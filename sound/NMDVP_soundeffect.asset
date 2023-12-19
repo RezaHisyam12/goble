@@ -1,0 +1,37 @@
+category = {
+	name = "Superevent Audios"
+	soundeffects = {
+	superev_greater_germanic_state_goebbels
+	superev_endsieg_goebbels
+	}
+}
+
+########### AUDIO ASSETS
+
+sound = {
+	name = "superev_greater_germanic_state_goebbels"
+	file = "superevents/superev_greater_germanic_state_goebbels.wav"
+}
+
+sound = {
+	name = "superev_endsieg_goebbels"
+	file = "superevents/superev_endsieg_goebbels.wav"
+}
+
+########## SOUND EFFECTS
+
+soundeffect = {
+	name = superev_greater_germanic_state_goebbels
+	volume = 2.5
+	sounds = {
+		sound = superev_greater_germanic_state_goebbels
+	} 
+}
+
+soundeffect = {
+	name = superev_endsieg_goebbels
+	volume = 2.5
+	sounds = {
+		sound = superev_endsieg_goebbels
+	} 
+}

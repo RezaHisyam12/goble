@@ -1,0 +1,661 @@
+austria_worried_about_france = {
+	allowed = {
+		tag = AUS
+	}
+	enable = {
+		has_socialist_government = no
+		is_subject = no
+		FRA = { has_socialist_government = yes }
+	}
+	abort = {
+		OR = {
+			has_socialist_government = yes
+			NOT = { is_faction_leader = yes }
+			FRA = { has_socialist_government = no }
+		}
+	}
+	ai_strategy = {
+		type = contain
+		id = "FRA"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "FRA"
+		value = 100
+	}
+}
+
+austria_worried_about_gru = {
+	allowed = {
+		tag = AUS
+	}
+	enable = {
+		is_subject = no
+		strength_ratio = { tag = GRU ratio < 0.5 }
+		NOT = { is_in_faction_with = GRU }
+	}
+	abort = {
+		OR = {
+			strength_ratio = { tag = GRU ratio > 0.5 }
+			NOT = { is_faction_leader = yes }
+			is_in_faction_with = GRU
+		}
+	}
+	ai_strategy = {
+		type = contain
+		id = "GRU"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "GRU"
+		value = 100
+	}
+}
+
+austria_worried_about_soviets = {
+	allowed = {
+		tag = AUS
+	}
+	enable = {
+		has_socialist_government = no
+		is_subject = no
+		RUS = {
+			exists = yes
+			has_socialist_government = yes
+		}
+	}
+	abort = {
+		OR = {
+			has_socialist_government = yes
+			NOT = { is_faction_leader = yes }
+			RUS = { has_socialist_government = no }
+		}
+	}
+	ai_strategy = {
+		type = contain
+		id = "RUS"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "RUS"
+		value = 100
+	}
+}
+
+austria_worried_about_russia = {
+	allowed = {
+		tag = AUS
+	}
+	enable = {
+		is_subject = no
+		strength_ratio = { tag = RUS ratio < 0.5 }
+		NOT = { is_in_faction_with = RUS }
+	}
+	abort = {
+		OR = {
+			strength_ratio = { tag = RUS ratio > 0.5 }
+			NOT = { is_faction_leader = yes }
+			is_in_faction_with = RUS
+		}
+	}
+	ai_strategy = {
+		type = contain
+		id = "RUS"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "RUS"
+		value = 100
+	}
+}
+
+austria_hates_sri = {
+	allowed = {
+		OR = {
+			tag = AUS
+			tag = CZE
+			tag = HUN
+			tag = CRO
+			tag = GAL
+			tag = ITA
+			tag = SIC
+			tag = ALB
+		}
+	}	
+	enable = {
+		is_in_faction_with = AUS
+		is_in_europe = yes
+		SRI = { has_socialist_government = yes }
+		AUS = {
+			is_faction_leader = yes
+			has_socialist_government = no
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = contain
+		id = "SRI"
+		value = 100
+	}
+	ai_strategy = {
+		type = conquer
+		id = "SRI"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "SRI"
+		value = 100
+	}
+}
+
+austria_hates_italy = {
+	allowed = {
+		OR = {
+			tag = AUS
+			tag = CZE
+			tag = HUN
+			tag = CRO
+			tag = GAL
+			tag = SIC
+			tag = ALB
+		}
+	}
+	enable = {
+		OR = {
+			tag = AUS
+			is_subject_of = AUS
+			is_in_faction_with = AUS
+		}
+		AUS = { is_subject = no }
+		ITA = {
+			has_government = national_populist
+			is_subject = no
+			NOT = { is_in_faction_with = AUS }
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = contain
+		id = "ITA"
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = "ITA"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "ITA"
+		value = 200
+	}
+}
+
+AUS_hates_serbia = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		NOT = { is_ally_with = SER }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = contain
+		id = "SER"
+		value = 100
+	}
+	ai_strategy = {
+		type = conquer
+		id = "SER"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "SER"
+		value = 100
+	}
+}
+
+AUS_crownlands_hate_serbia = {
+	allowed = {
+		OR = {
+			original_tag = CZE
+			original_tag = HUN
+			original_tag = SLO
+			original_tag = TRS
+			original_tag = CRO
+			original_tag = BOS
+			original_tag = GAL
+		}
+	}
+	enable = {
+		is_in_faction_with = AUS
+		NOT = { is_ally_with = SER }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = contain
+		id = "SER"
+		value = 100
+	}
+	ai_strategy = {
+		type = conquer
+		id = "SER"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "SER"
+		value = 100
+	}
+}
+
+AUS_crush_ser = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		has_war_with = SER
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = SER
+		value = 1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = SER
+		value = 100
+	}
+}
+
+AUS_crownlands_crush_ser = {
+	allowed = {
+		OR = {
+			original_tag = CZE
+			original_tag = HUN
+			original_tag = SLO
+			original_tag = TRS
+			original_tag = CRO
+			original_tag = BOS
+			original_tag = GAL
+		}
+	}
+	enable = {
+		has_war_with = SER
+		is_in_faction_with = AUS
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = SER
+		value = 1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = SER
+		value = 100
+	}
+}
+
+AUS_hates_romania = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		AUS = {
+			is_subject = no
+		}
+		is_neighbor_of = ROM
+		ROM = { has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = contain
+		id = "ROM"
+		value = 100
+	}
+	ai_strategy = {
+		type = conquer
+		id = "ROM"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "ROM"
+		value = 100
+	}
+}
+
+AUS_crownlands_hate_romania = {
+	allowed = {
+		OR = {
+			original_tag = CZE
+			original_tag = HUN
+			original_tag = SLO
+			original_tag = TRS
+			original_tag = CRO
+			original_tag = BOS
+			original_tag = GAL
+		}
+	}
+	enable = {
+		is_in_faction_with = AUS
+		NOT = { is_ally_with = ROM }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = contain
+		id = "ROM"
+		value = 100
+	}
+	ai_strategy = {
+		type = conquer
+		id = "ROM"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "ROM"
+		value = 100
+	}
+}
+
+AUS_crush_rom = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		has_war_with = ROM
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = ROM
+		value = 1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = ROM
+		value = 100
+	}
+}
+
+AUS_crownlands_crush_rom = {
+	allowed = {
+		OR = {
+			original_tag = CZE
+			original_tag = HUN
+			original_tag = SLO
+			original_tag = TRS
+			original_tag = CRO
+			original_tag = BOS
+			original_tag = GAL
+		}
+	}
+	enable = {
+		has_war_with = ROM
+		is_in_faction_with = AUS
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = ROM
+		value = 1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = ROM
+		value = 100
+	}
+}
+
+AUS_crownlands_support_austria = {
+	allowed = {
+		OR = {
+			original_tag = CZE
+			original_tag = HUN
+			original_tag = SLO
+			original_tag = TRS
+			original_tag = CRO
+			original_tag = BOS
+			original_tag = GAL
+		}
+	}
+	enable = {
+		has_autonomy_state = crownland
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = support
+		id = AUS
+		value = 400
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = AUS
+		value = 400
+	}
+}
+
+AUS_protect_crownlands = {
+	reversed = yes
+
+	allowed = {
+		original_tag = AUS
+	}
+	enable_reverse = {
+		AUS = { num_subjects > 0 }
+	}
+	enable = {
+		has_autonomy_state = crownland
+	}
+	abort_when_not_enabled = yes
+
+	target_array = AUS.subjects
+
+	ai_strategy = {
+		type = support
+		id = AUS
+		value = 400
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = AUS
+		value = 400
+	}
+}
+
+CZE_protect_other_crownlands = {
+	reversed = yes
+
+	enable_reverse = {
+		CZE = { has_autonomy_state = crownland }
+	}
+	enable = {
+		has_autonomy_state = crownland
+	}
+	abort_when_not_enabled = yes
+
+	target_array = AUS.subjects
+
+	ai_strategy = {
+		type = support
+		id = CZE
+		value = 400
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = CZE
+		value = 400
+	}
+}
+
+HUN_protect_other_crownlands = {
+	reversed = yes
+
+	enable_reverse = {
+		HUN = { has_autonomy_state = crownland }
+	}
+	enable = {
+		has_autonomy_state = crownland
+	}
+	abort_when_not_enabled = yes
+
+	target_array = AUS.subjects
+
+	ai_strategy = {
+		type = support
+		id = HUN
+		value = 400
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = HUN
+		value = 400
+	}
+}
+
+SLO_protect_other_crownlands = {
+	reversed = yes
+
+	enable_reverse = {
+		SLO = { has_autonomy_state = crownland }
+	}
+	enable = {
+		has_autonomy_state = crownland
+	}
+	abort_when_not_enabled = yes
+
+	target_array = AUS.subjects
+
+	ai_strategy = {
+		type = support
+		id = SLO
+		value = 400
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = SLO
+		value = 400
+	}
+}
+
+TRS_protect_other_crownlands = {
+	reversed = yes
+
+	enable_reverse = {
+		TRS = { has_autonomy_state = crownland }
+	}
+	enable = {
+		has_autonomy_state = crownland
+	}
+	abort_when_not_enabled = yes
+
+	target_array = AUS.subjects
+
+	ai_strategy = {
+		type = support
+		id = TRS
+		value = 400
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = TRS
+		value = 400
+	}
+}
+
+CRO_protect_other_crownlands = {
+	reversed = yes
+
+	enable_reverse = {
+		CRO = { has_autonomy_state = crownland }
+	}
+	enable = {
+		has_autonomy_state = crownland
+	}
+	abort_when_not_enabled = yes
+
+	target_array = AUS.subjects
+
+	ai_strategy = {
+		type = support
+		id = CRO
+		value = 400
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = CRO
+		value = 400
+	}
+}
+
+BOS_protect_other_crownlands = {
+	reversed = yes
+
+	enable_reverse = {
+		BOS = { has_autonomy_state = crownland }
+	}
+	enable = {
+		has_autonomy_state = crownland
+	}
+	abort_when_not_enabled = yes
+
+	target_array = AUS.subjects
+
+	ai_strategy = {
+		type = support
+		id = BOS
+		value = 400
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = BOS
+		value = 400
+	}
+}
+
+GAL_protect_other_crownlands = {
+	reversed = yes
+
+	enable_reverse = {
+		GAL = { has_autonomy_state = crownland }
+	}
+	enable = {
+		has_autonomy_state = crownland
+	}
+	abort_when_not_enabled = yes
+
+	target_array = AUS.subjects
+
+	ai_strategy = {
+		type = support
+		id = GAL
+		value = 400
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = GAL
+		value = 400
+	}
+}
