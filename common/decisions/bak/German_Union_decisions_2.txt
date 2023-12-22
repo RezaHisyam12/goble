@@ -2674,7 +2674,7 @@ GRU_germania_plan_decisions = {
 		}
 	}
 	
-
+	
 	GRU_pan_germanism_austria_decision = {
 		icon = GFX_pangermanicone
 
@@ -2763,13 +2763,14 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			base = 200
+			factor = 100
 			modifier = {
 				factor = 0
-				OR = {
-					ROOT_is_threatened_cautious = yes
-					FROM = { default_attack_AI_trigger_FROM = yes }
-				}
+				ROOT_is_threatened_cautious = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = { default_attack_AI_trigger_FROM = yes }
 			}
 		}
 
@@ -2821,13 +2822,14 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			base = 200
+			factor = 100
 			modifier = {
 				factor = 0
-				OR = {
-					ROOT_is_threatened_cautious = yes
-					FROM = { default_attack_AI_trigger_FROM = yes }
-				}
+				ROOT_is_threatened_cautious = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = { default_attack_AI_trigger_FROM = yes }
 			}
 		}
 
@@ -2880,13 +2882,14 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			base = 200
+			factor = 100
 			modifier = {
 				factor = 0
-				OR = {
-					ROOT_is_threatened_cautious = yes
-					FROM = { default_attack_AI_trigger_FROM = yes }
-				}
+				ROOT_is_threatened_cautious = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = { default_attack_AI_trigger_FROM = yes }
 			}
 		}
 
@@ -2942,13 +2945,14 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			base = 200
+			factor = 100
 			modifier = {
 				factor = 0
-				OR = {
-					ROOT_is_threatened_cautious = yes
-					FROM = { default_attack_AI_trigger_FROM = yes }
-				}
+				ROOT_is_threatened_cautious = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = { default_attack_AI_trigger_FROM = yes }
 			}
 		}
 
@@ -3001,13 +3005,14 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			base = 200
+			factor = 100
 			modifier = {
 				factor = 0
-				OR = {
-					ROOT_is_threatened_cautious = yes
-					FROM = { default_attack_AI_trigger_FROM = yes }
-				}
+				ROOT_is_threatened_cautious = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = { default_attack_AI_trigger_FROM = yes }
 			}
 		}
 
@@ -3056,13 +3061,14 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			base = 200
+			factor = 100
 			modifier = {
 				factor = 0
-				OR = {
-					ROOT_is_threatened_cautious = yes
-					FROM = { default_attack_AI_trigger_FROM = yes }
-				}
+				ROOT_is_threatened_cautious = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = { default_attack_AI_trigger_FROM = yes }
 			}
 		}
 
@@ -3126,13 +3132,14 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			base = 200
+			factor = 100
 			modifier = {
 				factor = 0
-				OR = {
-					ROOT_is_threatened_cautious = yes
-					FROM = { default_attack_AI_trigger_FROM = yes }
-				}
+				ROOT_is_threatened_cautious = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = { default_attack_AI_trigger_FROM = yes }
 			}
 		}
 
@@ -3187,13 +3194,14 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			base = 200
+			factor = 100
 			modifier = {
 				factor = 0
-				OR = {
-					ROOT_is_threatened_cautious = yes
-					FROM = { default_attack_AI_trigger_FROM = yes }
-				}
+				ROOT_is_threatened_cautious = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = { default_attack_AI_trigger_FROM = yes }
 			}
 		}
 
@@ -3242,13 +3250,14 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			base = 200
+			factor = 100
 			modifier = {
 				factor = 0
-				OR = {
-					ROOT_is_threatened_cautious = yes
-					FROM = { default_attack_AI_trigger_FROM = yes }
-				}
+				ROOT_is_threatened_cautious = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = { default_attack_AI_trigger_FROM = yes }
 			}
 		}
 
@@ -3300,13 +3309,14 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			base = 200
+			factor = 100
 			modifier = {
 				factor = 0
-				OR = {
-					ROOT_is_threatened_cautious = yes
-					FROM = { default_attack_AI_trigger_FROM = yes }
-				}
+				ROOT_is_threatened_cautious = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = { default_attack_AI_trigger_FROM = yes }
 			}
 		}
 
@@ -3355,13 +3365,14 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			base = 200
+			factor = 100
 			modifier = {
 				factor = 0
-				OR = {
-					ROOT_is_threatened_cautious = yes
-					FROM = { default_attack_AI_trigger_FROM = yes }
-				}
+				ROOT_is_threatened_cautious = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = { default_attack_AI_trigger_FROM = yes }
 			}
 		}
 
@@ -3413,13 +3424,14 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			base = 200
+			factor = 100
 			modifier = {
 				factor = 0
-				OR = {
-					ROOT_is_threatened_cautious = yes
-					FROM = { default_attack_AI_trigger_FROM = yes }
-				}
+				ROOT_is_threatened_cautious = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = { default_attack_AI_trigger_FROM = yes }
 			}
 		}
 
@@ -6414,7 +6426,7 @@ GRU_volksreichskommissariat_decisions = {
 
 			icon = GFX_hypoboreaVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -6483,7 +6495,7 @@ GRU_volksreichskommissariat_decisions = {
 
 			icon = GFX_hypoboreaVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -6615,7 +6627,7 @@ GRU_expansion_two_volksland_hypoborea = {
 
 			icon = GFX_hypoboreaVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -6727,7 +6739,7 @@ GRU_expansion_three_volksland_hypoborea = {
 
 			icon = GFX_hypoboreaVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -6930,7 +6942,7 @@ GRU_expansion_three_volksland_hypoborea = {
 
 			icon = GFX_ruthenienVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -6998,7 +7010,7 @@ GRU_expansion_three_volksland_hypoborea = {
 
 			icon = GFX_kaukasusVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -7067,7 +7079,7 @@ GRU_expansion_three_volksland_hypoborea = {
 
 			icon = GFX_baltenlandVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -7145,7 +7157,7 @@ GRU_expansion_three_volksland_hypoborea = {
 
 			icon = GFX_moskowienVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -7218,7 +7230,7 @@ GRU_expansion_three_volksland_hypoborea = {
 
 			icon = GFX_moskowienVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -7318,7 +7330,7 @@ GRU_expansion_three_volksland_hypoborea = {
 
 			icon = GFX_moskowienVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -7519,7 +7531,7 @@ GRU_expansion_three_volksland_hypoborea = {
 
 			icon = GFX_moskowienVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -7659,7 +7671,7 @@ GRU_expansion_three_volksland_hypoborea = {
 
 			icon = GFX_baltenlandVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -7729,7 +7741,7 @@ GRU_expansion_three_volksland_hypoborea = {
 
 			icon = GFX_baltenlandVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -7789,7 +7801,7 @@ GRU_expansion_three_volksland_hypoborea = {
 
 			icon = GFX_baltenlandVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -7892,7 +7904,7 @@ GRU_expansion_three_volksland_hypoborea = {
 
 			icon = GFX_baltenlandVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -7966,7 +7978,7 @@ GRU_expansion_three_volksland_hypoborea = {
 
 			icon = GFX_baltenlandVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -8156,7 +8168,7 @@ GRU_expansion_three_volksland_hypoborea = {
 
 			icon = GFX_ruthenienVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -8276,7 +8288,7 @@ GRU_expansion_two_volksreichskommissariat_ruthenia = {
 
 			fire_only_once = yes
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			available = {
 				has_completed_focus = GRU_NMDVP_LEBENSRAUM
@@ -8362,7 +8374,7 @@ GRU_expansion_three_volksreichskommissariat_ruthenia = {
 
 			icon = GFX_ruthenienVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -8453,7 +8465,7 @@ GRU_expansion_four_volksreichskommissariat_ruthenia = {
 
 			icon = GFX_ruthenienVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -8547,7 +8559,7 @@ GRU_expansion_four_volksreichskommissariat_ruthenia = {
 
 			icon = GFX_ruthenienVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -8650,7 +8662,7 @@ GRU_expansion_four_volksreichskommissariat_ruthenia = {
 
 			icon = GFX_ruthenienVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -8715,7 +8727,7 @@ GRU_expansion_four_volksreichskommissariat_ruthenia = {
 
 			icon = GFX_kaukasusVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -8892,7 +8904,7 @@ GRU_expansion_four_volksreichskommissariat_ruthenia = {
 
 			icon = GFX_kaukasusVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -8965,7 +8977,7 @@ GRU_expansion_two_volksreichskommissariat_kaukasia = {
 
 			icon = GFX_kaukasusVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -9077,7 +9089,7 @@ GRU_expansion_three_volksreichskommissariat_kaukasia = {
 
 			icon = GFX_kaukasusVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -9195,7 +9207,7 @@ GRU_expansion_four_volksreichskommissariat_kaukasia = {
 
 			icon = GFX_kaukasusVK
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -9305,13 +9317,14 @@ GRU_lebensraum_decisions = {
 		days_remove = 0
 
 		ai_will_do = {
-			base = 200
+			factor = 100
 			modifier = {
 				factor = 0
-				OR = {
-					ROOT_is_threatened_cautious = yes
-					FROM = { default_attack_AI_trigger_FROM = yes }
-				}
+				ROOT_is_threatened_cautious = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = { default_attack_AI_trigger_FROM = yes }
 			}
 		}
 
@@ -9444,7 +9457,7 @@ GRU_beyond_lebensraum_decisions = {
 
 			icon = GFX_judeaVS
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 
@@ -9518,7 +9531,7 @@ GRU_beyond_lebensraum_decisions = {
 
 			icon = GFX_judeaVS
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -9580,7 +9593,7 @@ GRU_expansion_two_volksstaat_Judea = {
 
 			icon = GFX_judeaVS
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -9822,7 +9835,7 @@ GRU_expansion_two_volksstaat_Judea = {
 
 			icon = GFX_turaniaVS
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 			
@@ -9896,7 +9909,7 @@ GRU_expansion_two_volksstaat_Judea = {
 
 			icon = GFX_turaniaVS
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				
@@ -10038,7 +10051,7 @@ GRU_expansion_two_volksstaat_Judea = {
 
 			icon = GFX_turaniaVS
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 			fire_only_once = yes
 				

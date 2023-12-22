@@ -6333,7 +6333,6 @@ shared_focus = {
 							has_war_with = FRA
 							FRA = { is_subject_of = GRU }
 							AUS = { exists = yes }
-							POL = { exists = yes }
 
 						}
 				}

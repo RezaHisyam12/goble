@@ -19,7 +19,7 @@ GRU_hates_socialists = {
 	ai_strategy = {
 		type = antagonize
 		id = GRU
-		value = 200
+		value = 2000
 	}
 }
 GRU_hates_japan = {
@@ -42,7 +42,7 @@ GRU_hates_japan = {
 	ai_strategy = {
 		type = antagonize
 		id = JAP
-		value = 200
+		value = 2000
 	}
 }
 stahlpakt_hates_russia = {
@@ -67,7 +67,7 @@ stahlpakt_hates_russia = {
 	ai_strategy = {
 		type = antagonize
 		id = RUS
-		value = 200
+		value = 300
 	}
 }
 
