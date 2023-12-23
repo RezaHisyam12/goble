@@ -327,8 +327,7 @@ ideas = {
 				eco_administrative_genius
 			}
 		}
-		
-		
+				
 		NGF_Herbert_Frahm_sec_sde = {
 			allowed = { original_tag = NGF }
 			available = {

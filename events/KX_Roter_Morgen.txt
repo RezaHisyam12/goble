@@ -4342,7 +4342,7 @@ country_event = { # Ideology Switch
 			long_name = GRU_NMDVP_R_long
 			name = GRU_NMDVP_R
 		}
-	      set_party_name = {
+	      	set_party_name = {
 			ideology = totalist
 			long_name = GRU_NMDVP_L_long
 			name = GRU_NMDVP_L
@@ -4351,11 +4351,12 @@ country_event = { # Ideology Switch
 		add_ideas = {
 			GRU_Joseph_Goebbels_hog_npo
 			GRU_Bodo_Uhse_for_npo
-			GRU_Albert_Speer_eco_npo
 			GRU_Ernst_Roehm_sec_npo
+			GRU_Albert_Speer_eco_npo
+			}
 		}
-	
 	}
+
 	option = { # Ideology Switch
 		name = rotermorgenmisc.1004.b
 		ai_chance = {
