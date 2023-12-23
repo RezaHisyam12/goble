@@ -2766,10 +2766,6 @@ GRU_germania_plan_decisions = {
 			factor = 100
 			modifier = {
 				factor = 0
-				has_war = yes
-			}
-			modifier = {
-				factor = 0
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.8
@@ -2856,10 +2852,6 @@ GRU_germania_plan_decisions = {
 
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
 			modifier = {
 				factor = 0
 				strength_ratio = {
@@ -2949,10 +2941,6 @@ GRU_germania_plan_decisions = {
 
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
 			modifier = {
 				factor = 0
 				strength_ratio = {
@@ -3047,10 +3035,6 @@ GRU_germania_plan_decisions = {
 			factor = 100
 			modifier = {
 				factor = 0
-				has_war = yes
-			}
-			modifier = {
-				factor = 0
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.8
@@ -3140,10 +3124,6 @@ GRU_germania_plan_decisions = {
 			factor = 100
 			modifier = {
 				factor = 0
-				has_war = yes
-			}
-			modifier = {
-				factor = 0
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.8
@@ -3227,10 +3207,6 @@ GRU_germania_plan_decisions = {
 
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
 			modifier = {
 				factor = 0
 				strength_ratio = {
@@ -3333,10 +3309,6 @@ GRU_germania_plan_decisions = {
 			factor = 100
 			modifier = {
 				factor = 0
-				has_war = yes
-			}
-			modifier = {
-				factor = 0
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.8
@@ -3428,10 +3400,6 @@ GRU_germania_plan_decisions = {
 			factor = 100
 			modifier = {
 				factor = 0
-				has_war = yes
-			}
-			modifier = {
-				factor = 0
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.8
@@ -3515,10 +3483,6 @@ GRU_germania_plan_decisions = {
 
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
 			modifier = {
 				factor = 0
 				strength_ratio = {
@@ -3609,10 +3573,6 @@ GRU_germania_plan_decisions = {
 			factor = 100
 			modifier = {
 				factor = 0
-				has_war = yes
-			}
-			modifier = {
-				factor = 0
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.8
@@ -3696,10 +3656,6 @@ GRU_germania_plan_decisions = {
 
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
 			modifier = {
 				factor = 0
 				strength_ratio = {
@@ -3788,10 +3744,6 @@ GRU_germania_plan_decisions = {
 
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
 			modifier = {
 				factor = 0
 				strength_ratio = {
@@ -9757,14 +9709,10 @@ GRU_lebensraum_decisions = {
 
 		fire_only_once = no
 		cost = 50
-		days_remove = 0
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
 			modifier = {
 				factor = 0
 				strength_ratio = {
