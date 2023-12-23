@@ -6242,7 +6242,44 @@ GRU_kill_entente_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					any_allied_country = {
+						is_faction_leader = yes
+						overlord = {
+							strength_ratio = {
+								tag = ROOT
+								ratio > 0.7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
+			}
 		}
 
 		remove_effect = {
@@ -6274,7 +6311,44 @@ GRU_kill_entente_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					any_allied_country = {
+						is_faction_leader = yes
+						overlord = {
+							strength_ratio = {
+								tag = ROOT
+								ratio > 0.7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
+			}
 		}
 
 		remove_effect = {
@@ -6335,14 +6409,43 @@ GRU_kill_rivals_decisions = {
 		days_remove = 14
 
 		ai_will_do = {
-			factor = 50
+			factor = 100
 			modifier = {
 				factor = 0
-				ROOT_is_threatened_cautious = yes
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
 			}
 			modifier = {
 				factor = 0
-				FROM = { default_attack_AI_trigger_FROM = yes }
+				FROM = {
+					any_allied_country = {
+						is_faction_leader = yes
+						overlord = {
+							strength_ratio = {
+								tag = ROOT
+								ratio > 0.7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
 			}
 		}
 
@@ -6391,14 +6494,43 @@ GRU_kill_colonies_decisions = {
 		days_remove = 14
 
 		ai_will_do = {
-			factor = 50
+			factor = 100
 			modifier = {
 				factor = 0
-				ROOT_is_threatened_cautious = yes
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
 			}
 			modifier = {
 				factor = 0
-				FROM = { default_attack_AI_trigger_FROM = yes }
+				FROM = {
+					any_allied_country = {
+						is_faction_leader = yes
+						overlord = {
+							strength_ratio = {
+								tag = ROOT
+								ratio > 0.7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
 			}
 		}
 
@@ -6575,14 +6707,43 @@ GRU_scandi_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 50
+			factor = 100
 			modifier = {
 				factor = 0
-				ROOT_is_threatened_cautious = yes
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
 			}
 			modifier = {
 				factor = 0
-				FROM = { default_attack_AI_trigger_FROM = yes }
+				FROM = {
+					any_allied_country = {
+						is_faction_leader = yes
+						overlord = {
+							strength_ratio = {
+								tag = ROOT
+								ratio > 0.7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
 			}
 		}
 
@@ -6610,14 +6771,43 @@ GRU_scandi_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 50
+			factor = 100
 			modifier = {
 				factor = 0
-				ROOT_is_threatened_cautious = yes
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
 			}
 			modifier = {
 				factor = 0
-				FROM = { default_attack_AI_trigger_FROM = yes }
+				FROM = {
+					any_allied_country = {
+						is_faction_leader = yes
+						overlord = {
+							strength_ratio = {
+								tag = ROOT
+								ratio > 0.7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
 			}
 		}
 
@@ -6645,14 +6835,43 @@ GRU_scandi_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 50
+			factor = 100
 			modifier = {
 				factor = 0
-				ROOT_is_threatened_cautious = yes
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
 			}
 			modifier = {
 				factor = 0
-				FROM = { default_attack_AI_trigger_FROM = yes }
+				FROM = {
+					any_allied_country = {
+						is_faction_leader = yes
+						overlord = {
+							strength_ratio = {
+								tag = ROOT
+								ratio > 0.7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
 			}
 		}
 
@@ -6680,14 +6899,43 @@ GRU_scandi_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 50
+			factor = 100
 			modifier = {
 				factor = 0
-				ROOT_is_threatened_cautious = yes
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
 			}
 			modifier = {
 				factor = 0
-				FROM = { default_attack_AI_trigger_FROM = yes }
+				FROM = {
+					any_allied_country = {
+						is_faction_leader = yes
+						overlord = {
+							strength_ratio = {
+								tag = ROOT
+								ratio > 0.7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
 			}
 		}
 
