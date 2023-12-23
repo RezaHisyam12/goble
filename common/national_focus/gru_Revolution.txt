@@ -3579,7 +3579,9 @@ shared_focus = {
 	#		has_army_manpower = { size > 300000 }
 	#	}
 	#	cost = 5
-	#	
+	#	ai_will_do = {
+	#	factor = 100
+	#	}
 	#}
 	
 	#focus = {
