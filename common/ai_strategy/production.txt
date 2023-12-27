@@ -492,6 +492,58 @@ default_bicycle_production = {
 	}
 }
 
+more_cavalry_focused_nation = {
+	allowed = {
+		OR = {
+			original_tag = MON
+			original_tag = ALO
+			original_tag = TRK
+			original_tag = KYR
+			original_tag = UZB
+			original_tag = DKB
+			original_tag = KUB
+			original_tag = KLY
+			original_tag = MTR
+			original_tag = SAU
+			original_tag = JBS
+			original_tag = EGY
+			original_tag = LBA
+			original_tag = TRP
+			original_tag = IRQ
+		}
+	}
+
+	enable = {
+		if = {
+			limit = { original_tag = EGY }
+			has_tech = mobile_warfare
+		}
+		else = {
+			always = yes
+		}
+	}
+	abort = {
+		date > 1940.1.1
+		has_tech = motorised_infantry
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -20
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = 20
+	}
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = 50
+	}
+}
+
 default_tank_production = {
 	enable = {
 		is_eligible_for_armor_production = yes
@@ -907,6 +959,7 @@ we_need_synth_oil_1 = {
 	allowed = {
 		OR = {
 			tag = GER
+			tag = GRU
 			tag = FRA
 		}
 	}
