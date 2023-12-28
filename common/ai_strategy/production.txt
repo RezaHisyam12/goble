@@ -325,10 +325,7 @@ we_need_dockyards_3 = {
 default_marine_production = {
 	allowed = {
 		NOT = {
-			AND = {
-				original_tag = CAN
-				NOT = { country_exists = GBR }
-			}
+			original_tag = CAN
 			original_tag = GBR
 			original_tag = ENG
 			original_tag = JAP
@@ -373,25 +370,15 @@ special_forces_marine_production = {
 extra_marine_production = {
 	allowed = {
 		OR = {
-			AND = {
-				original_tag = CAN
-				NOT = { country_exists = GBR }
-			}
+			original_tag = CAN
 			original_tag = GBR
 			original_tag = ENG
 			original_tag = JAP
 			original_tag = NFA
 			original_tag = GEX
 			original_tag = AST
-			AND = {
-				has_war = yes
-				num_of_naval_factories > 10
-				NOT = {
-					any_enemy_country = {
-						is_neighbor_of = ROOT
-					}
-				}
-			}
+			original_tag = GEA
+			is_american_tag = yes
 		}
 	}
 	enable = {
@@ -478,17 +465,17 @@ default_bicycle_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = -2
+		value = -10
 	}
 	ai_strategy = {
 		type = role_ratio
 		id = bicycle
-		value = 2
+		value = 10
 	}
 	ai_strategy = {
 		type = template_prio
 		id = bicycle
-		value = 20
+		value = 50
 	}
 }
 
