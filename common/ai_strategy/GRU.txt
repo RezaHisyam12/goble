@@ -112,23 +112,37 @@ GRU_dislikes_entente = {
 GRU_destroy_german = {
 	allowed = {
 		original_tag = GRU
-	}
+
 	enable = {
-		has_war_with = GER
-		is_neighbor_of = GER
-		GER = { has_capitulated = no }
+		has_country_flag = GRU_REBELLION
 	}
-	abort_when_not_enabled = yes
+	abort = {
+		has_country_flag = GRU_GCW_ENDED
+	}
 
 	ai_strategy = {
-		type = conquer
+		type = garrison
+		value = -60
+	}
+	ai_strategy = {
+		type = invade
 		id = GER
-		value = 300
+		value = 10 #just enough to overcome the AI's reluctance to invade when directly bordering an enemy
 	}
 	ai_strategy = {
 		type = front_unit_request
 		id = GER
 		value = 100
+	}
+	ai_strategy = {
+		type = front_armor_score
+		id = GER
+		value = 100
+	}
+	ai_strategy = {
+		type = ignore
+		id = AUS
+		value = 500
 	}
 }
 
@@ -165,6 +179,7 @@ GRU_eyes_on_austria = {
 	enable = {
 		GRU = {
 			is_subject = no
+			has_socialist_government = no
 		}
 		is_neighbor_of = AUS
 		AUS = { has_capitulated = no }

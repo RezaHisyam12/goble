@@ -1,4 +1,26 @@
 # Keep MAF units in Africa
+MAF_hates_socialists = {
+	reversed = yes
+
+	enable_reverse = {
+		MAF = {
+			is_subject = no
+			has_socialist_government = no
+		}
+	}
+	enable = {
+		has_socialist_government = yes
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = antagonize
+		id = MAF
+		value = 500
+	}
+}
+
 KR_keep_MAF_units_home = {
 	reversed = yes
 
@@ -101,7 +123,7 @@ GEA_invade_indochina = {
 	ai_strategy = {
 		type = invade
 		id = INC
-		value = 10 #just enough to overcome the AI's reluctance to invade when directly bordering an enemy
+		value = 20
 	}
 	ai_strategy = {
 		type = invasion_unit_request

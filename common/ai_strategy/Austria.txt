@@ -22,7 +22,7 @@ austria_worried_about_france = {
 	ai_strategy = {
 		type = antagonize
 		id = "FRA"
-		value = 100
+		value = 200
 	}
 }
 
@@ -81,7 +81,7 @@ austria_worried_about_soviets = {
 	ai_strategy = {
 		type = antagonize
 		id = "RUS"
-		value = 100
+		value = 200
 	}
 }
 
