@@ -21,7 +21,7 @@ ENG_hates_reichspakt = {
 	ai_strategy = {
 		type = antagonize
 		id = ENG
-		value = 1000
+		value = 300
 	}
 }
 ENG_hates_entente = {
@@ -44,7 +44,7 @@ ENG_hates_entente = {
 	ai_strategy = {
 		type = antagonize
 		id = ENG
-		value = 1000
+		value = 300
 	}
 }
 

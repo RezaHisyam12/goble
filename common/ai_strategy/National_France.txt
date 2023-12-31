@@ -16,7 +16,7 @@ NFA_hates_socialists = {
 	ai_strategy = {
 		type = antagonize
 		id = NFA
-		value = 1000
+		value = 300
 	}
 }
 NFA_dislikes_germany = {

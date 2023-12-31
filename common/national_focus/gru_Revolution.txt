@@ -6792,9 +6792,6 @@ shared_focus = {
 		relative_position_id = GRU_NMDVP_RED_COLONIALISM
 		x = 1
 		y = 2
-		available = {
-			has_army_manpower = { size > 1750000 }
-		}
 		cost = 7	
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_LEBENSRAUM"
