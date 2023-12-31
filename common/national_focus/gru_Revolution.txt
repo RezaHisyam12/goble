@@ -3955,7 +3955,7 @@ shared_focus = {
 							name = "Communal Councils"
 							desc = "GRU_Councils_DESC"
 							picture = "gfx/leaders/GRU/Communal_Council.png"
-							expire = "1965.1.1"
+							expire = "1.1.1"
 							ideology = syndicalist_subtype
 				}
 				set_cosmetic_tag = GRU_FAUD_B
@@ -3971,7 +3971,7 @@ shared_focus = {
 							name = "Communal Councils"
 							desc = "GRU_Councils_DESC"
 							picture = "gfx/leaders/GRU/Communal_Council.png"
-							expire = "1965.1.1"
+							expire = "1.1.1"
 							ideology = syndicalist_subtype
 				}
 				set_cosmetic_tag = GRU_FAUD_B
@@ -3987,7 +3987,7 @@ shared_focus = {
 							name = "Communal Councils"
 							desc = "GRU_Councils_DESC"
 							picture = "gfx/leaders/GRU/Communal_Council.png"
-							expire = "1965.1.1"
+							expire = "1.1.1"
 							ideology = syndicalist_subtype
 				}
 				set_cosmetic_tag = GRU_FAUD_B
@@ -4003,7 +4003,7 @@ shared_focus = {
 							name = "Communal Councils"
 							desc = "GRU_Councils_DESC"
 							picture = "gfx/leaders/GRU/Communal_Council.png"
-							expire = "1965.1.1"
+							expire = "1.1.1"
 							ideology = syndicalist_subtype
 				}
 				set_cosmetic_tag = GRU_FAUD_B
@@ -4402,14 +4402,14 @@ shared_focus = {
 							name = "Kurt Schuhmacher"
 							desc = "GRU_Schuhmacher_DESC"
 							picture = "gfx/leaders/GRU/Portrait_Germany_Kurt_Schuhmacher.png"
-							expire = "1965.1.1"
+							expire = "1.1.1"
 							ideology = socdem_democratic_socialism_subtype
 				}
 				create_country_leader = {
 							name = "Erich Honecker"
 							desc = "GRU_Honecker_DESC"
 							picture = "gfx/leaders/GRU/Portrait_Germany_Erich_Honecker_young.png"
-							expire = "1965.1.1"
+							expire = "1.1.1"
 							ideology = moderate_socialist_subtype
 				}
 				set_party_name = {
@@ -6381,7 +6381,6 @@ shared_focus = {
 		available = {
 					FRA = { has_country_leader = { ruling_only = yes name = "Marcel Déat" } }
 					NOT = { country_exists = AUS }
-					NOT = { country_exists = POL }
 				}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_PRESSURE_SORELIAN_FRANCE"

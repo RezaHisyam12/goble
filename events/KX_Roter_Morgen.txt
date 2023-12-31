@@ -28,21 +28,21 @@ country_event = { # GRU setup
 					name = "Internationale Administration of Germany"
 					desc = "GRU_OCCUPIED_GOV_DESC"
 					picture = "gfx/leaders/GRU/germans_no_freedom.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = syndicalist_subtype
 				}
 				create_country_leader = {
 					name = "Internationale Administration of Germany"
 					desc = "GRU_OCCUPIED_GOV_DESC"
 					picture = "gfx/leaders/GRU/germans_no_freedom.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = radical_socialist_subtype
 				}
 				create_country_leader = {
 					name = "Internationale Administration of Germany"
 					desc = "GRU_OCCUPIED_GOV_DESC"
 					picture = "gfx/leaders/GRU/germans_no_freedom.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = totalist_subtype
 				}
 				
@@ -50,14 +50,14 @@ country_event = { # GRU setup
 					name = "Konrad Adenauer"
 					desc = "GRU_Adenauer_DESC"
 					picture = "gfx/leaders/GRU/Portrait_Germany_Konrad_Adenauer.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = christian_democracy_subtype
 				}
 				create_country_leader = {
 					name = "Franz Blücher"
 					desc = "GRU_bluecher_DESC"
 					picture = "gfx/leaders/GRU/Portrait_Germany_Franz_Bluecher.png"
-					expire = "1965.1.1"
+					expire = "1.1.1"
 					ideology = centrist_subtype
 				}
 				set_politics = {
@@ -332,7 +332,7 @@ country_event = { # CONGRESS
 				name = "Josef Goebbels"
 				desc = "GRU_GOEBBELS_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Josef_Goebbels_13.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = germanic_socialism_subtype
 				traits = { gru_froncophobe }
 			}
@@ -345,7 +345,7 @@ country_event = { # CONGRESS
 				name = "Wilhelm Pieck"
 				desc = "GRU_PIECK_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Wilhelm_Pieck_I.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = syndicalist_subtype
 			}
 			set_party_name = {
@@ -357,7 +357,7 @@ country_event = { # CONGRESS
 				name = "Karl Liebknecht"
 				desc = "GRU_LIEBKNECHT_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Karl_Liebknecht.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = socdem_democratic_socialism_subtype
 			}
 			set_party_name = {
@@ -369,7 +369,7 @@ country_event = { # CONGRESS
 				name = "Rudolf Rocker"
 				desc = "GRU_ROCKER_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Rudolf_Rocker_I.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = anarchism_subtype
 			}
 			remove_all_ministers = yes
@@ -433,7 +433,7 @@ country_event = { # CONGRESS
 				name = "Josef Goebbels"
 				desc = "GRU_GOEBBELS_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Josef_Goebbels_13.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = germanic_socialism_subtype
 			}
 			set_party_name = {
@@ -445,7 +445,7 @@ country_event = { # CONGRESS
 				name = "Wilhelm Pieck"
 				desc = "GRU_PIECK_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Wilhelm_Pieck_I.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = syndicalist_subtype
 			}
 			set_party_name = {
@@ -457,7 +457,7 @@ country_event = { # CONGRESS
 				name = "Karl Liebknecht"
 				desc = "GRU_LIEBKNECHT_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Karl_Liebknecht.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = socdem_democratic_socialism_subtype
 			}
 			set_party_name = {
@@ -469,7 +469,7 @@ country_event = { # CONGRESS
 				name = "Rudolf Rocker"
 				desc = "GRU_ROCKER_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Rudolf_Rocker_I.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = anarchism_subtype
 			}
 			remove_all_ministers = yes
@@ -537,7 +537,7 @@ country_event = { # CONGRESS
 				name = "Wilhelm Pieck"
 				desc = "GRU_PIECK_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Wilhelm_Pieck_I.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authcom_subtype
 			}
 			set_party_name = {
@@ -554,7 +554,7 @@ country_event = { # CONGRESS
 				name = "Karl Liebknecht"
 				desc = "GRU_LIEBKNECHT_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Karl_Liebknecht.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = moderate_socialist_subtype
 			}
 			set_party_name = {
@@ -566,7 +566,7 @@ country_event = { # CONGRESS
 				name = "Rudolf Rocker"
 				desc = "GRU_ROCKER_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Rudolf_Rocker_I.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = anarcho_syndicalist_subtype
 			}
 		}
@@ -630,7 +630,7 @@ country_event = { # CONGRESS
 				name = "Josef Goebbels"
 				desc = "GRU_GOEBBELS_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Josef_Goebbels_13.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = germanic_socialism_subtype
 			}
 			set_party_name = {
@@ -642,7 +642,7 @@ country_event = { # CONGRESS
 				name = "Wilhelm Pieck"
 				desc = "GRU_PIECK_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Wilhelm_Pieck_I.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authcom_subtype
 			}
 			set_party_name = {
@@ -654,7 +654,7 @@ country_event = { # CONGRESS
 				name = "Karl Liebknecht"
 				desc = "GRU_LIEBKNECHT_DESC"
 				picture = "gfx/leaders/DDR/Portrait_Prussia_Karl_Liebknecht.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = moderate_socialist_subtype
 			}
 			set_party_name = {
@@ -696,7 +696,7 @@ country_event = { # SMEPD SPLIT
 				name = "Ernst Thälmann"
 				desc = "GRU_THALY_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Ernst_Thalmann.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = centralized_syndicalism_subtype
 			}
 			set_party_name = {
@@ -708,7 +708,7 @@ country_event = { # SMEPD SPLIT
 				name = "Wilhelm Pieck"
 				desc = "GRU_PIECK_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Wilhelm_Pieck_I.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authcom_subtype
 			}
 			complete_national_focus = GRU_thalmann
@@ -744,7 +744,7 @@ country_event = { # SMEPD SPLIT
 				name = "Ernst Thälmann"
 				desc = "GRU_THALY_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Ernst_Thalmann.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = centralized_syndicalism_subtype
 			}
 			set_party_name = {
@@ -756,7 +756,7 @@ country_event = { # SMEPD SPLIT
 				name = "Wilhelm Pieck"
 				desc = "GRU_PIECK_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Wilhelm_Pieck_I.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = authcom_subtype
 			}
 			complete_national_focus = GRU_pieck
@@ -1279,7 +1279,7 @@ country_event = { # portraitswapper
 							name = "Josef Goebbels"
 							desc = "GRU_GOEBBELS_DESC"
 							picture = "gfx/leaders/GRU/Portrait_Germany_Josef_Goebbels_14.png"
-							expire = "1965.1.1"
+							expire = "1.1.1"
 							ideology = germanic_socialism_subtype
 							traits = {
 								gru_froncophobe
@@ -1295,7 +1295,7 @@ country_event = { # portraitswapper
 							name = "Josef Goebbels"
 							desc = "GRU_GOEBBELS_DESC"
 							picture = "gfx/leaders/GRU/Portrait_Germany_Josef_Goebbels_14.png"
-							expire = "1965.1.1"
+							expire = "1.1.1"
 							ideology = national_populist_subtype
 							traits = {
 								gru_froncophobe
@@ -1317,7 +1317,7 @@ country_event = { # portraitswapper
 							name = "Communal Councils"
 							desc = "GRU_Councils_DESC"
 							picture = "gfx/leaders/GRU/Communal_Council.png"
-							expire = "1965.1.1"
+							expire = "1.1.1"
 							ideology = anarcho_syndicalist_subtype
 				}
 	}
@@ -3760,7 +3760,7 @@ country_event = { # anarcho_communes
 				name = "Communal Councils"
 				desc = "GRU_Councils_DESC"
 				picture = "gfx/leaders/GRU/councilism.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = anarcho_syndicalist_subtype
 			}
 			set_cosmetic_tag = GRU_ANARCHISM_PUPPET
@@ -3849,7 +3849,7 @@ country_event = { # Future of Germany MarLibs
 			name = "Gustav Krupp"
 			desc = "GRU_Krupp_DESC"
 			picture = "gfx/leaders/GRU/Portrait_GRU_Gustav_Krupp.png"
-			expire = "1965.1.1"
+			expire = "1.1.1"
 			ideology = oligarchy_subtype
 		}
 		add_popularity = {
@@ -3906,7 +3906,7 @@ country_event = { # Future of Germany MarLibs
 				name = "Gustav Krupp"
 				desc = "GRU_Krupp_DESC"
 				picture = "gfx/leaders/GRU/Portrait_GRU_Gustav_Krupp.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = corporatocracy_subtype
 			}
 			set_party_name = {
@@ -3918,7 +3918,7 @@ country_event = { # Future of Germany MarLibs
 				name = "Gustav Krupp"
 				desc = "GRU_Krupp_DESC"
 				picture = "gfx/leaders/GRU/Portrait_GRU_Gustav_Krupp.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = oligarchy_subtype
 			}
 			set_party_name = {
@@ -4007,43 +4007,43 @@ country_event = { # pick-a-kaiser
 			create_country_leader = {
 				name = "August Wilhelm I"
 				picture = "gfx/leaders/COS/Portrait_COS_August_Wilhelm.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = christian_democracy_subtype
 			}
 			create_country_leader = {
 				name = "August Wilhelm I"
 				picture = "gfx/leaders/COS/Portrait_COS_August_Wilhelm.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = socdem_democratic_socialism_subtype
 			}
 			create_country_leader = {
 				name = "August Wilhelm I"
 				picture = "gfx/leaders/COS/Portrait_COS_August_Wilhelm.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = centrist_subtype
 			}
 			create_country_leader = {
 				name = "August Wilhelm I"
 				picture = "gfx/leaders/COS/Portrait_COS_August_Wilhelm.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = ancap_subtype
 			}
 			create_country_leader = {
 				name = "August Wilhelm I"
 				picture = "gfx/leaders/COS/Portrait_COS_August_Wilhelm.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = prussian_constitutionalism_subtype
 			}
 			create_country_leader = {
 				name = "August Wilhelm I"
 				picture = "gfx/leaders/COS/Portrait_COS_August_Wilhelm.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = absolute_monarchy_subtype
 			}
 			create_country_leader = {
 				name = "August Wilhelm I"
 				picture = "gfx/leaders/COS/Portrait_COS_August_Wilhelm.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = militarism_subtype
 			}
 		}
@@ -4056,43 +4056,43 @@ country_event = { # pick-a-kaiser
 			create_country_leader = {
 				name = "Victoria Louise I"
 				picture = "gfx/leaders/FRP/VictoriaLouiseMarLib.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = christian_democracy_subtype
 			}
 			create_country_leader = {
 				name = "Victoria Louise I"
 				picture = "gfx/leaders/FRP/VictoriaLouiseMarLib.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = socdem_democratic_socialism_subtype
 			}
 			create_country_leader = {
 				name = "Victoria Louise I"
 				picture = "gfx/leaders/FRP/VictoriaLouiseMarLib.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = centrist_subtype
 			}
 			create_country_leader = {
 				name = "Victoria Louise I"
 				picture = "gfx/leaders/FRP/VictoriaLouiseMarLib.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = ancap_subtype
 			}
 			create_country_leader = {
 				name = "Victoria Louise I"
 				picture = "gfx/leaders/FRP/VictoriaLouiseMarLib.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = prussian_constitutionalism_subtype
 			}
 			create_country_leader = {
 				name = "Victoria Louise I"
 				picture = "gfx/leaders/FRP/VictoriaLouiseMarLib.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = absolute_monarchy_subtype
 			}
 			create_country_leader = {
 				name = "Victoria Louise I"
 				picture = "gfx/leaders/FRP/VictoriaLouiseMarLib.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = militarism_subtype
 			}
 		}
@@ -4105,43 +4105,43 @@ country_event = { # pick-a-kaiser
 			create_country_leader = {
 				name = "Rupprecht I"
 				picture = "gfx/leaders/GER/Portrait_Germany_Rupprecht_Bayern_kr.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = christian_democracy_subtype
 			}
 			create_country_leader = {
 				name = "Rupprecht I"
 				picture = "gfx/leaders/GER/Portrait_Germany_Rupprecht_Bayern_kr.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = socdem_democratic_socialism_subtype
 			}
 			create_country_leader = {
 				name = "Rupprecht I"
 				picture = "gfx/leaders/GER/Portrait_Germany_Rupprecht_Bayern_kr.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = centrist_subtype
 			}
 			create_country_leader = {
 				name = "Rupprecht I"
 				picture = "gfx/leaders/GER/Portrait_Germany_Rupprecht_Bayern_kr.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = ancap_subtype
 			}
 			create_country_leader = {
 				name = "Rupprecht I"
 				picture = "gfx/leaders/GER/Portrait_Germany_Rupprecht_Bayern_kr.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = prussian_constitutionalism_subtype
 			}
 			create_country_leader = {
 				name = "Rupprecht I"
 				picture = "gfx/leaders/GER/Portrait_Germany_Rupprecht_Bayern_kr.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = absolute_monarchy_subtype
 			}
 			create_country_leader = {
 				name = "Rupprecht I"
 				picture = "gfx/leaders/GER/Portrait_Germany_Rupprecht_Bayern_kr.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = militarism_subtype
 			}
 		}
@@ -4154,43 +4154,43 @@ country_event = { # pick-a-kaiser
 			create_country_leader = {
 				name = "Louis Ferdinand I"
 				picture = "gfx/leaders/RUS/Portrait_RUS_Louis_Ferdinand.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = christian_democracy_subtype
 			}
 			create_country_leader = {
 				name = "Louis Ferdinand I"
 				picture = "gfx/leaders/RUS/Portrait_RUS_Louis_Ferdinand.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = socdem_democratic_socialism_subtype
 			}
 			create_country_leader = {
 				name = "Louis Ferdinand I"
 				picture = "gfx/leaders/RUS/Portrait_RUS_Louis_Ferdinand.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = centrist_subtype
 			}
 			create_country_leader = {
 				name = "Louis Ferdinand I"
 				picture = "gfx/leaders/RUS/Portrait_RUS_Louis_Ferdinand.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = ancap_subtype
 			}
 			create_country_leader = {
 				name = "Louis Ferdinand I"
 				picture = "gfx/leaders/RUS/Portrait_RUS_Louis_Ferdinand.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = prussian_constitutionalism_subtype
 			}
 			create_country_leader = {
 				name = "Louis Ferdinand I"
 				picture = "gfx/leaders/RUS/Portrait_RUS_Louis_Ferdinand.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = absolute_monarchy_subtype
 			}
 			create_country_leader = {
 				name = "Louis Ferdinand I"
 				picture = "gfx/leaders/RUS/Portrait_RUS_Louis_Ferdinand.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = militarism_subtype
 			}
 		}
@@ -4203,43 +4203,43 @@ country_event = { # pick-a-kaiser
 			create_country_leader = {
 				name = "Friedrich Wilhelm I"
 				picture = "gfx/leaders/GER/Portrait_GER_Friedrich_Wilhelm.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = christian_democracy_subtype
 			}
 			create_country_leader = {
 				name = "Friedrich Wilhelm I"
 				picture = "gfx/leaders/GER/Portrait_GER_Friedrich_Wilhelm.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = socdem_democratic_socialism_subtype
 			}
 			create_country_leader = {
 				name = "Friedrich Wilhelm I"
 				picture = "gfx/leaders/GER/Portrait_GER_Friedrich_Wilhelm.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = centrist_subtype
 			}
 			create_country_leader = {
 				name = "Friedrich Wilhelm I"
 				picture = "gfx/leaders/GER/Portrait_GER_Friedrich_Wilhelm.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = ancap_subtype
 			}
 			create_country_leader = {
 				name = "Friedrich Wilhelm I"
 				picture = "gfx/leaders/GER/Portrait_GER_Friedrich_Wilhelm.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = prussian_constitutionalism_subtype
 			}
 			create_country_leader = {
 				name = "Friedrich Wilhelm I"
 				picture = "gfx/leaders/GER/Portrait_GER_Friedrich_Wilhelm.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = absolute_monarchy_subtype
 			}
 			create_country_leader = {
 				name = "Friedrich Wilhelm I"
 				picture = "gfx/leaders/GER/Portrait_GER_Friedrich_Wilhelm.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = militarism_subtype
 			}
 		}
@@ -4320,7 +4320,7 @@ country_event = { # Ideology Switch
 				name = "Josef Goebbels"
 				desc = "GRU_GOEBBELS_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Josef_Goebbels_14.png"
-				expire = "1965.1.1"
+				expire = "1.1.1"
 				ideology = natpop_goebbels_subtype
 				traits = {
 					gru_froncophobe
