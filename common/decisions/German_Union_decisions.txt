@@ -2736,7 +2736,9 @@ GRU_germania_plan_decisions = {
 		available = {
 			is_subject = no
 			country_exists = SWI
-			NOT = { is_in_faction_with = FRA }
+			SWI = {
+				NOT = { is_in_faction_with = FRA }
+			}
 		}
 		visible = {
 			has_completed_focus = GRU_NMDVP_PAN_GERMANISM
@@ -2828,7 +2830,9 @@ GRU_germania_plan_decisions = {
 		available = {
 			is_subject = no
 			country_exists = CZE
-			NOT = { is_in_faction_with = FRA }
+			CZE = {
+				NOT = { is_in_faction_with = FRA }
+			}
 		}
 		visible = {
 			has_completed_focus = GRU_NMDVP_SLAV_LAND_EXPANSION
@@ -2921,7 +2925,9 @@ GRU_germania_plan_decisions = {
 		available = {
 			is_subject = no
 			country_exists = GAL
-			NOT = { is_in_faction_with = FRA }
+			GAL = {
+				NOT = { is_in_faction_with = FRA }
+			}
 		}
 		visible = {
 			has_completed_focus = GRU_NMDVP_SLAV_LAND_EXPANSION
@@ -3017,7 +3023,9 @@ GRU_germania_plan_decisions = {
 		available = {
 			is_subject = no
 			country_exists = POL
-			NOT = { is_in_faction_with = FRA }
+			POL = {
+				NOT = { is_in_faction_with = FRA }
+			}
 		}
 		visible = {
 			has_completed_focus = GRU_NMDVP_SLAV_LAND_EXPANSION
@@ -3110,7 +3118,9 @@ GRU_germania_plan_decisions = {
 		available = {
 			is_subject = no
 			country_exists = LIT
-			NOT = { is_in_faction_with = FRA }
+			LIT = {
+				NOT = { is_in_faction_with = FRA }
+			}
 		}
 		visible = {
 			has_completed_focus = GRU_NMDVP_SLAV_LAND_EXPANSION
@@ -3199,7 +3209,9 @@ GRU_germania_plan_decisions = {
 		available = {
 			is_subject = no
 			country_exists = HOL
-			NOT = { is_in_faction_with = FRA }
+			HOL = {
+				NOT = { is_in_faction_with = FRA }
+			}
 		}
 		visible = {
 			has_completed_focus = GRU_NMDVP_PAN_GERMANISM_RELOADED
@@ -3303,7 +3315,9 @@ GRU_germania_plan_decisions = {
 		available = {
 			is_subject = no
 			country_exists = BEL
-			NOT = { is_in_faction_with = FRA }
+			BEL = {
+				NOT = { is_in_faction_with = FRA }
+			}
 		}
 		visible = {
 			has_completed_focus = GRU_NMDVP_PAN_GERMANISM_RELOADED
@@ -3398,7 +3412,9 @@ GRU_germania_plan_decisions = {
 		available = {
 			is_subject = no
 			country_exists = FLN
-			NOT = { is_in_faction_with = FRA }
+			FLN = {
+				NOT = { is_in_faction_with = FRA }
+			}
 		}
 		visible = {
 			has_completed_focus = GRU_NMDVP_PAN_GERMANISM_RELOADED
@@ -3487,7 +3503,9 @@ GRU_germania_plan_decisions = {
 		available = {
 			is_subject = no
 			country_exists = WLL
-			NOT = { is_in_faction_with = FRA }
+			WLL = {
+				NOT = { is_in_faction_with = FRA }
+			}
 		}
 		visible = {
 			has_completed_focus = GRU_NMDVP_PAN_GERMANISM_RELOADED
@@ -3579,7 +3597,9 @@ GRU_germania_plan_decisions = {
 		available = {
 			is_subject = no
 			country_exists = LUX
-			NOT = { is_in_faction_with = FRA }
+			LUX = {
+				NOT = { is_in_faction_with = FRA }
+			}
 		}
 		visible = {
 			has_completed_focus = GRU_NMDVP_PAN_GERMANISM_RELOADED
@@ -3668,7 +3688,9 @@ GRU_germania_plan_decisions = {
 		available = {
 			is_subject = no
 			country_exists = DEN
-			NOT = { is_in_faction_with = FRA }
+			DEN = {
+				NOT = { is_in_faction_with = FRA }
+			}
 		}
 		visible = {
 			has_completed_focus = GRU_NMDVP_PAN_GERMANISM_RELOADED
@@ -3760,7 +3782,9 @@ GRU_germania_plan_decisions = {
 		available = {
 			is_subject = no
 			country_exists = ICE
-			NOT = { is_in_faction_with = FRA }
+			ICE = {
+				NOT = { is_in_faction_with = FRA }
+			}
 		}
 		visible = {
 			has_completed_focus = GRU_NMDVP_PAN_GERMANISM_RELOADED
@@ -6289,7 +6313,7 @@ GRU_kill_entente_decisions = {
 		}
 
 		fire_only_once = yes
-		cost = 50
+		cost = 100
 		days_remove = 30
 
 		ai_will_do = {
@@ -6362,7 +6386,7 @@ GRU_kill_entente_decisions = {
 		}
 
 		fire_only_once = yes
-		cost = 50
+		cost = 100
 		days_remove = 30
 
 		ai_will_do = {
@@ -6464,8 +6488,8 @@ GRU_kill_rivals_decisions = {
 		}
 
 		fire_only_once = no
-		cost = 50
-		days_remove = 14
+		cost = 100
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 100
@@ -6553,8 +6577,8 @@ GRU_kill_colonies_decisions = {
 		}
 
 		fire_only_once = no
-		cost = 50
-		days_remove = 14
+		cost = 100
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 100
@@ -6699,7 +6723,7 @@ GRU_kill_libleft_decisions = {
 		}
 
 		fire_only_once = no
-		cost = 50
+		cost = 100
 		days_remove = 30		
 
 		ai_will_do = {
@@ -11782,7 +11806,6 @@ GRU_stahlpakt_alliance_decisions = {
 
 		available = {
 			is_major = yes
-			has_war = no
 			is_subject = no
 			is_faction_leader = yes
 			NOT = { has_country_leader = { name = "Reinhard Heydrich" ruling_only = yes } }
@@ -11808,7 +11831,7 @@ GRU_stahlpakt_alliance_decisions = {
 		}
 
 		fire_only_once = no
-		cost = 50
+		cost = 100
 		ai_will_do = {
 			factor = 6
 		}
