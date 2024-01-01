@@ -1168,7 +1168,7 @@ GRU_siemens_schuckert2:0 "VEB Siemens-Schukert Verbessert"
 
 
 #####traits####
-gru_volksfuehrer:0 "\nVolksführer\n\n§gJosef Goebbels has assumed the title of Volksführer, meaning the leader of the people. For some this might seem trivial, but it is a clear show of his own political power.§!"
+gru_volksfuehrer:0 "\Volksführer\n\§gJosef Goebbels has assumed the title of Volksführer, meaning the leader of the people. For some this might seem trivial, but it is a clear show of his own political power.§!"
 gru_volksfuehrer_desc:0 "Josef Goebbels has assumed the title of Volksführer meaning the leader of the people, for some this might seem trivial but it is a clear show of his own political power."
 
 gru_master:0 "Master Of Europe"
