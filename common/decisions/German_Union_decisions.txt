@@ -2710,15 +2710,34 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 100
+			factor = 200
 			modifier = {
 				factor = 0
 				has_war = yes
 			}
 		}
 
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_pan_germanism_austria_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_austria_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_austria_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
 			declare_war_on = {	type = annex_everything	target = AUS }
 			every_state = {
 				limit = {
@@ -2812,8 +2831,27 @@ GRU_germania_plan_decisions = {
 			}
 		}
 
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_pan_germanism_swiss_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_swiss_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_swiss_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
 			declare_war_on = {	type = annex_everything	target = SWI }
 			151 = {
 				add_claim_by = ROOT
@@ -2906,8 +2944,27 @@ GRU_germania_plan_decisions = {
 			}
 		}
 
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_pan_germanism_bohemia_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_bohemia_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_bohemia_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
 			declare_war_on = {	type = annex_everything	target = CZE }
 			every_state = {
 				limit = {
@@ -3001,8 +3058,27 @@ GRU_germania_plan_decisions = {
 			}
 		}
 
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_pan_germanism_galicia_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
 		remove_effect = {  
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_galicia_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_galicia_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
 			declare_war_on = {	type = annex_everything	target = GAL }
 			every_state = {
 				limit = {
@@ -3055,7 +3131,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 100
+			factor = 150
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -3099,8 +3175,27 @@ GRU_germania_plan_decisions = {
 			}
 		}
 
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_pan_germanism_poland_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_poland_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_poland_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
 			declare_war_on = {	type = annex_everything	target = POL }
 			every_state = {
 				limit = {
@@ -3194,8 +3289,27 @@ GRU_germania_plan_decisions = {
 			}
 		}
 
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_pan_germanism_suwalki_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_suwalki_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_suwalki_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
 			declare_war_on = {	type = annex_everything	target = LIT }
 			655 = {
 				add_claim_by = ROOT
@@ -3285,8 +3399,27 @@ GRU_germania_plan_decisions = {
 			}
 		}
 
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_pan_germanism_dutch_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_dutch_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_dutch_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
 			declare_war_on = {	type = annex_everything	target = HOL }
 			866 = {
 				add_claim_by = ROOT
@@ -3391,8 +3524,27 @@ GRU_germania_plan_decisions = {
 			}
 		}
 
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_pan_germanism_belgian_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_belgian_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_belgian_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
 			declare_war_on = {	type = annex_everything	target = BEL }
 			6 = {
 				add_claim_by = ROOT
@@ -3488,8 +3640,27 @@ GRU_germania_plan_decisions = {
 			}
 		}
 
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_pan_germanism_flandern_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_flandern_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_flandern_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
 			declare_war_on = {	type = annex_everything	target = FLN }
 			6 = {
 				add_claim_by = ROOT
@@ -3579,8 +3750,27 @@ GRU_germania_plan_decisions = {
 			}
 		}
 
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_pan_germanism_wallonia_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_wallonia_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_wallonia_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
 			declare_war_on = {	type = annex_everything	target = WLL }
 			34 = {
 				add_claim_by = ROOT
@@ -3673,8 +3863,27 @@ GRU_germania_plan_decisions = {
 			}
 		}
 
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_pan_germanism_luxembourg_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_luxembourg_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_luxembourg_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
 			declare_war_on = {	type = annex_everything	target = LUX }
 			8 = {
 				add_claim_by = ROOT
@@ -3764,8 +3973,27 @@ GRU_germania_plan_decisions = {
 			}
 		}
 
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_pan_germanism_denmark_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_denmark_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_denmark_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
 			declare_war_on = {	type = annex_everything	target = DEN }
 			99 = {
 				add_claim_by = ROOT
@@ -3858,8 +4086,27 @@ GRU_germania_plan_decisions = {
 			}
 		}
 
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_pan_germanism_iceland_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_iceland_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_iceland_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
 			declare_war_on = {	type = annex_everything	target = ICE }
 			100 = {
 				add_claim_by = ROOT
@@ -6317,7 +6564,7 @@ GRU_kill_entente_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 100
+			factor = 50
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -6390,7 +6637,7 @@ GRU_kill_entente_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 100
+			factor = 50
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -6492,7 +6739,7 @@ GRU_kill_rivals_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 100
+			factor = 50
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -6581,7 +6828,7 @@ GRU_kill_colonies_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 100
+			factor = 50
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -6625,8 +6872,27 @@ GRU_kill_colonies_decisions = {
 			}
 		}
 
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_attack_german_colonies_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_attack_german_colonies_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_attack_german_colonies_decision [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
 			declare_war_on = {	type = annex_everything	target = FROM }
 		}
 	}
@@ -6727,7 +6993,7 @@ GRU_kill_libleft_decisions = {
 		days_remove = 30		
 
 		ai_will_do = {
-			factor = 100
+			factor = 50
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -9992,6 +10258,14 @@ GRU_lebensraum_decisions = {
 	GRU_lebensraum_conquest_decision = {
 		icon = generic_prepare_civil_war
 
+		available = {
+			OR = {
+				is_neighbor_of = FROM
+				any_allied_country = {
+					is_neighbor_of = FROM
+				}
+			}
+		}
 		visible = {
 			has_completed_focus = GRU_NMDVP_LEBENSRAUM
 			can_declare_war_on = FROM
@@ -10051,7 +10325,7 @@ GRU_lebensraum_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 100
+			factor = 75
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -10095,8 +10369,27 @@ GRU_lebensraum_decisions = {
 			}
 		}
 
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_lebensraum_conquest_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_lebensraum_conquest_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_lebensraum_conquest_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
 			declare_war_on = {	type = annex_everything	target = FROM }
 		}
 	}
