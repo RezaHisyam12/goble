@@ -522,7 +522,7 @@ RUS_eyes_on_transamur = {
 		is_subject = no
 	}
 	enable = {
-		can_declare_war_on = TRM
+		is_neighbor_of = TRM
 	}
 	abort_when_not_enabled = yes
 
@@ -534,7 +534,7 @@ RUS_eyes_on_transamur = {
 	ai_strategy = {
 		type = conquer
 		id = "TRM"
-		value = 10
+		value = 100
 	}
 	ai_strategy = {
 		type = antagonize
