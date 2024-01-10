@@ -550,11 +550,6 @@ default_tank_production = {
 		value = 15
 	}
 	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = super_heavy_tank_chassis
-		value = 10
-	}
-	ai_strategy = {
 		type = role_ratio
 		id = armor_role
 		value = 15

@@ -539,7 +539,7 @@ RUS_eyes_on_transamur = {
 	ai_strategy = {
 		type = antagonize
 		id = "TRM"
-		value = 200
+		value = 300
 	}
 }
 
@@ -557,33 +557,6 @@ russia_focus_less_on_transamur = {
 		type = front_unit_request
 		tag = TRM
 		value = -10
-	}
-}
-
-TRM_eyes_on_russia = {
-	allowed = {
-		tag = TRM
-	}
-	enable = {
-		can_declare_war_on = RUS
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = contain
-		id = "RUS"
-		value = 100
-	}
-	ai_strategy = {
-		type = conquer
-		id = "RUS"
-		value = 200
-	}
-	ai_strategy = {
-		type = antagonize
-		id = "RUS"
-		value = 200
 	}
 }
 

@@ -54,7 +54,7 @@ default_railway_gun_management = {
 		num_divisions < 90
 	}
 
-	ai_strategy = { # This will add the specified value to the RAILWAY_GUN_PRODUCTION_BASE_DIVISIONS_RATIO_PERCENT define and use that as the desired railway guns / divisions ratio (in %)
+	ai_strategy = 
 		type = railway_gun_divisions_ratio
 		value = 4
 	}

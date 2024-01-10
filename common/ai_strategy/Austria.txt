@@ -26,34 +26,6 @@ austria_worried_about_france = {
 	}
 }
 
-austria_worried_about_gru = {
-	allowed = {
-		tag = AUS
-	}
-	enable = {
-		is_subject = no
-		strength_ratio = { tag = GRU ratio < 0.5 }
-		NOT = { is_in_faction_with = GRU }
-	}
-	abort = {
-		OR = {
-			strength_ratio = { tag = GRU ratio > 0.5 }
-			NOT = { is_faction_leader = yes }
-			is_in_faction_with = GRU
-		}
-	}
-	ai_strategy = {
-		type = contain
-		id = "GRU"
-		value = 100
-	}
-	ai_strategy = {
-		type = antagonize
-		id = "GRU"
-		value = 100
-	}
-}
-
 austria_worried_about_soviets = {
 	allowed = {
 		tag = AUS
@@ -280,6 +252,11 @@ AUS_crush_ser = {
 		id = SER
 		value = 100
 	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = GRU
+		value = -20
+	}
 }
 
 AUS_crownlands_crush_ser = {
@@ -304,6 +281,11 @@ AUS_crownlands_crush_ser = {
 		type = conquer
 		id = SER
 		value = 1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = GRU
+		value = -20
 	}
 	ai_strategy = {
 		type = front_unit_request
@@ -393,6 +375,11 @@ AUS_crush_rom = {
 	}
 	ai_strategy = {
 		type = front_unit_request
+		tag = GRU
+		value = -20
+	}
+	ai_strategy = {
+		type = front_unit_request
 		id = ROM
 		value = 100
 	}
@@ -423,7 +410,157 @@ AUS_crownlands_crush_rom = {
 	}
 	ai_strategy = {
 		type = front_unit_request
+		tag = GRU
+		value = -20
+	}
+	ai_strategy = {
+		type = front_unit_request
 		id = ROM
+		value = 100
+	}
+}
+
+AUS_watch_ukraine = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		NOT = { is_ally_with = UKR }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = contain
+		id = "UKR"
+		value = 100
+	}
+}
+
+AUS_crownlands_watch_ukraine = {
+	allowed = {
+		OR = {
+			original_tag = CZE
+			original_tag = HUN
+			original_tag = SLO
+			original_tag = TRS
+			original_tag = CRO
+			original_tag = BOS
+			original_tag = GAL
+		}
+	}
+	enable = {
+		is_in_faction_with = AUS
+		NOT = { is_ally_with = UKR }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = contain
+		id = "UKR"
+		value = 100
+	}
+}
+
+AUS_crush_ukraine = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		has_war_with = UKR
+		NOT = { has_war_with = GRU }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = UKR
+		value = 1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = GRU
+		value = -30
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = UKR
+		value = 100
+	}
+}
+
+AUS_crownlands_crush_ukraine = {
+	allowed = {
+		OR = {
+			original_tag = CZE
+			original_tag = HUN
+			original_tag = SLO
+			original_tag = TRS
+			original_tag = CRO
+			original_tag = BOS
+			original_tag = GAL
+		}
+	}
+	enable = {
+		has_war_with = UKR
+		is_in_faction_with = AUS
+		NOT = { has_war_with = GRU }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = UKR
+		value = 1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = GRU
+		value = -30
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = UKR
+		value = 100
+	}
+}
+
+AUS_watch_gru = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		NOT = { is_ally_with = GRU }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = contain
+		id = "GRU"
+		value = 100
+	}
+}
+
+AUS_crownlands_watch_gru = {
+	allowed = {
+		OR = {
+			original_tag = CZE
+			original_tag = HUN
+			original_tag = SLO
+			original_tag = TRS
+			original_tag = CRO
+			original_tag = BOS
+			original_tag = GAL
+		}
+	}
+	enable = {
+		is_in_faction_with = AUS
+		NOT = { is_ally_with = GRU }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = contain
+		id = "GRU"
 		value = 100
 	}
 }

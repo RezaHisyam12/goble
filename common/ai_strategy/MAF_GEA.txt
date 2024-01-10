@@ -21,6 +21,30 @@ MAF_hates_socialists = {
 	}
 }
 
+MAF_hates_france = {
+	reversed = yes
+
+	enable_reverse = {
+		MAF = {
+			is_subject = no
+			has_socialist_government = no
+		}
+		FRA = { is_faction_leader = yes }
+	}
+	enable = {
+		is_in_faction_with = FRA
+	}
+	abort_when_not_enabled = yes
+
+	target_array = FRA.faction_members
+
+	ai_strategy = {
+		type = antagonize
+		id = FRA
+		value = 300
+	}
+}
+
 KR_keep_MAF_units_home = {
 	reversed = yes
 

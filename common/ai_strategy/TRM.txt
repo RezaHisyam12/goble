@@ -1,0 +1,25 @@
+TRM_eyes_on_russia = {
+	allowed = {
+		tag = TRM
+	}
+	enable = {
+		is_neighbor_of = RUS
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = contain
+		id = "RUS"
+		value = 100
+	}
+	ai_strategy = {
+		type = conquer
+		id = "RUS"
+		value = 500
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "RUS"
+		value = 1000
+	}
+}
