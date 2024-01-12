@@ -245,6 +245,30 @@ japan_protect_manchuria = {
 	}
 }
 
+JAP_dont_spread_out_troops_if_fighting_china = {
+	reversed = yes
+
+	enable_reverse = {
+		JAP = {
+			has_war = yes
+			any_enemy_country = { is_chinese_tag = yes }
+		}
+	}
+	enable = {
+		is_in_faction_with = JAP
+		NOT = { is_chinese_tag = yes }
+	}
+	abort_when_not_enabled = yes
+
+	target_array = JAP.faction_members
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = JAP
+		value = 100
+	}
+}
+
 JAP_exploit_naval_invasions = {
 	allowed = {
 		is_han_chinese_tag = yes
