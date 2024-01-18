@@ -297,7 +297,7 @@ ideas = {
 
 		AUS_modern_army = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_modern_army" }
-			picture = generic_manpower_bonus
+			picture = AUS_army_spirit
 			allowed = { always = no }
 			modifier = {
 				army_core_attack_factor = 0.05
@@ -343,7 +343,7 @@ ideas = {
 		AUS_modern_army_hickmann = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_modern_army_hickmann" }
 			name = AUS_modern_army
-			picture = generic_manpower_bonus
+			picture = AUS_army_spirit
 			allowed = { always = no }
 			modifier = {
 				army_core_attack_factor = 0.05
@@ -376,7 +376,7 @@ ideas = {
 		AUS_modern_army_hickmann_2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_modern_army_hickmann_2" }
 			name = AUS_modern_army
-			picture = generic_manpower_bonus
+			picture = AUS_army_spirit
 			allowed = { always = no }
 			modifier = {
 				army_core_attack_factor = 0.1
@@ -387,7 +387,7 @@ ideas = {
 		AUS_modern_army_von_hubicki = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_modern_army_von_hubicki" }
 			name = AUS_modern_army
-			picture = generic_armor
+			picture = RUS_tank_academy
 			allowed = { always = no }
 			modifier = {
 				army_core_attack_factor = 0.05
@@ -401,7 +401,7 @@ ideas = {
 		AUS_modern_army_von_hubicki_2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_modern_army_von_hubicki_2" }
 			name = AUS_modern_army
-			picture = generic_armor
+			picture = RUS_tank_academy
 			allowed = { always = no }
 			modifier = {
 				army_core_attack_factor = 0.05
@@ -416,7 +416,7 @@ ideas = {
 		AUS_modern_army_von_hubicki_3 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_modern_army_von_hubicki_3" }
 			name = AUS_modern_army
-			picture = generic_armor
+			picture = RUS_tank_academy
 			allowed = { always = no }
 			modifier = {
 				army_core_attack_factor = 0.1
