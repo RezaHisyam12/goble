@@ -575,7 +575,7 @@ shared_focus = {
 	#R.v.A.
 shared_focus = {
 		id = GRU_National_Corporatism
-		icon = GRU_National_corporate
+		icon = GRU_National_Corporatism
 		relative_position_id = GRU_nmdvp_victory
 		x = -6
 		y = 2

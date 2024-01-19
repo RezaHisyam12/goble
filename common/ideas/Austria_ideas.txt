@@ -288,7 +288,7 @@ ideas = {
 		AUS_k_u_k_armee_bonus = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_k_u_k_armee_bonus" }
 			allowed = { always = no }
-			picture = generic_infantry_bonus
+			picture = AUS_mountaineers
 			modifier = {
 				conscription = 0.025
 				surrender_limit = 0.1
@@ -438,6 +438,15 @@ ideas = {
 			}
 		}
 
+		AUS_SLOintegration = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_SLOintegration" }
+			allowed = { always = no }
+			picture = FRA_matignon_agreements
+			modifier = {
+				political_power_cost = 0.1
+			}
+		}
+
 		AUS_military_integration = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_military_integration" }
 			picture = MEX_politicised_army_2
@@ -455,7 +464,7 @@ ideas = {
 			modifier = {
 				political_power_gain = 0.05
 				stability_weekly = 0.005
-				industrial_capacity_factory = 0.10
+				global_building_slots_factor = 0.1
 				consumer_goods_factor = -0.15
 			}
 			picture = CZE_tabor
@@ -467,7 +476,7 @@ ideas = {
 			modifier = {
 				stability_weekly = 0.003
 				political_power_gain = 0.10
-				monthly_population = 0.15
+				monthly_population = 0.25
 				consumer_goods_factor = -0.20
 			}
 			picture = CZE_tabor
@@ -478,8 +487,8 @@ ideas = {
 			allowed = { always = no }
 			picture = big_entente_idea
 			modifier = {
-				stability_factor = 0.05
-				conscription_factor = 0.01
+				stability_factor = 0.10
+				conscription_factor = 0.015
 				land_reinforce_rate = 0.05
 				consumer_goods_factor = -0.10
 			}

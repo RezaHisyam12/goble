@@ -3785,57 +3785,36 @@ rotermorgenmisc.1004.b:0 "No, of course not! We are not petty Reactionaries!"
 germanic_socialism_subtype:0 "National Marxism"
 germanic_socialism_subtype_desc:0 "§Y(National Marxism)§!\n\nCombining fierce Nationalist and Supremacist notions with Marxist ideology, National Marxism calls for the state to coalesce around one central figure - the Volksführer - as the people as a whole progress towards a unified future. Fiercely Totalitarian and Authoritarian beyond compare, it stresses the importance of scientific advancement, racial purity, Marxist economics, antitheism, cooperation between the masses, total nationalization of every aspect of the state, and national pride bordering on zealotry. National Marxism is detested by the wider Leftist world but still fights for the Revolution - a pure Revolution - just the same."
 
- AUS_financial_ties_broken: "Austro-Hungarian Ties Broken"
- AUS_financial_ties_broken_desc: "The Crown of Hungary refuses to pay their taxes into the common coffers for the common ministries.\n\nThey are still discontent with the formation of the Kingdom of Illyria as a resolution of the South Slavic revolts of 1926, and see themselves as betrayed by the Viennese government. They wish to be compensated for the loss of the Croatian lands."
+AUS_financial_ties_broken: "Austro-Hungarian Ties Broken"
+AUS_financial_ties_broken_desc: "The Crown of Hungary refuses to pay their taxes into the common coffers for the common ministries.\n\nThey are still discontent with the formation of the Kingdom of Illyria as a resolution of the South Slavic revolts of 1926, and see themselves as betrayed by the Viennese government. They wish to be compensated for the loss of the Croatian lands."
 
- HUN_financial_ties_broken: "Austro-Hungarian Ties Broken"
- HUN_slovak_demonstrations: "Slovak Pro-Independence Demonstrations"
- HUN_transylvanian_demonstrations: "Transylvanian Pro-Independence Demonstrations"
+AUS_black_monday: "Aftermath of Black Monday"
+AUS_black_monday_cs-1: "Aftermath of Black Monday"
+AUS_black_monday_cs-2: "Aftermath of Black Monday"
+AUS_black_monday_cs-3: "Aftermath of Black Monday"
+AUS_tuned_economy: "Tuned Economy"
 
- AUS_paid_reparations: "Paid Hungary Reparations"
+AUS_black_monday_sdap-1: "Aftermath of Black Monday"
+AUS_black_monday_sdap-2: "Aftermath of Black Monday"
+AUS_black_monday_sdap-3: "Aftermath of Black Monday"
+AUS_workers_spirit: "Workers' Spirit"
 
- AUS_vienna_circle: "The Vienna Circle"
- AUS_vienna_circle_desc: "The Vienna Circle is a group of philosophers and scientists, drawn from the natural and social sciences, logic and mathematics, who have met regularly at the University of Vienna since 1924.\n\nThe central thought behind their activities was "Exact Thinking on the Edge of Doom"."
+AUS_imperial_development_scheme: "Imperial Development Scheme"
+AUS_kaiser_faith: "Faith in the Kaiser"
+AUS_kaiser_faith_desc: "The people have come to trust in the new Realm. Gott erhalte unseren Kaiser!"
+AUS_military_integration: "Military Integration"
 
- austrian_research_name: "The Vienna Circle"
- austrian_research_desc: "The Vienna Circle is a group of philosophers and scientists, drawn from the natural and social sciences, logic and mathematics, who have met regularly at the University of Vienna since 1924.\n\nThe central thought behind their activities was "Exact Thinking on the Edge of Doom"."
+AUS_DNF_political_instability: "Political Instability"
+AUS_DNF_political_instability_desc: "The National Personal Autonomy Principle is in place. The many ethnicities of Austria are currently re-organising them in nation-parties, leaving the political landscape a chaos. Such a radical change was sure to come with a lot of instability, but even sceptics didn't anticipate it being so bad."
+AUS_DNF_political_instability-1: "Political Instability"
+AUS_DNF_political_instability-1_desc: "The National Personal Autonomy Principle is in place. The many ethnicities of Austria are currently re-organising them in nation-parties, leaving the political landscape a chaos. Such a radical change was sure to come with a lot of instability, but even sceptics didn't anticipate it being so bad."
+AUS_DNF_political_instability-2: "Political Instability"
+AUS_DNF_political_instability-2_desc: "The National Personal Autonomy Principle is in place. The many ethnicities of Austria are currently re-organising them in nation-parties, leaving the political landscape a chaos. Such a radical change was sure to come with a lot of instability, but even sceptics didn't anticipate it being so bad."
 
- AUS_socialist_promises: "Socialist Promises"
-
- AUS_divided_society: "Divided Society"
- AUS_divided_society_desc: "Almost half of the population is unhappy with the result of the elections. We should fix this."
-
- AUS_black_monday: "Aftermath of Black Monday"
- AUS_black_monday_cs-1: "Aftermath of Black Monday"
- AUS_black_monday_cs-2: "Aftermath of Black Monday"
- AUS_black_monday_cs-3: "Aftermath of Black Monday"
- AUS_tuned_economy: "Tuned Economy"
-
- AUS_black_monday_sdap-1: "Aftermath of Black Monday"
- AUS_black_monday_sdap-2: "Aftermath of Black Monday"
- AUS_black_monday_sdap-3: "Aftermath of Black Monday"
- AUS_workers_spirit: "Workers' Spirit"
-
- AUS_imperial_development_scheme: "Imperial Development Scheme"
-
- AUS_kaiser_faith: "Faith in the Kaiser"
- AUS_kaiser_faith_desc: "The people have come to trust in the new Realm. Gott erhalte unseren Kaiser!"
-
- AUS_military_integration: "Military Integration"
-
- AUS_DNF_political_instability: "Political Instability"
- AUS_DNF_political_instability_desc: "The National Personal Autonomy Principle is in place. The many ethnicities of Austria are currently re-organising them in nation-parties, leaving the political landscape a chaos. Such a radical change was sure to come with a lot of instability, but even sceptics didn't anticipate it being so bad."
- AUS_DNF_political_instability-1: "Political Instability"
- AUS_DNF_political_instability-1_desc: "The National Personal Autonomy Principle is in place. The many ethnicities of Austria are currently re-organising them in nation-parties, leaving the political landscape a chaos. Such a radical change was sure to come with a lot of instability, but even sceptics didn't anticipate it being so bad."
- AUS_DNF_political_instability-2: "Political Instability"
- AUS_DNF_political_instability-2_desc: "The National Personal Autonomy Principle is in place. The many ethnicities of Austria are currently re-organising them in nation-parties, leaving the political landscape a chaos. Such a radical change was sure to come with a lot of instability, but even sceptics didn't anticipate it being so bad."
-
- AUS_modern_army: "Modernisation of the Common Army"
- AUS_artillery_production: "Victory Through Firepower"
-
- AUS_kuk_fliegerkorps: "k.u.k. Fliegerkorps"
-
- AUS_crownland_revolt: "Crownlands in Revolt"
+AUS_modern_army: "Modernisation of the Common Army"
+AUS_artillery_production: "Victory Through Firepower"
+AUS_kuk_fliegerkorps: "k.u.k. Fliegerkorps"
+AUS_crownland_revolt: "Crownlands in Revolt"
 
 gru_HYP:0 "Hypoborea"
 gru_VSJ:0 "Judea"
@@ -3851,7 +3830,7 @@ AUS_hungary_becomes_crownland: "§H[?tag_to_release.GetName]§! will be reorgani
 AUS_crownland_revolt: "Crownlands in Revolt"
 FRA_vanguard:0 "Jacobinism"
 
-AUS_usa:0 "Union No Longer in Name"
-AUS_danubian_fed:0 "A Federation of Equals"
-AUS_imperial_together:0 "Cisleithania Together"
-AUS_drastic_together:0 "Cisleithania at War"
+AUS_usa: "Union No Longer in Name"
+AUS_danubian_fed: "A Federation of Equals"
+AUS_imperial_together: "Cisleithania Together"
+AUS_drastic_together: "Cisleithania at War"

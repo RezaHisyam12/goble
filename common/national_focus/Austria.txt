@@ -3405,7 +3405,7 @@ focus_tree = {
 
 			set_autonomy = {
 				target = HUN
-				autonomy_state = crownland
+				autonomy_state = kr_occupied_puppet
 			}
 		}
 		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
@@ -3558,7 +3558,7 @@ focus_tree = {
 
 			set_autonomy = {
 				target = HUN
-				autonomy_state = kr_occupied_puppet
+				autonomy_state = crownland
 			}
 		}
 		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
