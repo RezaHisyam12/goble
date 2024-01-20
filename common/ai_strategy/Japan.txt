@@ -1,51 +1,49 @@
-# befriend
-# conquer
-# antagonize
-# build_ship
-# build_army
-# unit_ratio
-# build_building
-# research_tech
-# garrison
-# protect
-# influence
-
-japan_hates_china = {
+#################
+### Diplomacy ###
+#################
+JAP_hates_reichspakt = {
 	reversed = yes
-	allowed = {
-		is_chinese_tag = yes
-	}
+
 	enable_reverse = {
-		JAP = { is_subject = no }
-	}
-	enable = {
-		OR = {
-			is_neighbor_of = JAP
-			tag = FNG
-			tag = event_target:current_china_leader
-			AND = {
-				is_neighbor_of = FNG
-				FNG_JAP_hostile = no
+		JAP = {
+			is_faction_leader = yes
+			GER = { #nested because of the PREV in both_socialist_or_both_not_socialist
+				is_faction_leader = yes
+				both_socialist_or_both_not_socialist = yes
 			}
 		}
-		NOT = {
-			is_working_with_JAP = yes
-			is_in_faction_with = JAP
-			is_subject_of = JAP
-		}
 	}
-	target_array = "global.china_tags_array"
-
+	enable = {
+		is_in_faction_with = GER
+	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = {
-		type = conquer
-		id = "JAP"
-		value = 100
-	}
+	target_array = GER.faction_members
+
 	ai_strategy = {
 		type = antagonize
-		id = "JAP"
+		id = JAP
+		value = 1000
+	}
+}
+JAP_hates_chinese_claimants = {
+	reversed = yes
+
+	enable_reverse = {
+		country_exists = JAP
+		JAP = { is_subject = no }
+		KOR = { any_core_state = { is_owned_by = JAP } }
+	}
+	enable = {
+		NOT = { is_ally_with = JAP }
+	}
+	abort_when_not_enabled = yes
+
+	target_array = global.china_tags_array
+
+	ai_strategy = {
+		type = antagonize
+		id = JAP
 		value = 1000
 	}
 }
@@ -120,21 +118,24 @@ japan_supports_sphere = {
 	}
 }
 
-japan_ignore_hawaii = {
-	allowed = {
-		tag = JAP
-	}
-	enable = {
-		has_completed_focus = JAP_extend_pacific_security_zone
-		country_exists = HAW
-	}
+################
+### Military ###
+################
 
+JAP_naval_focus = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = { always = yes }
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = ignore_claim
-		id = "HAW"
-		value = 1
+		type = dockyard_to_military_factory_ratio
+		value = 40
+	}
+	ai_strategy = {
+		type = naval_invasion_focus
+		value = 55
 	}
 }
 
@@ -150,98 +151,6 @@ JAP_home_islands_are_safe_for_now = {
 	ai_strategy = {
 		type = garrison
 		value = -25
-	}
-}
-
-#japan_ignore_gea = {
-#	allowed = {
-#		tag = JAP
-#	}
-#	enable = {
-#		has_completed_focus = JAP_claim_colonies
-#		country_exists = GEA
-#	}
-#
-#	abort_when_not_enabled = yes
-#
-#	ai_strategy = {
-#		type = ignore_claim
-#		id = "GEA"
-#		value = 1
-#	}
-#}
-
-#japan_ignore_dei = {
-#	allowed = {
-#		tag = JAP
-#	}
-#	enable = {
-#		has_completed_focus = JAP_claim_colonies
-#		country_exists = DEI
-#	}
-#
-#	abort_when_not_enabled = yes
-#
-#	ai_strategy = {
-#		type = ignore_claim
-#		id = "DEI"
-#		value = 1
-#	}
-#}
-
-#japan_ignore_insulindia = {
-#	allowed = {
-#		tag = JAP
-#	}
-#	enable = {
-#		has_completed_focus = JAP_claim_colonies
-#		country_exists = INS
-#	}
-#
-#	abort_when_not_enabled = yes
-#
-#	ai_strategy = {
-#		type = ignore_claim
-#		id = "INS"
-#		value = 1
-#	}
-#}
-
-japan_korea_is_paramount = {
-	allowed = {
-		tag = JAP
-	}
-	enable = {
-		OR = {
-			owns_state = 527
-			owns_state = 525
-		}
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = area_priority
-		id = korea
-		value = 50
-	}
-}
-
-japan_protect_manchuria = {
-	allowed = {
-		tag = JAP
-	}
-	enable = {
-		has_war = yes
-		716 = { is_owned_by_ROOT_or_war_ally = yes }
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = area_priority
-		id = manchuria
-		value = 50
 	}
 }
 
@@ -292,19 +201,3 @@ JAP_exploit_naval_invasions = {
 	}
 }
 
-JAP_naval_focus = {
-	allowed = {
-		original_tag = JAP
-	}
-	enable = { always = yes }
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = dockyard_to_military_factory_ratio
-		value = 40
-	}
-	ai_strategy = {
-		type = naval_invasion_focus
-		value = 55
-	}
-}
