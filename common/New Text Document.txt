@@ -1,9 +1,57 @@
-countery tag
-game rules
-idelogi
-intelligence
-"scripted gui/local"
+	option = { #Danubian Republic of Councils II
+		log = "[GetLogInfo]: event annex.14 option annex.1020.c"
+		name = annex.1020.c
+		trigger = {
+			is_germany_or_splinter_tag = no
+			AUS = { NOT = { has_completed_focus = AUS_military_occupation } }
+			43 = { #Budapest
+				is_owned_by = ROOT
+				is_claim_or_core_of_ROOT = no
+			}
+		}
+		ai_chance = { base = 80 }
+		set_temp_variable = { tag_to_release = AUS }
+		var:tag_to_release = {
+			set_cosmetic_tag = AUS_danubia
+			add_state_core = 43 #Central Hungary
+			add_state_core = 154 #Alfold
+			add_state_core = 155 #Transdanubia
+			add_state_core = 664 #Miskolc
+			add_state_core = 784 #Burgenland
+		}
+		784 = { clear_retain_state = yes }
+		release_targeted_tag_nocosmetic = yes
+		recheck_annexations = yes
+	}
+
+	option = { #old idea
+		log = "[GetLogInfo]: event annex.14 option annex.integration"
+		name = annex.integration
+		trigger = {
+			is_germany_or_splinter_tag = yes
+		}
+		ai_chance = { base = 100 }
+		every_state = {
+			limit = { is_core_austria = yes }
+			add_claim_of_ROOT = yes
+			enable_state_integration_50_compliance = yes
+		}
+		recheck_annexations = yes
+		hidden_effect = {
+			1123 = { enable_state_integration_80_compliance = yes } #Pressburg
+		}
+	}
+	option = { #occupy
+		log = "[GetLogInfo]: event annex.14 option annex.occupation"
+		name = annex.occupation
+		trigger = {
+			is_germany_or_splinter_tag = no
+		}
+		ai_chance = { base = 0 }
+		set_country_flag = AUS_CONQ
+		occupy_medium_country = yes
+		recheck_annexations = yes
+	}
+}
 
 
-
-GRU_pan_germanism

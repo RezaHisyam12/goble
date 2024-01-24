@@ -2109,15 +2109,9 @@ focus_tree = {
 		available = {
 			has_government = paternal_autocrat
 			NOT = {
-				has_war = yes
 				has_subject = SVK
 				has_subject = TRS
 				has_subject = HUN
-			}
-			OR = {
-				has_country_flag = AUS_slovakia_occupied
-				has_country_flag = AUS_transylvania_occupied
-				has_country_flag = AUS_hungary_occupied
 			}
 		}
 
@@ -2147,15 +2141,45 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_military_occupation"
-			custom_effect_tooltip = AUS_military_occupation_tooltip
-			set_politics = {
-				ruling_party = paternal_autocrat
+			add_state_core = 1123 #Pressburg
+			every_state = {
+				limit = {
+					OR = {
+						region = 22 #Bohemia
+						region = 27 #Hungary
+						region = 143 #Northern Balkans
+						region = 144 #Transylvania
+						region = 145 #Slovakia
+						is_galicia = yes
+						is_core_of = SLO
+						is_core_of = CZE
+						is_core_of = GAL
+						is_core_of = CRO
+						is_core_of = TRS
+					}
+					NOT = { is_core_of = ROOT }
+				}
+				add_claim_by = ROOT
 			}
+			custom_effect_tooltip = AUS_military_occupation_tooltip
+			custom_effect_tooltip = tooltip_white_line
 			add_popularity = {
 				ideology = paternal_autocrat
 				popularity = 0.2
 			}
 			add_political_power = -100
+			if = {
+				limit = { has_idea = AUS_financial_ties_broken }
+				remove_ideas = AUS_financial_ties_broken
+			}
+			if = {
+				limit = { HUN = { has_idea = HUN_financial_ties_broken } }
+				HUN = { remove_ideas = HUN_financial_ties_broken }
+			}
+			custom_effect_tooltip = tooltip_white_line
+			set_politics = {
+				ruling_party = paternal_autocrat
+			}
 			hidden_effect = {
 				CZE = {
 					country_event = {
@@ -2163,7 +2187,6 @@ focus_tree = {
 						days = 7
 					}
 				}
-				set_cosmetic_tag = AUS_AHE
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2501,12 +2524,26 @@ focus_tree = {
 
 		relative_position_id = AUS_military_occupation
 
+		available = {
+			has_war = no
+		}
+
 		prerequisite = {
 			focus = AUS_military_occupation
 		}
 
+		ai_will_do = { factor = 100 }
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_the_new_Empire"
+			every_owned_state = {
+				limit = {
+					is_claimed_by = ROOT
+					has_resistance = yes
+				}
+				add_compliance = 25
+				add_resistance = -10
+			}
 			add_ideas = AUS_kaiser_faith_military_occupation
 			add_popularity = {
 				ideology = paternal_autocrat
@@ -6733,6 +6770,382 @@ focus_tree = {
 				set_popularities = {
 					national_populist = 100
 				}
+			}
+		}
+	}
+
+	##################
+	### HRE ###
+	##################
+
+	focus = {
+		id = AUS_hre
+		text = AUS_hre
+		icon = GFX_GRU_Federation_Finish
+		cost = 5.00
+		x = 46
+		y = 7
+			available = {
+					OR = {
+					has_country_leader = {
+							ruling_only = yes
+							name = "Karl I"
+						}
+					has_country_leader = {
+							ruling_only = yes
+							name = "Otto"
+						}
+				}
+			}
+			available = {
+					OR = {
+							has_government = paternal_autocrat
+						}
+				}
+			available = {
+					NOT = {
+						is_subject = yes
+					}
+			}		
+			completion_reward = {
+					log = "[GetDateText]: [Root.GetName]: Focus AUS_hre"
+					custom_effect_tooltip = AUS_start_hre_tooltip
+					add_political_power = 150
+					increase_ruling_party_popularity_by_5 = yes
+				}
+	}
+	focus = {
+		id = AUS_national_rebirth
+		text = AUS_national_rebirth
+		icon = GFX_GRU_Protector_Europe
+		cost = 5.00
+		prerequisite = {
+			focus = AUS_hre
+		}
+		x = 46
+		y = 8
+			available = {
+					OR = {
+							has_government = paternal_autocrat
+						}
+				}
+			available = {
+					NOT = {
+						is_subject = yes
+					}
+			}
+			completion_reward = {
+					log = "[GetDateText]: [Root.GetName]: Focus AUS_national_rebirth"
+					custom_effect_tooltip = AUS_national_rebirth_tooltip
+					add_ideas = AUS_national_rebirth_idea
+				}
+
+	}
+	focus = {
+		id = AUS_avenge
+		text = AUS_avenge
+		icon = GFX_GRU_Total_War
+		cost = 5.00
+		prerequisite = {
+			focus = AUS_national_rebirth
+		}
+		x = 46
+		y = 9
+		ai_will_do = { 
+			factor = 10
+			modifier = {
+				factor = 0
+				date < 1942.1.1
+				}
+			}
+			available = {
+					OR = {
+							has_government = paternal_autocrat
+						}
+				}
+			available = {
+					NOT = {
+						is_subject = yes
+					}
+			}
+			completion_reward = {
+					log = "[GetDateText]: [Root.GetName]: Focus AUS_avenge"
+					custom_effect_tooltip = AUS_hreantium
+					add_war_support = 0.05
+					create_wargoal = {
+							target = GER
+							type = annex_everything
+						}
+					create_wargoal = {
+							target = GRU
+							type = annex_everything
+						}
+					create_wargoal = {
+							type = annex_everything
+							target = CZE
+						}
+					create_wargoal = {
+							type = annex_everything
+							target = SWI
+						}
+				}
+
+	}
+	focus = {
+		id = AUS_art_of_war
+		text = AUS_art_of_war
+		icon = GFX_GRU_Generic_Fiery_Charge
+		cost = 5.00
+		prerequisite = {
+			focus = AUS_national_rebirth
+		}
+		x = 44
+		y = 9
+			available = {
+					OR = {
+							has_government = paternal_autocrat
+						}
+				}
+			available = {
+					NOT = {
+						is_subject = yes
+					}
+			}
+			completion_reward = {
+					log = "[GetDateText]: [Root.GetName]: Focus AUS_art_of_war"
+					add_ideas = war_economy
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 2500
+					}
+					add_doctrine_cost_reduction = {
+	name = land_doc_bonus
+	cost_reduction = 0.5
+	uses = 1
+	category = land_doctrine
+						}
+						
+					1137 = {
+							add_building_construction = {
+									type = bunker
+									province = 11666
+									level = 3
+								}
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = arms_factory
+									level = 3
+									instant_build = yes
+								}
+						}
+	
+					775 = {
+							add_building_construction = {
+									type = bunker
+									province = 13575
+									level = 3
+								}
+							add_building_construction = {
+									type = bunker
+									province = 9679
+									level = 3
+								}
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+								type = arms_factory
+								level = 3
+								instant_build = yes
+								}
+						}
+					39 = {
+							add_building_construction = {
+									type = bunker
+									province = 6675
+									level = 3
+								}
+							add_building_construction = {
+									type = bunker
+									province = 9630
+									level = 3
+								}
+							add_building_construction = {
+									type = bunker
+									province = 9633
+									level = 3
+								}
+							add_extra_state_shared_building_slots = 3
+							add_building_construction = {
+									type = arms_factory
+									level = 3
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = AUS_orthodox_defence
+		text = AUS_orthodox_defence
+		icon = GFX_GRU_Generic_Orthodox_Defense
+		cost = 5.00
+		prerequisite = {
+			focus = AUS_art_of_war
+		}
+		x = 43
+		y = 10.5
+			available = {
+					OR = {
+							has_government = paternal_autocrat
+						}
+				}
+			available = {
+					NOT = {
+						is_subject = yes
+					}
+			}
+			completion_reward = {
+					log = "[GetDateText]: [Root.GetName]: Focus AUS_orthodox_defence"
+					add_ideas = AUS_orthodox_idea
+				}
+
+	}
+	focus = {
+		id = AUS_national_service
+		text = AUS_national_service
+		icon = GFX_GRU_Hamburg_Allies
+		cost = 5.00
+		prerequisite = {
+			focus = AUS_national_rebirth
+		}
+		x = 48
+		y = 9
+			available = {
+					OR = {
+							has_government = paternal_autocrat
+						}
+				}
+			available = {
+					NOT = {
+						is_subject = yes
+					}
+			}
+			completion_reward = {
+					log = "[GetDateText]: [Root.GetName]: Focus AUS_national_service"
+					add_ideas = extensive_conscription
+					add_manpower = 15000
+				}
+
+	}
+	focus = {
+		id = AUS_metaxas_youth
+		text = AUS_metaxas_youth
+		icon = GFX_GRU_Continued_Centralization
+		cost = 5.00
+		prerequisite = {
+			focus = AUS_national_service
+		}
+		x = 49
+		y = 10.5
+			available = {
+					OR = {
+							has_government = paternal_autocrat
+						}
+				}
+			available = {
+					NOT = {
+						is_subject = yes
+					}
+			}
+			completion_reward = {
+					log = "[GetDateText]: [Root.GetName]: Focus AUS_metaxas_youth"
+					add_war_support = 0.10
+					increase_ruling_party_popularity_by_10 = yes
+				}
+
+	}
+	focus = {
+		id = AUS_retake
+		text = AUS_retake
+		icon = GFX_GRU_Generic_German_Europe
+		cost = 5.00
+		prerequisite = {
+			focus = AUS_avenge
+		}
+		prerequisite = {
+			focus = AUS_national_service
+		}
+		prerequisite = {
+			focus = AUS_art_of_war
+		}
+		x = 46
+		y = 10
+			available = {
+					OR = {
+							has_government = paternal_autocrat
+						}
+				}
+			available = {
+					NOT = {
+						is_subject = yes
+					}
+			}
+			completion_reward = {
+					log = "[GetDateText]: [Root.GetName]: Focus AUS_retake"
+			every_state = {
+				limit = {
+					is_core_of = "GER"
+					is_not_claim_or_core_of_ROOT = yes
+				}
+				add_claim_by = AUS
+			}
+			every_state = {
+				limit = {
+					is_core_of = "SWI"
+					is_not_claim_or_core_of_ROOT = yes
+				}
+				add_claim_by = AUS
+			}
+			every_state = {
+				limit = {
+					is_core_of = "CZE"
+					is_not_claim_or_core_of_ROOT = yes
+				}
+				add_claim_by = AUS
+			}
+		}
+	}
+	focus = {
+		id = AUS_purple_pheonix
+		text = AUS_purple_pheonix
+		icon = GFX_GRU_Wonder
+		cost = 5.00
+		prerequisite = {
+			focus = AUS_retake
+		}
+		x = 46
+		y = 11
+			available = {
+					OR = {
+							has_government = paternal_autocrat
+						}
+					owns_state = 64
+					owns_state = 56
+					owns_state = 75
+					owns_state = 151
+				}
+			available = {
+					NOT = {
+						is_subject = yes
+					}
+			}
+			completion_reward = {
+					log = "[GetDateText]: [Root.GetName]: Focus AUS_purple_pheonix"
+					set_cosmetic_tag = AUS_HRE
+					custom_effect_tooltip = AUS_hreantium_reborn
+					add_ideas = AUS_purple_phoenix_idea
+					every_owned_state = {
+					limit = { OR = { is_core_of = GER is_core_of = SWI is_core_of = CZE }}
+						AUS = { add_state_core = PREV }
 			}
 		}
 	}

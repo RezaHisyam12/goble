@@ -262,7 +262,7 @@ ideas = {
 			modifier = {
 				political_power_gain = 0.5
 				non_core_manpower = 0.25
-				conscription = 0.05
+				conscription = 0.025
 			}
 		}
 
@@ -503,6 +503,46 @@ ideas = {
 				army_core_defence_factor = 0.05
 				army_morale_factor = 0.05
 				consumer_goods_factor = -0.10
+			}
+		}
+
+		AUS_national_rebirth_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRE_national_rebirth_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			picture = PB_GER_German_Century
+			modifier = {
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+				conscription_factor = 0.10
+				army_morale_factor = 0.10
+			}
+		}
+
+		AUS_purple_phoenix_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GRE_purple_phoenix_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			picture = PB_GER_German_Unity
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		AUS_orthodox_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GRE_orthodox_idea"}
+			allowed = { always = no }
+			removal_cost = -1
+			allowed_civil_war = { always = yes }
+			picture = GRE_orthodox_defence
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.05
+				monthly_population = 0.05
 			}
 		}
 	}

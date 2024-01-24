@@ -2862,26 +2862,32 @@ country_event = { #Liberation of Austria
 		}
 	}
 	option = { #old idea
-		name = annex.14.c
+		log = "[GetLogInfo]: event annex.14 option annex.integration"
+		name = annex.integration
 		trigger = {
-			is_german_tag = yes
+			is_germany_or_splinter_tag = yes
 		}
-		ai_chance = {
-			factor = 100
+		ai_chance = { base = 100 }
+		every_state = {
+			limit = { is_core_austria = yes }
+			add_claim_of_ROOT = yes
+			enable_state_integration_50_compliance = yes
 		}
-		set_country_flag = AUS_CONQ
-		country_event = annex.15
+		recheck_annexations = yes
+		hidden_effect = {
+			1123 = { enable_state_integration_80_compliance = yes } #Pressburg
+		}
 	}
 	option = { #occupy
+		log = "[GetLogInfo]: event annex.14 option annex.occupation"
 		name = annex.occupation
 		trigger = {
-			is_german_tag = no
+			is_germany_or_splinter_tag = no
 		}
-		ai_chance = {
-			factor = 0
-		}
+		ai_chance = { base = 0 }
 		set_country_flag = AUS_CONQ
 		occupy_medium_country = yes
+		recheck_annexations = yes
 	}
 }
 

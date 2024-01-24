@@ -796,3 +796,172 @@ GAL_protect_other_crownlands = {
 		value = 400
 	}
 }
+
+AUS_crush_hungary = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		has_war_with = HUN
+		NOT = { has_war_with = GRU }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = HUN
+		value = 1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = GRU
+		value = -30
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = HUN
+		value = 100
+	}
+	ai_strategy = {
+		type = ignore
+		id = GRU
+		value = 500
+	}
+}
+
+AUS_crownlands_crush_hungary = {
+	allowed = {
+		OR = {
+			original_tag = CZE
+			original_tag = SLO
+			original_tag = TRS
+			original_tag = CRO
+			original_tag = BOS
+			original_tag = GAL
+		}
+	}
+	enable = {
+		has_war_with = HUN
+		is_in_faction_with = AUS
+		NOT = { has_war_with = GRU }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = HUN
+		value = 1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = GRU
+		value = -30
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = HUN
+		value = 100
+	}
+	ai_strategy = {
+		type = ignore
+		id = GRU
+		value = 500
+	}
+}
+
+AUS_crush_illrya = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		has_war_with = CRO
+		NOT = { has_war_with = GRU }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = CRO
+		value = 1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = GRU
+		value = -30
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = CRO
+		value = 100
+	}
+	ai_strategy = {
+		type = ignore
+		id = GRU
+		value = 500
+	}
+}
+
+AUS_crush_bohemia = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		has_war_with = CZE
+		NOT = { has_war_with = GRU }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = CZE
+		value = 1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = GRU
+		value = -30
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = CZE
+		value = 100
+	}
+	ai_strategy = {
+		type = ignore
+		id = GRU
+		value = 500
+	}
+}
+
+AUS_crush_galicia = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		has_war_with = GAL
+		NOT = { has_war_with = GRU }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = GAL
+		value = 1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = GRU
+		value = -30
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = GAL
+		value = 100
+	}
+	ai_strategy = {
+		type = ignore
+		id = GRU
+		value = 500
+	}
+}
+
