@@ -734,11 +734,19 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/GRU/PRC_TERMINATOR.png"
 	}
 	spriteType = {
-		name = "PB_GER_German_Century.dds"
+		name = "GFX_idea_PB_GER_German_Unity"
+		texturefile = "gfx/interface/ideas/ideas/PB_GER_German_Unity.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_DDR_Post_War_Defeatism"
+		texturefile = "gfx/interface/ideas/ideas/PB_DDR_Post_War_Defeatism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_GER_German_Century"
 		texturefile = "gfx/interface/ideas/ideas/PB_GER_German_Century.dds"
 	}
 	spriteType = {
-		name = "PB_GER_German_Century.dds"
-		texturefile = "gfx/interface/ideas/ideas/GRE_orthodox_defence.dds"
+		name = "GFX_idea_PB_GER_Rebuilding_Germany"
+		texturefile = "gfx/interface/ideas/ideas/PB_GER_Rebuilding_Germany.dds"
 	}
 }

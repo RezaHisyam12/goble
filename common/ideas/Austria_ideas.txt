@@ -262,7 +262,7 @@ ideas = {
 			modifier = {
 				political_power_gain = 0.5
 				non_core_manpower = 0.25
-				conscription = 0.025
+				mobilization_speed = 0.10
 			}
 		}
 
@@ -387,7 +387,7 @@ ideas = {
 		AUS_modern_army_von_hubicki = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_modern_army_von_hubicki" }
 			name = AUS_modern_army
-			picture = RUS_tank_academy
+			picture = generic_armor
 			allowed = { always = no }
 			modifier = {
 				army_core_attack_factor = 0.05
@@ -401,7 +401,7 @@ ideas = {
 		AUS_modern_army_von_hubicki_2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_modern_army_von_hubicki_2" }
 			name = AUS_modern_army
-			picture = RUS_tank_academy
+			picture = generic_armor
 			allowed = { always = no }
 			modifier = {
 				army_core_attack_factor = 0.05
@@ -416,7 +416,7 @@ ideas = {
 		AUS_modern_army_von_hubicki_3 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_modern_army_von_hubicki_3" }
 			name = AUS_modern_army
-			picture = RUS_tank_academy
+			picture = generic_armor
 			allowed = { always = no }
 			modifier = {
 				army_core_attack_factor = 0.1
@@ -459,7 +459,7 @@ ideas = {
 		}
 
 		AUS_usa = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_modern_army" }
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_usa" }
 			allowed = { always = no }
 			modifier = {
 				political_power_gain = 0.05
@@ -471,7 +471,7 @@ ideas = {
 		}
 
 		AUS_danubian_fed = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_modern_army" }
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_danubian_fed" }
 			allowed = { always = no }
 			modifier = {
 				stability_weekly = 0.003
@@ -483,7 +483,7 @@ ideas = {
 		}
 
 		AUS_imperial_together = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_imperial_development_scheme" }
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_imperial_together" }
 			allowed = { always = no }
 			picture = big_entente_idea
 			modifier = {
@@ -495,7 +495,7 @@ ideas = {
 		}
 
 		AUS_drastic_together = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_imperial_development_scheme" }
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_drastic_together" }
 			allowed = { always = no }
 			picture = bulwark_idea
 			modifier = {
@@ -507,24 +507,20 @@ ideas = {
 		}
 
 		AUS_national_rebirth_idea = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRE_national_rebirth_idea"}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_national_rebirth_idea"}
 			allowed = { always = no }
-			removal_cost = -1
-			allowed_civil_war = { always = yes }
 			picture = PB_GER_German_Century
 			modifier = {
-				army_core_defence_factor = 0.05
-				army_core_attack_factor = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
 				conscription_factor = 0.10
 				army_morale_factor = 0.10
 			}
 		}
 
 		AUS_purple_phoenix_idea = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GRE_purple_phoenix_idea"}
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea AUS_purple_phoenix_idea"}
 			allowed = { always = no }
-			removal_cost = -1
-			allowed_civil_war = { always = yes }
 			picture = PB_GER_German_Unity
 			modifier = {
 				political_power_gain = 0.10
@@ -534,15 +530,33 @@ ideas = {
 		}
 
 		AUS_orthodox_idea = {
-			on_add = {log = "[GetDateText]: [Root.GetName]: add idea GRE_orthodox_idea"}
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea AUS_orthodox_idea"}
 			allowed = { always = no }
-			removal_cost = -1
-			allowed_civil_war = { always = yes }
 			picture = GRE_orthodox_defence
 			modifier = {
 				political_power_gain = 0.05
 				stability_factor = 0.05
 				monthly_population = 0.05
+			}
+		}
+		AUS_rebuilding = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea AUS_rebuilding"}
+			allowed = { always = no }
+			picture = PB_GER_Rebuilding_Germany
+			modifier = {
+				industry_repair_factor = 0.3
+			}
+		}
+		AUS_aftermath = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea AUS_aftermath"}
+			allowed = { always = no }
+			picture = generic_crippled_industry
+			modifier = {
+				war_support_factor = -0.3
+				consumer_goods_factor = 0.45
+				industrial_capacity_factory = -0.10
+				political_power_gain = -0.50
+				conscription_factor = -0.50
 			}
 		}
 	}

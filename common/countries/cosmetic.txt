@@ -1004,8 +1004,8 @@ TXS_texaco = {
 }
 
 AUS_HRE = {
-	color = rgb { 128 128 128 }
-	color_ui = rgb { 128 128 128 }
+	color = rgb { 165 163 39 }
+	color_ui = rgb { 165 163 39 }
 }
 ANT_1 = {
 	color = rgb { 156 126 159 }
