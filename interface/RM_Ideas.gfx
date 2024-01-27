@@ -749,4 +749,36 @@ spriteTypes = {
 		name = "GFX_idea_PB_GER_Rebuilding_Germany"
 		texturefile = "gfx/interface/ideas/ideas/PB_GER_Rebuilding_Germany.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_PB_GER_Centralization"
+		texturefile = "gfx/interface/ideas/ideas/PB_GER_Centralization.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TOB_air_land_battles"
+		texturefile = "gfx/interface/ideas/ideas/TOB_air_land_battles.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ITA_GenericAirforce"
+		texturefile = "gfx/interface/ideas/ideas/idea_ITA_GenericAirforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SIA_bloated_bureaucracy"
+		texturefile = "gfx/interface/ideas/ideas/SIA_bloated_bureaucracy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_INS_On_Land_Sea_and_Air"
+		texturefile = "gfx/interface/ideas/ideas/idea_INS_On_Land_Sea_and_Air.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_INS_A_Nation_Of_18000_Islands"
+		texturefile = "gfx/interface/ideas/ideas/idea_INS_A_Nation_Of_18000_Islands.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_GER_Long_Term"
+		texturefile = "gfx/interface/ideas/ideas/PB_GER_Long_Term.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_INS_The_Year_of_Living_Dangerously"
+		texturefile = "gfx/interface/ideas/ideas/idea_INS_The_Year_of_Living_Dangerously.dds"
+	}
 }

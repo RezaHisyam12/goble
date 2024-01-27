@@ -1,0 +1,529 @@
+###########################
+# HRE Decisions
+###########################	
+
+AUS_kill_rivals_decisions = {
+	AUS_attack_rival_germany_decision = {
+		icon = generic_prepare_civil_war
+
+		available = {
+			is_subject = no
+		}
+		visible = {
+			has_completed_focus = AUS_world
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = GER
+				tag = GEX
+				tag = DDR
+				tag = BAY
+				tag = WGR
+				tag = NGF
+				tag = GBR
+				tag = GBP
+				tag = NFA
+				tag = RUS
+				tag = CAN
+				}
+			}
+		}
+		target_root_trigger = {
+			has_completed_focus = AUS_world
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = GER
+				tag = GEX
+				tag = DDR
+				tag = BAY
+				tag = WGR
+				tag = NGF
+				tag = HUN
+				tag = CRO
+				tag = NFA
+				tag = RUS
+				tag = CAN
+				}
+			}
+		}
+
+		fire_only_once = no
+		cost = 100
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					any_allied_country = {
+						is_faction_leader = yes
+						overlord = {
+							strength_ratio = {
+								tag = ROOT
+								ratio > 0.7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_attack_rival_germany_decision"
+			declare_war_on = {	type = annex_everything	target = FROM }
+		}
+	}
+
+}
+
+AUS_kill_libleft_decisions = {
+	AUS_STRIKE_LIBS = {
+		icon = generic_prepare_civil_war
+		allowed = { original_tag = AUS }
+		available = {
+			is_major = yes
+			is_subject = no
+		}
+		visible = {
+			has_completed_focus = AUS_world
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+					any_neighbor_country = {
+						OR = {
+							tag = ROOT
+							gives_military_access_to = ROOT
+							is_in_faction_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+					tag = HUN
+					tag = SCO
+					tag = WAL
+					tag = IRE
+					tag = ITA
+					tag = SRI
+					tag = ENG
+					tag = SWE
+					tag = NOR
+					tag = FIN
+					tag = BAT
+					tag = LIT
+					tag = EST
+					tag = LAT
+					tag = SWI
+					tag = SPR
+					tag = SPA
+					tag = WHR
+					tag = UKR
+					tag = ROM
+				}
+				has_socialist_government = yes
+			}
+		}
+
+		target_root_trigger = {
+			has_completed_focus = AUS_world
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+					any_neighbor_country = {
+						OR = {
+							tag = ROOT
+							gives_military_access_to = ROOT
+							is_in_faction_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+					tag = HUN
+					tag = SCO
+					tag = WAL
+					tag = IRE
+					tag = ITA
+					tag = SRI
+					tag = ENG
+					tag = SWE
+					tag = NOR
+					tag = FIN
+					tag = BAT
+					tag = LIT
+					tag = EST
+					tag = LAT
+					tag = SWI
+					tag = SPR
+					tag = SPA
+					tag = WHR
+					tag = UKR
+					tag = ROM
+				}
+				has_socialist_government = yes
+			}
+		}
+
+		fire_only_once = no
+		cost = 100
+		days_remove = 30		
+
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					any_allied_country = {
+						is_faction_leader = yes
+						overlord = {
+							strength_ratio = {
+								tag = ROOT
+								ratio > 0.7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_STRIKE_LIBS target: [From.GetName]"
+			declare_war_on = {	type = annex_everything	target = FROM }
+		}
+	}
+}
+	
+	AUS_lib_middle_east_decision = {
+		icon = generic_prepare_civil_war
+
+		available = {
+			is_major = yes
+			has_war = no
+			is_subject = no
+		}
+		visible = {
+			has_completed_focus = AUS_SMEPD_LIBERATE_MIDDLE_EAST
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+					any_neighbor_country = {
+						OR = {
+							tag = ROOT
+							gives_military_access_to = ROOT
+							is_in_faction_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+				has_socialist_government = no
+			}
+		}
+
+		target_array = global.middle_eastern_tags_array
+
+		target_root_trigger = {
+			has_completed_focus = AUS_SMEPD_LIBERATE_MIDDLE_EAST
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+					any_neighbor_country = {
+						OR = {
+							tag = ROOT
+							gives_military_access_to = ROOT
+							is_in_faction_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+				has_socialist_government = no
+			}
+		}
+
+		fire_only_once = no
+		cost = 50
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					is_neighbor_of = FROM
+					has_navy_size = { size > 100 type = convoy }
+				}
+			}
+			modifier = {
+				factor = 0
+				has_army_manpower = { size < 250000 }
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_in_faction = no
+					strength_ratio = { tag = AUS ratio > 0.5 }
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_in_faction = yes
+					OR = {
+						strength_ratio = { tag = AUS ratio > 0.5 }
+						any_allied_country = {
+							is_faction_leader = yes
+							strength_ratio = { tag = AUS ratio > 1.0 }
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_lib_middle_east_decision target: [From.GetName]"
+			declare_war_on = {	type = annex_everything	target = FROM }
+		}
+	}
+	
+	AUS_lib_africa_decision = {
+		icon = generic_prepare_civil_war
+
+		available = {
+			is_major = yes
+			has_war = no
+			is_subject = no
+		}
+		visible = {
+			has_completed_focus = AUS_SMEPD_LIBERATE_AFRICA
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+					any_neighbor_country = {
+						OR = {
+							tag = ROOT
+							gives_military_access_to = ROOT
+							is_in_faction_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+				has_socialist_government = no
+			}
+		}
+
+		target_array = global.african_tags_array
+
+		target_root_trigger = {
+			has_completed_focus = AUS_SMEPD_LIBERATE_AFRICA
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+					any_neighbor_country = {
+						OR = {
+							tag = ROOT
+							gives_military_access_to = ROOT
+							is_in_faction_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+				has_socialist_government = no
+			}
+		}
+
+		fire_only_once = no
+		cost = 50
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					is_neighbor_of = FROM
+					has_navy_size = { size > 100 type = convoy }
+				}
+			}
+			modifier = {
+				factor = 0
+				has_army_manpower = { size < 250000 }
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_in_faction = no
+					strength_ratio = { tag = AUS ratio > 0.5 }
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_in_faction = yes
+					OR = {
+						strength_ratio = { tag = AUS ratio > 0.5 }
+						any_allied_country = {
+							is_faction_leader = yes
+							strength_ratio = { tag = AUS ratio > 1.0 }
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_lib_africa_decision target: [From.GetName]"
+			declare_war_on = {	type = annex_everything	target = FROM }
+		}
+	}
+	
+	AUS_lib_east_decision = {
+		icon = generic_prepare_civil_war
+
+		available = {
+			is_major = yes
+			has_war = no
+			is_subject = no
+		}
+		visible = {
+			has_completed_focus = AUS_SMEPD_LIBERATE_EAST
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+					tag = RUS
+					tag = TRM
+					tag = UKR
+					tag = WHR
+					tag = ALO
+					tag = DKB
+					tag = GEO
+					tag = AZE
+					tag = ARM
+					tag = TRK
+				}
+				has_socialist_government = no
+			}
+		}
+
+		target_root_trigger = {
+			has_completed_focus = AUS_SMEPD_LIBERATE_EAST
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+					tag = RUS
+					tag = TRM
+					tag = UKR
+					tag = WHR
+					tag = ALO
+					tag = DKB
+					tag = GEO
+					tag = AZE
+					tag = ARM
+					tag = TRK
+				}
+				has_socialist_government = no
+			}
+		}
+
+		fire_only_once = no
+		cost = 50
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					is_neighbor_of = FROM
+					has_navy_size = { size > 100 type = convoy }
+				}
+			}
+			modifier = {
+				factor = 0
+				has_army_manpower = { size < 250000 }
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_in_faction = no
+					strength_ratio = { tag = AUS ratio > 0.5 }
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_in_faction = yes
+					OR = {
+						strength_ratio = { tag = AUS ratio > 0.5 }
+						any_allied_country = {
+							is_faction_leader = yes
+							strength_ratio = { tag = AUS ratio > 1.0 }
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_lib_east_decision target: [From.GetName]"
+			declare_war_on = {	type = annex_everything	target = FROM }
+		}
+	}
+
+}

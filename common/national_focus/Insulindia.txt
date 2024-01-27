@@ -36,6 +36,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus INS_merdeka"
 			add_political_power = 50
+			add_ideas = INS_merdeka_idea
 			#remove_ideas = INS_idea_insulindian_national_revolution
 			hidden_effect = {
 				country_event = ins.5
@@ -1770,6 +1771,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus INS_economy_of_insulindia"
 			add_political_power = 100
+			add_ideas = INS_new_economy
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}

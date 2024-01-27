@@ -12,7 +12,7 @@ ideas = {
 			picture = generic_research_bonus
 			allowed = { always = no }
 			modifier = {
-				research_speed_factor = 0.03
+				research_speed_factor = 0.05
 			}
 		}
 
@@ -22,7 +22,7 @@ ideas = {
 			picture = generic_research_bonus
 			allowed = { always = no }
 			modifier = {
-				research_speed_factor = 0.08
+				research_speed_factor = 0.10
 			}
 		}
 
@@ -431,7 +431,7 @@ ideas = {
 
 		AUS_kuk_fliegerkorps = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_kuk_fliegerkorps" }
-			picture = generic_airforce
+			picture = ITA_GenericAirforce
 			allowed = { always = no }
 			modifier = {
 				air_defence_factor = 0.05
@@ -511,8 +511,8 @@ ideas = {
 			allowed = { always = no }
 			picture = PB_GER_German_Century
 			modifier = {
-				army_attack_factor = 0.05
-				army_defence_factor = 0.05
+				army_attack_factor = 0.10
+				army_defence_factor = 0.10
 				conscription_factor = 0.10
 				army_morale_factor = 0.10
 			}
@@ -521,11 +521,12 @@ ideas = {
 		AUS_purple_phoenix_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea AUS_purple_phoenix_idea"}
 			allowed = { always = no }
-			picture = PB_GER_German_Unity
+			picture = IMP_imperium_of_man
 			modifier = {
-				political_power_gain = 0.10
+				political_power_factor = 0.15
 				stability_factor = 0.05
 				war_support_factor = 0.05
+				compliance_growth = 0.10
 			}
 		}
 
@@ -543,10 +544,79 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea AUS_rebuilding"}
 			allowed = { always = no }
 			picture = PB_GER_Rebuilding_Germany
+			removal_cost = -1
 			modifier = {
 				industry_repair_factor = 0.3
 			}
 		}
+
+		AUS_Bureaucracy = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea AUS_Bureaucracy"}
+			allowed = { always = no }
+			picture = PB_GER_Centralization
+			modifier = {
+				political_power_gain = 0.10
+				consumer_goods_factor = -0.10
+				stability_factor = 0.10
+			}
+		}
+
+		AUS_reform_hre = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_reform_hre" }
+			picture = UK_military_loyal_idea
+			allowed = { always = no }
+			modifier = {
+				conscription_factor = -0.20
+				army_morale_factor = 0.10
+				special_forces_attack_factor = 0.15
+				special_forces_defence_factor = 0.15
+				planning_speed = 0.25
+				max_planning = 0.25
+				special_forces_cap = 0.25
+				special_forces_training_time_factor = 0.20
+			}
+		}
+
+		AUS_combined_hre = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_reform_hre" }
+			allowed = { always = no }
+			picture = TOB_air_land_battles
+			modifier = {
+				land_reinforce_rate = 0.05
+				air_air_superiority_defence_factor = 0.10
+				air_interception_defence_factor = 0.10
+				air_close_air_support_attack_factor = 0.20
+			}
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				small_plane_cas_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
+
+		AUS_imperial_development_scheme_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_imperial_development_scheme_2" }
+			picture = SIA_bloated_bureaucracy
+			allowed = { always = no }
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.30
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
 		AUS_aftermath = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea AUS_aftermath"}
 			allowed = { always = no }

@@ -1,0 +1,114 @@
+AUS_hydroelectricity_decisions = {
+	icon = hol_prepare_the_inundation_lines
+	allowed = { tag = AUS }
+}
+#done
+AUS_breitspurbahn_decisions = {
+	icon = breitspurbahnen
+	allowed = { tag = AUS }
+}
+#done
+AUS_germania_plan_decisions = {
+	icon = pangermanic
+	allowed = { tag = AUS }
+}
+#done
+AUS_allignment_decisions = {
+	icon = generic_political_actions
+	allowed = { tag = AUS }
+}
+##done
+AUS_subvert_france_decisions = {
+	icon = subvertfrance
+	allowed = { tag = AUS }
+}
+##done
+AUS_scandi_decisions = {
+	icon = scandidip
+	allowed = { tag = AUS }
+}
+
+AUS_blut_boden_decisions = {
+	icon = generic_political_actions
+	allowed = { tag = AUS }
+}
+
+AUS_DAF_decisions = {
+	icon = KDF
+	allowed = { tag = AUS }
+}
+
+AUS_lebensraum_decisions = {
+	icon = lebensraum
+	allowed = { tag = AUS }
+}
+
+AUS_beyond_lebensraum_decisions = {
+	icon = lebensraum
+	allowed = { tag = AUS }
+}
+
+AUS_volksreichskommissariat_decisions = {
+	icon = volkskomissariats
+	allowed = { tag = AUS }
+}
+
+AUS_kill_rivals_decisions = {
+	icon = gerrivals
+	allowed = { tag = AUS }
+}
+#done
+AUS_kill_colonies_decisions = {
+	icon = killcolonies
+	allowed = { tag = AUS }
+}
+#done
+AUS_kill_entente_decisions = {
+	icon = killentente
+	allowed = { tag = AUS }
+}
+AUS_OIL_OIL_OIL_CHING_CHING_decisions = {
+	icon = generic_construction
+	allowed = { tag = AUS }
+}
+#done
+AUS_kill_libleft_decisions = {
+	icon = killlibs
+	allowed = { tag = AUS }
+}
+#done
+AUS_build_that_wall_decisions = {
+	icon = bunkerger
+	allowed = { tag = AUS }
+}
+##done
+AUS_export_revolution_decisions = {
+	icon = export_revolution
+	allowed = { tag = AUS }
+}
+AUS_expand_internationale_decisions = {
+	icon = generic_foreign_policy
+	allowed = { tag = AUS }
+}
+
+AUS_new_alliance_decisions = {
+	icon = generic_foreign_policy
+	allowed = { tag = AUS }
+}
+
+AUS_anarchism_spread_decisions = {
+	icon = generic_political_actions
+	allowed = { tag = AUS }
+}
+
+AUS_Germania_Stadt_decisions = {
+	icon = germania_stadt
+	allowed = { tag = AUS }
+}
+AUS_stahlpakt_alliance_decisions = {
+	icon = generic_foreign_policy
+	allowed = { tag = AUS }
+}
+#AUS_alternate_leaders_decisions = {
+#	icon = babey
+#	allowed = {}

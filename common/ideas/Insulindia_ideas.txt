@@ -357,17 +357,22 @@ ideas = {
 			}
 		}
 		INS_modern_army = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_modern_army" }
-			picture = army_cooperation
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea INS_modern_army" }
+			picture = idea_INS_On_Land_Sea_and_Air
 			allowed = { always = no }
 			modifier = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
+				air_close_air_support_attack_factor = 0.10
+				air_air_superiority_defence_factor = 0.05
+				air_interception_defence_factor = 0.05
+				navy_org_factor = 0.05
+				convoy_escort_efficiency = 0.05
 			}
 		}
 		INS_marine_army = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_modern_army" }
-			picture = CAN_reclaimation_focus_idea
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea INS_marine_army" }
+			picture = idea_INS_A_Nation_Of_18000_Islands
 			allowed = { always = no }
 			modifier = {
 				navy_max_range_factor = 0.10
@@ -375,6 +380,28 @@ ideas = {
 				invasion_preparation = -0.1
 				naval_invasion_capacity = 5
 				special_forces_cap = 0.15
+				special_forces_attack_factor = 0.10
+				special_forces_defence_factor = 0.10
+			}
+		}
+		INS_merdeka_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea INS_merdeka"}
+			picture = idea_INS_The_Year_of_Living_Dangerously
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.25
+				stability_factor = 0.10
+				monthly_population = 0.10
+			}
+		}
+		INS_new_economy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea INS_merdeka"}
+			picture = PB_GER_Long_Term
+			allowed = { always = no }
+			modifier = {
+				global_building_slots_factor = 0.10
+				consumer_goods_factor = -0.15
+				production_factory_start_efficiency_factor = 0.1
 			}
 		}
 	}
