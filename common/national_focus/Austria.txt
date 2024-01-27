@@ -6985,6 +6985,8 @@ focus_tree = {
 									type = arms_factory
 									level = 3
 									instant_build = yes
+								}
+						}
 					random_owned_state = {
 							limit = {
 									free_building_slots = {
@@ -7061,9 +7063,9 @@ focus_tree = {
 								}
 						}
 				}
-			}
+		
 	}
-}
+
 	focus = {
 		id = AUS_orthodox_defence
 		text = AUS_orthodox_defence

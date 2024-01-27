@@ -262,6 +262,7 @@ ideas = {
 			modifier = {
 				political_power_gain = 0.5
 				non_core_manpower = 0.25
+				conscription = 0.025
 				mobilization_speed = 0.10
 			}
 		}
@@ -355,6 +356,10 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_artillery_production" }
 			picture = generic_artillery_regiments
 			allowed = { always = no }
+			modifier = {
+				army_artillery_attack_factor = 0.05
+				army_artillery_defence_factor = 0.05
+			}
 			equipment_bonus = {
 				artillery_equipment = {
 					soft_attack = 0.1
@@ -513,8 +518,8 @@ ideas = {
 			modifier = {
 				army_attack_factor = 0.10
 				army_defence_factor = 0.10
-				conscription_factor = 0.10
 				army_morale_factor = 0.10
+				army_org_factor = 0.10
 			}
 		}
 
@@ -566,7 +571,7 @@ ideas = {
 			picture = UK_military_loyal_idea
 			allowed = { always = no }
 			modifier = {
-				conscription_factor = -0.20
+				conscription_factor = -0.15
 				army_morale_factor = 0.10
 				special_forces_attack_factor = 0.15
 				special_forces_defence_factor = 0.15

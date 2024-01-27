@@ -815,7 +815,7 @@ AUS_crush_hungary = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = GRU
-		value = -30
+		value = -100
 	}
 	ai_strategy = {
 		type = front_unit_request
@@ -825,6 +825,16 @@ AUS_crush_hungary = {
 	ai_strategy = {
 		type = ignore
 		id = GRU
+		value = 500
+	}
+	ai_strategy = {
+		type = ignore
+		id = SER
+		value = 500
+	}
+	ai_strategy = {
+		type = ignore
+		id = ROM
 		value = 500
 	}
 }
@@ -855,7 +865,7 @@ AUS_crownlands_crush_hungary = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = GRU
-		value = -30
+		value = -100
 	}
 	ai_strategy = {
 		type = front_unit_request
@@ -865,6 +875,16 @@ AUS_crownlands_crush_hungary = {
 	ai_strategy = {
 		type = ignore
 		id = GRU
+		value = 500
+	}
+	ai_strategy = {
+		type = ignore
+		id = SER
+		value = 500
+	}
+	ai_strategy = {
+		type = ignore
+		id = ROM
 		value = 500
 	}
 }
@@ -887,7 +907,7 @@ AUS_crush_illrya = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = GRU
-		value = -30
+		value = -50
 	}
 	ai_strategy = {
 		type = front_unit_request
@@ -897,6 +917,16 @@ AUS_crush_illrya = {
 	ai_strategy = {
 		type = ignore
 		id = GRU
+		value = 500
+	}
+	ai_strategy = {
+		type = ignore
+		id = SER
+		value = 500
+	}
+	ai_strategy = {
+		type = ignore
+		id = ROM
 		value = 500
 	}
 }
@@ -919,7 +949,7 @@ AUS_crush_bohemia = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = GRU
-		value = -30
+		value = -100
 	}
 	ai_strategy = {
 		type = front_unit_request
@@ -929,6 +959,16 @@ AUS_crush_bohemia = {
 	ai_strategy = {
 		type = ignore
 		id = GRU
+		value = 500
+	}
+	ai_strategy = {
+		type = ignore
+		id = SER
+		value = 500
+	}
+	ai_strategy = {
+		type = ignore
+		id = ROM
 		value = 500
 	}
 }
@@ -951,7 +991,7 @@ AUS_crush_galicia = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = GRU
-		value = -30
+		value = -50
 	}
 	ai_strategy = {
 		type = front_unit_request
@@ -961,6 +1001,16 @@ AUS_crush_galicia = {
 	ai_strategy = {
 		type = ignore
 		id = GRU
+		value = 500
+	}
+	ai_strategy = {
+		type = ignore
+		id = SER
+		value = 500
+	}
+	ai_strategy = {
+		type = ignore
+		id = ROM
 		value = 500
 	}
 }

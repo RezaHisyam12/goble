@@ -3868,7 +3868,7 @@ AUS_hreantium:0 "§RIt is time to retake our historical lands!§!"
 AUS_hreantium_reborn:0 "§GThe enemy have been defeated. Holy Roman Empire is restored!§!"
 
 annex.1020.c: "Reunite the Danubian lands."
-AUS_tt_entente_decisions:0 "Unlocks §RWar§! decisions towards the §COur Rival§!."
+AUS_tt_entente_decisions:0 "Unlocks §RWar§! decisions towards §COur Rival§!."
 AUS_kill_rivals_decisions:0 "Rival Governments"
 AUS_kill_libleft_decisions:0 "Purge the §RRevolution§!"
 AUS_kill_libleft_decisions:0 "Purge the §RRevolution§!"
