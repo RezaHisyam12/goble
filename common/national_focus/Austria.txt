@@ -2100,7 +2100,7 @@ focus_tree = {
 		icon = GFX_goal_AUS_Paramilitary_Beatdowns
 		x = 10
 		y = 1
-		cost = 8
+		cost = 1
 
 		relative_position_id = AUS_ausgleich
 
@@ -2523,7 +2523,7 @@ focus_tree = {
 		icon = GFX_goal_AUS_Protect_Legacy_Empire
 		x = 2
 		y = 1
-		cost = 8
+		cost = 5
 
 		relative_position_id = AUS_military_occupation
 
@@ -3096,7 +3096,7 @@ focus_tree = {
 		icon = GFX_goal_AUS_donau_adriabund
 		x = -10
 		y = 1
-		cost = 5
+		cost = 1
 
 		relative_position_id = AUS_ausgleich
 
@@ -4046,7 +4046,7 @@ focus_tree = {
 		icon = GFX_goal_AUS_kaisers_men_of_honor
 		x = 0
 		y = 1
-		cost = 8
+		cost = 1
 
 		relative_position_id = AUS_ausgleich
 
