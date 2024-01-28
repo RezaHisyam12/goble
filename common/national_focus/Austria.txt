@@ -2721,71 +2721,112 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			can_declare_war_on = 46.owner
+		}
+		bypass_if_unavailable = yes
+
+		will_lead_to_war_with = ROM
+
+		ai_will_do = {
+			factor = 75
+			modifier = {
+				factor = 0
+				can_declare_war_on = ROM
+				is_in_faction = yes
+				is_faction_leader = no
+			}
+			modifier = {
+				factor = 0
+				can_declare_war_on = ROM
+				OR = {
+					has_war = yes
+					strength_ratio = { tag = ROM ratio < 0.75 }
+					# neither of us is in a faction and ROM is stronger
+					AND = {
+						ROM = {
+							is_in_faction = no
+							is_subject = no
+						}
+						is_in_faction = no
+						strength_ratio = { tag = ROM ratio < 1.0 }
+					}
+					# they're in a faction which is not at war
+					ROM = {
+						OR = {
+							is_in_faction = yes
+							is_subject = yes
+						}
+						has_war = no
+					}
+					# they're guaranteed but not in a faction
+					ROM = {
+						is_in_faction = no
+						has_guarantor = yes
+						any_of_scopes = {
+							array = guarantor_array
+							has_guaranteed = PREV
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're a subject and the overlord is stronger than us or in a faction and not losing
+					ROM = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're in a faction which is at war but not with a major and not losing
+					ROM = {
+						is_in_faction = yes
+						has_war = yes
+						NOT = {
+							any_enemy_country = { is_actual_major = yes }
+							surrender_progress > 0.10
+							faction_leader = { surrender_progress > 0.20 }
+						}
+					}
+				}
+			}
 		}
 
-		bypass = {
-			NOT = { can_declare_war_on = 46.owner }
-		}
-		will_lead_to_war_with = ROM
-		will_lead_to_war_with = ROM
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_claim_romanian_lands"
-			declare_war_on = {
-				type = annex_everything
-				target = 46.owner
-			}
-			add_state_claim = 81
 			add_state_claim = 46
-			add_state_claim = 79
 			add_state_claim = 78
+			add_state_claim = 79
+			add_state_claim = 81
 			add_state_claim = 1222
 			add_state_claim = 1320
 			if = {
-				limit = {
-					NOT = { is_ally_with = BUL }
-				}
+				limit = { NOT = { is_ally_with = BUL } }
 				if = {
-					limit = {
-						OR = {
-							ROM = { owns_state = 772 }
-							ROM = { owns_state = 772 }
-						}
-					}
-					add_state_claim = 772
-				}
-				if = {
-					limit = {
-						OR = {
-							ROM = { owns_state = 77 }
-							ROM = { owns_state = 77 }
-						}
-					}
+					limit = { ROM = { owns_state = 77 } }
 					add_state_claim = 77
 				}
-			}
-			else = {
 				if = {
-					limit = {
-						OR = {
-							ROM = { owns_state = 772 }
-							ROM = { owns_state = 77 }
-						}
-					}
-					BUL = {
-						add_state_claim = 772
-					}
+					limit = { ROM = { owns_state = 772 } }
+					add_state_claim = 772
 				}
-				if = {
-					limit = {
-						OR = {
-							ROM = { owns_state = 77 }
-							ROM = { owns_state = 77 }
-						}
-					}
-					BUL = {
-						add_state_claim = 77
-					}
+			}
+			if = {
+				limit = { has_subject = ROM }
+				annex_country = {
+					target = ROM
+					transfer_troops = no
+				}
+			}
+			else_if = {
+				limit = { can_declare_war_on = ROM }
+				create_wargoal = {
+					type = annex_everything
+					target = ROM
 				}
 			}
 		}
@@ -5040,10 +5081,8 @@ focus_tree = {
 
 		bypass = {
 			OR = {
-				NOT = { can_declare_war_on = ALB }
-				ALB = {
-					is_subject_of = BUL
-				}
+				NOT = { country_exists = ALB }
+				is_ally_with = ALB
 			}
 		}
 
@@ -5096,10 +5135,8 @@ focus_tree = {
 
 		bypass = {
 			OR = {
-				NOT = { can_declare_war_on = GRE }
-				GRE = {
-					is_subject_of = BUL
-				}
+				NOT = { country_exists = GRE }
+				is_ally_with = GRE
 			}
 		}
 
