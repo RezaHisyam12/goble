@@ -528,7 +528,7 @@ ideas = {
 			allowed = { always = no }
 			picture = IMP_imperium_of_man
 			modifier = {
-				political_power_factor = 0.15
+				political_power_factor = 0.10
 				stability_factor = 0.05
 				war_support_factor = 0.05
 				compliance_growth = 0.10
@@ -538,7 +538,7 @@ ideas = {
 		AUS_orthodox_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea AUS_orthodox_idea"}
 			allowed = { always = no }
-			picture = GRE_orthodox_defence
+			picture = orthodox_idea
 			modifier = {
 				political_power_gain = 0.05
 				stability_factor = 0.05

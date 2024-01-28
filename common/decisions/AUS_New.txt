@@ -25,6 +25,7 @@ AUS_kill_rivals_decisions = {
 				tag = NFA
 				tag = RUS
 				tag = CAN
+				tag = UKR
 				}
 			}
 		}
@@ -47,6 +48,7 @@ AUS_kill_rivals_decisions = {
 				tag = NFA
 				tag = RUS
 				tag = CAN
+				tag = UKR
 				}
 			}
 		}
