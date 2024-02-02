@@ -48,43 +48,6 @@ JAP_hates_chinese_claimants = {
 	}
 }
 
-japan_supports_chinese_allies = {
-	reversed = yes
-	allowed = {
-		is_chinese_tag = yes
-	}
-	enable_reverse = {
-		JAP = { is_subject = no }
-	}
-	enable = {
-		is_working_with_JAP = yes
-		NOT = {
-			has_war_with = JAP
-			tag = event_target:current_china_leader
-			is_in_faction_with = event_target:current_china_leader
-		}
-	}
-	target_array = "global.china_tags_array"
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = befriend
-		id = "JAP"
-		value = 100
-	}
-	ai_strategy = {
-		type = alliance
-		id = "JAP"
-		value = 100
-	}
-	ai_strategy = {
-		type = support
-		id = "JAP"
-		value = 100
-	}
-}
-
 japan_supports_sphere = {
 	reversed = yes
 	enable_reverse = {
@@ -121,7 +84,6 @@ japan_supports_sphere = {
 ################
 ### Military ###
 ################
-
 JAP_naval_focus = {
 	allowed = {
 		original_tag = JAP

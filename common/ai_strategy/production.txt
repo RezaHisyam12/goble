@@ -220,6 +220,7 @@ we_need_civ_factories_3 = {
 we_need_dockyards_1 = {
 	allowed = {
 		OR = {
+			tag = AUS
 			tag = CAN
 			tag = ENG
 			tag = GBR

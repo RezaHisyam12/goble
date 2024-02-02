@@ -2710,10 +2710,47 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 200
+			factor = 100
 			modifier = {
 				factor = 0
 				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					any_allied_country = {
+						is_faction_leader = yes
+						overlord = {
+							strength_ratio = {
+								tag = ROOT
+								ratio > 0.7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
 			}
 		}
 

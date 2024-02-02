@@ -572,7 +572,6 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				conscription_factor = -0.15
-				army_morale_factor = 0.10
 				special_forces_attack_factor = 0.15
 				special_forces_defence_factor = 0.15
 				planning_speed = 0.25
@@ -627,11 +626,51 @@ ideas = {
 			allowed = { always = no }
 			picture = generic_crippled_industry
 			modifier = {
-				war_support_factor = -0.3
-				consumer_goods_factor = 0.45
-				industrial_capacity_factory = -0.10
-				political_power_gain = -0.50
-				conscription_factor = -0.50
+				war_support_factor = -0.4
+				consumer_goods_factor = 0.55
+				industrial_capacity_factory = -0.15
+				political_power_gain = -0.60
+				conscription_factor = -0.60
+			}
+			rule = {
+				can_join_factions = no
+				can_only_justify_war_on_threat_country = yes
+				can_not_declare_war = yes
+			}
+		}
+
+		AUS_skoda_works = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_skoda_works"}
+			allowed = { always = no }
+			picture = CZE_Czech_Industrial_Power
+			modifier = {
+				production_factory_max_efficiency_factor = 0.075
+				production_factory_efficiency_gain_factor = 0.005
+				production_factory_start_efficiency_factor = 0.03
+				production_lack_of_resource_penalty_factor = -0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		AUS_skoda_works_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_skoda_works_2"}
+			allowed = { always = no }
+			picture = CZE_Czech_Industrial_Power
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.075
+				production_factory_start_efficiency_factor = 0.05
+				production_lack_of_resource_penalty_factor = -0.1
+				industrial_capacity_factory = 0.075
+			}
+		}
+
+		AUS_dockyard_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_dockyard_idea"}
+			picture = generic_coastal_navy
+			allowed = { always = no }
+			modifier = {
+				industrial_capacity_dockyard = 0.2
 			}
 		}
 	}

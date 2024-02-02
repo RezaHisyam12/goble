@@ -14,18 +14,24 @@ AUS_kill_rivals_decisions = {
 			can_declare_war_on = FROM
 			FROM = {
 				OR = {
-				tag = GER
-				tag = GEX
-				tag = DDR
-				tag = BAY
-				tag = WGR
-				tag = NGF
 				tag = GBR
 				tag = GBP
 				tag = NFA
 				tag = RUS
 				tag = CAN
+				tag = USA
+				tag = CSA
+				tag = TEX
+				tag = NEE
+				tag = PSA
+				tag = COR
+				tag = WCC
+				tag = USA
 				tag = UKR
+				tag = DDR
+				tag = BAY
+				tag = WGR
+				tag = NGF
 				}
 			}
 		}
@@ -37,18 +43,24 @@ AUS_kill_rivals_decisions = {
 			can_declare_war_on = FROM
 			FROM = {
 				OR = {
-				tag = GER
-				tag = GEX
+				tag = GBR
+				tag = GBP
+				tag = NFA
+				tag = RUS
+				tag = CAN
+				tag = USA
+				tag = CSA
+				tag = TEX
+				tag = NEE
+				tag = PSA
+				tag = COR
+				tag = WCC
+				tag = USA
+				tag = UKR
 				tag = DDR
 				tag = BAY
 				tag = WGR
 				tag = NGF
-				tag = HUN
-				tag = CRO
-				tag = NFA
-				tag = RUS
-				tag = CAN
-				tag = UKR
 				}
 			}
 		}
@@ -58,7 +70,7 @@ AUS_kill_rivals_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 50
+			factor = 25
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -131,13 +143,14 @@ AUS_kill_libleft_decisions = {
 							is_subject_of = ROOT
 						}
 					}
+					tag = FRA
+					tag = ENG
 					tag = HUN
 					tag = SCO
 					tag = WAL
 					tag = IRE
 					tag = ITA
 					tag = SRI
-					tag = ENG
 					tag = SWE
 					tag = NOR
 					tag = FIN
@@ -172,13 +185,14 @@ AUS_kill_libleft_decisions = {
 							is_subject_of = ROOT
 						}
 					}
+					tag = FRA
+					tag = ENG
 					tag = HUN
 					tag = SCO
 					tag = WAL
 					tag = IRE
 					tag = ITA
 					tag = SRI
-					tag = ENG
 					tag = SWE
 					tag = NOR
 					tag = FIN
@@ -252,280 +266,283 @@ AUS_kill_libleft_decisions = {
 		}
 	}
 }
-	
-	AUS_lib_middle_east_decision = {
-		icon = generic_prepare_civil_war
 
-		available = {
-			is_major = yes
-			has_war = no
-			is_subject = no
-		}
+AUS_build_that_wall_decisions = {
+
+	AUS_fortify_austrian_border_decision = {
+		icon = GFX_decision_generic_construction
+
 		visible = {
-			has_completed_focus = AUS_SMEPD_LIBERATE_MIDDLE_EAST
-			can_declare_war_on = FROM
-			FROM = {
-				OR = {
-					any_neighbor_country = {
-						OR = {
-							tag = ROOT
-							gives_military_access_to = ROOT
-							is_in_faction_with = ROOT
-							is_subject_of = ROOT
-						}
-					}
-				}
-				has_socialist_government = no
-			}
+			has_completed_focus = AUS_forty
+		}
+		available = {
+			152 = { is_owned_and_controlled_by = ROOT }
+			836 = { is_owned_and_controlled_by = ROOT }
 		}
 
-		target_array = global.middle_eastern_tags_array
+		fire_only_once = yes
+		cost = 20
+		days_remove = 120
 
-		target_root_trigger = {
-			has_completed_focus = AUS_SMEPD_LIBERATE_MIDDLE_EAST
-		}
-
-		target_trigger = {
-			can_declare_war_on = FROM
-			FROM = {
-				OR = {
-					any_neighbor_country = {
-						OR = {
-							tag = ROOT
-							gives_military_access_to = ROOT
-							is_in_faction_with = ROOT
-							is_subject_of = ROOT
-						}
-					}
-				}
-				has_socialist_government = no
-			}
-		}
-
-		fire_only_once = no
-		cost = 50
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = {
-					is_neighbor_of = FROM
-					has_navy_size = { size > 100 type = convoy }
-				}
-			}
-			modifier = {
-				factor = 0
-				has_army_manpower = { size < 250000 }
-			}
-			modifier = {
-				factor = 0
-				FROM = {
-					is_in_faction = no
-					strength_ratio = { tag = AUS ratio > 0.5 }
-				}
-			}
-			modifier = {
-				factor = 0
-				FROM = {
-					is_in_faction = yes
-					OR = {
-						strength_ratio = { tag = AUS ratio > 0.5 }
-						any_allied_country = {
-							is_faction_leader = yes
-							strength_ratio = { tag = AUS ratio > 1.0 }
-						}
-					}
-				}
-			}
+			factor = 6
 		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision AUS_lib_middle_east_decision target: [From.GetName]"
-			declare_war_on = {	type = annex_everything	target = FROM }
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_fortify_austrian_border_decision"
+			942 = {
+				add_building_construction = {
+					type = bunker
+					province = 6680
+					level = 3
+					instant_build = yes
+				}
+			}
+			#
+			153 = {
+				add_building_construction = {
+					type = bunker
+					province = 6678
+					level = 3
+					instant_build = yes
+				}
+			}
+			153 = {
+				add_building_construction = {
+					type = bunker
+					province = 9636
+					level = 3
+					instant_build = yes
+				}
+			}
+			153 = {
+				add_building_construction = {
+					type = bunker
+					province = 673
+					level = 3
+					instant_build = yes
+				}
+			}
+			153 = {
+				add_building_construction = {
+					type = bunker
+					province = 11634
+					level = 3
+					instant_build = yes
+				}
+			}
+			#
+			836 = {
+				add_building_construction = {
+					type = bunker
+					province = 3675
+					level = 3
+					instant_build = yes
+				}
+			}
+			836 = {
+				add_building_construction = {
+					type = bunker
+					province = 688
+					level = 3
+					instant_build = yes
+				}
+			}
+			836 = {
+				add_building_construction = {
+					type = bunker
+					province = 6708
+					level = 3
+					instant_build = yes
+				}
+			}
+			836 = {
+				add_building_construction = {
+					type = bunker
+					province = 3703
+					level = 3
+					instant_build = yes
+				}
+			}
+			836 = {
+				add_building_construction = {
+					type = bunker
+					province = 732
+					level = 3
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
-	AUS_lib_africa_decision = {
-		icon = generic_prepare_civil_war
+	AUS_fortify_bohemian_border_decision = {
+		icon = GFX_decision_generic_construction
 
-		available = {
-			is_major = yes
-			has_war = no
-			is_subject = no
-		}
 		visible = {
-			has_completed_focus = AUS_SMEPD_LIBERATE_AFRICA
-			can_declare_war_on = FROM
-			FROM = {
-				OR = {
-					any_neighbor_country = {
-						OR = {
-							tag = ROOT
-							gives_military_access_to = ROOT
-							is_in_faction_with = ROOT
-							is_subject_of = ROOT
-						}
-					}
-				}
-				has_socialist_government = no
-			}
+			has_completed_focus = AUS_NMDVP_BORDER_FORTIFICATIONS
+		}
+		available = {
+			1133 = { is_owned_and_controlled_by = ROOT }
+			786 = { is_owned_and_controlled_by = ROOT }
+			1131 = { is_owned_and_controlled_by = ROOT }
+			69 = { is_owned_and_controlled_by = ROOT }
 		}
 
-		target_array = global.african_tags_array
+		fire_only_once = yes
+		cost = 20
+		days_remove = 120
 
-		target_root_trigger = {
-			has_completed_focus = AUS_SMEPD_LIBERATE_AFRICA
-		}
-
-		target_trigger = {
-			can_declare_war_on = FROM
-			FROM = {
-				OR = {
-					any_neighbor_country = {
-						OR = {
-							tag = ROOT
-							gives_military_access_to = ROOT
-							is_in_faction_with = ROOT
-							is_subject_of = ROOT
-						}
-					}
-				}
-				has_socialist_government = no
-			}
-		}
-
-		fire_only_once = no
-		cost = 50
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = {
-					is_neighbor_of = FROM
-					has_navy_size = { size > 100 type = convoy }
-				}
-			}
-			modifier = {
-				factor = 0
-				has_army_manpower = { size < 250000 }
-			}
-			modifier = {
-				factor = 0
-				FROM = {
-					is_in_faction = no
-					strength_ratio = { tag = AUS ratio > 0.5 }
-				}
-			}
-			modifier = {
-				factor = 0
-				FROM = {
-					is_in_faction = yes
-					OR = {
-						strength_ratio = { tag = AUS ratio > 0.5 }
-						any_allied_country = {
-							is_faction_leader = yes
-							strength_ratio = { tag = AUS ratio > 1.0 }
-						}
-					}
-				}
-			}
+			factor = 6
 		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision AUS_lib_africa_decision target: [From.GetName]"
-			declare_war_on = {	type = annex_everything	target = FROM }
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_fortify_bohemian_border_decision"
+			786 = {
+				add_building_construction = {
+					type = bunker
+					province = 9441
+					level = 3
+					instant_build = yes
+				}
+			}
+			786 = {
+				add_building_construction = {
+					type = bunker
+					province = 9471
+					level = 3
+					instant_build = yes
+				}
+			}
+			#
+			1139 = {
+				add_building_construction = {
+					type = bunker
+					province = 9555
+					level = 3
+					instant_build = yes
+				}
+			}
+			#
+			1133 = {
+				add_building_construction = {
+					type = bunker
+					province = 424
+					level = 3
+					instant_build = yes
+				}
+			}
+			1133 = {
+				add_building_construction = {
+					type = bunker
+					province = 6470
+					level = 3
+					instant_build = yes
+				}
+			}
+			1133 = {
+				add_building_construction = {
+					type = bunker
+					province = 3585
+					level = 3
+					instant_build = yes
+				}
+			}
+			#
+			69 = {
+				add_building_construction = {
+					type = bunker
+					province = 3418
+					level = 3
+					instant_build = yes
+				}
+			}
+			69 = {
+				add_building_construction = {
+					type = bunker
+					province = 11432
+					level = 3
+					instant_build = yes
+				}
+			}
+			69 = {
+				add_building_construction = {
+					type = bunker
+					province = 469
+					level = 3
+					instant_build = yes
+				}
+			}
+			69 = {
+				add_building_construction = {
+					type = bunker
+					province = 11401
+					level = 3
+					instant_build = yes
+				}
+			}
+			#
+			1138 = {
+				add_building_construction = {
+					type = bunker
+					province = 11414
+					level = 3
+					instant_build = yes
+				}
+			}
+			#
+			1134 = {
+				add_building_construction = {
+					type = bunker
+					province = 445
+					level = 3
+					instant_build = yes
+				}
+			}
+			#
+			74 = {
+				add_building_construction = {
+					type = bunker
+					province = 421
+					level = 3
+					instant_build = yes
+				}
+			}
+			74 = {
+				add_building_construction = {
+					type = bunker
+					province = 6485
+					level = 3
+					instant_build = yes
+				}
+			}
+			74 = {
+				add_building_construction = {
+					type = bunker
+					province = 3583
+					level = 3
+					instant_build = yes
+				}
+			}
+			#			
+			1131 = {
+				add_building_construction = {
+					type = bunker
+					province = 9567
+					level = 3
+					instant_build = yes
+				}
+			}
+			1131 = {
+				add_building_construction = {
+					type = bunker
+					province = 13553
+					level = 3
+					instant_build = yes
+				}
+			}
 		}
 	}
-	
-	AUS_lib_east_decision = {
-		icon = generic_prepare_civil_war
 
-		available = {
-			is_major = yes
-			has_war = no
-			is_subject = no
-		}
-		visible = {
-			has_completed_focus = AUS_SMEPD_LIBERATE_EAST
-			can_declare_war_on = FROM
-			FROM = {
-				OR = {
-					tag = RUS
-					tag = TRM
-					tag = UKR
-					tag = WHR
-					tag = ALO
-					tag = DKB
-					tag = GEO
-					tag = AZE
-					tag = ARM
-					tag = TRK
-				}
-				has_socialist_government = no
-			}
-		}
-
-		target_root_trigger = {
-			has_completed_focus = AUS_SMEPD_LIBERATE_EAST
-		}
-
-		target_trigger = {
-			can_declare_war_on = FROM
-			FROM = {
-				OR = {
-					tag = RUS
-					tag = TRM
-					tag = UKR
-					tag = WHR
-					tag = ALO
-					tag = DKB
-					tag = GEO
-					tag = AZE
-					tag = ARM
-					tag = TRK
-				}
-				has_socialist_government = no
-			}
-		}
-
-		fire_only_once = no
-		cost = 50
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = {
-					is_neighbor_of = FROM
-					has_navy_size = { size > 100 type = convoy }
-				}
-			}
-			modifier = {
-				factor = 0
-				has_army_manpower = { size < 250000 }
-			}
-			modifier = {
-				factor = 0
-				FROM = {
-					is_in_faction = no
-					strength_ratio = { tag = AUS ratio > 0.5 }
-				}
-			}
-			modifier = {
-				factor = 0
-				FROM = {
-					is_in_faction = yes
-					OR = {
-						strength_ratio = { tag = AUS ratio > 0.5 }
-						any_allied_country = {
-							is_faction_leader = yes
-							strength_ratio = { tag = AUS ratio > 1.0 }
-						}
-					}
-				}
-			}
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision AUS_lib_east_decision target: [From.GetName]"
-			declare_war_on = {	type = annex_everything	target = FROM }
-		}
-	}
 
 }

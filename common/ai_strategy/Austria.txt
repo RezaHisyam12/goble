@@ -1,3 +1,6 @@
+#################
+### Diplomacy ###
+#################
 austria_worried_about_france = {
 	allowed = {
 		tag = AUS
@@ -797,6 +800,96 @@ GAL_protect_other_crownlands = {
 	}
 }
 
+################
+### Military ###
+################
+austria_focus_less_on_gru = {
+	allowed = {
+		tag = AUS
+	}
+	enable = {
+		NOT = { has_war_with = GRU }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = GRU
+		value = -10
+	}
+}
+
+AUS_ignore_GER = {
+	allowed = {
+		tag = AUS
+	}
+	enable = {
+		country_exists = GER
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "GER"
+		value = 1
+	}
+}
+
+AUS_ignore_GRU = {
+	allowed = {
+		tag = AUS
+	}
+	enable = {
+		country_exists = GRU
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "GRU"
+		value = 1
+	}
+}
+
+AUS_ignore_SWI = {
+	allowed = {
+		tag = AUS
+	}
+	enable = {
+		SWI = {
+			country_exists = SWI
+			has_socialist_government = yes
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "SWI"
+		value = 1
+	}
+}
+
+AUS_watch_illrya = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		NOT = { is_ally_with = CRO }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = contain
+		id = "CRO"
+		value = 100
+	}
+}
+
 AUS_crush_hungary = {
 	allowed = {
 		original_tag = AUS
@@ -1015,3 +1108,54 @@ AUS_crush_galicia = {
 	}
 }
 
+AUS_crush_ITA = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		has_war_with = ITA
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = ITA
+		value = 1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = ITA
+		value = 100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = GRU
+		value = -20
+	}
+}
+
+AUS_crush_SRI = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		has_war_with = SRI
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = SRI
+		value = 1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = SRI
+		value = 100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = GRU
+		value = -20
+	}
+}
