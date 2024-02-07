@@ -20079,6 +20079,7 @@ country_event = { #Fate of Slovakia
 				tag = HUN
 				tag = CZE
 			}
+			has_global_flag = BOH_czechoslovakism_yes
 		}
 		ai_chance = {
 			factor = 30

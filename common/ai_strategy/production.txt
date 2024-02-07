@@ -326,7 +326,10 @@ we_need_dockyards_3 = {
 default_marine_production = {
 	allowed = {
 		NOT = {
-			original_tag = CAN
+			AND = {
+				original_tag = CAN
+				NOT = { country_exists = GBR }
+			}
 			original_tag = GBR
 			original_tag = ENG
 			original_tag = JAP
@@ -371,7 +374,10 @@ special_forces_marine_production = {
 extra_marine_production = {
 	allowed = {
 		OR = {
-			original_tag = CAN
+			AND = {
+				original_tag = CAN
+				NOT = { country_exists = GBR }
+			}
 			original_tag = GBR
 			original_tag = ENG
 			original_tag = JAP
@@ -380,6 +386,15 @@ extra_marine_production = {
 			original_tag = AST
 			original_tag = GEA
 			is_american_tag = yes
+			AND = {
+				has_war = yes
+				num_of_naval_factories > 10
+				NOT = {
+					any_enemy_country = {
+						is_neighbor_of = ROOT
+					}
+				}
+			}
 		}
 	}
 	enable = {
@@ -480,6 +495,51 @@ default_bicycle_production = {
 	}
 }
 
+make_more_militia = {
+	enable = {
+		num_of_military_factories < 5
+	}
+	abort = {
+		num_of_military_factories > 4
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -10
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = militia
+		value = 10
+	}
+}
+
+make_less_cavalry_and_militia = {
+	enable = {
+		num_of_military_factories > 10
+	}
+	abort = {
+		num_of_military_factories < 11
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 14
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = -7
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = militia
+		value = -7
+	}
+}
+
 more_cavalry_focused_nation = {
 	allowed = {
 		OR = {
@@ -529,6 +589,136 @@ more_cavalry_focused_nation = {
 		type = template_prio
 		id = cavalry
 		value = 50
+	}
+}
+
+default_mobile_production = {
+	allowed = {
+		NOT = {
+			original_tag = MON
+			original_tag = ALO
+			original_tag = TRK
+			original_tag = UZB
+			original_tag = KYR
+			original_tag = DKB
+			original_tag = KUB
+			original_tag = SAU
+			original_tag = JBS
+			original_tag = LBA
+			original_tag = TRP
+			original_tag = IRQ
+		}
+	}
+	enable = {
+		has_tech = motorised_infantry
+		num_of_military_factories > 10
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = -3
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -2
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mobile
+		value = 5
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = 20
+	}
+}
+
+late_mobile_production = {
+	allowed = {
+		OR = {
+			original_tag = MON
+			original_tag = ALO
+			original_tag = TRK
+			original_tag = UZB
+			original_tag = KYR
+			original_tag = DKB
+			original_tag = KUB
+			original_tag = SAU
+			original_tag = JBS
+			original_tag = LBA
+			original_tag = TRP
+			original_tag = IRQ
+		}
+	}
+	enable = {
+		date > 1940.1.1
+		has_tech = motorised_infantry
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = -10
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mobile
+		value = 5
+	}
+}
+
+limit_mobile_production = {
+	enable = {
+		has_tech = motorised_infantry
+		num_of_military_factories > 10
+		OR = {
+			num_of_military_factories < 30
+			oil < 20
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = mobile
+		value = -6
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 6
+	}
+}
+
+more_mobile_production = {
+	enable = {
+		has_tech = motorised_infantry
+		num_of_military_factories > 30
+		oil > 30
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = mobile
+		value = 6
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -6
 	}
 }
 
@@ -632,7 +822,7 @@ more_super_heavy_tank_focused_nation = {
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = -3
+		value = -5
 	}
 	ai_strategy = {
 		type = template_prio
@@ -687,11 +877,6 @@ increased_tank_production_3 = {
 
 	ai_strategy = {
 		type = role_ratio
-		id = infantry
-		value = -3
-	}
-	ai_strategy = {
-		type = role_ratio
 		id = armor_role
 		value = 8
 	}
@@ -703,11 +888,6 @@ increased_tank_production_4 = {
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = -6
-	}
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
@@ -742,28 +922,11 @@ increased_tank_production_6 = {
 }
 
 more_armor_focused_nation = {
-	allowed = {
-		OR = {
-			original_tag = FRA
-			original_tag = GER
-			original_tag = GRU
-			original_tag = RUS
-			original_tag = USA
-			original_tag = CSA
-			original_tag = TXS
-			original_tag = TEX
-			original_tag = CAL
-			original_tag = COR
-			original_tag = CAN
-			original_tag = WCC
-			original_tag = AUS
-		}
-	}
 	enable = {
 		OR = {
-			num_of_military_factories > 60
+			num_of_military_factories > 49
 			AND = {
-				num_of_military_factories > 50
+				num_of_military_factories > 19
 				country_has_armor_focus = yes
 			}
 		}
@@ -774,7 +937,12 @@ more_armor_focused_nation = {
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = -10
+		value = -12
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = armor_role
+		value = 12
 	}
 }
 
@@ -855,12 +1023,6 @@ DEFAULT_template_design_industrial_country = {
 
 	ai_strategy = {
 		type = template_prio
-		id = medium_armor
-		value = 10
-	}
-
-	ai_strategy = {
-		type = template_prio
 		id = heavy_armor
 		value = 20
 	}
@@ -895,12 +1057,6 @@ LATE_template_design_industrial_country = {
 		type = template_prio
 		id = heavy_armor
 		value = 50
-	}
-
-	ai_strategy = {
-		type = template_prio
-		id = super_heavy_armor
-		value = 30
 	}
 
 	ai_strategy = {
