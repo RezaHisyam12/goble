@@ -891,7 +891,7 @@ increased_tank_production_4 = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
-		value = 8
+		value = 10
 	}
 }
 
@@ -904,7 +904,7 @@ increased_tank_production_5 = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
-		value = 10
+		value = 12
 	}
 }
 
@@ -917,7 +917,7 @@ increased_tank_production_6 = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
-		value = 10
+		value = 14
 	}
 }
 

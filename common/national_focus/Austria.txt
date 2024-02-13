@@ -7545,6 +7545,13 @@ focus_tree = {
 		}
 		x = 43
 		y = 10.5
+		ai_will_do = { 
+			factor = 3
+			modifier = {
+				factor = 0
+				date < 1940.1.1
+				}
+			}
 			available = {
 			has_government = paternal_autocrat
 				}
@@ -7608,6 +7615,13 @@ focus_tree = {
 		}
 		x = 49
 		y = 10.5
+		ai_will_do = { 
+			factor = 3
+			modifier = {
+				factor = 0
+				date < 1941.1.1
+				}
+			}
 			available = {
 			has_government = paternal_autocrat
 				}
@@ -7710,10 +7724,6 @@ focus_tree = {
 					create_wargoal = {
 							type = annex_everything
 							target = 3.owner
-						}
-					create_wargoal = {
-							type = annex_everything
-							target = 159.owner
 						}
 				}
 

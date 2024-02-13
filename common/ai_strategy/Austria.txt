@@ -859,10 +859,7 @@ AUS_ignore_SWI = {
 		tag = AUS
 	}
 	enable = {
-		SWI = {
-			country_exists = SWI
-			has_socialist_government = yes
-		}
+		country_exists = SWI
 	}
 
 	abort_when_not_enabled = yes

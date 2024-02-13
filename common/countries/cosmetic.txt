@@ -1004,8 +1004,8 @@ TXS_texaco = {
 }
 
 AUS_HRE = {
-	color = rgb { 222 222 62 }
-	color_ui = rgb { 222 222 62 }
+	color = rgb { 255 196 0 }
+	color_ui = rgb { 255 196 0 }
 }
 ANT_1 = {
 	color = rgb { 156 126 159 }
@@ -4221,10 +4221,10 @@ PPS = {
 	color_ui = rgb { 163 17 31 }
 }
 BFE = {
-	color = rgb { 222 222 62 }
-	color_ui = rgb { 222 222 62 }
+	color = rgb { 255 196 0 }
+	color_ui = rgb { 255 196 0 }
 }
 KOH = {
-	color = rgb { 222 222 62 }
-	color_ui = rgb { 222 222 62 }
+	color = rgb { 255 196 0 }
+	color_ui = rgb { 255 196 0 }
 }
