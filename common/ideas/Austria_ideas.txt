@@ -573,7 +573,7 @@ ideas = {
 			picture = UK_military_loyal_idea
 			allowed = { always = no }
 			modifier = {
-				conscription_factor = -0.15
+				conscription_factor = -0.10
 				special_forces_attack_factor = 0.15
 				special_forces_defence_factor = 0.15
 				planning_speed = 0.25
@@ -636,7 +636,6 @@ ideas = {
 			}
 			rule = {
 				can_join_factions = no
-				can_only_justify_war_on_threat_country = yes
 				can_not_declare_war = yes
 			}
 		}
