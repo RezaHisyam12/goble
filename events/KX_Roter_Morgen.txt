@@ -4363,3 +4363,79 @@ country_event = { # Ideology Switch
 		}	
 	}
 }
+
+country_event = { # BFE claims
+	id = rotermorgenmisc.8787
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8787" }
+	title = rotermorgenmisc.8787.t
+	desc = rotermorgenmisc.8787.d
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		1089 = { add_core_of = BFE }
+		211 = { add_core_of = BFE }
+		771 = { add_core_of = BFE }
+		77 = { add_core_of = BFE }
+		772 = { add_core_of = BFE }
+		770 = { add_core_of = BFE }
+		1090 = { add_core_of = BFE }
+		212 = { add_core_of = BFE }
+		48 = { add_core_of = BFE }
+		106 = { add_core_of = BFE }
+		766 = { add_core_of = BFE }
+		44 = { add_core_of = BFE }
+		841 = { add_core_of = BFE }
+		765 = { add_core_of = BFE }
+		767 = { add_core_of = BFE }
+		108 = { add_core_of = BFE }
+		107 = { add_core_of = BFE }
+		105 = { add_core_of = BFE }
+		163 = { add_core_of = BFE }
+		104 = { add_core_of = BFE }
+		103 = { add_core_of = BFE }
+		1143 = { add_core_of = BFE }
+		1270 = { add_core_of = BFE }
+		1206 = { add_core_of = BFE }
+		1271 = { add_core_of = BFE }
+		1268 = { add_core_of = BFE }
+		1097 = { add_core_of = BFE }
+		1270 = { add_core_of = BFE }
+		1098 = { add_core_of = BFE }
+		1128 = { add_core_of = BFE }
+		794 = { add_core_of = BFE }
+		1102 = { add_core_of = BFE }
+		1099 = { add_core_of = BFE }
+		109 = { add_core_of = BFE }
+		1206 = { add_core_of = BFE }
+		1104 = { add_core_of = BFE }
+		1101 = { add_core_of = BFE }
+		1103 = { add_core_of = BFE }
+		102 = { add_core_of = BFE }
+		1105 = { add_core_of = BFE }
+		1141 = { add_core_of = BFE }
+		1142 = { add_core_of = BFE }
+		1145 = { add_core_of = BFE }
+		1269 = { add_core_of = BFE }
+		46 = { add_core_of = BFE }
+		81 = { add_core_of = BFE }
+	}
+}
+
+country_event = { # KOH claims
+	id = rotermorgenmisc.8788
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8788" }
+	title = rotermorgenmisc.8788.t
+	desc = rotermorgenmisc.8788.d
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		43 = { add_core_of = KOH }
+		1107 = { add_core_of = KOH }
+		154 = { add_core_of = KOH }
+		1108 = { add_core_of = KOH }
+		1109 = { add_core_of = KOH }
+		1110 = { add_core_of = KOH }
+		155 = { add_core_of = KOH }
+		1106 = { add_core_of = KOH }
+	}
+}

@@ -7354,6 +7354,13 @@ focus_tree = {
 				}
 				add_claim_by = AUS
 			}
+			every_state = {
+				limit = {
+					is_core_of = "ITA"
+					is_not_claim_or_core_of_ROOT = yes
+				}
+				add_claim_by = AUS
+			}
 		}
 	}
 	focus = {
@@ -7704,6 +7711,10 @@ focus_tree = {
 							type = annex_everything
 							target = 3.owner
 						}
+					create_wargoal = {
+							type = annex_everything
+							target = 159.owner
+						}
 				}
 
 	}
@@ -7744,7 +7755,7 @@ focus_tree = {
 						days = 365 
 					}
 					every_owned_state = {
-					limit = { OR = { is_core_of = GER is_core_of = SWI is_core_of = CZE }}
+					limit = { OR = { is_core_of = GER is_core_of = SWI is_core_of = CZE is_core_of = ITA is_core_of = SLO}}
 						AUS = { add_state_core = PREV }
 			}
 		}
@@ -8148,8 +8159,9 @@ focus_tree = {
 		prerequisite = {
 			focus = AUS_byz_admin
 		}
+		prerequisite = { focus = AUS_puppet focus = AUS_center }
 		x = 46
-		y = 15
+		y = 16
 			available = {
 			has_government = paternal_autocrat
 			NOT = {
@@ -8166,5 +8178,76 @@ focus_tree = {
 					add_political_power = 100
 					custom_effect_tooltip = AUS_tt_entente_decisions
 				}
+	}
+	focus = {
+		id = AUS_puppet
+		text = AUS_puppet
+		icon = GER_Victory_In_Europe
+		cost = 5.00
+		prerequisite = {
+			focus = AUS_purple_pheonix
+		}
+		prerequisite = {
+			focus = AUS_avenge
+		}
+		x = 43
+		y = 15
+			available = {
+			has_government = paternal_autocrat
+			NOT = {
+				has_idea = AUS_aftermath
+				}
+			}
+			available = {
+					NOT = {
+						is_subject = yes
+					}
+			}
+			mutually_exclusive = {
+				focus = AUS_center
+			}
+			completion_reward = {
+					log = "[GetDateText]: [Root.GetName]: Focus AUS_puppet"
+					custom_effect_tooltip = AUS_tt_entente_decisions
+					add_stability = -0.10
+				}
+	}
+	focus = {
+		id = AUS_center
+		text = AUS_center
+		icon = GER_Victory_In_Europe
+		cost = 5.00
+		prerequisite = {
+			focus = AUS_purple_pheonix
+		}
+		prerequisite = {
+			focus = AUS_avenge
+		}
+		x = 49
+		y = 15
+			available = {
+			has_government = paternal_autocrat
+			NOT = {
+				has_idea = AUS_aftermath
+				}
+			}
+			available = {
+					NOT = {
+						is_subject = yes
+					}
+			}
+			mutually_exclusive = {
+				focus = AUS_puppet
+			}
+			completion_reward = {
+					log = "[GetDateText]: [Root.GetName]: Focus AUS_puppet"
+					custom_effect_tooltip = AUS_tt_entente_decisions
+					add_stability = 0.10
+					add_political_power = -150
+					every_owned_state = {
+					limit = { OR = { is_core_of = CRO is_core_of = HUN is_core_of = GAL is_core_of = TRS is_core_of = BOS}}
+						AUS = { add_state_core = PREV }
+			}
+		}
 	}
 }

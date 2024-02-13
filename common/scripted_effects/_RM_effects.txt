@@ -1517,3 +1517,54 @@ create_VST = {
 	}
 }
 
+create_BFE = {
+	SER = {
+		set_politics = {
+			ruling_party = paternal_autocrat
+			last_election = "1936.1.1"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		set_party_name = { ideology = paternal_autocrat long_name = "Kaiserliche Verwaltung" name = "KV"}
+		set_popularities = {
+			paternal_autocrat = 100
+		}
+
+		create_country_leader = {
+			name = "Imperial Administration"
+			desc = "POLITICS_TSAR_OF_ALL_RUSSIA_DESC"
+			picture = "gfx/leaders/GRU/Portrait_Germany_Vacant_Office.png"
+			expire = "1.1.1"
+			ideology = absolute_monarchy_subtype
+			traits = { 
+			}
+		}
+		set_cosmetic_tag = BFE
+	}
+}
+
+create_KOH = {
+	HUN = {
+		set_politics = {
+			ruling_party = paternal_autocrat
+			last_election = "1936.1.1"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		set_party_name = { ideology = paternal_autocrat long_name = "Kaiserliche Verwaltung" name = "KV"}
+		set_popularities = {
+			paternal_autocrat = 100
+		}
+
+		create_country_leader = {
+			name = "Imperial Administration"
+			desc = "POLITICS_TSAR_OF_ALL_RUSSIA_DESC"
+			picture = "gfx/leaders/GRU/Portrait_Germany_Vacant_Office.png"
+			expire = "1.1.1"
+			ideology = absolute_monarchy_subtype
+			traits = { 
+			}
+		}
+		set_cosmetic_tag = KOH
+	}
+}

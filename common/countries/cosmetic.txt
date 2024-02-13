@@ -1004,8 +1004,8 @@ TXS_texaco = {
 }
 
 AUS_HRE = {
-	color = rgb { 165 163 39 }
-	color_ui = rgb { 165 163 39 }
+	color = rgb { 222 222 62 }
+	color_ui = rgb { 222 222 62 }
 }
 ANT_1 = {
 	color = rgb { 156 126 159 }
@@ -4219,4 +4219,12 @@ VST = {
 PPS = {
 	color = rgb { 123 0 28 }
 	color_ui = rgb { 163 17 31 }
+}
+BFE = {
+	color = rgb { 222 222 62 }
+	color_ui = rgb { 222 222 62 }
+}
+KOH = {
+	color = rgb { 222 222 62 }
+	color_ui = rgb { 222 222 62 }
 }

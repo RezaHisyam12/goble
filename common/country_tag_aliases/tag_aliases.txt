@@ -217,6 +217,18 @@ OXA = {
 	has_cosmetic_tag = OXA
 }
 
+### Balkan Fed
+BFE = {
+	original_tag = SER
+	has_cosmetic_tag = BFE
+}
+
+### Konig Hung
+KOH = {
+	original_tag = HUN
+	has_cosmetic_tag = KOH
+}
+
 ### Moskito
 MKT = {
 	global_event_target = Miskitu_Coast
