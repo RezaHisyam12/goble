@@ -247,7 +247,6 @@ ideas = {
 			}
 			traits = {
 				economy_minister
-				
 				eco_administrative_genius
 			}
 		}
@@ -346,8 +345,7 @@ ideas = {
 				sec_man_of_the_people
 			}
 		}
-		
-		
+				
 		PRC_MAINFRAME_sec_tot = {
 			allowed = { original_tag = XNE }
 			available = {
@@ -385,6 +383,7 @@ ideas = {
 				sec_efficient_sociopath
 			}
 		}
+
 		GRU_MEMEMAN_sec_tot = {
 			allowed = { original_tag = GRU }
 			available = {
@@ -406,6 +405,7 @@ ideas = {
 				sec_efficient_sociopath
 			}
 		}
+
 		GRU_Ernst_Roehm_sec_tot = {
 			allowed = { original_tag = GRU }
 			available = {
@@ -424,6 +424,7 @@ ideas = {
 				sec_prince_of_terror
 			}
 		}
+
 		GRU_Ernst_Roehm_sec_npo = {
 			allowed = { original_tag = GRU }
 			available = {

@@ -294,7 +294,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 6680
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -303,7 +303,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 6678
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -311,7 +311,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 9636
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -319,7 +319,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 673
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -327,7 +327,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 11634
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -336,7 +336,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 3675
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -344,7 +344,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 688
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -352,7 +352,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 6708
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -360,7 +360,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 3703
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -368,7 +368,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 732
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -402,7 +402,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 9441
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -410,7 +410,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 9471
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -419,7 +419,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 9555
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -428,7 +428,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 424
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -436,7 +436,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 6470
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -444,7 +444,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 3585
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -453,7 +453,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 3418
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -461,7 +461,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 11432
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -469,7 +469,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 469
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -477,7 +477,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 11401
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -486,7 +486,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 11414
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -495,7 +495,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 445
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -504,7 +504,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 421
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -512,7 +512,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 6485
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -520,7 +520,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 3583
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -529,7 +529,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 9567
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -537,7 +537,7 @@ AUS_build_that_wall_decisions = {
 				add_building_construction = {
 					type = bunker
 					province = 13553
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -574,6 +574,14 @@ AUS_volksreichskommissariat_decisions = {
 		
 			complete_effect = {
 				create_BFE = yes
+				every_state = {
+					limit = {
+						OR = {
+						state = 107
+						}			
+					}
+				remove_claim_by = AUS
+				}
 				hidden_effect = {
 					BFE = {
 						transfer_state = 107
@@ -586,7 +594,7 @@ AUS_volksreichskommissariat_decisions = {
 						type = support_equipment
 						amount = 100
 						}
-						add_manpower = 40000
+						add_manpower = 100000
 					}
 				BFE = {	country_event = rotermorgenmisc.8787 }
 				set_autonomy = { target = BFE autonomy_state = crownland }
@@ -996,6 +1004,54 @@ AUS_volksreichskommissariat_decisions = {
 			}
 		
 			complete_effect = {
+				every_state = {
+					limit = {
+						OR = {
+						state = 1089
+						state = 211
+						state = 771
+						state = 77
+						state = 772
+						state = 770
+						state = 1090
+						state = 212
+						state = 48
+						state = 106
+						state = 766
+						state = 44
+						state = 841
+						state = 765
+						state = 767
+						state = 108
+						state = 109
+						state = 105
+						state = 163
+						state = 104
+						state = 103
+						state = 1143
+						state = 1270
+						state = 1206
+						state = 1271
+						state = 1268
+						state = 1097
+						state = 1270
+						state = 1098
+						state = 1128
+						state = 794
+						state = 1102
+						state = 1099
+						state = 1206
+						state = 1105
+						state = 1141
+						state = 1142
+						state = 1145
+						state = 1269
+						state = 46
+						state = 81
+						}			
+					}
+				remove_claim_by = AUS
+				}
 					BFE = {
 						transfer_state = 1089
 						transfer_state = 211
@@ -1073,6 +1129,14 @@ AUS_volksreichskommissariat_decisions = {
 		
 			complete_effect = {
 				create_KOH = yes
+				every_state = {
+					limit = {
+						OR = {
+							state = 43
+						}			
+					}
+					remove_claim_by = AUS
+				}
 				hidden_effect = {
 					KOH = {
 						transfer_state = 43
@@ -1085,7 +1149,7 @@ AUS_volksreichskommissariat_decisions = {
 						type = support_equipment
 						amount = 100
 						}
-						add_manpower = 40000
+						add_manpower = 100000
 					}
 				KOH = {	country_event = rotermorgenmisc.8788 }
 				set_autonomy = { target = KOH autonomy_state = crownland }
@@ -1396,8 +1460,45 @@ AUS_volksreichskommissariat_decisions = {
 			}
 		
 			complete_effect = {
+				every_state = {
+					limit = {
+						OR = {
+						state = 1107
+						state = 154
+						state = 1108
+						state = 1109
+						state = 1110
+						state = 155
+						state = 1106
+						state = 45
+						state = 70
+						state = 73
+						state = 76
+						state = 82
+						state = 83
+						state = 84
+						state = 664
+						state = 789
+						state = 875
+						state = 1111
+						state = 1112
+						state = 1113
+						state = 1114
+						state = 1115
+						state = 1116
+						state = 1117
+						state = 1118
+						state = 1119
+						state = 1120
+						state = 1121
+						state = 1122
+						state = 1135
+						state = 1136
+						}			
+					}
+				remove_claim_by = AUS
+				}
 					KOH = {
-						transfer_state = 43
 						transfer_state = 1107
 						transfer_state = 154
 						transfer_state = 1108
@@ -1434,5 +1535,232 @@ AUS_volksreichskommissariat_decisions = {
 				KOH = {	country_event = rotermorgenmisc.8788 }
 				}
 			}
+	}
+	AUS_pan_germanism_albania_decision = {
+		icon = GFX_pangermanicone
+		allowed = { original_tag = AUS }
+		available = {
+			is_subject = no
+			country_exists = ALB
+			ALB = {
+				NOT = { is_in_faction_with = RUS }
+			}
+		}
+		visible = {
+			has_completed_focus = AUS_puppet
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = ALB
+				}
+			}
+		}
+		targets = { ALB }
+		target_root_trigger = {
+			has_completed_focus = AUS_puppet
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = ALB
+				}	
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					any_allied_country = {
+						is_faction_leader = yes
+						overlord = {
+							strength_ratio = {
+								tag = ROOT
+								ratio > 0.7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_pan_germanism_albania_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_pan_germanism_albania_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+			declare_war_on = {	type = annex_everything	target = ALB }
+			every_state = {
+				limit = {
+					is_core_of = "ALB"
+					is_not_claim_or_core_of_ROOT = yes
+				}
+				add_claim_by = ROOT
+			}
+		}
+	}
+	#
+	AUS_pan_germanism_bulgaria_decision = {
+		icon = GFX_pangermanicone
+		allowed = { original_tag = AUS }
+		available = {
+			is_subject = no
+			country_exists = BUL
+			BUL = {
+				NOT = { is_in_faction_with = RUS }
+			}
+		}
+		visible = {
+			has_completed_focus = AUS_puppet
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = BUL
+				}
+			}
+		}
+		targets = { BUL }
+		target_root_trigger = {
+			has_completed_focus = AUS_puppet
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = BUL
+				}	
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					any_allied_country = {
+						is_faction_leader = yes
+						overlord = {
+							strength_ratio = {
+								tag = ROOT
+								ratio > 0.7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_pan_germanism_BULece_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_pan_germanism_BULece_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+			declare_war_on = {	type = annex_everything	target = BUL }
+			every_state = {
+				limit = {
+					is_core_of = "BUL"
+					is_not_claim_or_core_of_ROOT = yes
+				}
+				add_claim_by = ROOT
+			}
+		}
 	}
 }

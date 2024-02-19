@@ -7354,13 +7354,6 @@ focus_tree = {
 				}
 				add_claim_by = AUS
 			}
-			every_state = {
-				limit = {
-					is_core_of = "ITA"
-					is_not_claim_or_core_of_ROOT = yes
-				}
-				add_claim_by = AUS
-			}
 		}
 	}
 	focus = {
@@ -7672,6 +7665,7 @@ focus_tree = {
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus AUS_forty"
 					custom_effect_tooltip = AUS_tt_border
+					add_ideas = AUS_bunker_idea
 				}
 
 	}
@@ -7698,6 +7692,9 @@ focus_tree = {
 				has_war = yes
 				}
 			}
+			will_lead_to_war_with = GER
+			will_lead_to_war_with = GRU
+			will_lead_to_war_with = SWI
 			available = {
 			has_government = paternal_autocrat
 				}
@@ -8219,7 +8216,7 @@ focus_tree = {
 			}
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus AUS_puppet"
-					custom_effect_tooltip = AUS_tt_entente_decisions
+					custom_effect_tooltip = AUS_puppet_decisions
 					add_stability = -0.10
 				}
 	}
@@ -8252,7 +8249,7 @@ focus_tree = {
 			}
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus AUS_puppet"
-					custom_effect_tooltip = AUS_tt_entente_decisions
+					custom_effect_tooltip = AUS_direct_decisions
 					add_stability = 0.10
 					add_political_power = -150
 					every_owned_state = {

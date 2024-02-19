@@ -781,4 +781,8 @@ spriteTypes = {
 		name = "GFX_idea_idea_INS_The_Year_of_Living_Dangerously"
 		texturefile = "gfx/interface/ideas/ideas/idea_INS_The_Year_of_Living_Dangerously.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_PB_GER_Fortress_Germany"
+		texturefile = "gfx/interface/ideas/ideas/PB_GER_Fortress_Germany.dds"
+	}
 }

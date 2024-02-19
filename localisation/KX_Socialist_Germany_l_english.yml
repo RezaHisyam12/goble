@@ -3866,6 +3866,7 @@ AUS_combined_hre: "Airland Warfare"
 AUS_skoda_works: "National Industry"
 AUS_skoda_works_2: "National Industry"
 AUS_dockyard_idea: "Modern Shipyards"
+AUS_bunker_idea: "Defense of Vaterland"
 
 AUS_start_hre_tooltip:0 "§GAustria will look to its past and attempt to restore its former glory!§!"
 AUS_national_rebirth_tooltip:0 "§GThe government will proclaim a national rejuvenation to retake the legacies of the past.§!"
@@ -3888,6 +3889,12 @@ AUS_volksreichskommissariat_moskowien:0 "Establish the §OBalkan Federation§!."
 AUS_expansion_one_volksland_hypoborea:0 "Expand §OBalkan Federation§!."
 AUS_volksreichskommissariat_hungary:0 "Establish the §GKingdom of Hungary§!."
 AUS_expansion_two_volksland_hypoborea:0 "Expand §GKingdom of Hungary§!."
+AUS_direct_decisions:0 "§YDirect Administration of Danubian and Balkan Territories§!."
+AUS_puppet_decisions:0 "Unlocks §GNew§! decisions to establish new §CCrownlands§!."
+AUS_pan_germanism_albania_decision:0 "Attack Albania"
+AUS_pan_germanism_bulgaria_decision:0 "Attack Bulgaria"
+
+
 
 
 
@@ -3963,3 +3970,24 @@ KOH_national_populist:0 "Kingdom of Hungary"
 KOH_national_populist_ADJ:0 "Kingdom of Hungary"
 KOH_national_populist_DEF:0 "Kingdom of Hungary"
 
+###DESCRIPT###
+
+
+AUS_hre_desc:0 "In a bold and visionary move, the Austrian Empire unveils a strategic decision to embark on the ambitious task of restoring the fabled Holy Roman Empire. This decision, rooted in a deep sense of historical duty and imperial ambition, represents a defining moment in the empire's quest to reclaim its rightful place as a preeminent power in Central Europe."
+AUS_national_rebirth_desc:0 "Despite facing challenges to its authority and unity, the Austrian Empire maintained ambitions of imperial greatness, harkening back to the days of the Holy Roman Empire. The national spirit of the empire often emphasized its historical legacy and its aspirations for territorial expansion and geopolitical influence."
+AUS_avenge_desc:0 "In a resolute endeavor to reclaim the esteemed territorial legacy of the Holy Roman Empire, the Austrian Empire embarks on a strategic pursuit that epitomizes our unwavering dedication to restoring lands rightfully part of our illustrious past. This initiative underscores our commitment to safeguarding and honoring our imperial heritage with utmost reverence."
+AUS_art_of_war_desc:0 "In a decisive turn towards assertive action, the Austrian Empire embraces a strategic shift, marking a departure from diplomatic conventions. This decision underscores our readiness to confront challenges directly, signaling our determination to assert our interests through the crucible of conflict."
+AUS_national_service_desc:0 "In a significant policy shift, the Austrian Empire enacts a pivotal decision aimed at bolstering the readiness and unity of our nation. This step underscores our commitment to strengthening the defense and prosperity of our empire by mandating the active participation of all citizens."
+AUS_metaxas_youth_desc:0 "In a strategic endeavor aimed at enhancing governance and efficiency, and in preparation reminiscent of the Holy Roman Empire's grandeur, the Austrian Empire initiates measures to streamline administrative processes and consolidate authority. This reflects our commitment to fostering greater cohesion and effectiveness in managing our empire."
+AUS_forty_desc:0 "In response to the escalating threats posed to our cherished Vaterland, the Austrian Empire takes decisive action to fortify our defenses. This crucial measure signifies our steadfast dedication to preserving our nation's sovereignty and ensuring the safety of our citizens amidst mounting external pressures."
+AUS_retake_desc:0 "Amidst the rising tensions and historical imperatives, the Austrian Empire braces itself for the campaign to reclaim the territories once held by the Holy Roman Empire. This strategic endeavor underscores our unwavering determination to rectify past injustices and restore the glory of our imperial legacy."
+AUS_purple_pheonix_desc:0 "With the restoration of the Holy Roman Empire, the Austrian Empire ascends to new heights of power and prestige. As the rightful heirs to this venerable title, we stand poised to shape the course of history and usher in a new era of prosperity and influence for our empire and the continent as a whole."
+AUS_march_north_desc:0 "In the aftermath of recent conflicts, the Holy Roman Empire embarks on the monumental task of rebuilding. This endeavor epitomizes our steadfast commitment to revitalizing the territories reclaimed in the aftermath of war and restoring the empire to its former glory."
+AUS_secure_south_desc:0 "In a strategic maneuver aimed at enhancing efficiency and governance, the Holy Roman Empire undertakes measures to streamline bureaucratic processes and optimize the functioning of our administration. This decision underscores our determination to ensure the prosperity of the empire through more effective governance."
+AUS_rome_desc:0 "The Imperial Army Restructuring includes comprehensive training programs aimed at enhancing the skills and capabilities of our soldiers. Advanced combat training, leadership development, and specialization initiatives are introduced to ensure our troops are prepared for the challenges of modern warfare."
+AUS_africa_desc:0 "While the Empire stands nominally reunited under a single central government, the practical reality presents a far more nuanced picture. The integration of the old realms into the imperial administration demands considerable time, resources, and concerted effort. Moreover, the diverse peoples within our borders require patience and diplomacy to embrace our rule fully."
+AUS_byz_admin_desc:0 "The decision to implement the Air-Land Integration Initiative arises from a recognition of the changing dynamics of warfare in the modern era. As technology advances and tactics evolve, the Holy Roman Empire seeks to remain at the forefront of military innovation by adapting its strategies to exploit the synergies between air and land forces."
+AUS_orthodox_defence_desc:0 "In response to the profound influence of religion on the politics and culture of the Empire. In an age marked by religious strife and sectarian conflict, the empire seeks to harness the power of faith as a unifying force, rallying its people around a common set of spiritual values and beliefs."
+AUS_center_desc:0 "In light of prevailing geopolitical circumstances and imperatives for strategic consolidation, the imperial administration has chosen to assert direct control over the claimed territories in the Danubian and Balkan regions. This decisive move reflects the empire's commitment to fortify its territorial integrity and streamline governance mechanisms for enhanced efficiency and security."
+AUS_puppet_desc:0 "In response to the evolving geopolitical landscape and the imperatives of imperial governance, a new series of decisions have been unlocked to facilitate the establishment of additional Crownlands within the empire. These decisions represent a strategic initiative aimed at enhancing administrative efficiency, fostering regional integration, and consolidating imperial authority across newly acquired territories."
+AUS_world_desc:0 "Amidst the currents of global politics and the shifting tides of power, the Holy Roman Empire seizes upon a momentous opportunity to reclaim its position on the world stage. This decision marks a definitive step towards asserting the empire's influence and securing its rightful place among the great powers of the era."
