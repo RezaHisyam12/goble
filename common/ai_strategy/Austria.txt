@@ -246,11 +246,6 @@ AUS_crush_ser = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = conquer
-		id = SER
-		value = 1000
-	}
-	ai_strategy = {
 		type = front_unit_request
 		id = SER
 		value = 100
@@ -259,6 +254,15 @@ AUS_crush_ser = {
 		type = front_unit_request
 		tag = GRU
 		value = -20
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = SER
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
 	}
 }
 
@@ -372,11 +376,6 @@ AUS_crush_rom = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = conquer
-		id = ROM
-		value = 1000
-	}
-	ai_strategy = {
 		type = front_unit_request
 		tag = GRU
 		value = -20
@@ -385,6 +384,15 @@ AUS_crush_rom = {
 		type = front_unit_request
 		id = ROM
 		value = 100
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = ROM
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
 	}
 }
 
@@ -475,11 +483,6 @@ AUS_crush_ukraine = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = conquer
-		id = UKR
-		value = 1000
-	}
-	ai_strategy = {
 		type = front_unit_request
 		tag = GRU
 		value = -30
@@ -488,6 +491,15 @@ AUS_crush_ukraine = {
 		type = front_unit_request
 		id = UKR
 		value = 100
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = UKR
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
 	}
 }
 
@@ -1127,11 +1139,6 @@ AUS_crush_ITA = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = conquer
-		id = ITA
-		value = 1000
-	}
-	ai_strategy = {
 		type = front_unit_request
 		id = ITA
 		value = 100
@@ -1140,6 +1147,15 @@ AUS_crush_ITA = {
 		type = front_unit_request
 		tag = GRU
 		value = -20
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = ITA
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
 	}
 }
 
@@ -1153,11 +1169,6 @@ AUS_crush_SRI = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = conquer
-		id = SRI
-		value = 1000
-	}
-	ai_strategy = {
 		type = front_unit_request
 		id = SRI
 		value = 100
@@ -1166,6 +1177,15 @@ AUS_crush_SRI = {
 		type = front_unit_request
 		tag = GRU
 		value = -20
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = SRI
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
 	}
 }
 ###############
