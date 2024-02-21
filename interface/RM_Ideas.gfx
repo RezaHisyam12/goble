@@ -785,4 +785,16 @@ spriteTypes = {
 		name = "GFX_idea_PB_GER_Fortress_Germany"
 		texturefile = "gfx/interface/ideas/ideas/PB_GER_Fortress_Germany.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_PB_GER_Landship_Shock"
+		texturefile = "gfx/interface/ideas/ideas/PB_GER_Landship_Shock.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_GER_Artillery_Drone"
+		texturefile = "gfx/interface/ideas/ideas/PB_GER_Artillery_Drone.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_PB_GER_Our_Darkest_Hour"
+		texturefile = "gfx/interface/ideas/ideas/idea_PB_GER_Our_Darkest_Hour.dds"
+	}
 }

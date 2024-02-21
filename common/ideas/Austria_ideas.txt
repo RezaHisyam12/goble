@@ -354,6 +354,7 @@ ideas = {
 		}
 		AUS_artillery_production = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_artillery_production" }
+			name = AUS_artillery_production
 			picture = generic_artillery_regiments
 			allowed = { always = no }
 			modifier = {
@@ -528,7 +529,7 @@ ideas = {
 		AUS_purple_phoenix_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea AUS_purple_phoenix_idea"}
 			allowed = { always = no }
-			picture = IMP_imperium_of_man
+			picture = AUS_part_of_the_Empire
 			modifier = {
 				political_power_factor = 0.10
 				stability_factor = 0.05
@@ -568,23 +569,107 @@ ideas = {
 			}
 		}
 
-		AUS_reform_hre = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_reform_hre" }
-			picture = UK_military_loyal_idea
+		AUS_reform_hre_hickmann = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_reform_hre_hickmann" }
+			name = AUS_reform_hre
+			picture = idea_PB_GER_Our_Darkest_Hour
 			allowed = { always = no }
 			modifier = {
-				conscription_factor = -0.10
-				special_forces_attack_factor = 0.15
-				special_forces_defence_factor = 0.15
-				planning_speed = 0.25
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_org_factor = 0.05
+				planning_speed = 0.20
+				max_planning = 0.20
+				breakthrough_factor = 0.05
+			}
+		}
+
+		AUS_reform_hre_hickmann_artillery = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_reform_hre_hickmann_artillery" }
+			name = AUS_artillery_production
+			picture = PB_GER_Artillery_Drone
+			allowed = { always = no }
+			modifier = {
+				army_artillery_attack_factor = 0.1
+				army_artillery_defence_factor = 0.1
+			}
+			equipment_bonus = {
+				artillery_equipment = {
+					soft_attack = 0.1
+					hard_attack = 0.1
+					breakthrough = 0.15
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				rocket_artillery_equipment = {
+					soft_attack = 0.1
+					hard_attack = 0.1
+					breakthrough = 0.15
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				motorized_rocket_equipment = {
+					soft_attack = 0.1
+					hard_attack = 0.1
+					breakthrough = 0.15
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				anti_air_equipment = {
+					soft_attack = 0.1
+					hard_attack = 0.1
+					breakthrough = 0.15
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				anti_tank_equipment = {
+					soft_attack = 0.1
+					hard_attack = 0.1
+					breakthrough = 0.15
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+
+		AUS_reform_hre_hubicki = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_reform_hre_hubicki" }
+			name = AUS_reform_hre
+			picture = PB_GER_Landship_Shock
+			allowed = { always = no }
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.05
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
+				mechanized_attack_factor = 0.1
+				mechanized_defence_factor = 0.1
+				army_speed_factor = 0.1
+				army_org_factor = 0.05
+				planning_speed = 0.20
 				max_planning = 0.25
-				special_forces_cap = 0.25
-				special_forces_training_time_factor = 0.20
+			}
+		}
+
+		AUS_reform_hre_jansa = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_reform_hre_jansa" }
+			name = AUS_reform_hre
+			picture = idea_PB_GER_Our_Darkest_Hour
+			allowed = { always = no }
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.1
+				max_dig_in = 5
+				army_org_factor = 0.05
+				max_planning = 0.30
+				planning_speed = 0.15
+				army_morale_factor = 0.05
+				recon_factor = 0.1
 			}
 		}
 
 		AUS_combined_hre = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_reform_hre" }
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_combined_hre" }
 			allowed = { always = no }
 			picture = TOB_air_land_battles
 			modifier = {

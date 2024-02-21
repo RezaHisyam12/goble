@@ -977,24 +977,6 @@ AUS_volksreichskommissariat_decisions = {
 								owns_state = 1269
 							}
 						}
-						OR = {
-							AUS = {
-								owns_state = 46
-							}
-							any_other_country = {
-								is_subject_of = AUS
-								owns_state = 46
-							}
-						}
-						OR = {
-							AUS = {
-								owns_state = 81
-							}
-							any_other_country = {
-								is_subject_of = AUS
-								owns_state = 81
-							}
-						}
 					}
 			}
 		
@@ -1046,8 +1028,6 @@ AUS_volksreichskommissariat_decisions = {
 						state = 1142
 						state = 1145
 						state = 1269
-						state = 46
-						state = 81
 						}			
 					}
 				remove_claim_by = AUS
@@ -1092,8 +1072,6 @@ AUS_volksreichskommissariat_decisions = {
 						transfer_state = 1142
 						transfer_state = 1145
 						transfer_state = 1269
-						transfer_state = 46
-						transfer_state = 81
 					}
 					hidden_effect = {
 				BFE = {	country_event = rotermorgenmisc.8787 }
@@ -1451,6 +1429,24 @@ AUS_volksreichskommissariat_decisions = {
 								owns_state = 1111
 							}
 						}
+						OR = {
+							AUS = {
+								owns_state = 46
+							}
+							any_other_country = {
+								is_subject_of = AUS
+								owns_state = 46
+							}
+						}
+						OR = {
+							AUS = {
+								owns_state = 81
+							}
+							any_other_country = {
+								is_subject_of = AUS
+								owns_state = 81
+							}
+						}
 					}
 			}
 		
@@ -1494,6 +1490,8 @@ AUS_volksreichskommissariat_decisions = {
 						state = 1122
 						state = 1135
 						state = 1136
+						state = 46
+						state = 81
 						}			
 					}
 				remove_claim_by = AUS
@@ -1530,6 +1528,8 @@ AUS_volksreichskommissariat_decisions = {
 						transfer_state = 1122
 						transfer_state = 1135
 						transfer_state = 1136
+						state = 46
+						state = 81
 					}
 					hidden_effect = {
 				KOH = {	country_event = rotermorgenmisc.8788 }

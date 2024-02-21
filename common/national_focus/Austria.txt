@@ -8091,15 +8091,41 @@ focus_tree = {
 			has_government = paternal_autocrat
 				}
 			available = {
+			has_completed_focus = AUS_mil_expanded
+				}
+			available = {
 					NOT = {
 						is_subject = yes
 					}
 			}
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus AUS_rome"
-					add_ideas = AUS_reform_hre
+			if = {
+				limit = { has_idea = AUS_modern_army_hickmann_2 }
+				swap_ideas = {
+					remove_idea = AUS_modern_army_hickmann_2
+					add_idea = AUS_reform_hre_hickmann
 				}
-
+				swap_ideas = {
+					remove_idea = AUS_artillery_production
+					add_idea = AUS_reform_hre_hickmann_artillery
+				}
+			}
+			else_if = {
+				limit = { has_idea = AUS_modern_army_von_hubicki_3 }
+				swap_ideas = {
+					remove_idea = AUS_modern_army_von_hubicki_3
+					add_idea = AUS_reform_hre_hubicki
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = AUS_modern_army_jansa_3
+					add_idea = AUS_reform_hre_jansa
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
 		id = AUS_africa
@@ -8154,7 +8180,8 @@ focus_tree = {
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus AUS_byz_admin"
 					add_ideas = AUS_combined_hre
-				}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
 		id = AUS_world
@@ -8200,6 +8227,9 @@ focus_tree = {
 		}
 		x = 43
 		y = 15
+			ai_will_do = { 
+				factor = 100
+			}
 			available = {
 			has_government = paternal_autocrat
 			NOT = {
@@ -8233,6 +8263,9 @@ focus_tree = {
 		}
 		x = 49
 		y = 15
+			ai_will_do = { 
+				factor = 0
+			}
 			available = {
 			has_government = paternal_autocrat
 			NOT = {

@@ -4414,8 +4414,6 @@ country_event = { # BFE claims
 		1142 = { add_core_of = BFE }
 		1145 = { add_core_of = BFE }
 		1269 = { add_core_of = BFE }
-		46 = { add_core_of = BFE }
-		81 = { add_core_of = BFE }
 	}
 }
 
@@ -4435,5 +4433,24 @@ country_event = { # KOH claims
 		1110 = { add_core_of = KOH }
 		155 = { add_core_of = KOH }
 		1106 = { add_core_of = KOH }
+		46 = { add_core_of = KOH }
+		81 = { add_core_of = KOH }
+	}
+}
+
+country_event = { #Aftermath
+	id = fengtian.8789
+	immediate = { log = "[GetDateText]: [Root.GetName]: event fengtian.254" }
+	title = fengtian.254.t
+	desc = fengtian.254.d
+	picture = GFX_report_event_generic_economic_policy
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #
+		name = fengtian.254.a
+		add_ideas = FNG_Centralized_Command_Reforms
 	}
 }
