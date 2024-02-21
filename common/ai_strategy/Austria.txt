@@ -898,11 +898,6 @@ AUS_crush_hungary = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = conquer
-		id = HUN
-		value = 1000
-	}
-	ai_strategy = {
 		type = front_unit_request
 		tag = GRU
 		value = -100
@@ -926,6 +921,15 @@ AUS_crush_hungary = {
 		type = ignore
 		id = ROM
 		value = 500
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = HUN
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
 	}
 }
 
@@ -990,11 +994,6 @@ AUS_crush_illrya = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = conquer
-		id = CRO
-		value = 1000
-	}
-	ai_strategy = {
 		type = front_unit_request
 		tag = GRU
 		value = -50
@@ -1019,6 +1018,15 @@ AUS_crush_illrya = {
 		id = ROM
 		value = 500
 	}
+
+	ai_strategy = {
+		type = front_control
+		tag = CRO
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
 }
 
 AUS_crush_bohemia = {
@@ -1031,11 +1039,6 @@ AUS_crush_bohemia = {
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = {
-		type = conquer
-		id = CZE
-		value = 1000
-	}
 	ai_strategy = {
 		type = front_unit_request
 		tag = GRU
@@ -1060,6 +1063,15 @@ AUS_crush_bohemia = {
 		type = ignore
 		id = ROM
 		value = 500
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = CZE
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
 	}
 }
 
@@ -1154,5 +1166,80 @@ AUS_crush_SRI = {
 		type = front_unit_request
 		tag = GRU
 		value = -20
+	}
+}
+###############
+### Special ###
+###############
+
+AUS_build_radars_vienna = {
+	allowed = {
+		original_tag = AUS
+		threat > 0.6
+	}
+	enable = {
+		1137 = {
+			controller = { is_ally_with = FROM }
+			free_building_slots = {
+				building = radar_station
+				size > 0
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = radar_station
+		target = 1137
+		value = 2000
+	}
+}
+
+AUS_build_radars_bozen = {
+	allowed = {
+		original_tag = AUS
+		threat > 0.6
+	}
+	enable = {
+		39 = {
+			controller = { is_ally_with = FROM }
+			free_building_slots = {
+				building = radar_station
+				size > 0
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = radar_station
+		target = 39
+		value = 2000
+	}
+}
+
+AUS_build_radars_praue = {
+	allowed = {
+		original_tag = AUS
+		threat > 0.6
+	}
+	enable = {
+		1129 = {
+			controller = { is_ally_with = FROM }
+			free_building_slots = {
+				building = radar_station
+				size > 0
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = radar_station
+		target = 1129
+		value = 2000
 	}
 }

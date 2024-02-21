@@ -717,5 +717,136 @@ GRU_dont_trust_national_france = {
 		id = NFA
 		value = 100
 	}
+}
+################
+### Industry ###
+################
 
+GRU_total_war_against_russia = {
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		RUS = { is_faction_leader = yes }
+		FRA = {
+			OR = {
+				has_capitulated = yes
+				exists = no
+			}
+		}
+		SRI = {
+			OR = {
+				has_capitulated = yes
+				exists = no
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 20
+	}
+	ai_strategy = {
+		type = front_armor_score
+		id = RUS
+		value = 250
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 10
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = 60
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 20
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = -20
+	}
+	ai_strategy = {
+		type = railway_gun_divisions_ratio
+		value = 1
+	}
+}
+
+GRU_build_radars_berlin = {
+	allowed = {
+		original_tag = GRU
+		threat > 0.6
+	}
+	enable = {
+		64 = { #berlin
+			controller = { is_ally_with = FROM }
+			free_building_slots = {
+				building = radar_station
+				size > 0
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = radar_station
+		target = 64 #berlin
+		value = 2000
+	}
+}
+
+GRU_build_radars_hesse = {
+	allowed = {
+		original_tag = GRU
+		threat > 0.6
+	}
+	enable = {
+		55 = { #Hesse
+			controller = { is_ally_with = FROM }
+			free_building_slots = {
+				building = radar_station
+				size > 0
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = radar_station
+		target = 55 #Hesse
+		value = 2000
+	}
+}
+
+GRU_build_radars_prussia = {
+	allowed = {
+		original_tag = GRU
+		threat > 0.6
+	}
+	enable = {
+		5 = { #Warsaw
+			controller = { is_ally_with = FROM }
+			free_building_slots = {
+				building = radar_station
+				size > 0
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = radar_station
+		target = 5 #prussia
+		value = 2000
+	}
 }
