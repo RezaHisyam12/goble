@@ -812,6 +812,42 @@ GAL_protect_other_crownlands = {
 	}
 }
 
+AUS_crush_poland = {
+	allowed = {
+		tag = AUS
+	}
+	enable = {
+		has_war_with = POL
+		POL = { has_capitulated = no }
+		OR = {
+			FRA = {
+				has_war_with = ROOT
+				has_capitulated = no
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = FRA
+		value = -20
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = POL
+		value = 100
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = POL
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+}
 ################
 ### Military ###
 ################
