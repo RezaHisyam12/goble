@@ -4,6 +4,7 @@ TRM_eyes_on_russia = {
 	}
 	enable = {
 		is_neighbor_of = RUS
+		NOT = { is_in_faction_with = RUS }
 	}
 	abort_when_not_enabled = yes
 
