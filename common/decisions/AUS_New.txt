@@ -1528,8 +1528,209 @@ AUS_volksreichskommissariat_decisions = {
 						transfer_state = 1122
 						transfer_state = 1135
 						transfer_state = 1136
-						state = 46
-						state = 81
+						transfer_state = 46
+						transfer_state = 81
+					}
+					hidden_effect = {
+				KOH = {	country_event = rotermorgenmisc.8788 }
+				}
+			}
+	}
+	AUS_expansion_three_volksland_hypoborea = {
+
+			icon = GFX_hypoboreaVK
+			ai_will_do = {
+				factor = 50
+			}
+			fire_only_once = yes
+				
+			available = {
+				has_completed_focus = AUS_puppet
+				has_country_flag = KOH_established
+				tag = AUS 
+				AND = {	
+						OR = {
+							AUS = {
+								owns_state = 78
+							}
+							any_other_country = {
+								is_subject_of = AUS
+								owns_state = 78
+							}
+						}
+						OR = {
+							AUS = {
+								owns_state = 79
+							}
+							any_other_country = {
+								is_subject_of = AUS
+								owns_state = 79
+							}
+						}
+						OR = {
+							AUS = {
+								owns_state = 80
+							}
+							any_other_country = {
+								is_subject_of = AUS
+								owns_state = 80
+							}
+						}
+						OR = {
+							AUS = {
+								owns_state = 88
+							}
+							any_other_country = {
+								is_subject_of = AUS
+								owns_state = 88
+							}
+						}
+						OR = {
+							AUS = {
+								owns_state = 89
+							}
+							any_other_country = {
+								is_subject_of = AUS
+								owns_state = 89
+							}
+						}
+						OR = {
+							AUS = {
+								owns_state = 91
+							}
+							any_other_country = {
+								is_subject_of = AUS
+								owns_state = 91
+							}
+						}
+						OR = {
+							AUS = {
+								owns_state = 713
+							}
+							any_other_country = {
+								is_subject_of = AUS
+								owns_state = 713
+							}
+						}
+						OR = {
+							AUS = {
+								owns_state = 1125
+							}
+							any_other_country = {
+								is_subject_of = AUS
+								owns_state = 1125
+							}
+						}
+						OR = {
+							AUS = {
+								owns_state = 1126
+							}
+							any_other_country = {
+								is_subject_of = AUS
+								owns_state = 1126
+							}
+						}
+						OR = {
+							AUS = {
+								owns_state = 1127
+							}
+							any_other_country = {
+								is_subject_of = AUS
+								owns_state = 1127
+							}
+						}
+						OR = {
+							AUS = {
+								owns_state = 1140
+							}
+							any_other_country = {
+								is_subject_of = AUS
+								owns_state = 1140
+							}
+						}
+						OR = {
+							AUS = {
+								owns_state = 1222
+							}
+							any_other_country = {
+								is_subject_of = AUS
+								owns_state = 1222
+							}
+						}
+						OR = {
+							AUS = {
+								owns_state = 1314
+							}
+							any_other_country = {
+								is_subject_of = AUS
+								owns_state = 1314
+							}
+						}
+						OR = {
+							AUS = {
+								owns_state = 1319
+							}
+							any_other_country = {
+								is_subject_of = AUS
+								owns_state = 1319
+							}
+						}
+						OR = {
+							AUS = {
+								owns_state = 1320
+							}
+							any_other_country = {
+								is_subject_of = AUS
+								owns_state = 1320
+							}
+						}
+					}
+			}
+		
+			visible = {
+				has_completed_focus = AUS_puppet
+				has_country_flag = KOH_established
+			}
+		
+			complete_effect = {
+				every_state = {
+					limit = {
+						OR = {
+						state = 78
+						state = 79
+						state = 80
+						state = 88
+						state = 89
+						state = 91
+						state = 713
+						state = 1125
+						state = 1126
+						state = 1127
+						state = 1140
+						state = 1222
+						state = 1314
+						state = 1319
+						state = 1320
+						}			
+					}
+				remove_claim_by = AUS
+				}
+					KOH = {
+						transfer_state = 78
+						transfer_state = 79
+						transfer_state = 80
+						transfer_state = 88
+						transfer_state = 89
+						transfer_state = 91
+						transfer_state = 713
+						transfer_state = 1125
+						transfer_state = 1126
+						transfer_state = 1127
+						transfer_state = 1140
+						transfer_state = 1222
+						transfer_state = 1314
+						transfer_state = 1319
+						transfer_state = 1320
 					}
 					hidden_effect = {
 				KOH = {	country_event = rotermorgenmisc.8788 }

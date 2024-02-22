@@ -4435,6 +4435,21 @@ country_event = { # KOH claims
 		1106 = { add_core_of = KOH }
 		46 = { add_core_of = KOH }
 		81 = { add_core_of = KOH }
+		78 = { add_core_of = KOH }	
+		79 = { add_core_of = KOH }	
+		80 = { add_core_of = KOH }	
+		88 = { add_core_of = KOH }	
+		89 = { add_core_of = KOH }	
+		91 = { add_core_of = KOH }	
+		713 = { add_core_of = KOH }	
+		1125 = { add_core_of = KOH }	
+		1126 = { add_core_of = KOH }	
+		1127 = { add_core_of = KOH }	
+		1140 = { add_core_of = KOH }	
+		1222 = { add_core_of = KOH }	
+		1314 = { add_core_of = KOH }	
+		1319 = { add_core_of = KOH }	
+		1320 = { add_core_of = KOH }	
 	}
 }
 

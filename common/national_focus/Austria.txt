@@ -8289,6 +8289,17 @@ focus_tree = {
 					limit = { OR = { is_core_of = CRO is_core_of = HUN is_core_of = GAL is_core_of = TRS is_core_of = BOS}}
 						AUS = { add_state_core = PREV }
 			}
+			hidden_effect = {
+				limit = {
+					CRO = {
+						is_in_faction_with = AUS
+					}
+				}
+				annex_country = {
+					target = CRO
+					transfer_troops = yes
+				}
+			}
 		}
 	}
 }
