@@ -7591,7 +7591,7 @@ focus_tree = {
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus AUS_national_service"
 					add_ideas = extensive_conscription
-					add_manpower = 15000
+					add_manpower = 100000
 				}
 
 	}
