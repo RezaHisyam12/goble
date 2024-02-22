@@ -89,7 +89,8 @@ default_role_ratios_minors = {
 			tag = USA
 			tag = CSA
 			tag = TEX
-			tag = PSA
+			tag = CAL
+			tag = COR
 			tag = CAN
 		}
 	}
@@ -139,7 +140,8 @@ default_role_ratios_majors = {
 			tag = USA
 			tag = CSA
 			tag = TEX
-			tag = PSA
+			tag = CAL
+			tag = COR
 			tag = CAN
 		}
 	}
@@ -192,11 +194,11 @@ naval_unit_role_ratios_minors = {
 			tag = USA
 			tag = CSA
 			tag = TEX
-			tag = PSA
+			tag = CAL
+			tag = COR
 			tag = CAN
-			tag = RUS
-			tag = SOV
 		}
+		is_russian_tag = no
 	}
 	enable = { num_of_naval_factories > 0 }
 
@@ -378,10 +380,7 @@ naval_unit_role_ratios_NFA = {
 naval_unit_role_ratios_RUS = {
 	allowed = {
 		has_dlc_mtg = yes
-		OR = {
-			tag = RUS
-			tag = SOV
-		}
+		is_russian_tag = yes
 	}
 	enable = { always = yes }
 	abort_when_not_enabled = yes
@@ -431,7 +430,8 @@ naval_unit_role_ratios_USA = {
 			tag = USA
 			tag = CSA
 			tag = TEX
-			tag = PSA
+			tag = CAL
+			tag = COR
 		}
 	}
 	enable = { always = yes }
@@ -481,7 +481,8 @@ naval_unit_role_ratios_ACW = {
 			tag = USA
 			tag = CSA
 			tag = TEX
-			tag = PSA
+			tag = CAL
+			tag = COR
 		}
 	}
 	enable = {
@@ -582,10 +583,10 @@ high_convoy_threat = {
 			tag = USA
 			tag = CSA
 			tag = TEX
-			tag = PSA
+			tag = CAL
+			tag = COR
 			tag = CAN
-			tag = RUS
-			tag = SOV
+			is_russian_tag = yes
 		}
 	}
 	enable = {
@@ -656,7 +657,8 @@ high_mine_threat_1 = {
 			tag = USA
 			tag = CSA
 			tag = TEX
-			tag = PSA
+			tag = CAL
+			tag = COR
 			tag = CAN
 		}
 	}
@@ -686,7 +688,8 @@ high_mine_threat_2 = {
 			tag = USA
 			tag = CSA
 			tag = TEX
-			tag = PSA
+			tag = CAL
+			tag = COR
 			tag = CAN
 		}
 	}
@@ -719,7 +722,8 @@ we_need_convoys_minors = {
 				tag = USA
 				tag = CSA
 				tag = TEX
-				tag = PSA
+				tag = CAL
+				tag = COR
 			}
 		}
 	}
@@ -746,7 +750,8 @@ we_need_convoys_majors1 = {
 			tag = USA
 			tag = CSA
 			tag = TEX
-			tag = PSA
+			tag = CAL
+			tag = COR
 		}
 	}
 	enable = { stockpile_ratio = { archetype = convoy ratio < 75 } }
@@ -772,7 +777,8 @@ we_need_convoys_majors2 = {
 			tag = USA
 			tag = CSA
 			tag = TEX
-			tag = PSA
+			tag = CAL
+			tag = COR
 		}
 	}
 	enable = { stockpile_ratio = { archetype = convoy ratio < 150 } }
@@ -795,7 +801,8 @@ we_need_convoys_majors3 = {
 			tag = USA
 			tag = CSA
 			tag = TEX
-			tag = PSA
+			tag = CAL
+			tag = COR
 		}
 	}
 	enable = { stockpile_ratio = { archetype = convoy ratio < 250 } }
@@ -818,7 +825,8 @@ we_need_convoys_majors4 = {
 			tag = USA
 			tag = CSA
 			tag = TEX
-			tag = PSA
+			tag = CAL
+			tag = COR
 		}
 	}
 	enable = { stockpile_ratio = { archetype = convoy ratio < 400 } }
@@ -842,7 +850,8 @@ we_dont_need_convoys_1 = {
 				tag = USA
 				tag = CSA
 				tag = TEX
-				tag = PSA
+				tag = CAL
+				tag = COR
 			}
 		}
 	}
@@ -866,7 +875,8 @@ we_dont_need_convoys_2 = {
 			tag = USA
 			tag = CSA
 			tag = TEX
-			tag = PSA
+			tag = CAL
+			tag = COR
 		}
 	}
 	enable = { stockpile_ratio = { archetype = convoy ratio > 500 } }
