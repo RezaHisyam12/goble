@@ -548,7 +548,7 @@ AUS_build_that_wall_decisions = {
 AUS_volksreichskommissariat_decisions = {
 	AUS_volksreichskommissariat_moskowien = {
 
-			icon = GFX_moskowienVK
+			icon = generic_form_nation
 			ai_will_do = {
 				factor = 50
 			}
@@ -606,7 +606,7 @@ AUS_volksreichskommissariat_decisions = {
 	}
 	AUS_expansion_one_volksland_hypoborea = {
 
-			icon = GFX_hypoboreaVK
+			icon = generic_form_nation
 			ai_will_do = {
 				factor = 50
 			}
@@ -1081,7 +1081,7 @@ AUS_volksreichskommissariat_decisions = {
 
 	AUS_volksreichskommissariat_hungary = {
 
-			icon = GFX_moskowienVK
+			icon = generic_form_nation
 			ai_will_do = {
 				factor = 50
 			}
@@ -1139,7 +1139,7 @@ AUS_volksreichskommissariat_decisions = {
 	}
 	AUS_expansion_two_volksland_hypoborea = {
 
-			icon = GFX_hypoboreaVK
+			icon = generic_form_nation
 			ai_will_do = {
 				factor = 50
 			}
@@ -1538,7 +1538,7 @@ AUS_volksreichskommissariat_decisions = {
 	}
 	AUS_expansion_three_volksland_hypoborea = {
 
-			icon = GFX_hypoboreaVK
+			icon = generic_form_nation
 			ai_will_do = {
 				factor = 50
 			}
