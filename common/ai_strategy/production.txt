@@ -1110,6 +1110,7 @@ we_need_synth_oil_1 = {
 			tag = GER
 			tag = GRU
 			tag = FRA
+			tag = AUS
 		}
 	}
 	enable = {
