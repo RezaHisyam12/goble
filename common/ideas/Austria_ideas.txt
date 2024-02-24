@@ -731,7 +731,7 @@ ideas = {
 			picture = CZE_Czech_Industrial_Power
 			modifier = {
 				production_factory_max_efficiency_factor = 0.075
-				production_factory_efficiency_gain_factor = 0.005
+				production_factory_efficiency_gain_factor = 0.01
 				production_factory_start_efficiency_factor = 0.03
 				production_lack_of_resource_penalty_factor = -0.1
 				industrial_capacity_factory = 0.05
@@ -743,11 +743,11 @@ ideas = {
 			allowed = { always = no }
 			picture = CZE_Czech_Industrial_Power
 			modifier = {
-				production_factory_max_efficiency_factor = 0.1
-				production_factory_efficiency_gain_factor = 0.075
-				production_factory_start_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.125
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_start_efficiency_factor = 0.075
 				production_lack_of_resource_penalty_factor = -0.1
-				industrial_capacity_factory = 0.075
+				industrial_capacity_factory = 0.1
 			}
 		}
 

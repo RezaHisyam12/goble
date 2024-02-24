@@ -282,7 +282,7 @@ AUS_build_that_wall_decisions = {
 
 		fire_only_once = yes
 		cost = 20
-		days_remove = 120
+		days_remove = 40
 
 		ai_will_do = {
 			factor = 100
@@ -390,7 +390,7 @@ AUS_build_that_wall_decisions = {
 
 		fire_only_once = yes
 		cost = 20
-		days_remove = 120
+		days_remove = 40
 
 		ai_will_do = {
 			factor = 100

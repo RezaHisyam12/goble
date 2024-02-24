@@ -919,6 +919,46 @@ AUS_ignore_SWI = {
 	}
 }
 
+AUS_ignore_POL = {
+	allowed = {
+		tag = AUS
+	}
+	enable = {
+		NOT = {
+			is_ally_with = GER
+			}
+		country_exists = POL
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "POL"
+		value = 1
+	}
+}
+
+AUS_ignore_UKR = {
+	allowed = {
+		tag = AUS
+	}
+	enable = {
+		NOT = {
+			is_ally_with = GER
+			}
+		country_exists = UKR
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "UKR"
+		value = 1
+	}
+}
+
 AUS_watch_illrya = {
 	allowed = {
 		original_tag = AUS

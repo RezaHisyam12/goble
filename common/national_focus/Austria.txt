@@ -7269,6 +7269,7 @@ focus_tree = {
 			available = {
 					NOT = {
 						is_subject = yes
+						is_ally_with = GER
 					}
 			}		
 			completion_reward = {
@@ -7276,7 +7277,7 @@ focus_tree = {
 					custom_effect_tooltip = AUS_start_hre_tooltip
 					add_political_power = 150
 					increase_ruling_party_popularity_by_5 = yes
-				}
+		}
 	}
 	focus = {
 		id = AUS_national_rebirth
@@ -7353,6 +7354,22 @@ focus_tree = {
 					is_not_claim_or_core_of_ROOT = yes
 				}
 				add_claim_by = AUS
+			}
+					if = {
+						limit = { country_exists = GER }
+						GER = { add_opinion_modifier = {
+							target = AUS
+							modifier = KR_hostile
+					}
+				}
+			}
+					if = {
+						limit = { country_exists = SWI }
+						SWI = { add_opinion_modifier = {
+							target = AUS
+							modifier = KR_hostile
+					}
+				}
 			}
 		}
 	}
@@ -7702,6 +7719,19 @@ focus_tree = {
 					NOT = {
 						is_subject = yes
 					}
+			}
+			available = {
+			if = {
+				limit = { country_exists = GER }
+				GER = {
+					NOT = {
+					has_country_leader = {
+							ruling_only = yes
+							name = "Wilhelm II"
+							}
+						}
+					}
+				}
 			}
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus AUS_avenge"
@@ -8248,7 +8278,44 @@ focus_tree = {
 					log = "[GetDateText]: [Root.GetName]: Focus AUS_puppet"
 					custom_effect_tooltip = AUS_puppet_decisions
 					add_stability = -0.10
+			hidden_effect = {
+			if = {
+				limit = {
+					BUL = {
+						is_in_faction_with = AUS
+					}
 				}
+				annex_country = {
+					target = BUL
+					transfer_troops = yes
+				}
+			}
+
+			if = {
+				limit = {
+					ALB = {
+						is_in_faction_with = AUS
+					}
+				}
+				annex_country = {
+					target = ALB
+					transfer_troops = yes
+				}
+			}
+
+			if = {
+				limit = {
+					GRE = {
+						is_in_faction_with = AUS
+					}
+				}
+				annex_country = {
+					target = GRE
+					transfer_troops = yes
+					}
+				}
+			}
+		}
 	}
 	focus = {
 		id = AUS_center
