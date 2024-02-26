@@ -523,7 +523,7 @@ ideas = {
 				army_org_factor = 0.10
 				terrain_penalty_reduction = 0.1
 				out_of_supply_factor = -0.1
-				land_reinforce_rate = 0.02
+				land_reinforce_rate = 0.03
 			}
 		}
 
