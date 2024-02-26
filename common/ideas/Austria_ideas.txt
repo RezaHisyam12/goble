@@ -719,10 +719,6 @@ ideas = {
 				political_power_gain = -0.60
 				conscription_factor = -0.60
 			}
-			rule = {
-				can_join_factions = no
-				can_not_declare_war = yes
-			}
 		}
 
 		AUS_skoda_works = {
