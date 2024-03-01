@@ -7939,6 +7939,42 @@ GRU_expansion_three_volksland_hypoborea = {
 								owns_state = 1274
 							}
 						}
+						OR = {
+							GRU = {
+								owns_state = 1324
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 1324
+							}
+						}
+						OR = {
+							GRU = {
+								owns_state = 1325
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 1325
+							}
+						}
+						OR = {
+							GRU = {
+								owns_state = 1326
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 1326
+							}
+						}
+						OR = {
+							GRU = {
+								owns_state = 1327
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 1327
+							}
+						}
 				}
 			}
 		
@@ -7966,8 +8002,11 @@ GRU_expansion_three_volksland_hypoborea = {
 								transfer_state = 865
 								transfer_state = 146
 								transfer_state = 216
-
 								transfer_state = 1274
+								transfer_state = 1324
+								transfer_state = 1325
+								transfer_state = 1326
+								transfer_state = 1327
 					}
 					hidden_effect = {
 				HYP = {	country_event = rotermorgenmisc.900 }
@@ -9141,22 +9180,13 @@ GRU_expansion_three_volksland_hypoborea = {
 								owns_state = 1291
 							}
 						}
-												OR = {
-							GRU = {
-								owns_state = 1292
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								owns_state = 1292
-							}
-						}
 						OR = {
 							GRU = {
-								owns_state = 1293
+								owns_state = 1295
 							}
 							any_other_country = {
 								is_subject_of = GRU
-								owns_state = 1293
+								owns_state = 1295
 							}
 						}
 						OR = {
@@ -9166,6 +9196,24 @@ GRU_expansion_three_volksland_hypoborea = {
 							any_other_country = {
 								is_subject_of = GRU
 								owns_state = 210
+							}
+						}
+						OR = {
+							GRU = {
+								owns_state = 1289
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 1289
+							}
+						}
+						OR = {
+							GRU = {
+								owns_state = 1328
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 1328
 							}
 						}
 				}
@@ -9191,9 +9239,10 @@ GRU_expansion_three_volksland_hypoborea = {
 								transfer_state = 1289
 								transfer_state = 1290
 								transfer_state = 1287
-								transfer_state = 1292
-								transfer_state = 1293
+								transfer_state = 1295
+								transfer_state = 1289
 								transfer_state = 210
+								transfer_state = 1328
 					}
 					hidden_effect = {
 				VKB = {	country_event = rotermorgenmisc.400 }
@@ -10509,7 +10558,6 @@ GRU_beyond_lebensraum_decisions = {
 			581 = { is_owned_and_controlled_by = ROOT }
 			1195 = { is_owned_and_controlled_by = ROOT }
 			573 = { is_owned_and_controlled_by = ROOT }
-			1196 = { is_owned_and_controlled_by = ROOT }
 		}
 
 		fire_only_once = yes
@@ -10535,12 +10583,6 @@ GRU_beyond_lebensraum_decisions = {
 				}
 			}
 			573 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			1196 = { 
 				add_core_of = GRU
 				GRU = {
 					transfer_state = PREV
@@ -11338,6 +11380,24 @@ GRU_expansion_two_volksstaat_Judea = {
 								owns_state = 1279 
 							}
 						}
+						OR = {
+							GRU = {
+								owns_state = 1196
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 1196
+							}
+						}
+						OR = {
+							GRU = {
+								owns_state = 1292
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 1292
+							}
+						}
 				}
 			}
 		
@@ -11370,6 +11430,8 @@ GRU_expansion_two_volksstaat_Judea = {
 								transfer_state = 1277
 								transfer_state = 1278
 								transfer_state = 1279
+								transfer_state = 1196
+								transfer_state = 1292
 					}
 					hidden_effect = {
 				VST = {	country_event = rotermorgenmisc.951 }
