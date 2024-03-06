@@ -3065,8 +3065,7 @@ country_event = { # VKB claims
 		1087 = { add_claim_by = VKB }
 		1091 = { add_claim_by = VKB }
 		1287 = { add_claim_by = VKB }
-		1292 = { add_claim_by = VKB }
-		1293 = { add_claim_by = VKB }
+		1328 = { add_claim_by = VKB }
 	}
 }
 

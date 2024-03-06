@@ -5300,6 +5300,19 @@ GRU_germania_plan_decisions = {
 						is_subject_of = GRU
 					}
 				}
+			1329 = { 
+				owner = {
+					OR = {
+						tag = GRU
+						is_subject_of = GRU
+					}
+				}
+				controller = {
+					OR = {
+						tag = GRU
+						is_subject_of = GRU
+					}
+				}
 			}
 		}
 
@@ -5356,6 +5369,12 @@ GRU_germania_plan_decisions = {
 				}
 			}
 			1088 = { 
+				add_core_of = GRU
+				GRU = {
+					transfer_state = PREV
+				}
+			}
+			1329 = { 
 				add_core_of = GRU
 				GRU = {
 					transfer_state = PREV
