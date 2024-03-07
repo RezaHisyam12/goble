@@ -67,7 +67,7 @@ POL_dont_attack_ukraine_if_both_socialist = {
 	ai_strategy = { type = ignore_claim id = UKR value = 1 }
 }
 
-AUS_watch_ukraine = {
+POL_watch_ukraine = {
 	allowed = {
 		original_tag = POL
 	}
@@ -83,7 +83,7 @@ AUS_watch_ukraine = {
 	}
 }
 
-AUS_watch_lithu = {
+POL_watch_lithu = {
 	allowed = {
 		original_tag = POL
 	}
@@ -99,7 +99,7 @@ AUS_watch_lithu = {
 	}
 }
 
-AUS_watch_whr = {
+POL_watch_whr = {
 	allowed = {
 		original_tag = POL
 	}
@@ -115,7 +115,7 @@ AUS_watch_whr = {
 	}
 }
 
-AUS_watch_GRU = {
+POL_watch_GRU = {
 	allowed = {
 		original_tag = POL
 	}
@@ -131,7 +131,7 @@ AUS_watch_GRU = {
 	}
 }
 
-AUS_watch_RUS = {
+POL_watch_RUS = {
 	allowed = {
 		original_tag = POL
 	}

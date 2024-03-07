@@ -7793,8 +7793,33 @@ focus_tree = {
 						days = 365 
 					}
 					every_owned_state = {
-					limit = { OR = { is_core_of = GER is_core_of = SWI is_core_of = CZE is_core_of = ITA is_core_of = SLO}}
+					limit = { OR = { is_core_of = GER is_core_of = SWI is_core_of = CZE is_core_of = ITA is_core_of = SLO is_core_of = FIU}}
 						AUS = { add_state_core = PREV }
+				}
+			hidden_effect = {
+			if = {
+				limit = {
+					SLO = {
+						is_in_faction_with = AUS
+					}
+				}
+				annex_country = {
+					target = SLO
+					transfer_troops = yes
+				}
+			}
+			
+			if = {
+				limit = {
+					FIU = {
+						is_in_faction_with = AUS
+					}
+				}
+				annex_country = {
+					target = FIU
+					transfer_troops = yes
+					}
+				}
 			}
 		}
 	}

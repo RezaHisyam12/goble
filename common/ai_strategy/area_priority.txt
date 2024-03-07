@@ -58,6 +58,39 @@ germany_ignore_indian_islands = {
 	}
 }
 
+germany_ignore_indian_islands = {
+	allowed = {
+		tag = GER
+	}
+	enable = {
+		any_owned_state = {
+			OR = {
+				region = 60 #West Indian Ocean
+				region = 71 #East Indian Ocean
+				region = 74 #South East Indian Ocean
+				region = 85 #South West Indian Ocean
+				region = 99 #Far Eastern Indian Ocean
+				region = 101 #Bay of Bengal
+				region = 102 #East African Coast
+				region = 193 #Madagascar
+			}
+		}
+		NOT = {
+			has_war_with = PRF
+			has_war_with = DEH
+			has_war_with = BHC
+		}
+	}
+	
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = area_priority
+		id = indian_ocean
+		value = -500
+	}
+}
+
 germany_ignore_atlantic_islands = {
 	allowed = {
 		tag = GER
