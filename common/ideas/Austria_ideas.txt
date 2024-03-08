@@ -75,37 +75,14 @@ ideas = {
 
 		AUS_black_monday = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_black_monday" }
-			on_add = {
-				every_subject_country = {
-					limit = { has_autonomy_state = crownland }
-					add_timed_idea = {
-						idea = AUS_black_monday_for_subjects
-						days = 330
-					}
-				}
-			}
-			picture = chi_hyper_inflation
 			allowed = { always = no }
+			picture = chi_hyper_inflation
 			modifier = {
 				stability_factor = -0.2
 				production_factory_max_efficiency_factor = -0.20
 				industrial_capacity_factory = -0.5
 				production_speed_buildings_factor = -0.6
 				min_export = -0.4
-			}
-		}
-
-		# AUS subjects were magically not affected by BM (looks at you HUN)
-		AUS_black_monday_for_subjects = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_black_monday" }
-			name = AUS_black_monday
-			picture = chi_hyper_inflation
-			allowed = { always = no }
-			modifier = {
-				stability_factor = -0.2
-				production_factory_max_efficiency_factor = -0.2
-				industrial_capacity_factory = -0.2
-				production_speed_buildings_factor = -0.2
 			}
 		}
 
@@ -678,9 +655,9 @@ ideas = {
 			picture = TOB_air_land_battles
 			modifier = {
 				land_reinforce_rate = 0.05
-				air_air_superiority_defence_factor = 0.10
+				enemy_army_bonus_air_superiority_factor = -0.10
 				air_interception_defence_factor = 0.10
-				air_close_air_support_attack_factor = 0.20
+				ground_attack_factor = 0.20
 			}
 			equipment_bonus = {
 				small_plane_airframe = {

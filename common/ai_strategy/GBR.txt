@@ -1,0 +1,105 @@
+#################
+### Diplomacy ###
+#################
+GBR_hates_socialists = {
+	reversed = yes
+
+	enable_reverse = {
+		GBR = { is_in_faction_with = ENT }
+	}
+	enable = {
+		has_socialist_government = yes
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = antagonize
+		id = GBR #CAN/GBR
+		value = 1000
+	}
+}
+GBR_dislikes_germany = {
+	reversed = yes
+
+	enable_reverse = {
+		GBR = { is_in_faction_with = ENT }
+		GER = { is_faction_leader = yes }
+		NOT = { has_global_flag = GER_stay_out_france_uk }
+	}
+	enable = {
+		is_in_faction_with = GER
+	}
+	abort_when_not_enabled = yes
+
+	target_array = GER.faction_members
+
+	ai_strategy = {
+		type = ignore
+		id = GBR #CAN/GBR
+		value = 300
+	}
+	ai_strategy = {
+		type = alliance
+		id = GBR #CAN/GBR
+		value = -300
+	}
+	ai_strategy = {
+		type = befriend
+		id = GBR #CAN/GBR
+		value = -300
+	}
+	ai_strategy = {
+		type = support
+		id = GBR #CAN/GBR
+		value = -1000
+	}
+}
+entente_dislikes_germany = {
+	enable = {
+		is_in_faction_with = ENT
+		GER = { is_faction_leader = yes }
+		NOT = { has_global_flag = GER_stay_out_france_uk }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore
+		id = GER
+		value = 300
+	}
+	ai_strategy = {
+		type = alliance
+		id = GER
+		value = -300
+	}
+	ai_strategy = {
+		type = befriend
+		id = GER
+		value = -300
+	}
+	ai_strategy = {
+		type = support
+		id = GER
+		value = -1000
+	}
+}
+
+################
+### Military ###
+################
+GBR_naval_invasion_focus = {
+	allowed = {
+		tag = GBR
+	}
+	enable = {
+		surrender_progress < 0.05
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = naval_invasion_focus
+		value = 80
+	}
+}

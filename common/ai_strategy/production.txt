@@ -700,27 +700,6 @@ limit_mobile_production = {
 	}
 }
 
-more_mobile_production = {
-	enable = {
-		has_tech = motorised_infantry
-		num_of_military_factories > 30
-		oil > 30
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = role_ratio
-		id = mobile
-		value = 6
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = -6
-	}
-}
-
 default_tank_production = {
 	enable = {
 		is_eligible_for_armor_production = yes
