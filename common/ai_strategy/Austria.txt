@@ -1357,6 +1357,37 @@ AUS_crush_SRI = {
 		execute_order = yes
 	}
 }
+
+AUS_crush_SRD = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		has_war_with = SRD
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		id = SRD
+		value = 100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = GRU
+		value = -20
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = SRD
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+}
+
 ###############
 ### Special ###
 ###############

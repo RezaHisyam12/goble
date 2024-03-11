@@ -109,6 +109,14 @@ AUS_stahlpakt_alliance_decisions = {
 	icon = generic_foreign_policy
 	allowed = { tag = AUS }
 }
-#AUS_alternate_leaders_decisions = {
-#	icon = babey
-#	allowed = {}
+AUS_Foreign_Policy_decisions = {
+	icon = GFX_decision_category_russia
+	priority = 100
+
+	allowed = { tag = AUS }
+
+	visible = {
+		is_subject = no
+		has_completed_focus = AUS_world
+		}
+}

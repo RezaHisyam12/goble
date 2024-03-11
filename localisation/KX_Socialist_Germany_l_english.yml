@@ -3853,6 +3853,22 @@ AUS_byz_admin:0 "Implement the Airland Warfare"
 AUS_world:0 "Into The World"
 AUS_puppet:0 "Establish New Crownlands"
 AUS_center:0 "Direct Rule From Vienna"
+AUS_Invade_ITA:0 "Claim Eastern Italy"
+AUS_Invade_SWI:0 "Annex Switzerland"
+AUS_Invade_SRI:0 "Claim Northern Italy"
+AUS_Invade_HOL:0 "Annex Netherlands"
+AUS_End_BEL:0 "Annex Flanders-Wallonia"
+AUS_Attack_Europe:0 "Reclaim the Past"
+AUS_invite_ottomans:0 "Approach The Old Ally"
+AUS_lead_the_cetral_power:0 "Lead the Central Powers"
+AUS_electronic_warfare_goal:0 "Advanced Electronic Warfare Project"
+AUS_modernisation_prjct:0 "Broad Modernisation Project"
+
+
+HRE_rise:0 "Holy Roman Empire Restored"
+AUS_members_gain:0 "All Members Will Gain:"
+AUS_central_power:0 "Central Powers"
+
 
 AUS_purple_phoenix_idea: "Empire Reformed"
 AUS_orthodox_idea: "Nation of Faith"
@@ -3868,6 +3884,13 @@ AUS_skoda_works_2: "National Industry"
 AUS_dockyard_idea: "Modern Shipyards"
 AUS_bunker_idea: "Defense of Vaterland"
 AUS_reform_hre_hickmann_artillery: "Modern Artillery"
+AUS_ott_ally: "Astro-Turkish Ties Restored"
+AUS_found_IEA: "Imperial Economic Alliance"
+AUS_develop_navy:0 "Standardized Dockyard System"
+AUS_electronic_warfare:0 "Electronic Warfare"
+AUS_spending_ally:0 "Broad Modernisation Project"
+
+
 
 AUS_start_hre_tooltip:0 "§GAustria will look to its past and attempt to restore its former glory!§!"
 AUS_national_rebirth_tooltip:0 "§GThe government will proclaim a national rejuvenation to retake the legacies of the past.§!"
@@ -3892,6 +3915,7 @@ AUS_volksreichskommissariat_hungary:0 "Establish the §GKingdom of Hungary§!."
 AUS_expansion_two_volksland_hypoborea:0 "§GCrownland of Hungary§! expansion §GOne§!.."
 AUS_direct_decisions:0 "§YDirect Administration of Danubian and Balkan Territories§!."
 AUS_puppet_decisions:0 "Unlocks §GNew§! decisions to establish new §CCrownlands§!."
+AUS_Foreign_Policy_decisions:0 "Foreign Policy Decisions"
 AUS_pan_germanism_albania_decision:0 "Attack Albania"
 AUS_pan_germanism_bulgaria_decision:0 "Attack Bulgaria"
 AUS_expansion_three_volksland_hypoborea:0 "§GCrownland of Hungary§! expansion §GTwo§!."
@@ -3909,6 +3933,43 @@ INS_marine_army: "Negara Maritim"
 ins_silent_revolution_failed: "Revolusi Gagal"
 INS_new_economy: "Ekonomi Baru"
 INS_merdeka_idea: "Merdeka"
+
+
+AUS_Demand_FRA:0 "Demands Eastern France"
+RUS_Demand_FRA_desc:0 "The losing of our past industrialised regions of the west. It's time they are returned to their rightful owners."
+
+rotermorgenmisc.8790.t:0 "Holy Roman Empire Claims"
+rotermorgenmisc.8790.d:0 "Today the Holy Roman foreign minister has met with our prime minister. He has announced that the Holy Roman Empire wants to take back part of Eastern France. They are offering us monetary and material compensation as well as a guarantee of the new state borders in return. How shall we react?"
+rotermorgenmisc.8790.a:0 "Never!"
+rotermorgenmisc.8790.b:0 "All right."
+
+rotermorgenmisc.8791.t:0 "France Refused!"
+rotermorgenmisc.8791.d:0 "The France has refused our generous offer to transfer part of Eastern France back to the fatherland! We must take our rightful lands back by force!"
+rotermorgenmisc.8791.a:0 "Take it back by force!"
+rotermorgenmisc.8791.b:0 "Forget about it."
+
+rotermorgenmisc.8792.t:0 "Transfer of the Territory"
+rotermorgenmisc.8792.d:0 "The France has agreed to transfer the part of Eastern France in return for monetary and material compensation as well as the guarantee of the security of their new borders!"
+rotermorgenmisc.8792.a:0 "Another victory for Holy Roman Empire diplomacy!"
+
+rotermorgenmisc.8793.t:0 "An Invitation from [From.GetNameDef]"
+rotermorgenmisc.8793.d:0 "[From.GetNameDefCap] has rekindled her policy of acting as the 'Protector of the Balkans', and towards that end has formally invited us to join into her alliance. This would mean committing our forces to any [From.GetAdjective] wars, though we would also benefit from their protection."
+rotermorgenmisc.8793.a:0 "We agree to their protection"
+rotermorgenmisc.8793.b:0 "No, we're doing well enough on our own"
+
+rotermorgenmisc.8794.t:0 "[From.GetNameDefCap] Agrees"
+rotermorgenmisc.8794.d:0 "The [From.GetAdjective] has let us know that [From.GetNameDef] is looking forward to closer co-operation with [Root.GetNameDef]. [Root.GetAdjective]-[From.GetAdjective] relationships are off to a good start."
+rotermorgenmisc.8794.a:0 "Splendid"
+rotermorgenmisc.8795.t:0 "[From.GetNameDefCap] Declines"
+rotermorgenmisc.8795.d:0 "Without bothering to make a counter-offer, the [From.GetAdjective] government has refused our request... and, more over, has scoffed at our pretension to the title of 'Protector of the Balkans'. It appears our alliance will need to make do without them."
+rotermorgenmisc.8795.a:0 "Well then"
+
+rotermorgenmisc.8796.t:0 "An Unlikely Alliance"
+rotermorgenmisc.8796.d:0 "Historically, the Holy Roman Empire and the Ottoman Empire were often seen as rivals, vying for supremacy in Europe and the Mediterranean. However, the tumultuous geopolitical landscape of the early modern period prompted a reassessment of traditional enmities, as both empires grappled with internal challenges and external threats. The seeds of cooperation between the Holy Roman Empire and the Ottoman Empire were sown amidst the chaos of the Thirty Years' War, a devastating conflict that ravaged Central Europe. As the Holy Roman Empire struggled to maintain its territorial integrity and political cohesion, it found itself in dire need of allies who could provide strategic support and military assistance. Simultaneously, the Ottoman Empire faced its own set of challenges, contending with internal strife, territorial losses, and the encroachment of rival powers in the Balkans and Eastern Europe. Recognizing the potential benefits of a strategic partnership, the Ottoman Empire sought to cultivate diplomatic ties with the Holy Roman Empire, envisioning a mutually beneficial alliance that could bolster their respective positions on the world stage. The formation of this central power between the Holy Roman Empire and the Ottoman Empire ushered in a new era of stability and cooperation in Central and Eastern Europe. With their combined military might and diplomatic influence, the two empires exerted significant sway over the affairs of the region, effectively balancing the competing interests of neighboring powers and ensuring the preservation of their territorial integrity."
+rotermorgenmisc.8796.a:0 "Three Hurrahs For Our Empire"
+rotermorgenmisc.8797.a:0 "Three Hurrahs For Our Empire"
+
+
 
 ###BFE###
 
@@ -3997,3 +4058,7 @@ AUS_orthodox_defence_desc:0 "In response to the profound influence of religion o
 AUS_center_desc:0 "In light of prevailing geopolitical circumstances and imperatives for strategic consolidation, the imperial administration has chosen to assert direct control over the claimed territories in the Danubian and Balkan regions. This decisive move reflects the empire's commitment to fortify its territorial integrity and streamline governance mechanisms for enhanced efficiency and security."
 AUS_puppet_desc:0 "In response to the evolving geopolitical landscape and the imperatives of imperial governance, a new series of decisions have been unlocked to facilitate the establishment of additional Crownlands within the empire. These decisions represent a strategic initiative aimed at enhancing administrative efficiency, fostering regional integration, and consolidating imperial authority across newly acquired territories."
 AUS_world_desc:0 "Amidst the currents of global politics and the shifting tides of power, the Holy Roman Empire seizes upon a momentous opportunity to reclaim its position on the world stage. This decision marks a definitive step towards asserting the empire's influence and securing its rightful place among the great powers of the era."
+AUS_Invade_SRI_desc:0 "In earlier times, Italy constituted a significant part of the empire's domain. Through the endeavor to reclaim the territories in northern Italy, rightfully belonging to the empire, we uphold our historical heritage and ensure the integrity of our territorial boundaries."
+AUS_Invade_ITA_desc:0 "Italy wielded significant influence within the empire's domain. Our endeavor to recapture control of the territories in eastern Italy, rightfully belonging to the Empire."
+AUS_world_desc:0
+AUS_world_desc:0

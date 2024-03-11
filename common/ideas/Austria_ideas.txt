@@ -746,7 +746,90 @@ ideas = {
 				production_speed_coastal_bunker_factor = 0.2
 			}
 		}
-	}
+
+		AUS_ott_ally = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_skoda_works"}
+			allowed = { always = no }
+			picture = PB_PRS_United_In_Blood
+			modifier = {
+				stability_factor = 0.05
+				monthly_population = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		AUS_develop_navy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAN_unfied_broadcasting_system"}
+			allowed = { always = no }
+			picture = idea_CHI_Royal_Navy_Advisors
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_dockyard = 0.05
+				repair_speed_factor = 0.10
+				refit_speed = 0.05
+			}
+		}
+
+		AUS_electronic_warfare = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAN_unfied_broadcasting_system"}
+			allowed = { always = no }
+			picture = PB_FRA_Cipher
+			removal_cost = -1
+			modifier = {
+				decryption_factor = 0.03
+				encryption_factor = 0.03
+				intel_network_gain_factor = 0.1
+				local_intel_to_enemies = -0.03
+			}
+			research_bonus = {
+				electronics = 0.1
+			}
+		}
+
+		AUS_spending_ally = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_financial_ties_broken" }
+			picture = PB_Planned_Economy
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = 0.20
+				consumer_goods_factor = 0.15
+				global_building_slots_factor = 0.10
+			}
+		}
+
+		AUS_develop_radar = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAN_unfied_broadcasting_system"}
+			allowed = { always = no }
+			picture = CAN_unfied_broadcasting_system
+			removal_cost = -1
+			modifier = {
+				decryption_factor = 0.03
+				encryption_factor = 0.03
+				production_speed_radar_station_factor = 0.1
+				stability_factor = 0.05
+				war_support_factor = 0.03
+			}
+			research_bonus = {
+				electronics = 0.1
+				industry = 0.1
+			}
+		}
+
+		AUS_standardized_industry = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAN_standardized_industry"}
+			allowed = { always = no }
+			removal_cost = -1
+			picture = CAN_standardized_industry
+			modifier = {
+				industrial_capacity_factory = 0.05
+				repair_speed_factor = 0.05
+				local_resources_factor = -0.02
+				production_factory_efficiency_gain_factor = 0.04
+				stability_factor = 0.05
+				monthly_population = 0.02
+			}
+		}
+}
 
 	##############
 	# Companies

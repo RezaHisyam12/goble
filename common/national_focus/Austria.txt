@@ -1231,7 +1231,15 @@ focus_tree = {
 		cost = 6
 
 		ai_will_do = {
-			factor = 5
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				surrender_progress > 0
+			}
 		}
 
 		relative_position_id = AUS_military_expansion
@@ -7343,13 +7351,6 @@ focus_tree = {
 			}
 			every_state = {
 				limit = {
-					is_core_of = "SWI"
-					is_not_claim_or_core_of_ROOT = yes
-				}
-				add_claim_by = AUS
-			}
-			every_state = {
-				limit = {
 					is_core_of = "CZE"
 					is_not_claim_or_core_of_ROOT = yes
 				}
@@ -7358,14 +7359,6 @@ focus_tree = {
 					if = {
 						limit = { country_exists = GER }
 						GER = { add_opinion_modifier = {
-							target = AUS
-							modifier = KR_hostile
-					}
-				}
-			}
-					if = {
-						limit = { country_exists = SWI }
-						SWI = { add_opinion_modifier = {
 							target = AUS
 							modifier = KR_hostile
 					}
@@ -7748,10 +7741,6 @@ focus_tree = {
 								target = CZE
 							}
 						}						
-					create_wargoal = {
-							type = annex_everything
-							target = 3.owner
-						}
 				}
 
 	}
@@ -7775,7 +7764,6 @@ focus_tree = {
 					owns_state = 64
 					owns_state = 56
 					owns_state = 75
-					owns_state = 151
 				}
 			available = {
 					NOT = {
@@ -7792,6 +7780,7 @@ focus_tree = {
 						idea = AUS_aftermath  
 						days = 365 
 					}
+					set_country_flag = HRE_rise
 					every_owned_state = {
 					limit = { OR = { is_core_of = GER is_core_of = SWI is_core_of = CZE is_core_of = ITA is_core_of = SLO is_core_of = FIU}}
 						AUS = { add_state_core = PREV }
@@ -8394,4 +8383,584 @@ focus_tree = {
 			}
 		}
 	}
+
+
+	# Eastern Europe Path
+
+	focus = {
+		id = AUS_Attack_Europe
+		icon = GER_kill_syndies
+		prerequisite = {focus = AUS_world }
+		available = {
+			has_war = no
+			has_country_flag = HRE_rise
+			is_subject = no
+		}
+		x = 0
+		y = 1
+		
+		relative_position_id = AUS_world
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus TRM_Attack_Europe"
+			add_war_support = 0.05
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = AUS_Invade_ITA
+		icon = GFX_ITA_the_east
+		prerequisite = {focus = AUS_Attack_Europe}
+		available = {
+			has_war = no
+			has_country_flag = HRE_rise
+			is_subject = no		
+			any_neighbor_country = {
+				OR = {
+					is_ally_with = SRI
+					tag = SRI
+				}
+			}
+			if = {
+				limit = { country_exists = VNC }
+				any_neighbor_country = {
+					OR = {
+						is_ally_with = VNC
+						tag = VNC
+					}
+				}
+			}
+			if = {
+				limit = { country_exists = LOM }
+				any_neighbor_country = {
+					OR = {
+						is_ally_with = LOM
+						tag = LOM
+					}
+				}
+			}
+		}
+		x = 2
+		y = 1
+		
+		relative_position_id = AUS_Attack_Europe
+		cost = 5
+
+		bypass = {
+			NOT = { country_exists = ITA }
+			NOT = { country_exists = VNC }
+			NOT = { country_exists = LOM }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_Invade_ITA"
+			every_state = {
+				limit = {
+					is_core_of = "ITA"
+					is_not_claim_or_core_of_ROOT = yes
+				}
+				add_claim_by = AUS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ITA
+			}
+			if = {
+				limit = { country_exists = VNC }
+				create_wargoal = {
+					type = annex_everything
+					target = VNC
+				}
+			}
+			if = {
+				limit = { country_exists = LOM }
+				create_wargoal = {
+					type = annex_everything
+					target = LOM
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = AUS_Invade_SWI
+		icon = focus_attack_switzerland
+		prerequisite = {focus = AUS_Attack_Europe}
+		available = {
+			has_war = no
+			has_country_flag = HRE_rise
+			is_subject = no		
+			any_neighbor_country = {
+				OR = {
+					is_ally_with = SWI
+					tag = SWI
+				}
+			}
+		}
+		x = 0
+		y = 1
+		
+		relative_position_id = AUS_Attack_Europe
+		cost = 5
+
+		bypass = {
+			OR = {
+				NOT = { country_exists = SWI }
+				SWI = { is_in_faction_with = AUS }
+			}
+		}
+		will_lead_to_war_with = WHR
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_Invade_SWI"
+			every_state = {
+				limit = {
+					is_core_of = "SWI"
+					is_not_claim_or_core_of_ROOT = yes
+				}
+				add_claim_by = AUS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SWI
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = AUS_Invade_SRI
+		icon = BAY_TAKE_NORTH_ITALY
+		prerequisite = {
+			focus = AUS_Attack_Europe
+		}
+		available = {
+			has_war = no
+			has_country_flag = HRE_rise
+			is_subject = no		
+			any_neighbor_country = {
+				OR = {
+					is_ally_with = SRI
+					tag = SRI
+				}
+			}
+		}
+		x = -2
+		y = 1
+		relative_position_id = AUS_Attack_Europe
+		cost = 5
+
+		bypass = {
+			NOT = { country_exists = SRI }
+		}
+
+		will_lead_to_war_with = SRI
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_Invade_SRI"
+			every_state = {
+				limit = {
+					is_core_of = "SRI"
+					is_not_claim_or_core_of_ROOT = yes
+				}
+				add_claim_by = AUS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SRI
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = AUS_Invade_HOL
+		icon = BEL_Reclaim_Netherlands
+		prerequisite = {focus = AUS_Attack_Europe}
+		available = {
+			has_war = no
+			has_country_flag = HRE_rise
+			is_subject = no
+			any_neighbor_country = {
+				OR = {
+					is_ally_with = HOL
+					tag = HOL
+				}
+			}
+		}
+		x = 1
+		y = 2
+		
+		relative_position_id = AUS_Attack_Europe
+		cost = 5
+
+		bypass = {
+			NOT = { country_exists = HOL }
+		}
+		will_lead_to_war_with = HOL
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_Invade_HOL"
+			every_state = {
+				limit = {
+					is_core_of = "HOL"
+					is_not_claim_or_core_of_ROOT = yes
+				}
+				add_claim_by = AUS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = HOL
+			}
+			if = {
+				limit = { country_exists = LUX }
+				create_wargoal = {
+					type = annex_everything
+					target = LUX
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = AUS_End_BEL
+		icon = Focus_FRA_Strike_Wallonia
+		prerequisite = {
+			focus = AUS_Attack_Europe
+		}
+		available = {
+			has_war = no
+			has_country_flag = HRE_rise
+			is_subject = no		
+			any_neighbor_country = {
+				OR = {
+					is_ally_with = BEL
+					tag = BEL
+				}
+			}
+		}
+		x = -1
+		y = 2
+		relative_position_id = AUS_Attack_Europe
+		cost = 5
+
+		bypass = {
+			NOT = {
+				country_exists = POL
+			}
+		}
+
+		will_lead_to_war_with = BEL
+		will_lead_to_war_with = WAL
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_End_Poland"
+			every_state = {
+				limit = {
+					is_core_of = "BEL"
+					is_not_claim_or_core_of_ROOT = yes
+				}
+				add_claim_by = AUS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BEL
+			}
+			if = {
+				limit = { country_exists = WAL }
+				create_wargoal = {
+					type = annex_everything
+					target = WAL
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ANNEXATION FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = AUS_Demand_FRA
+		icon = FRA_demand_Alsace
+		prerequisite = {
+			focus = AUS_Invade_SWI
+			focus = AUS_Invade_HOL
+			focus = AUS_End_BEL
+		}
+		available = {
+			has_war = no
+			has_country_flag = HRE_rise
+			is_subject = no
+			if = {
+				limit = {
+					NOT = { has_global_flag = second_weltkrieg_has_started }
+				}
+				has_army_manpower = {
+					size > 1500000
+				}
+			}
+			any_neighbor_country = {
+				OR = {
+					is_ally_with = FRA
+					tag = FRA
+				}
+			}
+		}
+		x = 0
+		y = 3
+		
+		relative_position_id = AUS_Attack_Europe
+		cost = 5
+
+		bypass = {
+			NOT = {
+				country_exists = FRA
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		will_lead_to_war_with = GER
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_Demand_FRA"
+			762 = { add_claim_by = AUS }
+			21 = { add_claim_by = AUS }
+			763 = { add_claim_by = AUS }
+			735 = { add_claim_by = AUS }
+			943 = { add_claim_by = AUS }
+			785 = { add_claim_by = AUS }
+			779 = { add_claim_by = AUS }
+			unlock_decision_tooltip = AUS_Demand_FRA
+			}
+			search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+	#Alliances
+
+	focus = {
+		id = AUS_invite_ottomans
+		icon = AUS_sarajevo_accords
+		relative_position_id = AUS_world
+		x = 2
+		y = 1
+		
+		cost = 2
+
+		bypass = {
+			NOT = {
+				is_in_faction_with = TUR
+			}
+		}
+
+		available = {
+			is_subject = no
+			has_socialist_government = no
+			has_country_flag = HRE_rise
+			NOT = {
+				has_war_with = TUR
+			}
+			AUS = { is_faction_leader = yes }
+		}
+		prerequisite = {focus = AUS_world}
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 0
+				has_socialist_government = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_invite_ottomans"
+			TUR = {
+				country_event = { id = rotermorgenmisc.8793 days = 1 }
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_lead_the_cetral_power
+		icon = Generic_Germany_and_Colonies
+		cost = 6
+		prerequisite = {
+			focus = AUS_world
+		}
+		
+		relative_position_id = AUS_world
+		x = -2
+		y = 1
+
+		available = {
+			has_global_flag = HRE_rise
+			is_in_faction_with = TUR
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_lead_the_cetral_power"
+			set_faction_name = AUS_central_power
+			country_event = rotermorgenmisc.8796
+			hidden_effect = {
+				TUR = {
+					country_event = {
+						id = rotermorgenmisc.8797
+						days = 66
+						random_days = 44
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	# Faction Buff Path
+
+	focus = {
+		id = AUS_modernisation_prjct
+		icon = SCA_Ambitions_For_A_Modern_Industry
+		cost = 5
+		prerequisite = {
+			focus = AUS_world
+		}
+		
+		relative_position_id = AUS_world
+		x = -4
+		y = 1
+
+		available = {
+			has_completed_focus = AUS_world
+			has_global_flag = HRE_rise
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_modernisation_prjct"
+			add_political_power = -100
+			add_ideas = AUS_spending_ally
+		}
+	}
+	focus = {
+		id = AUS_develop_navy
+		icon = GER_naval_investments
+		cost = 5
+		prerequisite = {
+			focus = AUS_modernisation_prjct
+		}
+		
+		relative_position_id = AUS_world
+		x = -4
+		y = 2
+
+		available = {
+			has_global_flag = HRE_rise
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_develop_navy"
+			custom_effect_tooltip = AUS_members_gain
+			show_ideas_tooltip = AUS_develop_navy
+			hidden_effect = {
+				add_ideas = AUS_develop_navy
+				every_country = {
+					limit = {
+						is_in_faction_with = AUS
+					}
+					add_ideas = AUS_develop_navy
+				}
+			}
+		}
+	}
+	focus = {
+		id = AUS_electronic_warfare_goal
+		icon = PB_AME_Promote_the_IBM_Alternative
+		cost = 5
+		prerequisite = {
+			focus = AUS_develop_navy
+		}
+		
+		relative_position_id = AUS_world
+		x = -4
+		y = 3
+
+		available = {
+			has_global_flag = HRE_rise
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_electronic_warfare_goal"
+			custom_effect_tooltip = AUS_members_gain
+			show_ideas_tooltip = AUS_electronic_warfare
+			hidden_effect = {
+				add_ideas = AUS_electronic_warfare
+				every_country = {
+					limit = {
+						is_in_faction_with = AUS
+					}
+					add_ideas = AUS_electronic_warfare
+				}
+			}
+		}
+	}
+
 }

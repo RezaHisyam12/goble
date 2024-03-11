@@ -797,4 +797,24 @@ spriteTypes = {
 		name = "GFX_idea_idea_PB_GER_Our_Darkest_Hour"
 		texturefile = "gfx/interface/ideas/ideas/idea_PB_GER_Our_Darkest_Hour.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_PB_PRS_United_In_Blood"
+		texturefile = "gfx/interface/ideas/ideas/PB_PRS_United_In_Blood.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_FRA_Renewed_Naval_Policy"
+		texturefile = "gfx/interface/ideas/ideas/PB_FRA_Renewed_Naval_Policy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_CHI_Royal_Navy_Advisors"
+		texturefile = "gfx/interface/ideas/ideas/idea_CHI_Royal_Navy_Advisors.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_FRA_Cipher"
+		texturefile = "gfx/interface/ideas/ideas/PB_FRA_Cipher.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_Planned_Economy"
+		texturefile = "gfx/interface/ideas/ideas/PB_Planned_Economy.dds"
+	}
 }
