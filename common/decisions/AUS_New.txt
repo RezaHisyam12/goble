@@ -1802,4 +1802,983 @@ AUS_Foreign_Policy_decisions = {
 		    }
 		}
 	}
+
+	AUS_Attack_Eastern_Europe = {
+		name = AUS_Attack_Region
+		icon = hol_draw_up_staff_plans
+
+		available = {
+			is_neighbor_of = FROM
+		}
+
+		visible = {
+			can_declare_war_on = FROM
+		}
+
+		targets = { EST LAT LIT WHR UKR CRM }
+		target_root_trigger = {
+			has_completed_focus = AUS_Retake_Europe_East
+		}
+		target_trigger = {
+			can_declare_war_on = FROM
+		}
+		
+		cost = 10
+		days_remove = 14
+		fire_only_once = yes
+		war_with_target_on_remove = yes
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_Attack_Eastern_Europe target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 20 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_Attack_Eastern_Europe target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
+			}
+		}
+	}
+
+}
+
+AUS_core_decisions = {
+
+	AUS_pan_germanism_core_swiss_decision = {
+		icon = GFX_decision_cat_annexation
+
+		visible = {
+			has_completed_focus = AUS_Attack_Europe
+		}
+		available = {
+			3 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			151 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			761 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			760 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			943 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 100
+		modifier = {
+			political_power_gain = -0.20
+		}
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_pan_germanism_core_swiss_decision"
+			151 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			3 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			760 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			761 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			943 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+
+	AUS_pan_germanism_core_dutch_decision = {
+		icon = GFX_decision_cat_annexation
+
+		visible = {
+			has_completed_focus = AUS_Attack_Europe
+		}
+		available = {
+			866 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			36 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			7 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			35 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			978 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			979 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 100
+		modifier = {
+			political_power_gain = -0.20
+		}
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_pan_germanism_core_dutch_decision"
+			866 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			36 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			7 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			35 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			978 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			979 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+
+	AUS_pan_germanism_core_belgian_decision = {
+		icon = GFX_decision_cat_annexation
+
+		visible = {
+			has_completed_focus = AUS_Attack_Europe
+		}
+		available = {
+			6 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			34 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			741 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			29 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 100
+		modifier = {
+			political_power_gain = -0.20
+		}
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_pan_germanism_core_belgian_decision"
+			6 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			34 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			741 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			29 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+	
+	AUS_pan_germanism_core_elsas_decision = {
+		icon = GFX_decision_cat_annexation
+
+		visible = {
+			has_completed_focus = AUS_Attack_Europe
+		}
+		available = {
+			28 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			8 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			779 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 100
+		modifier = {
+			political_power_gain = -0.20
+		}
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_pan_germanism_core_elsas_decision"
+			28 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			779 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			8 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+
+	AUS_pan_germanism_core_eastern_france_decision = {
+		icon = GFX_decision_cat_annexation
+
+		visible = {
+			has_completed_focus = AUS_Attack_Europe
+		}
+		available = {
+			762 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			21 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			763 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			735 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			785 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			943 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 100
+		modifier = {
+			political_power_gain = -0.20
+		}
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_pan_germanism_core_eastern_france_decision"
+			21 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			762 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			763 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			735 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			943 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			785 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+
+	AUS_pan_germanism_core_eastern_italy_decision = {
+		icon = GFX_decision_cat_annexation
+
+		visible = {
+			has_completed_focus = AUS_Attack_Europe
+		}
+		available = {
+			159 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			160 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			759 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 100
+		modifier = {
+			political_power_gain = -0.20
+		}
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_pan_germanism_core_eastern_italy_decision"
+			159 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			160 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			759 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+
+	AUS_pan_germanism_core_northern_italy_decision = {
+		icon = GFX_decision_cat_annexation
+
+		visible = {
+			has_completed_focus = AUS_Attack_Europe
+		}
+		available = {
+			764 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			1005 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			157 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			162 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			161 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			1004 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			838 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			158 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+			1003 = { 
+				owner = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+				controller = {
+					OR = {
+						tag = AUS
+						is_subject_of = AUS
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 100
+		modifier = {
+			political_power_gain = -0.20
+		}
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_pan_germanism_core_northern_italy_decision"
+			764 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			1005 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			157 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			162 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			161 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			1004 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			838 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			158 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+			1003 = { 
+				add_core_of = AUS
+				AUS = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
 }

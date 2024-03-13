@@ -8255,7 +8255,6 @@ focus_tree = {
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus AUS_world"
 					add_political_power = 100
-					custom_effect_tooltip = AUS_tt_entente_decisions
 				}
 	}
 	focus = {
@@ -8290,6 +8289,7 @@ focus_tree = {
 			}
 			completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus AUS_puppet"
+					custom_effect_tooltip = unlocks_decision
 					custom_effect_tooltip = AUS_puppet_decisions
 					add_stability = -0.10
 			hidden_effect = {
@@ -8385,14 +8385,13 @@ focus_tree = {
 	}
 
 
-	# Eastern Europe Path
+	# Western Europe Path
 
 	focus = {
 		id = AUS_Attack_Europe
 		icon = GER_kill_syndies
 		prerequisite = {focus = AUS_world }
 		available = {
-			has_war = no
 			has_country_flag = HRE_rise
 			is_subject = no
 		}
@@ -8403,23 +8402,22 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus TRM_Attack_Europe"
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe"
+			custom_effect_tooltip = unlocks_decision
+			custom_effect_tooltip = AUS_core_2_decisions
 			add_war_support = 0.05
 			add_political_power = 50
 		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
+
 	focus = {
 		id = AUS_Invade_ITA
 		icon = GFX_ITA_the_east
 		prerequisite = {focus = AUS_Attack_Europe}
 		available = {
-			has_war = no
 			has_country_flag = HRE_rise
 			is_subject = no		
 			any_neighbor_country = {
@@ -8453,11 +8451,7 @@ focus_tree = {
 		relative_position_id = AUS_Attack_Europe
 		cost = 5
 
-		bypass = {
-			NOT = { country_exists = ITA }
-			NOT = { country_exists = VNC }
-			NOT = { country_exists = LOM }
-		}
+		bypass_if_unavailable = yes
 
 		ai_will_do = {
 			factor = 1
@@ -8468,13 +8462,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Invade_ITA"
-			every_state = {
-				limit = {
-					is_core_of = "ITA"
-					is_not_claim_or_core_of_ROOT = yes
-				}
-				add_claim_by = AUS
-			}
+			159 = { add_claim_by = AUS }
+			160 = { add_claim_by = AUS }
+			759 = { add_claim_by = AUS }
 			create_wargoal = {
 				type = annex_everything
 				target = ITA
@@ -8501,7 +8491,6 @@ focus_tree = {
 		icon = focus_attack_switzerland
 		prerequisite = {focus = AUS_Attack_Europe}
 		available = {
-			has_war = no
 			has_country_flag = HRE_rise
 			is_subject = no		
 			any_neighbor_country = {
@@ -8517,19 +8506,79 @@ focus_tree = {
 		relative_position_id = AUS_Attack_Europe
 		cost = 5
 
-		bypass = {
-			OR = {
-				NOT = { country_exists = SWI }
-				SWI = { is_in_faction_with = AUS }
-			}
-		}
-		will_lead_to_war_with = WHR
+		bypass_if_unavailable = yes
+		will_lead_to_war_with = SWI
 
 		ai_will_do = {
-			factor = 1
+			factor = 75
 			modifier = {
 				factor = 0
-				has_war = yes
+				can_declare_war_on = SWI
+				OR = {
+					has_war = yes
+					strength_ratio = { tag = SWI ratio < 0.75 }
+					# neither of us is in a faction and SWI is stronger
+					AND = {
+						SWI = {
+							is_in_faction = no
+							is_subject = no
+						}
+						is_in_faction = no
+						strength_ratio = { tag = SWI ratio < 1.0 }
+					}
+					# they're in a faction which is not at war
+					SWI = {
+						OR = {
+							AND = {
+								is_in_faction = yes
+								is_faction_leader = no
+							}
+							is_subject = yes
+						}
+						has_war = no
+					}
+					# they're in the Belgrade Pact and we're much stronger
+					SWI = {
+						is_in_faction = yes
+						is_faction_leader = no
+						strength_ratio = { tag = ROOT ratio > 0.30 }
+					}
+					# they're guaranteed but not in a faction
+					SWI = {
+						is_in_faction = no
+						has_guarantor = yes
+						any_of_scopes = {
+							array = guarantor_array
+							has_guaranteed = PREV
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're a subject and the overlord is stronger than us or in a faction and not losing
+					SWI = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're in a faction which is at war but not with a major and not losing
+					SWI = {
+						is_in_faction = yes
+						has_war = yes
+						NOT = {
+							any_enemy_country = { is_actual_major = yes }
+							surrender_progress > 0.10
+							faction_leader = { surrender_progress > 0.20 }
+						}
+					}
+				}
 			}
 		}
 		completion_reward = {
@@ -8555,7 +8604,6 @@ focus_tree = {
 			focus = AUS_Attack_Europe
 		}
 		available = {
-			has_war = no
 			has_country_flag = HRE_rise
 			is_subject = no		
 			any_neighbor_country = {
@@ -8570,9 +8618,7 @@ focus_tree = {
 		relative_position_id = AUS_Attack_Europe
 		cost = 5
 
-		bypass = {
-			NOT = { country_exists = SRI }
-		}
+		bypass_if_unavailable = yes
 
 		will_lead_to_war_with = SRI
 		ai_will_do = {
@@ -8584,13 +8630,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Invade_SRI"
-			every_state = {
-				limit = {
-					is_core_of = "SRI"
-					is_not_claim_or_core_of_ROOT = yes
-				}
-				add_claim_by = AUS
-			}
+			764 = { add_claim_by = AUS }
+			1005 = { add_claim_by = AUS }
+			157 = { add_claim_by = AUS }
+			162 = { add_claim_by = AUS }
+			161 = { add_claim_by = AUS }
+			1004 = { add_claim_by = AUS }
+			838 = { add_claim_by = AUS }
+			158 = { add_claim_by = AUS }
+			1003 = { add_claim_by = AUS }
 			create_wargoal = {
 				type = annex_everything
 				target = SRI
@@ -8603,7 +8651,6 @@ focus_tree = {
 		icon = BEL_Reclaim_Netherlands
 		prerequisite = {focus = AUS_Attack_Europe}
 		available = {
-			has_war = no
 			has_country_flag = HRE_rise
 			is_subject = no
 			any_neighbor_country = {
@@ -8619,15 +8666,78 @@ focus_tree = {
 		relative_position_id = AUS_Attack_Europe
 		cost = 5
 
-		bypass = {
-			NOT = { country_exists = HOL }
-		}
+		bypass_if_unavailable = yes
 		will_lead_to_war_with = HOL
 		ai_will_do = {
-			factor = 1
+			factor = 75
 			modifier = {
 				factor = 0
-				has_war = yes
+				can_declare_war_on = HOL
+				OR = {
+					has_war = yes
+					strength_ratio = { tag = HOL ratio < 0.75 }
+					# neither of us is in a faction and HOL is stronger
+					AND = {
+						HOL = {
+							is_in_faction = no
+							is_subject = no
+						}
+						is_in_faction = no
+						strength_ratio = { tag = HOL ratio < 1.0 }
+					}
+					# they're in a faction which is not at war
+					HOL = {
+						OR = {
+							AND = {
+								is_in_faction = yes
+								is_faction_leader = no
+							}
+							is_subject = yes
+						}
+						has_war = no
+					}
+					# they're in the Belgrade Pact and we're much stronger
+					HOL = {
+						is_in_faction = yes
+						is_faction_leader = no
+						strength_ratio = { tag = ROOT ratio > 0.30 }
+					}
+					# they're guaranteed but not in a faction
+					HOL = {
+						is_in_faction = no
+						has_guarantor = yes
+						any_of_scopes = {
+							array = guarantor_array
+							has_guaranteed = PREV
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're a subject and the overlord is stronger than us or in a faction and not losing
+					HOL = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're in a faction which is at war but not with a major and not losing
+					HOL = {
+						is_in_faction = yes
+						has_war = yes
+						NOT = {
+							any_enemy_country = { is_actual_major = yes }
+							surrender_progress > 0.10
+							faction_leader = { surrender_progress > 0.20 }
+						}
+					}
+				}
 			}
 		}
 		completion_reward = {
@@ -8660,7 +8770,6 @@ focus_tree = {
 			focus = AUS_Attack_Europe
 		}
 		available = {
-			has_war = no
 			has_country_flag = HRE_rise
 			is_subject = no		
 			any_neighbor_country = {
@@ -8675,19 +8784,80 @@ focus_tree = {
 		relative_position_id = AUS_Attack_Europe
 		cost = 5
 
-		bypass = {
-			NOT = {
-				country_exists = POL
-			}
-		}
+		bypass_if_unavailable = yes
 
 		will_lead_to_war_with = BEL
 		will_lead_to_war_with = WAL
 		ai_will_do = {
-			factor = 1
+			factor = 75
 			modifier = {
 				factor = 0
-				has_war = yes
+				can_declare_war_on = BEL
+				OR = {
+					has_war = yes
+					strength_ratio = { tag = BEL ratio < 0.75 }
+					# neither of us is in a faction and BEL is stronger
+					AND = {
+						BEL = {
+							is_in_faction = no
+							is_subject = no
+						}
+						is_in_faction = no
+						strength_ratio = { tag = BEL ratio < 1.0 }
+					}
+					# they're in a faction which is not at war
+					BEL = {
+						OR = {
+							AND = {
+								is_in_faction = yes
+								is_faction_leader = no
+							}
+							is_subject = yes
+						}
+						has_war = no
+					}
+					# they're in the Belgrade Pact and we're much stronger
+					BEL = {
+						is_in_faction = yes
+						is_faction_leader = no
+						strength_ratio = { tag = ROOT ratio > 0.30 }
+					}
+					# they're guaranteed but not in a faction
+					BEL = {
+						is_in_faction = no
+						has_guarantor = yes
+						any_of_scopes = {
+							array = guarantor_array
+							has_guaranteed = PREV
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're a subject and the overlord is stronger than us or in a faction and not losing
+					BEL = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're in a faction which is at war but not with a major and not losing
+					BEL = {
+						is_in_faction = yes
+						has_war = yes
+						NOT = {
+							any_enemy_country = { is_actual_major = yes }
+							surrender_progress > 0.10
+							faction_leader = { surrender_progress > 0.20 }
+						}
+					}
+				}
 			}
 		}
 		completion_reward = {
@@ -8722,7 +8892,6 @@ focus_tree = {
 			focus = AUS_End_BEL
 		}
 		available = {
-			has_war = no
 			has_country_flag = HRE_rise
 			is_subject = no
 			if = {
@@ -8746,11 +8915,7 @@ focus_tree = {
 		relative_position_id = AUS_Attack_Europe
 		cost = 5
 
-		bypass = {
-			NOT = {
-				country_exists = FRA
-			}
-		}
+		bypass_if_unavailable = yes
 
 		ai_will_do = {
 			factor = 10
@@ -8782,14 +8947,15 @@ focus_tree = {
 		relative_position_id = AUS_world
 		x = 2
 		y = 1
+		ai_will_do = { 
+			factor = 10
+		}
 		
 		cost = 2
 
 		bypass = {
-			NOT = {
 				is_in_faction_with = TUR
 			}
-		}
 
 		available = {
 			is_subject = no
@@ -8828,6 +8994,9 @@ focus_tree = {
 		relative_position_id = AUS_world
 		x = -2
 		y = 1
+		ai_will_do = { 
+			factor = 10
+		}
 
 		available = {
 			has_global_flag = HRE_rise
@@ -8877,7 +9046,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
@@ -8905,7 +9074,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
@@ -8942,7 +9111,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
@@ -8962,5 +9131,233 @@ focus_tree = {
 			}
 		}
 	}
+
+	# Eastern Europe Path
+
+	focus = {
+		id = AUS_Attack_Europe_East
+		icon = european_policy
+		prerequisite = {focus = AUS_world }
+		available = {
+			has_country_flag = HRE_rise
+			is_subject = no
+		}
+		x = 4
+		y = 1
+		
+		relative_position_id = AUS_world
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe"
+			army_experience = 50
+			air_experience = 50
+			navy_experience = 50
+		}
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+	}
+
+	focus = {
+		id = AUS_Invade_POL
+		icon = GFX_goal_POL_Poland_Forever
+		prerequisite = {focus = AUS_Attack_Europe_East}
+		available = {
+			has_country_flag = HRE_rise
+			is_subject = no		
+			any_neighbor_country = {
+				OR = {
+					is_ally_with = POL
+					tag = POL
+				}
+			}
+		}
+		x = 0
+		y = 1
+		
+		relative_position_id = AUS_Attack_Europe_East
+		cost = 5
+
+		bypass_if_unavailable = yes
+		will_lead_to_war_with = POL
+
+		ai_will_do = {
+			factor = 75
+			modifier = {
+				factor = 0
+				can_declare_war_on = POL
+				OR = {
+					has_war = yes
+					strength_ratio = { tag = POL ratio < 0.75 }
+					# neither of us is in a faction and POL is stronger
+					AND = {
+						POL = {
+							is_in_faction = no
+							is_subject = no
+						}
+						is_in_faction = no
+						strength_ratio = { tag = POL ratio < 1.0 }
+					}
+					# they're in a faction which is not at war
+					POL = {
+						OR = {
+							AND = {
+								is_in_faction = yes
+								is_faction_leader = no
+							}
+							is_subject = yes
+						}
+						has_war = no
+					}
+					# they're in the Belgrade Pact and we're much stronger
+					POL = {
+						is_in_faction = yes
+						is_faction_leader = no
+						strength_ratio = { tag = ROOT ratio > 0.30 }
+					}
+					# they're guaranteed but not in a faction
+					POL = {
+						is_in_faction = no
+						has_guarantor = yes
+						any_of_scopes = {
+							array = guarantor_array
+							has_guaranteed = PREV
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're a subject and the overlord is stronger than us or in a faction and not losing
+					POL = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're in a faction which is at war but not with a major and not losing
+					POL = {
+						is_in_faction = yes
+						has_war = yes
+						NOT = {
+							any_enemy_country = { is_actual_major = yes }
+							surrender_progress > 0.10
+							faction_leader = { surrender_progress > 0.20 }
+						}
+					}
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_Invade_POL"
+			create_wargoal = {
+				type = annex_everything
+				target = POL
+			}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+
+	focus = {
+		id = AUS_Retake_Europe_East
+		icon = GFX_RUS_eastern_europe
+		prerequisite = {focus = AUS_Invade_POL }
+		available = {
+			has_country_flag = HRE_rise
+			is_subject = no
+		}
+		x = 0
+		y = 2
+		
+		relative_position_id = AUS_Attack_Europe_East
+		cost = 6
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_stability < 0.25
+				}
+				modifier = {
+					factor = 0
+					has_war = yes
+				}
+				modifier = {
+					factor = 0
+					has_stability < 0.3
+				}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe"
+		custom_effect_tooltip = unlocks_decision
+		custom_effect_tooltip = AUS_Attack_Eastern_Europe_EST_tooltip
+		custom_effect_tooltip = unlocks_decision
+		custom_effect_tooltip = AUS_Attack_Eastern_Europe_LAT_tooltip
+		custom_effect_tooltip = unlocks_decision
+		custom_effect_tooltip = AUS_Attack_Eastern_Europe_LIT_tooltip
+		custom_effect_tooltip = unlocks_decision
+		custom_effect_tooltip = AUS_Attack_Eastern_Europe_WHR_tooltip
+		custom_effect_tooltip = unlocks_decision
+		custom_effect_tooltip = AUS_Attack_Eastern_Europe_UKR_tooltip
+		custom_effect_tooltip = unlocks_decision
+		custom_effect_tooltip = AUS_Attack_Eastern_Europe_CRM_tooltip
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+
+	focus = {
+		id = AUS_Rus_Left
+		icon = RUS_the_left
+		prerequisite = {focus = AUS_Retake_Europe_East }
+		available = {
+			has_country_flag = HRE_rise
+			is_subject = no
+		}
+		x = 2.5
+		y = 4
+		
+		relative_position_id = AUS_world
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe"
+			army_experience = 50
+			air_experience = 50
+			navy_experience = 50
+		}
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+	}
+	focus = {
+		id = AUS_Rus_Right
+		icon = RUS_the_right
+		prerequisite = {focus = AUS_Retake_Europe_East }
+		available = {
+			has_country_flag = HRE_rise
+			is_subject = no
+		}
+		x = 4
+		y = 4
+		
+		relative_position_id = AUS_world
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe"
+			army_experience = 50
+			air_experience = 50
+			navy_experience = 50
+		}
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+	}
+
 
 }
