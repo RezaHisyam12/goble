@@ -1883,6 +1883,83 @@ AUS_Foreign_Policy_decisions = {
 		}
 	}
 
+	AUS_Strike_RUS_decision = {
+		name = AUS_The_Final_Battle
+		priority = 150
+		icon = eng_puppet_usa
+
+		visible = {
+			can_declare_war_on = FROM
+		}
+
+		targets = { RUS }
+		target_root_trigger = {
+				has_completed_focus = AUS_Rus_Left
+				has_completed_focus = AUS_Rus_Right
+		}
+		target_trigger = {
+			can_declare_war_on = FROM
+		}
+		
+		cost = 0
+		days_remove = 40
+		fire_only_once = yes
+		war_with_target_on_remove = yes
+
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				any_allied_country = {
+					is_faction_leader = yes
+					has_war = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.6
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_Strike_RUS_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 45 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_Strike_RUS_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
+			}
+		}
+	}
+
 }
 
 AUS_core_decisions = {

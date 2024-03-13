@@ -3892,7 +3892,8 @@ AUS_spending_ally:0 "Broad Modernisation Project"
 AUS_Attack_Europe_East:0 "Prepare to Invade The East"
 AUS_Invade_POL:0 "Invade Poland"
 AUS_Retake_Europe_East:0 "Retake Eastern Europe"
-
+AUS_Rus_Left:0 "Subjugate"
+AUS_Rus_Right:0 "Russia"
 
 
 AUS_start_hre_tooltip:0 "§GAustria will look to its past and attempt to restore its former glory!§!"
@@ -3937,6 +3938,10 @@ AUS_Attack_Eastern_Europe_LIT_tooltip:0 "§HAttack [LIT.GetNameDef]§!\n"
 AUS_Attack_Eastern_Europe_WHR_tooltip:0 "§HAttack [WHR.GetNameDef]§!\n"
 AUS_Attack_Eastern_Europe_UKR_tooltip:0 "§HAttack [UKR.GetNameDef]§!\n"
 AUS_Attack_Eastern_Europe_CRM_tooltip:0 "§HAttack [CRM.GetNameDef]§!\n"
+AUS_The_Final_Battle:0 "Subjugate Russia"
+AUS_The_Final_Battle_desc:0 "The time of the Final Confrontation has come. We shall strike Russia before it's too late."
+AUS_Russia_tt:0 "§YSubjugate Russia§! §CAfter Completing All Russian Focuses§!"
+
 
 
 
@@ -4083,5 +4088,5 @@ AUS_puppet_desc:0 "In response to the evolving geopolitical landscape and the im
 AUS_world_desc:0 "Amidst the currents of global politics and the shifting tides of power, the Holy Roman Empire seizes upon a momentous opportunity to reclaim its position on the world stage. This decision marks a definitive step towards asserting the empire's influence and securing its rightful place among the great powers of the era."
 AUS_Invade_SRI_desc:0 "In earlier times, Italy constituted a significant part of the empire's domain. Through the endeavor to reclaim the territories in northern Italy, rightfully belonging to the empire, we uphold our historical heritage and ensure the integrity of our territorial boundaries."
 AUS_Invade_ITA_desc:0 "Italy wielded significant influence within the empire's domain. Our endeavor to recapture control of the territories in eastern Italy, rightfully belonging to the Empire."
-AUS_world_desc:0
-AUS_world_desc:0
+AUS_Rus_Right_desc:0 "We cannot continue to let the menace of the East continue to build up its strength gradually; it is time to curb Russia's ambition and bring peace and order to the East once and for all."
+AUS_Rus_Left_desc:0 "While we dealt the Russian Bear a crippling blow in the Weltkrieg, years of covert and open rearmament have made the Russian nation eager for war and revenge against Our Empire. As long as the Russian threat exists on the eastern border, we are not safe."

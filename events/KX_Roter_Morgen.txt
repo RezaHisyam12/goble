@@ -27,21 +27,21 @@ country_event = { # GRU setup
 				create_country_leader = {
 					name = "Internationale Administration of Germany"
 					desc = "GRU_OCCUPIED_GOV_DESC"
-					picture = "gfx/leaders/GRU/germans_no_freedom.png"
+					picture = "gfx/leaders/GRU/Portrait_GRU_Internationale_Occupation.png"
 					expire = "1.1.1"
 					ideology = syndicalist_subtype
 				}
 				create_country_leader = {
 					name = "Internationale Administration of Germany"
 					desc = "GRU_OCCUPIED_GOV_DESC"
-					picture = "gfx/leaders/GRU/germans_no_freedom.png"
+					picture = "gfx/leaders/GRU/Portrait_GRU_Internationale_Occupation.png"
 					expire = "1.1.1"
 					ideology = radical_socialist_subtype
 				}
 				create_country_leader = {
 					name = "Internationale Administration of Germany"
 					desc = "GRU_OCCUPIED_GOV_DESC"
-					picture = "gfx/leaders/GRU/germans_no_freedom.png"
+					picture = "gfx/leaders/GRU/Portrait_GRU_Internationale_Occupation.png"
 					expire = "1.1.1"
 					ideology = totalist_subtype
 				}
@@ -49,9 +49,9 @@ country_event = { # GRU setup
 				create_country_leader = {
 					name = "Konrad Adenauer"
 					desc = "GRU_Adenauer_DESC"
-					picture = "gfx/leaders/GRU/Portrait_Germany_Konrad_Adenauer.png"
+					picture = "gfx/leaders/GER/Portrait_Germany_Konrad_Adenauer_kr.png"
 					expire = "1.1.1"
-					ideology = christian_democracy_subtype
+					ideology = soccon_paneuropeanism_subtype
 				}
 				create_country_leader = {
 					name = "Franz Blücher"
@@ -3260,7 +3260,7 @@ country_event = { #rehab of generals
 		}
 		create_corps_commander = {
 			name = "Walter Model"
-			portrait_path = "gfx/leaders/GER/GERortrait_Germany_Walter_Model_kr.png"
+			portrait_path = "gfx/leaders/GER/Portrait_Germany_Walter_Model_kr.png"
 			traits = { politically_connected trait_cautious harsh_leader brilliant_strategist trickster }
 			skill = 4
 			attack_skill = 3

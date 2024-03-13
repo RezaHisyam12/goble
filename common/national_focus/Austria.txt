@@ -8420,30 +8420,6 @@ focus_tree = {
 		available = {
 			has_country_flag = HRE_rise
 			is_subject = no		
-			any_neighbor_country = {
-				OR = {
-					is_ally_with = SRI
-					tag = SRI
-				}
-			}
-			if = {
-				limit = { country_exists = VNC }
-				any_neighbor_country = {
-					OR = {
-						is_ally_with = VNC
-						tag = VNC
-					}
-				}
-			}
-			if = {
-				limit = { country_exists = LOM }
-				any_neighbor_country = {
-					OR = {
-						is_ally_with = LOM
-						tag = LOM
-					}
-				}
-			}
 		}
 		x = 2
 		y = 1
@@ -8493,12 +8469,6 @@ focus_tree = {
 		available = {
 			has_country_flag = HRE_rise
 			is_subject = no		
-			any_neighbor_country = {
-				OR = {
-					is_ally_with = SWI
-					tag = SWI
-				}
-			}
 		}
 		x = 0
 		y = 1
@@ -8606,12 +8576,6 @@ focus_tree = {
 		available = {
 			has_country_flag = HRE_rise
 			is_subject = no		
-			any_neighbor_country = {
-				OR = {
-					is_ally_with = SRI
-					tag = SRI
-				}
-			}
 		}
 		x = -2
 		y = 1
@@ -8653,12 +8617,6 @@ focus_tree = {
 		available = {
 			has_country_flag = HRE_rise
 			is_subject = no
-			any_neighbor_country = {
-				OR = {
-					is_ally_with = HOL
-					tag = HOL
-				}
-			}
 		}
 		x = 1
 		y = 2
@@ -8772,12 +8730,6 @@ focus_tree = {
 		available = {
 			has_country_flag = HRE_rise
 			is_subject = no		
-			any_neighbor_country = {
-				OR = {
-					is_ally_with = BEL
-					tag = BEL
-				}
-			}
 		}
 		x = -1
 		y = 2
@@ -8894,20 +8846,6 @@ focus_tree = {
 		available = {
 			has_country_flag = HRE_rise
 			is_subject = no
-			if = {
-				limit = {
-					NOT = { has_global_flag = second_weltkrieg_has_started }
-				}
-				has_army_manpower = {
-					size > 1500000
-				}
-			}
-			any_neighbor_country = {
-				OR = {
-					is_ally_with = FRA
-					tag = FRA
-				}
-			}
 		}
 		x = 0
 		y = 3
@@ -9166,12 +9104,6 @@ focus_tree = {
 		available = {
 			has_country_flag = HRE_rise
 			is_subject = no		
-			any_neighbor_country = {
-				OR = {
-					is_ally_with = POL
-					tag = POL
-				}
-			}
 		}
 		x = 0
 		y = 1
@@ -9328,9 +9260,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe"
-			army_experience = 50
-			air_experience = 50
-			navy_experience = 50
+			custom_effect_tooltip = unlocks_decision
+			custom_effect_tooltip = AUS_Russia_tt
+			custom_effect_tooltip = tech_winter_logistics_support_effect
+			hidden_effect = { set_technology = { tech_winter_logistics_support = 1 } }
 		}
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 	}
@@ -9339,6 +9272,7 @@ focus_tree = {
 		icon = RUS_the_right
 		prerequisite = {focus = AUS_Retake_Europe_East }
 		available = {
+			has_completed_focus = AUS_Rus_Left
 			has_country_flag = HRE_rise
 			is_subject = no
 		}
@@ -9352,11 +9286,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe"
-			army_experience = 50
-			air_experience = 50
-			navy_experience = 50
+			custom_effect_tooltip = unlocks_decision
+			custom_effect_tooltip = AUS_Russia_tt
+			custom_effect_tooltip = tech_arctic_commando_effect
+			hidden_effect = { set_technology = { tech_arctic_commando = 1 } }
 		}
-		search_filters = { FOCUS_FILTER_ARMY_XP }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
 
