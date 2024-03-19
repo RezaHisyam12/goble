@@ -4596,6 +4596,14 @@ country_event = { #Transfer of the territory
 						state = 735
 						state = 943
 						state = 785
+						state = 779
+						state = 32
+						state = 20
+						state = 27
+						state = 18
+						state = 24
+						state = 17
+						state = 980
 					}
 				}
 				transfer_state_to = ROOT

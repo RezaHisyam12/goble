@@ -1295,7 +1295,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 8
 		}
 
 		completion_reward = {
@@ -8872,6 +8872,13 @@ focus_tree = {
 			943 = { add_claim_by = AUS }
 			785 = { add_claim_by = AUS }
 			779 = { add_claim_by = AUS }
+			32 = { add_claim_by = AUS }
+			20 = { add_claim_by = AUS }
+			27 = { add_claim_by = AUS }
+			18 = { add_claim_by = AUS }
+			24 = { add_claim_by = AUS }
+			17 = { add_claim_by = AUS }
+			980 = { add_claim_by = AUS }
 			unlock_decision_tooltip = AUS_Demand_FRA
 			}
 			search_filters = { FOCUS_FILTER_POLITICAL }
@@ -8937,7 +8944,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_global_flag = HRE_rise
+			has_country_flag = HRE_rise
 			is_in_faction_with = TUR
 		}
 
@@ -8980,7 +8987,7 @@ focus_tree = {
 
 		available = {
 			has_completed_focus = AUS_world
-			has_global_flag = HRE_rise
+			has_country_flag = HRE_rise
 		}
 
 		ai_will_do = {
@@ -9008,7 +9015,7 @@ focus_tree = {
 		y = 2
 
 		available = {
-			has_global_flag = HRE_rise
+			has_country_flag = HRE_rise
 		}
 
 		ai_will_do = {
@@ -9045,7 +9052,7 @@ focus_tree = {
 		y = 3
 
 		available = {
-			has_global_flag = HRE_rise
+			has_country_flag = HRE_rise
 		}
 
 		ai_will_do = {
@@ -9111,7 +9118,14 @@ focus_tree = {
 		relative_position_id = AUS_Attack_Europe_East
 		cost = 5
 
-		bypass_if_unavailable = yes
+		bypass = {
+			OR = {
+				NOT = { country_exists = POL }
+				POL = { is_subject = yes }
+				POL = { is_in_faction = yes }
+				has_war_with = POL
+			}
+		}
 		will_lead_to_war_with = POL
 
 		ai_will_do = {
