@@ -7775,17 +7775,16 @@ focus_tree = {
 					set_cosmetic_tag = AUS_HRE
 					custom_effect_tooltip = AUS_hreantium_reborn
 					add_ideas = AUS_purple_phoenix_idea
-					white_peace_with_ROOT = yes
+					set_country_flag = HRE_rise
+			hidden_effect = {
 					add_timed_idea = { 
 						idea = AUS_aftermath  
 						days = 365 
-					}
-					set_country_flag = HRE_rise
+						}
 					every_owned_state = {
 					limit = { OR = { is_core_of = GER is_core_of = SWI is_core_of = CZE is_core_of = ITA is_core_of = SLO is_core_of = FIU}}
 						AUS = { add_state_core = PREV }
-				}
-			hidden_effect = {
+					}
 			if = {
 				limit = {
 					SLO = {
@@ -9103,7 +9102,7 @@ focus_tree = {
 		relative_position_id = AUS_world
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe"

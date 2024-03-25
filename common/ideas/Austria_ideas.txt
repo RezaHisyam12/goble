@@ -504,6 +504,19 @@ ideas = {
 			}
 		}
 
+		GER_total_war_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_total_war_3" }
+			picture = generic_war_preparation
+			name = GER_total_war_idea
+			allowed = { always = no }
+			modifier = {
+				conscription_factor = 0.15
+				org_loss_at_low_org_factor = -0.15
+				resistance_target_on_our_occupied_states = 0.1
+				army_attack_against_major_factor = 0.1
+			}
+		}
+
 		AUS_purple_phoenix_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea AUS_purple_phoenix_idea"}
 			allowed = { always = no }
@@ -765,8 +778,8 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				industrial_capacity_dockyard = 0.05
-				repair_speed_factor = 0.10
-				refit_speed = 0.05
+				repair_speed_factor = 0.15
+				refit_speed = 0.1
 			}
 		}
 
