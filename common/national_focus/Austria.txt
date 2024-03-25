@@ -7831,263 +7831,13 @@ focus_tree = {
 					}
 			}
 			completion_reward = {
-					log = "[GetDateText]: [Root.GetName]: Focus AUS_march_north"
-					add_timed_idea = { 
-						idea = AUS_rebuilding
-						days = 720 
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = infrastructure
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_building_construction = {
-									type = infrastructure
-									level = 2
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = infrastructure
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_building_construction = {
-									type = infrastructure
-									level = 2
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = infrastructure
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_building_construction = {
-									type = infrastructure
-									level = 2
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = infrastructure
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_building_construction = {
-									type = infrastructure
-									level = 2
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = infrastructure
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_building_construction = {
-									type = infrastructure
-									level = 2
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = infrastructure
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_building_construction = {
-									type = infrastructure
-									level = 2
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = infrastructure
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_building_construction = {
-									type = infrastructure
-									level = 2
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = infrastructure
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_building_construction = {
-									type = infrastructure
-									level = 2
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = infrastructure
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_building_construction = {
-									type = infrastructure
-									level = 2
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = infrastructure
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_building_construction = {
-									type = infrastructure
-									level = 2
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = infrastructure
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_building_construction = {
-									type = infrastructure
-									level = 2
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = infrastructure
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_building_construction = {
-									type = infrastructure
-									level = 2
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = infrastructure
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_building_construction = {
-									type = infrastructure
-									level = 2
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = infrastructure
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_building_construction = {
-									type = infrastructure
-									level = 2
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = infrastructure
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_building_construction = {
-									type = infrastructure
-									level = 2
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = infrastructure
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_building_construction = {
-									type = infrastructure
-									level = 2
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = infrastructure
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_building_construction = {
-									type = infrastructure
-									level = 2
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = infrastructure
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_building_construction = {
-									type = infrastructure
-									level = 2
-									instant_build = yes
-								}
-						}
+				log = "[GetDateText]: [Root.GetName]: Focus AUS_march_north"
+				custom_effect_tooltip = unlocks_decision
+				custom_effect_tooltip = AUS_rebuild_hre_tt
+				add_timed_idea = { 
+					idea = AUS_rebuilding
+					days = 720 
+					}
 				}
 		
 	}
@@ -8431,10 +8181,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Invade_ITA"
@@ -8587,10 +8333,6 @@ focus_tree = {
 		will_lead_to_war_with = SRI
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Invade_SRI"
@@ -8856,10 +8598,75 @@ focus_tree = {
 		bypass_if_unavailable = yes
 
 		ai_will_do = {
-			factor = 10
+			factor = 75
 			modifier = {
 				factor = 0
-				has_war = yes
+				can_declare_war_on = FRA
+				OR = {
+					has_war = yes
+					strength_ratio = { tag = FRA ratio < 0.75 }
+					# neither of us is in a faction and FRA is stronger
+					AND = {
+						FRA = {
+							is_in_faction = no
+							is_subject = no
+						}
+						is_in_faction = no
+						strength_ratio = { tag = FRA ratio < 1.0 }
+					}
+					# they're in a faction which is not at war
+					FRA = {
+						OR = {
+							AND = {
+								is_in_faction = yes
+								is_faction_leader = no
+							}
+							is_subject = yes
+						}
+						has_war = no
+					}
+					# they're in the FRAgrade Pact and we're much stronger
+					FRA = {
+						is_in_faction = yes
+						is_faction_leader = no
+						strength_ratio = { tag = ROOT ratio > 0.30 }
+					}
+					# they're guaranteed but not in a faction
+					FRA = {
+						is_in_faction = no
+						has_guarantor = yes
+						any_of_scopes = {
+							array = guarantor_array
+							has_guaranteed = PREV
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're a subject and the overlord is stronger than us or in a faction and not losing
+					FRA = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're in a faction which is at war but not with a major and not losing
+					FRA = {
+						is_in_faction = yes
+						has_war = yes
+						NOT = {
+							any_enemy_country = { is_actual_major = yes }
+							surrender_progress > 0.10
+							faction_leader = { surrender_progress > 0.20 }
+						}
+					}
+				}
 			}
 		}
 		will_lead_to_war_with = GER
@@ -9121,8 +8928,8 @@ focus_tree = {
 		bypass = {
 			OR = {
 				NOT = { country_exists = POL }
-				POL = { is_subject = yes }
-				POL = { is_in_faction = yes }
+				is_puppet_of = AUS
+				is_in_faction_with = AUS
 				has_war_with = POL
 			}
 		}

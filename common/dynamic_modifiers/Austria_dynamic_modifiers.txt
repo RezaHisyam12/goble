@@ -1,0 +1,26 @@
+
+	
+AUS_oprichnina_state_modifier = { #Oprichinina State
+	icon = "GFX_population_icon"
+	remove_trigger = {
+		NOT = { is_owned_by = AUS }
+	}
+	compliance_growth = 0.5
+	resistance_growth = -0.3
+	local_manpower = -0.75
+	recruitable_population_factor = 0.3
+	mobilization_speed = 0.3
+}
+AUS_new_eurasian_capital_modifier = {
+	icon = "GFX_idea_PB_GER_Land_Germans"
+	enable = { always = yes }
+	remove_trigger = {
+		NOT = { is_owned_by = AUS }
+	}
+	
+	local_manpower = 0.5
+	local_building_slots_factor = 0.1
+	state_production_speed_industrial_complex_factor = 0.3
+	state_production_speed_arms_factory_factor = 0.3
+}
+					

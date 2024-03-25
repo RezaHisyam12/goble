@@ -2051,7 +2051,7 @@ AUS_core_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -2190,7 +2190,7 @@ AUS_core_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -2307,7 +2307,7 @@ AUS_core_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -2398,7 +2398,7 @@ AUS_core_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -2637,7 +2637,7 @@ AUS_core_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -2788,7 +2788,7 @@ AUS_core_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -2957,7 +2957,7 @@ AUS_core_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -3019,3 +3019,788 @@ AUS_core_decisions = {
 		}
 	}
 }
+
+AUS_rebuild_hre_cat = {
+
+	AUS_dev_austria = {
+		icon = generic_monarchy
+		allowed = { tag = AUS }
+		highlight_states = { highlight_state_targets = { state = 1137 } }
+		available = {
+			has_completed_focus = AUS_march_north
+			1137 = {
+				OR = {
+					compliance > 60
+					is_core_of = AUS
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 2
+			controls_state = 1137
+		}
+		visible = {
+			1137 = {
+				OR = {
+					compliance > 30
+					is_core_of = AUS
+				}
+			}
+			owns_state = 1137
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		fire_only_once = yes
+		cost = 100
+		days_remove = 90
+		ai_will_do = { factor = 50 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_dev_austria"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_dev_austria"
+		1137 = {
+			set_state_category = twelve
+			add_dynamic_modifier = {
+				modifier = AUS_new_eurasian_capital_modifier
+			}
+			add_extra_state_shared_building_slots = 5
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = air_base
+				level = 2
+				instant_build = yes
+				}
+			}				
+		}
+	}
+
+	AUS_civ_in_berlin = {
+		icon = generic_construction
+		allowed = { tag = AUS }
+		highlight_states = { highlight_state_targets = { state = 64 } }
+		available = {
+			has_completed_focus = AUS_march_north
+			64 = {
+				OR = {
+					compliance > 60
+					is_core_of = AUS
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 2
+			controls_state = 64
+		}
+		visible = {
+			64 = {
+				OR = {
+					compliance > 30
+					is_core_of = AUS
+				}
+			}
+			owns_state = 64
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 90
+		ai_will_do = { factor = 50 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_civ_in_berlin"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_civ_in_berlin"
+			64 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	AUS_mil_in_berlin = {
+		icon = ger_military_buildup
+		allowed = { tag = AUS }
+		highlight_states = { highlight_state_targets = { state = 64 } }
+		available = {
+			has_completed_focus = AUS_march_north
+			64 = {
+				OR = {
+					compliance > 60
+					is_core_of = AUS
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 2
+			controls_state = 64
+		}
+		visible = {
+			64 = {
+				OR = {
+					compliance > 30
+					is_core_of = AUS
+				}
+			}
+			owns_state = 64
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 90
+		ai_will_do = { factor = 50 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_mil_in_berlin"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_mil_in_berlin"
+			64 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	AUS_Rebuild_Munich = {
+		icon = electrify
+		allowed = { tag = AUS }
+		highlight_states = { highlight_state_targets = { state = 52 } }
+		available = {
+			has_completed_focus = AUS_march_north
+			53 = {
+				OR = {
+					compliance > 60
+					is_core_of = AUS
+				}
+			}
+			52 = {
+				OR = {
+					compliance > 60
+					is_core_of = AUS
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 4
+			controls_state = 53
+			controls_state = 52
+		}
+		visible = {
+			has_completed_focus = AUS_march_north
+			53 = {
+				OR = {
+					compliance > 30
+					is_core_of = AUS
+				}
+			}
+			52 = {
+				OR = {
+					compliance > 30
+					is_core_of = AUS
+				}
+			}
+			owns_state = 53
+			owns_state = 52
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		fire_only_once = yes
+		cost = 35
+		days_remove = 90
+		ai_will_do = { factor = 50 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_Rebuild_Munich"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_Rebuild_Munich"
+			52 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			53 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	AUS_Restore_Konigsberg = {
+		icon = generic_scorched_earth
+		allowed = { tag = AUS }
+		highlight_states = { highlight_state_targets = { state = 5 } }
+		available = {
+			has_completed_focus = AUS_march_north
+			5 = {
+				OR = {
+					compliance > 60
+					is_core_of = AUS
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 4
+			controls_state = 5
+		}
+		visible = {
+			has_completed_focus = AUS_march_north
+			5 = {
+				OR = {
+					compliance > 30
+					is_core_of = AUS
+				}
+			}
+			owns_state = 5
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		fire_only_once = yes
+		cost = 20
+		days_remove = 90
+		ai_will_do = { factor = 50 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_Restore_Konigsberg"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_Restore_Konigsberg"
+			5 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					province = 6332
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	AUS_Rebuild_East_Rhine = {
+		icon = generic_construction
+		allowed = { tag = AUS }
+		highlight_states = { highlight_state_targets = { state = 51 } }
+		available = {
+			has_completed_focus = AUS_march_north
+			51 = {
+				OR = {
+					compliance > 60
+					is_core_of = AUS
+				}
+			}
+			57 = {
+				OR = {
+					compliance > 60
+					is_core_of = AUS
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 4
+			controls_state = 51
+			controls_state = 57
+		}
+		visible = {
+			has_completed_focus = AUS_march_north
+			51 = {
+				OR = {
+					compliance > 30
+					is_core_of = AUS
+				}
+			}
+			57 = {
+				OR = {
+					compliance > 30
+					is_core_of = AUS
+				}
+			}
+			owns_state = 51
+			owns_state = 57
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		fire_only_once = yes
+		cost = 35
+		days_remove = 90
+		ai_will_do = { factor = 50 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_Rebuild_East_Rhine"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_Rebuild_East_Rhine"
+			51 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			57 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	AUS_Renovate_Frankfurt = {
+		icon = generic_construction
+		allowed = { tag = AUS }
+		highlight_states = { highlight_state_targets = { state = 55 } }
+		available = {
+			has_completed_focus = AUS_march_north
+			55 = {
+				OR = {
+					compliance > 60
+					is_core_of = AUS
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 4
+			controls_state = 55
+		}
+		visible = {
+			has_completed_focus = AUS_march_north
+			55 = {
+				OR = {
+					compliance > 30
+					is_core_of = AUS
+				}
+			}
+			owns_state = 55
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		fire_only_once = yes
+		cost = 30
+		days_remove = 90
+		ai_will_do = { factor = 50 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_Renovate_Frankfurt"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_Renovate_Frankfurt"
+			55 = {
+				increase_state_category_by_one_level = yes
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	AUS_Renovate_Stettin = {
+		icon = generic_operation
+		allowed = { tag = AUS }
+		highlight_states = { highlight_state_targets = { state = 62 } }
+		available = {
+			has_completed_focus = AUS_march_north
+			62 = {
+				OR = {
+					compliance > 60
+					is_core_of = AUS
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 4
+			controls_state = 62
+		}
+		visible = {
+			has_completed_focus = AUS_march_north
+			62 = {
+				OR = {
+					compliance > 30
+					is_core_of = AUS
+				}
+			}
+			owns_state = 62
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		fire_only_once = yes
+		cost = 30
+		days_remove = 90
+		ai_will_do = { factor = 50 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_Renovate_Stettin"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_Renovate_Stettin"
+			62 = {
+				increase_state_category_by_one_level = yes
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					province = 9388
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	AUS_mil_in_provence = {
+		icon = ger_military_buildup
+		allowed = { tag = AUS }
+		highlight_states = { highlight_state_targets = { state = 63 } }
+		available = {
+			has_completed_focus = AUS_march_north
+			63 = {
+				OR = {
+					compliance > 60
+					is_core_of = AUS
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 2
+			controls_state = 63
+		}
+		visible = {
+			63 = {
+				OR = {
+					compliance > 30
+					is_core_of = AUS
+				}
+			}
+			owns_state = 63
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 90
+		ai_will_do = { factor = 50 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_mil_in_provence"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_mil_in_provence"
+			63 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	AUS_Revive_Hamburg = {
+		icon = generic_construction
+		allowed = { tag = AUS }
+		highlight_states = { highlight_state_targets = { state = 59} }
+		available = {
+			has_completed_focus = AUS_march_north
+			59 = {
+				OR = {
+					compliance > 60
+					is_core_of = AUS
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 4
+			controls_state = 59
+		}
+		visible = {
+			has_completed_focus = AUS_march_north
+			59 = {
+				OR = {
+					compliance > 30
+					is_core_of = AUS
+				}
+			}
+			owns_state = 59
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		fire_only_once = yes
+		cost = 30
+		days_remove = 90
+		ai_will_do = { factor = 50 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_Revive_Hamburg"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_Revive_Hamburg"
+			59 = {
+				increase_state_category_by_one_level = yes
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					province = 9347
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	AUS_civ_in_Saxony = {
+		icon = generic_construction
+		allowed = { tag = AUS }
+		highlight_states = { highlight_state_targets = { state = 65 } }
+		available = {
+			has_completed_focus = AUS_march_north
+			65 = {
+				OR = {
+					compliance > 60
+					is_core_of = AUS
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 2
+			controls_state = 65
+		}
+		visible = {
+			65 = {
+				OR = {
+					compliance > 30
+					is_core_of = AUS
+				}
+			}
+			owns_state = 65
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 90
+		ai_will_do = { factor = 50 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_civ_in_Saxony"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_civ_in_Saxony"
+			65 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	AUS_mil_in_breslau = {
+		icon = ger_military_buildup
+		allowed = { tag = AUS }
+		highlight_states = { highlight_state_targets = { state = 66 } }
+		available = {
+			has_completed_focus = AUS_march_north
+			66 = {
+				OR = {
+					compliance > 60
+					is_core_of = AUS
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 2
+			controls_state = 66
+		}
+		visible = {
+			66 = {
+				OR = {
+					compliance > 30
+					is_core_of = AUS
+				}
+			}
+			owns_state = 66
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 90
+		ai_will_do = { factor = 50 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_mil_in_Saxony"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_mil_in_Saxony"
+			66 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	AUS_Light_Up_Danzig = {
+		icon = electrify
+		allowed = { tag = AUS }
+		highlight_states = { highlight_state_targets = { state = 776 } }
+		available = {
+			has_completed_focus = AUS_march_north
+			776 = {
+				OR = {
+					compliance > 60
+					is_core_of = AUS
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 4
+			controls_state = 776
+		}
+		visible = {
+			has_completed_focus = AUS_march_north
+			776 = {
+				OR = {
+					compliance > 30
+					is_core_of = AUS
+				}
+			}
+			owns_state = 776
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		fire_only_once = yes
+		cost = 30
+		days_remove = 90
+		ai_will_do = { factor = 50 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_Light_Up_Danzig"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_Light_Up_Danzig"
+			776 = {
+				increase_state_category_by_one_level = yes
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	AUS_nav_in_schleswig = {
+		icon = generic_operation
+		allowed = { tag = AUS }
+		highlight_states = { highlight_state_targets = { state = 782 } }
+		available = {
+			has_completed_focus = AUS_march_north
+			782 = {
+				OR = {
+					compliance > 60
+					is_core_of = AUS
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 2
+			controls_state = 782
+		}
+		visible = {
+			782 = {
+				OR = {
+					compliance > 30
+					is_core_of = AUS
+				}
+			}
+			owns_state = 782
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 90
+		ai_will_do = { factor = 50 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_nav_in_schleswig"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_nav_in_schleswig"
+			782 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = naval_base
+					province = 332
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+}
+

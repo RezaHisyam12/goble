@@ -817,4 +817,12 @@ spriteTypes = {
 		name = "GFX_idea_PB_Planned_Economy"
 		texturefile = "gfx/interface/ideas/ideas/PB_Planned_Economy.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_PB_GER_Land_Germans"
+		texturefile = "gfx/interface/ideas/ideas/PB_GER_Land_Germans.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_category_hre_austria"
+		texturefile = "gfx/interface/decisions/hre_austria.png"
+	}
 }

@@ -4683,13 +4683,13 @@ country_event = {
 	option = {
 		name = rotermorgenmisc.8793.b #We refuse
 		ai_chance = {
-			factor = 50
+			factor = 0
 			modifier = {
-				factor = 0.5
+				factor = 0.1
 				AUS = { same_government_type_as_ROOT = yes }
 			}
 			modifier = {
-				factor = 1.5
+				factor = 0.1
 				AUS = { same_government_type_as_ROOT = no }
 			}
 		}

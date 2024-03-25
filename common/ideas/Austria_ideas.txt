@@ -557,7 +557,7 @@ ideas = {
 				army_core_defence_factor = 0.1
 				army_org_factor = 0.05
 				planning_speed = 0.20
-				max_planning = 0.20
+				max_planning = 0.15
 			}
 		}
 
@@ -626,7 +626,7 @@ ideas = {
 				mechanized_speed_factor = 0.1
 				army_org_factor = 0.05
 				planning_speed = 0.20
-				max_planning = 0.25
+				max_planning = 0.20
 				breakthrough_factor = 0.05
 			}
 		}
@@ -641,7 +641,7 @@ ideas = {
 				army_core_defence_factor = 0.1
 				max_dig_in = 5
 				army_org_factor = 0.05
-				max_planning = 0.30
+				max_planning = 0.25
 				planning_speed = 0.15
 				army_morale_factor = 0.05
 				recon_factor = 0.1
@@ -709,7 +709,7 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = 0.075
 				production_factory_efficiency_gain_factor = 0.01
-				production_factory_start_efficiency_factor = 0.03
+				production_factory_start_efficiency_factor = 0.025
 				production_lack_of_resource_penalty_factor = -0.1
 				industrial_capacity_factory = 0.05
 			}
@@ -722,7 +722,7 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = 0.125
 				production_factory_efficiency_gain_factor = 0.1
-				production_factory_start_efficiency_factor = 0.075
+				production_factory_start_efficiency_factor = 0.05
 				production_lack_of_resource_penalty_factor = -0.1
 				industrial_capacity_factory = 0.1
 			}
@@ -761,7 +761,7 @@ ideas = {
 		AUS_develop_navy = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAN_unfied_broadcasting_system"}
 			allowed = { always = no }
-			picture = idea_CHI_Royal_Navy_Advisors
+			picture = PB_FRA_Renewed_Naval_Policy
 			removal_cost = -1
 			modifier = {
 				industrial_capacity_dockyard = 0.05

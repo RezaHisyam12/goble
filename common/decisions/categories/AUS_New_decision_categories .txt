@@ -1,5 +1,5 @@
 AUS_core_decisions = {
-	icon = pangermanism1
+	icon = hre_austria
 	picture = GFX_decision_cat_generic_hre
 	priority = 100
 
@@ -12,7 +12,7 @@ AUS_core_decisions = {
 }
 #done
 AUS_Foreign_Policy_decisions = {
-	icon = GFX_decision_category_russia
+	icon = lebensraum
 	priority = 95
 
 	allowed = { tag = AUS }
@@ -33,6 +33,19 @@ AUS_Attack_Eastern_Europe_decisions = {
 		is_subject = no
 		has_completed_focus = AUS_Retake_Europe_East
 		}
+}
+
+AUS_rebuild_hre_cat = {
+	icon = GFX_decision_category_generic_industry
+	
+	picture = GFX_decision_cat_natfra_rebuild_metropole
+
+	allowed = {
+		original_tag = AUS
+	}
+	visible = {
+		has_completed_focus = AUS_march_north
+	}
 }
 
 AUS_breitspurbahn_decisions = {
@@ -76,7 +89,7 @@ AUS_beyond_lebensraum_decisions = {
 }
 
 AUS_volksreichskommissariat_decisions = {
-	icon = volkskomissariats
+	icon = GFX_decision_category_military_operation
 	allowed = { tag = AUS }
 }
 
