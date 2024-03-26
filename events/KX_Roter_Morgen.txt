@@ -4780,3 +4780,19 @@ country_event = {
 		add_ideas = AUS_ott_ally
 	}
 }
+
+# Expansion of the Vienna Circle
+country_event = {
+	id = aus.tree.4030
+	title = aus.tree.4030.t
+	desc = aus.tree.4030.d
+	picture = GFX_report_event_generic_diplomacy4
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event aus.tree.4030 option aus.tree.4030.a"
+		name = aus.tree.4030.a
+		effect_tooltip = { add_to_tech_sharing_group = austrian_research }
+	}
+}

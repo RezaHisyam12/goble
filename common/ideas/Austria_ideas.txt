@@ -421,6 +421,15 @@ ideas = {
 			}
 		}
 
+		AUS_kuk_kriegsmarine = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_kuk_kriegsmarine" }
+			picture = AUS_navy_spirit
+			allowed = { always = no }
+			modifier = {
+				navy_org_factor = 0.05
+			}
+		}
+
 		AUS_SLOintegration = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_SLOintegration" }
 			allowed = { always = no }
@@ -494,13 +503,11 @@ ideas = {
 			allowed = { always = no }
 			picture = PB_GER_German_Century
 			modifier = {
-				army_attack_factor = 0.05
-				army_defence_factor = 0.05
-				army_morale_factor = 0.10
-				army_org_factor = 0.10
+				army_attack_against_major_factor = 0.1
+				army_strength_factor = 0.1
+				org_loss_at_low_org_factor = -0.15
 				terrain_penalty_reduction = 0.1
 				out_of_supply_factor = -0.1
-				land_reinforce_rate = 0.03
 			}
 		}
 
@@ -523,8 +530,7 @@ ideas = {
 			picture = AUS_part_of_the_Empire
 			modifier = {
 				political_power_factor = 0.10
-				stability_factor = 0.05
-				war_support_factor = 0.05
+				resistance_growth = -0.15
 				compliance_growth = 0.10
 			}
 		}
@@ -746,7 +752,7 @@ ideas = {
 			picture = generic_coastal_navy
 			allowed = { always = no }
 			modifier = {
-				industrial_capacity_dockyard = 0.2
+				industrial_capacity_dockyard = 0.15
 			}
 		}
 
@@ -761,7 +767,7 @@ ideas = {
 		}
 
 		AUS_ott_ally = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_skoda_works"}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_ott_ally"}
 			allowed = { always = no }
 			picture = PB_PRS_United_In_Blood
 			modifier = {
@@ -771,8 +777,21 @@ ideas = {
 			}
 		}
 
+		AUS_eastern_front_operations_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_wide_front_operations_idea" }
+			picture = generic_victors_of_ww1
+			allowed = { always = no }
+			modifier = {
+				army_morale_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = RUS
+				attack_bonus_against = 0.05
+			}
+		}
+
 		AUS_develop_navy = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAN_unfied_broadcasting_system"}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_develop_navy"}
 			allowed = { always = no }
 			picture = PB_FRA_Renewed_Naval_Policy
 			removal_cost = -1
@@ -784,7 +803,7 @@ ideas = {
 		}
 
 		AUS_electronic_warfare = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAN_unfied_broadcasting_system"}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_electronic_warfare"}
 			allowed = { always = no }
 			picture = PB_FRA_Cipher
 			removal_cost = -1
@@ -800,7 +819,7 @@ ideas = {
 		}
 
 		AUS_spending_ally = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_financial_ties_broken" }
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_spending_ally" }
 			picture = PB_Planned_Economy
 			allowed = { always = no }
 			modifier = {

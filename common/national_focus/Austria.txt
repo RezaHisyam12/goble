@@ -1033,8 +1033,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_naval_effort"
-			add_ideas = AUS_dockyard_idea
 			navy_experience = 25
+			add_ideas = AUS_kuk_kriegsmarine
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	}
@@ -1173,6 +1173,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_istria_ports"
+			add_ideas = AUS_dockyard_idea
 			1144 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -1429,19 +1430,31 @@ focus_tree = {
 				remove_idea = AUS_vienna_circle
 				add_idea = AUS_vienna_circle_expanded
 			}
+			add_to_tech_sharing_group = austrian_research
 			if = {
 				limit = {
-					has_dlc = "Together for Victory"
+					is_in_faction = yes
+					OR = {
+						is_faction_leader = yes
+						faction_leader = { tag = OTT }
+					}
 				}
-				add_to_tech_sharing_group = austrian_research
-				every_country = {
+				every_other_country = {
+					limit = { is_in_faction_with = ROOT }
+					add_to_tech_sharing_group = austrian_research
+					country_event = aus.tree.4030
+				}
+			}
+			else = {
+				every_other_country = {
 					limit = {
-						is_subject_of = AUS
+						is_subject_of = ROOT
 					}
 					add_to_tech_sharing_group = austrian_research
+					country_event = aus.tree.4030
 				}
-				set_global_flag = vienna_circle_established
 			}
+			set_global_flag = vienna_circle_established
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -9082,8 +9095,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe"
 			custom_effect_tooltip = unlocks_decision
 			custom_effect_tooltip = AUS_Russia_tt
-			custom_effect_tooltip = tech_winter_logistics_support_effect
-			hidden_effect = { set_technology = { tech_winter_logistics_support = 1 } }
+			custom_effect_tooltip = tech_arctic_commando_effect
+			hidden_effect = { set_technology = { tech_arctic_commando = 1 } }
 		}
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 	}
@@ -9108,8 +9121,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe"
 			custom_effect_tooltip = unlocks_decision
 			custom_effect_tooltip = AUS_Russia_tt
-			custom_effect_tooltip = tech_arctic_commando_effect
-			hidden_effect = { set_technology = { tech_arctic_commando = 1 } }
+			add_ideas = AUS_eastern_front_operations_idea
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}

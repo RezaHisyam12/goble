@@ -2,6 +2,66 @@
 # HRE Decisions
 ###########################	
 
+political_actions = {
+
+	AUS_join_vienna_circle = {
+		icon = generic_research
+
+		allowed = {
+			has_tech_sharing_feature = yes
+			NOT = {
+				tag = AUS
+				tag = FRA #always hostile
+				tag = ENG
+				tag = CSA
+				tag = SRI
+				tag = CNT
+				tag = FOP
+				tag = PRF
+				tag = RUS #can't join
+				tag = JAP
+				tag = TRM
+				tag = USA
+				tag = CAL
+				tag = NEE
+				tag = DEH
+				tag = GER
+				tag = GEA
+				tag = MAF
+				tag = BHC
+				tag = COR
+				tag = WCC
+			}
+			is_tag_in_china_area = no #can't join
+		}
+
+		targets = { AUS }
+		target_root_trigger = { is_in_faction_with = AUS }
+		target_trigger = {
+			is_in_faction_with = FROM
+			NOT = { is_in_tech_sharing_group = austrian_research }
+			FROM = { is_in_tech_sharing_group = austrian_research }
+			OR = {
+				FROM = { is_faction_leader = yes }
+				has_country_flag = AUS_former_faction_member
+				OTT = {
+					is_faction_leader = yes
+					is_in_faction_with = FROM
+				}
+			}
+		}
+
+		fire_only_once = no
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete AUS_join_vienna_circle target: [From.GetName]"
+			add_to_tech_sharing_group = austrian_research
+		}
+	}
+}
+
 AUS_build_that_wall_decisions = {
 
 	AUS_fortify_austrian_border_decision = {

@@ -825,4 +825,8 @@ spriteTypes = {
 		name = "GFX_decision_category_hre_austria"
 		texturefile = "gfx/interface/decisions/hre_austria.png"
 	}
+	spriteType = {
+		name = "GFX_idea_AUS_navy_spirit.png"
+		texturefile = "gfx/interface/ideas/ideas/AUS_navy_spirit.png"
+	}
 }

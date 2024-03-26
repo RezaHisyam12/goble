@@ -22,5 +22,6 @@ AUS_new_eurasian_capital_modifier = {
 	local_building_slots_factor = 0.1
 	state_production_speed_buildings_factor = 0.3
 	state_resources_factor = 0.1
+	supply_node_range = 0.5
 }
 					

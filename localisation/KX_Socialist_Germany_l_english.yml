@@ -3849,7 +3849,7 @@ AUS_march_north:0 "Rebuild the Empire"
 AUS_secure_south:0 "Restructure Bureaucracy"
 AUS_rome:0 "Reform The Army"
 AUS_africa:0 "Empire Development Scheme"
-AUS_byz_admin:0 "Implement the Airland Warfare"
+AUS_byz_admin:0 "Implement Airland Warfare"
 AUS_world:0 "Into The World"
 AUS_puppet:0 "Establish New Crownlands"
 AUS_center:0 "Direct Rule From Vienna"
@@ -3863,29 +3863,6 @@ AUS_invite_ottomans:0 "Approach The Old Ally"
 AUS_lead_the_cetral_power:0 "Lead the New Central Powers"
 AUS_electronic_warfare_goal:0 "Advanced Electronic Warfare Project"
 AUS_modernisation_prjct:0 "Broad Modernisation Project"
-AUS_new_eurasian_capital_modifier:0 "£pol_idea Holy Roman Empire Capital"
-
-
-HRE_rise:0 "Holy Roman Empire Restored"
-AUS_members_gain:0 "All Members Will Gain:"
-AUS_central_power:0 "Central Powers"
-
-
-AUS_purple_phoenix_idea: "Empire Reformed"
-AUS_orthodox_idea: "Nation of Faith"
-AUS_national_rebirth_idea: "Imperial Ambition"
-AUS_rebuilding: "Rebuilding the Empire"
-AUS_aftermath: "Aftermath of the War"
-AUS_Bureaucracy: "Imperial Bureaucracy"
-AUS_reform_hre: "Kaiserliche Armee"
-AUS_imperial_development_scheme_2: "New Imperial Development Scheme"
-AUS_combined_hre: "Airland Warfare"
-AUS_skoda_works: "National Industry"
-AUS_skoda_works_2: "National Industry"
-AUS_dockyard_idea: "Modern Shipyards"
-AUS_bunker_idea: "Defense of Vaterland"
-AUS_reform_hre_hickmann_artillery: "Modern Artillery"
-AUS_ott_ally: "Astro-Turkish Ties"
 AUS_found_IEA: "Imperial Economic Alliance"
 AUS_develop_navy:0 "Standardized Dockyard System"
 AUS_electronic_warfare:0 "Electronic Warfare"
@@ -3897,6 +3874,29 @@ AUS_Rus_Left:0 "Subjugate"
 AUS_Rus_Right:0 "Russia"
 
 
+HRE_rise:0 "Holy Roman Empire Restored"
+AUS_members_gain:0 "All Members Will Gain:"
+AUS_central_power:0 "Central Powers"
+
+
+AUS_purple_phoenix_idea: "Empire Reformed"
+AUS_orthodox_idea: "Nation of Faith"
+AUS_national_rebirth_idea: "Imperial Ambition"
+AUS_rebuilding: "Reparaturprogramm"
+AUS_aftermath: "Aftermath of the War"
+AUS_Bureaucracy: "Imperial Bureaucracy"
+AUS_reform_hre: "Kaiserliche Armee"
+AUS_imperial_development_scheme_2: "New Imperial Development Scheme"
+AUS_combined_hre: "Airland Warfare"
+AUS_skoda_works: "National Industry"
+AUS_skoda_works_2: "National Industry"
+AUS_dockyard_idea: "Modern Shipyards"
+AUS_bunker_idea: "Verteidigungsplan"
+AUS_reform_hre_hickmann_artillery: "Modern Artillery"
+AUS_ott_ally: "Astro-Turkish Ties"
+AUS_new_eurasian_capital_modifier:0 "£pol_idea Holy Roman Empire Capital"
+AUS_eastern_front_operations_idea: "Eastern Front Operations"
+AUS_kuk_kriegsmarine: "k.u.k. Kriegsmarine"
 
 AUS_start_hre_tooltip:0 "§GAustria will look to its past and attempt to restore its former glory!§!"
 AUS_national_rebirth_tooltip:0 "§GThe government will proclaim a national rejuvenation to retake the legacies of the past.§!"
@@ -3946,6 +3946,7 @@ AUS_Russia_tt:0 "§YSubjugate Russia§! §CAfter Completing All Russian Focuses�
 AUS_rebuild_hre_cat:0 "Rebuild §Y[AUS.GetNameDef]§! Industry"
 AUS_rebuild_hre_tt:0 "§YRebuild [AUS.GetNameDef] Industry§!"
 AUS_rebuild_hre_cat_desc:0 "The Unification War has ravaged our beautiful lands, we must do everything in our power to restore them to their due glory."
+AUS_join_vienna_circle: "Join the Vienna Circle"
 
 
 
@@ -4017,6 +4018,10 @@ rotermorgenmisc.8796.t:0 "An Unlikely Alliance"
 rotermorgenmisc.8796.d:0 "Historically, the Holy Roman Empire and the Ottoman Empire were often seen as rivals, vying for supremacy in Europe and the Mediterranean. However, the tumultuous geopolitical landscape of the early modern period prompted a reassessment of traditional enmities, as both empires grappled with internal challenges and external threats. The seeds of cooperation between the Holy Roman Empire and the Ottoman Empire were sown amidst the chaos of the Thirty Years' War, a devastating conflict that ravaged Central Europe. As the Holy Roman Empire struggled to maintain its territorial integrity and political cohesion, it found itself in dire need of allies who could provide strategic support and military assistance. Simultaneously, the Ottoman Empire faced its own set of challenges, contending with internal strife, territorial losses, and the encroachment of rival powers in the Balkans and Eastern Europe. Recognizing the potential benefits of a strategic partnership, the Ottoman Empire sought to cultivate diplomatic ties with the Holy Roman Empire, envisioning a mutually beneficial alliance that could bolster their respective positions on the world stage. The formation of this central power between the Holy Roman Empire and the Ottoman Empire ushered in a new era of stability and cooperation in Central and Eastern Europe. With their combined military might and diplomatic influence, the two empires exerted significant sway over the affairs of the region, effectively balancing the competing interests of neighboring powers and ensuring the preservation of their territorial integrity."
 rotermorgenmisc.8796.a:0 "Three Hurrahs For Our Empire"
 rotermorgenmisc.8797.a:0 "Three Hurrahs For Our Empire"
+
+aus.tree.4030.t: "Expansion of the Vienna Circle"
+aus.tree.4030.d: "[From.GetNameDefCap], a country with which we have many ties, has invited us to the Vienna Circle — a prestigious array of top scientists, mathematicians, and other thinkers who gather to discuss the great topics of the day and advance research through more practical means as well. The official paper reads that they look forward to working alongside the intellectuals of [Root.GetNameDef]. Our inclusion would lead to a significant boost in our own technological capacity, though a few note this may be yet another move to try and consolidate the [From.GetAdjective] sphere around its namesake member.\n\nStill, even these cynics cannot deny that it is a great step for our country's scientific sector and international prestige to be included in an organisation of such great repute."
+aus.tree.4030.a: "Excellent"
 
 
 
