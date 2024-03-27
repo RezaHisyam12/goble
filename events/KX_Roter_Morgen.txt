@@ -4413,6 +4413,16 @@ country_event = { # BFE claims
 		1142 = { add_core_of = BFE }
 		1145 = { add_core_of = BFE }
 		1269 = { add_core_of = BFE }
+		731 = { add_core_of = BFE }
+		769 = { add_core_of = BFE }
+		47 = { add_core_of = BFE }
+		185 = { add_core_of = BFE }
+		186 = { add_core_of = BFE }
+		758 = { add_core_of = BFE }
+		768 = { add_core_of = BFE }
+		939 = { add_core_of = BFE }
+		989 = { add_core_of = BFE }
+		1076 = { add_core_of = BFE }
 	}
 }
 

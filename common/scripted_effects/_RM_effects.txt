@@ -1518,7 +1518,7 @@ create_VST = {
 }
 
 create_BFE = {
-	SER = {
+	CRO = {
 		set_politics = {
 			ruling_party = paternal_autocrat
 			last_election = "1936.1.1"

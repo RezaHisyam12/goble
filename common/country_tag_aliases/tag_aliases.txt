@@ -219,7 +219,7 @@ OXA = {
 
 ### Balkan Fed
 BFE = {
-	original_tag = SER
+	original_tag = CRO
 	has_cosmetic_tag = BFE
 }
 
