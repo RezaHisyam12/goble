@@ -2244,7 +2244,7 @@ focus_tree = {
 			focus = INS_guerilla_force
 		}
 		ai_will_do = {
-			factor = 75
+			factor = 1
 			modifier = {
 				factor = 2
 				has_war = yes

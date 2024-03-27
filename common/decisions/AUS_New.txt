@@ -662,7 +662,7 @@ AUS_volksreichskommissariat_decisions = {
 						type = support_equipment
 						amount = 100
 						}
-						add_manpower = 100000
+						add_manpower = 150000
 					}
 				BFE = {	country_event = rotermorgenmisc.8787 }
 				set_autonomy = { target = BFE autonomy_state = crownland }
@@ -760,6 +760,7 @@ AUS_volksreichskommissariat_decisions = {
 						transfer_state = 1269
 					}
 					hidden_effect = {
+				add_manpower = 75000
 				BFE = {	country_event = rotermorgenmisc.8787 }
 				}
 			}
@@ -829,6 +830,7 @@ AUS_volksreichskommissariat_decisions = {
 						transfer_state = 1268
 					}
 					hidden_effect = {
+				add_manpower = 50000
 				BFE = {	country_event = rotermorgenmisc.8787 }
 				}
 			}
@@ -1008,6 +1010,7 @@ AUS_volksreichskommissariat_decisions = {
 						transfer_state = 1271
 					}
 					hidden_effect = {
+				add_manpower = 100000
 				BFE = {	country_event = rotermorgenmisc.8787 }
 				}
 			}
@@ -1132,6 +1135,7 @@ AUS_volksreichskommissariat_decisions = {
 						transfer_state = 1076
 					}
 					hidden_effect = {
+				add_manpower = 750000
 				BFE = {	country_event = rotermorgenmisc.8787 }
 				}
 			}
@@ -1569,6 +1573,7 @@ AUS_volksreichskommissariat_decisions = {
 						transfer_state = 1136
 					}
 					hidden_effect = {
+				add_manpower = 200000
 				KOH = {	country_event = rotermorgenmisc.8788 }
 				}
 			}
@@ -1792,6 +1797,7 @@ AUS_volksreichskommissariat_decisions = {
 						transfer_state = 81
 					}
 					hidden_effect = {
+				add_manpower = 100000
 				KOH = {	country_event = rotermorgenmisc.8788 }
 				}
 			}
@@ -3376,7 +3382,7 @@ AUS_rebuild_hre_cat = {
 		fire_only_once = yes
 		cost = 100
 		days_remove = 90
-		ai_will_do = { factor = 50 }
+		ai_will_do = { factor = 100 }
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision AUS_dev_austria"
 		}

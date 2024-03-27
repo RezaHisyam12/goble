@@ -829,4 +829,8 @@ spriteTypes = {
 		name = "GFX_idea_AUS_navy_spirit.png"
 		texturefile = "gfx/interface/ideas/ideas/AUS_navy_spirit.png"
 	}
+	spriteType = {
+		name = "GFX_idea_PB_RUS_Russian_Civil_War"
+		texturefile = "gfx/interface/ideas/ideas/PB_RUS_Russian_Civil_War.dds"
+	}
 }

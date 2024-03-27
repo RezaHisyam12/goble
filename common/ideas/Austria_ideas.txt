@@ -700,7 +700,7 @@ ideas = {
 		AUS_aftermath = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea AUS_aftermath"}
 			allowed = { always = no }
-			picture = generic_crippled_industry
+			picture = PB_DDR_Post_War_Defeatism
 			modifier = {
 				war_support_factor = -0.4
 				consumer_goods_factor = 0.55
