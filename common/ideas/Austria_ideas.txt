@@ -504,23 +504,12 @@ ideas = {
 			picture = PB_GER_German_Century
 			modifier = {
 				army_attack_against_major_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_morale_factor = 0.1
 				army_strength_factor = 0.1
 				org_loss_at_low_org_factor = -0.15
 				terrain_penalty_reduction = 0.1
 				out_of_supply_factor = -0.1
-			}
-		}
-
-		GER_total_war_3 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_total_war_3" }
-			picture = generic_war_preparation
-			name = GER_total_war_idea
-			allowed = { always = no }
-			modifier = {
-				conscription_factor = 0.15
-				org_loss_at_low_org_factor = -0.15
-				resistance_target_on_our_occupied_states = 0.1
-				army_attack_against_major_factor = 0.1
 			}
 		}
 
@@ -826,6 +815,54 @@ ideas = {
 				political_power_cost = 0.20
 				consumer_goods_factor = 0.15
 				global_building_slots_factor = 0.10
+			}
+		}
+
+		AUS_civil_war_plan_HUN = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_civil_war_plan_HUN"}
+			picture = guns_shield
+			allowed = { always = no }
+			available = { has_war_with = HUN }
+			targeted_modifier = {
+				tag = HUN
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			modifier = {
+				army_morale_factor = 0.10
+				army_speed_factor = 0.10
+			}
+		}
+
+		AUS_civil_war_plan_CZE = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_civil_war_plan_CZE"}
+			picture = guns_shield
+			allowed = { always = no }
+			available = { has_war_with = CZE }
+			targeted_modifier = {
+				tag = CZE
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			modifier = {
+				army_morale_factor = 0.10
+				army_speed_factor = 0.10
+			}
+		}
+
+		AUS_civil_war_plan_CRO = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_civil_war_plan_CRO"}
+			picture = guns_shield
+			allowed = { always = no }
+			available = { has_war_with = CRO }
+			targeted_modifier = {
+				tag = CRO
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+			modifier = {
+				army_morale_factor = 0.10
+				army_speed_factor = 0.10
 			}
 		}
 

@@ -3897,6 +3897,10 @@ AUS_ott_ally: "Astro-Turkish Ties"
 AUS_new_eurasian_capital_modifier:0 "£pol_idea Holy Roman Empire Capital"
 AUS_eastern_front_operations_idea: "Eastern Front Operations"
 AUS_kuk_kriegsmarine: "k.u.k. Kriegsmarine"
+AUS_civil_war_plan_HUN: "Operation Einigung"
+AUS_civil_war_plan_CZE: "Operation Befriedung"
+AUS_civil_war_plan_CRO: "Operation Wiedervereinigung"
+
 
 AUS_start_hre_tooltip:0 "§GAustria will look to its past and attempt to restore its former glory!§!"
 AUS_national_rebirth_tooltip:0 "§GThe government will proclaim a national rejuvenation to retake the legacies of the past.§!"
@@ -3946,9 +3950,12 @@ AUS_Russia_tt:0 "§YSubjugate Russia§! §CAfter Completing All Russian Focuses�
 AUS_rebuild_hre_cat:0 "Rebuild §Y[AUS.GetNameDef]§! Industry"
 AUS_rebuild_hre_tt:0 "§YRebuild [AUS.GetNameDef] Industry§!"
 AUS_rebuild_hre_cat_desc:0 "The Unification War has ravaged our beautiful lands, we must do everything in our power to restore them to their due glory."
-AUS_join_vienna_circle: "Join the Vienna Circle"
-
-
+AUS_join_vienna_circle:0 "Join the Vienna Circle"
+AUS_civil_war_decision_category:0 "Unification War"
+AUS_civil_war_decision_category_desc:0 "Austria is not just a geographical region or a country. It is an idea, an expression of the belief in a holy Catholic Empire that has been given a mandate to watch over Europe. Though for centuries our authority has been challenged within and without, our Empire has always persisted, for it is Austria's destiny to watch the world."
+AUS_war_HUN_decision:0 "Push Against [HUN.GetNameDef]"
+AUS_war_CZE_decision:0 "Push Against [CZE.GetNameDef]"
+AUS_war_CRO_decision:0 "Push Against [CRO.GetNameDef]"
 
 
 

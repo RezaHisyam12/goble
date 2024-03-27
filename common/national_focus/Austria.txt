@@ -5644,7 +5644,7 @@ focus_tree = {
 			has_war = no
 			can_declare_war_on = ROM
 			ROM = {
-				has_war_with = ROM
+				has_war_with = BUL
 				any_neighbor_country = {
 					OR = {
 						is_subject_of = AUS
@@ -8781,8 +8781,8 @@ focus_tree = {
 				TUR = {
 					country_event = {
 						id = rotermorgenmisc.8797
-						days = 66
-						random_days = 44
+						days = 10
+						random_days = 5
 					}
 				}
 			}
@@ -8938,12 +8938,7 @@ focus_tree = {
 		cost = 5
 
 		bypass = {
-			OR = {
-				NOT = { country_exists = POL }
-				is_puppet_of = AUS
 				is_in_faction_with = AUS
-				has_war_with = POL
-			}
 		}
 		will_lead_to_war_with = POL
 

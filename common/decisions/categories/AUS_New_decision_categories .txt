@@ -48,6 +48,16 @@ AUS_rebuild_hre_cat = {
 	}
 }
 
+AUS_civil_war_decision_category = {
+	icon = power_struggle
+	allowed = { tag = AUS }
+
+	visible = {
+		is_subject = no
+		has_completed_focus = AUS_ausgleich
+		}
+}
+
 AUS_breitspurbahn_decisions = {
 	icon = breitspurbahnen
 	allowed = { tag = AUS }

@@ -31,11 +31,6 @@ default_unit_production = {
 
 	ai_strategy = {
 		type = equipment_variant_production_factor
-		id = light_tank_chassis
-		value = -100
-	}
-	ai_strategy = {
-		type = equipment_variant_production_factor
 		id = heavy_tank_chassis
 		value = -100
 	}

@@ -62,6 +62,90 @@ political_actions = {
 	}
 }
 
+AUS_civil_war_decision_category = {
+
+	AUS_war_HUN_decision = { 
+		icon = generic_prepare_civil_war
+		allowed = { tag = AUS }
+		visible = {
+			has_war_with = HUN
+		}
+		available = {
+			has_war_with = HUN
+		}
+		
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+		days_re_enable = 180
+		fire_only_once = no
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_war_HUN_decision"
+			add_timed_idea = {
+				idea = AUS_civil_war_plan_HUN
+				days = 90
+			}
+		}
+	}
+
+	AUS_war_CZE_decision = { 
+		icon = generic_prepare_civil_war
+		allowed = { tag = AUS }
+		visible = {
+			has_war_with = CZE
+		}
+		available = {
+			has_war_with = CZE
+		}
+		
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+		days_re_enable = 180
+		fire_only_once = no
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_war_CZE_decision"
+			add_timed_idea = {
+				idea = AUS_civil_war_plan_CZE
+				days = 90
+			}
+		}
+	}
+
+	AUS_war_CRO_decision = { 
+		icon = generic_prepare_civil_war
+		allowed = { tag = AUS }
+		visible = {
+			has_war_with = CRO
+		}
+		available = {
+			has_war_with = CRO
+		}
+		
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+		days_re_enable = 180
+		fire_only_once = no
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_war_CRO_decision"
+			add_timed_idea = {
+				idea = AUS_civil_war_plan_CRO
+				days = 90
+			}
+		}
+	}
+}
+
 AUS_build_that_wall_decisions = {
 
 	AUS_fortify_austrian_border_decision = {
@@ -902,6 +986,7 @@ AUS_volksreichskommissariat_decisions = {
 		
 			complete_effect = {
 				create_KOH = yes
+				set_country_flag = hungary_loyal
 				every_state = {
 					limit = {
 						OR = {
