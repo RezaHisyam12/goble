@@ -770,7 +770,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_wide_front_operations_idea" }
 			picture = generic_victors_of_ww1
 			allowed = { always = no }
-			available = { RUS = { is_subject = no } }
+			available = { RUS = { is_subject_of = AUS } }
 			modifier = {
 				army_morale_factor = 0.05
 			}
@@ -826,8 +826,8 @@ ideas = {
 			available = { has_war_with = HUN }
 			targeted_modifier = {
 				tag = HUN
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
 			}
 			modifier = {
 				army_morale_factor = 0.10
@@ -842,8 +842,8 @@ ideas = {
 			available = { has_war_with = CZE }
 			targeted_modifier = {
 				tag = CZE
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
 			}
 			modifier = {
 				army_morale_factor = 0.10
@@ -858,8 +858,8 @@ ideas = {
 			available = { has_war_with = CRO }
 			targeted_modifier = {
 				tag = CRO
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
 			}
 			modifier = {
 				army_morale_factor = 0.10
