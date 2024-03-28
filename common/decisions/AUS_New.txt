@@ -1189,7 +1189,7 @@ AUS_volksreichskommissariat_decisions = {
 						type = support_equipment
 						amount = 100
 						}
-						add_manpower = 100000
+						add_manpower = 330000
 					}
 				KOH = {	country_event = rotermorgenmisc.8788 }
 				set_autonomy = { target = KOH autonomy_state = crownland }

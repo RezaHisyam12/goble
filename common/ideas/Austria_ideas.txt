@@ -770,7 +770,13 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_wide_front_operations_idea" }
 			picture = generic_victors_of_ww1
 			allowed = { always = no }
-			available = { RUS = { is_subject_of = AUS } }
+			available = {
+				RUS = {
+					NOT = {
+						is_subject_of = AUS
+					}
+				}
+			}
 			modifier = {
 				army_morale_factor = 0.05
 			}

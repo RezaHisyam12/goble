@@ -31,6 +31,12 @@ default_unit_production = {
 
 	ai_strategy = {
 		type = equipment_variant_production_factor
+		id = light_tank_chassis
+		value = -100
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
 		id = heavy_tank_chassis
 		value = -100
 	}
@@ -1059,18 +1065,18 @@ we_need_synth_oil_1 = {
 			tag = GRU
 			tag = FRA
 			tag = AUS
+			tag = RUS
 		}
 	}
 	enable = {
 		has_tech = synth_oil_experiments
-		synthetic_refinery < 3
-		has_war = no
+		synthetic_refinery < 10
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 3
+		value = 10
 	}
 }
 
@@ -1079,17 +1085,18 @@ we_need_synth_oil_2 = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = CAN
+			tag = JAP
 		}
 	}
 	enable = {
 		has_tech = synth_oil_experiments
-		synthetic_refinery < 2
-		has_war = no
+		synthetic_refinery < 15
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 2
+		value = 15
 	}
 }
