@@ -2756,11 +2756,18 @@ focus_tree = {
 			focus = CRO_the_duke
 		}
 		available = {
-			has_country_flag = ILL_Mandate
+			OR = {
+				has_country_flag = ILL_Mandate
+				AUS = { has_country_flag = HRE_rise }
+			}
 		}
 		bypass = {
-			has_country_flag = ILL_Mandate
+			OR = {
+				has_country_flag = ILL_Mandate
+				AUS = { has_country_flag = HRE_rise }
+			}
 		}
+
 		relative_position_id = CRO_complete_loyalty_to_vienna
 		cost = 5
 		

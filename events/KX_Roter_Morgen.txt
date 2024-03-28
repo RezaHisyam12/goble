@@ -4806,3 +4806,20 @@ country_event = {
 		effect_tooltip = { add_to_tech_sharing_group = austrian_research }
 	}
 }
+
+# Against Russia
+country_event = {
+	id = rotermorgenmisc.8798
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8798" }
+	title = rotermorgenmisc.8798.t
+	desc = rotermorgenmisc.8798.d
+	picture = Ausgleich_prag
+
+	is_triggered_only = yes
+
+	option = {
+		name = rotermorgenmisc.8798.a
+		add_war_support = 0.05
+	}
+}
+

@@ -9097,10 +9097,9 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe"
 			custom_effect_tooltip = unlocks_decision
 			custom_effect_tooltip = AUS_Russia_tt
-			custom_effect_tooltip = tech_arctic_commando_effect
-			hidden_effect = { set_technology = { tech_arctic_commando = 1 } }
+			add_ideas = AUS_eastern_front_operations_idea
 		}
-		search_filters = { FOCUS_FILTER_ARMY_XP }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 	focus = {
 		id = AUS_Rus_Right
@@ -9123,9 +9122,9 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe"
 			custom_effect_tooltip = unlocks_decision
 			custom_effect_tooltip = AUS_Russia_tt
-			add_ideas = AUS_eastern_front_operations_idea
+			country_event = rotermorgenmisc.8798
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 
