@@ -549,7 +549,7 @@ ideas = {
 			allowed = { always = no }
 			picture = PB_GER_Centralization
 			modifier = {
-				political_power_gain = 0.10
+				industrial_concern_cost_factor = -0.33
 				consumer_goods_factor = -0.10
 				stability_factor = 0.10
 			}

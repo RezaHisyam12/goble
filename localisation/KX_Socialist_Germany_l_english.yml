@@ -3927,6 +3927,7 @@ AUS_expansion_four_volksreichskommissariat_hypoborea:0 "§OBalkan Federation§! 
 AUS_volksreichskommissariat_hungary:0 "Establish the §GKingdom of Hungary§!"
 AUS_expansion_two_volksland_hypoborea:0 "§GCrownland of Hungary§! expansion §GOne§!"
 AUS_expansion_three_volksland_hypoborea:0 "§GCrownland of Hungary§! expansion §GTwo§!"
+AUS_expansion_four_volksland_hypoborea:0 "§GCrownland of Hungary§! expansion §GThree§!"
 AUS_direct_decisions:0 "§YDirect Administration of Danubian and Balkan Territories§!"
 AUS_puppet_decisions:0 "§CEstablish new §CCrownlands§!"
 AUS_Foreign_Policy_decisions:0 "Foreign Policy Decisions"
