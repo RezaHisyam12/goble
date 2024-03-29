@@ -7414,7 +7414,7 @@ focus_tree = {
 					add_doctrine_cost_reduction = {
 	name = land_doc_bonus
 	cost_reduction = 0.5
-	uses = 1
+	uses = 2
 	category = land_doctrine
 						}
 						
@@ -7473,83 +7473,7 @@ focus_tree = {
 									instant_build = yes
 								}
 						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = industrial_complex
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_extra_state_shared_building_slots = 2
-							add_building_construction = {
-									type = arms_factory
-									level = 2
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = industrial_complex
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = arms_factory
-											size > 0
-											include_locked = yes
-										}
-								}
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-									type = arms_factory
-									level = 1
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = industrial_complex
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-						}
-					random_owned_state = {
-							limit = {
-									free_building_slots = {
-											building = industrial_complex
-											size > 1
-											include_locked = yes
-										}
-								}
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-									type = industrial_complex
-									level = 1
-									instant_build = yes
-								}
-						}
-				}
-		
+				}		
 	}
 
 	focus = {
@@ -7721,7 +7645,7 @@ focus_tree = {
 			}
 			will_lead_to_war_with = GER
 			will_lead_to_war_with = GRU
-			will_lead_to_war_with = SWI
+
 			available = {
 			has_government = paternal_autocrat
 				}
@@ -7799,7 +7723,7 @@ focus_tree = {
 						days = 365 
 						}
 					every_owned_state = {
-					limit = { OR = { is_core_of = GER is_core_of = SWI is_core_of = CZE is_core_of = ITA is_core_of = SLO is_core_of = FIU}}
+					limit = { OR = { is_core_of = GER is_core_of = SWI is_core_of = CZE is_core_of = ITA is_core_of = SLO is_core_of = FIU is_core_of = GAL}}
 						AUS = { add_state_core = PREV }
 					}
 			if = {
@@ -7824,6 +7748,9 @@ focus_tree = {
 					target = FIU
 					transfer_troops = yes
 					}
+				}
+				every_enemy_country = {
+					white_peace = AUS
 				}
 			}
 		}
@@ -8607,6 +8534,12 @@ focus_tree = {
 		available = {
 			has_country_flag = HRE_rise
 			is_subject = no
+			any_neighbor_country = {
+				OR = {
+					is_subject_of = FRA
+					tag = FRA
+				}
+			}
 		}
 		x = 0
 		y = 3
@@ -8617,77 +8550,12 @@ focus_tree = {
 		bypass_if_unavailable = yes
 
 		ai_will_do = {
-			factor = 75
+			factor = 10
 			modifier = {
-				factor = 0
-				can_declare_war_on = FRA
-				OR = {
-					has_war = yes
-					strength_ratio = { tag = FRA ratio < 0.75 }
-					# neither of us is in a faction and FRA is stronger
-					AND = {
-						FRA = {
-							is_in_faction = no
-							is_subject = no
-						}
-						is_in_faction = no
-						strength_ratio = { tag = FRA ratio < 1.0 }
-					}
-					# they're in a faction which is not at war
-					FRA = {
-						OR = {
-							AND = {
-								is_in_faction = yes
-								is_faction_leader = no
-							}
-							is_subject = yes
-						}
-						has_war = no
-					}
-					# they're in the FRAgrade Pact and we're much stronger
-					FRA = {
-						is_in_faction = yes
-						is_faction_leader = no
-						strength_ratio = { tag = ROOT ratio > 0.30 }
-					}
-					# they're guaranteed but not in a faction
-					FRA = {
-						is_in_faction = no
-						has_guarantor = yes
-						any_of_scopes = {
-							array = guarantor_array
-							has_guaranteed = PREV
-							OR = {
-								strength_ratio = { tag = ROOT ratio > 1.0 }
-								is_in_faction = yes
-							}
-							surrender_progress < 0.20
-						}
-					}
-					# they're a subject and the overlord is stronger than us or in a faction and not losing
-					FRA = {
-						is_subject = yes
-						overlord = {
-							OR = {
-								strength_ratio = { tag = ROOT ratio > 1.0 }
-								is_in_faction = yes
-							}
-							surrender_progress < 0.20
-						}
-					}
-					# they're in a faction which is at war but not with a major and not losing
-					FRA = {
-						is_in_faction = yes
-						has_war = yes
-						NOT = {
-							any_enemy_country = { is_actual_major = yes }
-							surrender_progress > 0.10
-							faction_leader = { surrender_progress > 0.20 }
-						}
-					}
+					factor = 0
+					has_stability < 0.25
 				}
 			}
-		}
 		will_lead_to_war_with = GER
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Demand_FRA"
@@ -8945,7 +8813,7 @@ focus_tree = {
 		cost = 5
 
 		bypass = {
-				is_in_faction_with = AUS
+				POL = { is_in_faction_with = AUS }
 		}
 		will_lead_to_war_with = POL
 

@@ -34,7 +34,6 @@ default_unit_production = {
 		id = light_tank_chassis
 		value = -100
 	}
-
 	ai_strategy = {
 		type = equipment_variant_production_factor
 		id = heavy_tank_chassis
@@ -146,12 +145,6 @@ default_specialised_production = {
 	ai_strategy = {
 		type = equipment_variant_production_factor
 		id = medium_tank_chassis
-		value = 5
-	}
-
-	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = super_heavy_tank_chassis
 		value = 5
 	}
 }
@@ -826,77 +819,17 @@ more_armor_focused_nation = {
 			}
 		}
 	}
-
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = -12
+		value = -20
 	}
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
-		value = 12
-	}
-}
-
-default_antitank_production = {
-	enable = {
-		num_of_military_factories > 10
-		has_tech = interwar_antitank
-		has_tech = tech_engineers
-		OR = {
-			any_enemy_country = {
-				ROOT = { estimated_intel_max_armor = { tag = PREV value > 25 } }
-			}
-			any_neighbor_country = {
-				NOT = {
-					is_in_faction_with = ROOT
-					is_subject_of = ROOT
-					ROOT = { is_subject_of = PREV }
-					has_war_with = ROOT
-					same_government_type_as_ROOT = yes
-				}
-				ROOT = { estimated_intel_max_armor = { tag = PREV value > 25 } }
-			}
-		}
-	}
-	abort = {
-		NOT = {
-			num_of_military_factories < 10
-			OR = {
-				any_enemy_country = {
-					ROOT = { estimated_intel_max_armor = { tag = PREV value > 25 } }
-				}
-				any_neighbor_country = {
-					NOT = {
-						is_in_faction_with = ROOT
-						is_subject_of = ROOT
-						ROOT = { is_subject_of = PREV }
-						has_war_with = ROOT
-						same_government_type_as_ROOT = yes
-					}
-					ROOT = { estimated_intel_max_armor = { tag = PREV value > 25 } }
-				}
-			}
-		}
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = -3
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = mobile
-		value = -2
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = anti_tank
-		value = 5
+		value = 20
 	}
 }
 
@@ -945,12 +878,6 @@ DEFAULT_template_design_low_factories = {
 
 	ai_strategy = {
 		type = template_prio
-		id = heavy_armor
-		value = -100
-	}
-
-	ai_strategy = {
-		type = template_prio
 		id = motorized
 		value = -100
 	}
@@ -984,7 +911,7 @@ DEFAULT_template_design_industrial_country = {
 	ai_strategy = {
 		type = template_prio
 		id = infantry
-		value = 70
+		value = 60
 	}
 }
 
