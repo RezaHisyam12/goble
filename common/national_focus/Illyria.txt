@@ -2593,7 +2593,9 @@ focus_tree = {
 		prerequisite = {
 			focus = CRO_meet_with_the_kaiser
 		}
-		
+		bypass = {
+				AUS = { has_country_flag = HRE_rise }
+		}		
 		relative_position_id = CRO_loyalty_remains
 		
 		completion_reward = {

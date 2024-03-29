@@ -761,7 +761,7 @@ ideas = {
 			picture = PB_PRS_United_In_Blood
 			modifier = {
 				stability_factor = 0.05
-				monthly_population = 0.05
+				monthly_population = 0.25
 				war_support_factor = 0.05
 			}
 		}

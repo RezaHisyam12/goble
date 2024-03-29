@@ -4526,12 +4526,12 @@ country_event = { #Holy Roman Empire claims FRA
 			modifier = {
 				factor = 0
 				tag = FRA
-				has_government = national_populist
+				has_government = totalist
 			}
 		}
 		add_political_power = -150
 		effect_tooltip = {
-			FIN = {
+			FRA = {
 				every_owned_state = {
 					limit = {
 						OR = {

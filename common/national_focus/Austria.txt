@@ -8177,7 +8177,6 @@ focus_tree = {
 				factor = 0
 				can_declare_war_on = SWI
 				OR = {
-					has_war = yes
 					strength_ratio = { tag = SWI ratio < 0.75 }
 					# neither of us is in a faction and SWI is stronger
 					AND = {
@@ -8320,7 +8319,6 @@ focus_tree = {
 				factor = 0
 				can_declare_war_on = HOL
 				OR = {
-					has_war = yes
 					strength_ratio = { tag = HOL ratio < 0.75 }
 					# neither of us is in a faction and HOL is stronger
 					AND = {
@@ -8434,7 +8432,6 @@ focus_tree = {
 				factor = 0
 				can_declare_war_on = BEL
 				OR = {
-					has_war = yes
 					strength_ratio = { tag = BEL ratio < 0.75 }
 					# neither of us is in a faction and BEL is stronger
 					AND = {
@@ -8643,7 +8640,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
@@ -8918,14 +8915,6 @@ focus_tree = {
 				factor = 0
 				has_stability < 0.25
 				}
-				modifier = {
-					factor = 0
-					has_war = yes
-				}
-				modifier = {
-					factor = 0
-					has_stability < 0.3
-				}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe"
@@ -8959,7 +8948,7 @@ focus_tree = {
 		relative_position_id = AUS_world
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe"
