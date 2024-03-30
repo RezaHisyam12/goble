@@ -8097,7 +8097,7 @@ focus_tree = {
 		relative_position_id = AUS_world
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe"
@@ -8126,7 +8126,7 @@ focus_tree = {
 		bypass_if_unavailable = yes
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Invade_ITA"
@@ -8277,7 +8277,7 @@ focus_tree = {
 
 		will_lead_to_war_with = SRI
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Invade_SRI"
