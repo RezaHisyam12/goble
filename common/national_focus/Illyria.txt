@@ -2181,7 +2181,10 @@ focus_tree = {
 		available = {
 			has_country_flag = cro_slovenia_failure
 		}
-		
+		bypass = {
+				AUS = { has_country_flag = HRE_rise }
+			}
+
 		mutually_exclusive = { focus = CRO_suspend_republicanism }
 		
 		prerequisite = { focus = CRO_sway_army }
@@ -2211,7 +2214,10 @@ focus_tree = {
 		available = {
 			has_country_flag = cro_slovenia_failure
 		}
-		
+		bypass = {
+			AUS = { has_country_flag = HRE_rise }
+		}
+	
 		mutually_exclusive = { focus = CRO_keep_republic }
 		
 		prerequisite = { focus = CRO_sway_army }
@@ -2262,7 +2268,10 @@ focus_tree = {
 		ai_will_do = { 
 			factor = 100
 		}
-		
+		bypass = {
+			AUS = { has_country_flag = HRE_rise }
+		}
+	
 		completion_reward = {
 			AUS = { 
 				end_puppet  = CRO
@@ -2300,7 +2309,10 @@ focus_tree = {
 			has_country_flag = cro_slovenia_failure
 			has_country_flag = cro_revolt_in_progress
 		}
-		
+		bypass = {
+			AUS = { has_country_flag = HRE_rise }
+		}
+	
 		
 		prerequisite = { focus = CRO_execute_operation }
 		

@@ -13436,8 +13436,119 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
+	##Icon For: 
+	SpriteType = { 
+		name = "GER_crush_western_syndies"
+		texturefile = "gfx/interface/goals/GER_crush_western_syndies.png"
+	}
 
+	##Icon Shine For: 
+	SpriteType = { 
+		name = "GER_crush_western_syndies_shine"
+		texturefile = "gfx/interface/goals/GER_crush_western_syndies.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GER_crush_western_syndies.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GER_crush_western_syndies.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
 
+	##Icon For: 
+	SpriteType = { 
+		name = "GER_crush_france"
+		texturefile = "gfx/interface/goals/GER_crush_france.tga"
+	}
+
+	##Icon Shine For: 
+	SpriteType = { 
+		name = "GER_crush_france_shine"
+		texturefile = "gfx/interface/goals/GER_crush_france.tga"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GER_crush_france.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GER_crush_france.tga"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: 
+	SpriteType = { 
+		name = "PB_ENG_It_Happened_Here"
+		texturefile = "gfx/interface/goals/PB_ENG_It_Happened_Here.dds"
+	}
+
+	##Icon Shine For: 
+	SpriteType = { 
+		name = "PB_ENG_It_Happened_Here_shine"
+		texturefile = "gfx/interface/goals/PB_ENG_It_Happened_Here.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/PB_ENG_It_Happened_Here.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/PB_ENG_It_Happened_Here.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
 
 
 

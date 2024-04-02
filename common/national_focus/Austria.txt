@@ -8425,7 +8425,7 @@ focus_tree = {
 		bypass_if_unavailable = yes
 
 		will_lead_to_war_with = BEL
-		will_lead_to_war_with = WAL
+		will_lead_to_war_with = WLL
 		ai_will_do = {
 			factor = 75
 			modifier = {
@@ -8511,10 +8511,10 @@ focus_tree = {
 				target = BEL
 			}
 			if = {
-				limit = { country_exists = WAL }
+				limit = { country_exists = WLL }
 				create_wargoal = {
 					type = annex_everything
-					target = WAL
+					target = WLL
 				}
 			}
 		}
@@ -8531,12 +8531,6 @@ focus_tree = {
 		available = {
 			has_country_flag = HRE_rise
 			is_subject = no
-			any_neighbor_country = {
-				OR = {
-					is_subject_of = FRA
-					tag = FRA
-				}
-			}
 		}
 		x = 0
 		y = 3
@@ -8553,7 +8547,7 @@ focus_tree = {
 					has_stability < 0.25
 				}
 			}
-		will_lead_to_war_with = GER
+		will_lead_to_war_with = FRA
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Demand_FRA"
 			762 = { add_claim_by = AUS }
@@ -8784,13 +8778,12 @@ focus_tree = {
 		relative_position_id = AUS_world
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe"
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe_East"
 			army_experience = 50
 			air_experience = 50
-			navy_experience = 50
 		}
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 	}
@@ -8984,5 +8977,108 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
+	# Western Europe Path
 
+	focus = {
+		id = AUS_Attack_Europe_West
+		icon = GER_crush_western_syndies
+		prerequisite = {focus = AUS_world }
+		available = {
+			has_country_flag = HRE_rise
+			is_subject = no
+		}
+		x = 6
+		y = 1
+		
+		relative_position_id = AUS_world
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe_West"
+			navy_experience = 100
+		}
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+	}
+
+	focus = {
+		id = AUS_Attack_NFA
+		icon = GER_crush_france
+		cost = 5
+		prerequisite = {
+			focus = AUS_Attack_Europe_West
+		}
+		
+		relative_position_id = AUS_world
+		x = 6
+		y = 2
+
+		available = {
+			has_country_flag = HRE_rise
+			NOT = { has_war_with = RUS }			
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_NFA"
+			create_wargoal = {
+				target = NFA
+				type = topple_government
+			}
+		}
+	}
+	
+	focus = {
+		id = AUS_Attack_Canada
+		icon = PB_ENG_It_Happened_Here
+		cost = 5
+		prerequisite = {
+			focus = AUS_Attack_NFA
+		}
+		
+		relative_position_id = AUS_world
+		x = 6
+		y = 3
+
+		available = {
+			has_country_flag = HRE_rise
+			NOT = { has_war_with = RUS }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CAUS_Attack_Canada"
+			create_wargoal = {
+				target = CAN
+				type = topple_government
+			}
+			if = {
+				limit = { country_exists = GBR }
+				create_wargoal = {
+					type = topple_government
+					target = GBR
+				}
+			}
+		}
+	}
+	
+
+
+
+
+
+
+
+	
 }

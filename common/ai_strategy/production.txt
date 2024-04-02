@@ -26,20 +26,14 @@ default_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = 100
+		value = 95
 	}
 
 	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = light_tank_chassis
-		value = -100
+		type = role_ratio
+		id = armor_role
+		value = 5
 	}
-	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = heavy_tank_chassis
-		value = -100
-	}
-}
 
 more_guns_in_the_early_game = {
 	enable = {
@@ -193,6 +187,7 @@ we_need_civ_factories_3 = {
 		NOT = {
 			tag = FRA
 			tag = GER
+			tag = GRU
 			tag = RUS
 		}
 	}
@@ -213,7 +208,6 @@ we_need_civ_factories_3 = {
 we_need_dockyards_1 = {
 	allowed = {
 		OR = {
-			tag = AUS
 			tag = CAN
 			tag = ENG
 			tag = GBR
@@ -247,7 +241,6 @@ we_need_dockyards_1 = {
 we_need_dockyards_2 = {
 	allowed = {
 		NOT = {
-			tag = AUS
 			tag = CAN
 			tag = ENG
 			tag = GBR
@@ -285,6 +278,7 @@ we_need_dockyards_3 = {
 			tag = GBR
 			tag = JAP
 			tag = GER
+			tag = GRU
 			tag = FRA
 			tag = NFA
 			tag = USA
@@ -345,6 +339,54 @@ default_marine_production = {
 		type = role_ratio
 		id = marine
 		value = 3
+	}
+}
+
+minimum_artillery_production = {
+	enable = {
+		num_of_military_factories < 2
+	}
+	abort = {
+		num_of_military_factories > 1
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = -100
+	}
+}
+
+default_artillery_production = {
+	enable = {
+		num_of_military_factories > 9
+	}
+	abort = {
+		OR = {
+			num_of_military_factories < 10
+			num_of_military_factories > 19
+		}
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 15
+	}
+}
+
+major_artillery_production = {
+	enable = {
+		num_of_military_factories > 19
+	}
+	abort = {
+		num_of_military_factories < 20
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 25
 	}
 }
 
@@ -488,6 +530,38 @@ default_bicycle_production = {
 	}
 }
 
+default_elite_special_forces_production = {
+	enable = {
+		ai_wants_divisions > 24
+		any_country_division = { division_has_battalion_in_template = elite_infantry }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = elite_infantry
+		value = 5
+	}
+}
+
+more_elite_special_forces_production = {
+	enable = {
+		has_tech = elite_infantry_tech
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = elite_infantry
+		value = 10
+	}
+	ai_strategy = {
+		type = template_prio
+		id = elite_infantry
+		value = 100
+	}
+}
+
 make_more_militia = {
 	enable = {
 		num_of_military_factories < 5
@@ -585,55 +659,6 @@ more_cavalry_focused_nation = {
 	}
 }
 
-default_mobile_production = {
-	allowed = {
-		NOT = {
-			original_tag = MON
-			original_tag = ALO
-			original_tag = TRK
-			original_tag = UZB
-			original_tag = KYR
-			original_tag = DKB
-			original_tag = KUB
-			original_tag = SAU
-			original_tag = JBS
-			original_tag = LBA
-			original_tag = TRP
-			original_tag = IRQ
-		}
-	}
-	enable = {
-		has_tech = motorised_infantry
-		num_of_military_factories > 10
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = role_ratio
-		id = cavalry
-		value = -3
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = -2
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = mobile
-		value = 5
-	}
-
-	ai_strategy = {
-		type = template_prio
-		id = motorized
-		value = 10
-	}
-}
-
 late_mobile_production = {
 	allowed = {
 		OR = {
@@ -697,14 +722,15 @@ limit_mobile_production = {
 default_tank_production = {
 	enable = {
 		is_eligible_for_armor_production = yes
-		num_divisions > 49 #build enough infantry first
+		has_design_based_on = medium_tank_chassis
+		num_divisions > 39 #build enough infantry first
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = -2
+		value = -3
 	}
 	ai_strategy = {
 		type = equipment_variant_production_factor
@@ -714,7 +740,7 @@ default_tank_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
-		value = 2
+		value = 3
 	}
 }
 
@@ -728,12 +754,12 @@ increased_tank_production_1 = {
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = -3
+		value = -5
 	}
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
-		value = 3
+		value = 5
 	}
 }
 
@@ -752,7 +778,7 @@ increased_tank_production_2 = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
-		value = 5
+		value = 6
 	}
 }
 
@@ -778,7 +804,7 @@ increased_tank_production_4 = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
-		value = 8
+		value = 10
 	}
 }
 
@@ -791,7 +817,7 @@ increased_tank_production_5 = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
-		value = 10
+		value = 12
 	}
 }
 
@@ -804,7 +830,7 @@ increased_tank_production_6 = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
-		value = 10
+		value = 14
 	}
 }
 
@@ -818,6 +844,7 @@ more_armor_focused_nation = {
 			}
 		}
 	}
+
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
@@ -980,7 +1007,7 @@ civil_war_militia_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = 60
+		value = 70
 	}
 }
 
@@ -996,13 +1023,13 @@ we_need_synth_oil_1 = {
 	}
 	enable = {
 		has_tech = synth_oil_experiments
-		synthetic_refinery < 25
+		synthetic_refinery < 15
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 25
+		value = 15
 	}
 }
 
@@ -1017,12 +1044,12 @@ we_need_synth_oil_2 = {
 	}
 	enable = {
 		has_tech = synth_oil_experiments
-		synthetic_refinery < 20
+		synthetic_refinery < 15
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 20
+		value = 15
 	}
 }

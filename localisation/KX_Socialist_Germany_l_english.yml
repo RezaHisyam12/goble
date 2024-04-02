@@ -3867,11 +3867,15 @@ AUS_found_IEA: "Imperial Economic Alliance"
 AUS_develop_navy:0 "Standardized Dockyard System"
 AUS_electronic_warfare:0 "Electronic Warfare"
 AUS_spending_ally:0 "Broad Modernisation Project"
-AUS_Attack_Europe_East:0 "Prepare to Invade The East"
+AUS_Attack_Europe_East:0 "Prepare to Invade East"
 AUS_Invade_POL:0 "Invade Poland"
 AUS_Retake_Europe_East:0 "Retake Eastern Europe"
 AUS_Rus_Left:0 "Subjugate"
 AUS_Rus_Right:0 "Russia"
+AUS_Attack_Europe_West:0 "Prepare to Strike West"
+AUS_Attack_NFA:0 "Crush France"
+AUS_Attack_Canada:0 "Our Oldest Foe"
+
 
 
 HRE_rise:0 "Holy Roman Empire Restored"

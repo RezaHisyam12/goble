@@ -5998,7 +5998,7 @@ GRU_germania_plan_decisions = {
 	#		set_country_flag = GRU_GREATER_DONE
 	#	}
 	#}
-
+	}
 }
 GRU_Germania_Stadt_decisions = {
 
