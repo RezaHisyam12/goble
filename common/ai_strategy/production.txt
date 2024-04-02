@@ -34,6 +34,7 @@ default_unit_production = {
 		id = armor_role
 		value = 5
 	}
+}
 
 more_guns_in_the_early_game = {
 	enable = {
@@ -1023,13 +1024,13 @@ we_need_synth_oil_1 = {
 	}
 	enable = {
 		has_tech = synth_oil_experiments
-		synthetic_refinery < 15
+		synthetic_refinery < 25
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 15
+		value = 25
 	}
 }
 
@@ -1044,12 +1045,12 @@ we_need_synth_oil_2 = {
 	}
 	enable = {
 		has_tech = synth_oil_experiments
-		synthetic_refinery < 15
+		synthetic_refinery < 20
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 15
+		value = 20
 	}
 }
