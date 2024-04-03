@@ -51,7 +51,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_military_expansion"
-			army_experience = 35
+			army_experience = 50
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
@@ -122,7 +122,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_rifle_trials"
-			army_experience = 10
+			army_experience = 25
 			add_tech_bonus = {
 				name = AUS_rifle_trials
 				bonus = 1
@@ -243,7 +243,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_tank_trials"
-			army_experience = 10
+			army_experience = 25
 			add_tech_bonus = {
 				name = AUS_tank_trials
 				bonus = 0.5
@@ -808,7 +808,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_flugschule"
-			air_experience = 25
+			air_experience = 50
 			add_doctrine_cost_reduction = {
 				name = AUS_flugschule
 				cost_reduction = 0.5
@@ -1033,7 +1033,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_naval_effort"
-			navy_experience = 25
+			navy_experience = 50
 			add_ideas = AUS_kuk_kriegsmarine
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
@@ -2840,7 +2840,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_claim_serbia"
-			declare_war_on = {
+			create_wargoal = {
 				type = annex_everything
 				target = SER
 			}
@@ -2864,6 +2864,13 @@ focus_tree = {
 						SER = { owns_state = 841 }
 					}
 					add_state_claim = 841
+				}
+			}
+			if = {
+				limit = { has_subject = SER }
+				annex_country = {
+					target = SER
+					transfer_troops = no
 				}
 			}
 			else = {
@@ -5500,12 +5507,6 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_protector_of_the_balkans"
 			add_political_power = 120
 			set_faction_name = austrian_sphere
-			#ALB respect ++
-			#GRE respect ++
-			#ROM respect ++
-
-			#SER respect --
-			#ROM respect --
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -5513,7 +5514,7 @@ focus_tree = {
 	focus = {
 		id = AUS_potb_albania
 		icon = GFX_goal_AUS_good_neighbor_albania
-		x = 1
+		x = 2
 		y = 1
 		cost = 5
 
@@ -5567,14 +5568,14 @@ focus_tree = {
 	focus = {
 		id = AUS_potb_greece
 		icon = GFX_goal_AUS_Olive_Branch_Greeks
-		x = 0
+		x = -2
 		y = 1
 		cost = 6
 
-		relative_position_id = AUS_potb_albania
+		relative_position_id = AUS_protector_of_the_balkans
 
 		prerequisite = {
-			focus = AUS_potb_albania
+			focus = AUS_protector_of_the_balkans
 		}
 
 		bypass = {
@@ -5627,7 +5628,7 @@ focus_tree = {
 	focus = {
 		id = AUS_potb_help_romania
 		icon = GFX_goal_AUS_Neutralize_Romania
-		x = -1
+		x = 0
 		y = 1
 		cost = 2
 
@@ -5640,15 +5641,16 @@ focus_tree = {
 		will_lead_to_war_with = ROM
 
 		ai_will_do = {
-			factor = 40
+			factor = 0
 		}
 
 		available = {
 			is_faction_leader = yes
 			has_war = no
+			has_global_flag = balkan_war_ended
 			can_declare_war_on = ROM
 			ROM = {
-				has_war_with = BUL
+				has_war = no
 				any_neighbor_country = {
 					OR = {
 						is_subject_of = AUS
@@ -5669,9 +5671,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_potb_help_romania"
-			#event to add Royal Romania to faction, then declare war on Codreanu
-			ROM = { set_country_flag = AUS_intervened_in_civil_war }
-			declare_war_on = {
+			create_wargoal = {
 				target = ROM
 				type = annex_everything
 			}
@@ -5680,74 +5680,16 @@ focus_tree = {
 	}
 
 	focus = {
-		id = AUS_potb_invite_romania
-		icon = GFX_goal_AUS_Study_Romanian_Legionairism
-		x = 0
-		y = 1
-		cost = 2
-
-		relative_position_id = AUS_potb_help_romania
-
-		prerequisite = {
-			focus = AUS_potb_help_romania
-		}
-
-		bypass = {
-			OR = {
-				NOT = { can_declare_war_on = ROM }
-				ROM = {
-					is_subject_of = BUL
-				}
-			}
-		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-			is_faction_leader = yes
-			has_war = no
-			NOT = { has_socialist_government = yes }
-			custom_trigger_tooltip = {
-				tooltip = AUS_potb_romania_tooltip
-				ROM = {
-					any_neighbor_country = {
-						OR = {
-							is_subject_of = AUS
-							is_in_faction_with = AUS
-							tag = AUS
-						}
-					}
-				}
-			}
-			ROM = {
-				has_war = no
-				is_subject = no
-				is_in_faction = no
-				NOT = { has_socialist_government = yes }
-			}
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AUS_potb_invite_romania"
-			ROM = {
-				country_event = { id = aus.tree.4020 days = 1 }
-			}
-		}
-	}
-
-	focus = {
 		id = AUS_potb_invite_bulgaria
 		icon = GFX_goal_AUS_free_bulgaria
-		x = -1
-		y = 1
+		x = 0
+		y = 2
 		cost = 6
 
-		relative_position_id = AUS_potb_greece
+		relative_position_id = AUS_protector_of_the_balkans
 
 		prerequisite = {
-			focus = AUS_potb_invite_romania
+			focus = AUS_potb_albania
 			focus = AUS_potb_greece
 		}
 
@@ -6288,7 +6230,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 100
-			army_experience = 25
+			army_experience = 50
 			add_popularity = {
 				ideology = national_populist
 				popularity = 0.15
@@ -8782,8 +8724,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe_East"
-			army_experience = 50
-			air_experience = 50
+			army_experience = 75
+			air_experience = 75
 		}
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 	}

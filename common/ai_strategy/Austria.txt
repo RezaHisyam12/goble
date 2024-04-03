@@ -1430,6 +1430,28 @@ AUS_crush_SRD = {
 ### Industry ###
 ################
 
+default_austria_mountaineers_production = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		has_tech = tech_mountaineers
+		NOT = { has_country_flag = HRE_rise }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineer
+		value = 5
+	}
+	ai_strategy = {
+		type = template_prio
+		id = mountaineer
+		value = 50
+	}
+}
+
 AUS_build_tanks_if_france_is_aggressive = {
 	allowed = {
 		original_tag = AUS

@@ -26,13 +26,13 @@ default_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = 95
+		value = 90
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
-		value = 5
+		value = 10
 	}
 }
 
@@ -421,6 +421,7 @@ extra_marine_production = {
 			original_tag = GEX
 			original_tag = AST
 			original_tag = GEA
+			original_tag = HOL
 			is_american_tag = yes
 			AND = {
 				has_war = yes
@@ -469,7 +470,6 @@ more_mountaineer_focused_nation = {
 	allowed = {
 		OR = {
 			original_tag = SWI
-			original_tag = AUS
 			original_tag = FIN
 			original_tag = NOR
 			original_tag = NEP
@@ -546,6 +546,9 @@ default_elite_special_forces_production = {
 }
 
 more_elite_special_forces_production = {
+	allowed = {
+		original_tag = UKR
+	}
 	enable = {
 		has_tech = elite_infantry_tech
 	}
@@ -559,7 +562,7 @@ more_elite_special_forces_production = {
 	ai_strategy = {
 		type = template_prio
 		id = elite_infantry
-		value = 100
+		value = 50
 	}
 }
 
@@ -724,7 +727,6 @@ default_tank_production = {
 	enable = {
 		is_eligible_for_armor_production = yes
 		has_design_based_on = medium_tank_chassis
-		num_divisions > 39 #build enough infantry first
 	}
 	abort_when_not_enabled = yes
 
@@ -741,7 +743,7 @@ default_tank_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
-		value = 3
+		value = 5
 	}
 }
 
@@ -932,13 +934,13 @@ DEFAULT_template_design_industrial_country = {
 	ai_strategy = {
 		type = template_prio
 		id = medium_armor
-		value = 30
+		value = 10
 	}
 
 	ai_strategy = {
 		type = template_prio
 		id = infantry
-		value = 60
+		value = 70
 	}
 }
 
@@ -1023,6 +1025,7 @@ we_need_synth_oil_1 = {
 		}
 	}
 	enable = {
+		date > 1939.1.1
 		has_tech = synth_oil_experiments
 		synthetic_refinery < 25
 	}
