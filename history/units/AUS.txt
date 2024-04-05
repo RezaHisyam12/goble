@@ -16,45 +16,6 @@ division_template = {
 		infantry = { x = 2 y = 2 }
 	}
 }
-
-division_template = {
-	name = "Infanteriedivision mit Artillerie"
-	division_names_group = AUS_INF_01
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-		infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
-	}
-	support = {
-		artillery = { x = 0 y = 0 }
-	}
-}
-
-division_template = {
-	name = "Infanteriedivision mit Pionierbataillon"
-	division_names_group = AUS_INF_01
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-		infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
-	}
-	support = {
-		engineer = { x = 0 y = 0 }
-	}
-}
-
 division_template = {
 	name = "Alpenjägerdivision"
 	division_names_group = AUS_MTN_01
@@ -74,50 +35,42 @@ division_template = {
 ### Territorial Army Cavalry
 
 division_template = {
-	name = "Dragonerdivision"
+	name = "Kavalleriedivision"
 	division_names_group = AUS_CAV_01
 	regiments = {
 		cavalry = { x = 0 y = 0 }
 		cavalry = { x = 0 y = 1 }
 		cavalry = { x = 0 y = 2 }
-		cavalry = { x = 1 y = 0 }
-		cavalry = { x = 1 y = 1 }
-		cavalry = { x = 1 y = 2 }
-	}
-}
-
-division_template = {
-	name = "Schnelle Abteilung"
-	division_names_group = AUS_MOT_01
-	regiments = {
-		cavalry = { x = 0 y = 0 }
-		cavalry = { x = 0 y = 1 }
-		cavalry = { x = 0 y = 2 }
-		motorized = { x = 1 y = 0 }
-		motorized = { x = 1 y = 1 }
-		motorized = { x = 1 y = 2 }
-		mot_artillery_brigade = { x = 2 y = 0 }
-		mot_artillery_brigade = { x = 2 y = 1 }
 	}
 	support = {
-		mot_recon = { x = 0 y = 0 }
+		recon = { x = 0 y = 0 }
 	}
 }
-
 division_template = {
-	name = "Panzerwagendivision"
+	name = "Kraftfahrjägerdivision"
+	division_names_group = AUS_MOT_01
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Kampfwagendivision"
 	division_names_group = AUS_ARM_01
 	regiments = {
 		light_armor = { x = 0 y = 0 }
 		light_armor = { x = 0 y = 1 }
-		light_armor = { x = 0 y = 2 }
-		light_armor = { x = 0 y = 3 }
-		light_armor = { x = 0 y = 4 }
 		motorized = { x = 1 y = 0 }
 		motorized = { x = 1 y = 1 }
-		motorized = { x = 1 y = 2 }
-		motorized = { x = 1 y = 3 }
 	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+	priority = 2
 }
 
 ### Land Units
@@ -160,7 +113,7 @@ units = {
 			name_order = 4
 		}
 		location = 9665
-		division_template = "Infanteriedivision mit Artillerie"
+		division_template = "Infanteriedivision"
 		start_experience_factor = 0.3
 	}
 	#Graz
@@ -180,7 +133,7 @@ units = {
 			name_order = 6
 		}
 		location = 673
-		division_template = "Infanteriedivision mit Pionierbataillon"
+		division_template = "Infanteriedivision"
 		start_experience_factor = 0.3
 	}
 	#Klagenfurt
@@ -200,7 +153,7 @@ units = {
 			name_order = 8
 		}
 		location = 688
-		division_template = "Infanteriedivision mit Pionierbataillon"
+		division_template = "Infanteriedivision"
 		start_experience_factor = 0.3
 	}
 	#Bozen
@@ -210,7 +163,7 @@ units = {
 			name_order = 9
 		}
 		location = 6675
-		division_template = "Infanteriedivision mit Pionierbataillon"
+		division_template = "Infanteriedivision"
 		start_experience_factor = 0.3
 	}
 	#Trento
@@ -220,7 +173,7 @@ units = {
 			name_order = 10
 		}
 		location = 9598
-		division_template = "Infanteriedivision mit Pionierbataillon"
+		division_template = "Infanteriedivision"
 		start_experience_factor = 0.3
 	}
 	#Verona
@@ -230,7 +183,7 @@ units = {
 			name_order = 11
 		}
 		location = 603
-		division_template = "Infanteriedivision mit Artillerie"
+		division_template = "Infanteriedivision"
 		start_experience_factor = 0.3
 	}
 	division = {
@@ -239,7 +192,7 @@ units = {
 			name_order = 12
 		}
 		location = 11584
-		division_template = "Dragonerdivision"
+		division_template = "Kavalleriedivision"
 		start_experience_factor = 0.3
 	}
 	#Trieste
@@ -249,7 +202,7 @@ units = {
 			name_order = 13
 		}
 		location = 6626
-		division_template = "Infanteriedivision mit Artillerie"
+		division_template = "Infanteriedivision"
 		start_experience_factor = 0.3
 	}
 	
@@ -263,7 +216,7 @@ units = {
 			name_order = 14
 		}
 		location = 11666
-		division_template = "Schnelle Abteilung"
+		division_template = "Kraftfahrjägerdivision"
 		start_experience_factor = 0.2
 	}
 	#Venice
@@ -273,7 +226,7 @@ units = {
 			name_order = 15
 		}
 		location = 11584
-		division_template = "Schnelle Abteilung"
+		division_template = "Kraftfahrjägerdivision"
 		start_experience_factor = 0.2
 	}
 	#Laibach
@@ -283,7 +236,7 @@ units = {
 			name_order = 16
 		}
 		location = 9627
-		division_template = "Schnelle Abteilung"
+		division_template = "Kraftfahrjägerdivision"
 		start_experience_factor = 0.2
 	}
 	#Linz
@@ -293,7 +246,7 @@ units = {
 			name_order = 17
 		}
 		location = 9665
-		division_template = "Schnelle Abteilung"
+		division_template = "Kraftfahrjägerdivision"
 		start_experience_factor = 0.2
 	}
 	
@@ -306,7 +259,7 @@ units = {
 			name_order = 18
 		}
 		location = 11666
-		division_template = "Panzerwagendivision"
+		division_template = "Kraftfahrjägerdivision"
 		start_experience_factor = 0.2
 	}
 	#Graz
@@ -316,7 +269,7 @@ units = {
 			name_order = 19
 		}
 		location = 13575
-		division_template = "Panzerwagendivision"
+		division_template = "Kraftfahrjägerdivision"
 		start_experience_factor = 0.2
 	}
 	
@@ -396,7 +349,7 @@ units = {
 			name_order = 32
 		}
 		location = 9660
-		division_template = "Dragonerdivision"
+		division_template = "Kavalleriedivision"
 		start_experience_factor = 0.2
 	}
 	#Prague
@@ -406,7 +359,7 @@ units = {
 			name_order = 33
 		}
 		location = 11542
-		division_template = "Dragonerdivision"
+		division_template = "Kavalleriedivision"
 		start_experience_factor = 0.2
 	}
 	#Rome
@@ -416,7 +369,7 @@ units = {
 			name_order = 34
 		}
 		location = 969
-		division_template = "Dragonerdivision"
+		division_template = "Kavalleriedivision"
 		start_experience_factor = 0.2
 	}
 	#Torino
@@ -426,7 +379,7 @@ units = {
 			name_order = 35
 		}
 		location = 3780
-		division_template = "Infanteriedivision mit Pionierbataillon"
+		division_template = "Infanteriedivision"
 		start_experience_factor = 0.2
 	}
 	#Lemberg
@@ -436,7 +389,7 @@ units = {
 			name_order = 36
 		}
 		location = 11479
-		division_template = "Dragonerdivision"
+		division_template = "Kavalleriedivision"
 		start_experience_factor = 0.2
 	}
 }

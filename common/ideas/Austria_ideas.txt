@@ -875,6 +875,17 @@ ideas = {
 			}
 		}
 
+		AUS_army_expand = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_weltpolitik_1" }
+			picture = advisors_austria2
+			allowed = { always = no }
+			modifier = {
+				experience_gain_army = 0.06
+				experience_gain_navy = 0.06
+				experience_gain_air = 0.06
+			}
+		}
+
 		AUS_develop_radar = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAN_unfied_broadcasting_system"}
 			allowed = { always = no }
