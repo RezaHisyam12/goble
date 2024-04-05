@@ -36,7 +36,7 @@ austria_ignore_romania = {
 
 austria_friends_with_germany = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		is_subject = no
@@ -96,7 +96,7 @@ austrian_sphere_ally_germany = {
 
 austria_worried_about_france = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		has_socialist_government = no
@@ -124,7 +124,7 @@ austria_worried_about_france = {
 
 austria_worried_about_soviets = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		has_socialist_government = no
@@ -155,7 +155,7 @@ austria_worried_about_soviets = {
 
 austria_worried_about_russia = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		is_subject = no
@@ -744,7 +744,7 @@ AUS_protect_crownlands = {
 	reversed = yes
 
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable_reverse = {
 		AUS = { num_subjects > 0 }
@@ -1425,10 +1425,104 @@ AUS_crush_SRD = {
 		execute_order = yes
 	}
 }
+
+################
+### Industry ###
+################
+AUS_build_tanks_if_france_is_aggressive = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		is_neighbor_of = FRA
+		has_country_flag = HRE_rise
+		FRA = { has_capitulated = no }
+		FRA = { has_government = totalist }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 10
+	}
+	ai_strategy = {
+		type = front_armor_score
+		id = FRA
+		value = 250 # AUS already gets a 100 score on FRA, but maybe this will make them focus even more.
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = FRA
+		value = 100
+	}
+	ai_strategy = {
+		type = railway_gun_divisions_ratio
+		value = 1
+	}
+}
+
+AUS_total_war_against_russia = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		has_country_flag = HRE_rise
+		RUS = { is_faction_leader = yes }
+		FRA = {
+			OR = {
+				has_capitulated = yes
+				exists = no
+			}
+		}
+		SRI = {
+			OR = {
+				has_capitulated = yes
+				exists = no
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 20
+	}
+	ai_strategy = {
+		type = front_armor_score
+		id = RUS
+		value = 250
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 10
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = 60
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 20
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = -20
+	}
+	ai_strategy = {
+		type = railway_gun_divisions_ratio
+		value = 1
+	}
+}
+
 ###############
 ### Special ###
 ###############
-
 AUS_build_radars_vienna = {
 	allowed = {
 		tag = AUS

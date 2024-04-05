@@ -14,6 +14,7 @@ division_limiter = {
 	ai_strategy = { type = build_army id = marine				value = -1000 }
 	ai_strategy = { type = build_army id = mountaineer			value = -1000 }
 	ai_strategy = { type = build_army id = suppression			value = -1000 }
+	ai_strategy = { type = build_army id = anti_tank			value = -1000 }
 }
 
 default_unit_production = {
@@ -25,11 +26,21 @@ default_unit_production = {
 		id = infantry
 		value = 90
 	}
-
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
 		value = 10
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = light_tank_chassis
+		value = -100
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = heavy_tank_chassis
+		value = -100
 	}
 }
 
@@ -119,7 +130,7 @@ default_specialised_production = {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = anti_air
-		value = 25
+		value = 15
 	}
 
 	ai_strategy = {
@@ -338,54 +349,6 @@ default_marine_production = {
 		type = role_ratio
 		id = marine
 		value = 3
-	}
-}
-
-minimum_artillery_production = {
-	enable = {
-		num_of_military_factories < 2
-	}
-	abort = {
-		num_of_military_factories > 1
-	}
-
-	ai_strategy = {
-		type = equipment_production_factor
-		id = artillery
-		value = -100
-	}
-}
-
-default_artillery_production = {
-	enable = {
-		num_of_military_factories > 9
-	}
-	abort = {
-		OR = {
-			num_of_military_factories < 10
-			num_of_military_factories > 19
-		}
-	}
-
-	ai_strategy = {
-		type = equipment_production_factor
-		id = artillery
-		value = 15
-	}
-}
-
-major_artillery_production = {
-	enable = {
-		num_of_military_factories > 19
-	}
-	abort = {
-		num_of_military_factories < 20
-	}
-
-	ai_strategy = {
-		type = equipment_production_factor
-		id = artillery
-		value = 25
 	}
 }
 

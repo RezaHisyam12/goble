@@ -385,7 +385,7 @@ technologies = {
 			}
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1937.1.1
 			}
 
@@ -432,7 +432,7 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1940.1.1
 			}
 
@@ -474,7 +474,7 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1943.1.1
 			}
 
@@ -511,7 +511,7 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1946.1.1
 			}
 
@@ -686,17 +686,17 @@ technologies = {
 				is_eligible_for_armor_production = yes
 			}
 			modifier = {
-				factor = 1.2
+				factor = 2
 				date > 1937.1.1
 			}
 
 			modifier = {
-				factor = 1.2
+				factor = 2
 				date > 1938.1.1
 			}
 
 			modifier = {
-				factor = 1.2
+				factor = 2
 				date > 1939.1.1
 			}
 		}
@@ -736,17 +736,17 @@ technologies = {
 				is_eligible_for_armor_production = yes
 			}
 			modifier = {
-				factor = 1.2
+				factor = 2
 				date > 1940.1.1
 			}
 
 			modifier = {
-				factor = 1.2
+				factor = 2
 				date > 1941.1.1
 			}
 
 			modifier = {
-				factor = 1.2
+				factor = 2
 				date > 1942.1.1
 			}
 		}
@@ -784,17 +784,17 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1943.1.1
 			}
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1944.1.1
 			}
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1945.1.1
 			}
 		}
@@ -822,17 +822,17 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1946.1.1
 			}
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1947.1.1
 			}
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1948.1.1
 			}
 		}
@@ -871,17 +871,17 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1937.1.1
 			}
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1938.1.1
 			}
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1939.1.1
 			}
 		}
@@ -917,17 +917,17 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1940.1.1
 			}
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1941.1.1
 			}
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1942.1.1
 			}
 		}
@@ -962,17 +962,17 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1943.1.1
 			}
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1944.1.1
 			}
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1945.1.1
 			}
 		}
@@ -1002,17 +1002,17 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1946.1.1
 			}
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1947.1.1
 			}
 
 			modifier = {
-				factor = 1.2
+				factor = 4
 				date > 1948.1.1
 			}
 		}
