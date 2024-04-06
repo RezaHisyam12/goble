@@ -4,7 +4,7 @@
 austria_ignore_romania = {
 	allowed = {
 		OR = {
-			tag = AUS
+			original_tag = AUS
 			is_in_faction_with = AUS
 			is_subject_of = AUS
 		}
@@ -184,14 +184,14 @@ austria_worried_about_russia = {
 austria_hates_sri = {
 	allowed = {
 		OR = {
-			tag = AUS
-			tag = CZE
-			tag = HUN
-			tag = CRO
-			tag = GAL
-			tag = ITA
-			tag = SIC
-			tag = ALB
+			original_tag = AUS
+			original_tag = CZE
+			original_tag = HUN
+			original_tag = CRO
+			original_tag = GAL
+			original_tag = ITA
+			original_tag = SIC
+			original_tag = ALB
 		}
 	}	
 	enable = {
@@ -226,18 +226,17 @@ austria_hates_sri = {
 austria_hates_italy = {
 	allowed = {
 		OR = {
-			tag = AUS
-			tag = CZE
-			tag = HUN
-			tag = CRO
-			tag = GAL
-			tag = SIC
-			tag = ALB
+			original_tag = AUS
+			original_tag = CZE
+			original_tag = HUN
+			original_tag = CRO
+			original_tag = GAL
+			original_tag = SIC
+			original_tag = ALB
 		}
 	}
 	enable = {
 		OR = {
-			tag = AUS
 			is_subject_of = AUS
 			is_in_faction_with = AUS
 		}
@@ -298,7 +297,6 @@ AUS_crownlands_watch_serbia = {
 	}
 	enable = {
 		OR = {
-			tag = AUS
 			is_subject_of = AUS
 			is_in_faction_with = AUS
 		}
@@ -330,7 +328,7 @@ AUS_crownlands_watch_serbia = {
 
 AUS_crush_ser = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		has_war_with = SER
@@ -372,7 +370,6 @@ AUS_crownlands_crush_ser = {
 	}
 	enable = {
 		OR = {
-			tag = AUS
 			is_subject_of = AUS
 			is_in_faction_with = AUS
 		}
@@ -436,7 +433,6 @@ AUS_crownlands_watch_romania = {
 	}
 	enable = {
 		OR = {
-			tag = AUS
 			is_subject_of = AUS
 			is_in_faction_with = AUS
 		}
@@ -468,7 +464,7 @@ AUS_crownlands_watch_romania = {
 
 AUS_crush_rom = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		has_war_with = ROM
@@ -510,7 +506,6 @@ AUS_crownlands_crush_rom = {
 	}
 	enable = {
 		OR = {
-			tag = AUS
 			is_subject_of = AUS
 			is_in_faction_with = AUS
 		}
@@ -541,7 +536,7 @@ AUS_crownlands_crush_rom = {
 
 AUS_watch_ukraine = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		NOT = { is_ally_with = UKR }
@@ -569,7 +564,6 @@ AUS_crownlands_watch_ukraine = {
 	}
 	enable = {
 		OR = {
-			tag = AUS
 			is_subject_of = AUS
 			is_in_faction_with = AUS
 		}
@@ -591,7 +585,7 @@ AUS_crownlands_watch_ukraine = {
 
 AUS_crush_ukraine = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		has_war_with = UKR
@@ -658,7 +652,7 @@ AUS_crownlands_crush_ukraine = {
 
 AUS_watch_gru = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		NOT = { is_ally_with = GRU }
@@ -686,7 +680,6 @@ AUS_crownlands_watch_gru = {
 	}
 	enable = {
 		OR = {
-			tag = AUS
 			is_subject_of = AUS
 			is_in_faction_with = AUS
 		}
@@ -945,7 +938,7 @@ GAL_protect_other_crownlands = {
 
 AUS_crush_poland = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		has_war_with = POL
@@ -961,7 +954,7 @@ AUS_crush_poland = {
 
 	ai_strategy = {
 		type = front_unit_request
-		tag = FRA
+		tag = GRU
 		value = -20
 	}
 	ai_strategy = {
@@ -984,7 +977,7 @@ AUS_crush_poland = {
 ################
 austria_focus_less_on_gru = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		NOT = { has_war_with = GRU }
@@ -1001,7 +994,7 @@ austria_focus_less_on_gru = {
 
 AUS_ignore_GER = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		country_exists = GER
@@ -1018,7 +1011,7 @@ AUS_ignore_GER = {
 
 AUS_ignore_GRU = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		country_exists = GRU
@@ -1035,7 +1028,7 @@ AUS_ignore_GRU = {
 
 AUS_ignore_SWI = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		country_exists = SWI
@@ -1052,7 +1045,7 @@ AUS_ignore_SWI = {
 
 AUS_ignore_POL = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		NOT = {
@@ -1072,7 +1065,7 @@ AUS_ignore_POL = {
 
 AUS_ignore_UKR = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		NOT = {
@@ -1092,7 +1085,7 @@ AUS_ignore_UKR = {
 
 AUS_watch_illrya = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		NOT = { is_ally_with = CRO }
@@ -1108,7 +1101,7 @@ AUS_watch_illrya = {
 
 AUS_crush_hungary = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		has_war_with = HUN
@@ -1204,7 +1197,7 @@ AUS_crownlands_crush_hungary = {
 
 AUS_crush_illrya = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		has_war_with = CRO
@@ -1250,7 +1243,7 @@ AUS_crush_illrya = {
 
 AUS_crush_bohemia = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		has_war_with = CZE
@@ -1296,7 +1289,7 @@ AUS_crush_bohemia = {
 
 AUS_crush_galicia = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		has_war_with = GAL
@@ -1338,7 +1331,7 @@ AUS_crush_galicia = {
 
 AUS_crush_ITA = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		has_war_with = ITA
@@ -1368,7 +1361,7 @@ AUS_crush_ITA = {
 
 AUS_crush_SRI = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		has_war_with = SRI
@@ -1398,7 +1391,7 @@ AUS_crush_SRI = {
 
 AUS_crush_SRD = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 	}
 	enable = {
 		has_war_with = SRD
@@ -1525,7 +1518,7 @@ AUS_total_war_against_russia = {
 ###############
 AUS_build_radars_vienna = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 		threat > 0.6
 	}
 	enable = {
@@ -1549,7 +1542,7 @@ AUS_build_radars_vienna = {
 
 AUS_build_radars_bozen = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 		threat > 0.6
 	}
 	enable = {
@@ -1573,7 +1566,7 @@ AUS_build_radars_bozen = {
 
 AUS_build_radars_prague = {
 	allowed = {
-		tag = AUS
+		original_tag = AUS
 		threat > 0.6
 	}
 	enable = {
