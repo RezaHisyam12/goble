@@ -492,51 +492,6 @@ default_bicycle_production = {
 	}
 }
 
-make_more_militia = {
-	enable = {
-		num_of_military_factories < 5
-	}
-	abort = {
-		num_of_military_factories > 4
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = -10
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = militia
-		value = 10
-	}
-}
-
-make_less_cavalry_and_militia = {
-	enable = {
-		num_of_military_factories > 10
-	}
-	abort = {
-		num_of_military_factories < 11
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = 14
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = cavalry
-		value = -7
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = militia
-		value = -7
-	}
-}
-
 more_cavalry_focused_nation = {
 	allowed = {
 		OR = {
@@ -629,7 +584,6 @@ default_tank_production = {
 	enable = {
 		is_eligible_for_armor_production = yes
 		has_design_based_on = medium_tank_chassis
-		ai_wants_divisions > 24
 	}
 	abort_when_not_enabled = yes
 
@@ -899,6 +853,7 @@ we_need_synth_oil_1 = {
 		has_tech = synth_oil_experiments
 		synthetic_refinery < 25
 		is_eligible_for_armor_production = yes
+		num_of_military_factories > 75
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {

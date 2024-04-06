@@ -1,0 +1,163 @@
+GRU_anarcho_support_GRU = {
+	allowed = {
+		OR = {
+			original_tag = DDR
+			original_tag = WGR
+			original_tag = NGF
+			original_tag = BAY
+		}
+	}
+	enable = {
+		has_autonomy_state = RM_ANARCHOCOMMUNE
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = spare_unit_factor
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = GRU
+		value = 400
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = GRU
+		value = 400
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = GRU
+		value = 400
+	}
+}
+
+GRU_protect_anarcho = {
+	reversed = yes
+
+	allowed = {
+		original_tag = GRU
+	}
+	enable_reverse = {
+		GRU = { num_subjects > 0 }
+	}
+	enable = {
+		has_autonomy_state = RM_ANARCHOCOMMUNE
+		has_country_flag = GRU_ANARCHIST_WORLD
+	}
+	abort_when_not_enabled = yes
+
+	target_array = GRU.subjects
+
+	ai_strategy = {
+		type = support
+		id = GRU
+		value = 400
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = GRU
+		value = 400
+	}
+}
+
+DDR_protect_other_anarcho = {
+	reversed = yes
+
+	enable_reverse = {
+		DDR = { has_autonomy_state = RM_ANARCHOCOMMUNE }
+	}
+	enable = {
+		has_autonomy_state = RM_ANARCHOCOMMUNE
+	}
+	abort_when_not_enabled = yes
+
+	target_array = GRU.subjects
+
+	ai_strategy = {
+		type = support
+		id = DDR
+		value = 400
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = DDR
+		value = 400
+	}
+}
+
+WGR_protect_other_anarcho = {
+	reversed = yes
+
+	enable_reverse = {
+		WGR = { has_autonomy_state = RM_ANARCHOCOMMUNE }
+	}
+	enable = {
+		has_autonomy_state = RM_ANARCHOCOMMUNE
+	}
+	abort_when_not_enabled = yes
+
+	target_array = GRU.subjects
+
+	ai_strategy = {
+		type = support
+		id = WGR
+		value = 400
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = WGR
+		value = 400
+	}
+}
+
+NGF_protect_other_anarcho = {
+	reversed = yes
+
+	enable_reverse = {
+		NGF = { has_autonomy_state = RM_ANARCHOCOMMUNE }
+	}
+	enable = {
+		has_autonomy_state = RM_ANARCHOCOMMUNE
+	}
+	abort_when_not_enabled = yes
+
+	target_array = GRU.subjects
+
+	ai_strategy = {
+		type = support
+		id = NGF
+		value = 400
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = NGF
+		value = 400
+	}
+}
+
+BAY_protect_other_anarcho = {
+	reversed = yes
+
+	enable_reverse = {
+		BAY = { has_autonomy_state = RM_ANARCHOCOMMUNE }
+	}
+	enable = {
+		has_autonomy_state = RM_ANARCHOCOMMUNE
+	}
+	abort_when_not_enabled = yes
+
+	target_array = GRU.subjects
+
+	ai_strategy = {
+		type = support
+		id = BAY
+		value = 400
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = BAY
+		value = 400
+	}
+}

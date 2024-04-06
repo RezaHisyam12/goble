@@ -1357,7 +1357,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 0
+			base = 5
 			modifier = {
 				add = 5
 				num_of_military_factories > 75
@@ -1416,7 +1416,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 0
+			base = 5
 			modifier = {
 				add = 5
 				num_of_military_factories > 50

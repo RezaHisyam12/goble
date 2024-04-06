@@ -3609,6 +3609,10 @@ shared_focus = {
 			is_major = yes
 		}
 		cost = 6
+		ai_will_do = {
+			factor = 15
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_FAUD_FUTURE"
 		}
@@ -3621,6 +3625,10 @@ shared_focus = {
 		x = 3
 		y = 1
 		cost = 6
+		ai_will_do = {
+			factor = 15
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_FAUD_DIPLO"
 			add_ideas = faud_anarchist_diplomacy_one
@@ -3635,6 +3643,10 @@ shared_focus = {
 		x = -1
 		y = 1
 		cost = 6
+		ai_will_do = {
+			factor = 15
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_FAUD_PROMOTE_ANARCHISM"
 			swap_ideas = {
@@ -3652,6 +3664,10 @@ shared_focus = {
 		x = 1
 		y = 1
 		cost = 6
+		ai_will_do = {
+			factor = 15
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_FAUD_SUPPORT_POOR_NATIONS"
 			add_ideas = FAUD_HELP
@@ -3666,6 +3682,10 @@ shared_focus = {
 		x = 0
 		y = 2
 		cost = 6
+		ai_will_do = {
+			factor = 15
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_FAUD_NEW_INTERNATIONAL_FAMILY_OF_ANARCHISTS"
 			swap_ideas = {
@@ -3685,6 +3705,10 @@ shared_focus = {
 		x = -3
 		y = 1
 		cost = 6
+		ai_will_do = {
+			factor = 15
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_FAUD_NEW_SOCIETY"
 			add_ideas = FAUD_SOCIETY_ONE
@@ -3698,6 +3722,10 @@ shared_focus = {
 		x = -1
 		y = 1
 		cost = 6
+		ai_will_do = {
+			factor = 15
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_FAUD_FEMININE_SOCIETY"
 			swap_ideas = {
@@ -3714,6 +3742,10 @@ shared_focus = {
 		x = -3
 		y = 1
 		cost = 6
+		ai_will_do = {
+			factor = 15
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_FAUD_ABOLISH_POLICE"
 			swap_ideas = {
@@ -3731,6 +3763,10 @@ shared_focus = {
 		x = 1
 		y = 1
 		cost = 6
+		ai_will_do = {
+			factor = 15
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_FAUD_NEW_FAMILY_MODEL"
 			add_ideas = FAUD_NEW_FAMILY
@@ -3744,6 +3780,10 @@ shared_focus = {
 		x = 3
 		y = 1
 		cost = 6
+		ai_will_do = {
+			factor = 15
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_FAUD_ABOLISH_PRISONS"
 			add_political_power = 75
@@ -3758,6 +3798,10 @@ shared_focus = {
 		x = 0
 		y = 2
 		cost = 6
+		ai_will_do = {
+			factor = 15
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_FAUD_ABSOLUTLY_FREE_SEXUALITY"
 			add_ideas = FAUD_SEXES
@@ -3774,6 +3818,10 @@ shared_focus = {
 		x = -2
 		y = 2
 		cost = 6
+		ai_will_do = {
+			factor = 15
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_FAUD_FINANCE_ARTISTS"
 			add_political_power = 25
@@ -3794,6 +3842,10 @@ shared_focus = {
 		x = 2
 		y = 2
 		cost = 6
+		ai_will_do = {
+			factor = 15
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_FAUD_DRUG_LEGALISATION"
 			add_ideas = FAUD_DRUGS
@@ -3810,6 +3862,10 @@ shared_focus = {
 		x = 3
 		y = 3
 		cost = 6
+		ai_will_do = {
+			factor = 15
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_FAUD_ANARCHIST_UTOPIA"
 			swap_ideas = {
@@ -3904,6 +3960,16 @@ shared_focus = {
 				create_prussian_cores = yes
 				set_temp_variable = { tag_to_release = DDR }
 				release_targeted_tag = yes
+				GRU = {
+				transfer_units_fraction= {
+					target = DDR
+					size = 0.2
+					stockpile_ratio = 0.2
+					army_ratio = 0.2
+					navy_ratio = 0.2
+					air_ratio = 0.2
+					}
+				}
 				64 = {
 					remove_core_of = DDR
 				}
@@ -3931,6 +3997,15 @@ shared_focus = {
 				create_rhenish_cores = yes
 				set_temp_variable = { tag_to_release = WGR }
 				release_targeted_tag = yes
+				GRU = {
+				transfer_units_fraction= {
+					target = WGR
+					size = 0.1
+					stockpile_ratio = 0.1
+					army_ratio = 0.1
+					air_ratio = 0.1
+					}
+				}
 				8 = {
 					add_core_of = WGR
 				}
@@ -3940,6 +4015,16 @@ shared_focus = {
 				create_hanoverian_cores = yes
 				set_temp_variable = { tag_to_release = NGF }
 				release_targeted_tag = yes
+				GRU = {
+				transfer_units_fraction= {
+					target = NGF
+					size = 0.2
+					stockpile_ratio = 0.2
+					army_ratio = 0.2
+					navy_ratio = 0.2
+					air_ratio = 0.2
+					}
+				}
 				61 = {
 					remove_core_of = NGF
 				}
@@ -3949,6 +4034,15 @@ shared_focus = {
 				create_bavarian_cores = yes
 				set_temp_variable = { tag_to_release = BAY }
 				release_targeted_tag = yes
+				GRU = {
+				transfer_units_fraction= {
+					target = BAY
+					size = 0.2
+					stockpile_ratio = 0.2
+					army_ratio = 0.2
+					air_ratio = 0.2
+					}
+				}
 				
 				DDR = {
 				create_country_leader = {
@@ -3981,6 +4075,7 @@ shared_focus = {
 						name = ANARCHIST_GERMANS
 				}
 				add_ideas = FAUD_SOCIETY_THREE
+				add_ideas = GRU_RED_MILITIAS_TWO
 				}
 				NGF = {
 				create_country_leader = {
@@ -3997,6 +4092,7 @@ shared_focus = {
 						name = ANARCHIST_GERMANS
 				}
 				add_ideas = FAUD_SOCIETY_THREE
+				add_ideas = GRU_RED_MILITIAS_TWO
 				}
 				BAY = {
 				create_country_leader = {
@@ -4013,6 +4109,7 @@ shared_focus = {
 						name = ANARCHIST_GERMANS
 				}
 				add_ideas = FAUD_SOCIETY_THREE
+				add_ideas = GRU_RED_MILITIAS_TWO
 				}
 				set_autonomy = { target = DDR autonomy_state = RM_ANARCHOCOMMUNE }
 				set_autonomy = { target = NGF autonomy_state = RM_ANARCHOCOMMUNE }
