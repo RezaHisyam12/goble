@@ -841,11 +841,12 @@ LATE_template_design_industrial_country = {
 we_need_synth_oil_1 = {
 	allowed = {
 		OR = {
-			tag = GER
-			tag = GRU
-			tag = FRA
-			tag = AUS
-			tag = RUS
+			original_tag = GER
+			original_tag = GRU
+			original_tag = FRA
+			original_tag = AUS
+			original_tag = RUS
+			is_chinese_tag = yes
 		}
 	}
 	enable = {
@@ -866,20 +867,44 @@ we_need_synth_oil_1 = {
 we_need_synth_oil_2 = {
 	allowed = {
 		OR = {
-			tag = ENG
-			tag = GBR
-			tag = CAN
-			tag = JAP
+			original_tag = GBR
+			original_tag = CAN
+			original_tag = JAP
 		}
 	}
 	enable = {
 		has_tech = synth_oil_experiments
 		synthetic_refinery < 20
+		date > 1939.1.1
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
 		value = 20
+	}
+}
+
+we_need_synth_oil_3 = {
+	allowed = {
+		OR = {
+			original_tag = UKR
+			original_tag = GEA
+			original_tag = TUR
+			original_tag = IRE
+			original_tag = BRA
+		}
+	}
+	enable = {
+		has_tech = synth_oil_experiments
+		synthetic_refinery < 15
+		date > 1939.1.1
+		num_of_military_factories > 50
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 15
 	}
 }

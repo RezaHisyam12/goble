@@ -233,7 +233,7 @@ ENG_produce_synthetic_oil = {
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 8
+		value = 20
 	}
 }
 
@@ -442,32 +442,6 @@ ENG_scapa_flow_naval_base = {
 	}
 }
 
-ENG_keep_out_of_the_baltic = {
-	allowed = {
-		original_tag = ENG
-	}
-	enable = {
-		has_war_with = GER
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = naval_avoid_region
-		id = 9 #Northern Baltic
-		value = 100
-	}
-	ai_strategy = {
-		type = naval_avoid_region
-		id = 206 #Southern Baltic
-		value = 100
-	}
-	ai_strategy = {
-		type = naval_avoid_region
-		id = 147 #Danish Belts
-		value = 100
-	}
-}
-
 ENG_retreat_to_the_isles = {
 	allowed = {
 		original_tag = ENG
@@ -502,6 +476,47 @@ ENG_retreat_to_the_isles = {
 		type = theatre_distribution_demand_increase
 		id = 132 #Lancashire
 		value = 10
+	}
+}
+
+ENG_flanders_pivot = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		OR = {
+			country_exists = BEL
+			country_exists = FLN
+		}
+	}
+	abort = {
+		NOT = {
+			country_exists = BEL
+			country_exists = FLN
+		}
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "BEL"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "FLN"
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = front_control
+
+		tag = GER
+
+		ratio = 0.40
+
+		priority = 100
+		ordertype = front
+		execution_type = careful
 	}
 }
 

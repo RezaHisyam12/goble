@@ -820,7 +820,7 @@ ideas = {
 			picture = PB_Planned_Economy
 			allowed = { always = no }
 			modifier = {
-				political_power_cost = 0.20
+				political_power_cost = 0.25
 				consumer_goods_factor = 0.15
 				global_building_slots_factor = 0.10
 				research_speed_factor = 0.1
@@ -880,9 +880,9 @@ ideas = {
 			picture = advisors_austria2
 			allowed = { always = no }
 			modifier = {
-				experience_gain_army = 0.06
-				experience_gain_navy = 0.06
-				experience_gain_air = 0.06
+				experience_gain_army = 0.04
+				experience_gain_navy = 0.04
+				experience_gain_air = 0.04
 			}
 		}
 

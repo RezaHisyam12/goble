@@ -163,3 +163,133 @@ JAP_exploit_naval_invasions = {
 	}
 }
 
+#################
+### KX ###
+#################
+japan_supports_chinese_allies = {
+	reversed = yes
+	allowed = {
+		is_chinese_tag = yes
+	}
+	enable_reverse = {
+		JAP = { is_subject = no }
+	}
+	enable = {
+		is_working_with_JAP = yes
+		NOT = {
+			has_war_with = JAP
+			tag = event_target:current_china_leader
+			is_in_faction_with = event_target:current_china_leader
+		}
+	}
+	target_array = "global.china_tags_array"
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = befriend
+		id = "JAP"
+		value = 100
+	}
+	ai_strategy = {
+		type = alliance
+		id = "JAP"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "JAP"
+		value = 100
+	}
+}
+
+japan_supports_sphere = {
+	reversed = yes
+	enable_reverse = {
+		JAP = { has_completed_focus = JAP_osaka_conference }
+	}
+	enable = {
+		NOT = {
+			has_war_with = JAP
+			is_in_faction_with = JAP
+			is_subject_of = JAP
+		}
+	}
+	target_array = "global.asian_economic_sphere"
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = befriend
+		id = "JAP"
+		value = 100
+	}
+	ai_strategy = {
+		type = alliance
+		id = "JAP"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "JAP"
+		value = 200
+	}
+}
+
+japan_ignore_hawaii = {
+	allowed = {
+		tag = JAP
+	}
+	enable = {
+		has_completed_focus = JAP_extend_pacific_security_zone
+		country_exists = HAW
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "HAW"
+		value = 1
+	}
+}
+
+japan_korea_is_paramount = {
+	allowed = {
+		tag = JAP
+	}
+	enable = {
+		OR = {
+			owns_state = 527
+			owns_state = 525
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = area_priority
+		id = korea
+		value = 50
+	}
+}
+
+japan_protect_manchuria = {
+	allowed = {
+		tag = JAP
+	}
+	enable = {
+		has_war = yes
+		716 = { is_owned_by_ROOT_or_war_ally = yes }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = area_priority
+		id = manchuria
+		value = 50
+	}
+}
+
+

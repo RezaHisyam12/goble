@@ -106,6 +106,30 @@ FRA_dont_justify_on_benesam = {
 ################
 ### Military ###
 ################
+FRA_keep_garrison = {
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		always = yes
+	}
+	abort = { always = no }
+	ai_strategy = {
+		type = garrison
+		value = 5
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.05
+		states = {
+			15 #Normandy
+			16 #Paris
+			20 #Lyonnais
+			21 #Provence
+		}
+	}
+}
+
 FRA_focus_on_germany = {
 	allowed = {
 		original_tag = FRA
