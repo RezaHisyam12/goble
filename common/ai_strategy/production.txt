@@ -893,6 +893,7 @@ we_need_synth_oil_3 = {
 			original_tag = TUR
 			original_tag = IRE
 			original_tag = BRA
+			original_tag = GRE
 		}
 	}
 	enable = {

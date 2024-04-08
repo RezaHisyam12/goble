@@ -265,6 +265,7 @@ create_country_leader = {
 	picture = "gfx/leaders/AUS/Portrait_AUS_Karl_I.png"
 	expire = "1.1.1"
 	ideology = austromarxism_subtype
+	traits = { AUS_kaiser_of_the_people }
 }
 
 create_country_leader = {
@@ -281,6 +282,7 @@ create_country_leader = {
 	picture = "gfx/leaders/AUS/Portrait_AUS_Karl_I.png"
 	expire = "1.1.1"
 	ideology = paneuropeanism_subtype
+	traits = { AUS_kaiser_of_the_people }
 }
 
 create_country_leader = {
@@ -289,6 +291,7 @@ create_country_leader = {
 	picture = "gfx/leaders/AUS/Portrait_AUS_Karl_I.png"
 	expire = "1.1.1"
 	ideology = market_liberal_subtype
+	traits = { AUS_kaiser_of_the_people }
 }
 
 create_country_leader = {
@@ -304,6 +307,7 @@ create_country_leader = {
 	picture = "gfx/leaders/AUS/Portrait_AUS_Karl_I.png"
 	expire = "1.1.1"
 	ideology = christian_democracy_subtype
+	traits = { AUS_kaiser_of_the_people }
 }
 
 create_country_leader = {
@@ -319,6 +323,7 @@ create_country_leader = {
 	picture = "gfx/leaders/AUS/Portrait_AUS_Karl_I.png"
 	expire = "1.1.1"
 	ideology = authoritarian_democrat_subtype
+	traits = { AUS_kaiser_of_the_people }
 }
 
 create_country_leader = {
@@ -334,6 +339,7 @@ create_country_leader = {
 	picture = "gfx/leaders/AUS/Portrait_AUS_Karl_I.png"
 	expire = "1.1.1"
 	ideology = austropopulism_subtype
+	traits = { AUS_kaiser_of_the_people }
 }
 
 create_country_leader = {

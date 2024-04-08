@@ -1,0 +1,24 @@
+#####################
+# Head of State traits
+#####################
+
+leader_traits = {
+	### GEA
+	GEA_grand_admiral = { #Hellmuth von Mucke
+		random = no
+		naval_doctrine_cost_factor = -0.1
+	}
+
+	### German Empire
+	GER_kaiser_of_old_world = { #Wilhelm II
+		random = no
+		stability_factor = 0.15
+		ai_focus_defense_factor = 0.25
+	}
+	GER_shogunate_trait = { #The "Shogunate"
+		random = no
+		ai_focus_aggressive_factor = 0.25
+		army_morale_factor = 0.1
+	}
+
+}

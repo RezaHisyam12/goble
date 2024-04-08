@@ -3905,6 +3905,7 @@ AUS_civil_war_plan_HUN: "Operation Einigung"
 AUS_civil_war_plan_CZE: "Operation Befriedung"
 AUS_civil_war_plan_CRO: "Operation Wiedervereinigung"
 AUS_army_expand: "Renewed Army"
+AUS_aircraft_production_improvements: "Aircraft Production Improvements"
 
 
 AUS_start_hre_tooltip:0 "§GAustria will look to its past and attempt to restore its former glory!§!"
@@ -3969,11 +3970,9 @@ AUS_war_CRO_decision:0 "Push Against [CRO.GetNameDef]"
 KOH_established:0 "Crownland of Hungary Established"
 BFE_established:0 "Crownland of Balkan Established"
 
+GER_kaiser_of_old_world: "Kaiser of the Old World"
+AUS_kaiser_of_the_people: "Kaiser of the People"
 
-
-rotermorgenmisc.8789.t: "Reform of Command Structure Finished"
-rotermorgenmisc.8789.d: "The [FNG.GetName]'s massive reform of the command structure is finally finished, creating finally a centralized command structure in China, seen by the central government as paramount for preventing a new division of China in the future. While this has improved the army considerably in its efficiency, it is very unpopular among high-ranking generals as its removing their previous autonomy, same with warlords ruling in many parts of this nation."
-rotermorgenmisc.8789.a: "China shall be united forever!"
 
 
 
@@ -4004,6 +4003,10 @@ AUS_civ_in_Saxony:0 "Rebuild Civilian Industry in Dresden"
 AUS_mil_in_breslau:0 "Rebuild Military Industry in Breslau"
 AUS_Light_Up_Danzig:0 "Light Up Danzig"
 AUS_nav_in_schleswig:0 "Revive the port of Schleswig"
+
+rotermorgenmisc.8789.t: "Reform of Command Structure Finished"
+rotermorgenmisc.8789.d: "The [FNG.GetName]'s massive reform of the command structure is finally finished, creating finally a centralized command structure in China, seen by the central government as paramount for preventing a new division of China in the future. While this has improved the army considerably in its efficiency, it is very unpopular among high-ranking generals as its removing their previous autonomy, same with warlords ruling in many parts of this nation."
+rotermorgenmisc.8789.a: "China shall be united forever!"
 
 
 rotermorgenmisc.8790.t:0 "Holy Roman Empire Claims"

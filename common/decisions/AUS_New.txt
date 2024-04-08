@@ -2222,14 +2222,6 @@ AUS_Foreign_Policy_decisions = {
 				factor = 0
 				AUS = { AUS_dont_attack_if_target_is_stronger = yes }
 			}
-			modifier = {
-				factor = 0
-				FROM = { AUS_dont_attack_if_faction_is_stronger = yes }
-			}
-			modifier = {
-				factor = 0
-				FROM = { AUS_dont_attack_if_overlord_is_stronger = yes }
-			}
 		}
 
 		complete_effect = {

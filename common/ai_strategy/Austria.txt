@@ -1420,8 +1420,31 @@ AUS_crush_SRD = {
 }
 
 ################
-### Industry ###
+##### HRE ######
 ################
+AUS_keep_garrison = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		has_country_flag = HRE_rise
+	}
+	abort = { always = no }
+	ai_strategy = {
+		type = garrison
+		value = 5
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.05
+		states = {
+			1137 #Vienna
+			1129 #Prague
+			64 #Berlin
+		}
+	}
+}
+
 AUS_build_tanks_if_france_is_aggressive = {
 	allowed = {
 		original_tag = AUS
