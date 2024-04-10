@@ -143,6 +143,7 @@ GRU_destroy_german = {
 		type = ignore
 		id = AUS
 		value = 500
+		}
 	}
 }
 
@@ -330,7 +331,7 @@ GRU_eyes_on_fiume = {
 	ai_strategy = {
 		type = conquer
 		id = FIU
-		value = 200
+		value = 1000
 	}
 }
 
@@ -833,7 +834,7 @@ GRU_build_radars_prussia = {
 		threat > 0.6
 	}
 	enable = {
-		5 = { #Warsaw
+		5 = { #prussia
 			controller = { is_ally_with = FROM }
 			free_building_slots = {
 				building = radar_station

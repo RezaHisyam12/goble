@@ -7740,7 +7740,10 @@ focus_tree = {
 		}
 		x = 46
 		y = 13
-			available = {
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
 			has_government = paternal_autocrat
 				}
 			available = {
@@ -7770,7 +7773,10 @@ focus_tree = {
 		}
 		x = 47
 		y = 14
-			available = {
+		ai_will_do = {
+			factor = 5
+		}	
+		available = {
 			has_government = paternal_autocrat
 				}
 			available = {
@@ -7820,7 +7826,10 @@ focus_tree = {
 		}
 		x = 48
 		y = 13
-			available = {
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
 			has_government = paternal_autocrat
 				}
 			available = {
@@ -7852,7 +7861,10 @@ focus_tree = {
 		}
 		x = 45
 		y = 14
-			available = {
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
 			has_government = paternal_autocrat
 				}
 			available = {
@@ -7880,7 +7892,10 @@ focus_tree = {
 		prerequisite = { focus = AUS_puppet focus = AUS_center }
 		x = 46
 		y = 16
-			available = {
+		ai_will_do = {
+			factor = 5
+		}	
+		available = {
 			has_government = paternal_autocrat
 			NOT = {
 				has_idea = AUS_aftermath

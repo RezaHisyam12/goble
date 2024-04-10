@@ -870,6 +870,7 @@ we_need_synth_oil_2 = {
 			original_tag = GBR
 			original_tag = CAN
 			original_tag = JAP
+			original_tag = GEA
 		}
 	}
 	enable = {
@@ -889,23 +890,45 @@ we_need_synth_oil_3 = {
 	allowed = {
 		OR = {
 			original_tag = UKR
-			original_tag = GEA
+			original_tag = NFA
 			original_tag = TUR
+			original_tag = GRE
 			original_tag = IRE
 			original_tag = BRA
-			original_tag = GRE
+			original_tag = MEX
+			original_tag = EGY
+			original_tag = TRM
+			original_tag = HUN
+			original_tag = CRO
+			original_tag = SCA
 		}
 	}
 	enable = {
 		has_tech = synth_oil_experiments
 		synthetic_refinery < 15
 		date > 1939.1.1
-		num_of_military_factories > 50
+		num_of_military_factories > 35
+		is_eligible_for_armor_production = yes
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
 		value = 15
+	}
+}
+
+we_need_nuclear = {
+	enable = {
+		has_tech = nuclear_reactor
+		nuclear_reactor < 10
+		date > 1944.1.1
+		num_of_military_factories > 150
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = nuclear_reactor
+		value = 10
 	}
 }
