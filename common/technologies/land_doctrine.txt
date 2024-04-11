@@ -22,11 +22,6 @@ technologies = {
 		army_speed_factor = 0.10
 		enable_tactic = tactic_unexpected_thrust
 		org_loss_when_moving = -0.1
-		ai_strategy = {
-			type = role_ratio
-			id = armor_role
-			value = 10
-		}
 
 		doctrine = yes
 		research_cost = 2.25

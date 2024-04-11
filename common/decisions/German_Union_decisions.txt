@@ -5135,6 +5135,20 @@ GRU_germania_plan_decisions = {
 					}
 				}
 			}
+			1319 = { 
+				owner = {
+					OR = {
+						tag = GRU
+						is_subject_of = GRU
+					}
+				}
+				controller = {
+					OR = {
+						tag = GRU
+						is_subject_of = GRU
+					}
+				}
+			}
 		}
 
 		fire_only_once = yes
@@ -5300,6 +5314,7 @@ GRU_germania_plan_decisions = {
 						is_subject_of = GRU
 					}
 				}
+			}
 			1329 = { 
 				owner = {
 					OR = {
@@ -5998,8 +6013,8 @@ GRU_germania_plan_decisions = {
 	#		set_country_flag = GRU_GREATER_DONE
 	#	}
 	#}
-	}
 }
+
 GRU_Germania_Stadt_decisions = {
 
 	GRU_Germania_Stadt_decision = {
@@ -6021,10 +6036,10 @@ GRU_Germania_Stadt_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Germania_Stadt_decision"
 			GRU = {	country_event = rotermorgenmisc.2000 }
+			}
 		}
-	}
-
 }
+
 
 GRU_build_that_wall_decisions = {
 

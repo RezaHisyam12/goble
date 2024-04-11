@@ -158,6 +158,7 @@ GRU_eyes_on_france = {
 		}
 		is_neighbor_of = FRA
 		FRA = { has_capitulated = no }
+		NOT = { has_war_with = AUS }
 	}
 	abort_when_not_enabled = yes
 
@@ -184,6 +185,7 @@ GRU_eyes_on_austria = {
 		}
 		is_neighbor_of = AUS
 		AUS = { has_capitulated = no }
+		NOT = { has_war_with = FRA }
 	}
 	abort_when_not_enabled = yes
 
@@ -722,6 +724,44 @@ GRU_dont_trust_national_france = {
 ################
 ### Industry ###
 ################
+
+GRU_build_tanks_if_france_is_aggressive = {
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		is_neighbor_of = FRA
+		FRA = { has_capitulated = no }
+		FRA = { has_government = totalist }
+		AUS = {
+			OR = {
+				has_capitulated = yes
+				exists = no
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 10
+	}
+	ai_strategy = {
+		type = front_armor_score
+		id = FRA
+		value = 250 # GRU already gets a 100 score on FRA, but maybe this will make them focus even more.
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = FRA
+		value = 100
+	}
+	ai_strategy = {
+		type = railway_gun_divisions_ratio
+		value = 4
+	}
+}
 
 GRU_total_war_against_russia = {
 	allowed = {
