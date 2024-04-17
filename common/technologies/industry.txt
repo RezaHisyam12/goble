@@ -1279,16 +1279,16 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 1.5
-				num_of_synthetic_refinery > 14
+				factor = 0.5
+				rubber > 10
 			}
 			modifier = {
-				factor = 2
-				num_of_synthetic_refinery > 19
+				factor = 0.5
+				rubber > 20
 			}
 			modifier = {
-				factor = 3
-				num_of_synthetic_refinery > 24
+				factor = 0.5
+				rubber > 30
 			}
 		}
 
@@ -1331,16 +1331,16 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 1.5
-				num_of_synthetic_refinery > 14
+				factor = 0.5
+				rubber > 10
 			}
 			modifier = {
-				factor = 2
-				num_of_synthetic_refinery > 19
+				factor = 0.5
+				rubber > 20
 			}
 			modifier = {
-				factor = 3
-				num_of_synthetic_refinery > 24
+				factor = 0.5
+				rubber > 30
 			}
 		}
 
@@ -1383,16 +1383,16 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 1.5
-				num_of_synthetic_refinery > 14
+				factor = 0.5
+				rubber > 10
 			}
 			modifier = {
-				factor = 2
-				num_of_synthetic_refinery > 19
+				factor = 0.5
+				rubber > 20
 			}
 			modifier = {
-				factor = 3
-				num_of_synthetic_refinery > 24
+				factor = 0.5
+				rubber > 30
 			}
 		}
 
@@ -1430,16 +1430,16 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 1.5
-				num_of_synthetic_refinery > 14
+				factor = 0.5
+				rubber > 10
 			}
 			modifier = {
-				factor = 2
-				num_of_synthetic_refinery > 19
+				factor = 0.5
+				rubber > 20
 			}
 			modifier = {
-				factor = 3
-				num_of_synthetic_refinery > 24
+				factor = 0.5
+				rubber > 30
 			}
 		}
 

@@ -6378,6 +6378,9 @@ shared_focus = {
 			has_army_manpower = { size > 300000 }
 		}
 		cost = 6
+		ai_will_do = {
+			factor = 15
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_PATH"
 			custom_effect_tooltip = GRU_tt_faction
@@ -6405,6 +6408,9 @@ shared_focus = {
 		x = 3
 		y = 1
 		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_imperialism"
 			add_ideas = gru_red_imperialism
@@ -6418,6 +6424,13 @@ shared_focus = {
 		x = -1
 		y = 2
 		cost = 6
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
 		available = {
 					is_subject = no
 					FRA = {
@@ -6477,7 +6490,6 @@ shared_focus = {
 		cost = 6
 		available = {
 					FRA = { has_country_leader = { ruling_only = yes name = "Marcel Déat" } }
-					NOT = { country_exists = AUS }
 				}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_PRESSURE_SORELIAN_FRANCE"
@@ -6578,6 +6590,9 @@ shared_focus = {
 		x = 1
 		y = 1
 		cost = 6
+		ai_will_do = {
+			factor = 15
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_BORDER_FORTIFICATIONS"
 			custom_effect_tooltip = GRU_tt_border
@@ -6591,6 +6606,9 @@ shared_focus = {
 		x = 3
 		y = 2
 		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
 		available = {
 			is_subject = no
 		}
@@ -6600,7 +6618,7 @@ shared_focus = {
 			hidden_effect = {
 			every_state = {
 				limit = {
-					is_core_of = "AUS"
+					OR = { is_core_of = AUS is_core_of = SLO is_core_of = FIU }
 					is_not_claim_or_core_of_ROOT = yes
 				}
 				add_claim_by = GRU
@@ -6609,6 +6627,9 @@ shared_focus = {
 				add_claim_by = GRU
 			}
 			3 = {
+				add_claim_by = GRU
+			}
+			761 = {
 				add_claim_by = GRU
 			}
 			}
@@ -6840,6 +6861,12 @@ shared_focus = {
 			89 = {
 				add_claim_by = GRU
 			}
+			1314 = {
+				add_claim_by = GRU
+			}
+			1319 = {
+				add_claim_by = GRU
+			}
 			#
 			every_state = {
 				limit = {
@@ -6849,6 +6876,9 @@ shared_focus = {
 				add_claim_by = GRU
 			}
 			655 = {
+				add_claim_by = GRU
+			}
+			1329 = {
 				add_claim_by = GRU
 			}
 			}

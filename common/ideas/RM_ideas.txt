@@ -28,7 +28,7 @@ ideas = {
 			modifier = {
 				war_support_factor = 0.1
 				training_time_factor = -0.1
-				conscription_factor = 0.06
+				conscription_factor = 0.05
 				army_morale_factor = 0.05
 			}
 		}
@@ -203,13 +203,13 @@ ideas = {
 				production_speed_arms_factory_factor = 0.20
 				industry_repair_factor = 0.10
 				stability_weekly = 0.005
-				political_power_gain = 0.07
+				political_power_gain = 0.05
 				production_factory_max_efficiency_factor = 0.15
 				production_factory_efficiency_gain_factor = 0.05
 				line_change_production_efficiency_factor = 0.1
 				production_oil_factor = 0.05
-				research_speed_factor = 0.08
-				local_resources_factor = 0.08
+				research_speed_factor = 0.1
+				local_resources_factor = 0.1
 			}
 		}
 		
@@ -223,7 +223,7 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.01
 				consumer_goods_factor = -0.11
 				stability_weekly = 0.01
-				political_power_gain = 0.05
+				political_power_gain = 0.01
 				party_popularity_stability_factor = 0.01
 			}
 		}
@@ -299,7 +299,7 @@ ideas = {
             modifier = {
 				army_speed_factor_for_controller = 0.05
 				stability_weekly = 0.01
-				consumer_goods_factor = -0.06
+				consumer_goods_factor = -0.05
 			}
 		}
 		
@@ -1990,7 +1990,7 @@ ideas = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FAUD_SOCIETY_TWO"}
 			allowed = { always = no }
 			modifier = {
-				war_support_factor = -0.14
+				war_support_factor = -0.15
 				political_power_gain = 0.15
 				local_manpower = 0.05
 				consumer_goods_factor = -0.10
@@ -2000,7 +2000,7 @@ ideas = {
 				local_resources_factor = 0.05
 				conversion_cost_mil_to_civ_factor = -0.10
 				production_factory_start_efficiency_factor = 0.05
-				offensive_war_stability_factor = -0.08
+				offensive_war_stability_factor = -0.1
 				defensive_war_stability_factor = 0.05
 				monthly_population = 0.05
 			}
@@ -2439,12 +2439,12 @@ ideas = {
 			picture = GRU_SPD_SOCIAL_MARKET_MIRACLE
 			allowed = { always = no }
             modifier = {
-				industrial_capacity_factory = 0.06
-				production_factory_max_efficiency_factor = 0.11
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.1
 				production_speed_buildings_factor = 0.05
-				production_speed_infrastructure_factor = 0.11
-				production_factory_efficiency_gain_factor = 0.02
-				consumer_goods_factor = -0.16
+				production_speed_infrastructure_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				consumer_goods_factor = -0.15
 				stability_weekly = 0.02
 				political_power_gain = 0.05
 				party_popularity_stability_factor = 0.1
@@ -2466,8 +2466,8 @@ ideas = {
 			picture = GRU_SPD_WORKER_RIGHTS
 			allowed = { always = no }
             modifier = {
-				industrial_capacity_factory = 0.07
-				consumer_goods_factor = -0.17
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.15
 				stability_factor = 0.05
 			}
 		}
@@ -2476,8 +2476,8 @@ ideas = {
 			picture = GRU_SPD_WORKER_RIGHTS
 			allowed = { always = no }
             modifier = {
-				industrial_capacity_factory = 0.07
-				consumer_goods_factor = -0.17
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.15
 				stability_factor = 0.10
 			}
 		}
@@ -2502,12 +2502,12 @@ ideas = {
 			picture = GRU_SOCIALIST_MARKET_ECONOMICS
 			allowed = { always = no }
             modifier = {
-				industrial_capacity_factory = 0.09
-				production_factory_max_efficiency_factor = 0.12
-				production_speed_buildings_factor = 0.06
-				production_speed_infrastructure_factor = 0.14
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.125
+				production_speed_buildings_factor = 0.05
+				production_speed_infrastructure_factor = 0.15
 				production_factory_efficiency_gain_factor = -0.05
-				consumer_goods_factor = -0.18
+				consumer_goods_factor = -0.2
 				stability_weekly = 0.01
 				political_power_gain = 0.05
 				party_popularity_stability_factor = 0.1

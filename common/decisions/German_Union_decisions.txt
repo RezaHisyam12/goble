@@ -2778,7 +2778,7 @@ GRU_germania_plan_decisions = {
 			declare_war_on = {	type = annex_everything	target = AUS }
 			every_state = {
 				limit = {
-					is_core_of = "AUS"
+					OR = { is_core_of = AUS is_core_of = SLO is_core_of = FIU }
 					is_not_claim_or_core_of_ROOT = yes
 				}
 				add_claim_by = ROOT
@@ -5186,6 +5186,9 @@ GRU_germania_plan_decisions = {
 				add_core_of = GRU
 			}
 			1314 = {
+				add_core_of = GRU
+			}
+			1319 = {
 				add_core_of = GRU
 			}
 			set_country_flag = galicia_cored
