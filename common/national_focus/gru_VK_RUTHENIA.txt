@@ -180,8 +180,7 @@ focus_tree = {
 							VKR = {
 								controls_state = 221
 								controls_state = 227
-								controls_state = 245
-								controls_state = 218
+								controls_state = 1229
 								controls_state = 228
 							}
 		}
@@ -194,10 +193,7 @@ focus_tree = {
 			227 = {
 				add_core_of = VKR
 			}
-			245 = {
-				add_core_of = VKR
-			}
-			218 = {
+			1229 = {
 				add_core_of = VKR
 			}
 			228 = {

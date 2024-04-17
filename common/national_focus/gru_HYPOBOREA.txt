@@ -244,6 +244,21 @@ focus_tree = {
 				216 = {
 					add_core_of  = HYP
 				}
+				1274 = {
+					add_core_of  = HYP
+				}
+				1326 = {
+					add_core_of  = HYP
+				}
+				1327 = {
+					add_core_of  = HYP
+				}
+				1324 = {
+					add_core_of  = HYP
+				}
+				1325 = {
+					add_core_of  = HYP
+				}
 		}
 		prerequisite = { focus = HYPOBOREA_germanize_PEOPLE  }
 	}

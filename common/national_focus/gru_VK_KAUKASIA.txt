@@ -75,6 +75,24 @@
 			1081 = {
 				add_core_of = VKK
 			}
+			1298 = {
+				add_core_of = VKK
+			}
+			1299 = {
+				add_core_of = VKK
+			}
+			1302 = {
+				add_core_of = VKK
+			}
+			1301 = {
+				add_core_of = VKK
+			}
+			1300 = {
+				add_core_of = VKK
+			}
+			1303 = {
+				add_core_of = VKK
+			}
 		}
 		prerequisite = { focus = VK_FOCUS_KAUKASIA_START_COLONIZING  }
 	}
@@ -120,6 +138,9 @@
 			1187 = {
 				add_core_of = VKK
 			}
+			1267 = {
+				add_core_of = VKK
+			}
 		}
 		prerequisite = { focus = VK_FOCUS_KAUKASIA_START_COLONIZING  }
 	}
@@ -159,6 +180,12 @@
 				add_core_of = VKK
 			}
 			237 = {
+				add_core_of = VKK
+			}
+			1227 = {
+				add_core_of = VKK
+			}
+			1266 = {
 				add_core_of = VKK
 			}
 		}

@@ -125,6 +125,12 @@
 			207 = {
 				add_core_of = VKB
 			}
+			1294 = {
+				add_core_of = VKB
+			}
+			1295 = {
+				add_core_of = VKB
+			}
 		}
 		prerequisite = { focus = VK_FOCUS_BALTEN_COLONIZE_TWO  }
 		prerequisite = { focus = VK_FOCUS_BALTEN_COLONIZE_THREE  }
@@ -206,6 +212,24 @@
 				add_core_of = VKB
 			}
 			210 = {
+				add_core_of = VKB
+			}
+			1328 = {
+				add_core_of = VKB
+			}
+			1288 = {
+				add_core_of = VKB
+			}
+			1291 = {
+				add_core_of = VKB
+			}
+			1289 = {
+				add_core_of = VKB
+			}
+			1290 = {
+				add_core_of = VKB
+			}
+			1287 = {
 				add_core_of = VKB
 			}
 			set_province_name = { id = 6174 name = "Petersburg"}

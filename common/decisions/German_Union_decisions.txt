@@ -9979,11 +9979,11 @@ GRU_expansion_four_volksreichskommissariat_ruthenia = {
 						}	
 						OR = {
 							GRU = {
-								owns_state = 1213  
+								owns_state = 1266  
 							}
 							any_other_country = {
 								is_subject_of = GRU
-								owns_state = 1213  
+								owns_state = 1266  
 							}
 						}						
 				}
@@ -10012,7 +10012,7 @@ GRU_expansion_four_volksreichskommissariat_ruthenia = {
 								transfer_state = 1301	
 								transfer_state = 1304								
 								transfer_state = 1188
-								transfer_state = 1213
+								transfer_state = 1266
 					}
 					hidden_effect = {
 				VKK = {	country_event = rotermorgenmisc.300 }
@@ -10314,7 +10314,6 @@ GRU_expansion_three_volksreichskommissariat_kaukasia = {
 								transfer_state = 218
 								transfer_state = 1263
 								transfer_state = 1264
-								transfer_state = 1265
 								
 								transfer_state = 1266
 								transfer_state = 1226
@@ -10592,9 +10591,48 @@ GRU_beyond_lebensraum_decisions = {
 			has_country_flag = HYP_established
 		}
 		available = {
-			581 = { is_owned_and_controlled_by = ROOT }
-			1195 = { is_owned_and_controlled_by = ROOT }
-			573 = { is_owned_and_controlled_by = ROOT }
+			581 = { 
+				owner = {
+					OR = {
+						tag = GRU
+						is_subject_of = GRU
+					}
+				}
+				controller = {
+					OR = {
+						tag = GRU
+						is_subject_of = GRU
+					}
+				}
+			}
+			1195 = { 
+				owner = {
+					OR = {
+						tag = GRU
+						is_subject_of = GRU
+					}
+				}
+				controller = {
+					OR = {
+						tag = GRU
+						is_subject_of = GRU
+					}
+				}
+			}
+			573 = { 
+				owner = {
+					OR = {
+						tag = GRU
+						is_subject_of = GRU
+					}
+				}
+				controller = {
+					OR = {
+						tag = GRU
+						is_subject_of = GRU
+					}
+				}
+			}
 		}
 
 		fire_only_once = yes

@@ -2742,9 +2742,6 @@ country_event = { # VKR claims
 				265 = {
 					add_claim_by = VKR
 				}
-				245 = {
-					add_claim_by = VKR
-				}
 				218 = {
 					add_claim_by = VKR
 				}
@@ -2833,6 +2830,9 @@ country_event = { # VKR claims
 					add_claim_by = VKR
 				}
 				227 = {
+					add_claim_by = VKR
+				}
+				1229 = {
 					add_claim_by = VKR
 				}
 	}
@@ -2990,6 +2990,36 @@ country_event = { # VKK claims
 				1226 = {
 					add_claim_by = VKK
 				}
+				1266 = {
+					add_claim_by = VKK
+				}
+				1267 = {
+					add_claim_by = VKK
+				}
+				1213 = {
+					add_claim_by = VKK
+				}
+				1301 = {
+					add_claim_by = VKK
+				}
+				1300 = {
+					add_claim_by = VKK
+				}
+				1303 = {
+					add_claim_by = VKK
+				}
+				1302 = {
+					add_claim_by = VKK
+				}
+				1304 = {
+					add_claim_by = VKK
+				}
+				1298 = {
+					add_claim_by = VKK
+				}
+				1299 = {
+					add_claim_by = VKK
+				}
 	}
 }
 
@@ -3078,6 +3108,12 @@ country_event = { # VKB claims
 		1091 = { add_claim_by = VKB }
 		1287 = { add_claim_by = VKB }
 		1328 = { add_claim_by = VKB }
+		1288 = { add_claim_by = VKB }
+		1291 = { add_claim_by = VKB }
+		1289 = { add_claim_by = VKB }
+		1290 = { add_claim_by = VKB }
+		1294 = { add_claim_by = VKB }
+		1295 = { add_claim_by = VKB }
 	}
 }
 
@@ -3122,6 +3158,8 @@ country_event = { # VKM claims
 		1204 = { add_claim_by = VKM }
 		1205 = { add_claim_by = VKM }
 		1208 = { add_claim_by = VKM }
+		1207 = { add_claim_by = VKM }
+		1224 = { add_claim_by = VKM }
 	}
 }
 
@@ -3166,6 +3204,11 @@ country_event = { # HYP claims
 		936 = { add_claim_by = HYP }
 		937 = { add_claim_by = HYP }
 		960 = { add_claim_by = HYP }
+		1274 = { add_claim_by = HYP }
+		1326 = { add_claim_by = HYP }
+		1327 = { add_claim_by = HYP }
+		1324 = { add_claim_by = HYP }
+		1325 = { add_claim_by = HYP }
 	}
 }
 

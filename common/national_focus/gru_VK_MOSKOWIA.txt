@@ -150,6 +150,36 @@
 			406 = {
 				add_core_of = VKM
 				}
+			1193 = {
+				add_core_of = VKM
+				}
+			1204 = {
+				add_core_of = VKM
+				}
+			1205 = {
+				add_core_of = VKM
+				}
+			1198 = {
+				add_core_of = VKM
+				}
+			1208 = {
+				add_core_of = VKM
+				}
+			1194 = {
+				add_core_of = VKM
+				}
+			1197 = {
+				add_core_of = VKM
+				}
+			1199 = {
+				add_core_of = VKM
+				}
+			1207 = {
+				add_core_of = VKM
+				}
+			1224 = {
+				add_core_of = VKM
+				}
 		}
 		prerequisite = { focus = VK_FOCUS_MOSKOWIA_START_COLONIZING  }
 	}
