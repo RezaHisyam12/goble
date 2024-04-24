@@ -11507,6 +11507,7 @@ GRU_expansion_two_volksstaat_Judea = {
 								transfer_state = 1279
 								transfer_state = 1196
 								transfer_state = 1292
+								transfer_state = 1218
 					}
 					hidden_effect = {
 				VST = {	country_event = rotermorgenmisc.951 }

@@ -231,6 +231,13 @@ NFA_defend_metropole_from_uob_counterattack = {
 		execution_type = balanced
 		execute_order = yes
 	}
+	ai_strategy = {
+		type = put_unit_buffers
+		states = { 29 17 15 14 983 23 19 779 16 }
+		ratio = 0.35
+		area = mainland_europe
+		subtract_fronts_from_need = no
+	}
 }
 
 NFA_follow_Lyon_like_a_good_boy = {

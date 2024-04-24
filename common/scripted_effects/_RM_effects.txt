@@ -1444,7 +1444,7 @@ create_VKM = {
 	}
 }
 create_VSJ = {
-	RVA = {
+	YAK = {
 		set_politics = {
 			ruling_party = totalist
 			last_election = "1936.1.1"
@@ -1458,7 +1458,7 @@ create_VSJ = {
 		}
 
 		create_country_leader = {
-			name = "Avraham Stern.png"
+			name = "Avraham Stern"
 			desc = "POLITICS_strasser_DESC"
 			picture = "gfx/leaders/GRU/GRU_Portrait_Avraham_Stern.png"
 			expire = "1.1.1"
@@ -1467,7 +1467,7 @@ create_VSJ = {
 			}
 		}
 		create_country_leader = {
-			name = "Wolf-Heinrich Graf von Helldorf"
+			name = "Avraham Stern"
 			desc = "POLITICS_strasser_DESC"
 			picture = "gfx/leaders/GRU/GRU_Portrait_Avraham_Stern.png"
 			expire = "1.1.1"

@@ -661,6 +661,11 @@ scripted_gui = {
 				has_global_flag = RUSSIAN_UNIFICATION_skoro
 			}
 		}
+		triggers = {
+			Super_Event_Image_RUSSIAN_UNIFICATION_abakumov_visible = {
+				has_global_flag = RUSSIAN_UNIFICATION_abakumov
+			}
+		}
 				
 		triggers = {
 			Super_Event_Image_Savinkov_Death_visible = {
@@ -1469,6 +1474,13 @@ scripted_gui = {
 						has_global_flag = RUSSIAN_UNIFICATION_skoro
 					}
 					clr_global_flag  = RUSSIAN_UNIFICATION_skoro
+				}
+
+				if = {
+					limit = {	
+						has_global_flag = RUSSIAN_UNIFICATION_abakumov
+					}
+					clr_global_flag  = RUSSIAN_UNIFICATION_abakumov
 				}
 				
 				if = {

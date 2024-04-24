@@ -3291,6 +3291,14 @@ country_event = { # VST claims
 		1211  = { add_claim_by = VST }
 		1212 = { add_claim_by = VST }
 		1281 = { add_claim_by = VST }
+		1278 = { add_claim_by = VST }
+		1196 = { add_claim_by = VST }
+		1279 = { add_claim_by = VST }
+		1276 = { add_claim_by = VST }
+		1277 = { add_claim_by = VST }
+		1275 = { add_claim_by = VST }
+		1217 = { add_claim_by = VST }
+		1218 = { add_claim_by = VST }
 	}
 }
 

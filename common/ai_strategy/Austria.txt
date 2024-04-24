@@ -102,14 +102,10 @@ austria_worried_about_france = {
 		has_socialist_government = no
 		is_subject = no
 		FRA = { has_socialist_government = yes }
+		is_neighbor_of = FRA
 	}
-	abort = {
-		OR = {
-			has_socialist_government = yes
-			NOT = { is_faction_leader = yes }
-			FRA = { has_socialist_government = no }
-		}
-	}
+	abort_when_not_enabled = yes
+
 	ai_strategy = {
 		type = contain
 		id = "FRA"
@@ -119,6 +115,28 @@ austria_worried_about_france = {
 		type = antagonize
 		id = "FRA"
 		value = 200
+	}
+}
+
+AUS_eyes_on_france = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		is_neighbor_of = FRA
+		FRA = { has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = FRA
+		value = 1000
+	}
+	ai_strategy = {
+		type = front_armor_score
+		id = FRA
+		value = 100
 	}
 }
 
@@ -1451,7 +1469,6 @@ AUS_build_tanks_if_france_is_aggressive = {
 	}
 	enable = {
 		is_neighbor_of = FRA
-		has_country_flag = HRE_rise
 		FRA = { has_capitulated = no }
 		FRA = { has_government = totalist }
 	}
@@ -1483,7 +1500,6 @@ AUS_total_war_against_russia = {
 		original_tag = AUS
 	}
 	enable = {
-		has_country_flag = HRE_rise
 		RUS = { is_faction_leader = yes }
 		FRA = {
 			OR = {
@@ -1533,6 +1549,30 @@ AUS_total_war_against_russia = {
 	ai_strategy = {
 		type = railway_gun_divisions_ratio
 		value = 1
+	}
+}
+
+AUS_keep_defence = { #Cease attacks if losing against France and has low equipment
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		surrender_progress > 0.25
+		has_equipment = { infantry_equipment < 0 }
+		FRA = {
+			has_war_with = ROOT
+			has_capitulated = no
+			surrender_progress < 0.1
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = FRA
+		priority = 150
+		ordertype = front
+		execute_order = no
 	}
 }
 

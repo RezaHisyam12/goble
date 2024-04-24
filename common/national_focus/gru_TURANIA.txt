@@ -398,6 +398,9 @@ focus_tree = {
 			654 = {
 					add_core_of  = VST
 				}
+			582 = {
+					add_core_of  = VST
+				}
 		}
 		prerequisite = { focus = TURANIA_HAIL_THE_ONDER  }
 	}
@@ -464,6 +467,12 @@ focus_tree = {
 					add_core_of  = VST
 				}
 			441 = {
+					add_core_of  = VST
+				}
+			1275 = {
+					add_core_of  = VST
+				}
+			1218 = {
 					add_core_of  = VST
 				}
 		}
@@ -594,6 +603,30 @@ focus_tree = {
 					add_core_of  = VST
 				}
 			1281 = {
+					add_core_of  = VST
+				}
+			1278 = {
+					add_core_of  = VST
+				}
+			1196 = {
+					add_core_of  = VST
+				}
+			1279 = {
+					add_core_of  = VST
+				}
+			1209 = {
+					add_core_of  = VST
+				}
+			1210 = {
+					add_core_of  = VST
+				}
+			1211 = {
+					add_core_of  = VST
+				}
+			1276 = {
+					add_core_of  = VST
+				}
+			1277 = {
 					add_core_of  = VST
 				}
 		}

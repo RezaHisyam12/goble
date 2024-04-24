@@ -1,6 +1,6 @@
 	shared_focus = {
 		id = GRU_GCW_VICTORY
-	    icon = GFX_GRU_REBELLS_VICTORY
+	   	icon = GFX_GRU_REBELLS_VICTORY
 		x = 35
 		y = 2
 		cost = 1
