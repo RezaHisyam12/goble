@@ -7666,7 +7666,7 @@ focus_tree = {
 						days = 365 
 						}
 					every_owned_state = {
-					limit = { OR = { is_core_of = GER is_core_of = SWI is_core_of = CZE is_core_of = ITA is_core_of = SLO is_core_of = FIU is_core_of = GAL}}
+					limit = { OR = { is_core_of = GER is_core_of = SWI is_core_of = CZE is_core_of = ITA is_core_of = SLO is_core_of = FIU}}
 						AUS = { add_state_core = PREV }
 					}
 			if = {

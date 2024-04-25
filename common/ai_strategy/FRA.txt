@@ -156,7 +156,7 @@ FRA_focus_on_germany = {
 	}
 }
 
-FRA_focus_on_germany_natpop = {
+FRA_focus_on_gru_natpop = {
 	allowed = {
 		original_tag = FRA
 	}

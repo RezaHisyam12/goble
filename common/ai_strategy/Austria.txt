@@ -94,30 +94,6 @@ austrian_sphere_ally_germany = {
 	}
 }
 
-austria_worried_about_france = {
-	allowed = {
-		original_tag = AUS
-	}
-	enable = {
-		has_socialist_government = no
-		is_subject = no
-		FRA = { has_socialist_government = yes }
-		is_neighbor_of = FRA
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = contain
-		id = "FRA"
-		value = 100
-	}
-	ai_strategy = {
-		type = antagonize
-		id = "FRA"
-		value = 200
-	}
-}
-
 AUS_eyes_on_france = {
 	allowed = {
 		original_tag = AUS
@@ -1044,6 +1020,24 @@ AUS_ignore_GRU = {
 	}
 }
 
+AUS_ignore_LUX = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		country_exists = LUX
+		NOT = { is_in_faction_with = FRA }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "LUX"
+		value = 1
+	}
+}
+
 AUS_ignore_SWI = {
 	allowed = {
 		original_tag = AUS
@@ -1469,6 +1463,7 @@ AUS_build_tanks_if_france_is_aggressive = {
 	}
 	enable = {
 		is_neighbor_of = FRA
+		NOT = { has_war_with = RUS }
 		FRA = { has_capitulated = no }
 		FRA = { has_government = totalist }
 	}
