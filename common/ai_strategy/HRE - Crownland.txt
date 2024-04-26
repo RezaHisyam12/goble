@@ -1,0 +1,53 @@
+#################
+### Diplomacy ###
+#################
+BFE_protect = {
+	allowed = {
+		original_tag = BFE
+	}
+	enable = {
+		has_war_with = RUS
+		AUS = { has_country_flag = HRE_rise }
+		is_in_faction_with = AUS
+		RUS = { has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = KOH
+		value = 100
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = AUS
+		value = 100
+	}
+}
+
+#################
+### Special ###
+#################
+KOH_build_radars_budapest = {
+	allowed = {
+		original_tag = KOH
+		threat > 0.6
+	}
+	enable = {
+		43 = { 
+			controller = { is_ally_with = FROM }
+			free_building_slots = {
+				building = radar_station
+				size > 0
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = radar_station
+		target = 43 
+		value = 2000
+	}
+}

@@ -29,7 +29,7 @@ austria_ignore_romania = {
 
 	ai_strategy = {
 		type = ignore
-		id = "ROM"
+		id = ROM
 		value = 500
 	}
 }
@@ -51,12 +51,12 @@ austria_friends_with_germany = {
 
 	ai_strategy = {
 		type = befriend
-		id = "GER"
+		id = GER
 		value = 200
 	}
 	ai_strategy = {
 		type = protect
-		id = "GER"
+		id = GER
 		value = 100
 	}
 }
@@ -84,12 +84,12 @@ austrian_sphere_ally_germany = {
 
 	ai_strategy = {
 		type = befriend
-		id = "GER"
+		id = GER
 		value = 200
 	}
 	ai_strategy = {
 		type = alliance
-		id = "GER"
+		id = GER
 		value = 200
 	}
 }
@@ -100,6 +100,7 @@ AUS_eyes_on_france = {
 	}
 	enable = {
 		is_neighbor_of = FRA
+		NOT = { has_war_with = RUS }
 		FRA = { has_capitulated = no }
 	}
 	abort_when_not_enabled = yes
@@ -137,12 +138,12 @@ austria_worried_about_soviets = {
 	}
 	ai_strategy = {
 		type = contain
-		id = "RUS"
+		id = RUS
 		value = 100
 	}
 	ai_strategy = {
 		type = antagonize
-		id = "RUS"
+		id = RUS
 		value = 100
 	}
 }
@@ -165,12 +166,12 @@ austria_worried_about_russia = {
 	}
 	ai_strategy = {
 		type = contain
-		id = "RUS"
+		id = RUS
 		value = 100
 	}
 	ai_strategy = {
 		type = antagonize
-		id = "RUS"
+		id = RUS
 		value = 100
 	}
 }
@@ -191,7 +192,10 @@ austria_hates_sri = {
 	enable = {
 		is_in_faction_with = AUS
 		is_in_europe = yes
-		SRI = { has_socialist_government = yes }
+		SRI = {
+			has_socialist_government = yes
+			NOT = { is_in_faction_with = AUS }
+		}
 		AUS = {
 			is_faction_leader = yes
 			has_socialist_government = no
@@ -202,17 +206,17 @@ austria_hates_sri = {
 
 	ai_strategy = {
 		type = contain
-		id = "SRI"
+		id = SRI
 		value = 100
 	}
 	ai_strategy = {
 		type = conquer
-		id = "SRI"
+		id = SRI
 		value = 100
 	}
 	ai_strategy = {
 		type = antagonize
-		id = "SRI"
+		id = SRI
 		value = 100
 	}
 }
@@ -246,17 +250,17 @@ austria_hates_italy = {
 
 	ai_strategy = {
 		type = contain
-		id = "ITA"
+		id = ITA
 		value = 200
 	}
 	ai_strategy = {
 		type = conquer
-		id = "ITA"
+		id = ITA
 		value = 200
 	}
 	ai_strategy = {
 		type = antagonize
-		id = "ITA"
+		id = ITA
 		value = 200
 	}
 }
@@ -298,6 +302,7 @@ AUS_crownlands_watch_serbia = {
 		SER = {
 			is_subject = no
 			NOT = { is_in_faction_with = AUS }
+			has_capitulated = no
 		}
 	}
 
@@ -305,17 +310,17 @@ AUS_crownlands_watch_serbia = {
 
 	ai_strategy = {
 		type = contain
-		id = "SER"
+		id = SER
 		value = 100
 	}
 	ai_strategy = {
 		type = conquer
-		id = "SER"
+		id = SER
 		value = 100
 	}
 	ai_strategy = {
 		type = antagonize
-		id = "SER"
+		id = SER
 		value = 100
 	}
 }
@@ -434,6 +439,7 @@ AUS_crownlands_watch_romania = {
 		ROM = {
 			is_subject = no
 			NOT = { is_in_faction_with = AUS }
+			has_capitulated = no
 		}
 	}
 
@@ -441,17 +447,17 @@ AUS_crownlands_watch_romania = {
 
 	ai_strategy = {
 		type = contain
-		id = "ROM"
+		id = ROM
 		value = 100
 	}
 	ai_strategy = {
 		type = conquer
-		id = "ROM"
+		id = ROM
 		value = 100
 	}
 	ai_strategy = {
 		type = antagonize
-		id = "ROM"
+		id = ROM
 		value = 100
 	}
 }
@@ -539,7 +545,7 @@ AUS_watch_ukraine = {
 
 	ai_strategy = {
 		type = contain
-		id = "UKR"
+		id = UKR
 		value = 10
 	}
 }
@@ -565,6 +571,7 @@ AUS_crownlands_watch_ukraine = {
 		UKR = {
 			is_subject = no
 			NOT = { is_in_faction_with = AUS }
+			has_capitulated = no
 		}
 	}
 
@@ -572,7 +579,7 @@ AUS_crownlands_watch_ukraine = {
 
 	ai_strategy = {
 		type = contain
-		id = "UKR"
+		id = UKR
 		value = 100
 	}
 }
@@ -655,7 +662,7 @@ AUS_watch_gru = {
 
 	ai_strategy = {
 		type = contain
-		id = "GRU"
+		id = GRU
 		value = 100
 	}
 }
@@ -681,6 +688,7 @@ AUS_crownlands_watch_gru = {
 		GRU = {
 			is_subject = no
 			NOT = { is_in_faction_with = AUS }
+			has_capitulated = no
 		}
 	}
 
@@ -688,7 +696,7 @@ AUS_crownlands_watch_gru = {
 
 	ai_strategy = {
 		type = contain
-		id = "GRU"
+		id = GRU
 		value = 100
 	}
 }
@@ -966,6 +974,7 @@ AUS_crush_poland = {
 		execute_order = yes
 	}
 }
+
 ################
 ### Military ###
 ################
@@ -998,7 +1007,7 @@ AUS_ignore_GER = {
 
 	ai_strategy = {
 		type = ignore_claim
-		id = "GER"
+		id = GER
 		value = 1
 	}
 }
@@ -1015,7 +1024,7 @@ AUS_ignore_GRU = {
 
 	ai_strategy = {
 		type = ignore_claim
-		id = "GRU"
+		id = GRU
 		value = 1
 	}
 }
@@ -1033,7 +1042,7 @@ AUS_ignore_LUX = {
 
 	ai_strategy = {
 		type = ignore_claim
-		id = "LUX"
+		id = LUX
 		value = 1
 	}
 }
@@ -1050,7 +1059,7 @@ AUS_ignore_SWI = {
 
 	ai_strategy = {
 		type = ignore_claim
-		id = "SWI"
+		id = SWI
 		value = 1
 	}
 }
@@ -1070,7 +1079,7 @@ AUS_ignore_POL = {
 
 	ai_strategy = {
 		type = ignore_claim
-		id = "POL"
+		id = POL
 		value = 1
 	}
 }
@@ -1090,7 +1099,7 @@ AUS_ignore_UKR = {
 
 	ai_strategy = {
 		type = ignore_claim
-		id = "UKR"
+		id = UKR
 		value = 1
 	}
 }
@@ -1106,7 +1115,7 @@ AUS_watch_illrya = {
 
 	ai_strategy = {
 		type = contain
-		id = "CRO"
+		id = CRO
 		value = 100
 	}
 }
@@ -1626,6 +1635,7 @@ AUS_build_radars_prague = {
 	allowed = {
 		original_tag = AUS
 		threat > 0.6
+		has_country_flag = HRE_rise
 	}
 	enable = {
 		1129 = {
@@ -1642,30 +1652,6 @@ AUS_build_radars_prague = {
 		type = build_building
 		id = radar_station
 		target = 1129
-		value = 2000
-	}
-}
-
-AUS_build_radars_budapest = {
-	allowed = {
-		original_tag = AUS
-		threat > 0.6
-	}
-	enable = {
-		43 = { 
-			controller = { is_ally_with = FROM }
-			free_building_slots = {
-				building = radar_station
-				size > 0
-			}
-		}
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = build_building
-		id = radar_station
-		target = 43 
 		value = 2000
 	}
 }

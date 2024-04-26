@@ -1195,7 +1195,8 @@ AUS_volksreichskommissariat_decisions = {
 				set_autonomy = { target = KOH autonomy_state = crownland }
 				set_country_flag = KOH_established
 				KOH = { set_country_flag = IS_KOH }
-				KOH = { set_country_flag = hungary_loyal}
+				KOH = { set_country_flag = hungary_loyal }
+				KOH = { clr_country_flag = hungary_democracy }
 				KOH = { inherit_technology = AUS }
 			}
 		}
@@ -2212,20 +2213,12 @@ AUS_Foreign_Policy_decisions = {
 			factor = 100
 			modifier = {
 				factor = 0
-				date < 1938.7.1
-			}
-			modifier = {
-				factor = 0
-				AUS_dont_attack_if_vulnerable_or_preparing = yes
-			}
-			modifier = {
-				factor = 0
-				AUS = { AUS_dont_attack_if_target_is_stronger = yes }
+				date < 1942.7.1
 			}
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision RUS_Demand_FRA target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_Demand_FRA target: [From.GetName]"
 			set_country_flag = { flag = imminent_war days = 20 value = 1 }
 			FROM = {
 				add_ai_strategy = {
@@ -2258,7 +2251,7 @@ AUS_Foreign_Policy_decisions = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove RUS_Demand_FRA target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_Demand_FRA target: [From.GetName]"
 			FROM = {
 				add_ai_strategy = {
 					type = prepare_for_war

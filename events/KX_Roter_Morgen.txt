@@ -4560,6 +4560,8 @@ country_event = { # BFE claims
 		939 = { add_core_of = BFE }
 		989 = { add_core_of = BFE }
 		1076 = { add_core_of = BFE }
+		182 = { add_core_of = BFE }
+		45 = { remove_core_of = BFE }
 	}
 }
 
@@ -4595,7 +4597,13 @@ country_event = { # KOH claims
 		1222 = { add_core_of = KOH }	
 		1314 = { add_core_of = KOH }	
 		1319 = { add_core_of = KOH }	
-		1320 = { add_core_of = KOH }	
+		1320 = { add_core_of = KOH }
+		1128 = { remove_claim_by = KOH }
+		794 = { remove_claim_by = KOH }
+		1102 = { remove_claim_by = KOH }
+		109 = { remove_claim_by = KOH }
+		1099 = { remove_claim_by = KOH }
+		103 = { remove_claim_by = KOH }
 	}
 }
 
