@@ -3041,7 +3041,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 200
+			factor = 300
 		}
 
 		available_if_capitulated = yes
@@ -3070,7 +3070,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 200
+			factor = 300
 		}
 
 		available_if_capitulated = yes
@@ -3100,7 +3100,7 @@ focus_tree = {
 			has_government = paternal_autocrat
 		}
 		ai_will_do = {
-			factor = 200
+			factor = 300
 		}
 
 		available_if_capitulated = yes
@@ -3129,7 +3129,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 200
+			factor = 300
 		}
 
 		available_if_capitulated = yes
@@ -3168,7 +3168,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 200
+			factor = 300
 		}
 
 		available_if_capitulated = yes
@@ -3209,7 +3209,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 200
+			factor = 300
 		}
 
 		available_if_capitulated = yes
