@@ -1078,7 +1078,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 0
+			factor = 1
 			modifier = {
 				factor = 2
 				is_major = yes
