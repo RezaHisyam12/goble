@@ -277,7 +277,7 @@ focus_tree = {
 				add_idea = CRO_black_monday_3
 				remove_idea = CRO_black_monday_2
 			}
-			add_research_slot = 1
+			add_research_slot_until_five = yes
 		}
 	}
 	

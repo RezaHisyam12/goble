@@ -4562,6 +4562,7 @@ country_event = { # BFE claims
 		1076 = { add_core_of = BFE }
 		182 = { add_core_of = BFE }
 		45 = { remove_core_of = BFE }
+		875 = { remove_core_of = BFE }
 	}
 }
 

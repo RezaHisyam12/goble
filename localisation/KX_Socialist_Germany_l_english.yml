@@ -3909,6 +3909,10 @@ AUS_civil_war_plan_CZE: "Operation Befriedung"
 AUS_civil_war_plan_CRO: "Operation Wiedervereinigung"
 AUS_army_expand: "Renewed Army"
 AUS_aircraft_production_improvements: "Aircraft Production Improvements"
+AUS_Uzelac_reform_plan: "Uzelac Ground Support Plan"
+AUS_Lohr_reform_plan: "Löhr Offensive Air Plan"
+AUS_improved_cruiser_production: "Flexible Navy"
+AUS_super_heavy_battleships_idea: "Developing the H-Class"
 
 
 AUS_start_hre_tooltip:0 "§GAustria will look to its past and attempt to restore its former glory!§!"

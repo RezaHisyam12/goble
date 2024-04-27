@@ -752,6 +752,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_uzelac-plan"
+			add_ideas = AUS_Uzelac_reform_plan
 			add_doctrine_cost_reduction = {
 				name = AUS_uzelac-plan
 				cost_reduction = 0.5
@@ -782,6 +783,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_loehr-plan"
+			add_ideas = AUS_Lohr_reform_plan
 			add_doctrine_cost_reduction = {
 				name = AUS_loehr-plan
 				cost_reduction = 0.5
@@ -1059,6 +1061,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_flexible_navy"
+			add_ideas = AUS_improved_cruiser_production
 			add_doctrine_cost_reduction = {
 				name = AUS_flexible_navy
 				cost_reduction = 0.5
@@ -1117,6 +1120,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_large_navy"
+			add_ideas = AUS_super_heavy_battleships_idea
 			add_doctrine_cost_reduction = {
 				name = AUS_large_navy
 				cost_reduction = 0.5
@@ -2342,6 +2346,7 @@ focus_tree = {
 						is_core_of = GAL
 						is_core_of = CRO
 						is_core_of = TRS
+						is_core_of = WSU
 					}
 					NOT = { is_core_of = ROOT }
 				}

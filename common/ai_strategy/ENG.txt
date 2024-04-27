@@ -261,7 +261,7 @@ ENG_build_naval_bombers = {
 ENG_build_patrol_bombers = {
 	allowed = {
 		original_tag = ENG
-		has_dlc_bba = yes
+		has_dlc = "By Blood Alone"
 	}
 	enable = {
 		is_eligible_for_heavy_aircraft_production = yes

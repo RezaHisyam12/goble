@@ -2491,7 +2491,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HUN_reeducation_reform"
 			add_stability = 0.05
-			add_research_slot = 1
+			add_research_slot_until_five = yes
 			hidden_effect = {
 				country_event = { id = kr.hungary.230 days = 1 }
 			}
@@ -2544,7 +2544,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		available_if_capitulated = yes
@@ -2573,7 +2573,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		available_if_capitulated = yes
@@ -2612,7 +2612,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		available_if_capitulated = yes
@@ -2643,7 +2643,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		available_if_capitulated = yes
@@ -2681,7 +2681,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		available_if_capitulated = yes
@@ -2713,7 +2713,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		available_if_capitulated = yes
@@ -2744,7 +2744,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		available_if_capitulated = yes
@@ -2783,7 +2783,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		available_if_capitulated = yes
@@ -2816,7 +2816,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		available_if_capitulated = yes
@@ -2852,7 +2852,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 200
 		}
 
 		available_if_capitulated = yes
@@ -2882,7 +2882,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 200
 		}
 
 		available_if_capitulated = yes
@@ -2914,7 +2914,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 200
 		}
 
 		available_if_capitulated = yes
@@ -2946,7 +2946,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 200
 		}
 
 		available_if_capitulated = yes
@@ -2956,7 +2956,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HUN_monarchist_education"
 			add_political_power = 50
-			add_research_slot = 1
+			add_research_slot_until_five = yes
 			###Country Event for Education
 			hidden_effect = {
 				country_event = { id = kr.hungary.255 days = 1 }
@@ -2979,7 +2979,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 200
 		}
 
 		available_if_capitulated = yes
@@ -3012,7 +3012,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 200
 		}
 
 		available_if_capitulated = yes
@@ -3041,7 +3041,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 200
 		}
 
 		available_if_capitulated = yes
@@ -3070,7 +3070,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 200
 		}
 
 		available_if_capitulated = yes
@@ -3100,7 +3100,7 @@ focus_tree = {
 			has_government = paternal_autocrat
 		}
 		ai_will_do = {
-			factor = 100
+			factor = 200
 		}
 
 		available_if_capitulated = yes
@@ -3129,7 +3129,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 200
 		}
 
 		available_if_capitulated = yes
@@ -3168,7 +3168,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 200
 		}
 
 		available_if_capitulated = yes
@@ -3209,7 +3209,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 200
 		}
 
 		available_if_capitulated = yes
@@ -3871,7 +3871,7 @@ focus_tree = {
 					}
 				}
 			}
-			add_research_slot = 1
+			add_research_slot_until_five = yes
 			swap_ideas = {
 				remove_idea = HUN_unified_recruitment_idea
 				add_idea = HUN_unified_recruitment_idea_2

@@ -100,7 +100,10 @@ AUS_eyes_on_france = {
 	}
 	enable = {
 		is_neighbor_of = FRA
-		NOT = { has_war_with = RUS }
+		NOT = {
+			has_war_with = RUS
+			has_war_with = GRU
+			}
 		FRA = { has_capitulated = no }
 	}
 	abort_when_not_enabled = yes
@@ -111,8 +114,8 @@ AUS_eyes_on_france = {
 		value = 1000
 	}
 	ai_strategy = {
-		type = front_armor_score
-		id = FRA
+		type = contain
+		id = "FRA"
 		value = 100
 	}
 }
@@ -1472,7 +1475,10 @@ AUS_build_tanks_if_france_is_aggressive = {
 	}
 	enable = {
 		is_neighbor_of = FRA
-		NOT = { has_war_with = RUS }
+		NOT = {
+			has_war_with = RUS
+			has_war_with = GRU
+			}
 		FRA = { has_capitulated = no }
 		FRA = { has_government = totalist }
 	}
@@ -1487,11 +1493,6 @@ AUS_build_tanks_if_france_is_aggressive = {
 		type = front_armor_score
 		id = FRA
 		value = 250 # AUS already gets a 100 score on FRA, but maybe this will make them focus even more.
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = FRA
-		value = 100
 	}
 	ai_strategy = {
 		type = railway_gun_divisions_ratio

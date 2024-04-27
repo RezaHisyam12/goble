@@ -45,7 +45,7 @@ dont_guard_against_overlord_puppets = {
 }
 
 default_railway_gun_management = {
-	allowed = { has_dlc_nsb = yes }
+	allowed = { has_dlc = "No Step Back" }
 	enable = {
 		num_divisions > 100
 		is_major = yes
@@ -58,10 +58,11 @@ default_railway_gun_management = {
 		type = railway_gun_divisions_ratio
 		value = 4
 	}
+
 }
 
 default_produce_floating_harbors = {
-	allowed = { has_dlc_nsb = yes }
+	allowed = { has_dlc = "No Step Back" }
 	enable = {
 		has_war = yes
 		num_of_naval_factories > 25
