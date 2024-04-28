@@ -54,7 +54,7 @@ country_event = { # GRU setup
 				}
 				create_country_leader = {
 					name = "Gustav Krupp"
-					picture = "gfx/leaders/WGR/Portrait_WGR_Gustav_Krupp.png"
+					picture = "gfx/leaders/WGR/Portrait_Rhineland_Gustav_Krupp.png"
 					expire = "1.1.1"
 					ideology = marlib_national_liberalism_subtype
 				}
@@ -3910,7 +3910,7 @@ country_event = { # Future of Germany MarLibs
 		create_country_leader = {
 			name = "Gustav Krupp"
 			desc = "GRU_Krupp_DESC"
-			picture = "gfx/leaders/GRU/Portrait_GRU_Gustav_Krupp.png"
+			picture = "gfx/leaders/WGR/Portrait_Rhineland_Gustav_Krupp.png"
 			expire = "1.1.1"
 			ideology = oligarchy_subtype
 		}
@@ -3967,7 +3967,7 @@ country_event = { # Future of Germany MarLibs
 			create_country_leader = {
 				name = "Gustav Krupp"
 				desc = "GRU_Krupp_DESC"
-				picture = "gfx/leaders/GRU/Portrait_GRU_Gustav_Krupp.png"
+				picture = "gfx/leaders/WGR/Portrait_Rhineland_Gustav_Krupp.png"
 				expire = "1.1.1"
 				ideology = right_technocracy_subtype
 			}
@@ -3979,7 +3979,7 @@ country_event = { # Future of Germany MarLibs
 			create_country_leader = {
 				name = "Gustav Krupp"
 				desc = "GRU_Krupp_DESC"
-				picture = "gfx/leaders/GRU/Portrait_GRU_Gustav_Krupp.png"
+				picture = "gfx/leaders/WGR/Portrait_Rhineland_Gustav_Krupp.png"
 				expire = "1.1.1"
 				ideology = oligarchy_subtype
 			}

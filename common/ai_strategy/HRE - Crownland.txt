@@ -29,8 +29,10 @@ BFE_protect_empire = {
 		original_tag = BFE
 	}
 	enable = {
-		is_in_faction_with = AUS
-		RUS = { has_capitulated = no }
+		OR = {
+			is_subject_of = AUS
+			is_in_faction_with = AUS
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -38,26 +40,6 @@ BFE_protect_empire = {
 		type = area_priority
 		id = austria_empire
 		value = 50
-	}
-}
-
-crown_dont_naval_invade_if_fighting_in_russia = {
-	allowed = {
-		OR = {
-			original_tag = KOH
-			original_tag = BFE
-		}
-	}
-	enable = {
-		has_war_with = RUS
-		RUS = { has_capitulated = no }
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = invasion_unit_request
-		area = globally
-		value = -500
 	}
 }
 
@@ -82,6 +64,46 @@ KOH_keep_guard_up = {
 		priority = 150
 		ordertype = front
 		execute_order = no
+	}
+}
+
+crown_dont_naval_invade_if_fighting_in_russia = {
+	allowed = {
+		OR = {
+			original_tag = KOH
+			original_tag = BFE
+		}
+	}
+	enable = {
+		has_war_with = RUS
+		RUS = { has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invasion_unit_request
+		area = globally
+		value = -500
+	}
+}
+
+crown_ignore_ottoman = {
+	allowed = {
+		OR = {
+			original_tag = KOH
+			original_tag = BFE
+		}
+	}
+	enable = {
+		has_war_with = RUS
+		RUS = { has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = TUR
+		value = 100
 	}
 }
 

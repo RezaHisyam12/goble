@@ -62,6 +62,72 @@ political_actions = {
 	}
 }
 
+AUS_reichkrieg_decision_category = {
+
+	AUS_hre_reichkrieg_decision = {
+		icon = GFX_decision_category_gerrivals
+		allowed = { original_tag = AUS }
+		available = {
+			is_subject = no
+			country_exists = 64.owner
+		}
+		visible = {
+			has_completed_focus = AUS_retake
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = 64.owner
+				}
+			}
+		}
+		targets = { 64.owner }
+		target_root_trigger = {
+			has_completed_focus = AUS_retake
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = 64.owner
+				}	
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_hre_reichkrieg_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_hre_reichkrieg_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+			declare_war_on = { type = annex_everything target = 64.owner }
+		}
+	}
+}
+
 AUS_civil_war_decision_category = {
 
 	AUS_war_HUN_decision = { 
@@ -2151,7 +2217,7 @@ AUS_volksreichskommissariat_decisions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision AUS_pan_germanism_BULece_decision target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_pan_germanism_bulgaria_decision target: [From.GetName]"
 			set_country_flag = { flag = imminent_war days = 30 value = 1 }
 			FROM = {
 				add_ai_strategy = {
@@ -2163,7 +2229,7 @@ AUS_volksreichskommissariat_decisions = {
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_pan_germanism_BULece_decision target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_pan_germanism_bulgaria_decision target: [From.GetName]"
 			FROM = {
 				add_ai_strategy = {
 					type = prepare_for_war
@@ -2184,6 +2250,1212 @@ AUS_volksreichskommissariat_decisions = {
 }
 
 AUS_Foreign_Policy_decisions = {
+
+	AUS_hre_world_SWI_decision = {
+		icon = GFX_pangermanicone
+		allowed = { original_tag = AUS }
+		available = {
+			is_subject = no
+			country_exists = SWI
+			SWI = {
+				NOT = { is_in_faction_with = RUS }
+			}
+		}
+		visible = {
+			has_completed_focus = AUS_Invade_SWI
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = SWI
+				}
+			}
+		}
+		targets = { SWI }
+		target_root_trigger = {
+			has_completed_focus = AUS_Invade_SWI
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = SWI
+				}	
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 75
+			modifier = {
+				factor = 0
+				can_declare_war_on = SWI
+				OR = {
+					strength_ratio = { tag = SWI ratio < 0.75 }
+					# neither of us is in a faction and SWI is stronger
+					AND = {
+						SWI = {
+							is_in_faction = no
+							is_subject = no
+						}
+						is_in_faction = no
+						strength_ratio = { tag = SWI ratio < 1.0 }
+					}
+					# they're in a faction which is not at war
+					SWI = {
+						OR = {
+							AND = {
+								is_in_faction = yes
+								is_faction_leader = no
+							}
+							is_subject = yes
+						}
+						has_war = no
+					}
+					# they're in the Belgrade Pact and we're much stronger
+					SWI = {
+						is_in_faction = yes
+						is_faction_leader = no
+						strength_ratio = { tag = ROOT ratio > 0.30 }
+					}
+					# they're guaranteed but not in a faction
+					SWI = {
+						is_in_faction = no
+						has_guarantor = yes
+						any_of_scopes = {
+							array = guarantor_array
+							has_guaranteed = PREV
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're a subject and the overlord is stronger than us or in a faction and not losing
+					SWI = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're in a faction which is at war but not with a major and not losing
+					SWI = {
+						is_in_faction = yes
+						has_war = yes
+						NOT = {
+							any_enemy_country = { is_actual_major = yes }
+							surrender_progress > 0.10
+							faction_leader = { surrender_progress > 0.20 }
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_hre_world_SWI_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_hre_world_SWI_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+			declare_war_on = { type = annex_everything target = SWI }
+		}
+	}
+
+	AUS_hre_world_SRI_decision = {
+		icon = GFX_pangermanicone
+		allowed = { original_tag = AUS }
+		available = {
+			is_subject = no
+			country_exists = SRI
+			SRI = {
+				NOT = { is_in_faction_with = RUS }
+			}
+		}
+		visible = {
+			has_completed_focus = AUS_Invade_SRI
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = SRI
+				}
+			}
+		}
+		targets = { SRI }
+		target_root_trigger = {
+			has_completed_focus = AUS_Invade_SRI
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = SRI
+				}	
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 75
+			modifier = {
+				factor = 0
+				can_declare_war_on = SRI
+				OR = {
+					strength_ratio = { tag = SRI ratio < 0.75 }
+					# neither of us is in a faction and SRI is stronger
+					AND = {
+						SRI = {
+							is_in_faction = no
+							is_subject = no
+						}
+						is_in_faction = no
+						strength_ratio = { tag = SRI ratio < 1.0 }
+					}
+					# they're in a faction which is not at war
+					SRI = {
+						OR = {
+							AND = {
+								is_in_faction = yes
+								is_faction_leader = no
+							}
+							is_subject = yes
+						}
+						has_war = no
+					}
+					# they're in the Belgrade Pact and we're much stronger
+					SRI = {
+						is_in_faction = yes
+						is_faction_leader = no
+						strength_ratio = { tag = ROOT ratio > 0.30 }
+					}
+					# they're guaranteed but not in a faction
+					SRI = {
+						is_in_faction = no
+						has_guarantor = yes
+						any_of_scopes = {
+							array = guarantor_array
+							has_guaranteed = PREV
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're a subject and the overlord is stronger than us or in a faction and not losing
+					SRI = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're in a faction which is at war but not with a major and not losing
+					SRI = {
+						is_in_faction = yes
+						has_war = yes
+						NOT = {
+							any_enemy_country = { is_actual_major = yes }
+							surrender_progress > 0.10
+							faction_leader = { surrender_progress > 0.20 }
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_hre_world_SRI_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_hre_world_SRI_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+			declare_war_on = { type = annex_everything target = SRI }
+		}
+	}
+
+	AUS_hre_world_ITA_decision = {
+		icon = GFX_pangermanicone
+		allowed = { original_tag = AUS }
+		available = {
+			is_subject = no
+			country_exists = ITA
+			ITA = {
+				NOT = { is_in_faction_with = RUS }
+			}
+		}
+		visible = {
+			has_completed_focus = AUS_Invade_ITA
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = ITA
+				}
+			}
+		}
+		targets = { ITA }
+		target_root_trigger = {
+			has_completed_focus = AUS_Invade_ITA
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = ITA
+				}	
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 75
+			modifier = {
+				factor = 0
+				can_declare_war_on = ITA
+				OR = {
+					strength_ratio = { tag = ITA ratio < 0.75 }
+					# neither of us is in a faction and ITA is stronger
+					AND = {
+						ITA = {
+							is_in_faction = no
+							is_subject = no
+						}
+						is_in_faction = no
+						strength_ratio = { tag = ITA ratio < 1.0 }
+					}
+					# they're in a faction which is not at war
+					ITA = {
+						OR = {
+							AND = {
+								is_in_faction = yes
+								is_faction_leader = no
+							}
+							is_subject = yes
+						}
+						has_war = no
+					}
+					# they're in the Belgrade Pact and we're much stronger
+					ITA = {
+						is_in_faction = yes
+						is_faction_leader = no
+						strength_ratio = { tag = ROOT ratio > 0.30 }
+					}
+					# they're guaranteed but not in a faction
+					ITA = {
+						is_in_faction = no
+						has_guarantor = yes
+						any_of_scopes = {
+							array = guarantor_array
+							has_guaranteed = PREV
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're a subject and the overlord is stronger than us or in a faction and not losing
+					ITA = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're in a faction which is at war but not with a major and not losing
+					ITA = {
+						is_in_faction = yes
+						has_war = yes
+						NOT = {
+							any_enemy_country = { is_actual_major = yes }
+							surrender_progress > 0.10
+							faction_leader = { surrender_progress > 0.20 }
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_hre_world_ITA_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_hre_world_ITA_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+			declare_war_on = { type = annex_everything target = ITA }
+		}
+	}
+
+	AUS_hre_world_VNC_decision = {
+		icon = GFX_pangermanicone
+		allowed = { original_tag = AUS }
+		available = {
+			is_subject = no
+			country_exists = VNC
+			VNC = {
+				NOT = { is_in_faction_with = RUS }
+			}
+		}
+		visible = {
+			has_completed_focus = AUS_Invade_ITA
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = VNC
+				}
+			}
+		}
+		targets = { VNC }
+		target_root_trigger = {
+			has_completed_focus = AUS_Invade_ITA
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = VNC
+				}	
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 75
+			modifier = {
+				factor = 0
+				can_declare_war_on = VNC
+				OR = {
+					strength_ratio = { tag = VNC ratio < 0.75 }
+					# neither of us is in a faction and VNC is stronger
+					AND = {
+						VNC = {
+							is_in_faction = no
+							is_subject = no
+						}
+						is_in_faction = no
+						strength_ratio = { tag = VNC ratio < 1.0 }
+					}
+					# they're in a faction which is not at war
+					VNC = {
+						OR = {
+							AND = {
+								is_in_faction = yes
+								is_faction_leader = no
+							}
+							is_subject = yes
+						}
+						has_war = no
+					}
+					# they're in the Belgrade Pact and we're much stronger
+					VNC = {
+						is_in_faction = yes
+						is_faction_leader = no
+						strength_ratio = { tag = ROOT ratio > 0.30 }
+					}
+					# they're guaranteed but not in a faction
+					VNC = {
+						is_in_faction = no
+						has_guarantor = yes
+						any_of_scopes = {
+							array = guarantor_array
+							has_guaranteed = PREV
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're a subject and the overlord is stronger than us or in a faction and not losing
+					VNC = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're in a faction which is at war but not with a major and not losing
+					VNC = {
+						is_in_faction = yes
+						has_war = yes
+						NOT = {
+							any_enemy_country = { is_actual_major = yes }
+							surrender_progress > 0.10
+							faction_leader = { surrender_progress > 0.20 }
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_hre_world_VNC_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_hre_world_VNC_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+			declare_war_on = { type = annex_everything target = VNC }
+		}
+	}
+
+	AUS_hre_world_LOM_decision = {
+		icon = GFX_pangermanicone
+		allowed = { original_tag = AUS }
+		available = {
+			is_subject = no
+			country_exists = LOM
+			LOM = {
+				NOT = { is_in_faction_with = RUS }
+			}
+		}
+		visible = {
+			has_completed_focus = AUS_Invade_ITA
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = LOM
+				}
+			}
+		}
+		targets = { LOM }
+		target_root_trigger = {
+			has_completed_focus = AUS_Invade_ITA
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = LOM
+				}	
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 75
+			modifier = {
+				factor = 0
+				can_declare_war_on = LOM
+				OR = {
+					strength_ratio = { tag = LOM ratio < 0.75 }
+					# neither of us is in a faction and LOM is stronger
+					AND = {
+						LOM = {
+							is_in_faction = no
+							is_subject = no
+						}
+						is_in_faction = no
+						strength_ratio = { tag = LOM ratio < 1.0 }
+					}
+					# they're in a faction which is not at war
+					LOM = {
+						OR = {
+							AND = {
+								is_in_faction = yes
+								is_faction_leader = no
+							}
+							is_subject = yes
+						}
+						has_war = no
+					}
+					# they're in the Belgrade Pact and we're much stronger
+					LOM = {
+						is_in_faction = yes
+						is_faction_leader = no
+						strength_ratio = { tag = ROOT ratio > 0.30 }
+					}
+					# they're guaranteed but not in a faction
+					LOM = {
+						is_in_faction = no
+						has_guarantor = yes
+						any_of_scopes = {
+							array = guarantor_array
+							has_guaranteed = PREV
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're a subject and the overlord is stronger than us or in a faction and not losing
+					LOM = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're in a faction which is at war but not with a major and not losing
+					LOM = {
+						is_in_faction = yes
+						has_war = yes
+						NOT = {
+							any_enemy_country = { is_actual_major = yes }
+							surrender_progress > 0.10
+							faction_leader = { surrender_progress > 0.20 }
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_hre_world_LOM_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_hre_world_LOM_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+			declare_war_on = { type = annex_everything target = LOM }
+		}
+	}
+
+	AUS_hre_world_BEL_decision = {
+		icon = GFX_pangermanicone
+		allowed = { original_tag = AUS }
+		available = {
+			is_subject = no
+			country_exists = BEL
+			BEL = {
+				NOT = { is_in_faction_with = RUS }
+			}
+		}
+		visible = {
+			has_completed_focus = AUS_End_BEL
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = BEL
+				}
+			}
+		}
+		targets = { BEL }
+		target_root_trigger = {
+			has_completed_focus = AUS_End_BEL
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = BEL
+				}	
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 75
+			modifier = {
+				factor = 0
+				can_declare_war_on = BEL
+				OR = {
+					strength_ratio = { tag = BEL ratio < 0.75 }
+					# neither of us is in a faction and BEL is stronger
+					AND = {
+						BEL = {
+							is_in_faction = no
+							is_subject = no
+						}
+						is_in_faction = no
+						strength_ratio = { tag = BEL ratio < 1.0 }
+					}
+					# they're in a faction which is not at war
+					BEL = {
+						OR = {
+							AND = {
+								is_in_faction = yes
+								is_faction_leader = no
+							}
+							is_subject = yes
+						}
+						has_war = no
+					}
+					# they're in the Belgrade Pact and we're much stronger
+					BEL = {
+						is_in_faction = yes
+						is_faction_leader = no
+						strength_ratio = { tag = ROOT ratio > 0.30 }
+					}
+					# they're guaranteed but not in a faction
+					BEL = {
+						is_in_faction = no
+						has_guarantor = yes
+						any_of_scopes = {
+							array = guarantor_array
+							has_guaranteed = PREV
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're a subject and the overlord is stronger than us or in a faction and not losing
+					BEL = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're in a faction which is at war but not with a major and not losing
+					BEL = {
+						is_in_faction = yes
+						has_war = yes
+						NOT = {
+							any_enemy_country = { is_actual_major = yes }
+							surrender_progress > 0.10
+							faction_leader = { surrender_progress > 0.20 }
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_hre_world_BEL_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_hre_world_BEL_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+			declare_war_on = { type = annex_everything target = BEL }
+		}
+	}
+
+	AUS_hre_world_WLL_decision = {
+		icon = GFX_pangermanicone
+		allowed = { original_tag = AUS }
+		available = {
+			is_subject = no
+			country_exists = WLL
+			WLL = {
+				NOT = { is_in_faction_with = RUS }
+			}
+		}
+		visible = {
+			has_completed_focus = AUS_End_BEL
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = WLL
+				}
+			}
+		}
+		targets = { WLL }
+		target_root_trigger = {
+			has_completed_focus = AUS_End_BEL
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = WLL
+				}	
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 75
+			modifier = {
+				factor = 0
+				can_declare_war_on = WLL
+				OR = {
+					strength_ratio = { tag = WLL ratio < 0.75 }
+					# neither of us is in a faction and WLL is stronger
+					AND = {
+						WLL = {
+							is_in_faction = no
+							is_subject = no
+						}
+						is_in_faction = no
+						strength_ratio = { tag = WLL ratio < 1.0 }
+					}
+					# they're in a faction which is not at war
+					WLL = {
+						OR = {
+							AND = {
+								is_in_faction = yes
+								is_faction_leader = no
+							}
+							is_subject = yes
+						}
+						has_war = no
+					}
+					# they're in the WLLgrade Pact and we're much stronger
+					WLL = {
+						is_in_faction = yes
+						is_faction_leader = no
+						strength_ratio = { tag = ROOT ratio > 0.30 }
+					}
+					# they're guaranteed but not in a faction
+					WLL = {
+						is_in_faction = no
+						has_guarantor = yes
+						any_of_scopes = {
+							array = guarantor_array
+							has_guaranteed = PREV
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're a subject and the overlord is stronger than us or in a faction and not losing
+					WLL = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're in a faction which is at war but not with a major and not losing
+					WLL = {
+						is_in_faction = yes
+						has_war = yes
+						NOT = {
+							any_enemy_country = { is_actual_major = yes }
+							surrender_progress > 0.10
+							faction_leader = { surrender_progress > 0.20 }
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_hre_world_WLL_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_hre_world_WLL_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+			declare_war_on = { type = annex_everything target = WLL }
+		}
+	}
+
+	AUS_hre_world_HOL_decision = {
+		icon = GFX_pangermanicone
+		allowed = { original_tag = AUS }
+		available = {
+			is_subject = no
+			country_exists = HOL
+			HOL = {
+				NOT = { is_in_faction_with = RUS }
+			}
+		}
+		visible = {
+			has_completed_focus = AUS_Invade_HOL
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = HOL
+				}
+			}
+		}
+		targets = { HOL }
+		target_root_trigger = {
+			has_completed_focus = AUS_Invade_HOL
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = HOL
+				}	
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 75
+			modifier = {
+				factor = 0
+				can_declare_war_on = HOL
+				OR = {
+					strength_ratio = { tag = HOL ratio < 0.75 }
+					# neither of us is in a faction and HOL is stronger
+					AND = {
+						HOL = {
+							is_in_faction = no
+							is_subject = no
+						}
+						is_in_faction = no
+						strength_ratio = { tag = HOL ratio < 1.0 }
+					}
+					# they're in a faction which is not at war
+					HOL = {
+						OR = {
+							AND = {
+								is_in_faction = yes
+								is_faction_leader = no
+							}
+							is_subject = yes
+						}
+						has_war = no
+					}
+					# they're in the HOLgrade Pact and we're much stronger
+					HOL = {
+						is_in_faction = yes
+						is_faction_leader = no
+						strength_ratio = { tag = ROOT ratio > 0.30 }
+					}
+					# they're guaranteed but not in a faction
+					HOL = {
+						is_in_faction = no
+						has_guarantor = yes
+						any_of_scopes = {
+							array = guarantor_array
+							has_guaranteed = PREV
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're a subject and the overlord is stronger than us or in a faction and not losing
+					HOL = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're in a faction which is at war but not with a major and not losing
+					HOL = {
+						is_in_faction = yes
+						has_war = yes
+						NOT = {
+							any_enemy_country = { is_actual_major = yes }
+							surrender_progress > 0.10
+							faction_leader = { surrender_progress > 0.20 }
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_hre_world_HOL_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_hre_world_HOL_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+			declare_war_on = { type = annex_everything target = HOL }
+		}
+	}
+
+	AUS_hre_world_LUX_decision = {
+		icon = GFX_pangermanicone
+		allowed = { original_tag = AUS }
+		available = {
+			is_subject = no
+			country_exists = LUX
+			LUX = {
+				NOT = { is_in_faction_with = RUS }
+			}
+		}
+		visible = {
+			has_completed_focus = AUS_Invade_HOL
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = LUX
+				}
+			}
+		}
+		targets = { LUX }
+		target_root_trigger = {
+			has_completed_focus = AUS_Invade_HOL
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = LUX
+				}	
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 14
+
+		ai_will_do = {
+			factor = 75
+			modifier = {
+				factor = 0
+				can_declare_war_on = LUX
+				OR = {
+					strength_ratio = { tag = LUX ratio < 0.75 }
+					# neither of us is in a faction and LUX is stronger
+					AND = {
+						LUX = {
+							is_in_faction = no
+							is_subject = no
+						}
+						is_in_faction = no
+						strength_ratio = { tag = LUX ratio < 1.0 }
+					}
+					# they're in a faction which is not at war
+					LUX = {
+						OR = {
+							AND = {
+								is_in_faction = yes
+								is_faction_leader = no
+							}
+							is_subject = yes
+						}
+						has_war = no
+					}
+					# they're in the LUXgrade Pact and we're much stronger
+					LUX = {
+						is_in_faction = yes
+						is_faction_leader = no
+						strength_ratio = { tag = ROOT ratio > 0.30 }
+					}
+					# they're guaranteed but not in a faction
+					LUX = {
+						is_in_faction = no
+						has_guarantor = yes
+						any_of_scopes = {
+							array = guarantor_array
+							has_guaranteed = PREV
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're a subject and the overlord is stronger than us or in a faction and not losing
+					LUX = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								strength_ratio = { tag = ROOT ratio > 1.0 }
+								is_in_faction = yes
+							}
+							surrender_progress < 0.20
+						}
+					}
+					# they're in a faction which is at war but not with a major and not losing
+					LUX = {
+						is_in_faction = yes
+						has_war = yes
+						NOT = {
+							any_enemy_country = { is_actual_major = yes }
+							surrender_progress > 0.10
+							faction_leader = { surrender_progress > 0.20 }
+						}
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_hre_world_LUX_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AUS_hre_world_LUX_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+			declare_war_on = { type = annex_everything target = LUX }
+		}
+	}
 
 	AUS_Demand_FRA = {
 		icon = generic_civil_support

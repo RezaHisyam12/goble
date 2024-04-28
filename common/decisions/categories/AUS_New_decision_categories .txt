@@ -58,6 +58,19 @@ AUS_civil_war_decision_category = {
 		}
 }
 
+AUS_reichkrieg_decision_category = {
+	icon = hre_austria
+	picture = GFX_decision_cat_generic_hre
+	priority = 100
+
+	allowed = { tag = AUS }
+
+	visible = {
+		is_subject = no
+		has_completed_focus = AUS_retake
+		}
+}
+
 AUS_breitspurbahn_decisions = {
 	icon = breitspurbahnen
 	allowed = { tag = AUS }
