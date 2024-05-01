@@ -1115,35 +1115,3 @@ ENT_buffer_troops_for_invasion_of_britain = {
 		value = 100
 	}
 }
-
-ENT_sync_invasions = {
-	allowed = {
-		is_in_faction_with = ENT
-	}
-	enable = {
-		has_war_with = INT
-		OR = {
-			FRA = {
-				exists = yes
-				has_capitulated = no
-			}
-			ENG = {
-				exists = yes
-				has_capitulated = no
-			}
-		}
-
-		#activate every 60 days
-		set_temp_variable = { days = global.num_days }
-		modulo_temp_variable = { days = 90 }
-		check_variable = { days < 60 }
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = front_control
-		area = mainland_europe
-		ordertype = invasion
-		execute_order = no
-	}
-}

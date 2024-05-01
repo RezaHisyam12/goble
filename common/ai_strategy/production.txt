@@ -14,7 +14,6 @@ division_limiter = {
 	ai_strategy = { type = build_army id = marine				value = -1000 }
 	ai_strategy = { type = build_army id = mountaineer			value = -1000 }
 	ai_strategy = { type = build_army id = suppression			value = -1000 }
-	ai_strategy = { type = build_army id = anti_tank			value = -1000 }
 }
 
 default_unit_production = {
@@ -149,6 +148,21 @@ default_specialised_production = {
 		type = equipment_variant_production_factor
 		id = medium_tank_chassis
 		value = 5
+	}
+}
+
+default_railway_gun_production = {
+	allowed = { has_dlc = "No Step Back" }
+	enable = {
+		num_divisions > 100
+		is_major = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = railway_gun
+		value = 1
 	}
 }
 
@@ -327,7 +341,6 @@ default_marine_production = {
 				NOT = { country_exists = GBR }
 			}
 			original_tag = GBR
-			original_tag = ENG
 			original_tag = JAP
 			original_tag = NFA
 			original_tag = GEX
@@ -376,7 +389,6 @@ extra_marine_production = {
 				NOT = { country_exists = GBR }
 			}
 			original_tag = GBR
-			original_tag = ENG
 			original_tag = JAP
 			original_tag = NFA
 			original_tag = GEX
@@ -583,7 +595,7 @@ late_mobile_production = {
 default_tank_production = {
 	enable = {
 		is_eligible_for_armor_production = yes
-		has_design_based_on = medium_tank_chassis
+		num_divisions > 29 #build enough infantry first
 	}
 	abort_when_not_enabled = yes
 

@@ -1301,7 +1301,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 8
+			factor = 10
 		}
 
 		completion_reward = {
@@ -2394,7 +2394,7 @@ focus_tree = {
 		cost = 6
 
 		ai_will_do = {
-			factor = 5
+			factor = 6
 		}
 
 		relative_position_id = AUS_military_occupation
@@ -8090,9 +8090,11 @@ focus_tree = {
 			custom_effect_tooltip = AUS_hre_world_VNC_decision
 			custom_effect_tooltip = unlocks_decision
 			custom_effect_tooltip = AUS_hre_world_LOM_decision
+			hidden_effect = {
 			159 = { add_claim_by = AUS }
 			160 = { add_claim_by = AUS }
 			759 = { add_claim_by = AUS }
+			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_STABILITY }
 	}
@@ -8120,6 +8122,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Invade_SWI"
 			custom_effect_tooltip = unlocks_decision
 			custom_effect_tooltip = AUS_hre_world_SWI_decision
+			hidden_effect = {
 			every_state = {
 				limit = {
 					is_core_of = "SWI"
@@ -8128,6 +8131,7 @@ focus_tree = {
 				add_claim_by = AUS
 			}
 		}
+	}
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_STABILITY }
 	}
 	focus = {
@@ -8155,6 +8159,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Invade_SRI"
 			custom_effect_tooltip = unlocks_decision
 			custom_effect_tooltip = AUS_hre_world_SRI_decision
+			hidden_effect = {
 			764 = { add_claim_by = AUS }
 			1005 = { add_claim_by = AUS }
 			157 = { add_claim_by = AUS }
@@ -8164,6 +8169,7 @@ focus_tree = {
 			838 = { add_claim_by = AUS }
 			158 = { add_claim_by = AUS }
 			1003 = { add_claim_by = AUS }
+			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_STABILITY }
 	}
@@ -8192,6 +8198,7 @@ focus_tree = {
 			custom_effect_tooltip = AUS_hre_world_HOL_decision
 			custom_effect_tooltip = unlocks_decision
 			custom_effect_tooltip = AUS_hre_world_LOM_decision
+			hidden_effect = {
 			every_state = {
 				limit = {
 					is_core_of = "HOL"
@@ -8200,6 +8207,7 @@ focus_tree = {
 				add_claim_by = AUS
 			}
 		}
+	}
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_STABILITY }
 	}
 	focus = {
@@ -8230,6 +8238,7 @@ focus_tree = {
 			custom_effect_tooltip = AUS_hre_world_BEL_decision
 			custom_effect_tooltip = unlocks_decision
 			custom_effect_tooltip = AUS_hre_world_WLL_decision
+			hidden_effect = {
 			every_state = {
 				limit = {
 					is_core_of = "BEL"
@@ -8238,6 +8247,7 @@ focus_tree = {
 				add_claim_by = AUS
 			}
 		}
+	}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ANNEXATION FOCUS_FILTER_STABILITY }
 	}
 	focus = {
@@ -8533,83 +8543,16 @@ focus_tree = {
 		will_lead_to_war_with = POL
 
 		ai_will_do = {
-			factor = 75
+			factor = 1
 			modifier = {
 				factor = 0
-				can_declare_war_on = POL
-				OR = {
-					has_war = yes
-					strength_ratio = { tag = POL ratio < 0.75 }
-					# neither of us is in a faction and POL is stronger
-					AND = {
-						POL = {
-							is_in_faction = no
-							is_subject = no
-						}
-						is_in_faction = no
-						strength_ratio = { tag = POL ratio < 1.0 }
-					}
-					# they're in a faction which is not at war
-					POL = {
-						OR = {
-							AND = {
-								is_in_faction = yes
-								is_faction_leader = no
-							}
-							is_subject = yes
-						}
-						has_war = no
-					}
-					# they're in the Belgrade Pact and we're much stronger
-					POL = {
-						is_in_faction = yes
-						is_faction_leader = no
-						strength_ratio = { tag = ROOT ratio > 0.30 }
-					}
-					# they're guaranteed but not in a faction
-					POL = {
-						is_in_faction = no
-						has_guarantor = yes
-						any_of_scopes = {
-							array = guarantor_array
-							has_guaranteed = PREV
-							OR = {
-								strength_ratio = { tag = ROOT ratio > 1.0 }
-								is_in_faction = yes
-							}
-							surrender_progress < 0.20
-						}
-					}
-					# they're a subject and the overlord is stronger than us or in a faction and not losing
-					POL = {
-						is_subject = yes
-						overlord = {
-							OR = {
-								strength_ratio = { tag = ROOT ratio > 1.0 }
-								is_in_faction = yes
-							}
-							surrender_progress < 0.20
-						}
-					}
-					# they're in a faction which is at war but not with a major and not losing
-					POL = {
-						is_in_faction = yes
-						has_war = yes
-						NOT = {
-							any_enemy_country = { is_actual_major = yes }
-							surrender_progress > 0.10
-							faction_leader = { surrender_progress > 0.20 }
-						}
-					}
+				has_stability < 0.25
 				}
-			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Invade_POL"
-			create_wargoal = {
-				type = annex_everything
-				target = POL
-			}
+			custom_effect_tooltip = unlocks_decision
+			custom_effect_tooltip = AUS_hre_world_POL_decision
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}

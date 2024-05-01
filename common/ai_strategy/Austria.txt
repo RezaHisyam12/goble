@@ -113,11 +113,6 @@ AUS_eyes_on_france = {
 		id = FRA
 		value = 1000
 	}
-	ai_strategy = {
-		type = contain
-		id = "FRA"
-		value = 100
-	}
 }
 
 austria_worried_about_soviets = {
@@ -1506,6 +1501,7 @@ AUS_total_war_against_russia = {
 	}
 	enable = {
 		RUS = { is_faction_leader = yes }
+		NOT = { has_war_with = NFA }
 		FRA = {
 			OR = {
 				has_capitulated = yes
