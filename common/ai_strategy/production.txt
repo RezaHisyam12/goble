@@ -151,21 +151,6 @@ default_specialised_production = {
 	}
 }
 
-default_railway_gun_production = {
-	allowed = { has_dlc = "No Step Back" }
-	enable = {
-		num_divisions > 100
-		is_major = yes
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = equipment_production_min_factories
-		id = railway_gun
-		value = 1
-	}
-}
-
 we_need_civ_factories_1 = {
 	enable = {
 		date < 1938.1.1
@@ -942,5 +927,21 @@ we_need_nuclear = {
 		type = building_target
 		id = nuclear_reactor
 		value = 10
+	}
+}
+
+default_railway_gun_production = {
+	allowed = { has_dlc = "No Step Back" }
+	enable = {
+		has_tech = railway_gun
+		num_divisions > 100
+		is_major = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = railway_gun
+		value = 1
 	}
 }

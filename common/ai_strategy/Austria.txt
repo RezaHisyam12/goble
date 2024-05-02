@@ -1528,26 +1528,6 @@ AUS_total_war_against_russia = {
 		value = 250
 	}
 	ai_strategy = {
-		type = equipment_production_factor
-		id = armor
-		value = 10
-	}
-	ai_strategy = {
-		type = unit_ratio
-		id = cas
-		value = 60
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = cas
-		value = 20
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = fighter
-		value = -20
-	}
-	ai_strategy = {
 		type = railway_gun_divisions_ratio
 		value = 1
 	}
