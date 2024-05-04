@@ -1,7 +1,8 @@
-infantry_default = {
-	blocked_for = {
-		TRP LBA SAU JBS TRU IKH YEM OMA ETS SIK KUM BUK TRK KHI ALO MON XSM #tag uses cavalry instead of infantry
-		FRA ENG USA CSA TEX NEE CAL COR WCC #uses infantry_artillery_focus below
+###alternative upgrade route for artillery-heavy nations - FRA, ENG, USA
+infantry_artillery_focus = {
+	available_for = {
+		FRA ENG
+		USA CSA TEX NEE CAL COR WCC
 	}
 
 	roles = { infantry }
@@ -12,7 +13,7 @@ infantry_default = {
 
 	match_to_count = 0.5
 
-	infantry_default = {
+	infantry_artillery_focus_default = {
 		upgrade_prio = {
 			factor = 2
 		}
@@ -20,7 +21,7 @@ infantry_default = {
 			factor = 1
 		}
 
-		target_width = 21.0
+		target_width = 27.0
 		width_weight = 1.0
 		column_swap_factor = 0.5
 
@@ -68,7 +69,7 @@ infantry_default = {
 
 			regiments = {
 				infantry = 9
-				artillery_brigade = 1
+				artillery_brigade = 3
 			}
 
 			support = {
@@ -92,7 +93,7 @@ infantry_default = {
 		}
 	}
 
-	infantry_upgraded = {
+	infantry_artillery_focus_upgraded = {
 		upgrade_prio = {
 			base = 0
 			modifier = {
@@ -195,7 +196,7 @@ infantry_default = {
 		}
 	}
 
-	infantry_motorised = {
+	infantry_artillery_focus_motorised = {
 		enable = {
 			ROOT = { has_tech = motorised_infantry }
 		}
@@ -311,7 +312,7 @@ infantry_default = {
 		}
 	}
 
-	infantry_mechanised = {
+	infantry_artillery_focus_mechanised = {
 		enable = {
 			ROOT = { has_tech = mechanised_infantry }
 		}

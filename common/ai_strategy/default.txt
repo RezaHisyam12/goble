@@ -1,30 +1,3 @@
-default_pp_spend_amount = {
-	enable = { always = yes }
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = pp_spend_amount
-		id = idea
-		value = 100
-	}
-	ai_strategy = {
-		type = pp_spend_amount
-		id = decision
-		value = 100
-	}
-
-	ai_strategy = {
-		type = pp_spend_priority
-		id = relation
-		value = -9999
-	}
-	ai_strategy = {
-		type = pp_spend_priority
-		id = relation
-		value = -9999
-	}
-}
-
 dont_guard_against_overlord_puppets = {
 	enable = {
 		is_subject = yes

@@ -107,6 +107,47 @@ crown_ignore_ottoman = {
 	}
 }
 
+AUS_attack_french_plains = { #try attacking through Belgium
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		has_war_with = FRA
+		AUS = { has_country_flag = HRE_rise }
+		FRA = {
+			has_capitulated = no
+			num_planes_stationed_in_regions = {
+				value < 500
+				regions = { 19 } #Northern France
+			}
+		}
+		num_planes_stationed_in_regions = {
+			value > 1000
+			regions = { 19 } #Northern France
+		}
+		OR = {
+			NOT = { has_war_with = HOL }
+			HOL = { has_capitulated = yes } #only mass attack when Netherlands dead
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		state_trigger = {
+			OR = {
+				state = 980 #Lille
+				state = 17 #Pas-de-Calais
+				state = 15 #Normandy
+			}
+		}
+		priority = 200
+		ordertype = front
+		execute_order = yes
+		execution_type = rush_weak
+	}
+}
+
 AUS_finish_russia_off = {
 	allowed = {
 		OR = {
@@ -148,6 +189,44 @@ AUS_finish_russia_off = {
 	ai_strategy = {
 		type = front_control
 		tag = RUS
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+}
+
+RUS_crush_hre = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = AUS
+		surrender_progress < 0.1
+		AUS = { has_country_flag = HRE_rise }
+		OR = {
+			NOT = { has_war_with = KOH }
+			KOH = { has_capitulated = yes }
+		}
+		OR = {
+			NOT = { has_war_with = BFE }
+			BFE = { has_capitulated = yes }
+		}
+		num_planes_stationed_in_regions = {
+			value > 1000
+			regions = { 8 }
+		}
+
+		#activate every 25 days, then pause for another 25
+		set_temp_variable = { frequency = global.num_days }
+		modulo_temp_variable = { frequency = 50 }
+		check_variable = { frequency < 25 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = AUS
 		priority = 100
 		ordertype = front
 		execution_type = rush_weak

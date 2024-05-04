@@ -585,11 +585,6 @@ default_tank_production = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = -5
-	}
-	ai_strategy = {
 		type = equipment_variant_production_factor
 		id = medium_tank_chassis
 		value = 15
@@ -608,11 +603,6 @@ increased_tank_production_1 = {
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = -5
-	}
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role

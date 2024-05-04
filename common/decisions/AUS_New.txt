@@ -2010,13 +2010,6 @@ AUS_volksreichskommissariat_decisions = {
 				}
 			}
 			declare_war_on = {	type = annex_everything	target = ALB }
-			every_state = {
-				limit = {
-					is_core_of = "ALB"
-					is_not_claim_or_core_of_ROOT = yes
-				}
-				add_claim_by = ROOT
-			}
 		}
 	}
 	#
@@ -2124,13 +2117,6 @@ AUS_volksreichskommissariat_decisions = {
 				}
 			}
 			declare_war_on = {	type = annex_everything	target = GRE }
-			every_state = {
-				limit = {
-					is_core_of = "GRE"
-					is_not_claim_or_core_of_ROOT = yes
-				}
-				add_claim_by = ROOT
-			}
 		}
 	}
 	#
@@ -2238,13 +2224,6 @@ AUS_volksreichskommissariat_decisions = {
 				}
 			}
 			declare_war_on = {	type = annex_everything	target = BUL }
-			every_state = {
-				limit = {
-					is_core_of = "BUL"
-					is_not_claim_or_core_of_ROOT = yes
-				}
-				add_claim_by = ROOT
-			}
 		}
 	}
 }
@@ -2286,7 +2265,7 @@ AUS_Foreign_Policy_decisions = {
 
 		fire_only_once = yes
 		cost = 50
-		days_remove = 14
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 75
@@ -2420,7 +2399,7 @@ AUS_Foreign_Policy_decisions = {
 
 		fire_only_once = yes
 		cost = 50
-		days_remove = 14
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 75
@@ -2554,7 +2533,7 @@ AUS_Foreign_Policy_decisions = {
 
 		fire_only_once = yes
 		cost = 50
-		days_remove = 14
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 75
@@ -2688,7 +2667,7 @@ AUS_Foreign_Policy_decisions = {
 
 		fire_only_once = yes
 		cost = 50
-		days_remove = 14
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 75
@@ -2822,7 +2801,7 @@ AUS_Foreign_Policy_decisions = {
 
 		fire_only_once = yes
 		cost = 50
-		days_remove = 14
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 75
@@ -2956,7 +2935,7 @@ AUS_Foreign_Policy_decisions = {
 
 		fire_only_once = yes
 		cost = 50
-		days_remove = 14
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 75
@@ -3090,7 +3069,7 @@ AUS_Foreign_Policy_decisions = {
 
 		fire_only_once = yes
 		cost = 50
-		days_remove = 14
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 75
@@ -3224,7 +3203,7 @@ AUS_Foreign_Policy_decisions = {
 
 		fire_only_once = yes
 		cost = 50
-		days_remove = 14
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 75
@@ -3358,7 +3337,7 @@ AUS_Foreign_Policy_decisions = {
 
 		fire_only_once = yes
 		cost = 50
-		days_remove = 14
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 75
@@ -3477,7 +3456,7 @@ AUS_Foreign_Policy_decisions = {
 		}
 		
 		cost = 10
-		days_remove = 14
+		days_remove = 30
 		fire_only_once = yes
 		war_with_target_on_remove = yes
 
@@ -3491,7 +3470,7 @@ AUS_Foreign_Policy_decisions = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision AUS_Demand_FRA target: [From.GetName]"
-			set_country_flag = { flag = imminent_war days = 20 value = 1 }
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
 			FROM = {
 				add_ai_strategy = {
 					type = prepare_for_war
@@ -3567,7 +3546,7 @@ AUS_Foreign_Policy_decisions = {
 
 		fire_only_once = yes
 		cost = 50
-		days_remove = 14
+		days_remove = 30
 
 		ai_will_do = {
 			factor = 75
@@ -3687,7 +3666,7 @@ AUS_Foreign_Policy_decisions = {
 		}
 		
 		cost = 10
-		days_remove = 14
+		days_remove = 30
 		fire_only_once = yes
 		war_with_target_on_remove = yes
 
@@ -3720,7 +3699,7 @@ AUS_Foreign_Policy_decisions = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision AUS_Attack_Eastern_Europe target: [From.GetName]"
-			set_country_flag = { flag = imminent_war days = 20 value = 1 }
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
 			FROM = {
 				add_ai_strategy = {
 					type = prepare_for_war

@@ -1,6 +1,29 @@
 #################
 ### Diplomacy ###
 #################
+AUS_the_mountain_wall = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		NOT = {
+			has_country_flag = HRE_rise
+			}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineer
+		value = 10
+	}
+	ai_strategy = {
+		type = template_prio
+		id = marine
+		value = 100
+	}
+}
+
 austria_ignore_romania = {
 	allowed = {
 		OR = {
@@ -1461,6 +1484,24 @@ AUS_keep_garrison = {
 			1129 #Prague
 			64 #Berlin
 		}
+	}
+}
+
+AUS_dont_naval_invade_if_fighting_in_two_fronts = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		has_war_with = 219.owner
+		has_war_with = 16.owner
+		16.owner = { has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invasion_unit_request
+		area = globally
+		value = -500
 	}
 }
 
