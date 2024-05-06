@@ -1,7 +1,7 @@
 infantry_default = {
 	blocked_for = {
 		TRP LBA SAU JBS TRU IKH YEM OMA ETS SIK KUM BUK TRK KHI ALO MON XSM #tag uses cavalry instead of infantry
-		FRA ENG USA CSA TEX NEE CAL COR WCC #uses infantry_artillery_focus below
+		FRA ENG USA CSA TEX NEE CAL COR WCC NYC #uses infantry_artillery_focus below
 	}
 
 	roles = { infantry }

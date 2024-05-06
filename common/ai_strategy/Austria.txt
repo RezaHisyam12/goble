@@ -20,7 +20,7 @@ AUS_the_mountain_wall = {
 	ai_strategy = {
 		type = template_prio
 		id = marine
-		value = 100
+		value = 50
 	}
 }
 

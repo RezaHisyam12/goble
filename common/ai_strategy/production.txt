@@ -111,11 +111,6 @@ default_specialised_production = {
 		value = 3
 	}
 	ai_strategy = {
-		type = equipment_production_min_factories
-		id = support_equipment
-		value = 3
-	}
-	ai_strategy = {
 		type = equipment_production_factor
 		id = artillery
 		value = 55
@@ -135,12 +130,6 @@ default_specialised_production = {
 	ai_strategy = {
 		type = equipment_production_min_factories
 		id = motorized
-		value = 1
-	}
-
-	ai_strategy = {
-		type = equipment_production_min_factories
-		id = mechanized
 		value = 1
 	}
 
@@ -580,7 +569,8 @@ late_mobile_production = {
 default_tank_production = {
 	enable = {
 		is_eligible_for_armor_production = yes
-		num_divisions > 29 #build enough infantry first
+		has_design_based_on = medium_tank_chassis
+		ai_wants_divisions > 24
 	}
 	abort_when_not_enabled = yes
 
@@ -683,25 +673,21 @@ increased_tank_production_6 = {
 
 more_armor_focused_nation = {
 	enable = {
-		OR = {
-			num_of_military_factories > 49
-			AND = {
-				num_of_military_factories > 19
-				country_has_armor_focus = yes
-			}
-		}
+		num_of_military_factories > 49
+		is_eligible_for_armor_production = yes
+		is_major = yes
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = -12
+		value = -10
 	}
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
-		value = 12
+		value = 10
 	}
 }
 

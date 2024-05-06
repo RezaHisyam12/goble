@@ -21298,8 +21298,8 @@ country_event = { #Albania Liberation
 			set_cosmetic_tag = ALB_Principality
 			set_party_name = {
 				ideology = authoritarian_democrat
-				long_name = "Grafschaft Wied-Neuwied"
-				name = "Grafschaft Wied-Neuwied"
+				long_name = ALB_authoritarian_democrat_wied_party_long
+				name = ALB_authoritarian_democrat_wied_party
 			}
 			add_popularity = {
 				ideology = authoritarian_democrat
@@ -37403,8 +37403,8 @@ country_event = { #The Fate of Emilia
 				add_popularity = { ideology = paternal_autocrat popularity = 0.2 }
 				set_party_name = {
 					ideology = paternal_autocrat
-					long_name = "Casa di Borbone di Parma"
-					name = "Borbone-Parma"
+					long_name = EMI_authoritarian_democrat_borbon_party_long
+					name = EMI_authoritarian_democrat_borbon_party
 				}
 			}
 		}
@@ -48637,7 +48637,7 @@ country_event = { #Fate of the Crimea
 				}
 				create_country_leader = {
 					name = "Mustafa Edige Kirimal"
-					picture = "gfx/leaders/UKR/Portrait_CRM_Mustafa_Edige_Kirimal.png"
+					picture = "gfx/leaders/CRM/Portrait_CRM_Mustafa_Edige_Kirimal.png"
 					expire = "1.1.1"
 					ideology = paternal_autocrat_subtype
 				}
@@ -48718,28 +48718,28 @@ country_event = { #Fate of the Crimea
 				create_country_leader = {
 					name = "Sultan Kadyr I"
 					desc = "POLITICS_SULTAN_KADYR_DESC"
-					picture = "gfx/leaders/UKR/Portrait_CRM_Kadyr_Giray.png"
+					picture = "gfx/leaders/CRM/Portrait_CRM_Kadyr_Giray.png"
 					expire = "1.1.1"
 					ideology = authoritarian_democrat_subtype
 				}
 				create_country_leader = {
 					name = "Sultan Kadyr I"
 					desc = "POLITICS_SULTAN_KADYR_DESC"
-					picture = "gfx/leaders/UKR/Portrait_CRM_Kadyr_Giray.png"
+					picture = "gfx/leaders/CRM/Portrait_CRM_Kadyr_Giray.png"
 					expire = "1.1.1"
 					ideology = national_conservative_subtype
 				}
 				create_country_leader = {
 					name = "Sultan Kadyr I"
 					desc = "POLITICS_SULTAN_KADYR_DESC"
-					picture = "gfx/leaders/UKR/Portrait_CRM_Kadyr_Giray.png"
+					picture = "gfx/leaders/CRM/Portrait_CRM_Kadyr_Giray.png"
 					expire = "1.1.1"
 					ideology = marlib_national_liberalism_subtype
 				}
 				create_country_leader = {
 					name = "Sultan Kadyr I"
 					desc = "POLITICS_SULTAN_KADYR_DESC"
-					picture = "gfx/leaders/UKR/Portrait_CRM_Kadyr_Giray.png"
+					picture = "gfx/leaders/CRM/Portrait_CRM_Kadyr_Giray.png"
 					expire = "1.1.1"
 					ideology = national_liberalism_subtype
 				}
@@ -48763,7 +48763,7 @@ country_event = { #Fate of the Crimea
 				}
 				create_country_leader = {
 					name = "Voldemar Falz Fein"
-					picture = "gfx/leaders/UKR/Portrait_CRM_Voldemar_Falz_Fein.png"
+					picture = "gfx/leaders/CRM/Portrait_CRM_Voldemar_Falz_Fein.png"
 					expire = "1.1.1"
 					ideology = authoritarian_democrat_subtype
 				}

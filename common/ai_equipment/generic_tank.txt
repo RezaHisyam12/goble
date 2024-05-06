@@ -1,4 +1,3 @@
-@ -1,2396 +0,0 @@
 # AI tank design for testing
 
 generic_light_tanks = {
@@ -687,7 +686,8 @@ generic_medium_tanks = {
 		priority = {
 			factor = 100
 			modifier = { 
-				has_tech = improved_medium_tank
+				factor = 0 #let's not waste XP here
+				has_tech = improved_medium_tank_chassis
 			}
 		}
 
@@ -2179,7 +2179,7 @@ generic_modern_tanks = {
 				suspension_type_slot = tank_christie_suspension
 				armor_type_slot = tank_riveted_armor
 				engine_type_slot = tank_gasoline_engine
-				special_type_slot_1 = wet_ammo_storage
+				special_type_slot_1 = easy_maintenance
 				special_type_slot_2 > tank_radio_1
 				special_type_slot_3 = armor_skirts
 				special_type_slot_4 = auto_loader
