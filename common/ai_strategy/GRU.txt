@@ -106,6 +106,78 @@ GRU_dislikes_entente = {
 	}
 }
 
+AUS_ignore_LUX = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		country_exists = LUX
+		NOT = { is_in_faction_with = FRA }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore_claim
+		id = LUX
+		value = 1
+	}
+}
+
+AUS_ignore_SWI = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		country_exists = SWI
+		NOT = { is_in_faction_with = FRA }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore_claim
+		id = SWI
+		value = 1
+	}
+}
+
+AUS_ignore_POL = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		NOT = { is_in_faction_with = FRA }
+		country_exists = POL
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore_claim
+		id = POL
+		value = 1
+	}
+}
+
+AUS_ignore_UKR = {
+	allowed = {
+		original_tag = AUS
+	}
+	enable = {
+		NOT = { is_in_faction_with = FRA }
+		country_exists = UKR
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore_claim
+		id = UKR
+		value = 1
+	}
+}
+
 ################
 ### Military ###
 ################
