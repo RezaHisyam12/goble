@@ -30,6 +30,16 @@ default_unit_production = {
 		id = armor_role
 		value = 10
 	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = light_tank_chassis
+		value = -100
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = heavy_tank_chassis
+		value = -100
+	}
 }
 
 more_guns_in_the_early_game = {
@@ -569,7 +579,7 @@ default_tank_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
-		value = 10
+		value = 4
 	}
 }
 
