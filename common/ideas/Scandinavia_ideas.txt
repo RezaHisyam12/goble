@@ -47,9 +47,8 @@ ideas = {
 		SCA_custom_union_idea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SCA_custom_union_idea" }
 			allowed = { always = no }
-            modifier = {
-				production_speed_buildings_factor = 0.05
-				industrial_capacity_factory = 0.05
+			modifier = {
+				industrial_capacity_factory = 0.1
 				consumer_goods_factor = -0.15
 			}
 			picture = NOR_monetary_union_idea
@@ -63,7 +62,7 @@ ideas = {
             modifier = {
 				conscription = 0.01
 				training_time_army_factor = 0.1
-				army_org_factor = 0.2
+				army_org_factor = 0.1
 			}
 			picture = generic_reserve_divisions
 		}

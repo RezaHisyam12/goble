@@ -108,11 +108,13 @@ GRU_dislikes_entente = {
 
 AUS_ignore_LUX = {
 	allowed = {
-		original_tag = AUS
+		original_tag = GRU
 	}
 	enable = {
+		LUX = {
+			is_in_faction_with = FRA
+		}
 		country_exists = LUX
-		NOT = { is_in_faction_with = FRA }
 	}
 
 	abort_when_not_enabled = yes
@@ -126,11 +128,13 @@ AUS_ignore_LUX = {
 
 AUS_ignore_SWI = {
 	allowed = {
-		original_tag = AUS
+		original_tag = GRU
 	}
 	enable = {
+		SWI = {
+			is_in_faction_with = FRA
+		}
 		country_exists = SWI
-		NOT = { is_in_faction_with = FRA }
 	}
 
 	abort_when_not_enabled = yes
@@ -144,10 +148,12 @@ AUS_ignore_SWI = {
 
 AUS_ignore_POL = {
 	allowed = {
-		original_tag = AUS
+		original_tag = GRU
 	}
 	enable = {
-		NOT = { is_in_faction_with = FRA }
+		POL = {
+			is_in_faction_with = FRA
+		}
 		country_exists = POL
 	}
 
@@ -162,10 +168,12 @@ AUS_ignore_POL = {
 
 AUS_ignore_UKR = {
 	allowed = {
-		original_tag = AUS
+		original_tag = GRU
 	}
 	enable = {
-		NOT = { is_in_faction_with = FRA }
+		UKR = {
+			is_in_faction_with = FRA
+		}
 		country_exists = UKR
 	}
 

@@ -22,9 +22,9 @@ division_template = {
 	name = "Panzer-Division"
 	division_names_group = GER_TNK_01
 	regiments = {
-		heavy_armor = { x = 0 y = 0 }
-		heavy_armor = { x = 0 y = 1 }
-		heavy_armor = { x = 0 y = 2 }
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_armor = { x = 0 y = 2 }
 		light_armor = { x = 1 y = 0 }
 		light_armor = { x = 1 y = 1 }
 		light_armor = { x = 1 y = 2 }
@@ -877,43 +877,22 @@ instant_effect = {
 		progress = 0.12
 		efficiency = 50
 	}
-	if = {
-		limit = { has_dlc_nsb = yes }
-		add_equipment_production = {
-			equipment = {
-				type = light_tank_chassis_1
-				version_name = "Sp.Pz. I Ausf. A"
-			}
-			requested_factories = 2
-			progress = 0.59
-			efficiency = 50
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_chassis_1
+			version_name = "Kätzchen"
 		}
-		add_equipment_production = {
-			equipment = {
-				version_name = "St.Pz.Kpfw. II"
-				type = medium_tank_chassis_0
-			}
-			requested_factories = 1
-			progress = 0.59
-			efficiency = 50
+		requested_factories = 3
+		progress = 0.59
+		efficiency = 50
 		}
-	}
-	else = {
-		add_equipment_production = {
-			equipment = {
-				type = light_tank_equipment_1
-			}
-			requested_factories = 2
-			progress = 0.59
-			efficiency = 50
+	add_equipment_production = {
+		equipment = {
+			version_name = "Versuchskonstruktion 20"
+			type = medium_tank_chassis_0
 		}
-		add_equipment_production = {
-			equipment = {
-				type = medium_tank_equipment_1
-			}
-			requested_factories = 1
-			progress = 0.59
-			efficiency = 50
+		requested_factories = 2
+		progress = 0.59
+		efficiency = 50
 		}
-	}
 }

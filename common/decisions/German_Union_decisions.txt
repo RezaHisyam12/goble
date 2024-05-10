@@ -6916,6 +6916,11 @@ GRU_kill_colonies_decisions = {
 			}
 			modifier = {
 				factor = 0
+				country_exists = FRA
+				country_exists = RUS
+			}
+			modifier = {
+				factor = 0
 				FROM = {
 					any_allied_country = {
 						is_faction_leader = yes

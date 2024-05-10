@@ -67,7 +67,7 @@ ideas = {
 
 		OTT_Ottoman_Reinvigoration = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea OTT_Ottoman_Reinvigoration" }
-			picture = MEX_revolutionary_army
+			picture = SYR_Ottoman_Military
 			allowed = { always = no }
 			available = {
 				OR = {
@@ -1159,11 +1159,12 @@ ideas = {
 		ott_greco_turkish_accord = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ott_greco_turkish_accord"}
 			picture = MTG_naval_treaty_adherent
+			allowed = { always = yes }
 			available = {
-				has_war = no
+				NOT = { has_war_with = GRE }
+				NOT = { has_war_with = TUR }
 			}
-			allowed = { always = no }
-            modifier = {
+			modifier = {
 				consumer_goods_factor = -0.15
 				production_speed_buildings_factor = 0.15
 				stability_factor = 0.10
