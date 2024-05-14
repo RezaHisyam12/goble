@@ -17,11 +17,6 @@ AUS_the_mountain_wall = {
 		id = mountaineer
 		value = 10
 	}
-	ai_strategy = {
-		type = template_prio
-		id = marine
-		value = 50
-	}
 }
 
 austria_ignore_romania = {

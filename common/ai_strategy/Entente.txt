@@ -946,3 +946,74 @@ ENT_buffer_troops_for_invasion_of_britain = {
 		value = 100
 	}
 }
+
+GBR_retreat_to_the_isles = {
+	allowed = {
+		original_tag = GBR
+	}
+	enable = {
+		surrender_progress > 0.2
+	}
+	abort = {
+		surrender_progress < 0.01 #don't stop until the isles are secure
+	}
+
+	ai_strategy = {
+		type = garrison
+		value = 40
+	}
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 126 #London
+		value = 20
+	}
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 127 #Sussex
+		value = 10
+	}
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 130 #Yorkshire
+		value = 10
+	}
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 132 #Lancashire
+		value = 10
+	}
+}
+
+canada_protect_britain = {
+	allowed = {
+		tag = CAN
+	}
+	enable = {
+		country_exists = GBR
+		has_war_with = FRA
+		is_in_faction_with = GBR
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = protect
+		id = "GBR"
+		value = 200
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = "GBR"
+		value = 200
+	}
+	ai_strategy = {
+		type = area_priority
+		id = british_isles
+		value = 500
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		area = british_isles
+		value = 25
+	}
+}

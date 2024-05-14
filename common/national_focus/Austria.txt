@@ -3642,6 +3642,10 @@ focus_tree = {
 			#HUN = {
 			#	set_cosmetic_tag = HUN_TRANS
 			#}
+			set_autonomy = {
+				target = CRO
+				autonomy_state = crownland
+			}
 		}
 	}
 

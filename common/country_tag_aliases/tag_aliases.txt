@@ -21,7 +21,7 @@ VKM = {
 }
 ### VS Judea
 VSJ = {
-	original_tag = YAK
+	original_tag = SIB
 	has_cosmetic_tag = VSJ
 }
 ### VS Turania

@@ -1467,7 +1467,7 @@ create_VKM = {
 	}
 }
 create_VSJ = {
-	YAK = {
+	SIB = {
 		set_politics = {
 			ruling_party = totalist
 			last_election = "1936.1.1"

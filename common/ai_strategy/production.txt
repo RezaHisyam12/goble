@@ -4,6 +4,7 @@ division_limiter = {
 	}
 	enable = {
 		has_reached_maximum_divisions = yes
+		NOT = { surrender_progress > 0.05 }
 	}
 
 	abort_when_not_enabled = yes

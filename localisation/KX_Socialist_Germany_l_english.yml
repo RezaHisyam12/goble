@@ -3788,6 +3788,8 @@ rotermorgenmisc.1004.b:0 "No, of course not! We are not petty Reactionaries!"
 germanic_socialism_subtype:0 "National Marxism"
 germanic_socialism_subtype_desc:0 "§Y(National Marxism)§!\n\nCombining fierce Nationalist and Supremacist notions with Marxist ideology, National Marxism calls for the state to coalesce around one central figure - the Volksführer - as the people as a whole progress towards a unified future. Fiercely Totalitarian and Authoritarian beyond compare, it stresses the importance of scientific advancement, racial purity, Marxist economics, anti-semitism, cooperation between the masses, total nationalization of every aspect of the state, and national pride bordering on zealotry. National Marxism is detested by the wider Leftist world but still fights for the Revolution - a pure Revolution - just the same."
 
+GRU_new_germania_modifier:0 "£pol_idea Germania"
+
 AUS_financial_ties_broken: "Austro-Hungarian Ties Broken"
 AUS_financial_ties_broken_desc: "The Crown of Hungary refuses to pay their taxes into the common coffers for the common ministries.\n\nThey are still discontent with the formation of the Kingdom of Illyria as a resolution of the South Slavic revolts of 1926, and see themselves as betrayed by the Viennese government. They wish to be compensated for the loss of the Croatian lands."
 
@@ -3888,7 +3890,7 @@ AUS_central_power:0 "Central Powers"
 
 AUS_purple_phoenix_idea: "Empire Reformed"
 AUS_orthodox_idea: "Nation of Faith"
-AUS_national_rebirth_idea: "Imperial Ambition"
+AUS_national_rebirth_idea: "Imperial Ambitions"
 AUS_rebuilding: "Reparaturprogramm"
 AUS_aftermath: "Post-War Devastation"
 AUS_Bureaucracy: "Imperial Bureaucracy"

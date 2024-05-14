@@ -837,4 +837,8 @@ spriteTypes = {
 		name = "GFX_idea_advisors_austria2"
 		texturefile = "gfx/interface/ideas/ideas/advisors_austria2.png"
 	}
+	spriteType = {
+		name = "GFX_idea_idea_GER_the_two_principles"
+		texturefile = "gfx/interface/ideas/GRU/idea_GER_the_two_principles.dds"
+	}
 }

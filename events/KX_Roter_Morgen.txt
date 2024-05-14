@@ -2045,6 +2045,9 @@ country_event = { # Germania finished
 			}		
 		set_province_name = { id = 6521 name = "Festungsstadt Germania"}
 		64 = {
+			add_dynamic_modifier = {
+				modifier = GRU_new_germania_modifier
+			}
 			add_building_construction = {
 				type = infrastructure
 				level = 8
@@ -2083,6 +2086,9 @@ country_event = { # Germania finished
 			}		
 		set_province_name = { id = 11431 name = "Festungsstadt Germania"}
 		57 = {
+			add_dynamic_modifier = {
+				modifier = GRU_new_germania_modifier
+			}
 			add_building_construction = {
 				type = infrastructure
 				level = 8
@@ -2122,6 +2128,9 @@ country_event = { # Germania finished
 			}		
 		set_province_name = { id = 374 name = "Festungsstadt Germania"}
 		59 = {
+			add_dynamic_modifier = {
+				modifier = GRU_new_germania_modifier
+			}
 			add_building_construction = {
 				type = infrastructure
 				level = 8
@@ -2173,6 +2182,9 @@ country_event = { # Germania finished
 			}		
 		set_province_name = { id = 11343 name = "Festungsstadt Germania"}
 		63 = {
+			add_dynamic_modifier = {
+				modifier = GRU_new_germania_modifier
+			}
 			add_building_construction = {
 				type = infrastructure
 				level = 8
@@ -2224,6 +2236,9 @@ country_event = { # Germania finished
 			}		
 		set_province_name = { id = 3474 name = "Festungsstadt Germania"}
 		54 = {
+			add_dynamic_modifier = {
+				modifier = GRU_new_germania_modifier
+			}
 			add_building_construction = {
 				type = infrastructure
 				level = 8

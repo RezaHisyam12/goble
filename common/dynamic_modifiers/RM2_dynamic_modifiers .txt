@@ -1,0 +1,14 @@
+
+	
+GRU_new_germania_modifier = {
+	icon = "idea_GER_the_two_principles"
+	enable = { always = yes }
+	remove_trigger = {
+		NOT = { is_owned_by = GRU }
+	}
+	
+	local_manpower = 0.5
+	local_building_slots_factor = 0.25
+	state_production_speed_buildings_factor = 0.5
+}
+					

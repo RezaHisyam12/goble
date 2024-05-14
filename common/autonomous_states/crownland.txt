@@ -23,7 +23,6 @@ autonomy_state = {
 		license_subject_master_purchase_cost = -1.0
 		cic_to_overlord_factor = 0.25
 		mic_to_overlord_factor = 0.25
-		unit_limit_subject_bonus = 1
 		peace_score_ratio_transferred_to_overlord = 0.2
 	}
 
