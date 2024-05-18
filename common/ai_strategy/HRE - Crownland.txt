@@ -234,6 +234,26 @@ RUS_crush_hre = {
 	}
 }
 
+RUS_dont_naval_invade_if_fighting_hre = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = AUS
+		AUS = { 
+			has_capitulated = no
+			has_country_flag = HRE_rise
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invasion_unit_request
+		area = globally
+		value = -500
+	}
+}
+
 #################
 ### Special ###
 #################
