@@ -106,7 +106,7 @@ GRU_dislikes_entente = {
 	}
 }
 
-AUS_ignore_LUX = {
+GRU_ignore_LUX = {
 	allowed = {
 		original_tag = GRU
 	}
@@ -126,7 +126,7 @@ AUS_ignore_LUX = {
 	}
 }
 
-AUS_ignore_SWI = {
+GRU_ignore_SWI = {
 	allowed = {
 		original_tag = GRU
 	}
@@ -146,7 +146,7 @@ AUS_ignore_SWI = {
 	}
 }
 
-AUS_ignore_POL = {
+GRU_ignore_POL = {
 	allowed = {
 		original_tag = GRU
 	}
@@ -166,7 +166,7 @@ AUS_ignore_POL = {
 	}
 }
 
-AUS_ignore_UKR = {
+GRU_ignore_UKR = {
 	allowed = {
 		original_tag = GRU
 	}

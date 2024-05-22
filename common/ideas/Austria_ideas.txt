@@ -668,20 +668,6 @@ ideas = {
 				air_interception_detect_factor = 0.10
 				ground_attack_factor = 0.20
 			}
-			equipment_bonus = {
-				small_plane_airframe = {
-					build_cost_ic = -0.10
-					instant = yes
-				}
-				small_plane_cas_airframe = {
-					build_cost_ic = -0.10
-					instant = yes
-				}
-				medium_plane_airframe = {
-					build_cost_ic = -0.10
-					instant = yes
-				}
-			}
 		}
 
 		AUS_imperial_development_scheme_2 = {

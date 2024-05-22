@@ -1,6 +1,28 @@
 #################
 ### Diplomacy ###
 #################
+AUS_hates_socialists = {
+	reversed = yes
+
+	enable_reverse = {
+		AUS = {
+			is_subject = no
+			has_socialist_government = no
+		}
+	}
+	enable = {
+		has_socialist_government = yes
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = antagonize
+		id = AUS
+		value = 300
+	}
+}
+
 AUS_the_mountain_wall = {
 	allowed = {
 		original_tag = AUS

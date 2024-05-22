@@ -2045,12 +2045,13 @@ country_event = { # Germania finished
 			}		
 		set_province_name = { id = 6521 name = "Festungsstadt Germania"}
 		64 = {
+			set_state_category = twelve
 			add_dynamic_modifier = {
 				modifier = GRU_new_germania_modifier
 			}
 			add_building_construction = {
 				type = infrastructure
-				level = 8
+				level = 2
 				instant_build = yes
 			}
 			add_building_construction = {
@@ -2086,12 +2087,13 @@ country_event = { # Germania finished
 			}		
 		set_province_name = { id = 11431 name = "Festungsstadt Germania"}
 		57 = {
+			set_state_category = twelve
 			add_dynamic_modifier = {
 				modifier = GRU_new_germania_modifier
 			}
 			add_building_construction = {
 				type = infrastructure
-				level = 8
+				level = 2
 				instant_build = yes
 			}
 			add_building_construction = {
@@ -2128,12 +2130,13 @@ country_event = { # Germania finished
 			}		
 		set_province_name = { id = 374 name = "Festungsstadt Germania"}
 		59 = {
+			set_state_category = twelve
 			add_dynamic_modifier = {
 				modifier = GRU_new_germania_modifier
 			}
 			add_building_construction = {
 				type = infrastructure
-				level = 8
+				level = 2
 				instant_build = yes
 			}
 			add_building_construction = {
@@ -2182,12 +2185,13 @@ country_event = { # Germania finished
 			}		
 		set_province_name = { id = 11343 name = "Festungsstadt Germania"}
 		63 = {
+			set_state_category = twelve
 			add_dynamic_modifier = {
 				modifier = GRU_new_germania_modifier
 			}
 			add_building_construction = {
 				type = infrastructure
-				level = 8
+				level = 2
 				instant_build = yes
 			}
 			add_building_construction = {
@@ -2236,12 +2240,13 @@ country_event = { # Germania finished
 			}		
 		set_province_name = { id = 3474 name = "Festungsstadt Germania"}
 		54 = {
+			set_state_category = twelve
 			add_dynamic_modifier = {
 				modifier = GRU_new_germania_modifier
 			}
 			add_building_construction = {
 				type = infrastructure
-				level = 8
+				level = 2
 				instant_build = yes
 			}
 			add_building_construction = {
