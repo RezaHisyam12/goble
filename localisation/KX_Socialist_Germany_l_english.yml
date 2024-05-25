@@ -250,7 +250,7 @@ GRU_agrarian_collectivisation_desc:0 "The agrarian lands must be nationalized an
 
 GRU_volksgesundheitsamt:0 "Boden und Blut"
 GRU_volksgesundheitsamt_desc:0 "The Soil and the Blood are what our Nation is made of and we must safeguard it. No matter the cost, We will defend our race and our borders to our last breath!"
-GRU_proclaim_victory_over_judeo_capitalism:0 "Proclaim Victory over Jewish-Funded Capitalism"
+GRU_proclaim_victory_over_judeo_capitalism:0 "Proclaim Victory over Judeo-Capitalism"
 GRU_proclaim_victory_over_judeo_capitalism_desc:0 "With our power seizure over Germany we have finally defeated the Judeo-Capitalists! They have done great damage to our nation with their capitalist lies and discare for the common man! Let our militias deal with them!"
 
 
@@ -1425,8 +1425,8 @@ rotermorgenmisc.803.t:0 "The [From.GetName] rebuke us!"
 rotermorgenmisc.803.d:0 "Despite our devotion to lenin, and our similar desire for an independent internationale from the French revisionists, [From.GetNamedef] has rejected our membership in their alliance. While this has of course distraught much of the party, we have made no lack of effort to redouble our crusade against the rising tide of false socialism, let the fact we stand alone be proof that we alone must lead the revolution!."
 rotermorgenmisc.803.a:0 "We stand alone, against all revisionists!"
 
-rotermorgenmisc.810.t:0 "Victory over Jewish-Funded-Capitalism"
-rotermorgenmisc.810.d:0 "After our proclamation of victory over Jewish-Funded Capitalism within our borders many of our more radical supporters took it as a green light signal for escalation, and during the following nights Jewish stores and houses were raided by disorganized militia and common people alike. While A comment was made by the Government asking citizens to not take any violent action, It is clear that the party seems to care little about the terrible violence racking the jewish population, and prehaps may be a symbol of things to come..."
+rotermorgenmisc.810.t:0 "Victory over Judeo-Capitalism"
+rotermorgenmisc.810.d:0 "After our proclamation of victory over Judeo-Capitalism within our borders many of our more radical supporters took it as a green light signal for escalation, and during the following nights Jewish stores and houses were raided by disorganized militia and common people alike. While A comment was made by the Government asking citizens to not take any violent action, It is clear that the party seems to care little about the terrible violence racking the jewish population, and prehaps may be a symbol of things to come..."
 rotermorgenmisc.810.a:0 "Damn."
 
 
