@@ -805,6 +805,44 @@ GRU_dont_trust_national_france = {
 ### Industry ###
 ################
 
+GRU_endsieg = { #Cease attacks if losing against France and has low equipment
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		surrender_progress > 0.25
+		stockpile_ratio = { archetype = infantry_equipment ratio < 0.1 }
+		FRA = {
+			has_war_with = ROOT
+			has_capitulated = no
+			surrender_progress < 0.1
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = FRA
+		priority = 150
+		ordertype = front
+		execute_order = no
+	}
+	ai_strategy = {
+		type = front_control
+		tag = HOL
+		priority = 150
+		ordertype = front
+		execute_order = no
+	}
+	ai_strategy = {
+		type = front_control
+		tag = RUS
+		priority = 150
+		ordertype = front
+		execute_order = no
+	}
+}
+
 GRU_build_tanks_if_france_is_aggressive = {
 	allowed = {
 		original_tag = GRU

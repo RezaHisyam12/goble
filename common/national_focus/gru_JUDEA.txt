@@ -76,6 +76,30 @@ focus_tree = {
 			516 = {
 					is_owned_and_controlled_by  = VSJ
 				}
+			1200 = {
+					is_owned_and_controlled_by  = VSJ
+				}
+			1201 = {
+					is_owned_and_controlled_by  = VSJ
+				}
+			1202 = {
+					is_owned_and_controlled_by  = VSJ
+				}
+			644 = {
+					is_owned_and_controlled_by  = VSJ
+				}
+			566 = {
+					is_owned_and_controlled_by  = VSJ
+				}
+			567 = {
+					is_owned_and_controlled_by  = VSJ
+				}
+			575 = {
+					is_owned_and_controlled_by  = VSJ
+				}
+			1292 = {
+					is_owned_and_controlled_by  = VSJ
+				}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus JUDEA_JUDAIZE_LAND"
@@ -116,6 +140,30 @@ focus_tree = {
 					add_core_of  = VSJ
 				}
 			811 = {
+					add_core_of  = VSJ
+				}
+			1200 = {
+					add_core_of  = VSJ
+				}
+			1201 = {
+					add_core_of  = VSJ
+				}
+			1202 = {
+					add_core_of  = VSJ
+				}
+			644 = {
+					add_core_of  = VSJ
+				}
+			566 = {
+					add_core_of  = VSJ
+				}
+			567 = {
+					add_core_of  = VSJ
+				}
+			575 = {
+					add_core_of  = VSJ
+				}
+			1292 = {
 					add_core_of  = VSJ
 				}
 		}

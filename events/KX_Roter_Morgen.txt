@@ -3248,7 +3248,6 @@ country_event = { # VSJ claims
 		570 = { add_claim_by = VSJ }
 		571 = { add_claim_by = VSJ }
 		572 = { add_claim_by = VSJ }
-		573 = { add_claim_by = VSJ }
 		576 = { add_claim_by = VSJ }
 		577 = { add_claim_by = VSJ }
 		578 = { add_claim_by = VSJ }
@@ -3259,6 +3258,10 @@ country_event = { # VSJ claims
 		1200 = { add_claim_by = VSJ }
 		1201 = { add_claim_by = VSJ }
 		1202 = { add_claim_by = VSJ }
+		1292 = { add_claim_by = VSJ }
+		575 = { add_claim_by = VSJ }
+		567 = { add_claim_by = VSJ }
+		566 = { add_claim_by = VSJ }
 	}
 }
 

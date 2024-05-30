@@ -2899,6 +2899,113 @@ GRU_germania_plan_decisions = {
 		}
 	}
 	#
+	GRU_pan_germanism_slovenia_decision = {
+		icon = GFX_pangermanicone
+		allowed = { original_tag = GRU }
+		available = {
+			is_subject = no
+			country_exists = SLO
+			SLO = {
+				NOT = { is_in_faction_with = FRA }
+			}
+		}
+		visible = {
+			has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = SLO
+				}
+			}
+		}
+		targets = { SLO }
+		target_root_trigger = {
+			has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = SLO
+				}	
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					any_allied_country = {
+						is_faction_leader = yes
+						overlord = {
+							strength_ratio = {
+								tag = ROOT
+								ratio > 0.7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_pan_germanism_slovenia_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_slovenia_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+			declare_war_on = {	type = annex_everything	target = SLO }
+		}
+	}
+	#
 	GRU_pan_germanism_bohemia_decision = {
 		icon = GFX_pangermanicone
 		allowed = { original_tag = GRU }
@@ -6024,10 +6131,10 @@ GRU_Germania_Stadt_decisions = {
 		icon = GFX_decision_category_germania_stadt
 
 		visible = {
-			has_completed_focus = GRU_german_millenia
+			has_completed_focus = GRU_NMDVP_PROCLAIM_GERMANIC_STATE
 		}
 		available = {
-			has_completed_focus = GRU_german_millenia
+			has_completed_focus = GRU_NMDVP_PROCLAIM_GERMANIC_STATE
 		}
 		fire_only_once = yes
 		cost = 500
@@ -10282,6 +10389,15 @@ GRU_expansion_three_volksreichskommissariat_kaukasia = {
 						}
 						OR = {
 							GRU = {
+								owns_state = 1265
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 1265
+							}
+						}
+						OR = {
+							GRU = {
 								owns_state = 1266
 							}
 							any_other_country = {
@@ -10319,6 +10435,7 @@ GRU_expansion_three_volksreichskommissariat_kaukasia = {
 								transfer_state = 218
 								transfer_state = 1263
 								transfer_state = 1264
+								transfer_state = 1265
 								
 								transfer_state = 1266
 								transfer_state = 1226
@@ -10986,29 +11103,47 @@ GRU_expansion_two_volksstaat_Judea = {
 						}
 						OR = {
 							GRU = {
-								owns_state = 562
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								owns_state = 562
-							}
-						}
-						OR = {
-							GRU = {
-								owns_state = 637
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								owns_state = 637
-							}
-						}
-						OR = {
-							GRU = {
 								owns_state = 565
 							}
 							any_other_country = {
 								is_subject_of = GRU
 								owns_state = 565
+							}
+						}
+						OR = {
+							GRU = {
+								owns_state = 566
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 566
+							}
+						}
+						OR = {
+							GRU = {
+								owns_state = 567
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 567
+							}
+						}
+						OR = {
+							GRU = {
+								owns_state = 575
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 575
+							}
+						}
+						OR = {
+							GRU = {
+								owns_state = 1292
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 1292
 							}
 						}
 				}
@@ -11040,9 +11175,11 @@ GRU_expansion_two_volksstaat_Judea = {
 								transfer_state = 811
 								transfer_state = 574
 								transfer_state = 575
-								transfer_state = 562
-								transfer_state = 637
 								transfer_state = 565
+								transfer_state = 575
+								transfer_state = 566
+								transfer_state = 567
+								transfer_state = 1292
 					}
 					hidden_effect = {
 				VSJ = {	country_event = rotermorgenmisc.950 }
@@ -12281,6 +12418,7 @@ GRU_stahlpakt_alliance_decisions = {
 			is_major = yes
 			is_subject = no
 			is_faction_leader = yes
+			has_war = no
 			NOT = { has_country_leader = { name = "Reinhard Heydrich" ruling_only = yes } }
 		}
 		visible = {
