@@ -584,7 +584,7 @@ country_event = { # GRU setup
 							desc = "GRU_REB_DESC"
 							picture = "gfx/leaders/GRU/NMKF.png"
 							expire = "1.1.1"
-							ideology = germanic_socialism_subtype
+							ideology = tot_left_nationalism_subtype
 				}
 				create_country_leader = {
 					name = "Konrad Adenauer"
@@ -1143,7 +1143,7 @@ country_event = { # CONGRESS
 				desc = "GRU_GOEBBELS_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Josef_Goebbels_13.png"
 				expire = "1.1.1"
-				ideology = germanic_socialism_subtype
+				ideology = tot_left_nationalism_subtype
 				traits = { gru_froncophobe }
 			}
 			set_party_name = {
@@ -1244,7 +1244,7 @@ country_event = { # CONGRESS
 				desc = "GRU_GOEBBELS_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Josef_Goebbels_13.png"
 				expire = "1.1.1"
-				ideology = germanic_socialism_subtype
+				ideology = tot_left_nationalism_subtype
 			}
 			set_party_name = {
 				ideology = syndicalist
@@ -1441,7 +1441,7 @@ country_event = { # CONGRESS
 				desc = "GRU_GOEBBELS_DESC"
 				picture = "gfx/leaders/GRU/Portrait_Germany_Josef_Goebbels_13.png"
 				expire = "1.1.1"
-				ideology = germanic_socialism_subtype
+				ideology = tot_left_nationalism_subtype
 			}
 			set_party_name = {
 				ideology = syndicalist

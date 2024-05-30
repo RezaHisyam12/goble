@@ -1299,7 +1299,7 @@ create_VKB = {
 			desc = "POLITICS_himmler_DESC"
 			picture = "gfx/leaders/GRU/Portrait_VKB_Heinrich_Himmler.png"
 			expire = "1.1.1"
-			ideology = germanic_socialism_subtype
+			ideology = tot_left_nationalism_subtype
 			traits = { 
 			}
 		}
@@ -1338,7 +1338,7 @@ create_VKR = {
 			desc = "POLITICS_Rosenberg_DESC"
 			picture = "gfx/leaders/GRU/Portrait_Germany_Alfred_rosenberg.png"
 			expire = "1.1.1"
-			ideology = germanic_socialism_subtype
+			ideology = tot_left_nationalism_subtype
 			traits = { 
 			}
 		}
@@ -1376,7 +1376,7 @@ create_VKK = {
 			desc = "POLITICS_hess_DESC"
 			picture = "gfx/leaders/GRU/Portrait_Germany_Rudolf_Hess2.png"
 			expire = "1.1.1"
-			ideology = germanic_socialism_subtype
+			ideology = tot_left_nationalism_subtype
 			traits = { 
 			}
 		}
@@ -1414,7 +1414,7 @@ create_HYP = {
 			desc = "POLITICS_Lindholm_DESC"
 			picture = "gfx/leaders/GRU/Portrait_HYP_sevn.png"
 			expire = "1.1.1"
-			ideology = germanic_socialism_subtype
+			ideology = tot_left_nationalism_subtype
 			traits = { }
 		}
 		create_country_leader = {
@@ -1449,7 +1449,7 @@ create_VKM = {
 			desc = "POLITICS_strasser_DESC"
 			picture = "gfx/leaders/GRU/Portrait_Germany_Karl_Vonheldoff.png"
 			expire = "1.1.1"
-			ideology = germanic_socialism_subtype
+			ideology = tot_left_nationalism_subtype
 			traits = { 
 			}
 		}
@@ -1485,7 +1485,7 @@ create_VSJ = {
 			desc = "POLITICS_strasser_DESC"
 			picture = "gfx/leaders/GRU/GRU_Portrait_Avraham_Stern.png"
 			expire = "1.1.1"
-			ideology = germanic_socialism_subtype
+			ideology = tot_left_nationalism_subtype
 			traits = { 
 			}
 		}
@@ -1522,7 +1522,7 @@ create_VST = {
 			desc = "POLITICS_strasser_DESC"
 			picture = "gfx/leaders/GRU/Portrait_Germany_Mirsaid_Sultangaliev.png"
 			expire = "1.1.1"
-			ideology = germanic_socialism_subtype
+			ideology = tot_left_nationalism_subtype
 			traits = { 
 			}
 		}

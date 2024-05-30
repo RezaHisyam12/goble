@@ -1008,6 +1008,20 @@ ideas = {
 			}
 		}
 
+		VSJ_terror_bombing = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VSJ_terror_bombing" }
+			allowed = { always = no }
+			picture = terror_bombing_2
+			modifier = {
+				production_speed_buildings_factor = -0.40
+				production_factory_max_efficiency_factor = -0.10
+				production_factory_efficiency_gain_factor = -0.07
+				consumer_goods_use_modifier = 0.07
+				industry_free_repair_factor = -0.70
+				monthly_population = -0.05
+			}
+		}
+
 		AUS_standardized_industry = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea CAN_standardized_industry"}
 			allowed = { always = no }

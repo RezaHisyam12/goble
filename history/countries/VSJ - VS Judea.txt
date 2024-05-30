@@ -91,7 +91,7 @@ create_country_leader = {
 	desc = "POLITICS_Stern_DESC"
 	picture = "gfx/leaders/GRU/GRU_Portrait_Avraham_Stern.png"
 	expire = "1.1.1"
-	ideology = germanic_socialism_subtype
+	ideology = tot_left_nationalism_subtype
 	traits = { 
 	}
 }

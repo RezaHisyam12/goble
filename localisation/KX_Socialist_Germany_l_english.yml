@@ -3830,6 +3830,9 @@ gru_VKK:0 "Kaukasia"
 gru_VKM:0 "Moskowia"
 gru_VKR:0 "Ruthenia"
 crownland:0 "Crownland"
+VSJ_terror_bombing: "Luftwaffe Training Ground"
+VSJ_terror_bombing_desc: "With depressing regularity, Luftwaffe bombers from the airfields of Reichskommissariat Moskowien fly over the Volkskommissariat Judea of eastern Russia, bombing everything they can see and severely affecting nearly every aspect of Jews and Russian life as a result."
+
 
 AUS_tag_becomes_crownland: "§H[?tag_to_release.GetName]§! becomes a §HCrownland§!."
 AUS_hungary_becomes_crownland: "§H[?tag_to_release.GetName]§! will be reorganised into a §HCrownland§!."

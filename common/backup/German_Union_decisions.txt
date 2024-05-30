@@ -10463,7 +10463,7 @@ GRU_new_alliance_decisions = {
 #			name = "Ernst Rhoem"
 #			picture = "gfx\leaders\GRU\Portrait_Germany_Ernst_Rhoem.png"
 #			expire = "1965.1.1"
-#			ideology = germanic_socialism_subtype }
+#			ideology = tot_left_nationalism_subtype }
 #			
 #		}
 #	}
@@ -10539,7 +10539,7 @@ GRU_new_alliance_decisions = {
 #			name = "Anton Drexler"
 #			picture = "gfx\leaders\GRU\Portrait_GRU_Anton_Drexler.png"
 #			expire = "1965.1.1"
-#			ideology = germanic_socialism_subtype }
+#			ideology = tot_left_nationalism_subtype }
 #			
 #		
 #		}

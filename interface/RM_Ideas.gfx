@@ -841,4 +841,8 @@ spriteTypes = {
 		name = "GFX_idea_GER_the_two_principles"
 		texturefile = "gfx/interface/ideas/GRU/GER_the_two_principles.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_terror_bombing_2"
+		texturefile = "gfx/interface/ideas/GRU/terror_bombing_2.dds"
+	}
 }
