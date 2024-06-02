@@ -4059,6 +4059,8 @@ shared_focus = {
 						name = ANARCHIST_GERMANS
 				}
 				add_ideas = FAUD_SOCIETY_THREE
+				add_ideas = GRU_RED_MILITIAS_TWO
+				add_ideas = GRU_COUNCIL_ECONOMICS
 				}
 				WGR = {
 				create_country_leader = {
@@ -4076,6 +4078,7 @@ shared_focus = {
 				}
 				add_ideas = FAUD_SOCIETY_THREE
 				add_ideas = GRU_RED_MILITIAS_TWO
+				add_ideas = GRU_COUNCIL_ECONOMICS
 				}
 				NGF = {
 				create_country_leader = {
@@ -4093,6 +4096,7 @@ shared_focus = {
 				}
 				add_ideas = FAUD_SOCIETY_THREE
 				add_ideas = GRU_RED_MILITIAS_TWO
+				add_ideas = GRU_COUNCIL_ECONOMICS
 				}
 				BAY = {
 				create_country_leader = {
@@ -4110,6 +4114,7 @@ shared_focus = {
 				}
 				add_ideas = FAUD_SOCIETY_THREE
 				add_ideas = GRU_RED_MILITIAS_TWO
+				add_ideas = GRU_COUNCIL_ECONOMICS
 				}
 				set_autonomy = { target = DDR autonomy_state = RM_ANARCHOCOMMUNE }
 				set_autonomy = { target = NGF autonomy_state = RM_ANARCHOCOMMUNE }

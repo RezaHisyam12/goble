@@ -12278,7 +12278,7 @@ GRU_new_alliance_decisions = {
 #			name = "Alfred Rosenberg"
 #			picture = "gfx\leaders\GRU\Portrait_Germany_Alfred_rosenberg.png"
 #			expire = "1965.1.1"
-#			ideology = volkism_subtype }
+#			ideology = natpop_goebbels_subtype }
 #		
 #		}
 #	}
@@ -12326,7 +12326,7 @@ GRU_new_alliance_decisions = {
 #			name = "Adolphus Hitler"
 #			picture = "gfx\leaders\GRU\Portrait_GRU_Hitler.png"
 #			expire = "1965.1.1"
-#			ideology = national_populist_subtype }
+#			ideology = natpop_goebbels_subtype }
 #			
 #		
 #		}
