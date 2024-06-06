@@ -1602,26 +1602,6 @@ country_event = {
 }
 
 country_event = {
-	id = kr.hungary.33
-	###Culture Conflict - the Church
-	immediate = {log = "[GetDateText]: [Root.GetName]: event kr.hungary.33"}
-	title = kr.hungary.33.t
-	desc = kr.hungary.33.d
-	picture = GFX_HUN_event_intro
-	
-	fire_only_once = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = kr.hungary.33.a #Down with the Church!
-		hidden_effect = {
-			country_event = { id = kr.hungary.34 days = 60 }
-		}
-	}
-}
-
-country_event = {
 	id = kr.hungary.34
 	###Culture Conflict 2 - Aristocrats
 	immediate = {log = "[GetDateText]: [Root.GetName]: event kr.hungary.34"}
@@ -1635,9 +1615,6 @@ country_event = {
 	
 	option = {
 		name = kr.hungary.34.a #Down with the Church!
-		hidden_effect = {
-			country_event = { id = kr.hungary.35 days = 60 }
-		}
 	}
 }
 
@@ -1654,7 +1631,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = kr.hungary.35.a #We live in a Society
+		name = kr.hungary.35.a
 	}
 }
 
@@ -4032,168 +4009,6 @@ country_event = {
 			traits = {}
 		}
 		add_popularity = { ideology = social_conservative popularity = 0.20 }
-	}
-}
-
-# NatPop Overlord of Romania: Choice of Government
-country_event = {
-	id = kr.hungary.330
-	immediate = {log = "[GetDateText]: [Root.GetName]: event kr.hungary.330"}
-	title = kr.hungary.330.t
-	desc = kr.hungary.330.d
-	picture = GFX_report_event_generic_sign_treaty3
-
-	is_triggered_only = yes
-
-	immediate = {
-		RRM = { drop_cosmetic_tag = yes }
-	}
-
-	option = {
-		name = kr.hungary.330.a # Create a republic
-
-		custom_effect_tooltip = romania.103.tta
-
-		ai_chance = {
-			factor = 50
-		}
-
-		hidden_effect = {
-			RRM = {
-				set_cosmetic_tag = RRM_republic
-				set_politics = {
-					ruling_party = social_conservative
-					elections_allowed = no
-				}
-				add_popularity = { ideology = social_conservative popularity = 0.30 }
-				create_country_leader = {
-					name = "Anton Bibescu"
-					desc = "POLITICS_ANTON_BIBESCU_DESC"
-					picture = "gfx/leaders/RRM/Portrait_RRM_Anton_Bibescu.png"
-					expire = "1.1.1"
-					ideology = social_democrat_subtype
-					traits = { }
-				}
-
-				create_country_leader = {
-					name = "Anton Bibescu"
-					desc = "POLITICS_ANTON_BIBESCU_DESC"
-					picture = "gfx/leaders/RRM/Portrait_RRM_Anton_Bibescu.png"
-					expire = "1.1.1"
-					ideology = social_liberal_subtype
-					traits = { }
-				}
-
-				create_country_leader = {
-					name = "Anton Bibescu"
-					desc = "POLITICS_ANTON_BIBESCU_DESC"
-					picture = "gfx/leaders/RRM/Portrait_RRM_Anton_Bibescu.png"
-					expire = "1.1.1"
-					ideology = market_liberal_subtype
-					traits = { }
-				}
-
-				create_country_leader = {
-					name = "Anton Bibescu"
-					desc = "POLITICS_ANTON_BIBESCU_DESC"
-					picture = "gfx/leaders/RRM/Portrait_RRM_Anton_Bibescu.png"
-					expire = "1.1.1"
-					ideology = social_conservative_subtype
-					traits = { }
-				}
-
-				create_country_leader = {
-					name = "Anton Bibescu"
-					desc = "POLITICS_ANTON_BIBESCU_DESC"
-					picture = "gfx/leaders/RRM/Portrait_RRM_Anton_Bibescu.png"
-					expire = "1.1.1"
-					ideology = authoritarian_democrat_subtype
-					traits = { }
-				}
-
-				create_country_leader = {
-					name = "Anton Bibescu"
-					desc = "POLITICS_ANTON_BIBESCU_DESC"
-					picture = "gfx/leaders/RRM/Portrait_RRM_Anton_Bibescu.png"
-					expire = "1.1.1"
-					ideology = paternal_autocrat_subtype
-					traits = { }
-				}
-			}
-		}
-	}
-
-	option = {
-		name = kr.hungary.330.b # Set up a regency
-
-		custom_effect_tooltip = romania.103.ttb
-
-		ai_chance = {
-			factor = 50
-		}
-
-		hidden_effect = {
-			RRM = {
-				set_politics = {
-					ruling_party = paternal_autocrat
-					elections_allowed = no
-				}
-				add_popularity = { ideology = paternal_autocrat popularity = 0.30 }
-				create_country_leader = {
-					name = "Nicolae I"
-					desc = "POLITICS_NICOLAE_I_DESC"
-					picture = "gfx/leaders/ROM/Portrait_Romania_Nicolae_I.png"
-					expire = "1.1.1"
-					ideology = social_democrat_subtype
-					traits = { }
-				}
-
-				create_country_leader = {
-					name = "Nicolae I"
-					desc = "POLITICS_NICOLAE_I_DESC"
-					picture = "gfx/leaders/ROM/Portrait_Romania_Nicolae_I.png"
-					expire = "1.1.1"
-					ideology = social_liberal_subtype
-					traits = { }
-				}
-
-				create_country_leader = {
-					name = "Nicolae I"
-					desc = "POLITICS_NICOLAE_I_DESC"
-					picture = "gfx/leaders/ROM/Portrait_Romania_Nicolae_I.png"
-					expire = "1.1.1"
-					ideology = market_liberal_subtype
-					traits = { }
-				}
-
-				create_country_leader = {
-					name = "Nicolae I"
-					desc = "POLITICS_NICOLAE_I_DESC"
-					picture = "gfx/leaders/ROM/Portrait_Romania_Nicolae_I.png"
-					expire = "1.1.1"
-					ideology = social_conservative_subtype
-					traits = { }
-				}
-
-				create_country_leader = {
-					name = "Nicolae I"
-					desc = "POLITICS_NICOLAE_I_DESC"
-					picture = "gfx/leaders/ROM/Portrait_Romania_Nicolae_I.png"
-					expire = "1.1.1"
-					ideology = prussian_constitutionalism_subtype
-					traits = { }
-				}
-
-				create_country_leader = {
-					name = "Nicolae I"
-					desc = "POLITICS_NICOLAE_I_DESC"
-					picture = "gfx/leaders/ROM/Portrait_Romania_Nicolae_I.png"
-					expire = "1.1.1"
-					ideology = absolute_monarchy_subtype
-					traits = { }
-				}
-			}
-		}
 	}
 }
 

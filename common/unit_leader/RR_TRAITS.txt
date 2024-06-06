@@ -154,8 +154,6 @@ leader_traits = {
 		planning_skill_factor = 1
 	}
 	
-	
-	
 	red_guard_leaders = {
 		type = land
 		trait_type = personality_trait

@@ -476,25 +476,25 @@ spriteTypes = {
 		name = "GFX_trait_RR_OFFICER"
 		texturefile = "gfx/interface/traits/rr_officer.png"
 	}
-	
+	spriteType = {
+		name = "GFX_trait_red_guard_leaders"
+		texturefile = "gfx/interface/traits/red_guard_leaders.png"
+	}
 	spriteType = {
 		name = "GFX_trait_cosmopolitan_war_tourist"
 		texturefile = "gfx/interface/traits/wandering_rev.png"
-	}
-	
-	spriteType = {
-		name = "GFX_trait_red_guard_leaders"
-		texturefile = "gfx/interface/traits/wandering_rev.png"
-	}
-	
+	}	
 	spriteType = {
 		name = "GFX_trait_radsoc_rev_leaders"
 		texturefile = "gfx/interface/traits/radsoc_rev.png"
 	}
-	
 	spriteType = {
 		name = "GFX_trait_Nazbol_rev_leaders"
 		texturefile = "gfx/interface/traits/Nazbol_rev_leaders.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_aimless_bolshevik"
+		texturefile = "gfx/interface/traits/aimless_bolshevik.png"
 	}
 	spriteType = {
 		name = "GFX_trait_XINET_MAINFRAME"
