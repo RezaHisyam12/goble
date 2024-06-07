@@ -69,6 +69,10 @@ ideas = {
 				training_time_factor = 0.20
 				weekly_manpower = 350
 				non_core_manpower = 0.05
+
+				amphibious_invasion = 0.1
+				amphibious_invasion_defence = 0.2
+				invasion_preparation = -0.5
 			}
 		}
 		
@@ -86,6 +90,10 @@ ideas = {
 				special_forces_cap = 0.25
 				training_time_factor = 0.20
 				non_core_manpower = 0.05
+				
+				amphibious_invasion = 0.1
+				amphibious_invasion_defence = 0.2
+				invasion_preparation = -0.5
 			}
 		}
 
@@ -100,6 +108,7 @@ ideas = {
 				army_attack_factor = -0.10
 				army_defence_factor = -0.10
 				non_core_manpower = 0.05
+				attrition = -0.05
 			}
 		}
 
@@ -110,6 +119,8 @@ ideas = {
 			modifier = {
 				conscription = 0.05
 				conscription_factor = -0.35
+				attrition = -0.05
+				recon_factor = 0.1
 				non_core_manpower = 0.05
 			}
 		}
@@ -119,6 +130,8 @@ ideas = {
 			picture = advisors_germany
 			allowed = { always = no }
 			modifier = {
+				attrition = -0.05
+				recon_factor = 0.1
 				conscription = 0.05
 				conscription_factor = -0.35
 				special_forces_cap = 0.10
@@ -133,6 +146,8 @@ ideas = {
 			picture = advisors_germany
 			allowed = { always = no }
 			modifier = {
+				attrition = -0.05
+				recon_factor = 0.1
 				conscription = 0.05
 				conscription_factor = -0.35
 				army_morale_factor = 0.05
@@ -239,7 +254,7 @@ ideas = {
 			picture = FRA_scw_intervention_republicans_focus
 			allowed = { always = no }
 			modifier = {
-				war_support_weekly = -0.005
+				war_support_factor = -0.3
 				stability_factor = -0.3
 				political_power_gain = -0.20
 				local_resources_factor = -0.15
@@ -252,7 +267,7 @@ ideas = {
 			picture = FRA_scw_intervention_republicans_focus
 			allowed = { always = no }
 			modifier = {
-				war_support_weekly = -0.003
+				war_support_factor = -0.2
 				stability_factor = -0.2
 				political_power_gain = -0.10
 				local_resources_factor = -0.10
@@ -278,11 +293,11 @@ ideas = {
 			picture = great_depression
 			allowed = { always = no }
 			modifier = {
-				stability_factor = -0.15
-				political_power_gain = -0.10
+				stability_factor = -0.10
+				political_power_gain = -0.05
 				production_factory_max_efficiency_factor = -0.05
-				industrial_capacity_factory = -0.1
-				production_speed_buildings_factor = -0.15
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.10
 			}
 		}
 
@@ -316,7 +331,6 @@ ideas = {
 				min_export = -0.4
 			}
 		}
-
 
 		GEA_flush_budget = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEA_flush_budget"}

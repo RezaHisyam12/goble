@@ -298,7 +298,7 @@ focus_tree = {
 			}
 			else = {
 				add_tech_bonus = {
-					name = GEA_refine_our_methods
+					name = land_doc_bonus
 					bonus = 1
 					uses = 1
 					category = electronics
@@ -307,7 +307,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
-				uses = 1
+				uses = 2
 				category = land_doctrine
 			}
 			add_manpower = 10000
@@ -326,7 +326,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = GEA_mission1
 		ai_will_do = {
-			factor = 2
+			factor = 5
 			modifier = {
 				factor = 5
 				has_war = yes
@@ -340,6 +340,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_germantroops3"
 			custom_effect_tooltip = GEA_Polizeiregiment
@@ -365,7 +368,7 @@ focus_tree = {
 		y = 5
 		relative_position_id = GEA_mission1
 		ai_will_do = {
-			factor = 2
+			factor = 5
 			modifier = {
 				factor = 5
 				has_war = yes
@@ -379,6 +382,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_germantroops4"
 			custom_effect_tooltip = GEA_Prussian
@@ -410,7 +416,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = GEA_mission1
 		ai_will_do = {
-			factor = 2
+			factor = 8
 			modifier = {
 				factor = 5
 				has_war = yes
@@ -424,6 +430,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_localtroops1"
 			swap_ideas = {
@@ -446,7 +455,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = GEA_mission1
 		ai_will_do = {
-			factor = 2
+			factor = 5
 			modifier = {
 				factor = 5
 				has_war = yes
@@ -460,6 +469,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_localtroops2"
 			custom_effect_tooltip = GEA_Natives
@@ -482,7 +494,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = GEA_mission1
 		ai_will_do = {
-			factor = 2
+			factor = 5
 			modifier = {
 				factor = 5
 				has_war = yes
@@ -496,6 +508,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_localtroops3"
 			swap_ideas = {
@@ -518,7 +533,7 @@ focus_tree = {
 		y = 5
 		relative_position_id = GEA_mission1
 		ai_will_do = {
-			factor = 2
+			factor = 5
 			modifier = {
 				factor = 5
 				has_war = yes
@@ -532,6 +547,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_localtroops4"
 			custom_effect_tooltip = GEA_Rights
@@ -579,6 +597,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_air1"
 			air_experience = 25
@@ -649,13 +670,16 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_air3"
 			air_experience = 25
 			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
 				cost_reduction = 0.5
-				uses = 1
+				uses = 2
 				category = air_doctrine
 			}
 		}
@@ -687,6 +711,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_air4"
 			add_tech_bonus = {
@@ -732,6 +759,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_air5"
 			add_tech_bonus = {
@@ -773,17 +803,20 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_air6"
 			add_equipment_to_stockpile = {
 				type = small_plane_airframe
 				amount = 200
-				producer = GEA
+				producer = GER
 			}
 			add_equipment_to_stockpile = {
 				type = cv_small_plane_airframe
 				amount = 100
-				producer = GEA
+				producer = GER
 			}
 		}
 	}
@@ -854,6 +887,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_navy2"
 			add_political_power = 50
+			add_doctrine_cost_reduction = {
+				name = naval_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -875,10 +914,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 			modifier = {
-				factor = 0
-				already_has_other_doctrine_FIB = yes
-			}
-			modifier = {
 				factor = 3
 				any_enemy_country = { is_actual_major = yes }
 			}
@@ -891,6 +926,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_fleet1"
 			add_doctrine_cost_reduction = {
@@ -928,15 +966,62 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_fleet3"
 			hidden_effect = { country_event = { id = Ostasien.53 days = 500 } }
 			custom_effect_tooltip = GEA_I_WANT_BB
 			add_tech_bonus = {
 				name = GEA_fleet3
-				bonus = 2
+				bonus = 1.5
 				uses = 1
 				category = bb_tech
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = { has_dlc_mtg = yes }
+				create_equipment_variant = {
+					name = "Neckar Class" #equivalent to OTL Bismarck
+					type = ship_hull_heavy_2
+					name_group = GER_BB_IMPERIAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_heavy_battery_2
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = heavy_ship_engine_2
+						fixed_ship_secondaries_slot = ship_secondaries_2
+						fixed_ship_armor_slot = ship_armor_bb_1
+						front_1_custom_slot = ship_anti_air_1
+						mid_1_custom_slot = ship_airplane_launcher_1
+						mid_2_custom_slot = ship_secondaries_2
+						rear_1_custom_slot = ship_heavy_battery_2
+					}
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_2
+						version_name = "Neckar Class"
+					}
+					name = "SMS Neckar"
+					requested_factories = 1
+					progress = 0.45
+					amount = 1
+				}
+			}
+			else = {
+				add_equipment_production = {
+					equipment = {
+						type = battleship_2
+					}
+					name = "SMS Neckar"
+					requested_factories = 1
+					progress = 0.45
+					amount = 1
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -959,10 +1044,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 			modifier = {
-				factor = 0
-				already_has_other_doctrine_TI = yes
-			}
-			modifier = {
 				factor = 3
 				any_enemy_country = { is_actual_major = yes }
 			}
@@ -975,6 +1056,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_battlecruiser1"
 			add_doctrine_cost_reduction = {
@@ -1013,15 +1097,177 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_fleet_2"
 			custom_effect_tooltip = GEA_Fleet_will_arrive
 			hidden_effect = { country_event = { id = Ostasien.56 days = 200 } }
 			add_tech_bonus = {
 				name = GEA_fleet_2
-				bonus = 2
+				bonus = 1
 				uses = 1
 				category = dd_tech
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = { has_dlc_mtg = yes }
+				create_equipment_variant = {
+					name = "Zerstörer 1939"
+					type = ship_hull_light_3
+					name_group = GER_DD_IMPERIAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_light_battery_2
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_fire_control_system_slot = ship_sonar_1
+						fixed_ship_radar_slot = ship_radar_1
+						fixed_ship_engine_slot = light_ship_engine_2
+						fixed_ship_torpedo_slot = ship_torpedo_2
+						mid_1_custom_slot = ship_mine_layer_1
+						rear_1_custom_slot = ship_depth_charge_2
+						front_1_custom_slot = ship_light_battery_2
+					}
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_3
+						version_name = "Zerstörer 1939"
+					}
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_3
+						version_name = "Zerstörer 1939"
+					}
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_3
+						version_name = "Zerstörer 1939"
+					}
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_3
+						version_name = "Zerstörer 1939"
+					}
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_3
+						version_name = "Zerstörer 1939"
+					}
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_3
+						version_name = "Zerstörer 1939"
+					}
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_3
+						version_name = "Zerstörer 1939"
+					}
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_3
+						version_name = "Zerstörer 1939"
+					}
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
+			}
+			else = {
+				add_equipment_production = {
+					equipment = {
+						type = destroyer_3
+					}
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = destroyer_3
+					}
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = destroyer_3
+					}
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = destroyer_3
+					}
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = destroyer_3
+					}
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = destroyer_3
+					}
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = destroyer_3
+					}
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = destroyer_3
+					}
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1052,15 +1298,81 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_battlecruiser2"
 			hidden_effect = { country_event = { id = Ostasien.54 days = 500 } }
 			custom_effect_tooltip = GEA_I_WANT_BC
 			add_tech_bonus = {
 				name = GEA_battlecruiser2
-				bonus = 2
+				bonus = 1.5
 				uses = 1
-				category = ca_tech
+				category = bc_tech
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = { has_dlc_mtg = yes }
+				create_equipment_variant = {
+					name = "Johann Jakob Class" #equivalent to OTL Richelieu
+					type = ship_hull_heavy_2
+					name_group = GER_BC_IMPERIAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_heavy_battery_2
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = heavy_ship_engine_2
+						fixed_ship_secondaries_slot = ship_secondaries_2
+						fixed_ship_armor_slot = ship_armor_bc_2
+						front_1_custom_slot = ship_heavy_battery_2
+						mid_1_custom_slot = ship_secondaries_2
+						mid_2_custom_slot = ship_anti_air_1
+						rear_1_custom_slot = ship_airplane_launcher_1
+					}
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_2
+						version_name = "Johann Jakob Class"
+					}
+					name = "SMS Johann Jakob"
+					requested_factories = 1
+					progress = 0.45
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_2
+						version_name = "Johann Jakob Class"
+					}
+					name = "SMS Emden"
+					requested_factories = 1
+					progress = 0.45
+					amount = 1
+				}
+			}
+			else = {
+				add_equipment_production = {
+					equipment = {
+						type = battle_cruiser_2
+					}
+					name = "SMS Neckar"
+					requested_factories = 1
+					progress = 0.45
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = battle_cruiser_2
+					}
+					name = "SMS Emden"
+					requested_factories = 1
+					progress = 0.45
+					amount = 1
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1083,10 +1395,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 			modifier = {
-				factor = 0
-				already_has_other_doctrine_BS = yes
-			}
-			modifier = {
 				factor = 3
 				any_enemy_country = { is_actual_major = yes }
 			}
@@ -1099,6 +1407,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_strikegroup1"
 			custom_effect_tooltip = GEA_FLATTOP_HERESY
@@ -1140,16 +1451,101 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_strikegroup2"
 			custom_effect_tooltip = GEA_Fleet_will_arrive
 			hidden_effect = { country_event = { id = Ostasien.55 days = 300 } }
 			add_tech_bonus = {
 				name = GEA_strikegroup2
-				bonus = 2
+				bonus = 1.5
 				uses = 1
 				category = cl_tech
-				category = ca_tech
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = { has_dlc_mtg = yes }
+				create_equipment_variant = {
+					name = "Aachen Class"
+					type = ship_hull_cruiser_3
+					name_group = GER_CL_IMPERIAL
+					parent_version = 0
+					modules = {
+						front_1_custom_slot = ship_light_medium_battery_3
+						mid_1_custom_slot = ship_torpedo_2
+						mid_2_custom_slot = dp_ship_secondaries_2
+						rear_1_custom_slot = ship_anti_air_3
+						rear_2_custom_slot = ship_airplane_launcher_2
+						fixed_ship_battery_slot = ship_light_medium_battery_3
+						fixed_ship_anti_air_slot = ship_anti_air_3
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+						fixed_ship_radar_slot = ship_sonar_1
+						fixed_ship_engine_slot = cruiser_ship_engine_3
+						fixed_ship_secondaries_slot = dp_ship_secondaries_2
+						fixed_ship_armor_slot = ship_armor_cruiser_3
+					}
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_cruiser_3
+						version_name = "Aachen Class"
+					}
+					name = "SMS Saipan"
+					requested_factories = 1
+					progress = 0.5
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_cruiser_3
+						version_name = "Aachen Class"
+					}
+					name = "SMS Sarawak"
+					requested_factories = 1
+					progress = 0.5
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_cruiser_3
+						version_name = "Aachen Class"
+					}
+					name = "SMS Tonkin"
+					requested_factories = 1
+					progress = 0.5
+					amount = 1
+				}
+			}
+			else = {
+				add_equipment_production = {
+					equipment = {
+						type = light_cruiser_3
+					}
+					name = "SMS Saipan"
+					requested_factories = 1
+					progress = 0.5
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = light_cruiser_3
+					}
+					name = "SMS Sarawak"
+					requested_factories = 1
+					progress = 0.5
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = light_cruiser_3
+					}
+					name = "SMS Tonkin"
+					requested_factories = 1
+					progress = 0.5
+					amount = 1
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1191,6 +1587,46 @@ focus_tree = {
 				bonus = 1
 				uses = 1
 				category = cv_tech
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = { has_dlc_mtg = yes }
+				create_equipment_variant = {
+					name = "Malaya Class" #equivalent to OTL Soryu
+					type = ship_hull_carrier_1
+					name_group = GER_CV_IMPERIAL
+					parent_version = 0
+					modules = {
+						fixed_ship_deck_slot_1 = ship_deck_space
+						fixed_ship_deck_slot_2 = ship_deck_space
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = carrier_ship_engine_2
+						fixed_ship_secondaries_slot = dp_ship_secondaries_1
+						front_1_custom_slot = ship_deck_space
+					}
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_carrier_1
+						version_name = "Malaya Class"
+					}
+					name = "SMS Malaya"
+					requested_factories = 1
+					progress = 0.45
+					amount = 1
+				}
+			}
+			else = {
+				add_equipment_production = {
+					equipment = {
+						type = carrier_2
+					}
+					name = "SMS Malaya"
+					requested_factories = 1
+					progress = 0.45
+					amount = 1
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
@@ -1341,6 +1777,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_fleet4"
 			add_tech_bonus = {
@@ -1378,6 +1817,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_navy5"
 			add_equipment_to_stockpile = { type = convoy_1 amount = 150 producer = GER }
@@ -1418,52 +1860,17 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_navyfort1"
 			add_war_support = 0.05
-			336 = {
-				add_building_construction = {
-					type = coastal_bunker
-					province = 12299
-					level = 5
-					instant_build = yes
-				}
-			}
-			333 = {
-				add_building_construction = {
-					type = coastal_bunker
-					province = 1208
-					level = 3
-					instant_build = yes
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_valid_state_for_development = yes
 				}
 				add_building_construction = {
 					type = coastal_bunker
-					province = 7387
-					level = 3
-					instant_build = yes
-				}
-			}
-			828 = {
-				add_building_construction = {
-					type = coastal_bunker
-					province = 10199
-					level = 3
-					instant_build = yes
-				}
-			}
-			846 = {
-				add_building_construction = {
-					type = coastal_bunker
-					province = 7427
-					level = 3
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					province = 10297
-					level = 3
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = coastal_bunker
-					province = 13543
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
 					level = 3
 					instant_build = yes
 				}
@@ -1497,6 +1904,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_navyfort2"
 			add_war_support = 0.05
@@ -1564,6 +1974,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_navyfort3"
 			add_war_support = 0.1
@@ -1600,12 +2013,15 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_marine1"
 			add_tech_bonus = {
 				name = GEA_marine1
 				bonus = 1
-				uses = 1
+				uses = 2
 				category = marine_tech
 			}
 		}
@@ -1701,6 +2117,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_marine3"
 			custom_effect_tooltip = jungle_warfare_effect
@@ -1735,6 +2154,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_strikegroup4"
 			add_tech_bonus = {
@@ -1775,6 +2197,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_naval_air1"
 			add_equipment_to_stockpile = {
@@ -1810,6 +2235,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_naval_air2"
 			if = {
@@ -1871,6 +2299,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_navy6"
 			add_ideas = GEA_New_Shipbuilding_Methods_idea
@@ -1911,6 +2342,9 @@ focus_tree = {
 				date > 1938.1.1
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_navy7"
 			add_ideas = GEA_pacific_rule_idea
@@ -1971,6 +2405,9 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_budget2"
 			remove_ideas = GEA_austerity_budget
@@ -2003,6 +2440,9 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_budget3"
 			add_political_power = 50
@@ -2056,6 +2496,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_budget5"
 			add_stability = 0.05
+			add_war_support = 0.05
 			if = {
 				limit = { controls_state = 286 }
 				286 = {
@@ -2249,6 +2690,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_budget7"
 			add_stability = 0.05
+			add_war_support = 0.05
 			336 = {
 				add_building_construction = {
 					type = bunker
@@ -2409,6 +2851,9 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_internal4"
 			if = {
@@ -2473,10 +2918,12 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_vong2"
-			add_stability = 0.05
-			add_war_support = 0.05
+			add_research_slot_until_five = yes
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
 	}
@@ -2498,9 +2945,12 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_vong3"
-			add_research_slot = 1
+			add_research_slot_until_five = yes
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -2544,6 +2994,9 @@ focus_tree = {
 				}
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_internal1"
 			swap_ideas = {
@@ -2571,6 +3024,9 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_johor1"
 			add_political_power = 30
@@ -2620,6 +3076,9 @@ focus_tree = {
 				}
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_bao1"
 			add_political_power = 30
@@ -2656,6 +3115,9 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_internal2"
 			remove_ideas = GEA_colonial_instability_idea
@@ -2697,6 +3159,9 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_internal3"
 			add_war_support = 0.05
@@ -2730,6 +3195,9 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_johor2"
 			remove_ideas = GEA_black_monday_idea
@@ -2757,6 +3225,9 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_budget13"
 			add_war_support = 0.05
@@ -2785,6 +3256,9 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_budget15"
 			add_doctrine_cost_reduction = {
@@ -2818,6 +3292,9 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_budget16"
 			add_ideas = MAF_white_phosphorus_idea
@@ -2845,6 +3322,9 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_budget17"
 			custom_effect_tooltip = GEA_valkyrie_tt
@@ -2873,6 +3353,9 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_vong1"
 			add_political_power = 125
@@ -2994,6 +3477,9 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_bao2"
 			add_war_support = 0.05
@@ -3092,6 +3578,9 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_budget11"
 			add_political_power = 25
