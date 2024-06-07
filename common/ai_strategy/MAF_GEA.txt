@@ -45,48 +45,6 @@ MAF_hates_france = {
 	}
 }
 
-KR_keep_MAF_units_home = {
-	reversed = yes
-
-	enable_reverse = {
-		MAF = { is_in_faction_with = GER }
-	}
-	enable = {
-		is_in_faction_with = MAF
-		NOT = {
-			tag = MAF
-			has_war_with = NFA
-		}
-	}
-	target_array = GER.faction_members
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = dont_defend_ally_borders
-		id = "MAF"
-		value = 100
-	}
-}
-KR_keep_MAF_units_home_2 = {
-	enable = {
-		is_in_faction_with = MAF
-		NOT = {
-			tag = MAF
-			has_war_with = NFA
-		}
-		MAF = { is_subject_of = GER }
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = dont_defend_ally_borders
-		id = "MAF"
-		value = 100
-	}
-}
-
 KR_MAF_prewar_strategy = {
 	allowed = {
 		tag = MAF
@@ -114,7 +72,6 @@ KR_MAF_prewar_strategy = {
 	}
 }
 
-# Navy won't die easily to Japan
 GEA_naval_focus = {
 	allowed = {
 		original_tag = GEA
@@ -153,43 +110,6 @@ GEA_invade_indochina = {
 		type = invasion_unit_request
 		tag = INC
 		value = 10
-	}
-}
-
-GEA_crush_guerilla_holdout = {
-	allowed = {
-		original_tag = GEA
-	}
-	enable = {
-		has_war_with = INC
-		has_defensive_war = no #== not attacked by Japan
-		controls_state = 286 #Cochinchina
-		has_full_control_of_state = 671 #Tonkin
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = conquer
-		id = INC
-		value = 400
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = INC
-		value = 60
-	}
-	ai_strategy = {
-		type = front_control
-		tag = INC
-		ordertype = front
-		execution_type = rush_weak
-		execute_order = yes
-	}
-
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 196 #Indochina
-		value = 30000
 	}
 }
 
@@ -264,26 +184,39 @@ GEA_eyes_on_siam = {
 	}
 }
 
-GEA_protect_malaya = {
+KR_GEA_prewar_strategy = {
 	allowed = {
-		original_tag = GEA
+		tag = GEA
 	}
 	enable = {
-		JAP = {
-			is_subject = no
-			surrender_progress < 0.3
-			naval_strength_comparison = { other = ROOT ratio > 0.6 }
-		}
+		is_subject_of = GER
 	}
+
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = theatre_distribution_demand_increase
-		id = 336 #Singapore
-		value = 20
+		type = area_priority
+		id = benelux
+		value = -1000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = germany
+		value = -1000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = east_indies
+		value = 500
+	}
+	ai_strategy = {
+		type = area_priority
+		id = se_asia
+		value = 500
 	}
 }
 
+# Navy won't die easily to Japan
 GEA_be_careful_around_japan = {
 	allowed = {
 		original_tag = GEA
@@ -297,10 +230,6 @@ GEA_be_careful_around_japan = {
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = {
-		type = strike_force_home_base
-		id = 72 #Natuna Sea
-	}
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 76 #East China Sea

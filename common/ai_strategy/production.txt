@@ -847,6 +847,7 @@ we_need_synth_oil_2 = {
 	enable = {
 		has_tech = synth_oil_experiments
 		synthetic_refinery < 20
+		oil < 30
 		date > 1939.1.1
 	}
 	abort_when_not_enabled = yes
@@ -877,6 +878,7 @@ we_need_synth_oil_3 = {
 	enable = {
 		has_tech = synth_oil_experiments
 		synthetic_refinery < 15
+		oil < 30
 		date > 1939.1.1
 		num_of_military_factories > 35
 		is_eligible_for_armor_production = yes

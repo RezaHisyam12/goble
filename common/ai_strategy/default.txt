@@ -50,6 +50,19 @@ default_produce_floating_harbors = {
 	}
 }
 
+build_patrol_bombers = {
+	allowed = { has_dlc = "By Blood Alone" }
+	enable = {
+		has_navy_size = { size > 1 }
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = unit_ratio
+		id = maritime_patrol_plane
+		value = 1
+	}
+}
+
 ask_foreign_manpower_as_major = {
 	enable = {
 		is_major = yes

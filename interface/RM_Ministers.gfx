@@ -104,6 +104,15 @@ spriteTypes = {
 		name = "GFX_idea_GRU_Franz_Oppenhoff_sec_rso"
 		texturefile = "gfx/interface/ministers/GRU/GRU_Franz_Oppenhoff.png"
 	}
+	## TEMP ##
+	spriteType = {
+		name = "GFX_idea_RUS_Lavr_G_Kornilov_carm_pau"
+		texturefile = "gfx/interface/ministers/RUS/RUS_Lavr_G_Kornilov.png"
+	}
+	spriteType = {
+		name = "GFX_idea_RUS_Lavr_G_Kornilov_II_carm_pau"
+		texturefile = "gfx/interface/ministers/RUS/RUS_Lavr_G_Kornilov.png"
+	}
 	##
 	spriteType = {
 		name = "GFX_idea_GRU_FRAUOBSRI_syn"
