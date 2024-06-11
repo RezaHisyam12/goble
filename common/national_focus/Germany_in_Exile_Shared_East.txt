@@ -926,16 +926,12 @@ shared_focus = {
 		}
 		modifier = {
 			factor = 0
-			JAP = { NOT = { has_global_flag = JAP_Fading_Sun }
-			}
-		}
-		modifier = {
-			factor = 0
 			JAP = { is_stronger_than_ROOT_and_not_vulnerable_consider_naval_strength = yes }
 		}
 	}
 	
 	completion_reward = {
+		add_ideas = GEX_kill_japan_idea
 		every_country = {
 			limit = { 
 				is_in_faction_with = GEX
@@ -1354,6 +1350,10 @@ shared_focus = {
 				level = 1
 				instant_build = yes
 			}
+		}
+		swap_ideas = {
+			remove_idea = GEX_kill_japan_idea
+			add_idea = GEX_kill_japan_idea_2
 		}
 		every_country = {
 			limit = {

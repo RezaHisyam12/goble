@@ -462,7 +462,7 @@ america_hates_german_russia = {
 	}
 	ai_strategy = {
 		type = antagonize
-		id = SOV
+		id = AUS
 		value = 1000
 	}
 }

@@ -250,6 +250,16 @@ GEA_be_careful_around_japan = {
 		id = 90 #Coast of Japan
 		value = 100
 	}
+	ai_strategy = {
+		type = area_priority
+		id = east_indies
+		value = 1000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = se_asia
+		value = 1000
+	}
 }
 
 GEA_take_the_fight_to_japan = {

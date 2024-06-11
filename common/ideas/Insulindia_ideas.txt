@@ -17,9 +17,10 @@ ideas = {
 			picture = INS_idea_insulindian_national_revolution
 			allowed = { always = no }
 			modifier = {
-				surrender_limit = 0.16
+				surrender_limit = 0.15
 				out_of_supply_factor = -0.5
 				supply_consumption_factor = -0.20
+				equipment_capture = 0.01
 			}
 		}
 
@@ -33,7 +34,6 @@ ideas = {
 				stability_factor = -0.10
 			}
 		}
-
 
 		INS_idea_allah_maha_besar = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea INS_idea_allah_maha_besar"}
@@ -362,8 +362,8 @@ ideas = {
 			picture = idea_INS_On_Land_Sea_and_Air
 			allowed = { always = no }
 			modifier = {
-				army_attack_factor = 0.05
-				army_defence_factor = 0.05
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
 				air_close_air_support_attack_factor = 0.10
 				air_air_superiority_defence_factor = 0.05
 				air_interception_defence_factor = 0.05
@@ -436,6 +436,7 @@ ideas = {
 				production_oil_factor = 0.1
 			}
 			research_bonus = {
+				synth_resources = 0.15
 				industry = 0.1
 			}
 		}

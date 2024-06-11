@@ -689,6 +689,65 @@ more_armor_focused_nation = {
 	}
 }
 
+default_antitank_production = {
+	enable = {
+		num_of_military_factories > 10
+		has_tech = interwar_antitank
+		has_tech = tech_engineers
+		OR = {
+			any_enemy_country = {
+				ROOT = { estimated_intel_max_armor = { tag = PREV value > 25 } }
+			}
+			any_neighbor_country = {
+				NOT = {
+					is_in_faction_with = ROOT
+					is_subject_of = ROOT
+					ROOT = { is_subject_of = PREV }
+					has_war_with = ROOT
+					same_government_type_as_ROOT = yes
+				}
+				ROOT = { estimated_intel_max_armor = { tag = PREV value > 25 } }
+			}
+		}
+	}
+	abort = {
+		NOT = {
+			num_of_military_factories < 10
+			OR = {
+				any_enemy_country = {
+					ROOT = { estimated_intel_max_armor = { tag = PREV value > 25 } }
+				}
+				any_neighbor_country = {
+					NOT = {
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						ROOT = { is_subject_of = PREV }
+						has_war_with = ROOT
+						same_government_type_as_ROOT = yes
+					}
+					ROOT = { estimated_intel_max_armor = { tag = PREV value > 25 } }
+				}
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -3
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = mobile
+		value = -2
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = anti_tank
+		value = 5
+	}
+}
+
 stockpile_less_early_game = {
 	enable = {
 		date < 1940.1.1
@@ -823,6 +882,7 @@ we_need_synth_oil_1 = {
 	enable = {
 		date > 1940.1.1
 		has_tech = synth_oil_experiments
+		oil < 30
 		synthetic_refinery < 25
 		is_eligible_for_armor_production = yes
 		num_of_military_factories > 75
@@ -841,7 +901,6 @@ we_need_synth_oil_2 = {
 			original_tag = GBR
 			original_tag = CAN
 			original_tag = JAP
-			original_tag = GEA
 		}
 	}
 	enable = {
@@ -873,11 +932,12 @@ we_need_synth_oil_3 = {
 			original_tag = HUN
 			original_tag = CRO
 			original_tag = SCA
+			original_tag = GEA
 		}
 	}
 	enable = {
 		has_tech = synth_oil_experiments
-		synthetic_refinery < 15
+		synthetic_refinery < 10
 		oil < 30
 		date > 1939.1.1
 		num_of_military_factories > 35
@@ -887,7 +947,7 @@ we_need_synth_oil_3 = {
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 15
+		value = 10
 	}
 }
 

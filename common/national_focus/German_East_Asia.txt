@@ -886,7 +886,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_navy2"
-			add_political_power = 50
+			add_offsite_building = { type = dockyard level = 1 }
 			add_doctrine_cost_reduction = {
 				name = naval_doc_bonus
 				cost_reduction = 0.5
@@ -1661,22 +1661,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_navy3"
-			827 = {
-				add_building_construction = {
-					type = naval_base
-					level = 3
-					province = 10162
-					instant_build = yes
-				}
-			}
-			336 = {
-				add_building_construction = {
-					type = naval_base
-					level = 3
-					province = 12299
-					instant_build = yes
-				}
-			}
+			add_one_random_dockyard = yes
+			add_one_random_dockyard = yes
+			add_one_random_dockyard = yes
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -3825,24 +3812,24 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_railway"
-
-			671 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+			build_railway = {
+				path = { 4397 1362 12332 1464 }
 			}
-			857 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+			build_railway = {
+				start_province = 10162
+				target_province = 4075
 			}
-			827 = {
+			custom_effect_tooltip = tooltip_white_line
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = INC
+						is_core_of = VIN
+						is_core_of = CAM
+						is_core_of = LAO
+					}
+					is_controlled_by = ROOT
+				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
@@ -4048,10 +4035,9 @@ focus_tree = {
 			744 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = bunker
-					level = 3
+					type = industrial_complex
+					level = 1
 					instant_build = yes
-					province = 13669
 				}
 			}
 		}
@@ -4062,6 +4048,11 @@ focus_tree = {
 		id = GEA_invest_in_concessions #make tsingtau dummy thicc
 		icon = GFX_goal_generic_german_construction
 		cost = 5
+
+		relative_position_id = GEA_develop_tsingtau
+		x = -1
+		y = 1
+
 		available = {
 			OR = {
 				728 = {
@@ -4081,9 +4072,7 @@ focus_tree = {
 		prerequisite = {
 			focus = GEA_develop_tsingtau
 		}
-		x = -1
-		y = 1
-		relative_position_id = GEA_develop_tsingtau
+
 		ai_will_do = {
 			factor = 6
 			modifier = {
@@ -4108,7 +4097,7 @@ focus_tree = {
 					}
 				}
 			}
-			996  = {
+			996 = {
 				if = {
 					limit = {
 						OR = {
