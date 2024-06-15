@@ -36,6 +36,7 @@ focus_tree = {
 				}
 			}
 		}
+		cancel_if_invalid = yes
 		cost = 10.00
 		x = 3
 		y = 0
@@ -1455,7 +1456,7 @@ focus_tree = {
 	}
 	focus = {# Coast Guard
 		id = CAR_coast_guard
-		icon = GFX_goal_generic_naval_destroyer2
+		icon = GFX_goal_generic_coastal_navy
 		cost = 5.00
 		prerequisite = {
 			focus = CAR_defend_the_coast
@@ -1965,6 +1966,7 @@ focus = {
 	completion_reward = {
 		add_political_power = 40
 		create_faction =  "Latin Union"
+		custom_effect_tooltip = COR_factions_tooltip
 	}
 }
 
@@ -1975,9 +1977,13 @@ focus = {
 		NOT = {
 			country_exists = SRD
 			country_exists = SIC
+			country_exists = PAP
 		}
 	}
 	available = {
+			OR = {
+			country_exists = SRD
+			country_exists = PAP
 			country_exists = SIC
 			SIC = {
 				exists = yes
@@ -1987,6 +1993,7 @@ focus = {
 				OR = {
 				has_completed_focus = SIC_ride_the_tiger
 				has_completed_focus = SIC_mafia_takeover
+					}
 				}
 			}
 		}
@@ -1999,7 +2006,7 @@ focus = {
 		factor = 25
 	}
 	completion_reward = {
-	country_event = { id = carfor.509 }
+	country_event = { id = carfor.409 }
 	}
 }
 
@@ -2063,6 +2070,7 @@ focus = {
 			has_war = no
 			is_subject = no
 			NOT = { has_socialist_government = yes }
+			NOT = { has_idea = AUS_part_of_the_Empire }
 		}
 	}
 	prerequisite = { focus = CAR_invite_italy }
@@ -2127,6 +2135,7 @@ focus = {
 			is_subject = no
 			has_government = national_populist
 		}
+		NOT = { has_country_flag = CAR_Tordesillas }
 	}
 	prerequisite = { focus = CAR_invite_portugal }
 	x = 43
@@ -2231,6 +2240,8 @@ focus = {
 		create_wargoal = { type = annex_everything target = MOR }
 		add_state_claim	= 461
 		add_state_claim	= 462
+		add_state_claim	= 647
+		add_state_claim	= 646
 		add_state_claim = 684
 	}
 }	
@@ -2514,6 +2525,7 @@ focus = {
 			custom_effect_tooltip = CAR_viceroy_tt
 			hidden_effect = {
 			news_event = { id = worldnews.500 days = 7 }
+			country_event = { id = carfor.471 days = 14 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }

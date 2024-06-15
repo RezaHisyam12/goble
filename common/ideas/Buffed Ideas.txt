@@ -1,0 +1,65 @@
+ideas = {
+	country = {
+		one_and_indivisible = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea one_and_indivisible"}
+			available = { NOT = { has_idea = local_parliaments } }
+			allowed = { always = no }
+			picture = PB_RUS_Russia_United
+			modifier = {
+				political_power_cost = -0.05
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.05
+				compliance_growth = -0.02
+				resistance_target = 0.02
+				non_core_manpower = 0.03
+			}
+		}
+
+		RUS_blackhundredists_8 = { #final
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_blackhundredists_8"}
+			name = RUS_blackhundredists
+			picture = blackhundredists
+			allowed = { always = no }
+			modifier = {
+				political_power_cost = -0.05
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				conscription_factor = 0.1
+				max_command_power = 15
+				mobilization_speed = 0.1
+				conscription = 0.02
+			}
+		}
+		#
+		GEX_JAP_civilian_concession = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEX_JAP_civilian_concession"}
+			picture = PER_Corruption
+			targeted_modifier = {
+				tag = GEX
+				cic_to_target_factor = 0.30
+			cancel = {
+					NOT = {
+						country_exists = GEA
+					}
+				}
+			}
+		}
+		
+		GEX_JAP_military_concession = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEX_JAP_military_concession"}
+			picture = PER_Corruption
+			targeted_modifier = {
+				tag = GEX
+				mic_to_target_factor = 0.30
+			cancel = {
+					NOT = {
+						country_exists = GEA
+					}
+				}
+			}
+		}
+
+
+	}
+}
+

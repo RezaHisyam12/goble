@@ -1222,9 +1222,10 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 8
+				add = 16
 				is_chinese_tag = yes
 			}
+		}
 	}
 
 	tech_signal_company2 = {
@@ -1254,9 +1255,10 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 8
+				add = 16
 				is_chinese_tag = yes
 			}
+		}
 	}
 
 	tech_signal_company3 = {
@@ -1285,10 +1287,12 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 8
+				add = 16
 				is_chinese_tag = yes
 			}
+		}
 	}
+
 	tech_signal_company4 = {
 
 		signal_company = {
@@ -1311,9 +1315,10 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 8
+				add = 16
 				is_chinese_tag = yes
 			}
+		}
 	}
 
 	basic_train = {

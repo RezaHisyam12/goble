@@ -731,7 +731,7 @@ AUS_volksreichskommissariat_decisions = {
 						add_manpower = 300000
 					}
 				BFE = {	country_event = rotermorgenmisc.8787 }
-				set_autonomy = { target = BFE autonomy_state = crownland }
+				set_autonomy = { target = BFE autonomy_state = botde_constituent }
 				set_country_flag = BFE_established
 				BFE = { set_country_flag = IS_BFE }
 				BFE = { set_country_flag = CRO_AUSTRIA}
@@ -1258,7 +1258,7 @@ AUS_volksreichskommissariat_decisions = {
 						add_manpower = 330000
 					}
 				KOH = {	country_event = rotermorgenmisc.8788 }
-				set_autonomy = { target = KOH autonomy_state = crownland }
+				set_autonomy = { target = KOH autonomy_state = botde_constituent }
 				set_country_flag = KOH_established
 				KOH = { set_country_flag = IS_KOH }
 				KOH = { set_country_flag = hungary_loyal }

@@ -2400,7 +2400,10 @@ focus_tree = {
 		available = {
 			has_country_flag = aus_slovenia_crisis_resolved
 		}
-		
+		bypass = {
+				AUS = { has_country_flag = HRE_rise }
+			}
+
 		mutually_exclusive = { focus = CRO_stir_the_spirits }
 		
 		completion_reward = {
@@ -2868,6 +2871,7 @@ focus_tree = {
 				has_country_flag = CRO_won_independence
 				has_country_flag = CRO_won_civilwar
 			}
+		NOT = { AUS = { has_country_flag = HRE_rise } }
 		}
 		bypass = {
 			OR = {
@@ -2936,7 +2940,9 @@ focus_tree = {
 		}
 		relative_position_id = CRO_democracy
 		cost = 5
-		
+		available = {
+		NOT = { AUS = { has_country_flag = HRE_rise } }
+		}		
 		
 		completion_reward = {
 			if = {

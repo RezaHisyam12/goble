@@ -845,4 +845,8 @@ spriteTypes = {
 		name = "GFX_idea_terror_bombing_2"
 		texturefile = "gfx/interface/ideas/GRU/terror_bombing_2.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_PB_RUS_Russia_United"
+		texturefile = "gfx/interface/ideas/ideas/PB_RUS_Russia_United.dds"
+	}
 }
