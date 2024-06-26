@@ -981,3 +981,31 @@ default_railway_gun_production = {
 		value = 1
 	}
 }
+
+default_elite_infantry_production = {
+	allowed = {
+		OR = {
+			original_tag = UKR
+		}
+	}
+	enable = {
+		has_tech = elite_infantry_tech
+	}
+	abort_when_not_enabled = yes 
+	
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -10
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = elite_infantry
+		value = 10
+	}
+	ai_strategy = {
+		type = template_prio
+		id = elite_infantry
+		value = 50
+	}
+}

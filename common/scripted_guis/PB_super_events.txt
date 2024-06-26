@@ -647,11 +647,6 @@ scripted_gui = {
 			}
 		}
 		triggers = {
-			Super_Event_Image_RUSSIAN_UNIFICATION_don_kuban_visible = {
-				has_global_flag = RUSSIAN_UNIFICATION_don_kuban
-			}
-		}
-		triggers = {
 			Super_Event_Image_RUSSIAN_UNIFICATION_krushchev_visible = {
 				has_global_flag = RUSSIAN_UNIFICATION_krushchev
 			}
@@ -1453,14 +1448,7 @@ scripted_gui = {
 						has_global_flag = RUSSIAN_UNIFICATION_drozd
 					}
 					clr_global_flag  = RUSSIAN_UNIFICATION_drozd
-				}
-				
-				if = {
-					limit = {	
-						has_global_flag = RUSSIAN_UNIFICATION_don_kuban
-					}
-					clr_global_flag  = RUSSIAN_UNIFICATION_don_kuban
-				}				
+				}			
 				
 				if = {
 					limit = {	

@@ -8574,6 +8574,18 @@ CSA_post_civil_war = {
 		allow_achievements = yes
 	}
 	option = {
+		name = CSA_POST_CIVIL_WAR_SCOTT
+		text = "RULE_OPTION_CSA_POST_CIVIL_WAR_SCOTT"
+		desc = "RULE_OPTION_CSA_POST_CIVIL_WAR_SCOTT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CSA_POST_CIVIL_WAR_LOEB
+		text = "RULE_OPTION_CSA_POST_CIVIL_WAR_LOEB"
+		desc = "RULE_OPTION_CSA_POST_CIVIL_WAR_LOEB_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = CSA_POST_CIVIL_WAR_TOTALIST_CAPONE
 		text = "RULE_OPTION_CSA_POST_CIVIL_WAR_TOTALIST_CAPONE"
 		desc = "RULE_OPTION_CSA_POST_CIVIL_WAR_TOTALIST_CAPONE_DESC"
@@ -13525,6 +13537,74 @@ YAK_independece_path = {
 		name = RULE_OPTION_TRM_YAKUTIA
 		text = "RULE_OPTION_TRM_YAKUTIA"
 		desc = "RULE_OPTION_TRM_YAKUTIA_DESC"
+		allow_achievements = yes
+	}
+}
+BRY_independence_path = {
+	name = "BRY_PATH"
+	group = "RULE_GROUP_KAISERREICH_RULES_EAST_ASIA"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_TRM_BURYAT_REVOLT_DEFAULT"
+		desc = "RULE_OPTION_TRM_BURYAT_REVOLT_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TRM_BURYAT_REVOLT
+		text = "RULE_OPTION_TRM_BURYAT_REVOLT"
+		desc = "RULE_OPTION_TRM_BURYAT_REVOLT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TRM_SEMYONOV_MILITARY_DISTRICT
+		text = "RULE_OPTION_TRM_SEMYONOV_MILITARY_DISTRICT"
+		desc = "RULE_OPTION_TRM_SEMYONOV_MILITARY_DISTRICT_DESC"
+		allow_achievements = yes
+	}
+}
+BRY_political_path = {
+	name = "BRY_POLITICAL_PATH"
+	group = "RULE_GROUP_KAISERREICH_RULES_EAST_ASIA"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_BRY_RANDOM"
+		desc = "RULE_OPTION_BRY_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BRY_ATHEISTS
+		text = "RULE_OPTION_BRY_ATHEISTS"
+		desc = "RULE_OPTION_BRY_ATHEISTS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BRY_BUDDHIST_SOCIALISTS
+		text = "RULE_OPTION_BRY_BUDDHIST_SOCIALISTS"
+		desc = "RULE_OPTION_BRY_BUDDHIST_SOCIALISTS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BRY_PSR
+		text = "RULE_OPTION_BRY_PSR"
+		desc = "RULE_OPTION_BRY_PSR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BRY_NATDEMS
+		text = "RULE_OPTION_BRY_NATDEMS"
+		desc = "RULE_OPTION_BRY_NATDEMS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BRY_COSSACKS
+		text = "RULE_OPTION_BRY_COSSACKS"
+		desc = "RULE_OPTION_BRY_COSSACKS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BRY_RADICAL_BUDDHISTS
+		text = "RULE_OPTION_BRY_RADICAL_BUDDHISTS"
+		desc = "RULE_OPTION_BRY_RADICAL_BUDDHISTS_DESC"
 		allow_achievements = yes
 	}
 }

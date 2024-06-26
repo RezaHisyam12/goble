@@ -34,10 +34,6 @@ DKB_vlasov_RUS_alt3 = {
 	color = rgb { 52 105 74 }
 	color_ui = rgb { 52 105 74 }
 }
-DKB_vlasov_RUS_vozhd = {
-	color = rgb { 0 57 165 }
-	color_ui = rgb { 0 57 165 }
-}
 DKB_RUS_empire = {
 	color = rgb { 38 146 90 }
 	color_ui = rgb { 38 146 90 }
@@ -829,6 +825,14 @@ TXS_america = {
 TXS_CONFED = {
 	color = rgb { 117 129 135 }
 	color_ui = rgb { 117 129 135 }
+}
+TXS_CONFED_texaco = {
+	color = rgb { 266 0 0 }
+	color_ui = rgb { 266 0 0 }
+}
+TXS_WEST_texaco = {
+	color = rgb { 266 0 0 }
+	color_ui = rgb { 266 0 0 }
 }
 
 GRE_byzantium = {
@@ -3756,6 +3760,18 @@ TAN_SULTAN = {
 TAN_U = {
 	color = rgb { 0 107 60 }
 	color_ui = rgb { 0 107 60 }
+}
+TAN_CHAGATAI = {
+	color = rgb { 250 240 190 }
+	color_ui = rgb { 250 240 190 }
+}
+TAN_MIDDLE_MONGOL = {
+	color = rgb { 250 240 190 }
+	color_ui = rgb { 250 240 190 }
+}
+TAN_MOGHULISTAN = {
+	color = rgb { 250 240 190 }
+	color_ui = rgb { 250 240 190 }
 }
 SHANG_EMPIRE = {
 	color = rgb { 255 204 0 }

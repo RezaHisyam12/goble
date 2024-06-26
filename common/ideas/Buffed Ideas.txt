@@ -34,28 +34,38 @@ ideas = {
 		GEX_JAP_civilian_concession = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEX_JAP_civilian_concession"}
 			picture = PER_Corruption
-			targeted_modifier = {
-				tag = GEX
-				cic_to_target_factor = 0.30
-			cancel = {
+			available = {
+				OR = {
 					NOT = {
 						country_exists = GEA
 					}
 				}
+			}
+			cancel = {
+				GEA = { exists = no }
+			}
+			targeted_modifier = {
+				tag = GEX
+				cic_to_target_factor = 0.3
 			}
 		}
 		
 		GEX_JAP_military_concession = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GEX_JAP_military_concession"}
 			picture = PER_Corruption
-			targeted_modifier = {
-				tag = GEX
-				mic_to_target_factor = 0.30
-			cancel = {
+			available = {
+				OR = {
 					NOT = {
 						country_exists = GEA
 					}
 				}
+			}
+			cancel = {
+				GEA = { exists = no }
+			}
+			targeted_modifier = {
+				tag = GEX
+				mic_to_target_factor = 0.3
 			}
 		}
 

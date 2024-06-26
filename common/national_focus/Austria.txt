@@ -8384,6 +8384,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_lead_the_cetral_power"
 			set_faction_name = AUS_central_power
+			if = {
+				limit = { is_in_faction = no }
+				create_faction = "Central Powers"
+			}
 			country_event = rotermorgenmisc.8796
 			hidden_effect = {
 				TUR = {
