@@ -1,0 +1,119 @@
+#Head of Government
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_PB_GER_German_Unity"
+		texturefile = "gfx/interface/ideas/ideas/PB_GER_German_Unity.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_DDR_Post_War_Defeatism"
+		texturefile = "gfx/interface/ideas/ideas/PB_DDR_Post_War_Defeatism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_GER_German_Century"
+		texturefile = "gfx/interface/ideas/ideas/PB_GER_German_Century.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_GER_Rebuilding_Germany"
+		texturefile = "gfx/interface/ideas/ideas/PB_GER_Rebuilding_Germany.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_GER_Centralization"
+		texturefile = "gfx/interface/ideas/ideas/PB_GER_Centralization.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_TOB_air_land_battles"
+		texturefile = "gfx/interface/ideas/ideas/TOB_air_land_battles.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ITA_GenericAirforce"
+		texturefile = "gfx/interface/ideas/ideas/idea_ITA_GenericAirforce.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SIA_bloated_bureaucracy"
+		texturefile = "gfx/interface/ideas/ideas/SIA_bloated_bureaucracy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_INS_On_Land_Sea_and_Air"
+		texturefile = "gfx/interface/ideas/ideas/idea_INS_On_Land_Sea_and_Air.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_INS_A_Nation_Of_18000_Islands"
+		texturefile = "gfx/interface/ideas/ideas/idea_INS_A_Nation_Of_18000_Islands.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_GER_Long_Term"
+		texturefile = "gfx/interface/ideas/ideas/PB_GER_Long_Term.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_INS_The_Year_of_Living_Dangerously"
+		texturefile = "gfx/interface/ideas/ideas/idea_INS_The_Year_of_Living_Dangerously.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_GER_Fortress_Germany"
+		texturefile = "gfx/interface/ideas/ideas/PB_GER_Fortress_Germany.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_GER_Landship_Shock"
+		texturefile = "gfx/interface/ideas/ideas/PB_GER_Landship_Shock.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_GER_Artillery_Drone"
+		texturefile = "gfx/interface/ideas/ideas/PB_GER_Artillery_Drone.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_PB_GER_Our_Darkest_Hour"
+		texturefile = "gfx/interface/ideas/ideas/idea_PB_GER_Our_Darkest_Hour.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_PRS_United_In_Blood"
+		texturefile = "gfx/interface/ideas/ideas/PB_PRS_United_In_Blood.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_FRA_Renewed_Naval_Policy"
+		texturefile = "gfx/interface/ideas/ideas/PB_FRA_Renewed_Naval_Policy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_CHI_Royal_Navy_Advisors"
+		texturefile = "gfx/interface/ideas/ideas/idea_CHI_Royal_Navy_Advisors.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_FRA_Cipher"
+		texturefile = "gfx/interface/ideas/ideas/PB_FRA_Cipher.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_Planned_Economy"
+		texturefile = "gfx/interface/ideas/ideas/PB_Planned_Economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_GER_Land_Germans"
+		texturefile = "gfx/interface/ideas/ideas/PB_GER_Land_Germans.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_category_hre_austria"
+		texturefile = "gfx/interface/decisions/hre_austria.png"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_navy_spirit.png"
+		texturefile = "gfx/interface/ideas/ideas/AUS_navy_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_RUS_Russian_Civil_War"
+		texturefile = "gfx/interface/ideas/ideas/PB_RUS_Russian_Civil_War.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_advisors_austria2"
+		texturefile = "gfx/interface/ideas/ideas/advisors_austria2.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_the_two_principles"
+		texturefile = "gfx/interface/ideas/GRU/GER_the_two_principles.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_terror_bombing_2"
+		texturefile = "gfx/interface/ideas/GRU/terror_bombing_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_PB_RUS_Russia_United"
+		texturefile = "gfx/interface/ideas/ideas/PB_RUS_Russia_United.dds"
+	}
+}

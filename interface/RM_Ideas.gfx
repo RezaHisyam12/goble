@@ -1,6 +1,35 @@
 #Head of Government
 spriteTypes = {
 	spriteType = {
+		name = "GFX_idea_GRU_Soldatenkonig_Legacy_idea"
+		texturefile = "gfx/interface/ideas/GRU/NEW/GRU_Soldatenkonig_Legacy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRU_Bismarckian_Social_Policy"
+		texturefile = "gfx/interface/ideas/GRU/NEW/GRU_Bismarckian_Social_Policy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRU_Inlandsabteilung"
+		texturefile = "gfx/interface/ideas/GRU/NEW/GRU_Inlandsabteilung.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRU_new_germany_l"
+		texturefile = "gfx/interface/ideas/GRU/NEW/GRU_new_germany.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRU_VKC"
+		texturefile = "gfx/interface/ideas/GRU/NEW/GRU_VKC.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRU_NATCORP_ECONOMICS"
+		texturefile = "gfx/interface/ideas/GRU/NEW/NATCORP_ECONOMICS.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRU_PV"
+		texturefile = "gfx/interface/ideas/GRU/NEW/PV.png"
+	}
+
+	spriteType = {
 		name = "GFX_idea_BAY_AUSTRIAN_ALLIES"
 		texturefile = "gfx/interface/ideas/ideas/BAY_AUSTRIAN_ALLIES.png"
 	}
@@ -55,6 +84,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_GRU_guard"
 		texturefile = "gfx/interface/ideas/GRU/GRU_guard.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRU_guard_2"
+		texturefile = "gfx/interface/ideas/GRU/GRU_guard_2.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRU_Rote_Ritters_Ic"
+		texturefile = "gfx/interface/ideas/GRU/NEW/GRU_Rote_Ritters.png"
 	}
 	spriteType = {
 		name = "GFX_idea_GRU_lager"
@@ -240,6 +277,18 @@ spriteTypes = {
 		name = "GFX_idea_GRU_volkssturm_idea"
 		texturefile = "gfx/interface/ideas/GRU/VOLKSSTURM.png"
 	}
+	spriteType = {
+		name = "GFX_idea_GRU_totalerkieg"
+		texturefile = "gfx/interface/ideas/GRU/totalerkieg.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRU_nancy_treaty"
+		texturefile = "gfx/interface/ideas/GRU/nancy_treaty.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRU_nancy_treaty_2"
+		texturefile = "gfx/interface/ideas/GRU/nancy_treaty_2.png"
+	}
 	
 	spriteType = {
 		name = "GFX_decision_category_breitspurbahnen"
@@ -248,6 +297,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_decision_category_volkskomissariats"
 		texturefile = "gfx/interface/decisions/vk.png"
+	}
+	spriteType = {
+		name = "GFX_kill_kaiserreich"
+		texturefile = "gfx/interface/decisions/killger_money5.png"
 	}
 	spriteType = {
 		name = "GFX_decision_category_lebensraum"
@@ -282,32 +335,64 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/strikeliberals.png"
 	}
 	spriteType = {
+		name = "GFX_decision_category_GRU_volkssturm"
+		texturefile = "gfx/interface/decisions/GRU_Volkssturm.png"
+	}
+	spriteType = {
 		name = "GFX_kaukasusVK"
 		texturefile = "gfx/interface/decisions/Kaukasia.png"
+	}
+	spriteType = {
+		name = "GFX_goebb_decision_dks"
+		texturefile = "gfx/interface/decisions/Lebensraum/goebb_decision_dks.png"
 	}
 	spriteType = {
 		name = "GFX_ruthenienVK"
 		texturefile = "gfx/interface/decisions/ruthenia.png"
 	}
 	spriteType = {
+		name = "GFX_goebb_decision_ukr"
+		texturefile = "gfx/interface/decisions/Lebensraum/goebb_decision_ukr.png"
+	}
+	spriteType = {
 		name = "GFX_baltenlandVK"
 		texturefile = "gfx/interface/decisions/baltenland.png"
+	}
+	spriteType = {
+		name = "GFX_goebb_decision_bal"
+		texturefile = "gfx/interface/decisions/Lebensraum/goebb_decision_bal.png"
 	}
 	spriteType = {
 		name = "GFX_moskowienVK"
 		texturefile = "gfx/interface/decisions/moskowien.png"
 	}
 	spriteType = {
+		name = "GFX_goebb_decision_mos"
+		texturefile = "gfx/interface/decisions/Lebensraum/goebb_decision_mos.png"
+	}
+	spriteType = {
 		name = "GFX_hypoboreaVK"
 		texturefile = "gfx/interface/decisions/hypoborea.png"
+	}
+	spriteType = {
+		name = "GFX_goebb_decision_sca"
+		texturefile = "gfx/interface/decisions/Lebensraum/goebb_decision_sca.png"
 	}
 	spriteType = {
 		name = "GFX_judeaVS"
 		texturefile = "gfx/interface/decisions/judea.png"
 	}
 	spriteType = {
+		name = "GFX_goebb_decision_judea"
+		texturefile = "gfx/interface/decisions/Lebensraum/goebb_decision_judea.png"
+	}
+	spriteType = {
 		name = "GFX_turaniaVS"
 		texturefile = "gfx/interface/decisions/turania.png"
+	}
+	spriteType = {
+		name = "GFX_goebb_decision_turan"
+		texturefile = "gfx/interface/decisions/Lebensraum/goebb_decision_turan.png"
 	}
 	spriteType = {
 		name = "GFX_decision_category_pangermanic"
@@ -321,6 +406,68 @@ spriteTypes = {
 		name = "GFX_pangermanictwo"
 		texturefile = "gfx/interface/decisions/pangermanism2.png"
 	}
+	spriteType = {
+		name = "GFX_pangermanismthree"
+		texturefile = "gfx/interface/decisions/pan_germanismthree.png"
+	}
+	spriteType = {
+		name = "GFX_gru_new_order"
+		texturefile = "gfx/interface/decisions/gru_new_order.png"
+	}
+	###
+	spriteType = {
+		name = "GFX_goebb_decision_bri"
+		texturefile = "gfx/interface/decisions/Stahlpakt/goebb_decision_bri.png"
+	}
+	spriteType = {
+		name = "GFX_goebb_decision_bul"
+		texturefile = "gfx/interface/decisions/Stahlpakt/goebb_decision_bul.png"
+	}
+	spriteType = {
+		name = "GFX_goebb_decision_burg"
+		texturefile = "gfx/interface/decisions/Stahlpakt/goebb_decision_burg.png"
+	}
+	spriteType = {
+		name = "GFX_goebb_decision_corn"
+		texturefile = "gfx/interface/decisions/Stahlpakt/goebb_decision_corn.png"
+	}
+	spriteType = {
+		name = "GFX_goebb_decision_eng"
+		texturefile = "gfx/interface/decisions/Stahlpakt/goebb_decision_eng.png"
+	}
+	spriteType = {
+		name = "GFX_goebb_decision_fra"
+		texturefile = "gfx/interface/decisions/Stahlpakt/goebb_decision_fra.png"
+	}
+	spriteType = {
+		name = "GFX_goebb_decision_hun"
+		texturefile = "gfx/interface/decisions/Stahlpakt/goebb_decision_hun.png"
+	}
+	spriteType = {
+		name = "GFX_goebb_decision_ita"
+		texturefile = "gfx/interface/decisions/Stahlpakt/goebb_decision_ita.png"
+	}
+	spriteType = {
+		name = "GFX_goebb_decision_nrm"
+		texturefile = "gfx/interface/decisions/Stahlpakt/goebb_decision_nrm.png"
+	}
+	spriteType = {
+		name = "GFX_goebb_decision_serb"
+		texturefile = "gfx/interface/decisions/Stahlpakt/goebb_decision_serb.png"
+	}
+	spriteType = {
+		name = "GFX_goebb_decision_spa"
+		texturefile = "gfx/interface/decisions/Stahlpakt/goebb_decision_spa.png"
+	}
+	spriteType = {
+		name = "GFX_goebb_decision_tur"
+		texturefile = "gfx/interface/decisions/Stahlpakt/goebb_decision_tur.png"
+	}
+	spriteType = {
+		name = "GFX_goebb_decision_wall"
+		texturefile = "gfx/interface/decisions/Stahlpakt/goebb_decision_wall.png"
+	}
+
 	
 	spriteType = {
 		name = "GFX_idea_gru_millenium"
@@ -477,24 +624,42 @@ spriteTypes = {
 		texturefile = "gfx/interface/traits/rr_officer.png"
 	}
 	spriteType = {
+		name = "GFX_trait_RR_OFFICER_LENSCH"
+		texturefile = "gfx/interface/traits/rr_officer_l.png"
+	}
+
+	spriteType = {
+		name = "GFX_trait_aimless_bolshevik"
+		texturefile = "gfx/interface/traits/aimless_bolshevik.png"
+	}
+	
+	spriteType = {
 		name = "GFX_trait_red_guard_leaders"
 		texturefile = "gfx/interface/traits/red_guard_leaders.png"
 	}
+	
 	spriteType = {
 		name = "GFX_trait_cosmopolitan_war_tourist"
 		texturefile = "gfx/interface/traits/wandering_rev.png"
-	}	
+	}
+	
+	spriteType = {
+		name = "GFX_trait_red_guard_leaders"
+		texturefile = "gfx/interface/traits/red_guard_leaders.png"
+	}
+	
 	spriteType = {
 		name = "GFX_trait_radsoc_rev_leaders"
 		texturefile = "gfx/interface/traits/radsoc_rev.png"
 	}
+	
 	spriteType = {
 		name = "GFX_trait_Nazbol_rev_leaders"
 		texturefile = "gfx/interface/traits/Nazbol_rev_leaders.dds"
 	}
 	spriteType = {
-		name = "GFX_trait_aimless_bolshevik"
-		texturefile = "gfx/interface/traits/aimless_bolshevik.png"
+		name = "GFX_trait_germsoc_rev_leaders"
+		texturefile = "gfx/interface/traits/germsoc_rev_leaders.png"
 	}
 	spriteType = {
 		name = "GFX_trait_XINET_MAINFRAME"
@@ -605,10 +770,25 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/GRU/Volksgenosse_newspaper.png"
 	}
 	spriteType = {
+		name = "GFX_idea_GRU_PV"
+		texturefile = "gfx/interface/ideas/GRU/PV.png"
+	}
+	spriteType = {
 		name = "GFX_idea_GRU_DAF_KDF"
 		texturefile = "gfx/interface/ideas/GRU/KDF.png"
 	}
-
+	spriteType = {
+		name = "GFX_idea_volksfernseher"
+		texturefile = "gfx/interface/ideas/GRU/volksfernseher.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ostarbeiters"
+		texturefile = "gfx/interface/ideas/GRU/Ostarbeiters.png"
+	}
+	spriteType = {
+		name = "GFX_idea_volkswohlfahrt"
+		texturefile = "gfx/interface/ideas/GRU/volkswohlfahrt.png"
+	}
 	spriteType = {
 		name = "GFX_Volkswagen"
 		texturefile = "gfx/interface/decisions/volkswagen.png"
@@ -620,6 +800,18 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Volksempfaenger"
 		texturefile = "gfx/interface/decisions/volksempfaenger.png"
+	}
+	spriteType = {
+		name = "GFX_decision_category_PV"
+		texturefile = "gfx/interface/decisions/PV.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRU_NATCORP_ECONOMICS"
+		texturefile = "gfx/interface/ideas/GRU/NATCORP_ECONOMICS.png"
+	}
+	spriteType = {
+		name = "GFX_Volksempfaenger_2"
+		texturefile = "gfx/interface/decisions/NEW/volksempfaenger.png"
 	}
 	spriteType = {
 		name = "GFX_Volksgenosse_newspaper"
@@ -733,120 +925,132 @@ spriteTypes = {
 		name = "GFX_idea_PRC_TERMINATOR"
 		texturefile = "gfx/interface/ideas/GRU/PRC_TERMINATOR.png"
 	}
+
 	spriteType = {
-		name = "GFX_idea_PB_GER_German_Unity"
-		texturefile = "gfx/interface/ideas/ideas/PB_GER_German_Unity.dds"
+		name = "GFX_decision_category_bunkerger_2"
+		texturefile = "gfx/interface/decisions/bunkerger_2.png"
 	}
 	spriteType = {
-		name = "GFX_idea_PB_DDR_Post_War_Defeatism"
-		texturefile = "gfx/interface/ideas/ideas/PB_DDR_Post_War_Defeatism.dds"
+		name = "GFX_decision_category_gsv_bunkers"
+		texturefile = "gfx/interface/decisions/gsv_bunkers.png"
 	}
 	spriteType = {
-		name = "GFX_idea_PB_GER_German_Century"
-		texturefile = "gfx/interface/ideas/ideas/PB_GER_German_Century.dds"
+		name = "GFX_decision_category_bunkerger_3"
+		texturefile = "gfx/interface/decisions/bunkerger_3.png"
 	}
 	spriteType = {
-		name = "GFX_idea_PB_GER_Rebuilding_Germany"
-		texturefile = "gfx/interface/ideas/ideas/PB_GER_Rebuilding_Germany.dds"
+		name = "GFX_decision_category_volksgesundheitsamt"
+		texturefile = "gfx/interface/decisions/volksgesundheitsamt.png"
 	}
 	spriteType = {
-		name = "GFX_idea_PB_GER_Centralization"
-		texturefile = "gfx/interface/ideas/ideas/PB_GER_Centralization.dds"
+		name = "GFX_Reichsautobahn"
+		texturefile = "gfx/interface/decisions/Reichsautobahn.png"
+		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_idea_TOB_air_land_battles"
-		texturefile = "gfx/interface/ideas/ideas/TOB_air_land_battles.dds"
+		name = "GFX_no_smoking"
+		texturefile = "gfx/interface/decisions/GRU_no_smoking.png"
+		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_idea_ITA_GenericAirforce"
-		texturefile = "gfx/interface/ideas/ideas/idea_ITA_GenericAirforce.dds"
+		name = "GFX_savetheanimals"
+		texturefile = "gfx/interface/decisions/savetheanimals.png"
+		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_idea_SIA_bloated_bureaucracy"
-		texturefile = "gfx/interface/ideas/ideas/SIA_bloated_bureaucracy.dds"
+		name = "GFX_volkssport"
+		texturefile = "gfx/interface/decisions/volkssport.png"
+		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_idea_idea_INS_On_Land_Sea_and_Air"
-		texturefile = "gfx/interface/ideas/ideas/idea_INS_On_Land_Sea_and_Air.dds"
+		name = "GFX_protect_nature"
+		texturefile = "gfx/interface/decisions/protect_nature.png"
+		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_idea_idea_INS_A_Nation_Of_18000_Islands"
-		texturefile = "gfx/interface/ideas/ideas/idea_INS_A_Nation_Of_18000_Islands.dds"
+		name = "GFX_GRU_bad_genes"
+		texturefile = "gfx/interface/decisions/GRU_bad_genes.png"
+		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_idea_PB_GER_Long_Term"
-		texturefile = "gfx/interface/ideas/ideas/PB_GER_Long_Term.dds"
+		name = "GFX_Kraft_durch_Freude"
+		texturefile = "gfx/interface/decisions/GER_Kraft_durch_Freude.png"
+		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_idea_idea_INS_The_Year_of_Living_Dangerously"
-		texturefile = "gfx/interface/ideas/ideas/idea_INS_The_Year_of_Living_Dangerously.dds"
+		name = "GFX_schonheit_arbeit"
+		texturefile = "gfx/interface/decisions/schonheit_arbeit.png"
+		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_idea_PB_GER_Fortress_Germany"
-		texturefile = "gfx/interface/ideas/ideas/PB_GER_Fortress_Germany.dds"
+		name = "GFX_goebbels_speech"
+		texturefile = "gfx/interface/decisions/goebbels_speech.dds"
+		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_idea_PB_GER_Landship_Shock"
-		texturefile = "gfx/interface/ideas/ideas/PB_GER_Landship_Shock.dds"
+		name = "GFX_ns_eagle"
+		texturefile = "gfx/interface/decisions/ns_eagle2.png"
+		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_idea_PB_GER_Artillery_Drone"
-		texturefile = "gfx/interface/ideas/ideas/PB_GER_Artillery_Drone.dds"
+		name = "GFX_Germania_Stadt"
+		texturefile = "gfx/interface/decisions/Germania_Stadt.png"
 	}
 	spriteType = {
-		name = "GFX_idea_idea_PB_GER_Our_Darkest_Hour"
-		texturefile = "gfx/interface/ideas/ideas/idea_PB_GER_Our_Darkest_Hour.dds"
+		name = "GFX_idea_HNG_counterrevolution_idea"
+		texturefile = "gfx/interface/ideas/HUN/counterrevolution_idea.png"
 	}
 	spriteType = {
-		name = "GFX_idea_PB_PRS_United_In_Blood"
-		texturefile = "gfx/interface/ideas/ideas/PB_PRS_United_In_Blood.dds"
+		name = "GFX_idea_HNG_united_militias_idea"
+		texturefile = "gfx/interface/ideas/HUN/unite_militias_idea.png"
 	}
 	spriteType = {
-		name = "GFX_idea_PB_FRA_Renewed_Naval_Policy"
-		texturefile = "gfx/interface/ideas/ideas/PB_FRA_Renewed_Naval_Policy.dds"
+		name = "GFX_idea_HNG_arpadi_scouts_idea"
+		texturefile = "gfx/interface/ideas/HUN/arpadi_scouts_idea.png"
 	}
 	spriteType = {
-		name = "GFX_idea_idea_CHI_Royal_Navy_Advisors"
-		texturefile = "gfx/interface/ideas/ideas/idea_CHI_Royal_Navy_Advisors.dds"
+		name = "GFX_idea_GGB_german_dictate"
+		texturefile = "gfx/interface/ideas/GRU/GGB/german_dictate.png"
 	}
 	spriteType = {
-		name = "GFX_idea_PB_FRA_Cipher"
-		texturefile = "gfx/interface/ideas/ideas/PB_FRA_Cipher.dds"
+		name = "GFX_idea_GGB_economic_collapse"
+		texturefile = "gfx/interface/ideas/GRU/GGB/economic_collapse.png"
 	}
 	spriteType = {
-		name = "GFX_idea_PB_Planned_Economy"
-		texturefile = "gfx/interface/ideas/ideas/PB_Planned_Economy.dds"
+		name = "GFX_idea_GGB_Illegitimate_king"
+		texturefile = "gfx/interface/ideas/GRU/GGB/Illegitimate_king.png"
 	}
 	spriteType = {
-		name = "GFX_idea_PB_GER_Land_Germans"
-		texturefile = "gfx/interface/ideas/ideas/PB_GER_Land_Germans.dds"
+		name = "GFX_idea_GGB_waning_military"
+		texturefile = "gfx/interface/ideas/GRU/GGB/waning_military.png"
 	}
 	spriteType = {
-		name = "GFX_decision_category_hre_austria"
-		texturefile = "gfx/interface/decisions/hre_austria.png"
+		name = "GFX_idea_GGB_old_lion"
+		texturefile = "gfx/interface/ideas/GRU/GGB/old_lion.png"
 	}
 	spriteType = {
-		name = "GFX_idea_AUS_navy_spirit.png"
-		texturefile = "gfx/interface/ideas/ideas/AUS_navy_spirit.png"
+		name = "GFX_volkswohlfahrt_desc"
+		texturefile = "gfx/interface/decisions/volkswohlfahrt.png"
+	}
+	### ROEM
+	spriteType = {
+		name = "GFX_roem_dismantle"
+		texturefile = "gfx/interface/decisions/ROEM/roem_dismantle.png"
+		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_idea_PB_RUS_Russian_Civil_War"
-		texturefile = "gfx/interface/ideas/ideas/PB_RUS_Russian_Civil_War.dds"
+		name = "GFX_roem_time"
+		texturefile = "gfx/interface/decisions/ROEM/roem_time.png"
+		legacy_lazy_load = no
+	}
+
+	###
+	spriteType = {
+		name = "GFX_idea_GRU_PV"
+		texturefile = "gfx/interface/ideas/GRU/PV.png"
 	}
 	spriteType = {
-		name = "GFX_idea_advisors_austria2"
-		texturefile = "gfx/interface/ideas/ideas/advisors_austria2.png"
-	}
-	spriteType = {
-		name = "GFX_idea_GER_the_two_principles"
-		texturefile = "gfx/interface/ideas/GRU/GER_the_two_principles.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_terror_bombing_2"
-		texturefile = "gfx/interface/ideas/GRU/terror_bombing_2.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_PB_RUS_Russia_United"
-		texturefile = "gfx/interface/ideas/ideas/PB_RUS_Russia_United.dds"
+		name = "GFX_decision_category_PV"
+		texturefile = "gfx/interface/decisions/PV.png"
 	}
 }

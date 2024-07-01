@@ -1,0 +1,474 @@
+add_namespace = aushre
+
+
+country_event = { # BFE claims
+	id = rotermorgenmisc.8787
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8787" }
+	title = rotermorgenmisc.8787.t
+	desc = rotermorgenmisc.8787.d
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		1089 = { add_core_of = BFE }
+		211 = { add_core_of = BFE }
+		771 = { add_core_of = BFE }
+		77 = { add_core_of = BFE }
+		772 = { add_core_of = BFE }
+		770 = { add_core_of = BFE }
+		1090 = { add_core_of = BFE }
+		212 = { add_core_of = BFE }
+		48 = { add_core_of = BFE }
+		106 = { add_core_of = BFE }
+		766 = { add_core_of = BFE }
+		44 = { add_core_of = BFE }
+		841 = { add_core_of = BFE }
+		765 = { add_core_of = BFE }
+		767 = { add_core_of = BFE }
+		108 = { add_core_of = BFE }
+		107 = { add_core_of = BFE }
+		105 = { add_core_of = BFE }
+		163 = { add_core_of = BFE }
+		104 = { add_core_of = BFE }
+		103 = { add_core_of = BFE }
+		1143 = { add_core_of = BFE }
+		1270 = { add_core_of = BFE }
+		1206 = { add_core_of = BFE }
+		1271 = { add_core_of = BFE }
+		1268 = { add_core_of = BFE }
+		1097 = { add_core_of = BFE }
+		1270 = { add_core_of = BFE }
+		1098 = { add_core_of = BFE }
+		1128 = { add_core_of = BFE }
+		794 = { add_core_of = BFE }
+		1102 = { add_core_of = BFE }
+		1099 = { add_core_of = BFE }
+		109 = { add_core_of = BFE }
+		1206 = { add_core_of = BFE }
+		1104 = { add_core_of = BFE }
+		1101 = { add_core_of = BFE }
+		1103 = { add_core_of = BFE }
+		102 = { add_core_of = BFE }
+		1105 = { add_core_of = BFE }
+		1141 = { add_core_of = BFE }
+		1142 = { add_core_of = BFE }
+		1145 = { add_core_of = BFE }
+		1269 = { add_core_of = BFE }
+		731 = { add_core_of = BFE }
+		769 = { add_core_of = BFE }
+		47 = { add_core_of = BFE }
+		185 = { add_core_of = BFE }
+		186 = { add_core_of = BFE }
+		758 = { add_core_of = BFE }
+		768 = { add_core_of = BFE }
+		939 = { add_core_of = BFE }
+		989 = { add_core_of = BFE }
+		1076 = { add_core_of = BFE }
+		182 = { add_core_of = BFE }
+		45 = { remove_core_of = BFE }
+		875 = { remove_core_of = BFE }
+	}
+}
+
+country_event = { # KOH claims
+	id = rotermorgenmisc.8788
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8788" }
+	title = rotermorgenmisc.8788.t
+	desc = rotermorgenmisc.8788.d
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		43 = { add_core_of = KOH }
+		1107 = { add_core_of = KOH }
+		154 = { add_core_of = KOH }
+		1108 = { add_core_of = KOH }
+		1109 = { add_core_of = KOH }
+		1110 = { add_core_of = KOH }
+		155 = { add_core_of = KOH }
+		1106 = { add_core_of = KOH }
+		46 = { add_core_of = KOH }
+		81 = { add_core_of = KOH }
+		78 = { add_core_of = KOH }	
+		79 = { add_core_of = KOH }	
+		80 = { add_core_of = KOH }	
+		88 = { add_core_of = KOH }	
+		89 = { add_core_of = KOH }	
+		91 = { add_core_of = KOH }	
+		713 = { add_core_of = KOH }	
+		1125 = { add_core_of = KOH }	
+		1126 = { add_core_of = KOH }	
+		1127 = { add_core_of = KOH }	
+		1140 = { add_core_of = KOH }	
+		1222 = { add_core_of = KOH }	
+		1314 = { add_core_of = KOH }	
+		1319 = { add_core_of = KOH }	
+		1320 = { add_core_of = KOH }
+		1128 = { remove_claim_by = KOH }
+		794 = { remove_claim_by = KOH }
+		1102 = { remove_claim_by = KOH }
+		109 = { remove_claim_by = KOH }
+		1099 = { remove_claim_by = KOH }
+		103 = { remove_claim_by = KOH }
+	}
+}
+
+country_event = { #Aftermath
+	id = rotermorgenmisc.8788
+	immediate = { log = "[GetDateText]: [Root.GetName]: event fengtian.254" }
+	title = fengtian.254.t
+	desc = fengtian.254.d
+	picture = GFX_report_event_generic_economic_policy
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #
+		name = fengtian.254.a
+		add_ideas = FNG_Centralized_Command_Reforms
+	}
+}
+
+country_event = { #Holy Roman Empire claims FRA
+	id = rotermorgenmisc.8790
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8790" }
+	title = rotermorgenmisc.8790.t
+	desc = rotermorgenmisc.8790.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = rotermorgenmisc.8790.a #Never!
+		ai_chance = {
+			factor = 95
+			modifier = {
+				factor = 0
+				any_enemy_country = {
+					OR = {
+						is_actual_major = yes
+						is_neighbor_of = FRA
+					}
+				}
+			}
+		}
+		FROM = {
+			country_event = {
+				id = rotermorgenmisc.8791
+				days = 6
+			}
+		}
+	}
+
+	option = {
+		name = rotermorgenmisc.8790.b #All right.
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 40
+				is_in_faction = no
+				AUS = {
+					NOT = {
+						surrender_progress > 0
+						any_enemy_country = { is_actual_major = yes }
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				tag = FRA
+				has_government = totalist
+			}
+		}
+		add_political_power = -150
+		effect_tooltip = {
+			FRA = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							is_core_of = FROM
+							is_claimed_by = FROM
+							state = 21
+							state = 762
+							state = 763
+							state = 735
+							state = 943
+							state = 785
+						}
+					}
+					transfer_state_to = FROM
+				}
+			}
+		}
+		if = {
+			limit = { tag = FRA }
+			custom_effect_tooltip = received_equipment_5000
+			add_one_random_infrastructure = yes
+		}
+		FROM = {
+			country_event = {
+				id = rotermorgenmisc.8792
+				days = 6
+			}
+		}
+	}
+}
+
+country_event = { #France refused!
+	id = rotermorgenmisc.8791
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8791" }
+	title = rotermorgenmisc.8791.t
+	desc = rotermorgenmisc.8791.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = rotermorgenmisc.8791.a #Take it back by force!
+		ai_chance = {
+			factor = 70
+		}
+		create_wargoal = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+}
+
+country_event = { #Transfer of the territory
+	id = rotermorgenmisc.8792
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8792" }
+	title = rotermorgenmisc.8792.t
+	desc = rotermorgenmisc.8792.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = rotermorgenmisc.8792.a #Another victory for Empire diplomacy!
+		add_political_power = 50
+		FRA = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+						state = 21
+						state = 762
+						state = 763
+						state = 735
+						state = 943
+						state = 785
+						state = 779
+						state = 32
+						state = 20
+						state = 27
+						state = 18
+						state = 24
+						state = 17
+						state = 980
+					}
+				}
+				transfer_state_to = ROOT
+			}
+		}
+		if = {
+			limit = {
+				FROM = { tag = FRA }
+			}
+			send_equipment = {
+				target = FROM
+				type = infantry_equipment
+				amount = 5000
+			}
+			diplomatic_relation = {
+				country = FROM
+				relation = non_aggression_pact
+			}
+		}
+	}
+}
+
+## Adding Ottomans nation to sphere
+country_event = {
+	id =  rotermorgenmisc.8793
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8793" }
+	title = rotermorgenmisc.8793.t
+	desc = rotermorgenmisc.8793.d
+	picture = GFX_report_event_generic_diplomacy2
+
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = {
+			exists = yes
+			is_faction_leader = yes
+			NOT = { has_war_with = ROOT }
+		}
+		is_subject = no
+	}
+
+	option = {
+		name = rotermorgenmisc.8793.a #We agree
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				AUS = { same_government_type_as_ROOT = yes }
+			}
+			modifier = {
+				factor = 0.5
+				AUS = { same_government_type_as_ROOT = no }
+			}
+			modifier = {
+				factor = 0.5
+				has_government = national_populist
+			}
+			modifier = {
+				factor = 0
+				any_state = {
+					is_claim_or_core_of_ROOT = yes
+					owner = {
+						OR = {
+							tag = FROM
+							is_subject_of = FROM
+							is_in_faction_with = FROM
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			country_event = { id = rotermorgenmisc.8794 days = 1 }
+			}
+	}
+
+	option = {
+		name = rotermorgenmisc.8793.b #We refuse
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 0.1
+				AUS = { same_government_type_as_ROOT = yes }
+			}
+			modifier = {
+				factor = 0.1
+				AUS = { same_government_type_as_ROOT = no }
+			}
+		}
+		FROM = {
+			country_event = { id = rotermorgenmisc.8795 days = 1 }
+			}
+		}
+}
+# Country agrees, no conditions
+country_event = {
+	id = rotermorgenmisc.8794
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8794" }
+	title = rotermorgenmisc.8794.t
+	desc = rotermorgenmisc.8794.d
+	picture = GFX_report_event_generic_diplomacy3
+
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = {
+			exists = yes
+			is_subject = no
+			NOT = { has_war_with = ROOT }
+		}
+	}
+
+	option = {
+		name = rotermorgenmisc.8794.a
+		add_political_power = 25
+		add_to_faction = FROM
+	}
+}
+# Country refuses outright
+country_event = {
+	id = rotermorgenmisc.8795
+	immediate = { log = "[GetDateText]: [Root.GetName]: event aus.rotermorgenmisc.8795" }
+	title = rotermorgenmisc.8795.t
+	desc = rotermorgenmisc.8795.d
+	picture = GFX_report_event_generic_diplomacy4
+
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = {
+			exists = yes
+			is_subject = no
+			NOT = { has_war_with = ROOT }
+		}
+	}
+
+	option = {
+		name = rotermorgenmisc.8795.a
+		add_political_power = -25
+		add_opinion_modifier = { target = FROM modifier = KR_disapproves_of_govt }
+	}
+}
+
+# Changed Dynamic
+country_event = {
+	id = rotermorgenmisc.8796
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8796" }
+	title = rotermorgenmisc.8796.t
+	desc = rotermorgenmisc.8796.d
+	picture = GFX_report_event_generic_diplomacy2
+
+	is_triggered_only = yes
+
+	option = {
+		name = rotermorgenmisc.8796.a
+		add_war_support = 0.02
+		add_ideas = AUS_ott_ally
+	}
+}
+
+# Changed Dynamic OTT
+country_event = {
+	id = rotermorgenmisc.8797
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8797" }
+	title = rotermorgenmisc.8796.t
+	desc = rotermorgenmisc.8796.d
+	picture = GFX_report_event_generic_diplomacy2
+
+	is_triggered_only = yes
+
+	option = {
+		name = rotermorgenmisc.8797.a
+		add_war_support = 0.02
+		add_ideas = AUS_ott_ally
+	}
+}
+
+# Expansion of the Vienna Circle
+country_event = {
+	id = aus.tree.4030
+	title = aus.tree.4030.t
+	desc = aus.tree.4030.d
+	picture = GFX_report_event_generic_diplomacy4
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event aus.tree.4030 option aus.tree.4030.a"
+		name = aus.tree.4030.a
+		effect_tooltip = { add_to_tech_sharing_group = austrian_research }
+	}
+}
+
+# Against Russia
+country_event = {
+	id = rotermorgenmisc.8798
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8798" }
+	title = rotermorgenmisc.8798.t
+	desc = rotermorgenmisc.8798.d
+	picture = Ausgleich_prag
+
+	is_triggered_only = yes
+
+	option = {
+		name = rotermorgenmisc.8798.a
+		add_war_support = 0.05
+	}
+}
+

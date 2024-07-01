@@ -1,0 +1,146 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_decision_header_GSV"
+		texturefile = "gfx/interface/decision_headers/decision_header_GSV.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_decision_header_GRU_1"
+		texturefile = "gfx/interface/decision_headers/decision_header_GRU_1.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_decision_header_GRU_2"
+		texturefile = "gfx/interface/decision_headers/decision_header_GRU_2.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_decision_header_GRU_4"
+		texturefile = "gfx/interface/decision_headers/decision_header_GRU_4.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_gsv_red_army"
+		texturefile = "gfx/interface/decision_headers/gsv_red_army.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_gsv_civ_ds_1"
+		texturefile = "gfx/interface/decision_headers/gsv_civ_ds_1.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_gsv_civ_ds_2"
+		texturefile = "gfx/interface/decision_headers/gsv_civ_ds_2.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_gsv_civ_ds_3"
+		texturefile = "gfx/interface/decision_headers/gsv_civ_ds_3.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_gsv_civ_ds_4"
+		texturefile = "gfx/interface/decision_headers/gsv_civ_ds_4.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_gsv_civ_ds_5"
+		texturefile = "gfx/interface/decision_headers/gsv_civ_ds_5.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_gsv_civ_ds_6"
+		texturefile = "gfx/interface/decision_headers/gsv_civ_ds_6.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_gsv_civ_ds_7"
+		texturefile = "gfx/interface/decision_headers/gsv_civ_ds_7.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_trm_test_kolchak"
+		texturefile = "gfx/interface/decision_headers/trm_test_kolchak.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_rus_elect"
+		texturefile = "gfx/interface/decision_headers/rus_elect.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_rus_elect_monarch"
+		texturefile = "gfx/interface/decision_headers/rus_elect_monarch.png"
+		legacy_lazy_load = no
+	}
+	###
+	spriteType = {
+		name = "GFX_goebb_grosdhl"
+		texturefile = "gfx/interface/decision_headers/goebb_grosdhl.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_bldun"
+		texturefile = "gfx/interface/decision_headers/goebb_bldun.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_breitspurbahn"
+		texturefile = "gfx/interface/decision_headers/goebb_breitspurbahn.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_volks"
+		texturefile = "gfx/interface/decision_headers/goebb_volks.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_germania_stadt"
+		texturefile = "gfx/interface/decision_headers/germania_stadt.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_volk"
+		texturefile = "gfx/interface/decision_headers/goebb_volk.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_stahlpakt"
+		texturefile = "gfx/interface/decision_headers/goebb_stahlpakt.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goebb_new_order"
+		texturefile = "gfx/interface/decision_headers/goebb_new_order.png "
+		legacy_lazy_load = no
+	}
+
+
+
+	spriteType = {
+		name = "GFX_gsv_ln_ds"
+		texturefile = "gfx/interface/decision_headers/gsv_ln_ds.png"
+		legacy_lazy_load = no
+	}
+	##
+	spriteType = {
+		name = "GFX_GSV_sup_ln"
+		texturefile = "gfx/interface/decisions/GSV_sup_ln.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_ROA_Maginot_line"
+		texturefile = "gfx/interface/decisions/ROA_Maginot_line.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_decision_category_rus_elections_bz"
+		texturefile = "gfx/interface/decisions/RUS/decision_category_elections.png"
+	}
+	spriteType = {
+		name = "GFX_decision_category_rus_capital_bz"
+		texturefile = "gfx/interface/decisions/RUS/decision_category_new_capital.png"
+	}
+}

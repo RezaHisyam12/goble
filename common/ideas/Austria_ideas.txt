@@ -789,7 +789,7 @@ ideas = {
 		AUS_electronic_warfare = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_electronic_warfare"}
 			allowed = { always = no }
-			picture = PB_FRA_Cipher
+			picture = NOR_oslo_analyzer
 			removal_cost = -1
 			modifier = {
 				decryption_factor = 0.05

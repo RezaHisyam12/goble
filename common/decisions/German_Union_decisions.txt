@@ -970,13 +970,12 @@ GRU_blut_boden_decisions = {
 }
 
 GRU_breitspurbahn_decisions = {
-
-
+GRU_breitspurbahn_decisions = {
 	GRU_Breitspur_cologne_ddorf_dortmund_hannover_hamburg_decision = {
-		icon = generic_construction
+		icon = GFX_Reichsautobahn
 
-		visible = {
-			has_completed_focus = GRU_breitspurbahnen
+		available = {
+			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 			and ={
 			781 = { is_owned_and_controlled_by = ROOT }
 			51 = { is_owned_and_controlled_by = ROOT }
@@ -984,12 +983,20 @@ GRU_breitspurbahn_decisions = {
 			59 = { is_owned_and_controlled_by = ROOT }
 			}
 		}
-		available = {
-			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
-		}
 		fire_only_once = yes
-		cost = 120
+		cost = 150
 		days_remove = 120
+
+		state_target = yes
+		targets = { 781 }
+		highlight_states = {
+			highlight_provinces = { 587 6570 6469 495 6535 9509 405 3395 6377 }
+		}
+
+		modifier = { 
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.10
+		}
 
 		ai_will_do = {
 			factor = 6
@@ -1000,11 +1007,15 @@ GRU_breitspurbahn_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_cologne_ddorf_dortmund_hannover_hamburg_decision"
 			clr_country_flag = GRU_TRAIN_BUILDING
+			build_railway = {
+				path = { 587 6570 6469 495 6535 9509 405 3395 6377 }
+				level = 5
+			}
 			781 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1012,7 +1023,7 @@ GRU_breitspurbahn_decisions = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1020,54 +1031,7 @@ GRU_breitspurbahn_decisions = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
-			}
-			59 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			set_country_flag = cologne_ddorf_dortmund_hannover_build
-		}
-	}
-	
-	GRU_Breitspur_wilhelmshaven_hannover_decision = {
-		icon = generic_construction
-
-		visible = {
-			has_completed_focus = GRU_breitspurbahnen
-			and ={
-			56 = { is_owned_and_controlled_by = ROOT }
-			59 = { is_owned_and_controlled_by = ROOT }
-			}
-			has_country_flag = cologne_ddorf_dortmund_hannover_build 
-		}
-		available = {
-			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
-		}
-		fire_only_once = yes
-		cost = 20
-		days_remove = 60
-
-		ai_will_do = {
-			factor = 6
-		}
-		complete_effect = {
-			set_country_flag = GRU_TRAIN_BUILDING
-		}
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_wilhelmshaven_hannover_decision"
-			clr_country_flag = GRU_TRAIN_BUILDING
-			56 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1081,22 +1045,179 @@ GRU_breitspurbahn_decisions = {
 			}
 		}
 	}
-	GRU_Breitspur_berlin_hamburg_decision = {
-		icon = generic_construction
+	GRU_Breitspur_wilhelmshaven_hannover_decision = {
+		icon = GFX_Reichsautobahn
 
-		visible = {
-			has_completed_focus = GRU_breitspurbahnen
+		available = {
+			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
+			and ={
+			56 = { is_owned_and_controlled_by = ROOT }
+			59 = { is_owned_and_controlled_by = ROOT }
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 60
+
+		state_target = yes
+		targets = { 56 }
+		highlight_states = {
+			highlight_provinces = { 6325 6349 3326 241 11360 336 3271 }
+		}
+
+		modifier = { 
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.10
+		}
+
+		ai_will_do = {
+			factor = 6
+		}
+		complete_effect = {
+			set_country_flag = GRU_TRAIN_BUILDING
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_wilhelmshaven_hannover_decision"
+			clr_country_flag = GRU_TRAIN_BUILDING
+			build_railway = {
+				path = { 6325 6349 3326 241 11360 336 3271 }
+				level = 5
+			}
+			56 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			59 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	GRU_Breitspur_bern_brussel_decision = {
+		icon = GFX_Reichsautobahn
+
+		available = {
+			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
+			and ={
+			59 = { is_owned_and_controlled_by = ROOT }
+			58 = { is_owned_and_controlled_by = ROOT }
+			839 = { is_owned_and_controlled_by = ROOT }
+			782 = { is_owned_and_controlled_by = ROOT }
+			37 = { is_owned_and_controlled_by = ROOT }
+			99 = { is_owned_and_controlled_by = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+		cost = 120
+		days_remove = 120
+
+		state_target = yes
+		targets = { 37 }
+		highlight_states = {
+			highlight_provinces = { 9347 9320 11331 6389 317 11366 332 3277 3325 3260 6393 6287 }
+		}
+
+		modifier = { 
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.10
+		}
+
+		ai_will_do = {
+			factor = 6
+		}
+		complete_effect = {
+			set_country_flag = GRU_TRAIN_BUILDING
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_bern_brussel_decision"
+			clr_country_flag = GRU_TRAIN_BUILDING
+			build_railway = {
+				path = { 9347 9320 11331 6389 317 11366 332 3277 3325 3260 6393 6287 }
+				level = 5
+			}
+			59 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			58 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			839 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			782 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			37 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			99 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	GRU_Breitspur_berlin_hamburg_decision = {
+		icon = GFX_Reichsautobahn
+
+		available = {
+			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 			and ={
 			64 = { is_owned_and_controlled_by = ROOT }
 			59 = { is_owned_and_controlled_by = ROOT }
 			}
 		}
-		available = {
-			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
-		}
 		fire_only_once = yes
 		cost = 20
 		days_remove = 60
+
+		state_target = yes
+		targets = { 59 }
+		highlight_states = {
+			highlight_provinces = { 6263 6298 9347 526 9375 3522 9456 3499 6521 }
+		}
+
+		modifier = { 
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.10
+		}
 
 		ai_will_do = {
 			factor = 6
@@ -1107,6 +1228,10 @@ GRU_breitspurbahn_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_berlin_hamburg_decision"
 			clr_country_flag = GRU_TRAIN_BUILDING
+			build_railway = {
+				path = { 6263 6298 9347 526 9375 3522 9456 3499 6521 }
+				level = 5
+			}
 			59 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1125,12 +1250,11 @@ GRU_breitspurbahn_decisions = {
 			}
 		}
 	}
-	
 	GRU_Breitspur_berlin_nurnberg_munich_decision = {
-		icon = generic_construction
+		icon = GFX_Reichsautobahn
 
-		visible = {
-			has_completed_focus = GRU_breitspurbahnen
+		available = {
+			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 			and ={
 			64 = { is_owned_and_controlled_by = ROOT }
 			60 = { is_owned_and_controlled_by = ROOT }
@@ -1138,12 +1262,20 @@ GRU_breitspurbahn_decisions = {
 			52 = { is_owned_and_controlled_by = ROOT }
 			}
 		}
-		available = {
-			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
-		}
 		fire_only_once = yes
-		cost = 120
+		cost = 150
 		days_remove = 120
+
+		state_target = yes
+		targets = { 54 }
+		highlight_states = {
+			highlight_provinces = { 65 3499 11545 9560 3535 9441 11404 9416 11544 561 6540 3705 692 }
+		}
+
+		modifier = { 
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.10
+		}
 
 		ai_will_do = {
 			factor = 6
@@ -1154,7 +1286,10 @@ GRU_breitspurbahn_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_berlin_nurnberg_munich_decision"
 			clr_country_flag = GRU_TRAIN_BUILDING
-
+			build_railway = {
+				path = { 65 3499 11545 9560 3535 9441 11404 9416 11544 561 6540 3705 692 }
+				level = 5
+			}
 			64 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1167,7 +1302,7 @@ GRU_breitspurbahn_decisions = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1175,52 +1310,10 @@ GRU_breitspurbahn_decisions = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
-			52 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			set_country_flag = berlin_munich_build
-		}
-	}
-	
-	GRU_Breitspur_munich_vienna_expansion_decision = {
-		icon = generic_construction
-
-		visible = {
-			has_completed_focus = GRU_breitspurbahnen
-			and ={
-			52 = { is_owned_and_controlled_by = ROOT }
-			836 = { is_owned_and_controlled_by = ROOT }
-			152 = { is_owned_and_controlled_by = ROOT }
-			4 = { is_owned_and_controlled_by = ROOT }
-			1137 = { is_owned_and_controlled_by = ROOT }
-			}
-			has_country_flag = berlin_munich_build 
-		}
-		available = {
-			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
-		}
-		fire_only_once = yes
-		cost = 80
-		days_remove = 90
-
-		ai_will_do = {
-			factor = 6
-		}
-		complete_effect = {
-			set_country_flag = GRU_TRAIN_BUILDING
-		}
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_munich_vienna_expansion_decision"
-			clr_country_flag = GRU_TRAIN_BUILDING
 			52 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1229,59 +1322,34 @@ GRU_breitspurbahn_decisions = {
 					instant_build = yes
 				}
 			}
-			836 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			152 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			4 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			1137 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
-			}
-			set_country_flag = munich_vienna_build
+			set_country_flag = berlin_munich_build
 		}
 	}
-	
 	GRU_Breitspur_ddorf_frankfurt_nurnberg_decision = {
-		icon = generic_construction
+		icon = GFX_Reichsautobahn
 
-		visible = {
-			has_completed_focus = GRU_breitspurbahnen
+		available = {
+			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 			and ={
 			51 = { is_owned_and_controlled_by = ROOT }
 			55 = { is_owned_and_controlled_by = ROOT }
 			54 = { is_owned_and_controlled_by = ROOT }
 			}
 		}
-		available = {
-			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
-		}
 		fire_only_once = yes
 		cost = 50
 		days_remove = 60
+
+		state_target = yes
+		targets = { 54 }
+		highlight_states = {
+			highlight_provinces = { 11544 9572 11417 3397 6488 6444 529 6570 }
+		}
+
+		modifier = { 
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.10
+		}
 
 		ai_will_do = {
 			factor = 6
@@ -1292,7 +1360,10 @@ GRU_breitspurbahn_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_ddorf_frankfurt_nurnberg_decision"
 			clr_country_flag = GRU_TRAIN_BUILDING
-
+			build_railway = {
+				path = { 11544 9572 11417 3397 6488 6444 529 6570 }
+				level = 5
+			}
 			51 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1305,7 +1376,7 @@ GRU_breitspurbahn_decisions = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1321,35 +1392,50 @@ GRU_breitspurbahn_decisions = {
 		}
 	}
 	GRU_Breitspur_frankfurt_stuttgart_decision = {
-		icon = generic_construction
+		icon = GFX_Reichsautobahn
 
-		visible = {
-			has_completed_focus = GRU_breitspurbahnen
+		available = {
+			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 			and ={
 			55 = { is_owned_and_controlled_by = ROOT }
 			50 = { is_owned_and_controlled_by = ROOT }
 			}
 		}
-		available = {
-			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
-		}
 		fire_only_once = yes
 		cost = 20
 		days_remove = 60
+
+		state_target = yes
+		targets = { 55 }
+		highlight_states = {
+			highlight_provinces = { 6488 589 6568 3530 9517 }
+		}
+
+		modifier = { 
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.10
+		}
 
 		ai_will_do = {
 			factor = 6
 		}
 
+		complete_effect = {
+			set_country_flag = GRU_TRAIN_BUILDING
+		}
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_frankfurt_stuttgart_decision"
 			clr_country_flag = GRU_TRAIN_BUILDING
-
+			build_railway = {
+				path = { 6488 589 6568 3530 9517 }
+				level = 5
+			}
 			50 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1365,26 +1451,32 @@ GRU_breitspurbahn_decisions = {
 
 		}
 	}
-	
 	GRU_Breitspur_stuttgart_zurich_expansion_decision = {
-		icon = generic_construction
+		icon = GFX_Reichsautobahn
 
-		visible = {
-			has_completed_focus = GRU_breitspurbahnen
+		available = {
+			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 			and ={
 			50 = { is_owned_and_controlled_by = ROOT }
 			780 = { is_owned_and_controlled_by = ROOT }
 			151 = { is_owned_and_controlled_by = ROOT }
 			3 = { is_owned_and_controlled_by = ROOT }
 			}
-			has_country_flag = frankfurt_stuttgart_build 
-		}
-		available = {
-			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 		}
 		fire_only_once = yes
 		cost = 20
 		days_remove = 60
+
+		state_target = yes
+		targets = { 50 }
+		highlight_states = {
+			highlight_provinces = { 9517 11486 694 3679 663 9638 9620 }
+		}
+
+		modifier = { 
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.10
+		}
 
 		ai_will_do = {
 			factor = 6
@@ -1395,6 +1487,10 @@ GRU_breitspurbahn_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_munich_vienna_expansion_decision"
 			clr_country_flag = GRU_TRAIN_BUILDING
+			build_railway = {
+				path = { 9517 11486 694 3679 663 9638 9620 }
+				level = 5
+			}
 			50 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1407,7 +1503,7 @@ GRU_breitspurbahn_decisions = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1415,7 +1511,7 @@ GRU_breitspurbahn_decisions = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1423,34 +1519,125 @@ GRU_breitspurbahn_decisions = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
 			set_country_flag = stuttgart_bern_build
 		}
 	}
-	
-	GRU_Breitspur_berlin_koenigsberg_decision = {
-		icon = generic_construction
+	GRU_Breitspur_munich_vienna_expansion_decision = {
+		icon = GFX_Reichsautobahn
 
-		visible = {
-			has_completed_focus = GRU_breitspurbahnen
+		available = {
+			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
+			and ={
+			52 = { is_owned_and_controlled_by = ROOT }
+			836 = { is_owned_and_controlled_by = ROOT }
+			152 = { is_owned_and_controlled_by = ROOT }
+			4 = { is_owned_and_controlled_by = ROOT }
+			1137 = { is_owned_and_controlled_by = ROOT }
+			}
+		}
+		fire_only_once = yes
+		cost = 80
+		days_remove = 90
+
+		state_target = yes
+		targets = { 52 }
+		highlight_states = {
+			highlight_provinces = { 692 11653 6725 6708 3703 9665 11651 704 11666 }
+		}
+
+		modifier = { 
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.10
+		}
+
+		ai_will_do = {
+			factor = 6
+		}
+		complete_effect = {
+			set_country_flag = GRU_TRAIN_BUILDING
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_munich_vienna_expansion_decision"
+			clr_country_flag = GRU_TRAIN_BUILDING
+			build_railway = {
+				path = { 692 11653 6725 6708 3703 9665 11651 704 11666 }
+				level = 5
+			}
+			52 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			836 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			152 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			4 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1137 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = munich_vienna_build
+		}
+	}
+	GRU_Breitspur_berlin_koenigsberg_decision = {
+		icon = GFX_Reichsautobahn
+
+		available = {
+			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 			and ={
 			64 = { is_owned_and_controlled_by = ROOT }
 			68 = { is_owned_and_controlled_by = ROOT }
-			63 = { is_owned_and_controlled_by = ROOT }
+			86 = { is_owned_and_controlled_by = ROOT }
 			776 = { is_owned_and_controlled_by = ROOT }
 			777 = { is_owned_and_controlled_by = ROOT }
 			5 = { is_owned_and_controlled_by = ROOT }
 			}
 		}
-		available = {
-			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
-		}
 		fire_only_once = yes
 		cost = 200
 		days_remove = 160
+
+		state_target = yes
+		targets = { 64 }
+		highlight_states = {
+			highlight_provinces = { 65 11505 9496 3473 11478 3532 6558 11232 279 3324 3380 362 6402 6332 }
+		}
+
+		modifier = { 
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.10
+		}
 
 		ai_will_do = {
 			factor = 6
@@ -1461,7 +1648,10 @@ GRU_breitspurbahn_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_berlin_koenigsberg_decision"
 			clr_country_flag = GRU_TRAIN_BUILDING
-
+			build_railway = {
+				path = { 65 11505 9496 3473 11478 3532 6558 11232 279 3324 3380 362 6402 6332 }
+				level = 5
+			}
 			64 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1478,7 +1668,7 @@ GRU_breitspurbahn_decisions = {
 					instant_build = yes
 				}
 			}
-			63 = {
+			86 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
@@ -1506,7 +1696,7 @@ GRU_breitspurbahn_decisions = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1514,25 +1704,31 @@ GRU_breitspurbahn_decisions = {
 
 		}
 	}
-	
 	GRU_Breitspur_berlin__dresden_breslau_hindenburg_decision = {
-		icon = generic_construction
+		icon = GFX_Reichsautobahn
 
-		visible = {
-			has_completed_focus = GRU_breitspurbahnen
+		available = {
+			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 			and ={
 			64 = { is_owned_and_controlled_by = ROOT }
 			65 = { is_owned_and_controlled_by = ROOT }
 			66 = { is_owned_and_controlled_by = ROOT }
-			67 = { is_owned_and_controlled_by = ROOT }
 			}
-		}
-		available = {
-			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 		}
 		fire_only_once = yes
 		cost = 140
-		days_remove = 140
+		days_remove = 120
+
+		state_target = yes
+		targets = { 66 }
+		highlight_states = {
+			highlight_provinces = { 6521 11505 9496 3572 6595 552 9570 }
+		}
+
+		modifier = { 
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.10
+		}
 
 		ai_will_do = {
 			factor = 6
@@ -1543,7 +1739,10 @@ GRU_breitspurbahn_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_berlin__dresden_breslau_hindenburg_decision"
 			clr_country_flag = GRU_TRAIN_BUILDING
-
+			build_railway = {
+				path = { 6521 11505 9496 3572 6595 552 9570 }
+				level = 5
+			}
 			64 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1556,7 +1755,7 @@ GRU_breitspurbahn_decisions = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1564,15 +1763,7 @@ GRU_breitspurbahn_decisions = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			67 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1581,12 +1772,11 @@ GRU_breitspurbahn_decisions = {
 
 		}
 	}
-	
 	GRU_Breitspur_vienna_prague_dresden_decision = {
-		icon = generic_construction
+		icon = GFX_Reichsautobahn
 
-		visible = {
-			has_completed_focus = GRU_breitspurbahnen
+		available = {
+			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 			and ={
 			1137 = { is_owned_and_controlled_by = ROOT }
 			4 = { is_owned_and_controlled_by = ROOT }
@@ -1596,17 +1786,21 @@ GRU_breitspurbahn_decisions = {
 			69 = { is_owned_and_controlled_by = ROOT }
 			65 = { is_owned_and_controlled_by = ROOT }
 			}
-			and ={
-			has_country_flag = berlin_dresden_build 
-			has_country_flag = munich_vienna_build
-			}
-		}
-		available = {
-			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 		}
 		fire_only_once = yes
 		cost = 120
 		days_remove = 120
+
+		state_target = yes
+		targets = { 65 }
+		highlight_states = {
+			highlight_provinces = { 9471 6559 11432 6440 11542 9569 11556 11525 6552 9527 11666 }
+		}
+
+		modifier = { 
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.10
+		}
 
 		ai_will_do = {
 			factor = 6
@@ -1617,6 +1811,10 @@ GRU_breitspurbahn_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_vienna_prague_dresden_decision"
 			clr_country_flag = GRU_TRAIN_BUILDING
+			build_railway = {
+				path = { 9471 6559 11432 6440 11542 9569 11556 11525 6552 9527 11666 }
+				level = 5
+			}
 			1137 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1653,7 +1851,7 @@ GRU_breitspurbahn_decisions = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1675,12 +1873,11 @@ GRU_breitspurbahn_decisions = {
 			}
 		}
 	}
-	
 	GRU_Breitspur_cologne_amsterdam_decision = {
-		icon = generic_construction
+		icon = GFX_Reichsautobahn
 
-		visible = {
-			has_completed_focus = GRU_breitspurbahnen
+		available = {
+			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 			and ={
 			781= { is_owned_and_controlled_by = ROOT }
 			978 = { is_owned_and_controlled_by = ROOT }
@@ -1688,12 +1885,20 @@ GRU_breitspurbahn_decisions = {
 			7 = { is_owned_and_controlled_by = ROOT }
 			}
 		}
-		available = {
-			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
-		}
 		fire_only_once = yes
 		cost = 40
 		days_remove = 60
+
+		state_target = yes
+		targets = { 7 }
+		highlight_states = {
+			highlight_provinces = { 587 9522 11562 6500 6496 11456 13544 391 3211 9498 }
+		}
+
+		modifier = { 
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.10
+		}
 
 		ai_will_do = {
 			factor = 6
@@ -1704,7 +1909,10 @@ GRU_breitspurbahn_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_cologne_amsterdam_decision"
 			clr_country_flag = GRU_TRAIN_BUILDING
-
+			build_railway = {
+				path = { 587 9522 11562 6500 6496 11456 13544 391 3211 9498 }
+				level = 5
+			}
 			781 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1717,7 +1925,7 @@ GRU_breitspurbahn_decisions = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1725,7 +1933,7 @@ GRU_breitspurbahn_decisions = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1733,18 +1941,18 @@ GRU_breitspurbahn_decisions = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
 		}
 	}
-	
 	GRU_Breitspur_cologne_brussel_decision = {
-		icon = generic_construction
+		icon = GFX_Reichsautobahn
 
-		visible = {
-			has_completed_focus = GRU_breitspurbahnen
+
+		available = {
+			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 			and ={
 			781= { is_owned_and_controlled_by = ROOT }
 			978 = { is_owned_and_controlled_by = ROOT }
@@ -1756,11 +1964,19 @@ GRU_breitspurbahn_decisions = {
 		cost = 40
 		days_remove = 60
 
+		state_target = yes
+		targets = { 6 }
+		highlight_states = {
+			highlight_provinces = { 587 3547 3488 11435 6537 11519 13661 516 }
+		}
+
+		modifier = { 
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.10
+		}
+
 		ai_will_do = {
 			factor = 6
-		}
-		available = {
-			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 		}
 		complete_effect = {
 			set_country_flag = GRU_TRAIN_BUILDING
@@ -1768,7 +1984,10 @@ GRU_breitspurbahn_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_cologne_brussel_decision"
 			clr_country_flag = GRU_TRAIN_BUILDING
-
+			build_railway = {
+				path = { 587 3547 3488 11435 6537 11519 13661 516 }
+				level = 5
+			}
 			781 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1789,32 +2008,37 @@ GRU_breitspurbahn_decisions = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
 		}
 	}
-	
 	GRU_Breitspur_breslau_warschau_decision = {
-		icon = generic_construction
+		icon = GFX_Reichsautobahn
 
-		visible = {
-			has_completed_focus = GRU_breitspurbahnen
+		available = {
+			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 			and ={
-			66 = { is_owned_and_controlled_by = ROOT }
 			86 = { is_owned_and_controlled_by = ROOT }
 			87 = { is_owned_and_controlled_by = ROOT }
 			10 = { is_owned_and_controlled_by = ROOT }
 			}
-			has_country_flag = berlin_breslau_build 
-		}
-		available = {
-			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 		}
 		fire_only_once = yes
 		cost = 40
 		days_remove = 60
+
+		state_target = yes
+		targets = { 86 }
+		highlight_states = {
+			highlight_provinces = { 6558 17 9439 493 9508 11492 3544 }
+		}
+
+		modifier = { 
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.10
+		}
 
 		ai_will_do = {
 			factor = 6
@@ -1825,13 +2049,9 @@ GRU_breitspurbahn_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_breslau_warschau_decision"
 			clr_country_flag = GRU_TRAIN_BUILDING
-			66 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+			build_railway = {
+				path = { 6558 17 9439 493 9508 11492 3544 }
+				level = 5
 			}
 			86 = {
 				add_extra_state_shared_building_slots = 1
@@ -1860,26 +2080,32 @@ GRU_breitspurbahn_decisions = {
 			set_country_flag = breslau_warschau_build
 		}
 	}
-	
 	GRU_Breitspur_koenigsberg_warschau_decision = {
-		icon = generic_construction
+		icon = GFX_Reichsautobahn
 
-		visible = {
-			has_completed_focus = GRU_breitspurbahnen
+		available = {
+			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 			and ={
 			5 = { is_owned_and_controlled_by = ROOT }
 			777 = { is_owned_and_controlled_by = ROOT }
 			98 = { is_owned_and_controlled_by = ROOT }
 			10 = { is_owned_and_controlled_by = ROOT }
 			}
-			has_country_flag = berlin_königsberg_build 
-		}
-		available = {
-			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 		}
 		fire_only_once = yes
-		cost = 40
+		cost = 100
 		days_remove = 60
+
+		state_target = yes
+		targets = { 5 }
+		highlight_states = {
+			highlight_provinces = { 6332 6402 3380 3351 6347 3230 6259 3544 524 402 11274 11329 11386 9327 266 }
+		}
+
+		modifier = { 
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.10
+		}
 
 		ai_will_do = {
 			factor = 6
@@ -1890,6 +2116,10 @@ GRU_breitspurbahn_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_koenigsberg_warschau_decision"
 			clr_country_flag = GRU_TRAIN_BUILDING
+			build_railway = {
+				path = { 6332 6402 3380 3351 6347 3230 6259 3544 524 402 11274 11329 11386 9327 266 }
+				level = 5
+			}
 			5 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -1925,30 +2155,35 @@ GRU_breitspurbahn_decisions = {
 			set_country_flag = königsberg_warschau_build
 		}
 	}
-	
 	GRU_Breitspur_warschau_lemberg_decision = {
-		icon = generic_construction
+		icon = GFX_Reichsautobahn
 
-		visible = {
-			has_completed_focus = GRU_breitspurbahnen
-			and ={
-			10 = { is_owned_and_controlled_by = ROOT }
-			90 = { is_owned_and_controlled_by = ROOT }
-			1125 = { is_owned_and_controlled_by = ROOT }
-			1127 = { is_owned_and_controlled_by = ROOT }
-			91 = { is_owned_and_controlled_by = ROOT }
-			}
-			OR = {
-			has_country_flag = königsberg_warschau_build 
-			has_country_flag = breslau_warschau_build 
-			}
-		}
 		available = {
 			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
+			and ={
+			    66 = { is_owned_and_controlled_by = ROOT }
+				67 = { is_owned_and_controlled_by = ROOT }
+				1124 = { is_owned_and_controlled_by = ROOT }
+				88 = { is_owned_and_controlled_by = ROOT }
+				1125 = { is_owned_and_controlled_by = ROOT }
+				1127 = { is_owned_and_controlled_by = ROOT }
+				91 = { is_owned_and_controlled_by = ROOT }
+			}
 		}
 		fire_only_once = yes
-		cost = 60
-		days_remove = 70
+		cost = 150
+		days_remove = 90
+
+		state_target = yes
+		targets = { 91 }
+		highlight_states = {
+			highlight_provinces = { 9570 6512 9457 11467 6464 9427 11413 442 6499 6522 9468 11479 }
+		}
+
+		modifier = { 
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.10
+		}
 
 		ai_will_do = {
 			factor = 6
@@ -1959,82 +2194,19 @@ GRU_breitspurbahn_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_königsberg_warschau_decision"
 			clr_country_flag = GRU_TRAIN_BUILDING
-			10 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+			build_railway = {
+				path = { 9570 6512 9457 11467 6464 9427 11413 442 6499 6522 9468 11479 }
+				level = 5
 			}
-			90 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			1125 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			1127 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			91 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			set_country_flag = warschau_lemberg_build
-		}
-	}
-	
-	GRU_Breitspur_hindenburg_lemberg_decision = {
-		icon = generic_construction
-
-		visible = {
-			has_completed_focus = GRU_breitspurbahnen
-			and ={
-			67 = { is_owned_and_controlled_by = ROOT }
-			88 = { is_owned_and_controlled_by = ROOT }
-			1125 = { is_owned_and_controlled_by = ROOT }
-			1127 = { is_owned_and_controlled_by = ROOT }
-			91 = { is_owned_and_controlled_by = ROOT }
-			}
-			has_country_flag = berlin_breslau_build 
-
-		}
-		available = {
-			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
-		}
-		fire_only_once = yes
-		cost = 60
-		days_remove = 120
-
-		ai_will_do = {
-			factor = 6
-		}
-		complete_effect = {
-			set_country_flag = GRU_TRAIN_BUILDING
-		}
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_hindenburg_lemberg_decision"
-			clr_country_flag = GRU_TRAIN_BUILDING
 			67 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1124 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
@@ -2074,32 +2246,36 @@ GRU_breitspurbahn_decisions = {
 					instant_build = yes
 				}
 			}
-			set_country_flag = hindenburg_lemberg_build
+			set_country_flag = warschau_lemberg_build
 		}
 	}
-	
-	GRU_Breitspur_bern_brussel_decision = {
-		icon = generic_construction
+	GRU_Breitspur_hindenburg_lemberg_decision = {
+		icon = GFX_Reichsautobahn
 
-		visible = {
-			has_completed_focus = GRU_breitspurbahnen
-			and ={
-			3 = { is_owned_and_controlled_by = ROOT }
-			28 = { is_owned_and_controlled_by = ROOT }
-			8 = { is_owned_and_controlled_by = ROOT }
-			741 = { is_owned_and_controlled_by = ROOT }
-			34 = { is_owned_and_controlled_by = ROOT }
-			5 = { is_owned_and_controlled_by = ROOT }
-			}
-			has_country_flag = stuttgart_bern_build 
-
-		}
 		available = {
 			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
+			and ={
+			10 = { is_owned_and_controlled_by = ROOT }
+			92 = { is_owned_and_controlled_by = ROOT }
+			1125 = { is_owned_and_controlled_by = ROOT }
+			1127 = { is_owned_and_controlled_by = ROOT }
+			91 = { is_owned_and_controlled_by = ROOT }
+			}
 		}
 		fire_only_once = yes
-		cost = 120
+		cost = 100
 		days_remove = 120
+
+		state_target = yes
+		targets = { 10 }
+		highlight_states = {
+			highlight_provinces = { 3544 12562 3521 6484 1088 3559 13546 6522 9468 11479 }
+		}
+
+		modifier = { 
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.10
+		}
 
 		ai_will_do = {
 			factor = 6
@@ -2110,7 +2286,11 @@ GRU_breitspurbahn_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Breitspur_hindenburg_lemberg_decision"
 			clr_country_flag = GRU_TRAIN_BUILDING
-			3 = {
+			build_railway = {
+				path = { 3544 12562 3521 6484 1088 3559 13546 6522 9468 11479 }
+				level = 5
+			}
+			10 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
@@ -2118,7 +2298,7 @@ GRU_breitspurbahn_decisions = {
 					instant_build = yes
 				}
 			}
-			28 = {
+			92 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
@@ -2126,7 +2306,7 @@ GRU_breitspurbahn_decisions = {
 					instant_build = yes
 				}
 			}
-			8 = {
+			1125 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
@@ -2134,7 +2314,7 @@ GRU_breitspurbahn_decisions = {
 					instant_build = yes
 				}
 			}
-			741 = {
+			1127 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
@@ -2142,7 +2322,7 @@ GRU_breitspurbahn_decisions = {
 					instant_build = yes
 				}
 			}
-			34 = {
+			91 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
@@ -2150,14 +2330,7 @@ GRU_breitspurbahn_decisions = {
 					instant_build = yes
 				}
 			}
-			5 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
+			set_country_flag = hindenburg_lemberg_build
 		}
 	}
 }

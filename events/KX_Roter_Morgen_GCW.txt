@@ -59,21 +59,29 @@ country_event = { # Help companies
 		name = rotermorgenGCW.100.a
 		ai_chance = {
 			factor = 100
+			modifier = {
+				factor = 0 
+				has_global_flag = KX_GER_REV_ALWAYS
+			}
 		}
 		add_stability = 0.02
 		add_political_power = -50
 		hidden_effect = {
-				add_to_variable = { var = Willy_fucks_it_up value = -2 }
-				country_event = {
+			add_to_variable = { var = Willy_fucks_it_up value = -2 }
+			country_event = {
 				id = rotermorgenGCW.101
 				days = 7
-				}
+			}
 		}
 	}
 	option = { # no
 		name = rotermorgenGCW.100.b
 		ai_chance = {
 			factor = 0
+			modifier = {
+				factor = 100
+				has_global_flag = KX_GER_REV_ALWAYS
+			}
 		}
 		add_stability = -0.05
 		add_political_power = 25
@@ -97,8 +105,6 @@ country_event = { #Open soup kitchens
 	is_triggered_only = yes
 	fire_only_once = yes
 	
-
-	
 	option = { # no
 		name = rotermorgenGCW.101.a
 		ai_chance = {
@@ -107,11 +113,11 @@ country_event = { #Open soup kitchens
 		add_stability = -0.1
 		add_political_power = 30
 		hidden_effect = {
-				add_to_variable = { var = Willy_fucks_it_up value = 2 }
-				country_event = {
+			add_to_variable = { var = Willy_fucks_it_up value = 2 }
+			country_event = {
 				id = rotermorgenGCW.102
 				days = 7
-				}
+			}
 		}
 	}
 	option = { # yes
@@ -122,11 +128,11 @@ country_event = { #Open soup kitchens
 		add_stability = 0.1
 		add_political_power = -20
 		hidden_effect = {
-				add_to_variable = { var = Willy_fucks_it_up value = -1 }
-				country_event = {
+			add_to_variable = { var = Willy_fucks_it_up value = -1 }
+			country_event = {
 				id = rotermorgenGCW.102
 				days = 7
-				}
+			}
 		}
 	}
 }
@@ -138,8 +144,6 @@ country_event = { # Bail out Banks
 	desc = rotermorgenGCW.102.d
 	fire_only_once = yes
 	is_triggered_only = yes
-	
-
 	
 	option = { # no
 		name = rotermorgenGCW.102.a
@@ -164,11 +168,11 @@ country_event = { # Bail out Banks
 		add_stability = 0.15
 		add_political_power = -100
 		hidden_effect = {
-				add_to_variable = { var = Willy_fucks_it_up value = -3 }
-				country_event = {
+			add_to_variable = { var = Willy_fucks_it_up value = -3 }
+			country_event = {
 				id = rotermorgenGCW.104
 				days = 7
-				}
+			}
 		}
 	}
 }
@@ -182,8 +186,6 @@ country_event = { # Banks collapse
 	is_triggered_only = yes
 	fire_only_once = yes
 	
-
-	
 	option = { # Help them now 
 		name = rotermorgenGCW.103.a
 		ai_chance = {
@@ -192,11 +194,11 @@ country_event = { # Banks collapse
 		add_stability = 0.10
 		add_political_power = -150
 		hidden_effect = {
-				add_to_variable = { var = Willy_fucks_it_up value = -2 }
-				country_event = {
+			add_to_variable = { var = Willy_fucks_it_up value = -2 }
+			country_event = {
 				id = rotermorgenGCW.104
 				days = 7
-				}
+			}
 		}
 	}
 	option = { # nope no help
@@ -207,11 +209,11 @@ country_event = { # Banks collapse
 		add_stability = -0.10
 		add_political_power = 90
 		hidden_effect = {
-				add_to_variable = { var = Willy_fucks_it_up value = 2 }
-				country_event = {
+			add_to_variable = { var = Willy_fucks_it_up value = 2 }
+			country_event = {
 				id = rotermorgenGCW.104
 				days = 7
-				}
+			}
 		}
 	}
 }
@@ -223,8 +225,6 @@ country_event = { # expropirate some rich people
 	desc = rotermorgenGCW.104.d
 	fire_only_once = yes
 	is_triggered_only = yes
-	
-
 	
 	option = { # Hell no!
 		name = rotermorgenGCW.104.a
@@ -249,11 +249,11 @@ country_event = { # expropirate some rich people
 		add_stability = 0.35
 		add_political_power = -250
 		hidden_effect = {
-				add_to_variable = { var = Willy_fucks_it_up value = -4 }
-				country_event = {
+			add_to_variable = { var = Willy_fucks_it_up value = -4 }
+			country_event = {
 				id = rotermorgenGCW.105
 				days = 7
-				}
+			}
 		}
 	}
 }
@@ -299,42 +299,12 @@ country_event = { # CW averted!
 	fire_only_once = yes
 	is_triggered_only = yes
 	
-
-	
 	option = { #
 		name = rotermorgenGCW.106.a
 		add_stability = 0.25
 		add_political_power = 200
 	}
 }
-
-
-#country_event = { 
-	#id = rotermorgenGCW.1
-	#immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.1" }
-	#title = rotermorgenGCW.1.t
-	#desc = rotermorgenGCW.1.d
-	#is_triggered_only = yes
-	#trigger = {
-		#GER = {
-		#	#NOT = { has_completed_focus = GER_black_monday_aftermath }
-		#	check_variable = { Willy_fucks_it_up > 5 } 
-		#}
-		#date > 1936.11.1
-	#}
-	#hidden = yes
-	#fire_only_once = yes
-	#immediate = {
-	#	GER = {
-	#		country_event = {
-	#			id = rotermorgenGCW.2
-	#			days = 5
-	#			}
-	#	}
-	#}
-#}
-
-
 
 country_event = { # companies crash
 	id = rotermorgenGCW.2
@@ -348,10 +318,10 @@ country_event = { # companies crash
 		name = rotermorgenGCW.2.a
 		add_stability = -0.15
 		hidden_effect = {
-				country_event = {
+			country_event = {
 				id = rotermorgenGCW.3
 				days = 7
-				}
+			}
 		}
 	}
 }
@@ -368,10 +338,10 @@ country_event = { # Inform of mass poverty
 		name = rotermorgenGCW.3.a
 		add_stability = -0.05
 		hidden_effect = {
-				country_event = {
+			country_event = {
 				id = rotermorgenGCW.7
-				days = 9
-				}
+				days = 7
+			}
 		}
 	}
 }
@@ -388,15 +358,13 @@ country_event = { # flavour about ruined germany
 		name = rotermorgenGCW.7.a
 		add_stability = -0.05
 		hidden_effect = {
-				country_event = {
+			country_event = {
 				id = rotermorgenGCW.4
-				days = 9
-				}
+				days = 7
+			}
 		}
 	}
 }
-
-
 
 country_event = { # riots!
 	id = rotermorgenGCW.4
@@ -410,14 +378,13 @@ country_event = { # riots!
 		name = rotermorgenGCW.4.a
 		add_stability = -0.20
 		hidden_effect = {
-				country_event = {
+			country_event = {
 				id = rotermorgenGCW.8
 				days = 14
-				}
+			}
 		}
 	}
 }
-
 
 country_event = { # flavour about united front
 	id = rotermorgenGCW.8
