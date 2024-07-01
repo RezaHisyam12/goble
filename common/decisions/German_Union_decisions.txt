@@ -970,7 +970,6 @@ GRU_blut_boden_decisions = {
 }
 
 GRU_breitspurbahn_decisions = {
-GRU_breitspurbahn_decisions = {
 	GRU_Breitspur_cologne_ddorf_dortmund_hannover_hamburg_decision = {
 		icon = GFX_Reichsautobahn
 
@@ -7045,6 +7044,565 @@ GRU_kill_entente_decisions = {
 }
 
 GRU_kill_rivals_decisions = {
+	GRU_westafrica_decision = {
+		icon = GFX_ns_eagle
+		ai_will_do = { factor = 100 }
+		highlight_states = {
+		    highlight_state_targets = {
+		    	state = 298
+				state = 966
+				state = 807
+				state = 963
+				state = 1321
+				state = 1323
+				state = 877
+				state = 1322
+				state = 876
+				state = 973
+				state = 558
+				state = 662
+				state = 878
+				state = 913
+				state = 274
+				state = 1192
+				state = 809
+				state = 808
+				state = 556
+				state = 806
+				state = 700
+				state = 296
+				state = 272
+				state = 834
+				state = 557
+		    }
+		}
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = GRU_NMDVP_KILL_COLONIES
+			GRU = { has_government = national_populist }
+		}
+		available = {
+			tag = GRU 
+			AND = {
+				OR = {
+					GRU = {
+						controls_state = 558
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 558
+					}
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				every_owned_state = {
+			    	limit = {
+			    		OR = {
+							state = 298
+					        state = 966
+					        state = 807
+					        state = 963
+					        state = 1321
+					        state = 1323
+					        state = 877
+					        state = 1322
+					        state = 876
+					        state = 973
+					        state = 558
+					        state = 662
+					        state = 878
+					        state = 913
+					        state = 274
+					        state = 1192
+					        state = 809
+					        state = 808
+					        state = 556
+					        state = 806
+					        state = 700
+					        state = 296
+					        state = 272
+					        state = 834
+					        state = 557
+			    		}
+			    	}
+			    	MVA = {
+			    		add_state_core = PREV
+			    		transfer_state = PREV
+			    	}
+			    }
+				every_state = {
+			    	limit = {
+			    		OR = {
+					        state = 298
+					        state = 966
+					        state = 807
+					        state = 963
+					        state = 1321
+					        state = 1323
+					        state = 877
+					        state = 1322
+					        state = 876
+					        state = 973
+					        state = 558
+					        state = 662
+					        state = 878
+					        state = 913
+					        state = 274
+					        state = 1192
+					        state = 809
+					        state = 808
+					        state = 556
+					        state = 806
+					        state = 700
+					        state = 296
+					        state = 272
+					        state = 834
+					        state = 557
+			    		}
+			    	}
+			    	remove_claim_by = GRU
+			    }
+				MVA = {
+					inherit_technology = GRU
+
+					set_cosmetic_tag = MVA
+
+					country_event = rotermorgenmisc.952
+					
+					add_manpower = 100000
+					add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
+					add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 30000 }
+					add_equipment_to_stockpile = { type = support_equipment amount = 3000 }
+					add_equipment_to_stockpile = { type = artillery_equipment amount = 1000 }
+					add_equipment_to_stockpile = { type = anti_tank_equipment amount = 600 }
+					add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 5000 }
+				}
+				set_autonomy = { target = MVA autonomy_state = RM_Reichskommissariat }
+			}
+		}
+	}
+	GRU_mittelafrika_decision = {
+		icon = GFX_ns_eagle
+		ai_will_do = { factor = 100 }
+		highlight_states = {
+		    highlight_state_targets = {
+				state = 927
+				state = 952
+				state = 297
+				state = 971
+				state = 962
+				state = 975
+				state = 660
+				state = 974
+				state = 1180
+				state = 718
+				state = 1025
+				state = 1026
+				state = 1181
+				state = 977
+				state = 953
+				state = 539
+				state = 928
+				state = 914
+				state = 881
+				state = 916
+				state = 540
+				state = 917
+				state = 959
+				state = 957
+				state = 958
+				state = 813
+				state = 956
+				state = 879
+				state = 1183
+				state = 976
+				state = 295
+				state = 1185
+				state = 538
+				state = 949
+				state = 1184
+				state = 1182
+				state = 948
+				state = 515
+		    }
+		}
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = GRU_NMDVP_KILL_COLONIES
+			GRU = { has_government = national_populist }
+		}
+		available = {
+			tag = GRU 
+			AND = {
+				OR = {
+					GRU = {
+						controls_state = 881
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 881
+					}
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				every_owned_state = {
+			    	limit = {
+			    		OR = {
+							state = 927
+					        state = 952
+					        state = 297
+					        state = 971
+					        state = 962
+					        state = 975
+					        state = 660
+					        state = 974
+					        state = 1180
+					        state = 718
+					        state = 1025
+					        state = 1026
+					        state = 1181
+					        state = 977
+					        state = 953
+					        state = 539
+					        state = 928
+					        state = 914
+					        state = 881
+					        state = 916
+					        state = 540
+					        state = 917
+					        state = 959
+					        state = 957
+					        state = 958
+					        state = 813
+					        state = 956
+					        state = 879
+					        state = 1183
+					        state = 976
+					        state = 295
+					        state = 1185
+					        state = 538
+					        state = 949
+					        state = 1184
+					        state = 1182
+					        state = 948
+					        state = 515
+			    		}
+			    	}
+			    	MTA = {
+			    		add_state_core = PREV
+			    		transfer_state = PREV
+			    	}
+			    }
+				every_state = {
+			    	limit = {
+			    		OR = {
+					        state = 927
+					        state = 952
+					        state = 297
+					        state = 971
+					        state = 962
+					        state = 975
+					        state = 660
+					        state = 974
+					        state = 1180
+					        state = 718
+					        state = 1025
+					        state = 1026
+					        state = 1181
+					        state = 977
+					        state = 953
+					        state = 539
+					        state = 928
+					        state = 914
+					        state = 881
+					        state = 916
+					        state = 540
+					        state = 917
+					        state = 959
+					        state = 957
+					        state = 958
+					        state = 813
+					        state = 956
+					        state = 879
+					        state = 1183
+					        state = 976
+					        state = 295
+					        state = 1185
+					        state = 538
+					        state = 949
+					        state = 1184
+					        state = 1182
+					        state = 948
+					        state = 515
+			    		}
+			    	}
+			    	remove_claim_by = GRU
+			    }
+				MTA = {
+					inherit_technology = GRU
+
+					set_cosmetic_tag = MTA
+
+					country_event = rotermorgenmisc.953
+					
+					add_manpower = 200000
+					add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
+					add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 30000 }
+					add_equipment_to_stockpile = { type = support_equipment amount = 3000 }
+					add_equipment_to_stockpile = { type = artillery_equipment amount = 1000 }
+					add_equipment_to_stockpile = { type = anti_tank_equipment amount = 600 }
+					add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 5000 }
+				}
+				set_autonomy = { target = MTA autonomy_state = RM_Reichskommissariat }
+			}
+		}
+	}
+	GRU_ostafrica_decision = {
+		icon = GFX_ns_eagle
+		ai_will_do = { factor = 100 }
+		highlight_states = {
+		    highlight_state_targets = {
+				state = 548
+				state = 969
+				state = 547
+				state = 925
+				state = 970
+				state = 965
+				state = 544
+				state = 950
+				state = 954
+				state = 955
+				state = 871
+				state = 899
+				state = 546
+				state = 870
+				state = 918
+				state = 869
+				state = 905
+				state = 1032
+				state = 708
+				state = 706
+				state = 707
+				state = 543
+				state = 1177
+				state = 1179
+				state = 1178
+		    }
+		}
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = GRU_NMDVP_KILL_COLONIES
+			GRU = { has_government = national_populist }
+		}
+		available = {
+			tag = GRU 
+			AND = {
+				OR = {
+					GRU = {
+						controls_state = 965
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 965
+					}
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				every_owned_state = {
+			    	limit = {
+			    		OR = {
+							state = 548
+					        state = 969
+					        state = 547
+					        state = 925
+					        state = 970
+					        state = 965
+					        state = 544
+					        state = 950
+					        state = 954
+					        state = 955
+					        state = 871
+					        state = 899
+					        state = 1032
+					        state = 546
+					        state = 870
+					        state = 918
+					        state = 869
+					        state = 905
+					        state = 708
+					        state = 706
+					        state = 707
+					        state = 543
+					        state = 1177
+					        state = 1179
+					        state = 1178
+			    		}
+			    	}
+			    	MOA = {
+			    		add_state_core = PREV
+			    		transfer_state = PREV
+			    	}
+			    }
+				every_state = {
+			    	limit = {
+			    		OR = {
+							state = 548
+					        state = 969
+					        state = 547
+					        state = 925
+					        state = 970
+					        state = 965
+					        state = 544
+					        state = 950
+					        state = 954
+					        state = 955
+					        state = 871
+					        state = 899
+					        state = 1032
+					        state = 546
+					        state = 870
+					        state = 918
+					        state = 869
+					        state = 905
+					        state = 708
+					        state = 706
+					        state = 707
+					        state = 543
+					        state = 1177
+					        state = 1179
+					        state = 1178
+			    		}
+			    	}
+					remove_claim_by = GRU
+			    }
+				MOA = {
+					inherit_technology = GRU
+
+					set_cosmetic_tag = MOA
+
+					country_event = rotermorgenmisc.954
+					
+					add_manpower = 100000
+					add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
+					add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 30000 }
+					add_equipment_to_stockpile = { type = support_equipment amount = 3000 }
+					add_equipment_to_stockpile = { type = artillery_equipment amount = 1000 }
+					add_equipment_to_stockpile = { type = anti_tank_equipment amount = 600 }
+					add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 5000 }
+				}
+				set_autonomy = { target = MOA autonomy_state = RM_Reichskommissariat }
+			}
+		}
+	}
+	GRU_sudwestafrica_decision = {
+		icon = GFX_ns_eagle
+		ai_will_do = { factor = 100 }
+		highlight_states = {
+		    highlight_state_targets = {
+				state = 964
+				state = 541
+				state = 542
+				state = 545
+				state = 275
+				state = 738
+				state = 719
+				state = 946
+				state = 681
+				state = 945
+				state = 947
+				state = 85
+				state = 1176
+		    }
+		}
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = GRU_NMDVP_KILL_COLONIES
+			GRU = { has_government = national_populist }
+		}
+		available = {
+			tag = GRU 
+			AND = {
+				OR = {
+					GRU = {
+						controls_state = 541
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 541
+					}
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				every_owned_state = {
+			    	limit = {
+			    		OR = {
+					        state = 964
+					        state = 541
+					        state = 542
+					        state = 545
+					        state = 275
+					        state = 738
+					        state = 719
+					        state = 946
+					        state = 681
+					        state = 1176
+					        state = 945
+					        state = 947
+					        state = 85
+			    		}
+			    	}
+			    	MZA = {
+			    		add_state_core = PREV
+			    		transfer_state = PREV
+			    	}
+			    }
+				every_state = {
+			    	limit = {
+			    		OR = {
+					        state = 964
+					        state = 541
+					        state = 542
+					        state = 545
+					        state = 275
+					        state = 738
+					        state = 719
+					        state = 946
+					        state = 681
+					        state = 1176
+					        state = 945
+					        state = 947
+					        state = 85
+			    		}
+			    	}
+			    	remove_claim_by = GRU
+			    }
+				MZA = {
+					inherit_technology = GRU
+
+					set_cosmetic_tag = MZA
+
+					country_event = rotermorgenmisc.955
+					
+					add_manpower = 100000
+					add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
+					add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 30000 }
+					add_equipment_to_stockpile = { type = support_equipment amount = 3000 }
+					add_equipment_to_stockpile = { type = artillery_equipment amount = 1000 }
+					add_equipment_to_stockpile = { type = anti_tank_equipment amount = 600 }
+					add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 5000 }
+				}
+				set_autonomy = { target = MZA autonomy_state = RM_Reichskommissariat }
+			}
+		}
+	}
 	GRU_attack_rival_germany_decision = {
 		icon = generic_prepare_civil_war
 

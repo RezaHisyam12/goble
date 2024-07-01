@@ -4509,7 +4509,7 @@ country_event = { # Ideology Switch
 		remove_all_ministers = yes
 		add_ideas = {
 			GRU_Joseph_Goebbels_hog_npo
-			GRU_Bodo_Uhse_for_npo
+			GRU_Joachim_Ribbentrop_for_npo
 			}
 		}
 
@@ -4520,3 +4520,149 @@ country_event = { # Ideology Switch
 		}	
 	}
 }
+
+country_event = { #
+	id = rotermorgenmisc.952
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.952" }
+	title = rotermorgenmisc.952.t
+	desc = rotermorgenmisc.952.d
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		298 = { add_core_of = MVA }
+		966 = { add_core_of = MVA }
+		807 = { add_core_of = MVA }
+		963 = { add_core_of = MVA }
+		1321 = { add_core_of = MVA }
+		1323 = { add_core_of = MVA }
+		877 = { add_core_of = MVA }
+		1322 = { add_core_of = MVA }
+		876 = { add_core_of = MVA }
+		973 = { add_core_of = MVA }
+		558 = { add_core_of = MVA }
+		662 = { add_core_of = MVA }
+		878 = { add_core_of = MVA }
+		913 = { add_core_of = MVA }
+		274 = { add_core_of = MVA }
+		1192 = { add_core_of = MVA }
+		809 = { add_core_of = MVA }
+		808 = { add_core_of = MVA }
+		556 = { add_core_of = MVA }
+		806 = { add_core_of = MVA }
+		700 = { add_core_of = MVA }
+		296 = { add_core_of = MVA }
+		272 = { add_core_of = MVA }
+		834 = { add_core_of = MVA }
+		557 = { add_core_of = MVA }
+	}
+}
+
+country_event = { #
+	id = rotermorgenmisc.953
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.953" }
+	title = rotermorgenmisc.953.t
+	desc = rotermorgenmisc.953.d
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		927 = { add_core_of = MTA }
+		952 = { add_core_of = MTA }
+		297 = { add_core_of = MTA }
+		971 = { add_core_of = MTA }
+		962 = { add_core_of = MTA }
+		975 = { add_core_of = MTA }
+		660 = { add_core_of = MTA }
+		974 = { add_core_of = MTA }
+		1180 = { add_core_of = MTA }
+		718 = { add_core_of = MTA }
+		1025 = { add_core_of = MTA }
+		1026 = { add_core_of = MTA }
+		1181 = { add_core_of = MTA }
+		977 = { add_core_of = MTA }
+		953 = { add_core_of = MTA }
+		539 = { add_core_of = MTA }
+		928 = { add_core_of = MTA }
+		914 = { add_core_of = MTA }
+		881 = { add_core_of = MTA }
+		916 = { add_core_of = MTA }
+		540 = { add_core_of = MTA }
+		917 = { add_core_of = MTA }
+		959 = { add_core_of = MTA }
+		957 = { add_core_of = MTA }
+		958 = { add_core_of = MTA }
+		813 = { add_core_of = MTA }
+		956 = { add_core_of = MTA }
+		879 = { add_core_of = MTA }
+		1183 = { add_core_of = MTA }
+		976 = { add_core_of = MTA }
+		295 = { add_core_of = MTA }
+		1185 = { add_core_of = MTA }
+		538 = { add_core_of = MTA }
+		949 = { add_core_of = MTA }
+		1184 = { add_core_of = MTA }
+		1182 = { add_core_of = MTA }
+		948 = { add_core_of = MTA }
+		515 = { add_core_of = MTA }
+	}
+}
+
+country_event = { #
+	id = rotermorgenmisc.954
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.954" }
+	title = rotermorgenmisc.954.t
+	desc = rotermorgenmisc.954.d
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		548 = { add_core_of = MOA }
+		969 = { add_core_of = MOA }
+		547 = { add_core_of = MOA }
+		925 = { add_core_of = MOA }
+		970 = { add_core_of = MOA }
+		965 = { add_core_of = MOA }
+		544 = { add_core_of = MOA }
+		950 = { add_core_of = MOA }
+		954 = { add_core_of = MOA }
+		955 = { add_core_of = MOA }
+		871 = { add_core_of = MOA }
+		899 = { add_core_of = MOA }
+		1032 = { add_core_of = MOA }
+		546 = { add_core_of = MOA }
+		870 = { add_core_of = MOA }
+		918 = { add_core_of = MOA }
+		869 = { add_core_of = MOA }
+		905 = { add_core_of = MOA }
+		708 = { add_core_of = MOA }
+		706 = { add_core_of = MOA }
+		707 = { add_core_of = MOA }
+		543 = { add_core_of = MOA }
+		1177 = { add_core_of = MOA }
+		1179 = { add_core_of = MOA }
+		1178 = { add_core_of = MOA }
+	}
+}
+
+country_event = { #
+	id = rotermorgenmisc.955
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.955" }
+	title = rotermorgenmisc.955.t
+	desc = rotermorgenmisc.955.d
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		964 = { add_core_of = MZA }
+		541 = { add_core_of = MZA }
+		542 = { add_core_of = MZA }
+		545 = { add_core_of = MZA }
+		275 = { add_core_of = MZA }
+		738 = { add_core_of = MZA }
+		719 = { add_core_of = MZA }
+		946 = { add_core_of = MZA }
+		681 = { add_core_of = MZA }
+		1176 = { add_core_of = MZA }
+		945 = { add_core_of = MZA }
+		947 = { add_core_of = MZA }
+		85 = { add_core_of = MZA }
+	}
+}
+

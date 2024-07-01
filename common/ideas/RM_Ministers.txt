@@ -54,16 +54,53 @@ ideas = {
 			traits = {
 				head_of_government
 				national_populist
+				sec_man_of_the_people
+				hog_silent_workhorse
+				hog_populist_reactionary
+			}
+		}
+
+		GRU_Paul_Lensch_hog_tot = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Paul_Lensch_hog_tot"
+			}
+			traits = {
+				head_of_government
+				totalist
 				hog_silent_workhorse
 			}
 		}
-		
+
 		GRU_Wilhelm_Pieck_hog_tot = {
 			allowed = { original_tag = GRU }
 			available = {
 				custom_trigger_tooltip = {
 					tooltip = head_of_gov_available
 					always = no
+				}
+			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
 				}
 			}
 			cancel_if_invalid = no
@@ -85,6 +122,14 @@ ideas = {
 					always = no
 				}
 			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
+				}
+			}
 			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea GRU_Ernst_Thaelmann_hog_syn"
@@ -102,6 +147,14 @@ ideas = {
 				custom_trigger_tooltip = {
 					tooltip = head_of_gov_available
 					always = no
+				}
+			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
 				}
 			}
 			cancel_if_invalid = no
@@ -123,6 +176,14 @@ ideas = {
 					always = no
 				}
 			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
+				}
+			}
 			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea GRU_Heinrich_Brandler_hog_rso"
@@ -140,6 +201,14 @@ ideas = {
 				custom_trigger_tooltip = {
 					tooltip = head_of_gov_available
 					always = no
+				}
+			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
 				}
 			}
 			cancel_if_invalid = no
@@ -161,6 +230,14 @@ ideas = {
 					always = no
 				}
 			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
+				}
+			}
 			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea GRU_FRAUOBSRI_hog_syn"
@@ -170,12 +247,30 @@ ideas = {
 				syndicalist
 			}
 		}
+		HNG_Miklos_Horthy_hog_pau = {
+			allowed = { original_tag = HNG }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDatext]: [Root.GetName]: add idea HNG_Miklos_Horthy_hog_pau"
+			}
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_old_admiral
+			}
+		}
 	}
 
 	person_of_influence = {
 	
 		######NMDVP#####
-		
+
 		PRC_MAINFRAME_for_tot = {
 			allowed = { original_tag = XNE }
 			available = {
@@ -203,6 +298,14 @@ ideas = {
 					always = no
 				}
 			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
+				}
+			}
 			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea GRU_Bodo_Uhse_for_tot"
@@ -214,7 +317,34 @@ ideas = {
 			}
 		}
 		
-		GRU_Bodo_Uhse_for_npo = {
+		GRU_Heinrich_Cunow_for_tot = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Heinrich_Cunow_for_tot"
+			}
+			traits = {
+				foreign_minister
+				totalist
+				for_biased_intellectual
+			}
+		}
+
+		GRU_Joachim_Ribbentrop_for_npo = {
 			allowed = { original_tag = GRU }
 			available = {
 				custom_trigger_tooltip = {
@@ -224,15 +354,15 @@ ideas = {
 			}
 			cancel_if_invalid = no
 			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea GRU_Bodo_Uhse_for_npo"
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Joachim_Ribbentrop_for_npo"
 			}
 			traits = {
 				foreign_minister
-				national_populist
-				for_apologetic_clerk
+				for_the_cloak_n_dagger_schemer
+				for_ideological_crusader
 			}
 		}
-
+		
 		PRC_MAINFRAME_eco_tot = {
 			allowed = { original_tag = XNE }
 			available = {
@@ -247,7 +377,35 @@ ideas = {
 			}
 			traits = {
 				economy_minister
+				
 				eco_administrative_genius
+			}
+		}
+
+		GRU_Paul_Lensch_eco_tot = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Paul_Lensch_eco_tot"
+			}
+			traits = {
+				economy_minister
+				totalist
+				eco_planned_economy_proponent
 			}
 		}
 		
@@ -259,13 +417,20 @@ ideas = {
 					always = no
 				}
 			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
+				}
+			}
 			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea GRU_Gregor_Strasser_eco_tot"
 			}
 			traits = {
 				economy_minister
-				totalist
 				eco_planned_economy_proponent
 			}
 		}
@@ -278,6 +443,14 @@ ideas = {
 					always = no
 				}
 			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
+				}
+			}
 			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea GRU_Gregor_Strasser_eco_npo"
@@ -288,8 +461,8 @@ ideas = {
 				eco_planned_economy_proponent
 			}
 		}
-		
-		GRU_Albert_Speer_eco_tot = {
+
+		GRU_Hermann_von_Goering_eco_npo = {
 			allowed = { original_tag = GRU }
 			available = {
 				custom_trigger_tooltip = {
@@ -299,40 +472,33 @@ ideas = {
 			}
 			cancel_if_invalid = no
 			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea GRU_Albert_Speer_eco_tot"
-			}
-			traits = {
-				economy_minister
-				totalist
-				eco_administrative_genius
-			}
-		}
-		
-		GRU_Albert_Speer_eco_npo = {
-			allowed = { original_tag = GRU }
-			available = {
-				custom_trigger_tooltip = {
-					tooltip = minister_available
-					always = no
-				}
-			}
-			cancel_if_invalid = no
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea GRU_Albert_Speer_eco_npo"
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Hermann_von_Goering_eco_npo"
 			}
 			traits = {
 				economy_minister
 				national_populist
-				eco_administrative_genius
+				sec_crooked_kleptocrat
+				hog_old_air_marshal
+				eco_military_entrepreneur
+				eco_mixed_economy
+				eco_captain_of_industry
 			}
 		}
-				
+		
 		NGF_Herbert_Frahm_sec_sde = {
 			allowed = { original_tag = NGF }
 			available = {
 				custom_trigger_tooltip = {
 					tooltip = minister_available
 					always = no
+				}
+			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
 				}
 			}
 			cancel_if_invalid = no
@@ -345,7 +511,8 @@ ideas = {
 				sec_man_of_the_people
 			}
 		}
-				
+		
+		
 		PRC_MAINFRAME_sec_tot = {
 			allowed = { original_tag = XNE }
 			available = {
@@ -383,7 +550,6 @@ ideas = {
 				sec_efficient_sociopath
 			}
 		}
-
 		GRU_MEMEMAN_sec_tot = {
 			allowed = { original_tag = GRU }
 			available = {
@@ -405,7 +571,32 @@ ideas = {
 				sec_efficient_sociopath
 			}
 		}
-
+		GRU_Paul_Lensch_sec_tot = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Paul_Lensch_sec_tot"
+			}
+			traits = {
+				security_minister
+				totalist
+				sec_silent_lawyer
+			}
+		}
 		GRU_Ernst_Roehm_sec_tot = {
 			allowed = { original_tag = GRU }
 			available = {
@@ -413,6 +604,9 @@ ideas = {
 					tooltip = minister_available
 					always = no
 				}
+			}
+			visible = {
+				NOT = { has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE }
 			}
 			cancel_if_invalid = no
 			on_add = {
@@ -424,7 +618,6 @@ ideas = {
 				sec_prince_of_terror
 			}
 		}
-
 		GRU_Ernst_Roehm_sec_npo = {
 			allowed = { original_tag = GRU }
 			available = {
@@ -432,6 +625,9 @@ ideas = {
 					tooltip = minister_available
 					always = no
 				}
+			}
+			visible = {
+				NOT = { has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE }
 			}
 			cancel_if_invalid = no
 			on_add = {
@@ -443,6 +639,44 @@ ideas = {
 				sec_prince_of_terror
 			}
 		}
+		GRU_Albert_Speer_sec_npo = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Albert_Speer_sec_npo"
+			}
+			traits = {
+				national_populist
+				sec_popular_figurehead
+				eco_construction_magnate
+				eco_administrative_genius
+				hog_influential_intellectual
+			}
+		}
+		HNG_riccardo_zanella_sec_pau = {
+			allowed = { original_tag = HNG }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea HNG_riccardo_zanella_sec_pau"
+			}
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_man_of_the_people
+			}
+		}
 		######NMDVP#####
 		####SEPD Tot####
 		GRU_Willi_Muenzenberg_sec_tot = {
@@ -451,6 +685,14 @@ ideas = {
 				custom_trigger_tooltip = {
 					tooltip = minister_available
 					always = no
+				}
+			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
 				}
 			}
 			cancel_if_invalid = no
@@ -473,6 +715,14 @@ ideas = {
 					always = no
 				}
 			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
+				}
+			}
 			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea GRU_Gerhart_Eisler_for_syn"
@@ -491,6 +741,14 @@ ideas = {
 					always = no
 				}
 			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
+				}
+			}
 			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea GRU_Jakob_Kaiser_eco_syn"
@@ -507,6 +765,14 @@ ideas = {
 				custom_trigger_tooltip = {
 					tooltip = minister_available
 					always = no
+				}
+			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
 				}
 			}
 			cancel_if_invalid = no
@@ -529,6 +795,14 @@ ideas = {
 					always = no
 				}
 			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
+				}
+			}
 			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea GRU_Erich_Ollenhauer_for_rso"
@@ -545,6 +819,14 @@ ideas = {
 				custom_trigger_tooltip = {
 					tooltip = minister_available
 					always = no
+				}
+			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
 				}
 			}
 			cancel_if_invalid = no
@@ -565,6 +847,14 @@ ideas = {
 					always = no
 				}
 			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
+				}
+			}
 			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea GRU_Franz_Oppenhoff_sec_rso"
@@ -575,6 +865,42 @@ ideas = {
 				sec_efficient_sociopath
 			}
 		}
+		HNG_vasarhelyi_miklos_for_pau = {
+			allowed = { original_tag = HNG }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea HNG_vasarhelyi_miklos_for_pau"
+			}
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_great_compromiser
+			}
+		}
+		HNG_miklos_horthy_eco_pau = {
+			allowed = { original_tag = HNG }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea HNG_miklos_horthy_eco_pau"
+			}
+			traits = {
+				economy_minister
+				paternal_autocrat
+				eco_battle_fleet_proponent
+			}
+		}
 		######SPDR######
 		####OCCUPATION##
 		GRU_FRA_syn = {
@@ -583,6 +909,14 @@ ideas = {
 				custom_trigger_tooltip = {
 					tooltip = minister_available
 					always = no
+				}
+			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
 				}
 			}
 			cancel_if_invalid = no
@@ -602,6 +936,14 @@ ideas = {
 					always = no
 				}
 			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
+				}
+			}
 			cancel_if_invalid = no
 			on_add = {
 				log = "[GetDateText]: [Root.GetName]: add idea GRU_UOB_for_syn"
@@ -617,6 +959,14 @@ ideas = {
 				custom_trigger_tooltip = {
 					tooltip = minister_available
 					always = no
+				}
+			}
+			visible = {
+				NOT = {
+					OR = {
+						has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+						has_country_flag = GRU_GOEBB_SPEER_VISIBLE
+					}
 				}
 			}
 			cancel_if_invalid = no

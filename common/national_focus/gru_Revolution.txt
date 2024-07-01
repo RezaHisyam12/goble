@@ -6928,6 +6928,7 @@ shared_focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_LEBENSRAUM"
 			custom_effect_tooltip = GRU_tt_lebensraum_decisions			
+			custom_effect_tooltip = GRU_tt_lebensraum_2_decisions			
 			}
 		prerequisite = { focus = GRU_NMDVP_RED_COLONIALISM  }
 		}	

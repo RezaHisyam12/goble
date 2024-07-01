@@ -4307,3 +4307,24 @@ KOH = {
 	color = rgb { 128 128 128 }
 	color_ui = rgb { 128 128 128 }
 }
+###
+MVA = {
+	color = rgb { 77 93 83 }
+	color_ui = rgb { 138 155 116 }
+}
+MTA = {
+	color = rgb { 77 93 83 }
+	color_ui = rgb { 138 155 116 }
+}
+MOA = {
+	color = rgb { 77 93 83 }
+	color_ui = rgb { 138 155 116 }
+}
+MZA = {
+	color = rgb { 77 93 83 }
+	color_ui = rgb { 138 155 116 }
+}
+AFRICAN_HRE_GOEBB = {
+	color = rgb { 77 93 83 }
+	color_ui = rgb { 138 155 116 }
+}

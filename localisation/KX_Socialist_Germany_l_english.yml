@@ -5,7 +5,7 @@ GRU_breitspurbahnen_desc:0 "While the Old Empire did little for us and for the G
 GRU_welfare:0 "People's Welfare"
 GRU_welfare_desc:0 "The Kaiser served not the worker but the Junker nobility who did nothing but oppress us! This was perfectly demonstrated with his not only inability to do anything to alleviate our suffering during Black Monday, but also his outright refusal to do so! Now with the worker in power we will remedy his mistakes! We shall institute a generous welfare program to alleviate the plight of the common man using funds seized from the decadent Junkers."
 GRU_staatsfeind_nr1:0 "Staatsfeind Nr.1"
-GRU_staatsfeind_nr1_desc:0 "'They lay among us, everywhere these inventors and propagators of Judeo-Capitalism. These Reactionary Capitalist snakes lie in the bush, controlling the Bankers both abroad and even at home, awaiting the perfect time to strike our workers' paradise and pull us back into their degenerate hands!'\nIn a recent speech Volksfuhrer Joseph Goebbels has lashed out at the Bankers both foreign and domestic. He has declared them Staatsfiend No 1, Public Enemy Number 1, and ordered the Army to round up any remaining bankers still hiding out in German borders, Jewish or not, and to seize what few private banks have remained open in the government’s blind spots."
+GRU_staatsfeind_nr1_desc:0 "They are among us, everywhere, these inventors and propagators of Jew capitalism. These Zionist snakes have infiltrated our home, controlling bankers abroad and even the government, waiting for the opportune moment to strike at our workers' paradise and take us back into their degenerate hands!"
 GRU_germany_reborn:0 "Germany Reborn"
 GRU_germany_reborn_desc:0 "Through hard work, grit and determination we have built a new Germany on the ashes of the old. Many thought that building a workers utopia by carving out the heart of reaction was impossible, much less that it would last as long as it has. However we have proven them wrong and we stand poised to bring our new German revolution to the whole world!"
 GRU_form_the_guard:0 "Form the KdV"
@@ -251,7 +251,7 @@ GRU_agrarian_collectivisation_desc:0 "The agrarian lands must be nationalized an
 GRU_volksgesundheitsamt:0 "Boden und Blut"
 GRU_volksgesundheitsamt_desc:0 "The Soil and the Blood are what our Nation is made of and we must safeguard it. No matter the cost, We will defend our race and our borders to our last breath!"
 GRU_proclaim_victory_over_judeo_capitalism:0 "Proclaim Victory over Judeo-Capitalism"
-GRU_proclaim_victory_over_judeo_capitalism_desc:0 "With our power seizure over Germany we have finally defeated the Judeo-Capitalists! They have done great damage to our nation with their capitalist lies and discare for the common man! Let our militias deal with them!"
+GRU_proclaim_victory_over_judeo_capitalism_desc:0 "After Goebbels won the elections to the general congress of the German trade unions, the country was plunged into the agony of anti-Semitism. Under the slogans of national purity and in the name of the final solution to the Jewish question, began mass pogroms, the purpose of which was to cleanse Germany of "subhumans"\n\nThe streets of the cities resounded with cries of hatred, anti-Semitic slogans sounded from the mouths of the crowds, encouraged by the new government. During Kristallnacht, 30,000 Jews were arrested and sent to concentration camps through local jails, their stores and businesses were destroyed, they were banned from certain professions, and some were killed without trial."
 
 
 GRU_pieck_heroism:0 "Positive Heroism"
@@ -719,36 +719,36 @@ austria_cored:0 "Austria cored"
 
 ####ideas####
 GRU_Stasi:0 "Stasi"
-GRU_Stasi_desc:0 "The Ministerium für Staatssicherheit, MfS or Staatssicherheitsdienst, SSD, commonly known as the Stasi, is the official state security service of the German National Worker State. It has been described as one of the most effective and repressive intelligence and secret police agencies to have ever existed."
+GRU_Stasi_desc:0 "\n£goebb_stasi£\n\n\n\nThe Ministerium für Staatssicherheit, MfS or Staatssicherheitsdienst, SSD, commonly known as the Stasi, is the official state security service of the German National Worker State. It has been described as one of the most effective and repressive intelligence and secret police agencies to have ever existed."
 
 GRU_FDJ:0 "FDJ"
-GRU_FDJ_desc:0 "The Freie Deutsche Jugend\nThe political and ideological goal of the FDJ is to influence every aspect of life of young people in Germany, distribution of National-Marxism, and the promotion of 'German behavior', as the Volksführer calls it.\nMembership in the FDJ is nominally voluntary, however, those who do not join lose access to organized holidays, and find it difficult, if not impossible to be admitted to universities, pursue chosen careers, etc. The FDJ has appropriated many of the activities of the Boy Scouts movement which has been banned since the formation of the FDJ; including camping and hiking. However, its content and intention are different. For example, many activities closely resemble military training, with weapons training, assault course circuits and basic tactics. The aim is to instill the motivation that will enable its members to fight faithfully for Germany as soldiers. There is greater emphasis on physical fitness, hardness and military training than on academic study."
+GRU_FDJ_desc:0 "\n£goebb_fdj£\n\n\n\nThe Freie Deutsche Jugend\nThe political and ideological goal of the FDJ is to influence every aspect of life of young people in Germany, distribution of National-Marxism, and the promotion of 'German behavior', as the Volksführer calls it.\nMembership in the FDJ is nominally voluntary, however, those who do not join lose access to organized holidays, and find it difficult, if not impossible to be admitted to universities, pursue chosen careers, etc. The FDJ has appropriated many of the activities of the Boy Scouts movement which has been banned since the formation of the FDJ; including camping and hiking. However, its content and intention are different. For example, many activities closely resemble military training, with weapons training, assault course circuits and basic tactics. The aim is to instill the motivation that will enable its members to fight faithfully for Germany as soldiers. There is greater emphasis on physical fitness, hardness and military training than on academic study."
 
 GRU_red_ufa:0 "UFA"
-GRU_red_ufa_desc:0 "After their nationalization all media distribution and production has been merged into the UFA to serve as Germany's new centralized propaganda machine."
+GRU_red_ufa_desc:0 "\n£goebb_ufa£\n\n\n\nAfter their nationalization all media distribution and production has been merged into the UFA to serve as Germany's new centralized propaganda machine."
 
 
 GRU_blackbook:0 "Schwarzes Buch der Partei"
-GRU_blackbook_desc:0 "The black book of the party.\nThe Volksführer has published this ideological masterpiece in which his ideological thought on state and society are set in stone.\nEvery German household is to receive a copy of this book as well as every German on his sixteenth birthday.\nOf course, every citizen is expected to read it carefully so they can easily detect and report all forms of anti-governmental speech, action or both."
+GRU_blackbook_desc:0 "\n£goebb_blackbook£\n\n\n\nThe black book of the party.\nThe Volksführer has published this ideological masterpiece in which his ideological thought on state and society are set in stone.\nEvery German household is to receive a copy of this book as well as every German on his sixteenth birthday.\nOf course, every citizen is expected to read it carefully so they can easily detect and report all forms of anti-governmental speech, action or both."
 
 GRU_breitspur:0 "Breitspurbahnen"
-GRU_breitspur_desc:0 "The Breitspurbahnen is an ongoing project of building up a railroad network with an extremely wide gauge width. The idea behind this is to interlink all German cities and areas with high industrial development or large amount of resources."
+GRU_breitspur_desc:0 "\n£goebb_breitspur£\n\n\n\nThe Breitspurbahnen is an ongoing project of building up a railroad network with an extremely wide gauge width. The idea behind this is to interlink all German cities and areas with high industrial development or large amount of resources."
 
-GRU_guard:0 "R.R. - Revolutionäres Regiment"
-GRU_guard_desc:0 "The Revolutionary Regiment.\nThese men fear no one, in fact everyone else fears them now not only in Germany as their reputation has already reached neighboring countries.\nThe Revolutionary Regiment, dressed in all black uniforms with their crimson runic 'RR' symbols serves as a small elite force under direct command of the party. They are responsible for the deportation and removal of enemies of the state in Germany and beyond."
+GRU_guard:0 "£RR_guard£ R.R. - Revolutionäres Regiment"
+GRU_guard_desc:0 "\n£goebb_rr£\n\n\n\nThe Revolutionary Regiment.\nThese men fear no one, in fact everyone else fears them now not only in Germany as their reputation has already reached neighboring countries.\nThe Revolutionary Regiment, dressed in all black uniforms with their crimson runic 'RR' symbols serves as a small elite force under direct command of the party. They are responsible for the deportation and removal of enemies of the state in Germany and beyond."
 
 GRU_lager:0 "Anhaltelager"
-GRU_lager_desc:0 "These camps are run by the R.R. and no one knows for sure what happens to those that end up in them. All the people know is that products that only require manual labor have gotten cheaper recently. Best not to think about it..."
+GRU_lager_desc:0 "\n£goebb_lager£\n\n\n\nThese camps are run by the R.R. and no one knows for sure what happens to those that end up in them. All the people know is that products that only require manual labor have gotten cheaper recently. Best not to think about it..."
 
 
 GRU_new_germany:0 "Das neue Deutschland!"
-GRU_new_germany_desc:0 "The new Germany.\n\nGermany has been reborn, risen from the ashes when it was crushed by foreign forces and the kaiser, but no more! Now we have been reborn like a phoenix and we shall forever vanguard our glorious Fatherland!"
+GRU_new_germany_desc:0 "\n£goebb_new_germany£\n\n\n\nThe new Germany.\n\nGermany has been reborn, risen from the ashes when it was crushed by foreign forces and the kaiser, but no more! Now we have been reborn like a phoenix and we shall forever vanguard our glorious Fatherland!"
 
 GRU_deutsche_architecture:0 "Deutschsozialistische Architektur"
-GRU_deutsche_architecture_desc:0 "German Socialist Architecture.\nThe Volksführer has developed a special interest in the architectural image of Germany.\nSome might question why chose a reactionary as his new national architect but who knows what Albert Speer might accomplish if guided by the hand of the revolution."
+GRU_deutsche_architecture_desc:0 "\n£architecture£\n\n\n\nGerman Socialist Architecture.\nThe Volksführer has developed a special interest in the architectural image of Germany.\nSome might question why chose a reactionary as his new national architect but who knows what Albert Speer might accomplish if guided by the hand of the revolution."
 
 GRU_heavy_industry:0 "Neue Schwerindustrie"
-GRU_heavy_industry_desc:0 "New Heavy Industries.\n\nWe have been building up a new heavy industry that will dwarf the industries of all other European countries."
+GRU_heavy_industry_desc:0 "\n£goebb_industry£\n\n\n\nNew Heavy Industries.\n\nWe have been building up a new heavy industry that will dwarf the industries of all other European countries."
 
 GRU_carrier:0 "Naval Focus: Carriers"
 GRU_carrier_desc:0 "Our Navy development is focused on building up a carrier task force based fleet."
@@ -760,10 +760,10 @@ GRU_carrier_cruiser:0 "Naval Focus: Carriers and Cruisers"
 GRU_carrier_cruiser_desc:0 "Our Navy development is focused on building up a carrier task force and cruiser based fleet."
 
 GRU_carrier_submarine_OK_NVM:0 "Oberkommando National Volksmarine"
-GRU_carrier_submarine_OK_NVM_desc:0 "The naval high command of the German national armed forces.\n\nOur Fleet has a heavy focus on Carriers task forces and Submarine wolfpacks."
+GRU_carrier_submarine_OK_NVM_desc:0 "\n£goebb_oknvm£\n\n\n\nThe naval high command of the German national armed forces.\n\nOur Fleet has a heavy focus on Carriers task forces and Submarine wolfpacks."
 
 GRU_carrier_cruiser_OK_NVM:0 "Oberkommando National Volksmarine"
-GRU_carrier_cruiser_OK_NVM_desc:0 "The naval high command of the German national armed forces.\n\nOur Fleet has a heavy focus on Carriers task forces and Cruisers."
+GRU_carrier_cruiser_OK_NVM_desc:0 "\n£goebb_oknvm£\n\n\n\nThe naval high command of the German national armed forces.\n\nOur Fleet has a heavy focus on Carriers task forces and Cruisers."
 
 GRU_battleship:0 "Naval Focus: Battleships"
 GRU_battleship_desc:0 "Our Navy development is focused on building up a battleship task force based fleet."
@@ -775,10 +775,10 @@ GRU_battleship_cruiser:0 "Naval Focus: Battleships and Cruisers"
 GRU_battleship_cruiser_desc:0 "Our Navy development is focused on building up a battleship task force and cruiser based fleet."
 
 GRU_battleship_submarine_OK_NVM:0 "Oberkommando National Volksmarine"
-GRU_battleship_submarine_OK_NVM_desc:0 "The naval high command of the German national armed forces.\n\nOur Fleet has a heavy focus on Battleships task forces and Submarine wolfpacks."
+GRU_battleship_submarine_OK_NVM_desc:0 "\n£goebb_oknvm£\n\n\n\nThe naval high command of the German national armed forces.\n\nOur Fleet has a heavy focus on Battleships task forces and Submarine wolfpacks."
 
 GRU_battleship_cruiser_OK_NVM:0 "Oberkommando National Volksmarine"
-GRU_battleship_cruiser_OK_NVM_desc:0 "The naval high command of the German national armed forces.\n\nOur Fleet has a heavy focus on Battleships task forces and Cruisers."
+GRU_battleship_cruiser_OK_NVM_desc:0 "\n£goebb_oknvm£\n\n\n\nThe naval high command of the German national armed forces.\n\nOur Fleet has a heavy focus on Battleships task forces and Cruisers."
 
 GRU_fighter:0 "Air Force Focus: Fighters"
 GRU_fighter_desc:0 "Our air force development is focused on building up a Fighter based air force."
@@ -790,10 +790,10 @@ GRU_fighter_sea:0 "Air Force Focus: Fighters and naval support"
 GRU_fighter_sea_desc:0 "Our air force development is focused on building up a Fighter and naval support based air force."
 
 GRU_fighter_ground_OK_NLW:0 "Oberkommando Nationale Luftwaffe"
-GRU_fighter_ground_OK_NLW_desc:0 "The air force high command of the German national armed forces.\n\nOur air force has a heavy focus on Fighters and ground support."
+GRU_fighter_ground_OK_NLW_desc:0 "\n£goebb_oknlw£\n\n\n\nThe air force high command of the German national armed forces.\n\nOur air force has a heavy focus on Fighters and ground support."
 
 GRU_fighter_sea_OK_NLW:0 "Oberkommando Nationale Luftwaffe"
-GRU_fighter_sea_OK_NLW_desc:0 "The air force high command of the German national armed forces.\n\nOur air force has a heavy focus on Fighters and naval support."
+GRU_fighter_sea_OK_NLW_desc:0 "\n£goebb_oknlw£\n\n\n\nThe air force high command of the German national armed forces.\n\nOur air force has a heavy focus on Fighters and naval support."
 
 GRU_bomber:0 "Air Force Focus: Bombers"
 GRU_bomber_desc:0 "Our air force development is focused on building up a bomber based air force."
@@ -805,10 +805,10 @@ GRU_bomber_sea:0 "Air Force Focus: Bombers and naval support"
 GRU_bomber_sea_desc:0 "Our air force development is focused on building up a bomber and naval support based air force."
 
 GRU_bomber_ground_OK_NLW:0 "Oberkommando Nationale Luftwaffe"
-GRU_bomber_ground_OK_NLW_desc:0 "The air force high command of the German national armed forces.\n\nOur air force has a heavy focus on bombers and ground support."
+GRU_bomber_ground_OK_NLW_desc:0 "\n£goebb_oknlw£\n\n\n\nThe air force high command of the German national armed forces.\n\nOur air force has a heavy focus on bombers and ground support."
 
 GRU_bomber_sea_OK_NLW:0 "Oberkommando Nationale Luftwaffe"
-GRU_bomber_sea_OK_NLW_desc:0 "The air force high command of the German national armed forces.\n\nOur air force has a heavy focus on bombers and naval support."
+GRU_bomber_sea_OK_NLW_desc:0 "\n£goebb_oknlw£\n\n\n\nThe air force high command of the German national armed forces.\n\nOur air force has a heavy focus on bombers and naval support."
 
 GRU_panzer:0 "Army Focus: Panzers"
 GRU_panzer_desc:0 "Our Army development is focused on building up a armored force."
@@ -824,13 +824,13 @@ GRU_masses_two_desc:0 "Our army development is focused on building up a large in
 
 
 GRU_mobile_generals:0 "Oberkommando Nationales Volksheer"
-GRU_mobile_generals_desc:0 "The army high command of the German national armed forces.\n\nOur land based armed forces are focused on mobility, speed and the use of armored divisions."
+GRU_mobile_generals_desc:0 "\n£goebb_oknvh£\n\n\n\nThe army high command of the German national armed forces.\n\nOur land based armed forces are focused on mobility, speed and the use of armored divisions."
 
 GRU_masses_generals:0 "Oberkommando Nationales Volksheer"
-GRU_masses_generals_desc:0 "The army high command of the German national armed forces.\n\nOur land based armed forces are focused on human wave tactics combined with overwhelming artillery fire on enemy positions."
+GRU_masses_generals_desc:0 "\n£goebb_oknvh£\n\n\n\nThe army high command of the German national armed forces.\n\nOur land based armed forces are focused on human wave tactics combined with overwhelming artillery fire on enemy positions."
 
 GRU_pol_off:0 "Political Officers"
-GRU_pol_off_desc:0 "Our officer corps has a primacy on ideological conformism in recruitment."
+GRU_pol_off_desc:0 "\n£goebb_pol_off£\n\n\n\nOur officer corps has a primacy on ideological conformism in recruitment."
 
 GRU_skill_off:0 "Skilled Officers"
 GRU_skill_off_desc:0 "Our officer corps has a primacy on actual skill in recruitment."
@@ -839,7 +839,7 @@ GRU_eleced_off:0 "Elected Officers"
 GRU_eleced_off_desc:0 "Soldiers elect their direct superior from among their ranks, except for the Generality which is appointed by the government."
 
 GRU_MFSP:0 "Ministerium für Spezialprojekte"
-GRU_MFSP_desc:0 "Ministry of Special Projects.\nThe Ministry of Special Projects is tasked with allocating brain pool and resources for top primacy projects."
+GRU_MFSP_desc:0 "\n£goebb_MFSP£\n\n\n\nMinistry of Special Projects.\nThe Ministry of Special Projects is tasked with allocating brain pool and resources for top primacy projects."
 
 
 
@@ -921,7 +921,7 @@ GRU_SPD_WORKER_RIGHTS:0 "Worker Rights"
 GRU_SPD_WORKER_RIGHTS_desc:0 "By passing several laws that protect workers from unfair treatment of their employers we shall create a society in which classes exist in harmony."
 
 GRU_volkssturm_idea:0 "Volkssturm"
-GRU_volkssturm_idea_desc:0 "The VS or Volkssturm is a paramilitary force directly integrated into the party structure."
+GRU_volkssturm_idea_desc:0 "\n£goebb_volkssturm£\n\n\n\nThe VS or Volkssturm is a paramilitary force directly integrated into the party structure."
 
 gru_red_imperialism:0 "Red Imperialism"
 gru_red_imperialism_desc:0 "We shall retake all that has been taken from us by all means!"
@@ -1059,9 +1059,14 @@ GRU_PDS_SOCIALIST_MARKET_ECONOMICS:0 "Socialist Market Economics."
 GRU_RED_NEWS_RDS:0 "State Media."
 
 GRU_DAF_KDF_ONE:0 "Deutsche Arbeiterfront"
+GRU_DAF_KDF_ONE_desc:0 "\n£goebb_KDF£\n\n\n\nTo ease the dilemma of independent unions, we have created the Deutsche Arbeitsfront or German Labor Front. This union will be a national union, with the state as the chief representative of the labor force.\n\nAll members must renounce membership in other unions and must join them. This will not only eliminate Communist influence over our workers, but will ensure the proper labor welfare of our people."
 GRU_DAF_KDF_A:0 "Deutsche Arbeiterfront"
+GRU_DAF_KDF_A_desc:0 "\n£goebb_KDF£\n\n\n\nTo ease the dilemma of independent unions, we have created the Deutsche Arbeitsfront or German Labor Front. This union will be a national union, with the state as the chief representative of the labor force.\n\nAll members must renounce membership in other unions and must join them. This will not only eliminate Communist influence over our workers, but will ensure the proper labor welfare of our people."
 GRU_DAF_KDF_B:0 "Deutsche Arbeiterfront"
+GRU_DAF_KDF_B_desc:0 "\n£goebb_KDF£\n\n\n\nTo ease the dilemma of independent unions, we have created the Deutsche Arbeitsfront or German Labor Front. This union will be a national union, with the state as the chief representative of the labor force.\n\nAll members must renounce membership in other unions and must join them. This will not only eliminate Communist influence over our workers, but will ensure the proper labor welfare of our people."
 GRU_DAF_KDF_AB:0 "Deutsche Arbeiterfront"
+GRU_DAF_KDF_AB_desc:0 "\n£goebb_KDF£\n\n\n\nTo ease the dilemma of independent unions, we have created the Deutsche Arbeitsfront or German Labor Front. This union will be a national union, with the state as the chief representative of the labor force.\n\nAll members must renounce membership in other unions and must join them. This will not only eliminate Communist influence over our workers, but will ensure the proper labor welfare of our people."
+
 GRU_Der_Volksgenosse:0 "Der Volksgenosse"
 GRU_Volksempfaenger:0 "Volksempfänger"
 GRU_Volksempfaenger_two:0 "Volksfernseher"
@@ -1078,7 +1083,7 @@ GRU_KOMMANDOWIRTSCHAFT_aa:0 "Interlinked Economy"
 GRU_National_socialism_one:0 "National Corporatism"
 GRU_National_socialism_two:0 "National Corporatist Economics"
 GRU_National_socialism_three:0 "National Socialist Market Economics"
-GRU_National_socialism_three_desc:0 "§YFight the class struggle by class cooperation§!. This is the idea behind our 'National Socialist Market Economy', in which private and nationalized industries work hand in hand in the interest of the Nation and the People with a strong social system that is interlinked with the party to ensure total loyalty."
+GRU_National_socialism_three_desc:0 "\n£goebb_economic£\n\n\n\n§YFight the class struggle by class cooperation§!. This is the idea behind our 'National Socialist Market Economy', in which private and nationalized industries work hand in hand in the interest of the Nation and the People with a strong social system that is interlinked with the party to ensure total loyalty."
 
 
 GERMAN_CIVIL_WAR_participant:0 "German Civil War Participant"
@@ -1780,11 +1785,12 @@ rotermorgenIV.3.e:0 "The revolutions torch still burns in the north!"
 
 ###tooltips###
 GRU_tt_hydroelectricity_decisions:0 "Decisions on §YHydroelectricity§! will become available."
-GRU_tt_breitspurbahn_decisions:0 "Decisions on building the §RBreitspurbahn§! network will become available."
+GRU_tt_breitspurbahn_decisions:0 "\n\n\n£goebb_breitspur_tt£\n\n\n\nDecisions on building the §RBreitspurbahn§! network will become available."
 GRU_tt_pan_germanism_one_decisions:0 "Unlocks decisions for the §RGermania Plan§!\n\nGrants claims on German lands."
 GRU_tt_pan_germanism_two_decisions:0 "Unlocks westward decisions for the §RGermania Plan§!\n\nGrants claims on Germanic lands."
 GRU_tt_pan_germanism_three_decisions:0 "Unlocks eastward decisions for the §RGermania Plan§!\n\nGrants claims on Slavic lands."
 GRU_tt_lebensraum_decisions:0 "Decisions on §RLebensraum§! become available."
+GRU_tt_lebensraum_2_decisions:0 "\n\n\n£goebb_lebens£\n\n\n\n£heroism_texticon£  All of this, belongs to £attack_texticon£ §VUS!§!\n\n£new_germany_texticon£  §X--»§!  England, Cornwall, Burgundy, Frankia, Brittany, Iberia, Italy, Hungary, Wallachia, Serbia, Bulgaria, Turkey\n\n§P£lebensraum_texticon£  ------------------------------------------------------ »§!\n\n£goebb_ska£ Scandinavia, £goebb_bal£ Baltenland, £goebb_rut£ Ruthenia, £goebb_dks£ Don-Caucasia, £goebb_mos£ Moscovia\n\n§V:::::::::::::::::::::::::  C L A S S I F I E D  :::::::::::::::::::::::::§!\n\n                             £goebb_jud£  §V«-   -»§!  £goebb_tur£\n\n§V:::::::::::::::::::::::::  C L A S S I F I E D  :::::::::::::::::::::::::§!"
 GRU_tt_scandinavia_decisions:0 "Unlocks decisions for §CScandinavia§!."
 GRU_tt_allies_decisions:0 "Decisions to §Yalign§! other §YNations§! and to subvert the §R3rd Internationale§! become available."
 GRU_tt_entente_decisions:0 "Unlocks §RWar§! decisions towards the §CEntente§!."
@@ -1831,23 +1837,23 @@ GRU_Lemburg_Hydroelectricity_decision:0 "Damm the Dnister"
 GRU_tyrol_Hydroelectricity_decision:0 "Damm the Etsch"
 
 GRU_breitspurbahn_decisions:0 "The Breitspurbahn Network"
-GRU_Breitspur_cologne_ddorf_dortmund_hannover_hamburg_decision:0 "Construction of the £rail_texticon£ line:\n§9Cologne - Düsseldorf - Dortmund - Hanover§!"
-GRU_Breitspur_wilhelmshaven_hannover_decision:0 "Construction of the £rail_texticon£ line:\n§9Hamburg - Hanover - Wilhelmshaven§!"
-GRU_Breitspur_bern_brussel_decision:0 "Construction of the £rail_texticon£ line:\n§9Hamburg - Copenhagen§!"
-GRU_Breitspur_berlin_hamburg_decision:0 "Construction of the £rail_texticon£ line:\n§9Hamburg - Magdeburg - Berlin§!"
-GRU_Breitspur_berlin_nurnberg_munich_decision:0 "Construction of the £rail_texticon£ line:\n§9Berlin - Leipzig - Nuremberg - Munich§!"
-GRU_Breitspur_ddorf_frankfurt_nurnberg_decision:0 "Construction of the £rail_texticon£ line:\n§9Nuremberg - Frankfurt - Düsseldorf§!"
-GRU_Breitspur_frankfurt_stuttgart_decision:0 "Construction of the £rail_texticon£ line:\n§9Frankfurt - Stuttgart§!"
-GRU_Breitspur_stuttgart_zurich_expansion_decision:0 "Construction of the £rail_texticon£ line:\n§9Stuttgart - Zurich - Bern§!"
-GRU_Breitspur_munich_vienna_expansion_decision:0 "Construction of the £rail_texticon£ line:\n§9Munich - Linz - Vienna§!"
-GRU_Breitspur_berlin_koenigsberg_decision:0 "Construction of the £rail_texticon£ line:\n§9Berlin - Danzig - Königsberg§!"
-GRU_Breitspur_berlin__dresden_breslau_hindenburg_decision:0 "Construction of the £rail_texticon£ line:\n§9Berlin - Breslau§!"
-GRU_Breitspur_vienna_prague_dresden_decision:0 "Construction of the £rail_texticon£ line:\n§9Dresden - Prague - Vienna§!"
-GRU_Breitspur_cologne_amsterdam_decision:0 "Construction of the £rail_texticon£ line:\n§9Cologne - Amsterdam - The Hague - Rotterdam§!"
-GRU_Breitspur_cologne_brussel_decision:0 "Construction of the £rail_texticon£ line:\n§9Cologne - Brussels§!"
-GRU_Breitspur_breslau_warschau_decision:0 "Construction of the £rail_texticon£ line:\n§9Poznan - Lodz - Warsaw§!"
-GRU_Breitspur_koenigsberg_warschau_decision:0 "Construction of the £rail_texticon£ line:\n§9Königsberg - Warsaw§!"
-GRU_Breitspur_warschau_lemberg_decision:0 "Construction of the £rail_texticon£ line:\n§9Breslau - Hindenburg - Krakow - Lemberg§!"
+GRU_Breitspur_cologne_ddorf_dortmund_hannover_hamburg_decision:0 "Construction of the £rail_texticon£ \n§9Cologne - Düsseldorf - Dortmund - Hanover§! Section"
+GRU_Breitspur_wilhelmshaven_hannover_decision:0 "Construction of the £rail_texticon£ \n§9Hamburg - Hanover - Wilhelmshaven§! Section"
+GRU_Breitspur_bern_brussel_decision:0 "Construction of the £rail_texticon£ \n§9Hamburg - Copenhagen§! Section"
+GRU_Breitspur_berlin_hamburg_decision:0 "Construction of the £rail_texticon£ \n§9Hamburg - Magdeburg - Berlin§! Section"
+GRU_Breitspur_berlin_nurnberg_munich_decision:0 "Construction of the £rail_texticon£ \n§9Berlin - Leipzig - Nuremberg - Munich§! Section"
+GRU_Breitspur_ddorf_frankfurt_nurnberg_decision:0 "Construction of the £rail_texticon£ \n§9Nuremberg - Frankfurt - Düsseldorf§! Section"
+GRU_Breitspur_frankfurt_stuttgart_decision:0 "Construction of the £rail_texticon£ \n§9Frankfurt - Stuttgart§! Section"
+GRU_Breitspur_stuttgart_zurich_expansion_decision:0 "Construction of the £rail_texticon£ \n§9Stuttgart - Zurich - Bern§! Section"
+GRU_Breitspur_munich_vienna_expansion_decision:0 "Construction of the £rail_texticon£ \n§9Munich - Linz - Vienna§! Section"
+GRU_Breitspur_berlin_koenigsberg_decision:0 "Construction of the £rail_texticon£ \n§9Berlin - Danzig - Königsberg§! Section"
+GRU_Breitspur_berlin__dresden_breslau_hindenburg_decision:0 "Construction of the £rail_texticon£ \n§9Berlin - Breslau§! Section"
+GRU_Breitspur_vienna_prague_dresden_decision:0 "Construction of the £rail_texticon£ \n§9Dresden - Prague - Vienna§! Section"
+GRU_Breitspur_cologne_amsterdam_decision:0 "Construction of the £rail_texticon£ \n§9Cologne - Amsterdam - The Hague - Rotterdam§! Section"
+GRU_Breitspur_cologne_brussel_decision:0 "Construction of the £rail_texticon£ \n§9Cologne - Brussels§! Section"
+GRU_Breitspur_breslau_warschau_decision:0 "Construction of the £rail_texticon£ \n§9Poznan - Lodz - Warsaw§! Section"
+GRU_Breitspur_koenigsberg_warschau_decision:0 "Construction of the £rail_texticon£ \n§9Königsberg - Warsaw§! Section"
+GRU_Breitspur_warschau_lemberg_decision:0 "Construction of the £rail_texticon£ \n§9Breslau - Hindenburg - Krakow - Lemberg§! Section"
 
 GRU_germania_plan_decisions:0 "The Germania Plan"
 GRU_pan_germanism_complete_germania_plan_decision:0 "Finish the Germania Plan"
@@ -1904,9 +1910,10 @@ GRU_pan_germanism_core_iceland_decision:0 "Core Iceland"
 GRU_pan_germanism_core_polarisland_decision:0 "Core Polar Islands"
 
 GRU_build_that_wall_decisions:0 "Border fortifications"
-GRU_fortify_french_border_decision:0 "Wall up against the French"
-GRU_fortify_austrian_border_decision:0 "Fortify the Austrian border"
-GRU_fortify_bohemian_border_decision:0 "Fortify the Bohemian border"
+GRU_build_that_wall_decisions_desc:0 "\n\n£decision_header_GRU_1£\n\n\n"
+GRU_fortify_french_border_decision:0 "£border_texticon£ Wall up against the French"
+GRU_fortify_austrian_border_decision:0 "£border_texticon£ Fortify the Austrian border"
+GRU_fortify_bohemian_border_decision:0 "£border_texticon£ Fortify the Bohemian border"
 
 GRU_allignment_decisions:0 "Nation Alignment"
 GRU_allign_mosley_decision:0 "Align Mosley"
@@ -1922,6 +1929,7 @@ GRU_attack_other_frogs_decision:0 "Strike §CNational France§!"
 GRU_attack_united_kingdom_decision:0 "Strike the §CUnited Kingdom§!"
 
 GRU_kill_rivals_decisions:0 "Rival Governments"
+GRU_kill_rivals_decisions_desc:0 "\n\n£decision_header_GRU_4£\n\n\n"
 GRU_attack_rival_germany_decision:0 "Destroy [From.GetNameDef]."
 
 GRU_kill_colonies_decisions:0 "Imperial Remnants"
@@ -1929,6 +1937,12 @@ GRU_attack_german_colonies_decision:0 "Destroy [From.GetNameDef]."
 
 GRU_kill_libleft_decisions:0 "Purge the §RRevolution§!"
 GRU_STRIKE_LIBS:0 "Destroy [From.GetNameDef]."
+
+GRU_westafrica_decision:0 "Establish §YReichskommissariat Westafrika§!"
+GRU_mittelafrika_decision:0 "Establish §YReichskommissariat Mittelafrika§!"
+GRU_ostafrica_decision:0 "Establish §YReichskommissariat Ostafrika§!"
+GRU_sudwestafrica_decision:0 "Establish §YReichskommissariat Südwestafrika§!"
+
 
 GRU_scandi_decisions:0 "Scandinavian Diplomacy"
 GRU_scandi_sweden_war_decision:0 "Attack Sweden."
@@ -1942,6 +1956,7 @@ GRU_scandi_karelia_friend_decision:0 "Align Karelia."
 
 
 GRU_volksreichskommissariat_decisions:0 "Establish the VKs"
+GRU_volksreichskommissariat_decisions_desc:0 "\n\n£goebb_volks£\n\n\n\nIn the £production_licence_cost_texticon£ §Lmemorandum§! sent by the £faction_texticon_GER_state   §gchancellery of the Volksführer§! to the Chief of Staff £wehrmacht_texticon£ Völkische Oberkommando, states the beginning of massive preparations for the £war_plans_texticon£ build-up of §garmy, air§! and other £manpower_texticon  forces in the            £war_score£ §9eastern border region.§!\n\n£impact_texticon£  It follows from the §gGoebbels§! memorandum that it is necessary                      £SOV_paranoia_text_icon£ §Vimmediately§! to begin preliminary £text_infiltrate_army_token£ §Lland§! & £text_infiltrate_air_token£ §Lairborne§! reconnaissance, to assess §garmy, air§! and infrastructure £manpower_texticon   accumulations along the £border_texticon£ §Vborder.§!\n\n£change_government£ The main part of the headquarters of the £wehrmacht_texticon£ §gVölkisch§! & £luftwaffe_texticon£ §gVolksluftwaffe§! should be £war_plans_texticon£  moved and concentrated along the eastern border, and, if possible, all £SOV_paranoia_text_icon£ fears of invasion by £SOV_propaganda_text_icon£ spreading false information about our §7« large-scale exercises »§! along the border should be allayed."
 GRU_volksreichskommissariat_ruthenia:0 "Establish the VK §BRuthenien§!."
 GRU_volksreichskommissariat_kaukasus:0 "Establish the VK §YKaukasus§!."
 GRU_volksreichskommissariat_baltenland:0 "Establish the VK §GBaltenland§!."
@@ -2015,7 +2030,7 @@ GRU_blut_boden_mandatory_exercises_decision:0 "Mandatory Sport"
 
 
 GRU_DAF_decisions:0 "Deutsche Arbeiterfront"
-GRU_DAF_decisions_desc:0 "The Deutsche Arbeiterfront is the labor organization under the National Marxist German Peoples' Party which has replaced the various independent trade unions in Germany, it is also in charge of several KDF or Kraft durch Freuden projects that aim on the improvement of the daily workers' life."
+GRU_DAF_decisions_desc:0 "\n\n£decision_header_GRU_2£\n\n\n\nThe Deutsche Arbeiterfront is the labor organization under the National Marxist German Peoples' Party which has replaced the various independent trade unions in Germany, it is also in charge of several KDF or Kraft durch Freuden projects that aim on the improvement of the daily workers' life."
 
 GRU_DAF_Volkswagen_decision:0 "The Volkswagen"
 GRU_DAF_Volkssprecher_decision:0 "The Volksempfänger"
@@ -2029,9 +2044,9 @@ GRU_subvert_france_decisions_desc:0 "Decisions to subvert the §R3rd Internation
 
 GRU_hydroelectricity_decisions_desc:0 "We have several possible project regarding the construction of Hydroelectricity Power Plants available."
 GRU_breitspurbahn_decisions_desc:0 "\n\n£goebb_breitspurbahn£\n\n\n\nThe Breitspurbahn Network project is an ongoing effort to build the biggest, fastest and most efficient railroad system ever to exist."
-GRU_germania_plan_decisions_desc:0 "The 'Germania Plan' is the planned expansion of the German National Worker state into several neighboring territories."
+GRU_germania_plan_decisions_desc:0 "\n\n£goebb_grosdhl£\n\n\n\nThe 'Germania Plan' is the planned expansion of the German National Worker state into several neighboring territories."
 
-GRU_blut_boden_decisions_desc:0 "The doctrine of §GSoil§! and §RBlood§! calls for a direct connection between a land and the people that live on it or lived there in the past it is beyond a claim also a duty, a duty towards nature and the protection of the harmonious unity a people should form with their ancestral home."
+GRU_blut_boden_decisions_desc:0 "\n\n£goebb_bldun£\n\n\n\nThe doctrine of §GSoil§! and §RBlood§! calls for a direct connection between a land and the people that live on it or lived there in the past it is beyond a claim also a duty, a duty towards nature and the protection of the harmonious unity a people should form with their ancestral home."
 GRU_blut_boden_volksgesundheitsamt_decision_desc:0 "The Volksgesundheit will be established to safeguard our people's genetic destiny and purity."
 GRU_blut_boden_ban_tobacco_decision_desc:0 "Tobacco is the worst of all the vices that have befallen our people, it is addictive and studies have shown it contains several highly toxic substances. We will ban the use and trade with this vile plant once and for all."
 GRU_blut_boden_protect_nature_decision_desc:0 "We value nature above all and must ensure its continuity, for this reason we will enact several 'Environmental Protection Laws'."
@@ -3776,6 +3791,20 @@ VKK_established:0 "Kaukasus Established"
 VKR_established:0 "Ruthenien Established"
 VKM_established:0 "Moskowien Established"
 HYP_established:0 "Skandinavien Established"
+
+MVA_national_populist:0 "Reichskommissariat Westafrika"
+MVA_national_populist_ADJ:0 "Vestafrika"
+MVA_national_populist_DEF:0 "Reichskommissariat Westafrika"
+MTA_national_populist:0 "Reichskommissariat Mittelafrika"
+MTA_national_populist_ADJ:0 "Mittelafrika"
+MTA_national_populist_DEF:0 "Reichskommissariat Mittelafrika"
+MOA_national_populist:0 "Reichskommissariat Ostafrika"
+MOA_national_populist_ADJ:0 "Ostafrika"
+MOA_national_populist_DEF:0 "Reichskommissariat Ostafrika"
+MZA_national_populist:0 "Reichskommissariat Züdwestafrika"
+MZA_national_populist_ADJ:0 "Zuidwestafrika"
+MZA_national_populist_DEF:0 "Reichskommissariat Züdwestafrika"
+
 
 natpop_goebbels_subtype:0 "National Socialism"
 natpop_goebbels_subtype_desc:0 "§Y(National-Socialism)§!\n\nCombining fierce Nationalist and Supremacist notions with Socialism ideology, National Socialism calls for the state to coalesce around one central figure - the Volksführer - as the people as a whole progress towards a unified future. Fiercely Totalitarian and Authoritarian beyond compare, it stresses the importance of scientific advancement, extreme racial purity, Social economics, anti-semitism, cooperation between the masses, total nationalization of every aspect of the state, and national pride bordering on zealotry. National Socialism is detested by the wider world but still fights for the Revolution - a pure Revolution - just the same, Even if it's 'Socialism' aspect is up for debate."
