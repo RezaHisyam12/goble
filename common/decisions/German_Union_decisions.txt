@@ -3406,6 +3406,9 @@ GRU_germania_plan_decisions = {
 			713 = {
 				remove_claim_by = ROOT
 			}
+			80 = {
+				remove_claim_by = ROOT
+			}
 		}
 	}
 	#
@@ -3519,6 +3522,12 @@ GRU_germania_plan_decisions = {
 					is_not_claim_or_core_of_ROOT = yes
 				}
 				add_claim_by = ROOT
+			}
+			713 = {
+				remove_claim_by = ROOT
+			}
+			80 = {
+				remove_claim_by = ROOT
 			}
 		}
 	}
@@ -4593,6 +4602,20 @@ GRU_germania_plan_decisions = {
 					}
 				}
 			}
+			1272 = { 
+				owner = {
+					OR = {
+						tag = GRU
+						is_subject_of = GRU
+					}
+				}
+				controller = {
+					OR = {
+						tag = GRU
+						is_subject_of = GRU
+					}
+				}
+			}
 			#784 = { 
 			#	owner = {
 			#		OR = {
@@ -4680,6 +4703,12 @@ GRU_germania_plan_decisions = {
 				}
 			}
 			1235 = { 
+				add_core_of = GRU
+				GRU = {
+					transfer_state = PREV
+				}
+			}
+			1272 = { 
 				add_core_of = GRU
 				GRU = {
 					transfer_state = PREV
@@ -9059,17 +9088,7 @@ GRU_expansion_three_volksland_hypoborea = {
 		
 			complete_effect = {
 				create_VKB = yes
-				create_field_marshal = {
-					name = "Heinrich Himmler"
-					picture = "gfx/leaders/GRU/Portrait_VKB_Heinrich_Himmler.png"
-					traits = { trickster panzer_leader war_hero RR_OFFICER }
-					skill = 4
 
-					attack_skill = 4
-					defense_skill = 2
-					planning_skill = 2
-					logistics_skill = 4
-				}
 				hidden_effect = {
 					VKB = {
 						transfer_state = 1091
@@ -9083,7 +9102,18 @@ GRU_expansion_three_volksland_hypoborea = {
 						amount = 100
 						}
 						add_manpower = 40000
-					}
+				create_field_marshal = {
+					name = "Heinrich Himmler"
+					portrait_path = "gfx/leaders/GRU/Portrait_VKB_Heinrich_Himmler.png"
+					traits = { trickster panzer_leader war_hero RR_OFFICER }
+					skill = 4
+
+					attack_skill = 4
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 4
+						}
+				}
 				VKB = {	country_event = rotermorgenmisc.400 }
 				if = {
 						limit = {

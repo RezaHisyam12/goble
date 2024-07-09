@@ -1624,7 +1624,7 @@ ideas = {
 				conscription_factor = 0.01
 				local_resources_factor = 0.15
 				monthly_population = 0.10
-				production_speed_buildings_factor = 0.3
+				production_speed_buildings_factor = 0.1
 				global_building_slots_factor = 0.2
 				unit_limit_bonus = 20
 			}
@@ -1641,8 +1641,8 @@ ideas = {
 				production_oil_factor = 0.05
 				conscription_factor = 0.01
 				local_resources_factor = 0.15
-				monthly_population = 0.10
-				production_speed_buildings_factor = 0.3
+				monthly_population = 0.05
+				production_speed_buildings_factor = 0.2
 				global_building_slots_factor = 0.2
 				unit_limit_bonus = 40
 			}
@@ -1662,8 +1662,8 @@ ideas = {
 				industry_free_repair_factor = 0.15
 				industry_repair_factor = 0.05
 				local_resources_factor = 0.20
-				monthly_population = 0.15
-				production_speed_buildings_factor = 0.35
+				monthly_population = 0.10
+				production_speed_buildings_factor = 0.20
 				global_building_slots_factor = 0.3
 				unit_limit_bonus = 80
 			}

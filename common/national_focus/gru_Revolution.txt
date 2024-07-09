@@ -208,15 +208,14 @@ shared_focus = {
 		icon = GFX_GRU_breitspurbahnen-3974
 		relative_position_id = GRU_volksfuhrer
 		x = -4
-		y = 4
+		y = 1
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_breitspurbahnen"
 			custom_effect_tooltip = GRU_tt_breitspurbahn_decisions
 			add_ideas = GRU_breitspur
 		}
-		prerequisite = { focus = GRU_mfsp } 
-		prerequisite = { focus = GRU_deutschsozialistische_architektur  }
+		prerequisite = { focus = GRU_volksfuhrer  }
 	}
 
 	#Welfare
@@ -245,9 +244,39 @@ shared_focus = {
 		cost = 5
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_staatsfeind_nr1"
-					add_political_power = 50
-					add_stability = -0.15
-					add_manpower = -12000
+		64 = {
+			add_manpower = -169584
+		}
+		55 = {
+			add_manpower = -29158
+		}
+		66 = {
+			add_manpower = -22156
+		}
+		65 = {
+			add_manpower = -16564
+		}
+		54 = {
+			add_manpower = -7502
+		}
+		52 = {
+			add_manpower = -1109
+		}
+		59 = {
+			add_manpower = -18885
+		}
+		5 = {
+			add_manpower = -2170
+		}
+		780 = {
+			add_manpower = -1138
+		}
+		781 = {
+			add_manpower = -3654
+		}
+		57 = {
+			add_manpower = -7852
+			}
 		}
 
 		prerequisite = { focus = GRU_volksfuhrer }
@@ -1054,10 +1083,85 @@ shared_focus = {
 		y = 1
 		cost = 5
 		completion_reward = {
-                  country_event = { id =  rotermorgenmisc.402 }
-                  add_manpower = -1000
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_volkssturm"
+			custom_effect_tooltip = GRU_recruit_6_units
 			add_ideas = GRU_volkssturm_idea
+        	country_event = { id =  rotermorgenmisc.402 }
+            add_manpower = -1000
+			hidden_effect = {
+
+				division_template = {
+					name = "Volksdeutsche «Werwolf»"
+					division_names_group = GRU_RR_Werwolf
+					regiments = {
+						RR_Werwolf = { x = 0 y = 0 }
+						RR_Werwolf = { x = 0 y = 1 }
+						RR_Werwolf = { x = 0 y = 2 }
+						RR_Werwolf = { x = 0 y = 3 }
+						
+						RR_Werwolf = { x = 1 y = 0 }
+						RR_Werwolf = { x = 1 y = 1 }
+						RR_Werwolf = { x = 1 y = 2 }
+
+						RR_Werwolf = { x = 2 y = 0 }
+						RR_Werwolf = { x = 2 y = 1 }
+
+						RR_Werwolf = { x = 3 y = 0 }
+	
+						artillery_brigade = { x = 2 y = 2 }
+					}
+					support = {
+						mot_recon = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+						military_police = { x = 0 y = 2 }
+						signal_company = { x = 0 y = 3 }
+					}
+					priority = 2
+				}
+				custom_effect_tooltip =  RR_Werwolf_tech_effect
+				hidden_effect = { set_technology = { RR_Werwolf_tech  = 1 } }			
+				random_owned_state = {
+					prioritize =  { 64 }
+					create_unit = {
+						division = "name = \"Volksdeutsche Division «Werwolf» \" division_template = \"Volksdeutsche «Werwolf»\" start_experience_factor = 0.75 start_equipment_factor = 1"
+						owner = GRU
+					}
+				}
+
+				create_field_marshal = {
+		        	name = "Ernst Röhm"
+		        	portrait_path = "gfx/leaders/GRU/Portrait_Germany_Ernst_Rhoem.png"
+		        	traits = { politically_connected trait_reckless war_hero volkssturm_leader }
+		        	skill = 3
+		        	id = 144888
+		        	attack_skill = 2
+		        	defense_skill = 2
+		        	planning_skill = 4
+		        	logistics_skill = 2
+		        }
+		        create_corps_commander = {
+		        	name = "Karl Ernst"
+		        	portrait_path = "gfx/leaders/GRU/Portrait_Germany_Karl_Ernst.png"
+		        	traits = { politically_connected war_hero volkssturm_leader }
+		        	skill = 2
+		        	id = 144889
+		        	attack_skill = 2
+		        	defense_skill = 2
+		        	planning_skill = 4
+		        	logistics_skill = 2
+		        }
+		        create_corps_commander = {
+		        	name = "Horst Wessel"
+		        	portrait_path = "gfx/leaders/GRU/Portrait_Germany_Horst_Wessel.png"
+		        	traits = { politically_connected war_hero volkssturm_leader }
+		        	skill = 3
+        
+		        	attack_skill = 4
+		        	defense_skill = 2
+		        	planning_skill = 4
+		        	logistics_skill = 2
+		        }
+			}
 		}
 		prerequisite = { focus = GRU_nmdvp_victory  }
 	}
@@ -1116,7 +1220,9 @@ shared_focus = {
 					#kill_ideology_leader = social_democrat
 					#kill_ideology_leader = radical_socialist
 					#kill_ideology_leader = syndicalist
-					
+			hidden_effect = {
+				country_event = { id = rotermorgen.1007 days = 2 } }
+
 					if = {
 						limit = {
 							has_country_flag = NMDVP_L_RULE
@@ -1135,6 +1241,7 @@ shared_focus = {
 							popularity = 0.25
 						}
 					}
+					
 		}
 
 		prerequisite = { focus = GRU_form_the_guard }
@@ -1749,6 +1856,12 @@ shared_focus = {
 				uses = 2
 				category = industry
 			}
+			add_tech_bonus = {
+				uses = 2
+				bonus = 0.75
+				technology = excavation1
+				technology = excavation2
+			}
 		}
 
 		prerequisite = { focus = GRU_rva }
@@ -1816,8 +1929,23 @@ shared_focus = {
 		cost = 5
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_rev_oil"
-					add_ideas = ENG_synthetic_oil_lover
+			add_ideas = ENG_synthetic_oil_lover
+
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				    add_building_construction = {
+				    type = synthetic_refinery
+				    level = 2
+				    instant_build = yes
 				}
+			}
+			add_tech_bonus = {
+				name = synth_resources
+				bonus = 1
+				uses = 1
+				category = synth_resources
+			}
+		}
 	
 		prerequisite = { focus = GRU_mfsp  }
 	}
@@ -3538,30 +3666,24 @@ shared_focus = {
 		icon = GFX_GRU_deutschsozialistische_architektur-4074
 		relative_position_id = GRU_volksfuhrer
 		x = -4
-		y = 1
+		y = 4
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_deutschsozialistische_architektur"
 			add_ideas = GRU_deutsche_architecture
-			
-			if = {
-				limit = {
-					GRU = { has_country_flag = NMDVP_R_RULE }
+
+		if = {
+			limit = {
+				GRU = { has_country_flag = NMDVP_R_RULE }
+			}			
+			swap_ideas = {
+				remove_idea = GRU_Ernst_Roehm_sec_tot
+				add_idea = GRU_Albert_Speer_sec_npo
 				}
-				swap_ideas = {
-							remove_idea = GRU_Gregor_Strasser_eco_npo
-							add_idea = GRU_Albert_Speer_eco_npo
-						}
-			}
-			else = {
-				swap_ideas = {
-							remove_idea = GRU_Gregor_Strasser_eco_tot
-							add_idea = GRU_Albert_Speer_eco_tot
-						}
 			}
 		}
-		
-		prerequisite = { focus = GRU_volksfuhrer  }
+		prerequisite = { focus = GRU_mfsp  }
+		prerequisite = { focus = GRU_breitspurbahnen  }
 	}
 	
 	
@@ -6551,9 +6673,10 @@ shared_focus = {
 		
 		
 		completion_reward = {
-			add_political_power = 100
+			add_political_power = -100
 			FRA = {
 				reverse_add_opinion_modifier = { target = GRU modifier = KR_trade_sanctions }
+				embargo_ROOT = yes
 			}
 			GRU = {
 				reverse_add_opinion_modifier = { target = FRA modifier = KR_trade_sanctions }

@@ -209,6 +209,34 @@ GRU_ignore_BEL = {
 ################
 ### Military ###
 ################
+default_RR_Werwolf_production = {
+	allowed = {
+		OR = {
+			original_tag = GRU
+		}
+	}
+	enable = {
+		has_tech = RR_Werwolf_tech
+	}
+	abort_when_not_enabled = yes 
+	
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -10
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = RR_Werwolf
+		value = 10
+	}
+	ai_strategy = {
+		type = template_prio
+		id = RR_Werwolf
+		value = 50
+	}
+}
+
 GRU_destroy_german = {
 	allowed = {
 		original_tag = GRU

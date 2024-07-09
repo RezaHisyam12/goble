@@ -1,4 +1,5 @@
 add_namespace = rotermorgen
+add_namespace = rmgoebbnews
 
 
 country_event = { # GRU setup
@@ -389,7 +390,7 @@ country_event = { # CONGRESS
 				GRU_Joseph_Goebbels_hog_tot
 				GRU_Bodo_Uhse_for_tot
 				GRU_Gregor_Strasser_eco_tot
-				GRU_MEMEMAN_sec_tot
+				GRU_Paul_Lensch_sec_tot
 			}
 			set_politics = {
 				ruling_party = totalist
@@ -1156,6 +1157,17 @@ country_event = { #
 			logistics_skill = 3
 		}
 		create_corps_commander = {
+			name = "Adolf Eichmann"
+			portrait_path = "gfx/leaders/GRU/GRU_Portrait_Adolf_Eichmann.png"
+			traits = { panzer_leader ranger war_hero RR_OFFICER }
+			skill = 4
+
+			attack_skill = 4
+			defense_skill = 3
+			maneuvering_skill = 4
+			coordination_skill = 3
+		}
+		create_corps_commander = {
 			name = "Otto Kumm"
 			portrait_path = "gfx/leaders/GRU/Portrait_Germany_Otto_Kumm.png"
 			traits = { panzer_leader ranger RR_OFFICER }
@@ -1188,28 +1200,6 @@ country_event = { #
 			planning_skill = 2
 			logistics_skill = 2
 		}
-		create_field_marshal = {
-			name = "Ernst Röhm"
-			portrait_path = "gfx/leaders/GRU/Portrait_Germany_Ernst_Rhoem.png"
-			traits = { politically_connected trait_reckless war_hero volkssturm_leader }
-			skill = 3
-
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 4
-			logistics_skill = 2
-		}
-		create_corps_commander = {
-			name = "Karl Ernst"
-			portrait_path = "gfx/leaders/GRU/Portrait_Germany_Karl_Ernst.png"
-			traits = { politically_connected war_hero volkssturm_leader }
-			skill = 3
-
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 4
-			logistics_skill = 2
-		}
 		create_corps_commander = {
 			name = "Rudolf Walter Richard Heß"
 			portrait_path = "gfx/leaders/GRU/Portrait_Germany_Rudolf_Hess.png"
@@ -1231,18 +1221,6 @@ country_event = { #
 			defense_skill = 2
 			planning_skill = 4
 			logistics_skill = 2
-		}
-		create_corps_commander = {
-			name = "Horst Wessel"
-			portrait_path = "gfx/leaders/GRU/Portrait_Germany_Horst_Wessel.png"
-			traits = { politically_connected war_hero volkssturm_leader }
-			skill = 3
-
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 4
-			logistics_skill = 2
-
 		}
 
 		every_army_leader = {
@@ -2977,6 +2955,9 @@ country_event = { # VKK claims
 				1191 = {
 					add_claim_by = VKK
 				}
+				1081 = {
+					add_claim_by = VKK
+				}
 				
 				
 				
@@ -3585,19 +3566,8 @@ country_event = { # roehm the hero
 	option = { # death
 		name = rotermorgenmisc.778.a
 		remove_ideas = { GRU_MEMEMAN_sec_tot }
-		if = {
-			limit = {
-				GRU = { has_country_flag = NMDVP_R_RULE }
-			}
-			add_ideas = {
-				GRU_Ernst_Roehm_sec_npo
-			}
-		}
-		else = {
-			add_ideas = {
-				GRU_Ernst_Roehm_sec_tot
-			}
-		}
+		add_manpower = -1
+		remove_ideas = GRU_MEMEMAN_sec_tot
 	}
 }
 
@@ -4510,14 +4480,98 @@ country_event = { # Ideology Switch
 		add_ideas = {
 			GRU_Joseph_Goebbels_hog_npo
 			GRU_Joachim_Ribbentrop_for_npo
+			GRU_Ernst_Roehm_sec_tot
+			GRU_Gregor_Strasser_eco_tot
 			}
+		set_country_flag = NMDVP_R_RULE
 		}
 
 	option = { # Ideology Switch
 		name = rotermorgenmisc.1004.b
 		ai_chance = {
 			factor = 0
-		}	
+		}
+		set_country_flag = NMDVP_L_RULE	
+	}
+}
+
+country_event = {
+	id = rotermorgen.1007
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgen.1007" }
+	title = rotermorgen.1007.t
+	desc = rotermorgen.1007.d
+	picture = GFX_The_Night_of_the_Long_Knives
+
+	is_triggered_only = yes
+	
+	option = {
+		name = rotermorgen.1007.a
+
+		custom_effect_tooltip = rotermorgen.1007.a.tt
+
+		add_political_power = 100
+		add_stability = -0.2
+		add_manpower = -200
+
+		if = {
+			limit = {
+				GRU = { has_country_flag = NMDVP_R_RULE }
+			}			
+		swap_ideas = {
+			remove_idea = GRU_Gregor_Strasser_eco_tot
+			add_idea = GRU_Hermann_von_Goering_eco_npo
+			}
+		}
+		hidden_effect = {
+
+			remove_ideas = { GRU_Gregor_Strasser_eco_npo }
+			remove_ideas = { GRU_Ernst_Roehm_sec_npo }
+			remove_ideas = { GRU_Ernst_Roehm_sec_tot }
+
+			random_unit_leader = {
+				limit = { has_id = 144888 }
+				set_nationality = NSW
+			}
+			random_unit_leader = {
+				limit = { has_id = 144889 }
+				set_nationality = NSW
+			}
+		}
+
+		news_event = {
+			id = rmgoebbnews.2
+			days = 2
+		}
+	}
+}
+news_event = {
+	id = rmgoebbnews.2
+	title = rmgoebbnews.2.t
+	desc = rmgoebbnews.2.d
+
+	picture = GFX_news_Night_of_the_Long_Knives
+
+	major = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		wants_world_news = yes
+	}
+
+	option = {
+		name = rmgoebbnews.2.a
+		trigger = {
+			original_tag = GRU
+		}
+	}
+	option = {
+		name = rmgoebbnews.2.b
+		trigger = {
+			NOT = {
+				original_tag = GRU
+			}
+		}
 	}
 }
 

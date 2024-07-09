@@ -2,10 +2,10 @@ add_namespace = aushre
 
 
 country_event = { # BFE claims
-	id = rotermorgenmisc.8787
-	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8787" }
-	title = rotermorgenmisc.8787.t
-	desc = rotermorgenmisc.8787.d
+	id = aushre.8787
+	immediate = { log = "[GetDateText]: [Root.GetName]: event aushre.8787" }
+	title = aushre.8787.t
+	desc = aushre.8787.d
 	is_triggered_only = yes
 	hidden = yes
 	immediate = {
@@ -70,10 +70,10 @@ country_event = { # BFE claims
 }
 
 country_event = { # KOH claims
-	id = rotermorgenmisc.8788
-	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8788" }
-	title = rotermorgenmisc.8788.t
-	desc = rotermorgenmisc.8788.d
+	id = aushre.8788
+	immediate = { log = "[GetDateText]: [Root.GetName]: event aushre.8788" }
+	title = aushre.8788.t
+	desc = aushre.8788.d
 	is_triggered_only = yes
 	hidden = yes
 	immediate = {
@@ -112,7 +112,7 @@ country_event = { # KOH claims
 }
 
 country_event = { #Aftermath
-	id = rotermorgenmisc.8788
+	id = aushre.8788
 	immediate = { log = "[GetDateText]: [Root.GetName]: event fengtian.254" }
 	title = fengtian.254.t
 	desc = fengtian.254.d
@@ -129,15 +129,15 @@ country_event = { #Aftermath
 }
 
 country_event = { #Holy Roman Empire claims FRA
-	id = rotermorgenmisc.8790
-	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8790" }
-	title = rotermorgenmisc.8790.t
-	desc = rotermorgenmisc.8790.d
+	id = aushre.8790
+	immediate = { log = "[GetDateText]: [Root.GetName]: event aushre.8790" }
+	title = aushre.8790.t
+	desc = aushre.8790.d
 
 	is_triggered_only = yes
 
 	option = {
-		name = rotermorgenmisc.8790.a #Never!
+		name = aushre.8790.a #Never!
 		ai_chance = {
 			factor = 95
 			modifier = {
@@ -152,14 +152,14 @@ country_event = { #Holy Roman Empire claims FRA
 		}
 		FROM = {
 			country_event = {
-				id = rotermorgenmisc.8791
+				id = aushre.8791
 				days = 6
 			}
 		}
 	}
 
 	option = {
-		name = rotermorgenmisc.8790.b #All right.
+		name = aushre.8790.b #All right.
 		ai_chance = {
 			base = 5
 			modifier = {
@@ -205,7 +205,7 @@ country_event = { #Holy Roman Empire claims FRA
 		}
 		FROM = {
 			country_event = {
-				id = rotermorgenmisc.8792
+				id = aushre.8792
 				days = 6
 			}
 		}
@@ -213,15 +213,15 @@ country_event = { #Holy Roman Empire claims FRA
 }
 
 country_event = { #France refused!
-	id = rotermorgenmisc.8791
-	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8791" }
-	title = rotermorgenmisc.8791.t
-	desc = rotermorgenmisc.8791.d
+	id = aushre.8791
+	immediate = { log = "[GetDateText]: [Root.GetName]: event aushre.8791" }
+	title = aushre.8791.t
+	desc = aushre.8791.d
 
 	is_triggered_only = yes
 
 	option = {
-		name = rotermorgenmisc.8791.a #Take it back by force!
+		name = aushre.8791.a #Take it back by force!
 		ai_chance = {
 			factor = 70
 		}
@@ -233,15 +233,15 @@ country_event = { #France refused!
 }
 
 country_event = { #Transfer of the territory
-	id = rotermorgenmisc.8792
-	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8792" }
-	title = rotermorgenmisc.8792.t
-	desc = rotermorgenmisc.8792.d
+	id = aushre.8792
+	immediate = { log = "[GetDateText]: [Root.GetName]: event aushre.8792" }
+	title = aushre.8792.t
+	desc = aushre.8792.d
 
 	is_triggered_only = yes
 
 	option = {
-		name = rotermorgenmisc.8792.a #Another victory for Empire diplomacy!
+		name = aushre.8792.a #Another victory for Empire diplomacy!
 		add_political_power = 50
 		FRA = {
 			every_owned_state = {
@@ -287,10 +287,10 @@ country_event = { #Transfer of the territory
 
 ## Adding Ottomans nation to sphere
 country_event = {
-	id =  rotermorgenmisc.8793
-	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8793" }
-	title = rotermorgenmisc.8793.t
-	desc = rotermorgenmisc.8793.d
+	id =  aushre.8793
+	immediate = { log = "[GetDateText]: [Root.GetName]: event aushre.8793" }
+	title = aushre.8793.t
+	desc = aushre.8793.d
 	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
@@ -305,7 +305,7 @@ country_event = {
 	}
 
 	option = {
-		name = rotermorgenmisc.8793.a #We agree
+		name = aushre.8793.a #We agree
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -335,12 +335,12 @@ country_event = {
 			}
 		}
 		FROM = {
-			country_event = { id = rotermorgenmisc.8794 days = 1 }
+			country_event = { id = aushre.8794 days = 1 }
 			}
 	}
 
 	option = {
-		name = rotermorgenmisc.8793.b #We refuse
+		name = aushre.8793.b #We refuse
 		ai_chance = {
 			factor = 0
 			modifier = {
@@ -353,16 +353,16 @@ country_event = {
 			}
 		}
 		FROM = {
-			country_event = { id = rotermorgenmisc.8795 days = 1 }
+			country_event = { id = aushre.8795 days = 1 }
 			}
 		}
 }
 # Country agrees, no conditions
 country_event = {
-	id = rotermorgenmisc.8794
-	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8794" }
-	title = rotermorgenmisc.8794.t
-	desc = rotermorgenmisc.8794.d
+	id = aushre.8794
+	immediate = { log = "[GetDateText]: [Root.GetName]: event aushre.8794" }
+	title = aushre.8794.t
+	desc = aushre.8794.d
 	picture = GFX_report_event_generic_diplomacy3
 
 	is_triggered_only = yes
@@ -376,17 +376,17 @@ country_event = {
 	}
 
 	option = {
-		name = rotermorgenmisc.8794.a
+		name = aushre.8794.a
 		add_political_power = 25
 		add_to_faction = FROM
 	}
 }
 # Country refuses outright
 country_event = {
-	id = rotermorgenmisc.8795
-	immediate = { log = "[GetDateText]: [Root.GetName]: event aus.rotermorgenmisc.8795" }
-	title = rotermorgenmisc.8795.t
-	desc = rotermorgenmisc.8795.d
+	id = aushre.8795
+	immediate = { log = "[GetDateText]: [Root.GetName]: event aus.aushre.8795" }
+	title = aushre.8795.t
+	desc = aushre.8795.d
 	picture = GFX_report_event_generic_diplomacy4
 
 	is_triggered_only = yes
@@ -400,7 +400,7 @@ country_event = {
 	}
 
 	option = {
-		name = rotermorgenmisc.8795.a
+		name = aushre.8795.a
 		add_political_power = -25
 		add_opinion_modifier = { target = FROM modifier = KR_disapproves_of_govt }
 	}
@@ -408,16 +408,16 @@ country_event = {
 
 # Changed Dynamic
 country_event = {
-	id = rotermorgenmisc.8796
-	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8796" }
-	title = rotermorgenmisc.8796.t
-	desc = rotermorgenmisc.8796.d
+	id = aushre.8796
+	immediate = { log = "[GetDateText]: [Root.GetName]: event aushre.8796" }
+	title = aushre.8796.t
+	desc = aushre.8796.d
 	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
 	option = {
-		name = rotermorgenmisc.8796.a
+		name = aushre.8796.a
 		add_war_support = 0.02
 		add_ideas = AUS_ott_ally
 	}
@@ -425,16 +425,16 @@ country_event = {
 
 # Changed Dynamic OTT
 country_event = {
-	id = rotermorgenmisc.8797
-	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8797" }
-	title = rotermorgenmisc.8796.t
-	desc = rotermorgenmisc.8796.d
+	id = aushre.8797
+	immediate = { log = "[GetDateText]: [Root.GetName]: event aushre.8797" }
+	title = aushre.8796.t
+	desc = aushre.8796.d
 	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
 	option = {
-		name = rotermorgenmisc.8797.a
+		name = aushre.8797.a
 		add_war_support = 0.02
 		add_ideas = AUS_ott_ally
 	}
@@ -458,16 +458,16 @@ country_event = {
 
 # Against Russia
 country_event = {
-	id = rotermorgenmisc.8798
-	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.8798" }
-	title = rotermorgenmisc.8798.t
-	desc = rotermorgenmisc.8798.d
+	id = aushre.8798
+	immediate = { log = "[GetDateText]: [Root.GetName]: event aushre.8798" }
+	title = aushre.8798.t
+	desc = aushre.8798.d
 	picture = Ausgleich_prag
 
 	is_triggered_only = yes
 
 	option = {
-		name = rotermorgenmisc.8798.a
+		name = aushre.8798.a
 		add_war_support = 0.05
 	}
 }

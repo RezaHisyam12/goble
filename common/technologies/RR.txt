@@ -1,0 +1,21 @@
+technologies = {
+
+	RR_Werwolf_tech = {
+		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech RR_Werwolf_tech"}
+
+		research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		#If you change these
+		#Change the custom tooltip too: RR_Werwolf_tech_effect
+		enable_subunits = {
+			RR_Werwolf
+		}
+	}
+
+}
+

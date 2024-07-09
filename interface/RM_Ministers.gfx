@@ -10,6 +10,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/GRU/GRU_Joseph_Goebbels.png"
 	}
 	spriteType = {
+		name = "GFX_idea_GRU_Paul_Lensch_hog_tot"
+		texturefile = "gfx/interface/ministers/GRU/NEW/GRU_Paul_Lensch.png"
+	}
+	spriteType = {
 		name = "GFX_idea_GRU_Wilhelm_Pieck_hog_tot"
 		texturefile = "gfx/interface/ministers/GRU/GRU_Wilhelm_Pieck.png"
 	}
@@ -35,8 +39,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/GRU/GRU_Bodo_Uhse.png"
 	}
 	spriteType = {
-		name = "GFX_idea_GRU_Bodo_Uhse_for_npo"
-		texturefile = "gfx/interface/ministers/GRU/GRU_Bodo_Uhse.png"
+		name = "GFX_idea_GRU_Joachim_Ribbentrop_for_npo"
+		texturefile = "gfx/interface/ministers/GRU/GRU_Joachim_Ribbentrop.png"
 	}
 	spriteType = {
 		name = "GFX_idea_GRU_Gerhart_Eisler_for_syn"
@@ -52,16 +56,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/GRU/GRU_Gregor_Strasser.png"
 	}
 	spriteType = {
-		name = "GFX_idea_GRU_Albert_Speer_eco_tot"
-		texturefile = "gfx/interface/ministers/GRU/GRU_Albert_Speer.png"
-	}
-	spriteType = {
 		name = "GFX_idea_GRU_Gregor_Strasser_eco_npo"
 		texturefile = "gfx/interface/ministers/GRU/GRU_Gregor_Strasser.png"
 	}
 	spriteType = {
-		name = "GFX_idea_GRU_Albert_Speer_eco_npo"
-		texturefile = "gfx/interface/ministers/GRU/GRU_Albert_Speer.png"
+		name = "GFX_idea_GRU_Hermann_von_Goering_eco_npo"
+		texturefile = "gfx/interface/ministers/GRU/GRU_Hermann_von_Goering_eco_npo.png"
 	}
 	spriteType = {
 		name = "GFX_idea_GRU_Jakob_Kaiser_eco_syn"
@@ -82,11 +82,23 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_idea_GRU_MEMEMAN_sec_tot"
-		texturefile = "gfx/interface/ministers/GRU/GRU_MEMEMAN.png"
+		texturefile = "gfx/interface/ministers/GRU/NEW/GRU_Karl_Otto_Paetel.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRU_Paul_Lensch_sec_tot"
+		texturefile = "gfx/interface/ministers/GRU/NEW/GRU_Paul_Lensch.png"
 	}
 	spriteType = {
 		name = "GFX_idea_GRU_Ernst_Roehm_sec_tot"
 		texturefile = "gfx/interface/ministers/GRU/GRU_Ernst_Roehm.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRU_Ernst_Roehm_sec_npo"
+		texturefile = "gfx/interface/ministers/GRU/GRU_Ernst_Roehm.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRU_Albert_Speer_sec_npo"
+		texturefile = "gfx/interface/ministers/GRU/GRU_Albert_Speer.png"
 	}
 	spriteType = {
 		name = "GFX_idea_GRU_Ernst_Roehm_sec_npo"
@@ -103,6 +115,22 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_GRU_Franz_Oppenhoff_sec_rso"
 		texturefile = "gfx/interface/ministers/GRU/GRU_Franz_Oppenhoff.png"
+	}
+	spriteType = {
+		name = "GFX_idea_HNG_Miklos_Horthy_hog_pau"
+		texturefile = "gfx/interface/ministers/FIU/FIU_Miklos_Horthy_hog_pau.png"
+	}
+	spriteType = {
+		name = "GFX_idea_HNG_vasarhelyi_miklos_for_pau"
+		texturefile = "gfx/interface/ministers/FIU/FIU_vasarhelyi_miklos_for_pau.png"
+	}
+	spriteType = {
+		name = "GFX_idea_HNG_miklos_horthy_eco_pau"
+		texturefile = "gfx/interface/ministers/FIU/FIU_miklos_horthy_eco_pau.png"
+	}
+	spriteType = {
+		name = "GFX_idea_HNG_riccardo_zanella_sec_pau"
+		texturefile = "gfx/interface/ministers/FIU/FIU_riccardo_zanella_sec_pau.png"
 	}
 	## TEMP ##
 	spriteType = {
@@ -137,12 +165,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/PRC/PRC_CORE_SYSTEM.png"
 	}
 	spriteType = {
-		name = "GFX_idea_PRC_MAINFRAME_for_tot"
-		texturefile = "gfx/interface/ministers/PRC/PRC_CORE_SYSTEM.png"
+		name = "GFX_idea_GRU_Heinrich_Cunow_for_tot"
+		texturefile = "gfx/interface/ministers/GRU/GRU_Heinrich_Cunow.png"
 	}
 	spriteType = {
 		name = "GFX_idea_PRC_MAINFRAME_eco_tot"
 		texturefile = "gfx/interface/ministers/PRC/PRC_CORE_SYSTEM.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRU_Paul_Lensch_eco_tot"
+		texturefile = "gfx/interface/ministers/GRU/GRU_Paul_Lensch.png"
 	}
 	spriteType = {
 		name = "GFX_idea_PRC_MAINFRAME_sec_tot"

@@ -5,7 +5,7 @@ GRU_breitspurbahnen_desc:0 "While the Old Empire did little for us and for the G
 GRU_welfare:0 "People's Welfare"
 GRU_welfare_desc:0 "The Kaiser served not the worker but the Junker nobility who did nothing but oppress us! This was perfectly demonstrated with his not only inability to do anything to alleviate our suffering during Black Monday, but also his outright refusal to do so! Now with the worker in power we will remedy his mistakes! We shall institute a generous welfare program to alleviate the plight of the common man using funds seized from the decadent Junkers."
 GRU_staatsfeind_nr1:0 "Staatsfeind Nr.1"
-GRU_staatsfeind_nr1_desc:0 "They are among us, everywhere, these inventors and propagators of Jew capitalism. These Zionist snakes have infiltrated our home, controlling bankers abroad and even the government, waiting for the opportune moment to strike at our workers' paradise and take us back into their degenerate hands!"
+GRU_staatsfeind_nr1_desc:0 "They lay among us, everywhere, these inventors and propagators of Jew capitalism. These Zionist snakes have infiltrated our home, controlling the Bankers both abroad and even at home, awaiting the perfect time to strike our workers' paradise and pull us back into their degenerate hands!\nIn a recent speech Volksfuhrer Joseph Goebbels has lashed out at the Bankers both foreign and domestic. He has declared them Staatsfiend No 1, Public Enemy Number 1, and ordered the Army to round up any remaining bankers still hiding out in German borders."
 GRU_germany_reborn:0 "Germany Reborn"
 GRU_germany_reborn_desc:0 "Through hard work, grit and determination we have built a new Germany on the ashes of the old. Many thought that building a workers utopia by carving out the heart of reaction was impossible, much less that it would last as long as it has. However we have proven them wrong and we stand poised to bring our new German revolution to the whole world!"
 GRU_form_the_guard:0 "Form the KdV"
@@ -1208,41 +1208,52 @@ Nazbol_rev_vet_leaders:0 "NM-KV/SNF Veteran"
 Nazbol_rev_vet_leaders_desc:0 "One of the early leaders of the NM-KV or Nationalmarxistische Kampfverbände or the similar SNF or Sozialnationalistische Front."
 
 ####ministers####
-GRU_Joseph_Goebbels_hog_tot:0 "Josef Goebbels"
+GRU_Joseph_Goebbels_hog_tot:0 "Joseph Goebbels"
+GRU_Joseph_Goebbels_hog_npo:0 "Joseph Goebbels"
+GRU_Paul_Lensch_hog_tot:0 "Paul Lensch"
 GRU_Wilhelm_Pieck_hog_tot:0 "Wilhelm Pieck"
-GRU_Ernst_Thaelmann_hog_syn:0 "Ernst Thälmann"
-GRU_Helmut_Herzfeld_hog_syn:0 "Helmut Herzfeld"
+GRU_Ernst_Thaelmann_hog_syn:0 "Ernst Thelmann"
+GRU_Helmut_Herzfeld_hog_syn:0 "John Hartfield"
 GRU_Heinrich_Brandler_hog_rso:0 "Heinrich Brandler"
 GRU_Erich_Honecker_hog_rso:0 "Erich Honecker"
 
-GRU_Bodo_Uhse_for_tot:0 "Bodo Uhse"
-GRU_Bodo_Uhse_for_npo:0 "Bodo Uhse"
+GRU_Heinrich_Cunow_for_tot:0 "Heinrich Kunow"
+GRU_Bodo_Uhse_for_tot:0 "Bodo Uze"
+GRU_Joachim_Ribbentrop_for_npo:0 "Joachim von Ribbentrop"
 GRU_Gerhart_Eisler_for_syn:0 "Gerhart Eisler"
 GRU_Erich_Ollenhauer_for_rso:0 "Erich Ollenhauer"
 
-GRU_Gregor_Strasser_eco_tot:0 "Gregor Strasser"
-GRU_Albert_Speer_eco_tot:0 "Albert Speer"
-GRU_Jakob_Kaiser_eco_syn:0 "Jakob_Kaiser"
-GRU_Hans_Reichenbach_eco_rso:0 "Hans Reichenbach"
+GRU_Joseph_Goebbels_sec_tot:0 "Joseph Goebbels"
+GRU_MEMEMAN_sec_tot:0 "Karl Otto Petel"
 
-GRU_Joseph_Goebbels_sec_tot:0 "Josef Goebbels"
-GRU_MEMEMAN_sec_tot:0 "Karl Otto Paetel"
-GRU_Ernst_Roehm_sec_tot:0 "Ernst Roehm"
-GRU_Willi_Muenzenberg_sec_tot:0 "Willi Münzenberg"
+GRU_Paul_Lensch_sec_tot:0 "Paul Lensch"
+GRU_Ernst_Roehm_sec_tot:0 "Ernst Röhm"
+GRU_Ernst_Roehm_sec_npo:0 "Ernst Röhm"
+GRU_Albert_Speer_sec_npo:0 "Albert Speer"
+GRU_Willi_Muenzenberg_sec_tot:0 "Willy Münzenberg"
 GRU_Ludwig_Renn_sec_syn:0 "Ludwig Renn"
-GRU_Franz_Oppenhoff_sec_rso:0 "Franz Oppenhoff"
+GRU_Franz_Oppenhoff_sec_rso:0 "Franz Oppenhof"
 
 GRU_FRAUOBSRI_syn:0 "Internationale Occupation"
 GRU_FRA_syn:0 "French Administration"
 GRU_UOB_syn:0 "British Administration"
 GRU_SRI_syn:0 "Italian Administration"
 
-GRU_Joseph_Goebbels_hog_npo:0 "Josef Goebbels"
+GRU_Paul_Lensch_eco_tot:0 "Paul Lensch"
+GRU_Jakob_Kaiser_eco_syn:0 "Jakob Kaiser"
+GRU_Hans_Reichenbach_eco_rso:0 "Hans Reichenbach"
+GRU_Gregor_Strasser_eco_tot:0 "Gregor Strasser"
 GRU_Gregor_Strasser_eco_npo:0 "Gregor Strasser"
-GRU_Albert_Speer_eco_npo:0 "Albert Speer"
-GRU_Ernst_Roehm_sec_npo:0 "Ernst Röhm"
 
-NGF_Herbert_Frahm_sec_sde:0 "Herbert Frahm"
+GRU_Hermann_von_Goering_eco_npo:0 "Hermann Goering"
+
+NGF_Herbert_Frahm_sec_sde:0 "Willy Brandt"
+
+GRU_Jakob_Kaiser_eco_syn:0 "Jakob Kaiser"
+GRU_Mittelafrika_Wilhelm_II:0 "Wilhelm II"
+GRU_Mittelafrika_Wilhelm_III:0 "Wilhelm III"
+
+
 ###Leaders###
 GRU_GOEBBELS_DESC:0 "The Undisputed Leader of current day Germany had humble origins. Before his rise to power Goebbels worked as a journalist and occasional Film Theater and Theater critique in his hometown of Rheydt. He was relatively well known in his home region as a hardcore political activist and within the bigger cities of Cologne, Düsseldorf and Mönchengladbach near his hometown.\nHis early contact with Marxism during his youth and tendencies to Nationalism influenced his political leanings and ideological thought a lot which he had to hide during the reign of the Kaiser or he might have faced a ban on his journalism work due to repressions against far left writers in the German Empire.\nWhile not being in line with traditional Syndicalist or Socialist values he can be seen a a mirror to the French Sorelians with his Syncretism between ideological concepts that can be found within the far left and the far right he has manifested himself his very own ideology which he calls „National-Marxism“. It still remains questionable if it is actually different to Sorelian National-Syndicalism or if it even is 'Marxist' at all. Regardless, He will become one of the central figures in Europe within the coming years."
 
@@ -1854,6 +1865,8 @@ GRU_Breitspur_cologne_brussel_decision:0 "Construction of the £rail_texticon£ 
 GRU_Breitspur_breslau_warschau_decision:0 "Construction of the £rail_texticon£ \n§9Poznan - Lodz - Warsaw§! Section"
 GRU_Breitspur_koenigsberg_warschau_decision:0 "Construction of the £rail_texticon£ \n§9Königsberg - Warsaw§! Section"
 GRU_Breitspur_warschau_lemberg_decision:0 "Construction of the £rail_texticon£ \n§9Breslau - Hindenburg - Krakow - Lemberg§! Section"
+GRU_Breitspur_hindenburg_lemberg_decision:0 "Construction of the £rail_texticon£ \n§9Warsaw - Lemberg§! Section"
+
 
 GRU_germania_plan_decisions:0 "The Germania Plan"
 GRU_pan_germanism_complete_germania_plan_decision:0 "Finish the Germania Plan"
@@ -3829,3 +3842,32 @@ gru_VKR:0 "Ruthenia"
 
 VSJ_terror_bombing: "Luftwaffe Training Ground"
 VSJ_terror_bombing_desc: "With depressing regularity, Luftwaffe bombers from the airfields of Reichskommissariat Moskowien fly over the Volkskommissariat Judea of eastern Russia, bombing everything they can see and severely affecting nearly every aspect of Jews and Russian life as a result."
+
+### NEW
+gru_alldeutschpakt_faction:0 "Alldeutschpakt"
+
+rotermorgen.1007.t:0 "Operation «Hummingbird»"
+rotermorgen.1007.d:0 "With the passing of the Authorisation Act and the reform of the Volkssturm, we greatly consolidated our power in Germany, laws were passed on a whim without any serious opposition, and the subsequent silencing of opposition groups allowed us to effectively enforce our policies.\n\nHowever, there are still units of the FSR Röhm/Strasser that are disloyal to us. "The Volkssturm NMDVP/NSDVP has established itself as an unruly and rebellious organisation, whose members have adhered to their ideology of "National Marxism" from the very beginning. The Volksführer and his loyalists, realise this perfectly well, and whatever these traitors say, they are not the bearers of National Marxism. From head to toe they have perverted the ideas of the Volksfuehrer, Strasserism, that is their ideology! It seeks to combine National Marxism with Bolshevik beliefs. The creation of the so-called "Black Front" movement was also discovered, which clearly indicates the preparation of a coup.\n\nAll traitors will be immediately eliminated with the help of RR Himmler and the Stasi.\n\nToday would be the end of Röhm's extremist gang in Operation «Hummingbird»"
+rotermorgen.1007.a:0 "Down with the conspirators!"
+rotermorgen.1007.a.tt:0 "§V::::::::::::::::::::::::: T O P S E C R E T :::::::::::::::::::::::::§!\n\nOperation §7«Hummingbird»§! comes into effect, §Lpunitive§! units will be sent against the following conspirators £RR_guard£ RR:\n\n£VS_fhuerer_texticon£ VS-Obergruppenführer §YErnst Röhma§!\n£VS_fhuerer_texticon£ VS-Gruppenführer §YKarl Ernst§!\n£nazbol_texticon£ Reichsleiter §YGregor Strasser§!\n£red_guard_texticon£ Wilhelm Peake, the leader «SMEPD-M»\n£red_guard_texticon£ Ernst Telman, the leader «SMEPD-S»\n£radsoc_rev_texticon£ Karl Liebknect, the leader «SPD-R»\n£radsoc_rev_texticon£ Rudolph Rocker, the leader «FAUD»\n\n§gas well as:§! Kurt Schumacher, Konrad Adenauer, Rudolf Hilferding, Karl Artelt.\n\n§V::::::::::::::::::::::::: T O P S E C R E T :::::::::::::::::::::::::§!\n\n"
+
+rmgoebbnews.2.t:0 "«Night of the Long Knives»"
+rmgoebbnews.2.d:0 "The scattered newspapers spread sensational news of events that took place in the darkness of the night now known as «Night of the Long Knives». According to these reports, Joseph Goebbels was able to prevent a putsch by VS-Obergruppenführer Röhm and Reichsleiter NMDVP/NSDVP Strasser. According to the publications, Röhm and his loyalists, who had suffered the shock of betrayal and conversion to the reactionary path, began to develop plans to assassinate the Volksführer and seize power.\nHeinrich Himmler's SD counterintelligence and the Stasi quickly disrupted these plots, but some believe it was merely personal intrigue by RR leader Heinrich Himmler, as Röhm was his rival for power. The terrible night ended with the shooting of several high ranking figures, including Karl Ernst «VS-Gruppenführer», Wilhelm Pieck/Ernst Thälmann «SMEPD-M/SMEPD-S», Konrad Adenauer, Karl Liebchnect, Rudolf Rocker, Kurt Schumacher, as well as Rudolf Hilferding and Karl Artelt.\n\nDetails of Ryom's shooting are also being discussed in the press. He was reportedly caught in a compromising situation, having same-sex sex with his adjutant. The spectacle of this unholy act caused Brigadeführer Theodor Eicke and Sturmbannführer Michael Lipper to mercilessly spill the blood of both, firing several rounds each from automatic rifles at point-blank range, emphasizing the ruthlessness and brutality of that night..."
+rmgoebbnews.2.a:0 "No man, no problem"
+rmgoebbnews.2.b:0 "Is Röhm gay? No way..."
+
+GRU_recruit_6_units:0 "\n\n\n£goebb_volkssturm_2£\n\n\n\nThe £unit_level_5_texticon£ elite §g«Werwolf»§! division of £mobilize_volkssturm£ §gVolkssturm§! units will be £manpower_texticon deployed.\n\nRecruitment decisions for §LVolksDeutsche§! units will become £increase_texticon£ §7available§!\n§P« --------------------------------------------------------- »§!\n\n"
+
+###
+RR_1_medium_armor:0 "Tank Battalion RR"
+RR_1_medium_armor_long:0 "Tank Battalion RR"
+RR_2_medium_armor:0 "Tank Battalion RR"
+RR_2_medium_armor_long:0 "Tank Battalion RR"
+RR_3_medium_armor:0 "Tank Battalion RR"
+RR_3_medium_armor_long:0 "Tank Battalion RR"
+RR_1_motorized:0 "Panzer-Grenadier Battalion RR"
+RR_1_motorized_long:0 "Panzer-Grenadier Battalion RR"
+RR_Werwolf:0 "Volkssturm"
+RR_Werwolf_long:0 "Volksdeutsche"
+RR_Werwolf_tech:0 "Volkssturm"
+RR_Werwolf_tech_effect:0 Enables §Y$Volkssturm$§! battalions"

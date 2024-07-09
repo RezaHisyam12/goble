@@ -8350,7 +8350,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_invite_ottomans"
 			TUR = {
-				country_event = { id = rotermorgenmisc.8793 days = 1 }
+				country_event = { id = aushre.8793 days = 1 }
 			}
 		}
 	}
@@ -8388,11 +8388,11 @@ focus_tree = {
 				limit = { is_in_faction = no }
 				create_faction = "Central Powers"
 			}
-			country_event = rotermorgenmisc.8796
+			country_event = aushre.8796
 			hidden_effect = {
 				TUR = {
 					country_event = {
-						id = rotermorgenmisc.8797
+						id = aushre.8797
 						days = 10
 						random_days = 5
 					}
@@ -8651,7 +8651,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe"
 			custom_effect_tooltip = unlocks_decision
 			custom_effect_tooltip = AUS_Russia_tt
-			country_event = rotermorgenmisc.8798
+			country_event = aushre.8798
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
