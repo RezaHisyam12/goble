@@ -16066,10 +16066,10 @@ country_event = { #The Annexation of Afghanistan
 					ideology = pataut_oligarchy_subtype
 					traits = {}
 				}
-				if = {
-				limit = {
-				NOT = {	has_country_leader_ideology = natpop_islamism_subtype }
-					}
+			}
+			if = {
+				limit = { NOT = { has_country_leader_ideology = natpop_islamism_subtype } }
+				AFG = { 
 				set_party_name = { 
 						ideology = national_populist
 						long_name = "Hezb Enqilab Mile (National Revolutionary Party)" 
@@ -16083,6 +16083,12 @@ country_event = { #The Annexation of Afghanistan
 						ideology = natpop_popular_patriotism_subtype
 						traits = {}
 					}
+				}
+			}
+			if = {
+				limit = { has_country_leader_ideology = natpop_islamism_subtype }
+				AFG = { 
+				set_cosmetic_tag = AFG_KALAKANI
 				}
 			}
 			if = { 
@@ -22526,26 +22532,22 @@ country_event = { #Fate of France
 	        }
 
 			create_country_leader = {
-				name = "Marcel Déat"
-				desc = "POLITICS_MARCEL_DEAT_DESC"
-				picture = "gfx/leaders/FRA/Portrait_France_Marcel_Deat_Emergency.png"
+				name = "Edgar Puaud"
+				picture = "gfx/leaders/GRU/Portrait_Edgar_Puaud.png"
 				expire = "1.1.1"
-				ideology = national_populist_subtype
+				ideology = natpop_goebbels_subtype
 				traits = {
-					dictator
 				}
 			}
 			set_party_name = {
 			  ideology = national_populist
-			  long_name = FRA_vanguard
-			  name = FRA_vanguard
+			  long_name = goebb_party_RFA_long
+			  name = goebb_party_RFA
 	        }
-			add_ideas = FRA_cpai2
-			add_ideas = FRA_cult
-			add_ideas = FRA_union_loyalty2
-			add_ideas = FRA_planisme
-			add_ideas = ENG_synthetic_oil_lover
-			add_ideas = FRA_empower_rifleman_idea		
+			add_manpower = 60000
+			add_ideas = limited_conscription
+			add_ideas = limited_exports
+			add_ideas = war_economy	
 			}
 			if = {
 				limit = {
@@ -22574,6 +22576,9 @@ country_event = { #Fate of France
 						ideology = totalist
 						popularity = 0.70
 					}
+					add_ideas = FRA_union_loyalty2
+					add_ideas = FRA_planisme
+					add_ideas = FRA_empower_rifleman_idea	
 				}
 				IF = {
 					limit = {
@@ -22581,6 +22586,8 @@ country_event = { #Fate of France
 							has_government = national_populist
 						}
 					}
+					set_cosmetic_tag = goebb_fra
+					remove_all_ministers = yes
 					set_politics = {
 						ruling_party = national_populist
 						last_election = "1936.1.1"
@@ -22591,6 +22598,9 @@ country_event = { #Fate of France
 						ideology = national_populist
 						popularity = 0.70
 					}
+					set_capital = { state = 16 }
+					add_ideas = GRU_guard
+					add_ideas = GRU_lager
 				}
 			}
 		}

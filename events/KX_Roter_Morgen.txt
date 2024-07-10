@@ -2740,9 +2740,6 @@ country_event = { # VKR claims
 				265 = {
 					add_claim_by = VKR
 				}
-				218 = {
-					add_claim_by = VKR
-				}
 				228 = {
 					add_claim_by = VKR
 				}
@@ -2831,6 +2828,12 @@ country_event = { # VKR claims
 					add_claim_by = VKR
 				}
 				1229 = {
+					add_claim_by = VKR
+				}
+				1222 = {
+					add_claim_by = VKR
+				}
+				1320 = {
 					add_claim_by = VKR
 				}
 	}
@@ -4484,6 +4487,7 @@ country_event = { # Ideology Switch
 			GRU_Gregor_Strasser_eco_tot
 			}
 		set_country_flag = NMDVP_R_RULE
+		add_tot_to_coalition = yes
 		}
 
 	option = { # Ideology Switch

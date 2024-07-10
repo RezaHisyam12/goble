@@ -480,8 +480,6 @@ ideas = {
 				sec_crooked_kleptocrat
 				hog_old_air_marshal
 				eco_military_entrepreneur
-				eco_mixed_economy
-				eco_captain_of_industry
 			}
 		}
 		

@@ -1135,7 +1135,7 @@ country_event = { # victory Intro
 					MAF_old_new_guard_divide2_goering
 				}
 				set_politics = {
-					ruling_party = paternal_autocrat
+					ruling_party = authoritarian_democrat
 					last_election = "1936.1.1"
 					elections_allowed = no
 				}

@@ -1986,6 +1986,7 @@ GRU_expansion_three_volksreichskommissariat_ruthenia:0 "§BRuthenien§! expansio
 GRU_expansion_four_volksreichskommissariat_ruthenia:0 "§BRuthenien§! expansion §RFour§!."
 GRU_expansion_five_volksreichskommissariat_ruthenia:0 "§BRuthenien§! expansion §RFive§!."
 GRU_expansion_six_volksreichskommissariat_ruthenia:0 "§BRuthenien§! expansion §RSix§!."
+GRU_expansion_seven_volksreichskommissariat_ruthenia:0 "§BRuthenien§! expansion §RSeven§!."
 
 GRU_expansion_one_volksreichskommissariat_kaukasia:0 "§YKaukasus§! expansion §ROne§!."
 GRU_expansion_two_volksreichskommissariat_kaukasia:0 "§YKaukasus§! expansion §RTwo§!."
@@ -3845,6 +3846,15 @@ VSJ_terror_bombing_desc: "With depressing regularity, Luftwaffe bombers from the
 
 ### NEW
 gru_alldeutschpakt_faction:0 "Alldeutschpakt"
+
+goebb_party_RFA:0 "Teutonic Order of Frankreich"
+goebb_party_RFA_long:0 "Teutonic Order of Frankreich"
+
+goebb_fra:0 "Ordensreich Charlemagne"
+goebb_fra_ADJ:0 "Charlemagne"
+goebb_fra_DEF:0 "the Ordensreich Charlemagne"
+
+
 
 rotermorgen.1007.t:0 "Operation «Hummingbird»"
 rotermorgen.1007.d:0 "With the passing of the Authorisation Act and the reform of the Volkssturm, we greatly consolidated our power in Germany, laws were passed on a whim without any serious opposition, and the subsequent silencing of opposition groups allowed us to effectively enforce our policies.\n\nHowever, there are still units of the FSR Röhm/Strasser that are disloyal to us. "The Volkssturm NMDVP/NSDVP has established itself as an unruly and rebellious organisation, whose members have adhered to their ideology of "National Marxism" from the very beginning. The Volksführer and his loyalists, realise this perfectly well, and whatever these traitors say, they are not the bearers of National Marxism. From head to toe they have perverted the ideas of the Volksfuehrer, Strasserism, that is their ideology! It seeks to combine National Marxism with Bolshevik beliefs. The creation of the so-called "Black Front" movement was also discovered, which clearly indicates the preparation of a coup.\n\nAll traitors will be immediately eliminated with the help of RR Himmler and the Stasi.\n\nToday would be the end of Röhm's extremist gang in Operation «Hummingbird»"
