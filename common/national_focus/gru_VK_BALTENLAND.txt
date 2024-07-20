@@ -17,7 +17,7 @@
 		allow_branch = {
 			has_country_flag = IS_VKB 
 		}
-		cost = 6
+		cost = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTENLAND_START_COLONIZING"
 			1091 = {
@@ -46,7 +46,7 @@
 								controls_state = 13
 							}
 		}
-		cost = 15
+		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_TWO"
 			190 = {
@@ -77,7 +77,7 @@
 								controls_state = 96
 							}
 		}
-		cost = 15
+		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_THREE"
 			189 = {
@@ -107,7 +107,7 @@
 								controls_state = 207
 							}
 		}
-		cost = 15
+		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_FOUR"
 			94 = {
@@ -150,7 +150,7 @@
 								controls_state = 246
 							}
 		}
-		cost = 15
+		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_FIVE"
 			243 = {
@@ -187,7 +187,7 @@
 								controls_state = 210
 							}
 		}
-		cost = 15
+		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_SIX"
 			880 = {

@@ -14,7 +14,7 @@ focus_tree = {
 		relative_position_id = VK_FOCUS_SHARED_ESTABLISH_VK
 		x = 0
 		y = 3
-		cost = 6
+		cost = 2
 		allow_branch = {
 			has_country_flag = IS_VKR 
 		}
@@ -51,7 +51,7 @@ focus_tree = {
 								controls_state = 198
 							}
 		}
-		cost = 12.5
+		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_ONE"
 			997 = {
@@ -94,7 +94,7 @@ focus_tree = {
 								controls_state = 225
 							}
 		}
-		cost = 12.5
+		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_TWO"
 			194 = {
@@ -135,7 +135,7 @@ focus_tree = {
 								controls_state = 137
 							}
 		}
-		cost = 12.5
+		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_THREE"
 			259 = {
@@ -184,7 +184,7 @@ focus_tree = {
 								controls_state = 228
 							}
 		}
-		cost = 12.5
+		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_FOUR"
 			221 = {
@@ -219,7 +219,7 @@ focus_tree = {
 								controls_state = 223
 							}
 		}
-		cost = 12.5
+		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_FIVE"
 			224 = {
@@ -255,7 +255,7 @@ focus_tree = {
 								controls_state = 265
 							}
 		}
-		cost = 12.5
+		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_SIX"
 			240 = {

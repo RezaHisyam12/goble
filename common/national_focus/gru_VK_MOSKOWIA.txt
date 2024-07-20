@@ -17,7 +17,7 @@
 		allow_branch = {
 			has_country_flag = IS_VKM
 		}
-		cost = 6
+		cost = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_MOSKOWIA_START_COLONIZING"
 			219 = {
@@ -52,7 +52,7 @@
 
 							}
 		}
-		cost = 25
+		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_MOSKOWIA_COLONIZE_ONE"
 			247 = {
@@ -104,7 +104,7 @@
 								controls_state = 406
 							}
 		}
-		cost = 25
+		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_MOSKOWIA_COLONIZE_TWO"
 			257 = {
@@ -198,7 +198,7 @@
 
 							}
 		}
-		cost = 25
+		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_MOSKOWIA_COLONIZE_THREE"
 			214 = {

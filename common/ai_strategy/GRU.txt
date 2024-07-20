@@ -819,6 +819,30 @@ GRU_take_the_fight_to_scandinavia = {
 	}
 }
 
+GRU_take_the_fight_to_sweden = {
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		has_war_with = SWE
+		has_navy_size = { size > 0 }
+		SWE = { naval_strength_comparison = { other = ROOT ratio < 0.6 } }
+		surrender_progress < 0.05
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invade
+		id = SWE
+		value = 200
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		tag = SWE
+		value = 10
+	}
+}
+
 GRU_dont_defend_indian_ocean = { #GRU loves sending huge portions of the navy to vacation in Reunion rather than defend
 	allowed = {
 		original_tag = GRU
@@ -965,12 +989,6 @@ GRU_total_war_against_russia = {
 	enable = {
 		RUS = { is_faction_leader = yes }
 		FRA = {
-			OR = {
-				has_capitulated = yes
-				exists = no
-			}
-		}
-		SRI = {
 			OR = {
 				has_capitulated = yes
 				exists = no

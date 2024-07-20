@@ -2010,6 +2010,9 @@ GRU_expansion_two_volksstaat_Judea:0 "Expand Judea further east."
 GRU_volksstaat_turnaia:0 "Establish Turania."
 GRU_expansion_one_volksstaat_turnaia:0 "First Turania Expansion."
 GRU_expansion_two_volksstaat_turnaia:0 "Second Turania Expansion."
+GRU_expansion_three_volksstaat_turnaia:0 "Third Turania Expansion."
+GRU_expansion_four_volksstaat_turnaia:0 "Fourth Turania Expansion."
+
 
 GRU_volksland_hypoborea:0 "Found the Volksland Skandinavien"
 GRU_expansion_one_volksland_hypoborea:0 "Expand Skandinavien over Sweden."

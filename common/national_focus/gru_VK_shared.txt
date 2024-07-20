@@ -19,7 +19,7 @@ shared_focus = {
 		y = 1
 		available = {
 		}
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_SHARED_SETTLERS"
 			add_ideas = VK_COLONY_SETTLERS_ONE
@@ -34,7 +34,7 @@ shared_focus = {
 		y = 1
 		available = {
 		}
-		cost = 6
+		cost = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_SHARED_NATIONALISATION"
 			add_ideas = VK_COLONY_INDUSTRY_ONE
@@ -49,7 +49,7 @@ shared_focus = {
 		y = 2
 		available = {
 		}
-		cost = 6
+		cost = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_SHARED_MORE_SETTLERS"
 			swap_ideas = {
@@ -68,7 +68,7 @@ shared_focus = {
 		y = 2
 		available = {
 		}
-		cost = 6
+		cost = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_SHARED_OUR_OWN_RR"
 			add_ideas = GRU_guard
@@ -84,7 +84,7 @@ shared_focus = {
 		y = 2
 		available = {
 		}
-		cost = 6
+		cost = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_SHARED_ENSLAVE_NATIVES"
 			swap_ideas = {

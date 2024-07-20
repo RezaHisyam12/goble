@@ -439,6 +439,9 @@ focus_tree = {
 			441 = {
 					is_owned_and_controlled_by  = VST
 				}
+			1217 = {
+					is_owned_and_controlled_by  = VST
+				}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TURANIA_TAKE_MUGHAL_LAND"
@@ -473,6 +476,9 @@ focus_tree = {
 					add_core_of  = VST
 				}
 			1218 = {
+					add_core_of  = VST
+				}
+			1217 = {
 					add_core_of  = VST
 				}
 		}
@@ -563,9 +569,6 @@ focus_tree = {
 			732 = {
 					is_owned_and_controlled_by  = VST
 				}
-			1217 = {
-					is_owned_and_controlled_by  = VST
-				}
 			586 = {
 					is_owned_and_controlled_by  = VST
 				}
@@ -594,9 +597,6 @@ focus_tree = {
 					add_core_of  = VST
 				}
 			732 = {
-					add_core_of  = VST
-				}
-			1217 = {
 					add_core_of  = VST
 				}
 			586 = {
