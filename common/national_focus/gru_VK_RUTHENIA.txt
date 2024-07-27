@@ -267,20 +267,14 @@ focus_tree = {
 		x = -3
 		y = 2
 		available = {
-							VKR = {
-				controls_state = 1140
-				controls_state = 89
-							}
+			VKR = {
+				controls_state = 202
+			}
 		}
 		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_THREE"
-			1140 = {
-				add_core_of = VKR
-			}
-			89 = {
-				add_core_of = VKR
-			}
+			add_manpower = 15000
 		}
 		prerequisite = { focus = VK_FOCUS_RUTHENIA_COLONIZE_ONE }
 		prerequisite = { focus = VK_FOCUS_RUTHENIA_COLONIZE_TWO  }
