@@ -2713,9 +2713,6 @@ country_event = { # VKR claims
 				200 = {
 					add_claim_by = VKR
 				}
-				224 = {
-					add_claim_by = VKR
-				}
 				225 = {
 					add_claim_by = VKR
 				}		
@@ -2723,21 +2720,6 @@ country_event = { # VKR claims
 					add_claim_by = VKR
 				}
 				221 = {
-					add_claim_by = VKR
-				}
-				222 = {
-					add_claim_by = VKR
-				}
-				223 = {
-					add_claim_by = VKR
-				}
-				258 = {
-					add_claim_by = VKR
-				}
-				260 = {
-					add_claim_by = VKR
-				}
-				265 = {
 					add_claim_by = VKR
 				}
 				228 = {
@@ -2759,12 +2741,6 @@ country_event = { # VKR claims
 					add_claim_by = VKR
 				}
 				1230 = {
-					add_claim_by = VKR
-				}
-				79 = {
-					add_claim_by = VKR
-				}
-				713 = {
 					add_claim_by = VKR
 				}
 				80 = {
@@ -2830,10 +2806,37 @@ country_event = { # VKR claims
 				1229 = {
 					add_claim_by = VKR
 				}
+				1285 = {
+					add_claim_by = VKR
+				}
+				1282 = {
+					add_claim_by = VKR
+				}
+				1286 = {
+					add_claim_by = VKR
+				}
+				1283 = {
+					add_claim_by = VKR
+				}
+				1284 = {
+					add_claim_by = VKR
+				}
+				1231 = {
+					add_claim_by = VKR
+				}
+				1220 = {
+					add_claim_by = VKR
+				}
 				1222 = {
 					add_claim_by = VKR
 				}
 				1320 = {
+					add_claim_by = VKR
+				}
+				89 = {
+					add_claim_by = VKR
+				}
+				1140 = {
 					add_claim_by = VKR
 				}
 	}
@@ -2889,141 +2892,50 @@ country_event = { # VKK claims
 	is_triggered_only = yes
 	hidden = yes
 	immediate = {
-				990 = {
-					add_claim_by = VKK
-				}
-				229 = {
-					add_claim_by = VKK
-				}
-				998 = {
-					add_claim_by = VKK
-				}	
-				230 = {
-					add_claim_by = VKK
-				}
-				231 = {
-					add_claim_by = VKK
-				}
-				1082 = {
-					add_claim_by = VKK
-				}
-				1080 = {
-					add_claim_by = VKK
-				}
-				232 = {
-					add_claim_by = VKK
-				}
-				787 = {
-					add_claim_by = VKK
-				}
-				233 = {
-					add_claim_by = VKK
-				}
-				234 = {
-					add_claim_by = VKK
-				}
-				235 = {
-					add_claim_by = VKK
-				}
-				787 = {
-					add_claim_by = VKK
-				}
-				237 = {
-					add_claim_by = VKK
-				}
-				238 = {
-					add_claim_by = VKK
-				}
-				236 = {
-					add_claim_by = VKK
-				}
-				217 = {
-					add_claim_by = VKK
-				}
-				1190 = {
-					add_claim_by = VKK
-				}
-				1189 = {
-					add_claim_by = VKK
-				}
-				1186 = {
-					add_claim_by = VKK
-				}
-				1187 = {
-					add_claim_by = VKK
-				}
-				1188 = {
-					add_claim_by = VKK
-				}
-				1191 = {
-					add_claim_by = VKK
-				}
-				1081 = {
-					add_claim_by = VKK
-				}
-				
-				
-				
-				1001 = {
-					add_claim_by = VKK
-				}
-				1000 = {
-					add_claim_by = VKK
-				}
-				355 = {
-					add_claim_by = VKK
-				}
-				354 = {
-					add_claim_by = VKK
-				}
-				352 = {
-					add_claim_by = VKK
-				}
-				417 = {
-					add_claim_by = VKK
-				}
-				419 = {
-					add_claim_by = VKK
-				}
-				420 = {
-					add_claim_by = VKK
-				}
-				1227 = {
-					add_claim_by = VKK
-				}
-				1226 = {
-					add_claim_by = VKK
-				}
-				1266 = {
-					add_claim_by = VKK
-				}
-				1267 = {
-					add_claim_by = VKK
-				}
-				1213 = {
-					add_claim_by = VKK
-				}
-				1301 = {
-					add_claim_by = VKK
-				}
-				1300 = {
-					add_claim_by = VKK
-				}
-				1303 = {
-					add_claim_by = VKK
-				}
-				1302 = {
-					add_claim_by = VKK
-				}
-				1304 = {
-					add_claim_by = VKK
-				}
-				1298 = {
-					add_claim_by = VKK
-				}
-				1299 = {
-					add_claim_by = VKK
-				}
+		990 = { add_claim_by = VKK }
+		1263 = { add_claim_by = VKK }
+		234 = { add_claim_by = VKK }
+		245 = { add_claim_by = VKK }
+		1227 = { add_claim_by = VKK }
+		1190 = { add_claim_by = VKK }
+		1080 = { add_claim_by = VKK }
+		1188 = { add_claim_by = VKK }
+		1187 = { add_claim_by = VKK }
+		1186 = { add_claim_by = VKK }
+		233 = { add_claim_by = VKK }
+		1189 = { add_claim_by = VKK }
+		1191 = { add_claim_by = VKK }
+		232 = { add_claim_by = VKK }
+		1266 = { add_claim_by = VKK }
+		1267 = { add_claim_by = VKK }
+		237 = { add_claim_by = VKK }
+		1264 = { add_claim_by = VKK }
+		1226 = { add_claim_by = VKK }
+		1265 = { add_claim_by = VKK }
+		218 = { add_claim_by = VKK }
+		235 = { add_claim_by = VKK }
+		238 = { add_claim_by = VKK }
+		787 = { add_claim_by = VKK }
+		218 = { add_claim_by = VKK }
+		231 = { add_claim_by = VKK }
+		1301 = { add_claim_by = VKK }
+		1300 = { add_claim_by = VKK }
+		1081 = { add_claim_by = VKK }
+		229 = { add_claim_by = VKK }
+		990 = { add_claim_by = VKK }
+		1304 = { add_claim_by = VKK }
+		236 = { add_claim_by = VKK }
+		217 = { add_claim_by = VKK }
+		1000 = { add_claim_by = VKK }
+		1213 = { add_claim_by = VKK }
+		1001 = { add_claim_by = VKK }
+		230 = { add_claim_by = VKK }
+		1082 = { add_claim_by = VKK }
+		1298 = { add_claim_by = VKK }
+		1299 = { add_claim_by = VKK }
+		1303 = { add_claim_by = VKK }
+		998 = { add_claim_by = VKK }
+		1302 = { add_claim_by = VKK }
 	}
 }
 
@@ -3085,39 +2997,32 @@ country_event = { # VKB claims
 	is_triggered_only = yes
 	hidden = yes
 	immediate = {
-		11 = { add_claim_by = VKB }
 		12 = { add_claim_by = VKB }
-		13 = { add_claim_by = VKB }
-		94 = { add_claim_by = VKB }
-		96 = { add_claim_by = VKB }
-		189 = { add_claim_by = VKB }
-		190 = { add_claim_by = VKB }
 		191 = { add_claim_by = VKB }
-		195 = { add_claim_by = VKB }
-		204 = { add_claim_by = VKB }
-		205 = { add_claim_by = VKB }
-		206 = { add_claim_by = VKB }
-		207 = { add_claim_by = VKB }
-		208 = { add_claim_by = VKB }
-		209 = { add_claim_by = VKB }
-		210 = { add_claim_by = VKB }
-		242 = { add_claim_by = VKB }
-		243 = { add_claim_by = VKB }
-		244 = { add_claim_by = VKB }
-		246 = { add_claim_by = VKB }
-		263 = { add_claim_by = VKB }
-		755 = { add_claim_by = VKB }
-		880 = { add_claim_by = VKB }
-		1087 = { add_claim_by = VKB }
+		13 = { add_claim_by = VKB }
+		190 = { add_claim_by = VKB }
+		189 = { add_claim_by = VKB }
+		11 = { add_claim_by = VKB }
+		655 = { add_claim_by = VKB }
+	    1288 = { add_claim_by = VKB }
+	    209 = { add_claim_by = VKB }
+	    880 = { add_claim_by = VKB }
+	    207 = { add_claim_by = VKB }
+	    96 = { add_claim_by = VKB }
+	    94 = { add_claim_by = VKB }
+	    1295 = { add_claim_by = VKB }
+	    204 = { add_claim_by = VKB }
+	    206 = { add_claim_by = VKB }
+	    1294 = { add_claim_by = VKB }
+	    1287 = { add_claim_by = VKB }
+	    1290 = { add_claim_by = VKB }
+	    1289 = { add_claim_by = VKB }
+	    1291 = { add_claim_by = VKB }
+	    210 = { add_claim_by = VKB }
+	    755 = { add_claim_by = VKB }
+	    243 = { add_claim_by = VKB }
+	    1087 = { add_claim_by = VKB }
 		1091 = { add_claim_by = VKB }
-		1287 = { add_claim_by = VKB }
-		1328 = { add_claim_by = VKB }
-		1288 = { add_claim_by = VKB }
-		1291 = { add_claim_by = VKB }
-		1289 = { add_claim_by = VKB }
-		1290 = { add_claim_by = VKB }
-		1294 = { add_claim_by = VKB }
-		1295 = { add_claim_by = VKB }
 	}
 }
 
@@ -3162,8 +3067,22 @@ country_event = { # VKM claims
 		1204 = { add_claim_by = VKM }
 		1205 = { add_claim_by = VKM }
 		1208 = { add_claim_by = VKM }
+		223 = { add_claim_by = VKM }
+		258 = { add_claim_by = VKM }
 		1207 = { add_claim_by = VKM }
 		1224 = { add_claim_by = VKM }
+		244 = { add_claim_by = VKM }
+		195 = { add_claim_by = VKM }
+		208 = { add_claim_by = VKM }
+		263 = { add_claim_by = VKM }
+		246 = { add_claim_by = VKM }
+		205 = { add_claim_by = VKM }
+		1328 = { add_claim_by = VKM }
+		242 = { add_claim_by = VKM }
+		224 = { add_claim_by = VKM }
+		222 = { add_claim_by = VKM }
+		260 = { add_claim_by = VKM }
+		265 = { add_claim_by = VKM }
 	}
 }
 
@@ -3236,16 +3155,28 @@ country_event = { # VSJ claims
 		577 = { add_claim_by = VSJ }
 		578 = { add_claim_by = VSJ }
 		580 = { add_claim_by = VSJ }
-		644 = { add_claim_by = VSJ }
 		653 = { add_claim_by = VSJ }
 		811 = { add_claim_by = VSJ }
 		1200 = { add_claim_by = VSJ }
 		1201 = { add_claim_by = VSJ }
 		1202 = { add_claim_by = VSJ }
-		1292 = { add_claim_by = VSJ }
-		575 = { add_claim_by = VSJ }
-		567 = { add_claim_by = VSJ }
+		329 = { add_claim_by = VSJ }
+		644 = { add_claim_by = VSJ }
+		565 = { add_claim_by = VSJ }
+		564 = { add_claim_by = VSJ }
+		563 = { add_claim_by = VSJ }
+		574 = { add_claim_by = VSJ }
+		657 = { add_claim_by = VSJ }
+		562 = { add_claim_by = VSJ }
+		637 = { add_claim_by = VSJ }
+		561 = { add_claim_by = VSJ }
+		560 = { add_claim_by = VSJ }
+		409 = { add_claim_by = VSJ }
+		1246 = { add_claim_by = VSJ }
+		408 = { add_claim_by = VSJ }
 		566 = { add_claim_by = VSJ }
+		567 = { add_claim_by = VSJ }
+		575 = { add_claim_by = VSJ }
 	}
 }
 

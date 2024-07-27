@@ -48,39 +48,6 @@ JAP_hates_chinese_claimants = {
 	}
 }
 
-japan_supports_sphere = {
-	reversed = yes
-	enable_reverse = {
-		JAP = { has_completed_focus = JAP_osaka_conference }
-	}
-	enable = {
-		NOT = {
-			has_war_with = JAP
-			is_in_faction_with = JAP
-			is_subject_of = JAP
-		}
-	}
-	target_array = "global.asian_economic_sphere"
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = befriend
-		id = "JAP"
-		value = 100
-	}
-	ai_strategy = {
-		type = alliance
-		id = "JAP"
-		value = 100
-	}
-	ai_strategy = {
-		type = support
-		id = "JAP"
-		value = 200
-	}
-}
-
 ################
 ### Military ###
 ################

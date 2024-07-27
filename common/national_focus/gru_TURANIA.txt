@@ -17,6 +17,27 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus TURANIA_START"
 			add_ideas = VST_TURANIA_ONE
+			if = {
+				limit = {
+					has_idea = alo_black_monday_3
+				}
+				remove_ideas = alo_black_monday_3
+			}
+			else_if = {
+				limit = {
+					has_idea = alo_black_monday_2
+				}
+				remove_ideas = alo_black_monday_2
+			}
+			else_if = {
+				limit = {
+					has_idea = alo_black_monday_1
+				}
+				remove_ideas = alo_black_monday_1
+			}
+			else = {
+				remove_idea = alo_black_monday
+			}
 		}
 	}
 	###the new###

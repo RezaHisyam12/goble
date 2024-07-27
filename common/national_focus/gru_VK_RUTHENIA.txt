@@ -42,39 +42,191 @@ focus_tree = {
 		y = 1
 		available = {
 							VKR = {
-								controls_state = 997
-								controls_state = 93
-								controls_state = 792
-								controls_state = 201
-								controls_state = 199
-								controls_state = 791
-								controls_state = 198
-							}
+				controls_state = 1320
+				controls_state = 78
+				controls_state = 1222
+				controls_state = 1244
+				controls_state = 201
+				controls_state = 1228
+				controls_state = 792
+				controls_state = 997
+				controls_state = 93
+				controls_state = 199
+				controls_state = 1245
+				controls_state = 198
+				controls_state = 1240
+				controls_state = 193
+				controls_state = 241
+				controls_state = 1230
+				controls_state = 1242
+				controls_state = 1237
+				controls_state = 1243
+				controls_state = 225
+				controls_state = 221
+				controls_state = 1285
+				controls_state = 1282
+				controls_state = 1284
+				controls_state = 1283
+				controls_state = 227
+				controls_state = 228
+				controls_state = 1286
+				controls_state = 1239
+				controls_state = 259
+				controls_state = 1238
+				controls_state = 203
+				controls_state = 791
+				controls_state = 192
+				controls_state = 1232
+				controls_state = 1233
+				controls_state = 1241
+				controls_state = 226
+				controls_state = 197
+				controls_state = 196
+				controls_state = 1234
+				controls_state = 200
+				controls_state = 1220
+				controls_state = 137
+				controls_state = 1221
+			}
 		}
 		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_ONE"
+			1320 = {
+				add_core_of = VKR
+			}
+			78 = {
+				add_core_of = VKR
+			}
+			1222 = {
+				add_core_of = VKR
+			}
+			1244 = {
+				add_core_of = VKR
+			}
+			201 = {
+				add_core_of = VKR
+			}
+			1228 = {
+				add_core_of = VKR
+			}
+			792 = {
+				add_core_of = VKR
+			}
 			997 = {
 				add_core_of = VKR
 			}
 			93 = {
 				add_core_of = VKR
 			}
-			792 = {
-				add_core_of = VKR
-			}
-			201 = {
-				add_core_of = VKR
-			}
 			199 = {
 				add_core_of = VKR
 			}
-			791 = {
+			1245 = {
 				add_core_of = VKR
 			}
 			198 = {
 				add_core_of = VKR
 			}
+			1240 = {
+				add_core_of = VKR
+			}
+			193 = {
+				add_core_of = VKR
+			}
+			241 = {
+				add_core_of = VKR
+			}
+			1230 = {
+				add_core_of = VKR
+			}
+			1242 = {
+				add_core_of = VKR
+			}
+			1237 = {
+				add_core_of = VKR
+			}
+			1243 = {
+				add_core_of = VKR
+			}
+			225 = {
+				add_core_of = VKR
+			}
+			221 = {
+				add_core_of = VKR
+			}
+			1285 = {
+				add_core_of = VKR
+			}
+			1282 = {
+				add_core_of = VKR
+			}
+			1284 = {
+				add_core_of = VKR
+			}
+			1283 = {
+				add_core_of = VKR
+			}
+			227 = {
+				add_core_of = VKR
+			}
+			228 = {
+				add_core_of = VKR
+			}
+			1286 = {
+				add_core_of = VKR
+			}
+			1239 = {
+				add_core_of = VKR
+			}
+			259 = {
+				add_core_of = VKR
+			}
+			1238 = {
+				add_core_of = VKR
+			}
+			203 = {
+				add_core_of = VKR
+			}
+			791 = {
+				add_core_of = VKR
+			}
+			192 = {
+				add_core_of = VKR
+			}
+			1232 = {
+				add_core_of = VKR
+			}
+			1233 = {
+				add_core_of = VKR
+			}
+			1241 = {
+				add_core_of = VKR
+			}
+			226 = {
+				add_core_of = VKR
+			}
+			197 = {
+				add_core_of = VKR
+			}
+			196 = {
+				add_core_of = VKR
+			}
+			1234 = {
+				add_core_of = VKR
+			}
+			200 = {
+				add_core_of = VKR
+			}
+			1220 = {
+				add_core_of = VKR
+			}
+			137 = {
+				add_core_of = VKR
+			}
+			1221 = {
+				add_core_of = VKR
+				}
 		}
 		prerequisite = { focus = VK_FOCUS_RUTHENIA_START_COLONIZING  }
 	}
@@ -86,30 +238,22 @@ focus_tree = {
 		x = 1
 		y = 1
 		available = {
-							VKR = {
-								controls_state = 194
-								controls_state = 95
-								controls_state = 241
-								controls_state = 193
-								controls_state = 225
-							}
+				VKR = {
+				controls_state = 80
+				controls_state = 95
+				controls_state = 194
+					}
 		}
 		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_TWO"
-			194 = {
+			80 = {
 				add_core_of = VKR
 			}
 			95 = {
 				add_core_of = VKR
 			}
-			241 = {
-				add_core_of = VKR
-			}
-			193 = {
-				add_core_of = VKR
-			}
-			225 = {
+			194 = {
 				add_core_of = VKR
 			}
 		}
@@ -124,45 +268,17 @@ focus_tree = {
 		y = 2
 		available = {
 							VKR = {
-								controls_state = 259
-								controls_state = 203
-								controls_state = 192
-								controls_state = 197
-								controls_state = 226
-								controls_state = 821
-								controls_state = 200
-								controls_state = 196
-								controls_state = 137
+				controls_state = 1140
+				controls_state = 89
 							}
 		}
 		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_THREE"
-			259 = {
+			1140 = {
 				add_core_of = VKR
 			}
-			203 = {
-				add_core_of = VKR
-			}
-			192 = {
-				add_core_of = VKR
-			}
-			197 = {
-				add_core_of = VKR
-			}
-			226 = {
-				add_core_of = VKR
-			}
-			821 = {
-				add_core_of = VKR
-			}
-			200 = {
-				add_core_of = VKR
-			}
-			196 = {
-				add_core_of = VKR
-			}
-			137 = {
+			89 = {
 				add_core_of = VKR
 			}
 		}
@@ -178,25 +294,17 @@ focus_tree = {
 		y = 2
 		available = {
 							VKR = {
-								controls_state = 221
-								controls_state = 227
-								controls_state = 1229
-								controls_state = 228
+				controls_state = 220
+				controls_state = 821
 							}
 		}
 		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_FOUR"
-			221 = {
+			220 = {
 				add_core_of = VKR
 			}
-			227 = {
-				add_core_of = VKR
-			}
-			1229 = {
-				add_core_of = VKR
-			}
-			228 = {
+			821 = {
 				add_core_of = VKR
 			}
 		}
@@ -212,29 +320,17 @@ focus_tree = {
 		y = 2
 		available = {
 							VKR = {
-								controls_state = 224
-								controls_state = 220
-								controls_state = 222
-								controls_state = 258
-								controls_state = 223
+				controls_state = 240
+				controls_state = 1231
 							}
 		}
 		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_FIVE"
-			224 = {
+			240 = {
 				add_core_of = VKR
 			}
-			220 = {
-				add_core_of = VKR
-			}
-			222 = {
-				add_core_of = VKR
-			}
-			258 = {
-				add_core_of = VKR
-			}
-			223 = {
+			1231 = {
 				add_core_of = VKR
 			}
 		}
@@ -250,21 +346,13 @@ focus_tree = {
 		y = 2
 		available = {
 							VKR = {
-								controls_state = 240
-								controls_state = 260
-								controls_state = 265
+				controls_state = 1229
 							}
 		}
 		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_SIX"
-			240 = {
-				add_core_of = VKR
-			}
-			260 = {
-				add_core_of = VKR
-			}
-			265 = {
+			1229 = {
 				add_core_of = VKR
 			}
 		}

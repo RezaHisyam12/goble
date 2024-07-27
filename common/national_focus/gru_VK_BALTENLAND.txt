@@ -40,25 +40,68 @@
 		y = 1
 		available = {
 							VKB = {
-								controls_state = 190
-								controls_state = 12
-								controls_state = 191
+								controls_state = 1288
+								controls_state = 209
+								controls_state = 880
+								controls_state = 207
+								controls_state = 96
+								controls_state = 94
+								controls_state = 1295
+								controls_state = 189
+								controls_state = 11
 								controls_state = 13
+								controls_state = 191
+								controls_state = 12
+								controls_state = 190
+								controls_state = 655
 							}
 		}
 		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_TWO"
-			190 = {
+			1288 = {
 				add_core_of = VKB
 			}
-			12 = {
+			209 = {
+				add_core_of = VKB
+			}
+			209 = {
+				add_core_of = VKB
+			}
+			880 = {
+				add_core_of = VKB
+			}
+			207 = {
+				add_core_of = VKB
+			}
+			96 = {
+				add_core_of = VKB
+			}
+			94 = {
+				add_core_of = VKB
+			}
+			1295 = {
+				add_core_of = VKB
+			}
+			189 = {
+				add_core_of = VKB
+			}
+			11 = {
+				add_core_of = VKB
+			}
+			13 = {
 				add_core_of = VKB
 			}
 			191 = {
 				add_core_of = VKB
 			}
-			13 = {
+			12 = {
+				add_core_of = VKB
+			}
+			190 = {
+				add_core_of = VKB
+			}
+			655 = {
 				add_core_of = VKB
 			}
 		}
@@ -72,23 +115,31 @@
 		y = 1
 		available = {
 							VKB = {
-								controls_state = 189
-								controls_state = 11
-								controls_state = 96
-							}
+								controls_state = 204
+								controls_state = 206
+								controls_state = 1294
+								controls_state = 1287
+								controls_state = 1290						
+									}
 		}
 		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_THREE"
-			189 = {
+			204 = {
 				add_core_of = VKB
 			}
-			11 = {
+			206 = {
 				add_core_of = VKB
 			}
-			96 = {
+			1294 = {
 				add_core_of = VKB
 			}
+			1287 = {
+				add_core_of = VKB
+			}
+			1290 = {
+				add_core_of = VKB
+				}
 		}
 		prerequisite = { focus = VK_FOCUS_BALTENLAND_START_COLONIZING  }
 	}
@@ -100,35 +151,26 @@
 		y = 2
 		available = {
 							VKB = {
-								controls_state = 94
-								controls_state = 204
-								controls_state = 206
-								controls_state = 1087
-								controls_state = 207
+								controls_state = 1289
+								controls_state = 1291
+								controls_state = 210
+								controls_state = 755
+
 							}
 		}
 		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_FOUR"
-			94 = {
+			1289 = {
 				add_core_of = VKB
 			}
-			204 = {
+			1291 = {
 				add_core_of = VKB
 			}
-			206 = {
+			210 = {
 				add_core_of = VKB
 			}
-			1087 = {
-				add_core_of = VKB
-			}
-			207 = {
-				add_core_of = VKB
-			}
-			1294 = {
-				add_core_of = VKB
-			}
-			1295 = {
+			755 = {
 				add_core_of = VKB
 			}
 		}
@@ -144,10 +186,6 @@
 		available = {
 							VKB = {
 								controls_state = 243
-
-								controls_state = 242
-								controls_state = 205
-								controls_state = 246
 							}
 		}
 		cost = 6
@@ -155,15 +193,7 @@
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_FIVE"
 			243 = {
 				add_core_of = VKB
-			}
-			242 = {
-				add_core_of = VKB
-			}
-			205 = {
-				add_core_of = VKB
-			}
-			246 = {
-				add_core_of = VKB
+
 			}
 		}
 		prerequisite = { focus = VK_FOCUS_BALTEN_COLONIZE_TWO  }
@@ -177,61 +207,15 @@
 		y = 2
 		available = {
 							VKB = {
-								controls_state = 880
-								controls_state = 209
-								controls_state = 208
-								controls_state = 195
-								controls_state = 244
-								controls_state = 263
-								controls_state = 755
-								controls_state = 210
+								controls_state = 1087
 							}
 		}
 		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_SIX"
-			880 = {
+			1087 = {
 				add_core_of = VKB
-			}
-			209 = {
-				add_core_of = VKB
-			}
-			208 = {
-				add_core_of = VKB
-			}
-			195 = {
-				add_core_of = VKB
-			}
-			244 = {
-				add_core_of = VKB
-			}
-			263 = {
-				add_core_of = VKB
-			}
-			755 = {
-				add_core_of = VKB
-			}
-			210 = {
-				add_core_of = VKB
-			}
-			1328 = {
-				add_core_of = VKB
-			}
-			1288 = {
-				add_core_of = VKB
-			}
-			1291 = {
-				add_core_of = VKB
-			}
-			1289 = {
-				add_core_of = VKB
-			}
-			1290 = {
-				add_core_of = VKB
-			}
-			1287 = {
-				add_core_of = VKB
-			}
+				}
 			set_province_name = { id = 6174 name = "Petersburg"}
 			set_province_name = { id = 117 name = "Hólmgarðr"}
 		}
