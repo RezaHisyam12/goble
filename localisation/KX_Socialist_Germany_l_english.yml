@@ -4122,6 +4122,18 @@ goebb_fra:0 "Ordensreich Charlemagne"
 goebb_fra_ADJ:0 "Charlemagne"
 goebb_fra_DEF:0 "the Ordensreich Charlemagne"
 
+natpop_goebbels5_subtype:0 "Rosenbergism"
+natpop_goebbels5_subtype_desc:0 "§Y(Rosenbergism)§!\n\n-"
+natpop_goebbels6_subtype:0 "Fundamentalism"
+natpop_goebbels6_subtype_desc:0 "§Y(Fundamentalism)§!\n\n-"
+natpop_goebbels8_subtype:0 "Theocracy"
+natpop_goebbels8_subtype_desc:0 "-"
+national_socialism_spartanism_subtype:0 "Spartanism"
+national_socialism_spartanism_subtype_desc:0 "§Y(Spartanism)§!\n\n-"
+despotism_vanguard_anarchism_subtype:0 "Vanguard Anarchism"
+despotism_vanguard_anarchism_subtype_desc:0 "Vanguard anarchism attempts to combine a decentralised anarchist society with a standard, disciplined army to protect the society, often with a central, dominant leader of that army acting as the final voice when it comes to questions of societal survival. Proponents of this style of anarchism argue that it is fundamentally necessary to prevent communes from being suppressed by more organised and stable external threats. On the other hand, opponents believe that it is a fundamentally flawed interpretation of anarchism because the needs and will of the people are often subordinated to the power of the military in the name of defence and protection, and even more so, the vast amount of individual power wielded by those who run the military makes them little better than any other dictator."
+
+
 ###
 gru_west_russian_triumvirate_faction:0 "West Russian Triumvirate"
 gru_cossack_pact_faction:0 "Cossack Pact"
@@ -4147,6 +4159,12 @@ GRU_recruit_6_units:0 "\n\n\n£goebb_volkssturm_2£\n\n\n\nThe £unit_level_5_te
 rotermorgenrussiandoom.3.a:0 "The end of an entire era..."
 rotermorgenrussiandoom.3.b:0 "The Kaiser could only dream of such a..."
 
+SPEVNT_ger_civl: "German Civil War"
+SPEVNT_ger_civl_TEXT: "Rootless subjects... “\n (Wilhelm II on revolutionaries)\n\n§Y— Wilhelm II Hohenzollern —§!"
+SPEVNT_ger_civl_REMARK: "The Reich will never spread its wings again."
+SPEVNT_ger_civl_DESC: "Sensational news comes from the once mighty ruler of Europe. After the Kaiser's criminal and painfully helpless “struggle” against the Black Monday economic crisis, a struggle in which he effectively betrayed his own people by abandoning them to their fate, he felt just retribution. With the onset of mass starvation, rebel leaders announced the beginning of the “Second Great November Revolution.” Local Freikor units were the first to join the bloodbath. Days passed, but an indomitable wave of retribution swept German cities, directly carrying the threat to the Kaiser's mutts. It was now obvious that Germany had descended into a bloody civil war, and what would happen next was unknown. The French Commune and the British Union urgently convened a congress, at which they announced their full support for the revolutionaries and sent humanitarian and military aid...\n\n§VOne thing can be said:§!"
+
+
 ###
 RR_1_medium_armor:0 "Tank Battalion RR"
 RR_1_medium_armor_long:0 "Tank Battalion RR"
@@ -4159,7 +4177,7 @@ RR_1_motorized_long:0 "Panzer-Grenadier Battalion RR"
 RR_Werwolf:0 "Volkssturm"
 RR_Werwolf_long:0 "Volksdeutsche"
 RR_Werwolf_tech:0 "Volkssturm"
-RR_Werwolf_tech_effect:0 Enables §Y$Volkssturm$§! battalions"
+RR_Werwolf_tech_effect:0 "Enables §Y$Volkssturm$§! battalions"
 
 ### Collapse Russia
 GRU_ldr_Vaino_I:0 "Väinö I"

@@ -18,6 +18,11 @@ sound = {
 	file = "superevents/superev_endsieg_goebbels.wav"
 }
 
+sound = {
+	name = "ger_civl_sound"
+	file = "superevents/ger_civl.wav"
+	volume = 2.5
+}
 ########## SOUND EFFECTS
 
 soundeffect = {
@@ -33,5 +38,13 @@ soundeffect = {
 	volume = 2.5
 	sounds = {
 		sound = superev_endsieg_goebbels
+	} 
+}
+
+soundeffect = {
+	name = ger_civl_sound
+	volume = 2
+	sounds = {
+		sound = ger_civl_sound
 	} 
 }

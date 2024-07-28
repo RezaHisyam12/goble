@@ -965,6 +965,14 @@ ideologies = {
 			panchayat_system_subtype = {can_be_randomly_selected = no} #Panchayat
 			natpop_militant_atheism_subtype = {can_be_randomly_selected = no} #Militant Atheism
 			natpop_kritarchy_subtype = {can_be_randomly_selected = no} #Kritarchy
+			natpop_goebbels_subtype = { can_be_randomly_selected = no color = { 100 5 5 } }
+			natpop_goebbels2_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }
+			natpop_goebbels3_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }
+			natpop_goebbels5_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }
+			natpop_goebbels6_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }
+			natpop_goebbels8_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }
+			national_socialism_spartanism_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }
+			despotism_vanguard_anarchism_subtype = {can_be_randomly_selected = no color = { 5 5 5 } }
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_NATIONAL_POPULIST_1"

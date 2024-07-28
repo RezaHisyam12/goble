@@ -27,6 +27,12 @@ scripted_gui = {
 		}
 
 		triggers = {
+			GRU_Super_Event_Image_ger_civl_visible = {
+				has_global_flag = ger_civl
+			}
+		}
+
+		triggers = {
 			Super_Event_Image_Second_Weltkrieg_visible = {
 				has_global_flag = GER_Second_Weltkrieg
 			}
@@ -698,6 +704,13 @@ scripted_gui = {
 						has_global_flag = endsieg_goebbels
 					}
 					clr_global_flag  = endsieg_goebbels
+				}
+
+				if = {
+					limit = {	
+						has_global_flag = ger_civl
+					}
+					clr_global_flag  = ger_civl
 				}
 
 				if = {

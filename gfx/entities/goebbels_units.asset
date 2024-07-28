@@ -388,12 +388,12 @@ entity = {
 	scale = 0.8			
 }	
 entity = {
-	clone = "GER_infantry_entity"
+	clone = "GRU_infantry_entity"
 	pdxmesh = "MI_GER_infantry_rifle_1_desert_mesh"
 	name = "GRU_infantry_entity_desert"
 }
 entity = {
-	clone = "GER_infantry_entity"
+	clone = "GRU_infantry_entity"
 	pdxmesh = "MI_GER_infantry_rifle_1_snow_mesh"
 	name = "GRU_infantry_entity_snow"
 }
@@ -441,12 +441,12 @@ entity = {
 	scale = 0.8			
 }	
 entity = {
-	clone = "GER_infantry_0_entity"
+	clone = "GRU_infantry_0_entity"
 	pdxmesh = "MI_GER_infantry_rifle_0_desert_mesh"
 	name = "GRU_infantry_0_entity_desert"
 }
 entity = {
-	clone = "GER_infantry_0_entity"
+	clone = "GRU_infantry_0_entity"
 	pdxmesh = "MI_GER_infantry_rifle_0_snow_mesh"
 	name = "GRU_infantry_0_entity_snow"
 }
@@ -494,12 +494,12 @@ entity = {
 	scale = 0.8			
 }	
 entity = {
-	clone = "GER_infantry_1_entity"
+	clone = "GRU_infantry_1_entity"
 	pdxmesh = "MI_GER_infantry_rifle_1_desert_mesh"
 	name = "GRU_infantry_1_entity_desert"
 }
 entity = {
-	clone = "GER_infantry_1_entity"
+	clone = "GRU_infantry_1_entity"
 	pdxmesh = "MI_GER_infantry_rifle_1_snow_mesh"
 	name = "GRU_infantry_1_entity_snow"
 }
@@ -547,12 +547,12 @@ entity = {
 	scale = 0.8			
 }
 entity = {
-	clone = "GER_infantry_2_entity"
+	clone = "GRU_infantry_2_entity"
 	pdxmesh = "MI_GER_infantry_mg_2_desert_mesh"
 	name = "GRU_infantry_2_entity_desert"
 }
 entity = {
-	clone = "GER_infantry_2_entity"
+	clone = "GRU_infantry_2_entity"
 	pdxmesh = "MI_GER_infantry_mg_2_snow_mesh"
 	name = "GRU_infantry_2_entity_snow"
 }
@@ -587,12 +587,12 @@ entity = {
 		scale = 0.8			
 	}	
 	entity = {
-		clone = "GER_infantry_rider_0_entity"
+		clone = "GRU_infantry_rider_0_entity"
 		pdxmesh = "MI_GER_infantry_rifle_0_desert_mesh"
 		name = "GRU_infantry_rider_0_entity_desert"
 	}
 	entity = {
-		clone = "GER_infantry_rider_0_entity"
+		clone = "GRU_infantry_rider_0_entity"
 		pdxmesh = "MI_GER_infantry_rifle_0_snow_mesh"
 		name = "GRU_infantry_rider_0_entity_snow"
 	}
@@ -623,12 +623,12 @@ entity = {
 		scale = 0.8			
 	}	
 	entity = {
-		clone = "GER_infantry_rider_1_entity"
+		clone = "GRU_infantry_rider_1_entity"
 		pdxmesh = "MI_GER_infantry_rifle_1_desert_mesh"
 		name = "GRU_infantry_rider_1_entity_desert"
 	}
 	entity = {
-		clone = "GER_infantry_rider_1_entity"
+		clone = "GRU_infantry_rider_1_entity"
 		pdxmesh = "MI_GER_infantry_rifle_1_snow_mesh"
 		name = "GRU_infantry_rider_1_entity_snow"
 	}
@@ -659,12 +659,12 @@ entity = {
 		scale = 0.8			
 	}
 	entity = {
-		clone = "GER_infantry_rider_2_entity"
+		clone = "GRU_infantry_rider_2_entity"
 		pdxmesh = "MI_GER_infantry_mg_2_desert_mesh"
 		name = "GRU_infantry_rider_2_entity_desert"
 	}
 	entity = {
-		clone = "GER_infantry_rider_2_entity"
+		clone = "GRU_infantry_rider_2_entity"
 		pdxmesh = "MI_GER_infantry_mg_2_snow_mesh"
 		name = "GRU_infantry_rider_2_entity_snow"
 	}
@@ -695,12 +695,12 @@ entity = {
 		scale = 0.8			
 	}
 	entity = {
-		clone = "GER_infantry_rider_3_entity"
+		clone = "GRU_infantry_rider_3_entity"
 		pdxmesh = "MI_GER_infantry_mg_3_desert_mesh"
 		name = "GRU_infantry_rider_3_entity_desert"
 	}
 	entity = {
-		clone = "GER_infantry_rider_3_entity"
+		clone = "GRU_infantry_rider_3_entity"
 		pdxmesh = "MI_GER_infantry_mg_3_snow_mesh"
 		name = "GRU_infantry_rider_3_entity_snow"
 	}
@@ -731,12 +731,12 @@ entity = {
 		scale = 0.8			
 	}
 	entity = {
-		clone = "GER_infantry_rider_4_entity"
+		clone = "GRU_infantry_rider_4_entity"
 		pdxmesh = "MI_GER_infantry_mg_4_desert_mesh"
 		name = "GRU_infantry_rider_4_entity_desert"
 	}
 	entity = {
-		clone = "GER_infantry_rider_4_entity"
+		clone = "GRU_infantry_rider_4_entity"
 		pdxmesh = "MI_GER_infantry_mg_4_snow_mesh"
 		name = "GRU_infantry_rider_4_entity_snow"
 	}
@@ -1411,12 +1411,12 @@ entity = {
 		scale = 0.8			
     }
 	entity = {
-		clone = "GER_vehicle_infantry_rifle_0_entity"
+		clone = "GRU_vehicle_infantry_rifle_0_entity"
 		pdxmesh = "MI_GER_motorized_rifle_0_desert_mesh"
 		name = "GRU_vehicle_infantry_rifle_0_entity_desert"
 	}
 	entity = {
-		clone = "GER_vehicle_infantry_rifle_0_entity"
+		clone = "GRU_vehicle_infantry_rifle_0_entity"
 		pdxmesh = "MI_GER_motorized_rifle_0_snow_mesh"
 		name = "GRU_vehicle_infantry_rifle_0_entity_snow"
 	}
@@ -1466,12 +1466,12 @@ entity = {
 		scale = 0.8			
     }
 	entity = {
-		clone = "GER_vehicle_infantry_rifle_1_entity"
+		clone = "GRU_vehicle_infantry_rifle_1_entity"
 		pdxmesh = "MI_GER_motorized_rifle_1_desert_mesh"
 		name = "GRU_vehicle_infantry_rifle_1_entity_desert"
 	}
 	entity = {
-		clone = "GER_vehicle_infantry_rifle_1_entity"
+		clone = "GRU_vehicle_infantry_rifle_1_entity"
 		pdxmesh = "MI_GER_motorized_rifle_1_snow_mesh"
 		name = "GRU_vehicle_infantry_rifle_1_entity_snow"
 	}
@@ -1520,12 +1520,12 @@ entity = {
 		scale = 0.8			
 	}
 	entity = {
-		clone = "GER_vehicle_infantry_mg_2_entity"
+		clone = "GRU_vehicle_infantry_mg_2_entity"
 		pdxmesh = "MI_GER_motorized_mg_2_desert_mesh"
 		name = "GRU_vehicle_infantry_mg_2_entity_desert"
 	}
 	entity = {
-		clone = "GER_vehicle_infantry_mg_2_entity"
+		clone = "GRU_vehicle_infantry_mg_2_entity"
 		pdxmesh = "MI_GER_motorized_mg_2_snow_mesh"
 		name = "GRU_vehicle_infantry_mg_2_entity_snow"
 	}
@@ -1574,12 +1574,12 @@ entity = {
 		scale = 0.8			
 	}
 	entity = {
-		clone = "GER_vehicle_infantry_mg_3_entity"
+		clone = "GRU_vehicle_infantry_mg_3_entity"
 		pdxmesh = "MI_GER_motorized_mg_3_desert_mesh"
 		name = "GRU_vehicle_infantry_mg_3_entity_desert"
 	}
 	entity = {
-		clone = "GER_vehicle_infantry_mg_3_entity"
+		clone = "GRU_vehicle_infantry_mg_3_entity"
 		pdxmesh = "MI_GER_motorized_mg_3_snow_mesh"
 		name = "GRU_vehicle_infantry_mg_3_entity_snow"
 	}
@@ -1628,28 +1628,28 @@ entity = {
 		scale = 0.8			
 	}
 	entity = {
-		clone = "GER_vehicle_infantry_mg_4_entity"
+		clone = "GRU_vehicle_infantry_mg_4_entity"
 		pdxmesh = "MI_GER_motorized_mg_4_desert_mesh"
 		name = "GRU_vehicle_infantry_mg_4_entity_desert"
 	}
 	entity = {
-		clone = "GER_vehicle_infantry_mg_4_entity"
+		clone = "GRU_vehicle_infantry_mg_4_entity"
 		pdxmesh = "MI_GER_motorized_mg_4_snow_mesh"
 		name = "GRU_vehicle_infantry_mg_4_entity_snow"
 	}
 #5#	
 	entity = {
-		clone = "GER_vehicle_infantry_mg_4_entity"
+		clone = "GRU_vehicle_infantry_mg_4_entity"
 		pdxmesh = "MI_GER_motorized_mg_4_mesh"
 		name = "GRU_vehicle_infantry_mg_5_entity"
 	}
 	entity = {
-		clone = "GER_vehicle_infantry_mg_4_entity"
+		clone = "GRU_vehicle_infantry_mg_4_entity"
 		pdxmesh = "MI_GER_motorized_mg_4_desert_mesh"
 		name = "GRU_vehicle_infantry_mg_5_entity_desert"
 	}
 	entity = {
-		clone = "GER_vehicle_infantry_mg_4_entity"
+		clone = "GRU_vehicle_infantry_mg_4_entity"
 		pdxmesh = "MI_GER_motorized_mg_4_snow_mesh"
 		name = "GRU_vehicle_infantry_mg_5_entity_snow"
 	}
@@ -2131,12 +2131,12 @@ entity = {
 		scale = 0.8			
     }
 	entity = {
-		clone = "GER_mech_vehicle_infantry_mg_1_entity"
+		clone = "GRU_mech_vehicle_infantry_mg_1_entity"
 		pdxmesh = "MI_GER_mechanized_mg_1_desert_mesh"
 		name = "GRU_mech_vehicle_infantry_mg_1_entity_desert"
 	}
 	entity = {
-		clone = "GER_mech_vehicle_infantry_mg_1_entity"
+		clone = "GRU_mech_vehicle_infantry_mg_1_entity"
 		pdxmesh = "MI_GER_mechanized_mg_1_snow_mesh"
 		name = "GRU_mech_vehicle_infantry_mg_1_entity_snow"
 	}
@@ -2181,12 +2181,12 @@ entity = {
 		scale = 0.8			
 	}
 	entity = {
-		clone = "GER_mech_vehicle_infantry_mg_2_entity"
+		clone = "GRU_mech_vehicle_infantry_mg_2_entity"
 		pdxmesh = "MI_GER_mechanized_mg_0_desert_mesh"
 		name = "GRU_mech_vehicle_infantry_mg_2_entity_desert"
 	}
 	entity = {
-		clone = "GER_mech_vehicle_infantry_mg_2_entity"
+		clone = "GRU_mech_vehicle_infantry_mg_2_entity"
 		pdxmesh = "MI_GER_mechanized_mg_0_snow_mesh"
 		name = "GRU_mech_vehicle_infantry_mg_2_entity_snow"
 	}
@@ -2231,12 +2231,12 @@ entity = {
 		scale = 0.8			
 	}
 	entity = {
-		clone = "GER_mech_vehicle_infantry_mg_3_entity"
+		clone = "GRU_mech_vehicle_infantry_mg_3_entity"
 		pdxmesh = "MI_GER_mechanized_mg_2_desert_mesh"
 		name = "GRU_mech_vehicle_infantry_mg_3_entity_desert"
 	}
 	entity = {
-		clone = "GER_mech_vehicle_infantry_mg_3_entity"
+		clone = "GRU_mech_vehicle_infantry_mg_3_entity"
 		pdxmesh = "MI_GER_mechanized_mg_2_snow_mesh"
 		name = "GRU_mech_vehicle_infantry_mg_3_entity_snow"
 	}
@@ -2281,12 +2281,12 @@ entity = {
 		scale = 0.8			
 	}
 	entity = {
-		clone = "GER_mech_vehicle_infantry_mg_4_entity"
+		clone = "GRU_mech_vehicle_infantry_mg_4_entity"
 		pdxmesh = "MI_GER_mechanized_mg_2_desert_mesh"
 		name = "GRU_mech_vehicle_infantry_mg_4_entity_desert"
 	}
 	entity = {
-		clone = "GER_mech_vehicle_infantry_mg_4_entity"
+		clone = "GRU_mech_vehicle_infantry_mg_4_entity"
 		pdxmesh = "MI_GER_mechanized_mg_3_snow_mesh"
 		name = "GRU_mech_vehicle_infantry_mg_4_entity_snow"
 	}
@@ -2735,12 +2735,12 @@ entity = {
 	scale = 0.8			
 }	
 entity = {
-	clone = "GER_mountaineers_0_entity"
+	clone = "GRU_mountaineers_0_entity"
 	pdxmesh = "MI_GER_mountaineers_rifle_0_desert_mesh"
 	name = "GRU_mountaineers_0_entity_desert"
 }
 entity = {
-	clone = "GER_mountaineers_0_entity"
+	clone = "GRU_mountaineers_0_entity"
 	pdxmesh = "MI_GER_mountaineers_rifle_0_snow_mesh"
 	name = "GRU_mountaineers_0_entity_snow"
 }
@@ -2791,12 +2791,12 @@ entity = {
 	scale = 0.8			
 }	
 entity = {
-	clone = "GER_mountaineers_1_entity"
+	clone = "GRU_mountaineers_1_entity"
 	pdxmesh = "MI_GER_mountaineers_rifle_1_desert_mesh"
 	name = "GRU_mountaineers_1_entity_desert"
 }
 entity = {
-	clone = "GER_mountaineers_1_entity"
+	clone = "GRU_mountaineers_1_entity"
 	pdxmesh = "MI_GER_mountaineers_rifle_1_snow_mesh"
 	name = "GRU_mountaineers_1_entity_snow"
 }
@@ -2845,12 +2845,12 @@ entity = {
 	scale = 0.8			
 }
 entity = {
-	clone = "GER_mountaineers_2_entity"
+	clone = "GRU_mountaineers_2_entity"
 	pdxmesh = "MI_GER_mountaineers_mg_2_desert_mesh"
 	name = "GRU_mountaineers_2_entity_desert"
 }
 entity = {
-	clone = "GER_mountaineers_2_entity"
+	clone = "GRU_mountaineers_2_entity"
 	pdxmesh = "MI_GER_mountaineers_mg_2_snow_mesh"
 	name = "GRU_mountaineers_2_entity_snow"
 }
@@ -2899,12 +2899,12 @@ entity = {
 	scale = 0.8			
 }
 entity = {
-	clone = "GER_mountaineers_3_entity"
+	clone = "GRU_mountaineers_3_entity"
 	pdxmesh = "MI_GER_mountaineers_mg_3_desert_mesh"
 	name = "GRU_mountaineers_3_entity_desert"
 }
 entity = {
-	clone = "GER_mountaineers_3_entity"
+	clone = "GRU_mountaineers_3_entity"
 	pdxmesh = "MI_GER_mountaineers_mg_3_snow_mesh"
 	name = "GRU_mountaineers_3_entity_snow"
 }
@@ -2955,27 +2955,27 @@ entity = {
 	scale = 0.8			
 }
 entity = {
-	clone = "GER_mountaineers_4_entity"
+	clone = "GRU_mountaineers_4_entity"
 	pdxmesh = "MI_GER_mountaineers_mg_2_desert_mesh"
 	name = "GRU_mountaineers_4_entity_desert"
 }
 entity = {
-	clone = "GER_mountaineers_4_entity"
+	clone = "GRU_mountaineers_4_entity"
 	pdxmesh = "MI_GER_mountaineers_mg_2_snow_mesh"
 	name = "GRU_mountaineers_4_entity_snow"
 }
 
 entity = {
-	clone = "GER_mountaineers_4_entity"
+	clone = "GRU_mountaineers_4_entity"
 	name = "GRU_mountaineers_5_entity"
 }
 entity = {
-	clone = "GER_mountaineers_5_entity"
+	clone = "GRU_mountaineers_5_entity"
 	pdxmesh = "MI_GER_mountaineers_mg_2_desert_mesh"
 	name = "GRU_mountaineers_5_entity_desert"
 }
 entity = {
-	clone = "GER_mountaineers_5_entity"
+	clone = "GRU_mountaineers_5_entity"
 	pdxmesh = "MI_GER_mountaineers_mg_2_snow_mesh"
 	name = "GRU_mountaineers_5_entity_snow"
 }
@@ -3022,6 +3022,165 @@ entity = {
 	
 	scale = 1.2
 }
+
+###
+
+entity = {
+	clone = "infantry_rifle_GRU_entity"
+	name = "GRU_NMDVP_infantry_entity"
+	pdxmesh = "GER_infantry_rifle_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_rifle_long_idle_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+
+	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
+	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
+	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
+	#attach = { 	name = "sandbag"			Root_node_1 = "sandbag_entity" }
+
+	state = {
+	name = "death"	animation = "death"
+	event = { time = 0 node="head" particle = "blood_particle"  keep_particle = yes }
+	}
+}
+
+entity = {
+	clone = "infantry_2_GRU_entity"
+	name = "GRU_NMDVP_infantry_2_entity"
+	pdxmesh = "GER_infantry_mg_mesh"
+
+	attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }
+	attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_mg_left_entity" }
+	attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+	attach = { 	name = "rifle3"	mid_back_node = "GER_infantry_weapon_mg_long_idle_entity" }
+
+	attach = { 	name = "lighter"			Right_Hand_node_4 = "lighter_entity" }
+	attach = { 	name = "cigarette1"			Right_Hand_node_2 = "cigarette_entity" }
+	attach = { 	name = "cigarette_package1"	Right_Hand_node_3 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette_package2"	Left_Hand_node_2 = "cigarette_package_entity" }
+	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }
+
+}
+
+entity = {
+	name = "GRU_NMDVP_infantry_weapon_rifle_left_entity"
+	pdxmesh = "GOEBB_infantry_weapon_rifle_mesh"
+	scale = 1
+
+	get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+
+	state = {
+	name = "attack"	animation = "attack"
+	event = { time = 1.15 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = infantry_rifle_attack } }
+	event = { time = 2.2 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
+	}
+
+	state = {
+	name = "defend"
+	event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = infantry_rifle_attack } }
+	event = { time = 1.2 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
+	}
+
+	state = {
+	name = "support_attack"	animation = "support_attack"
+	event = { time = 0 node="muzzle"  particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = infantry_rifle_attack } }
+	event = { time = 1.2 node="cartridge" particle = "rifle_cartridge_particle"  keep_particle = yes sound = { soundeffect = infantry_rifle_cartridge } }
+	}
+}
+
+entity = {
+	name = "sandbag_entity"
+	pdxmesh = "sandbag_mesh"
+	scale = 1
+}
+
+entity = {
+	name = "GRU_NMDVP_infantry_weapon_rifle_right_entity"
+	pdxmesh = "GOEBB_infantry_weapon_rifle_mesh"
+	scale = 1
+}
+
+entity = {
+	name = "GRU_NMDVP_infantry_weapon_rifle_long_idle_entity"
+	pdxmesh = "GOEBB_infantry_weapon_rifle_mesh"
+	scale = 1
+}
+
+entity = {
+	name = "GRU_NMDVP_infantry_weapon_mg_right_entity"
+	pdxmesh = "GOEBB_infantry_weapon_mg_mesh"
+	scale = 1
+
+	get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+
+	state = { name = "attack"	animation = "attack"
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+
+	state = { name = "defend"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+
+	state = { name = "support_attack"	animation = "support_attack"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+}
+
+	entity = {
+	name = "GRU_NMDVP_infantry_weapon_mg_long_idle_entity"
+	pdxmesh = "GOEBB_infantry_weapon_mg_mesh"
+	scale = 1
+}
+
+entity = {
+	name = "GRU_NMDVP_infantry_weapon_mg_left_entity"
+	pdxmesh = "GOEBB_infantry_weapon_mg_mesh"
+	scale = 1
+}
+
+	entity = {
+	    clone = "GRU_NMDVP_infantry_entity"
+	    name = "GRU_NMDVP_infantry_entity_snow"
+	    pdxmesh = "GRU_winter_infantry_rifle_mesh"
+        scale = 0.8					
+    }	
+	
+	entity = {
+	    clone = "GRU_NMDVP_infantry_2_entity"
+	    name = "GRU_NMDVP_infantry_2_entity_snow"
+	    pdxmesh = "GRU_winter_infantryy_mg_mesh"
+        scale = 0.8					
+    }	
+
+    entity = {
+		clone = "GRU_NMDVP_infantry_rider_entity"
+		name = "GRU_NMDVP_infantry_rider_entity_snow"
+        pdxmesh = "GRU_winter_infantry_rifle_mesh"
+		scale = 0.8
+	}
+	
+	entity = {
+		clone = "GRU_NMDVP_infantry_mg_rider_entity"
+		name = "GRU_NMDVP_infantry_mg_rider_entity_snow"
+        pdxmesh = "GRU_winter_infantryy_mg_mesh"
+		scale = 0.8
+	}
 
 #############
 ### GUN 2 ###
@@ -3388,12 +3547,12 @@ entity = {
 	scale = 0.78
 }
 entity = {
-	clone = "GER_paratrooper_0_entity"
+	clone = "GRU_paratrooper_0_entity"
 	pdxmesh = "MI_GER_paratrooper_rifle_1_desert_mesh"
 	name = "GRU_paratrooper_0_entity_desert"
 }
 entity = {
-	clone = "GER_paratrooper_0_entity"
+	clone = "GRU_paratrooper_0_entity"
 	pdxmesh = "MI_GER_paratrooper_rifle_1_snow_mesh"
 	name = "GRU_paratrooper_0_entity_snow"
 }
@@ -3443,12 +3602,12 @@ entity = {
 	scale = 0.78
 }
 entity = {
-	clone = "GER_paratrooper_1_entity"
+	clone = "GRU_paratrooper_1_entity"
 	pdxmesh = "MI_GER_paratrooper_rifle_1_desert_mesh"
 	name = "GRU_paratrooper_1_entity_desert"
 }
 entity = {
-	clone = "GER_paratrooper_1_entity"
+	clone = "GRU_paratrooper_1_entity"
 	pdxmesh = "MI_GER_paratrooper_rifle_1_snow_mesh"
 	name = "GRU_paratrooper_1_entity_snow"
 }
@@ -3499,12 +3658,12 @@ entity = {
 	scale = 0.78
 }	
 entity = {
-	clone = "GER_paratrooper_2_entity"
+	clone = "GRU_paratrooper_2_entity"
 	pdxmesh = "MI_GER_paratrooper_mg_2_desert_mesh"
 	name = "GRU_paratrooper_2_entity_desert"
 }
 entity = {
-	clone = "GER_paratrooper_2_entity"
+	clone = "GRU_paratrooper_2_entity"
 	pdxmesh = "MI_GER_paratrooper_mg_2_snow_mesh"
 	name = "GRU_paratrooper_2_entity_snow"
 }
@@ -3554,12 +3713,12 @@ entity = {
 	scale = 0.78		
 }	
 entity = {
-	clone = "GER_paratrooper_3_entity"
+	clone = "GRU_paratrooper_3_entity"
 	pdxmesh = "MI_GER_paratrooper_mg_3_desert_mesh"
 	name = "GRU_paratrooper_3_entity_desert"
 }
 entity = {
-	clone = "GER_paratrooper_3_entity"
+	clone = "GRU_paratrooper_3_entity"
 	pdxmesh = "MI_GER_paratrooper_mg_3_snow_mesh"
 	name = "GRU_paratrooper_3_entity_snow"
 }
@@ -3609,27 +3768,27 @@ entity = {
 	scale = 0.78		
 }	
 entity = {
-	clone = "GER_paratrooper_4_entity"
+	clone = "GRU_paratrooper_4_entity"
 	pdxmesh = "MI_GER_paratrooper_mg_3_desert_mesh"
 	name = "GRU_paratrooper_4_entity_desert"
 }
 entity = {
-	clone = "GER_paratrooper_4_entity"
+	clone = "GRU_paratrooper_4_entity"
 	pdxmesh = "MI_GER_paratrooper_mg_3_snow_mesh"
 	name = "GRU_paratrooper_4_entity_snow"
 }	
 
 entity = {
-	clone = "GER_paratrooper_4_entity"
+	clone = "GRU_paratrooper_4_entity"
 	name = "GRU_paratrooper_5_entity"
 }	
 entity = {
-	clone = "GER_paratrooper_5_entity"
+	clone = "GRU_paratrooper_5_entity"
 	pdxmesh = "MI_GER_paratrooper_mg_3_desert_mesh"
 	name = "GRU_paratrooper_5_entity_desert"
 }
 entity = {
-	clone = "GER_paratrooper_5_entity"
+	clone = "GRU_paratrooper_5_entity"
 	pdxmesh = "MI_GER_paratrooper_mg_3_snow_mesh"
 	name = "GRU_paratrooper_5_entity_snow"
 }	
@@ -3864,7 +4023,7 @@ entity = {
 }	
 
 entity = {
-	clone = "GER_marine_4_entity"
+	clone = "GRU_marine_4_entity"
 	name = "GRU_marine_5_entity"
 }	
 	
@@ -3933,12 +4092,12 @@ entity = {
 		scale = 1		
 	}
 	entity = {
-		clone = "GER_bicycle_rider_rifle_entity"
+		clone = "GRU_bicycle_rider_rifle_entity"
 		pdxmesh = "MI_GER_motorized_rifle_1_desert_mesh"
 		name = "GRU_bicycle_rider_rifle_desert"
 	}
 	entity = {
-		clone = "GER_bicycle_rider_rifle_entity"
+		clone = "GRU_bicycle_rider_rifle_entity"
 		pdxmesh = "MI_GER_motorized_rifle_1_snow_mesh"
 		name = "GRU_bicycle_rider_rifle_snow"
 	}
@@ -4015,12 +4174,12 @@ entity = {
 		scale = 1		
 	}
 	entity = {
-		clone = "GER_bicycle_rider_mg_entity"
+		clone = "GRU_bicycle_rider_mg_entity"
 		pdxmesh = "MI_GER_bicycle_mg_2_desert_mesh"
 		name = "GRU_bicycle_rider_mg_desert"
 	}
 	entity = {
-		clone = "GER_bicycle_rider_mg_entity"
+		clone = "GRU_bicycle_rider_mg_entity"
 		pdxmesh = "MI_GER_bicycle_mg_2_snow_mesh"
 		name = "GRU_bicycle_rider_mg_snow"
 	}
