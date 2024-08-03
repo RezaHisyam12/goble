@@ -10,3 +10,9 @@
   GFX_SPEVNT_endsieg_goebbels_REMARK:0 "Über alles in der Welt"
   GFX_SPEVNT_endsieg_goebbels_DESC:0 "The Germanic army seems unstoppable, having marched all the way to the tips of Scandandinavia and Edges of Eastern Europe, the Germanic State has secured its grip over Europe. The Conquered territories in the east have become nothing but colonies for the germanic people to settle in, with the local populace suffering the horrors of occupation. Many wonder for how long this peace will last, but one thing is sure-\n\n The New Order is here."
   
+
+  GFX_SPEVNT_ger_civl:0 "German Civil War"
+  GFX_SPEVNT_ger_civl_TEXT:0 "Rootless subjects... “\n (Wilhelm II on revolutionaries)\n\n§Y— Wilhelm II Hohenzollern —§!"
+  GFX_SPEVNT_ger_civl_REMARK:0 "The Reich will never spread its wings again."
+  GFX_SPEVNT_ger_civl_DESC:0 "Sensational news comes from the once mighty ruler of Europe. After the Kaiser's criminal and painfully helpless “struggle” against the Black Monday economic crisis, a struggle in which he effectively betrayed his own people by abandoning them to their fate, he felt just retribution. With the onset of mass starvation, rebel leaders announced the beginning of the “Second Great November Revolution.” Local Freikor units were the first to join the bloodbath. Days passed, but an indomitable wave of retribution swept German cities, directly carrying the threat to the Kaiser's mutts. It was now obvious that Germany had descended into a bloody civil war, and what would happen next was unknown. The French Commune and the British Union urgently convened a congress, at which they announced their full support for the revolutionaries and sent humanitarian and military aid...\n\n§VOne thing can be said:§!"
+

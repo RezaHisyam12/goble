@@ -77,7 +77,6 @@ country_event = { #GOEBBELS GREATER GERMANIC NATIONAL WORKERS STATE
 
 	option = {
 		name = nmdvpsuper.3.a
-		add_named_threat = { threat = 5 name = GRU_named_threat_3 }
 		GER = {
 			declare_war_on = {
 				target = GRU
@@ -237,7 +236,7 @@ country_event = { #GOEBBELS GREATER GERMANIC NATIONAL WORKERS STATE
 				value = 1000
 			}
 		}
-		set_global_flag = GRU_Super_Event_Visible
+		set_global_flag = Super_Event_Visible
 		set_global_flag = ger_civl
 		every_country = {
 			limit = {

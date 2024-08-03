@@ -30,6 +30,12 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_SPEVNT_civl_gru"
+		texturefile = "gfx/super_events/SPEVNT_civl_gru.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
 		name = "GFX_SPEVNT_Second_Weltkrieg"
 		texturefile = "gfx/super_events/SPEVNT_Second_Weltkrieg.png"
 		legacy_lazy_load = no

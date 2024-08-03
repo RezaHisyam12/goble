@@ -397,6 +397,29 @@ country_event = { # flavour about united front
 	option = { # RebellioN? What nonsense
 		name = rotermorgenGCW.8.a
 		add_stability = -0.20
+		every_state = {
+			limit = {
+				OR = {
+					state = 781
+					state = 51
+					state = 42
+					state = 55
+					state = 57
+					state = 56
+					state = 50
+					state = 780
+					state = 28
+					state = 779
+					state = 8
+					state = 188
+					state = 782
+					state = 67
+					state = 86
+					state = 776
+				}
+			}
+			set_demilitarized_zone = yes
+		}
 		hidden_effect = {
 				country_event = {
 				id = rotermorgenGCW.9
@@ -500,6 +523,7 @@ country_event = { # GRU setup
 			
 			
 			GRU = {
+				country_event = { id = nmdvpsuper.3 days = 4 }
 				
 				add_ideas = GERMAN_CIVIL_WAR_participant
 				transfer_state = 781
@@ -511,6 +535,30 @@ country_event = { # GRU setup
 				transfer_state = 59
 				transfer_state = 50
 				transfer_state = 780
+
+				every_state = {
+		        	limit = {
+		        		OR = {
+		        			state = 781
+		        			state = 51
+		        			state = 42
+		        			state = 55
+		        			state = 57
+		        			state = 56
+		        			state = 50
+		        			state = 780
+		        			state = 28
+		        			state = 779
+		        			state = 8
+		        			state = 741
+		        			state = 188
+		        			state = 782
+		        			state = 67
+		        		}
+		        	}
+		        	set_demilitarized_zone = no
+		        }
+
 				inherit_technology = GER		
 				add_equipment_to_stockpile = {
 				type = infantry_equipment_2
@@ -870,24 +918,12 @@ country_event = { # GRU setup
 	
 	option = { # stay what you are
 		name = rotermorgenGCW.5.a
-		GER = {
-			declare_war_on = {
-				target = GRU
-				type = annex_everything
-			}
-		}
 	}
 	
 	option = { # fight for a future
 		name = rotermorgenGCW.5.b
 		GRU = {
 			change_tag_from = GER
-		}
-		GER = {
-			declare_war_on = {
-				target = GRU
-				type = annex_everything
-			}
 		}
 	}
 }
