@@ -18,6 +18,12 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_GRU_SPEVNT_civl_gru"
+		texturefile = "gfx/super_events/SPEVNT_gru_civl.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
 		name = "GFX_SPEVNT_greater_germanic_state_goebbels"
 		texturefile = "gfx/super_events/SPEVNT_greater_germanic_state_goebbels.png"
 		legacy_lazy_load = no
@@ -29,12 +35,6 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	
-	spriteType = {
-		name = "GFX_SPEVNT_civl_gru"
-		texturefile = "gfx/super_events/SPEVNT_civl_gru.png"
-		legacy_lazy_load = no
-	}
-
 	spriteType = {
 		name = "GFX_SPEVNT_Second_Weltkrieg"
 		texturefile = "gfx/super_events/SPEVNT_Second_Weltkrieg.png"
@@ -182,13 +182,7 @@ spriteTypes = {
 		texturefile = "gfx/super_events/SPEVNT_Gamelin_Coup.png"
 		legacy_lazy_load = no
 	}
-	
-	spriteType = {
-		name = "GFX_SPEVNT_Anarchist_France"
-		texturefile = "gfx/super_events/SPEVNT_Anarchist_France.png"
-		legacy_lazy_load = no
-	}
-	
+
 	spriteType = {
 		name = "GFX_SPEVNT_Caucasus_Chaos"
 		texturefile = "gfx/super_events/SPEVNT_Caucasus_Chaos.png"
@@ -198,12 +192,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_SPEVNT_Capone_CSA"
 		texturefile = "gfx/super_events/SPEVNT_Capone_CSA.png"
-		legacy_lazy_load = no
-	}
-	
-	spriteType = {
-		name = "GFX_SPEVNT_Romanian_Restoration"
-		texturefile = "gfx/super_events/SPEVNT_Romanian_Restoration.png"
 		legacy_lazy_load = no
 	}
 	

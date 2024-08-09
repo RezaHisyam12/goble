@@ -64,7 +64,7 @@ country_event = {		#GOEBBELS ENDSIEG
 	}
 }
 
-country_event = { #GOEBBELS GREATER GERMANIC NATIONAL WORKERS STATE
+country_event = { #CIVIL WAR
 	id = nmdvpsuper.3
 	title = nmdvpsuper.3.t
 	desc = nmdvpsuper.3.d

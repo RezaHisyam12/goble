@@ -21,6 +21,12 @@ guiTypes = {
 		}
 
 		iconType = {
+			name ="GRU_Super_Event_Image_ger_civl_visible"
+			spriteType = "GFX_GRU_SPEVNT_civl_gru"
+			position = { x = -150 y = -45 }
+		}
+
+		iconType = {
 			name ="Super_Event_Image_greater_germanic_state_goebbels"
 			spriteType = "GFX_SPEVNT_greater_germanic_state_goebbels"
 			position = { x = -150 y = -45 }
@@ -29,12 +35,6 @@ guiTypes = {
 		iconType = {
 			name ="Super_Event_Image_endsieg_goebbels"
 			spriteType = "GFX_SPEVNT_endsieg_goebbels"
-			position = { x = -150 y = -45 }
-		}
-
-		iconType = {
-			name ="GRU_Super_Event_Image_ger_civl_visible"
-			spriteType = "GFX_SPEVNT_civl_gru"
 			position = { x = -150 y = -45 }
 		}
 
@@ -181,13 +181,7 @@ guiTypes = {
 			spriteType = "GFX_SPEVNT_Gamelin_Coup"
 			position = { x = -150 y = -45 }
 		}
-		
-		iconType = {
-			name ="Super_Event_Image_Anarchist_France"
-			spriteType = "GFX_SPEVNT_Anarchist_France"
-			position = { x = -150 y = -45 }
-		}
-		
+
 		iconType = {
 			name ="Super_Event_Image_Caucasus_Chaos"
 			spriteType = "GFX_SPEVNT_Caucasus_Chaos"
@@ -199,13 +193,7 @@ guiTypes = {
 			spriteType = "GFX_SPEVNT_Capone_CSA"
 			position = { x = -150 y = -45 }
 		}
-		
-		iconType = {
-			name ="Super_Event_Image_Romanian_Restoration"
-			spriteType = "GFX_SPEVNT_Romanian_Restoration"
-			position = { x = -150 y = -45 }
-		}
-		
+
 		iconType = {
 			name ="Super_Event_Image_Korean_Revolt"
 			spriteType = "GFX_SPEVNT_Korean_Revolt"

@@ -8,8 +8,7 @@
   GFX_SPEVNT_endsieg_goebbels:0 "Endsieg"
   GFX_SPEVNT_endsieg_goebbels_TEXT:0 "There will come a day, when all the lies will collapse under their own weight, and truth will again triumph. \n §Y-Paul Josef Goebbels-§!"
   GFX_SPEVNT_endsieg_goebbels_REMARK:0 "Über alles in der Welt"
-  GFX_SPEVNT_endsieg_goebbels_DESC:0 "The Germanic army seems unstoppable, having marched all the way to the tips of Scandandinavia and Edges of Eastern Europe, the Germanic State has secured its grip over Europe. The Conquered territories in the east have become nothing but colonies for the germanic people to settle in, with the local populace suffering the horrors of occupation. Many wonder for how long this peace will last, but one thing is sure-\n\n The New Order is here."
-  
+  GFX_SPEVNT_endsieg_goebbels_DESC:0 "The Germanic army seems unstoppable, having marched all the way to the tips of Scandandinavia and Edges of Eastern Europe, the Germanic State has secured its grip over Europe. The Conquered territories in the east have become nothing but colonies for the germanic people to settle in, with the local populace suffering the horrors of occupation. Many wonder for how long this peace will last, but one thing is sure-\n\n The New Order is here." 
 
   GFX_SPEVNT_ger_civl:0 "German Civil War"
   GFX_SPEVNT_ger_civl_TEXT:0 "Rootless subjects... “\n (Wilhelm II on revolutionaries)\n\n§Y— Wilhelm II Hohenzollern —§!"

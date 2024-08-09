@@ -1,26 +1,26 @@
 defined_text = { #SUPER EVENT TITLES
 	name = get_super_event_title
 
-    text = { 
-        trigger = {
-            has_global_flag = greater_germanic_state_goebbels
-        }
-        localization_key = "GFX_SPEVNT_greater_germanic_state_goebbels"
-    }
-
-    text = { 
-        trigger = {
-            has_global_flag = endsieg_goebbels
-        }
-        localization_key = "GFX_SPEVNT_endsieg_goebbels"
-    }
+    	text = { 
+		trigger = {
+			has_global_flag = greater_germanic_state_goebbels
+		}
+		localization_key = "GFX_SPEVNT_greater_germanic_state_goebbels"
+	}
 
 	text = { 
-        trigger = {
-            has_global_flag = ger_civl
-        }
-        localization_key = "GFX_SPEVNT_ger_civl"
-    }
+		trigger = {
+			has_global_flag = endsieg_goebbels
+		}
+		localization_key = "GFX_SPEVNT_endsieg_goebbels"
+	}
+
+	text = { 
+		trigger = {
+			has_global_flag = ger_civl
+		}
+		localization_key = "GFX_SPEVNT_ger_civl"
+	}
 
 	text = { 
 		trigger = {
@@ -190,14 +190,7 @@ defined_text = { #SUPER EVENT TITLES
 		}
 		localization_key = "GFX_SPEVNT_Gamelin_Coup"
 	}
-	
-	text = { 
-		trigger = {
-			has_global_flag = FRA_anarchist_takeover
-		}
-		localization_key = "GFX_SPEVNT_Anarchist_France"
-	}
-	
+
 	text = { 
 		trigger = {
 			has_global_flag = GEO_chaos_in_caucasus
@@ -756,6 +749,13 @@ defined_text = { #SUPER EVENT QUOTES
         localization_key = "GFX_SPEVNT_endsieg_goebbels_TEXT"
     }
 	
+    text = { 
+        trigger = {
+            has_global_flag = ger_civl
+        }
+        localization_key = "GFX_SPEVNT_ger_civl_TEXT"
+    }
+
 	text = { 
 		trigger = {
 			has_global_flag = GER_Second_Weltkrieg
@@ -925,14 +925,7 @@ defined_text = { #SUPER EVENT QUOTES
 		}
 		localization_key = "GFX_SPEVNT_Gamelin_Coup_TEXT"
 	}
-	
-	text = { 
-		trigger = {
-			has_global_flag = FRA_anarchist_takeover
-		}
-		localization_key = "GFX_SPEVNT_Anarchist_France_TEXT"
-	}
-	
+
 	text = { 
 		trigger = {
 			has_global_flag = GEO_chaos_in_caucasus
@@ -1490,6 +1483,13 @@ defined_text = { #SUPER EVENT REMARKS
         localization_key = "GFX_SPEVNT_endsieg_goebbels_REMARK"
     }
 
+    text = { 
+        trigger = {
+            has_global_flag = ger_civl
+        }
+        localization_key = "GFX_SPEVNT_ger_civl_REMARK"
+    }
+
 	text = { 
 		trigger = {
 			has_global_flag = GER_Second_Weltkrieg
@@ -1657,14 +1657,7 @@ defined_text = { #SUPER EVENT REMARKS
 		}
 		localization_key = "GFX_SPEVNT_Gamelin_Coup_REMARK"
 	}
-	
-	text = { 
-		trigger = {
-			has_global_flag = FRA_anarchist_takeover
-		}
-		localization_key = "GFX_SPEVNT_Anarchist_France_REMARK"
-	}
-	
+
 	text = { 
 		trigger = {
 			has_global_flag = GEO_chaos_in_caucasus
@@ -2223,6 +2216,13 @@ defined_text = { #SUPER EVENT DESCS
         localization_key = "GFX_SPEVNT_endsieg_goebbels_DESC"
     }
 
+    text = { 
+        trigger = {
+            has_global_flag = ger_civl
+        }
+        localization_key = "GFX_SPEVNT_ger_civl_DESC"
+    }
+
 	text = { 
 		trigger = {
 			has_global_flag = GER_Second_Weltkrieg
@@ -2390,14 +2390,7 @@ defined_text = { #SUPER EVENT DESCS
 		}
 		localization_key = "GFX_SPEVNT_Gamelin_Coup_DESC"
 	}
-	
-	text = { 
-		trigger = {
-			has_global_flag = FRA_anarchist_takeover
-		}
-		localization_key = "GFX_SPEVNT_Anarchist_France_DESC"
-	}
-	
+
 	text = { 
 		trigger = {
 			has_global_flag = GEO_chaos_in_caucasus
