@@ -3003,7 +3003,6 @@ country_event = { # VKB claims
 		190 = { add_claim_by = VKB }
 		189 = { add_claim_by = VKB }
 		11 = { add_claim_by = VKB }
-		655 = { add_claim_by = VKB }
 	    1288 = { add_claim_by = VKB }
 	    209 = { add_claim_by = VKB }
 	    880 = { add_claim_by = VKB }
@@ -4392,7 +4391,7 @@ country_event = { # Ideology Switch
 			}
 			add_popularity = {
 				ideology = national_populist
-				popularity = 0.7
+				popularity = 1.0
 			}
 		}
 		set_politics = {

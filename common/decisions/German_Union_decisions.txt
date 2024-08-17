@@ -7156,86 +7156,287 @@ GRU_kill_rivals_decisions = {
 		available = {
 			tag = GRU 
 			AND = {
-				OR = {
-					GRU = {
-						controls_state = 558
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 558
-					}
-				}
-			}
-		}
+							OR = {
+								GRU = {
+									controls_state = 298
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 298
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 966
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 966
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 807
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 807
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 963
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 963
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 1321
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 1321
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 1323
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 1323
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 877
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 877
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 1322
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 1322
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 876
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 876
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 973
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 973
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 558
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 558
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 662
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 662
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 878
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 878
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 913
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 913
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 274
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 274
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 1192
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 1192
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 809
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 809
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 808
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 808
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 556
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 556
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 806
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 806
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 700
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 700
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 296
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 296
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 272
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 272
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 834
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 834
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 557
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 557
+								}
+							}
+
+			    		}
+			    	}
 		complete_effect = {
+					MVA = {
+			    	transfer_state = 298
+				transfer_state = 966
+				transfer_state = 807
+				transfer_state = 963
+				transfer_state = 1321
+				transfer_state = 1323
+				transfer_state = 877
+				transfer_state = 1322
+				transfer_state = 876
+				transfer_state = 973
+				transfer_state = 558
+				transfer_state = 662
+				transfer_state = 878
+				transfer_state = 913
+				transfer_state = 274
+				transfer_state = 1192
+				transfer_state = 809
+				transfer_state = 808
+				transfer_state = 556
+				transfer_state = 806
+				transfer_state = 700
+				transfer_state = 296
+				transfer_state = 272
+				transfer_state = 834
+				transfer_state = 557
+					}
 			hidden_effect = {
-				every_owned_state = {
-			    	limit = {
-			    		OR = {
-							state = 298
-					        state = 966
-					        state = 807
-					        state = 963
-					        state = 1321
-					        state = 1323
-					        state = 877
-					        state = 1322
-					        state = 876
-					        state = 973
-					        state = 558
-					        state = 662
-					        state = 878
-					        state = 913
-					        state = 274
-					        state = 1192
-					        state = 809
-					        state = 808
-					        state = 556
-					        state = 806
-					        state = 700
-					        state = 296
-					        state = 272
-					        state = 834
-					        state = 557
-			    		}
-			    	}
-			    	MVA = {
-			    		add_state_core = PREV
-			    		transfer_state = PREV
-			    	}
-			    }
-				every_state = {
-			    	limit = {
-			    		OR = {
-					        state = 298
-					        state = 966
-					        state = 807
-					        state = 963
-					        state = 1321
-					        state = 1323
-					        state = 877
-					        state = 1322
-					        state = 876
-					        state = 973
-					        state = 558
-					        state = 662
-					        state = 878
-					        state = 913
-					        state = 274
-					        state = 1192
-					        state = 809
-					        state = 808
-					        state = 556
-					        state = 806
-					        state = 700
-					        state = 296
-					        state = 272
-					        state = 834
-					        state = 557
-			    		}
-			    	}
-			    	remove_claim_by = GRU
-			    }
 				MVA = {
 					inherit_technology = GRU
 
@@ -7251,7 +7452,7 @@ GRU_kill_rivals_decisions = {
 					add_equipment_to_stockpile = { type = anti_tank_equipment amount = 600 }
 					add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 5000 }
 				}
-				set_autonomy = { target = MVA autonomy_state = RM_Reichskommissariat }
+				set_autonomy = { target = MVA autonomy_state = RM_Volkskommissariat }
 			}
 		}
 	}
@@ -7308,112 +7509,429 @@ GRU_kill_rivals_decisions = {
 		available = {
 			tag = GRU 
 			AND = {
-				OR = {
-					GRU = {
-						controls_state = 881
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 881
-					}
-				}
-			}
-		}
+							OR = {
+								GRU = {
+									controls_state = 927
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 927
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 952
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 952
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 297
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 297
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 971
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 971
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 962
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 962
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 975
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 975
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 660
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 660
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 974
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 974
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 1180
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 1180
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 718
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 718
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 1025
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 1025
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 1026
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 1026
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 1181
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 1181
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 977
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 977
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 953
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 953
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 539
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 539
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 928
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 928
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 914
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 914
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 881
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 881
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 916
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 916
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 540
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 540
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 917
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 917
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 959
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 959
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 957
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 957
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 958
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 958
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 813
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 813
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 956
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 956
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 879
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 879
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 1183
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 1183
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 976
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 976
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 295
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 295
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 1185
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 1185
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 538
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 538
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 949
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 949
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 1184
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 1184
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 1182
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 1182
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 948
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 948
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 515
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 515
+								}
+							}
+			    		}
+			    	}
 		complete_effect = {
+					MTA = {
+				transfer_state = 927
+				transfer_state = 952
+				transfer_state = 297
+				transfer_state = 971
+				transfer_state = 962
+				transfer_state = 975
+				transfer_state = 660
+				transfer_state = 974
+				transfer_state = 1180
+				transfer_state = 718
+				transfer_state = 1025
+				transfer_state = 1026
+				transfer_state = 1181
+				transfer_state = 977
+				transfer_state = 953
+				transfer_state = 539
+				transfer_state = 928
+				transfer_state = 914
+				transfer_state = 881
+				transfer_state = 916
+				transfer_state = 540
+				transfer_state = 917
+				transfer_state = 959
+				transfer_state = 957
+				transfer_state = 958
+				transfer_state = 813
+				transfer_state = 956
+				transfer_state = 879
+				transfer_state = 1183
+				transfer_state = 976
+				transfer_state = 295
+				transfer_state = 1185
+				transfer_state = 538
+				transfer_state = 949
+				transfer_state = 1184
+				transfer_state = 1182
+				transfer_state = 948
+				transfer_state = 515
+					}
 			hidden_effect = {
-				every_owned_state = {
-			    	limit = {
-			    		OR = {
-							state = 927
-					        state = 952
-					        state = 297
-					        state = 971
-					        state = 962
-					        state = 975
-					        state = 660
-					        state = 974
-					        state = 1180
-					        state = 718
-					        state = 1025
-					        state = 1026
-					        state = 1181
-					        state = 977
-					        state = 953
-					        state = 539
-					        state = 928
-					        state = 914
-					        state = 881
-					        state = 916
-					        state = 540
-					        state = 917
-					        state = 959
-					        state = 957
-					        state = 958
-					        state = 813
-					        state = 956
-					        state = 879
-					        state = 1183
-					        state = 976
-					        state = 295
-					        state = 1185
-					        state = 538
-					        state = 949
-					        state = 1184
-					        state = 1182
-					        state = 948
-					        state = 515
-			    		}
-			    	}
-			    	MTA = {
-			    		add_state_core = PREV
-			    		transfer_state = PREV
-			    	}
-			    }
-				every_state = {
-			    	limit = {
-			    		OR = {
-					        state = 927
-					        state = 952
-					        state = 297
-					        state = 971
-					        state = 962
-					        state = 975
-					        state = 660
-					        state = 974
-					        state = 1180
-					        state = 718
-					        state = 1025
-					        state = 1026
-					        state = 1181
-					        state = 977
-					        state = 953
-					        state = 539
-					        state = 928
-					        state = 914
-					        state = 881
-					        state = 916
-					        state = 540
-					        state = 917
-					        state = 959
-					        state = 957
-					        state = 958
-					        state = 813
-					        state = 956
-					        state = 879
-					        state = 1183
-					        state = 976
-					        state = 295
-					        state = 1185
-					        state = 538
-					        state = 949
-					        state = 1184
-					        state = 1182
-					        state = 948
-					        state = 515
-			    		}
-			    	}
-			    	remove_claim_by = GRU
-			    }
 				MTA = {
 					inherit_technology = GRU
 
@@ -7429,7 +7947,7 @@ GRU_kill_rivals_decisions = {
 					add_equipment_to_stockpile = { type = anti_tank_equipment amount = 600 }
 					add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 5000 }
 				}
-				set_autonomy = { target = MTA autonomy_state = RM_Reichskommissariat }
+				set_autonomy = { target = MTA autonomy_state = RM_Volkskommissariat }
 			}
 		}
 	}
@@ -7473,86 +7991,286 @@ GRU_kill_rivals_decisions = {
 		available = {
 			tag = GRU 
 			AND = {
-				OR = {
-					GRU = {
-						controls_state = 965
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 965
-					}
-				}
-			}
-		}
+							OR = {
+								GRU = {
+									controls_state = 548
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 548
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 969
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 969
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 547
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 547
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 925
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 925
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 970
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 970
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 965
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 965
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 544
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 544
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 950
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 950
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 954
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 954
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 955
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 955
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 871
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 871
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 899
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 899
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 1032
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 1032
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 546
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 546
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 870
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 870
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 918
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 918
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 869
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 869
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 905
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 905
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 708
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 708
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 706
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 706
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 707
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 707
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 543
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 543
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 1177
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 1177
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 1179
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 1179
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 1178
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 1178
+								}
+							}
+			    		}
+			    	}
 		complete_effect = {
+					MOA = {
+				transfer_state = 548
+				transfer_state = 969
+				transfer_state = 547
+				transfer_state = 925
+				transfer_state = 970
+				transfer_state = 965
+				transfer_state = 544
+				transfer_state = 950
+				transfer_state = 954
+				transfer_state = 955
+				transfer_state = 871
+				transfer_state = 899
+				transfer_state = 546
+				transfer_state = 870
+				transfer_state = 918
+				transfer_state = 869
+				transfer_state = 905
+				transfer_state = 1032
+				transfer_state = 708
+				transfer_state = 706
+				transfer_state = 707
+				transfer_state = 543
+				transfer_state = 1177
+				transfer_state = 1179
+				transfer_state = 1178
+					}
 			hidden_effect = {
-				every_owned_state = {
-			    	limit = {
-			    		OR = {
-							state = 548
-					        state = 969
-					        state = 547
-					        state = 925
-					        state = 970
-					        state = 965
-					        state = 544
-					        state = 950
-					        state = 954
-					        state = 955
-					        state = 871
-					        state = 899
-					        state = 1032
-					        state = 546
-					        state = 870
-					        state = 918
-					        state = 869
-					        state = 905
-					        state = 708
-					        state = 706
-					        state = 707
-					        state = 543
-					        state = 1177
-					        state = 1179
-					        state = 1178
-			    		}
-			    	}
-			    	MOA = {
-			    		add_state_core = PREV
-			    		transfer_state = PREV
-			    	}
-			    }
-				every_state = {
-			    	limit = {
-			    		OR = {
-							state = 548
-					        state = 969
-					        state = 547
-					        state = 925
-					        state = 970
-					        state = 965
-					        state = 544
-					        state = 950
-					        state = 954
-					        state = 955
-					        state = 871
-					        state = 899
-					        state = 1032
-					        state = 546
-					        state = 870
-					        state = 918
-					        state = 869
-					        state = 905
-					        state = 708
-					        state = 706
-					        state = 707
-					        state = 543
-					        state = 1177
-					        state = 1179
-					        state = 1178
-			    		}
-			    	}
-					remove_claim_by = GRU
-			    }
 				MOA = {
 					inherit_technology = GRU
 
@@ -7568,7 +8286,7 @@ GRU_kill_rivals_decisions = {
 					add_equipment_to_stockpile = { type = anti_tank_equipment amount = 600 }
 					add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 5000 }
 				}
-				set_autonomy = { target = MOA autonomy_state = RM_Reichskommissariat }
+				set_autonomy = { target = MOA autonomy_state = RM_Volkskommissariat }
 			}
 		}
 	}
@@ -7600,62 +8318,154 @@ GRU_kill_rivals_decisions = {
 		available = {
 			tag = GRU 
 			AND = {
-				OR = {
-					GRU = {
-						controls_state = 541
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 541
-					}
-				}
-			}
-		}
+							OR = {
+								GRU = {
+									controls_state = 964
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 964
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 541
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 541
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 542
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 542
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 545
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 545
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 275
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 275
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 738
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 738
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 719
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 719
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 946
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 946
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 681
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 681
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 1176
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 1176
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 945
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 945
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 947
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 947
+								}
+							}
+
+							OR = {
+								GRU = {
+									controls_state = 85
+								}
+								any_other_country = {
+									is_subject_of = GRU
+									controls_state = 85
+								}
+							}
+			    		}
+			    	}
 		complete_effect = {
+					MZA = {
+				transfer_state = 964
+				transfer_state = 541
+				transfer_state = 542
+				transfer_state = 545
+				transfer_state = 275
+				transfer_state = 738
+				transfer_state = 719
+				transfer_state = 946
+				transfer_state = 681
+				transfer_state = 945
+				transfer_state = 947
+				transfer_state = 85
+				transfer_state = 1176
+					}
 			hidden_effect = {
-				every_owned_state = {
-			    	limit = {
-			    		OR = {
-					        state = 964
-					        state = 541
-					        state = 542
-					        state = 545
-					        state = 275
-					        state = 738
-					        state = 719
-					        state = 946
-					        state = 681
-					        state = 1176
-					        state = 945
-					        state = 947
-					        state = 85
-			    		}
-			    	}
-			    	MZA = {
-			    		add_state_core = PREV
-			    		transfer_state = PREV
-			    	}
-			    }
-				every_state = {
-			    	limit = {
-			    		OR = {
-					        state = 964
-					        state = 541
-					        state = 542
-					        state = 545
-					        state = 275
-					        state = 738
-					        state = 719
-					        state = 946
-					        state = 681
-					        state = 1176
-					        state = 945
-					        state = 947
-					        state = 85
-			    		}
-			    	}
-			    	remove_claim_by = GRU
-			    }
 				MZA = {
 					inherit_technology = GRU
 
@@ -7671,7 +8481,7 @@ GRU_kill_rivals_decisions = {
 					add_equipment_to_stockpile = { type = anti_tank_equipment amount = 600 }
 					add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 5000 }
 				}
-				set_autonomy = { target = MZA autonomy_state = RM_Reichskommissariat }
+				set_autonomy = { target = MZA autonomy_state = RM_Volkskommissariat }
 			}
 		}
 	}
@@ -7770,10 +8580,10 @@ GRU_kill_rivals_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_attack_rival_germany_decision"
 			declare_war_on = {	type = annex_everything	target = FROM }
+			}
 		}
 	}
 
-}
 
 
 GRU_kill_colonies_decisions = {
@@ -9870,7 +10680,6 @@ GRU_expansion_three_volksland_hypoborea = {
 				state = 190
 				state = 189
 				state = 11
-				state = 655
 				state = 1091
 		    }
 		}
@@ -9935,15 +10744,6 @@ GRU_expansion_three_volksland_hypoborea = {
 						controls_state = 11
 					}
 				}
-				OR = {
-					GRU = {
-						controls_state = 655
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 655
-					}
-				}
 			}
 		}
 		
@@ -9960,7 +10760,6 @@ GRU_expansion_three_volksland_hypoborea = {
 				transfer_state = 190
 				transfer_state = 189
 				transfer_state = 11
-				transfer_state = 655
 					}
 					hidden_effect = {
 				VKB = {	country_event = rotermorgenmisc.400 }
@@ -9976,8 +10775,6 @@ GRU_expansion_three_volksland_hypoborea = {
 			}
 		highlight_states = {
 		    highlight_state_targets = {
-				state = 209
-				state = 880
 				state = 207
 				state = 96
 				state = 94
@@ -9985,8 +10782,7 @@ GRU_expansion_three_volksland_hypoborea = {
 				state = 204
 				state = 206
 				state = 1294
-				state = 1287
-				state = 1290
+				state = 1087
 		    }
 		}
 			fire_only_once = yes
@@ -9998,24 +10794,6 @@ GRU_expansion_three_volksland_hypoborea = {
 			AND = {
 				OR = {
 					GRU = {
-						controls_state = 209
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 209
-					}
-				}
-				OR = {
-					GRU = {
-						controls_state = 880
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 880
-					}
-				}
-				OR = {
-					GRU = {
 						controls_state = 207
 					}
 					any_other_country = {
@@ -10079,20 +10857,11 @@ GRU_expansion_three_volksland_hypoborea = {
 				}
 				OR = {
 					GRU = {
-						controls_state = 1287
+						controls_state = 1087
 					}
 					any_other_country = {
 						is_subject_of = GRU
-						controls_state = 1287
-					}
-				}
-				OR = {
-					GRU = {
-						controls_state = 1290
-					}
-					any_other_country = {
-						is_subject_of = GRU
-						controls_state = 1290
+						controls_state = 1087
 					}
 				}
 			}
@@ -10105,9 +10874,6 @@ GRU_expansion_three_volksland_hypoborea = {
 		
 			complete_effect = {
 					VKB = {
-				transfer_state = 1288
-				transfer_state = 209
-				transfer_state = 880
 				transfer_state = 207
 				transfer_state = 96
 				transfer_state = 94
@@ -10115,8 +10881,7 @@ GRU_expansion_three_volksland_hypoborea = {
 				transfer_state = 204
 				transfer_state = 206
 				transfer_state = 1294
-				transfer_state = 1287
-				transfer_state = 1290
+				transfer_state = 1087
 					}
 					hidden_effect = {
 				VKB = {	country_event = rotermorgenmisc.400 }
@@ -10137,8 +10902,11 @@ GRU_expansion_three_volksland_hypoborea = {
 				state = 210
 				state = 755
 				state = 1288
-				state = 1087
 				state = 243
+				state = 209
+				state = 880
+				state = 1287
+				state = 1290
 		    }
 		}
 			fire_only_once = yes
@@ -10195,20 +10963,47 @@ GRU_expansion_three_volksland_hypoborea = {
 				}
 				OR = {
 					GRU = {
-						controls_state = 1087
+						controls_state = 243
 					}
 					any_other_country = {
 						is_subject_of = GRU
-						controls_state = 1087
+						controls_state = 243
 					}
 				}
 				OR = {
 					GRU = {
-						controls_state = 243
+						controls_state = 209
 					}
 					any_other_country = {
 						is_subject_of = GRU
-						controls_state = 243
+						controls_state = 209
+					}
+				}
+				OR = {
+					GRU = {
+						controls_state = 880
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 880
+					}
+				}
+				OR = {
+					GRU = {
+						controls_state = 1287
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 1287
+					}
+				}
+				OR = {
+					GRU = {
+						controls_state = 1290
+					}
+					any_other_country = {
+						is_subject_of = GRU
+						controls_state = 1290
 					}
 				}
 			}
@@ -10222,12 +11017,16 @@ GRU_expansion_three_volksland_hypoborea = {
 			complete_effect = {
 				
 					VKB = {
+				transfer_state = 1288
 				transfer_state = 1289
 				transfer_state = 1291
 				transfer_state = 210
 				transfer_state = 755
-				transfer_state = 1087
 				transfer_state = 243
+				transfer_state = 209
+				transfer_state = 880
+				transfer_state = 1287
+				transfer_state = 1290
 					}
 					hidden_effect = {
 				VKB = {	country_event = rotermorgenmisc.400 }
@@ -11569,7 +12368,7 @@ GRU_lebensraum_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 75
+			factor = 95
 			modifier = {
 				factor = 0
 				has_war = yes

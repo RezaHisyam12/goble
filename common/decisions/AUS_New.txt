@@ -730,7 +730,7 @@ AUS_volksreichskommissariat_decisions = {
 						}
 						add_manpower = 300000
 					}
-				BFE = {	country_event = rotermorgenmisc.8787 }
+				BFE = {	country_event = aushre.8787 }
 				set_autonomy = { target = BFE autonomy_state = botde_constituent }
 				set_country_flag = BFE_established
 				BFE = { set_country_flag = IS_BFE }
@@ -827,7 +827,7 @@ AUS_volksreichskommissariat_decisions = {
 					}
 					hidden_effect = {
 				BFE = { add_manpower = 75000 }
-				BFE = {	country_event = rotermorgenmisc.8787 }
+				BFE = {	country_event = aushre.8787 }
 				}
 			}
 	}
@@ -897,7 +897,7 @@ AUS_volksreichskommissariat_decisions = {
 					}
 					hidden_effect = {
 				BFE = { add_manpower = 50000 }
-				BFE = {	country_event = rotermorgenmisc.8787 }
+				BFE = {	country_event = aushre.8787 }
 				}
 			}
 	}
@@ -1077,7 +1077,7 @@ AUS_volksreichskommissariat_decisions = {
 					}
 					hidden_effect = {
 				BFE = { add_manpower = 100000 }
-				BFE = {	country_event = rotermorgenmisc.8787 }
+				BFE = {	country_event = aushre.8787 }
 				}
 			}
 	}
@@ -1202,7 +1202,7 @@ AUS_volksreichskommissariat_decisions = {
 					}
 					hidden_effect = {
 				BFE = { add_manpower = 75000 }
-				BFE = {	country_event = rotermorgenmisc.8787 }
+				BFE = {	country_event = aushre.8787 }
 				}
 			}
 	}
@@ -1257,7 +1257,7 @@ AUS_volksreichskommissariat_decisions = {
 						}
 						add_manpower = 330000
 					}
-				KOH = {	country_event = rotermorgenmisc.8788 }
+				KOH = {	country_event = aushre.8788 }
 				set_autonomy = { target = KOH autonomy_state = botde_constituent }
 				set_country_flag = KOH_established
 				KOH = { set_country_flag = IS_KOH }
@@ -1641,7 +1641,7 @@ AUS_volksreichskommissariat_decisions = {
 					}
 					hidden_effect = {
 				KOH = { add_manpower = 75000 }
-				KOH = {	country_event = rotermorgenmisc.8788 }
+				KOH = {	country_event = aushre.8788 }
 				}
 			}
 	}
@@ -1799,7 +1799,7 @@ AUS_volksreichskommissariat_decisions = {
 					}
 					hidden_effect = {
 				KOH = { add_manpower = 100000 }
-				KOH = {	country_event = rotermorgenmisc.8788 }
+				KOH = {	country_event = aushre.8788 }
 				}
 			}
 	}
@@ -1902,7 +1902,7 @@ AUS_volksreichskommissariat_decisions = {
 					}
 					hidden_effect = {
 				KOH = { add_manpower = 100000 }
-				KOH = {	country_event = rotermorgenmisc.8788 }
+				KOH = {	country_event = aushre.8788 }
 				}
 			}
 	}
@@ -3484,7 +3484,7 @@ AUS_Foreign_Policy_decisions = {
 				}
 				var:FROM.overlord = {
 					country_event = {
-						id = rotermorgenmisc.8790
+						id = aushre.8790
 						days = 2
 						random = 48
 					}
@@ -3493,7 +3493,7 @@ AUS_Foreign_Policy_decisions = {
 			else = {
 				FROM = {
 					country_event = {
-						id = rotermorgenmisc.8790
+						id = aushre.8790
 						days = 2
 						random = 48
 					}
