@@ -192,7 +192,7 @@ set_autonomy = {
 	autonomy_state = crownland
 }
 
-create_faction = "Austro-Hungarian Empire"
+create_faction = ah_empire_faction
 add_to_faction = HUN
 add_to_faction = CZE
 add_to_faction = CRO
@@ -283,6 +283,14 @@ create_country_leader = {
 	expire = "1.1.1"
 	ideology = paneuropeanism_subtype
 	traits = { AUS_kaiser_of_the_people }
+}
+
+create_country_leader = {
+	name = "Erik von Kuehnelt-Leddihn"
+	desc = ""
+	picture = "gfx/leaders/AUS/Portrait_AUS_Erik_von_Kuehnelt-Leddihn.png"
+	expire = "1.1.1"
+	ideology = market_liberal_subtype
 }
 
 create_country_leader = {

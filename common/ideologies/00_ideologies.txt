@@ -973,7 +973,7 @@ ideologies = {
 			lepenisme_subtype = {can_be_randomly_selected = no} #Lepenisme
 			natpop_poujadisme_subtype = {can_be_randomly_selected = no} #Poujadisme
 			natpop_humanisme_integral_subtype = {can_be_randomly_selected = no} #Humanisme Integral
-			natpop_goebbels_subtype = { can_be_randomly_selected = no color = { 100 5 5 } }
+			natpop_goebbels_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }
 			natpop_goebbels2_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }
 			natpop_goebbels3_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }
 			natpop_goebbels5_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }
