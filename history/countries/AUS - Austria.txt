@@ -214,13 +214,6 @@ add_ideas = {
 	
 	AUS_fatherland_front
 	
-	#AUS_ethnic_warfare
-	#AUS_sick_man
-	AUS_karl_habsburg
-	#AUS_lingering_german_influence
-	#AUS_legacy_of_galician_war
-	#AUS_immeasurable_debt
-
 	### Minister
 	AUS_Ernst_Streeruwitz_hog_ade
 	AUS_Edmund_Glaise_von_Horstenau_for_ade

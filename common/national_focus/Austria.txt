@@ -7662,6 +7662,7 @@ focus_tree = {
 					custom_effect_tooltip = AUS_hreantium_reborn
 					set_cosmetic_tag = AUS_HRE
 					add_ideas = AUS_purple_phoenix_idea
+					remove_ideas = AUS_fatherland_front
 					set_country_flag = HRE_rise
 			hidden_effect = {
 					add_timed_idea = { 

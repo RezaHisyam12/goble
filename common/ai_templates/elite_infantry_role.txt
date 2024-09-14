@@ -18,7 +18,7 @@ elite_infantry_generic = {
 			factor = 2
 		}
 
-		target_width = 24
+		target_width = 28
 		width_weight = 3
 		column_swap_factor = 0.2
 
@@ -61,15 +61,17 @@ elite_infantry_generic = {
 		}
 
 		target_template = {
-			weight = 0.5
+			weight = 0.9
 			match_value = 3000
 
 			regiments = {
-				elite_infantry = 12
+				elite_infantry = 9
+				artillery_brigade = 3
+				anti_air_brigade = 1
 			}
 
 			support = {
-				artillery = 1
+				recon = 1
 				engineer = 1
 				field_hospital = 1
 				anti_air = 1
@@ -79,11 +81,13 @@ elite_infantry_generic = {
 
 		allowed_types = {
 			elite_infantry
+			artillery_brigade
+			anti_air_brigade
+
+			recon
 			engineer
-			artillery
 			logistics_company
 			field_hospital
-			recon
 			anti_air
 		}
 	}

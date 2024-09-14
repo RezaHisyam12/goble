@@ -1,9 +1,9 @@
 ﻿l_english:
 
-  GFX_SPEVNT_greater_germanic_state_goebbels:0 "Großgermanischer Nationaler Arbeiterstaat"
+  GFX_SPEVNT_greater_germanic_state_goebbels:0 "[GRU.GetNameDef]"
   GFX_SPEVNT_greater_germanic_state_goebbels_TEXT:0 "National and Socialist! What comes first and what second? For us in the West there can be no doubt. First the socialist redemption, then, like a hurricane, national liberation. \n §Y-Paul Josef Goebbels-§!"
   GFX_SPEVNT_greater_germanic_state_goebbels_REMARK:0 "Germania Marches Forward"
-  GFX_SPEVNT_greater_germanic_state_goebbels_DESC:0 "A shocking development few expected has just happened. Paul Josef Goebbels, the Volksführer of Germany has officially proclamied the Greater Germanic National Workers State. Leader of the NMDVP, a minor fraction of the leftist coalition that overthrew the Kaiser's government, few have even considered, let alone expected his rapid rise to power.\n\n What happens next, nobody, except the Volksführer, truly knows."
+  GFX_SPEVNT_greater_germanic_state_goebbels_DESC:0 "A shocking development few expected has just happened. Paul Josef Goebbels, the Volksführer of Germany has officially proclaimed [GRU.GetNameDef]. Leader of the NMDVP, a minor fraction of the leftist coalition that overthrew the Kaiser's government, few have even considered, let alone expected his rapid rise to power.\n\n What happens next, nobody, except the Volksführer, truly knows."
   
   GFX_SPEVNT_endsieg_goebbels:0 "Endsieg"
   GFX_SPEVNT_endsieg_goebbels_TEXT:0 "There will come a day, when all the lies will collapse under their own weight, and truth will again triumph. \n §Y-Paul Josef Goebbels-§!"

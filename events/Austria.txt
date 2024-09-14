@@ -88,10 +88,6 @@ country_event = {
 			expire = "1.1.1"
 			ideology = austropopulism_subtype
 		}
-		swap_ideas = {
-			remove_idea = AUS_karl_habsburg
-			add_idea = AUS_otto_habsburg
-		}
 	}
 }
 
