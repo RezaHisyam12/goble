@@ -8489,8 +8489,12 @@ GRU_kill_rivals_decisions = {
 		icon = generic_prepare_civil_war
 
 		available = {
-			is_subject = no
-			has_war = no
+			OR = {
+				is_neighbor_of = FROM
+				any_allied_country = {
+					is_neighbor_of = FROM
+				}
+			}
 		}
 		visible = {
 			has_completed_focus = GRU_NMDVP_REMOVE_KAISER
@@ -8505,6 +8509,11 @@ GRU_kill_rivals_decisions = {
 				tag = NGF
 				tag = HUN
 				tag = CRO
+				tag = LIB
+				tag = POR
+				tag = ZIM
+				tag = MAG
+				tag = SAF
 				}
 			}
 		}
@@ -8524,6 +8533,11 @@ GRU_kill_rivals_decisions = {
 				tag = NGF
 				tag = HUN
 				tag = CRO
+				tag = LIB
+				tag = POR
+				tag = ZIM
+				tag = MAG
+				tag = SAF
 				}
 			}
 		}
@@ -8533,11 +8547,7 @@ GRU_kill_rivals_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 50
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
+			factor = 25
 			modifier = {
 				factor = 0
 				strength_ratio = {
