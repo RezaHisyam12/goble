@@ -1096,7 +1096,7 @@ country_event = { # victory Intro
 				add_opinion_modifier = { target = GRU modifier = KR_hostile }
 				if = {
 					limit = {
-						NOT = { has_global_flag = wilhelmiided }
+						NOT = { has_global_flag = Wilhelm_II_Dead }
 					}
 					set_country_flag = MAF_kasier_willyII_gang
 					create_country_leader = {
@@ -1138,7 +1138,7 @@ country_event = { # victory Intro
 				}
 				if = {
 					limit = {
-						has_global_flag = wilhelmiided 
+						has_global_flag = Wilhelm_II_Dead 
 					}
 					create_country_leader = {
 						name = GRU_Mittelafrika_Wilhelm_III
