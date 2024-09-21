@@ -983,6 +983,32 @@ country_event = { # victory Intro
 	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.10" }
 	immediate = {
 		hidden_effect = {
+			MAF = {
+		    	add_ai_strategy = {
+		    		type = send_volunteers_desire
+		    		id = GEA
+		    		value = 0
+		    	}
+		    	add_ai_strategy = {
+		    		type = send_lend_lease_desire
+		    		id = GEA
+		    		value = 0
+		    	}
+		    	add_ai_strategy = {
+		    		type = support
+		    		id = GEA
+		    		value = 0
+		    	}
+		    }
+			GRU = {
+				MAF = { embargo_ROOT = yes }
+				GEA = { embargo_ROOT = yes }
+				MAG = { embargo_ROOT = yes }
+				add_opinion_modifier = { target = MAF modifier = KR_hostile }
+				add_opinion_modifier = { target = GEA modifier = KR_hostile }
+				add_opinion_modifier = { target = MAG modifier = KR_hostile }
+
+			}
 			if = {
 				limit {
 					NOT = { has_country_flag = GRU_OCCUPIED_START }
@@ -1067,6 +1093,7 @@ country_event = { # victory Intro
 				}
 			}
 			MAF = {
+				add_opinion_modifier = { target = GRU modifier = KR_hostile }
 				if = {
 					limit = {
 						NOT = { has_global_flag = wilhelmiided }
@@ -1174,6 +1201,10 @@ country_event = { # victory Intro
 					ruling_party = authoritarian_democrat
 					last_election = "1936.1.1"
 					elections_allowed = no
+				}
+				set_rule = {
+					can_decline_call_to_war = yes
+					can_not_declare_war = no
 				}
 				event_target:Mittelafrika_Target = { transfer_technology = yes }
 				event_target:Mittelafrika_Target = {

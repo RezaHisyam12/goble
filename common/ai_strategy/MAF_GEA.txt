@@ -1,50 +1,4 @@
-# Keep MAF units in Africa
-MAF_hates_socialists = {
-	reversed = yes
-
-	enable_reverse = {
-		MAF = {
-			is_subject = no
-			has_socialist_government = no
-		}
-	}
-	enable = {
-		has_socialist_government = yes
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = antagonize
-		id = MAF
-		value = 500
-	}
-}
-
-MAF_hates_france = {
-	reversed = yes
-
-	enable_reverse = {
-		MAF = {
-			is_subject = no
-			has_socialist_government = no
-		}
-		FRA = { is_faction_leader = yes }
-	}
-	enable = {
-		is_in_faction_with = FRA
-	}
-	abort_when_not_enabled = yes
-
-	target_array = FRA.faction_members
-
-	ai_strategy = {
-		type = antagonize
-		id = FRA
-		value = 300
-	}
-}
-
+# Keep MAF
 KR_MAF_prewar_strategy = {
 	allowed = {
 		tag = MAF
@@ -52,7 +6,6 @@ KR_MAF_prewar_strategy = {
 	enable = {
 		is_subject_of = GER
 	}
-
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
@@ -72,6 +25,7 @@ KR_MAF_prewar_strategy = {
 	}
 }
 
+# Keep GEA
 GEA_naval_focus = {
 	allowed = {
 		original_tag = GEA

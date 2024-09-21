@@ -366,3 +366,11 @@ AUS_Invade_SRI_desc:0 "In earlier times, Italy constituted a significant part of
 AUS_Invade_ITA_desc:0 "Italy wielded significant influence within the empire's domain. Our endeavor to recapture control of the territories in eastern Italy, rightfully belonging to the Empire."
 AUS_Rus_Right_desc:0 "We cannot continue to let the menace of the East continue to build up its strength gradually; it is time to curb Russia's ambition and bring peace and order to the East once and for all."
 AUS_Rus_Left_desc:0 "While we dealt the Russian Bear a crippling blow in the Weltkrieg, years of covert and open rearmament have made the Russian nation eager for war and revenge against Our Empire. As long as the Russian threat exists on the eastern border, we are not safe."
+
+
+####puppets##  
+
+
+crownland:0 "Crownland"
+
+
