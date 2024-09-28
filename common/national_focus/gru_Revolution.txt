@@ -6589,9 +6589,11 @@ shared_focus = {
 							FRA = { is_puppet_of = GRU }
 						}
 				}
+		select_effect = {
+					set_country_flag = { flag = imminent_war days = 42 value = 1 }
+		}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_END_FRANCE"
-					set_country_flag = { flag = imminent_war days = 42 value = 1 }
 					create_wargoal = {
 							type = annex_everything
 							target = FRA
