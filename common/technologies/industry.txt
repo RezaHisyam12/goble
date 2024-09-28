@@ -1060,16 +1060,9 @@ technologies = {
 				factor = 0.5
 				oil > 30
 			}
-			#KRTX AI weighting
 			modifier = {
-				factor = 10
-				OR = {
-					oil < 8
-					AND = {
-						has_war = yes
-						fuel_ratio < 1
-					}
-				}
+				factor = 8
+				num_of_military_factories > 50
 			}
 		}
 
@@ -1117,16 +1110,9 @@ technologies = {
 				factor = 0.5
 				oil > 30
 			}
-			#KRTX AI weighting
 			modifier = {
-				factor = 10
-				OR = {
-					oil < 8
-					AND = {
-						has_war = yes
-						fuel_ratio < 1
-					}
-				}
+				factor = 8
+				num_of_military_factories > 50
 			}
 		}
 
@@ -1174,16 +1160,9 @@ technologies = {
 				factor = 0.5
 				oil > 30
 			}
-			#KRTX AI weighting
 			modifier = {
-				factor = 10
-				OR = {
-					oil < 8
-					AND = {
-						has_war = yes
-						fuel_ratio < 1
-					}
-				}
+				factor = 8
+				num_of_military_factories > 50
 			}
 		}
 
@@ -1226,16 +1205,9 @@ technologies = {
 				factor = 0.5
 				oil > 30
 			}
-			#KRTX AI weighting
 			modifier = {
-				factor = 10
-				OR = {
-					oil < 8
-					AND = {
-						has_war = yes
-						fuel_ratio < 1
-					}
-				}
+				factor = 8
+				num_of_military_factories > 50
 			}
 		}
 

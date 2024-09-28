@@ -8848,9 +8848,29 @@ GRU_kill_libleft_decisions = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision GRU_STRIKE_LIBS target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_STRIKE_LIBS target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
 			declare_war_on = {	type = annex_everything	target = FROM }
 		}
 	}
+
 }
 
 GRU_scandi_decisions = {
