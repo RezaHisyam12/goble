@@ -653,6 +653,10 @@ DKB_coring_shit = {
 			set_cosmetic_tag = DKB_Leeb_Germany
 			set_capital = { state = 64 }
 			add_research_slot_until_five = yes
+			if = {
+				limit = { is_in_faction = no }
+				create_faction = "Einheitspakt"
+			}
 			hidden_effect = {
 			every_owned_state = {
 					limit = {
