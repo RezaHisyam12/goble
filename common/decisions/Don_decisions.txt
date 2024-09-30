@@ -647,7 +647,7 @@ DKB_coring_shit = {
 			has_country_flag = DKB_leeb_gaming_begins
 		}
 		cost = 10
-		fire_only_once = no
+		fire_only_once = yes
 		
 		complete_effect = {
 			set_cosmetic_tag = DKB_Leeb_Germany
@@ -657,12 +657,19 @@ DKB_coring_shit = {
 				limit = { is_in_faction = no }
 				create_faction = "Einheitspakt"
 			}
+			add_to_faction = CRM
 			hidden_effect = {
 			every_owned_state = {
 					limit = {
 						is_core_of = GER
 					}
 					add_core_of = DKB
+				}
+				every_state = {
+					limit = {
+						is_core_of = RUS
+					}
+					remove_claim_by = DKB
 				}
 				every_owned_state = {
 					limit = {

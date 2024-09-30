@@ -69,6 +69,15 @@ ideas = {
 			}
 		}
 
+		DKB_KNOR_idea_ger = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea DKB_KNOR_idea_ger"}
+			picture = DKB_konr_idea
+			allowed = { always = no }
+          		modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.15
+			}
+		}
 
 	}
 }
