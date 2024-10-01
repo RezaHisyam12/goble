@@ -444,7 +444,10 @@ america_hates_german_russia = {
 		is_american_tag = yes
 	}
 	enable = {
-		has_global_flag = USA_civil_war_over_flag
+		OR = {
+			has_global_flag = USA_civil_war_over_flag
+			has_global_flag = USA_civil_war_avoided_flag
+		}
 	}
 	abort_when_not_enabled = yes
 
