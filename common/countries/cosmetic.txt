@@ -4301,6 +4301,14 @@ LEB_PHOENICIA = {
 	color = rgb { 109 0 205 }
 	color_ui = rgb { 109 0 205 }
 }
+AST_obu_iww = {
+	color = rgb { 97 6 6 }
+	color_ui = rgb { 97 6 6 }
+}
+AST_obu_slp = {
+	color = rgb { 97 6 6 }
+	color_ui = rgb { 97 6 6 }
+}
 GRU_HEYDRICH_STATE = {
 	color = rgb { 20 20 20 }
 	color_ui = rgb { 20 20 20 }
