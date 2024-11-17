@@ -1,2 +1,4 @@
 graphical_culture = RUS
 graphical_culture_2d = RUS
+
+use_legacy_ai_pp_spend = yes

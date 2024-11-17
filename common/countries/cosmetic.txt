@@ -1549,6 +1549,21 @@ KOG_KONGO = {
 	color_ui = rgb { 199 160 139 }
 }
 
+KOG_KONGO_ALT = {
+	color = rgb { 199 160 139 }
+	color_ui = rgb { 199 160 139 }
+}
+
+KOG_KONGO_ALT_2 = {
+	color = rgb { 199 160 139 }
+	color_ui = rgb { 199 160 139 }
+}
+
+KOG_KONGO_ALT_3 = {
+	color = rgb { 199 160 139 }
+	color_ui = rgb { 199 160 139 }
+}
+
 NIC_LIB = {
 	color = rgb { 189 35 53 }
 	color_ui = rgb { 189 25 53 }
@@ -2644,10 +2659,6 @@ CRM_KRIM = {
 	color = rgb { 77 93 83 }
 	color_ui = rgb { 77 93 83 }
 }
-UBD_napoleonic = {
-	color = rgb { 20 40 150 }
-	color_ui = rgb { 20 40 150 }
-}
 ILL_napoleonic = {
 	color = rgb { 20 40 150 }
 	color_ui = rgb { 20 40 150 }
@@ -2989,6 +3000,10 @@ POL_ANARCHY = {
 ABP = {
 	color = rgb { 29 52 119 }
 	color_ui = rgb { 29 52 119 }
+}
+BDN_SAV = {
+	color = rgb { 2 73 124 }
+	color_ui = rgb { 2 73 124 }
 }
 ARG_LA_PLATA = {
 	color = rgb { 153 217 234 }

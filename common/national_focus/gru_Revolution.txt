@@ -133,6 +133,10 @@ shared_focus = {
 		cost = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_nmdvp_victory"
+			news_event = {
+	  	     	id = rmgoebbnews.1
+	   	     	days = 2
+	   		 }
 			hidden_effect = {
 				country_event = { id =  rotermorgenmisc.666 days = 550 }
 				swap_ideas = {
@@ -316,8 +320,11 @@ shared_focus = {
 			add_ideas = GRU_new_germany
 			set_country_flag = GRU_REBUILD
 			country_event = { id =  rotermorgenmisc.20 }
+		news_event = {
+	    		id = rmgoebbnews.4
+	    		days = 7
+	    	}
 		}
-
 		prerequisite = { focus = GRU_night_of_the }
 		prerequisite = { focus = GRU_anhaltelager  }
 	}
@@ -1964,8 +1971,13 @@ shared_focus = {
 							name = GRU_spzproj_uran
 							bonus = 1
 							uses = 1
-							category = nuclear
+							technology = atomic_research
 						}
+					add_breakthrough_progress = {
+						specialization = specialization_nuclear
+						value = 0.25
+					}
+				custom_effect_tooltip = tooltip_white_line
 				}
 	
 		prerequisite = { focus = GRU_mfsp  }
@@ -3096,8 +3108,13 @@ shared_focus = {
 				category = land_doctrine
 						}
 					army_experience = 25
-				}
-		
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+			custom_effect_tooltip = tooltip_white_line
+		}
+
 		prerequisite = { focus = GRU_elected_officers focus = GRU_skilled_officers focus = GRU_political_officers  }
 	}
 
@@ -3118,8 +3135,14 @@ shared_focus = {
 				category = naval_doctrine
 						}
 					navy_experience = 25
-				}
-		
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.5
+			}
+			custom_effect_tooltip = tooltip_white_line
+		}
+
+
 		prerequisite = { focus = GRU_elected_officers focus = GRU_skilled_officers focus = GRU_political_officers  }
 	}
 
@@ -3140,8 +3163,13 @@ shared_focus = {
 				category = air_doctrine
 						}
 					air_experience  = 25
-				}
-		
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+			custom_effect_tooltip = tooltip_white_line
+		}
+
 		prerequisite = { focus = GRU_elected_officers focus = GRU_skilled_officers focus = GRU_political_officers  }
 	}
 

@@ -216,6 +216,25 @@ GEA_be_careful_around_japan = {
 	}
 }
 
+GEA_naval_focus = {
+	allowed = {
+		original_tag = GEA
+	}
+	enable = {
+		has_navy_size = { size > 0 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dockyard_to_military_factory_ratio
+		value = 20
+	}
+	ai_strategy = {
+		type = naval_invasion_focus
+		value = 55
+	}
+}
+
 GEA_take_the_fight_to_japan = {
 	allowed = {
 		original_tag = GEA

@@ -1142,6 +1142,47 @@ RUS_total_war_against_germany = {
 	}
 }
 
+RUS_crush_germanysocialist = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = GRU
+		surrender_progress < 0.1
+		OR = {
+			NOT = { has_war_with = UKR }
+			UKR = { has_capitulated = yes }
+		}
+		OR = {
+			NOT = { has_war_with = WHR }
+			WHR = { has_capitulated = yes }
+		}
+		OR = {
+			NOT = { has_war_with = POL }
+			POL = { has_capitulated = yes }
+		}
+		num_planes_stationed_in_regions = {
+			value > 1000
+			regions = { 8 } #Lower Germany
+		}
+
+		#activate every 25 days, then pause for another 25
+		set_temp_variable = { frequency = global.num_days }
+		modulo_temp_variable = { frequency = 50 }
+		check_variable = { frequency < 25 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = GRU
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+}
+
 RUS_total_war_against_germansocialist = {
 	allowed = {
 		original_tag = RUS

@@ -1,2 +1,4 @@
 graphical_culture = GER
 graphical_culture_2d = GER
+
+use_legacy_ai_pp_spend = yes
