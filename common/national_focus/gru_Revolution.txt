@@ -133,16 +133,16 @@ shared_focus = {
 		cost = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_nmdvp_victory"
-			news_event = {
-	  	     	id = rmgoebbnews.1
-	   	     	days = 2
-	   		 }
 			hidden_effect = {
 				country_event = { id =  rotermorgenmisc.666 days = 550 }
 				swap_ideas = {
 							remove_idea = GRU_RUINED_ECONOMY_TOALLY_RUINED
 							add_idea = GRU_RUINED_ECONOMY_TOALLY_BETTER
 						}
+				news_event = {
+	  	     		id = rmgoebbnews.1
+	   	     		days = 2
+	   		 	}
 			}
 			leave_faction = yes
 			separate_peace_all_wars = yes
@@ -320,10 +320,12 @@ shared_focus = {
 			add_ideas = GRU_new_germany
 			set_country_flag = GRU_REBUILD
 			country_event = { id =  rotermorgenmisc.20 }
+		hidden_effect = {
 		news_event = {
 	    		id = rmgoebbnews.4
 	    		days = 7
-	    	}
+	    		}
+			}
 		}
 		prerequisite = { focus = GRU_night_of_the }
 		prerequisite = { focus = GRU_anhaltelager  }
@@ -6586,6 +6588,7 @@ shared_focus = {
 				has_war = yes
 			}
 		}
+		will_lead_to_war_with = FRA
 		available = {
 					is_subject = no
 					FRA = {
@@ -6619,6 +6622,13 @@ shared_focus = {
 				}
 		select_effect = {
 					set_country_flag = { flag = imminent_war days = 42 value = 1 }
+			FRA = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
 		}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_END_FRANCE"

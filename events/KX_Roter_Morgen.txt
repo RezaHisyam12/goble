@@ -7577,56 +7577,30 @@ news_event = {
 
 news_event = {
 	id = rmgoebbnews.4
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rmgoebbnews.4" }
 	title = rmgoebbnews.4.t
 	desc = rmgoebbnews.4.d
-
 	picture = GFX_news_event_goebb_remilitarization
 
 	major = yes
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			every_state = {
-		    	limit = {
-		    		OR = {
-		    			state = 51
-		    			state = 781
-		    			state = 42
-		    		}
-		    	}
-		    	set_demilitarized_zone = no
-		    }
-			every_country = {
-		    	limit = {
-		    		NOT = {
-		    			is_ai = yes
-		    			has_country_flag = KX_superevent_sounds_off
-		    		}
-		    	}
-		    	scoped_sound_effect = "superev_remilitarization"
-		    }
-			FRA = {
-				remove_ideas = FRA_GRU_rheinland_idea
-			}
-			GRU = {
-				country_lock_all_division_template = no
-			}
-		}
+	trigger = {
+		wants_world_news = yes
 	}
 
 	option = {
 		name = rmgoebbnews.4.a
 		trigger = {
-			original_tag = GRU
+			NOT = {
+				tag = GRU
+			}
 		}
 	}
 	option = {
 		name = rmgoebbnews.4.b
 		trigger = {
-			NOT = {
-				original_tag = GRU
-			}
+			tag = GRU
 		}
 	}
 }
