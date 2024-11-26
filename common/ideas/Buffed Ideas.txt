@@ -79,6 +79,20 @@ ideas = {
 			}
 		}
 
+		RUS_Royal_Constitution_1 = {
+			allowed = { always = no }
+			picture = LIT_crown_4
+			name = RUS_Royal_Constitution_idea
+			modifier = {
+				stability_weekly_factor = 0.01
+				war_support_weekly = 0.001
+				political_power_gain = 0.1
+				surrender_limit = 0.2
+			}
+		}
+
+
+
 	}
 }
 

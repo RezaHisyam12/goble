@@ -1767,20 +1767,19 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 2
-
+			base = 1
 			modifier = {
-				factor = 5
-				is_major = yes
+				add = 15
+				is_eligible_for_armor_production = yes
 			}
 			
 			modifier = {
-				factor = 1.5
+				factor = 2
 				date > "1940.1.1"
 			}
 			
 			modifier = {
-				factor = 1.5
+				factor = 4
 				date > "1944.1.1"
 			}
 		}
@@ -1821,20 +1820,19 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 2
-
+			base = 1
 			modifier = {
-				factor = 5
-				is_major = yes
+				add = 15
+				is_eligible_for_armor_production = yes
 			}
 			
 			modifier = {
-				factor = 1.5
+				factor = 2
 				date > "1940.1.1"
 			}
 			
 			modifier = {
-				factor = 1.5
+				factor = 4
 				date > "1944.1.1"
 			}
 		}
