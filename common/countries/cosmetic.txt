@@ -4459,8 +4459,8 @@ MZA = {
 	color_ui = rgb { 138 155 116 }
 }
 AFRICAN_HRE_GOEBB = {
-	color = rgb { 77 93 83 }
-	color_ui = rgb { 138 155 116 }
+	color = rgb { 93 93 61 }
+	color_ui = rgb { 93 93 61 }
 }
 goebb_fra = {
 	color = rgb { 83 89 172 }

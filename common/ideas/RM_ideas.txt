@@ -146,12 +146,12 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_new_germany"}
 			picture = GRU_new_germany
 			allowed = { always = no }
-            modifier = {
+          		modifier = {
+				ai_focus_aggressive_factor = 0.25
 				surrender_limit = 0.50
 				stability_weekly_factor = 0.01
 				MONTHLY_POPULATION = 0.15
 				political_power_gain = 0.25
-				ai_focus_aggressive_factor = 0.5
 				conscription_factor = 0.05
 				justify_war_goal_time = -0.5
 				special_forces_cap = 0.1

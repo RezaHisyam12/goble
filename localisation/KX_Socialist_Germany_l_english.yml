@@ -2000,6 +2000,7 @@ GRU_expansion_three_volksreichskommissariat_moskowien:0 "§OMoskowien§! expansi
 
 GRU_lebensraum_decisions:0 "Conquest of Lebensraum"
 GRU_lebensraum_conquest_decision:0 "Conquest of [From.GetNameDef]."
+GRU_lebensraum_russia_conquest_decision:0 "Conquest of [From.GetNameDef]."
 
 GRU_beyond_lebensraum_decisions:0 "Lebensraum beyond the Urals"
 GRU_beyond_lebensraum_conquest_decision:0 "Conquest of [From.GetNameDef]."
@@ -4174,6 +4175,10 @@ GRU_recruit_6_units:0 "\n\n\n£goebb_volkssturm_2£\n\n\n\nThe £unit_level_5_te
 
 rotermorgenrussiandoom.3.a:0 "The end of an entire era..."
 rotermorgenrussiandoom.3.b:0 "The Kaiser could only dream of such a..."
+
+AFRICAN_HRE_GOEBB: "African Kaiserreich"
+AFRICAN_HRE_GOEBB_ADJ: "German"
+AFRICAN_HRE_GOEBB_DEF: "the German Reich in Exile"
 
 
 ###

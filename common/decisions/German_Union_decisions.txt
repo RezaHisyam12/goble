@@ -12349,6 +12349,7 @@ GRU_lebensraum_decisions = {
 				any_allied_country = {
 					is_neighbor_of = FROM
 				}
+			NOT = { is_in_faction_with = RUS }
 			}
 		}
 		visible = {
@@ -12361,14 +12362,13 @@ GRU_lebensraum_decisions = {
 				tag = LAT
 				tag = LIT
 				tag = WHR
-				original_tag = UKR
+				tag = UKR
 				tag = DKB
 				tag = KUB
 				tag = MTR
 				tag = GEO
 				tag = AZE
 				tag = ARM
-				tag = RUS
 				tag = RRY
 				tag = TTR
 				tag = RRF
@@ -12389,14 +12389,13 @@ GRU_lebensraum_decisions = {
 				tag = LAT
 				tag = LIT
 				tag = WHR
-				original_tag = UKR
+				tag = UKR
 				tag = DKB
 				tag = KUB
 				tag = MTR
 				tag = GEO
 				tag = AZE
 				tag = ARM
-				tag = RUS
 				tag = RRY
 				tag = TTR
 				tag = RRF
@@ -12410,7 +12409,7 @@ GRU_lebensraum_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 95
+			factor = 100
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -12478,9 +12477,115 @@ GRU_lebensraum_decisions = {
 			declare_war_on = {	type = annex_everything	target = FROM }
 		}
 	}
+	GRU_lebensraum_russia_conquest_decision = {
+		icon = generic_prepare_civil_war
+
+		available = {
+			is_subject = no
+			country_exists = RUS
+		}
+		visible = {
+			has_completed_focus = GRU_NMDVP_LEBENSRAUM
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = RUS
+				}
+			}
+		}
+		targets = { RUS }
+		target_root_trigger = {
+			has_completed_focus = GRU_NMDVP_LEBENSRAUM
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = RUS
+				}	
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				factor = 0
+				date < 1942.1.1
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					any_allied_country = {
+						is_faction_leader = yes
+						overlord = {
+							strength_ratio = {
+								tag = ROOT
+								ratio > 0.7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_lebensraum_russia_conquest_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_lebensraum_russia_conquest_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+			declare_war_on = {	type = annex_everything	target = RUS }
+		}
+	}
 
 }
-
 
 GRU_beyond_lebensraum_decisions = {
 	GRU_beyond_lebensraum_conquest_decision = {
