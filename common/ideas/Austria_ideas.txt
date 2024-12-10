@@ -504,7 +504,7 @@ ideas = {
 			picture = PB_GER_German_Century
 			modifier = {
 				army_attack_against_major_factor = 0.1
-				army_core_defence_factor = 0.1
+				army_defence_factor = 0.1
 				army_morale_factor = 0.1
 				army_strength_factor = 0.1
 				org_loss_at_low_org_factor = -0.15
@@ -515,7 +515,7 @@ ideas = {
 		AUS_purple_phoenix_idea = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea AUS_purple_phoenix_idea"}
 			allowed = { always = no }
-			picture = AUS_part_of_the_Empire
+			picture = AUS_HRE_restored
 			modifier = {
 				political_power_factor = 0.10
 				resistance_growth = -0.15
@@ -739,7 +739,7 @@ ideas = {
 			modifier = {
 				production_speed_bunker_factor = 0.2
 				production_speed_coastal_bunker_factor = 0.2
-				army_defence_factor = 0.1
+				army_core_defence_factor = 0.1
 			}
 		}
 

@@ -116,4 +116,24 @@ spriteTypes = {
 		name = "GFX_idea_PB_RUS_Russia_United"
 		texturefile = "gfx/interface/ideas/ideas/PB_RUS_Russia_United.dds"
 	}
-}
+	spriteType = {
+		name = "GFX_idea_AUS_empire_restored"
+		texturefile = "gfx/interface/ideas/ideas/AUS_empire_restored.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_habsburg_restored"
+		texturefile = "gfx/interface/ideas/ideas/AUS_habsburg_restored.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_HRE_restored"
+		texturefile = "gfx/interface/ideas/ideas/AUS_HRE_restored.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_AUS_phonix_fleugzeugwerke"
+		texturefile = "gfx/interface/ideas/ideas/AUS_phonix_fleugzeugwerke.dds"
+	}
+}	spriteType = {
+		name = "GFX_idea_AUS_phonix_variant"
+		texturefile = "gfx/interface/ideas/ideas/AUS_phonix_variant.dds"
+	}
+}}

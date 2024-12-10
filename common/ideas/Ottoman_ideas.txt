@@ -48,8 +48,8 @@ ideas = {
 			}
 			modifier = {
 				surrender_limit = 0.20
-				#economy_cost_factor = -0.5
-				#mobilization_laws_cost_factor = -0.5
+				economy_cost_factor = -0.5
+				mobilization_laws_cost_factor = -0.5
 				#chief_of_staff_cost_factor = -0.3
 				#chief_of_army_cost_factor = -0.3
 			}
@@ -61,7 +61,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				mobilization_speed = 0.1
-				war_support_weekly = 0.001
+				war_support_weekly = 0.01
 			}
 		}
 
@@ -169,7 +169,7 @@ ideas = {
 
 		ott_armed_neutrality = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ott_armed_neutrality" }
-			picture = OTT_Horrors_of_the_Weltkrieg
+			picture = OTT_Horrors_of_the_Weltkrieg_idea_icon
 			allowed = { always = no }
 			available = {
 				NOT = {
@@ -197,7 +197,7 @@ ideas = {
 				conscription = 0.01
 				stability_factor = 0.10
 				war_support_factor = -0.10
-				army_core_defence_factor = 0.05
+				army_core_defence_factor = 0.10
 			}
 		}
 
@@ -213,7 +213,7 @@ ideas = {
 
 		ott_widespread_illiteracy = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ott_widespread_illiteracy" }
-			picture = OTT_Technical_Illiteracy
+			picture = OTT_Technical_Illiteracy_idea_icon
 			allowed = { always = no }
             modifier = {
 				research_speed_factor = -0.15
@@ -284,9 +284,8 @@ ideas = {
 					}
 				}
 			}
-			picture = OTT_Sublime_Porte
 			allowed = { always = no }
-			modifier = {
+            modifier = {
 				custom_modifier_tooltip = ott_vilayet_stability_tooltip
 			}
 		}
@@ -300,9 +299,8 @@ ideas = {
 				log = "[GetDateText]: [Root.GetName]: remove idea ott_centralisation_idea"
 				remove_dynamic_modifier = { modifier = centralisation_dynamic_modifier }
 			}
-			picture = tur_etatism_bonus
 			allowed = { always = no }
-			modifier = {
+            modifier = {
 				custom_modifier_tooltip = ott_centralisation_tooltip
 			}
 		}
@@ -316,11 +314,11 @@ ideas = {
 				log = "[GetDateText]: [Root.GetName]: remove idea ott_parliament_idea"
 				remove_dynamic_modifier = { modifier = parliament_dynamic_modifier }
 			}
-			picture = OTT_autocracy_idea
 			allowed = { always = no }
-			modifier = {
+            modifier = {
 				custom_modifier_tooltip = ott_parliament_tooltip
 			}
+			picture = generic_political_support
 		}
 
 		ott_millet_mektepleri_idea = {
@@ -332,7 +330,6 @@ ideas = {
 				log = "[GetDateText]: [Root.GetName]: remove idea ott_millet_mektepleri_idea"
 				remove_dynamic_modifier = { modifier = millet_mektepleri_dynamic_modifier }
 			}
-			picture = jap_supremacy_of_will
 			allowed = { always = no }
 		}
 
@@ -345,7 +342,6 @@ ideas = {
 				log = "[GetDateText]: [Root.GetName]: remove idea ott_AMN_member_idea"
 				remove_dynamic_modifier = { modifier = AMN_member_dynamic_modifier scope = TUR }
 			}
-			picture = raj_marginalized_muslim_community_happy
 			available = {
 				NOT = { has_global_flag = AXIS_VICTORY }
 				NOT = { has_war_with = TUR }
@@ -360,10 +356,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ott_reformed_secret_service"}
 			picture = generic_secret_police
 			available = {
-				OR = {
-					has_authoritarian_government = yes
-					has_completed_focus = OTT_Enshrine_Endeavour_Front
-				}
+				has_authoritarian_government = yes
 			}
 			allowed = { always = no }
             modifier = {
@@ -388,10 +381,10 @@ ideas = {
 
 		ott_renaissance = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ott_renaissance"}
-			picture = OTT_autocracy_idea
+			picture = OTT_autocracy_idea_icon
 			allowed = { always = no }
-			modifier = {
-				political_power_gain = 0.15
+            modifier = {
+				political_power_gain = 0.5
 				stability_factor = 0.20
 			}
 		}
@@ -448,8 +441,8 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ott_reoarganised_vilayet_system"}
 			picture = generic_pp_unity_bonus
 			allowed = { always = no }
-			modifier = {
-				political_power_gain = 0.20
+            modifier = {
+				political_power_gain = 0.30
 				resistance_growth = -0.1
 				production_speed_buildings_factor = 0.05
 			}
@@ -504,7 +497,7 @@ ideas = {
             modifier = {
 				political_power_gain = 0.1
 				war_support_factor = 0.10
-				training_time_factor = -0.10
+				training_time_factor= -0.10
 				army_org_factor = 0.075
 			}
 		}
@@ -542,7 +535,7 @@ ideas = {
 
 		ott_widespread_illiteracy_fevzi = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ott_widespread_illiteracy_fevzi"}
-			picture = OTT_Technical_Illiteracy
+			picture = OTT_Technical_Illiteracy_idea_icon
 			allowed = { always = no }
             modifier = {
 				research_speed_factor = -0.05
@@ -558,15 +551,15 @@ ideas = {
 				political_power_gain = 0.1
 			}
 
-			picture = OTT_gendarmerie
+			picture = OTT_gendarmerie_idea_icon
 		}
 
 		ott_bloated_administration = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ott_bloated_administration"}
 			picture = chi_hyper_inflation3
 			allowed = { always = no }
-			modifier = {
-				political_power_factor = -0.10
+            modifier = {
+				political_power_factor = -0.15
 			}
 		}
 
@@ -615,7 +608,7 @@ ideas = {
 			allowed = { always = no }
             modifier = {
 				production_speed_buildings_factor = -0.20
-				consumer_goods_factor = 0.5
+				consumer_goods_factor = 0.45
 			}
 		}
 
@@ -630,7 +623,7 @@ ideas = {
 
 		ott_widespread_illiteracy_liberal = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ott_widespread_illiteracy_liberal"}
-			picture = OTT_Technical_Illiteracy
+			picture = OTT_Technical_Illiteracy_idea_icon
 			allowed = { always = no }
             modifier = {
 				research_speed_factor = -0.075
@@ -674,8 +667,8 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ott_endeavour_front"}
 			picture = tur_kemalist_neutrality
 			allowed = { always = no }
-			modifier = {
-				political_power_factor = -0.25
+            modifier = {
+				political_power_factor = -0.5
 				stability_factor = 0.2
 				authoritarian_democrat_drift = 0.03
 				market_liberal_drift = 0.06
@@ -689,7 +682,7 @@ ideas = {
 			allowed = { always = no }
             modifier = {
 				production_speed_arms_factory_factor = 0.1
-				conversion_cost_civ_to_mil_factor = -0.3
+				conversion_cost_civ_to_mil_factor= -0.3
 				industrial_capacity_factory = 0.1
 			}
 		}
@@ -1020,9 +1013,10 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ott_autarky_resources"}
 			picture = generic_autarky
 			allowed = { always = no }
-			modifier = {
-				political_power_gain = 0.15
+            modifier = {
+				political_power_gain = 0.20
 				min_export = -0.25
+				local_resources_factor = 0.10
 			}
 		}
 
@@ -1130,15 +1124,11 @@ ideas = {
 		}
 
 		ott_balkan_military_accords = {
-			on_add = {
-				log = "[GetDateText]: [Root.GetName]: add idea ott_balkan_military_accords"
-				activate_targeted_decision = { decision = OTT_leave_edirne_accords target = TUR }
-			}
-			on_remove = {
-				log = "[GetDateText]: [Root.GetName]: remove idea ott_balkan_military_accords"
-				remove_targeted_decision = { decision = OTT_leave_edirne_accords target = TUR }
-			}
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ott_balkan_military_accords"}
 			picture = MTG_naval_treaty_adherent
+			available = {
+				has_war = no
+			}
 			allowed = { always = no }
             modifier = {
 				consumer_goods_factor = -0.15
@@ -1183,8 +1173,7 @@ ideas = {
 
 		ott_armed_neutrality_2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ott_armed_neutrality_2"}
-			picture = OTT_Horrors_of_the_Weltkrieg
-			allowed = { always = no }
+			picture = OTT_Horrors_of_the_Weltkrieg_idea_icon
 			available = {
 				NOT = {
 					AND = {
@@ -1200,10 +1189,11 @@ ideas = {
 					}
 				}
 			}
-			modifier = {
+			allowed = { always = no }
+            modifier = {
 				stability_factor = 0.10
 				war_support_factor = -0.10
-				army_core_defence_factor = 0.05
+				army_core_defence_factor = 0.10
 				production_speed_bunker_factor = 0.1
 				production_speed_coastal_bunker_factor = 0.1
 			}
@@ -1216,8 +1206,13 @@ ideas = {
 			available = {
 				has_war_with = TUR
 			}
-			modifier = {
-				surrender_limit = 1
+			allowed = { always = no }
+            modifier = {
+				surrender_limit = 0.20
+				army_core_attack_factor = 0.3
+				army_core_defence_factor = 0.3
+				no_supply_grace = 200
+				dig_in_speed_factor = 0.20
 				unit_limit_bonus = 10
 			}
 		}

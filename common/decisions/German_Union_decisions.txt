@@ -8526,6 +8526,8 @@ GRU_kill_rivals_decisions = {
 				tag = ZIM
 				tag = MAG
 				tag = SAF
+				tag = ZAM
+				tag = SOM
 				}
 			}
 		}
@@ -8550,6 +8552,8 @@ GRU_kill_rivals_decisions = {
 				tag = ZIM
 				tag = MAG
 				tag = SAF
+				tag = ZAM
+				tag = SOM
 				}
 			}
 		}

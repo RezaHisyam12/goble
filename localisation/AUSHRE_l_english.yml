@@ -1,5 +1,13 @@
 ﻿l_english:
 
+
+
+### Leaders ###
+POLITICS_KARL_DESC: "§YLeader Description\nBorn:§! August 17th, 1887, in Persenbeug Castle, Persenbeug-Gottsdorf, Lower Austria, Austria-Hungary\n§YPolitical Career:§! After his uncle Franz Ferdinand was assassinated in 1914, Karl von Habsburg-Lothringen became the designated successor of Kaiser Franz Josef, upon whose death Karl inherited the many thrones of the Habsburg Empire in late 1916. In spite of victory in the Weltkrieg, Austria remained burdened by an archaic political system and unrest. Emperor Karl now has the arduous task of reforming the ailing Empire despite numerous internal and external threats."
+
+POLITICS_OTTO_DESC: "§YLeader Description\nBorn:§! November 20th, 1912, in Wartholz Castle, Reichenau an der Rax, Lower Austria, Austria-Hungary\n§YPolitical Career:§! Emperor Otto von Habsburg-Lothringen has succeeded his father, Karl, as monarch of Austria. Otto, despite his young age, has grand ambitions of an Empire whose disparate peoples share but one national identity. His laconic speech and youthful charm have culminated in Otto garnering frequent media attention."
+
+
 AUS_financial_ties_broken: "Austro-Hungarian Ties Broken"
 AUS_financial_ties_broken_desc: "The Crown of Hungary refuses to pay their taxes into the common coffers for the common ministries.\n\nThey are still discontent with the formation of the Kingdom of Illyria as a resolution of the South Slavic revolts of 1926, and see themselves as betrayed by the Viennese government. They wish to be compensated for the loss of the Croatian lands."
 
@@ -89,7 +97,7 @@ AUS_members_gain:0 "All Members Will Gain:"
 AUS_central_power:0 "Central Powers"
 
 
-AUS_purple_phoenix_idea: "Empire Reformed"
+AUS_purple_phoenix_idea: "Empire Restored"
 AUS_orthodox_idea: "Nation of Faith"
 AUS_national_rebirth_idea: "Imperial Ambitions"
 AUS_rebuilding: "Reparaturprogramm"
