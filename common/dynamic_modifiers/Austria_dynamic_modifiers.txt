@@ -12,7 +12,7 @@ AUS_oprichnina_state_modifier = { #Oprichinina State
 	mobilization_speed = 0.3
 }
 AUS_new_eurasian_capital_modifier = {
-	icon = "GFX_idea_PB_GER_Land_Germans"
+	icon = "GFX_dynamic_mod_generic_government"
 	enable = { always = yes }
 	remove_trigger = {
 		NOT = { is_owned_by = AUS }

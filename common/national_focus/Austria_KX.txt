@@ -8321,22 +8321,6 @@ focus_tree = {
 		will_lead_to_war_with = FRA
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Demand_FRA"
-			hidden_effect = {
-			762 = { add_claim_by = AUS }
-			21 = { add_claim_by = AUS }
-			763 = { add_claim_by = AUS }
-			735 = { add_claim_by = AUS }
-			943 = { add_claim_by = AUS }
-			785 = { add_claim_by = AUS }
-			779 = { add_claim_by = AUS }
-			32 = { add_claim_by = AUS }
-			20 = { add_claim_by = AUS }
-			27 = { add_claim_by = AUS }
-			18 = { add_claim_by = AUS }
-			24 = { add_claim_by = AUS }
-			17 = { add_claim_by = AUS }
-			980 = { add_claim_by = AUS }
-			}
 			unlock_decision_tooltip = AUS_Demand_FRA
 			}
 			search_filters = { FOCUS_FILTER_POLITICAL }
@@ -8660,7 +8644,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe"
 			custom_effect_tooltip = unlocks_decision
 			custom_effect_tooltip = AUS_Russia_tt
-			add_ideas = AUS_eastern_front_operations_idea
+			custom_effect_tooltip = tech_arctic_commando_effect
+			hidden_effect = { set_technology = { tech_arctic_commando = 1 } }
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}

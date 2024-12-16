@@ -1,3 +1,58 @@
+#################
+### Diplomacy ###
+#################
+RUS_hates_reichspakt = {
+	reversed = yes
+
+	enable_reverse = {
+		RUS = { is_subject = no }
+	}
+	enable = {
+		is_in_faction_with = GER
+	}
+	abort_when_not_enabled = yes
+
+	target_array = GER.faction_members
+
+	ai_strategy = {
+		type = antagonize
+		id = RUS
+		value = 1000
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		target = market_access_rights
+		id = RUS
+		value = -1000
+	}
+}
+
+RUS_hates_stahlpakt = {
+	reversed = yes
+
+	enable_reverse = {
+		RUS = { is_subject = no }
+	}
+	enable = {
+		is_in_faction_with = GRU
+	}
+	abort_when_not_enabled = yes
+
+	target_array = GRU.faction_members
+
+	ai_strategy = {
+		type = antagonize
+		id = RUS
+		value = 1000
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		target = market_access_rights
+		id = RUS
+		value = -1000
+	}
+}
+#################
 SOV_build_army = {
 	allowed = {
 		tag = RUS
@@ -960,6 +1015,7 @@ RUS_crush_transamur = {
 	}
 	enable = {
 		has_war_with = TRM
+		surrender_progress < 0.3 #Once RUS starts losing heavily, it'll focus less on FER.
 	}
 	abort_when_not_enabled = yes
 
@@ -1054,11 +1110,6 @@ russia_likes_serbia = {
 		id = "SER"
 		value = 100
 	}
-	ai_strategy = {
-		type = protect
-		id = "SER"
-		value = 100
-	}
 }
 
 russia_likes_mongolia = {
@@ -1085,11 +1136,6 @@ russia_likes_mongolia = {
 
 	ai_strategy = {
 		type = befriend
-		id = "MON"
-		value = 100
-	}
-	ai_strategy = {
-		type = protect
 		id = "MON"
 		value = 100
 	}
@@ -1446,4 +1492,64 @@ RUS_we_dont_need_garrisons = {
 		value = -200
 	}
 }
+
+RUS_dont_send_troops_over_black_sea = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = GER
+		UKR = { has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = ROM
+		value = 10
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = SER
+		value = 10
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = BUL
+		value = 10
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = ALB
+		value = 10
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = GRE
+		value = 10
+	}
+}
+
+RUS_ignore_faraway_allies = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = GER
+		GER = { has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = ITA
+		value = 10
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = NOR
+		value = 10
+	}
+}
+
 	

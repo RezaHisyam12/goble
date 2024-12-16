@@ -301,6 +301,8 @@
 		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_MOSKOWIA_COLONIZED"
+			set_province_name = { id = 6174 name = "Petersburg"}
+			set_province_name = { id = 117 name = "Hólmgarðr"}
 			swap_ideas = {
 							remove_idea = VK_COLONY_TWO
 							add_idea = VK_COLONY_THREE

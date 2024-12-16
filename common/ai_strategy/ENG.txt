@@ -23,6 +23,12 @@ ENG_hates_reichspakt = {
 		id = ENG
 		value = 1000
 	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		target = market_access_rights
+		id = ENG
+		value = -1000
+	}
 }
 ENG_hates_entente = {
 	reversed = yes
@@ -45,6 +51,12 @@ ENG_hates_entente = {
 		type = antagonize
 		id = ENG
 		value = 1000
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		target = market_access_rights
+		id = ENG
+		value = -1000
 	}
 }
 
@@ -69,7 +81,7 @@ ENG_build_up_civs_1 = {
 	}
 	ai_strategy = {
 		type = air_factory_balance
-		value = 20
+		value = 15
 	}
 }
 
@@ -98,6 +110,10 @@ ENG_build_up_civs_2 = {
 		type = building_target
 		id = dockyard
 		value = 50
+	}
+	ai_strategy = {
+		type = air_factory_balance
+		value = 30
 	}
 }
 
@@ -146,16 +162,32 @@ ENG_per_ardua_ad_astra_1 = {
 	allowed = {
 		original_tag = ENG
 	}
-	enable = { always = yes }
+	enable = {
+		always = yes
+	}
 	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 85 #+35 from light_aircraft_production = 120
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = 15 #+65 from light_aircraft_production = 80
+	}
 
 	ai_strategy = {
 		type = equipment_production_factor
 		id = fighter
-		value = 50
+		value = 40
 	}
-	ai_strategy = { type = unit_ratio id = fighter value = 60 }
-	ai_strategy = { type = unit_ratio id = cas value = 40 }
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 10
+	}
 }
 
 ENG_per_ardua_ad_astra_2 = {
@@ -163,16 +195,25 @@ ENG_per_ardua_ad_astra_2 = {
 		original_tag = ENG
 	}
 	enable = {
-		date > 1938.6.1
+		date > 1939.1.1
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = air_factory_balance
-		value = 125
+		type = equipment_production_factor
+		id = fighter
+		value = 5
 	}
-	ai_strategy = { type = unit_ratio id = fighter value = 60 }
-	ai_strategy = { type = unit_ratio id = cas value = 40 }
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 5
+	}
+
+	ai_strategy = {
+		type = air_factory_balance
+		value = 50
+	}
 }
 
 ENG_per_ardua_ad_astra_3 = {
@@ -186,10 +227,8 @@ ENG_per_ardua_ad_astra_3 = {
 
 	ai_strategy = {
 		type = air_factory_balance
-		value = 125
+		value = 30
 	}
-	ai_strategy = { type = unit_ratio id = fighter value = 60 }
-	ai_strategy = { type = unit_ratio id = cas value = 40 }
 }
 
 ENG_the_wooden_wall = {
@@ -235,7 +274,7 @@ ENG_produce_synthetic_oil = {
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 20
+		value = 15
 	}
 }
 
@@ -429,6 +468,38 @@ ENG_build_radars_lothian = {
 ################
 ### Military ###
 ################
+ENG_protect_ascension = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		controls_state = 703 #Ascension
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 703 #Ascension
+		value = 1
+	}
+}
+
+ENG_protect_saint_helena = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		controls_state = 704 #Saint Helena
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 704 #Saint Helena
+		value = 1
+	}
+}
+
 ENG_scapa_flow_naval_base = {
 	allowed = {
 		original_tag = ENG
@@ -441,43 +512,7 @@ ENG_scapa_flow_naval_base = {
 	ai_strategy = {
 		type = strike_force_home_base
 		id = 16 #North Sea
-	}
-}
-
-ENG_retreat_to_the_isles = {
-	allowed = {
-		original_tag = ENG
-	}
-	enable = {
-		surrender_progress > 0.2
-	}
-	abort = {
-		surrender_progress < 0.01 #don't stop until the isles are secure
-	}
-
-	ai_strategy = {
-		type = garrison
-		value = 40
-	}
-	ai_strategy = {
-		type = theatre_distribution_demand_increase
-		id = 126 #London
-		value = 20
-	}
-	ai_strategy = {
-		type = theatre_distribution_demand_increase
-		id = 127 #Sussex
-		value = 10
-	}
-	ai_strategy = {
-		type = theatre_distribution_demand_increase
-		id = 130 #Yorkshire
-		value = 10
-	}
-	ai_strategy = {
-		type = theatre_distribution_demand_increase
-		id = 132 #Lancashire
-		value = 10
+		value = 70
 	}
 }
 
@@ -519,6 +554,249 @@ ENG_flanders_pivot = {
 		priority = 100
 		ordertype = front
 		execution_type = careful
+	}
+
+	ai_strategy = {
+		type = front_control
+
+		tag = GRU
+
+		ratio = 0.40
+
+		priority = 100
+		ordertype = front
+		execution_type = careful
+	}
+}
+
+ENG_protect_the_channel_from_invasions = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		has_war = yes
+		123 = { is_fully_controlled_by = ROOT } #Cornwall
+		125 = { is_fully_controlled_by = ROOT } #East Anglia
+		126 = { is_fully_controlled_by = ROOT } #Greater London
+		127 = { is_fully_controlled_by = ROOT } #Sussex
+		any_enemy_country = {
+			OR = {
+				ships_in_area = {
+					type = screen_ship
+					area = 18
+					size > 14
+				}
+				ships_in_area = {
+					type = capital_ship
+					area = 18
+					size > 1
+				}
+				ships_in_area = {
+					type = submarine
+					area = 18
+					size > 23
+				}
+				ships_in_area = {
+					type = carrier
+					area = 18
+					size > 1
+				}
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = naval_mission_threshold
+		id = MISSION_PATROL
+		value = -100
+	}
+	ai_strategy = {
+		type = strike_force_home_base
+		id = 18 #English Channel
+		value = 250
+	}
+}
+
+ENG_raid_channel_if_invaded = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		has_war = yes
+		OR = {
+			123 = { NOT = { is_fully_controlled_by = ROOT } } #Cornwall
+			125 = { NOT = { is_fully_controlled_by = ROOT } } #East Anglia
+			126 = { NOT = { is_fully_controlled_by = ROOT } } #Greater London
+			127 = { NOT = { is_fully_controlled_by = ROOT } } #Sussex
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = naval_convoy_raid_region
+		id = 18 #English Channel
+		value = 250
+	}
+	ai_strategy = {
+		type = strike_force_home_base
+		id = 18 #English Channel
+		value = 120
+	}
+}
+
+ENG_raid_north_sea_if_invaded = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		has_war = yes
+		OR = {
+			120 = { NOT = { is_fully_controlled_by = ROOT } } #Scottish Highlands
+			121 = { NOT = { is_fully_controlled_by = ROOT } } #Lothian
+			129 = { NOT = { is_fully_controlled_by = ROOT } } #East Midlands
+			130 = { NOT = { is_fully_controlled_by = ROOT } } #Yorkshire
+			131 = { NOT = { is_fully_controlled_by = ROOT } } #Northumberland
+			136 = { NOT = { is_fully_controlled_by = ROOT } } #Aberdeenshire
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = naval_convoy_raid_region
+		id = 16 #North Sea
+		value = 250
+	}
+	ai_strategy = {
+		type = strike_force_home_base
+		id = 16 #North Sea
+		value = 120
+	}
+}
+
+ENG_raid_western_approaches_if_invaded = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		has_war = yes
+		OR = {
+			120 = { NOT = { is_fully_controlled_by = ROOT } } #Scottish Highlands
+			122 = { NOT = { is_fully_controlled_by = ROOT } } #South Wales
+			132 = { NOT = { is_fully_controlled_by = ROOT } } #Lancashire
+			133 = { NOT = { is_fully_controlled_by = ROOT } } #Lanark
+			338 = { NOT = { is_fully_controlled_by = ROOT } } #Gloucestershire
+			IRE = {
+				has_war_with = ROOT
+				has_capitulated = no
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = naval_convoy_raid_region
+		id = 43 #Western Approaches
+		value = 250
+	}
+	ai_strategy = {
+		type = strike_force_home_base
+		id = 16 #Western Approaches
+		value = 120
+	}
+}
+
+ENG_protect_against_invasions = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		has_war_with_major = yes
+		enemies_naval_strength_ratio > 1
+		OR = {
+			NOT = { is_in_faction_with = FRA }
+			FRA = { surrender_progress > 0.8 } #France is lost, retreat
+			num_divisions < 24 #num of starting divisions in OOB
+		}
+		OR = {
+			HOL = {
+				has_war_with = ROOT
+				has_capitulated = no
+			}
+			var:6.owner = { #Flanders
+				has_war_with = ROOT
+				has_capitulated = no
+			}
+			var:925.owner = { #Brabant
+				has_war_with = ROOT
+				has_capitulated = no
+			}
+			IRE = {
+				has_war_with = ROOT
+				has_capitulated = no
+			}
+			ICE = {
+				has_war_with = ROOT
+				has_capitulated = no
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 200
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.35
+		states = { 120 121 122 123 125 126 127 129 130 131 132 133 136 338 }
+		subtract_fronts_from_need = no
+		subtract_invasions_from_need = no
+	}
+}
+
+ENG_push_back_invasions = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		has_war_with_major = yes
+		any_home_area_neighbor_country = { has_war_with = ROOT } #ENG has no home_area neighbours unless invaded
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = naval_invasion_focus
+		value = -80 #counteracts ENG_the_wooden_wall
+	}
+
+	ai_strategy = {
+		type = front_control
+		strategic_region = 1 #Southern England
+		strategic_region = 2 #Northern England
+		strategic_region = 3 #Scotland
+		priority = 100
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		strategic_region = 1 #Southern England
+		strategic_region = 2 #Northern England
+		strategic_region = 3 #Scotland
+		value = 250
+	}
+
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 126 #Greater London
+		value = 10
 	}
 }
 

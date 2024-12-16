@@ -86,6 +86,18 @@ GRU_hydroelectricity_decisions = {
 					level = 2
 					instant_build = yes
 				}
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 3462
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
 			}
 		}
 	}
@@ -126,6 +138,18 @@ GRU_hydroelectricity_decisions = {
 					type = infrastructure
 					level = 1
 					instant_build = yes
+				}
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 11417
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
 				}
 			}
 		}
@@ -168,6 +192,18 @@ GRU_hydroelectricity_decisions = {
 					level = 1
 					instant_build = yes
 				}
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 3355
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
 			}
 		}
 	}
@@ -208,6 +244,18 @@ GRU_hydroelectricity_decisions = {
 					level = 1
 					instant_build = yes
 				}
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 11479
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
 			}
 		}
 	}
@@ -247,6 +295,18 @@ GRU_hydroelectricity_decisions = {
 					type = infrastructure
 					level = 1
 					instant_build = yes
+				}
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 6675
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
 				}
 			}
 		}
@@ -3228,7 +3288,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 100
+			factor = 150
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -3462,10 +3522,14 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 150
+			factor = 145
 			modifier = {
 				factor = 0
 				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				is_in_faction_with = RUS
 			}
 			modifier = {
 				factor = 0
@@ -3582,10 +3646,14 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 100
+			factor = 125
 			modifier = {
 				factor = 0
 				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				is_in_faction_with = RUS
 			}
 			modifier = {
 				factor = 0
@@ -12361,12 +12429,7 @@ GRU_lebensraum_decisions = {
 			can_declare_war_on = FROM
 			FROM = {
 				OR = {
-				tag = BAT
-				tag = EST
-				tag = LAT
 				tag = LIT
-				tag = WHR
-				tag = UKR
 				tag = DKB
 				tag = KUB
 				tag = MTR
@@ -12388,12 +12451,7 @@ GRU_lebensraum_decisions = {
 			can_declare_war_on = FROM
 			FROM = {
 				OR = {
-				tag = BAT
-				tag = EST
-				tag = LAT
 				tag = LIT
-				tag = WHR
-				tag = UKR
 				tag = DKB
 				tag = KUB
 				tag = MTR
@@ -12484,7 +12542,14 @@ GRU_lebensraum_decisions = {
 	GRU_lebensraum_russia_conquest_decision = {
 		icon = generic_prepare_civil_war
 
+		allowed = { original_tag = GRU }
 		available = {
+			OR = {
+				is_neighbor_of = FROM
+				any_allied_country = {
+					is_neighbor_of = FROM
+				}
+			}
 			is_subject = no
 			country_exists = RUS
 		}
@@ -12586,6 +12651,110 @@ GRU_lebensraum_decisions = {
 				}
 			}
 			declare_war_on = {	type = annex_everything	target = RUS }
+		}
+	}
+	GRU_lebensraum_baltic_conquest_decision = {
+		icon = GFX_pangermanicone
+		allowed = { original_tag = GRU }
+		available = {
+			OR = {
+				is_neighbor_of = FROM
+				any_allied_country = {
+					is_neighbor_of = FROM
+				}
+			}
+		}
+
+		visible = {
+			can_declare_war_on = FROM
+		}
+
+		targets = { EST LAT BAT WHR UKR }
+		target_root_trigger = {
+			has_completed_focus = GRU_NMDVP_LEBENSRAUM
+		}
+		target_trigger = {
+			can_declare_war_on = FROM
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 115
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				is_in_faction_with = RUS
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					any_allied_country = {
+						is_faction_leader = yes
+						overlord = {
+							strength_ratio = {
+								tag = ROOT
+								ratio > 0.7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_lebensraum_baltic_conquest_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_lebensraum_baltic_conquest_decision target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
+			}
 		}
 	}
 

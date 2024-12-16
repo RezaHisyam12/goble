@@ -3016,6 +3016,9 @@ shared_focus = {
 				}
 			}
 		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_formation_of_the_nva"
 			hidden_effect = {
@@ -6536,7 +6539,7 @@ shared_focus = {
 		}
 		cost = 6
 		ai_will_do = {
-			factor = 15
+			factor = 20
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_PATH"
@@ -6552,6 +6555,9 @@ shared_focus = {
 		x = -1
 		y = 1
 		cost = 6
+		ai_will_do = {
+			factor = 20
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_allignment"
 			custom_effect_tooltip = GRU_tt_allies_decisions
@@ -6566,7 +6572,7 @@ shared_focus = {
 		y = 1
 		cost = 6
 		ai_will_do = {
-			factor = 10
+			factor = 15
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_imperialism"
@@ -6780,7 +6786,7 @@ shared_focus = {
 		y = 2
 		cost = 6
 		ai_will_do = {
-			factor = 10
+			factor = 15
 		}
 		available = {
 			is_subject = no
@@ -6816,6 +6822,9 @@ shared_focus = {
 		x = 4
 		y = 3
 		cost = 6
+		ai_will_do = {
+			factor = 15
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_PAN_GERMANISM_RELOADED"
 			custom_effect_tooltip = GRU_tt_pan_germanism_two_decisions
@@ -6996,6 +7005,9 @@ shared_focus = {
 		x = 2
 		y = 3
 		cost = 6
+		ai_will_do = {
+			factor = 15
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_SLAV_LAND_EXPANSION"
 			custom_effect_tooltip = GRU_tt_pan_germanism_three_decisions
@@ -7065,6 +7077,9 @@ shared_focus = {
 		x = 0
 		y = 3
 		cost = 6
+		ai_will_do = {
+			factor = 20
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_RED_COLONIALISM"
 					add_political_power = 50
@@ -7093,6 +7108,9 @@ shared_focus = {
 		x = 1
 		y = 2
 		cost = 7	
+		ai_will_do = {
+			factor = 20
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_LEBENSRAUM"
 			custom_effect_tooltip = GRU_tt_lebensraum_decisions			

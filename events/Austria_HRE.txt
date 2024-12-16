@@ -186,12 +186,7 @@ country_event = { #Holy Roman Empire claims FRA
 						OR = {
 							is_core_of = FROM
 							is_claimed_by = FROM
-							state = 21
-							state = 762
-							state = 763
-							state = 735
-							state = 943
-							state = 785
+							state = 28
 						}
 					}
 					transfer_state_to = FROM
@@ -249,20 +244,7 @@ country_event = { #Transfer of the territory
 					OR = {
 						is_core_of = ROOT
 						is_claimed_by = ROOT
-						state = 21
-						state = 762
-						state = 763
-						state = 735
-						state = 943
-						state = 785
-						state = 779
-						state = 32
-						state = 20
-						state = 27
-						state = 18
-						state = 24
-						state = 17
-						state = 980
+						state = 28
 					}
 				}
 				transfer_state_to = ROOT

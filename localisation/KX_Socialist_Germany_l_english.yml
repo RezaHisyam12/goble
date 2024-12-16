@@ -2001,6 +2001,7 @@ GRU_expansion_three_volksreichskommissariat_moskowien:0 "§OMoskowien§! expansi
 GRU_lebensraum_decisions:0 "Conquest of Lebensraum"
 GRU_lebensraum_conquest_decision:0 "Conquest of [From.GetNameDef]."
 GRU_lebensraum_russia_conquest_decision:0 "Conquest of [From.GetNameDef]."
+GRU_lebensraum_baltic_conquest_decision:0 "Conquest of [From.GetNameDef]."
 
 GRU_beyond_lebensraum_decisions:0 "Lebensraum beyond the Urals"
 GRU_beyond_lebensraum_conquest_decision:0 "Conquest of [From.GetNameDef]."
@@ -4111,6 +4112,10 @@ gru_VKK:0 "Kaukasia"
 gru_VKM:0 "Moskowia"
 gru_VKR:0 "Ruthenia"
 
+GRU_new_order_decisions: "£national_populist_texticon£  §8The New Order§!"
+GRU_new_order_decisions_desc: "\n\n£goebb_new_order£\n\n\n\nAfter long years of £violence_damage_texticon£ §8humiliation§! and £heroism_texticon£ §Vstruggle§!, the world must appear before our nation in all its glory, and as for the first time, it will mean either our §Rcomplete destruction§! or a grand triumph.\n\nWe have enemies from both §9East§! and §4West§!, and it is now that we will once again show the world that we remain on top, and that is true\n£national_populist_texticon£ §8our rightful place.§!\n\nThrough careful £war_plans_texticon£ §7planning§! and §6modernized tactics§! as well as the paramilitaryization of our youth and the strengthening of our own influence, and the combined efforts of our £luftwaffe_texticon£ air power, the fate of our enemies £new_germany_texticon£ §gis sealed§! and our plans and operations £increase_texticon£ §7ready§! to be realized"
+
+
 VSJ_terror_bombing: "Luftwaffe Training Ground"
 VSJ_terror_bombing_desc: "With depressing regularity, Luftwaffe bombers from the airfields of Reichskommissariat Moskowien fly over the Volkskommissariat Judea of eastern Russia, bombing everything they can see and severely affecting nearly every aspect of Jews and Russian life as a result."
 
@@ -4179,6 +4184,9 @@ rotermorgenrussiandoom.3.b:0 "The Kaiser could only dream of such a..."
 AFRICAN_HRE_GOEBB: "African Kaiserreich"
 AFRICAN_HRE_GOEBB_ADJ: "German"
 AFRICAN_HRE_GOEBB_DEF: "the German Reich in Exile"
+
+RUS_Attack_Germany: "Crush the German Hegemon"
+RUS_Attack_Germany_desc: "The time has come for us to end the injustices inflicted from the Weltkrieg and strike back at the damnable Kaiser. Brest-Litovsk shall be avenged!"
 
 
 ###

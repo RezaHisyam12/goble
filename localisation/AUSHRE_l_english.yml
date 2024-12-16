@@ -92,7 +92,7 @@ AUS_Attack_Canada:0 "Our Oldest Foe"
 
 
 
-HRE_rise:0 "Holy Roman Empire Restored"
+HRE_rise:0 "Holy Roman Empire is Restored"
 AUS_members_gain:0 "All Members Will Gain:"
 AUS_central_power:0 "Central Powers"
 
@@ -113,7 +113,7 @@ AUS_bunker_idea: "Verteidigungsplan"
 AUS_reform_hre_hickmann_artillery: "Modern Artillery"
 AUS_ott_ally: "Austro-Turkish Ties"
 AUS_new_eurasian_capital_modifier:0 "£pol_idea Holy Roman Empire Capital"
-AUS_eastern_front_operations_idea: "Eastern Front Operations"
+AUS_eastern_front_operations_idea: "Ready to Strike"
 AUS_kuk_kriegsmarine: "k.u.k. Kriegsmarine"
 AUS_civil_war_plan_HUN: "Operation Einigung"
 AUS_civil_war_plan_CZE: "Operation Befriedung"
@@ -130,6 +130,7 @@ AUS_start_hre_tooltip:0 "§GAustria will look to its past and attempt to restore
 AUS_national_rebirth_tooltip:0 "§GThe government will proclaim a national rejuvenation to retake the legacies of the past.§!"
 AUS_hreantium:0 "§RIt is time to retake our historical lands!§!"
 AUS_hreantium_reborn:0 "§GThe enemy have been defeated. Holy Roman Empire is restored!§!"
+AUS_if_demands_refused:0 "§GIf France refuse our demand!§!"
 
 annex.1020.c: "Reunite the Danubian lands."
 AUS_tt_entente_decisions:0 "Unlocks §RWar§! decisions towards §COur Rival§!."
@@ -162,7 +163,6 @@ AUS_pan_germanism_core_swiss_decision:0 "Integrate Switzerland"
 AUS_pan_germanism_core_dutch_decision:0 "Integrate the Netherlands"
 AUS_pan_germanism_core_belgian_decision:0 "Integrate Belgium"
 AUS_pan_germanism_core_elsas_decision:0 "Integrate Elsas-Lothringen"
-AUS_pan_germanism_core_eastern_france_decision:0 "Integrate Eastern France"
 AUS_pan_germanism_core_eastern_italy_decision:0 "Integrate Eastern Italy"
 AUS_pan_germanism_core_northern_italy_decision:0 "Integrate Northern Italy"
 AUS_Attack_Region:0 "Attack [FROM.GetNameDef]"
@@ -217,7 +217,7 @@ INS_new_economy: "Ekonomi Baru"
 INS_merdeka_idea: "Merdeka"
 
 
-AUS_Demand_FRA:0 "Demands Eastern France"
+AUS_Demand_FRA:0 "Demand Elsas-Lothringen"
 RUS_Demand_FRA_desc:0 "The losing of our past industrialised regions of the west. It's time they are returned to their rightful owners."
 AUS_core_decisions:0 "Integration Plan"
 AUS_core_decisions_desc:0 "The integration of the old realms into the imperial administration demands considerable time, resources, and concerted effort. Moreover, the diverse peoples within our borders require patience to embrace our rule fully."
@@ -243,17 +243,17 @@ aushre.8789.a: "China shall be united forever!"
 
 
 aushre.8790.t:0 "Holy Roman Empire Claims"
-aushre.8790.d:0 "Today the Holy Roman foreign minister has met with our prime minister. He has announced that the Holy Roman Empire wants to take back part of Eastern France. They are offering us monetary and material compensation as well as a guarantee of the new state borders in return. How shall we react?"
+aushre.8790.d:0 "Today the Holy Roman foreign minister has met with our prime minister. He has announced that the Holy Roman Empire wants to take back Elsas-Lothringen. They are offering us monetary and material compensation as well as a guarantee of the new state borders in return. How shall we react?"
 aushre.8790.a:0 "Never!"
 aushre.8790.b:0 "All right."
 
 aushre.8791.t:0 "France Refused!"
-aushre.8791.d:0 "The France has refused our generous offer to transfer part of Eastern France back to the fatherland! We must take our rightful lands back by force!"
+aushre.8791.d:0 "The France has refused our generous offer to transfer Elsas-Lothringen back to the fatherland! We must take our rightful lands back by force!"
 aushre.8791.a:0 "Take it back by force!"
 aushre.8791.b:0 "Forget about it."
 
 aushre.8792.t:0 "Transfer of the Territory"
-aushre.8792.d:0 "The France has agreed to transfer the part of Eastern France in return for monetary and material compensation as well as the guarantee of the security of their new borders!"
+aushre.8792.d:0 "The France has agreed to transfer Elsas-Lothringen in return for monetary and material compensation as well as the guarantee of the security of their new borders!"
 aushre.8792.a:0 "Another victory for Holy Roman Empire diplomacy!"
 
 aushre.8793.t:0 "An Invitation from [From.GetNameDef]"

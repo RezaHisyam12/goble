@@ -23,6 +23,12 @@ FRA_hates_reichspakt = {
 		id = FRA
 		value = 1000
 	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		target = market_access_rights
+		id = FRA
+		value = -1000
+	}
 }
 FRA_hates_gru = {
 	reversed = yes
@@ -46,6 +52,12 @@ FRA_hates_gru = {
 		id = FRA
 		value = 1000
 	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		target = market_access_rights
+		id = FRA
+		value = -1000
+	}
 }
 FRA_hates_entente = {
 	reversed = yes
@@ -68,6 +80,12 @@ FRA_hates_entente = {
 		type = antagonize
 		id = FRA
 		value = 1000
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		target = market_access_rights
+		id = FRA
+		value = -1000
 	}
 }
 FRA_dont_justify_on_benesam = {
@@ -212,7 +230,7 @@ FRA_endsieg = { #If losing, focus everything on defence and don't do stupid atta
 	}
 	enable = {
 		surrender_progress > 0.25
-		has_equipment = { infantry_equipment < 0 }
+		stockpile_ratio = { archetype = infantry_equipment ratio < 0.1 }
 		GER = {
 			has_war_with = ROOT
 			has_capitulated = no
@@ -240,7 +258,46 @@ FRA_endsieg = { #If losing, focus everything on defence and don't do stupid atta
 	}
 	ai_strategy = {
 		type = dont_defend_ally_borders
-		id = SWF
+		id = SWI
+		value = 100
+	}
+}
+
+FRA_endsieg_2 = { #If losing, focus everything on defence and don't do stupid attacks
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		surrender_progress > 0.25
+		stockpile_ratio = { archetype = infantry_equipment ratio < 0.1 }
+		GRU = {
+			has_war_with = ROOT
+			has_capitulated = no
+			surrender_progress < 0.1
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = GRU
+		priority = 150
+		ordertype = front
+		execute_order = no
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		area = globally
+		value = -500
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = SRI
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = SWI
 		value = 100
 	}
 }
@@ -248,6 +305,68 @@ FRA_endsieg = { #If losing, focus everything on defence and don't do stupid atta
 ################
 ### Industry ###
 ################
+FRA_industrial_strategy_early = {
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		date < 1938.1.1
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 49
+	}
+	ai_strategy = {
+		type = air_factory_balance
+		value = 15
+	}
+}
+
+FRA_industrial_strategy_war = {
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		OR = {
+			threat > 0.75
+			has_war = yes
+		}
+		num_of_military_factories < 150
+	}
+	abort = {
+		num_of_military_factories > 150
+	}
+
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 50
+	}
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 150
+	}
+}
+
+FRA_industrial_strategy_war_late = {
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		num_of_military_factories > 150
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 20
+	}
+}
+
 FRA_build_radars_lorraine = {
 	allowed = {
 		original_tag = FRA

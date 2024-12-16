@@ -411,11 +411,7 @@ country_event = { # flavour about united front
 					state = 28
 					state = 779
 					state = 8
-					state = 188
-					state = 782
-					state = 67
-					state = 86
-					state = 776
+					state = 741
 				}
 			}
 			set_demilitarized_zone = yes
@@ -539,21 +535,18 @@ country_event = { # GRU setup
 				every_state = {
 		        	limit = {
 		        		OR = {
-		        			state = 781
-		        			state = 51
-		        			state = 42
-		        			state = 55
-		        			state = 57
-		        			state = 56
-		        			state = 50
-		        			state = 780
-		        			state = 28
-		        			state = 779
-		        			state = 8
-		        			state = 741
-		        			state = 188
-		        			state = 782
-		        			state = 67
+					state = 781
+					state = 51
+					state = 42
+					state = 55
+					state = 57
+					state = 56
+					state = 50
+					state = 780
+					state = 28
+					state = 779
+					state = 8
+					state = 741
 		        		}
 		        	}
 		        	set_demilitarized_zone = no
@@ -981,23 +974,27 @@ country_event = {
 country_event = { # victory Intro
 	id = rotermorgenGCW.10
 	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.10" }
+	title = rotermorgenGCW.10.t
+	desc = rotermorgenGCW.10.d
+	picture = GFX_report_event_victory_cw
+	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
 			MAF = {
 		    	add_ai_strategy = {
 		    		type = send_volunteers_desire
 		    		id = GEA
-		    		value = 0
+		    		value = 10
 		    	}
 		    	add_ai_strategy = {
 		    		type = send_lend_lease_desire
 		    		id = GEA
-		    		value = 0
+		    		value = 10
 		    	}
 		    	add_ai_strategy = {
 		    		type = support
 		    		id = GEA
-		    		value = 0
+		    		value = 10
 		    	}
 		    }
 			GRU = {
@@ -1009,236 +1006,15 @@ country_event = { # victory Intro
 				add_opinion_modifier = { target = MAG modifier = KR_hostile }
 
 			}
-			if = {
-				limit {
-					NOT = { has_country_flag = GRU_OCCUPIED_START }
-				}
-				every_state = {
-				limit = {
-					OR = {
-						is_core_of = COG
-						state = 956
-						state = 955
-						state = 970
-						state = 547
-						state = 969
-						state = 548
-						state = 925
-						state = 558
-						state = 662
-						state = 878
-						state = 913
-						state = 973
-						state = 876
-						state = 877
-						state = 1322
-						state = 1321
-						state = 274
-						state = 871
-						state = 957
-						state = 958
-					}
-				}
-				MAF = {
-					add_state_core = PREV
-					transfer_state = PREV
-				}
-			}
-			every_state = {
-				limit = {
-					OR = {
-						state = 963
-						state = 807
-						state = 1323
-					}
-				}
-				NFA = {
-					transfer_state = PREV
-				}
-			}
-			every_state = {
-				limit = {
-					OR = {
-						state = 892
-						state = 268
-					}
-				}
-				SOM = {
-					transfer_state = PREV
-				}
-			}
-			every_state = {
-				limit = {
-					OR = {
-						state = 813
-					}
-				}
-				ZIM = {
-					add_state_core = PREV
-					transfer_state = PREV
-				}
-			}
-			every_state = {
-				limit = {
-					OR = {
-						state = 964
-						state = 541
-					}
-				}
-				SAF = {
-					transfer_state = PREV
-				}
-				MAF = {
-					remove_core_of = PREV
-				}
-			}
 			MAF = {
 				add_opinion_modifier = { target = GRU modifier = KR_hostile }
-				if = {
-					limit = {
-						NOT = { has_global_flag = Wilhelm_II_Dead }
-					}
-					set_country_flag = MAF_kasier_willyII_gang
-					create_country_leader = {
-						name = GRU_Mittelafrika_Wilhelm_III
-						picture = "gfx/leaders/MAF/Portrait_Mittelafrika_Wilhelm_III.png"
-						expire = "1.1.1"
-						ideology = soccon_colonial_govt_subtype
-					}
-					create_country_leader = {
-						name = GRU_Mittelafrika_Wilhelm_III
-						picture = "gfx/leaders/MAF/Portrait_Mittelafrika_Wilhelm_III.png"
-						expire = "1.1.1"
-						ideology = marlib_colonial_govt_subtype
-					}
-					create_country_leader = {
-						name = GRU_Mittelafrika_Wilhelm_III
-						picture = "gfx/leaders/MAF/Portrait_Mittelafrika_Wilhelm_III.png"
-						expire = "1.1.1"
-						ideology = soclib_colonial_govt_subtype
-					}
-					create_country_leader = {
-						name = GRU_Mittelafrika_Wilhelm_III
-						picture = "gfx/leaders/MAF/Portrait_Mittelafrika_Wilhelm_III.png"
-						expire = "1.1.1"
-						ideology = socdem_colonial_govt_subtype
-					}
-					create_country_leader = {
-						name = GRU_Mittelafrika_Wilhelm_III
-						picture = "gfx/leaders/MAF/Portrait_Mittelafrika_Wilhelm_III.png"
-						expire = "1.1.1"
-						ideology = colonial_govt_subtype
-					}
-					create_country_leader = {
-						name = GRU_Mittelafrika_Wilhelm_III
-						picture = "gfx/leaders/MAF/Portrait_Mittelafrika_Wilhelm_III.png"
-						expire = "1.1.1"
-						ideology = autocratic_colonial_govt_subtype
-					}
-				}
-				if = {
-					limit = {
-						has_global_flag = Wilhelm_II_Dead 
-					}
-					create_country_leader = {
-						name = GRU_Mittelafrika_Wilhelm_III
-						picture = "gfx/leaders/MAF/Portrait_Germany_Wilhelm_III.png"
-						expire = "1.1.1"
-						ideology = socdem_colonial_govt_subtype
-					}
-					create_country_leader = {
-						name = GRU_Mittelafrika_Wilhelm_III
-						picture = "gfx/leaders/MAF/Portrait_Germany_Wilhelm_III.png"
-						expire = "1.1.1"
-						ideology = soclib_colonial_govt_subtype
-					}
-					create_country_leader = {
-						name = GRU_Mittelafrika_Wilhelm_III
-						picture = "gfx/leaders/MAF/Portrait_Germany_Wilhelm_III.png"
-						expire = "1.1.1"
-						ideology = marlib_colonial_govt_subtype
-					}
-					create_country_leader = {
-						name = GRU_Mittelafrika_Wilhelm_III
-						picture = "gfx/leaders/MAF/Portrait_Germany_Wilhelm_III.png"
-						expire = "1.1.1"
-						ideology = soccon_colonial_govt_subtype
-					}
-					create_country_leader = {
-						name = GRU_Mittelafrika_Wilhelm_III
-						picture = "gfx/leaders/MAF/Portrait_Germany_Wilhelm_III.png"
-						expire = "1.1.1"
-						ideology = colonial_govt_subtype
-					}
-					create_country_leader = {
-						name = GRU_Mittelafrika_Wilhelm_III
-						picture = "gfx/leaders/MAF/Portrait_Germany_Wilhelm_III.png"
-						expire = "1.1.1"
-						ideology = autocratic_colonial_govt_subtype
-					}
-				}
-				remove_all_ministers = yes
-				add_ideas = {
-	                GER_Franz_von_Papen_hog_ade
-	                GER_Friedrich_Werner_von_der_Schulenberg_for_ade
-	                GER_Hjalmar_Schacht_eco_ade
-	                GER_Johann_von_Bernstorff_sec_ade
-                
-	                GER_August_Von_Mackensen_carm_pau
-	                GER_Manfred_Freiherr_von_Richthofen_cair_ade
-	                GER_Hans_von_Seeckt_cos_pau
-				}
 				remove_ideas = {
 					MAF_Colonial_Nation
-					MAF_French_Settlers
-					MAF_Belgian_Investors
-					MAF_British_Protectorates
-					MAF_old_new_guard_divide
-					MAF_old_new_guard_divide2
-					MAF_old_new_guard_divide2_goering
-				}
-				set_politics = {
-					ruling_party = authoritarian_democrat
-					last_election = "1936.1.1"
-					elections_allowed = no
 				}
 				set_rule = {
 					can_decline_call_to_war = yes
 					can_not_declare_war = no
 				}
-				event_target:Mittelafrika_Target = { transfer_technology = yes }
-				event_target:Mittelafrika_Target = {
-					set_global_flag = GER_became_GEX
-				
-		        event_target:current_german_exile_government = {
-		        	clr_country_flag = current_german_exile_government
-		        }
-		        clear_global_event_target = current_german_exile_government
-	            save_global_event_target_as = current_german_exile_government
-	            GER = {
-	            	take_occupied_states_in_africa = yes
-	            	every_owned_state = {
-	            		limit = {
-	            			OR = {
-	            				is_on_continent = africa
-	            				state = 710 #Diego Garcia
-	            			}
-	            			is_controlled_by = GER
-	            		}
-	            		event_target:Mittelafrika_Target = { transfer_state = PREV }
-	            	}
-	            }
-	
-	            add_manpower = 400000
-	            set_major = yes
-	            add_ideas = GEX_GEX_idea
-	            add_timed_idea = {
-	            	idea = GEX_trauma
-	            	days = 120
-	            }
-
-				set_global_flag = MAF_no_die
-				set_cosmetic_tag = AFRICAN_HRE_GOEBB
 
 				create_field_marshal = {
                 	name = GRU_general_August_Mackensen
@@ -1280,7 +1056,7 @@ country_event = { # victory Intro
                 	planning_skill = 2
                 	logistics_skill = 5
                 }
-	
+
 	            GER = {
 		            # transfer a sizeable amount of equipment
 		            set_temp_variable = { temp = num_equipment@infantry_equipment }
@@ -1342,7 +1118,7 @@ country_event = { # victory Intro
 		            	set_temp_variable = { temp = num_equipment@modern_tank_chassis }
 		            	multiply_temp_variable = { temp = 0.3 }
 		            	send_equipment = { target = PREV type = modern_tank_chassis amount = temp }
-		            }
+					}
 	            	set_temp_variable = { temp = num_equipment@small_plane_naval_bomber_airframe }
 	            	multiply_temp_variable = { temp = 0.35 }
 	            	send_equipment = { target = PREV type = small_plane_naval_bomber_airframe amount = temp }
@@ -1371,59 +1147,25 @@ country_event = { # victory Intro
 	            	multiply_temp_variable = { temp = 0.5 }
 	            	send_equipment = { target = PREV type = convoy amount = temp }
 	            }
-	                if = {
-	                	limit = {
-	                		NOT = { tag = GEA }
-	                		country_exists = GEA
-	                		GEA = { is_subject_of = GER }
-	                	}
-	                	"GEA" = { get_current_government_type = yes }
-	                	puppet = "GEA"
-	                	"GEA" = { restore_previous_government_type = yes }
-	                }
-	                else = {
-	                	GER = {
-	                		set_autonomy = {
-	                			target = GEA
-	                			autonomy_state = autonomy_free
-	                		}
-	                	}
-	                }
-	                if = {
-	                	limit = {
-	                		NOT = { tag = LEP }
-	                		country_exists = LEP
-	                		LEP = { is_subject_of = GER }
-	                	}
-	                	"LEP" = { get_current_government_type = yes }
-	                	puppet = "LEP"
-	                	"LEP" = { restore_previous_government_type = yes }
-	                }
-	                else = {
-	                	GER = {
-	                		set_autonomy = {
-	                			target = LEP
-	                			autonomy_state = autonomy_free
-	                		}
-	                	}
-	                }
-	                change_tag_from = GER
-				}
+
 				germany_capitulates = yes
 				create_faction = gru_alldeutschpakt_faction
 				MAF = {
 					add_to_faction = GEA
 					add_to_faction = MAG
 				}
-			}
+				MLT = {
+			    	if = {
+		            	limit = { 
+			    			has_country_flag = MLT_germ_cuck_knights
+			    		}
+			    		MAF = { add_to_faction = MLT }
+		            }
+			    }
 			}
 		}
 	}
-	title = rotermorgenGCW.10.t
-	desc = rotermorgenGCW.10.d
-	picture = GFX_report_event_victory_cw
-	is_triggered_only = yes
-	
+
 	option = { # SPD-r forms
 		name = rotermorgenGCW.10.a
 		INT = { add_to_faction = GRU }
@@ -1471,6 +1213,7 @@ country_event = { # SPD radikalize Forms
 		}
 	}
 }
+
 country_event = { # FAUD-Reaorganises
 	id = rotermorgenGCW.30
 	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.30" }

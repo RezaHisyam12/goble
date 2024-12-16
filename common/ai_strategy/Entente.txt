@@ -997,3 +997,18 @@ canada_protect_britain = {
 		value = 25
 	}
 }
+
+CAN_build_up_troops = {
+	allowed = {
+		tag = CAN
+	}
+	enable = {
+		NOT = { country_exists = GBR }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = force_build_armies
+		value = 100
+	}
+}
