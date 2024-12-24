@@ -211,6 +211,11 @@ is_not_excluded_from_stahlpakt_alliance = {
 		tag = LEC
 		tag = MLT
 		tag = CRE
+		tag = YUC
+		tag = GUA
+		tag = COS
+		tag = PAN
+		tag = ERI
 	}
 }
 

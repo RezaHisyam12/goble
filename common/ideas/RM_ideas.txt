@@ -122,9 +122,8 @@ ideas = {
 				land_reinforce_rate = 0.05
 				army_speed_factor = 0.05
 				war_support_factor = 0.2
-				political_power_gain = 0.05
 				encryption_factor = 0.05
-				local_intel_to_enemies = -0.1
+				local_intel_to_enemies = -0.15
 				army_org_Factor = 0.10
 				max_planning = 0.05
 				out_of_supply_factor = -0.2
@@ -132,6 +131,8 @@ ideas = {
 				org_loss_when_moving = -0.15
 				local_manpower = 0.05
 				max_command_power = 25
+				conscription_factor = -0.2
+				mobilization_speed = 0.10
 			}
 		}
 		GRU_lager = {
@@ -149,7 +150,7 @@ ideas = {
           		modifier = {
 				ai_focus_aggressive_factor = 0.25
 				surrender_limit = 0.50
-				stability_weekly_factor = 0.01
+				stability_weekly_factor = 0.001
 				MONTHLY_POPULATION = 0.15
 				political_power_gain = 0.25
 				conscription_factor = 0.05
@@ -182,7 +183,7 @@ ideas = {
 				production_speed_dockyard_factor = 0.05
 				production_speed_arms_factory_factor = 0.10
 				industry_repair_factor = 0.10
-				stability_weekly = 0.005
+				stability_weekly = 0.001
 				political_power_gain = 0.02
 				production_factory_max_efficiency_factor = 0.10
 				production_factory_efficiency_gain_factor = 0.05
@@ -202,7 +203,7 @@ ideas = {
 				production_speed_dockyard_factor = 0.10
 				production_speed_arms_factory_factor = 0.20
 				industry_repair_factor = 0.10
-				stability_weekly = 0.005
+				stability_weekly = 0.001
 				political_power_gain = 0.05
 				production_factory_max_efficiency_factor = 0.15
 				production_factory_efficiency_gain_factor = 0.05
@@ -222,7 +223,7 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.01
 				production_factory_efficiency_gain_factor = 0.01
 				consumer_goods_factor = -0.11
-				stability_weekly = 0.01
+				stability_weekly = 0.001
 				political_power_gain = 0.01
 				party_popularity_stability_factor = 0.01
 			}
@@ -235,7 +236,7 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.02
 				production_factory_efficiency_gain_factor = 0.02
 				consumer_goods_factor = -0.1
-				stability_weekly = 0.01
+				stability_weekly = 0.001
 				political_power_gain = 0.05
 				party_popularity_stability_factor = 0.01
 			}
@@ -248,7 +249,7 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.01
 				production_factory_efficiency_gain_factor = 0.01
 				consumer_goods_factor = -0.1
-				stability_weekly = 0.02
+				stability_weekly = 0.002
 				political_power_gain = 0.05
 				party_popularity_stability_factor = 0.05
 			}
@@ -261,7 +262,7 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.02
 				production_factory_efficiency_gain_factor = 0.02
 				consumer_goods_factor = -0.1
-				stability_weekly = 0.02
+				stability_weekly = 0.002
 				political_power_gain = 0.05
 				party_popularity_stability_factor = 0.05
 			}
@@ -271,7 +272,7 @@ ideas = {
 			picture = GRU_Der_Volksgenosse
 			modifier = {
 				political_power_gain = 0.01
-				stability_weekly = 0.01
+				stability_weekly = 0.001
 			}
 		}
 		GRU_Volksempfaenger = {
@@ -298,7 +299,7 @@ ideas = {
 			allowed = { always = no }
             modifier = {
 				army_speed_factor_for_controller = 0.05
-				stability_weekly = 0.01
+				stability_weekly = 0.001
 				consumer_goods_factor = -0.05
 			}
 		}
@@ -730,6 +731,7 @@ ideas = {
 			}
 			allowed = { always = no }
             modifier = {
+			air_ace_generation_chance_factor = 0.10
 			air_superiority_efficiency = 0.05
 			air_intercept_efficiency = 0.05
 			air_cas_efficiency = 0.05
@@ -777,6 +779,7 @@ ideas = {
 			}
 			allowed = { always = no }
             modifier = {
+			air_ace_generation_chance_factor = 0.10
 			air_superiority_efficiency = 0.05
 			air_intercept_efficiency = 0.05
 			air_nav_efficiency = 0.05
@@ -906,6 +909,7 @@ ideas = {
 			}
 			allowed = { always = no }
             modifier = {
+			air_ace_generation_chance_factor = 0.10
 			air_cas_efficiency = 0.05
 
 			air_strategic_bomber_bombing_factor = 0.1
@@ -956,6 +960,7 @@ ideas = {
 			allowed = { always = no }
             modifier = {
 
+			air_ace_generation_chance_factor = 0.10
 			air_nav_efficiency = 0.05
 			
 			air_strategic_bomber_bombing_factor = 0.1
@@ -1113,7 +1118,7 @@ ideas = {
 			picture = GRU_DSR_Welfare
 			allowed = { always = no }
             modifier = {
-				stability_weekly_factor = 0.01
+				stability_weekly_factor = 0.001
 				MONTHLY_POPULATION = 0.05
 			}
 		}
@@ -1344,7 +1349,7 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.05
 				consumer_goods_factor = -0.15
-				stability_weekly = 0.01
+				stability_weekly = 0.001
 				political_power_gain = 0.05
 				party_popularity_stability_factor = 0.1
 			}
@@ -1376,7 +1381,7 @@ ideas = {
 				production_speed_infrastructure_factor = 0.10
 				production_factory_efficiency_gain_factor = 0.05
 				consumer_goods_factor = -0.2
-				stability_weekly = 0.02
+				stability_weekly = 0.002
 				political_power_gain = 0.05
 				party_popularity_stability_factor = 0.1
 			}
@@ -1439,7 +1444,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_soccredit_idea"}
 			picture = GRU_credit
 			modifier = {
-				stability_weekly = 0.01
+				stability_weekly = 0.001
 				political_power_gain = 0.1
 			}
 		}
@@ -1487,7 +1492,7 @@ ideas = {
 			picture = gru_genetics
 			modifier = {
 				monthly_population = -0.02
-				stability_weekly = 0.01
+				stability_weekly = 0.001
 			}
 		}
 		GRU_HEROISM = {
@@ -1505,7 +1510,7 @@ ideas = {
 			allowed = { always = no }
             modifier = {
 				conscription_factor = 0.05
-				stability_weekly = 0.01
+				stability_weekly = 0.001
 				political_power_gain = 0.05
 				encryption_factor = 0.05
 				local_intel_to_enemies = -0.1
@@ -1524,7 +1529,7 @@ ideas = {
 			allowed = { always = no }
             modifier = {
 				political_power_gain = 0.05
-				stability_weekly = 0.01
+				stability_weekly = 0.001
 			}
 		}
 		GRU_WOMAN_WORKER = {
@@ -1702,7 +1707,7 @@ ideas = {
 			allowed = { always = no }
             modifier = {
 				political_power_gain = 0.10
-				stability_weekly = 0.01
+				stability_weekly = 0.001
 				war_support_factor = 0.10
 			}
 		}
@@ -1711,7 +1716,7 @@ ideas = {
 			picture = GRU_PARLIAMENT
 			allowed = { always = no }
             modifier = {
-				stability_weekly = 0.003
+				stability_weekly = 0.0003
 				political_power_gain = 0.05
 				production_factory_max_efficiency_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.05
@@ -1839,20 +1844,20 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VK_COLONY_ONE"}
 			picture = VK_COLONYONE
 			modifier = {
-				stability_weekly_factor = 0.01
+				stability_weekly_factor = 0.001
 				MONTHLY_POPULATION = -0.05
 				political_power_gain = 0.15
-				conscription_factor = -0.02
+				conscription_factor = -0.05
 			}
 		}
 		VK_COLONY_TWO = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VK_COLONY_TWO"}
 			picture = VK_COLONYTWO
 			modifier = {
-				stability_weekly_factor = 0.01
+				stability_weekly_factor = 0.001
 				MONTHLY_POPULATION = 0.05
 				political_power_gain = 0.15
-				conscription_factor = 0.02
+				conscription_factor = 0.05
 				special_forces_cap = 0.05
 				production_lack_of_resource_penalty_factor = -0.05
 				local_resources_factor = 0.05
@@ -1863,10 +1868,10 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VK_COLONY_THREE"}
 			picture = VK_COLONYTHREE
 			modifier = {
-				stability_weekly_factor = 0.01
+				stability_weekly_factor = 0.001
 				MONTHLY_POPULATION = 0.10
 				political_power_gain = 0.25
-				conscription_factor = 0.05
+				conscription_factor = 0.1
 				special_forces_cap = 0.1
 				production_lack_of_resource_penalty_factor = -0.1
 				local_resources_factor = 0.08
@@ -1878,6 +1883,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VK_COLONY_SETTLERS_ONE"}
 			picture = GRU_family
 			modifier = {
+				weekly_manpower = 125
 				MONTHLY_POPULATION = 0.10
 			}
 		}
@@ -1885,7 +1891,8 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VK_COLONY_SETTLERS_TWO"}
 			picture = GRU_family
 			modifier = {
-				MONTHLY_POPULATION = 0.15
+				weekly_manpower = 250
+				MONTHLY_POPULATION = 0.20
 			}
 		}
 		VK_COLONY_INDUSTRY_ONE = {
@@ -1920,7 +1927,7 @@ ideas = {
 			picture = HYP_NATURE_PROTECT
 			modifier = {
 				surrender_limit = 0.25
-				stability_weekly_factor = 0.01
+				stability_weekly_factor = 0.001
 				MONTHLY_POPULATION = 0.10
 				political_power_gain = 0.15
 				conscription_factor = 0.05
@@ -1932,7 +1939,7 @@ ideas = {
 			picture = HYP_NATURE_PROTECT
 			modifier = {
 				surrender_limit = 0.50
-				stability_weekly_factor = 0.01
+				stability_weekly_factor = 0.001
 				MONTHLY_POPULATION = 0.15
 				political_power_gain = 0.25
 				ai_focus_aggressive_factor = 0.5
@@ -1945,7 +1952,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea HYP_NORDMANNEN"}
 			picture = HYP_NATURE_PROTECT
 			modifier = {
-				stability_weekly_factor = 0.01
+				stability_weekly_factor = 0.001
 				political_power_gain = 0.15
 			}
 		}
@@ -1953,7 +1960,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea HYP_NATURE"}
 			picture = HYP_NATURE_PROTECT
 			modifier = {
-				stability_weekly_factor = 0.01
+				stability_weekly_factor = 0.001
 				political_power_gain = 0.05
 				local_intel_to_enemies = -0.2
 				army_org_Factor = 0.05
@@ -2179,7 +2186,7 @@ ideas = {
             modifier = { 
 				production_factory_start_efficiency_factor = 0.05
 				production_speed_buildings_factor = 0.1
-				stability_weekly = 0.005
+				stability_weekly = 0.001
 				political_power_gain = 0.10
 				monthly_population = 0.05
 				party_popularity_stability_factor = 0.05
@@ -2189,7 +2196,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_banned_tobacco"}
 			picture = GRU_banned_tobacco
 			modifier = {
-				stability_weekly_factor = -0.01
+				stability_weekly_factor = -0.001
 				monthly_population = 0.05
 			}
 		}
@@ -2199,7 +2206,7 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			picture = GRU_Basic_animal_rights
 			modifier = { 
-				stability_weekly = 0.003
+				stability_weekly = 0.001
 				political_power_gain = 0.05
 			}
 		}
@@ -2207,7 +2214,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_mandatory_sport"}
 			picture = GRU_mandatory_sport
 			modifier = {
-				stability_weekly_factor = 0.01
+				stability_weekly_factor = 0.001
 				monthly_population = 0.01
 				recruitable_population_factor = 0.01
 			}
@@ -2252,7 +2259,7 @@ ideas = {
 			allowed = { always = no }
             modifier = {
 				political_power_gain = 0.05
-				stability_weekly = 0.01
+				stability_weekly = 0.001
 			}
 		}
 		GRU_OLIGARCHY = {
@@ -2264,7 +2271,7 @@ ideas = {
             modifier = { 
 				production_factory_start_efficiency_factor = 0.1
 				production_speed_buildings_factor = 0.1
-				stability_weekly = 0.01
+				stability_weekly = 0.001
 				political_power_gain = 0.25
 				monthly_population = -0.05
 				party_popularity_stability_factor = -0.01
@@ -2280,7 +2287,7 @@ ideas = {
             modifier = { 
 				production_factory_start_efficiency_factor = 0.05
 				production_speed_buildings_factor = 0.05
-				stability_weekly = 0.01
+				stability_weekly = 0.001
 				political_power_gain = 0.20
 
 			}
@@ -2297,7 +2304,7 @@ ideas = {
 				production_speed_buildings_factor = 0.125
 				production_speed_infrastructure_factor = 0.125
 				production_factory_efficiency_gain_factor = 0.05
-				stability_weekly = 0.01
+				stability_weekly = 0.001
 				political_power_gain = 0.35
 				monthly_population = -0.02
 				consumer_goods_factor = -0.3
@@ -2314,7 +2321,7 @@ ideas = {
 				production_speed_buildings_factor = 0.15
 				production_speed_infrastructure_factor = 0.15
 				production_factory_efficiency_gain_factor = 0.1
-				stability_weekly = 0.01
+				stability_weekly = 0.001
 				political_power_gain = 0.35
 				monthly_population = -0.02
 				consumer_goods_factor = -0.35
@@ -2398,7 +2405,7 @@ ideas = {
 			allowed = { always = no }
             modifier = {
 				political_power_gain = 0.05
-				stability_weekly = 0.01
+				stability_weekly = 0.001
 			}
 		}
 		GRU_FDP_SOCIAL_MARKET_MIRACLE = {
@@ -2424,7 +2431,7 @@ ideas = {
             modifier = { 
 				production_factory_start_efficiency_factor = 0.1
 				production_speed_buildings_factor = 0.10
-				stability_weekly = 0.01
+				stability_weekly = 0.001
 				political_power_gain = 0.05
 				party_popularity_stability_factor = 0.05
 			}
@@ -2442,7 +2449,7 @@ ideas = {
 				production_speed_infrastructure_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.05
 				consumer_goods_factor = -0.15
-				stability_weekly = 0.02
+				stability_weekly = 0.002
 				political_power_gain = 0.05
 				party_popularity_stability_factor = 0.1
 			}
@@ -2487,7 +2494,7 @@ ideas = {
             modifier = { 
 				production_factory_start_efficiency_factor = 0.1
 				production_speed_buildings_factor = 0.1
-				stability_weekly = 0.005
+				stability_weekly = 0.001
 				political_power_gain = 0.10
 				monthly_population = 0.05
 				party_popularity_stability_factor = 0.1
@@ -2505,7 +2512,7 @@ ideas = {
 				production_speed_infrastructure_factor = 0.15
 				production_factory_efficiency_gain_factor = -0.05
 				consumer_goods_factor = -0.2
-				stability_weekly = 0.01
+				stability_weekly = 0.001
 				political_power_gain = 0.05
 				party_popularity_stability_factor = 0.1
 			}
@@ -2516,7 +2523,7 @@ ideas = {
 			allowed = { always = no }
             modifier = {
 				political_power_gain = 0.05
-				stability_weekly = 0.01
+				stability_weekly = 0.001
 			}
 		}
 		
@@ -2590,7 +2597,7 @@ ideas = {
 			modifier = {
 				foreign_subversive_activites = -0.1
 				encryption_factor = 0.3
-				stability_weekly_factor = 0.01
+				stability_weekly_factor = 0.001
 			}
 		}
 		VST_TURANIA_ONE = {
@@ -2598,7 +2605,7 @@ ideas = {
 			picture = VST_TURANIA_ICON
 			modifier = {
 				surrender_limit = 0.10
-				stability_weekly_factor = 0.01
+				stability_weekly_factor = 0.001
 				MONTHLY_POPULATION = 0.05
 				political_power_gain = 0.05
 				conscription_factor = 0.01
@@ -2609,7 +2616,7 @@ ideas = {
 			picture = VST_TURANIA_ICON
 			modifier = {
 				surrender_limit = 0.15
-				stability_weekly_factor = 0.02
+				stability_weekly_factor = 0.002
 				MONTHLY_POPULATION = 0.07
 				political_power_gain = 0.08
 				conscription_factor = 0.02
@@ -2620,7 +2627,7 @@ ideas = {
 			picture = VST_TURANIA_ICON
 			modifier = {
 				surrender_limit = 0.20
-				stability_weekly_factor = 0.02
+				stability_weekly_factor = 0.002
 				MONTHLY_POPULATION = 0.1
 				political_power_gain = 0.10
 				conscription_factor = 0.07
@@ -2644,7 +2651,7 @@ ideas = {
 			picture = VST_TURANIA_OLD
 			modifier = {
 				surrender_limit = 0.02
-				stability_weekly_factor = 0.01
+				stability_weekly_factor = 0.001
 				conscription_factor = 0.01
 			}
 		}
@@ -2653,7 +2660,7 @@ ideas = {
 			picture = VST_TURANIA_OLD
 			modifier = {
 				surrender_limit = 0.05
-				stability_weekly_factor = 0.01
+				stability_weekly_factor = 0.001
 				conscription_factor = 0.02
 			}
 		}
@@ -2664,7 +2671,7 @@ ideas = {
 			picture = VSJ_JUDEA_IDEA
 			modifier = {
 				surrender_limit = 0.40
-				stability_weekly_factor = 0.01
+				stability_weekly_factor = 0.001
 				political_power_gain = 0.05
 				conscription_factor = 0.01
 			}
@@ -2683,7 +2690,7 @@ ideas = {
 			modifier = {
 				MONTHLY_POPULATION = 0.10
 				conscription_factor = 0.09
-				stability_weekly_factor = 0.01
+				stability_weekly_factor = 0.001
 				political_power_gain = 0.15
 			}
 		}
@@ -2768,62 +2775,6 @@ ideas = {
 # Companies
 ##############
 
-industrial_concern = {
-
-
-
-		GRU_krupp = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea krupp2"}
-			allowed = { tag = GRU }
-			picture = krupp
-			traits = { industrial_manufacturer }
-            modifier = {
-				production_speed_arms_factory_factor = 0.20
-				production_speed_industrial_complex_factor = 0.05
-			}
-			research_bonus = {
-				industry = 0.1
-			}
-		}
-
-		GRU_aeg = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea aeg"}
-			allowed = { tag = GRU }
-			traits = { electronics_manufacturer }
-            modifier = {
-				production_speed_radar_station_factor = 0.15
-			}
-			research_bonus = {
-				electronics = 0.1
-			}
-		}
-
-		GRU_braun_company = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea braun_company"}
-			allowed = { tag = GRU }
-			traits = { electronics_manufacturer }
-            modifier = {
-				production_speed_radar_station_factor = 0.15
-			}
-			research_bonus = {
-				electronics = 0.1
-				industry = 0.1
-			}
-		}
-
-		GRU_basf = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea basf"}
-			allowed = { tag = GRU }
-			traits = { chemical_producer }
-            modifier = {
-				production_speed_synthetic_refinery_factor = 0.15
-			}
-			research_bonus = {
-				synth_resources = 0.1
-				industry = 0.1
-			}
-		}
-	}
 
 #### Weapons ####
 	materiel_manufacturer = {
@@ -3092,10 +3043,11 @@ industrial_concern = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea albatros"}
 			allowed = { tag = GRU }
 			traits = {
-				fighter_producer_offense_2
+				siemens_schuckert_air
 			}
 			research_bonus = {
 				air_equipment = 0.1
+				tactical_bomber = 0.1
 			}
 		}
 
@@ -3146,26 +3098,9 @@ industrial_concern = {
 		GRU_siemens_schuckert = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea siemens_schuckert"}
 			allowed = { tag = GRU }
-			visible = {
-				NOT = { has_completed_focus = GER_siemens }
-			}
-			traits = {
-				bomber_producer_defense_2
-			}
-			research_bonus = {
-				air_equipment = 0.1
-			}
-		}
-
-		GRU_siemens_schuckert2 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea siemens_schuckert2"}
 			picture = siemens_schuckert
-			allowed = { tag = GRU }
-			visible = {
-				has_completed_focus = GER_siemens
-			}
 			traits = {
-				bomber_producer_defense_2
+				siemens_schuckert_air
 			}
 			research_bonus = {
 				air_equipment = 0.1
@@ -3177,7 +3112,7 @@ industrial_concern = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea hansa_brandenburg"}
 			allowed = { tag = GRU }
 			traits = {
-				bomber_producer_mass_2
+				heinkel
 			}
 			research_bonus = {
 				air_equipment = 0.1

@@ -148,6 +148,42 @@ FRA_keep_garrison = {
 	}
 }
 
+FRA_focus_on_the_home_front = {
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		OR = {
+			GER = {
+				exists = yes
+				has_capitulated = no
+			}
+			GRU = {
+				exists = yes
+				has_capitulated = no
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = area_priority
+		id = france
+		value = 300
+	}
+	ai_strategy = {
+		type = area_priority
+		id = germany
+		value = 100
+	}
+	ai_strategy = {
+		type = area_priority
+		id = benelux
+		value = 100
+	}
+}
+
 FRA_focus_on_germany = {
 	allowed = {
 		original_tag = FRA

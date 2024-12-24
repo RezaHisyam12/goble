@@ -266,15 +266,13 @@ ENG_produce_synthetic_oil = {
 	}
 	enable = {
 		date > 1939.1.1
-		has_tech = synth_oil_experiments
-		synthetic_refinery < 20
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 15
+		value = 8
 	}
 }
 
@@ -516,56 +514,44 @@ ENG_scapa_flow_naval_base = {
 	}
 }
 
-ENG_flanders_pivot = {
+ENG_careful_around_the_channel = {
 	allowed = {
 		original_tag = ENG
 	}
 	enable = {
-		OR = {
-			country_exists = BEL
-			country_exists = FLN
+		has_war = yes
+		any_enemy_country = {
+			NOT = {
+				ships_in_area = {
+					type = screen_ship
+					area = 18
+					size > 14
+				}
+				ships_in_area = {
+					type = capital_ship
+					area = 18
+					size > 1
+				}
+				ships_in_area = {
+					type = submarine
+					area = 18
+					size > 23
+				}
+				ships_in_area = {
+					type = carrier
+					area = 18
+					size > 1
+				}
+			}
 		}
+
 	}
-	abort = {
-		NOT = {
-			country_exists = BEL
-			country_exists = FLN
-		}
-	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = antagonize
-		id = "BEL"
-		value = 200
-	}
-	ai_strategy = {
-		type = antagonize
-		id = "FLN"
-		value = 200
-	}
-	
-	ai_strategy = {
-		type = front_control
-
-		tag = GER
-
-		ratio = 0.40
-
-		priority = 100
-		ordertype = front
-		execution_type = careful
-	}
-
-	ai_strategy = {
-		type = front_control
-
-		tag = GRU
-
-		ratio = 0.40
-
-		priority = 100
-		ordertype = front
-		execution_type = careful
+		type = naval_avoid_region
+		id = 18 #English Channel
+		value = 75
 	}
 }
 
@@ -806,6 +792,8 @@ ENG_invade_ireland = {
 	}
 	enable = {
 		has_war_with = IRE
+		IRE = { has_capitulated = no }
+		NOT = { surrender_progress > 0.01 }
 	}
 	abort_when_not_enabled = yes
 
@@ -832,6 +820,8 @@ ENG_invade_iceland = {
 	}
 	enable = {
 		has_war_with = ICE
+		ICE = { has_capitulated = no }
+		NOT = { surrender_progress > 0.01 }
 		OR = {
 			NOT = { has_war_with = IRE }
 			IRE = { has_capitulated = yes }
@@ -862,6 +852,8 @@ ENG_invade_canada = {
 	}
 	enable = {
 		has_war_with = CAN
+		CAN = { has_capitulated = no }
+		NOT = { surrender_progress > 0.01 }
 		OR = {
 			NOT = { has_war_with = IRE }
 			IRE = { has_capitulated = yes }

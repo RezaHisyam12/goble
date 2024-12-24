@@ -12421,7 +12421,6 @@ GRU_lebensraum_decisions = {
 				any_allied_country = {
 					is_neighbor_of = FROM
 				}
-			NOT = { is_in_faction_with = RUS }
 			}
 		}
 		visible = {
@@ -12475,6 +12474,10 @@ GRU_lebensraum_decisions = {
 			modifier = {
 				factor = 0
 				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				is_in_faction_with = RUS
 			}
 			modifier = {
 				factor = 0

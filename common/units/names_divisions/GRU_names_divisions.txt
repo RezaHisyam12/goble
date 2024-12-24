@@ -935,6 +935,33 @@ GRU_SS_01 =
 	}
 }
 
+GRU_RR_Werwolf = {
+	name = "Volksdeutsche «Werwolf»"
+
+	for_countries = { GRU }
+
+	can_use = { has_completed_focus = GRU_volkssturm }
+
+	division_types = { "RR_Werwolf" }
+
+	fallback_name = "%d. Volksdeutsche «Werwolf»"
+
+	# Names with numbers (only one number per entry)
+	ordered = {
+		1 = { "%d. Volksdeutsche «Werwolf»" }
+		2 = { "%d. Volksdeutsche «Werwolf»" }
+		3 = { "%d. Volksdeutsche «Werwolf»" }
+		4 = { "%d. Volksdeutsche «Werwolf»" }
+		5 = { "%d. Volksdeutsche «Werwolf»" }
+		6 = { "%d. Volksdeutsche «Werwolf»" }
+		7 = { "%d. Volksdeutsche «Werwolf»" }
+		8 = { "%d. Volksdeutsche «Werwolf»" }
+		9 = { "%d. Volksdeutsche «Werwolf»" }
+		10 = { "%d. Volksdeutsche «Werwolf»" }
+
+	}
+}
+
 GRU_MILINF_01 = {
 	name = "Militia Divisions"
 

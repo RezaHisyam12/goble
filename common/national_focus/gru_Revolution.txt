@@ -246,6 +246,9 @@ shared_focus = {
 		x = 2
 		y = 1
 		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_staatsfeind_nr1"
 		64 = {
@@ -315,6 +318,9 @@ shared_focus = {
 		x = 0
 		y = 3
 		cost = 1
+		ai_will_do = {
+			factor = 20
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_germany_reborn"
 			add_ideas = GRU_new_germany
@@ -506,6 +512,9 @@ shared_focus = {
 		x = 0
 		y = 1
 		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_form_the_guard"
 			add_ideas = GRU_guard
@@ -534,6 +543,9 @@ shared_focus = {
 		x = -2
 		y = 1
 		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_kulturkampf"
 			add_ideas = GRU_blackbook
@@ -618,6 +630,9 @@ shared_focus = {
 		x = -6
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
 		offset = {
 			x = -1
 			y = 0
@@ -737,6 +752,9 @@ shared_focus = {
 		x = -6
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
 		offset = {
 			x = -1
 			y = 0
@@ -1100,7 +1118,7 @@ shared_focus = {
 			hidden_effect = {
 
 				division_template = {
-					name = "Volksdeutsche «Werwolf»"
+					name = "Volkssturm"
 					division_names_group = GRU_RR_Werwolf
 					regiments = {
 						RR_Werwolf = { x = 0 y = 0 }
@@ -1114,10 +1132,9 @@ shared_focus = {
 
 						RR_Werwolf = { x = 2 y = 0 }
 						RR_Werwolf = { x = 2 y = 1 }
-
-						RR_Werwolf = { x = 3 y = 0 }
+						RR_Werwolf = { x = 2 y = 2 }
 	
-						artillery_brigade = { x = 2 y = 2 }
+						artillery_brigade = { x = 3 y = 0 }
 					}
 					support = {
 						mot_recon = { x = 0 y = 0 }
@@ -1201,6 +1218,9 @@ shared_focus = {
 		x = 1
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_anhaltelager"
 			add_ideas = GRU_lager
@@ -1221,6 +1241,9 @@ shared_focus = {
 		x = -1
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_night_of_the"
 					add_political_power = 50
@@ -1851,6 +1874,9 @@ shared_focus = {
 		x = -5
 		y = 3
 		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
 		offset = {
 			x = -2
 			y = 0
@@ -1884,6 +1910,9 @@ shared_focus = {
 		x = -7
 		y = 3
 		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
 		offset = {
 			x = -2
 			y = 0
@@ -3104,6 +3133,13 @@ shared_focus = {
 		x = 4
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_nationales_volksheer"
 					add_doctrine_cost_reduction = {
@@ -3131,6 +3167,24 @@ shared_focus = {
 		x = -4
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				surrender_progress > 0
+			}
+		}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_nationale_volksmarine"
 					add_doctrine_cost_reduction = {
@@ -3159,6 +3213,13 @@ shared_focus = {
 		x = 0
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_nationale_luftwaffe"
 					add_doctrine_cost_reduction = {
@@ -3259,6 +3320,13 @@ shared_focus = {
 		x = -1
 		y = 3
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_bomber_focus"
 			add_ideas = GRU_bomber
@@ -3276,6 +3344,13 @@ shared_focus = {
 		x = 1
 		y = 3
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_fighter_focus"
 			add_ideas = GRU_fighter
@@ -3293,6 +3368,13 @@ shared_focus = {
 		x = -5
 		y = 3
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_carrier_focus"
 			add_ideas = GRU_carrier
@@ -3310,6 +3392,13 @@ shared_focus = {
 		x = -3
 		y = 3
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_battleship_focus"
 			add_ideas = GRU_battleship
@@ -3369,6 +3458,13 @@ shared_focus = {
 		x = -5
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_submarine_focus"
 			if={
@@ -3403,6 +3499,13 @@ shared_focus = {
 		x = -3
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_submarine_focus"
 			if={
@@ -3436,6 +3539,13 @@ shared_focus = {
 		x = 4
 		y = 5
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_oknvh"
 			if={
@@ -3507,6 +3617,13 @@ shared_focus = {
 		x = -4
 		y = 5
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_submarine_focus"
 			if={
@@ -3554,6 +3671,13 @@ shared_focus = {
 		x = -1
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_naval_support_focus"
 			if={
@@ -3587,6 +3711,13 @@ shared_focus = {
 		x = 1
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_ground_support_focus"
 			if={
@@ -3620,6 +3751,13 @@ shared_focus = {
 		x = 0
 		y = 5
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_oknlw"
 			if={
@@ -6596,6 +6734,10 @@ shared_focus = {
 			modifier = {
 				factor = 0
 				has_country_flag = imminent_war
+			}
+			modifier = {
+				factor = 0
+				date < 1941.6.1
 			}
 		}
 		will_lead_to_war_with = FRA

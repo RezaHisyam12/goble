@@ -8644,8 +8644,20 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe"
 			custom_effect_tooltip = unlocks_decision
 			custom_effect_tooltip = AUS_Russia_tt
+			custom_effect_tooltip = tooltip_white_line
+
+			every_character = {
+				limit = { has_trait = winter_specialist }
+				add_max_trait = 1
+				add_unit_leader_trait = winter_expert
+			}
+
+			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = tech_arctic_commando_effect
 			hidden_effect = { set_technology = { tech_arctic_commando = 1 } }
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = tech_ski_infantry_effect
+			hidden_effect = { set_technology = { tech_ski_infantry = 1 } }
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
@@ -8670,6 +8682,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_Attack_Europe"
 			custom_effect_tooltip = unlocks_decision
 			custom_effect_tooltip = AUS_Russia_tt
+			custom_effect_tooltip = tooltip_white_line
 			country_event = aushre.8798
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }

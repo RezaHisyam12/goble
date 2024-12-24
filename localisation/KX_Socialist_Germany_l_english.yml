@@ -989,15 +989,15 @@ GRU_COMMUNAL_HOUSING:0 "Communal Housing"
 GRU_SUCCDUM:0 "Socialist Democracy"
 
 
-VK_COLONY_ONE:0 "Early colonization"
-VK_COLONY_TWO:0 "Ongoing colonization"
-VK_COLONY_THREE:0 "Fully colonized"
+VK_COLONY_ONE:0 "Early Colonization"
+VK_COLONY_TWO:0 "Ongoing Colonization"
+VK_COLONY_THREE:0 "Fully Colonized"
 
-VK_COLONY_SETTLERS_ONE:0 "Germanic immigration"
-VK_COLONY_SETTLERS_TWO:0 "Germanic mass immigration"
+VK_COLONY_SETTLERS_ONE:0 "Germanic Immigration"
+VK_COLONY_SETTLERS_TWO:0 "Germanic Mass Immigration"
 
-VK_COLONY_INDUSTRY_ONE:0 "German Industrial model"
-VK_COLONY_INDUSTRY_TWO:0 "Slavery based Industry"
+VK_COLONY_INDUSTRY_ONE:0 "German Industrial Model"
+VK_COLONY_INDUSTRY_TWO:0 "Slavery Based Industry"
 
 GRU_FUTHARK:0 "Germanic Culture Enforcement"
 GRU_FUTHARK_desc:0 "The Polish and Bohemian cultures has been declared a foreign hostile influence on Germanic culture and is to be phased out by the Germanic way of life."
@@ -1160,6 +1160,7 @@ GRU_gothaer_waggonfabrik:0 "VEB Gothaer Waggonfabrik"
 GRU_hansa_brandenburg:0 "VEB Hansa-Brandenburg"
 GRU_henschel:0 "VEB Henschel"
 GRU_junkers:0 "VEB Junkers"
+GRU_zeppelin:0 "Luftschiffbau Zeppelin"
 GRU_luftschiffbau_zeppelin:0 "VEB Luftschiffbau Zeppelin"
 GRU_bfw:0 "VEB Bayerische Flugzeugwerke"
 GRU_siemens_schuckert:0 "VEB Siemens-Schuckert"
@@ -4176,7 +4177,7 @@ rmgoebbnews.8.d:0 "Despite the rabid anti-Semitism of Goebbels and his party, th
 rmgoebbnews.8.a: "That's the way to go!"
 rmgoebbnews.8.b: "Germany has left the community of civilized nations"
 
-GRU_recruit_6_units:0 "\n\n\n£goebb_volkssturm_2£\n\n\n\nThe £unit_level_5_texticon£ elite §g«Werwolf»§! division of £mobilize_volkssturm£ §gVolkssturm§! units will be £manpower_texticon deployed.\n\nRecruitment decisions for §LVolksDeutsche§! units will become £increase_texticon£ §7available§!\n§P« --------------------------------------------------------- »§!\n\n"
+GRU_recruit_6_units:0 "\n\n\n£goebb_volkssturm_2£\n\n\n\nThe £unit_level_5_texticon£ elite §g«Werwolf»§! division of £mobilize_volkssturm£ §gVolkssturm§! units will be £manpower_texticon deployed.\n\nRecruitment decisions for §LVolkssturm§! units will become £increase_texticon£ §7available§!\n§P« --------------------------------------------------------- »§!\n\n"
 
 rotermorgenrussiandoom.3.a:0 "The end of an entire era..."
 rotermorgenrussiandoom.3.b:0 "The Kaiser could only dream of such a..."
@@ -4199,7 +4200,7 @@ RR_3_medium_armor_long:0 "Tank Battalion RR"
 RR_1_motorized:0 "Panzer-Grenadier Battalion RR"
 RR_1_motorized_long:0 "Panzer-Grenadier Battalion RR"
 RR_Werwolf:0 "Volkssturm"
-RR_Werwolf_long:0 "Volksdeutsche"
+RR_Werwolf_long:0 "Volkssturm"
 RR_Werwolf_tech:0 "Volkssturm"
 RR_Werwolf_tech_effect:0 "Enables §Y$Volkssturm$§! battalions"
 

@@ -377,8 +377,8 @@ ideas = {
 				army_core_defence_factor = 0.05
 				army_armor_attack_factor = 0.05
 				army_armor_defence_factor = 0.05
-				mechanized_attack_factor = 0.05
-				mechanized_defence_factor = 0.05
+				modifier_army_sub_unit_category_mobile_infantry_attack_factor = 0.05
+				modifier_army_sub_unit_category_mobile_infantry_defence_factor = 0.05
 			}
 		}
 		AUS_modern_army_von_hubicki_2 = {
@@ -391,8 +391,8 @@ ideas = {
 				army_core_defence_factor = 0.05
 				army_armor_attack_factor = 0.05
 				army_armor_defence_factor = 0.05
-				mechanized_attack_factor = 0.05
-				mechanized_defence_factor = 0.05
+				modifier_army_sub_unit_category_mobile_infantry_attack_factor = 0.05
+				modifier_army_sub_unit_category_mobile_infantry_defence_factor = 0.05
 				army_org_factor = 0.05
 			}
 		}
@@ -406,8 +406,8 @@ ideas = {
 				army_core_defence_factor = 0.05
 				army_armor_attack_factor = 0.1
 				army_armor_defence_factor = 0.1
-				mechanized_attack_factor = 0.1
-				mechanized_defence_factor = 0.1
+				modifier_army_sub_unit_category_mobile_infantry_attack_factor = 0.1
+				modifier_army_sub_unit_category_mobile_infantry_defence_factor = 0.1
 				army_org_factor = 0.05
 			}
 		}
@@ -633,8 +633,8 @@ ideas = {
 				army_armor_attack_factor = 0.1
 				army_armor_defence_factor = 0.1
 				army_armor_speed_factor = 0.1
-				mechanized_attack_factor = 0.1
-				mechanized_defence_factor = 0.1
+				modifier_army_sub_unit_category_mobile_infantry_attack_factor = 0.1
+				modifier_army_sub_unit_category_mobile_infantry_defence_factor = 0.1
 				army_org_factor = 0.1
 				planning_speed = 0.20
 				max_planning = 0.20

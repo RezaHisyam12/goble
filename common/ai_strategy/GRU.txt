@@ -21,6 +21,17 @@ GRU_hates_socialists = {
 		id = GRU
 		value = 300
 	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		target = market_access_rights
+		id = GRU
+		value = -1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = GRU
+		value = -1000
+	}
 }
 GRU_hates_japan = {
 	reversed = yes
@@ -43,6 +54,12 @@ GRU_hates_japan = {
 		type = antagonize
 		id = JAP
 		value = 300
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		target = market_access_rights
+		id = GRU
+		value = -1000
 	}
 }
 stahlpakt_hates_russia = {
@@ -68,6 +85,12 @@ stahlpakt_hates_russia = {
 		type = antagonize
 		id = RUS
 		value = 300
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		target = market_access_rights
+		id = GRU
+		value = -1000
 	}
 }
 
@@ -300,6 +323,11 @@ GRU_eyes_on_france = {
 		id = FRA
 		value = 100
 	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = FRA
+		value = 50
+	}
 }
 
 GRU_eyes_on_austria = {
@@ -328,7 +356,6 @@ GRU_eyes_on_netherlands = {
 	allowed = {
 		original_tag = GRU
 		has_socialist_government = no
-
 	}
 	enable = {
 		GRU = {
@@ -339,6 +366,7 @@ GRU_eyes_on_netherlands = {
 		HOL = {
 			has_socialist_government = yes
 			has_capitulated = no
+			is_in_faction_with = FRA
 		}
 	}
 	abort_when_not_enabled = yes
@@ -407,6 +435,7 @@ GRU_eyes_on_belgium = {
 		BEL = {
 			has_socialist_government = yes
 			has_capitulated = no
+			is_in_faction_with = FRA
 		}
 	}
 	abort_when_not_enabled = yes
@@ -455,6 +484,7 @@ GRU_eyes_on_fiume = {
 		FIU = {
 			has_capitulated = no
 		}
+		NOT = { has_war_with = FRA }
 	}
 	abort_when_not_enabled = yes
 
