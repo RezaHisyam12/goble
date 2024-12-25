@@ -446,7 +446,251 @@ RUS_Foreign_Policy_decisions = {
 			}
 		}
 	}
+}
 
+RUS_MIO_decisions = {
+	### Mine Pilled decision unlocked through Dalzavod MIO
+	RUS_dalzavod_mining_baltic_sea = {
+		icon = GFX_decision_generic_naval_mine
+		allowed = { always = no }
+		available = {
+			owns_state = 195
+			has_war = yes
+		}
+		visible = {
+			mio:RUS_dalzavod_organisation = {
+				is_mio_trait_completed = dalzavod_upgrade_3
+			}
+		}
 
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP25
+
+		days_remove = 60
+
+		ai_will_do = { base = 5 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete RUS_dalzavod_mining_baltic_sea"
+			hidden_effect = {
+				add_command_power = -25
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_mines = {
+							region = 272
+							amount = 900
+						}
+					}
+				}
+				add_mines = {
+					region = 272
+					amount = RUS_dalzavod_mines_number
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_mines = {
+							region = 138
+							amount = 900
+						}
+					}
+				}
+				add_mines = {
+					region = 138
+					amount = RUS_dalzavod_mines_number
+				}
+			}
+			else = {
+				add_mines = {
+					region = 9
+					amount = RUS_dalzavod_mines_number
+				}
+			}
+			if = {
+				limit = { NOT = { has_variable = RUS_dalzavod_total_mines_launched } }
+				set_variable = { RUS_dalzavod_total_mines_launched = 0 }
+			}
+			add_to_variable = { RUS_dalzavod_total_mines_launched = RUS_dalzavod_mines_number }
+		}
+	}
+	RUS_dalzavod_mining_black_sea = {
+		icon = GFX_decision_generic_naval_mine
+		allowed = { always = no }
+		available = {
+			owns_state = 218
+			has_war = yes
+		}
+		visible = {
+			mio:RUS_dalzavod_organisation = {
+				is_mio_trait_completed = dalzavod_upgrade_1_3
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP25
+
+		days_remove = 60
+
+		ai_will_do = { base = 5 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete RUS_dalzavod_mining_black_sea"
+			hidden_effect = {
+				add_command_power = -25
+			}
+			add_mines = {
+				region = 30
+				amount = RUS_dalzavod_mines_number
+			}
+			if = {
+				limit = { NOT = { has_variable = RUS_dalzavod_total_mines_launched } }
+				set_variable = { RUS_dalzavod_total_mines_launched = 0 }
+			}
+			add_to_variable = { RUS_dalzavod_total_mines_launched = RUS_dalzavod_mines_number }
+		}
+	}
+	RUS_dalzavod_mining_far_east = {
+		icon = GFX_decision_generic_naval_mine
+		allowed = { always = no }
+		available = {
+			owns_state = 408
+			has_war = yes
+		}
+		visible = {
+			mio:RUS_dalzavod_organisation = {
+				is_mio_trait_completed = dalzavod_upgrade_2_2
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP25
+
+		days_remove = 60
+
+		ai_will_do = { base = 5 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete RUS_dalzavod_mining_far_east"
+			hidden_effect = {
+				add_command_power = -25
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_mines = {
+							region = 79
+							amount = 900
+						}
+					}
+				}
+				add_mines = {
+					region = 79
+					amount = RUS_dalzavod_mines_number
+				}
+			}
+			else = {
+				add_mines = {
+					region = 87
+					amount = RUS_dalzavod_mines_number
+				}
+			}
+			if = {
+				limit = { NOT = { has_variable = RUS_dalzavod_total_mines_launched } }
+				set_variable = { RUS_dalzavod_total_mines_launched = 0 }
+			}
+			add_to_variable = { RUS_dalzavod_total_mines_launched = RUS_dalzavod_mines_number }
+		}
+	}
+	RUS_dalzavod_mining_barents = {
+		icon = GFX_decision_generic_naval_mine
+		allowed = { always = no }
+		available = {
+			owns_state = 213
+			has_war = yes
+		}
+		visible = {
+			mio:RUS_dalzavod_organisation = {
+				is_mio_trait_completed = dalzavod_upgrade_3_3
+			}
+		}
+
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_CP25
+
+		days_remove = 60
+
+		ai_will_do = { base = 5 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete RUS_dalzavod_mining_barents"
+			hidden_effect = {
+				add_command_power = -25
+			}
+			add_mines = {
+				region = 46
+				amount = RUS_dalzavod_mines_number
+			}
+			if = {
+				limit = { NOT = { has_variable = RUS_dalzavod_total_mines_launched } }
+				set_variable = { RUS_dalzavod_total_mines_launched = 0 }
+			}
+			add_to_variable = { RUS_dalzavod_total_mines_launched = RUS_dalzavod_mines_number }
+		}
+	}
+	### TOZ Medal decision ###
+	RUS_TOZ_Medals = {
+		icon = GFX_decision_CHL_carabineros
+		name = RUS_TOZ_Medals
+		allowed = { always = no }
+		available = { owns_state = 223 }
+		visible = { RUS_has_one_TOZ_medal_trait = yes }
+
+		custom_cost_trigger = {
+			mio:RUS_toz_organisation = {
+				check_variable = { funds > ROOT.TOZ_Required_Funds?500 }
+			}
+		}
+		custom_cost_text = RUS_TOZ_Funds_Medals_Requirement
+
+		days_remove = 10
+
+		ai_will_do = { base = 5 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete RUS_TOZ_Medals"
+			hidden_effect = {
+				set_temp_variable = { funds_change = TOZ_Required_Funds?500 }
+				multiply_temp_variable = { funds_change = -1 }
+				mio:RUS_toz_organisation = { add_mio_funds = var:funds_change }
+			}
+			RUS_TOZ_Hand_Out_Medals = yes
+		}
+	}
+	RUS_AV_Repeatable_Random_Funds = {
+		icon = GFX_decision_generic_research
+		name = RUS_AV_Repeatable_Random_Funds
+		allowed = { always = no }
+
+		custom_cost_trigger = {
+			mio:RUS_av_organisation = {
+				check_variable = { funds > 249 }
+			}
+		}
+		custom_cost_text = RUS_AV_Funds_Requirement
+
+		days_remove = 10
+
+		ai_will_do = { base = 1000 }
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete RUS_AV_Repeatable_Random_Funds"
+			mio:RUS_av_organisation = { RUS_AV_set_random_decaying_funds_bonus = yes }
+			}
+		}
 }
 

@@ -1,0 +1,8 @@
+RUS_MIO_decisions = {
+	icon = GFX_decision_wrenches
+	priority = 50
+	allowed = { is_russian_tag = yes }
+	visible = {
+		has_dlc_aat = yes
+	}
+}

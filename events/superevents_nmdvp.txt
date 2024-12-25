@@ -249,3 +249,146 @@ country_event = { #CIVIL WAR
 		}
 	}
 }
+
+country_event = { #Second Weltkrieg
+	id = nmdvpsuper.4
+	title = nmdvpsuper.4.t
+	desc = nmdvpsuper.4.d
+	picture = GFX_report_event_diplomatic_message
+
+	is_triggered_only = no
+	
+	trigger = {
+		GRU = { has_war_with = FRA }
+		NOT = { has_global_flag = KX_superevent_total_off }
+	}
+
+	fire_only_once = yes
+	
+	hidden = yes
+
+	option = {
+		name = nmdvpsuper.4.a
+
+		set_global_flag = Super_Event_Visible
+		set_global_flag = GER_Second_Weltkrieg
+		every_country = {
+			limit = {
+				NOT = {
+					is_ai = yes
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			scoped_sound_effect = "superev_weltkrieg"
+		}
+	}
+}
+
+country_event = {		#Russia Declares War on Germany
+	id = nmdvpsuper.5
+	title = nmdvpsuper.5.t
+	desc = nmdvpsuper.5.d
+	picture = GFX_report_event_diplomatic_message
+
+	is_triggered_only = no
+	
+	trigger = {
+		RUS = { has_offensive_war_with = GRU }		
+		NOT = { has_global_flag = KX_superevent_total_off }
+	}
+
+	fire_only_once = yes
+	
+	hidden = yes
+
+	option = {
+		name = nmdvpsuper.5.a
+
+		set_global_flag = Super_Event_Visible
+		set_global_flag = RUS_offensive_entry
+		every_country = {
+			limit = {
+				NOT = {
+					is_ai = yes
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			scoped_sound_effect = "superev_german_attacks_russia"
+		}
+	}
+}
+
+country_event = {		#Russia Declares War
+	id = nmdvpsuper.6
+	title = nmdvpsuper.6.t
+	desc = nmdvpsuper.6.d
+	picture = GFX_report_event_diplomatic_message
+
+	is_triggered_only = no
+	
+	trigger = {
+		RUS = { has_defensive_war_with = GRU }
+		NOT = { has_global_flag = KX_superevent_total_off }
+	}
+
+	fire_only_once = yes
+	
+	hidden = yes
+
+	option = {
+		name = nmdvpsuper.6.a
+
+		set_global_flag = Super_Event_Visible
+		set_global_flag = RUS_entry
+		every_country = {
+			limit = {
+				NOT = {
+					is_ai = yes
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			scoped_sound_effect = "superev_russia"
+		}
+	}
+}
+
+country_event = {		#Austria Declares War
+	id = nmdvpsuper.7
+	title = nmdvpsuper.7.t
+	desc = nmdvpsuper.7.d
+	picture = GFX_report_event_diplomatic_message
+
+	is_triggered_only = no
+	
+	trigger = {
+		GRU = {
+			AND = {
+			has_war_with = AUS 
+			is_subject = no
+			}
+		}
+		NOT = { has_global_flag = KX_superevent_total_off }
+	}
+
+	fire_only_once = yes
+	
+	hidden = yes
+
+	option = {
+		name = nmdvpsuper.7.a
+
+		set_global_flag = Super_Event_Visible
+		set_global_flag = GRU_entry
+		every_country = {
+			limit = {
+				NOT = {
+					is_ai = yes
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			scoped_sound_effect = "superev_austria"
+		}
+	}
+}
+
+

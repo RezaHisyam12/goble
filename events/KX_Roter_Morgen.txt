@@ -7722,4 +7722,57 @@ news_event = {
 	}
 }
 
+news_event = {
+	id = rmgoebbnews.9
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rmgoebbnews.9" }
+	title = rmgoebbnews.9.t
+	picture = GFX_news_event_ger_civil_war
+
+	desc = {
+		text = rmgoebbnews.9.d
+		trigger = {
+			GRU = {
+				has_war_with = FRA
+			}
+		}
+	}
+
+	major = yes
+	is_triggered_only = yes
+
+	trigger = {
+		wants_world_news = yes
+	}
+
+	show_major = {
+		OR = {
+			regional_europe_news = yes
+			regional_asia_news = yes
+			regional_middle_east_news = yes
+		}
+	}
+
+	option = {
+		name = rmgoebbnews.9.a
+		trigger = {
+			original_tag = GRU
+		}
+	}
+	option = {
+		name = rmgoebbnews.9.b
+		trigger = {
+			original_tag = FRA
+		}
+	}
+	option = {
+		name = rmgoebbnews.9.c
+		trigger = {
+			NOT = {
+				original_tag = GRU
+				original_tag = FRA
+			}
+		}
+	}
+}
+
 

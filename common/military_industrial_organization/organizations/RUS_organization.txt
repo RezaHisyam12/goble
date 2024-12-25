@@ -11472,30 +11472,7 @@ RUS_vpoz_organisation = {
 		is_russian_tag = yes
 	}
 	available = {
-		if = {
-			limit = { FROM = { original_tag = RUS } }
-			FROM = {
-				has_completed_focus = RUS_military_production
-				owns_state = 400 #Vyatka
-			}
-		}
-		else_if = {
-			limit = { FROM = { original_tag = FER } }
-			FROM = {
-				OR = {
-					has_completed_focus = FER_masters_over_siberia
-					has_completed_focus = FER_return_to_kremlin
-				}
-				owns_state = 400 #Vyatka
-			}
-		}
-		else_if = {
-			limit = { FROM = { original_tag = RSA } }
-			FROM = {
-				has_completed_focus = RUS_secret_weapons_development
-				owns_state = 400 #Vyatka
-			}
-		}
+		owns_state = 400 #Vyatka
 	}
 
 	equipment_type = {

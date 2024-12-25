@@ -170,7 +170,7 @@ ideas = {
 			picture = LIT_crown_4
 			name = RUS_Royal_Constitution_idea
 			modifier = {
-				stability_weekly_factor = 0.01
+				stability_weekly = 0.01
 				war_support_weekly = 0.001
 				political_power_gain = 0.1
 				surrender_limit = 0.2
@@ -451,7 +451,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea toz" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 223 } #Tula
-			visible = { NOT = { has_country_flag = improve_toz } }
+			visible = { owns_state = 223 }
 			traits = { toz_RUS }
 			ai_will_do = { base = 1 }
 		}
@@ -459,14 +459,14 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea toz_improved" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 223 } #Tula
-			visible = { has_country_flag = improve_toz }
+			visible = { owns_state = 223 }
 			traits = { toz_improved_RUS }
 			ai_will_do = { base = 1 }
 		}
 		vpoz = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea vpoz" }
 			allowed = { is_russian_tag = yes }
-			visible = { has_completed_focus = RUS_desperate_measures }
+			visible = { owns_state = 400 }
 			available = { owns_state = 400 } #Vyatka
 			traits = { vpoz_RUS }
 			research_bonus = {
@@ -478,7 +478,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea imz" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 399 } #Izhevsk
-			visible = { NOT = { has_country_flag = improve_imz } }
+			visible = { owns_state = 399 }
 			traits = { imz_RUS }
 			ai_will_do = { base = 1 }
 		}
@@ -486,7 +486,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea imz_improved" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 399 } #Izhevsk
-			visible = { has_country_flag = improve_imz }
+			visible = { owns_state = 399 }
 			traits = { imz_improved_RUS }
 			ai_will_do = { base = 1 }
 		}
@@ -499,7 +499,12 @@ ideas = {
 					owns_state = 195 #Petrograd
 				}
 			}
-			visible = { NOT = { has_country_flag = improve_imz } }
+			visible = {
+				OR = {
+					owns_state = 253 #Vladimir
+					owns_state = 195 #Petrograd
+				}
+			}
 			traits = { soz_RUS }
 			ai_will_do = { base = 1 }
 		}
@@ -512,7 +517,12 @@ ideas = {
 					owns_state = 195 #Petrograd
 				}
 			}
-			visible = { has_country_flag = improve_soz }
+			visible = {
+				OR = {
+					owns_state = 253 #Vladimir
+					owns_state = 195 #Petrograd
+				}
+			}
 			traits = { soz_improved_RUS }
 			ai_will_do = { base = 1 }
 		}
@@ -560,9 +570,7 @@ ideas = {
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 219 } #Moscow
 			traits = { amo_RUS }
-			visible = {
-				NOT = { has_country_flag = improve_amo }
-			}
+			visible = { owns_state = 219 }
 			research_bonus = {
 				motorized_equipment = 0.1
 			}
@@ -576,9 +584,7 @@ ideas = {
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 219 } #Moscow
 			traits = { amo_improved_RUS }
-			visible = {
-				has_country_flag = improve_amo
-			}
+			visible = { owns_state = 219 }
 			research_bonus = {
 				motorized_equipment = 0.1
 			}
@@ -591,7 +597,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea naz" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 252 } #Nizhny Novgorod
-			visible = { NOT = { has_completed_focus = RUS_nizhegorodsky_avtomobilny_focus } }
+			visible = { owns_state = 252 }
 			traits = { naz_RUS }
 			research_bonus = {
 				motorized_equipment = 0.1
@@ -605,7 +611,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea naz_improved" }
 			picture = naz
 			allowed = { is_russian_tag = yes }
-			visible = { has_completed_focus = RUS_nizhegorodsky_avtomobilny_focus }
+			visible = { owns_state = 252 }
 			cost = 75
 			available = { owns_state = 252 } #Nizhny Novgorod
 			traits = { naz_improved_RUS }
@@ -621,7 +627,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea laz" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 248 } #Yaroslav
-			visible = { NOT = { has_completed_focus = RUS_update_equipment } }
+			visible = { owns_state = 248 }
 			traits = { laz_RUS }
 			research_bonus = {
 				motorized_equipment = 0.1
@@ -635,7 +641,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea laz_improved" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 248 } #Yaroslav
-			visible = { has_completed_focus = RUS_update_equipment }
+			visible = { owns_state = 248 }
 			traits = { laz_improved_RUS }
 			research_bonus = {
 				motorized_equipment = 0.1
@@ -654,7 +660,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea sormovo" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 252 } #Nizhny Novgorod
-			visible = { NOT = { has_country_flag = upgrade_sormovo } }
+			visible = { owns_state = 252 }
 			traits = { sormovo_RUS }
 			research_bonus = {
 				armor = 0.1
@@ -668,7 +674,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea sormovo_improved" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 252 } #Nizhny Novgorod
-			visible = { has_country_flag = upgrade_sormovo }
+			visible = { owns_state = 252 }
 			traits = { sormovo_improved_RUS }
 			research_bonus = {
 				armor = 0.1
@@ -695,9 +701,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea putilovets" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 195 } #Petrograd
-			visible = {
-				NOT = { has_country_flag = putilovets_improved }
-			}
+			visible = { owns_state = 195 }
 			traits = { putilovets_RUS }
 			research_bonus = {
 				armor = 0.1
@@ -708,9 +712,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea putilovets_improved" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 195 } #Petrograd
-			visible = {
-				has_country_flag = putilovets_improved
-			}
+			visible = { owns_state = 195 }
 			traits = { putilovets_improved_RUS }
 			research_bonus = {
 				armor = 0.1
@@ -720,7 +722,7 @@ ideas = {
 		okmo_kr = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea okmo_kr" }
 			allowed = { is_russian_tag = yes }
-			visible = { has_completed_focus = RUS_motorisation }
+			visible = { owns_state = 219 }
 			traits = { okmo_RUS }
 			research_bonus = {
 				armor = 0.15
@@ -730,7 +732,7 @@ ideas = {
 		tstz = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea tstz" }
 			allowed = { is_russian_tag = yes }
-			visible = { has_country_flag = unlock_tstz }
+			visible = { owns_state = 217 }
 			available = { owns_state = 217 } #Tsaritsyn
 			traits = { tstz_RUS }
 			research_bonus = {
@@ -742,7 +744,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea uztm" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 653 } #Yekaterinburg
-			visible = { has_country_flag = unlock_uztm }
+			visible = { owns_state = 653 }
 			traits = { uztm_RUS }
 			research_bonus = {
 				armor = 0.05
@@ -753,10 +755,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea chtz" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 572 } #Chelyabinsk
-			visible = {
-				has_country_flag = unlock_chtz
-				NOT = { has_country_flag = improve_chtz }
-			}
+			visible = { owns_state = 572 }
 			traits = { chtz_RUS }
 			research_bonus = {
 				armor = 0.05
@@ -767,10 +766,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea chtz_improved" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 572 } #Chelyabinsk
-			visible = {
-				has_country_flag = unlock_chtz
-				has_country_flag = improve_chtz
-			}
+			visible = { owns_state = 572 }
 			traits = { chtz_improved_RUS }
 			research_bonus = {
 				armor = 0.05
@@ -797,7 +793,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea bz" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 195 } #Petrograd
-			visible = { NOT = { has_country_flag = improve_bz } }
+			visible = { owns_state = 195 }
 			traits = { bz_RUS }
 			research_bonus = {
 				naval_equipment = 0.1
@@ -808,7 +804,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea bz_improved" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 195 } #Petrograd
-			visible = { has_country_flag = improve_bz }
+			visible = { owns_state = 195 }
 			traits = { bz_improved_RUS }
 			research_bonus = {
 				naval_equipment = 0.1
@@ -819,7 +815,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea av" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 195 } #Petrograd
-			visible = { NOT = { has_country_flag = improve_av } }
+			visible = { owns_state = 195 }
 			traits = { av_RUS }
 			research_bonus = {
 				naval_equipment = 0.1
@@ -830,7 +826,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea av_improved" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 195 } #Petrograd
-			visible = { has_country_flag = improve_av }
+			visible = { owns_state = 195 }
 			traits = { av_improved_RUS }
 			research_bonus = {
 				naval_equipment = 0.1
@@ -841,7 +837,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea as" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 218 } #Rostov
-			visible = { NOT = { has_country_flag = improve_as } }
+			visible = { owns_state = 218 }
 			traits = { as_RUS }
 			research_bonus = {
 				naval_equipment = 0.05
@@ -852,7 +848,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea as_improved" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 218 } #Rostov
-			visible = { has_country_flag = improve_as }
+			visible = { owns_state = 218 }
 			traits = { as_improved_RUS }
 			research_bonus = {
 				naval_equipment = 0.1
@@ -864,7 +860,7 @@ ideas = {
 			picture = generic_naval_manufacturer_2
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 408 } #Vladivostok
-			visible = { NOT = { has_country_flag = improve_dalzavod } }
+			visible = { owns_state = 408 }
 			traits = { dalzavod_RUS }
 			modifier = {
 				refit_ic_cost = -0.1
@@ -882,7 +878,7 @@ ideas = {
 			picture = generic_naval_manufacturer_2
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 408 } #Vladivostok
-			visible = { has_country_flag = improve_dalzavod }
+			visible = { owns_state = 408 }
 			traits = { dalzavod_improved_RUS }
 			modifier = {
 				refit_ic_cost = -0.1
@@ -917,7 +913,12 @@ ideas = {
 					owns_state = 566 #Irkutsk
 				}
 			}
-			visible = { NOT = { has_completed_focus = RUS_the_flying_tank } }
+			visible = {
+				OR = {
+					owns_state = 219  #Moscow
+					owns_state = 566 #Irkutsk
+				}
+			}
 			traits = { osoavia_RUS }
 			research_bonus = {
 				air_equipment = 0.1
@@ -933,7 +934,12 @@ ideas = {
 					owns_state = 566 #Irkutsk
 				}
 			}
-			visible = { has_completed_focus = RUS_the_flying_tank }
+			visible = {
+				OR = {
+					owns_state = 219  #Moscow
+					owns_state = 566 #Irkutsk
+				}
+			}
 			traits = { osoavia_improved_RUS }
 			research_bonus = {
 				air_equipment = 0.1
@@ -944,7 +950,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea duks" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 219 } #Moscow
-			visible = { NOT = { has_completed_focus = RUS_polikarpov_fighters } }
+			visible = { owns_state = 219 } #Nikolayev
 			traits = { duks_RUS }
 			research_bonus = {
 				air_equipment = 0.1
@@ -955,7 +961,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea duks_improved" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 219 } #Moscow
-			visible = { has_completed_focus = RUS_polikarpov_fighters }
+			visible = { owns_state = 219 } #Nikolayev
 			traits = { duks_improved_RUS }
 			research_bonus = {
 				air_equipment = 0.1
@@ -966,7 +972,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea tsagi" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 219 } #Moscow
-			visible = { NOT = { has_completed_focus = RUS_project_m } }
+			visible = { owns_state = 219 } #Nikolayev
 			traits = { tsagi_RUS }
 			research_bonus = {
 				air_equipment = 0.15
@@ -977,7 +983,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea tsagi_improved" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 219 } #Moscow
-			visible = { has_completed_focus = RUS_project_m }
+			visible = { owns_state = 219 } #Nikolayev
 			traits = { tsagi_improved_RUS }
 			research_bonus = {
 				air_equipment = 0.15
@@ -988,7 +994,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea gamayun" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 249 } #Kazan
-			visible = { NOT = { has_completed_focus = RUS_enter_hundred } }
+			visible = { owns_state = 249 } #Nikolayev
 			traits = { gamayun_RUS }
 			research_bonus = {
 				air_equipment = 0.1
@@ -999,7 +1005,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea gamayun_improved" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 249 } #Kazan
-			visible = { has_completed_focus = RUS_enter_hundred }
+			visible = { owns_state = 249 } #Nikolayev
 			traits = { gamayun_improved_RUS }
 			research_bonus = {
 				air_equipment = 0.1
@@ -1010,7 +1016,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea skorost" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 219 } #Moscow
-			visible = { NOT = { has_completed_focus = RUS_project_m } }
+			visible = { owns_state = 219 } #Nikolayev
 			traits = { skorost_RUS }
 			research_bonus = {
 				air_equipment = 0.1
@@ -1021,7 +1027,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea skorost_improved" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 219 } #Moscow
-			visible = { has_completed_focus = RUS_project_m }
+			visible = { owns_state = 219 } #Nikolayev
 			traits = { skorost_improved_RUS }
 			research_bonus = {
 				air_equipment = 0.1
@@ -1042,7 +1048,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea seversky" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 260 } #Voronezh
-			visible = { NOT = { has_completed_focus = RUS_over_the_northern_skies } }
+			visible = { owns_state = 260 } #Nikolayev
 			traits = { seversky_RUS }
 			research_bonus = {
 				air_equipment = 0.1
@@ -1053,7 +1059,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea seversky_improved" }
 			allowed = { is_russian_tag = yes }
 			available = { owns_state = 260 } #Voronezh
-			visible = { has_completed_focus = RUS_over_the_northern_skies }
+			visible = { owns_state = 260 } #Nikolayev
 			traits = { seversky_improved_RUS }
 			research_bonus = {
 				air_equipment = 0.1
