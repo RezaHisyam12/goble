@@ -363,7 +363,8 @@ country_event = {		#Austria Declares War
 	trigger = {
 		GRU = {
 			AND = {
-			has_war_with = AUS 
+			has_country_leader = { name = "Josef Goebbels" ruling_only = yes }
+			has_offensive_war_with = AUS 
 			is_subject = no
 			}
 		}

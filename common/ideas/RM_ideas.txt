@@ -19,6 +19,7 @@ ideas = {
 				stability_factor = -0.05
 				operative_slot = 2
 				foreign_subversive_activites = -0.1
+				local_intel_to_enemies = -0.2
 			}
 		}
 		
@@ -1962,9 +1963,9 @@ ideas = {
 			modifier = {
 				stability_weekly_factor = 0.001
 				political_power_gain = 0.05
-				local_intel_to_enemies = -0.2
 				army_org_Factor = 0.05
 				local_manpower = 0.05
+				local_resources_factor = 0.05
 			}
 		}
 		

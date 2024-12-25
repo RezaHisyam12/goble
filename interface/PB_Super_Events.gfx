@@ -18,7 +18,7 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_GRU_SPEVNT_civl_gru"
+		name = "GFX_SPEVNT_ger_civl"
 		texturefile = "gfx/super_events/SPEVNT_gru_civl.png"
 		legacy_lazy_load = no
 	}
@@ -36,7 +36,7 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_SPEVNT_gru_entry"
+		name = "GFX_SPEVNT_GRU_entry"
 		texturefile = "gfx/super_events/SPEVNT_GRU_Entry.png"
 		legacy_lazy_load = no
 	}
