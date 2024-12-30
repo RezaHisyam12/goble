@@ -2218,6 +2218,22 @@ country_event = { #HUN liberation
 					name = HUN_NAZBOL_PARTY
 				}
 				if = {
+					limit = { has_idea = AUS_imperial_development_scheme }
+					remove_ideas = AUS_imperial_development_scheme
+				}
+				if = {
+					limit = { has_idea = AUS_imperial_development_scheme_2 }
+					remove_ideas = AUS_imperial_development_scheme_2
+				}
+				if = {
+					limit = { has_idea = AUS_imperial_together }
+					remove_ideas = AUS_imperial_together
+				}
+				if = {
+					limit = { has_idea = AUS_drastic_together }
+					remove_ideas = AUS_drastic_together
+				}
+				if = {
 					limit = {
 						109 = { is_owned_and_controlled_by = GRU }
 					}

@@ -301,7 +301,7 @@ ideas = {
             modifier = {
 				army_speed_factor_for_controller = 0.05
 				stability_weekly = 0.001
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = 0.05
 			}
 		}
 		
