@@ -259,7 +259,13 @@ country_event = { #Second Weltkrieg
 	is_triggered_only = no
 	
 	trigger = {
-		GRU = { has_war_with = FRA }
+		GRU = {
+			AND = {
+			has_country_leader = { name = "Josef Goebbels" ruling_only = yes }
+			has_war_with = FRA 
+			is_subject = no
+			}
+		}
 		NOT = { has_global_flag = KX_superevent_total_off }
 	}
 
@@ -271,7 +277,7 @@ country_event = { #Second Weltkrieg
 		name = nmdvpsuper.4.a
 
 		set_global_flag = Super_Event_Visible
-		set_global_flag = GER_Second_Weltkrieg
+		set_global_flag = GRU_Total_War
 		every_country = {
 			limit = {
 				NOT = {

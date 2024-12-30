@@ -31,6 +31,13 @@ defined_text = { #SUPER EVENT TITLES
 
 	text = { 
 		trigger = {
+			has_global_flag = GRU_Total_War
+		}
+		localization_key = "GFX_SPEVNT_GRU_Total_War"
+	}
+
+	text = { 
+		trigger = {
 			has_global_flag = GER_Second_Weltkrieg
 		}
 		localization_key = "GFX_SPEVNT_Second_Weltkrieg"
@@ -761,6 +768,13 @@ defined_text = { #SUPER EVENT QUOTES
             has_global_flag = GRU_entry
         }
         localization_key = "GFX_SPEVNT_gru_entry_TEXT"
+    }
+
+    text = { 
+        trigger = {
+            has_global_flag = GRU_Total_War
+        }
+        localization_key = "GFX_SPEVNT_GRU_Total_War_TEXT"
     }
 
 	text = { 
@@ -1499,6 +1513,13 @@ defined_text = { #SUPER EVENT REMARKS
 
 	text = { 
 		trigger = {
+			has_global_flag = GRU_Total_War
+		}
+		localization_key = "GFX_SPEVNT_GRU_Total_War_REMARK"
+	}
+
+	text = { 
+		trigger = {
 			has_global_flag = GER_Second_Weltkrieg
 		}
 		localization_key = "GFX_SPEVNT_Second_Weltkrieg_REMARK"
@@ -2228,6 +2249,13 @@ defined_text = { #SUPER EVENT DESCS
             has_global_flag = GRU_entry
         }
         localization_key = "GFX_SPEVNT_gru_entry_DESC"
+    }
+
+    text = { 
+        trigger = {
+            has_global_flag = GRU_Total_War
+        }
+        localization_key = "GFX_SPEVNT_GRU_Total_War_DESC"
     }
 
 	text = { 

@@ -33,8 +33,8 @@ scripted_gui = {
 		}
 
 		triggers = {
-			Super_Event_Image_Second_Weltkrieg_goebbels_visible = {
-				has_global_flag = GER_Second_Weltkrieg
+			Super_Event_Image_GRU_Total_War_visible = {
+				has_global_flag = GRU_Total_War
 			}
 		}
 
@@ -707,6 +707,13 @@ scripted_gui = {
 						has_global_flag = GRU_entry
 					}
 					clr_global_flag  = GRU_entry
+				}
+
+				if = {
+					limit = {	
+						has_global_flag = GRU_Total_War
+					}
+					clr_global_flag  = GRU_Total_War
 				}
 
 				if = {

@@ -25,3 +25,8 @@
   GFX_SPEVNT_gru_entry_REMARK:0 "Die Zukunft gehört uns!"
   GFX_SPEVNT_gru_entry_DESC:0 "For years, the tension between the Austrian Empire and the radical regime of Joseph Goebbels in Berlin has simmered beneath the surface. Goebbels denounced the Austrian Empire as a bastion of oppression and called upon the workers and oppressed peoples of the Empire to rise against their rulers. As the armies of Berlin clash with the defenders of the Habsburg monarchy, the fragile peace in Central Europe is shattered. The time for diplomacy is over—\n\n The time for war has begun."
 
+  GFX_SPEVNT_GRU_Total_War:0 "Total War Against Syndicalism"
+  GFX_SPEVNT_GRU_Total_War_TEXT:0 "Syndicalism is not a revolution of the workers—it is a revolution against them. \n §Y-Paul Josef Goebbels-§!"
+  GFX_SPEVNT_GRU_Total_War_REMARK:0 "Totaler Krieg, totaler Sieg!"
+  GFX_SPEVNT_GRU_Total_War_DESC:0 "In a fiery speech broadcast across the nation, Joseph Goebbels has called for nothing less than the complete mobilization of his people in a crusade against the syndicalist menace. Delivered in front of a roaring crowd in Berlin, his words echoed through the halls of history, urging his followers to embrace their struggle with unrelenting determination.\n\nThe speech has electrified his supporters, spurring the people into action as factories churn out weapons and soldiers march toward the front. Yet it has also sparked fear among his enemies, who now brace themselves for the full force of Goebbels’ war machine. The world watches with bated breath as Germany vows to end syndicalism once and for all—by any means necessary."
+

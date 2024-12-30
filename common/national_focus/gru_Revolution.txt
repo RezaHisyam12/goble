@@ -1993,25 +1993,51 @@ shared_focus = {
 		id = GRU_spzproj_uran
 		icon = GFX_GRU_spzproj_uran-3975
 		relative_position_id = GRU_nmdvp_victory
+		prerequisite = { focus = GRU_mfsp  }
 		x = -8
 		y = 8
 		cost = 5
 		completion_reward = {
-					log = "[GetDateText]: [Root.GetName]: Focus GRU_spzproj_uran"
-					add_tech_bonus = {
-							name = GRU_spzproj_uran
-							bonus = 1
-							uses = 1
-							technology = atomic_research
-						}
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_spzproj_uran"
+				add_tech_bonus = {
+						name = GRU_spzproj_uran
+						bonus = 1
+						uses = 1
+						technology = atomic_research
+					}
 					add_breakthrough_progress = {
 						specialization = specialization_nuclear
 						value = 0.25
 					}
-				custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = {
+				controls_province = 3535
+					65 = {
+						is_owned_and_controlled_by = GRU
+						can_construct_building = nuclear_facility
+					}
 				}
-	
-		prerequisite = { focus = GRU_mfsp  }
+				65 = {
+					add_building_construction = {
+						type = nuclear_facility
+						level = 1
+						province = 3535
+						instant_build = yes
+						}
+					}
+				}	
+			else = {
+				random_owned_controlled_state = {
+					prioritize = { 63 57 54 }
+					limit = {
+						is_core_of = GRU
+						can_construct_building = nuclear_facility
+					}
+					construct_building_in_random_province = { nuclear_facility = 1 }
+				}
+			}
+		}
 	}
 
 	#Spz.Proj.PFEIL
