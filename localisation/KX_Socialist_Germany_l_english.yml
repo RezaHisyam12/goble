@@ -4706,3 +4706,16 @@ GRU_general_Karl_Marthinsen:0 "Karl Martinsen"
 GRU_general_Axel_Stang:0 "Axel Stang"
 GRU_general_Konrad_Sundlo:0 "Konrad Sundlo"
 
+ ### Medals ###
+ RUS_order_of_st_george: "Order of Saint George"
+ RUS_order_of_st_nikolay: "Order of Saint Nikolay the Wonder-Worker"
+ RUS_order_of_st_vladimir: "Order of Saint Vladimir"
+ RUS_order_of_aleksandr_nevsky: "Order of Aleksandr Nevsky"
+ RUS_order_of_patriotic_war: "Order of the Patriotic War"
+ RUS_order_of_liberty_of_russia: "Order of the Liberty of Russia"
+
+ #Socialist medals
+ RUS_order_of_glory: "Order of Glory"
+ RUS_order_of_victory: "Order of Victory"
+ RUS_order_of_red_star: "Order of the Red Star"
+
