@@ -181,7 +181,7 @@ ideas = {
 		RUS_tsagi_1 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_tsagi_1" }
 			name = RUS_tsagi_rockets
-			picture = GFX_idea_tsagi
+			picture = tsagi
 			equipment_bonus = {
 				guided_missile_equipment = {
 					instant = yes
@@ -192,7 +192,7 @@ ideas = {
 		RUS_tsagi_2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_tsagi_2" }
 			name = RUS_tsagi_rockets
-			picture = GFX_idea_tsagi
+			picture = tsagi
 			equipment_bonus = {
 				guided_missile_equipment = {
 					instant = yes
@@ -204,7 +204,7 @@ ideas = {
 		RUS_tsagi_3 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_tsagi_3" }
 			name = RUS_tsagi_rockets
-			picture = GFX_idea_tsagi
+			picture = tsagi
 			equipment_bonus = {
 				guided_missile_equipment = {
 					instant = yes
@@ -217,7 +217,7 @@ ideas = {
 		RUS_tsagi_4 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_tsagi_4" }
 			name = RUS_tsagi_rockets
-			picture = GFX_idea_tsagi
+			picture = tsagi
 			equipment_bonus = {
 				guided_missile_equipment = {
 					instant = yes
@@ -228,7 +228,7 @@ ideas = {
 		RUS_tsagi_5 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_tsagi_5" }
 			name = RUS_tsagi_rockets
-			picture = GFX_idea_tsagi
+			picture = tsagi
 			equipment_bonus = {
 				guided_missile_equipment = {
 					instant = yes

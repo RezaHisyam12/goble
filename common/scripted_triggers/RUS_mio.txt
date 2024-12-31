@@ -1,0 +1,1037 @@
+RUS_obukhov_upgrade_3_1_lvl4 = {
+	OR = {
+		FROM = {
+			NOT = {
+				OR = {
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_2_lvl4
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_3_lvl4
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_4_lvl4
+					}
+				}
+			}
+		}
+		FROM = {
+			mio:RUS_obukhov_organisation = {
+				is_mio_trait_completed = obukhov_upgrade_3_1_lvl4
+			}
+		}
+	}
+}
+
+RUS_obukhov_upgrade_3_1_lvl3 = {
+	OR = {
+		FROM = {
+			AND = {
+				NOT = {
+					OR = {
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_2_lvl3
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_3_lvl3
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_4_lvl3
+						}
+					}
+				}
+				OR = {
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_2_lvl4
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_3_lvl4
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_4_lvl4
+					}
+				}
+				NOT = {
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_1_lvl4
+					}
+				}
+			}
+		}
+		FROM = {
+			mio:RUS_obukhov_organisation = {
+				is_mio_trait_completed = obukhov_upgrade_3_1_lvl3
+			}
+		}
+	}
+}
+
+RUS_obukhov_upgrade_3_1_lvl2 = {
+	OR = {
+		FROM = {
+			AND = {
+				NOT = {
+					OR = {
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_2_lvl2
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_3_lvl2
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_4_lvl2
+						}
+					}
+				}
+				OR = {
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_2_lvl3
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_3_lvl3
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_4_lvl3
+					}
+				}
+				NOT = {
+					OR = {
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_1_lvl4
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_1_lvl3
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			mio:RUS_obukhov_organisation = {
+				is_mio_trait_completed = obukhov_upgrade_3_1_lvl2
+			}
+		}
+	}
+}
+
+RUS_obukhov_upgrade_3_1_lvl1 = {
+	OR = {
+		FROM = {
+			AND = {
+				OR = {
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_2_lvl2
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_3_lvl2
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_4_lvl2
+					}
+				}
+				NOT = {
+					OR = {
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_1_lvl4
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_1_lvl3
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_1_lvl2
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			mio:RUS_obukhov_organisation = {
+				is_mio_trait_completed = obukhov_upgrade_3_1_lvl1
+			}
+		}
+	}
+}
+
+RUS_obukhov_upgrade_3_2_lvl4 = {
+	OR = {
+		FROM = {
+			NOT = {
+				OR = {
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_1_lvl4
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_3_lvl4
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_4_lvl4
+					}
+				}
+			}
+		}
+		FROM = {
+			mio:RUS_obukhov_organisation = {
+				is_mio_trait_completed = obukhov_upgrade_3_2_lvl4
+			}
+		}
+	}
+}
+
+RUS_obukhov_upgrade_3_2_lvl3 = {
+	OR = {
+		FROM = {
+			AND = {
+				NOT = {
+					OR = {
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_1_lvl3
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_3_lvl3
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_4_lvl3
+						}
+					}
+				}
+				OR = {
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_1_lvl4
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_3_lvl4
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_4_lvl4
+					}
+				}
+				NOT = {
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_2_lvl4
+					}
+				}
+			}
+		}
+		FROM = {
+			mio:RUS_obukhov_organisation = {
+				is_mio_trait_completed = obukhov_upgrade_3_2_lvl3
+			}
+		}
+	}
+}
+
+RUS_obukhov_upgrade_3_2_lvl2 = {
+	OR = {
+		FROM = {
+			AND = {
+				NOT = {
+					OR = {
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_1_lvl2
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_3_lvl2
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_4_lvl2
+						}
+					}
+				}
+				OR = {
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_1_lvl3
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_3_lvl3
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_4_lvl3
+					}
+				}
+				NOT = {
+					OR = {
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_2_lvl4
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_2_lvl3
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			mio:RUS_obukhov_organisation = {
+				is_mio_trait_completed = obukhov_upgrade_3_2_lvl2
+			}
+		}
+	}
+}
+
+RUS_obukhov_upgrade_3_2_lvl1 = {
+	OR = {
+		FROM = {
+			AND = {
+				OR = {
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_1_lvl2
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_3_lvl2
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_4_lvl2
+					}
+				}
+				NOT = {
+					OR = {
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_2_lvl4
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_2_lvl3
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_2_lvl2
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			mio:RUS_obukhov_organisation = {
+				is_mio_trait_completed = obukhov_upgrade_3_2_lvl1
+			}
+		}
+	}
+}
+
+RUS_obukhov_upgrade_3_3_lvl4 = {
+	OR = {
+		FROM = {
+			NOT = {
+				OR = {
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_2_lvl4
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_1_lvl4
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_4_lvl4
+					}
+				}
+			}
+		}
+		FROM = {
+			mio:RUS_obukhov_organisation = {
+				is_mio_trait_completed = obukhov_upgrade_3_3_lvl4
+			}
+		}
+	}
+}
+
+RUS_obukhov_upgrade_3_3_lvl3 = {
+	OR = {
+		FROM = {
+			AND = {
+				NOT = {
+					OR = {
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_2_lvl3
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_1_lvl3
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_4_lvl3
+						}
+					}
+				}
+				OR = {
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_2_lvl4
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_1_lvl4
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_4_lvl4
+					}
+				}
+				NOT = {
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_3_lvl4
+					}
+				}
+			}
+		}
+		FROM = {
+			mio:RUS_obukhov_organisation = {
+				is_mio_trait_completed = obukhov_upgrade_3_3_lvl3
+			}
+		}
+	}
+}
+
+RUS_obukhov_upgrade_3_3_lvl2 = {
+	OR = {
+		FROM = {
+			AND = {
+				NOT = {
+					OR = {
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_2_lvl2
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_1_lvl2
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_4_lvl2
+						}
+					}
+				}
+				OR = {
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_2_lvl3
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_1_lvl3
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_4_lvl3
+					}
+				}
+				NOT = {
+					OR = {
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_3_lvl4
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_3_lvl3
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			mio:RUS_obukhov_organisation = {
+				is_mio_trait_completed = obukhov_upgrade_3_3_lvl2
+			}
+		}
+	}
+}
+
+RUS_obukhov_upgrade_3_3_lvl1 = {
+	OR = {
+		FROM = {
+			AND = {
+				OR = {
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_2_lvl2
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_1_lvl2
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_4_lvl2
+					}
+				}
+				NOT = {
+					OR = {
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_3_lvl4
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_3_lvl3
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_3_lvl2
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			mio:RUS_obukhov_organisation = {
+				is_mio_trait_completed = obukhov_upgrade_3_3_lvl1
+			}
+		}
+	}
+}
+
+RUS_obukhov_upgrade_3_4_lvl4 = {
+	OR = {
+		FROM = {
+			NOT = {
+				OR = {
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_2_lvl4
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_3_lvl4
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_1_lvl4
+					}
+				}
+			}
+		}
+		FROM = {
+			mio:RUS_obukhov_organisation = {
+				is_mio_trait_completed = obukhov_upgrade_3_4_lvl4
+			}
+		}
+	}
+}
+
+RUS_obukhov_upgrade_3_4_lvl3 = {
+	OR = {
+		FROM = {
+			AND = {
+				NOT = {
+					OR = {
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_2_lvl3
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_3_lvl3
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_1_lvl3
+						}
+					}
+				}
+				OR = {
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_2_lvl4
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_3_lvl4
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_1_lvl4
+					}
+				}
+				NOT = {
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_4_lvl4
+					}
+				}
+			}
+		}
+		FROM = {
+			mio:RUS_obukhov_organisation = {
+				is_mio_trait_completed = obukhov_upgrade_3_4_lvl3
+			}
+		}
+	}
+}
+
+RUS_obukhov_upgrade_3_4_lvl2 = {
+	OR = {
+		FROM = {
+			AND = {
+				NOT = {
+					OR = {
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_2_lvl2
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_3_lvl2
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_1_lvl2
+						}
+					}
+				}
+				OR = {
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_2_lvl3
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_3_lvl3
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_1_lvl3
+					}
+				}
+				NOT = {
+					OR = {
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_4_lvl4
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_4_lvl3
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			mio:RUS_obukhov_organisation = {
+				is_mio_trait_completed = obukhov_upgrade_3_4_lvl2
+			}
+		}
+	}
+}
+
+RUS_obukhov_upgrade_3_4_lvl1 = {
+	OR = {
+		FROM = {
+			AND = {
+				OR = {
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_2_lvl2
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_3_lvl2
+					}
+					mio:RUS_obukhov_organisation = {
+						is_mio_trait_completed = obukhov_upgrade_3_1_lvl2
+					}
+				}
+				NOT = {
+					OR = {
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_4_lvl4
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_4_lvl3
+						}
+						mio:RUS_obukhov_organisation = {
+							is_mio_trait_completed = obukhov_upgrade_3_4_lvl2
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			mio:RUS_obukhov_organisation = {
+				is_mio_trait_completed = obukhov_upgrade_3_4_lvl1
+			}
+		}
+	}
+}
+
+RUS_chtz_manufacturer_research_gain_chtz_2 = {
+	FROM = {
+		mio:RUS_chtz_organisation = {
+			is_mio_trait_completed = chtz_upgrade_2_2
+		}
+		mio:RUS_chtz_organisation = {
+			is_mio_trait_completed = chtz_upgrade_2_5
+		}
+	}
+}
+
+RUS_chtz_manufacturer_research_gain_chtz_1 = {
+	FROM = {
+		OR = {
+			AND = {
+				mio:RUS_chtz_organisation = {
+					is_mio_trait_completed = chtz_upgrade_2_2
+				}
+				NOT = {
+					mio:RUS_chtz_organisation = {
+						is_mio_trait_completed = chtz_upgrade_2_5
+					}
+				}
+			}
+			AND = {
+				NOT = {
+					mio:RUS_chtz_organisation = {
+						is_mio_trait_completed = chtz_upgrade_2_2
+					}
+				}
+				mio:RUS_chtz_organisation = {
+					is_mio_trait_completed = chtz_upgrade_2_5
+				}
+			}
+		}
+	}
+}
+
+RUS_vpoz_manufacturer_research_gain_vpoz = {
+	FROM = {
+		mio:RUS_vpoz_organisation = {
+			is_mio_trait_completed = vpoz_upgrade_1_3
+		}
+	}
+}
+
+RUS_has_obukhov_obukhov_upgrade_7 = {
+	FROM = {
+		mio:RUS_obukhov_organisation = {
+			is_mio_trait_completed = obukhov_upgrade_7
+		}
+	}
+}
+
+RUS_has_obukhov_obukhov_upgrade_8 = {
+	FROM = {
+		mio:RUS_obukhov_organisation = {
+			is_mio_trait_completed = obukhov_upgrade_8
+		}
+	}
+}
+
+RUS_manufacturer_research_gain_tsagi_3 = {
+	FROM = {
+		mio:RUS_tsagi_organisation = {
+			is_mio_trait_completed = tsagi_upgrade_2
+		}
+		mio:RUS_tsagi_organisation = {
+			is_mio_trait_completed = tsagi_upgrade_1_2
+		}
+		mio:RUS_tsagi_organisation = {
+			is_mio_trait_completed = tsagi_upgrade_1_5
+		}
+	}
+}
+
+RUS_manufacturer_research_gain_tsagi_2 = {
+	FROM = {
+		OR = {
+			AND = {
+				NOT = {
+					mio:RUS_tsagi_organisation = {
+						is_mio_trait_completed = tsagi_upgrade_2
+					}
+				}
+				mio:RUS_tsagi_organisation = {
+					is_mio_trait_completed = tsagi_upgrade_1_2
+				}
+				mio:RUS_tsagi_organisation = {
+					is_mio_trait_completed = tsagi_upgrade_1_5
+				}
+			}
+			AND = {
+				mio:RUS_tsagi_organisation = {
+					is_mio_trait_completed = tsagi_upgrade_2
+				}
+				NOT = {
+					mio:RUS_tsagi_organisation = {
+						is_mio_trait_completed = tsagi_upgrade_1_2
+					}
+				}
+				mio:RUS_tsagi_organisation = {
+					is_mio_trait_completed = tsagi_upgrade_1_5
+				}
+			}
+			AND = {
+				mio:RUS_tsagi_organisation = {
+					is_mio_trait_completed = tsagi_upgrade_2
+				}
+				mio:RUS_tsagi_organisation = {
+					is_mio_trait_completed = tsagi_upgrade_1_2
+				}
+				NOT = {
+					mio:RUS_tsagi_organisation = {
+						is_mio_trait_completed = tsagi_upgrade_1_5
+					}
+				}
+			}
+		}
+	}
+}
+
+RUS_manufacturer_research_gain_tsagi_1 = {
+	FROM = {
+		OR = {
+			AND = {
+				NOT = {
+					mio:RUS_tsagi_organisation = {
+						is_mio_trait_completed = tsagi_upgrade_2
+					}
+				}
+				NOT = {
+					mio:RUS_tsagi_organisation = {
+						is_mio_trait_completed = tsagi_upgrade_1_2
+					}
+				}
+				mio:RUS_tsagi_organisation = {
+					is_mio_trait_completed = tsagi_upgrade_1_5
+				}
+			}
+			AND = {
+				mio:RUS_tsagi_organisation = {
+					is_mio_trait_completed = tsagi_upgrade_2
+				}
+				NOT = {
+					mio:RUS_tsagi_organisation = {
+						is_mio_trait_completed = tsagi_upgrade_1_2
+					}
+				}
+				NOT = {
+					mio:RUS_tsagi_organisation = {
+						is_mio_trait_completed = tsagi_upgrade_1_5
+					}
+				}
+			}
+			AND = {
+				NOT = {
+					mio:RUS_tsagi_organisation = {
+						is_mio_trait_completed = tsagi_upgrade_2
+					}
+				}
+				mio:RUS_tsagi_organisation = {
+					is_mio_trait_completed = tsagi_upgrade_1_2
+				}
+				NOT = {
+					mio:RUS_tsagi_organisation = {
+						is_mio_trait_completed = tsagi_upgrade_1_5
+					}
+				}
+			}
+		}
+	}
+}
+
+RUS_has_gamayun_upgrade_1 = {
+	FROM = {
+		mio:RUS_gamayun_organisation = {
+			is_mio_trait_completed = gamayun_upgrade_1
+		}
+	}
+}
+
+RUS_has_gamayun_upgrade_3 = {
+	FROM = {
+		mio:RUS_gamayun_organisation = {
+			is_mio_trait_completed = gamayun_upgrade_3
+		}
+	}
+}
+
+RUS_has_sokol_upgrade_1_or_2 = {
+	FROM = {
+		OR = {
+			mio:RUS_sokol_organisation = {
+				is_mio_trait_completed = sokol_upgrade_1
+			}
+			mio:RUS_sokol_organisation = {
+				is_mio_trait_completed = sokol_upgrade_2
+			}
+		}
+	}
+}
+
+RUS_has_bz_upgrade_1_2 = {
+	FROM = {
+		mio:RUS_bz_organisation = {
+			is_mio_trait_completed = bz_upgrade_5
+		}
+	}
+}
+
+RUS_has_bz_upgrade_3_3 = {
+	FROM = {
+		mio:RUS_bz_organisation = {
+			is_mio_trait_completed = bz_upgrade_1
+		}
+	}
+}
+
+RUS_has_av_upgrade_2 = {
+	FROM = {
+		mio:RUS_av_organisation = {
+			is_mio_trait_completed = av_upgrade_2
+		}
+	}
+}
+
+RUS_has_av_upgrade_4 = {
+	FROM = {
+		mio:RUS_av_organisation = {
+			is_mio_trait_completed = av_upgrade_4
+		}
+	}
+}
+
+RUS_has_av_upgrade_3_4 = {
+	FROM = {
+		mio:RUS_av_organisation = {
+			is_mio_trait_completed = av_upgrade_3_4
+		}
+	}
+}
+
+RUS_has_as_upgrade_1_2 = {
+	FROM = {
+		mio:RUS_as_organisation = {
+			is_mio_trait_completed = as_upgrade_1_2
+		}
+	}
+}
+
+RUS_has_as_upgrade_1_5 = {
+	FROM = {
+		mio:RUS_as_organisation = {
+			is_mio_trait_completed = as_upgrade_1_5
+		}
+	}
+}
+
+RUS_has_as_upgrade_4 = {
+	FROM = {
+		mio:RUS_as_organisation = {
+			is_mio_trait_completed = as_upgrade_4
+		}
+	}
+}
+
+RUS_has_one_TOZ_medal_trait = {
+	FROM = {
+		OR = {
+			mio:RUS_toz_organisation = {
+				is_mio_trait_completed = toz_upgrade_2
+			}
+			mio:RUS_toz_organisation = {
+				is_mio_trait_completed = toz_upgrade_4
+			}
+			mio:RUS_toz_organisation = {
+				is_mio_trait_completed = toz_upgrade_1_2
+			}
+			mio:RUS_toz_organisation = {
+				is_mio_trait_completed = toz_upgrade_1_5
+			}
+		}
+	}
+}
+
+RUS_has_TOZ_attack_medal = {
+	FROM = {
+		mio:RUS_toz_organisation = {
+			is_mio_trait_completed = toz_upgrade_2
+		}
+	}
+}
+
+RUS_has_TOZ_defense_medal = {
+	FROM = {
+		mio:RUS_toz_organisation = {
+			is_mio_trait_completed = toz_upgrade_4
+		}
+	}
+}
+
+RUS_has_TOZ_org_medal = {
+	FROM = {
+		mio:RUS_toz_organisation = {
+			is_mio_trait_completed = toz_upgrade_1_2
+		}
+	}
+}
+
+RUS_has_TOZ_breakthrough_medal = {
+	FROM = {
+		mio:RUS_toz_organisation = {
+			is_mio_trait_completed = toz_upgrade_1_5
+		}
+	}
+}
+
+RUS_has_OSOAVIA_upgrade_3 = {
+	FROM = {
+		mio:RUS_osoavia_organisation = {
+			is_mio_trait_completed = osoavia_upgrade_3
+		}
+	}
+}
+
+RUS_has_OSOAVIA_upgrade_1_3 = {
+	FROM = {
+		mio:RUS_osoavia_organisation = {
+			is_mio_trait_completed = osoavia_upgrade_1_3
+		}
+	}
+}
+
+RUS_has_OSOAVIA_upgrade_1_4 = {
+	FROM = {
+		mio:RUS_osoavia_organisation = {
+			is_mio_trait_completed = osoavia_upgrade_1_4
+		}
+	}
+}
+
+RUS_has_OSOAVIA_upgrade_2_3 = {
+	FROM = {
+		mio:RUS_osoavia_organisation = {
+			is_mio_trait_completed = osoavia_upgrade_2_3
+		}
+	}
+}
+
+RUS_has_OSOAVIA_upgrade_2_4 = {
+	FROM = {
+		mio:RUS_osoavia_organisation = {
+			is_mio_trait_completed = osoavia_upgrade_2_4
+		}
+	}
+}
+
+RUS_has_OSOAVIA_upgrade_2_5 = {
+	FROM = {
+		mio:RUS_osoavia_organisation = {
+			is_mio_trait_completed = osoavia_upgrade_2_5
+		}
+	}
+}
+
+RUS_has_amo_upgrade_1_2 = {
+	FROM = {
+		mio:RUS_amo_organisation = {
+			is_mio_trait_completed = amo_upgrade_1_2
+		}
+	}
+}
+
+RUS_has_amo_upgrade_1_4 = {
+	FROM = {
+		mio:RUS_amo_organisation = {
+			is_mio_trait_completed = amo_upgrade_1_4
+		}
+	}
+}
+
+RUS_has_amo_upgrade_1_2_non_nsb = {
+	FROM = {
+		mio:RUS_amo_organisation_non_nsb = {
+			is_mio_trait_completed = amo_upgrade_1_2
+		}
+	}
+}
+
+RUS_has_amo_upgrade_1_4_non_nsb = {
+	FROM = {
+		mio:RUS_amo_organisation_non_nsb = {
+			is_mio_trait_completed = amo_upgrade_1_4
+		}
+	}
+}
+
+RUS_has_amo_policy = {
+	FROM = {
+		OR = {
+			mio:RUS_amo_organisation = {
+				has_mio_policy_active = RUS_mio_policy_expand_weapon_deals
+			}
+			mio:RUS_amo_organisation_non_nsb = {
+				has_mio_policy_active = RUS_mio_policy_expand_weapon_deals
+			}
+		}
+	}
+}
+
+RUS_has_obukhov_upgrade_5_or_6 = {
+	FROM = {
+		mio:RUS_obukhov_organisation = {
+			OR = {
+				is_mio_trait_completed = obukhov_upgrade_5
+				is_mio_trait_completed = obukhov_upgrade_6
+			}
+		}
+	}
+}

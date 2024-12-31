@@ -1,0 +1,65 @@
+on_actions = {
+	on_weekly_RSA = {
+		effect = {
+			if = { ### Russian MIO weekly updates
+				limit = {
+					has_dlc_aat = yes
+					exists = yes
+				}
+				RUS_Update_MIO_Research_Speeds = yes
+				RUS_Update_MIO_XP_Gains = yes
+				RUS_Update_Sokol = yes
+				RUS_Update_Decaying_Funds_Bonus = yes
+			}
+		}
+	}
+
+	on_weekly_FER = {
+		effect = {
+			if = { ### Russian MIO weekly updates
+				limit = {
+					has_dlc_aat = yes
+					exists = yes
+				}
+				RUS_Update_MIO_Research_Speeds = yes
+				RUS_Update_MIO_XP_Gains = yes
+				RUS_Update_Sokol = yes
+				RUS_Update_Decaying_Funds_Bonus = yes
+			}
+		}
+	}
+
+	on_weekly_RUS = {
+		effect = {
+			if = { ### Russian MIO weekly updates
+				limit = { has_dlc_aat = yes }
+				RUS_Update_MIO_Research_Speeds = yes
+				RUS_Update_MIO_XP_Gains = yes
+				RUS_Update_Sokol = yes
+				RUS_Update_Decaying_Funds_Bonus = yes
+			}
+		}
+	}
+
+	on_ruling_party_change = {
+		# temp var old_ideology_token is available for effects
+		effect = {
+			### MIO Handling ###
+			if = {
+				limit = {
+					is_russian_tag = yes
+					mio:RUS_bz_organisation = {
+						has_mio_policy_active = RUS_mio_policy_political_interference_bz
+					}
+				}
+				meta_effect = {
+					text = {
+						remove_ideas = RUS_bz_political_interference_[OLD_IDEOLOGY_TOKEN]
+					}
+					OLD_IDEOLOGY_TOKEN = "[?old_ideology_token.GetTokenKey]"
+				}
+				RUS_bz_add_political_interference = yes
+			}
+		}
+	}
+}

@@ -480,33 +480,19 @@ RUS_MIO_decisions = {
 				limit = {
 					NOT = {
 						has_mines = {
-							region = 272
+							region = 9
 							amount = 900
 						}
 					}
 				}
 				add_mines = {
-					region = 272
-					amount = RUS_dalzavod_mines_number
-				}
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						has_mines = {
-							region = 138
-							amount = 900
-						}
-					}
-				}
-				add_mines = {
-					region = 138
+					region = 9
 					amount = RUS_dalzavod_mines_number
 				}
 			}
 			else = {
 				add_mines = {
-					region = 9
+					region = 248
 					amount = RUS_dalzavod_mines_number
 				}
 			}
@@ -521,7 +507,7 @@ RUS_MIO_decisions = {
 		icon = GFX_decision_generic_naval_mine
 		allowed = { always = no }
 		available = {
-			owns_state = 218
+			owns_state = 1263 #Rostov
 			has_war = yes
 		}
 		visible = {
@@ -558,7 +544,7 @@ RUS_MIO_decisions = {
 		icon = GFX_decision_generic_naval_mine
 		allowed = { always = no }
 		available = {
-			owns_state = 408
+			owns_state = 408 #Vladivostok
 			has_war = yes
 		}
 		visible = {
@@ -611,7 +597,7 @@ RUS_MIO_decisions = {
 		icon = GFX_decision_generic_naval_mine
 		allowed = { always = no }
 		available = {
-			owns_state = 213
+			owns_state = 213 #Murmansk
 			has_war = yes
 		}
 		visible = {
