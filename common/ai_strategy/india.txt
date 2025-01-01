@@ -36,36 +36,6 @@ PRF_hates_other_claimants = {
 	ai_strategy = { type = ignore_claim	id = DEH value = 1 } #use the focus instead
 }
 
-DEH_keep_troops_home_until_unification = {
-	allowed = {
-		original_tag = DEH
-	}
-	enable = {
-		OR = {
-			BHC = {
-				exists = yes
-				has_capitulated = no
-			}
-			PRF = {
-				exists = yes
-				has_capitulated = no
-			}
-		}
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = front_unit_request
-		area = globally
-		value = -200
-	}
-	ai_strategy = {
-		type = front_unit_request
-		area = asia #counteracts globally above
-		value = 200
-	}
-}
-
 DEH_focus_on_bharatiya = {
 	allowed = {
 		original_tag = PRF

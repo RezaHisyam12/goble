@@ -167,6 +167,9 @@ shared_focus = {
 		x = 0
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_form_the_stasi"
 			hidden_effect = {
@@ -656,6 +659,9 @@ shared_focus = {
 		x = 0
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
 		completion_reward = {
                   country_event = { id =  rotermorgenmisc.401 days = 1 }
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_found_the_fdj" 
@@ -673,6 +679,9 @@ shared_focus = {
 		x = -2
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_nationalize_ufa"
 			add_ideas = GRU_red_ufa
@@ -1052,6 +1061,9 @@ shared_focus = {
 		x = 2
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_form_the_stasi"
 			add_ideas = GRU_Stasi
@@ -1073,6 +1085,9 @@ shared_focus = {
 		x = -1
 		y = 3
 		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_form_the_stasi"
 			add_popularity = {
@@ -1092,6 +1107,9 @@ shared_focus = {
 		x = 1
 		y = 3
 		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_volksgesundheitsamt"
 			custom_effect_tooltip = GRU_tt_boden_blut
@@ -1109,6 +1127,9 @@ shared_focus = {
 		x = 1
 		y = 1
 		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_volkssturm"
 			custom_effect_tooltip = GRU_recruit_6_units

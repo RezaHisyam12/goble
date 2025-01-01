@@ -995,8 +995,8 @@ country_event = { # victory Intro
 		    		type = support
 		    		id = GEA
 		    		value = 10
-		    	}
-		    }
+		    		}
+		  	}
 			GRU = {
 				MAF = { embargo_ROOT = yes }
 				GEA = { embargo_ROOT = yes }
@@ -1010,6 +1010,10 @@ country_event = { # victory Intro
 				add_opinion_modifier = { target = GRU modifier = KR_hostile }
 				remove_ideas = {
 					MAF_Colonial_Nation
+				}
+				set_politics = {
+					ruling_party = authoritarian_democrat
+					elections_allowed = no
 				}
 				set_rule = {
 					can_decline_call_to_war = yes
