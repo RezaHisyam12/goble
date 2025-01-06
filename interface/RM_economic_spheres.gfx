@@ -1,0 +1,79 @@
+spriteTypes = {
+	SpriteType = {		
+		name = "GFX_goal_GRU_zollverein"
+		texturefile = "gfx/interface/goals/GRU_zollverein.dds"	
+	}
+
+	SpriteType = {		
+		name = "GFX_goal_GRU_zollverein_shine"	
+		texturefile = "gfx/interface/goals/GRU_zollverein.dds"	
+		effectFile = "gfx/FX/buttonstate.lua"	
+		animation = {	
+			animationmaskfile = "gfx/interface/goals/GRU_zollverein.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}		
+		animation = {	
+			animationmaskfile = "gfx/interface/goals/GRU_zollverein.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}	
+		legacy_lazy_load = no	
+			
+	}
+	SpriteType = {		
+		name = "GFX_goal_GRU_guiding_hand"
+		texturefile = "gfx/interface/goals/GRU_guiding_hand.png"	
+	}
+
+	SpriteType = {		
+		name = "GFX_goal_GRU_guiding_hand_shine"	
+		texturefile = "gfx/interface/goals/GRU_guiding_hand.png"	
+		effectFile = "gfx/FX/buttonstate.lua"	
+		animation = {	
+			animationmaskfile = "gfx/interface/goals/GRU_guiding_hand.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}		
+		animation = {	
+			animationmaskfile = "gfx/interface/goals/GRU_guiding_hand.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}	
+		legacy_lazy_load = no	
+			
+	}
+	spriteType = {
+		name = "GFX_idea_GRU_zollverein"
+		texturefile = "gfx/interface/ideas/GRU/GRU_zollverein.png"
+	}
+
+}

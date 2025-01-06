@@ -1,0 +1,15 @@
+technology_sharing_group = { 
+	id = zollverein_research
+	name = zollverein_research_name
+	desc = zollverein_research_desc
+	picture = GFX_zollverein_research
+
+	research_sharing_per_country_bonus = 0.1
+
+	available = {
+		country_exists = GRU
+		NOT = { has_war_with = GRU }
+		has_same_government_as_ROOT = yes
+	}
+}
+

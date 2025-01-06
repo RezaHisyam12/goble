@@ -116,6 +116,10 @@ GRU_new_order_decisions = {
 	icon = GFX_gru_new_order
 	allowed = { tag = GRU }
 }
+GRU_zollverein_category = {
+	icon = generic_political_actions
+	picture = GFX_decision_cat_generic_crate_of_guns
+}
 #GRU_alternate_leaders_decisions = {
 #	icon = babey
 #	allowed = {}

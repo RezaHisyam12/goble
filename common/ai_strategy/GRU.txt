@@ -241,62 +241,57 @@ GRU_Volunteer = {
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = BHC
-		value = -400
+		value = -10000
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = CSA
-		value = -400
+		value = -10000
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = SRI
-		value = -400
+		value = -10000
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = CNT
-		value = -400
+		value = -10000
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = PRF
-		value = 400
+		value = 10000
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = TEX
-		value = 400
+		value = 10000
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = ITA
-		value = 400
+		value = 10000
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = SPR
-		value = 400
+		value = 10000
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = TUR
-		value = 400
+		value = 10000
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = CHI
-		value = 400
-	}
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = AFG
-		value = 400
+		value = 10000
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = FIN
-		value = 400
+		value = 10000
 	}
 
 }

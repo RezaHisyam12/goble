@@ -293,3 +293,81 @@ GRU_new_internationale_eligible = {
 		has_government = syndicalist
 	}
 }
+
+GRU_dont_attack_if_vulnerable_or_preparing = {
+	OR = {
+		enemies_strength_ratio > 0.4
+		surrender_progress > 0.02
+		has_country_flag = imminent_war
+	}
+}
+
+GRU_dont_attack_if_target_is_stronger = {
+	strength_ratio = { tag = ROOT ratio > 1.2 }
+	enemies_strength_ratio < 1
+	surrender_progress < 0.1
+}
+
+GRU_dont_attack_if_overlord_is_stronger = {
+	is_subject = yes
+	overlord = {
+		strength_ratio = { tag = ROOT ratio > 0.7 }
+		enemies_strength_ratio < 1
+		surrender_progress < 0.2
+	}
+}
+
+GRU_dont_attack_if_faction_is_stronger = {
+	if = {
+		limit = { ROOT = { has_war = yes } }
+		is_in_faction = yes
+		is_faction_leader = yes
+		faction_leader = {
+			OR = {
+				is_actual_major = yes
+				strength_ratio = { tag = ROOT ratio > 0.7 }
+			}
+			enemies_strength_ratio < 1.5
+			surrender_progress < 0.3
+		}
+	}
+	else = {
+		is_in_faction = yes
+		faction_leader = {
+			strength_ratio = { tag = ROOT ratio > 0.7 }
+			enemies_strength_ratio < 1
+			surrender_progress < 0.2
+		}
+	}
+}
+
+is_in_tech_research_group = {
+	custom_trigger_tooltip = {
+		tooltip = is_in_tech_research_group
+		OR = {
+			is_in_tech_sharing_group = russian_research
+			is_in_tech_sharing_group = german_research
+			is_in_tech_sharing_group = zollverein_research
+			is_in_tech_sharing_group = phalanstere_research
+			is_in_tech_sharing_group = entente_research
+			is_in_tech_sharing_group = us_research
+			is_in_tech_sharing_group = japan_research
+			is_in_tech_sharing_group = austrian_research
+			is_in_tech_sharing_group = scandinavian_research
+			is_in_tech_sharing_group = belgian_research
+			is_in_tech_sharing_group = argentina_research
+			is_in_tech_sharing_group = balkan_research
+			is_in_tech_sharing_group = cubcos_research
+			is_in_tech_sharing_group = maliphinsul_research_group
+			is_in_tech_sharing_group = colombia_research
+			is_in_tech_sharing_group = kyiv_conf_research
+			is_in_tech_sharing_group = mizhmoria_research
+		}
+	}
+}
+
+
+GRU_is_zollverein_member = {
+	has_country_flag = GRU_zollverein_member
+}
+

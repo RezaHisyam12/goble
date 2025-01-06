@@ -1,0 +1,138 @@
+###########################
+## Zollverein Decisions ##
+###########################
+
+@GRU_zollverein_decision_cost = 150
+@GRU_zollverein_decision_time = 50
+
+GRU_zollverein_category = {
+	GRU_join_zollverein = {
+		icon = generic_research
+
+		allowed = {
+			NOT = {
+				tag = GRU #added by event
+				tag = ENG
+				tag = GER #always hostile
+				tag = GEX
+				tag = GEA
+				tag = MAF
+				tag = BAT
+				tag = JAP
+				tag = RUS
+				tag = NFA
+				tag = SRD
+				tag = SIC
+				tag = ITA
+				tag = PAP
+				tag = ARG
+				tag = USA
+				tag = TEX
+				tag = CAL
+				tag = NEE
+				tag = DEH
+				tag = PRF
+				tag = TUR
+				tag = DEI
+				tag = ICE #handled by tag content
+				tag = ABK #handled by tag content
+				tag = INS
+			}
+			is_chinese_tag = no
+		}
+
+		visible = {
+			is_in_faction_with = FROM
+			FROM = {
+				exists = yes
+				is_in_tech_sharing_group = zollverein_research
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		targets = { GRU }
+		target_root_trigger = { is_in_faction = yes }
+		target_trigger = {
+			is_in_faction_with = FROM
+			FROM = { is_in_tech_sharing_group = zollverein_research }
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_join_zollverein target: [From.GetName]"
+			add_to_tech_sharing_group = zollverein_research
+		}
+	}
+
+	GRU_Develop_Country = {
+		icon = generic_construction
+
+		allowed = { tag = GRU }
+
+		available = {
+			NOT = { has_global_flag = GRU_ongoing_zollverein_development }
+			FROM = { has_civil_war = no }
+		}
+
+		cancel_trigger = {
+			OR = {
+				NOT = { country_exists = FROM }
+				has_war_with = FROM
+				FROM = { has_same_government_as_ROOT = no }
+				is_faction_leader = no
+			}
+		}
+
+		targets = { ENG SRI ITA SWF NOR HND PRF MEX GUA ELS HON NIC COS PAN CEN CUB HAI DOM WIF BRA FOP CHL URG PAR BOL PRU ECU COL VEN HUN VKB VKR VKK VKM VSJ VST HYP }
+		target_root_trigger = { has_global_flag = GRU_created_zollverein }
+		target_trigger = {
+			FROM = {
+				has_same_government_as_ROOT = yes
+				NOT = { has_war_with = ROOT }
+			}
+			is_faction_leader = yes
+		}
+
+		fire_only_once = yes
+		cost = @GRU_zollverein_decision_cost
+		days_remove = @GRU_zollverein_decision_time
+
+		ai_will_do = { factor = 4 }
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel GRU_Develop_Country target: [From.GetName]"
+			hidden_effect = { add_political_power = @GRU_zollverein_decision_cost }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete GRU_Develop_Country target: [From.GetName]"
+			set_global_flag = { flag = GRU_ongoing_zollverein_development days = @GRU_zollverein_decision_time value = 1 }
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Develop_Country target: [From.GetName]"
+			set_temp_variable = { GRU_num_target_states = FROM.num_of_factories }
+			divide_temp_variable = { GRU_num_target_states = GRU.num_of_factories }
+			multiply_temp_variable = { GRU_num_target_states = 10 }
+			if = {
+				limit = { HUN = { GRU_is_zollverein_member = no } }
+				divide_temp_variable = { GRU_num_target_states = 2 }
+			}
+			round_temp_variable = GRU_num_target_states
+			clamp_temp_variable = { var = GRU_num_target_states min = 1 max = 4 }
+			meta_effect = {
+				text = { [STATE] = { save_event_target_as = target_value } }
+				STATE = "[?GRU_num_target_states]"
+			}
+			FROM = {
+				country_event = rotermorgen.1004
+				effect_tooltip = { GRU_zollverein_effect = yes }
+			}
+		}
+	}
+}

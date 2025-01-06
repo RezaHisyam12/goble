@@ -1,0 +1,13 @@
+GRU_zollverein_target = {
+	FROM = {
+		has_same_government_as_ROOT = yes
+		NOT = { has_war_with = ROOT }
+	}
+}
+
+trade_partners_zollverein = {
+	custom_trigger_tooltip = {
+		tooltip = trade_partners_zollverein
+		GRU_is_zollverein_member = yes
+	}
+}

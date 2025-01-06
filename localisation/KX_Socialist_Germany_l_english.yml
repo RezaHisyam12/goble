@@ -1,5 +1,58 @@
 ﻿l_english:
 
+
+has_same_government_as_ROOT_tt_NOT: "NOT: Has same government as §Y[ROOT.GetNameWithFlag]§!."
+
+
+###################
+####Zollverein#####
+###################
+
+GRU_zollverein: "Zollverein"
+
+ KR_zollverein_tooltip: "Zollverein"
+ KR_zollverein_tooltip_desc: "Zollverein is an organisation for economic development and cooperation between states. The Zollverein aims to better coordinate resources between the member states, and it has numerous support programmes to bolster industrialisation in the less wealthy countries."
+ KR_zollverein_desc: "Zollverein is an organisation for economic development and cooperation between states. The Zollverein aims to better coordinate resources between the member states, and it has numerous support programmes to bolster industrialisation in the less wealthy countries."
+
+ GRU_zollverein: "Zollverein"
+ KR_zollverein_name_GRU: "Leader of the §H$INT_zollverein$§!"
+ KR_zollverein_name: "Member of the §H$INT_zollverein$§!"
+GRU_zollverein_category:0 "The Zollverein"
+GRU_zollverein_category_desc:0 "During the Tenth International Congress, we have decided to embark on an ambitious plan of industrial and economic investment for all developing nations that wish to apply. We will work together to make the world a better place for us all."
+
+GRU_zollverein_goal: "Found The Zollverein"
+GRU_zollverein_goal_desc: "Spearheaded by Albert Speer, Zollverein seeks to unite the continent under a common, single market, ensuring economic cooperation and mutual stability in the process. The Zollverein aims to better coordinate resources between the member states, and it has numerous support programmes to bolster industrialisation in the less wealthy countries."
+
+rotermorgen.1001.t: "The Zollverein Research Organisation"
+rotermorgen.1001.d: "As time has passed it has quickly become apparent that the global revolution requires far more than just devotion to the cause. With France and Britain being the only highly-developed socialist countries in the world, it has become widely accepted that they should launch a long-term research aid programme for other countries. And thus has begun the so-called 'Phalanstère International Research Organisation', a branch of the 'Phalanstère International' programme aimed at providing technological support for socialist countries all over the world. The question now is whether we should join in with this endeavour."
+rotermorgen.1001.a: "Participation sounds good."
+
+rotermorgen.1002.t: "The Zollverein International Industrial Programme"
+rotermorgen.1002.d: "It has become apparent to many in the Internationale that it is the responsibility of all sufficiently-developed syndicalist nations to provide industrial support to those nations that are less able to provide for themselves. The choice is now upon us to decide whether we should stand in solidarity with workers around the world by helping implement a massive programme of industrial aid alongside our French brothers-in-arms."
+rotermorgen.1002.a: "It sounds like a great idea!"
+
+rotermorgen.1003.t:0 "The Zollverein's Assistance Arrives"
+rotermorgen.1003.d:0 "As part of the Phalanstère Intertional programme, our comrades in Paris and London have just delivered us a much needed help. Industrial machines, mining equipment, weapons, ammunition and more - all of this is being unloaded in our ports and airports and being transported across the country."
+rotermorgen.1003.a:0 "Excellent!"
+
+rotermorgen.1004.t: "The Zollverein Offers Assistance"
+rotermorgen.1004.d: "As part of the Zollverein programme, our comrades in Berlin have just offered us much needed help. Industrial machines, mining equipment, weapons, ammunition and more - all of this will be unloaded in our ports and airports and transported across the country - assuming we desire that."
+rotermorgen.1004.a: "Excellent!"
+rotermorgen.1004.b: "We don't want their help."
+
+
+ GRU_created_zollverein: "§Y[FRA.GetNameDef]§!: $has_completed_focus$$GRU_zollverein_goal$§!"
+ GRU_join_zollverein:0 "Join the Zollverein"
+ GRU_Develop_Country: "Develop [FROM.GetNameDef]"
+ GRU_Develop_Country_desc: "[FROM.GRU_Develop_Country_desc]"
+GRU_ongoing_zollverein_development: "Ongoing Zollverein development"
+
+### Techs ###
+ zollverein_research_name: "Zollverein"
+ zollverein_research_desc: "During the meeting of the Internationale we decided on the establishment of a worldwide plan to combine the efforts and technological advances of socialist nations. This plan has since evolved into a more ambitious plan, the Phalanstère International, aimed at helping socialist regimes around the world."
+
+
+####
 GRU_breitspurbahnen:0 "Breitspurbahnen"
 GRU_breitspurbahnen_desc:0 "While the Old Empire did little for us and for the German worker, at the very least it's undeniable it had done wonders to improve its infrastructure. However the Kaiser as usual had not done enough. Today we are beginning work on a grand and ambitious program, the Breitspurbahnen or Double Gauge Railway, which will link the cities of our nation with large gauge railways carrying our noble citizens on grand Hotels of the Rails, the double decker railroad coaches. It will be a time consuming project as much of the existing railway has to be torn up as well to be remade to fit with our new ones, but the time taken will be earned back ten fold by the speed and safety we will achieve on our new rails."
 GRU_welfare:0 "People's Welfare"

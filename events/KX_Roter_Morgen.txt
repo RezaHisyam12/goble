@@ -7775,4 +7775,88 @@ news_event = {
 	}
 }
 
+country_event = {
+	id = rotermorgen.1001
+	title = rotermorgen.1001.t
+	desc = rotermorgen.1001.d
+	picture = GFX_report_event_generic_diplomacy2
+	is_triggered_only = yes
 
+	option = { #we shall participate
+		log = "[GetLogInfo]: event rotermorgen.1001 option rotermorgen.1001.a"
+		name = rotermorgen.1001.a
+		GRU_add_to_zollverein = yes
+	}
+}
+
+country_event = {
+	id = rotermorgen.1002
+	title = rotermorgen.1002.t
+	desc = rotermorgen.1002.d
+	picture = GFX_report_event_generic_diplomacy2
+
+	trigger = {
+		has_same_government_as_ROOT = yes
+		NOT = { has_war_with = FROM }
+	}
+
+	is_triggered_only = yes
+
+	option = { #we shall participate
+		log = "[GetLogInfo]: event rotermorgen.1002 option rotermorgen.1002.a"
+		name = rotermorgen.1002.a
+		add_tech_bonus = {
+			name = rotermorgen.1002.t
+			bonus = 1
+			uses = 1
+			category = construction_tech
+		}
+	}
+}
+
+country_event = {
+	id = rotermorgen.1003
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgen.1003" }
+	title = rotermorgen.1003.t
+	desc = rotermorgen.1003.d
+	picture = GFX_report_event_soviet_soldiers_tank
+
+	is_triggered_only = yes
+
+	option = { #wonderful
+		name = rotermorgen.1003.a
+		add_stability = 0.04
+	}
+}
+
+country_event = {
+	id = rotermorgen.1004
+	title = rotermorgen.1004.t
+	desc = rotermorgen.1004.d
+	picture = GFX_report_event_generic_economic_policy
+
+	is_triggered_only = yes
+
+	option = { #Excellent!
+		log = "[GetLogInfo]: event rotermorgen.1004 option rotermorgen.1004.a"
+		name = rotermorgen.1004.a
+		meta_effect = {
+			text = { set_temp_variable = { GRU_num_target_states = [VALUE] } }
+			VALUE = "[target_value.GetId]"
+		}
+		GRU_zollverein_effect = yes
+	}
+
+	option = { #We don't want their help.
+		log = "[GetLogInfo]: event rotermorgen.1004 option rotermorgen.1004.b"
+		name = rotermorgen.1004.b
+		ai_chance = { base = 0 }
+		FROM = {
+			add_political_power = 50
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = KR_disapproves_of_govt
+			}
+		}
+	}
+}

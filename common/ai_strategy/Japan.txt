@@ -47,6 +47,62 @@ JAP_hates_chinese_claimants = {
 		value = 1000
 	}
 }
+JAP_heavily_support_INS = {
+	allowed = {
+		tag = JAP
+	}
+
+	enable = {		
+		INS = { has_war_with = DEI }	
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = support
+		id = INS
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = INS
+		value = 500
+	}	
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = INS
+		value = 500
+	}
+}
+JAP_heavily_support_PRF = {
+	allowed = {
+		tag = JAP
+	}
+
+	enable = {		
+		OR = {
+			PRF = { has_war_with = BHC }	
+			PRF = { has_war_with = DEH }	
+			PRF = { has_war_with = MAD }	
+		}
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = support
+		id = PRF
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = PRF
+		value = 500
+	}	
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = PRF
+		value = 500
+	}
+}
 
 ################
 ### Military ###

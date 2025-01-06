@@ -924,18 +924,6 @@ RUS_focus_on_germansocialist = {
 	enable = {
 		has_war_with = GRU
 		surrender_progress < 0.1
-		OR = {
-			NOT = { has_war_with = VKB }
-			UKR = { has_capitulated = yes }
-		}
-		OR = {
-			NOT = { has_war_with = VKR }
-			WHR = { has_capitulated = yes }
-		}
-		OR = {
-			NOT = { has_war_with = VKK }
-			POL = { has_capitulated = yes }
-		}
 	}
 	abort_when_not_enabled = yes
 
@@ -958,18 +946,6 @@ RUS_crush_germansocialist = {
 	enable = {
 		has_war_with = GRU
 		surrender_progress < 0.1
-		OR = {
-			NOT = { has_war_with = VKB }
-			UKR = { has_capitulated = yes }
-		}
-		OR = {
-			NOT = { has_war_with = VKR }
-			WHR = { has_capitulated = yes }
-		}
-		OR = {
-			NOT = { has_war_with = VKK }
-			POL = { has_capitulated = yes }
-		}
 		num_planes_stationed_in_regions = {
 			value > 1000
 			regions = { 8 } #Lower Germany

@@ -3008,6 +3008,17 @@ GRU_germania_plan_decisions = {
 					value = 1000
 				}
 			}
+			for_each_scope_loop = {
+				array = FROM.faction_members
+				if = {
+					limit = { is_neighbor_of = ROOT }
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+				}
+			}
 		}
 
 		remove_effect = {
@@ -3017,6 +3028,17 @@ GRU_germania_plan_decisions = {
 					type = prepare_for_war
 					id = ROOT
 					value = -1000
+				}
+			}
+			for_each_scope_loop = {
+				array = FROM.faction_members
+				if = {
+					limit = { is_neighbor_of = ROOT }
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = -1000
+					}
 				}
 			}
 			declare_war_on = {	type = annex_everything	target = AUS }
@@ -3188,6 +3210,12 @@ GRU_germania_plan_decisions = {
 			}
 			modifier = {
 				factor = 0
+				FROM = {
+				is_in_faction_with = RUS
+				}
+			}
+			modifier = {
+				factor = 0
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.8
@@ -3291,6 +3319,12 @@ GRU_germania_plan_decisions = {
 			modifier = {
 				factor = 0
 				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = RUS
+				}
 			}
 			modifier = {
 				factor = 0
@@ -3515,6 +3549,12 @@ GRU_germania_plan_decisions = {
 			}
 			modifier = {
 				factor = 0
+				FROM = {
+				is_in_faction_with = RUS
+				}
+			}
+			modifier = {
+				factor = 0
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.8
@@ -3635,7 +3675,9 @@ GRU_germania_plan_decisions = {
 			}
 			modifier = {
 				factor = 0
+				FROM = {
 				is_in_faction_with = RUS
+				}
 			}
 			modifier = {
 				factor = 0
@@ -3759,7 +3801,9 @@ GRU_germania_plan_decisions = {
 			}
 			modifier = {
 				factor = 0
+				FROM = {
 				is_in_faction_with = RUS
+				}
 			}
 			modifier = {
 				factor = 0
@@ -12748,6 +12792,17 @@ GRU_lebensraum_decisions = {
 					value = 1000
 				}
 			}
+			for_each_scope_loop = {
+				array = FROM.faction_members
+				if = {
+					limit = { is_neighbor_of = ROOT }
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+				}
+			}
 		}
 
 		remove_effect = {
@@ -12757,6 +12812,17 @@ GRU_lebensraum_decisions = {
 					type = prepare_for_war
 					id = ROOT
 					value = -1000
+				}
+			}
+			for_each_scope_loop = {
+				array = FROM.faction_members
+				if = {
+					limit = { is_neighbor_of = ROOT }
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = -1000
+					}
 				}
 			}
 			declare_war_on = {	type = annex_everything	target = RUS }
@@ -12798,7 +12864,9 @@ GRU_lebensraum_decisions = {
 			}
 			modifier = {
 				factor = 0
+				FROM = {
 				is_in_faction_with = RUS
+				}
 			}
 			modifier = {
 				factor = 0
@@ -12849,6 +12917,17 @@ GRU_lebensraum_decisions = {
 					value = 1000
 				}
 			}
+			for_each_scope_loop = {
+				array = FROM.faction_members
+				if = {
+					limit = { is_neighbor_of = ROOT }
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 1000
+					}
+				}
+			}
 		}
 
 		remove_effect = {
@@ -12858,6 +12937,17 @@ GRU_lebensraum_decisions = {
 					type = prepare_for_war
 					id = ROOT
 					value = -1000
+				}
+			}
+			for_each_scope_loop = {
+				array = FROM.faction_members
+				if = {
+					limit = { is_neighbor_of = ROOT }
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = -1000
+					}
 				}
 			}
 			declare_war_on = {

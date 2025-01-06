@@ -1,0 +1,9 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_zollverein_research"
+		texturefile = "gfx/interface/technology_sharing/GRU_zollverein.png"
+	}
+
+}
+
