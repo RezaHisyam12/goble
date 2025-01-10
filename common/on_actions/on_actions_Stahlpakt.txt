@@ -1,0 +1,41 @@
+on_actions = {
+	#ROOT is winner #FROM is loser
+	on_annex = {
+		effect = {
+			# Reset the GRU alias
+			if = {
+				limit = { FROM = { tag = GRU } }
+				GRU = { save_global_event_target_as = KR_stahlpakt_leader }
+				every_country = {
+					limit = { is_in_tech_sharing_group = zollverein_research }
+					remove_from_tech_sharing_group = zollverein_research
+				}
+			}
+			else = {
+				FROM = { remove_from_tech_sharing_group = zollverein_research }
+			}
+		}
+	}
+
+	#ROOT = attacking side
+	#FROM = defending side
+	#fired when two countries end up at war with each other (on_war is fired when a country goes to war against anyone and is not fired again when it enters war against another country unless it went to peace first)
+	on_war_relation_added = {
+		effect = {
+			if = {
+				limit = {
+					is_in_tech_sharing_group = zollverein_research
+					GRU = { is_ally_with = FROM }
+				}
+				remove_from_tech_sharing_group = zollverein_research
+			}
+			else_if = {
+				limit = {
+					FROM = { is_in_tech_sharing_group = zollverein_research }
+					is_ally_with = GRU
+				}
+				FROM = { remove_from_tech_sharing_group = zollverein_research }
+			}
+		}
+	}
+}

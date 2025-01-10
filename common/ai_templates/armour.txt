@@ -137,9 +137,9 @@ armour_generic = {
 			}
 
 			support = {
-				mot_recon = 1
+				helicopter_recon = 1
 				armored_engineer = 1
-				anti_air = 1
+				armored_signal = 1
 				logistics_company = 1
 				armored_maintenance = 1
 			}

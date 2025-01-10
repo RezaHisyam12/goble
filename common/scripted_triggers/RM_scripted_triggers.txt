@@ -366,8 +366,7 @@ is_in_tech_research_group = {
 	}
 }
 
-
 GRU_is_zollverein_member = {
-	has_country_flag = GRU_zollverein_member
+	is_in_array = { global.zollverein_members = THIS }
 }
 

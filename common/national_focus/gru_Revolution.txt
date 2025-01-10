@@ -1838,7 +1838,7 @@ shared_focus = {
 		y = 7
 		cost = 5
 		ai_will_do = {
-			factor = 5
+			factor = 17
 		}
 		prerequisite = { focus = GRU_union_trade_committee focus = GRU_neue_schwerindustrie  }
 		completion_reward = {
@@ -2380,7 +2380,7 @@ shared_focus = {
 		cost = 5
 		prerequisite = { focus = GRU_deutschsozialistische_architektur  }
 		ai_will_do = {
-			factor = 5
+			factor = 10
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_zollverein_goal"
@@ -3954,7 +3954,7 @@ shared_focus = {
 		y = 4
 		cost = 5
 		ai_will_do = {
-			factor = 8
+			factor = 17
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_deutschsozialistische_architektur"

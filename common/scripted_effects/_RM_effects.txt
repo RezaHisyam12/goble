@@ -1592,6 +1592,26 @@ create_KOH = {
 	}
 }
 
+GRU_transfer_stahlpakt_leader = {
+	if = {
+		limit = {
+			any_allied_country = {
+				is_actual_major = yes
+				is_subject = no
+				has_capitulated = no
+			}
+		}
+		get_highest_scored_country_temp = {
+			scorer = next_stahlpakt_leader_scorer
+			var = next_stahlpakt_leader
+		}
+		var:next_stahlpakt_leader = { save_global_event_target_as = KR_stahlpakt_leader }
+	}
+	else = {
+		GRU = { save_global_event_target_as = KR_stahlpakt_leader }
+	}
+}
+
 GRU_add_to_zollverein = {
 	if = {
 		limit = {

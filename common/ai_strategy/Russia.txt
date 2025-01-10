@@ -937,6 +937,11 @@ RUS_focus_on_germansocialist = {
 		id = GRU
 		value = 100
 	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = GRU
+		value = 50
+	}
 }
 
 RUS_crush_germansocialist = {

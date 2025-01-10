@@ -10,7 +10,7 @@ RR_Werwolf_generic = {
 		factor = 2
 	}
 
-	RR_Werwolf_template = {
+	RR_Werwolf_template_early = {
 		reinforce_prio = 2
 
 		upgrade_prio = {
@@ -30,6 +30,44 @@ RR_Werwolf_generic = {
 				field_hospital = 1
 				anti_air = 1
 				logistics_company = 1
+			}
+		}
+	}
+
+	RR_Werwolf_template_late = {
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			base = 1
+			modifier = {
+				factor = 0
+				NOT = { has_tech = sp_helicopter_artillery_observers_tech }
+				NOT = { has_tech = sp_helicopter_med_evac_tech }
+				NOT = { has_tech = sp_helicopter_transport_pods_tech }
+			}
+			modifier = {
+				factor = 3
+				num_of_military_factories > 99
+			}
+			modifier = {
+				add = 1
+				has_reached_maximum_divisions = yes
+			}
+		}
+
+		target_template = {
+			regiments = {
+				RR_Werwolf = 9
+				artillery_brigade = 3
+				anti_air_brigade = 1
+			}
+
+			support = {
+				helicopter_recon = 1
+				engineer = 1
+				helicopter_field_hospital = 1
+				anti_air = 1
+				helicopter_transport = 1
 			}
 		}
 	}

@@ -36,7 +36,6 @@ GRU_zollverein_category = {
 				tag = DEI
 				tag = ICE #handled by tag content
 				tag = ABK #handled by tag content
-				tag = INS
 			}
 			is_chinese_tag = no
 		}
@@ -65,7 +64,7 @@ GRU_zollverein_category = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision GRU_join_zollverein target: [From.GetName]"
-			add_to_tech_sharing_group = zollverein_research
+			country_event = rotermorgen.1001
 		}
 	}
 
@@ -77,6 +76,7 @@ GRU_zollverein_category = {
 		available = {
 			NOT = { has_global_flag = GRU_ongoing_zollverein_development }
 			FROM = { has_civil_war = no }
+			is_in_tech_sharing_group = zollverein_research
 		}
 
 		cancel_trigger = {
@@ -88,12 +88,13 @@ GRU_zollverein_category = {
 			}
 		}
 
-		targets = { ENG SRI ITA SWF NOR HND PRF MEX GUA ELS HON NIC COS PAN CEN CUB HAI DOM WIF BRA FOP CHL URG PAR BOL PRU ECU COL VEN HUN VKB VKR VKK VKM VSJ VST HYP }
+		targets = { ENG FRP SRI ITA SER CRO ROM BUL GRE ALB NOR SWE FIN IRE PRF MEX GUA ELS HON NIC COS PAN CEN CUB HAI DOM WIF BRA FOP CHL URG PAR BOL PRU ECU COL VEN HUN VKB VKR VKK VKM VSJ VST HYP }
 		target_root_trigger = { has_global_flag = GRU_created_zollverein }
 		target_trigger = {
 			FROM = {
 				has_same_government_as_ROOT = yes
 				NOT = { has_war_with = ROOT }
+				is_in_tech_sharing_group = zollverein_research
 			}
 			is_faction_leader = yes
 		}

@@ -1,0 +1,21 @@
+next_stahlpakt_leader_scorer = {
+	targets = {
+		target_array = GRU.faction_members
+
+		target_trigger = {
+			is_actual_major = yes
+			has_capitulated = no
+			is_subject = no
+		}
+
+		score = {
+			base = 100
+			modifier = {
+				add = num_of_factories
+			}
+			modifier = {
+				add = num_divisions
+			}
+		}
+	}
+}

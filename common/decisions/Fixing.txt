@@ -680,3 +680,143 @@ RUS_MIO_decisions = {
 		}
 }
 
+AFG_india_conquest = {
+	AFG_nadir_india = {#
+		icon = generic_prepare_civil_war
+		allowed = { tag = AFG }
+		available = {
+			tag = AFG
+			hidden_trigger = {
+			OR = {
+			has_country_flag = AFG_nadir_victory
+			has_country_flag = AFG_nadir_victory_ent
+			has_country_flag = AFG_zahir_victory
+			has_country_flag = AFG_daoud_victory
+				}
+			}
+			owns_state = 439
+			DEH = {
+				exists = no
+			}
+			PRF = {
+				exists = no
+			}
+			BHC = {
+				exists = no
+			}
+			PGI = {
+				exists = no
+				}
+			}
+		visible = {
+			tag = AFG
+			OR = {
+			has_country_flag = AFG_nadir_victory
+			has_country_flag = AFG_zahir_victory
+			has_country_flag = AFG_daoud_victory
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		cost = 100
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AFG_integrate_pamir"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AFG_integrate_pamir"
+			every_state = {
+				limit = { is_on_continent = india }
+				add_core_of = AFG
+			}
+			activate_targeted_decision = { target = NEP decision = AFG_attack_country }
+			activate_targeted_decision = { target = BHU decision = AFG_attack_country }
+			activate_targeted_decision = { target = SKM decision = AFG_attack_country }
+			activate_targeted_decision = { target = MAD decision = AFG_attack_country }
+		
+		}
+	}
+	AFG_amanullah_india = {#
+		icon = generic_prepare_civil_war
+		allowed = { tag = AFG }
+		available = {
+			tag = AFG
+			has_country_leader = { ruling_only = yes name = "Amanullah Khan" }
+			owns_state = 439
+			DEH = {
+				exists = no
+			}
+			PRF = {
+				exists = no
+			}
+			BHC = {
+				exists = no
+			}
+			PGI = {
+				exists = no
+			}
+			}
+		visible = {
+			tag = AFG
+			has_country_leader = { ruling_only = yes name = "Amanullah Khan" }
+			has_completed_focus = AFG_AMN_darul_aman
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		cost = 100
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AFG_integrate_pamir"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove AFG_integrate_pamir"
+			every_state = {
+				limit = { is_on_continent = india }
+				add_core_of = AFG
+			}
+			set_country_leader_portrait = { portrait = "gfx/leaders/AFG/Portrait_AFG_Amanullah_Khan_India.png" }
+			set_country_flag = AFG_india_amanullah_portrait
+			activate_targeted_decision = { target = NEP decision = AFG_attack_country }
+			activate_targeted_decision = { target = BHU decision = AFG_attack_country }
+			activate_targeted_decision = { target = SKM decision = AFG_attack_country }
+			activate_targeted_decision = { target = MAD decision = AFG_attack_country }
+		}
+	}
+	AFG_nasrullah_india = {#
+		icon = generic_prepare_civil_war
+		allowed = { tag = AFG }
+		available = {
+			tag = AFG
+			DEH = {
+				exists = no
+			}
+			PGI = {
+				exists = no
+			}
+			has_country_leader = { ruling_only = yes name = "Nasrullah Khan" }
+			owns_state = 439
+			}
+		visible = {
+			tag = AFG
+			has_country_leader = { ruling_only = yes name = "Nasrullah Khan" }
+			has_completed_focus = AFG_realize_mughal_ambitions
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = yes
+		cost = 100
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision AFG_nasrullah_india"
+		}
+		remove_effect = {
+			country_event = afghanredux.113
+			log = "[GetDateText]: [Root.GetName]: Decision remove AFG_nasrullah_india"
+		}
+	}
+}

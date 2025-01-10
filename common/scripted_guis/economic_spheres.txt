@@ -14,7 +14,7 @@ scripted_gui = {
 				GER_is_in_mitteleuropa = yes
 			}
 			KR_zollverein_button_visible = {
-				is_in_tech_sharing_group = zollverein_research
+				GRU_is_zollverein_member = yes
 			}
 			KR_phalanstere_button_visible = {
 				is_in_tech_sharing_group = phalanstere_research

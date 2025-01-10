@@ -34,6 +34,10 @@ HYP = {
 	original_tag = SWE
 	has_cosmetic_tag = HYP
 }
+### Stahlpakt Leader
+GRU = {
+	global_event_target = KR_stahlpakt_leader
+}
 
 ## RM Collapse Tags ##
 ### Saxony

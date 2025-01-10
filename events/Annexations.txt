@@ -10800,6 +10800,23 @@ country_event = { #Fate of Morroco
 			MOR = { end_coalition = yes }
 		}
 	}
+	
+	option = { #puppet as Republic
+		name = annex.60.b
+		ai_chance = {
+			factor = 100
+		}
+		MOR = {
+			set_cosmetic_tag = MOR_republic
+			MOR_remove_monarchy = yes
+			remove_ideas = MOR_germanmission_idea
+		}
+		set_temp_variable = { tag_to_release = MOR }
+		release_targeted_tag = yes
+		hidden_effect = {
+			MOR = { end_coalition = yes }
+		}
+	}
 
 	option = { #occupy
 		name = annex.occupation
@@ -16003,6 +16020,17 @@ country_event = { #The Annexation of Persia
 			if = {
 				limit = { tag = IRQ }
 				add_state_claim = 413 #Khuzestan
+			}
+			if = {
+				limit = { 
+					tag = TUR
+					OR = {
+						has_government = market_liberal
+			            has_government = social_liberal
+					}
+				}
+				add_state_claim = 419 #Tabriz
+				add_state_claim = 417 #Urmia
 			}
 		}
 	}
@@ -25836,6 +25864,22 @@ country_event = { #Fate of Morocco non-leftist
 		set_temp_variable = { tag_to_release = MOR }
 		release_targeted_tag = yes
 	}
+	
+
+	option = { #puppet
+		name = annex.167.b
+		ai_chance = {
+			factor = 99
+		}
+		MOR = {
+			set_cosmetic_tag = MOR_republic
+			MOR_remove_monarchy = yes
+			remove_ideas = MOR_germanmission_idea
+		}
+		set_temp_variable = { tag_to_release = MOR }
+		release_targeted_tag = yes
+	}
+	
 
 	option = { #occupy
 		name = annex.occupation
@@ -29521,6 +29565,10 @@ country_event = { #Fate of Canada
 				AND = {
 				tag = NVN
 				has_cosmetic_tag = NVN_USA
+				}
+				AND = {
+					tag = ARZ
+					has_cosmetic_tag = ARZ_USA
 				}
 			}
 		}
