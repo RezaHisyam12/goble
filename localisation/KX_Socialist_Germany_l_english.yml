@@ -1,24 +1,37 @@
 ﻿l_english:
 
 
-has_same_government_as_ROOT_tt_NOT: "NOT: Has same government as §Y[ROOT.GetNameWithFlag]§!."
+has_same_government_as_ROOT_tt_NOT: "Does not have the same government as §Y[ROOT.GetNameWithFlag]§!."
 
 
 ###################
 ####Zollverein#####
 ###################
+ 
+ KR_zollverein_tooltip:0 "[GetZollvereinSphereName]\n[GetZollvereinSphereEffects]"
+ KR_zollverein_tooltip_desc:0 "§L[GetZollvereinSphereDesc]§!"
+
+ KR_zollverein_name_GRU:0 "Leader of the §HZollverein§!"
+ KR_zollverein_name:0 "Member of the §HZollverein§!"
+
+ KR_zollverein_desc_GRU:0 "The §HZollverein§! is an economic and political alliance that is working together to overthrow the influence of Western Imperialism in Europe. As the leader of the East Zollverein, German provides investments, technologies and specialists to the members of the Sphere, at the expense of exploiting their resources and entrenching its political influence.\n\nCurrent members of Zollverein: [GRU_ally0][GRU_ally1][GRU_ally2][GRU_ally3][GRU_ally4][GRU_ally5][GRU_ally6][GRU_ally7][GRU_ally8][JAP_ally9][JAP_ally10][JAP_ally11][JAP_ally12][JAP_ally13][JAP_ally14]"
+ KR_zollverein_desc:0 "The §HZollverein§! is an economic and political alliance that is working together to overthrow the influence of Western Imperialism in Europe. German, as its leader, gives economic support to its other members, at the price of exploiting its natural resources and entrenching its political influence.\n\nCurrent members of Zollverein: [GRU_ally0][GRU_ally1][GRU_ally2][GRU_ally3][GRU_ally4][GRU_ally5][GRU_ally6][GRU_ally7][GRU_ally8][GRU_ally9][GRU_ally10][GRU_ally11][GRU_ally12][GRU_ally13][GRU_ally14]"
+
+ KR_zollverein_effects_GRU:0 "$MODIFIER_RESEARCH_SPEED_FACTOR$: [?global.zollverein_goods_boost|+=%]\n$MODIFIER_GLOBAL_BUILDING_SLOTS_FACTOR$: [?global.zollverein_slots_boost|+=%]\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: [?global.zollverein_industry_boost|+=%]"
+ KR_zollverein_effects:0 "$MODIFIER_POLITICAL_POWER_GAIN$: §G+0.05§!\n$MODIFIER_RESEARCH_SPEED_FACTOR$: [?global.zollverein_goods_boost_member|+=%]\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: [?global.zollverein_resources_boost_member|+=%]"
+
 
 GRU_zollverein: "Zollverein"
-
- KR_zollverein_tooltip: "Zollverein"
- KR_zollverein_tooltip_desc: "Zollverein is an organisation for economic development and cooperation between states. The Zollverein aims to better coordinate resources between the member states, and it has numerous support programmes to bolster industrialisation in the less wealthy countries."
  KR_zollverein_desc: "Zollverein is an organisation for economic development and cooperation between states. The Zollverein aims to better coordinate resources between the member states, and it has numerous support programmes to bolster industrialisation in the less wealthy countries."
 
- GRU_zollverein: "Zollverein"
- KR_zollverein_name_GRU: "Leader of the §H$INT_zollverein$§!"
- KR_zollverein_name: "Member of the §H$INT_zollverein$§!"
 GRU_zollverein_category:0 "The Zollverein"
 GRU_zollverein_category_desc:0 "During the Tenth International Congress, we have decided to embark on an ambitious plan of industrial and economic investment for all developing nations that wish to apply. We will work together to make the world a better place for us all."
+
+GRU_zollverein_economic_sphere:0 "Zollverein"
+GRU_zollverein_economic_sphere_desc:0 "This represents the overall boost to our economy received from our central place within the Zollverein. The more members we add, and the greater their industry, the better off we become."
+
+GRU_zollverein_economic_sphere_member:0 "Zollverein"
+GRU_zollverein_economic_sphere_member_desc:0 "This represents the overall boost to our economy received from our membership within German's Zollverein. The more members in the sphere, and the greater their collective industry, the better off we all become."
 
 GRU_zollverein_goal: "Found The Zollverein"
 GRU_zollverein_goal_desc: "Spearheaded by Albert Speer, Zollverein seeks to unite the continent under a common, single market, ensuring economic cooperation and mutual stability in the process. The Zollverein aims to better coordinate resources between the member states, and it has numerous support programmes to bolster industrialisation in the less wealthy countries."
@@ -40,12 +53,47 @@ rotermorgen.1004.d: "As part of the Zollverein programme, our comrades in Berlin
 rotermorgen.1004.a: "Excellent!"
 rotermorgen.1004.b: "We don't want their help."
 
-
  GRU_created_zollverein: "§Y[FRA.GetNameDef]§!: $has_completed_focus$$GRU_zollverein_goal$§!"
  GRU_join_zollverein:0 "Join the Zollverein"
  GRU_Develop_Country: "Develop [FROM.GetNameDef]"
  GRU_Develop_Country_desc: "[FROM.GRU_Develop_Country_desc]"
 GRU_ongoing_zollverein_development: "Ongoing Zollverein development"
+
+### Scripted Loc ###
+GRU_ally1_name:0 "§Y[?global.zollverein_members^0.GetFlag][?global.zollverein_members^0.GetName]§!, "
+GRU_ally2_name:0 "§Y[?global.zollverein_members^1.GetFlag][?global.zollverein_members^1.GetName]§!, "
+GRU_ally3_name:0 "§Y[?global.zollverein_members^2.GetFlag][?global.zollverein_members^2.GetName]§!, "
+GRU_ally4_name:0 "§Y[?global.zollverein_members^3.GetFlag][?global.zollverein_members^3.GetName]§!, "
+GRU_ally5_name:0 "§Y[?global.zollverein_members^4.GetFlag][?global.zollverein_members^4.GetName]§!, "
+GRU_ally6_name:0 "§Y[?global.zollverein_members^5.GetFlag][?global.zollverein_members^5.GetName]§!, "
+GRU_ally7_name:0 "§Y[?global.zollverein_members^6.GetFlag][?global.zollverein_members^6.GetName]§!, "
+GRU_ally8_name:0 "§Y[?global.zollverein_members^7.GetFlag][?global.zollverein_members^7.GetName]§!, "
+GRU_ally9_name:0 "§Y[?global.zollverein_members^8.GetFlag][?global.zollverein_members^8.GetName]§!, "
+GRU_ally10_name:0 "§Y[?global.zollverein_members^9.GetFlag][?global.zollverein_members^9.GetName]§!, "
+GRU_ally11_name:0 "§Y[?global.zollverein_members^10.GetFlag][?global.zollverein_members^10.GetName]§!, "
+GRU_ally12_name:0 "§Y[?global.zollverein_members^11.GetFlag][?global.zollverein_members^11.GetName]§!, "
+GRU_ally13_name:0 "§Y[?global.zollverein_members^12.GetFlag][?global.zollverein_members^12.GetName]§!, "
+GRU_ally14_name:0 "§Y[?global.zollverein_members^13.GetFlag][?global.zollverein_members^13.GetName]§!, "
+GRU_ally15_name:0 "§Y[?global.zollverein_members^14.GetFlag][?global.zollverein_members^14.GetName]§!, "
+GRU_ally1_last:0 "§Y[?global.zollverein_members^0.GetFlag][?global.zollverein_members^0.GetName]§!"
+GRU_ally2_last:0 "§Y[?global.zollverein_members^1.GetFlag][?global.zollverein_members^1.GetName]§!"
+GRU_ally3_last:0 "§Y[?global.zollverein_members^2.GetFlag][?global.zollverein_members^2.GetName]§!"
+GRU_ally4_last:0 "§Y[?global.zollverein_members^3.GetFlag][?global.zollverein_members^3.GetName]§!"
+GRU_ally5_last:0 "§Y[?global.zollverein_members^4.GetFlag][?global.zollverein_members^4.GetName]§!"
+GRU_ally6_last:0 "§Y[?global.zollverein_members^5.GetFlag][?global.zollverein_members^5.GetName]§!"
+GRU_ally7_last:0 "§Y[?global.zollverein_members^6.GetFlag][?global.zollverein_members^6.GetName]§!"
+GRU_ally8_last:0 "§Y[?global.zollverein_members^7.GetFlag][?global.zollverein_members^7.GetName]§!"
+GRU_ally9_last:0 "§Y[?global.zollverein_members^8.GetFlag][?global.zollverein_members^8.GetName]§!"
+GRU_ally10_last:0 "§Y[?global.zollverein_members^9.GetFlag][?global.zollverein_members^9.GetName]§!"
+GRU_ally11_last:0 "§Y[?global.zollverein_members^10.GetFlag][?global.zollverein_members^10.GetName]§!"
+GRU_ally12_last:0 "§Y[?global.zollverein_members^11.GetFlag][?global.zollverein_members^11.GetName]§!"
+GRU_ally13_last:0 "§Y[?global.zollverein_members^12.GetFlag][?global.zollverein_members^12.GetName]§!"
+GRU_ally14_last:0 "§Y[?global.zollverein_members^13.GetFlag][?global.zollverein_members^13.GetName]§!"
+GRU_ally15_last:0 "§Y[?global.zollverein_members^14.GetFlag][?global.zollverein_members^14.GetName]§!"
+GRU_ally_none:0 ""
+GRU_ally_no_sphere:0 "None"
+GRU_invest_timer:0 "Has been target of investment within the last year"
+GRU_economic_sphere_member:0 "Is a member of German's economic sphere"
 
 ### Techs ###
  zollverein_research_name: "Zollverein"

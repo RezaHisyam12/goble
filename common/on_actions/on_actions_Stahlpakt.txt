@@ -14,6 +14,12 @@ on_actions = {
 			else = {
 				FROM = { remove_from_tech_sharing_group = zollverein_research }
 			}
+			if = {
+				limit = {
+					has_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere }
+				}
+				remove_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere }
+			}
 		}
 	}
 
@@ -24,7 +30,7 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					is_in_tech_sharing_group = zollverein_research
+					is_in_array = { global.zollverein_members = FROM }
 					GRU = { is_ally_with = FROM }
 				}
 				remove_from_tech_sharing_group = zollverein_research
@@ -36,6 +42,14 @@ on_actions = {
 				}
 				FROM = { remove_from_tech_sharing_group = zollverein_research }
 			}
+			if = {
+				limit = {
+					is_in_array = { global.zollverein_members = FROM }
+					has_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere_member }
+				}
+				remove_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere_member }
+			}
+			GRU_recalculate_economic_integration = yes
 		}
 	}
 }

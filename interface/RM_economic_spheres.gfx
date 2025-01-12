@@ -1,15 +1,15 @@
 spriteTypes = {
 	SpriteType = {		
 		name = "GFX_goal_GRU_zollverein"
-		texturefile = "gfx/interface/goals/GRU_zollverein.dds"	
+		texturefile = "gfx/interface/goals/GRU_zollverein.png"	
 	}
 
 	SpriteType = {		
 		name = "GFX_goal_GRU_zollverein_shine"	
-		texturefile = "gfx/interface/goals/GRU_zollverein.dds"	
+		texturefile = "gfx/interface/goals/GRU_zollverein.png"	
 		effectFile = "gfx/FX/buttonstate.lua"	
 		animation = {	
-			animationmaskfile = "gfx/interface/goals/GRU_zollverein.dds"
+			animationmaskfile = "gfx/interface/goals/GRU_zollverein.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -21,7 +21,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}		
 		animation = {	
-			animationmaskfile = "gfx/interface/goals/GRU_zollverein.dds"
+			animationmaskfile = "gfx/interface/goals/GRU_zollverein.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no

@@ -2384,8 +2384,17 @@ shared_focus = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_zollverein_goal"
+			add_to_tech_sharing_group = zollverein_research
 			set_global_flag = GRU_created_zollverein
-			GRU_add_to_zollverein = yes
+			set_country_flag = GRU_zollverein_member
+			add_to_array = { global.zollverein_members = THIS }
+			hidden_effect = {
+			country_event = rotermorgen.1005
+			if = {
+				limit = { NOT = { has_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere } } }
+				add_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere }
+				}
+			}
 			add_tech_bonus = {
 				name = GRU_found_the_zollverein
 				bonus = 1
@@ -6850,15 +6859,19 @@ shared_focus = {
 			factor = 2
 			modifier = {
 				factor = 0
-				GRU_dont_attack_if_vulnerable_or_preparing = yes
-			}
-			modifier = {
-				factor = 0
-				has_manpower < 2000000
-			}
-			modifier = {
-				factor = 0
 				date < 1941.6.1
+			}
+			modifier = {
+				factor = 0
+				has_manpower < 2250000
+			}
+			modifier = {
+				factor = 0
+				has_war_with = AUS
+			}
+			modifier = {
+				factor = 0
+				has_war_with = RUS
 			}
 		}
 		targets = { FRA }

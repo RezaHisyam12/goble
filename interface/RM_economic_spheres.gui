@@ -9,7 +9,7 @@ guiTypes = {
 			spriteType = "GFX_goal_GRU_zollverein"
 			pdx_tooltip = KR_zollverein_tooltip
 			pdx_tooltip_delayed = KR_zollverein_tooltip_desc
-			scale = 0.8
+			scale = 0.9
 		}
 
 		buttonType = {

@@ -1620,9 +1620,14 @@ GRU_add_to_zollverein = {
 		set_country_flag = GRU_zollverein_member
 		add_to_array = { global.zollverein_members = THIS }
 		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere_member } } }
+			add_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere_member }
+		}
+		if = {
 			limit = { NOT = { is_in_tech_sharing_group = zollverein_research } }
 			add_to_tech_sharing_group = zollverein_research
 		}
+		GRU_recalculate_economic_integration = yes
 	}
 }
 
@@ -1641,6 +1646,46 @@ GRU_remove_from_zollverein = {
 GRU_zollverein_tech_sharing = {
 	add_to_tech_sharing_group = zollverein_research
 	country_event = rotermorgen.1003
+}
+
+GRU_recalculate_economic_integration = {
+	hidden_effect = {
+		set_variable = { global.var_zollverein_factories = 0 }
+		for_each_scope_loop = {
+			array = global.zollverein_members
+			add_to_variable = { global.var_zollverein_factories = THIS.num_of_civilian_factories }
+		}
+
+		#German's building boost
+		set_variable = { global.zollverein_slots_boost = global.var_zollverein_factories }
+		clamp_variable = { var = global.zollverein_slots_boost max = 10 min = 0 }
+		multiply_variable = { global.zollverein_slots_boost = 0.75 }
+		multiply_variable = { global.zollverein_slots_boost = 0.01 }
+
+		#German's industry boost
+		set_variable = { global.zollverein_industry_boost = global.var_zollverein_factories }
+		clamp_variable = { var = global.zollverein_industry_boost max = 10 min = 0 }
+		multiply_variable = { global.zollverein_industry_boost = 0.01 }
+		multiply_variable = { global.zollverein_industry_boost = 0.50 }
+
+		#German's consumer research boost
+		set_variable = { global.zollverein_goods_boost = global.var_zollverein_factories }
+		clamp_variable = { var = global.zollverein_goods_boost max = 10 min = 0 }
+		multiply_variable = { global.zollverein_goods_boost = 0.01 }
+
+		#Member's consumer research boost
+		set_variable = { global.zollverein_goods_boost_member = global.var_zollverein_factories }
+		add_to_variable = { global.zollverein_goods_boost_member = GRU.num_of_civilian_factories }
+		clamp_variable = { var = global.zollverein_goods_boost_member max = 10 min = 0 }
+		multiply_variable = { global.zollverein_goods_boost_member = 0.0005 }
+
+		#Member's resources boost
+		set_variable = { global.zollverein_resources_boost_member = global.var_zollverein_factories }
+		add_to_variable = { global.zollverein_resources_boost_member = GRU.num_of_civilian_factories }
+		clamp_variable = { var = global.zollverein_resources_boost_member max = 10 min = 0 }
+		multiply_variable = { global.zollverein_resources_boost_member = 0.01 }
+		multiply_variable = { global.zollverein_resources_boost_member = 0.50 }
+	}
 }
 
 GRU_zollverein_effect = {

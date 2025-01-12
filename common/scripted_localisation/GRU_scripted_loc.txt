@@ -1,3 +1,366 @@
+defined_text = { # Country
+	name = GetZollvereinSphereName
+	text = {
+		trigger = { tag = GRU }
+		localization_key = KR_zollverein_name_GRU
+	}
+	text = {
+		localization_key = KR_zollverein_name
+	}
+}
+
+defined_text = { # Country
+	name = GetZollvereinSphereDesc
+	text = {
+		trigger = { tag = GRU }
+		localization_key = KR_zollverein_desc_GRU
+	}
+	text = {
+		localization_key = KR_zollverein_desc
+	}
+}
+
+defined_text = {
+	name = GetZollvereinSphereEffects
+	text = {
+		trigger = { tag = GRU }
+		localization_key = KR_zollverein_effects_GRU
+	}
+	text = {
+		localization_key = KR_zollverein_effects
+	}
+}
+
+defined_text = {
+	name = GRU_ally0
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num > 1 }
+		}
+		localization_key = GRU_ally1_name
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 1 }
+		}
+		localization_key = GRU_ally_no_sphere
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 2 }
+		}
+		localization_key = GRU_ally1_last
+	}
+}
+
+defined_text = {
+	name = GRU_ally1
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num > 2 }
+		}
+		localization_key = GRU_ally2_name
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 2 }
+		}
+		localization_key = GRU_ally_none
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 3 }
+		}
+		localization_key = GRU_ally2_last
+	}
+}
+
+defined_text = {
+	name = GRU_ally2
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num > 3 }
+		}
+		localization_key = GRU_ally3_name
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 3 }
+		}
+		localization_key = GRU_ally_none
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 4 }
+		}
+		localization_key = GRU_ally3_last
+	}
+}
+
+defined_text = {
+	name = GRU_ally3
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num > 4 }
+		}
+		localization_key = GRU_ally4_name
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 4 }
+		}
+		localization_key = GRU_ally_none
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 5 }
+		}
+		localization_key = GRU_ally4_last
+	}
+}
+
+defined_text = {
+	name = GRU_ally4
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num > 5 }
+		}
+		localization_key = GRU_ally5_name
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 5 }
+		}
+		localization_key = GRU_ally_none
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 6 }
+		}
+		localization_key = GRU_ally5_last
+	}
+}
+
+defined_text = {
+	name = GRU_ally5
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num > 6 }
+		}
+		localization_key = GRU_ally6_name
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 6 }
+		}
+		localization_key = GRU_ally_none
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 7 }
+		}
+		localization_key = GRU_ally6_last
+	}
+}
+
+defined_text = {
+	name = GRU_ally6
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num > 7 }
+		}
+		localization_key = GRU_ally7_name
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 7 }
+		}
+		localization_key = GRU_ally_none
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 8 }
+		}
+		localization_key = GRU_ally7_last
+	}
+}
+
+defined_text = {
+	name = GRU_ally7
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num > 8 }
+		}
+		localization_key = GRU_ally8_name
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 8 }
+		}
+		localization_key = GRU_ally_none
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 9 }
+		}
+		localization_key = GRU_ally8_last
+	}
+}
+
+defined_text = {
+	name = GRU_ally8
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num > 9 }
+		}
+		localization_key = GRU_ally9_name
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 9 }
+		}
+		localization_key = GRU_ally_none
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 10 }
+		}
+		localization_key = GRU_ally9_last
+	}
+}
+
+defined_text = {
+	name = GRU_ally9
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num > 10 }
+		}
+		localization_key = GRU_ally10_name
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 10 }
+		}
+		localization_key = GRU_ally_none
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 11 }
+		}
+		localization_key = GRU_ally10_last
+	}
+}
+
+defined_text = {
+	name = GRU_ally10
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num > 11 }
+		}
+		localization_key = GRU_ally11_name
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 11 }
+		}
+		localization_key = GRU_ally_none
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 12 }
+		}
+		localization_key = GRU_ally11_last
+	}
+}
+
+defined_text = {
+	name = GRU_ally11
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num > 12 }
+		}
+		localization_key = GRU_ally12_name
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 12 }
+		}
+		localization_key = GRU_ally_none
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 13 }
+		}
+		localization_key = GRU_ally12_last
+	}
+}
+
+defined_text = {
+	name = GRU_ally12
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num > 13 }
+		}
+		localization_key = GRU_ally13_name
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 13 }
+		}
+		localization_key = GRU_ally_none
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 14 }
+		}
+		localization_key = GRU_ally13_last
+	}
+}
+
+defined_text = {
+	name = GRU_ally13
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num > 14 }
+		}
+		localization_key = GRU_ally14_name
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 14 }
+		}
+		localization_key = GRU_ally_none
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 15 }
+		}
+		localization_key = GRU_ally14_last
+	}
+}
+
+defined_text = {
+	name = GRU_ally14
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num > 15 }
+		}
+		localization_key = GRU_ally15_name
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 15 }
+		}
+		localization_key = GRU_ally_none
+	}
+	text = {
+		trigger = {
+			check_variable = { global.zollverein_members^num < 16 }
+		}
+		localization_key = GRU_ally15_last
+	}
+}
+
 defined_text = { #Target scope
 	name = FRA_Develop_Country_desc
 	text = {

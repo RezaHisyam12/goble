@@ -7860,3 +7860,19 @@ country_event = {
 		}
 	}
 }
+
+country_event = { #Setup and monthly checking
+	id = rotermorgen.1005
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_faction_leader = yes
+	}
+
+	immediate = {
+		GRU_recalculate_economic_integration = yes
+		country_event = { id = rotermorgen.1005 days = 30 }
+	}
+}

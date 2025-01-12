@@ -11,4 +11,24 @@ GRU_new_germania_modifier = {
 	local_building_slots_factor = 0.25
 	state_production_speed_buildings_factor = 0.5
 }
+
+GRU_zollverein_economic_sphere = {
+	remove_trigger = {
+		GRU = { is_faction_leader = no }
+	}
+	
+	global_building_slots_factor = global.zollverein_slots_boost
+	research_speed_factor = global.zollverein_goods_boost
+	production_factory_max_efficiency_factor = global.zollverein_industry_boost
+}
+
+GRU_zollverein_economic_sphere_member = {
+	remove_trigger = {
+		GRU = { is_faction_leader = no }
+	}
+
+	political_power_gain = 0.05
+	research_speed_factor = global.zollverein_goods_boost_member
+	production_factory_max_efficiency_factor = global.zollverein_resources_boost_member
+}
 					
