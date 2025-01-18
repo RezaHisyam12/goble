@@ -1485,6 +1485,7 @@
  RUS_TOZ_Medal_abcd: "Experimental TOZ Equipment"
  RUS_TOZ_Medal_ab: "Experimental TOZ Equipment"
  RUS_TOZ_Medal_abd: "Experimental TOZ Equipment"
+ RUS_TOZ_Medal_acd: "Experimental TOZ Equipment"
  RUS_TOZ_Medal_b: "Experimental TOZ Equipment"
  RUS_TOZ_Medal_bd: "Experimental TOZ Equipment"
  RUS_TOZ_Medal_a_tt: "§g§YExperimental TOZ Equipment§! which grants:\n§W$MODIFIERS_ARMY_ATTACK_FACTOR$:§! §G+10%§!§!"
@@ -1495,6 +1496,7 @@
  RUS_TOZ_Medal_b_tt: "§g§YExperimental TOZ Equipment§! which grants:\n§W$MODIFIERS_ARMY_DEFENCE_FACTOR$:§! §G+10%§!§!"
  RUS_TOZ_Medal_bd_tt: "§g§YExperimental TOZ Equipment§! which grants:\n§W$MODIFIERS_ARMY_DEFENCE_FACTOR$:§! §G+10%§!\n§W$MODIFIER_BREAKTHROUGH$:§!§G+10%§!§!"
  RUS_TOZ_Medal_abd_tt: "§g§YExperimental TOZ Equipment§! which grants:\n§W$MODIFIERS_ARMY_ATTACK_FACTOR$:§! §G+10%§!§!\n§W$MODIFIERS_ARMY_DEFENCE_FACTOR$:§! §G+10%§!\n§W$MODIFIER_BREAKTHROUGH$:§!§G+10%§!§!"
+ RUS_TOZ_Medal_acd_tt: "§g§YExperimental TOZ Equipment§! which grants:\n§W$MODIFIERS_ARMY_ATTACK_FACTOR$:§! §G+10%§!§!\n§W$MODIFIER_ARMY_ORG$:§! §G+10%§!§!\n§W$MODIFIER_BREAKTHROUGH$:§!§G+10%§!§!"
  RUS_TOZ_Org_reset_tt: "§gWill reset the unit's organisation to 0%§!\n"
  RUS_TOZ_Medal_cost_tt: "§gThis decision costs 500 TOZ §HFunds§!§!"
 

@@ -23,6 +23,7 @@ has_same_government_as_ROOT_tt_NOT: "Does not have the same government as §Y[RO
 
 GRU_zollverein: "Zollverein"
  KR_zollverein_desc: "Zollverein is an organisation for economic development and cooperation between states. The Zollverein aims to better coordinate resources between the member states, and it has numerous support programmes to bolster industrialisation in the less wealthy countries."
+GRU_may_now_invite_sphere:0 "Unaligned and subject nations may now be invited into German's sphere of economic influence\n"
 
 GRU_zollverein_category:0 "The Zollverein"
 GRU_zollverein_category_desc:0 "During the Tenth International Congress, we have decided to embark on an ambitious plan of industrial and economic investment for all developing nations that wish to apply. We will work together to make the world a better place for us all."
@@ -2007,6 +2008,7 @@ GRU_pan_germanism_denmark_decision:0 "Attack [FROM.GetNameDef]"
 GRU_pan_germanism_elsas_decision:0 "Attack Elsas-Lothringen"
 GRU_pan_germanism_westukraine_decision:0 "Attack [From.GetNameDef]"
 GRU_pan_germanism_iceland_decision:0 "Attack [From.GetNameDef]"
+GRU_pan_germanism_italy_decision:0 "Attack [From.GetNameDef]"
 
 GRU_pan_germanism_core_austria_decision:0 "Core Austria"
 GRU_pan_germanism_core_slovenia_decision:0 "Core Slovenia"

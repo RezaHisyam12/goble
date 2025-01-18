@@ -2384,12 +2384,13 @@ shared_focus = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_zollverein_goal"
+			custom_effect_tooltip = GRU_may_now_invite_sphere
+			custom_effect_tooltip = tooltip_white_line
 			add_to_tech_sharing_group = zollverein_research
 			set_global_flag = GRU_created_zollverein
 			set_country_flag = GRU_zollverein_member
 			add_to_array = { global.zollverein_members = THIS }
 			hidden_effect = {
-			country_event = rotermorgen.1005
 			if = {
 				limit = { NOT = { has_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere } } }
 				add_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere }
@@ -2400,16 +2401,6 @@ shared_focus = {
 				bonus = 1
 				uses = 1
 				category = construction_tech
-			}
-			custom_effect_tooltip = tooltip_white_line
-			every_other_country = {
-				display_individual_scopes = yes
-				limit = {
-					has_same_government_as_ROOT = yes
-					is_in_faction_with = ROOT
-					NOT = { has_war_with = ROOT }
-				}
-				country_event = rotermorgen.1001
 			}
 		}
 
@@ -6863,7 +6854,7 @@ shared_focus = {
 			}
 			modifier = {
 				factor = 0
-				has_manpower < 2250000
+				has_country_flag = imminent_war
 			}
 			modifier = {
 				factor = 0

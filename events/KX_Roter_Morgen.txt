@@ -2268,6 +2268,11 @@ country_event = { # allignment
 		ai_chance = {
 			factor = 90
 		}
+		separate_peace_all_wars = yes
+		if = {
+			limit = { is_in_tech_sharing_group = phalanstere_research }
+			remove_from_tech_sharing_group = phalanstere_research
+		}
 		GRU = {
 		add_to_faction = ROOT
 		}
@@ -7872,7 +7877,24 @@ country_event = { #Setup and monthly checking
 	}
 
 	immediate = {
+		add_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere }
 		GRU_recalculate_economic_integration = yes
 		country_event = { id = rotermorgen.1005 days = 30 }
 	}
 }
+
+country_event = { #Removing a country from the economic sphere
+	id = rotermorgen.1006
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_war_with = GRU }
+			set_country_flag = GRU_refused_invitation
+		}
+		GRU_remove_from_zollverein = yes
+	}
+}
+

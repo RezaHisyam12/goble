@@ -3004,7 +3004,7 @@ GRU_germania_plan_decisions = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision GRU_pan_germanism_austria_decision target: [From.GetName]"
-			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			set_country_flag = { flag = imminent_war days = 31 value = 1 }
 			setup_decision_attack_AI = yes
 		}
 
@@ -3018,6 +3018,21 @@ GRU_germania_plan_decisions = {
 					is_not_claim_or_core_of_ROOT = yes
 				}
 				add_claim_by = ROOT
+			}
+			1135 = {
+				remove_claim_by = ROOT
+			}
+			664 = {
+				remove_claim_by = ROOT
+			}
+			70 = {
+				remove_claim_by = ROOT
+			}
+			1120 = {
+				remove_claim_by = ROOT
+			}
+			1121 = {
+				remove_claim_by = ROOT
 			}
 		}
 	}
@@ -3223,6 +3238,109 @@ GRU_germania_plan_decisions = {
 		}
 	}
 	#
+	GRU_pan_germanism_italy_decision = {
+		icon = GFX_pangermanicone
+		allowed = { original_tag = GRU }
+		available = {
+			is_subject = no
+			country_exists = ITA
+		}
+		visible = {
+			has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = ITA
+				}
+			}
+			783 = { 
+				owner = {
+					tag = ITA
+				}
+			}
+		}
+		targets = { ITA }
+		target_root_trigger = {
+			has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = ITA
+				}	
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 145
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = FRA
+				}
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					any_allied_country = {
+						is_faction_leader = yes
+						overlord = {
+							strength_ratio = {
+								tag = ROOT
+								ratio > 0.7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_pan_germanism_italy_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			setup_decision_attack_AI = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_italy_decision target: [From.GetName]"
+			clear_decision_attack_AI = yes
+			declare_war_on = {	type = annex_everything	target = ITA }
+		}
+	}
+	#
 	GRU_pan_germanism_slovenia_decision = {
 		icon = GFX_pangermanicone
 		allowed = { original_tag = GRU }
@@ -3261,7 +3379,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 100
+			factor = 145
 			modifier = {
 				factor = 0
 				has_war = yes

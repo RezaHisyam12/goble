@@ -216,6 +216,9 @@ is_not_excluded_from_stahlpakt_alliance = {
 		tag = COS
 		tag = PAN
 		tag = ERI
+		tag = PRI
+		tag = HAI
+		tag = DOM
 	}
 }
 

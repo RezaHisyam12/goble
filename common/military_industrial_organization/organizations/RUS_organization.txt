@@ -5787,7 +5787,7 @@ RUS_bz_organisation = {
 		custom_effect_tooltip = RUS_MIO_XP_Gain_tt
 	}
 
-	ai_will_do = { base = 1 }
+	ai_will_do = { base = 1000 }
 
 	initial_trait = {
 		name = RUS_bz_mio_desc
@@ -6182,7 +6182,7 @@ RUS_av_organisation = {
 		tp_tech
 	}
 
-	ai_will_do = { base = 1000 }
+	ai_will_do = { base = 100 }
 
 	initial_trait = {
 		name = RUS_av_mio_desc
@@ -6556,7 +6556,7 @@ RUS_as_organisation = {
 		custom_effect_tooltip = tooltip_white_line
 	}
 
-	ai_will_do = { base = 1 }
+	ai_will_do = { base = 1000 }
 
 	initial_trait = {
 		name = RUS_as_mio_desc
@@ -8510,7 +8510,7 @@ RUS_tsagi_organisation = {
 		custom_effect_tooltip = tooltip_white_line
 	}
 
-	ai_will_do = { base = 1 }
+	ai_will_do = { base = 1000 }
 
 	initial_trait = {
 		name = RUS_tsagi_mio_desc
@@ -9629,7 +9629,7 @@ RUS_skorost_organisation = {
 		}
 	}
 
-	ai_will_do = { base = 1000 }
+	ai_will_do = { base = 100 }
 
 	initial_trait = {
 		name = RUS_skorost_mio_desc
@@ -11057,7 +11057,7 @@ RUS_toz_organisation = {
 		cat_special_forces_generic
 	}
 
-	ai_will_do = { base = 1 }
+	ai_will_do = { base = 1000 }
 
 	initial_trait = {
 		name = RUS_toz_mio_desc
@@ -11471,9 +11471,7 @@ RUS_vpoz_organisation = {
 	allowed = {
 		is_russian_tag = yes
 	}
-	available = {
-		owns_state = 400 #Vyatka
-	}
+	available = { FROM = { owns_state = 400 } }
 
 	equipment_type = {
 		infantry_equipment

@@ -464,4 +464,20 @@ unit_medals = {
 			add_divisional_commander_xp = 100
 		}
 	}
+	RUS_TOZ_Medal_acd = {
+		available = { always = no }
+		frame = 4
+		icon = "GFX_medal_icon_default"
+
+		cost = @cost
+
+		unit_modifiers = {
+			army_attack_factor = 0.1
+			army_org_factor = 0.1
+			breakthrough_factor = 0.1
+		}
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+	}
 }

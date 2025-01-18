@@ -1155,6 +1155,23 @@ RUS_dont_bother_naval_invading_before_germany_dies = {
 	}
 }
 
+RUS_dont_bother_naval_invading_before_germansocialist_dies = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = GRU
+		GRU = { has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invasion_unit_request
+		area = globally
+		value = -500
+	}
+}
+
 RUS_less_focus_on_navy = {
 	allowed = {
 		original_tag = RUS
@@ -1532,5 +1549,106 @@ RUS_ignore_faraway_allies = {
 		value = 10
 	}
 }
+
+################
+### Industry/2WK ###
+################
+
+RUS_build_radars_moscow = {
+	allowed = {
+		original_tag = RUS
+		threat > 0.6
+	}
+	enable = {
+		219 = {
+			controller = { is_ally_with = FROM }
+			free_building_slots = {
+				building = radar_station
+				size > 0
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = radar_station
+		target = 219
+		value = 2000
+	}
+}
+
+RUS_build_radars_petrograd = {
+	allowed = {
+		original_tag = RUS
+		threat > 0.6
+	}
+	enable = {
+		195 = {
+			controller = { is_ally_with = FROM }
+			free_building_slots = {
+				building = radar_station
+				size > 0
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = radar_station
+		target = 195
+		value = 2000
+	}
+}
+
+RUS_build_radars_yekaterinburg = {
+	allowed = {
+		original_tag = RUS
+		threat > 0.6
+	}
+	enable = {
+		653 = {
+			controller = { is_ally_with = FROM }
+			free_building_slots = {
+				building = radar_station
+				size > 0
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = radar_station
+		target = 653
+		value = 2000
+	}
+}
+
+RUS_build_radars_yeniseyk = {
+	allowed = {
+		original_tag = RUS
+		threat > 0.6
+	}
+	enable = {
+		576 = {
+			controller = { is_ally_with = FROM }
+			free_building_slots = {
+				building = radar_station
+				size > 0
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = radar_station
+		target = 576
+		value = 2000
+	}
+}
+
 
 	

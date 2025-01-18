@@ -370,13 +370,14 @@ GRU_eyes_on_france = {
 		original_tag = GRU
 	}
 	enable = {
+		NOT = { has_war_with = AUS }
+		NOT = { has_war_with = RUS }
 		GRU = {
 			is_subject = no
 			has_socialist_government = no
 		}
 		is_neighbor_of = FRA
 		FRA = { has_capitulated = no }
-		NOT = { has_war_with = AUS }
 	}
 	abort_when_not_enabled = yes
 
@@ -394,6 +395,38 @@ GRU_eyes_on_france = {
 		type = front_unit_request
 		tag = FRA
 		value = 50
+	}
+}
+
+GRU_eyes_on_Russia = {
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		has_war_with = RUS
+		NOT = { has_war_with = FRA }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = RUS
+		value = 300
+	}
+	ai_strategy = {
+		type = front_armor_score
+		id = RUS
+		value = 100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = RUS
+		value = 50
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = FRA
+		value = -50
 	}
 }
 
@@ -1005,24 +1038,13 @@ GRU_dont_trust_national_france = {
 
 GRU_finish_russia_off = {
 	allowed = {
-		tag = GRU
-		is_in_europe = yes
+		OR = {
+			original_tag = GRU
+			is_ally_with = GRU
+		}
 	}
 	enable = {
 		has_war_with = RUS
-		OR = {
-			NOT = { country_exists = FRA }
-			FRA = { has_capitulated = yes }
-		}
-		OR = {
-			NOT = { country_exists = ENG }
-			NOT = { has_war_with = ENG }
-			ENG = { has_capitulated = yes }
-		}
-		OR = {
-			NOT = { country_exists = SRI }
-			SRI = { has_capitulated = yes }
-		}
 		NOT = { is_neighbor_of = CSA } #== being invaded
 		stockpile_ratio = { archetype = infantry_equipment ratio > 1 }
 

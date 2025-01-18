@@ -20,7 +20,7 @@ ideas = {
 			picture = blackhundredists
 			allowed = { always = no }
 			modifier = {
-				stability_weekly_factor = 0.001
+				stability_weekly = 0.001
 				national_populist_drift = 0.02
 			}
 		}
@@ -52,7 +52,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				political_power_cost = -0.05
-				stability_weekly_factor = 0.001
+				stability_weekly = 0.001
 				surrender_limit = 0.1
 				national_populist_drift = 0.02
 			}
@@ -63,7 +63,7 @@ ideas = {
 			picture = blackhundredists
 			allowed = { always = no }
 			modifier = {
-				stability_weekly_factor = 0.001
+				stability_weekly = 0.001
 				war_support_weekly_factor = 0.001
 				conscription_factor = 0.25
 				max_command_power = 15
@@ -90,7 +90,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				political_power_cost = -0.05
-				stability_weekly_factor = 0.001
+				stability_weekly = 0.001
 				war_support_weekly_factor = 0.001
 				conscription_factor = 0.25
 				surrender_limit = 0.1
@@ -105,7 +105,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				political_power_cost = -0.05
-				stability_weekly_factor = 0.001
+				stability_weekly = 0.001
 				war_support_weekly_factor = 0.001
 				conscription_factor = 0.25
 				max_command_power = 15

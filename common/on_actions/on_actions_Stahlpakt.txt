@@ -1,55 +1,106 @@
 on_actions = {
-	#ROOT is winner #FROM is loser
 	on_annex = {
 		effect = {
-			# Reset the GRU alias
-			if = {
-				limit = { FROM = { tag = GRU } }
-				GRU = { save_global_event_target_as = KR_stahlpakt_leader }
-				every_country = {
-					limit = { is_in_tech_sharing_group = zollverein_research }
-					remove_from_tech_sharing_group = zollverein_research
-				}
-			}
-			else = {
-				FROM = { remove_from_tech_sharing_group = zollverein_research }
-			}
 			if = {
 				limit = {
-					has_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere }
+					is_in_array = { global.zollverein_members = FROM }
 				}
-				remove_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere }
+				remove_from_array = { global.zollverein_members = FROM }
+				FROM = {
+					if = {
+						limit = {
+							has_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere_member }
+						}
+						remove_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere_member }
+					}
+				}
+				GRU_recalculate_economic_integration = yes
 			}
 		}
 	}
 
-	#ROOT = attacking side
-	#FROM = defending side
-	#fired when two countries end up at war with each other (on_war is fired when a country goes to war against anyone and is not fired again when it enters war against another country unless it went to peace first)
-	on_war_relation_added = {
+	#FROM is war target
+	on_declare_war = {
 		effect = {
+
 			if = {
 				limit = {
-					is_in_array = { global.zollverein_members = FROM }
-					GRU = { is_ally_with = FROM }
+					FROM = { tag = GRU }
 				}
-				remove_from_tech_sharing_group = zollverein_research
+				# removing from Japanese economic sphere
+				if = {
+					limit = {
+						is_in_array = { global.zollverein_members = ROOT }
+					}
+					ROOT = { country_event = rotermorgen.1006 }
+				}
+				# removing Japanese extra mils
+				if = {
+					limit = {
+						ROOT = { has_country_flag = has_offsite_mils_from_JAP }
+					}
+					ROOT = {
+						add_offsite_building = { type = arms_factory level = -2 }
+						clr_country_flag = has_offsite_mils_from_JAP
+					}
+					FROM = {
+						random_owned_state = {
+							limit = { has_state_flag = JAP_mils_to_china_state }
+							clr_state_flag = JAP_mils_to_china_state
+							add_building_construction = {
+								type = arms_factory
+								level = 2
+								instant_build = yes
+							}
+						}
+					}
+				}
 			}
 			else_if = {
 				limit = {
-					FROM = { is_in_tech_sharing_group = zollverein_research }
-					is_ally_with = GRU
+					ROOT = { tag = GRU }
 				}
-				FROM = { remove_from_tech_sharing_group = zollverein_research }
+				# removing from Japanese economic sphere
+				if = {
+					limit = {
+						is_in_array = { global.zollverein_members = FROM }
+					}
+					FROM = { country_event = rotermorgen.1006 }
+				}
+				# removing Japanese extra mils
+				if = {
+					limit = {
+						FROM = { has_country_flag = has_offsite_mils_from_JAP }
+					}
+					FROM = {
+						add_offsite_building = { type = arms_factory level = -2 }
+						clr_country_flag = has_offsite_mils_from_JAP
+					}
+					ROOT = {
+						random_owned_state = {
+							limit = { has_state_flag = JAP_mils_to_china_state }
+							clr_state_flag = JAP_mils_to_china_state
+							add_building_construction = {
+								type = arms_factory
+								level = 2
+								instant_build = yes
+							}
+						}
+					}
+				}
 			}
+		}
+	}
+
+	on_government_change = {
+		effect = {
 			if = {
 				limit = {
-					is_in_array = { global.zollverein_members = FROM }
-					has_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere_member }
+					is_in_array = { global.zollverein_members = ROOT }
+					has_socialist_government = yes
 				}
-				remove_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere_member }
+				country_event = rotermorgen.1006
 			}
-			GRU_recalculate_economic_integration = yes
 		}
 	}
 }
