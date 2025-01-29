@@ -483,9 +483,9 @@ ideas = {
 			picture = big_entente_idea
 			modifier = {
 				stability_factor = 0.10
-				conscription = 0.015
+				conscription = 0.01
 				land_reinforce_rate = 0.05
-				consumer_goods_factor = -0.10
+				consumer_goods_factor = -0.05
 			}
 		}
 

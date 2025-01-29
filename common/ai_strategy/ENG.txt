@@ -260,22 +260,6 @@ ENG_the_wooden_wall = {
 	}
 }
 
-ENG_produce_synthetic_oil = {
-	allowed = {
-		original_tag = ENG
-	}
-	enable = {
-		date > 1939.1.1
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = building_target
-		id = synthetic_refinery
-		value = 8
-	}
-}
-
 ENG_build_naval_bombers = {
 	allowed = {
 		original_tag = ENG

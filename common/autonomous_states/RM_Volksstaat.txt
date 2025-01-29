@@ -50,6 +50,7 @@ autonomy_state = {
 			tag = VSP
 			tag = VSB
 			tag = VST
+			tag = VOB
 		}
 		overlord = { 
 			AND = {

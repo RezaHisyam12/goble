@@ -1,5 +1,6 @@
 add_namespace = rotermorgen
 add_namespace = rmgoebbnews
+add_namespace = wll
 
 
 country_event = { # GRU setup
@@ -347,7 +348,6 @@ country_event = { # CONGRESS
 				picture = "gfx/leaders/GRU/Portrait_Germany_Josef_Goebbels_13.png"
 				expire = "1.1.1"
 				ideology = tot_left_nationalism_subtype
-				traits = { gru_froncophobe }
 			}
 			set_party_name = {
 				ideology = syndicalist
@@ -4393,7 +4393,6 @@ country_event = { # Ideology Switch
 				expire = "1.1.1"
 				ideology = natpop_goebbels_subtype
 				traits = {
-					gru_froncophobe
 					gru_volksfuehrer
 				}
 			}
@@ -4659,6 +4658,68 @@ country_event = { #
 		945 = { add_core_of = MZA }
 		947 = { add_core_of = MZA }
 		85 = { add_core_of = MZA }
+	}
+}
+
+country_event = { #
+	id = rotermorgenmisc.956
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.956" }
+	title = rotermorgenmisc.956.t
+	desc = rotermorgenmisc.956.d
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		29 = { add_core_of = VOB }
+		980 = { add_core_of = VOB }
+		17 = { add_core_of = VOB }
+		24 = { add_core_of = VOB }
+		785 = { add_core_of = VOB }
+		18 = { add_core_of = VOB }
+		779 = { add_core_of = VOB }
+		27 = { add_core_of = VOB }
+		760 = { add_core_of = VOB }
+		943 = { add_core_of = VOB }
+		741 = { add_core_of = VOB }
+		34 = { add_core_of = VOB }
+		6 = { add_core_of = VOB }
+
+		29 = { remove_claim_by = GRU }
+		980 = { remove_claim_by = GRU }
+		17 = { remove_claim_by = GRU }
+		24 = { remove_claim_by = GRU }
+		785 = { remove_claim_by = GRU }
+		18 = { remove_claim_by = GRU }
+		779 = { remove_claim_by = GRU }
+		27 = { remove_claim_by = GRU }
+		760 = { remove_claim_by = GRU }
+		943 = { remove_claim_by = GRU }
+		741 = { remove_claim_by = GRU }
+		34 = { remove_claim_by = GRU }
+		6 = { remove_claim_by = GRU }
+	}
+}
+
+country_event = { #
+	id = rotermorgenmisc.957
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.957" }
+	title = rotermorgenmisc.957.t
+	desc = rotermorgenmisc.957.d
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		979 = { add_core_of = VKN }
+		35 = { add_core_of = VKN }
+		866 = { add_core_of = VKN }
+		7 = { add_core_of = VKN }
+		36 = { add_core_of = VKN }
+		978 = { add_core_of = VKN }
+
+		979 = { remove_claim_by = GRU }
+		35 = { remove_claim_by = GRU }
+		866 = { remove_claim_by = GRU }
+		7 = { remove_claim_by = GRU }
+		36 = { remove_claim_by = GRU }
+		978 = { remove_claim_by = GRU }
 	}
 }
 
@@ -7877,7 +7938,11 @@ country_event = { #Setup and monthly checking
 	}
 
 	immediate = {
-		add_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere }
+		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere } } }
+			add_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere }
+			}
+		}
 		GRU_recalculate_economic_integration = yes
 		country_event = { id = rotermorgen.1005 days = 30 }
 	}
@@ -7897,4 +7962,3 @@ country_event = { #Removing a country from the economic sphere
 		GRU_remove_from_zollverein = yes
 	}
 }
-

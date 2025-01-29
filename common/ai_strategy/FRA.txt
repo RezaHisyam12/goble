@@ -210,15 +210,13 @@ FRA_focus_on_germany = {
 	}
 }
 
-FRA_focus_on_gru_natpop = {
+FRA_eyes_on_GRU = {
 	allowed = {
 		original_tag = FRA
 	}
 	enable = {
-		has_war = no
 		is_neighbor_of = GRU
 		GRU = {
-			is_faction_leader = yes
 			has_socialist_government = no
 			has_capitulated = no
 		}
@@ -228,12 +226,22 @@ FRA_focus_on_gru_natpop = {
 	ai_strategy = {
 		type = conquer
 		id = GRU
-		value = 200
+		value = 1000
 	}
 	ai_strategy = {
 		type = front_armor_score
 		id = GRU
 		value = 100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = GRU
+		value = 50
+	}
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 28 #Alsace-Lorraine
+		value = 10
 	}
 }
 
@@ -322,6 +330,11 @@ FRA_endsieg_2 = { #If losing, focus everything on defence and don't do stupid at
 		execute_order = no
 	}
 	ai_strategy = {
+		type = front_unit_request
+		tag = GRU
+		value = 50
+	}
+	ai_strategy = {
 		type = invasion_unit_request
 		area = globally
 		value = -500
@@ -335,6 +348,27 @@ FRA_endsieg_2 = { #If losing, focus everything on defence and don't do stupid at
 		type = dont_defend_ally_borders
 		id = SWI
 		value = 100
+	}
+}
+
+FRA_less_troops_on_iberia = {
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		OR = {
+			has_war_with = POR
+			has_war_with = GER
+			has_war_with = GRU
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		strategic_region = 236 #Southern Iberia
+		strategic_region = 237 #Western Iberia
+		value = -30
 	}
 }
 
@@ -407,14 +441,12 @@ FRA_build_radars_lorraine = {
 	allowed = {
 		original_tag = FRA
 		threat > 0.6
+		is_special_project_completed = sp:sp_air_radar
 	}
 	enable = {
 		785 = { #Lorraine
 			controller = { is_ally_with = FROM }
-			free_building_slots = {
-				building = radar_station
-				size > 0
-			}
+			free_building_slots = { building = radar_station size > 0 }
 		}
 	}
 	abort_when_not_enabled = yes
@@ -431,14 +463,12 @@ FRA_build_radars_picardy = {
 	allowed = {
 		original_tag = FRA
 		threat > 0.6
+		is_special_project_completed = sp:sp_air_radar
 	}
 	enable = {
 		24 = { #Picardy
 			controller = { is_ally_with = FROM }
-			free_building_slots = {
-				building = radar_station
-				size > 0
-			}
+			free_building_slots = { building = radar_station size > 0 }
 		}
 	}
 	abort_when_not_enabled = yes
@@ -455,14 +485,12 @@ FRA_build_radars_paris = {
 	allowed = {
 		original_tag = FRA
 		threat > 0.6
+		is_special_project_completed = sp:sp_air_radar
 	}
 	enable = {
 		16 = { #Île de France
 			controller = { is_ally_with = FROM }
-			free_building_slots = {
-				building = radar_station
-				size > 0
-			}
+			free_building_slots = { building = radar_station size > 0 }
 		}
 	}
 	abort_when_not_enabled = yes
@@ -479,14 +507,12 @@ FRA_build_radars_provence = {
 	allowed = {
 		original_tag = FRA
 		threat > 0.7
+		is_special_project_completed = sp:sp_air_radar
 	}
 	enable = {
 		21 = { #Provence
 			controller = { is_ally_with = FROM }
-			free_building_slots = {
-				building = radar_station
-				size > 0
-			}
+			free_building_slots = { building = radar_station size > 0 }
 		}
 	}
 	abort_when_not_enabled = yes

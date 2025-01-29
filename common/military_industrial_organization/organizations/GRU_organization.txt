@@ -66,6 +66,205 @@
 ###################
 ### Armour MIOs ###
 ###################
+GRU_krupp_tank_organisation = {
+	name = krupp
+	icon = GFX_idea_krupp
+	allowed = {
+		tag = GRU
+	}
+	available = {
+		FROM = {
+			owns_state = 64
+		}
+	}
+	visible = {
+		FROM = {
+			has_country_flag = NMDVP_R_RULE
+		}
+	}
+
+	equipment_type = {
+		armor
+	}
+
+	research_categories = {
+		mio_cat_tech_all_armor_and_modules
+	}
+
+	ai_will_do = { base = 10 }
+
+	initial_trait = {
+		name = GRU_krupp_mio_desc
+
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.25
+		}
+	}
+
+	trait = {
+		token = krupp_upgrade_1
+		name = krupp_upgrade_1
+		icon = GFX_generic_mio_trait_icon_armor_value
+
+		mutually_exclusive = { krupp_upgrade_2 }
+
+		position = { x = 1 y = 0 }
+
+		equipment_bonus = {
+			armor_value = 0.1
+		}
+	}
+
+	trait = {
+		token = krupp_upgrade_2
+		name = krupp_upgrade_2
+		icon = GFX_generic_mio_trait_icon_armor_value
+
+		mutually_exclusive = { krupp_upgrade_1 }
+
+		position = { x = 3 y = 0 }
+
+		equipment_bonus = {
+			armor_value = 0.2
+			maximum_speed = -0.1
+		}
+	}
+
+	trait = {
+		token = krupp_upgrade_3
+		name = krupp_upgrade_3
+		icon = GFX_generic_mio_trait_icon_hardness
+
+		mutually_exclusive = { krupp_upgrade_4 }
+
+		position = { x = 5 y = 0 }
+
+		equipment_bonus = {
+			hardness = 0.2
+			reliability = -0.1
+		}
+	}
+
+	trait = {
+		token = krupp_upgrade_4
+		name = krupp_upgrade_4
+		icon = GFX_generic_mio_trait_icon_hardness
+
+		mutually_exclusive = { krupp_upgrade_3 }
+
+		position = { x = 7 y = 0 }
+
+		equipment_bonus = {
+			hardness = 0.1
+		}
+	}
+
+	trait = {
+		token = krupp_upgrade_1_1
+		name = krupp_upgrade_1_1
+		icon = GFX_generic_mio_trait_icon_armor_value
+
+		any_parent = { krupp_upgrade_1 krupp_upgrade_2 }
+
+		position = { x = 2 y = 1 }
+
+		equipment_bonus = {
+			armor_value = 0.05
+		}
+	}
+
+	trait = {
+		token = krupp_upgrade_dozer
+		name = krupp_upgrade_dozer
+		icon = GFX_generic_mio_trait_icon_entrenchment
+
+		visible = {
+			has_dlc_nsb = yes
+		}
+
+		position = { x = 4 y = 1 }
+
+		equipment_bonus = {
+			entrenchment = 0.5
+		}
+	}
+
+	trait = {
+		token = krupp_upgrade_1_2
+		name = krupp_upgrade_1_2
+		icon = GFX_generic_mio_trait_icon_hardness
+
+		any_parent = { krupp_upgrade_3 krupp_upgrade_4 }
+
+		position = { x = 6 y = 1 }
+
+		equipment_bonus = {
+			hardness = 0.05
+		}
+	}
+
+	trait = {
+		token = krupp_upgrade_2_1
+		name = krupp_upgrade_2_1
+		icon = GFX_KR_generic_mio_trait_icon_army_xp
+
+		special_trait_background = yes
+
+		all_parents = { krupp_upgrade_1_1 krupp_upgrade_1_2 krupp_upgrade_3_1 }
+
+		position = { x = 4 y = 2 }
+
+		equipment_bonus = {
+			soft_attack = 0.05
+		}
+	}
+
+	trait = {
+		token = krupp_upgrade_3_1
+		name = krupp_upgrade_3_1
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		any_parent = { krupp_upgrade_4_1 krupp_upgrade_4_2 }
+
+		position = { x = 4 y = 3 }
+
+		equipment_bonus = {
+			hard_attack = 0.05
+			ap_attack = 0.05
+		}
+	}
+
+	trait = {
+		token = krupp_upgrade_4_1
+		name = krupp_upgrade_4_1
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		mutually_exclusive = { krupp_upgrade_4_2 }
+
+		position = { x = 3 y = 4 }
+
+		equipment_bonus = {
+			hard_attack = 0.05
+			ap_attack = 0.05
+		}
+	}
+
+	trait = {
+		token = krupp_upgrade_4_2
+		name = krupp_upgrade_4_2
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		mutually_exclusive = { krupp_upgrade_4_1 }
+
+		position = { x = 5 y = 4 }
+
+		equipment_bonus = {
+			hard_attack = 0.1
+			ap_attack = 0.1
+			build_cost_ic = 0.1
+		}
+	}
+}
 
 ##################
 ### Naval MIOs ###
@@ -83,30 +282,305 @@ GRU_hansa_brandenburg_organisation = {
 	}
 }
 GRU_albatros_organisation = {
-	include = generic_multi_role_aircraft_organization
 	name = GRU_albatros
 	icon = GFX_idea_albatros
 	allowed = {
 		tag = GRU
 	}
-	add_trait = {
-		token = GRU_mio_trait_maintenance_first_design
-		name = GRU_mio_trait_maintenance_first_design
+	available = {
+		FROM = {
+			owns_state = 50
+		}
+	}
+	equipment_type = {
+		small_plane_airframe
+		medium_plane_fighter_airframe
+	}
 
-		icon = GFX_generic_mio_department_icon_plane_fighter_line_efficiency
+	research_categories = {
+		mio_cat_all_light_aircraft_and_modules
+		mio_cat_all_medium_aircraft_and_modules
+		jet_technology
+		plane_modules_tech
+	}
+
+	ai_will_do = { base = 1000 }
+
+	initial_trait = {
+		name = GRU_albatros_mio_desc
+
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.25
+		}
+	}
+
+	trait = {
+		token = albatros_upgrade_1
+		name = albatros_upgrade_1
+		icon = GFX_generic_mio_trait_icon_air_superiority
+
+		position = { x = 0 y = 0 }
+
+		mutually_exclusive = { albatros_upgrade_2 }
+
+		equipment_bonus = {
+			air_superiority = 0.05
+		}
+	}
+
+	trait = {
+		token = albatros_upgrade_2
+		name = albatros_upgrade_2
+		icon = GFX_generic_mio_trait_icon_air_range
+
+		position = { x = 1 y = 0 }
+
+		mutually_exclusive = { albatros_upgrade_1 }
+
+		equipment_bonus = {
+			air_range = 0.1
+		}
+	}
+
+	trait = {
+		token = albatros_upgrade_3
+		name = albatros_upgrade_3
+		icon = GFX_generic_mio_trait_icon_air_attack
+
+		position = { x = 7 y = 0 }
+
+		mutually_exclusive = { albatros_upgrade_4 }
+
+		equipment_bonus = {
+			air_attack = 0.05
+		}
+	}
+
+	trait = {
+		token = albatros_upgrade_4
+		name = albatros_upgrade_4
+		icon = GFX_generic_mio_trait_icon_air_defence
+
+		position = { x = 8 y = 0 }
+
+		mutually_exclusive = { albatros_upgrade_3 }
+
+		equipment_bonus = {
+			air_defence = 0.05
+		}
+	}
+
+	trait = {
+		token = albatros_upgrade_1_1
+		name = albatros_upgrade_1_1
+		icon = GFX_generic_mio_trait_icon_air_superiority
+
+		any_parent = { albatros_upgrade_1 albatros_upgrade_2 }
+
+		position = { x = 2 y = 1 }
+
+		mutually_exclusive = { albatros_upgrade_1_2 }
+
+		equipment_bonus = {
+			air_superiority = 0.1
+			air_range = 0.05
+		}
+	}
+
+	trait = {
+		token = albatros_upgrade_1_2
+		name = albatros_upgrade_1_2
+		icon = GFX_generic_mio_trait_icon_air_range
+
+		any_parent = { albatros_upgrade_1 albatros_upgrade_2 }
+
+		position = { x = 3 y = 1 }
+
+		mutually_exclusive = { albatros_upgrade_1_1 }
+
+		equipment_bonus = {
+			air_superiority = 0.05
+			air_range = 0.1
+		}
+	}
+
+	trait = {
+		token = albatros_upgrade_1_3
+		name = albatros_upgrade_1_3
+		icon = GFX_generic_mio_trait_icon_air_attack
+
+		any_parent = { albatros_upgrade_3 albatros_upgrade_4 }
+
+		position = { x = 5 y = 1 }
+
+		mutually_exclusive = { albatros_upgrade_1_4 }
+
+		equipment_bonus = {
+			air_attack = 0.1
+			air_defence = 0.05
+		}
+	}
+
+	trait = {
+		token = albatros_upgrade_1_4
+		name = albatros_upgrade_1_4
+		icon = GFX_generic_mio_trait_icon_air_defence
+
+		any_parent = { albatros_upgrade_3 albatros_upgrade_4 }
+
+		position = { x = 6 y = 1 }
+
+		mutually_exclusive = { albatros_upgrade_1_3 }
+
+		equipment_bonus = {
+			air_attack = 0.05
+			air_defence = 0.1
+		}
+	}
+
+	trait = {
+		token = albatros_upgrade_2_1
+		name = albatros_upgrade_2_1
+		icon = GFX_KR_generic_mio_trait_icon_air_xp
+
 		special_trait_background = yes
 
-		position = { x=-2 y=1 }
-		relative_position_id = generic_mio_trait_expanded_production_facilities
+		any_parent = { albatros_upgrade_1_1 albatros_upgrade_1_2 }
+		any_parent = { albatros_upgrade_1_3 albatros_upgrade_1_4 }
+		any_parent = { albatros_upgrade_3_1 albatros_upgrade_3_2 }
+		any_parent = { albatros_upgrade_3_3 albatros_upgrade_3_4 }
 
-		all_parents = { generic_mio_trait_expanded_production_facilities }
+		position = { x = 4 y = 2 }
+
+		equipment_bonus = {
+			air_superiority = 0.05
+			air_agility = 0.05
+			air_attack = 0.05
+			air_defence = 0.05
+		}
+	}
+
+	trait = {
+		token = albatros_upgrade_3_1
+		name = albatros_upgrade_3_1
+		icon = GFX_generic_mio_trait_icon_air_agility
+
+		any_parent = { albatros_upgrade_4_1 albatros_upgrade_4_2 }
+
+		position = { x = 2 y = 3 }
+
+		mutually_exclusive = { albatros_upgrade_3_2 }
+
+		equipment_bonus = {
+			air_agility = 0.1
+			air_range = 0.05
+		}
+	}
+
+	trait = {
+		token = albatros_upgrade_3_2
+		name = albatros_upgrade_3_2
+		icon = GFX_generic_mio_trait_icon_air_range
+
+		any_parent = { albatros_upgrade_4_1 albatros_upgrade_4_2 }
+
+		position = { x = 3 y = 3 }
+
+		mutually_exclusive = { albatros_upgrade_3_1 }
+
+		equipment_bonus = {
+			air_agility = 0.05
+			air_range = 0.1
+		}
+	}
+
+	trait = {
+		token = albatros_upgrade_3_3
+		name = albatros_upgrade_3_3
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		any_parent = { albatros_upgrade_4_3 albatros_upgrade_4_4 }
+
+		position = { x = 5 y = 3 }
+
+		mutually_exclusive = { albatros_upgrade_3_4 }
+
+		equipment_bonus = {
+			reliability = 0.1
+			maximum_speed = 0.05
+		}
+	}
+
+	trait = {
+		token = albatros_upgrade_3_4
+		name = albatros_upgrade_3_4
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		any_parent = { albatros_upgrade_4_3 albatros_upgrade_4_4 }
+
+		position = { x = 6 y = 3 }
+
+		mutually_exclusive = { albatros_upgrade_3_3 }
+
+		equipment_bonus = {
+			reliability = 0.05
+			maximum_speed = 0.1
+		}
+	}
+
+	trait = {
+		token = albatros_upgrade_4_1
+		name = albatros_upgrade_4_1
+		icon = GFX_generic_mio_trait_icon_air_agility
+
+		position = { x = 0 y = 4 }
+
+		mutually_exclusive = { albatros_upgrade_4_2 }
+
+		equipment_bonus = {
+			air_agility = 0.05
+		}
+	}
+
+	trait = {
+		token = albatros_upgrade_4_2
+		name = albatros_upgrade_4_2
+		icon = GFX_generic_mio_trait_icon_air_range
+
+		position = { x = 1 y = 4 }
+
+		mutually_exclusive = { albatros_upgrade_4_1 }
+
+		equipment_bonus = {
+			air_range = 0.1
+		}
+	}
+
+	trait = {
+		token = albatros_upgrade_4_3
+		name = albatros_upgrade_4_3
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		position = { x = 7 y = 4 }
+
+		mutually_exclusive = { albatros_upgrade_4_4 }
 
 		equipment_bonus = {
 			reliability = 0.05
 		}
+	}
 
-		production_bonus = {
-			production_efficiency_gain_factor = 0.05
+	trait = {
+		token = albatros_upgrade_4_4
+		name = albatros_upgrade_4_4
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		position = { x = 8 y = 4 }
+
+		mutually_exclusive = { albatros_upgrade_4_3 }
+
+		equipment_bonus = {
+			maximum_speed = 0.05
 		}
 	}
 }
@@ -116,11 +590,6 @@ GRU_zeppelin_organization = {
 	icon = GFX_idea_luftschiffbau_zeppelin
 	allowed = {
 		original_tag = GRU
-	}
-	visible = {
-		owner = {
-			original_tag = GRU
-		}
 	}
 	initial_trait  = {
 		limit_to_equipment_type = { large_airship_airframe_0 heavy_airship_equipment_0 }
@@ -132,3 +601,230 @@ GRU_zeppelin_organization = {
 #####################
 ### Materiel MIOs ###
 #####################
+GRU_mauser_organisation = {
+	name = mauser
+	icon = GFX_idea_mauser
+	allowed = {
+		tag = GRU
+	}
+	available = {
+		FROM = {
+			owns_state = 50
+		}
+	}
+	visible = {
+		FROM = {
+			has_country_flag = NMDVP_R_RULE
+		}
+	}
+	
+	equipment_type = {
+		infantry_equipment
+		support_equipment
+	}
+	research_categories = {
+		infantry_weapons
+		support_tech
+		battlefield_support_tree
+		cat_battlefield_support
+		night_vision
+		cat_special_forces_generic
+	}
+
+	ai_will_do = { base = 1000 }
+
+	initial_trait = {
+		name = GRU_mauser_mio_desc
+
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.25
+		}
+	}
+
+	trait = {
+		token = mauser_upgrade_1
+		name = mauser_upgrade_1
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		position = { x = 1 y = 0 }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+
+	trait = {
+		token = mauser_upgrade_2
+		name = mauser_upgrade_2
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		position = { x = 3 y = 1 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.025
+		}
+	}
+
+	trait = {
+		token = mauser_upgrade_3
+		name = mauser_upgrade_3
+		icon = GFX_generic_mio_trait_icon_resources
+
+		position = { x = 5 y = 1 }
+
+		production_bonus = {
+			production_resource_need_factor = -0.05
+		}
+	}
+
+	trait = {
+		token = mauser_upgrade_4
+		name = mauser_upgrade_4
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+
+		position = { x = 7 y = 0 }
+
+		production_bonus = {
+			production_cost_factor = -0.025
+		}
+	}
+
+	trait = {
+		token = mauser_upgrade_1_1
+		name = mauser_upgrade_1_1
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		position = { x = 0 y = 2 }
+
+		mutually_exclusive = { mauser_upgrade_1_2 }
+
+		all_parents = { mauser_upgrade_1 mauser_upgrade_2 }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+
+	trait = {
+		token = mauser_upgrade_1_2
+		name = mauser_upgrade_1_2
+		icon = GFX_KR_generic_mio_trait_icon_production_output
+
+		position = { x = 2 y = 2 }
+
+		mutually_exclusive = { mauser_upgrade_1_1 mauser_upgrade_1_3 }
+
+		all_parents = { mauser_upgrade_1 mauser_upgrade_2 }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.1
+			production_efficiency_cap_factor = 0.05
+			production_resource_need_factor = -0.1
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_assign_cost = 2.0
+		}
+	}
+
+	trait = {
+		token = mauser_upgrade_1_3
+		name = mauser_upgrade_1_3
+		icon = GFX_generic_mio_trait_icon_resources
+
+		position = { x = 4 y = 2 }
+
+		all_parents = { mauser_upgrade_3 mauser_upgrade_2 }
+
+		mutually_exclusive = { mauser_upgrade_1_2 mauser_upgrade_1_4 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.025
+			production_resource_need_factor = -0.05
+		}
+	}
+
+	trait = {
+		token = mauser_upgrade_1_4
+		name = mauser_upgrade_1_4
+		icon = GFX_KR_generic_mio_trait_icon_research_speed
+
+		position = { x = 6 y = 2 }
+
+		mutually_exclusive = { mauser_upgrade_1_3 mauser_upgrade_1_5 }
+
+		all_parents = { mauser_upgrade_3 mauser_upgrade_4 }
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.15
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.3
+		}
+	}
+
+	trait = {
+		token = mauser_upgrade_1_5
+		name = mauser_upgrade_1_5
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+
+		position = { x = 8 y = 2 }
+
+		mutually_exclusive = { mauser_upgrade_1_4 }
+
+		all_parents = { mauser_upgrade_3 mauser_upgrade_4 }
+
+		production_bonus = {
+			production_cost_factor = -0.025
+		}
+	}
+
+	trait = {
+		token = mauser_upgrade_2_1
+		name = mauser_upgrade_2_1
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		position = { x = 3 y = 3 }
+
+		any_parent = { mauser_upgrade_1_1 mauser_upgrade_1_2 mauser_upgrade_1_3 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.025
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+
+	trait = {
+		token = mauser_upgrade_2_2
+		name = mauser_upgrade_2_2
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+
+		position = { x = 5 y = 3 }
+
+		any_parent = { mauser_upgrade_1_5 mauser_upgrade_1_4 mauser_upgrade_1_3 }
+
+		production_bonus = {
+			production_resource_need_factor = -0.05
+			production_cost_factor = -0.025
+		}
+	}
+
+	trait = {
+		token = mauser_upgrade_3_1
+		name = mauser_upgrade_3_1
+		icon = GFX_KR_generic_mio_trait_icon_army_xp
+
+		special_trait_background = yes
+
+		position = { x = 4 y = 4 }
+
+		all_parents = { mauser_upgrade_2_1 mauser_upgrade_2_2 }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+			production_efficiency_cap_factor = 0.025
+			production_resource_need_factor = -0.05
+			production_cost_factor = -0.025
+		}
+	}
+}

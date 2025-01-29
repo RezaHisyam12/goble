@@ -299,6 +299,45 @@ GRU_Volunteer = {
 ################
 ### Military ###
 ################
+GRU_build_army = {
+	allowed = {
+		tag = GRU
+		is_subject = no
+	}
+	enable = {
+		has_army_manpower = { size < 1250000 }
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = build_army
+		id = mobile
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = armor
+		value = 1000
+	}
+	ai_strategy = {
+		type = build_army
+		id = militia
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 1000
+	}
+}
+
 default_RR_Werwolf_production = {
 	allowed = {
 		OR = {
@@ -370,8 +409,7 @@ GRU_eyes_on_france = {
 		original_tag = GRU
 	}
 	enable = {
-		NOT = { has_war_with = AUS }
-		NOT = { has_war_with = RUS }
+		has_war = no
 		GRU = {
 			is_subject = no
 			has_socialist_government = no
@@ -441,14 +479,65 @@ GRU_eyes_on_austria = {
 		}
 		is_neighbor_of = AUS
 		AUS = { has_capitulated = no }
-		NOT = { has_war_with = FRA }
+		has_war = no
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = conquer
 		id = AUS
-		value = 200
+		value = 400
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = FRA
+		value = -25
+	}
+}
+
+GRU_ignore_garrison = {
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		AUS = {
+			has_war_with = ROOT
+			has_capitulated = no
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = garrison
+		value = -100
+	}
+
+}
+
+GRU_eyes_on_bohemia = {
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		GRU = {
+			is_subject = no
+			has_socialist_government = no
+		}
+		is_neighbor_of = CZE
+		CZE = { has_capitulated = no }
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = CZE
+		value = 300
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = HOL
+		value = -25
 	}
 }
 
@@ -463,6 +552,7 @@ GRU_eyes_on_netherlands = {
 			has_socialist_government = no
 		}
 		is_neighbor_of = HOL
+		has_war = no
 		HOL = {
 			has_socialist_government = yes
 			has_capitulated = no
@@ -532,6 +622,7 @@ GRU_eyes_on_belgium = {
 			has_socialist_government = no
 		}
 		is_neighbor_of = BEL
+		has_war = no
 		BEL = {
 			has_socialist_government = yes
 			has_capitulated = no
@@ -557,6 +648,7 @@ GRU_eyes_on_switzerland = {
 			has_socialist_government = no
 		}
 		is_neighbor_of = SWI
+		has_war = no
 		SWI = {
 			has_socialist_government = yes
 			has_capitulated = no
@@ -584,7 +676,7 @@ GRU_eyes_on_fiume = {
 		FIU = {
 			has_capitulated = no
 		}
-		NOT = { has_war_with = FRA }
+		has_war = no
 	}
 	abort_when_not_enabled = yes
 
@@ -604,16 +696,6 @@ GRU_crush_poland = {
 	enable = {
 		has_war_with = POL
 		POL = { has_capitulated = no }
-		OR = {
-			FRA = {
-				has_war_with = ROOT
-				has_capitulated = no
-			}
-			var:219.owner = {
-				has_war_with = ROOT
-				has_capitulated = no
-			}
-		}
 	}
 	abort_when_not_enabled = yes
 
@@ -647,12 +729,6 @@ GRU_crush_ukraine = {
 	enable = {
 		has_war_with = UKR
 		UKR = { has_capitulated = no }
-		OR = {
-			FRA = {
-				has_war_with = ROOT
-				has_capitulated = no
-			}
-		}
 	}
 	abort_when_not_enabled = yes
 
@@ -670,6 +746,39 @@ GRU_crush_ukraine = {
 	ai_strategy = {
 		type = front_control
 		tag = UKR
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+}
+
+GRU_crush_lithuania = {
+	allowed = {
+		OR = {
+			original_tag = GRU
+		}
+	}
+	enable = {
+		has_war_with = LIT
+		LIT = { has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = FRA
+		value = -20
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = LIT
+		value = 100
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = LIT
 		priority = 100
 		ordertype = front
 		execution_type = rush_weak
@@ -1071,6 +1180,51 @@ GRU_finish_russia_off = {
 	}
 }
 
+GRU_endsieg_aus = { #Cease attacks if losing against Austria and has low equipment
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		surrender_progress > 0.25
+		stockpile_ratio = { archetype = infantry_equipment ratio < 0.1 }
+		AUS = {
+			has_war_with = ROOT
+			has_capitulated = no
+			surrender_progress < 0.1
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = AUS
+		priority = 150
+		ordertype = front
+		execute_order = no
+	}
+	ai_strategy = {
+		type = front_control
+		tag = CZE
+		priority = 150
+		ordertype = front
+		execute_order = no
+	}
+	ai_strategy = {
+		type = front_control
+		tag = HUN
+		priority = 150
+		ordertype = front
+		execute_order = no
+	}
+	ai_strategy = {
+		type = front_control
+		tag = GAL
+		priority = 150
+		ordertype = front
+		execute_order = no
+	}
+}
+
 GRU_endsieg = { #Cease attacks if losing against France and has low equipment
 	allowed = {
 		original_tag = GRU
@@ -1202,14 +1356,12 @@ GRU_build_radars_berlin = {
 	allowed = {
 		original_tag = GRU
 		threat > 0.6
+		is_special_project_completed = sp:sp_air_radar
 	}
 	enable = {
 		64 = { #berlin
-			controller = { is_ally_with = FROM }
-			free_building_slots = {
-				building = radar_station
-				size > 0
-			}
+			is_owned_and_controlled_by_ROOT_or_ally = yes
+			free_building_slots = { building = radar_station size > 0 }
 		}
 	}
 	abort_when_not_enabled = yes
@@ -1226,14 +1378,12 @@ GRU_build_radars_hesse = {
 	allowed = {
 		original_tag = GRU
 		threat > 0.6
+		is_special_project_completed = sp:sp_air_radar
 	}
 	enable = {
 		55 = { #Hesse
-			controller = { is_ally_with = FROM }
-			free_building_slots = {
-				building = radar_station
-				size > 0
-			}
+			is_owned_and_controlled_by_ROOT_or_ally = yes
+			free_building_slots = { building = radar_station size > 0 }
 		}
 	}
 	abort_when_not_enabled = yes
@@ -1250,14 +1400,12 @@ GRU_build_radars_prussia = {
 	allowed = {
 		original_tag = GRU
 		threat > 0.6
+		is_special_project_completed = sp:sp_air_radar
 	}
 	enable = {
 		5 = { #prussia
-			controller = { is_ally_with = FROM }
-			free_building_slots = {
-				building = radar_station
-				size > 0
-			}
+			is_owned_and_controlled_by_ROOT_or_ally = yes
+			free_building_slots = { building = radar_station size > 0 }
 		}
 	}
 	abort_when_not_enabled = yes
@@ -1269,3 +1417,82 @@ GRU_build_radars_prussia = {
 		value = 2000
 	}
 }
+
+GRU_build_large_caliber_palatinate = {
+	allowed = {
+		original_tag = GRU
+		threat > 0.6
+		is_special_project_completed = sp:sp_land_multi_charge_large_caliber_gun
+	}
+	enable = {
+		42 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = mega_gun_emplacement
+		target = 42
+		value = 2000
+	}
+}
+
+GRU_build_large_caliber_posen = {
+	allowed = {
+		original_tag = GRU
+		threat > 0.6
+		is_special_project_completed = sp:sp_land_multi_charge_large_caliber_gun
+	}
+	enable = {
+		86 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = mega_gun_emplacement
+		target = 86
+		value = 2000
+	}
+}
+
+GRU_build_rocket_site_wurttemberg = {
+	allowed = {
+		original_tag = GRU
+		threat > 0.6
+		has_tech = experimental_rockets
+	}
+	enable = {
+		50 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+		free_building_slots = { building = rocket_site size > 0 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = rocket_site
+		target = 50
+		value = 2000
+	}
+}
+
+GRU_build_rocket_site_masuria = {
+	allowed = {
+		original_tag = GRU
+		threat > 0.6
+		has_tech = experimental_rockets
+	}
+	enable = {
+		777 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+		free_building_slots = { building = rocket_site size > 0 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = rocket_site
+		target = 777
+		value = 2000
+	}
+}
+

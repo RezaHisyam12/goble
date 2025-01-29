@@ -1,0 +1,10 @@
+spriteTypes = {
+spriteType = {
+		name = "GFX_ideology_natpop_goebbels_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/goebbels_ideology_group.png"
+	}
+spriteType = {
+		name = "GFX_ideology_natpop_goebbels2_subtype"
+		texturefile = "gfx/interface/ideologies/subideologies/goebb_ideology_burg.png"
+	}
+}

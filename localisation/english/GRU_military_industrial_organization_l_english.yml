@@ -1,0 +1,96 @@
+﻿l_english:
+
+### MIO Titles ###
+### Material Equipment ###
+ mauser_GRU_MIO: "Infantry Equipment Production Designer"
+
+### Tank ###
+### Krupp ###
+ krupp_upgrade_1: "Heat Treated Plates"
+ krupp_upgrade_2: "Heat Treated Plates"
+ krupp_upgrade_3: "Eliminate Small Arms Weak Spots"
+ krupp_upgrade_4: "Eliminate Small Arms Weak Spots"
+ krupp_upgrade_1_1: "Gurdier Alloys"
+ krupp_upgrade_dozer: "Improved Dozer Equipment"
+ krupp_upgrade_1_2: "Concealed Tracks"
+ krupp_upgrade_2_1: "Improved Krupp"
+ krupp_upgrade_3_1: "Expanded Ammunition Capacity"
+ krupp_upgrade_4_1: "Increased Muzzle Velocity"
+ krupp_upgrade_4_2: "Increased Muzzle Velocity"
+
+### Ship ###
+
+### Plane ###
+### Albatros ###
+ albatros_upgrade_1: "Improved Aerodynamics"
+ albatros_upgrade_2: "Additional Fuel Tank Capacity"
+ albatros_upgrade_3: "Reduce Machine Gun Spread"
+ albatros_upgrade_4: "Eliminate Aircraft Weak Spots"
+ albatros_upgrade_1_1: "Lighter Fuselage"
+ albatros_upgrade_1_2: "Improved Gliding Potential"
+ albatros_upgrade_1_3: "Improved Ammunition Yawing"
+ albatros_upgrade_1_4: "Redesigned Cockpit"
+ albatros_upgrade_2_1: "Improved Albatros"
+ albatros_upgrade_3_1: "Improved Turning Capabilities"
+ albatros_upgrade_3_2: "Eliminate Wasteful Fuel Use"
+ albatros_upgrade_3_3: "Internal Component Isolation"
+ albatros_upgrade_3_4: "Improved Materials For Radiator Cooling"
+ albatros_upgrade_4_1: "Increase Wing Loading Limit"
+ albatros_upgrade_4_2: "Additional Fuel Tank Capacity"
+ albatros_upgrade_4_3: "Eliminate Random Engine Fires"
+ albatros_upgrade_4_4: "Improved Propeller Design"
+
+### MIO Traits ###
+### Material Equipment ###
+### Mauser ###
+ mauser_upgrade_1: "Rapid Upscaling"
+ mauser_upgrade_2: "Long-Life Production Run"
+ mauser_upgrade_3: "Eliminate Material Waste"
+ mauser_upgrade_4: "Standardise Parts"
+ mauser_upgrade_1_1: "Further Upscaling"
+ mauser_upgrade_1_2: "Extreme Long-Life Production Run"
+ mauser_upgrade_1_3: "Suitable Long-Life Production Run"
+ mauser_upgrade_1_4: "Joint Front Line Designer-Development Teams"
+ mauser_upgrade_1_5: "Further Standardise Parts"
+ mauser_upgrade_2_1: "Influence From Competing Branches"
+ mauser_upgrade_2_2: "Finalise Standardisation of Parts"
+ mauser_upgrade_3_1: "Improved Mauser"
+
+### Plane ###
+### Ship ###
+
+### MIO Descriptions/Decisions (and/or effects) ###
+### Mauser ###
+ mauser_AV_MIO_List: "\n$mauser$ §W(§7+[?av_mauser_research_speed|.2]%§!)§!"
+ GRU_mauser_mio_desc: "$mauser_GRU_MIO$\n§L$mauser_desc$§!\n"
+ mauser_desc: "Awarded numerous government contracts, extensive funding, and state advertising due to its participation on the side of the Whites in the GRUsian Civil War, the Izhevsk Arms Factory was greatly modernised in the last several decades was greatly modernised by the creation of several new workshops and merging with smaller plants. As a consequence of its expansion, the factory was recently renamed the Izhevsk Mechanical Factory."
+ mauser_improved: "Mauser"
+ mauser_improved_desc: "Awarded numerous government contracts, extensive funding, and state advertising due to its participation on the side of the Whites in the GRUsian Civil War, the Izhevsk Arms Factory was greatly modernised in the last several decades by the creation of several new workshops and merging with smaller plants. As a consequence of its expansion, the factory was recently renamed the Izhevsk Mechanical Factory."
+ mauser_improved_GRU: "Infantry Equipment Manufacturer"
+
+### Putilovets ###
+ krupp_GRU_MIO: "Heavy Protection Tank Designer"
+ krupp_AV_MIO_List: "\n$krupp$ §W(§7+[?av_krupp_research_speed|.2]%§!)§!"
+ GRU_krupp_mio_desc: "$krupp_GRU_MIO$\n§L$krupp_desc$§!\n"
+ krupp: "[GRU_Dynamic_krupp_Name]"
+ krupp_desc: "The main factory of OPZ, whilst remaining privately owned ever since 1885, has seen some limited nationalisation by Savinkov since 1935 and been renamed to krupp. Now having switched to armament production and with the expansion of its designer department, the Krupp factory has become the main tank producer in GRUsia."
+ krupp_GRU: "Tank Manufacturer"
+ krupp_improved: "$krupp$"
+ krupp_improved_desc: "$krupp_desc$"
+ krupp_improved_GRU: "Tank Manufacturer"
+ krupp_improved_tt: "\nUnlocks an improved variant of §H$krupp$§!.\nIf §H$krupp$§! is already hired, then the improved variant will replace it:"
+ transfer_krupp_tt: "\nWill start transferring §H$krupp$§! to a safer location and unlock a new variant that replaces the previous one. If §H$krupp$§! is already hired, then the new variant will replace it:\n"
+ transfer_krupp: "$krupp$ has been evacuated"
+
+### Duks ###
+ albatros_GRU_MIO: "Aerial Supremacy Designer"
+ albatros_AV_MIO_List: "\n$albatros$ §W(§7+[?av_albatros_research_speed|.2]%§!)§!"
+ GRU_albatros_mio_desc: "$albatros_RUS_MIO$\n§L$albatros_desc$§!\n"
+ albatros: "Albatros"
+ albatros_desc: "Due to the harsh economic conditions in the 1920s, the Moscow Aviation Factory Albatros lost several small factories to OSOAVIA - but still managed to survive and stay in the aircraft industry. Concentrating its efforts on the expansion of the Moscow plant, Albatros still maintains its place as the king of fighter aircraft."
+ albatros_GRU: "Fighter Manufacturer"
+ improve_albatros_tt: "\nUnlocks an improved variant of §Albatros§!.\nIf §HAlbatros§! is already hired, then the improved variant will replace it:"
+ albatros_improved: "Albatros"
+ albatros_improved_desc: "Due to the harsh economic conditions in the 1920s, the Moscow Aviation Factory Albatros lost several small factories to OSOAVIA - but still managed to survive and stay in the aircraft industry. Concentrating its efforts on the expansion of the Moscow plant, Albatros still maintains its place as the king of fighter aircraft."
+ albatros_improved_GRU: "Fighter Manufacturer"
+

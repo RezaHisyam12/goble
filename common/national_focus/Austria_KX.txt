@@ -91,6 +91,18 @@ focus_tree = {
 				category = infantry_weapons
 				category = artillery
 			}
+			if = {
+				limit = { land_facility < 1 }
+				custom_effect_tooltip = tooltip_white_line
+				random_owned_controlled_state = {
+					prioritize = { 4 }
+					limit = {
+						is_core_of = ROOT
+						can_construct_building = land_facility
+					}
+					construct_building_in_random_province = { land_facility = 1 }
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -304,15 +316,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_rockets"
-			add_tech_bonus = {
-				name = AUS_rockets
-				bonus = 1
-				uses = 1
-				category = rocketry
-			}
 			add_breakthrough_progress = {
 				specialization = specialization_air
 				value = 0.5
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_tech_bonus = {
+				name = AUS_rockets
+				bonus = 0.75
+				uses = 2
+				category = jet_technology
+				category = rocketry
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -623,6 +637,11 @@ focus_tree = {
 				category = cat_light_armor
 				category = cat_medium_armor
 			}
+			custom_effect_tooltip = tooltip_white_line
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.25
+			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -830,6 +849,26 @@ focus_tree = {
 				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = {
+					43 = { #Central Hungary
+						is_owned_and_controlled_by = ROOT
+						can_construct_building = air_facility
+					}
+				}
+				43 = { construct_building_in_random_province = { air_facility = 1 } } #Central Hungary
+			}
+			else = {
+				random_owned_controlled_state = {
+					prioritize = { 775 }
+					limit = {
+						is_core_of = ROOT
+						can_construct_building = air_facility
+					}
+					construct_building_in_random_province = { air_facility = 1 }
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE_BONUS }
@@ -1200,12 +1239,38 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			every_core_state = {
+				random_select_amount = 2
+				display_individual_scopes = yes
+				limit = {
+					OR = {
+						state = 488 #Trieste
+						state = 736 #Istria
+					}
+					is_owned_and_controlled_by = ROOT
+					is_valid_state_for_development = yes
+					can_construct_building = naval_base
+				}
 				add_building_construction = {
 					type = naval_base
 					level = 2
-					province = 11735
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
 					instant_build = yes
 				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			random_owned_controlled_state = {
+				prioritize = { 736 }
+				limit = {
+					is_core_of = ROOT
+					can_construct_building = naval_facility
+				}
+				construct_building_in_random_province = { naval_facility = 1 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1501,38 +1566,35 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_suedbahn"
-			4 = {
+			build_railway = {
+				level = 1
+				path = { 11666 6690 9648 13575 9646 665 9596 9627 599 6626 }
+			}
+			775 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 					instant_build = yes
 				}
 			}
-			775 = {
+			102 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			835 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			102 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			736 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -2438,7 +2500,8 @@ focus_tree = {
 		}
 
 		available = {
-			owns_state = 9
+			9 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			75 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
 		}
 
 		completion_reward = {
@@ -2475,7 +2538,7 @@ focus_tree = {
 		}
 
 		available = {
-			owns_state = 9
+			9 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
 		}
 
 		completion_reward = {
@@ -2504,8 +2567,8 @@ focus_tree = {
 		}
 
 		available = {
-			owns_state = 104
-			owns_state = 109
+			104 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			109 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
 		}
 
 		completion_reward = {
@@ -2554,8 +2617,8 @@ focus_tree = {
 		}
 
 		available = {
-			owns_state = 163
-			owns_state = 105
+			103 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			163 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
 		}
 
 		completion_reward = {
@@ -2613,40 +2676,42 @@ focus_tree = {
 			784 = { is_owned_and_controlled_by = ROOT }
 		}
 
+		ai_will_do = { factor = 100 }
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_transcarpathian_railway"
 			43 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			73 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			154 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			155 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			784 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -2668,8 +2733,8 @@ focus_tree = {
 		}
 
 		available = {
-			owns_state = 43
-			owns_state = 155
+			43 = { is_owned_and_controlled_by = ROOT }
+			155 = { is_owned_and_controlled_by = ROOT }
 		}
 
 		completion_reward = {
@@ -2677,7 +2742,7 @@ focus_tree = {
 			43 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 				add_extra_state_shared_building_slots = 2
@@ -2690,7 +2755,7 @@ focus_tree = {
 			155 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 				add_extra_state_shared_building_slots = 1
@@ -2718,8 +2783,8 @@ focus_tree = {
 		}
 
 		available = {
-			owns_state = 43
-			owns_state = 155
+			43 = { is_owned_and_controlled_by = ROOT }
+			155 = { is_owned_and_controlled_by = ROOT }
 		}
 
 		completion_reward = {
@@ -2731,7 +2796,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-
 			155 = {
 				add_building_construction = {
 					type = air_base
@@ -3885,7 +3949,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_drastic_measures"
 			add_ideas = AUS_drastic_together
 			every_country = {
-				limit = { has_idea = AUS_part_of_the_Empire }
+				limit = { 
+				has_idea = AUS_part_of_the_Empire 
+				NOT = { tag = HUN }
+				}
 				add_ideas = AUS_drastic_together
 			}
 #			CZE = {
@@ -4010,7 +4077,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_cisleithania_centralised"
 			add_ideas = AUS_imperial_together
 			every_country = {
-				limit = { has_idea = AUS_part_of_the_Empire }
+				limit = { 
+				has_idea = AUS_part_of_the_Empire 
+				NOT = { tag = HUN }
+				}
 				add_ideas = AUS_imperial_together
 			}
 #			CZE = {
@@ -4080,6 +4150,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_ausgleich_1947"
 			remove_ideas = AUS_financial_ties_broken
+			HUN = { remove_ideas = HUN_financial_ties_broken }
 		}
 	}
 
@@ -4160,87 +4231,35 @@ focus_tree = {
 		}
 		available = {
 			has_completed_focus = AUS_suedbahn
-			109 = {
-				OR = {
-					is_owned_by = AUS
-					owner = { is_subject_of = AUS }
-				}
-			}
-			794 = {
-				OR = {
-					is_owned_by = AUS
-					owner = { is_subject_of = AUS }
-				}
-			}
-			103 = {
-				OR = {
-					is_owned_by = AUS
-					owner = { is_subject_of = AUS }
-				}
-			}
-			104 = {
-				OR = {
-					is_owned_by = AUS
-					owner = { is_subject_of = AUS }
-				}
-			}
-			163 = {
-				OR = {
-					is_owned_by = AUS
-					owner = { is_subject_of = AUS }
-				}
-			}
-			105 = {
-				OR = {
-					is_owned_by = AUS
-					owner = { is_subject_of = AUS }
-				}
-			}
+			1100 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			1144 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			103 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			109 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			163 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			104 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
 		}
+		bypass_if_unavailable = yes
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_the_illyrian_suedbahn"
-			109 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+			build_railway = { #Trieste to Pola
+				level = 1
+				path = { 6626 11735 }
 			}
-			794 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
+			build_railway = { #Pola to Zagreb
+				build_only_on_allied = yes
+				start_province = 11735
+				target_province = 11581
 			}
-			103 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+			build_railway = { #Zagreb to Sarajevo
+				build_only_on_allied = yes
+				start_province = 11581
+				target_province = 11899
 			}
-			104 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			163 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			105 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+			build_railway = { #Supply Dump to Split
+				build_only_on_allied = yes
+				start_province = 3601
+				target_province = 3924
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4259,13 +4278,9 @@ focus_tree = {
 			focus = AUS_the_illyrian_suedbahn
 		}
 		available = {
-			109 = {
-				OR = {
-					is_owned_by = AUS
-					owner = { is_subject_of = AUS }
-				}
-			}
+			109 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
 		}
+		bypass_if_unavailable = yes
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_agram_industrial_complex"
@@ -4294,19 +4309,10 @@ focus_tree = {
 			focus = AUS_agram_industrial_complex
 		}
 		available = {
-			103 = {
-				OR = {
-					is_owned_by = AUS
-					owner = { is_subject_of = AUS }
-				}
-			}
-			105 = {
-				OR = {
-					is_owned_by = AUS
-					owner = { is_subject_of = AUS }
-				}
-			}
+			103 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			163 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
 		}
+		bypass_if_unavailable = yes
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_adriatic_ports"
@@ -4343,48 +4349,32 @@ focus_tree = {
 			focus = AUS_northern_railway_bohemia
 		}
 		available = {
-			88 = {
-				OR = {
-					is_owned_by = AUS
-					owner = { is_subject_of = AUS }
-				}
-			}
-			89 = {
-				OR = {
-					is_owned_by = AUS
-					owner = { is_subject_of = AUS }
-				}
-			}
-			91 = {
-				OR = {
-					is_owned_by = AUS
-					owner = { is_subject_of = AUS }
-				}
-			}
+			75 = { is_owned_and_controlled_by_ROOT_or_ally = yes } #Tschen
+			88 = { is_owned_and_controlled_by_ROOT_or_ally = yes } #Krakow
+			89 = { is_owned_and_controlled_by_ROOT_or_ally = yes } #Stanislawow
+			91 = { is_owned_and_controlled_by_ROOT_or_ally = yes } #Lwow
 		}
+		bypass_if_unavailable = yes
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_northern_railway_galicia"
-			88 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+			build_railway = { #Tschen to Krakow
+				level = 1
+				build_only_on_allied = yes
+				start_province = 13553
+				target_province = 9427
 			}
-			91 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+			build_railway = { #Krakow to Lwow
+				level = 1
+				build_only_on_allied = yes
+				start_province = 9427
+				target_province = 11479
 			}
-			89 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+			build_railway = { #Lwow to Stanislawow
+				level = 1
+				build_only_on_allied = yes
+				start_province = 11479
+				target_province = 11411
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4403,18 +4393,8 @@ focus_tree = {
 			focus = AUS_northern_railway_galicia
 		}
 		available = {
-			89 = {
-				OR = {
-					is_owned_by = AUS
-					owner = { is_subject_of = AUS }
-				}
-			}
-			91 = {
-				OR = {
-					is_owned_by = AUS
-					owner = { is_subject_of = AUS }
-				}
-			}
+			89 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			91 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
 		}
 
 		completion_reward = {
@@ -4467,48 +4447,30 @@ focus_tree = {
 			focus = AUS_cisleithanian_development_scheme
 		}
 		available = {
-			786 = {
-				OR = {
-					is_owned_by = AUS
-					owner = { is_subject_of = AUS }
-				}
-			}
-			75 = {
-				OR = {
-					is_owned_by = AUS
-					owner = { is_subject_of = AUS }
-				}
-			}
-			74 = {
-				OR = {
-					is_owned_by = AUS
-					owner = { is_subject_of = AUS }
-				}
-			}
+			9 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			75 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			74 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_northern_railway_bohemia"
-			786 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+			build_railway = { #Vienna to Brno
+				level = 1
+				build_only_on_allied = yes
+				start_province = 11666
+				target_province = 3569
 			}
-			75 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+			build_railway = { #Prague to Brno
+				level = 1
+				build_only_on_allied = yes
+				start_province = 11542
+				target_province = 3569
 			}
-			74 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
+			build_railway = { #Brno to Tschen
+				level = 1
+				build_only_on_allied = yes
+				start_province = 3569
+				target_province = 13553
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4527,35 +4489,25 @@ focus_tree = {
 			focus = AUS_northern_railway_bohemia
 		}
 		available = {
-			75 = {
-				OR = {
-					is_owned_by = AUS
-					owner = { is_subject_of = AUS }
-				}
-			}
-			74 = {
-				OR = {
-					is_owned_by = AUS
-					owner = { is_subject_of = AUS }
-				}
-			}
+			74 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			75 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_morava_industrial_park"
-			75 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
 			74 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
 					level = 1
+					instant_build = yes
+				}
+			}
+			75 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -4590,6 +4542,8 @@ focus_tree = {
 			}
 			has_country_flag = AUS_a_new_Hungary
 		}
+
+		cancelable = no
 
 		mutually_exclusive = {
 			focus = AUS_status_quo
@@ -5117,60 +5071,69 @@ focus_tree = {
 			focus = AUS_decentralised_development_scheme
 		}
 
+		bypass = {
+			9 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+			43 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+			70 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+			91 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+			109 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_idea = AUS_new_administration
+				has_war = no
+			}
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_decentralised_infrastructure"
-			if = {
+			random_state = { #CZE
+				prioritize = { 9 75 }
 				limit = {
-					has_subject = CZE
-					has_subject = HUN
+					region = 22 #Bohemia
+					owner = { is_ally_with = ROOT }
+					free_building_slots = { building = infrastructure size > 0 }
 				}
-				every_other_country = {
-					limit = { has_idea = AUS_part_of_the_Empire }
-					random_owned_state = {
-						add_building_construction = {
-							type = infrastructure
-							level = 1
-							instant_build = yes
-						}
-					}
-					random_owned_state = {
-						add_building_construction = {
-							type = infrastructure
-							level = 1
-							instant_build = yes
-						}
-					}
-				}
+				add_building_construction = { type = infrastructure level = 1 }
 			}
-			else = {
-				random_owned_state = {
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+			random_state = { #HUN
+				prioritize = { 43 154 155 }
+				limit = {
+					region = 27 #Hungary
+					owner = { is_ally_with = ROOT }
+					free_building_slots = { building = infrastructure size > 0 }
 				}
-				random_owned_state = {
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+				add_building_construction = { type = infrastructure level = 1 }
+			}
+			random_state = { #SLO
+				prioritize = { 70 1090 }
+				limit = {
+					is_core_of = SLO
+					owner = { is_ally_with = ROOT }
+					free_building_slots = { building = infrastructure size > 0 }
 				}
-				random_owned_state = {
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+				add_building_construction = { type = infrastructure level = 1 }
+			}
+			random_state = { #GAL
+				prioritize = { 88 91 }
+				limit = {
+					region = 38 #Poland
+					owner = { is_ally_with = ROOT }
+					free_building_slots = { building = infrastructure size > 0 }
 				}
-				random_owned_state = {
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+				add_building_construction = { type = infrastructure level = 1 }
+			}
+			random_state = { #CRO
+				prioritize = { 104 109 }
+				limit = {
+					region = 143 #Northern Balkans
+					owner = { is_ally_with = ROOT }
+					free_building_slots = { building = infrastructure size > 0 }
 				}
+				add_building_construction = { type = infrastructure level = 1 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5189,58 +5152,63 @@ focus_tree = {
 			focus = AUS_decentralised_infrastructure
 		}
 
+		bypass = {
+			9 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+			43 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+			91 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+			109 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_idea = AUS_new_administration
+				has_war = no
+			}
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_decentralised_military_factories"
-			if = {
+			random_state = { #CZE
+				prioritize = { 786 }
 				limit = {
-					has_subject = CZE
-					has_subject = HUN
+					region = 22 #Bohemia
+					owner = { is_ally_with = ROOT }
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
 				}
-				every_other_country = {
-					limit = { has_idea = AUS_part_of_the_Empire }
-					random_owned_state = {
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = arms_factory
-							level = 1
-							instant_build = yes
-						}
-					}
-					random_owned_state = {
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = arms_factory
-							level = 1
-							instant_build = yes
-						}
-					}
-				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 }
 			}
-			else = {
-				random_owned_state = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
+			random_state = { #HUN
+				prioritize = { 154 }
+				limit = {
+					region = 27 #Hungary
+					owner = { is_ally_with = ROOT }
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
 				}
-				random_owned_state = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 }
+			}
+			random_state = { #GAL
+				prioritize = { 91 }
+				limit = {
+					region = 38 #Poland
+					owner = { is_ally_with = ROOT }
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
 				}
-				random_owned_state = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 }
+			}
+			random_state = { #CRO
+				prioritize = { 104 }
+				limit = {
+					region = 143 #Northern Balkans
+					owner = { is_ally_with = ROOT }
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
 				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5338,30 +5306,59 @@ focus_tree = {
 			focus = AUS_decentralised_infrastructure
 		}
 
+		bypass = {
+			9 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+			43 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+			91 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+			109 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_idea = AUS_new_administration
+				has_war = no
+			}
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_transformation_of_nature"
-			if = {
+			random_state = { #CZE
+				prioritize = { 9 }
 				limit = {
-					has_subject = CZE
-					has_subject = HUN
+					region = 22 #Bohemia
+					owner = { is_ally_with = ROOT }
 				}
-				every_country = {
-					limit = { has_idea = AUS_part_of_the_Empire }
-					random_owned_state = {
-						add_extra_state_shared_building_slots = 1
-					}
-				}
+				increase_state_category_by_one_level = yes
 			}
-			else = {
-				random_owned_state = {
-					add_extra_state_shared_building_slots = 1
+			random_state = { #HUN
+				prioritize = { 155 }
+				limit = {
+					region = 27 #Hungary
+					owner = { is_ally_with = ROOT }
 				}
-				random_owned_state = {
-					add_extra_state_shared_building_slots = 1
+				increase_state_category_by_one_level = yes
+			}
+			random_state = { #GAL
+				prioritize = { 80 }
+				limit = {
+					OR = {
+						region = 38 #Poland
+						state = 80 #Cernauti
+						state = 713 #Suceava
+					}
+					owner = { is_ally_with = ROOT }
 				}
-				random_owned_state = {
-					add_extra_state_shared_building_slots = 1
+				increase_state_category_by_one_level = yes
+			}
+			random_state = { #CRO
+				prioritize = { 163 }
+				limit = {
+					region = 143 #Northern Balkans
+					owner = { is_ally_with = ROOT }
 				}
+				increase_state_category_by_one_level = yes
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5381,9 +5378,19 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				has_subject = GAL
-				owns_state = 89
+			91 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+		}
+
+		bypass = {
+			91 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_idea = AUS_new_administration
+				has_war = no
 			}
 		}
 
@@ -5398,7 +5405,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -5427,42 +5434,63 @@ focus_tree = {
 			focus = AUS_decentralised_infrastructure
 		}
 
+		bypass = {
+			9 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+			43 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+			91 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+			109 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_idea = AUS_new_administration
+				has_war = no
+			}
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_decentralised_factories"
-			if = {
+			random_state = { #CZE
+				prioritize = { 74 }
 				limit = {
-					has_subject = CZE
-					has_subject = HUN
+					region = 22 #Bohemia
+					owner = { is_ally_with = ROOT }
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
 				}
-				every_other_country = {
-					limit = { has_idea = AUS_part_of_the_Empire }
-					random_owned_state = {
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = industrial_complex
-							level = 1
-							instant_build = yes
-						}
-					}
-				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
 			}
-			else = {
-				random_owned_state = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
+			random_state = { #HUN
+				prioritize = { 155 }
+				limit = {
+					region = 27 #Hungary
+					owner = { is_ally_with = ROOT }
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
 				}
-				random_owned_state = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
+			random_state = { #GAL
+				prioritize = { 89 }
+				limit = {
+					region = 38 #Poland
+					owner = { is_ally_with = ROOT }
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
 				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
+			random_state = { #CRO
+				prioritize = { 794 }
+				limit = {
+					region = 143 #Northern Balkans
+					owner = { is_ally_with = ROOT }
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5481,42 +5509,63 @@ focus_tree = {
 			focus = AUS_decentralised_factories
 		}
 
+		bypass = {
+			9 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+			43 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+			91 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+			109 = { is_owned_and_controlled_by_ROOT_or_ally = no }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_idea = AUS_new_administration
+				has_war = no
+			}
+		}
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_decentralised_more_factories"
-			if = {
+			random_state = { #CZE
+				prioritize = { 75 }
 				limit = {
-					has_subject = CZE
-					has_subject = HUN
+					region = 22 #Bohemia
+					owner = { is_ally_with = ROOT }
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
 				}
-				every_country = {
-					limit = { has_idea = AUS_part_of_the_Empire }
-					random_owned_state = {
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = industrial_complex
-							level = 1
-							instant_build = yes
-						}
-					}
-				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
 			}
-			else = {
-				random_owned_state = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
+			random_state = { #HUN
+				prioritize = { 43 }
+				limit = {
+					region = 27 #Hungary
+					owner = { is_ally_with = ROOT }
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
 				}
-				random_owned_state = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
+			random_state = { #GAL
+				prioritize = { 88 }
+				limit = {
+					region = 38 #Poland
+					owner = { is_ally_with = ROOT }
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
 				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
+			}
+			random_state = { #CRO
+				prioritize = { 109 }
+				limit = {
+					region = 143 #Northern Balkans
+					owner = { is_ally_with = ROOT }
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5549,7 +5598,49 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_protector_of_the_balkans"
 			add_political_power = 120
-			set_faction_name = austrian_sphere
+			if = {
+				limit = {
+					is_faction_leader = yes
+					NOT = { has_global_flag = AUS_created_donau_adriabund }
+				}
+				set_global_flag = AUS_created_donau_adriabund
+				set_faction_name = austrian_sphere
+			}
+			if = {
+				limit = { ALB = { has_socialist_government = yes } }
+				reverse_add_opinion_modifier = { target = ALB modifier = KR_hates_govt }
+			}
+			else = {
+				reverse_add_opinion_modifier = { target = ALB modifier = KR_pleased }
+			}
+			if = {
+				limit = { GRE = { has_socialist_government = yes } }
+				reverse_add_opinion_modifier = { target = GRE modifier = KR_hates_govt }
+			}
+			else = {
+				reverse_add_opinion_modifier = { target = GRE modifier = KR_pleased }
+			}
+			if = {
+				limit = {
+					BUL = {
+						OR = {
+							has_government = social_conservative
+							has_socialist_government = yes
+						}
+					}
+				}
+				reverse_add_opinion_modifier = { target = BUL modifier = KR_hates_govt }
+			}
+			else = {
+				reverse_add_opinion_modifier = { target = BUL modifier = KR_pleased }
+			}
+			reverse_add_opinion_modifier = { target = SER modifier = KR_hates_govt }
+			reverse_add_opinion_modifier = { target = ROM modifier = KR_hates_govt }
+			hidden_effect = {
+				activate_targeted_decision = { target = INT decision = AUS_syndie_threat }
+				activate_targeted_decision = { target = RUS decision = AUS_russian_threat }
+				activate_targeted_decision = { target = THIS decision = AUS_reform_faction }
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -5557,9 +5648,9 @@ focus_tree = {
 	focus = {
 		id = AUS_potb_albania
 		icon = GFX_goal_AUS_good_neighbor_albania
-		x = 2
+		x = -2
 		y = 1
-		cost = 5
+		cost = 2
 
 		relative_position_id = AUS_protector_of_the_balkans
 
@@ -5580,43 +5671,33 @@ focus_tree = {
 
 		available = {
 			is_faction_leader = yes
-			has_war = no
-			has_global_flag = balkan_war_ended
-			NOT = { has_socialist_government = yes }
-			custom_trigger_tooltip = {
-				tooltip = AUS_potb_albania_tooltip
-				ALB = {
-					any_neighbor_country = { 
-						AND = {
-						is_ally_with = AUS 
-						NOT = { tag = CRO }
-						}
-					}
-				}
-			}
+			threat > 0.6
 			ALB = {
-				has_war = no
+				has_socialist_government = no
+				is_in_faction = no
 				is_subject = no
-				NOT = { has_socialist_government = yes }
+				at_peace_or_same_enemies_as_ROOT = yes
+			}
+			OR = {
+				NOT = { ALB = { is_guaranteed_by = BUL } }
+				is_in_faction_with = BUL
 			}
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_potb_albania"
-			ALB = {
-				country_event = { id = aus.tree.4020 days = 1 }
-			}
+			ALB = { country_event = aus.tree.4020 }
 		}
 	}
 
 	focus = {
 		id = AUS_potb_greece
 		icon = GFX_goal_AUS_Olive_Branch_Greeks
-		x = -2
-		y = 1
-		cost = 6
+		cost = 2
 
 		relative_position_id = AUS_protector_of_the_balkans
+		x = 2
+		y = 1
 
 		prerequisite = {
 			focus = AUS_protector_of_the_balkans
@@ -5635,143 +5716,64 @@ focus_tree = {
 
 		available = {
 			is_faction_leader = yes
-			has_war = no
-			has_global_flag = balkan_war_ended
-			NOT = { has_socialist_government = yes }
-			custom_trigger_tooltip = {
-				tooltip = AUS_potb_greece_tooltip
-				any_allied_country = {
-					OR = {
-						is_neighbor_of = GRE
-						any_neighbor_country = { is_ally_with = GRE }
-					}
-				}
-			}
+			threat > 0.6
 			custom_trigger_tooltip = {
 				tooltip = AUS_no_greek_economic_sanctions
 				NOT = { has_country_flag = GRE_economic_sanctions }
 			}
 			GRE = {
-				has_war = no
+				has_socialist_government = no
+				is_in_faction = no
 				is_subject = no
-				NOT = { has_socialist_government = yes }
-				OR = {
-					is_in_faction = no
-					is_in_faction_with = SER
-				}
+				has_civil_war = no
+				at_peace_or_same_enemies_as_ROOT = yes
 			}
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_potb_greece"
-			GRE = {
-				country_event = { id = aus.tree.4020 days = 1 }
-			}
+			GRE = { country_event = aus.tree.4020 }
 		}
 	}
 
 	focus = {
-		id = AUS_potb_help_romania
-		icon = GFX_goal_AUS_Neutralize_Romania
-		x = 0
-		y = 1
+		id = AUS_potb_invite_bulgaria
+		icon = GFX_BUL_Anti_Belgrade_Pact
 		cost = 2
 
 		relative_position_id = AUS_protector_of_the_balkans
+		x = 0
+		y = 1
 
 		prerequisite = {
 			focus = AUS_protector_of_the_balkans
 		}
 
-		will_lead_to_war_with = ROM
-
-		ai_will_do = {
-			factor = 0
-		}
+		ai_will_do = { factor = 10 }
 
 		available = {
 			is_faction_leader = yes
-			has_war = no
-			has_global_flag = balkan_war_ended
-			can_declare_war_on = ROM
-			ROM = {
-				has_war = no
-				any_neighbor_country = {
-					OR = {
-						is_subject_of = AUS
-						is_in_faction_with = AUS
-						tag = AUS
-					}
-				}
-				is_subject = no
-			}
-		}
-
-		bypass = {
-			OR = {
-				NOT = { can_declare_war_on = ROM }
-				ROM = { is_subject_of = BUL }
-			}
-		}
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus AUS_potb_help_romania"
-			create_wargoal = {
-				target = ROM
-				type = annex_everything
-			}
-		}
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-	}
-
-	focus = {
-		id = AUS_potb_invite_bulgaria
-		icon = GFX_goal_AUS_free_bulgaria
-		x = 0
-		y = 2
-		cost = 6
-
-		relative_position_id = AUS_protector_of_the_balkans
-
-		prerequisite = {
-			focus = AUS_potb_albania
-			focus = AUS_potb_greece
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		available = {
+			threat > 0.6
 			BUL = {
-				has_war = no
+				exists = yes
 				is_subject = no
 				is_in_faction = no
-				NOT = { has_socialist_government = yes }
+				has_socialist_government = no
+				NOT = { has_government = authoritarian_democrat }
+				at_peace_or_same_enemies_as_ROOT = yes
 			}
-			is_faction_leader = yes
-			has_war = no
-			has_global_flag = balkan_war_ended
-			NOT = { has_socialist_government = yes }
-			custom_trigger_tooltip = {
-				tooltip = AUS_potb_bulgaria_tooltip
-				BUL = {
-					any_neighbor_country = {
-						OR = {
-							is_subject_of = AUS
-							is_in_faction_with = AUS
-							tag = AUS
-						}
-					}
-				}
+		}
+		bypass = {
+			OR = {
+				BUL = { is_subject = yes }
+				BUL = { is_in_faction = yes }
+				BUL = { has_socialist_government = yes }
 			}
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_potb_invite_bulgaria"
-			BUL = {
-				country_event = { id = aus.tree.4020 days = 1 }
-			}
+			BUL = { country_event = aus.tree.4020 }
 		}
 	}
 	

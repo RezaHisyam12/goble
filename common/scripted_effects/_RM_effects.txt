@@ -1295,9 +1295,9 @@ create_VKB = {
 		}
 
 		create_country_leader = {
-			name = "Heinrich Himmler"
-			desc = "POLITICS_himmler_DESC"
-			picture = "gfx/leaders/GRU/Portrait_VKB_Heinrich_Himmler.png"
+			name = "Hinrich Lohse"
+			desc = "POLITICS_Lohse_DESC"
+			picture = "gfx/leaders/GRU/Portrait_Germany_Hinrich_Lohse.dds"
 			expire = "1.1.1"
 			ideology = tot_left_nationalism_subtype
 			traits = { 
@@ -1305,9 +1305,9 @@ create_VKB = {
 		}
 
 		create_country_leader = {
-			name = "Heinrich Himmler"
-			desc = "POLITICS_himmler_DESC"
-			picture = "gfx/leaders/GRU/Portrait_VKB_Heinrich_Himmler.png"
+			name = "Hinrich Lohse"
+			desc = "POLITICS_Lohse_DESC"
+			picture = "gfx/leaders/GRU/Portrait_Germany_Hinrich_Lohse.dds"
 			expire = "1.1.1"
 			ideology = natpop_goebbels_subtype
 			traits = { 
@@ -1537,6 +1537,82 @@ create_VST = {
 		}
 		set_cosmetic_tag = VST
 		load_focus_tree = gru_VST
+	}
+}
+
+create_VOB = {
+	VOB = {
+		set_politics = {
+			ruling_party = totalist
+			last_election = "1936.1.1"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		set_party_name = { ideology = totalist long_name = "NSDVP-Himmlerites" name = "NSDVP-H"}
+		set_party_name = { ideology = national_populist long_name = "NSDVP-Himmlerites" name = "NSDVP-H"}
+		set_popularities = {
+			totalist = 100
+		}
+
+		create_country_leader = {
+			name = "Heinrich Himmler"
+			desc = "POLITICS_himmler_DESC"
+			picture = "gfx/leaders/GRU/Portrait_RRB_Heinrich_Himmler.png"
+			expire = "1.1.1"
+			ideology = tot_left_nationalism_subtype
+			traits = { 
+			}
+		}
+
+		create_country_leader = {
+			name = "Heinrich Himmler"
+			desc = "POLITICS_himmler_DESC"
+			picture = "gfx/leaders/GRU/Portrait_RRB_Heinrich_Himmler.png"
+			expire = "1.1.1"
+			ideology = natpop_goebbels_subtype
+			traits = { 
+			}
+		}
+		set_cosmetic_tag = VOB
+		load_focus_tree = generic_focus
+	}
+}
+
+create_VKN = {
+	VKN = {
+		set_politics = {
+			ruling_party = totalist
+			last_election = "1936.1.1"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		set_party_name = { ideology = totalist long_name = "NSDVP-Niederlande" name = "NSDVP-N"}
+		set_party_name = { ideology = national_populist long_name = "NSDVP-Niederlande" name = "NSDVP-N"}
+		set_popularities = {
+			totalist = 100
+		}
+
+		create_country_leader = {
+			name = "Arthur Seyss-Inquart"
+			desc = "POLITICS_Seyss_DESC"
+			picture = "gfx/leaders/GRU/Portrait_Netherlands_Seyss_Inquart_Arthur.png"
+			expire = "1.1.1"
+			ideology = tot_left_nationalism_subtype
+			traits = { 
+			}
+		}
+
+		create_country_leader = {
+			name = "Arthur Seyss-Inquart"
+			desc = "POLITICS_Seyss_DESC"
+			picture = "gfx/leaders/GRU/Portrait_Netherlands_Seyss_Inquart_Arthur.png"
+			expire = "1.1.1"
+			ideology = natpop_goebbels_subtype
+			traits = { 
+			}
+		}
+		set_cosmetic_tag = VKN
+		load_focus_tree = gru_VKN
 	}
 }
 

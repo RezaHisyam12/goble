@@ -1650,5 +1650,96 @@ RUS_build_radars_yeniseyk = {
 	}
 }
 
+RUS_build_large_caliber_ryazan = {
+	allowed = {
+		original_tag = RUS
+		threat > 0.6
+	}
+	enable = {
+		254 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = mega_gun_emplacement
+		target = 254
+		value = 2000
+	}
+}
+
+RUS_build_large_caliber_novgorod = {
+	allowed = {
+		original_tag = RUS
+		threat > 0.6
+	}
+	enable = {
+		263 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = mega_gun_emplacement
+		target = 263
+		value = 2000
+	}
+}
+
+RUS_build_large_caliber_tomsk = {
+	allowed = {
+		original_tag = RUS
+		threat > 0.6
+	}
+	enable = {
+		578 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = mega_gun_emplacement
+		target = 578
+		value = 2000
+	}
+}
+
+RUS_build_rocket_site_tula = {
+	allowed = {
+		original_tag = RUS
+		threat > 0.6
+	}
+	enable = {
+		223 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+		free_building_slots = { building = rocket_site size > 0 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = rocket_site
+		target = 223
+		value = 2000
+	}
+}
+
+RUS_build_rocket_site_tikhvin = {
+	allowed = {
+		original_tag = RUS
+		threat > 0.6
+	}
+	enable = {
+		264 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+		free_building_slots = { building = rocket_site size > 0 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = rocket_site
+		target = 264
+		value = 2000
+	}
+}
 
 	

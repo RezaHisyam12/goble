@@ -168,7 +168,7 @@ shared_focus = {
 		y = 4
 		cost = 5
 		ai_will_do = {
-			factor = 5
+			factor = 10
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_form_the_stasi"
@@ -218,7 +218,7 @@ shared_focus = {
 		y = 1
 		cost = 5
 		ai_will_do = {
-			factor = 8
+			factor = 20
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_breitspurbahnen"
@@ -303,6 +303,9 @@ shared_focus = {
 		x = 4
 		y = 1
 		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_DAF"
 					add_political_power = 25
@@ -584,6 +587,9 @@ shared_focus = {
 		x = -8
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		offset = {
 			x = -1
 			y = 0
@@ -637,7 +643,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 20
+			factor = 100
 		}
 		offset = {
 			x = -1
@@ -663,7 +669,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 5
+			factor = 10
 		}
 		completion_reward = {
                   country_event = { id =  rotermorgenmisc.401 days = 1 }
@@ -683,7 +689,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 5
+			factor = 10
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_nationalize_ufa"
@@ -728,6 +734,9 @@ shared_focus = {
 		x = -8
 		y = 4
 		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
 		offset = {
 			x = -1
 			y = 0
@@ -765,7 +774,7 @@ shared_focus = {
 		y = 4
 		cost = 5
 		ai_will_do = {
-			factor = 20
+			factor = 100
 		}
 		offset = {
 			x = -1
@@ -795,6 +804,9 @@ shared_focus = {
 		x = -7
 		y = 5
 		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
 		offset = {
 			x = -1
 			y = 0
@@ -1065,7 +1077,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 5
+			factor = 10
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_form_the_stasi"
@@ -1089,7 +1101,7 @@ shared_focus = {
 		y = 3
 		cost = 5
 		ai_will_do = {
-			factor = 5
+			factor = 10
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_form_the_stasi"
@@ -1111,7 +1123,7 @@ shared_focus = {
 		y = 3
 		cost = 5
 		ai_will_do = {
-			factor = 5
+			factor = 10
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_volksgesundheitsamt"
@@ -1838,7 +1850,7 @@ shared_focus = {
 		y = 7
 		cost = 5
 		ai_will_do = {
-			factor = 17
+			factor = 20
 		}
 		prerequisite = { focus = GRU_union_trade_committee focus = GRU_neue_schwerindustrie  }
 		completion_reward = {
@@ -1902,7 +1914,7 @@ shared_focus = {
 		y = 3
 		cost = 5
 		ai_will_do = {
-			factor = 20
+			factor = 100
 		}
 		offset = {
 			x = -2
@@ -1938,7 +1950,7 @@ shared_focus = {
 		y = 3
 		cost = 5
 		ai_will_do = {
-			factor = 20
+			factor = 100
 		}
 		offset = {
 			x = -2
@@ -1967,7 +1979,7 @@ shared_focus = {
 		y = 6
 		cost = 5
 		ai_will_do = {
-			factor = 4
+			factor = 25
 		}
 		allow_branch = {
 			OR = {
@@ -1996,7 +2008,7 @@ shared_focus = {
 		y = 8
 		cost = 5
 		ai_will_do = {
-			factor = 4
+			factor = 8
 		}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_rev_oil"
@@ -2391,19 +2403,16 @@ shared_focus = {
 			set_country_flag = GRU_zollverein_member
 			add_to_array = { global.zollverein_members = THIS }
 			hidden_effect = {
-			if = {
-				limit = { NOT = { has_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere } } }
 				add_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere }
-				}
-			}
 			add_tech_bonus = {
 				name = GRU_found_the_zollverein
 				bonus = 1
 				uses = 1
 				category = construction_tech
 			}
+			country_event = { id = rotermorgen.1005 days = 30 }
 		}
-
+	}
 }
 
 	#Industrial Unionisation
@@ -3238,7 +3247,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 2
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3272,7 +3281,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 2
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3318,7 +3327,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 2
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3954,7 +3963,7 @@ shared_focus = {
 		y = 4
 		cost = 5
 		ai_will_do = {
-			factor = 17
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_deutschsozialistische_architektur"
@@ -6811,7 +6820,7 @@ shared_focus = {
 		y = 1
 		cost = 6
 		ai_will_do = {
-			factor = 20
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_allignment"
@@ -6827,7 +6836,7 @@ shared_focus = {
 		y = 1
 		cost = 6
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_imperialism"
@@ -6845,7 +6854,6 @@ shared_focus = {
 		allowed = {
 			tag = GRU
 		}
-
 		ai_will_do = {
 			factor = 2
 			modifier = {
@@ -6858,11 +6866,11 @@ shared_focus = {
 			}
 			modifier = {
 				factor = 0
-				has_war_with = AUS
+				has_war = yes
 			}
 			modifier = {
 				factor = 0
-				has_war_with = RUS
+				country_exists = AUS
 			}
 		}
 		targets = { FRA }
@@ -6910,58 +6918,20 @@ shared_focus = {
 						FRA = { is_puppet_of = GRU }
 					}
 			}
-			select_effect = {
-				set_country_flag = { flag = imminent_war days = 42 value = 1 }
-			FROM = {
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = ROOT
-					value = 1000
-				}
-			}
-			for_each_scope_loop = {
-				array = FROM.faction_members
-				if = {
-					limit = { is_neighbor_of = ROOT }
-					add_ai_strategy = {
-						type = prepare_for_war
-						id = ROOT
-						value = 1000
-					}
-				}
-			}
+		select_effect = {
+			set_country_flag = { flag = imminent_war days = 42 value = 1 }
+			setup_decision_attack_AI = yes
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_END_FRANCE"
-			FROM = {
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = ROOT
-					value = -1000
-				}
-			}
-			for_each_scope_loop = {
-				array = FROM.faction_members
-				if = {
-					limit = { is_neighbor_of = ROOT }
-					add_ai_strategy = {
-						type = prepare_for_war
-						id = ROOT
-						value = -1000
-					}
-				}
-			}
-			create_wargoal = {
-					type = annex_everything
-					target = FRA
-				}
-			28 = {
+			clear_decision_attack_AI = yes
+			add_stability = -0.1
+			add_country_leader_trait = gru_froncophobe
+			declare_war_on = {	type = annex_everything	target = FRA }
+				28 = {
 				add_claim_by = GRU
 				}
 				8 = {
-				add_claim_by = GRU
-				}
-			779 = {
 				add_claim_by = GRU
 				}
 		}
@@ -6980,6 +6950,7 @@ shared_focus = {
 				}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_PRESSURE_SORELIAN_FRANCE"
+					add_political_power = 100
 					if = {
 							limit = {
 									NOT = {
@@ -7079,7 +7050,7 @@ shared_focus = {
 		y = 1
 		cost = 6
 		ai_will_do = {
-			factor = 15
+			factor = 30
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_BORDER_FORTIFICATIONS"
@@ -7184,9 +7155,6 @@ shared_focus = {
 				add_claim_by = GRU
 			}
 			28 = {
-				add_claim_by = GRU
-			}
-			779 = {
 				add_claim_by = GRU
 			}
 			337 = {
@@ -7387,7 +7355,7 @@ shared_focus = {
 		y = 3
 		cost = 6
 		ai_will_do = {
-			factor = 20
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_RED_COLONIALISM"
@@ -7418,7 +7386,7 @@ shared_focus = {
 		y = 2
 		cost = 7	
 		ai_will_do = {
-			factor = 20
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_LEBENSRAUM"

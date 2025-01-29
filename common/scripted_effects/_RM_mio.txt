@@ -1723,6 +1723,15 @@ RUS_TOZ_Hand_Out_Medals = {
 		limit = {
 			RUS_has_TOZ_attack_medal = no
 			RUS_has_TOZ_defense_medal = yes
+			RUS_has_TOZ_org_medal = yes
+			RUS_has_TOZ_breakthrough_medal = no
+		}
+		custom_effect_tooltip = RUS_TOZ_Medal_bc_tt
+	}
+	else_if = {
+		limit = {
+			RUS_has_TOZ_attack_medal = no
+			RUS_has_TOZ_defense_medal = yes
 			RUS_has_TOZ_org_medal = no
 			RUS_has_TOZ_breakthrough_medal = yes
 		}
@@ -1745,6 +1754,15 @@ RUS_TOZ_Hand_Out_Medals = {
 			RUS_has_TOZ_breakthrough_medal = yes
 		}
 		custom_effect_tooltip = RUS_TOZ_Medal_acd_tt
+	}
+	else_if = {
+		limit = {
+			RUS_has_TOZ_attack_medal = no
+			RUS_has_TOZ_defense_medal = yes
+			RUS_has_TOZ_org_medal = yes
+			RUS_has_TOZ_breakthrough_medal = yes
+		}
+		custom_effect_tooltip = RUS_TOZ_Medal_bcd_tt
 	}
 	custom_effect_tooltip = tooltip_white_line
 	custom_effect_tooltip = RUS_TOZ_Org_reset_tt
@@ -1876,6 +1894,26 @@ RUS_TOZ_Hand_Out_Medals = {
 			limit = {
 				RUS_has_TOZ_attack_medal = no
 				RUS_has_TOZ_defense_medal = yes
+				RUS_has_TOZ_org_medal = yes
+				RUS_has_TOZ_breakthrough_medal = no
+			}
+			random_country_division = {
+				limit = { unit_organization > 0.02 }
+				add_history_entry = {
+					key = RUS_TOZ_Medal_Award
+					subject = "RUS_TOZ_Medal_Award"
+					allow = yes
+				}
+				add_unit_medal_to_latest_entry = {
+					unit_medals = RUS_TOZ_Medal_bc
+				}
+				set_unit_organization = 0.01
+			}
+		}
+		else_if = {
+			limit = {
+				RUS_has_TOZ_attack_medal = no
+				RUS_has_TOZ_defense_medal = yes
 				RUS_has_TOZ_org_medal = no
 				RUS_has_TOZ_breakthrough_medal = yes
 			}
@@ -1928,6 +1966,26 @@ RUS_TOZ_Hand_Out_Medals = {
 				}
 				add_unit_medal_to_latest_entry = {
 					unit_medals = RUS_TOZ_Medal_acd
+				}
+				set_unit_organization = 0.01
+			}
+		}
+		else_if = {
+			limit = {
+				RUS_has_TOZ_attack_medal = no
+				RUS_has_TOZ_defense_medal = yes
+				RUS_has_TOZ_org_medal = yes
+				RUS_has_TOZ_breakthrough_medal = yes
+			}
+			random_country_division = {
+				limit = { unit_organization > 0.02 }
+				add_history_entry = {
+					key = RUS_TOZ_Medal_Award
+					subject = "RUS_TOZ_Medal_Award"
+					allow = yes
+				}
+				add_unit_medal_to_latest_entry = {
+					unit_medals = RUS_TOZ_Medal_bcd
 				}
 				set_unit_organization = 0.01
 			}

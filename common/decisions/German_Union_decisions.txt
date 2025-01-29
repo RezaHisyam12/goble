@@ -2605,6 +2605,7 @@ GRU_germania_plan_decisions = {
 			has_completed_focus = GRU_NMDVP_PAN_GERMANISM_RELOADED
 			country_exists = HOL
 			HOL = { is_subject_of = GRU }
+			NOT = { has_country_flag = VKN_established }
 		}
 		available = {
 			country_exists = HOL
@@ -2635,6 +2636,7 @@ GRU_germania_plan_decisions = {
 			has_completed_focus = GRU_NMDVP_PAN_GERMANISM_RELOADED
 			country_exists = BEL
 			BEL = { is_subject_of = GRU }
+			NOT = { has_country_flag = VOB_established }
 		}
 		available = {
 			country_exists = BEL
@@ -2864,7 +2866,6 @@ GRU_germania_plan_decisions = {
 			 FRA = { is_subject_of = GRU }
 			 OR = {
 			
-			779 = { is_owned_and_controlled_by = FRA }
 			28 = { is_owned_and_controlled_by = FRA }
 			8 = { is_owned_and_controlled_by = FRA }
 			741 = { is_owned_and_controlled_by = FRA }
@@ -2876,7 +2877,6 @@ GRU_germania_plan_decisions = {
 			FRA = { is_subject_of = GRU }
 			OR = {
 			
-			779 = { is_owned_and_controlled_by = FRA }
 			28 = { is_owned_and_controlled_by = FRA }
 			8 = { is_owned_and_controlled_by = FRA }
 			741 = { is_owned_and_controlled_by = FRA }
@@ -3000,6 +3000,10 @@ GRU_germania_plan_decisions = {
 				factor = 0
 				has_country_flag = imminent_war
 			}
+			modifier = {
+				factor = 0
+				has_army_manpower = { size < 1750000 }
+			}
 		}
 
 		complete_effect = {
@@ -3079,6 +3083,12 @@ GRU_germania_plan_decisions = {
 			modifier = {
 				factor = 0
 				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = FRA
+				}
 			}
 			modifier = {
 				factor = 0
@@ -3487,6 +3497,12 @@ GRU_germania_plan_decisions = {
 			}
 			modifier = {
 				factor = 0
+				FROM = {
+				is_in_faction_with = FRA
+				}
+			}
+			modifier = {
+				factor = 0
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.8
@@ -3724,6 +3740,12 @@ GRU_germania_plan_decisions = {
 			}
 			modifier = {
 				factor = 0
+				FROM = {
+				is_in_faction_with = FRA
+				}
+			}
+			modifier = {
+				factor = 0
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.8
@@ -3868,6 +3890,12 @@ GRU_germania_plan_decisions = {
 			}
 			modifier = {
 				factor = 0
+				FROM = {
+				is_in_faction_with = FRA
+				}
+			}
+			modifier = {
+				factor = 0
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.8
@@ -3962,10 +3990,16 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 100
+			factor = 145
 			modifier = {
 				factor = 0
 				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = FRA
+				}
 			}
 			modifier = {
 				factor = 0
@@ -4082,6 +4116,12 @@ GRU_germania_plan_decisions = {
 			}
 			modifier = {
 				factor = 0
+				FROM = {
+				is_in_faction_with = FRA
+				}
+			}
+			modifier = {
+				factor = 0
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.8
@@ -4186,6 +4226,12 @@ GRU_germania_plan_decisions = {
 			}
 			modifier = {
 				factor = 0
+				FROM = {
+				is_in_faction_with = FRA
+				}
+			}
+			modifier = {
+				factor = 0
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.8
@@ -4281,6 +4327,12 @@ GRU_germania_plan_decisions = {
 			modifier = {
 				factor = 0
 				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = FRA
+				}
 			}
 			modifier = {
 				factor = 0
@@ -4385,6 +4437,12 @@ GRU_germania_plan_decisions = {
 			}
 			modifier = {
 				factor = 0
+				FROM = {
+				is_in_faction_with = FRA
+				}
+			}
+			modifier = {
+				factor = 0
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.8
@@ -4480,6 +4538,12 @@ GRU_germania_plan_decisions = {
 			modifier = {
 				factor = 0
 				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = FRA
+				}
 			}
 			modifier = {
 				factor = 0
@@ -4581,6 +4645,12 @@ GRU_germania_plan_decisions = {
 			modifier = {
 				factor = 0
 				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = FRA
+				}
 			}
 			modifier = {
 				factor = 0
@@ -6010,6 +6080,7 @@ GRU_germania_plan_decisions = {
 
 		visible = {
 			has_completed_focus = GRU_NMDVP_PAN_GERMANISM_RELOADED
+			NOT = { has_country_flag = VKN_established }
 		}
 		available = {
 			866 = { 
@@ -6153,6 +6224,7 @@ GRU_germania_plan_decisions = {
 
 		visible = {
 			has_completed_focus = GRU_NMDVP_PAN_GERMANISM_RELOADED
+			NOT = { has_country_flag = VOB_established }
 		}
 		available = {
 			6 = { 
@@ -6484,20 +6556,6 @@ GRU_germania_plan_decisions = {
 					}
 				}
 			}
-			779 = { 
-				owner = {
-					OR = {
-						tag = GRU
-						is_subject_of = GRU
-					}
-				}
-				controller = {
-					OR = {
-						tag = GRU
-						is_subject_of = GRU
-					}
-				}
-			}
 		}
 
 		fire_only_once = yes
@@ -6511,12 +6569,6 @@ GRU_germania_plan_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_core_elsas_decision"
 			28 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			779 = { 
 				add_core_of = GRU
 				GRU = {
 					transfer_state = PREV
@@ -6582,8 +6634,10 @@ GRU_Germania_Stadt_decisions = {
 		cost = 500
 		days_remove = 250
 
+		modifier = { consumer_goods_factor = 0.15 }
+
 		ai_will_do = {
-			factor = 6
+			factor = 1000
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Germania_Stadt_decision"
@@ -7187,7 +7241,7 @@ GRU_kill_entente_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 50
+			factor = 0
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -7260,7 +7314,7 @@ GRU_kill_entente_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 50
+			factor = 0
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -8752,6 +8806,10 @@ GRU_kill_rivals_decisions = {
 			factor = 25
 			modifier = {
 				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.8
@@ -9083,6 +9141,7 @@ GRU_scandi_decisions = {
 		visible = {
 			has_completed_focus = GRU_NMDVP_SCANDINAVIA
 			country_exists = SWE
+			NOT = { is_subject_of = GRU }
 			#NOT = { SWE = { has_government = totalist } }
 		}
 		available = {
@@ -9147,6 +9206,7 @@ GRU_scandi_decisions = {
 		visible = {
 			has_completed_focus = GRU_NMDVP_SCANDINAVIA
 			country_exists = NOR
+			NOT = { is_subject_of = GRU }
 			#NOT = { NOR = { has_government = totalist } }
 		}
 		available = {
@@ -9211,6 +9271,7 @@ GRU_scandi_decisions = {
 		visible = {
 			has_completed_focus = GRU_NMDVP_SCANDINAVIA
 			country_exists = FIN
+			NOT = { is_subject_of = GRU }
 			#NOT = { FIN = { has_government = totalist } }
 		}
 		available = {
@@ -10188,18 +10249,7 @@ GRU_expansion_three_volksland_hypoborea = {
 						amount = 100
 						}
 						add_manpower = 40000
-				create_field_marshal = {
-					name = "Heinrich Himmler"
-					portrait_path = "gfx/leaders/GRU/Portrait_VKB_Heinrich_Himmler.png"
-					traits = { trickster panzer_leader war_hero RR_OFFICER }
-					skill = 4
-
-					attack_skill = 4
-					defense_skill = 2
-					planning_skill = 2
-					logistics_skill = 4
-						}
-				}
+					}
 				VKB = {	country_event = rotermorgenmisc.400 }
 				if = {
 						limit = {
@@ -12768,7 +12818,7 @@ GRU_lebensraum_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 115
+			factor = 145
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -15048,6 +15098,7 @@ GRU_stahlpakt_alliance_decisions = {
 			is_subject = no
 			is_faction_leader = yes
 			has_war = no
+			AUS = { exists = no }
 			NOT = { has_country_leader = { name = "Reinhard Heydrich" ruling_only = yes } }
 		}
 		visible = {
@@ -15081,3 +15132,379 @@ GRU_stahlpakt_alliance_decisions = {
 		}
 	}
 }
+
+GRU_new_order_decisions = {
+	GRU_Ordenstaat_Burgundy = {
+
+		icon = GFX_goebb_decision_burg
+		ai_will_do = { factor = 2000 }
+		highlight_states = {
+		    highlight_state_targets = {
+				state = 29
+				state = 980
+				state = 17
+				state = 24
+				state = 785
+				state = 18
+				state = 779
+				state = 27
+				state = 760
+				state = 943
+				state = 741
+				state = 34
+				state = 6
+				}
+			}
+			fire_only_once = yes
+				
+			available = {
+				has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+				tag = GRU 
+				AND = {
+					OR = {
+						GRU = {
+							controls_state = 29
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 29
+						}
+					}
+					OR = {
+						GRU = {
+							controls_state = 980
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 980
+						}
+					}
+					OR = {
+						GRU = {
+							controls_state = 17
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 17
+						}
+					}
+					OR = {
+						GRU = {
+							controls_state = 24
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 24
+						}
+					}
+					OR = {
+						GRU = {
+							controls_state = 785
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 785
+						}
+					}
+					OR = {
+						GRU = {
+							controls_state = 18
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 18
+						}
+					}
+					OR = {
+						GRU = {
+							controls_state = 779
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 779
+						}
+					}
+					OR = {
+						GRU = {
+							controls_state = 27
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 27
+						}
+					}
+					OR = {
+						GRU = {
+							controls_state = 760
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 760
+						}
+					}
+					OR = {
+						GRU = {
+							controls_state = 943
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 943
+						}
+					}
+					OR = {
+						GRU = {
+							controls_state = 741
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 741
+						}
+					}
+					OR = {
+						GRU = {
+							controls_state = 34
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 34
+						}
+					}
+					OR = {
+						GRU = {
+							controls_state = 6
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 6
+						}
+					}
+				}
+			}
+		
+			visible = {
+				has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+			}
+		
+			complete_effect = {
+				create_VOB = yes
+
+				hidden_effect = {
+					VOB = {
+						transfer_state = 29
+						transfer_state = 980
+						transfer_state = 17
+						transfer_state = 24
+						transfer_state = 785
+						transfer_state = 18
+						transfer_state = 779
+						transfer_state = 27
+						transfer_state = 760
+						transfer_state = 943
+						transfer_state = 741
+						transfer_state = 34
+						transfer_state = 6
+						
+						set_capital = { state = 779 }
+						add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
+						add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 30000 }
+						add_equipment_to_stockpile = { type = support_equipment amount = 3000 }
+						add_equipment_to_stockpile = { type = artillery_equipment amount = 1000 }
+						add_equipment_to_stockpile = { type = anti_tank_equipment amount = 600 }
+						add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 5000 }
+						add_manpower = 40000
+						remove_all_ministers = yes
+						add_ideas = limited_conscription
+						add_ideas = limited_exports
+						add_ideas = war_economy
+						
+						add_ideas = {
+							GRU_pol_off
+							GRU_guard
+                    					GRU_lager
+							VK_COLONY_INDUSTRY_TWO
+                  				}
+						create_field_marshal = {
+							name = "Heinrich Himmler"
+							portrait_path = "gfx/leaders/GRU/Portrait_RRB_Heinrich_Himmler.png"
+							traits = { trickster panzer_leader war_hero RR_OFFICER }
+							skill = 4
+
+							attack_skill = 4
+							defense_skill = 2
+							planning_skill = 2
+							logistics_skill = 4
+								}
+				}
+				VOB = {	country_event = rotermorgenmisc.956 }
+				if = {
+						limit = {
+							GRU = { has_country_flag = NMDVP_R_RULE }
+						}
+						VOB = {	
+							set_popularities = {
+								national_populist = 100
+							}
+							set_politics = {
+								ruling_party = national_populist
+								last_election = "1936.1.1"
+								election_frequency = 48
+								elections_allowed = no
+							}
+						}
+					}
+				}
+				set_autonomy = { target = VOB autonomy_state = RM_Volksstaat }
+				set_country_flag = VOB_established
+				VOB = { set_country_flag = IS_VOB }
+				VOB = { inherit_technology = GRU }
+			}
+	}
+	GRU_VK_netherland = {
+
+		icon = GFX_goebb_decision_burg
+		ai_will_do = { factor = 2000 }
+		highlight_states = {
+		    highlight_state_targets = {
+				state = 979
+				state = 35
+				state = 866
+				state = 7
+				state = 36
+				state = 978
+				}
+			}
+			fire_only_once = yes
+				
+			available = {
+				has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+				tag = GRU 
+				AND = {
+					OR = {
+						GRU = {
+							controls_state = 979
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 979
+						}
+					}
+					OR = {
+						GRU = {
+							controls_state = 35
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 35
+						}
+					}
+					OR = {
+						GRU = {
+							controls_state = 866
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 866
+						}
+					}
+					OR = {
+						GRU = {
+							controls_state = 7
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 7
+						}
+					}
+					OR = {
+						GRU = {
+							controls_state = 36
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 36
+						}
+					}
+					OR = {
+						GRU = {
+							controls_state = 978
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 978
+						}
+					}
+				}
+			}
+		
+			visible = {
+				has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+			}
+		
+			complete_effect = {
+				create_VKN = yes
+
+				hidden_effect = {
+					VKN = {
+				transfer_state = 979
+				transfer_state = 35
+				transfer_state = 866
+				transfer_state = 7
+				transfer_state = 36
+				transfer_state = 978
+						
+						add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
+						add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 30000 }
+						add_equipment_to_stockpile = { type = support_equipment amount = 3000 }
+						add_equipment_to_stockpile = { type = artillery_equipment amount = 1000 }
+						add_equipment_to_stockpile = { type = anti_tank_equipment amount = 600 }
+						add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 5000 }
+						add_manpower = 40000
+						remove_all_ministers = yes
+						add_ideas = limited_conscription
+						add_ideas = limited_exports
+						add_ideas = war_economy
+
+						add_ideas = {
+							GRU_pol_off
+                    					GRU_lager
+                  				}
+						create_field_marshal = {
+							name = "Arthur Seyss-Inquart"
+							desc = "GRU_Seyss_DESC"
+							portrait_path = "gfx/leaders/GRU/Portrait_Netherlands_Seyss_Inquart_Arthur.png"
+							traits = { trickster war_hero RR_OFFICER }
+							skill = 4
+							attack_skill = 2
+							defense_skill = 4
+							planning_skill = 2
+							logistics_skill = 2
+						}
+				}
+				VKN = {	country_event = rotermorgenmisc.957 }
+				if = {
+						limit = {
+							GRU = { has_country_flag = NMDVP_R_RULE }
+						}
+						VKN = {	
+							set_popularities = {
+								national_populist = 100
+							}
+							set_politics = {
+								ruling_party = national_populist
+								last_election = "1936.1.1"
+								election_frequency = 48
+								elections_allowed = no
+							}
+						}
+					}
+				}
+				set_autonomy = { target = VKN autonomy_state = RM_Volkskommissariat }
+				set_country_flag = VKN_established
+				VKN = { set_country_flag = IS_VKN }
+				VKN = { inherit_technology = GRU }
+			}
+	}
+
+}
+
+

@@ -1,0 +1,102 @@
+ideas = {
+	head_of_government = { ### Head of Government ###
+	########## RUSSIA #############
+		RUS_Aleksandr_S_Antonov_carm_npo = {
+			allowed = { original_tag = RUS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = military_staff_available
+					NOT = { has_country_flag = Aleksandr_S_Antonov_dead }
+				}
+			}
+			visible = {
+				NOT = { has_country_flag = Aleksandr_S_Antonov_dead }
+				NOT = { has_country_flag = soviet_russia_restored }
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea RUS_Aleksandr_S_Antonov_carm_npo"
+			}
+			traits = {
+				chief_of_army
+				carm_tambov_wolf
+			}
+			cancel_if_invalid = yes
+		}
+		RUS_Mikhail_Drozdovskiy_cos_pau = {
+			allowed = { original_tag = RUS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = military_staff_available
+					NOT = { has_country_flag = Mikhail_Drozdovskiy_dead }
+				}
+				RUS_russian_monarch = yes
+				has_unit_leader = 405
+			}
+			visible = {
+				NOT = { has_country_flag = Mikhail_Drozdovskiy_dead }
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea RUS_Mikhail_Drozdovskiy_cos_pau"
+			}
+			traits = {
+				chief_of_staff
+				cos_merciless_monarchist
+			}
+			cancel_if_invalid = yes
+		}
+		RUS_Dmitri_N_Verderevsky_cnav_sde = {
+			allowed = { original_tag = RUS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = military_staff_available
+					NOT = { has_country_flag = Mikhail_Berens_dead }
+				}
+			}
+			visible = {
+				NOT = { has_country_flag = Dmitri_N_Verderevsky_dead }
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea RUS_Dmitri_N_Verderevsky_cnav_sde"
+			}
+			traits = {
+				chief_of_navy
+				cnav_utopist
+			}
+			cancel_if_invalid = yes
+		}
+		RUS_Igor_I_Sikorskiy_cair_sco = {
+			allowed = { original_tag = RUS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = military_staff_available
+					NOT = { has_country_flag = Igor_I_Sikorskiy_dead }
+				}
+			}
+			visible = {
+				NOT = { has_country_flag = Igor_I_Sikorskiy_dead }
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea RUS_Igor_I_Sikorskiy_cair_sco"
+			}
+			traits = {
+				chief_of_air_force
+				cair_genius_constructor
+			}
+			cancel_if_invalid = yes
+		}
+
+	}
+}
+

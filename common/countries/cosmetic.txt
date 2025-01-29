@@ -4460,6 +4460,15 @@ VST = {
 	color = rgb { 75 75 75 }
 	color_ui = rgb { 85 85 85 }
 }
+VOB = {
+	color = rgb { 75 75 75 }
+	color_ui = rgb { 85 85 85 }
+}
+VKN = {
+	color = rgb { 75 75 75 }
+	color_ui = rgb { 85 85 85 }
+}
+###
 PPS = {
 	color = rgb { 123 0 28 }
 	color_ui = rgb { 163 17 31 }

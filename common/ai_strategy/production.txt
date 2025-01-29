@@ -891,7 +891,7 @@ we_need_synth_oil_1 = {
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 25
+		value = 15
 	}
 }
 
@@ -901,18 +901,18 @@ we_need_synth_oil_2 = {
 			original_tag = GBR
 			original_tag = CAN
 			original_tag = JAP
+			original_tag = ENG
 		}
 	}
 	enable = {
 		has_tech = synth_oil_experiments
-		oil < 75
 		date > 1939.1.1
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 20
+		value = 10
 	}
 }
 
@@ -945,21 +945,34 @@ we_need_synth_oil_3 = {
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 10
+		value = 8
 	}
 }
 
-we_need_nuclear = {
+we_need_nuclear_reactor = {
 	enable = {
-		has_tech = nuclear_reactor
+		is_special_project_completed = sp:sp_nuclear_reactor
 		nuclear_reactor < 10
-		date > 1944.1.1
 		num_of_military_factories > 150
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = building_target
 		id = nuclear_reactor
+		value = 10
+	}
+}
+
+we_need_nuclear_reactor_commercial = {
+	enable = {
+		is_special_project_completed = sp:sp_commercial_nuclear_reactor
+		commercial_nuclear_reactor < 10
+		num_of_military_factories > 150
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = commercial_nuclear_reactor
 		value = 10
 	}
 }

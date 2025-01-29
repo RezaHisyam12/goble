@@ -49,6 +49,7 @@ autonomy_state = {
 			tag = VSP
 			tag = VSB
 			tag = VST
+			tag = VKN
 			tag = MVA
 			tag = MTA
 			tag = MOA
