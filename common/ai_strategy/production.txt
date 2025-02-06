@@ -24,12 +24,7 @@ default_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = 90
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = armor_role
-		value = 10
+		value = 100
 	}
 	ai_strategy = {
 		type = equipment_variant_production_factor
@@ -570,6 +565,7 @@ late_mobile_production = {
 default_tank_production = {
 	enable = {
 		is_eligible_for_armor_production = yes
+		num_divisions > 49 #build enough infantry first
 	}
 	abort_when_not_enabled = yes
 
@@ -581,13 +577,13 @@ default_tank_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
-		value = 4
+		value = 8
 	}
 }
 
 increased_tank_production_1 = {
 	enable = {
-		num_of_military_factories > 30
+		num_of_military_factories > 49
 		num_divisions > 19 #build enough infantry first
 	}
 	abort_when_not_enabled = yes
@@ -595,13 +591,13 @@ increased_tank_production_1 = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
-		value = 5
+		value = 8
 	}
 }
 
 increased_tank_production_2 = {
 	enable = {
-		num_of_military_factories > 45
+		num_of_military_factories > 99
 	}
 	abort_when_not_enabled = yes
 
@@ -614,13 +610,13 @@ increased_tank_production_2 = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
-		value = 6
+		value = 8
 	}
 }
 
 increased_tank_production_3 = {
 	enable = {
-		num_of_military_factories > 60
+		num_of_military_factories > 119
 	}
 	abort_when_not_enabled = yes
 
@@ -633,7 +629,20 @@ increased_tank_production_3 = {
 
 increased_tank_production_4 = {
 	enable = {
-		num_of_military_factories > 75
+		num_of_military_factories > 149
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor_role
+		value = 8
+	}
+}
+
+increased_tank_production_5 = {
+	enable = {
+		num_of_military_factories > 179
 	}
 	abort_when_not_enabled = yes
 
@@ -644,29 +653,16 @@ increased_tank_production_4 = {
 	}
 }
 
-increased_tank_production_5 = {
-	enable = {
-		num_of_military_factories > 90
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = role_ratio
-		id = armor_role
-		value = 12
-	}
-}
-
 increased_tank_production_6 = {
 	enable = {
-		num_of_military_factories > 105
+		num_of_military_factories > 199
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
-		value = 14
+		value = 10
 	}
 }
 

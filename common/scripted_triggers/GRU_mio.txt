@@ -1,0 +1,31 @@
+GRU_has_junkers_upgrade_1 = {
+	FROM = {
+		mio:GRU_junkers_organisation = {
+			is_mio_trait_completed = junkers_upgrade_1
+		}
+	}
+}
+
+GRU_has_junkers_upgrade_3 = {
+	FROM = {
+		mio:GRU_junkers_organisation = {
+			is_mio_trait_completed = junkers_upgrade_3
+		}
+	}
+}
+
+GRU_has_volksmarine_upgrade_1_2 = {
+	FROM = {
+		mio:GRU_volksmarine_organisation = {
+			is_mio_trait_completed = volksmarine_upgrade_5
+		}
+	}
+}
+
+GRU_has_volksmarine_upgrade_3_3 = {
+	FROM = {
+		mio:GRU_volksmarine_organisation = {
+			is_mio_trait_completed = volksmarine_upgrade_1
+		}
+	}
+}

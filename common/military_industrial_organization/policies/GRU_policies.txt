@@ -1,0 +1,132 @@
+GRU_mio_policy_RD_Cap = {
+	name = RUS_mio_policy_RD_Cap
+	icon = GFX_idea_jap_supremacy_of_technology
+	allowed = {
+		OR = {
+			is_military_industrial_organization = GRU_rheinmetall_organisation
+		}
+	}
+	organization_modifier = {
+		military_industrial_organization_funds_gain = -0.05
+	}
+	on_add = {
+		custom_effect_tooltip = GRU_mio_policy_RD_Cap_tt
+		add_to_variable = { max_research_speed = 0.25 }
+		add_to_variable = { max_research_speed_loc = 25 }
+	}
+	on_remove = {
+		subtract_from_variable = { max_research_speed = 0.25 }
+		subtract_from_variable = { max_research_speed_loc = 25 }
+	}
+	ai_will_do = { base = 10 }
+}
+
+GRU_mio_policy_RD_Growth = {
+	name = RUS_mio_policy_RD_Growth
+	icon = GFX_idea_jap_supremacy_of_technology
+	allowed = {
+		OR = {
+			is_military_industrial_organization = GRU_rheinmetall_organisation
+		}
+	}
+	organization_modifier = {
+		military_industrial_organization_funds_gain = -0.05
+	}
+	on_add = {
+		custom_effect_tooltip = RUS_mio_policy_RD_Growth_tt
+		add_to_variable = { weekly_research_speed_gain = 0.01 }
+		add_to_variable = { weekly_research_speed_gain_loc = 1 }
+	}
+	on_remove = {
+		subtract_from_variable = { weekly_research_speed_gain = 0.01 }
+		subtract_from_variable = { weekly_research_speed_gain_loc = 1 }
+	}
+	ai_will_do = { base = 1000 }
+}
+
+GRU_mio_policy_improved_external_equipment = {
+	name = RUS_mio_policy_improved_external_equipment
+	icon = GFX_generic_mio_department_icon_tank_general_engine
+	allowed = {
+		OR = {
+			is_military_industrial_organization = GRU_krupp_organisation
+		}
+	}
+	available = {
+		has_mio_size > 5
+	}
+	visible = {
+		has_dlc_nsb = yes
+	}
+	equipment_bonus = {
+		same_as_mio = {
+			fuel_capacity = 0.5
+			entrenchment = 0.5
+		}
+	}
+	ai_will_do = { base = 1000 }
+}
+
+GRU_mio_policy_additional_fuel_tanks = {
+	name = RUS_mio_policy_additional_fuel_tanks
+	icon = GFX_generic_mio_department_icon_ship_general_engine
+	allowed = {
+		OR = {
+			is_military_industrial_organization = GRU_volksmarine_organisation
+		}
+	}
+	available = {
+		has_mio_size > 5
+	}
+	equipment_bonus = {
+		same_as_mio = {
+			fuel_consumption = -0.25
+		}
+	}
+	ai_will_do = { base = 2 }
+}
+
+GRU_mio_policy_space_effecient_designs = {
+	name = RUS_mio_policy_space_effecient_designs
+	icon = GFX_idea_SWE_formation_flying
+	allowed = {
+		OR = {
+			is_military_industrial_organization = GRU_albatros_organisation
+			is_military_industrial_organization = GRU_junkers_organisation
+		}
+	}
+	available = {
+		has_mio_size > 5
+	}
+	visible = {
+		has_dlc_bba = yes
+	}
+	equipment_bonus = {
+		same_as_mio = {
+			thrust = 0.1
+			weight = -0.1
+		}
+	}
+	ai_will_do = { base = 100 }
+}
+
+GRU_mio_policy_ergonomic_equipment = {
+	name = RUS_mio_policy_ergonomic_equipment
+	icon = GFX_idea_ETH_peacekeeping_forces
+	allowed = {
+		OR = {
+			is_military_industrial_organization = GRU_mauser_organisation
+			is_military_industrial_organization = GRU_rheinmetall_organisation
+			is_military_industrial_organization = GRU_opel_organisation
+		}
+	}
+	available = {
+		has_mio_size > 5
+	}
+	equipment_bonus = {
+		same_as_mio = {
+			maximum_speed = 0.15
+		}
+	}
+	ai_will_do = { base = 10 }
+}

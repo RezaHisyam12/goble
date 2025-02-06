@@ -924,6 +924,14 @@ RUS_focus_on_germansocialist = {
 	enable = {
 		has_war_with = GRU
 		surrender_progress < 0.1
+		OR = {
+			NOT = { has_war_with = VKR }
+			VKR = { has_capitulated = yes }
+		}
+		OR = {
+			NOT = { has_war_with = VKB }
+			VKB = { has_capitulated = yes }
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -938,9 +946,9 @@ RUS_focus_on_germansocialist = {
 		value = 100
 	}
 	ai_strategy = {
-		type = front_unit_request
-		tag = GRU
-		value = 50
+		type = strategic_air_importance
+		id = 8 #Lower Germany
+		value = 30000
 	}
 }
 
@@ -951,6 +959,14 @@ RUS_crush_germansocialist = {
 	enable = {
 		has_war_with = GRU
 		surrender_progress < 0.1
+		OR = {
+			NOT = { has_war_with = VKR }
+			VKR = { has_capitulated = yes }
+		}
+		OR = {
+			NOT = { has_war_with = VKB }
+			VKB = { has_capitulated = yes }
+		}
 		num_planes_stationed_in_regions = {
 			value > 1000
 			regions = { 8 } #Lower Germany
@@ -966,6 +982,157 @@ RUS_crush_germansocialist = {
 	ai_strategy = {
 		type = front_control
 		tag = GRU
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+}
+
+RUS_focus_on_vkr = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		OR = {
+			has_war = no
+			has_war_with = VKR
+		}
+		VKR = {
+			exists = yes
+			has_capitulated = no
+			NOT = { is_ally_with = ROOT }
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = VKR
+		value = 300
+	}
+	ai_strategy = {
+		type = front_armor_score
+		id = VKR
+		value = 3000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = VKR
+		value = 120
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = TRM
+		value = -25
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 130
+		value = 30000
+	}
+}
+RUS_crush_VKR = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = VKR
+		VKR = { has_capitulated = no }
+		has_manpower > 250000
+		stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
+		num_planes_stationed_in_regions = {
+			value > 1000
+			regions = { 130 }
+		}
+
+		#activate during the non-winter months
+		set_temp_variable = { frequency = global.num_days }
+		modulo_temp_variable = { frequency = 365 }
+		check_variable = { frequency > 90 } #early April
+		check_variable = { frequency < 300 } #late October
+
+		#activate every 25 days, then pause for another 25
+		set_temp_variable = { frequency = global.num_days }
+		modulo_temp_variable = { frequency = 50 }
+		check_variable = { frequency < 25 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = VKR
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+}
+RUS_focus_on_vk_baltic_duchy = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = VKB
+		OR = {
+			NOT = { has_war_with = VKR }
+			VKR = { has_capitulated = yes }
+		}
+		VKB = { has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = VKB
+		value = 25
+	}
+	ai_strategy = {
+		type = conquer
+		id = VKB
+		value = 100
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 37 #vk_baltic States
+		value = 10000
+	}
+}
+
+RUS_mop_up_vk_baltic_duchy = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = VKB
+		OR = {
+			NOT = { has_war_with = VKR }
+			VKR = { has_capitulated = yes }
+		}
+		VKB = { has_capitulated = no }
+		has_manpower > 250000
+		stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
+		num_planes_stationed_in_regions = {
+			value > 1000
+			regions = { 37 } #vk_baltic States
+		}
+
+		#activate during the non-winter months
+		set_temp_variable = { frequency = global.num_days }
+		modulo_temp_variable = { frequency = 365 }
+		check_variable = { frequency > 90 } #early April
+		check_variable = { frequency < 300 } #late October
+
+		#activate every 25 days, then pause for another 25
+		set_temp_variable = { frequency = global.num_days }
+		modulo_temp_variable = { frequency = 50 }
+		check_variable = { frequency < 25 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = VKB
 		priority = 100
 		ordertype = front
 		execution_type = rush_weak
@@ -1119,6 +1286,40 @@ russia_likes_mongolia = {
 		type = befriend
 		id = "MON"
 		value = 100
+	}
+}
+
+RUS_ignore_MON = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		country_exists = MON
+		NOT = { has_war_with = MON }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore_claim
+		id = MON
+		value = 1
+	}
+}
+
+RUS_ignore_AFG = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		country_exists = AFG
+		NOT = { has_war_with = AFG }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore_claim
+		id = AFG
+		value = 1
 	}
 }
 
@@ -1487,7 +1688,7 @@ RUS_we_dont_need_garrisons = {
 
 	ai_strategy = {
 		type = garrison
-		value = -200
+		value = -100
 	}
 }
 
@@ -1496,7 +1697,7 @@ RUS_dont_send_troops_over_black_sea = {
 		original_tag = RUS
 	}
 	enable = {
-		has_war_with = GER
+		has_war_with_major = yes
 		UKR = { has_capitulated = no }
 	}
 	abort_when_not_enabled = yes
@@ -1533,8 +1734,7 @@ RUS_ignore_faraway_allies = {
 		original_tag = RUS
 	}
 	enable = {
-		has_war_with = GER
-		GER = { has_capitulated = no }
+		has_war_with_major = yes
 	}
 	abort_when_not_enabled = yes
 
@@ -1711,7 +1911,6 @@ RUS_build_rocket_site_tula = {
 	}
 	enable = {
 		223 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
-		free_building_slots = { building = rocket_site size > 0 }
 	}
 	abort_when_not_enabled = yes
 
@@ -1730,7 +1929,6 @@ RUS_build_rocket_site_tikhvin = {
 	}
 	enable = {
 		264 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
-		free_building_slots = { building = rocket_site size > 0 }
 	}
 	abort_when_not_enabled = yes
 

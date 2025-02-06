@@ -3991,5 +3991,297 @@ leader_traits = {
 		}
 		ai_will_do = { factor = 1 }
 	}
+
+	### German Designers ###
+	albatros_GRU = {
+		random = no
+		equipment_bonus = {
+			small_plane_airframe = {
+				air_agility = 0.1
+				maximum_speed = 0.1
+				air_defence = 0.1
+			}
+			cv_small_plane_airframe = {
+				air_agility = 0.1
+				maximum_speed = 0.1
+				air_defence = 0.1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	albatros_improved_GRU = {
+		random = no
+		equipment_bonus = {
+			small_plane_airframe = {
+				air_agility = 0.1
+				maximum_speed = 0.1
+				air_defence = 0.1
+				air_attack = 0.1
+			}
+			cv_small_plane_airframe = {
+				air_agility = 0.1
+				maximum_speed = 0.1
+				air_defence = 0.1
+				air_attack = 0.1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	junkers_GRU = {
+		random = no
+		equipment_bonus = {
+			medium_plane_airframe = {
+				air_ground_attack = 0.15
+				maximum_speed = 0.05
+				air_agility = 0.05
+			}
+			large_plane_airframe = {
+				fuel_consumption = -0.1
+				air_defence = 0.1
+			}
+			medium_plane_fighter_airframe = {
+				air_attack = 0.05
+				maximum_speed = 0.1
+				air_agility = 0.1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	junkers_improved_GRU = {
+		random = no
+		equipment_bonus = {
+			medium_plane_airframe = {
+				air_ground_attack = 0.15
+				maximum_speed = 0.1
+				air_agility = 0.1
+			}
+			large_plane_airframe = {
+				fuel_consumption = -0.15
+				air_defence = 0.15
+			}
+			medium_plane_fighter_airframe = {
+				air_attack = 0.15
+				maximum_speed = 0.1
+				air_agility = 0.1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	krupp_GRU = {
+		random = no
+		equipment_bonus = {
+			armor = {
+				armor_value = 0.2
+				hard_attack = 0.1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	krupp_improved_GRU = {
+		random = no
+		equipment_bonus = {
+			armor = {
+				armor_value = 0.2
+				hard_attack = 0.1
+				soft_attack = 0.1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	opel_GRU = {
+		random = no
+		equipment_bonus = {
+			motorized_equipment = {
+				instant = yes
+				hardness = 0.1
+				armor_value = 0.1
+				maximum_speed = -0.1
+			}
+			mechanized_equipment = {
+				hardness = 0.1
+				armor_value = 0.1
+				maximum_speed = -0.1
+			}
+			armored_car_equipment = {
+				hardness = 0.1
+				armor_value = 0.1
+				maximum_speed = -0.1
+			}
+			light_tank_artillery_chassis = {
+				instant = yes
+				hardness = 0.1
+				armor_value = 0.1
+				maximum_speed = -0.1
+			}
+			medium_tank_artillery_chassis = {
+				instant = yes
+				hardness = 0.1
+				armor_value = 0.1
+				maximum_speed = -0.1
+			}
+			heavy_tank_artillery_chassis = {
+				instant = yes
+				hardness = 0.1
+				armor_value = 0.1
+				maximum_speed = -0.1
+			}
+			light_tank_destroyer_chassis = {
+				instant = yes
+				hardness = 0.1
+				armor_value = 0.1
+				maximum_speed = -0.1
+			}
+			medium_tank_destroyer_chassis = {
+				instant = yes
+				hardness = 0.1
+				armor_value = 0.1
+				maximum_speed = -0.1
+			}
+			heavy_tank_destroyer_chassis = {
+				instant = yes
+				hardness = 0.1
+				armor_value = 0.1
+				maximum_speed = -0.1
+			}
+			light_tank_aa_chassis = {
+				instant = yes
+				hardness = 0.1
+				armor_value = 0.1
+				maximum_speed = -0.1
+			}
+			medium_tank_aa_chassis = {
+				instant = yes
+				hardness = 0.1
+				armor_value = 0.1
+				maximum_speed = -0.1
+			}
+			heavy_tank_aa_chassis = {
+				instant = yes
+				hardness = 0.1
+				armor_value = 0.1
+				maximum_speed = -0.1
+			}
+			small_plane_airframe = {
+				instant = yes
+				thrust = 0.1
+			}
+			medium_plane_airframe = {
+				instant = yes
+				thrust = 0.1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	opel_improved_GRU = {
+		random = no
+		equipment_bonus = {
+			motorized_equipment = {
+				instant = yes
+				hardness = 0.1
+				armor_value = 0.1
+			}
+			mechanized_equipment = {
+				hardness = 0.1
+				armor_value = 0.1
+			}
+			armored_car_equipment = {
+				hardness = 0.1
+				armor_value = 0.1
+			}
+			light_tank_artillery_chassis = {
+				instant = yes
+				hardness = 0.1
+				armor_value = 0.1
+			}
+			medium_tank_artillery_chassis = {
+				instant = yes
+				hardness = 0.1
+				armor_value = 0.1
+			}
+			heavy_tank_artillery_chassis = {
+				instant = yes
+				hardness = 0.1
+				armor_value = 0.1
+			}
+			light_tank_destroyer_chassis = {
+				instant = yes
+				hardness = 0.1
+				armor_value = 0.1
+			}
+			medium_tank_destroyer_chassis = {
+				instant = yes
+				hardness = 0.1
+				armor_value = 0.1
+			}
+			heavy_tank_destroyer_chassis = {
+				instant = yes
+				hardness = 0.1
+				armor_value = 0.1
+			}
+			light_tank_aa_chassis = {
+				instant = yes
+				hardness = 0.1
+				armor_value = 0.1
+			}
+			medium_tank_aa_chassis = {
+				instant = yes
+				hardness = 0.1
+				armor_value = 0.1
+			}
+			heavy_tank_aa_chassis = {
+				instant = yes
+				hardness = 0.1
+				armor_value = 0.1
+			}
+			small_plane_airframe = {
+				instant = yes
+				thrust = 0.1
+			}
+			medium_plane_airframe = {
+				instant = yes
+				thrust = 0.1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	rheinmetall_GRU = {
+		random = no
+		equipment_bonus = {
+			artillery_equipment = {
+				breakthrough = 0.1
+				defense = 0.1
+			}
+			train_equipment = {
+				instant = yes
+				build_cost_ic = -0.15
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	mauser_GRU = {
+		random = no
+		equipment_bonus = {
+			infantry_equipment = {
+				soft_attack = 0.05
+				hard_attack = 0.05
+				ap_attack = 0.1
+				reliability = 0.1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	mauser_improved_GRU = {
+		random = no
+		equipment_bonus = {
+			infantry_equipment = {
+				soft_attack = 0.1
+				hard_attack = 0.1
+				ap_attack = 0.1
+				reliability = 0.1
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+
 }
 

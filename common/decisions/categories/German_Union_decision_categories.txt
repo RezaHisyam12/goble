@@ -1,10 +1,12 @@
 GRU_hydroelectricity_decisions = {
 	icon = hol_prepare_the_inundation_lines
+	priority = 70
 	allowed = { tag = GRU }
 }
 #done
 GRU_breitspurbahn_decisions = {
 	icon = breitspurbahnen
+	priority = 85
 	allowed = { tag = GRU }
 	visible = {
 		has_completed_focus = GRU_breitspurbahnen
@@ -13,6 +15,7 @@ GRU_breitspurbahn_decisions = {
 #done
 GRU_germania_plan_decisions = {
 	icon = pangermanic
+	priority = 100
 	allowed = { tag = GRU }
 }
 #done
@@ -33,16 +36,19 @@ GRU_scandi_decisions = {
 
 GRU_blut_boden_decisions = {
 	icon = generic_political_actions
+	priority = 75
 	allowed = { tag = GRU }
 }
 
 GRU_DAF_decisions = {
 	icon = KDF
+	priority = 80
 	allowed = { tag = GRU }
 }
 
 GRU_lebensraum_decisions = {
 	icon = lebensraum
+	priority = 95
 	allowed = { tag = GRU }
 }
 
@@ -54,6 +60,7 @@ GRU_beyond_lebensraum_decisions = {
 GRU_volksreichskommissariat_decisions = {
 	icon = volkskomissariats
 	allowed = { tag = GRU }
+	priority = 90
 }
 
 GRU_kill_rivals_decisions = {
@@ -106,18 +113,22 @@ GRU_anarchism_spread_decisions = {
 
 GRU_Germania_Stadt_decisions = {
 	icon = germania_stadt
+	priority = 1000
 	allowed = { tag = GRU }
 }
 GRU_stahlpakt_alliance_decisions = {
 	icon = generic_foreign_policy
+	priority = 65
 	allowed = { tag = GRU }
 }
 GRU_new_order_decisions = {
 	icon = GFX_gru_new_order
+	priority = 88
 	allowed = { tag = GRU }
 }
 GRU_zollverein_category = {
 	icon = generic_political_actions
+	priority = 65
 	picture = GFX_decision_cat_generic_crate_of_guns
 }
 #GRU_alternate_leaders_decisions = {

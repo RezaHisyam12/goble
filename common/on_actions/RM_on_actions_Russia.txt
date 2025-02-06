@@ -41,6 +41,16 @@ on_actions = {
 		}
 	}
 
+	on_weekly_GRU = {
+		effect = {
+			if = { ### Russian MIO weekly updates
+				limit = { has_dlc_aat = yes }
+				GRU_Update_MIO_XP_Gains = yes
+				GRU_Update_MIO_Research_Speeds = yes
+			}
+		}
+	}
+
 	on_ruling_party_change = {
 		# temp var old_ideology_token is available for effects
 		effect = {

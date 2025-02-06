@@ -24,7 +24,7 @@ GER_krupp_tank_organisation = {
 	visible = {
 		GRU = {
 			NOT = {
-				has_country_flag = NMDVP_R_RULE
+				has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH
 			}
 		}			
 	}
@@ -110,6 +110,13 @@ GER_kaiserliche_werft_wilhelmshaven_organisation = {
 	icon = GFX_idea_kaiserliche_werft_wilhelmshaven
 	allowed = {
 		is_germany_or_german_colonial_tag = yes
+	}
+	visible = {
+		GRU = {
+			NOT = {
+				has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH
+			}
+		}			
 	}
 }
 GER_germaniawerft_organisation = {
@@ -210,6 +217,13 @@ GER_junkers_organisation = {
 	allowed = {
 		is_germany_or_german_colonial_tag = yes
 	}
+	visible = {
+		GRU = {
+			NOT = {
+				has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH
+			}
+		}			
+	}
 
 	add_trait = {
 		token = GER_mio_trait_psychological_warfare
@@ -283,7 +297,7 @@ GER_mauser_organisation = {
 	visible = {
 		GRU = {
 			NOT = {
-				has_country_flag = NMDVP_R_RULE
+				has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH
 			}
 		}			
 	}
@@ -302,6 +316,13 @@ GER_rheinmetall_organisation = {
 	icon = GFX_idea_rheinmetall
 	allowed = {
 		is_germany_or_german_colonial_tag = yes
+	}
+	visible = {
+		GRU = {
+			NOT = {
+				has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH
+			}
+		}			
 	}
 }
 GER_dwm_organisation = {
@@ -327,5 +348,12 @@ GER_opel_organisation = {
 	icon = GFX_idea_opel
 	allowed = {
 		is_germany_or_german_colonial_tag = yes
+	}
+	visible = {
+		GRU = {
+			NOT = {
+				has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH
+			}
+		}			
 	}
 }

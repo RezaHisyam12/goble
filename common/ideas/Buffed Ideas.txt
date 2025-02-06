@@ -276,26 +276,205 @@ ideas = {
 			}
 		}
 	}
+	hidden_ideas = {
+		### Russian Faction Ideas ###
+		RUS_surrender_limit_idea = { #this is so RUS doesn't cap before Scripted Peace, removed by `on_peace`
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_surrender_limit_idea" }
+			modifier = {
+				surrender_limit = 0.1
+			}
+		}
+		### Hidden MIO ideas
+		RUS_obukhov_army_xp = { #Hidden idea for giving incremental Army XP from Obukhov
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_obukhov_army_xp" }
+			modifier = {
+				experience_gain_army = 0.2
+			}
+		}
+		RUS_obukhov_army_xp_2 = { #Hidden idea for giving incremental Army XP from Obukhov
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_obukhov_army_xp_2" }
+			modifier = {
+				experience_gain_army = 0.3
+			}
+		}
+		RUS_bz_navy_xp = { #Hidden idea for giving incremental Navy XP from BZ
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_bz_navy_xp" }
+			modifier = {
+				experience_gain_navy = 0.2
+			}
+		}
+		RUS_bz_navy_xp_2 = { #Hidden idea for giving incremental Navy XP from BZ
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_bz_navy_xp_2" }
+			modifier = {
+				experience_gain_navy = 0.3
+			}
+		}
+		RUS_osoavia_air_xp = { #Hidden idea for giving incremental Air XP from osoavia
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_osoavia_air_xp" }
+			modifier = {
+				experience_gain_air = 0.2
+			}
+		}
+		RUS_osoavia_air_xp_2 = { #Hidden idea for giving incremental Air XP from osoavia
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_osoavia_air_xp_2" }
+			modifier = {
+				experience_gain_air = 0.3
+			}
+		}
+		RUS_obukhov_political_interference = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_obukhov_political_interference" }
+			modifier = {
+				experience_gain_army_factor = -0.35
+				political_power_gain = 0.15
+			}
+		}
+		RUS_obukhov_private_assistance = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_obukhov_private_assistance" }
+			modifier = {
+				experience_gain_army_factor = -0.35
+			}
+		}
+		RUS_osoavia_political_interference = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_osoavia_political_interference" }
+			modifier = {
+				experience_gain_air_factor = -0.35
+			}
+		}
+		RUS_osoavia_private_assistance = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_osoavia_private_assistance" }
+			modifier = {
+				experience_gain_air_factor = -0.35
+			}
+		}
+		RUS_bz_political_interference_totalist = {
+			name = RUS_bz_political_interference
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_bz_political_interference_totalist" }
+			modifier = {
+				experience_gain_navy_factor = -0.35
+				totalist_drift = 0.04
+			}
+		}
+		RUS_bz_political_interference_syndicalist = {
+			name = RUS_bz_political_interference
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_bz_political_interference_syndicalist" }
+			modifier = {
+				experience_gain_navy_factor = -0.35
+				syndicalist_drift = 0.04
+			}
+		}
+		RUS_bz_political_interference_market_liberal = {
+			name = RUS_bz_political_interference
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_bz_political_interference_market_liberal" }
+			modifier = {
+				experience_gain_navy_factor = -0.35
+				market_liberal_drift = 0.04
+			}
+		}
+		RUS_bz_political_interference_social_liberal = {
+			name = RUS_bz_political_interference
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_bz_political_interference_social_liberal" }
+			modifier = {
+				experience_gain_navy_factor = -0.35
+				social_liberal_drift = 0.04
+			}
+		}
+		RUS_bz_political_interference_social_democrat = {
+			name = RUS_bz_political_interference
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_bz_political_interference_social_democrat" }
+			modifier = {
+				experience_gain_navy_factor = -0.35
+				social_democrat_drift = 0.04
+			}
+		}
+		RUS_bz_political_interference_national_populist = {
+			name = RUS_bz_political_interference
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_bz_political_interference_national_populist" }
+			modifier = {
+				experience_gain_navy_factor = -0.35
+				national_populist_drift = 0.04
+			}
+		}
+		RUS_bz_political_interference_paternal_autocrat = {
+			name = RUS_bz_political_interference
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_bz_political_interference_paternal_autocrat" }
+			modifier = {
+				experience_gain_navy_factor = -0.35
+				paternal_autocrat_drift = 0.04
+			}
+		}
+		RUS_bz_political_interference_radical_socialist = {
+			name = RUS_bz_political_interference
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_bz_political_interference_radical_socialist" }
+			modifier = {
+				experience_gain_navy_factor = -0.35
+				radical_socialist_drift = 0.04
+			}
+		}
+		RUS_bz_political_interference_social_conservative = {
+			name = RUS_bz_political_interference
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_bz_political_interference_social_conservative" }
+			modifier = {
+				experience_gain_navy_factor = -0.35
+				social_conservative_drift = 0.04
+			}
+		}
+		RUS_bz_political_interference_authoritarian_democrat = {
+			name = RUS_bz_political_interference
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_bz_political_interference_authoritarian_democrat" }
+			modifier = {
+				experience_gain_navy_factor = -0.35
+				authoritarian_democrat_drift = 0.04
+			}
+		}
+		RUS_bz_private_assistance = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_bz_private_assistance" }
+			modifier = {
+				experience_gain_navy_factor = -0.35
+			}
+		}
+		RUS_amo_cic_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_amo_cic_1" }
+			modifier = {
+				cic_construction_boost_factor = 2.0
+			}
+		}
+		RUS_amo_cic_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_amo_cic_2" }
+			modifier = {
+				cic_construction_boost_factor = 2.0
+			}
+		}
+		GRU_volksmarine_navy_xp = { #Hidden idea for giving incremental Navy XP from BZ
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_volksmarine_navy_xp" }
+			modifier = {
+				experience_gain_navy = 0.2
+			}
+		}
+		GRU_volksmarine_navy_xp_2 = { #Hidden idea for giving incremental Navy XP from BZ
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_volksmarine_navy_xp_2" }
+			modifier = {
+				experience_gain_navy = 0.3
+			}
+		}
+		GRU_junkers_navy_xp = { #Hidden idea for giving incremental Navy XP from BZ
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_junkers_navy_xp" }
+			modifier = {
+				experience_gain_navy = 0.2
+			}
+		}
+		GRU_junkers_navy_xp_2 = { #Hidden idea for giving incremental Navy XP from BZ
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_junkers_navy_xp_2" }
+			modifier = {
+				experience_gain_navy = 0.3
+			}
+		}
+	}
 	##############
 	# Companies  #
 	##############
 
 	#### Industrial Concern ####
 	industrial_concern = {
-		vostokneft = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea vostokneft" }
-			allowed = { is_russian_tag = yes }
-			available = {
-				owns_state = 652 #Orenburg
-			}
-			visible = { owns_state = 652 }
-			traits = { oil_concern }
-			research_bonus = {
-				synth_resources = 0.1
-			}
-			cost = 50
-			ai_will_do = { base = 1 }
-		}
 		vostokneft_improved = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea vostokneft_improved" }
 			allowed = { is_russian_tag = yes }
@@ -651,6 +830,42 @@ ideas = {
 			}
 			ai_will_do = { base = 1 }
 		}
+		mauser = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea mauser" }
+			allowed = { is_germany_or_german_colonial_tag = yes }
+			available = { owns_state = 50 } #Izhevsk
+			visible = { has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH }
+			traits = { mauser_GRU }
+			ai_will_do = { base = 1 }
+		}
+		opel = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea opel" }
+			allowed = { is_germany_or_german_colonial_tag = yes }
+			available = { owns_state = 55 } #Yaroslav
+			visible = { has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH }
+			traits = { opel_GRU }
+			research_bonus = {
+				motorized_equipment = 0.1
+			}
+			modifier = {
+				custom_modifier_tooltip = GRU_opel_designer_tooltip
+			}
+			ai_will_do = { base = 1 }
+		}
+		rheinmetall = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea rheinmetall" }
+			allowed = { is_germany_or_german_colonial_tag = yes }
+			available = { owns_state = 51 } #Bryansk
+			visible = { has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH }
+			traits = { rheinmetall_GRU }
+			research_bonus = {
+				artillery = 0.1
+			}
+			modifier = {
+				custom_modifier_tooltip = GRU_rheinmetall_designer_tooltip
+			}
+			ai_will_do = { base = 1 }
+		}
 	}
 
 	#### Tank Designers ####
@@ -784,6 +999,17 @@ ideas = {
 			}
 			ai_will_do = { base = 1 }
 		}
+		krupp = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea krupp" }
+			allowed = { is_germany_or_german_colonial_tag = yes }
+			available = { owns_state = 64 } #Petrograd
+			visible = { has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH }
+			traits = { krupp_GRU }
+			research_bonus = {
+				armor = 0.1
+			}
+			ai_will_do = { base = 1 }
+		}
 	}
 
 	#### Ship Designers ####
@@ -897,6 +1123,17 @@ ideas = {
 			available = { owns_state = 197 } #Nikolayev
 			visible = { owns_state = 197 } #Nikolayev
 			traits = { nikosud_RUS }
+			ai_will_do = { base = 1 }
+		}
+		volksmarine = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea volksmarine" }
+			allowed = { is_germany_or_german_colonial_tag = yes }
+			available = { owns_state = 56 } #Petrograd
+			visible = { has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH }
+			traits = { volksmarine_GRU }
+			research_bonus = {
+				naval_equipment = 0.1
+			}
 			ai_will_do = { base = 1 }
 		}
 	}
@@ -1085,6 +1322,28 @@ ideas = {
 			traits = { anatra_company_RUS }
 			ai_will_do = { base = 1 }
 			}
+		}
+		albatros = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea albatros" }
+			allowed = { is_germany_or_german_colonial_tag = yes }
+			available = { owns_state = 50 } 
+			visible = { has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH }
+			traits = { albatros_GRU }
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			ai_will_do = { base = 1 }
+		}
+		junkers = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea junkers" }
+			allowed = { is_germany_or_german_colonial_tag = yes }
+			available = { owns_state = 64 } #Kazan
+			visible = { has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH }
+			traits = { junkers_GRU }
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			ai_will_do = { base = 1 }
 		}
 
 

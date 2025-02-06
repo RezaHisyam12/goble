@@ -1422,7 +1422,6 @@ GRU_build_large_caliber_palatinate = {
 	allowed = {
 		original_tag = GRU
 		threat > 0.6
-		is_special_project_completed = sp:sp_land_multi_charge_large_caliber_gun
 	}
 	enable = {
 		42 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
@@ -1441,7 +1440,6 @@ GRU_build_large_caliber_posen = {
 	allowed = {
 		original_tag = GRU
 		threat > 0.6
-		is_special_project_completed = sp:sp_land_multi_charge_large_caliber_gun
 	}
 	enable = {
 		86 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
@@ -1460,11 +1458,9 @@ GRU_build_rocket_site_wurttemberg = {
 	allowed = {
 		original_tag = GRU
 		threat > 0.6
-		has_tech = experimental_rockets
 	}
 	enable = {
 		50 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
-		free_building_slots = { building = rocket_site size > 0 }
 	}
 	abort_when_not_enabled = yes
 
@@ -1480,11 +1476,9 @@ GRU_build_rocket_site_masuria = {
 	allowed = {
 		original_tag = GRU
 		threat > 0.6
-		has_tech = experimental_rockets
 	}
 	enable = {
 		777 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
-		free_building_slots = { building = rocket_site size > 0 }
 	}
 	abort_when_not_enabled = yes
 

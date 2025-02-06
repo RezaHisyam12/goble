@@ -2941,6 +2941,9 @@ country_event = { # VKK claims
 		1303 = { add_claim_by = VKK }
 		998 = { add_claim_by = VKK }
 		1302 = { add_claim_by = VKK }
+		1191 = { add_claim_by = VKK }
+		1227 = { add_claim_by = VKK }
+		1187 = { add_claim_by = VKK }
 	}
 }
 

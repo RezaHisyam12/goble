@@ -551,3 +551,51 @@ defined_text = {
 		localization_key = empty
 	}
 }
+
+define_text = {
+	name = GRU_MIO_Funds_Requirement_R_and_D
+	text = {
+		trigger = {
+			check_variable = { Funds_Difference > weekly_funds_requirement }
+		}
+		localization_key = GRU_MIO_Research_Gain_R_and_D_positive_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { Funds_Difference < weekly_funds_requirement }
+		}
+		localization_key = GRU_MIO_Research_Gain_R_and_D_negative_tt
+	}
+}
+
+define_text = {
+	name = GRU_MIO_Funds_Requirement_XP
+	text = {
+		trigger = {
+			check_variable = { Funds_Difference > weekly_funds_requirement }
+		}
+		localization_key = GRU_MIO_Research_Gain_XP_positive_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { Funds_Difference < weekly_funds_requirement }
+		}
+		localization_key = GRU_MIO_Research_Gain_XP_negative_tt
+	}
+}
+
+define_text = {
+	name = GRU_XP_Icon
+	text = {
+		trigger = {
+			is_military_industrial_organization = GRU_volksmarine_organisation
+		}
+		localization_key = GRU_Navy_XP_icon
+	}
+	text = {
+		trigger = {
+			is_military_industrial_organization = GRU_junkers_organisation
+		}
+		localization_key = GRU_Air_XP_icon
+	}
+}

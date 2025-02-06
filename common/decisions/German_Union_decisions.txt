@@ -3152,6 +3152,10 @@ GRU_germania_plan_decisions = {
 		icon = GFX_pangermanicone
 		allowed = { original_tag = GRU }
 		available = {
+			OR = {
+				is_owner_neighbor_of = FROM
+				any_allied_country = { is_owner_neighbor_of = FROM }
+			}
 			is_subject = no
 			country_exists = WSU
 			WSU = {
@@ -10150,11 +10154,11 @@ GRU_expansion_three_volksland_hypoborea = {
 				tag = GRU 
 						OR = {
 							GRU = {
-								owns_state = 990
+								owns_state = 218
 							}
 							any_other_country = {
 								is_subject_of = GRU
-								owns_state = 990
+								owns_state = 218
 						}
 					}
 				}
@@ -10167,7 +10171,7 @@ GRU_expansion_three_volksland_hypoborea = {
 				create_VKK = yes
 				hidden_effect = {
 					VKK = {
-						transfer_state = 990
+						transfer_state = 218
 						remove_all_ministers = yes
 						
 						add_equipment_to_stockpile = {
@@ -12063,6 +12067,15 @@ GRU_expansion_four_volksreichskommissariat_ruthenia = {
 						}
 						OR = {
 							GRU = {
+								owns_state = 990
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 990
+							}
+						}
+						OR = {
+							GRU = {
 								owns_state = 1082
 							}
 							any_other_country = {
@@ -12190,7 +12203,7 @@ GRU_expansion_four_volksreichskommissariat_ruthenia = {
 			complete_effect = {
 					VKK = {
 								transfer_state = 229
-								#transfer_state = 998
+								transfer_state = 990
 								#transfer_state = 230
 								transfer_state = 1082
 								transfer_state = 231
@@ -12513,7 +12526,6 @@ GRU_expansion_three_volksreichskommissariat_kaukasia = {
 								transfer_state = 237
 								
 								transfer_state = 245
-								transfer_state = 218
 								transfer_state = 1263
 								transfer_state = 1264
 								transfer_state = 1265
@@ -12596,7 +12608,6 @@ GRU_lebensraum_decisions = {
 			can_declare_war_on = FROM
 			FROM = {
 				OR = {
-				tag = LIT
 				tag = DKB
 				tag = KUB
 				tag = MTR
@@ -12618,7 +12629,6 @@ GRU_lebensraum_decisions = {
 			can_declare_war_on = FROM
 			FROM = {
 				OR = {
-				tag = LIT
 				tag = DKB
 				tag = KUB
 				tag = MTR
@@ -12638,14 +12648,16 @@ GRU_lebensraum_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 100
+			factor = 130
 			modifier = {
 				factor = 0
 				has_war = yes
 			}
 			modifier = {
 				factor = 0
+				FROM = {
 				is_in_faction_with = RUS
+				}
 			}
 			modifier = {
 				factor = 0
@@ -12747,6 +12759,12 @@ GRU_lebensraum_decisions = {
 			}
 			modifier = {
 				factor = 0
+				NOT = {
+					has_completed_focus = GRU_NMDVP_END_FRANCE
+				}
+			}
+			modifier = {
+				factor = 0
 				FROM = {
 					any_allied_country = {
 						is_faction_leader = yes
@@ -12805,7 +12823,7 @@ GRU_lebensraum_decisions = {
 			can_declare_war_on = FROM
 		}
 
-		targets = { EST LAT BAT WHR UKR }
+		targets = { LIT EST LAT BAT WHR UKR }
 		target_root_trigger = {
 			has_completed_focus = GRU_NMDVP_LEBENSRAUM
 		}

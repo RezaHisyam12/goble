@@ -66,7 +66,7 @@
 ###################
 ### Armour MIOs ###
 ###################
-GRU_krupp_tank_organisation = {
+GRU_krupp_organisation = {
 	name = krupp
 	icon = GFX_idea_krupp
 	allowed = {
@@ -79,7 +79,7 @@ GRU_krupp_tank_organisation = {
 	}
 	visible = {
 		FROM = {
-			has_country_flag = NMDVP_R_RULE
+			has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH
 		}
 	}
 
@@ -91,7 +91,7 @@ GRU_krupp_tank_organisation = {
 		mio_cat_tech_all_armor_and_modules
 	}
 
-	ai_will_do = { base = 10 }
+	ai_will_do = { base = 1000 }
 
 	initial_trait = {
 		name = GRU_krupp_mio_desc
@@ -269,6 +269,435 @@ GRU_krupp_tank_organisation = {
 ##################
 ### Naval MIOs ###
 ##################
+GRU_volksmarine_organisation = {
+	name = volksmarine
+	icon = GFX_idea_kaiserliche_werft_wilhelmshaven
+	allowed = {
+		tag = GRU
+	}
+	visible = {
+		FROM = {
+			has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH
+		}
+	}
+	available = {
+		FROM = {
+			owns_state = 56
+		}
+	}
+
+	equipment_type = {
+		mio_cat_eq_all_battleship
+		mio_cat_eq_all_carrier
+	}
+
+	research_categories = {
+		mio_cat_tech_all_capital_ship_and_modules
+		mio_cat_tech_all_carrier_and_modules
+		tp_tech
+	}
+
+	on_design_team_assigned_to_tech = {
+		if = {
+			limit = { FROM = { NOT = { has_variable = volksmarine_Research_Number } } }
+			FROM = {
+				set_variable = {
+					var = volksmarine_Research_Number
+					value = 1
+				}
+			}
+		}
+		else = {
+			FROM = {
+				add_to_variable = {
+					var = volksmarine_Research_Number
+					value = 1
+				}
+			}
+		}
+	}
+
+	on_tech_research_cancelled = {
+		FROM = {
+			subtract_from_variable = {
+				var = volksmarine_Research_Number
+				value = 1
+			}
+		}
+	}
+
+	on_tech_research_completed = {
+		FROM = {
+			subtract_from_variable = {
+				var = volksmarine_Research_Number
+				value = 1
+			}
+		}
+	}
+
+	on_industrial_manufacturer_assigned = {
+		custom_effect_tooltip = GRU_MIO_XP_Gain_volksmarine_tt
+	}
+
+	ai_will_do = { base = 1000 }
+
+	initial_trait = {
+		name = GRU_volksmarine_mio_desc
+	}
+
+	trait = {
+		token = volksmarine_upgrade_1
+		name = volksmarine_upgrade_1
+		icon = GFX_KR_generic_mio_trait_icon_funds
+
+		position = { x = 0 y = 0 }
+
+		mutually_exclusive = { volksmarine_upgrade_2 }
+
+		limit_to_equipment_type = { ship_hull_heavy }
+
+		equipment_bonus = {
+			naval_torpedo_enemy_critical_chance_factor = -0.1
+		}
+		on_complete = {
+			multiply_variable = { weekly_funds_requirement = 0.33 }
+			multiply_variable = { weekly_funds_requirement_loc = 0.33 }
+			FROM = {
+				custom_effect_tooltip = GRU_manufacturer_trait_navy_xp_min_funds_volksmarine_tt
+				custom_effect_tooltip = tooltip_white_line
+				custom_effect_tooltip = tooltip_white_line
+			}
+		}
+	}
+
+	trait = {
+		token = volksmarine_upgrade_2
+		name = volksmarine_upgrade_2
+		icon = GFX_generic_mio_trait_icon_naval_torpedo_hit_chance_factor
+
+		position = { x = 2 y = 0 }
+
+		mutually_exclusive = { volksmarine_upgrade_1 }
+
+		limit_to_equipment_type = { ship_hull_heavy }
+
+		equipment_bonus = {
+			naval_torpedo_enemy_critical_chance_factor = -0.2
+			build_cost_ic = 0.1
+		}
+
+		on_complete = {
+			add_to_variable = { total_campaign_xp = 30 }
+			FROM = {
+				navy_experience = 30
+			}
+		}
+	}
+
+	trait = {
+		token = volksmarine_upgrade_3
+		name = volksmarine_upgrade_3
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+
+		position = { x = 4 y = 0 }
+
+		equipment_bonus = {
+			anti_air_attack = 0.1
+		}
+
+	}
+
+	trait = {
+		token = volksmarine_upgrade_4
+		name = volksmarine_upgrade_4
+		icon = GFX_generic_mio_department_icon_ship_carrier_utility
+
+		position = { x = 6 y = 0 }
+
+		mutually_exclusive = { volksmarine_upgrade_5 }
+
+		limit_to_equipment_type = { ship_hull_carrier }
+
+		equipment_bonus = {
+			carrier_size = 2
+		}
+
+		on_complete = {
+			add_to_variable = { total_campaign_xp = 50 }
+			FROM = {
+				navy_experience = 50
+			}
+		}
+	}
+
+	trait = {
+		token = volksmarine_upgrade_5
+		name = volksmarine_upgrade_5
+		icon = GFX_KR_generic_mio_trait_icon_navy_xp
+
+		position = { x = 8 y = 0 }
+
+		mutually_exclusive = { volksmarine_upgrade_4 }
+
+		limit_to_equipment_type = { ship_hull_carrier }
+
+		equipment_bonus = {
+			build_cost_ic = -0.15
+		}
+
+		on_complete = {
+			multiply_variable = { xp_gain_loc = 1.5 }
+			FROM = {
+				custom_effect_tooltip = GRU_manufacturer_trait_navy_xp_volksmarine_tt
+				custom_effect_tooltip = tooltip_white_line
+				custom_effect_tooltip = tooltip_white_line
+			}
+		}
+	}
+
+	trait = {
+		token = volksmarine_upgrade_1_1
+		name = volksmarine_upgrade_1_1
+		icon = GFX_generic_mio_trait_icon_batteries_hit_chance
+
+		any_parent = { volksmarine_upgrade_1 volksmarine_upgrade_2 }
+
+		position = { x = 1 y = 1 }
+
+		limit_to_equipment_type = { ship_hull_heavy }
+
+		equipment_bonus = {
+			naval_light_gun_hit_chance_factor = 0.1
+			naval_heavy_gun_hit_chance_factor = 0.1
+		}
+	}
+
+	trait = {
+		token = volksmarine_upgrade_1_2
+		name = volksmarine_upgrade_1_2
+		icon = GFX_generic_mio_trait_icon_naval_speed
+
+		all_parents = { volksmarine_upgrade_3 }
+
+		position = { x = 3 y = 1 }
+
+		mutually_exclusive = { volksmarine_upgrade_1_3 }
+
+		equipment_bonus = {
+			naval_speed = 0.05
+		}
+	}
+
+	trait = {
+		token = volksmarine_upgrade_1_3
+		name = volksmarine_upgrade_1_3
+		icon = GFX_generic_mio_trait_icon_naval_speed
+
+		all_parents = { volksmarine_upgrade_3 }
+
+		position = { x = 5 y = 1 }
+
+		mutually_exclusive = { volksmarine_upgrade_1_2 }
+
+		equipment_bonus = {
+			build_cost_ic = 0.05
+			naval_speed = 0.1
+		}
+	}
+
+	trait = {
+		token = volksmarine_upgrade_1_4
+		name = volksmarine_upgrade_1_4
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+
+		any_parent = { volksmarine_upgrade_4 volksmarine_upgrade_5 }
+
+		position = { x = 7 y = 1 }
+
+		limit_to_equipment_type = { ship_hull_carrier }
+
+		equipment_bonus = {
+			build_cost_ic = -0.05
+		}
+	}
+
+	trait = {
+		token = volksmarine_upgrade_2_1
+		name = volksmarine_upgrade_2_1
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		all_parents = { volksmarine_upgrade_1_1 }
+
+		position = { x = 1 y = 2 }
+
+		limit_to_equipment_type = { ship_hull_heavy }
+
+		equipment_bonus = {
+			reliability = 0.1
+		}
+	}
+
+	trait = {
+		token = volksmarine_upgrade_2_2
+		name = volksmarine_upgrade_2_2
+		icon = GFX_generic_mio_trait_icon_armor_value
+
+		any_parent = { volksmarine_upgrade_1_2 volksmarine_upgrade_1_3 }
+
+		position = { x = 4 y = 2 }
+
+		equipment_bonus = {
+			armor_value = 0.1
+			naval_torpedo_damage_reduction_factor = 0.25
+		}
+	}
+
+	trait = {
+		token = volksmarine_upgrade_2_3
+		name = volksmarine_upgrade_2_3
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		all_parents = { volksmarine_upgrade_1_4 }
+
+		position = { x = 7 y = 2 }
+
+		limit_to_equipment_type = { ship_hull_carrier }
+
+		equipment_bonus = {
+			reliability = 0.1
+		}
+	}
+
+	trait = {
+		token = volksmarine_upgrade_3_1
+		name = volksmarine_upgrade_3_1
+		icon = GFX_generic_mio_trait_icon_max_strength
+
+		all_parents = { volksmarine_upgrade_2_1 }
+
+		position = { x = 0 y = 3 }
+
+		mutually_exclusive = { volksmarine_upgrade_3_2 }
+
+		limit_to_equipment_type = { ship_hull_heavy }
+
+		equipment_bonus = {
+			max_strength = 0.1
+		}
+	}
+
+	trait = {
+		token = volksmarine_upgrade_3_2
+		name = volksmarine_upgrade_3_2
+		icon = GFX_generic_mio_trait_icon_max_strength
+
+		all_parents = { volksmarine_upgrade_2_1 }
+
+		position = { x = 2 y = 3 }
+
+		mutually_exclusive = { volksmarine_upgrade_3_1 }
+
+		limit_to_equipment_type = { ship_hull_heavy }
+
+		equipment_bonus = {
+			max_strength = 0.2
+		}
+
+		production_bonus = {
+			production_resource_need_factor = 0.4
+		}
+	}
+
+	trait = {
+		token = volksmarine_upgrade_3_3
+		name = volksmarine_upgrade_3_3
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_utility
+
+		all_parents = { volksmarine_upgrade_2_2 }
+
+		position = { x = 3 y = 3 }
+
+		mutually_exclusive = { volksmarine_upgrade_3_4 }
+
+		equipment_bonus = {
+			naval_weather_penalty_factor = -0.25
+		}
+	}
+
+	trait = {
+		token = volksmarine_upgrade_3_4
+		name = volksmarine_upgrade_3_4
+		icon = GFX_generic_mio_trait_icon_naval_range
+
+		all_parents = { volksmarine_upgrade_2_2 }
+
+		position = { x = 5 y = 3 }
+
+		mutually_exclusive = { volksmarine_upgrade_3_3 }
+
+		equipment_bonus = {
+			naval_range = 0.2
+		}
+	}
+
+	trait = {
+		token = volksmarine_upgrade_3_5
+		name = volksmarine_upgrade_3_5
+		icon = GFX_generic_mio_trait_icon_max_strength
+
+		all_parents = { volksmarine_upgrade_2_3 }
+
+		position = { x = 6 y = 3 }
+
+		limit_to_equipment_type = { ship_hull_carrier }
+
+		mutually_exclusive = { volksmarine_upgrade_3_6 }
+
+		equipment_bonus = {
+			max_strength = 0.1
+		}
+	}
+
+	trait = {
+		token = volksmarine_upgrade_3_6
+		name = volksmarine_upgrade_3_6
+		icon = GFX_generic_mio_trait_icon_max_strength
+
+		all_parents = { volksmarine_upgrade_2_3 }
+
+		position = { x = 8 y = 3 }
+
+		limit_to_equipment_type = { ship_hull_carrier }
+
+		mutually_exclusive = { volksmarine_upgrade_3_5 }
+
+		equipment_bonus = {
+			max_strength = 0.2
+		}
+
+		production_bonus = {
+			production_resource_need_factor = 0.4
+		}
+	}
+
+	trait = {
+		token = volksmarine_upgrade_4_1
+		name = volksmarine_upgrade_4_1
+		icon = GFX_KR_generic_mio_trait_icon_navy_xp
+
+		special_trait_background = yes
+
+		any_parent = { volksmarine_upgrade_3_1 volksmarine_upgrade_3_2 }
+		any_parent = { volksmarine_upgrade_3_3 volksmarine_upgrade_3_4 }
+		any_parent = { volksmarine_upgrade_3_5 volksmarine_upgrade_3_6 }
+
+		position = { x = 4 y = 4 }
+
+		equipment_bonus = {
+			naval_speed = 0.1
+		}
+	}
+}
 
 #####################
 ### Airplane MIOs ###
@@ -598,6 +1027,295 @@ GRU_zeppelin_organization = {
 		}
 	}
 }
+
+GRU_junkers_organisation = {
+	name = junkers
+	icon = GFX_idea_junkers
+	allowed = {
+		is_germany_or_german_colonial_tag = yes
+	}
+	available = {
+		FROM = {
+			owns_state = 64
+		}
+	}
+	visible = {
+		FROM = {
+			has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH
+		}
+	}
+
+	equipment_type = {
+		medium_plane_airframe
+		large_plane_airframe
+	}
+
+	research_categories = {
+		mio_cat_all_medium_aircraft_and_modules
+		mio_cat_all_heavy_aircraft_and_modules
+		jet_technology
+		plane_modules_tech
+	}
+
+	on_design_team_assigned_to_tech = {
+		if = {
+			limit = { FROM = { NOT = { has_variable = Junkers_Research_Number } } }
+			FROM = {
+				set_variable = {
+					var = Junkers_Research_Number
+					value = 1
+				}
+			}
+		}
+		else = {
+			FROM = {
+				add_to_variable = {
+					var = Junkers_Research_Number
+					value = 1
+				}
+			}
+		}
+	}
+
+	on_tech_research_cancelled = {
+		FROM = {
+			subtract_from_variable = {
+				var = Junkers_Research_Number
+				value = 1
+			}
+		}
+	}
+
+	on_tech_research_completed = {
+		FROM = {
+			subtract_from_variable = {
+				var = Junkers_Research_Number
+				value = 1
+			}
+		}
+	}
+
+	on_industrial_manufacturer_assigned = {
+		custom_effect_tooltip = GRU_MIO_XP_Gain_junkers_tt
+	}
+
+	ai_will_do = { base = 1000 }
+
+	initial_trait = {
+		name = GRU_junkers_mio_desc
+	}
+
+	trait = {
+		token = junkers_upgrade_1
+		name = junkers_upgrade_1
+		icon = GFX_KR_generic_mio_trait_icon_air_xp
+
+		position = { x = 0 y = 0 }
+
+		mutually_exclusive = { junkers_upgrade_2 }
+
+		on_complete = {
+			multiply_variable = { xp_gain_loc = 1.5 }
+			custom_effect_tooltip = GRU_manufacturer_trait_air_xp_junkers_tt
+		}
+	}
+
+	trait = {
+		token = junkers_upgrade_2
+		name = junkers_upgrade_2
+		icon = GFX_generic_mio_trait_icon_strategic_attack
+
+		position = { x = 2 y = 0 }
+
+		mutually_exclusive = { junkers_upgrade_1 }
+
+		equipment_bonus = {
+			air_bombing = 0.1
+		}
+
+		on_complete = {
+			add_to_variable = { total_campaign_xp = 70 }
+			FROM = {
+				air_experience = 70
+			}
+		}
+	}
+
+	trait = {
+		token = junkers_upgrade_3
+		name = junkers_upgrade_3
+		icon = GFX_KR_generic_mio_trait_icon_funds
+
+		position = { x = 6 y = 0 }
+
+		mutually_exclusive = { junkers_upgrade_4 }
+
+		on_complete = {
+			multiply_variable = { weekly_funds_requirement = 0.33 }
+			multiply_variable = { weekly_funds_requirement_loc = 0.33 }
+			custom_effect_tooltip = GRU_manufacturer_trait_air_xp_min_funds_junkers_tt
+		}
+	}
+
+	trait = {
+		token = junkers_upgrade_4
+		name = junkers_upgrade_4
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+
+		position = { x = 8 y = 0 }
+
+		mutually_exclusive = { junkers_upgrade_3 }
+
+		equipment_bonus = {
+			build_cost_ic = -0.05
+		}
+
+		on_complete = {
+			add_to_variable = { total_campaign_xp = 25 }
+			FROM = {
+				air_experience = 25
+			}
+		}
+	}
+
+	trait = {
+		token = junkers_upgrade_1_1
+		name = junkers_upgrade_1_1
+		icon = GFX_generic_mio_trait_icon_strategic_attack
+
+		any_parent = { junkers_upgrade_1 junkers_upgrade_2 }
+
+		position = { x = 1 y = 1 }
+
+		equipment_bonus = {
+			air_bombing = 0.1
+		}
+	}
+
+	trait = {
+		token = junkers_upgrade_1_2
+		name = junkers_upgrade_1_2
+		icon = GFX_generic_mio_trait_icon_air_range
+
+		position = { x = 3 y = 1 }
+
+		mutually_exclusive = { junkers_upgrade_1_3 }
+
+		equipment_bonus = {
+			air_range = 0.15
+		}
+	}
+
+	trait = {
+		token = junkers_upgrade_1_3
+		name = junkers_upgrade_1_3
+		icon = GFX_generic_mio_trait_icon_air_defence
+
+		position = { x = 5 y = 1 }
+
+		mutually_exclusive = { junkers_upgrade_1_2 }
+
+		equipment_bonus = {
+			air_defence = 0.1
+		}
+	}
+
+	trait = {
+		token = junkers_upgrade_1_4
+		name = junkers_upgrade_1_4
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+
+		any_parent = { junkers_upgrade_3 junkers_upgrade_4 }
+
+		position = { x = 7 y = 1 }
+
+		equipment_bonus = {
+			build_cost_ic = -0.05
+		}
+	}
+
+	trait = {
+		token = junkers_upgrade_2_1
+		name = junkers_upgrade_2_1
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		all_parents = { junkers_upgrade_1_1 }
+		any_parent = { junkers_upgrade_1_2 junkers_upgrade_1_3 }
+
+		position = { x = 2 y = 2 }
+
+		equipment_bonus = {
+			maximum_speed = 0.05
+			air_range = 0.05
+		}
+	}
+
+	trait = {
+		token = junkers_upgrade_2_2
+		name = junkers_upgrade_2_2
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		any_parent = { junkers_upgrade_1_2 junkers_upgrade_1_3 }
+		all_parents = { junkers_upgrade_1_4 }
+
+		position = { x = 6 y = 2 }
+
+		equipment_bonus = {
+			reliability = 0.05
+			air_defence = 0.05
+		}
+	}
+
+	trait = {
+		token = junkers_upgrade_3_1
+		name = junkers_upgrade_3_1
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		all_parents = { junkers_upgrade_2_1 junkers_upgrade_2_2 }
+
+		position = { x = 3 y = 3 }
+
+		mutually_exclusive = { junkers_upgrade_3_2 }
+
+		equipment_bonus = {
+			maximum_speed = 0.1
+		}
+	}
+
+	trait = {
+		token = junkers_upgrade_3_2
+		name = junkers_upgrade_3_2
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		all_parents = { junkers_upgrade_2_1 junkers_upgrade_2_2 }
+
+		position = { x = 5 y = 3 }
+
+		mutually_exclusive = { junkers_upgrade_3_1 }
+
+		equipment_bonus = {
+			reliability = 0.15
+		}
+	}
+
+	trait = {
+		token = junkers_upgrade_4_1
+		name = junkers_upgrade_4_1
+		icon = GFX_KR_generic_mio_trait_icon_air_xp
+
+		special_trait_background = yes
+
+		any_parent = { junkers_upgrade_3_1 junkers_upgrade_3_2 }
+
+		position = { x = 4 y = 4 }
+
+		equipment_bonus = {
+			air_bombing = 0.1
+		}
+	}
+
+}
+
 #####################
 ### Materiel MIOs ###
 #####################
@@ -614,7 +1332,7 @@ GRU_mauser_organisation = {
 	}
 	visible = {
 		FROM = {
-			has_country_flag = NMDVP_R_RULE
+			has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH
 		}
 	}
 	
@@ -828,3 +1546,957 @@ GRU_mauser_organisation = {
 		}
 	}
 }
+
+GRU_opel_organisation = {
+	name = opel
+	icon = GFX_idea_opel
+	allowed = {
+		tag = GRU
+	}
+	available = {
+		FROM = {
+			owns_state = 55
+		}
+	}
+	visible = {
+		FROM = {
+			has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH
+		}
+	}
+	equipment_type = {
+		motorized_equipment
+		mechanized_equipment
+		motorized_rocket_equipment
+	}
+
+	research_categories = {
+		mio_cat_tech_all_motorized_mechanized
+	}
+
+	ai_will_do = { base = 1000 }
+
+	initial_trait = {
+		name = GRU_opel_mio_desc
+
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.25
+		}
+	}
+
+	trait = {
+		token = opel_upgrade_1
+		name = opel_upgrade_1
+		icon = GFX_KR_generic_mio_trait_icon_funds
+
+		position = { x = 3 y = 0 }
+
+		mutually_exclusive = { opel_upgrade_2 }
+
+		limit_to_equipment_type = {
+			motorized_equipment
+			mechanized_equipment
+			motorized_rocket_equipment
+		}
+
+		equipment_bonus = {
+			fuel_consumption = -0.1
+		}
+
+		on_complete = {
+			custom_effect_tooltip = laz_research_funds_share_tt
+			FROM = { set_country_flag = laz_research_funds_gain }
+		}
+	}
+
+	trait = {
+		token = opel_upgrade_2
+		name = opel_upgrade_2
+		icon = GFX_KR_generic_mio_trait_icon_political_power
+
+		position = { x = 5 y = 0 }
+
+		mutually_exclusive = { opel_upgrade_1 }
+
+		limit_to_equipment_type = {
+			motorized_equipment
+			mechanized_equipment
+			motorized_rocket_equipment
+		}
+
+		equipment_bonus = {
+			fuel_consumption = -0.1
+		}
+
+		on_complete = {
+			FROM = {
+				add_political_power = 75
+			}
+		}
+	}
+
+	trait = {
+		token = opel_upgrade_1_1
+		name = opel_upgrade_1_1
+		icon = GFX_KR_generic_mio_trait_icon_stability
+
+		any_parent = { opel_upgrade_1 opel_upgrade_2 }
+
+		position = { x = 3 y = 1 }
+
+		mutually_exclusive = { opel_upgrade_1_2 }
+
+		equipment_bonus = {
+			hardness = 0.2
+		}
+
+		on_complete = {
+			FROM = {
+				add_stability = 0.05
+			}
+		}
+	}
+
+	trait = {
+		token = opel_upgrade_1_2
+		name = opel_upgrade_1_2
+		icon = GFX_KR_generic_mio_trait_icon_war_support
+
+		any_parent = { opel_upgrade_1 opel_upgrade_2 }
+
+		position = { x = 5 y = 1 }
+
+		mutually_exclusive = { opel_upgrade_1_1 }
+
+		equipment_bonus = {
+			hardness = 0.2
+		}
+
+		on_complete = {
+			FROM = {
+				add_war_support = 0.05
+			}
+		}
+	}
+
+	trait = {
+		token = opel_upgrade_2_1
+		name = opel_upgrade_2_1
+		icon = GFX_generic_mio_trait_icon_hardness
+
+		any_parent = { opel_upgrade_1 opel_upgrade_2 }
+
+		position = { x = 0 y = 2 }
+
+		mutually_exclusive = { opel_upgrade_2_2 opel_upgrade_2_3 }
+
+		limit_to_equipment_type = {
+			motorized_equipment
+			mechanized_equipment
+		}
+
+		equipment_bonus = {
+			hardness = 0.1
+		}
+
+		on_complete = {
+			custom_effect_tooltip = GRU_opel_upgrade_2_1_tt
+		}
+	}
+
+	trait = {
+		token = opel_upgrade_2_2
+		name = opel_upgrade_2_2
+		icon = GFX_generic_mio_trait_icon_hardness
+
+		any_parent = { opel_upgrade_1 opel_upgrade_2 }
+
+		position = { x = 1 y = 2 }
+
+		mutually_exclusive = { opel_upgrade_2_1 opel_upgrade_2_3 }
+
+		limit_to_equipment_type = {
+			motorized_equipment
+			mechanized_equipment
+		}
+
+		equipment_bonus = {
+			hardness = 0.2
+		}
+
+		production_bonus = {
+			production_resource_need_factor = 0.25
+		}
+
+		on_complete = {
+			custom_effect_tooltip = GRU_opel_upgrade_2_2_tt
+		}
+	}
+
+	trait = {
+		token = opel_upgrade_2_3
+		name = opel_upgrade_2_3
+		icon = GFX_generic_mio_trait_icon_hardness
+
+		any_parent = { opel_upgrade_1 opel_upgrade_2 }
+
+		position = { x = 2 y = 2 }
+
+		mutually_exclusive = { opel_upgrade_2_1 opel_upgrade_2_2 }
+
+		limit_to_equipment_type = {
+			motorized_equipment
+			mechanized_equipment
+		}
+
+		equipment_bonus = {
+			hardness = 0.3
+			build_cost_ic = 0.1
+		}
+
+		production_bonus = {
+			production_resource_need_factor = 0.25
+		}
+
+		on_complete = {
+			custom_effect_tooltip = GRU_opel_upgrade_2_3_tt
+		}
+	}
+
+	trait = {
+		token = opel_upgrade_2_4
+		name = opel_upgrade_2_4
+		icon = GFX_KR_generic_mio_trait_icon_assign_cost
+
+		any_parent = { opel_upgrade_1_1 opel_upgrade_1_2 }
+
+		mutually_exclusive = { opel_upgrade_2_5 }
+
+		position = { x = 3 y = 2 }
+
+		equipment_bonus = {
+			reliability = 0.1
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_assign_cost = -0.5
+		}
+	}
+
+	trait = {
+		token = opel_upgrade_2_5
+		name = opel_upgrade_2_5
+		icon = GFX_KR_generic_mio_trait_icon_design_cost
+
+		any_parent = { opel_upgrade_1_1 opel_upgrade_1_2 }
+
+		mutually_exclusive = { opel_upgrade_2_4 }
+
+		position = { x = 5 y = 2 }
+
+		equipment_bonus = {
+			reliability = 0.1
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = -0.5
+		}
+	}
+
+	trait = {
+		token = opel_upgrade_2_6
+		name = opel_upgrade_2_6
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		any_parent = { opel_upgrade_1 opel_upgrade_2 }
+
+		position = { x = 6 y = 2 }
+
+		mutually_exclusive = { opel_upgrade_2_7 opel_upgrade_2_8 }
+
+		limit_to_equipment_type = {
+			motorized_rocket_equipment
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.05
+		}
+
+		on_complete = {
+			custom_effect_tooltip = GRU_opel_upgrade_2_6_tt
+		}
+	}
+
+	trait = {
+		token = opel_upgrade_2_7
+		name = opel_upgrade_2_7
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		any_parent = { opel_upgrade_1 opel_upgrade_2 }
+
+		position = { x = 7 y = 2 }
+
+		mutually_exclusive = { opel_upgrade_2_6 opel_upgrade_2_8 }
+
+		limit_to_equipment_type = {
+			motorized_rocket_equipment
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.1
+		}
+
+		production_bonus = {
+			production_resource_need_factor = 0.25
+		}
+
+		on_complete = {
+			custom_effect_tooltip = GRU_opel_upgrade_2_7_tt
+		}
+	}
+
+	trait = {
+		token = opel_upgrade_2_8
+		name = opel_upgrade_2_8
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		any_parent = { opel_upgrade_1 opel_upgrade_2 }
+
+		position = { x = 8 y = 2 }
+
+		mutually_exclusive = { opel_upgrade_2_6 opel_upgrade_2_7 }
+
+		limit_to_equipment_type = {
+			motorized_rocket_equipment
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.15
+			build_cost_ic = 0.1
+		}
+
+		production_bonus = {
+			production_resource_need_factor = 0.25
+		}
+
+		on_complete = {
+			custom_effect_tooltip = GRU_opel_upgrade_2_8_tt
+		}
+	}
+
+	trait = {
+		token = opel_upgrade_3_1
+		name = opel_upgrade_3_1
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		any_parent = { opel_upgrade_2_1 opel_upgrade_2_2 opel_upgrade_2_3 }
+		any_parent = { opel_upgrade_2_4 opel_upgrade_2_5 }
+
+		mutually_exclusive = { opel_upgrade_3_2 }
+
+		position = { x = 1 y = 3 }
+
+		limit_to_equipment_type = {
+			motorized_equipment
+			mechanized_equipment
+		}
+
+		equipment_bonus = {
+			breakthrough = 0.25
+			maximum_speed = -0.2
+		}
+	}
+
+	trait = {
+		token = opel_upgrade_3_2
+		name = opel_upgrade_3_2
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		any_parent = { opel_upgrade_2_1 opel_upgrade_2_2 opel_upgrade_2_3 }
+		any_parent = { opel_upgrade_2_4 opel_upgrade_2_5 }
+
+		mutually_exclusive = { opel_upgrade_3_1 }
+
+		position = { x = 2 y = 3 }
+
+		limit_to_equipment_type = {
+			motorized_equipment
+			mechanized_equipment
+		}
+
+		equipment_bonus = {
+			breakthrough = 0.25
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = -0.3
+		}
+	}
+
+	trait = {
+		token = opel_upgrade_3_3
+		name = opel_upgrade_3_3
+		icon = GFX_KR_generic_mio_trait_icon_civilian_factory
+
+		any_parent = { opel_upgrade_2_4 opel_upgrade_2_5 }
+
+		available = {
+			FROM = {
+				owns_state = 55
+			}
+		}
+
+		mutually_exclusive = { opel_upgrade_3_4 }
+
+		position = { x = 3 y = 3 }
+
+		on_complete = {
+			FROM = {
+				55 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	trait = {
+		token = opel_upgrade_3_4
+		name = opel_upgrade_3_4
+		icon = GFX_KR_generic_mio_trait_icon_military_factory
+
+		any_parent = { opel_upgrade_2_4 opel_upgrade_2_5 }
+
+		available = {
+			FROM = {
+				owns_state = 55
+			}
+		}
+
+		mutually_exclusive = { opel_upgrade_3_3 }
+
+		position = { x = 5 y = 3 }
+
+		on_complete = {
+			FROM = {
+				55 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	trait = {
+		token = opel_upgrade_3_5
+		name = opel_upgrade_3_5
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		any_parent = { opel_upgrade_2_4 opel_upgrade_2_5 }
+		any_parent = { opel_upgrade_2_6 opel_upgrade_2_7 opel_upgrade_2_8 }
+
+		mutually_exclusive = { opel_upgrade_3_6 }
+
+		position = { x = 6 y = 3 }
+
+		limit_to_equipment_type = {
+			motorized_rocket_equipment
+		}
+
+		equipment_bonus = {
+			breakthrough = 0.25
+			maximum_speed = -0.2
+		}
+	}
+
+	trait = {
+		token = opel_upgrade_3_6
+		name = opel_upgrade_3_6
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		any_parent = { opel_upgrade_2_4 opel_upgrade_2_5 }
+		any_parent = { opel_upgrade_2_6 opel_upgrade_2_7 opel_upgrade_2_8 }
+
+		mutually_exclusive = { opel_upgrade_3_5 }
+
+		position = { x = 7 y = 3 }
+
+		limit_to_equipment_type = {
+			motorized_rocket_equipment
+		}
+
+		equipment_bonus = {
+			breakthrough = 0.25
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = -0.3
+		}
+	}
+
+	trait = {
+		token = opel_upgrade_4_1
+		name = opel_upgrade_4_1
+		icon = GFX_KR_generic_mio_trait_icon_land_doctrine
+
+		available = {
+			FROM = {
+				owns_state = 55
+			}
+		}
+
+		any_parent = { opel_upgrade_3_1 opel_upgrade_3_2 opel_upgrade_3_3 opel_upgrade_3_4 }
+
+		mutually_exclusive = { opel_upgrade_4_2 }
+
+		position = { x = 3 y = 4 }
+
+		equipment_bonus = {
+			maximum_speed = 0.2
+		}
+
+		on_complete = {
+			GRU_add_opel_upgrade_4_1 = yes
+		}
+	}
+
+	trait = {
+		token = opel_upgrade_4_2
+		name = opel_upgrade_4_2
+		icon = GFX_KR_generic_mio_trait_icon_research_bonus
+
+		available = {
+			FROM = {
+				owns_state = 55
+			}
+		}
+
+		any_parent = { opel_upgrade_3_3 opel_upgrade_3_4 opel_upgrade_3_5 opel_upgrade_3_6 }
+
+		mutually_exclusive = { opel_upgrade_4_1 }
+
+		position = { x = 5 y = 4 }
+
+		equipment_bonus = {
+			maximum_speed = 0.2
+		}
+
+		on_complete = {
+			FROM = {
+				add_tech_bonus = {
+					name = opel_upgrade_4_2
+					bonus = 3.0
+					uses = 1
+					category = cat_mechanized_equipment
+				}
+			}
+		}
+	}
+}
+
+GRU_rheinmetall_organisation = {
+	name = rheinmetall
+	icon = GFX_idea_rheinmetall
+	allowed = {
+		is_germany_or_german_colonial_tag = yes
+	}
+	available = {
+		FROM = {
+			owns_state = 51
+		}
+	}
+	visible = {
+		FROM = {
+			has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH
+		}
+	}
+	on_industrial_manufacturer_assigned = {
+		FROM = {
+			if = {
+				limit = { NOT = { has_variable = MIO_Rheinmetall_assigned_manufacturer_number } }
+				set_variable = {
+					var = MIO_Rheinmetall_assigned_manufacturer_number
+					value = 1
+				}
+			}
+			else = {
+				add_to_variable = { MIO_Rheinmetall_assigned_manufacturer_number = 1 }
+			}
+		}
+		custom_effect_tooltip = GRU_MIO_Research_Gain_tt
+		custom_effect_tooltip = tooltip_white_line
+	}
+
+	on_industrial_manufacturer_unassigned = {
+		FROM = {
+			subtract_from_variable = { MIO_Rheinmetall_assigned_manufacturer_number = 1 }
+		}
+	}
+
+	on_tech_research_completed = {
+		hidden_effect = {
+			FROM = {
+				mio:GRU_rheinmetall_organisation = {
+					set_mio_research_bonus = 0
+				}
+				clr_country_flag = GRU_rheinmetall_RS_Notification
+			}
+		}
+		custom_effect_tooltip = GRU_manufacturer_research_reset_tt
+	}
+
+	on_tech_research_cancelled = {
+		FROM = { add_political_power = -35 }
+		custom_effect_tooltip = tooltip_white_line
+	}
+
+	equipment_type = {
+		artillery_equipment
+		anti_air_equipment
+		anti_tank_equipment
+		rocket_artillery_equipment
+		railway_gun_equipment
+		train_equipment
+	}
+
+	research_categories = {
+		mio_cat_all_artillery_equipment
+		train_tech
+	}
+
+	ai_will_do = { base = 1000 }
+
+	initial_trait = {
+		name = GRU_rheinmetall_mio_desc
+	}
+
+	trait = {
+		token = rheinmetall_upgrade_1
+		name = rheinmetall_upgrade_1
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		position = { x = 3 y = 0 }
+
+		limit_to_equipment_type = {
+			artillery_equipment
+			rocket_artillery_equipment
+		}
+
+		equipment_bonus = {
+			breakthrough = 0.1
+			soft_attack = 0.05
+		}
+	}
+
+	trait = {
+		token = rheinmetall_upgrade_2
+		name = rheinmetall_upgrade_2
+		icon = GFX_KR_generic_mio_trait_icon_railway
+
+		available = {
+			FROM = {
+				owns_state = 215
+			}
+		}
+
+		position = { x = 5 y = 0 }
+
+		equipment_bonus = {
+			build_cost_ic = -0.025
+		}
+
+		on_complete = {
+			FROM = {
+				build_railway = {
+					level = 1
+					fallback = yes
+					start_province = 673
+					target_province = 11640
+				}
+				custom_effect_tooltip = tooltip_white_line
+				780 = {
+					add_building_construction = {
+						type = supply_node
+						level = 1
+						instant_build = yes
+						province = 3679
+					}
+				}
+			}
+		}
+	}
+
+	trait = {
+		token = rheinmetall_upgrade_1_1
+		name = rheinmetall_upgrade_1_1
+		icon = GFX_KR_generic_mio_trait_icon_research_speed
+
+		position = { x = 0 y = 1 }
+
+		mutually_exclusive = { rheinmetall_upgrade_1_2 }
+
+		production_bonus = {
+			production_resource_need_factor = -0.5
+		}
+
+		on_complete = {
+			set_temp_variable = { current_research_bonus = research_bonus }
+			multiply_temp_variable = { current_research_bonus = 100 }
+			set_temp_variable = { weekly_research_speed_to_add = current_research_bonus }
+			multiply_temp_variable = { weekly_research_speed_to_add = 0.04 }
+			custom_effect_tooltip = GRU_manufacturer_trait_research_gain_rheinmetall_tt
+			add_to_variable = { weekly_research_speed_gain_loc = weekly_research_speed_to_add }
+			divide_temp_variable = { weekly_research_speed_to_add = 100 }
+			add_to_variable = { weekly_research_speed_gain = weekly_research_speed_to_add }
+		}
+		ai_will_do = { base = 100 }
+	}
+
+	trait = {
+		token = rheinmetall_upgrade_1_2
+		name = rheinmetall_upgrade_1_2
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+
+		position = { x = 2 y = 1 }
+
+		mutually_exclusive = { rheinmetall_upgrade_1_1 }
+
+		equipment_bonus = {
+			build_cost_ic = -0.025
+		}
+
+		on_complete = {
+			add_mio_research_bonus = 0.17
+			add_to_variable = { total_campaign_xp = 17 }
+		}
+	}
+
+	trait = {
+		token = rheinmetall_upgrade_1_3
+		name = rheinmetall_upgrade_1_3
+		icon = GFX_KR_generic_mio_trait_icon_supply
+
+		available = {
+			FROM = {
+				owns_state = 566
+			}
+		}
+
+		position = { x = 4 y = 1 }
+
+		any_parent = { rheinmetall_upgrade_1 rheinmetall_upgrade_2 }
+
+		equipment_bonus = {
+			build_cost_ic = -0.025
+		}
+
+		on_complete = {
+			FROM = {
+				777 = {
+					add_building_construction = {
+						type = supply_node
+						level = 1
+						instant_build = yes
+						province = 11386
+					}
+				}
+			}
+		}
+	}
+
+	trait = {
+		token = rheinmetall_upgrade_1_4
+		name = rheinmetall_upgrade_1_4
+		icon = GFX_KR_generic_mio_trait_icon_research_speed
+
+		position = { x = 6 y = 1 }
+
+		mutually_exclusive = { rheinmetall_upgrade_1_5 }
+
+		equipment_bonus = {
+			build_cost_ic = -0.025
+		}
+
+		on_complete = {
+			custom_effect_tooltip = GRU_manufacturer_trait_research_cap_rheinmetall_tt
+			add_to_variable = { max_research_speed = 0.25 }
+			add_to_variable = { max_research_speed_loc = 25 }
+		}
+		ai_will_do = { base = 100 }
+	}
+
+	trait = {
+		token = rheinmetall_upgrade_1_5
+		name = rheinmetall_upgrade_1_5
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		position = { x = 8 y = 1 }
+
+		mutually_exclusive = { rheinmetall_upgrade_1_4 }
+
+		limit_to_equipment_type = {
+			artillery_equipment
+			rocket_artillery_equipment
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.05
+		}
+
+		on_complete = {
+			add_mio_research_bonus = 0.12
+			add_to_variable = { total_campaign_xp = 12 }
+		}
+	}
+
+	trait = {
+		token = rheinmetall_upgrade_2_1
+		name = rheinmetall_upgrade_2_1
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		position = { x = 1 y = 2 }
+
+		any_parent = { rheinmetall_upgrade_1_1 rheinmetall_upgrade_1_2 }
+
+		limit_to_equipment_type = { anti_tank_equipment }
+
+		equipment_bonus = {
+			hard_attack = 0.05
+			ap_attack = 0.1
+		}
+	}
+
+	trait = {
+		token = rheinmetall_upgrade_2_2
+		name = rheinmetall_upgrade_2_2
+		icon = GFX_generic_mio_department_icon_tank_general_spg
+
+		position = { x = 3 y = 2 }
+
+		all_parents = { rheinmetall_upgrade_1_3 }
+
+		limit_to_equipment_type = {
+			railway_gun_equipment
+		}
+
+		equipment_bonus = {
+			railway_gun_attack = 0.1
+			maximum_speed = 0.1
+		}
+	}
+
+	trait = {
+		token = rheinmetall_upgrade_2_3
+		name = rheinmetall_upgrade_2_3
+		icon = GFX_KR_generic_mio_trait_icon_railway_gun
+
+		available = {
+			FROM = {
+				owns_state = 224
+				has_tech = railway_gun
+			}
+		}
+
+		position = { x = 5 y = 2 }
+
+		all_parents = { rheinmetall_upgrade_1_3 }
+
+		on_complete = {
+			FROM = {
+				create_railway_gun = {
+					name = "Schwerer Gustav"
+					equipment = railway_gun_equipment_1
+					location = 6521
+				}
+				create_railway_gun = {
+					name = "Langer Gustav"
+					equipment = railway_gun_equipment_1
+					location = 6521
+				}
+			}
+		}
+	}
+
+	trait = {
+		token = rheinmetall_upgrade_2_4
+		name = rheinmetall_upgrade_2_4
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		position = { x = 7 y = 2 }
+
+		any_parent = { rheinmetall_upgrade_1_4 rheinmetall_upgrade_1_5 }
+
+		limit_to_equipment_type = {
+			artillery_equipment
+			anti_air_equipment
+			anti_tank_equipment
+			rocket_artillery_equipment
+		}
+
+		equipment_bonus = {
+			reliability = 0.1
+		}
+	}
+
+	trait = {
+		token = rheinmetall_upgrade_3_1
+		name = rheinmetall_upgrade_3_1
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+
+		position = { x = 4 y = 3 }
+
+		all_parents = { rheinmetall_upgrade_2_2 rheinmetall_upgrade_2_3 }
+
+		limit_to_equipment_type = {
+			anti_air_equipment
+		}
+
+		equipment_bonus = {
+			hard_attack = 1.0
+			ap_attack = 0.5
+		}
+	}
+
+	trait = {
+		token = rheinmetall_upgrade_4_1
+		name = rheinmetall_upgrade_4_1
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+
+		position = { x = 2 y = 4 }
+
+		all_parents = { rheinmetall_upgrade_2_1 rheinmetall_upgrade_2_2 }
+
+		equipment_bonus = {
+			build_cost_ic = -0.025
+		}
+	}
+
+	trait = {
+		token = rheinmetall_upgrade_4_2
+		name = rheinmetall_upgrade_4_2
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		position = { x = 6 y = 4 }
+
+		all_parents = { rheinmetall_upgrade_2_3 rheinmetall_upgrade_2_4 }
+
+		limit_to_equipment_type = {
+			artillery_equipment
+			anti_air_equipment
+			anti_tank_equipment
+			rocket_artillery_equipment
+		}
+
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+}
+

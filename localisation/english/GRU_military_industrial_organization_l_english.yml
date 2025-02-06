@@ -19,6 +19,26 @@
  krupp_upgrade_4_2: "Increased Muzzle Velocity"
 
 ### Ship ###
+### Volksmarine ###
+ volksmarine_upgrade_1: "Isolate Critical Capital Ship Components"
+ volksmarine_upgrade_2: "Isolate Critical Capital Ship Components"
+ volksmarine_upgrade_3: "Increased Anti-Air Armament Explosive Rounds"
+ volksmarine_upgrade_4: "Additional Aircraft Spacing"
+ volksmarine_upgrade_5: "Additional Aircraft Spacing"
+ volksmarine_upgrade_1_1: "Stabilise Firing Mechanisms"
+ volksmarine_upgrade_1_2: "Improved Propellor Design"
+ volksmarine_upgrade_1_3: "Improved Propellor Design"
+ volksmarine_upgrade_1_4: "Standardise Carrier Parts"
+ volksmarine_upgrade_2_1: "Additional Capital Ship Testing"
+ volksmarine_upgrade_2_2: "Thicker Plating"
+ volksmarine_upgrade_2_3: "Additional Carrier Ship Testing"
+ volksmarine_upgrade_3_1: "Reduce Internal Damage Capability"
+ volksmarine_upgrade_3_2: "Reduce Internal Damage Capability"
+ volksmarine_upgrade_3_3: "Additional Fuel Capacity"
+ volksmarine_upgrade_3_4: "Additional Fuel Capacity"
+ volksmarine_upgrade_3_5: "Eliminate Random Carrier Fires"
+ volksmarine_upgrade_3_6: "Eliminate Random Carrier Fires"
+ volksmarine_upgrade_4_1: "Improved Volksmarine Werft"
 
 ### Plane ###
 ### Albatros ###
@@ -40,6 +60,21 @@
  albatros_upgrade_4_3: "Eliminate Random Engine Fires"
  albatros_upgrade_4_4: "Improved Propeller Design"
 
+### Junkers ###
+ junkers_upgrade_1: "R&D Department Expansion"
+ junkers_upgrade_2: "Improved Bomb Fins"
+ junkers_upgrade_3: "R&D Department Expansion"
+ junkers_upgrade_4: "Standardise Parts Between Airframes"
+ junkers_upgrade_1_1: "Externally Mounted Bombs"
+ junkers_upgrade_1_2: "Additional Fuel Capacity"
+ junkers_upgrade_1_3: "Additional Weakspot Protection"
+ junkers_upgrade_1_4: "Simplify Assembly Process"
+ junkers_upgrade_2_1: "Improve Airframe Aerodynamic Structure"
+ junkers_upgrade_2_2: "Eliminate Random Fires"
+ junkers_upgrade_3_1: "Lighter Fuselage"
+ junkers_upgrade_3_2: "Reinforced Undercarriage"
+ junkers_upgrade_4_1: "Improved Junkers"
+
 ### MIO Traits ###
 ### Material Equipment ###
 ### Mauser ###
@@ -56,24 +91,77 @@
  mauser_upgrade_2_2: "Finalise Standardisation of Parts"
  mauser_upgrade_3_1: "Improved Mauser"
 
+### rheinmetall ###
+ rheinmetall_upgrade_1: "APBC Ammunition"
+ rheinmetall_upgrade_2: "Expand Northern Routes"
+ rheinmetall_upgrade_1_1: "Simplified Assembly Proccedures"
+ rheinmetall_upgrade_1_2: "Standardise Artillery Parts"
+ rheinmetall_upgrade_1_3: "Expand Southern Routes"
+ rheinmetall_upgrade_1_4: "Expanded Strike Packages"
+ rheinmetall_upgrade_1_5: "Concrete Busting Capabilities"
+ rheinmetall_upgrade_2_1: "Decreased Shell Windage"
+ rheinmetall_upgrade_2_2: "Crane Operated Reloading Mechanism"
+ rheinmetall_upgrade_2_3: "Experimental Prototypes"
+ rheinmetall_upgrade_2_4: "Improved Barrel Materials"
+ rheinmetall_upgrade_3_1: "Illumination Shells"
+ rheinmetall_upgrade_4_1: "Standardised Ammunition Sizes"
+ rheinmetall_upgrade_4_2: "Increased Propellant"
+
+### OPEL ###
+ opel_upgrade_1: "Share Engine Design with Fighter Departments"
+ opel_upgrade_2: "Share Engine Design with Bomber Departments"
+ opel_upgrade_1_1: "Increased Salaries"
+ opel_upgrade_1_2: "Workplace Propaganda"
+ opel_upgrade_2_1: "Slightly Reduce Motorised/Mechanised Small Arms Vulnerabilities"
+ opel_upgrade_2_2: "Moderately Reduce Motorised/Mechanised Small Arms Vulnerabilities"
+ opel_upgrade_2_3: "Greatly Reduce Motorised/Mechanised Small Arms Vulnerabilities"
+ opel_upgrade_2_4: "Expanded Research Department"
+ opel_upgrade_2_5: "Expanded Design Department"
+ opel_upgrade_2_6: "Improved Fragmentation Rockets"
+ opel_upgrade_2_7: "Improved Shrapnel Rockets"
+ opel_upgrade_2_8: "Larger Rocket Rack"
+ opel_upgrade_3_1: "Smoother Motorised/Mechanised Transmission"
+ opel_upgrade_3_2: "Smoother Motorised/Mechanised Transmission"
+ opel_upgrade_3_3: "Assign Additional Construction Facilities"
+ opel_upgrade_3_4: "Assign Additional Workshop Facilities"
+ opel_upgrade_3_5: "Heavier Rocket Payload"
+ opel_upgrade_3_6: "Heavier Rocket Payload"
+ opel_upgrade_4_1: "Recognise Survivourship Bias Reports"
+ opel_upgrade_4_2: "Additional Equipment Trial Testing"
+
 ### Plane ###
 ### Ship ###
 
 ### MIO Descriptions/Decisions (and/or effects) ###
+ GRU_MIO_Research_Gain_tt: "§gBonus £research_speed_icon §HResearch Speed§! will be incrementally gained for this §HMilitary Industrial Organisation§! whilst assigned as a £industrial_manufacturer_icon §HManufacturer§! (does not stack while manufacturing multiple lines)\n\nWeekly £research_speed_icon §HResearch Speed§! gain: §W[?weekly_research_speed_gain_loc|.2]%§!\n£research_speed_icon §HResearch Speed§! Soft Cap: §W[?max_research_speed_loc|.2]%§!\nMinimum daily §HFunds§! required to gain £research_speed_icon §HResearch Speed§!: §W[?weekly_funds_requirement_loc|.2]§!\n\n[GRU_MIO_Funds_Requirement_R_and_D]\n\nTotal £research_speed_icon §HResearch Speed§! gained from this §HMilitary Industrial Organisation§! during this campaign: §W[?total_campaign_research_speed|.2]%§!§!"
+GRU_MIO_XP_Gain_volksmarine_tt: "§gWill incrementally gain [GRU_XP_Icon] when §H$volksmarine$§! is assigned as a £industrial_manufacturer_icon §HManufacturer§! to a piece of equipment or when £design_team_icon §HResearching§! new equipment\n\nDaily [GRU_XP_Icon] gained: §W[?xp_gain_loc|.2]§!\nMinimum daily §HFunds§! required to gain [GRU_XP_Icon]: §W[?weekly_funds_requirement_loc|.2]§!\n\n[GRU_MIO_Funds_Requirement_XP]\n\nTotal [GRU_XP_Icon] gained from this §HMilitary Industrial Organisation§! during this campaign: §W[?total_campaign_xp|.2]§!§!"
+GRU_MIO_XP_Gain_junkers_tt: "§gWill incrementally gain [GRU_XP_Icon] when §H$junkers$§! is assigned as a £industrial_manufacturer_icon §HManufacturer§! to a piece of equipment or when £design_team_icon §HResearching§! new equipment\n\nDaily [GRU_XP_Icon] gained: §W[?xp_gain_loc|.2]§!\nMinimum daily §HFunds§! required to gain [GRU_XP_Icon]: §W[?weekly_funds_requirement_loc|.2]§!\n\n[GRU_MIO_Funds_Requirement_XP]\n\nTotal [GRU_XP_Icon] gained from this §HMilitary Industrial Organisation§! during this campaign: §W[?total_campaign_xp|.2]§!§!"
+ GRU_mio_policy_RD_Cap_tt: "§gWill increase£research_speed_icon §HResearch Speed§! Soft Cap by §G+25.00%§!§!"
+
+ GRU_MIO_Research_Gain_R_and_D_negative_tt: "§RCurrently not gaining§! £research_speed_icon §HResearch Speed§! (§gCurrent daily§! §HFunds§!: §W[?Funds_Difference_loc|.2]§! )"
+ GRU_MIO_Research_Gain_R_and_D_positive_tt: "§GCurrently gaining§! £research_speed_icon §HResearch Speed§! (§gCurrent daily§! §HFunds§!: §W[?Funds_Difference_loc|.2]§! )"
+ GRU_manufacturer_research_reset_tt: "§gWill reset any Bonus£research_speed_icon §HResearch Speed§! gained§!"
+ GRU_Army_XP_icon: "£army_experience §HArmy Experience§!"
+ GRU_Air_XP_icon: "£air_experience §HAir Experience§!"
+ GRU_Navy_XP_icon: "£navy_experience §HNavy Experience§!"
+ GRU_MIO_Research_Gain_XP_negative_tt: "§RCurrently not gaining§! [GRU_XP_Icon] (§gCurrent daily§! §HFunds§!: §W[?Funds_Difference_loc|.2]§! )"
+ GRU_MIO_Research_Gain_XP_positive_tt: "§GCurrently gaining§! [GRU_XP_Icon] (§gCurrent daily§! §HFunds§!: §W[?Funds_Difference_loc|.2]§! )"
+ RUS_manufacturer_trait_navy_xp_min_funds_bz_tt: "§gWill decrease minimum daily §HFunds§! requirement by §G-66.00%§!§!"
+
 ### Mauser ###
  mauser_AV_MIO_List: "\n$mauser$ §W(§7+[?av_mauser_research_speed|.2]%§!)§!"
  GRU_mauser_mio_desc: "$mauser_GRU_MIO$\n§L$mauser_desc$§!\n"
- mauser_desc: "Awarded numerous government contracts, extensive funding, and state advertising due to its participation on the side of the Whites in the GRUsian Civil War, the Izhevsk Arms Factory was greatly modernised in the last several decades was greatly modernised by the creation of several new workshops and merging with smaller plants. As a consequence of its expansion, the factory was recently renamed the Izhevsk Mechanical Factory."
+ mauser_desc: "Awarded numerous government contracts, extensive funding, and state advertising due to its participation on the side of the Whites in the Civil War, the Izhevsk Arms Factory was greatly modernised in the last several decades was greatly modernised by the creation of several new workshops and merging with smaller plants. As a consequence of its expansion, the factory was recently renamed the Izhevsk Mechanical Factory."
  mauser_improved: "Mauser"
- mauser_improved_desc: "Awarded numerous government contracts, extensive funding, and state advertising due to its participation on the side of the Whites in the GRUsian Civil War, the Izhevsk Arms Factory was greatly modernised in the last several decades by the creation of several new workshops and merging with smaller plants. As a consequence of its expansion, the factory was recently renamed the Izhevsk Mechanical Factory."
+ mauser_improved_desc: "Awarded numerous government contracts, extensive funding, and state advertising due to its participation on the side of the Whites in the Civil War, the Izhevsk Arms Factory was greatly modernised in the last several decades by the creation of several new workshops and merging with smaller plants. As a consequence of its expansion, the factory was recently renamed the Izhevsk Mechanical Factory."
  mauser_improved_GRU: "Infantry Equipment Manufacturer"
 
-### Putilovets ###
+### KRUPP ###
  krupp_GRU_MIO: "Heavy Protection Tank Designer"
  krupp_AV_MIO_List: "\n$krupp$ §W(§7+[?av_krupp_research_speed|.2]%§!)§!"
  GRU_krupp_mio_desc: "$krupp_GRU_MIO$\n§L$krupp_desc$§!\n"
  krupp: "[GRU_Dynamic_krupp_Name]"
- krupp_desc: "The main factory of OPZ, whilst remaining privately owned ever since 1885, has seen some limited nationalisation by Savinkov since 1935 and been renamed to krupp. Now having switched to armament production and with the expansion of its designer department, the Krupp factory has become the main tank producer in GRUsia."
+ krupp_desc: "The main factory of OPZ, whilst remaining privately owned ever since 1885, has seen some limited nationalisation by Savinkov since 1935 and been renamed to krupp. Now having switched to armament production and with the expansion of its designer department, the Krupp factory has become the main tank producer in German."
  krupp_GRU: "Tank Manufacturer"
  krupp_improved: "$krupp$"
  krupp_improved_desc: "$krupp_desc$"
@@ -85,7 +173,7 @@
 ### Duks ###
  albatros_GRU_MIO: "Aerial Supremacy Designer"
  albatros_AV_MIO_List: "\n$albatros$ §W(§7+[?av_albatros_research_speed|.2]%§!)§!"
- GRU_albatros_mio_desc: "$albatros_RUS_MIO$\n§L$albatros_desc$§!\n"
+ GRU_albatros_mio_desc: "$albatros_GRU_MIO$\n§L$albatros_desc$§!\n"
  albatros: "Albatros"
  albatros_desc: "Due to the harsh economic conditions in the 1920s, the Moscow Aviation Factory Albatros lost several small factories to OSOAVIA - but still managed to survive and stay in the aircraft industry. Concentrating its efforts on the expansion of the Moscow plant, Albatros still maintains its place as the king of fighter aircraft."
  albatros_GRU: "Fighter Manufacturer"
@@ -93,4 +181,70 @@
  albatros_improved: "Albatros"
  albatros_improved_desc: "Due to the harsh economic conditions in the 1920s, the Moscow Aviation Factory Albatros lost several small factories to OSOAVIA - but still managed to survive and stay in the aircraft industry. Concentrating its efforts on the expansion of the Moscow plant, Albatros still maintains its place as the king of fighter aircraft."
  albatros_improved_GRU: "Fighter Manufacturer"
+
+### OPEL ###
+ opel_GRU_MIO: "Quality Mechanised Equipment Designer"
+ opel_AV_MIO_List: "\n$opel$ §W(§7+[?av_opel_research_speed|.2]%§!)§!"
+ GRU_opel_upgrade_2_1_tt: "§gMutually exclusive with §H$opel_upgrade_2_2$§! and §H$opel_upgrade_2_3$§!§!"
+ GRU_opel_upgrade_2_2_tt: "§gMutually exclusive with §H$opel_upgrade_2_1$§! and §H$opel_upgrade_2_3$§!§!"
+ GRU_opel_upgrade_2_3_tt: "§gMutually exclusive with §H$opel_upgrade_2_1$§! and §H$opel_upgrade_2_2$§!§!"
+ GRU_opel_upgrade_2_6_tt: "§gMutually exclusive with §H$opel_upgrade_2_7$§! and §H$opel_upgrade_2_8$§!§!"
+ GRU_opel_upgrade_2_7_tt: "§gMutually exclusive with §H$opel_upgrade_2_6$§! and §H$opel_upgrade_2_8$§!§!"
+ GRU_opel_upgrade_2_8_tt: "§gMutually exclusive with §H$opel_upgrade_2_6$§! and §H$opel_upgrade_2_7$§!§!"
+ GRU_opel_mio_desc: "$opel_GRU_MIO$\n§L$opel_desc$§!\n"
+ naz_research_funds_share_tt: "§g§HFunds§! that are gained through §HResearch§! by §H$naz$§! will also be shared with §H$opel$§!§!"
+ opel: "[GRU_Dynamic_OPEL_Name]"
+ opel_non_socGRU: "VEB Opel"
+ opel_desc: "The Lebedev Automotive Factory was created in 1916 as part of the state programme for the creation of a automotive industry. Due to its founder's love for aeronautics, VEB Opel tried to venture into the aircraft industry after the Civil War but almost went bankrupt. Still maintaining contracts with aircraft companies, VEB Opel now specialises in heavy trucks and engine production."
+ opel_GRU: "Mechanised Equipment"
+ improve_opel_tt: "\nUnlocks an improved variant of §H$opel$§!.\nIf §H$opel$§! is already hired, then the improved variant will replace it:"
+ opel_improved: "$opel$"
+ opel_improved_desc: "$opel_desc$"
+ opel_improved_GRU: "Mechanised Equipment"
+ opel_research_funds_share_tt: "§g§HFunds§! that are gained through §HResearch§! by §H$opel$§! will also be shared with §H$naz$§!§!"
+ opel_research_funds_gain_trigger_tt: "§gHas completed trait §H$opel_upgrade_1$§!§!"
+
+### Volksmarine ###
+ volksmarine_GRU_MIO: "Experimental Capital & Carrier Ship Designer"
+ volksmarine_AV_MIO_List: "\n$volksmarine$ §W(§7+[?av_volksmarine_research_speed|.2]%§!)§!"
+ GRU_manufacturer_trait_navy_xp_volksmarine_tt: "§gWill increase£navy_experience §HNavy Experience§! gained by §G+50.00%§!§!"
+ GRU_manufacturer_trait_navy_xp_min_funds_volksmarine_tt: "§gWill decrease minimum daily §HFunds§! requirement by §G-66.00%§!§!"
+ GRU_volksmarine_navy_xp: "$volksmarine$"
+ GRU_volksmarine_navy_xp_2: "$volksmarine$"
+ GRU_volksmarine_mio_desc: "$volksmarine_GRU_MIO$\n§L$volksmarine_desc$§!\n"
+ volksmarine: "Volksmarine Werft"
+ volksmarine_desc: "The Baltic Factory has produced many ships since it was founded in 1861. After the Germann Civil War, the factory experienced hard times, but due to the never-ending support of the Maritime Ministry, it endured them, and its shipyard became the biggest in German by absorbing Petrozavod and Ust-Izhora shipyards."
+ volksmarine_GRU: "Capital Ship Manufacturer"
+ volksmarine_improved: "Volksmarine Werft"
+ volksmarine_improved_desc: "The Baltic Factory has produced many ships since it was founded in 1861. After the Germann Civil War, the factory experienced hard times, but due to the never-ending support of the Maritime Ministry, it endured them, and its shipyard became the biggest in German by absorbing Petrozavod and Ust-Izhora shipyards."
+ volksmarine_improved_GRU: "Capital Ship Manufacturer"
+ improve_volksmarine_tt: "\nUnlocks an improved variant of §HVolksmarine Werft§!.\nIf §HVolksmarine Werft§! is already hired, then the improved variant will replace it:"
+ GRU_manufacturer_trait_navy_xp_min_funds_volksmarine_tt: "§gWill decrease minimum daily §HFunds§! requirement by §G-66.00%§!§!"
+
+### rheinmetall ###
+ rheinmetall_GRU_MIO: "R&D Artillery Centric Designer"
+ rheinmetall_AV_MIO_List: "\n$rheinmetall$ §W(§7+[?av_rheinmetall_research_speed|.2]%§!)§!"
+ GRU_manufacturer_trait_research_cap_rheinmetall_tt: "§gWill increase £research_speed_icon §HResearch Speed§! Soft Cap by §G+25.00%§!"
+ GRU_manufacturer_trait_research_gain_rheinmetall_tt: "§gWill increase Weekly £research_speed_icon §HResearch Speed§! Gain by §G+0.04%§! for every §W1%§! £research_speed_icon §HResearch Speed§! that §H$rheinmetall$§! currently has\n\nAs §H$rheinmetall$§! currently has §W[?current_research_bonus]%§! £research_speed_icon §HResearch Speed§! this will increase Weekly £research_speed_icon §HResearch Speed§! Gain by §G+[?weekly_research_speed_to_add|.2]%§!"
+ GRU_rheinmetall_mio_desc: "$rheinmetall_GRU_MIO$\n§L$rheinmetall_desc$§!\n"
+ rheinmetall_desc: "Whilst initially being founded as a locomotive and partial shipbuilding operation, the Bryansk Machine-building Factory has, since the Great War, come to be established as a major artillery manufacturer while retaining its train-building capacities and seeing limited nationalisation by .......... in 1934."
+ rheinmetall_GRU: "Artillery Manufacturer"
+ transfer_rheinmetall_tt: "\nWill start transferring §HRheinmetall§! to a safer location and unlock a new variant that replaces the previous one. If §HRheinmetall§! is already hired, then the new variant will replace it:\n"
+ transfer_rheinmetall: "Rheinmetall has been evacuated"
+
+### Junkers ###
+ junkers_GRU_MIO: "Experimental Battlefield Plane Designer"
+ junkers_AV_MIO_List: "\n$junkers$ §W(§7+[?av_junkers_research_speed|.2]%§!)§!"
+ GRU_manufacturer_trait_air_xp_junkers_tt: "§gWill increase£air_experience §HAir Experience§! gained by §G+50.00%§!§!"
+ GRU_manufacturer_trait_air_xp_min_funds_junkers_tt: "§gWill decrease minimum daily §HFunds§! requirement by §G-66.00%§!§!"
+ GRU_junkers_air_xp: "$junkers$"
+ GRU_junkers_air_xp_2: "$junkers$"
+ GRU_junkers_mio_desc: "$junkers_GRU_MIO$\n§L$junkers_desc$§!\n"
+ junkers_desc: "Reborn in 1927 out of a joint venture by veterans of German aeronautics, and the German Association of Aviation 'Junkers' managed to establish a modern aircraft factory by 1932. After attracting promising designers such as Petlyakov from TsAGI to the factory, Junkers concluded solid contracts with the War Ministry and established itself as a bomber and transport aircraft producer."
+ junkers_GRU: "Heavy Bomber Manufacturer"
+ improve_junkers_tt: "\nUnlocks an improved variant of §H$junkers$§!.\nIf §H$junkers$§! is already hired, then the improved variant will replace it:"
+ junkers_improved: "$junkers$"
+ junkers_improved_desc: "$junkers_desc$"
+ junkers_improved_GRU: "Heavy Bomber Manufacturer"
+
 
