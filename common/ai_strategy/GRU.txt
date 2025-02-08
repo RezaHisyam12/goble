@@ -1141,6 +1141,124 @@ GRU_dont_trust_national_france = {
 		value = 100
 	}
 }
+
+#############################
+## Stahlpakt  Coordination ##
+#############################
+
+STP_ignore_northern_oststaaten = {
+	allowed = {
+		OR = {
+			is_italian_tag = yes
+			tag = VKR
+
+			#Banned from Eastern Front in general
+			is_belgian_tag = yes
+			is_scandinavian_tag = yes
+			tag = VKN
+		}
+	}
+	enable = {
+		is_ally_with = GRU
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = VKB
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = VKK
+		value = 100
+	}
+}
+
+STP_ignore_southern_oststaaten = { #Rest of Reichspakt should focus on BLR/BAT front
+	allowed = {
+		OR = {
+			tag = VKB
+			tag = VKK
+			is_baltic_tag = yes
+
+			#Banned from Eastern Front in general
+			is_belgian_tag = yes
+			is_scandinavian_tag = yes
+			tag = VKN
+
+		}
+	}
+	enable = {
+		is_ally_with = GRU
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = VKR
+		value = 100
+	}
+}
+
+STP_ignore_western_front = {
+	allowed = {
+		OR = {
+			is_polish_tag = yes
+			is_baltic_tag = yes
+			is_balkan_tag = yes
+			is_scandinavian_tag = yes
+			is_danubian_tag = yes
+			tag = VKB
+			tag = VKR
+			tag = VKK
+		}
+	}
+	enable = {
+		is_ally_with = GRU
+		FRA = { is_faction_leader = yes }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = GRU
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = VKN
+		value = 100
+	}
+}
+
+STP_defend_eastern_front = {
+	allowed = {
+		OR = {
+			is_polish_tag = yes
+			is_baltic_tag = yes
+			is_balkan_tag = yes
+			is_danubian_tag = yes
+		}
+	}
+	enable = {
+		is_ally_with = GRU
+		has_war_with = RUS
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = VKB
+		value = 100
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = VKR
+		value = 100
+	}
+}
+
 ################
 ### Industry/2WK ###
 ################
@@ -1149,10 +1267,21 @@ GRU_finish_russia_off = {
 	allowed = {
 		OR = {
 			original_tag = GRU
+			original_tag = HUN
 			is_ally_with = GRU
 		}
+		is_in_europe = yes
 	}
 	enable = {
+		OR = {
+			NOT = { country_exists = FRA }
+			FRA = { has_capitulated = yes }
+		}
+		OR = {
+			NOT = { country_exists = ENG }
+			NOT = { has_war_with = ENG }
+			ENG = { has_capitulated = yes }
+		}
 		has_war_with = RUS
 		NOT = { is_neighbor_of = CSA } #== being invaded
 		stockpile_ratio = { archetype = infantry_equipment ratio > 1 }
@@ -1222,6 +1351,24 @@ GRU_endsieg_aus = { #Cease attacks if losing against Austria and has low equipme
 		priority = 150
 		ordertype = front
 		execute_order = no
+	}
+}
+
+GRU_dont_naval_invade_if_fighting_in_two_fronts = {
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		has_war_with = RUS
+		has_war_with = FRA
+		FRA = { has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invasion_unit_request
+		area = globally
+		value = -500
 	}
 }
 

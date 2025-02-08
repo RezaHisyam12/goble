@@ -78,7 +78,7 @@ shared_focus = {
 	}
 	shared_focus = {
 		id = VK_FOCUS_SHARED_ENSLAVE_NATIVES
-		icon = VK_ENSLAVE_NATIVES
+		icon = GFX_GRU_gleichschaltung-3953
 		relative_position_id = VK_FOCUS_SHARED_ESTABLISH_VK
 		x = 2
 		y = 2

@@ -413,7 +413,7 @@ VK_FOCUS_SHARED_NATIONALISATION:0 "Nationalize All Industries"
 VK_FOCUS_SHARED_NATIONALISATION_desc:0 "We will nationalize all industries and form our economy after the image of the Fatherland."
 VK_FOCUS_SHARED_MORE_SETTLERS:0 "The Great Settler Wave"
 VK_FOCUS_SHARED_MORE_SETTLERS_desc:0 "We are ready for the next wave of settlers, the great wave that will become the foundation of our future population."
-VK_FOCUS_SHARED_ENSLAVE_NATIVES:0 "German Ruling Class"
+VK_FOCUS_SHARED_ENSLAVE_NATIVES:0 "Controlled Economy"
 VK_FOCUS_SHARED_ENSLAVE_NATIVES_desc:0 "Germans will rule supreme in our Volkskommissariat."
 
 
@@ -1110,7 +1110,7 @@ VK_COLONY_SETTLERS_ONE:0 "Germanic Immigration"
 VK_COLONY_SETTLERS_TWO:0 "Germanic Mass Immigration"
 
 VK_COLONY_INDUSTRY_ONE:0 "German Industrial Model"
-VK_COLONY_INDUSTRY_TWO:0 "Slavery Based Industry"
+VK_COLONY_INDUSTRY_TWO:0 "Gelenkte Wirtschaft"
 
 GRU_FUTHARK:0 "Germanic Culture Enforcement"
 GRU_FUTHARK_desc:0 "The Polish and Bohemian cultures has been declared a foreign hostile influence on Germanic culture and is to be phased out by the Germanic way of life."
@@ -4567,6 +4567,8 @@ AFRICAN_HRE_GOEBB_DEF: "the German Reich in Exile"
 
 RUS_Intervene_Germany: "Intervene the Weltkrieg"
 RUS_Intervene_Germany_desc: "The time has come for us to end the injustices inflicted from the Weltkrieg and strike back at the damnable German. Brest-Litovsk shall be avenged!"
+SOV_Intervene_Germany: "Intervene the Weltkrieg"
+SOV_Intervene_Germany_desc: "The time has come for us to end the injustices inflicted from the Weltkrieg and strike back at the damnable German. Brest-Litovsk shall be avenged!"
 
 
 ###

@@ -1,9 +1,10 @@
-﻿instant_effect = {
+instant_effect = {
 	### Variants ###
 	add_equipment_production = {
 		equipment = {
-			type = infantry_equipment_0
+			type = infantry_equipment_1
 		}
+		industrial_manufacturer = mio:TUR_ankara_tufek_organisation
 		requested_factories = 1
 		progress = 0.43
 		efficiency = 50
@@ -12,6 +13,7 @@
 		equipment = {
 			type = support_equipment_1
 		}
+		industrial_manufacturer = mio:TUR_sarsilmaz_organisation
 		requested_factories = 1
 		progress = 0.44
 		efficiency = 50
@@ -20,19 +22,10 @@
 		equipment = {
 			type = artillery_equipment_1
 		}
+		industrial_manufacturer = mio:TUR_mke_organisation
 		requested_factories = 1
 		progress = 0.83
 		efficiency = 50
-	}
-	add_equipment_production = {
-		equipment = {
-			type = ship_hull_light_2
-			creator = "TUR"
-			version_name = "Zafer Class"
-		}
-		requested_factories = 5
-		progress = 0.1
-		amount = 12
 	}
 }
 
@@ -46,6 +39,19 @@ division_template = {
 		cavalry = { x = 1 y = 0 }
 		cavalry = { x = 1 y = 1 }
 		cavalry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Deve Kolordu"
+	division_names_group = OTT_CAV_01
+	regiments = {
+		camelry = { x = 0 y = 0 }
+		camelry = { x = 0 y = 1 }
+		camelry = { x = 0 y = 2 }
+		camelry = { x = 1 y = 0 }
+		camelry = { x = 1 y = 1 }
+		camelry = { x = 1 y = 2 }
 	}
 }
 

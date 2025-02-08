@@ -1378,7 +1378,10 @@ RUS_less_focus_on_navy = {
 		original_tag = RUS
 	}
 	enable = {
-		GER = { is_faction_leader = yes }
+		OR = {
+			GER = { is_faction_leader = yes }
+			GRU = { is_faction_leader = yes }
+		}
 	}
 	abort_when_not_enabled = yes
 

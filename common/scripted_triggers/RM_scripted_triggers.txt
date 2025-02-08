@@ -219,6 +219,7 @@ is_not_excluded_from_stahlpakt_alliance = {
 		tag = PRI
 		tag = HAI
 		tag = DOM
+		tag = KLY
 	}
 }
 

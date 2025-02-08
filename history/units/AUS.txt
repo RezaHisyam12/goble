@@ -1,6 +1,3 @@
-﻿### Templates
-### Territorial Army Infantry Division
-
 division_template = {
 	name = "Infanteriedivision"
 	division_names_group = AUS_INF_01
@@ -32,8 +29,6 @@ division_template = {
 	}
 	priority = 2
 }
-### Territorial Army Cavalry
-
 division_template = {
 	name = "Kavalleriedivision"
 	division_names_group = AUS_CAV_01
@@ -62,8 +57,8 @@ division_template = {
 	name = "Kampfwagendivision"
 	division_names_group = AUS_ARM_01
 	regiments = {
-		medium_armor = { x = 0 y = 0 }
-		medium_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
 		motorized = { x = 1 y = 0 }
 		motorized = { x = 1 y = 1 }
 	}
@@ -73,324 +68,165 @@ division_template = {
 	priority = 2
 }
 
-### Land Units
 units = {
-### Landwehr Infantry
-### Vienna
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 11666
-		division_template = "Infanteriedivision"
-		start_experience_factor = 0.3
-	}
-	
-	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 2
-		}
-		location = 11666
-		division_template = "Infanteriedivision"
-		start_experience_factor = 0.3
-	}
-	#Sankt Polten
-	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 3
-		}
-		location = 704
-		division_template = "Infanteriedivision"
-		start_experience_factor = 0.3
-	}
-	#Linz
-	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 4
-		}
-		location = 9665
-		division_template = "Infanteriedivision"
-		start_experience_factor = 0.3
-	}
-	#Graz
-	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 5
-		}
-		location = 13575
-		division_template = "Infanteriedivision"
-		start_experience_factor = 0.3
-	}
-	#Innsbruck
-	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 6
-		}
-		location = 673
-		division_template = "Infanteriedivision"
-		start_experience_factor = 0.3
-	}
-	#Klagenfurt
-	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 7
-		}
-		location = 6673
-		division_template = "Infanteriedivision"
-		start_experience_factor = 0.3
-	}
-	#Salzburg
-	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 8
-		}
 		location = 688
 		division_template = "Infanteriedivision"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
-	#Bozen
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 9
-		}
-		location = 6675
+		location = 9627
 		division_template = "Infanteriedivision"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
-	#Trento
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 10
-		}
-		location = 9598
+		location = 11618
 		division_template = "Infanteriedivision"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
-	#Verona
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 11
-		}
-		location = 603
+		location = 11595
 		division_template = "Infanteriedivision"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 12
-		}
-		location = 11584
-		division_template = "Kavalleriedivision"
-		start_experience_factor = 0.3
+		location = 665
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
-	#Trieste
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 13
-		}
 		location = 6626
 		division_template = "Infanteriedivision"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
-	
-	
-	
-	#### Fast divisions ####
-	#Vienna
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 14
-		}
 		location = 11666
-		division_template = "Kraftfahrjägerdivision"
+		division_template = "Infanteriedivision"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
-	#Venice
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 15
-		}
-		location = 11584
-		division_template = "Kraftfahrjägerdivision"
+		location = 11666
+		division_template = "Infanteriedivision"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
-	#Laibach
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 16
-		}
-		location = 9627
-		division_template = "Kraftfahrjägerdivision"
+		location = 11634
+		division_template = "Infanteriedivision"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
-	#Linz
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 17
-		}
+		location = 6680
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		location = 3703
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		location = 704
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
 		location = 9665
-		division_template = "Kraftfahrjägerdivision"
+		division_template = "Infanteriedivision"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
-	
-	
-	#### Panzers ####
-	#Vienna
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 18
-		}
-		location = 11666
-		division_template = "Kraftfahrjägerdivision"
+		location = 688
+		division_template = "Infanteriedivision"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
-	#Graz
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 19
-		}
+		location = 6626
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division = {
+		location = 11735
+		division_template = "Infanteriedivision"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+
+	division = {
 		location = 13575
 		division_template = "Kraftfahrjägerdivision"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
-	
-	#### Territorial brigades ####
-	#Pola
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 20
-		}
-		location = 11735
-		division_template = "Alpenjägerdivision"
-		start_experience_factor = 0.1
+		location = 13575
+		division_template = "Kraftfahrjägerdivision"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
-	#Liechtenstein
+
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 21
-		}
-		location = 6680
+		location = 6673
 		division_template = "Alpenjägerdivision"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
-	#Marburg an der Drau
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 22
-		}
-		location = 596
+		location = 11618
 		division_template = "Alpenjägerdivision"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
-	#Udine
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 23
-		}
-		location = 9613
+		location = 6675
 		division_template = "Alpenjägerdivision"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
-	#Sarajevo
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 24
-		}
-		location = 11899
+		location = 9598
 		division_template = "Alpenjägerdivision"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
-	#Pressburg
+
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 25
-		}
-		location = 9692
-		division_template = "Alpenjägerdivision"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.7
-	}
-	
-	
-	#### Foreign Infantry ####
-	#Budapest
-	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 32
-		}
-		location = 9660
-		division_template = "Kavalleriedivision"
+		location = 11666
+		division_template = "Kampfwagendivision"
 		start_experience_factor = 0.2
+		start_equipment_factor = 1
 	}
-	#Prague
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 33
-		}
-		location = 11542
-		division_template = "Kavalleriedivision"
+		location = 11666
+		division_template = "Kampfwagendivision"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
-	#Rome
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 34
-		}
-		location = 969
-		division_template = "Kavalleriedivision"
+		location = 9627
+		division_template = "Kampfwagendivision"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.1
 	}
-	#Torino
 	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 35
-		}
-		location = 3780
-		division_template = "Infanteriedivision"
+		location = 9627
+		division_template = "Kampfwagendivision"
 		start_experience_factor = 0.2
-	}
-	#Lemberg
-	division = {
-		division_name = {
-			is_name_ordered = yes
-			name_order = 36
-		}
-		location = 11479
-		division_template = "Kavalleriedivision"
-		start_experience_factor = 0.2
+		start_equipment_factor = 0.1
 	}
 }
 
@@ -400,6 +236,7 @@ instant_effect = {
 		equipment = {
 			type = infantry_equipment_1
 		}
+		industrial_manufacturer = mio:AUS_steyr_organisation
 		requested_factories = 4
 		progress = 0.82
 		efficiency = 100
@@ -408,6 +245,7 @@ instant_effect = {
 		equipment = {
 			type = artillery_equipment_1
 		}
+		industrial_manufacturer = mio:AUS_bohler_organisation
 		requested_factories = 2
 		progress = 0.83
 		efficiency = 100
@@ -416,6 +254,7 @@ instant_effect = {
 		equipment = {
 			type = support_equipment_1
 		}
+		industrial_manufacturer = mio:AUS_leopold_gasser_waffenfabrik_organisation
 		requested_factories = 1
 		progress = 0.44
 		efficiency = 100
@@ -427,6 +266,7 @@ instant_effect = {
 				type = light_tank_chassis_1
 				version_name = "leKpfW M.35"
 			}
+			industrial_manufacturer = mio:AUS_graef_stift_organisation
 			requested_factories = 1
 			progress = 0.59
 			efficiency = 100
@@ -437,10 +277,10 @@ instant_effect = {
 			equipment = {
 				type = light_tank_equipment_1
 			}
+			industrial_manufacturer = mio:AUS_graef_stift_organisation
 			requested_factories = 1
 			progress = 0.59
 			efficiency = 100
 		}
 	}
 }
-

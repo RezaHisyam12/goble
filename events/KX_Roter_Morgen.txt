@@ -2838,12 +2838,6 @@ country_event = { # VKR claims
 				1320 = {
 					add_claim_by = VKR
 				}
-				89 = {
-					add_claim_by = VKR
-				}
-				1140 = {
-					add_claim_by = VKR
-				}
 	}
 }
 

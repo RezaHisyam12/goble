@@ -216,10 +216,7 @@ FRA_eyes_on_GRU = {
 	}
 	enable = {
 		is_neighbor_of = GRU
-		GRU = {
-			has_socialist_government = no
-			has_capitulated = no
-		}
+		GRU = { has_capitulated = no }
 	}
 	abort_when_not_enabled = yes
 
@@ -231,7 +228,12 @@ FRA_eyes_on_GRU = {
 	ai_strategy = {
 		type = front_armor_score
 		id = GRU
-		value = 100
+		value = 250
+	}
+	ai_strategy = {
+		type = front_unit_request
+		area = globally
+		value = -25
 	}
 	ai_strategy = {
 		type = front_unit_request

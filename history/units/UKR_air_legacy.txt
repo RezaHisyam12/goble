@@ -1,6 +1,16 @@
-﻿air_wings = {
+air_wings = {
 	202 = {
 		fighter_equipment_1 = {
+			owner = "UKR"
+			amount = 100
+			creator = "GER"
+		}
+		fighter_equipment_0 = {
+			owner = "UKR"
+			amount = 100
+			creator = "GER"
+		}
+		fighter_equipment_0 = {
 			owner = "UKR"
 			amount = 100
 			creator = "GER"

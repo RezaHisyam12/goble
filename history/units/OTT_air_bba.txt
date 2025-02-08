@@ -1,4 +1,4 @@
-﻿instant_effect = {
+instant_effect = {
 	create_equipment_variant = {
 		name = "Hür.XIV"
 		type = small_plane_airframe_0
@@ -57,6 +57,7 @@ instant_effect = {
 			type = small_plane_airframe_0
 			version_name = "Hür.XIV"
 		}
+		industrial_manufacturer = mio:TUR_hurkus_organisation
 		requested_factories = 2
 		progress = 0.47
 		efficiency = 50

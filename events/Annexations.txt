@@ -2253,18 +2253,6 @@ country_event = { #HUN liberation
 				}
 				if = {
 					limit = {
-						81 = { is_owned_and_controlled_by = GRU }
-					}
-					transfer_state = 81
-				}
-				if = {
-					limit = {
-						46 = { is_owned_and_controlled_by = GRU }
-					}
-					transfer_state = 46
-				}
-				if = {
-					limit = {
 						1099 = { is_owned_and_controlled_by = GRU }
 					}
 					transfer_state = 1099
@@ -2281,15 +2269,20 @@ country_event = { #HUN liberation
 					}
 					transfer_state = 1105
 				}
+				if = {
+					limit = {
+						107 = { is_owned_and_controlled_by = GRU }
+					}
+					transfer_state = 107
+				}
 				add_state_claim = 109
 				add_state_claim = 1102
 				add_state_claim = 794
-				add_state_claim = 1128
-				add_state_claim = 81
-				add_state_claim = 46				
+				add_state_claim = 1128			
 				add_state_claim = 1099	
 				add_state_claim = 103	
 				add_state_claim = 1105	
+				add_state_claim = 107	
 			}
 		}
 		set_autonomy = { target = HUN autonomy_state = RM_Stahlpakt_member }

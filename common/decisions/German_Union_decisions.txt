@@ -3038,6 +3038,12 @@ GRU_germania_plan_decisions = {
 			1121 = {
 				remove_claim_by = ROOT
 			}
+			1119 = {
+				remove_claim_by = ROOT
+			}
+			73 = {
+				remove_claim_by = ROOT
+			}
 		}
 	}
 	#
@@ -3574,6 +3580,12 @@ GRU_germania_plan_decisions = {
 				remove_claim_by = ROOT
 			}
 			1121 = {
+				remove_claim_by = ROOT
+			}
+			1119 = {
+				remove_claim_by = ROOT
+			}
+			73 = {
 				remove_claim_by = ROOT
 			}
 		}
@@ -10107,13 +10119,29 @@ GRU_expansion_three_volksland_hypoborea = {
 						
 						add_equipment_to_stockpile = {
 						type = infantry_equipment_1
-						amount = 4000
+						amount = 40000
 						} 
 						add_equipment_to_stockpile = {
 						type = support_equipment
-						amount = 100
+						amount = 1000
 						}
 						add_manpower = 40000
+						remove_dynamic_modifier = { modifier = UKR_breadbasket_of_europe_modifier }
+						remove_dynamic_modifier = { modifier = UKR_ukrainian_army }
+						remove_dynamic_modifier = { modifier = UKR_borotbyst_uprising_state }
+						remove_dynamic_modifier = { modifier = UKR_cornbasket_of_europe_modifier }
+						remove_dynamic_modifier = { modifier = UKR_galician_resistance }
+						remove_dynamic_modifier = { modifier = UKR_rebel_state }
+						remove_idea = UKR_borotbyst_uprising
+						remove_idea = UKR_nationalist_resistance
+						remove_idea = UKR_nationalist_resistance_1
+						remove_idea = UKR_nationalist_resistance_2
+						remove_idea = UKR_dyrektoria_resistance
+						remove_idea = UKR_dyrektoria_resistance_1
+						remove_idea = UKR_dyrektoria_resistance_2
+						remove_idea = UKR_brotfrieden_idea_GER
+						remove_idea = UKR_KUB_Convention
+						remove_idea = UKR_KUB_Convention_2
 					}
 				VKR = {	country_event = rotermorgenmisc.200 }
 				VKR = {	country_event = { id = rotermorgenmisc.201 days = 2 } }
@@ -10176,11 +10204,11 @@ GRU_expansion_three_volksland_hypoborea = {
 						
 						add_equipment_to_stockpile = {
 						type = infantry_equipment_1
-						amount = 4000
+						amount = 40000
 						} 
 						add_equipment_to_stockpile = {
 						type = support_equipment
-						amount = 100
+						amount = 1000
 						}
 						add_manpower = 40000
 					}
@@ -10246,11 +10274,11 @@ GRU_expansion_three_volksland_hypoborea = {
 						
 						add_equipment_to_stockpile = {
 						type = infantry_equipment_1
-						amount = 4000
+						amount = 40000
 						} 
 						add_equipment_to_stockpile = {
 						type = support_equipment
-						amount = 100
+						amount = 1000
 						}
 						add_manpower = 40000
 					}
@@ -12823,7 +12851,7 @@ GRU_lebensraum_decisions = {
 			can_declare_war_on = FROM
 		}
 
-		targets = { LIT EST LAT BAT WHR UKR }
+		targets = { LIT EST LAT BAT WHR UKR ROM }
 		target_root_trigger = {
 			has_completed_focus = GRU_NMDVP_LEBENSRAUM
 		}

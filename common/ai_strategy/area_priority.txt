@@ -25,6 +25,42 @@ zero_focus_on_non_neighbour_fronts_if_losing_war = {
 	}
 }
 
+dont_protect_other_continent_allies_if_war_at_home_europe = {
+	allowed = {
+		is_in_europe = yes
+	}
+	enable = {
+		is_in_faction = yes
+		has_war = yes
+		any_home_area_neighbor_country = {
+			has_war_with = ROOT
+			has_capitulated = no
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		area = globally
+		value = -90
+	}
+	ai_strategy = {
+		type = front_unit_request
+		area = mainland_europe #counteracts globally above
+		value = 90
+	}
+	ai_strategy = {
+		type = front_unit_request
+		area = east_russia #counteracts globally above
+		value = 90
+	}
+	ai_strategy = {
+		type = front_unit_request
+		area = scandinavia #counteracts globally above
+		value = 90
+	}
+}
+
 germany_ignore_indian_islands = {
 	allowed = {
 		tag = GER

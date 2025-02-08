@@ -1,4 +1,4 @@
-﻿#Equipment Production
+#Equipment Production
 
 instant_effect = {
 
@@ -7,6 +7,7 @@ instant_effect = {
 			type = infantry_equipment_0
 			creator = "FNG"
 		}
+		industrial_manufacturer = mio:CHN_small_arms_industry_organisation
 		requested_factories = 2
 		progress = 0.1
 		efficiency = 50
@@ -17,6 +18,7 @@ instant_effect = {
 			type = artillery_equipment_1
 			creator = "FNG"
 		}
+		industrial_manufacturer = mio:CHN_artillery_industry_organisation
 		requested_factories = 1
 		progress = 0.3
 		efficiency = 50
@@ -26,6 +28,7 @@ instant_effect = {
 			type = support_equipment_1
 			creator = "FNG"
 		}
+		industrial_manufacturer = mio:CHN_support_equipment_industry_organisation
 		requested_factories = 1
 		progress = 0.3
 		efficiency = 50
@@ -198,7 +201,7 @@ units = {
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "Di 28 Shi"
+		name = "Di 29 Shi"
 		location = 934
 		division_template = "Fengtian Bubing Shi"
 		force_equipment_variants = { infantry_equipment_1 = { owner = "JAP" } }
@@ -206,7 +209,7 @@ units = {
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "Di 36 Shi"
+		name = "Di 15 Shi"
 		location = 9873
 		division_template = "Fengtian Bubing Shi"
 		force_equipment_variants = { infantry_equipment_1 = { owner = "JAP" } }
