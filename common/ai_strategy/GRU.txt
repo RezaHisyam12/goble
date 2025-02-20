@@ -19,7 +19,7 @@ GRU_hates_socialists = {
 	ai_strategy = {
 		type = antagonize
 		id = GRU
-		value = 300
+		value = 200
 	}
 	ai_strategy = {
 		type = diplo_action_acceptance
@@ -129,104 +129,39 @@ GRU_dislikes_entente = {
 	}
 }
 
-GRU_ignore_LUX = {
+GRU_dont_justify = {
 	allowed = {
 		original_tag = GRU
 	}
-	enable = {
-		LUX = {
-			is_in_faction_with = FRA
-		}
-		country_exists = LUX
-	}
-
+	enable = { always = yes }
 	abort_when_not_enabled = yes
 
-	ai_strategy = {
-		type = ignore_claim
-		id = LUX
-		value = 1
-	}
-}
-
-GRU_ignore_SWI = {
-	allowed = {
-		original_tag = GRU
-	}
-	enable = {
-		SWI = {
-			is_in_faction_with = FRA
-		}
-		country_exists = SWI
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = ignore_claim
-		id = SWI
-		value = 1
-	}
-}
-
-GRU_ignore_POL = {
-	allowed = {
-		original_tag = GRU
-	}
-	enable = {
-		POL = {
-			is_in_faction_with = FRA
-		}
-		country_exists = POL
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = ignore_claim
-		id = POL
-		value = 1
-	}
-}
-
-GRU_ignore_UKR = {
-	allowed = {
-		original_tag = GRU
-	}
-	enable = {
-		UKR = {
-			is_in_faction_with = FRA
-		}
-		country_exists = UKR
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = ignore_claim
-		id = UKR
-		value = 1
-	}
-}
-
-GRU_ignore_BEL = {
-	allowed = {
-		original_tag = GRU
-	}
-	enable = {
-		BEL = {
-			is_in_faction_with = FRA
-		}
-		country_exists = BEL
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = ignore_claim
-		id = BEL
-		value = 1
-	}
+	ai_strategy = { type = ignore_claim id = FRA value = 1 }
+	ai_strategy = { type = ignore_claim id = ENG value = 1 }
+	ai_strategy = { type = ignore_claim id = AUS value = 1 }
+	ai_strategy = { type = ignore_claim id = CZE value = 1 }
+	ai_strategy = { type = ignore_claim id = GAL value = 1 }
+	ai_strategy = { type = ignore_claim id = HUN value = 1 }
+	ai_strategy = { type = ignore_claim id = CRO value = 1 }
+	ai_strategy = { type = ignore_claim id = FRA value = 1 }
+	ai_strategy = { type = ignore_claim id = SWI value = 1 }
+	ai_strategy = { type = ignore_claim id = HOL value = 1 }
+	ai_strategy = { type = ignore_claim id = LUX value = 1 }
+	ai_strategy = { type = ignore_claim id = BEL value = 1 }
+	ai_strategy = { type = ignore_claim id = DEN value = 1 }
+	ai_strategy = { type = ignore_claim id = FLA value = 1 }
+	ai_strategy = { type = ignore_claim id = WLL value = 1 }
+	ai_strategy = { type = ignore_claim id = NOR value = 1 }
+	ai_strategy = { type = ignore_claim id = SWE value = 1 }
+	ai_strategy = { type = ignore_claim id = FIN value = 1 }
+	ai_strategy = { type = ignore_claim id = ICE value = 1 }
+	ai_strategy = { type = ignore_claim id = WHR value = 1 }
+	ai_strategy = { type = ignore_claim id = POL value = 1 }
+	ai_strategy = { type = ignore_claim id = UKR value = 1 }
+	ai_strategy = { type = ignore_claim id = WSU value = 1 }
+	ai_strategy = { type = ignore_claim id = LIT value = 1 }
+	ai_strategy = { type = ignore_claim id = BAT value = 1 }
+	ai_strategy = { type = ignore_claim id = EST value = 1 }
 }
 
 GRU_Volunteer = {
@@ -362,7 +297,7 @@ default_RR_Werwolf_production = {
 	ai_strategy = {
 		type = template_prio
 		id = RR_Werwolf
-		value = 50
+		value = 100
 	}
 }
 
@@ -1242,8 +1177,12 @@ STP_defend_eastern_front = {
 		}
 	}
 	enable = {
+		OR = {
+			country_exists = RUS
+			RUS = { has_capitulated = no }
+			has_war_with = RUS
+		}
 		is_ally_with = GRU
-		has_war_with = RUS
 	}
 	abort_when_not_enabled = yes
 

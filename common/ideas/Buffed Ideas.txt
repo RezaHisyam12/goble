@@ -40,7 +40,7 @@ ideas = {
 			picture = blackhundredists
 			allowed = { always = no }
 			modifier = {
-				war_support_weekly_factor = 0.001
+				weekly_casualties_war_support = 0.001
 				conscription_factor = 0.25
 				max_command_power = 15
 			}
@@ -64,7 +64,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				stability_weekly = 0.001
-				war_support_weekly_factor = 0.001
+				weekly_casualties_war_support = 0.001
 				conscription_factor = 0.25
 				max_command_power = 15
 				national_populist_drift = 0.02
@@ -77,7 +77,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				political_power_cost = -0.05
-				war_support_weekly_factor = 0.001
+				weekly_casualties_war_support = 0.001
 				conscription_factor = 0.25
 				max_command_power = 15
 				surrender_limit = 0.1
@@ -91,7 +91,7 @@ ideas = {
 			modifier = {
 				political_power_cost = -0.05
 				stability_weekly = 0.001
-				war_support_weekly_factor = 0.001
+				weekly_casualties_war_support = 0.001
 				conscription_factor = 0.25
 				surrender_limit = 0.1
 				max_command_power = 15
@@ -106,14 +106,37 @@ ideas = {
 			modifier = {
 				political_power_cost = -0.05
 				stability_weekly = 0.001
-				war_support_weekly_factor = 0.001
+				weekly_casualties_war_support = 0.001
 				conscription_factor = 0.25
-				max_command_power = 15
+				max_command_power = 30
+				command_power_gain_mult = 0.15
 				surrender_limit = 0.1
 				national_populist_drift = 0.02
 				mobilization_speed = 0.1
 				conscription = 0.02
-				training_time_army_factor = -0.2
+				training_time_factor = -0.25
+			}
+		}
+
+		RUS_imperial_glory_9 = { #all
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_imperial_glory_9"}
+			allowed = { always = no }
+			available = { RUS_russian_monarch = yes }
+			name = RUS_imperial_glory
+			picture = SOV_the_true_tsars
+			modifier = {
+				stability_factor = 0.15
+				research_speed_factor = 0.03
+				war_support_factor = 0.05
+				army_morale_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				surrender_limit = 0.03
+				army_defence_factor = 0.1
+				non_core_manpower = 0.01
+				compliance_growth = 0.15
+				army_attack_factor = 0.05
+				resistance_damage_to_garrison_on_our_occupied_states = 0.1
+				coordination_bonus = 0.05
 			}
 		}
 		#
@@ -171,9 +194,26 @@ ideas = {
 			name = RUS_Royal_Constitution_idea
 			modifier = {
 				stability_weekly = 0.01
-				war_support_weekly = 0.001
+				war_support_factor = 0.2
 				political_power_gain = 0.1
 				surrender_limit = 0.2
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				research_speed_factor = 0.05
+				compliance_growth = 0.1
+			}
+		}
+
+		RUS_eurasianist_passports = {
+			picture = eurasian_passport
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_weekly = 0.005
+				monthly_population = 0.2
+				foreign_subversive_activites = -0.1
+				surrender_limit = 0.02
 			}
 		}
 
@@ -187,8 +227,8 @@ ideas = {
 			}
 			cancel = {
 				OR = {
-					NOT = { GER = { has_war_with = FRA } }
-					NOT = { GRU = { has_war_with = FRA } }
+					GER = { has_war_with = FRA }
+					GRU = { has_war_with = FRA }
 				}
 			}
 			picture = advisors_france

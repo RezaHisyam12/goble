@@ -885,9 +885,8 @@ GRU_Cav_01 =
 	
 }
 
-GRU_SS_01 = 
-{
-	name = "rr Divisions"
+GRU_RR_01 = {
+	name = "RR Divisions"
 
 	for_countries = { GRU }
 

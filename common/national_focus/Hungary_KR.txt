@@ -1770,9 +1770,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HUN_patriotic_industry"
-			swap_ideas = {
+			if = {
+				limit = { has_idea = HUN_black_monday_2 }
+				swap_ideas = {
 				remove_idea = HUN_black_monday_2
 				add_idea = HUN_black_monday_3
+				}
 			}
 			43 = {
 				if = {
@@ -1835,9 +1838,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HUN_export_economy"
-			swap_ideas = {
+			if = {
+				limit = { has_idea = HUN_black_monday_3 }
+				swap_ideas = {
 				remove_idea = HUN_black_monday_3
 				add_idea = HUN_black_monday_4
+				}
 			}
 			add_ideas = HUN_export_focus_idea
 			add_political_power = 50
@@ -2000,7 +2006,9 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
-			remove_ideas = HUN_widespread_unemployment_idea
+			if = {
+				limit = { has_idea = HUN_widespread_unemployment_idea }			remove_ideas = HUN_widespread_unemployment_idea
+			}
 		}
 	}
 	###In the Black - Recovery
@@ -2028,7 +2036,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HUN_in_the_black"
-			remove_ideas = HUN_black_monday_4
+			if = {
+				limit = { has_idea = HUN_black_monday_4 }
+				remove_ideas = HUN_black_monday_4
+			}
 			add_stability = 0.075
 			add_political_power = 75
 			#hidden_effect = {
@@ -4886,7 +4897,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HUN_nandorfehervar"
 			add_political_power = 50
-			set_province_name = { id = 9599 name = "Nándorfehérvár"}
+			set_province_name = { id = 11586 name = "Nándorfehérvár"}
 			107 = {
 				add_core_of = HUN 
 				if = {

@@ -11071,7 +11071,6 @@ RUS_toz_organisation = {
 		name = toz_upgrade_2
 		icon = GFX_idea_toz_medal_MIO
 
-		ai_will_do = { base = 1000 }
 		position = { x = 1 y = 0 }
 
 		mutually_exclusive = { toz_upgrade_1 }
@@ -11089,6 +11088,7 @@ RUS_toz_organisation = {
 			}
 			custom_effect_tooltip = toz_upgrade_2_tt
 		}
+		ai_will_do = { base = 1000 }
 	}
 
 	trait = {
@@ -11110,7 +11110,6 @@ RUS_toz_organisation = {
 		name = toz_upgrade_4
 		icon = GFX_idea_toz_medal_MIO
 
-		ai_will_do = { base = 1000 }
 		position = { x = 8 y = 0 }
 
 		mutually_exclusive = { toz_upgrade_3 }
@@ -11128,6 +11127,7 @@ RUS_toz_organisation = {
 			}
 			custom_effect_tooltip = toz_upgrade_4_tt
 		}
+		ai_will_do = { base = 1000 }
 	}
 
 	trait = {
@@ -11151,7 +11151,6 @@ RUS_toz_organisation = {
 		name = toz_upgrade_1_2
 		icon = GFX_idea_toz_medal_MIO
 
-		ai_will_do = { base = 1000 }
 		any_parent = { toz_upgrade_1 toz_upgrade_2 }
 
 		position = { x = 2 y = 1 }
@@ -11171,6 +11170,7 @@ RUS_toz_organisation = {
 			}
 			custom_effect_tooltip = toz_upgrade_1_2_tt
 		}
+		ai_will_do = { base = 1000 }
 	}
 
 	trait = {
@@ -11211,7 +11211,6 @@ RUS_toz_organisation = {
 
 		any_parent = { toz_upgrade_3 toz_upgrade_4 }
 
-		ai_will_do = { base = 1000 }
 		position = { x = 7 y = 1 }
 
 		mutually_exclusive = { toz_upgrade_1_4 }
@@ -11229,6 +11228,7 @@ RUS_toz_organisation = {
 			}
 			custom_effect_tooltip = toz_upgrade_1_5_tt
 		}
+		ai_will_do = { base = 1000 }
 	}
 
 	trait = {

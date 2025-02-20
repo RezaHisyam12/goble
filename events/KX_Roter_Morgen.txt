@@ -7959,3 +7959,53 @@ country_event = { #Removing a country from the economic sphere
 		GRU_remove_from_zollverein = yes
 	}
 }
+
+country_event = { #Two-front war with France and Russia, only available when Russia attacks
+	id = rotermorgen.1101
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgen.1101" }
+	title = rotermorgen.1101.t
+	desc = rotermorgen.1101.d
+	picture = GFX_report_event_generic_towar
+
+	fire_only_once = yes
+
+	trigger = { #This is to check and make sure that it's a defensive war with Russia.
+		tag = GRU
+		has_war_with = FRA
+		OR = {
+			has_war_with = SOV
+			has_war_with = RUS
+		}
+		NOT = {
+			has_offensive_war_with = SOV
+		}
+		NOT = {
+			has_offensive_war_with = RUS
+		}
+	}
+
+	option = { # Activates defense and org buff for 730 days.
+		name = rotermorgen.1101.a
+		add_timed_idea = {
+			idea = GER_two_front_idea
+			days = 730
+		}
+	}
+}
+
+country_event = { # Puppet Buff
+	id = rotermorgenmisc.1102
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.1102" }
+	title = rotermorgenmisc.1102.t
+	desc = rotermorgenmisc.1102.d
+	picture = GFX_report_event_generic_towar
+	is_triggered_only = yes
+	
+	option = {
+		name = rotermorgenmisc.1102.a
+		add_timed_idea = {
+			idea = VK_COLONY_TRAINING_ARMY
+			days = 730
+		}
+	}
+}

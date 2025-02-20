@@ -21,7 +21,6 @@ autonomy_state = {
 		extra_trade_to_overlord_factor = 0.4
 		overlord_trade_cost_factor = -0.5
 		cic_to_overlord_factor = 0.10
-		mic_to_overlord_factor = 0.10
 		autonomy_gain_global_factor = -0.5
 	}
 

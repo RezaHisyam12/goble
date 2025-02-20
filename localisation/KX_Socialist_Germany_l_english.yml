@@ -26,7 +26,7 @@ GRU_zollverein: "Zollverein"
 GRU_may_now_invite_sphere:0 "Unaligned and subject nations may now be invited into German's sphere of economic influence\n"
 
 GRU_zollverein_category:0 "The Zollverein"
-GRU_zollverein_category_desc:0 "During the Tenth International Congress, we have decided to embark on an ambitious plan of industrial and economic investment for all developing nations that wish to apply. We will work together to make the world a better place for us all."
+GRU_zollverein_category_desc:0 "During the International Congress, we have decided to embark on an ambitious plan of industrial and economic investment for all developing nations that wish to apply. We will work together to make the world a better place for us all."
 
 GRU_zollverein_economic_sphere:0 "Zollverein"
 GRU_zollverein_economic_sphere_desc:0 "This represents the overall boost to our economy received from our central place within the Zollverein. The more members we add, and the greater their industry, the better off we become."
@@ -1101,6 +1101,7 @@ GRU_RED_MILITIAS:0 "Red Militia"
 GRU_COMMUNAL_HOUSING:0 "Communal Housing"
 GRU_SUCCDUM:0 "Socialist Democracy"
 
+stahlpakt_defense_spirit:0 "Legacy of Weltkrieg"
 
 VK_COLONY_ONE:0 "Early Colonization"
 VK_COLONY_TWO:0 "Ongoing Colonization"
@@ -1111,6 +1112,8 @@ VK_COLONY_SETTLERS_TWO:0 "Germanic Mass Immigration"
 
 VK_COLONY_INDUSTRY_ONE:0 "German Industrial Model"
 VK_COLONY_INDUSTRY_TWO:0 "Gelenkte Wirtschaft"
+
+VK_COLONY_TRAINING_ARMY:0 "Rekrutierungsplan"
 
 GRU_FUTHARK:0 "Germanic Culture Enforcement"
 GRU_FUTHARK_desc:0 "The Polish and Bohemian cultures has been declared a foreign hostile influence on Germanic culture and is to be phased out by the Germanic way of life."
@@ -4528,6 +4531,16 @@ rotermorgen.1007.d:0 "With the passing of the Authorisation Act and the reform o
 rotermorgen.1007.a:0 "Down with the conspirators!"
 rotermorgen.1007.a.tt:0 "§V::::::::::::::::::::::::: T O P S E C R E T :::::::::::::::::::::::::§!\n\nOperation §7\"Hummingbird\"§! comes into effect, §Lpunitive§! units will be sent against the following conspirators £RR_guard£ RR:\n\n£VS_fhuerer_texticon£ VS-Obergruppenführer §YErnst Röhma§!\n£VS_fhuerer_texticon£ VS-Gruppenführer §YKarl Ernst§!\n£nazbol_texticon£ Reichsleiter §YGregor Strasser§!\n£red_guard_texticon£ Wilhelm Peake, the leader «SMEPD-M»\n£red_guard_texticon£ Ernst Telman, the leader «SMEPD-S»\n£radsoc_rev_texticon£ Karl Liebknect, the leader «SPD-R»\n£radsoc_rev_texticon£ Rudolph Rocker, the leader «FAUD»\n\n§gas well as:§! Kurt Schumacher, Konrad Adenauer, Rudolf Hilferding, Karl Artelt.\n\n§V::::::::::::::::::::::::: T O P S E C R E T :::::::::::::::::::::::::§!\n\n"
 
+rotermorgen.1101.t:0 "The Reich Besieged"
+rotermorgen.1101.d:0 "Following the Weltkrieg, Russia was absolutely humiliated and cut down to size. Despite their expansionist agenda as of late, most policy experts within Germany agreed that Ivan would never again challenge our might--Today, we were proven horrendously wrong by a formal declaration of war from the East. Russian troops have crossed the borders and reports are coming in of attacks everywhere. It's debatable if we were ready for a war with the Communards, let alone this..."
+rotermorgen.1101.a:0 "But we will hold."
+
+rotermorgenmisc.1102.t:0 "Before the Storm"
+rotermorgenmisc.1102.d:0 "Following the Weltkrieg, Russia was absolutely humiliated and cut down to size. Despite their expansionist agenda as of late, most policy experts within Germany agreed that Ivan would never again challenge our might--Today, we were proven horrendously wrong. Russian troops have mobilized across the borders and reports are coming in of upcoming attacks. It's debatable if we were ready for a war with the Communards, let alone this..."
+rotermorgenmisc.1102.a:0 "We shall be ready."
+
+
+
 rmgoebbnews.1.t: "The victory of the \"NMDVP\" party led by Goebbels."
 rmgoebbnews.1.d: "Finally, the world became aware of the results of the first German Trade Union Congress, in which each of the designated parties, or political organizations with more than 20,000 members, participated. At first the leading leaders were candidates from the SMEPD party, which promotes a strongly Marxist form of syndicalism, the SPD-R, a radicalized wing of the pre-war SPD calling for "socialist democracy." But other parties also entered the race. The FAUD, which has lost most of its influence due to the legalization of leftist parties in Germany, and the NMDVP, which is led by Joseph Goebbels and is not accepted by other parties for its call for ultranationalism, promotion of traditional values, and call for national revival. The Congress ended with the «National Marxist German People's Party» winning a majority of seats in the government. This was a shocking development for some, because a month before the results, the «NMDVP» party had 32.1% of the vote, while the «SMEPD» held steady at 42.25%. Many believe that the election was rigged. Prominent left-wing critics pointed this out, but as time went on, their lives were cut short suddenly and under very strange circumstances. Goebbels supporters organized mass pogroms against left-wing publications, and hundreds of left-wing activists and prominent politicians were murdered in one month alone. No one had ever before managed to create such a massive and ideologically powerful propaganda throughout Germany. One way or another, only time will tell what surprises Germany has in store for the world this time...."
 rmgoebbnews.1.a: "How could this happen?"
@@ -4579,11 +4592,13 @@ RR_2_medium_armor_long:0 "Tank Battalion RR"
 RR_3_medium_armor:0 "Tank Battalion RR"
 RR_3_medium_armor_long:0 "Tank Battalion RR"
 RR_1_motorized:0 "Panzer-Grenadier Battalion RR"
+RR_1_motorized_tech:0 "Panzer-Grenadier Battalion RR"
 RR_1_motorized_long:0 "Panzer-Grenadier Battalion RR"
 RR_Werwolf:0 "Volkssturm"
 RR_Werwolf_long:0 "Volkssturm"
 RR_Werwolf_tech:0 "Volkssturm"
-RR_Werwolf_tech_effect:0 "Enables §Y$Volkssturm$§! battalions"
+RR_Werwolf_tech_effect:0 "Enables §Y$RR_Werwolf_tech$§! battalions"
+RR_1_motorized_tech_effect:0 "Enables §R$RR_1_motorized_tech$§!"
 
 ### Leaders
 

@@ -2202,7 +2202,7 @@ GRU_rheinmetall_organisation = {
 
 		available = {
 			FROM = {
-				owns_state = 215
+				owns_state = 780
 			}
 		}
 
@@ -2285,7 +2285,7 @@ GRU_rheinmetall_organisation = {
 
 		available = {
 			FROM = {
-				owns_state = 566
+				owns_state = 777
 			}
 		}
 
@@ -2399,7 +2399,7 @@ GRU_rheinmetall_organisation = {
 
 		available = {
 			FROM = {
-				owns_state = 224
+				owns_state = 64
 				has_tech = railway_gun
 			}
 		}

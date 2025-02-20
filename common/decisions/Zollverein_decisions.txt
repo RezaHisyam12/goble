@@ -3,7 +3,7 @@
 ###########################
 
 @GRU_zollverein_decision_cost = 150
-@GRU_zollverein_decision_time = 50
+@GRU_zollverein_decision_time = 90
 
 GRU_zollverein_category = {
 	GRU_join_zollverein = {
@@ -102,6 +102,11 @@ GRU_zollverein_category = {
 		cost = @GRU_zollverein_decision_cost
 		days_remove = @GRU_zollverein_decision_time
 
+		modifier = { 
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.10
+		}
+
 		ai_will_do = { factor = 4 }
 
 		cancel_effect = {
@@ -124,7 +129,7 @@ GRU_zollverein_category = {
 				divide_temp_variable = { GRU_num_target_states = 2 }
 			}
 			round_temp_variable = GRU_num_target_states
-			clamp_temp_variable = { var = GRU_num_target_states min = 1 max = 4 }
+			clamp_temp_variable = { var = GRU_num_target_states min = 3 max = 6 }
 			meta_effect = {
 				text = { [STATE] = { save_event_target_as = target_value } }
 				STATE = "[?GRU_num_target_states]"

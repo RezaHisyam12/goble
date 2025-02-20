@@ -28,4 +28,68 @@ leader_traits = {
 		army_morale_factor = 0.1
 	}
 
+	###Tsar traits
+	RUS_emperor_of_all_russias = {
+		random = no
+		stability_factor = 0.05
+		political_power_gain = 0.1
+	}
+	RUS_emperor_of_all_russias_2 = {
+		random = no
+		stability_factor = 0.15
+		political_power_gain = 0.1
+		army_morale_factor = 0.1
+		conscription_factor = 0.1
+	}
+	RUS_imperial_advisory_council_trait = {
+		random = no
+		party_popularity_stability_factor = 0.1
+		political_advisor_cost_factor = -0.33
+	}
+	RUS_patron_of_sciences = {
+		random = no
+		research_speed_factor = 0.05
+		research_sharing_per_country_bonus = 0.1
+	}
+	RUS_imperial_life_guard = {
+		random = no
+		modifier_army_sub_unit_marines_max_org_factor = 0.1
+		grant_medal_cost_factor = -0.5
+	}
+	RUS_high_imperial_council_trait = {
+		random = no
+		political_power_gain = 0.1
+		political_advisor_cost_factor = -0.33
+	}
+	RUS_high_imperial_council_member = {
+		random = no
+		political_power_gain = 0.075
+	}
+	RUS_guiding_hand = {
+		random = no
+		political_power_factor = 0.05
+		party_popularity_stability_factor = 0.075
+	}
+	RUS_peoples_tsar = {
+		random = no
+		stability_factor = 0.05
+		war_support_factor = 0.05
+		conscription_factor = 0.05
+	}
+	RUS_figurehead_monarch = {
+		random = no
+		stability_factor = 0.05
+		compliance_gain = 0.01
+	}
+	RUS_wrangel_great = {
+		random = no
+		offence = 0.05
+		justify_war_goal_time = -0.25
+	}
+	RUS_vladimir_great = {
+		random = no
+		offence = 0.05
+		send_volunteer_size = 1
+	}
+
 }

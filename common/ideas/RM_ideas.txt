@@ -1924,6 +1924,19 @@ ideas = {
 				trade_cost_for_target_factor = -0.25
 			}
 		}
+		VK_COLONY_TRAINING_ARMY = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VK_COLONY_TRAINING_ARMY"}
+			picture = GRU_guard_2
+			allowed = { always = no }
+			modifier = {
+				conscription_factor = 0.25
+				national_populist_drift = 0.05
+				mobilization_speed = 0.15
+				training_time_factor = -0.50
+				training_time_army_factor = -0.25
+				minimum_training_level = -0.1
+			}
+		}
 		GRU_FUTHARK = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_FUTHARK"}
 			picture = GRU_FUTHARK

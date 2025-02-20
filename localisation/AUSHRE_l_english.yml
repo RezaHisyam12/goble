@@ -377,8 +377,10 @@ AUS_Rus_Left_desc:0 "While we dealt the Russian Bear a crippling blow in the Wel
 
 
 ####puppets##  
-
-
 crownland:0 "Crownland"
+
+###Russia###
+RUS_emperor_of_all_russias: "Emperor of All the Russias"
+RUS_emperor_of_all_russias_trait: "Emperor of All the Russias"
 
 

@@ -7,7 +7,7 @@ RR_Werwolf_generic = {
 	role = RR_Werwolf
 
 	upgrade_prio = {
-		factor = 2
+		factor = 10
 	}
 
 	RR_Werwolf_template_early = {
@@ -60,6 +60,44 @@ RR_Werwolf_generic = {
 				RR_Werwolf = 9
 				artillery_brigade = 3
 				anti_air_brigade = 1
+			}
+
+			support = {
+				helicopter_recon = 1
+				engineer = 1
+				helicopter_field_hospital = 1
+				anti_air = 1
+				helicopter_transport = 1
+			}
+		}
+	}
+	RR_Motorized_template_late = {
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			base = 1
+			modifier = {
+				factor = 0
+				NOT = { has_tech = sp_helicopter_artillery_observers_tech }
+				NOT = { has_tech = sp_helicopter_med_evac_tech }
+				NOT = { has_tech = sp_helicopter_transport_pods_tech }
+				NOT = { has_tech = RR_1_motorized_tech }
+			}
+			modifier = {
+				factor = 3
+				num_of_military_factories > 149
+			}
+			modifier = {
+				add = 1
+				has_reached_maximum_divisions = yes
+			}
+		}
+
+		target_template = {
+			regiments = {
+				RR_1_motorized = 9
+				mot_artillery_brigade = 3
+				mot_anti_air_brigade = 1
 			}
 
 			support = {

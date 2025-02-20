@@ -1,7 +1,51 @@
 ###########################
-# HRE Decisions
+# Fix Decisions
 ###########################	
 
+RUS_Economy_decisions = {
+	RUS_New_Eurasian_Capital = {
+		icon = GFX_decision_generic_focus
+		
+		visible = {
+			OR = {
+				has_completed_focus = RUS_Young_Eurasianists
+				has_completed_focus = RUS_Orthodox_Eurasianists
+				has_completed_focus = RUS_Left_Eurasianists
+			}
+			OR = {
+				252 = { is_owned_and_controlled_by = ROOT } #Nizhny
+				570 = { is_owned_and_controlled_by = ROOT } #Novosib
+				653 = { is_owned_and_controlled_by = ROOT } #EKB
+			}
+		}
+		available = {
+			OR = {
+				252 = { is_owned_and_controlled_by = ROOT } #Nizhny
+				570 = { is_owned_and_controlled_by = ROOT } #Novosib
+				653 = { is_owned_and_controlled_by = ROOT } #EKB
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+
+		cost = freedec?0
+		fire_only_once = yes
+		days_remove = 7
+		
+		highlight_states = {
+			highlight_provinces = { 1821 7274 11375 }
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision RUS_New_Eurasian_Capital"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision RUS_New_Eurasian_Capital"
+			country_event =  eurasia.33
+		}
+	}
+}
 TRM_russian_expansion = {
 
 	RUS_Start_The_Offensive_TRM = {
@@ -238,7 +282,7 @@ RUS_Foreign_Policy_decisions = {
 		}
 		
 		cost = 0
-		days_remove = 30
+		days_remove = 45
 		fire_only_once = yes
 		war_with_target_on_remove = yes
 
@@ -911,7 +955,7 @@ AFG_india_conquest = {
 			has_completed_focus = AFG_realize_mughal_ambitions
 		}
 		ai_will_do = {
-			factor = 100
+			factor = 50
 		}
 		fire_only_once = yes
 		cost = 100

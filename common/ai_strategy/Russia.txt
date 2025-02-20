@@ -1163,7 +1163,7 @@ RUS_crush_transamur = {
 	}
 	enable = {
 		has_war_with = TRM
-		surrender_progress < 0.3 #Once RUS starts losing heavily, it'll focus less on FER.
+		surrender_progress < 0.3 #Once RUS starts losing heavily, it'll focus less on TRM.
 	}
 	abort_when_not_enabled = yes
 
@@ -1306,6 +1306,41 @@ RUS_ignore_MON = {
 	}
 }
 
+RUS_crush_mongolia = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = MON
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = MON
+		value = 400
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = MON
+		value = 50
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 152 #Outer Mongolia
+		value = 30000
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = MON
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+}
+
 RUS_ignore_AFG = {
 	allowed = {
 		original_tag = RUS
@@ -1320,6 +1355,129 @@ RUS_ignore_AFG = {
 		type = ignore_claim
 		id = AFG
 		value = 1
+	}
+}
+
+RUS_crush_afghans = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = AFG
+		AFG = { has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = AFG
+		value = 50
+	}
+	ai_strategy = {
+		type = conquer
+		id = AFG
+		value = 100
+	}
+}
+
+RUS_crush_persians = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = PER
+		PER = { has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = PER
+		value = 50
+	}
+	ai_strategy = {
+		type = conquer
+		id = PER
+		value = 100
+	}
+}
+
+RUS_crush_ottomans = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = TUR
+		TUR = { has_capitulated = no }
+		any_neighbor_country = {
+			OR = {
+				tag = TUR
+				is_subject_of = TUR
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = TUR
+		value = 50
+	}
+	ai_strategy = {
+		type = conquer
+		id = TUR
+		value = 100
+	}
+}
+
+RUS_invade_straits = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = TUR
+		TUR = { has_capitulated = no }
+		GER = { is_faction_leader = no }
+		NOT = { has_war_with = INT }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invade
+		id = TUR
+		value = 200
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		tag = TUR
+		value = 25
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = TUR
+		value = 100
+	}
+}
+
+RUS_crush_turkestan = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = ETS
+		ETS = { has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = ETS
+		value = 50
+	}
+	ai_strategy = {
+		type = conquer
+		id = ETS
+		value = 100
 	}
 }
 
@@ -1380,7 +1538,7 @@ RUS_less_focus_on_navy = {
 	enable = {
 		OR = {
 			GER = { is_faction_leader = yes }
-			GRU = { is_faction_leader = yes }
+			GRU = { exists = yes }
 		}
 	}
 	abort_when_not_enabled = yes
@@ -1561,6 +1719,114 @@ RUS_protect_petrograd = {
 		subtract_fronts_from_need = no
 	}
 }
+RUS_crush_alash = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = ALO
+		ALO = { has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = ALO
+		value = 500
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = ALO
+		value = 70
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 136 #Kazakh Steppes
+		value = 10000
+	}
+}
+
+RUS_crush_bukhara = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = TRK
+		TRK = { has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = TRK
+		value = 500
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = TRK
+		value = 70
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 243 #Ferghana Valley
+		value = 10000
+	}
+}
+
+RUS_crush_kokand = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = KYR
+		KYR = { has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = KYR
+		value = 500
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = KYR
+		value = 70
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 245 #Transoxiana
+		value = 10000
+	}
+}
+
+RUS_crush_khiva = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = UZB
+		UZB = { has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = UZB
+		value = 500
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = UZB
+		value = 70
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 243 #Transcaspia
+		value = 10000
+	}
+}
+
 RUS_crush_central_asia = {
 	allowed = {
 		original_tag = RUS
@@ -1578,7 +1844,6 @@ RUS_crush_central_asia = {
 	ai_strategy = {
 		type = front_control
 		tag = ALO
-		ratio = 0.25
 		priority = 100
 		ordertype = front
 		execution_type = rush_weak
@@ -1587,7 +1852,6 @@ RUS_crush_central_asia = {
 	ai_strategy = {
 		type = front_control
 		tag = UZB
-		ratio = 0.25
 		priority = 100
 		ordertype = front
 		execution_type = rush_weak
@@ -1596,7 +1860,6 @@ RUS_crush_central_asia = {
 	ai_strategy = {
 		type = front_control
 		tag = KYR
-		ratio = 0.25
 		priority = 100
 		ordertype = front
 		execution_type = rush_weak
@@ -1605,7 +1868,6 @@ RUS_crush_central_asia = {
 	ai_strategy = {
 		type = front_control
 		tag = TRK
-		ratio = 0.25
 		priority = 100
 		ordertype = front
 		execution_type = rush_weak

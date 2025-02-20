@@ -8,6 +8,9 @@ shared_focus = {
 		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_SHARED_ESTABLISH_VK"
+			hidden_effect = {
+				country_event = { id =  rotermorgenmisc.1102 days = 30 }
+			}
 			add_ideas = VK_COLONY_ONE
 		}
 	}

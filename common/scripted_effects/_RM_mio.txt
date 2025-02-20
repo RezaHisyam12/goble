@@ -1764,6 +1764,24 @@ RUS_TOZ_Hand_Out_Medals = {
 		}
 		custom_effect_tooltip = RUS_TOZ_Medal_bcd_tt
 	}
+	else_if = {
+		limit = {
+			RUS_has_TOZ_attack_medal = no
+			RUS_has_TOZ_defense_medal = no
+			RUS_has_TOZ_org_medal = yes
+			RUS_has_TOZ_breakthrough_medal = no
+		}
+		custom_effect_tooltip = RUS_TOZ_Medal_c_tt
+	}
+	else_if = {
+		limit = {
+			RUS_has_TOZ_attack_medal = no
+			RUS_has_TOZ_defense_medal = no
+			RUS_has_TOZ_org_medal = no
+			RUS_has_TOZ_breakthrough_medal = yes
+		}
+		custom_effect_tooltip = RUS_TOZ_Medal_d_tt
+	}
 	custom_effect_tooltip = tooltip_white_line
 	custom_effect_tooltip = RUS_TOZ_Org_reset_tt
 	set_temp_variable = { TOZ_Divisions_Save = TOZ_Divisions }
@@ -1986,6 +2004,46 @@ RUS_TOZ_Hand_Out_Medals = {
 				}
 				add_unit_medal_to_latest_entry = {
 					unit_medals = RUS_TOZ_Medal_bcd
+				}
+				set_unit_organization = 0.01
+			}
+		}
+		else_if = {
+			limit = {
+				RUS_has_TOZ_attack_medal = no
+				RUS_has_TOZ_defense_medal = no
+				RUS_has_TOZ_org_medal = yes
+				RUS_has_TOZ_breakthrough_medal = no
+			}
+			random_country_division = {
+				limit = { unit_organization > 0.02 }
+				add_history_entry = {
+					key = RUS_TOZ_Medal_Award
+					subject = "RUS_TOZ_Medal_Award"
+					allow = yes
+				}
+				add_unit_medal_to_latest_entry = {
+					unit_medals = RUS_TOZ_Medal_c
+				}
+				set_unit_organization = 0.01
+			}
+		}
+		else_if = {
+			limit = {
+				RUS_has_TOZ_attack_medal = no
+				RUS_has_TOZ_defense_medal = no
+				RUS_has_TOZ_org_medal = no
+				RUS_has_TOZ_breakthrough_medal = yes
+			}
+			random_country_division = {
+				limit = { unit_organization > 0.02 }
+				add_history_entry = {
+					key = RUS_TOZ_Medal_Award
+					subject = "RUS_TOZ_Medal_Award"
+					allow = yes
+				}
+				add_unit_medal_to_latest_entry = {
+					unit_medals = RUS_TOZ_Medal_d
 				}
 				set_unit_organization = 0.01
 			}

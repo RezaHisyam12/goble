@@ -2958,7 +2958,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 150
+			factor = 140
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -3016,13 +3016,6 @@ GRU_germania_plan_decisions = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_austria_decision target: [From.GetName]"
 			clear_decision_attack_AI = yes
 			declare_war_on = {	type = annex_everything	target = AUS }
-			every_state = {
-				limit = {
-					OR = { is_core_of = AUS is_core_of = SLO is_core_of = FIU }
-					is_not_claim_or_core_of_ROOT = yes
-				}
-				add_claim_by = ROOT
-			}
 			1135 = {
 				remove_claim_by = ROOT
 			}
@@ -3095,6 +3088,10 @@ GRU_germania_plan_decisions = {
 				FROM = {
 				is_in_faction_with = FRA
 				}
+			}
+			modifier = {
+				factor = 0
+				country_exists = AUS
 			}
 			modifier = {
 				factor = 0
@@ -3196,7 +3193,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 145
+			factor = 135
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -3298,7 +3295,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 145
+			factor = 135
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -3399,7 +3396,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 145
+			factor = 135
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -3500,7 +3497,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 150
+			factor = 135
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -3560,13 +3557,6 @@ GRU_germania_plan_decisions = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_bohemia_decision target: [From.GetName]"
 			clear_decision_attack_AI = yes
 			declare_war_on = {	type = annex_everything	target = CZE }
-			every_state = {
-				limit = {
-					is_core_of = "CZE"
-					is_not_claim_or_core_of_ROOT = yes
-				}
-				add_claim_by = ROOT
-			}
 			1135 = {
 				remove_claim_by = ROOT
 			}
@@ -3809,13 +3799,6 @@ GRU_germania_plan_decisions = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_poland_decision target: [From.GetName]"
 			clear_decision_attack_AI = yes
 			declare_war_on = {	type = annex_everything	target = POL }
-			every_state = {
-				limit = {
-					is_core_of = "POL"
-					is_not_claim_or_core_of_ROOT = yes
-				}
-				add_claim_by = ROOT
-			}
 			713 = {
 				remove_claim_by = ROOT
 			}
@@ -10132,16 +10115,17 @@ GRU_expansion_three_volksland_hypoborea = {
 						remove_dynamic_modifier = { modifier = UKR_cornbasket_of_europe_modifier }
 						remove_dynamic_modifier = { modifier = UKR_galician_resistance }
 						remove_dynamic_modifier = { modifier = UKR_rebel_state }
-						remove_idea = UKR_borotbyst_uprising
-						remove_idea = UKR_nationalist_resistance
-						remove_idea = UKR_nationalist_resistance_1
-						remove_idea = UKR_nationalist_resistance_2
-						remove_idea = UKR_dyrektoria_resistance
-						remove_idea = UKR_dyrektoria_resistance_1
-						remove_idea = UKR_dyrektoria_resistance_2
-						remove_idea = UKR_brotfrieden_idea_GER
-						remove_idea = UKR_KUB_Convention
-						remove_idea = UKR_KUB_Convention_2
+						remove_ideas = UKR_borotbyst_uprising
+						remove_ideas = UKR_nationalist_resistance
+						remove_ideas = UKR_nationalist_resistance_1
+						remove_ideas = UKR_nationalist_resistance_2
+						remove_ideas = UKR_dyrektoria_resistance
+						remove_ideas = UKR_dyrektoria_resistance_1
+						remove_ideas = UKR_dyrektoria_resistance_2
+						remove_ideas = UKR_brotfrieden_idea
+						remove_ideas = UKR_brotfrieden_idea_GER
+						remove_ideas = UKR_KUB_Convention
+						remove_ideas = UKR_KUB_Convention_2
 					}
 				VKR = {	country_event = rotermorgenmisc.200 }
 				VKR = {	country_event = { id = rotermorgenmisc.201 days = 2 } }
@@ -12646,6 +12630,7 @@ GRU_lebensraum_decisions = {
 				tag = TTR
 				tag = RRF
 				tag = SCA
+				tag = ROM
 				}
 			}
 		}
@@ -12667,6 +12652,7 @@ GRU_lebensraum_decisions = {
 				tag = TTR
 				tag = RRF
 				tag = SCA
+				tag = ROM
 				}	
 			}
 		}
@@ -12685,6 +12671,12 @@ GRU_lebensraum_decisions = {
 				factor = 0
 				FROM = {
 				is_in_faction_with = RUS
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = AUS
 				}
 			}
 			modifier = {
@@ -12851,7 +12843,7 @@ GRU_lebensraum_decisions = {
 			can_declare_war_on = FROM
 		}
 
-		targets = { LIT EST LAT BAT WHR UKR ROM }
+		targets = { LIT EST LAT BAT WHR UKR }
 		target_root_trigger = {
 			has_completed_focus = GRU_NMDVP_LEBENSRAUM
 		}
@@ -12872,7 +12864,13 @@ GRU_lebensraum_decisions = {
 			modifier = {
 				factor = 0
 				FROM = {
-				is_in_faction_with = RUS
+					is_in_faction_with = RUS
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_in_faction_with = AUS
 				}
 			}
 			modifier = {

@@ -1,0 +1,31 @@
+ideas = {
+	division_command_spirit = {
+		stahlpakt_defense_spirit = {
+			ledger = army
+			picture = german_advisors
+			visible = {
+				OR = {
+					tag = GRU
+					tag = VKB
+					tag = VKR
+					tag = VKK
+					tag = VKM
+					tag = VSJ
+					tag = VST
+					tag = HYP
+					tag = VKN
+					tag = VOB
+				}
+			}
+			modifier = {
+				army_strength_factor = 0.10
+				army_core_defence_factor = 0.10
+				dig_in_speed_factor = 0.30
+			}
+			ai_will_do = {
+				factor = 5
+			}
+		}
+
+	}
+}

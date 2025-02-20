@@ -117,7 +117,15 @@ entente_bhc = {
 		is_in_faction_with = DEH
 		country_exists = BHC
 		NOT = {
-			has_war_with = AFG
+			OR = {
+				has_war_with = AFG
+				has_war_with = NEP
+				has_war_with = TIB
+				has_war_with = BRM
+				has_war_with = MAD
+				has_war_with = BHU
+				has_war_with = SKM
+			}
 		}
 	}
 
@@ -428,122 +436,51 @@ entente_invade_bhc = {
 	}
 }
 
-ENT_support_DEH_against_bharatiya = {
+entente_assist_delhi = {
 	allowed = {
-		is_in_faction_with = ENT
+		is_indian_tag = no
+	}
+	enable = {
 		is_in_faction_with = DEH
-		NOT = { tag = DEH }
-		is_american_tag = no
+		num_divisions > 4
+		DEH = {
+			OR = {
+				has_war_with = BHC
+				has_war_with = PRF
+				has_war_with = NEP
+			}
+		}
+		NOT = { surrender_progress > 0 }
 	}
 
-	enable = {
-		country_exists = BHC
-		OR = {
-			DEH = { has_war_with = BHC }
-			check_variable = { DEH.preparing_for_war_with_BHC^num > 0 }
-			check_variable = { BHC.preparing_for_war_with_DEH^num > 0 }
-			DEH = { has_wargoal_against = BHC }
-			DEH = { is_justifying_wargoal_against = BHC }
-			BHC = { has_wargoal_against = DEH }
-			BHC = { is_justifying_wargoal_against = DEH }
-		}
-	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = avoid_starting_wars
-		value = -200
-	}
-
-	ai_strategy = {
-		type = force_defend_ally_borders
-		id = DEH
-		value = 100
-	}
-
-	ai_strategy = {
-		type = front_unit_request
-		tag = BHC
-		value = 40
-	}
-	ai_strategy = {
-		type = prepare_for_war
-		id = BHC
+		type = support
+		id = "DEH"
 		value = 200
 	}
 	ai_strategy = {
-		type = conquer
-		id = BHC
-		value = 200 #counters avoid_starting_wars
+		type = send_volunteers_desire
+		id = "DEH"
+		value = 10000
 	}
 	ai_strategy = {
-		type = invasion_unit_request
-		tag = BHC
-		value = 10
-	}
-}
-
-ENT_support_DEH_against_princes = {
-	allowed = {
-		is_in_faction_with = ENT
-		is_in_faction_with = DEH
-		NOT = { tag = DEH }
-		is_american_tag = no
-	}
-
-	enable = {
-		country_exists = PRF
-		OR = {
-			DEH = { has_war_with = PRF }
-			check_variable = { DEH.preparing_for_war_with_PRF^num > 0 }
-			check_variable = { PRF.preparing_for_war_with_DEH^num > 0 }
-			DEH = { has_wargoal_against = PRF }
-			DEH = { is_justifying_wargoal_against = PRF }
-			PRF = { has_wargoal_against = DEH }
-			PRF = { is_justifying_wargoal_against = DEH }
-		}
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = avoid_starting_wars
-		value = -200
-	}
-
-	ai_strategy = {
-		type = force_defend_ally_borders
-		id = DEH
-		value = 100
-	}
-
-	ai_strategy = {
-		type = front_unit_request
-		tag = PRF
-		value = 40
-	}
-	ai_strategy = {
-		type = prepare_for_war
-		id = PRF
-		value = 200
-	}
-	ai_strategy = {
-		type = conquer
-		id = PRF
-		value = 200 #counters avoid_starting_wars
-	}
-	ai_strategy = {
-		type = invasion_unit_request
-		tag = PRF
-		value = 10
+		type = area_priority
+		id = india
+		value = 500
 	}
 }
 
 entente_assist_carlists = {
 	allowed = {
-		is_spanish_tag = no
+		is_italian_tag = yes
+		is_french_tag = yes
+		is_CANZACAF_tag = yes
+		is_indian_unifier_tag = yes
 	}
 	enable = {
-		is_in_faction_with = CAR
+		is_ally_with = CAR
 		num_divisions > 4
 		has_war_with = FRA
 		NOT = { surrender_progress > 0 }
@@ -580,10 +517,13 @@ entente_assist_carlists = {
 
 entente_assist_spain_kingdom = {
 	allowed = {
-		is_spanish_tag = no
+		is_italian_tag = yes
+		is_french_tag = yes
+		is_CANZACAF_tag = yes
+		is_indian_unifier_tag = yes
 	}
 	enable = {
-		is_in_faction_with = SPR
+		is_ally_with = SPR
 		num_divisions > 4
 		has_war_with = FRA
 		NOT = { surrender_progress > 0 }
@@ -620,10 +560,12 @@ entente_assist_spain_kingdom = {
 
 entente_assist_sicily = {
 	allowed = {
-		is_italian_tag = no
+		is_french_tag = yes
+		is_CANZACAF_tag = yes
+		is_indian_unifier_tag = yes
 	}
 	enable = {
-		is_in_faction_with = SIC
+		is_ally_with = SIC
 		num_divisions > 4
 		OR = {
 			has_war_with = FRA
@@ -664,10 +606,12 @@ entente_assist_sicily = {
 
 entente_hold_italy = {
 	allowed = {
-		is_italian_tag = no
+		is_french_tag = yes
+		is_CANZACAF_tag = yes
+		is_indian_unifier_tag = yes
 	}
 	enable = {
-		is_in_faction_with = SRD
+		is_ally_with = SRD
 		num_divisions > 4
 		NOT = { surrender_progress > 0 }
 		OR = {
@@ -708,7 +652,7 @@ entente_hold_italy = {
 
 entente_hold_france = {
 	enable = {
-		is_in_faction_with = NFA
+		is_ally_with = NFA
 		num_divisions > 4
 		has_war_with = FRA
 		FRA = { has_capitulated = no }
@@ -734,10 +678,13 @@ entente_hold_france = {
 
 entente_assist_portugal = {
 	allowed = {
-		NOT = { tag = POR }
+		is_italian_tag = yes
+		is_french_tag = yes
+		is_CANZACAF_tag = yes
+		is_indian_unifier_tag = yes
 	}
 	enable = {
-		is_in_faction_with = POR
+		is_ally_with = POR
 		num_divisions > 4
 		OR = {
 			has_war_with = CNT
