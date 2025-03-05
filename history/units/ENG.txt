@@ -281,8 +281,3 @@ instant_effect = {
 		}
 	}
 }
-
-focus = {
-	current = "ENG_tuc"
-	progress = 0
-}

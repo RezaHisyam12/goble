@@ -276,7 +276,16 @@ GRU_build_army = {
 default_RR_Werwolf_production = {
 	allowed = {
 		OR = {
-			original_tag = GRU
+			tag = GRU
+			tag = VKB
+			tag = VKR
+			tag = VKK
+			tag = VKM
+			tag = VSJ
+			tag = VST
+			tag = HYP
+			tag = VKN
+			tag = VOB
 		}
 	}
 	enable = {

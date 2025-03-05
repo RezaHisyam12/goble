@@ -312,6 +312,18 @@ GRU_SOCIAL_CREDIT_desc:0 "The Volksführer has come up with a new Treuepunktsyst
 GRU_german_millenia:0 "The Germanic Millennium"
 GRU_german_millenia_desc:0 "We have cemented our grasp over all the Germanic lands bringing forth a new age, a new millennium to show Germanic supremacy to the entire world, no one will ever bring down our order again. We can relax, and §Wait§!...."
 
+GRU_new_order:0 "The New Order"
+GRU_reinforce_bunker:0 "Reinforce Capital Fortifications"
+GRU_eastern_rail_plan:0 "Eastern Railway Plan"
+GRU_support_colonies:0 "Expand Volkskommissariat Budgets"
+GRU_ostwall:0 "Ostwall"
+GRU_first_plan:0 "Prelude to War"
+GRU_aid_plan:0 "Aid to Eastern Volkskommissariat"
+GRU_aid_plan_2:0 "Another Aid to Eastern Volkskommissariat"
+GRU_prepare_for_russia:0 "Defend At All Cost"
+GRU_prepare_for_russia_2:0 "Prepare for Counter Attacks"
+GRU_panzer_divisions:0 "Panzer Divisions"
+
 GRU_SMEPD_DIPLO:0 "World Revolution"
 GRU_SMEPD_DIPLO_desc:0 "We will carry the torch of the revolution into the world!"
 GRU_SMEPD_EXPORT_REVOLUTION:0 "Export the Fires of Revolution"
@@ -803,6 +815,7 @@ GRU_LIEBKNECHT_RETIRED:0 "Karl Liebknecht has announced his retirement"
 GRU_DEMOCRACY_FULLFILLED:0 "Has won the election"
 
 GRU_GREATER_DONE:0 "The §RGermania Plan§! has been completed."
+GRU_VK_EAST:0 "At least 2 §YEastern Volkskommissariat§! has been established."
 
 GRU_GCW_ENDED:0 "the German civil war is over"
 GRU_WIP:0 "In the distant future"
@@ -1955,6 +1968,9 @@ FAUD_tt_anarchism_spread:0 "Unlocks decisions to liberate neighbour nations."
 
 GRU_bolshevik_generals_get:0 "Former §RRed Army§! Generals if still in exile will join our cause."
 
+GRU_panzer_divisions_tt: "If §HBasic Medium Tank§! has been researched:\n£nato_unit_medium_armor_icon_small  Raise two §YPanzer Divisions§! with 6 §YMedium Tank§! and 4 §YMotorised§! battalions, 1 §YSupport Artillery§! support group, 1 §YEngineer§! support group, and 1 §YMotorised Recon§! support group."
+GRU_war_preparedness_buff_tt: "This will make our eastern front ally §Gprioritize a stronger defensive stance to repel any invasion from the East!§!"
+
 ###decisions###
 GRU_hydroelectricity_decisions:0 "Hydroelectricity"
 GRU_Damn_the_danube_decision:0 "Damm the Danube"
@@ -2229,6 +2245,14 @@ GRU_anarchism_spread_decision:0 "Liberate [From.GetNameDef]"
 GRU_Germania_Stadt_decisions:0 "Construction of Germania"
 GRU_Germania_Stadt_decisions_desc: "\n\n£germania_stadt£\n\n\n"
 GRU_Germania_Stadt_decision:0 "Start the construction of a new capital city."
+
+GRU_okw:0 "Oberkommando Nationales Volksheer"
+GRU_okw_desc: "the German Armed Forces High Command is also responsible for training and overseeing army of the Volkskommissariat"
+
+GRU_ostwall_idea:0 "Ostwall Program"
+GRU_MAF_stabilisation:0 "Stabilisation Priority"
+GRU_financing_colonies:0 "Financing the Volkskommissariat"
+GRU_financing_colonies_received:0 "Influx of Investment"
 
 ####puppets##  
 

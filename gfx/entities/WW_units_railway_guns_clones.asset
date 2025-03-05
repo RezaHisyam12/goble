@@ -1,0 +1,70 @@
+####### Super Heavy #######
+
+####################################################### England ###########################################################
+
+# BL 18-inch railway howitzer
+
+### ENG_super_heavy_railway_gun_entity
+entity = { 
+	clone = "ENG_super_heavy_railway_gun_entity"
+	name = "IMP_super_heavy_railway_gun_entity"
+}
+entity = { 
+	clone = "ENG_super_heavy_railway_gun_entity"
+	name = "SAF_super_heavy_railway_gun_entity"
+}
+entity = { 
+	clone = "ENG_super_heavy_railway_gun_entity"
+	name = "AST_super_heavy_railway_gun_entity"
+}
+
+####################################################### France ###########################################################
+
+# Obusier de 520 modèle 1916
+### FRA_super_heavy_railway_gun_entity
+entity = { 
+	clone = "FRA_super_heavy_railway_gun_entity"
+	name = "NFA_super_heavy_railway_gun_entity"
+}
+
+######################################################## Italy ###########################################################
+
+# Cannone da 381/40 AVS
+### ITA_super_heavy_railway_gun_entity
+entity = { 
+	clone = "ITA_super_heavy_railway_gun_entity"
+	name = "SRI_super_heavy_railway_gun_entity"
+}
+entity = { 
+	clone = "ITA_super_heavy_railway_gun_entity"
+	name = "SIC_super_heavy_railway_gun_entity"
+}
+entity = { 
+	clone = "ITA_super_heavy_railway_gun_entity"
+	name = "SRD_super_heavy_railway_gun_entity"
+}
+entity = { 
+	clone = "ITA_super_heavy_railway_gun_entity"
+	name = "PAP_super_heavy_railway_gun_entity"
+}
+
+####################################################### USA ##########################################################
+
+#14-inch M1920 railway gun
+### USA_super_heavy_railway_gun_entity
+entity = { 
+	clone = "USA_super_heavy_railway_gun_entity"
+	name = "CSA_super_heavy_railway_gun_entity"
+}
+entity = { 
+	clone = "USA_super_heavy_railway_gun_entity"
+	name = "PSA_super_heavy_railway_gun_entity"
+}
+entity = { 
+	clone = "USA_super_heavy_railway_gun_entity"
+	name = "TEX_super_heavy_railway_gun_entity"
+}
+entity = { 
+	clone = "USA_super_heavy_railway_gun_entity"
+	name = "NEE_super_heavy_railway_gun_entity"
+}

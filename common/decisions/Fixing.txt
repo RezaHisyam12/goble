@@ -319,7 +319,8 @@ RUS_Foreign_Policy_decisions = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision RUS_Intervene_Germany target: [From.GetName]"
-			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			set_country_flag = { flag = imminent_war days = 42 value = 1 }
+			setup_decision_attack_AI = yes
 			for_each_scope_loop = {
 				array = FROM.faction_members
 				if = {
@@ -362,8 +363,8 @@ RUS_Foreign_Policy_decisions = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove RUS_Intervene_Germany target: [From.GetName]"
+			clear_decision_attack_AI = yes
 			news_event = worldnews.472
-			clr_country_flag = RUS_GER_blocks_caucasus
 			effect_tooltip = {
 				every_other_country = {
 					limit = {
@@ -437,7 +438,9 @@ SOV_Spreading_The_Revolution_decisions = {
 
 		visible = {
 			OR = {
-				has_completed_focus = SOV_The_Final_Battle
+				has_completed_focus = RUS_The_Fourth_Internationale
+				has_completed_focus = RUS_Join_The_Internationale
+				has_completed_focus = DKB_Into_The_Future
 			}
 			can_declare_war_on = FROM
 			NOT = { has_global_flag = danzig_treaty_active }
@@ -496,7 +499,8 @@ SOV_Spreading_The_Revolution_decisions = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision SOV_Intervene_Germany target: [From.GetName]"
-			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			set_country_flag = { flag = imminent_war days = 42 value = 1 }
+			setup_decision_attack_AI = yes
 			for_each_scope_loop = {
 				array = FROM.faction_members
 				if = {
@@ -539,8 +543,8 @@ SOV_Spreading_The_Revolution_decisions = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SOV_Intervene_Germany target: [From.GetName]"
+			clear_decision_attack_AI = yes
 			news_event = worldnews.472
-			clr_country_flag = RUS_GER_blocks_caucasus
 			effect_tooltip = {
 				every_other_country = {
 					limit = {
@@ -966,6 +970,75 @@ AFG_india_conquest = {
 		remove_effect = {
 			country_event = afghanredux.113
 			log = "[GetDateText]: [Root.GetName]: Decision remove AFG_nasrullah_india"
+		}
+	}
+}
+
+NFA_reclaim_metropole_cat = {
+
+	NFA_La_Lutte_Finale = {
+		icon = generic_ignite_civil_war
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_country_flag = NFA_active_rebellion
+			}
+			modifier = {
+				factor = 0
+				ROOT_is_threatened = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = { default_attack_AI_trigger_FROM = yes }
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					GRU = {
+						has_war_with = FRA 
+					}
+				}
+			}
+		}
+		visible = {
+			owns_state = 459
+			can_declare_war_on = FRA
+			NOT = {
+				has_annex_war_goal = FRA
+			}
+		}
+		cost = 30
+		available = {
+			controls_state = 459
+			OR = {
+				FRA = { has_war_with = GER }
+				date > 1940.1.1
+			}
+		}
+
+		days_remove = 30
+		fire_only_once = yes
+
+		remove_effect = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				create_wargoal = {
+					target = FRA
+					type = annex_everything
+				}
+			}
+			else = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				FRA = { country_event =  nfa.110 } #Inform CoF that they will be attacked soon.
+			}
 		}
 	}
 }

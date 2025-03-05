@@ -1,0 +1,165 @@
+####################################################### ENGLAND ###########################################################
+
+# CRUISER SUBMARINE-------------------------------------------------------------------------------------
+
+# NUCLEAR POWERED SUBMARINE-----------------------------------------------------------------------------
+
+### ENG_ship_hull_nuclear_powered_submarine_entity
+entity = { 
+	clone = "ENG_ship_hull_nuclear_powered_submarine_entity"
+	name = "IMP_ship_hull_nuclear_powered_submarine_entity"
+}
+entity = { 
+	clone = "ENG_ship_hull_nuclear_powered_submarine_entity"
+	name = "SAF_ship_hull_nuclear_powered_submarine_entity"
+}
+entity = { 
+	clone = "ENG_ship_hull_nuclear_powered_submarine_entity"
+	name = "AST_ship_hull_nuclear_powered_submarine_entity"
+}
+
+####################################################### FRANCE ############################################################
+
+# CRUISER SUBMARINE-------------------------------------------------------------------------------------
+
+### FRA_ship_hull_cruiser_submarine_entity
+entity = { 
+	clone = "FRA_ship_hull_cruiser_submarine_entity"
+	name = "NFA_ship_hull_cruiser_submarine_entity"
+}
+
+####################################################### GERMANY ##########################################################
+
+# CRUISER SUBMARINE-------------------------------------------------------------------------------------
+
+### GER_ship_hull_cruiser_submarine_entity
+entity = { 
+	clone = "GER_ship_hull_cruiser_submarine_entity"
+	name = "MAF_ship_hull_cruiser_submarine_entity"
+}
+entity = { 
+	clone = "GER_ship_hull_cruiser_submarine_entity"
+	name = "GEA_ship_hull_cruiser_submarine_entity"
+}
+entity = { 
+	clone = "GER_ship_hull_cruiser_submarine_entity"
+	name = "BAT_ship_hull_cruiser_submarine_entity"
+}
+entity = { 
+	clone = "GER_ship_hull_cruiser_submarine_entity"
+	name = "LIT_ship_hull_cruiser_submarine_entity"
+}
+entity = { 
+	clone = "GER_ship_hull_cruiser_submarine_entity"
+	name = "BLR_ship_hull_cruiser_submarine_entity"
+}
+entity = { 
+	clone = "GER_ship_hull_cruiser_submarine_entity"
+	name = "UKR_ship_hull_cruiser_submarine_entity"
+}
+entity = { 
+	clone = "GER_ship_hull_cruiser_submarine_entity"
+	name = "AUS_ship_hull_cruiser_submarine_entity"
+}
+entity = { 
+	clone = "GER_ship_hull_cruiser_submarine_entity"
+	name = "POL_ship_hull_cruiser_submarine_entity"
+}
+entity = { 
+	clone = "GER_ship_hull_cruiser_submarine_entity"
+	name = "GRU_ship_hull_cruiser_submarine_entity"
+}
+
+####################################################### ITALY ###########################################################
+
+# CRUISER SUBMARINE-------------------------------------------------------------------------------------
+
+### ITA_ship_hull_cruiser_submarine_entity
+entity = { 
+	clone = "ITA_ship_hull_cruiser_submarine_entity"
+	name = "SRI_ship_hull_cruiser_submarine_entity"
+}
+entity = { 
+	clone = "ITA_ship_hull_cruiser_submarine_entity"
+	name = "SIC_ship_hull_cruiser_submarine_entity"
+}
+entity = { 
+	clone = "ITA_ship_hull_cruiser_submarine_entity"
+	name = "SRD_ship_hull_cruiser_submarine_entity"
+}
+entity = { 
+	clone = "ITA_ship_hull_cruiser_submarine_entity"
+	name = "PAP_ship_hull_cruiser_submarine_entity"
+}
+
+# NUCLEAR POWERED SUBMARINE-----------------------------------------------------------------------------
+
+####################################################### JAPAN ###########################################################
+
+# CRUISER SUBMARINE-------------------------------------------------------------------------------------
+
+### JAP_ship_hull_cruiser_submarine_entity
+entity = { 
+	clone = "JAP_ship_hull_cruiser_submarine_entity"
+	name = "FNG_ship_hull_cruiser_submarine_entity"
+}
+
+# NUCLEAR POWERED SUBMARINE-----------------------------------------------------------------------------
+
+
+####################################################### SOVIET ###########################################################
+
+# CRUISER SUBMARINE-------------------------------------------------------------------------------------
+### SOV_ship_hull_cruiser_submarine_entity
+entity = { 
+	clone = "SOV_ship_hull_cruiser_submarine_entity"
+	name = "RUS_ship_hull_cruiser_submarine_entity"
+}
+
+# NUCLEAR POWERED SUBMARINE-----------------------------------------------------------------------------
+### SOV_ship_hull_nuclear_powered_submarine_entity
+entity = { 
+	clone = "SOV_ship_hull_nuclear_powered_submarine_entity"
+	name = "RUS_ship_hull_nuclear_powered_submarine_entity"
+}
+
+
+######################################################## USA ############################################################
+
+# CRUISER SUBMARINE-------------------------------------------------------------------------------------
+### USA_ship_hull_cruiser_submarine_entity
+entity = { 
+	clone = "USA_ship_hull_cruiser_submarine_entity"
+	name = "CSA_ship_hull_cruiser_submarine_entity"
+}
+entity = { 
+	clone = "USA_ship_hull_cruiser_submarine_entity"
+	name = "PSA_ship_hull_cruiser_submarine_entity"
+}
+entity = { 
+	clone = "USA_ship_hull_cruiser_submarine_entity"
+	name = "TEX_ship_hull_cruiser_submarine_entity"
+}
+entity = { 
+	clone = "USA_ship_hull_cruiser_submarine_entity"
+	name = "NEE_ship_hull_cruiser_submarine_entity"
+}
+
+# NUCLEAR POWERED SUBMARINE-----------------------------------------------------------------------------
+### USA_ship_hull_nuclear_powered_submarine_entity
+entity = { 
+	clone = "USA_ship_hull_nuclear_powered_submarine_entity"
+	name = "CSA_ship_hull_nuclear_powered_submarine_entity"
+}
+entity = { 
+	clone = "USA_ship_hull_nuclear_powered_submarine_entity"
+	name = "PSA_ship_hull_nuclear_powered_submarine_entity"
+}
+entity = { 
+	clone = "USA_ship_hull_nuclear_powered_submarine_entity"
+	name = "TEX_ship_hull_nuclear_powered_submarine_entity"
+}
+entity = { 
+	clone = "USA_ship_hull_nuclear_powered_submarine_entity"
+	name = "NEE_ship_hull_nuclear_powered_submarine_entity"
+}

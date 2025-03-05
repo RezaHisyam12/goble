@@ -2267,6 +2267,11 @@ country_event = { # allignment
 		name = rotermorgenmisc.40.a
 		ai_chance = {
 			factor = 90
+			modifier = {
+				factor = 0
+				has_same_government_as_ROOT = no
+				}
+			}
 		}
 		separate_peace_all_wars = yes
 		if = {
@@ -2838,6 +2843,17 @@ country_event = { # VKR claims
 				1320 = {
 					add_claim_by = VKR
 				}
+				73 = { remove_claim_by = VKR }
+				1119 = { remove_claim_by = VKR }
+				1319 = { remove_claim_by = VKR }
+				89 = { remove_claim_by = VKR }
+				91 = { remove_claim_by = VKR }
+				1126 = { remove_claim_by = VKR }
+				1127 = { remove_claim_by = VKR }
+				1088 = { remove_claim_by = VKR }
+				1140 = { remove_claim_by = VKR }
+				1088 = { remove_claim_by = VKR }
+				1088 = { remove_claim_by = VKR }
 	}
 }
 
@@ -7634,7 +7650,6 @@ news_event = {
 		trigger = {
 			tag = GRU
 		}
-		add_named_threat = { threat = 5 name = GRU_named_threat_1 }
 	}
 }
 
@@ -7936,9 +7951,12 @@ country_event = { #Setup and monthly checking
 
 	immediate = {
 		if = {
-			limit = { NOT = { has_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere } } }
-			add_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere }
+			limit = { 
+				NOT = { 
+					has_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere } 
+				} 
 			}
+			add_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere }
 		}
 		GRU_recalculate_economic_integration = yes
 		country_event = { id = rotermorgen.1005 days = 30 }
@@ -8005,7 +8023,7 @@ country_event = { # Puppet Buff
 		name = rotermorgenmisc.1102.a
 		add_timed_idea = {
 			idea = VK_COLONY_TRAINING_ARMY
-			days = 730
+			days = 500
 		}
 	}
 }

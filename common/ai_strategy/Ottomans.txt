@@ -45,6 +45,18 @@ TUR_invade_egypt = {
 	enable = {
 		has_idea = OTT_Ottoman_Stand
 		has_war_with = EGY
+		SYR = {
+			OR = {
+				has_capitulated = yes
+				exists = no
+			}
+		}
+		PER = {
+			OR = {
+				has_capitulated = yes
+				exists = no
+			}
+		}
 	}
 	abort_when_not_enabled = yes
 

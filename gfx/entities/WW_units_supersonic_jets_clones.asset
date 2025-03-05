@@ -1,0 +1,135 @@
+####################################################### England ###########################################################
+
+#English Electric Lightning
+### ENG_supersonic_jet_plane_entity
+entity = { 
+	clone = "ENG_supersonic_jet_plane_entity"
+	name = "IMP_supersonic_jet_plane_entity"
+}
+entity = { 
+	clone = "ENG_supersonic_jet_plane_entity"
+	name = "SAF_supersonic_jet_plane_entity"
+}
+entity = { 
+	clone = "ENG_supersonic_jet_plane_entity"
+	name = "AST_supersonic_jet_plane_entity"
+}
+
+####################################################### France ###########################################################
+
+#Dassault Super Mystère
+### FRA_supersonic_jet_plane_entity
+entity = { 
+	clone = "FRA_supersonic_jet_plane_entity"
+	name = "NFA_supersonic_jet_plane_entity"
+}
+
+####################################################### Germany ###########################################################
+
+#Messerschmitt P.111X
+### GER_supersonic_jet_plane_entity
+entity = { 
+	clone = "GER_supersonic_jet_plane_entity"
+	name = "MAF_supersonic_jet_plane_entity"
+}
+entity = { 
+	clone = "GER_supersonic_jet_plane_entity"
+	name = "GEA_supersonic_jet_plane_entity"
+}
+entity = { 
+	clone = "GER_supersonic_jet_plane_entity"
+	name = "BAT_supersonic_jet_plane_entity"
+}
+entity = { 
+	clone = "GER_supersonic_jet_plane_entity"
+	name = "LIT_supersonic_jet_plane_entity"
+}
+entity = { 
+	clone = "GER_supersonic_jet_plane_entity"
+	name = "BLR_supersonic_jet_plane_entity"
+}
+entity = { 
+	clone = "GER_supersonic_jet_plane_entity"
+	name = "UKR_supersonic_jet_plane_entity"
+}
+entity = { 
+	clone = "GER_supersonic_jet_plane_entity"
+	name = "AUS_supersonic_jet_plane_entity"
+}
+entity = { 
+	clone = "GER_supersonic_jet_plane_entity"
+	name = "POL_supersonic_jet_plane_entity"
+}
+entity = { 
+	clone = "GER_supersonic_jet_plane_entity"
+	name = "GRU_supersonic_jet_plane_entity"
+}
+
+####################################################### Italy ###########################################################
+
+#Aerfer Sagittario 2
+### ITA_supersonic_jet_plane_entity
+entity = { 
+	clone = "ITA_supersonic_jet_plane_entity"
+	name = "SRI_supersonic_jet_plane_entity"
+}
+entity = { 
+	clone = "ITA_supersonic_jet_plane_entity"
+	name = "SIC_supersonic_jet_plane_entity"
+}
+entity = { 
+	clone = "ITA_supersonic_jet_plane_entity"
+	name = "SRD_supersonic_jet_plane_entity"
+}
+entity = { 
+	clone = "ITA_supersonic_jet_plane_entity"
+	name = "PAP_supersonic_jet_plane_entity"
+}
+
+####################################################### Japan ###########################################################
+
+#Nakajima Ki-20X
+### JAP_supersonic_jet_plane_entity
+entity = { 
+	clone = "JAP_supersonic_jet_plane_entity"
+	name = "FNG_supersonic_jet_plane_entity"
+}
+
+####################################################### Soviet ###########################################################
+
+#MiG-19
+### SOV_supersonic_jet_plane_entity
+entity = { 
+	clone = "SOV_supersonic_jet_plane_entity"
+	name = "RUS_supersonic_jet_plane_entity"
+}
+
+####################################################### Sweden ###########################################################
+
+#SAAB 32 Lansen
+### SWE_supersonic_jet_plane_entity
+entity = { 
+	clone = "SWE_supersonic_jet_plane_entity"
+	name = "SCA_supersonic_jet_plane_entity"
+}
+
+######################################################### USA #############################################################
+
+#F100 Super Sabre
+### USA_supersonic_jet_plane_entity
+entity = { 
+	clone = "USA_supersonic_jet_plane_entity"
+	name = "CSA_supersonic_jet_plane_entity"
+}
+entity = { 
+	clone = "USA_supersonic_jet_plane_entity"
+	name = "PSA_supersonic_jet_plane_entity"
+}
+entity = { 
+	clone = "USA_supersonic_jet_plane_entity"
+	name = "TEX_supersonic_jet_plane_entity"
+}
+entity = { 
+	clone = "USA_supersonic_jet_plane_entity"
+	name = "NEE_supersonic_jet_plane_entity"
+}

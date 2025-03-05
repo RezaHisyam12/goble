@@ -1,0 +1,154 @@
+####################################################### ENGLAND ############################################################
+
+#ENG land cruiser
+### ENG_land_cruiser_entity
+entity = { 
+	clone = "ENG_land_cruiser_entity"
+	name = "IMP_land_cruiser_entity"
+}
+entity = { 
+	clone = "ENG_land_cruiser_entity"
+	name = "SAF_land_cruiser_entity"
+}
+entity = { 
+	clone = "ENG_land_cruiser_entity"
+	name = "AST_land_cruiser_entity"
+}
+
+####################################################### FRANCE ############################################################
+
+#FRA land cruiser
+### FRA_land_cruiser_entity
+entity = { 
+	clone = "FRA_land_cruiser_entity"
+	name = "NFA_land_cruiser_entity"
+}
+
+####################################################### GERMANY ###########################################################
+
+#GER land cruiser 1
+### GER_land_cruiser_entity
+entity = { 
+	clone = "GER_land_cruiser_entity"
+	name = "MAF_land_cruiser_entity"
+}
+entity = { 
+	clone = "GER_land_cruiser_entity"
+	name = "GEA_land_cruiser_entity"
+}
+entity = { 
+	clone = "GER_land_cruiser_entity"
+	name = "BAT_land_cruiser_entity"
+}
+entity = { 
+	clone = "GER_land_cruiser_entity"
+	name = "LIT_land_cruiser_entity"
+}
+entity = { 
+	clone = "GER_land_cruiser_entity"
+	name = "BLR_land_cruiser_entity"
+}
+entity = { 
+	clone = "GER_land_cruiser_entity"
+	name = "UKR_land_cruiser_entity"
+}
+entity = { 
+	clone = "GER_land_cruiser_entity"
+	name = "POL_land_cruiser_entity"
+}
+entity = { 
+	clone = "GER_land_cruiser_entity"
+	name = "GRU_land_cruiser_entity"
+}
+
+
+#GER land cruiser 2
+### GER_land_cruiser_alt_0_entity
+entity = { 
+	clone = "GER_land_cruiser_alt_0_entity"
+	name = "MAF_land_cruiser_alt_0_entity"
+}
+entity = { 
+	clone = "GER_land_cruiser_alt_0_entity"
+	name = "GEA_land_cruiser_alt_0_entity"
+}
+entity = { 
+	clone = "GER_land_cruiser_alt_0_entity"
+	name = "BAT_land_cruiser_alt_0_entity"
+}
+entity = { 
+	clone = "GER_land_cruiser_alt_0_entity"
+	name = "LIT_land_cruiser_alt_0_entity"
+}
+entity = { 
+	clone = "GER_land_cruiser_alt_0_entity"
+	name = "BLR_land_cruiser_alt_0_entity"
+}
+entity = { 
+	clone = "GER_land_cruiser_alt_0_entity"
+	name = "UKR_land_cruiser_alt_0_entity"
+}
+entity = { 
+	clone = "GER_land_cruiser_alt_0_entity"
+	name = "AUS_land_cruiser_alt_0_entity"
+}
+entity = { 
+	clone = "GER_land_cruiser_alt_0_entity"
+	name = "POL_land_cruiser_alt_0_entity"
+}
+entity = { 
+	clone = "GER_land_cruiser_alt_0_entity"
+	name = "GRU_land_cruiser_alt_0_entity"
+}
+
+######################################################### ITALY #############################################################
+
+#ITA land cruiser 2
+### ITA_land_cruiser_entity
+entity = { 
+	clone = "ITA_land_cruiser_entity"
+	name = "SRI_land_cruiser_entity"
+}
+entity = { 
+	clone = "ITA_land_cruiser_entity"
+	name = "SIC_land_cruiser_entity"
+}
+entity = { 
+	clone = "ITA_land_cruiser_entity"
+	name = "SRD_land_cruiser_entity"
+}
+entity = { 
+	clone = "ITA_land_cruiser_entity"
+	name = "PAP_land_cruiser_entity"
+}
+
+
+######################################################## SOVIET ############################################################
+
+#SOV land cruiser
+### SOV_land_cruiser_entity
+entity = { 
+	clone = "SOV_land_cruiser_entity"
+	name = "RUS_land_cruiser_entity"
+}
+
+######################################################### USA ##############################################################
+
+#USA land cruiser
+### USA_land_cruiser_entity
+entity = { 
+	clone = "USA_land_cruiser_entity"
+	name = "CSA_land_cruiser_entity"
+}
+entity = { 
+	clone = "USA_land_cruiser_entity"
+	name = "PSA_land_cruiser_entity"
+}
+entity = { 
+	clone = "USA_land_cruiser_entity"
+	name = "TEX_land_cruiser_entity"
+}
+entity = { 
+	clone = "USA_land_cruiser_entity"
+	name = "NEE_land_cruiser_entity"
+}

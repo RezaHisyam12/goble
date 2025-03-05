@@ -2785,6 +2785,95 @@ ideas = {
 			removal_cost = -1
 			picture = natmarxdiplo
 		}
+		GRU_okw = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_weltpolitik_1" }
+			picture = german_advisors
+			allowed = { always = no }
+			modifier = {
+				send_volunteer_size = 2
+				experience_gain_army = 0.02
+				experience_gain_navy = 0.02
+				experience_gain_air = 0.02
+			}
+		}
+		GRU_ostwall_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_ostwall_idea" }
+			picture = advisors_germany
+			allowed = { always = no }
+			available = {
+				is_in_faction_with = GRU
+			}
+			modifier = {
+				production_speed_bunker_factor = 0.1
+			}
+		}
+		GRU_MAF_stabilisation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_MAF_stabilisation" }
+			picture = gru_cops
+			allowed = { always = no }
+			modifier = {
+				stability_weekly = 0.005
+			}
+		}
+		GRU_financing_colonies = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_financing_colonies" }
+			picture = VK_COLONYTHREE
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.4
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+			}
+		}
+		GRU_financing_colonies_received = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_financing_colonies_received" }
+			picture = GRU_heavy_industry
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.3
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				weekly_manpower = 150
+			}
+		}
+		GRU_wide_front_operations_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_wide_front_operations_idea" }
+			picture = generic_victors_of_ww1
+			allowed = { always = no }
+			modifier = {
+				army_morale_factor = 0.05
+				ai_focus_defense_factor = 0.5
+			}
+			targeted_modifier = {
+				tag = RUS
+				defense_bonus_against = 0.05
+			}
+		}
+		GRU_break_fortifications_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_break_fortifications_idea" }
+			picture = generic_victors_of_ww1
+			allowed = { always = no }
+			modifier = {
+				ground_attack_factor = 0.1
+				ai_focus_defense_factor = 0.25
+			}
+			targeted_modifier = {
+				tag = RUS
+				defense_bonus_against = 0.05
+			}
+		}
+		GRU_expanded_espionage_non_lar = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_expanded_espionage_non_lar" }
+			name = GER_expanded_espionage
+			picture = generic_spy_political
+			allowed = { always = no }
+			modifier = {
+				army_intel_factor = 0.05
+				civilian_intel_factor = 0.05
+				navy_intel_factor = 0.05
+				airforce_intel_factor = 0.05
+			}
+		}
 		
 		
 	}
@@ -3173,6 +3262,7 @@ ideas = {
 				air_equipment = 0.1
 			}
 		}
+
 
 	}
 

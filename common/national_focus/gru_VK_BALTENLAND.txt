@@ -31,6 +31,11 @@
 		cost = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTENLAND_START_COLONIZING"
+			swap_ideas = {
+				remove_idea = VK_COLONY_ONE
+				add_idea = VK_COLONY_TWO
+			}
+			custom_effect_tooltip = tooltip_white_line			
 			12 = {
 				add_core_of = VKB
 			}
@@ -52,10 +57,6 @@
 			1091 = {
 				add_core_of = VKB
 			}
-			swap_ideas = {
-							remove_idea = VK_COLONY_ONE
-							add_idea = VK_COLONY_TWO
-						}
 		}
 		prerequisite = { focus = VK_FOCUS_SHARED_MORE_SETTLERS  }
 		prerequisite = { focus = VK_FOCUS_SHARED_OUR_OWN_RR  }

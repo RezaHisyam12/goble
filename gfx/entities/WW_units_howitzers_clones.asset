@@ -1,0 +1,189 @@
+####################################################### ENGLAND ###########################################################
+
+#BL howitzer
+### ENG_super_heavy_artillery_entity
+entity = { 
+	clone = "ENG_super_heavy_artillery_entity"
+	name = "IMP_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "ENG_super_heavy_artillery_entity"
+	name = "SAF_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "ENG_super_heavy_artillery_entity"
+	name = "AST_super_heavy_artillery_entity"
+}
+
+####################################################### FRANCE ############################################################
+
+### Howitzers --------------------------------------------------------------------------------------------------------------
+
+#Canon de 220 L mle 1917
+### FRA_super_heavy_artillery_entity
+entity = { 
+	clone = "FRA_super_heavy_artillery_entity"
+	name = "NFA_super_heavy_artillery_entity"
+}
+
+### SP Howitzers -----------------------------------------------------------------------------------------------------------
+
+#Mortier 280 mm TR de Schneider sur affût-chenilles St Chamond
+### FRA_self_propelled_super_heavy_artillery_entity
+entity = { 
+	clone = "FRA_self_propelled_super_heavy_artillery_entity"
+	name = "NFA_self_propelled_super_heavy_artillery_entity"
+}
+
+####################################################### GERMANY ###########################################################
+
+
+#Haubitze M1
+### GER_super_heavy_artillery_entity
+entity = { 
+	clone = "GER_super_heavy_artillery_entity"
+	name = "MAF_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "GER_super_heavy_artillery_entity"
+	name = "GEA_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "GER_super_heavy_artillery_entity"
+	name = "BAT_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "GER_super_heavy_artillery_entity"
+	name = "LIT_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "GER_super_heavy_artillery_entity"
+	name = "BLR_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "GER_super_heavy_artillery_entity"
+	name = "UKR_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "GER_super_heavy_artillery_entity"
+	name = "AUS_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "GER_super_heavy_artillery_entity"
+	name = "POL_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "GER_super_heavy_artillery_entity"
+	name = "GRU_super_heavy_artillery_entity"
+}
+
+### SP Howitzers -----------------------------------------------------------------------------------------------------------
+
+#Karl-Gerät
+### GER_self_propelled_super_heavy_artillery_entity
+entity = { 
+	clone = "GER_self_propelled_super_heavy_artillery_entity"
+	name = "MAF_self_propelled_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "GER_self_propelled_super_heavy_artillery_entity"
+	name = "GEA_self_propelled_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "GER_self_propelled_super_heavy_artillery_entity"
+	name = "BAT_self_propelled_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "GER_self_propelled_super_heavy_artillery_entity"
+	name = "LIT_self_propelled_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "GER_self_propelled_super_heavy_artillery_entity"
+	name = "BLR_self_propelled_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "GER_self_propelled_super_heavy_artillery_entity"
+	name = "UKR_self_propelled_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "GER_self_propelled_super_heavy_artillery_entity"
+	name = "AUS_self_propelled_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "GER_self_propelled_super_heavy_artillery_entity"
+	name = "POL_self_propelled_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "GER_self_propelled_super_heavy_artillery_entity"
+	name = "GRU_self_propelled_super_heavy_artillery_entity"
+}
+
+####################################################### ITALY ############################################################
+
+
+#Obice da 305/17
+### ITA_super_heavy_artillery_entity
+entity = { 
+	clone = "ITA_super_heavy_artillery_entity"
+	name = "SRI_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "ITA_super_heavy_artillery_entity"
+	name = "SIC_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "ITA_super_heavy_artillery_entity"
+	name = "SRD_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "ITA_super_heavy_artillery_entity"
+	name = "PAP_super_heavy_artillery_entity"
+}
+####################################################### Japan ############################################################
+
+#Kunana Shiki
+### JAP_super_heavy_artillery_entity
+entity = { 
+	clone = "JAP_super_heavy_artillery_entity"
+	name = "FNG_super_heavy_artillery_entity"
+}
+
+######################################################## USA ##############################################################
+
+#240 mm howitzer M1
+### USA_super_heavy_artillery_entity
+entity = { 
+	clone = "USA_super_heavy_artillery_entity"
+	name = "CSA_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "USA_super_heavy_artillery_entity"
+	name = "PSA_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "USA_super_heavy_artillery_entity"
+	name = "TEX_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "USA_super_heavy_artillery_entity"
+	name = "NEE_super_heavy_artillery_entity"
+}
+
+####################################################### SOVIET ############################################################
+
+
+#280 mm mortar M1939 (Br-5)
+### SOV_super_heavy_artillery_entity
+entity = { 
+	clone = "SOV_super_heavy_artillery_entity"
+	name = "RUS_super_heavy_artillery_entity"
+}
+
+### SP Howitzers -----------------------------------------------------------------------------------------------------------
+
+#S-51
+### SOV_self_propelled_super_heavy_artillery_entity
+entity = { 
+	clone = "SOV_self_propelled_super_heavy_artillery_entity"
+	name = "RUS_self_propelled_super_heavy_artillery_entity"
+}

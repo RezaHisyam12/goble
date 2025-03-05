@@ -99,6 +99,7 @@ RUS_focus_on_ukraine = {
 	}
 	enable = {
 		is_faction_leader = yes
+		has_war_with = GER
 		OR = {
 			has_war = no
 			has_war_with = UKR
@@ -144,6 +145,7 @@ RUS_crush_ukraine = {
 	}
 	enable = {
 		has_war_with = UKR
+		has_war_with = GER
 		UKR = { has_capitulated = no }
 		has_equipment = { infantry_equipment > -10000 }
 		num_planes_stationed_in_regions = {
@@ -320,6 +322,7 @@ RUS_focus_on_baltic_duchy = {
 	}
 	enable = {
 		has_war_with = BAT
+		has_war_with = GER
 		OR = {
 			NOT = { has_war_with = UKR }
 			UKR = { has_capitulated = yes }
@@ -351,6 +354,7 @@ RUS_mop_up_baltic_duchy = {
 	}
 	enable = {
 		has_war_with = BAT
+		has_war_with = GER
 		OR = {
 			NOT = { has_war_with = UKR }
 			UKR = { has_capitulated = yes }
@@ -989,157 +993,6 @@ RUS_crush_germansocialist = {
 	}
 }
 
-RUS_focus_on_vkr = {
-	allowed = {
-		original_tag = RUS
-	}
-	enable = {
-		OR = {
-			has_war = no
-			has_war_with = VKR
-		}
-		VKR = {
-			exists = yes
-			has_capitulated = no
-			NOT = { is_ally_with = ROOT }
-		}
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = conquer
-		id = VKR
-		value = 300
-	}
-	ai_strategy = {
-		type = front_armor_score
-		id = VKR
-		value = 3000
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = VKR
-		value = 120
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = TRM
-		value = -25
-	}
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 130
-		value = 30000
-	}
-}
-RUS_crush_VKR = {
-	allowed = {
-		original_tag = RUS
-	}
-	enable = {
-		has_war_with = VKR
-		VKR = { has_capitulated = no }
-		has_manpower > 250000
-		stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
-		num_planes_stationed_in_regions = {
-			value > 1000
-			regions = { 130 }
-		}
-
-		#activate during the non-winter months
-		set_temp_variable = { frequency = global.num_days }
-		modulo_temp_variable = { frequency = 365 }
-		check_variable = { frequency > 90 } #early April
-		check_variable = { frequency < 300 } #late October
-
-		#activate every 25 days, then pause for another 25
-		set_temp_variable = { frequency = global.num_days }
-		modulo_temp_variable = { frequency = 50 }
-		check_variable = { frequency < 25 }
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = front_control
-		tag = VKR
-		priority = 100
-		ordertype = front
-		execution_type = rush_weak
-		execute_order = yes
-	}
-}
-RUS_focus_on_vk_baltic_duchy = {
-	allowed = {
-		original_tag = RUS
-	}
-	enable = {
-		has_war_with = VKB
-		OR = {
-			NOT = { has_war_with = VKR }
-			VKR = { has_capitulated = yes }
-		}
-		VKB = { has_capitulated = no }
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = front_unit_request
-		tag = VKB
-		value = 25
-	}
-	ai_strategy = {
-		type = conquer
-		id = VKB
-		value = 100
-	}
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 37 #vk_baltic States
-		value = 10000
-	}
-}
-
-RUS_mop_up_vk_baltic_duchy = {
-	allowed = {
-		original_tag = RUS
-	}
-	enable = {
-		has_war_with = VKB
-		OR = {
-			NOT = { has_war_with = VKR }
-			VKR = { has_capitulated = yes }
-		}
-		VKB = { has_capitulated = no }
-		has_manpower > 250000
-		stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
-		num_planes_stationed_in_regions = {
-			value > 1000
-			regions = { 37 } #vk_baltic States
-		}
-
-		#activate during the non-winter months
-		set_temp_variable = { frequency = global.num_days }
-		modulo_temp_variable = { frequency = 365 }
-		check_variable = { frequency > 90 } #early April
-		check_variable = { frequency < 300 } #late October
-
-		#activate every 25 days, then pause for another 25
-		set_temp_variable = { frequency = global.num_days }
-		modulo_temp_variable = { frequency = 50 }
-		check_variable = { frequency < 25 }
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = front_control
-		tag = VKB
-		priority = 100
-		ordertype = front
-		execution_type = rush_weak
-		execute_order = yes
-	}
-}
-
 RUS_eyes_on_transamur = {
 	allowed = {
 		original_tag = RUS
@@ -1698,7 +1551,7 @@ RUS_protect_petrograd = {
 		original_tag = RUS
 	}
 	enable = {
-		1325 = { #Karelia
+		146 = { #Karelia
 			controller = {
 				OR = {
 					has_war_with = ROOT
@@ -1953,7 +1806,7 @@ RUS_we_dont_need_garrisons = {
 
 	ai_strategy = {
 		type = garrison
-		value = -100
+		value = -200
 	}
 }
 
@@ -2012,6 +1865,82 @@ RUS_ignore_faraway_allies = {
 		type = dont_defend_ally_borders
 		id = NOR
 		value = 10
+	}
+}
+
+RUS_focus_on_vkr = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		OR = {
+			has_war = no
+			has_war_with = VKR
+		}
+		VKR = {
+			exists = yes
+			has_capitulated = no
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = VKR
+		value = 300
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 130 #Ukraine
+		value = 30000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 165 #Ukraine
+		value = 30000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = TRM
+		value = -25
+	}
+}
+
+RUS_focus_on_vk_baltic_duchy = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		OR = {
+			has_war = no
+			has_war_with = VKB
+		}
+		VKB = {
+			exists = yes
+			has_capitulated = no
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = VKB
+		value = 300
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 37 #vk_baltic States
+		value = 10000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 39 #Belarus
+		value = 30000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = TRM
+		value = -25
 	}
 }
 
@@ -2202,6 +2131,28 @@ RUS_build_rocket_site_tikhvin = {
 		id = rocket_site
 		target = 264
 		value = 2000
+	}
+}
+
+RUS_ignore_FNG = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		country_exists = FNG
+		NOT = { has_war_with = FNG }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore
+		id = FNG
+		value = 300
+	}
+	ai_strategy = {
+		type = ignore_claim
+		id = FNG
+		value = 1
 	}
 }
 

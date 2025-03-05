@@ -1,0 +1,149 @@
+####################################################### ENGLAND ###########################################################
+
+##########################
+# COMMAND TANKS #
+##########################
+
+### ENG_armored_signal_entity
+entity = { 
+	clone = "ENG_armored_signal_entity"
+	name = "IMP_armored_signal_entity"
+}
+entity = { 
+	clone = "ENG_armored_signal_entity"
+	name = "SAF_armored_signal_entity"
+}
+entity = { 
+	clone = "ENG_armored_signal_entity"
+	name = "AST_armored_signal_entity"
+}
+
+
+####################################################### FRANCE ###########################################################
+
+##########################
+# COMMAND TANKS #
+##########################
+
+### FRA_armored_signal_entity
+entity = { 
+	clone = "FRA_armored_signal_entity"
+	name = "NFA_armored_signal_entity"
+}
+
+
+####################################################### GERMANY ###########################################################
+
+##########################
+# COMMAND TANKS #
+##########################
+
+### GER_armored_signal_entity
+entity = { 
+	clone = "GER_armored_signal_entity"
+	name = "MAF_armored_signal_entity"
+}
+entity = { 
+	clone = "GER_armored_signal_entity"
+	name = "GEA_armored_signal_entity"
+}
+entity = { 
+	clone = "GER_armored_signal_entity"
+	name = "BAT_armored_signal_entity"
+}
+entity = { 
+	clone = "GER_armored_signal_entity"
+	name = "LIT_armored_signal_entity"
+}
+entity = { 
+	clone = "GER_armored_signal_entity"
+	name = "BLR_armored_signal_entity"
+}
+entity = { 
+	clone = "GER_armored_signal_entity"
+	name = "UKR_armored_signal_entity"
+}
+entity = { 
+	clone = "GER_armored_signal_entity"
+	name = "AUS_armored_signal_entity"
+}
+entity = { 
+	clone = "GER_armored_signal_entity"
+	name = "POL_armored_signal_entity"
+}
+entity = { 
+	clone = "GER_armored_signal_entity"
+	name = "GRU_armored_signal_entity"
+}
+
+######################################################## ITALY ############################################################
+
+##########################
+# COMMAND TANKS #
+##########################
+
+### ITA_armored_signal_entity
+entity = { 
+	clone = "ITA_armored_signal_entity"
+	name = "SRI_armored_signal_entity"
+}
+entity = { 
+	clone = "ITA_armored_signal_entity"
+	name = "SIC_armored_signal_entity"
+}
+entity = { 
+	clone = "ITA_armored_signal_entity"
+	name = "SRD_armored_signal_entity"
+}
+entity = { 
+	clone = "ITA_armored_signal_entity"
+	name = "PAP_armored_signal_entity"
+}
+######################################################## JAPAN ############################################################
+
+##########################
+# COMMAND TANKS #
+##########################
+
+### JAP_armored_signal_entity
+entity = { 
+	clone = "JAP_armored_signal_entity"
+	name = "FNG_armored_signal_entity"
+}
+
+######################################################## SOVIET ############################################################
+
+##########################
+# SOVIET TANKS #
+##########################
+
+### SOV_armored_signal_entity
+entity = { 
+	clone = "SOV_armored_signal_entity"
+	name = "RUS_armored_signal_entity"
+}
+### SOV_armored_signal_var_1_entity
+entity = { 
+	clone = "SOV_armored_signal_var_1_entity"
+	name = "RUS_armored_signal_var_1_entity"
+}
+
+######################################################## USA ############################################################
+
+### USA_armored_signal_entity
+entity = { 
+	clone = "USA_armored_signal_entity"
+	name = "CSA_armored_signal_entity"
+}
+entity = { 
+	clone = "USA_armored_signal_entity"
+	name = "PSA_armored_signal_entity"
+}
+entity = { 
+	clone = "USA_armored_signal_entity"
+	name = "TEX_armored_signal_entity"
+}
+entity = { 
+	clone = "USA_armored_signal_entity"
+	name = "NEE_armored_signal_entity"
+}

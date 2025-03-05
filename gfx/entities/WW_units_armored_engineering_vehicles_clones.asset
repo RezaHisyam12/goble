@@ -1,0 +1,256 @@
+####################################################### GENERIC ############################################################
+
+##########################
+# MINE CLEARANCE VEHICLES #
+##########################	
+#UNIT CAN ATTACK BUT MAY NOT DO THIS UNLESS WE WANT IT TO.
+
+### ENG_assault_engineer_entity
+entity = { 
+	clone = "ENG_assault_engineer_entity"
+	name = "IMP_assault_engineer_entity"
+}
+entity = { 
+	clone = "ENG_assault_engineer_entity"
+	name = "SAF_assault_engineer_entity"
+}
+entity = { 
+	clone = "ENG_assault_engineer_entity"
+	name = "AST_assault_engineer_entity"
+}
+
+### GER_assault_engineer_entity
+entity = { 
+	clone = "GER_assault_engineer_entity"
+	name = "MAF_assault_engineer_entity"
+}
+entity = { 
+	clone = "GER_assault_engineer_entity"
+	name = "GEA_assault_engineer_entity"
+}
+entity = { 
+	clone = "GER_assault_engineer_entity"
+	name = "BAT_assault_engineer_entity"
+}
+entity = { 
+	clone = "GER_assault_engineer_entity"
+	name = "LIT_assault_engineer_entity"
+}
+entity = { 
+	clone = "GER_assault_engineer_entity"
+	name = "BLR_assault_engineer_entity"
+}
+entity = { 
+	clone = "GER_assault_engineer_entity"
+	name = "UKR_assault_engineer_entity"
+}
+entity = { 
+	clone = "GER_assault_engineer_entity"
+	name = "AUS_assault_engineer_entity"
+}
+entity = { 
+	clone = "GER_assault_engineer_entity"
+	name = "POL_assault_engineer_entity"
+}
+entity = { 
+	clone = "GER_assault_engineer_entity"
+	name = "GRU_assault_engineer_entity"
+}
+
+### JAP_assault_engineer_entity
+entity = { 
+	clone = "JAP_assault_engineer_entity"
+	name = "FNG_assault_engineer_entity"
+}
+
+### SOV_assault_engineer_entity
+entity = { 
+	clone = "SOV_assault_engineer_entity"
+	name = "RUS_assault_engineer_entity"
+}
+
+### USA_assault_engineer_entity
+entity = { 
+	clone = "USA_assault_engineer_entity"
+	name = "CSA_assault_engineer_entity"
+}
+entity = { 
+	clone = "USA_assault_engineer_entity"
+	name = "PSA_assault_engineer_entity"
+}
+entity = { 
+	clone = "USA_assault_engineer_entity"
+	name = "TEX_assault_engineer_entity"
+}
+entity = { 
+	clone = "USA_assault_engineer_entity"
+	name = "NEE_assault_engineer_entity"
+}
+
+##########################
+# CROSSING VEHICLES #
+##########################
+#UNIT CAN ATTACK BUT MAY NOT DO THIS UNLESS WE WANT IT TO.
+
+### ENG_armored_engineer_entity
+entity = { 
+	clone = "ENG_armored_engineer_entity"
+	name = "IMP_armored_engineer_entity"
+}
+entity = { 
+	clone = "ENG_armored_engineer_entity"
+	name = "SAF_armored_engineer_entity"
+}
+entity = { 
+	clone = "ENG_armored_engineer_entity"
+	name = "AST_armored_engineer_entity"
+}
+
+### GER_armored_engineer_entity
+entity = { 
+	clone = "GER_armored_engineer_entity"
+	name = "MAF_armored_engineer_entity"
+}
+entity = { 
+	clone = "GER_armored_engineer_entity"
+	name = "GEA_armored_engineer_entity"
+}
+entity = { 
+	clone = "GER_armored_engineer_entity"
+	name = "BAT_armored_engineer_entity"
+}
+entity = { 
+	clone = "GER_armored_engineer_entity"
+	name = "LIT_armored_engineer_entity"
+}
+entity = { 
+	clone = "GER_armored_engineer_entity"
+	name = "BLR_armored_engineer_entity"
+}
+entity = { 
+	clone = "GER_armored_engineer_entity"
+	name = "UKR_armored_engineer_entity"
+}
+entity = { 
+	clone = "GER_armored_engineer_entity"
+	name = "AUS_armored_engineer_entity"
+}
+entity = { 
+	clone = "GER_armored_engineer_entity"
+	name = "POL_armored_engineer_entity"
+}
+entity = { 
+	clone = "GER_armored_engineer_entity"
+	name = "GRU_armored_engineer_entity"
+}
+
+### ITA_armored_engineer_entity
+entity = { 
+	clone = "ITA_armored_engineer_entity"
+	name = "SRI_armored_engineer_entity"
+}
+entity = { 
+	clone = "ITA_armored_engineer_entity"
+	name = "SIC_armored_engineer_entity"
+}
+entity = { 
+	clone = "ITA_armored_engineer_entity"
+	name = "SRD_armored_engineer_entity"
+}
+entity = { 
+	clone = "ITA_armored_engineer_entity"
+	name = "PAP_armored_engineer_entity"
+}
+
+### SOV_armored_engineer_entity
+entity = { 
+	clone = "SOV_armored_engineer_entity"
+	name = "RUS_armored_engineer_entity"
+}
+
+##########################
+# RECOVERY VEHICLES #
+##########################
+
+
+### ENG_armored_maintenance_entity
+entity = { 
+	clone = "ENG_armored_maintenance_entity"
+	name = "IMP_armored_maintenance_entity"
+}
+entity = { 
+	clone = "ENG_armored_maintenance_entity"
+	name = "SAF_armored_maintenance_entity"
+}
+entity = { 
+	clone = "ENG_armored_maintenance_entity"
+	name = "AST_armored_maintenance_entity"
+}
+
+### GER_armored_maintenance_entity
+entity = { 
+	clone = "GER_armored_maintenance_entity"
+	name = "MAF_armored_maintenance_entity"
+}
+entity = { 
+	clone = "GER_armored_maintenance_entity"
+	name = "GEA_armored_maintenance_entity"
+}
+entity = { 
+	clone = "GER_armored_maintenance_entity"
+	name = "BAT_armored_maintenance_entity"
+}
+entity = { 
+	clone = "GER_armored_maintenance_entity"
+	name = "LIT_armored_maintenance_entity"
+}
+entity = { 
+	clone = "GER_armored_maintenance_entity"
+	name = "BLR_armored_maintenance_entity"
+}
+entity = { 
+	clone = "GER_armored_maintenance_entity"
+	name = "UKR_armored_maintenance_entity"
+}
+entity = { 
+	clone = "GER_armored_maintenance_entity"
+	name = "AUS_armored_maintenance_entity"
+}
+entity = { 
+	clone = "GER_armored_maintenance_entity"
+	name = "POL_armored_maintenance_entity"
+}
+entity = { 
+	clone = "GER_armored_maintenance_entity"
+	name = "GRU_armored_maintenance_entity"
+}
+
+### JAP_armored_maintenance_entity
+entity = { 
+	clone = "JAP_armored_maintenance_entity"
+	name = "FNG_armored_maintenance_entity"
+}
+
+### SOV_armored_maintenance_entity
+entity = { 
+	clone = "SOV_armored_maintenance_entity"
+	name = "RUS_armored_maintenance_entity"
+}
+
+### USA_armored_maintenance_entity
+entity = { 
+	clone = "USA_armored_maintenance_entity"
+	name = "CSA_armored_maintenance_entity"
+}
+entity = { 
+	clone = "USA_armored_maintenance_entity"
+	name = "PSA_armored_maintenance_entity"
+}
+entity = { 
+	clone = "USA_armored_maintenance_entity"
+	name = "TEX_armored_maintenance_entity"
+}
+entity = { 
+	clone = "USA_armored_maintenance_entity"
+	name = "NEE_armored_maintenance_entity"
+}

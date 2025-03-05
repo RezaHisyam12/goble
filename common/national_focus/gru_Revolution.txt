@@ -2415,6 +2415,10 @@ shared_focus = {
 		y = 9
 		cost = 5
 		prerequisite = { focus = GRU_deutschsozialistische_architektur  }
+		available = {
+			is_faction_leader = yes
+			num_faction_members > 2
+		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -7079,7 +7083,7 @@ shared_focus = {
 		y = 1
 		cost = 6
 		ai_will_do = {
-			factor = 30
+			factor = 10
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_BORDER_FORTIFICATIONS"
@@ -7473,3 +7477,915 @@ shared_focus = {
 		}	
 		prerequisite = { focus = GRU_NMDVP_RED_COLONIALISM  }
 	} 
+
+	# Puppet Policy
+
+	shared_focus = {
+		id = GRU_new_order
+		icon = GFX_GRU_order
+		cost = 5
+		x = -6
+		y = 0
+		relative_position_id = GRU_NMDVP_LEBENSRAUM
+		available = {
+			has_country_flag = VKB_established
+			has_country_flag = VKR_established
+		}
+
+		ai_will_do = { factor = 6 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_new_order"
+			every_subject_country = {
+				limit = { has_autonomy_state = RM_Volkskommissariat }
+				add_ideas = GRU_okw
+			}
+		}
+		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS }
+	}
+
+	shared_focus = {
+		id = GRU_support_colonies
+		icon = GRU_spheres_of_influence
+		cost = 10
+		relative_position_id = GRU_new_order
+		x = 2
+		y = 1
+
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = {
+			focus = GRU_new_order
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_support_colonies"
+			add_timed_idea = {
+				idea = GRU_financing_colonies
+				days = 180
+			}
+			if = {
+				limit = {
+					country_exists = VKB
+					VKB = {
+						is_subject_of = GRU
+					}
+				}
+				VKB = {
+					add_ideas = GRU_financing_colonies_received
+					custom_effect_tooltip = tooltip_white_line
+					add_timed_idea = {
+						idea = GRU_MAF_stabilisation
+						days = 365
+					}
+				}
+			}
+			if = {
+				limit = {
+					country_exists = VKR
+					VKR = {
+						is_subject_of = GRU
+					}
+				}
+				VKR = {
+					add_ideas = GRU_financing_colonies_received
+					add_timed_idea = {
+						idea = GRU_MAF_stabilisation
+						days = 365
+					}
+				}
+			}
+			if = {
+				limit = {
+					country_exists = VKK
+					VKK = {
+						is_subject_of = GRU
+					}
+				}
+				VKK = {
+					add_ideas = GRU_financing_colonies_received
+					add_timed_idea = {
+						idea = GRU_MAF_stabilisation
+						days = 365
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_PRODUCTION FOCUS_FILTER_INTERNAL_AFFAIRS FOCUS_FILTER_TFV_AUTONOMY }
+	}
+	
+	shared_focus = {
+		id = GRU_ostwall
+		icon = GFX_goal_GER_Ostwall
+		cost = 5
+
+		relative_position_id = GRU_new_order
+		x = 0
+		y = 1
+
+		ai_will_do = { factor = 5 }
+		prerequisite = {
+			focus = GRU_new_order
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_ostwall"
+			every_other_country = {
+				limit = {
+					OR = {
+						tag = VKB
+						tag = VKR
+						tag = VKK
+					}
+					is_in_faction_with = GRU
+				}
+				add_ideas = GRU_ostwall_idea
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_TFV_AUTONOMY }
+	}
+	shared_focus = {
+		id = GRU_reinforce_bunker
+		icon = GFX_goal_nested_fortifications
+		cost = 15
+
+		relative_position_id = GRU_new_order
+		x = -2
+		y = 1
+
+		ai_will_do = { factor = 5 }
+		prerequisite = {
+			focus = GRU_new_order
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_reinforce_alsace"
+			64 = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = stronghold_network
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					VKB = {
+						is_in_faction_with = GRU
+					}
+				}
+				1091 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = stronghold_network
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					VKR = {
+						is_in_faction_with = GRU
+					}
+				}
+				202 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = stronghold_network
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					VKK = {
+						is_in_faction_with = GRU
+					}
+				}
+				218 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = stronghold_network
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	shared_focus = {
+		id = GRU_eastern_rail_plan
+		icon = GFX_goal_generic_railway_construction
+		cost = 6
+		relative_position_id = GRU_new_order
+		x = -2
+		y = 2
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 4
+				FRA = { exists = no }
+			}
+		}
+		prerequisite = {
+			focus = GRU_reinforce_bunker
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_eastern_rail_plan"
+			if = {
+				limit = {
+					VKB = {
+						is_in_faction_with = GRU
+					}
+				}
+				build_railway = {
+					level = 2
+					start_province = 6332
+					target_province = 3320
+				}
+				if = {
+					limit = {
+						VKB = {
+							is_in_faction_with = GRU
+						}
+					}
+					build_railway = {
+						level = 2
+						start_province = 3320
+						target_province = 11370
+					}
+				}
+				if = {
+					limit = {
+						VKB = {
+							is_in_faction_with = GRU
+						}
+						NOT = {
+							country_exists = LAT
+						}
+					}
+					build_railway = {
+						level = 2
+						start_province = 6296
+						target_province = 9340
+					}
+				}
+			}
+			if = {
+				limit = {
+					VKR = {
+						is_in_faction_with = GRU
+					}
+				}
+				build_railway = {
+					level = 2
+					start_province = 6558
+					target_province = 3544
+				}
+				if = {
+					limit = {
+						VKR = {
+							is_in_faction_with = GRU
+						}
+					}
+					build_railway = {
+						level = 2
+						start_province = 3544
+						target_province = 3392
+					}
+					build_railway = {
+						level = 2
+						start_province = 3392
+						target_province = 525
+					}
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			every_other_country = {
+				limit = { has_autonomy_state = RM_Volkskommissariat }
+				add_equipment_to_stockpile = {
+					type = train_equipment_1
+					amount = 20
+					producer = GRU
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_PRODUCTION }
+	}
+
+	shared_focus = {
+		id = GRU_first_plan
+		icon = GFX_GRU_nmdvp_victory-3943
+		cost = 4
+
+		relative_position_id = GRU_new_order
+		x = 0
+		y = 2
+
+		ai_will_do = { factor = 30 }
+		prerequisite = {
+			focus = GRU_ostwall
+		}
+		available = {
+			has_war_with = FRA
+			has_war_with = RUS
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_first_plan"
+			every_other_country = {
+				limit = {
+					OR = {
+						tag = VKB
+						tag = VKR
+						tag = VKK
+					}
+					is_in_faction_with = GRU
+				}
+				add_ideas = GRU_expanded_espionage_non_lar
+			}
+		}
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_INTERNAL_AFFAIRS }
+	}
+	shared_focus = {
+		id = GRU_aid_plan
+		icon = VKB_COLONIZED
+		cost = 10
+
+		relative_position_id = GRU_new_order
+		x = 0
+		y = 3
+
+		ai_will_do = { factor = 30 }
+		prerequisite = {
+			focus = GRU_first_plan
+		}
+		available = {
+			has_war_with = FRA
+			has_war_with = RUS
+			has_equipment = { infantry_equipment > 14999 }
+			has_equipment = { support_equipment > 2999 }
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_aid_plan"
+			if = {
+				limit = {
+					VKB = {
+						is_in_faction_with = GRU
+					}
+				}
+				GRU = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -5000
+					}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -1000
+					}
+				}
+				VKB = {
+					add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 5000
+					producer = GRU
+					}
+					add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1000
+					producer = GRU
+					}
+				}
+			}
+			if = {
+				custom_effect_tooltip = tooltip_white_line
+				limit = {
+					VKR = {
+						is_in_faction_with = GRU
+					}
+				}
+				GRU = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -5000
+					}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -1000
+					}
+				}
+				VKR = {
+					add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 5000
+					producer = GRU
+					}
+					add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1000
+					producer = GRU
+					}
+				}
+			}
+			if = {
+				custom_effect_tooltip = tooltip_white_line
+				limit = {
+					VKK = {
+						is_in_faction_with = GRU
+					}
+				}
+				GRU = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -5000
+					}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -1000
+					}
+				}
+				VKK = {
+					add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 5000
+					producer = GRU
+					}
+					add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1000
+					producer = GRU
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_PRODUCTION }
+	}
+	shared_focus = {
+		id = GRU_aid_plan_2
+		icon = VKR_COLONIZE_ONE
+		cost = 10
+
+		relative_position_id = GRU_new_order
+		x = 0
+		y = 4
+
+		ai_will_do = { factor = 30 }
+		prerequisite = {
+			focus = GRU_aid_plan
+		}
+		available = {
+			has_war_with = FRA
+			has_war_with = RUS
+			has_equipment = { convoy > 299 }
+			has_equipment = { motorized_equipment > 7499 }
+			has_equipment = { mechanized_equipment > 749 }
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_aid_plan_2"
+			if = {
+				limit = {
+					VKB = {
+						is_in_faction_with = GRU
+					}
+				}
+				GRU = {
+				add_equipment_to_stockpile = {
+					type = convoy
+					amount = -100
+					}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -2500
+					}
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = -250
+					}
+				}
+				VKB = {
+				add_equipment_to_stockpile = {
+					type = convoy
+					amount = 100
+					producer = GRU
+					}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 2500
+					producer = GRU
+					}
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = 250
+					producer = GRU
+					}
+				}
+			}
+			if = {
+				custom_effect_tooltip = tooltip_white_line
+				limit = {
+					VKR = {
+						is_in_faction_with = GRU
+					}
+				}
+				GRU = {
+				add_equipment_to_stockpile = {
+					type = convoy
+					amount = -100
+					}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -2500
+					}
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = -250
+					}
+				}
+				VKR = {
+				add_equipment_to_stockpile = {
+					type = convoy
+					amount = 100
+					producer = GRU
+					}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 2500
+					producer = GRU
+					}
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = 250
+					producer = GRU
+					}
+				}
+			}
+			if = {
+				custom_effect_tooltip = tooltip_white_line
+				limit = {
+					VKK = {
+						is_in_faction_with = GRU
+					}
+				}
+				GRU = {
+				add_equipment_to_stockpile = {
+					type = convoy
+					amount = -100
+					}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -2500
+					}
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = -250
+					}
+				}
+				VKK = {
+				add_equipment_to_stockpile = {
+					type = convoy
+					amount = 100
+					producer = GRU
+					}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 2500
+					producer = GRU
+					}
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = 250
+					producer = GRU
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_PRODUCTION }
+	}
+	shared_focus = {
+		id = GRU_prepare_for_russia
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 2
+
+		relative_position_id = GRU_new_order
+		x = 2
+		y = 3
+
+		prerequisite = {
+			focus = GRU_first_plan
+		}
+		mutually_exclusive = {
+			focus = GRU_prepare_for_france
+		}
+
+		ai_will_do = { factor = 50 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_prepare_for_russia"
+			every_other_country = {
+				limit = {
+					OR = {
+						tag = VKB
+						tag = VKR
+						tag = VKK
+					}
+					is_in_faction_with = GRU
+				}
+				add_ideas = GRU_wide_front_operations_idea
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = GRU_war_preparedness_buff_tt
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+	shared_focus = {
+		id = GRU_prepare_for_russia_2
+		icon = GFX_goal_generic_mobile_artillery_light
+		cost = 2
+
+		relative_position_id = GRU_new_order
+		x = 4
+		y = 3
+
+		prerequisite = {
+			focus = GRU_first_plan
+		}
+		mutually_exclusive = {
+			focus = GRU_prepare_for_russia
+		}
+
+		ai_will_do = { factor = 50 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_prepare_for_russia_2"
+			every_other_country = {
+				limit = {
+					OR = {
+						tag = VKB
+						tag = VKR
+						tag = VKK
+					}
+					is_in_faction_with = GRU
+				}
+				add_ideas = GRU_break_fortifications_idea
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = GRU_war_preparedness_buff_tt
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+	shared_focus = {
+		id = GRU_panzer_divisions
+		icon = GFX_focus_ger_heavy_tanks
+		cost = 10
+
+		relative_position_id = GRU_new_order
+		x = 3
+		y = 4
+
+		prerequisite = {
+			focus = GRU_prepare_for_russia
+			focus = GRU_prepare_for_russia_2
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_panzer_divisions"
+			if = {
+				limit = {
+					VKB = {
+						is_in_faction_with = GRU
+					}
+					OR = {
+						AND = {
+							has_dlc_nsb = yes
+							has_tech = basic_medium_tank_chassis
+						}
+						has_tech = basic_medium_tank
+					}
+				}
+				VKB = {
+					custom_effect_tooltip = GRU_panzer_divisions_tt
+					hidden_effect = {
+					create_equipment_variant = {
+						name = "Panzer I"
+						type = medium_tank_chassis_0
+						parent_version = 0
+						modules = {
+							main_armament_slot = tank_small_cannon
+							turret_type_slot = tank_light_two_man_tank_turret
+							special_type_slot_1 = additional_machine_guns
+							suspension_type_slot = tank_bogie_suspension
+							armor_type_slot = tank_riveted_armor
+							engine_type_slot = tank_gasoline_engine
+						}
+					}
+					division_template = {
+						name = "Panzer-Division (Neue)"
+						division_names_group = GRU_Arm_01
+						regiments = {
+							medium_armor = { x = 0 y = 0 }
+							medium_armor = { x = 0 y = 1 }
+							medium_armor = { x = 0 y = 2 }
+							medium_armor = { x = 1 y = 0 }
+							medium_armor = { x = 1 y = 1 }
+							medium_armor = { x = 1 y = 2 }
+							motorized = { x = 2 y = 0 }
+							motorized = { x = 2 y = 1 }
+							motorized = { x = 2 y = 2 }
+							motorized = { x = 2 y = 3 }
+						}
+						support = {
+							mot_recon = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							artillery = { x = 0 y = 2 }
+							}
+						}
+						random_owned_controlled_state = {
+							limit = {
+								is_core_of = VKB
+								valid_state_for_spawning_friendly_unit = yes
+							}
+							create_unit = {
+								division = "division_template = \"Panzer-Division (Neue)\" start_experience_factor = 0.5"
+								owner = VKB
+							}
+						}
+						random_owned_controlled_state = {
+							limit = {
+								is_core_of = VKB
+								valid_state_for_spawning_friendly_unit = yes
+							}
+							create_unit = {
+								division = "division_template = \"Panzer-Division (Neue)\" start_experience_factor = 0.5"
+								owner = VKB
+							}
+						}
+					}
+				}
+			}
+			if = {
+				custom_effect_tooltip = tooltip_white_line
+				limit = {
+					VKR = {
+						is_in_faction_with = GRU
+					}
+					OR = {
+						AND = {
+							has_dlc_nsb = yes
+							has_tech = basic_medium_tank_chassis
+						}
+						has_tech = basic_medium_tank
+					}
+				}
+				VKR = {
+					custom_effect_tooltip = GRU_panzer_divisions_tt
+					hidden_effect = {
+					create_equipment_variant = {
+						name = "Panzer I"
+						type = medium_tank_chassis_0
+						parent_version = 0
+						modules = {
+							main_armament_slot = tank_small_cannon
+							turret_type_slot = tank_light_two_man_tank_turret
+							special_type_slot_1 = additional_machine_guns
+							suspension_type_slot = tank_bogie_suspension
+							armor_type_slot = tank_riveted_armor
+							engine_type_slot = tank_gasoline_engine
+						}
+					}
+					division_template = {
+						name = "Panzer-Division (Neue)"
+						division_names_group = GRU_Arm_01
+						regiments = {
+							medium_armor = { x = 0 y = 0 }
+							medium_armor = { x = 0 y = 1 }
+							medium_armor = { x = 0 y = 2 }
+							medium_armor = { x = 1 y = 0 }
+							medium_armor = { x = 1 y = 1 }
+							medium_armor = { x = 1 y = 2 }
+							motorized = { x = 2 y = 0 }
+							motorized = { x = 2 y = 1 }
+							motorized = { x = 2 y = 2 }
+							motorized = { x = 2 y = 3 }
+						}
+						support = {
+							mot_recon = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							artillery = { x = 0 y = 2 }
+							}
+						}
+						random_owned_controlled_state = {
+							limit = {
+								is_core_of = VKR
+								valid_state_for_spawning_friendly_unit = yes
+							}
+							create_unit = {
+								division = "division_template = \"Panzer-Division (Neue)\" start_experience_factor = 0.5"
+								owner = VKR
+							}
+						}
+						random_owned_controlled_state = {
+							limit = {
+								is_core_of = VKR
+								valid_state_for_spawning_friendly_unit = yes
+							}
+							create_unit = {
+								division = "division_template = \"Panzer-Division (Neue)\" start_experience_factor = 0.5"
+								owner = VKR
+							}
+						}
+					}
+				}
+			}
+			if = {
+				custom_effect_tooltip = tooltip_white_line
+				limit = {
+					VKK = {
+						is_in_faction_with = GRU
+					}
+					OR = {
+						AND = {
+							has_dlc_nsb = yes
+							has_tech = basic_medium_tank_chassis
+						}
+						has_tech = basic_medium_tank
+					}
+				}
+				VKK = {
+					custom_effect_tooltip = GRU_panzer_divisions_tt
+					hidden_effect = {
+					create_equipment_variant = {
+						name = "Panzer I"
+						type = medium_tank_chassis_0
+						parent_version = 0
+						modules = {
+							main_armament_slot = tank_small_cannon
+							turret_type_slot = tank_light_two_man_tank_turret
+							special_type_slot_1 = additional_machine_guns
+							suspension_type_slot = tank_bogie_suspension
+							armor_type_slot = tank_riveted_armor
+							engine_type_slot = tank_gasoline_engine
+						}
+					}
+					division_template = {
+						name = "Panzer-Division (Neue)"
+						division_names_group = GRU_Arm_01
+						regiments = {
+							medium_armor = { x = 0 y = 0 }
+							medium_armor = { x = 0 y = 1 }
+							medium_armor = { x = 0 y = 2 }
+							medium_armor = { x = 1 y = 0 }
+							medium_armor = { x = 1 y = 1 }
+							medium_armor = { x = 1 y = 2 }
+							motorized = { x = 2 y = 0 }
+							motorized = { x = 2 y = 1 }
+							motorized = { x = 2 y = 2 }
+							motorized = { x = 2 y = 3 }
+						}
+						support = {
+							mot_recon = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							artillery = { x = 0 y = 2 }
+							}
+						}
+						random_owned_controlled_state = {
+							limit = {
+								is_core_of = VKK
+								valid_state_for_spawning_friendly_unit = yes
+							}
+							create_unit = {
+								division = "division_template = \"Panzer-Division (Neue)\" start_experience_factor = 0.5"
+								owner = VKK
+							}
+						}
+						random_owned_controlled_state = {
+							limit = {
+								is_core_of = VKK
+								valid_state_for_spawning_friendly_unit = yes
+							}
+							create_unit = {
+								division = "division_template = \"Panzer-Division (Neue)\" start_experience_factor = 0.5"
+								owner = VKK
+							}
+						}
+					}
+				}
+			}
+			search_filters = { FOCUS_FILTER_ARMY_BONUS }
+		}
+	}

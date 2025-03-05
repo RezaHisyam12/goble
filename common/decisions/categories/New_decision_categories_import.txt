@@ -6,3 +6,9 @@ RUS_MIO_decisions = {
 		has_dlc_aat = yes
 	}
 }
+
+VKB_ostwall_decision_category = {
+	icon = GFX_decision_category_military_operation
+	#picture = GFX_decision_cat_LIT_Palace
+	allowed = { always = no }
+}

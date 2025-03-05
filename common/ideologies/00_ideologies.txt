@@ -90,6 +90,14 @@ ideologies = {
 			tot_left_nationalism_subtype = {can_be_randomly_selected = no} #Left Nationalism
 			british_maximism_subtype = {can_be_randomly_selected = no} #British Maximism
 			left_boulangism_subtype = {can_be_randomly_selected = no} #Left Boulangism
+			#NE SUBIDEOLOGIES
+			ingsoc_subtype = { can_be_randomly_selected = no }  #INGSOC
+			tot_sansepolcrismo = { can_be_randomly_selected = no } #Sansepolcrismo
+			tot_euro_mosleyism = { can_be_randomly_selected = no } #Oswald Mosley Thought
+			tot_neosocialism_subtype = { can_be_randomly_selected = no } #Neosocialism
+			tot_francism_subtype = { can_be_randomly_selected = no } #Francism
+			tot_natcol_subtype = { can_be_randomly_selected = no } #National Collectivism
+			tot_canaanism_subtype = {can_be_randomly_selected = no} #Canaanism
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_TOTALIST_1"
@@ -169,6 +177,8 @@ ideologies = {
 			aboriginal_garveyism_subtype = {can_be_randomly_selected = no} #aboriginal garveyism
 			syn_gandhism_subtype = {can_be_randomly_selected = no} #Gandhism
 			syn_anarcho_communism_subtype = {can_be_randomly_selected = no} #Anarcho-Communism
+			#NE 
+			syn_united_front = {can_be_randomly_selected = no} #United Front
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_SYNDICALIST_1"
@@ -280,6 +290,12 @@ ideologies = {
 			euro_panafricanism_subtype = {can_be_randomly_selected = no} #Euro Panafricanism
 			revolutionary_bolivarianism_subtype = {can_be_randomly_selected = no} #Revolutionary Bolivarianism
 			radsoc_clientelism_subtype = {can_be_randomly_selected = no} #Clientelism
+			#NE
+			radsoc_reformed_germanism = {can_be_randomly_selected = no} #Reformed Germanism
+			radsoc_sansepolcrismo = {can_be_randomly_selected = no}
+			radsoc_nasserism = { can_be_randomly_selected = no }
+			radsoc_brownism = { can_be_randomly_selected = no }
+			radsoc_canaanism_subtype = {can_be_randomly_selected = no} #Canaanism
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_RADICAL_SOCIALIST_1"
@@ -390,6 +406,8 @@ ideologies = {
 			lenschian_tendency_subtype = {can_be_randomly_selected = no } #Lenschian Tendency
 			langism_subtype = {can_be_randomly_selected = no } #langism
 			chinese_federalism_subtype = {can_be_randomly_selected = no } #Chinese Federalism
+			#NE
+			socdem_reformed_germanism = {can_be_randomly_selected = no} #Reformed Germanism
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_SOCIAL_DEMOCRAT_1"
@@ -559,6 +577,7 @@ ideologies = {
 			marlib_kritarchy_subtype = {can_be_randomly_selected = no} #Kritarchy
 			futuriblesisme_subtype = {can_be_randomly_selected = no} #Futuriblesisme
 			enlightened_conservatism_subtype = {can_be_randomly_selected = no} #Enlightened Conservatism
+			marlib_tridemism_subtype = {can_be_randomly_selected = no} #Tridemism
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_MARKET_LIBERAL_1"
@@ -985,6 +1004,8 @@ ideologies = {
 			lepenisme_subtype = {can_be_randomly_selected = no} #Lepenisme
 			natpop_poujadisme_subtype = {can_be_randomly_selected = no} #Poujadisme
 			natpop_humanisme_integral_subtype = {can_be_randomly_selected = no} #Humanisme Integral
+			natpop_tridemism_subtype = {can_be_randomly_selected = no} #Tridemism
+			#Goeb 			
 			natpop_goebbels_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }
 			natpop_goebbels2_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }
 			natpop_goebbels3_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }
@@ -993,6 +1014,9 @@ ideologies = {
 			natpop_goebbels8_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }
 			national_socialism_spartanism_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }
 			despotism_vanguard_anarchism_subtype = {can_be_randomly_selected = no color = { 5 5 5 } }
+			#NE 
+			natpop_canaanism_subtype = {can_be_randomly_selected = no} #Canaanism
+
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_NATIONAL_POPULIST_1"

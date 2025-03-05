@@ -1,0 +1,194 @@
+
+##########################
+# GERMANY #
+##########################
+
+# Panzer I Ausf.B
+### GER_light_flame_tank_entity
+entity = { 
+	clone = "GER_light_flame_tank_entity"
+	name = "MAF_light_flame_tank_entity"
+}
+entity = { 
+	clone = "GER_light_flame_tank_entity"
+	name = "GEA_light_flame_tank_entity"
+}
+entity = { 
+	clone = "GER_light_flame_tank_entity"
+	name = "BAT_light_flame_tank_entity"
+}
+entity = { 
+	clone = "GER_light_flame_tank_entity"
+	name = "LIT_light_flame_tank_entity"
+}
+entity = { 
+	clone = "GER_light_flame_tank_entity"
+	name = "BLR_light_flame_tank_entity"
+}
+entity = { 
+	clone = "GER_light_flame_tank_entity"
+	name = "UKR_light_flame_tank_entity"
+}
+entity = { 
+	clone = "GER_light_flame_tank_entity"
+	name = "AUS_light_flame_tank_entity"
+}
+entity = { 
+	clone = "GER_light_flame_tank_entity"
+	name = "POL_light_flame_tank_entity"
+}
+entity = { 
+	clone = "GER_light_flame_tank_entity"
+	name = "GRU_light_flame_tank_entity"
+}
+
+#Panzerkampfwagen III (flamm)
+### GER_medium_flame_tank_entity
+entity = { 
+	clone = "GER_medium_flame_tank_entity"
+	name = "MAF_medium_flame_tank_entity"
+}
+entity = { 
+	clone = "GER_medium_flame_tank_entity"
+	name = "GEA_medium_flame_tank_entity"
+}
+entity = { 
+	clone = "GER_medium_flame_tank_entity"
+	name = "BAT_medium_flame_tank_entity"
+}
+entity = { 
+	clone = "GER_medium_flame_tank_entity"
+	name = "LIT_medium_flame_tank_entity"
+}
+entity = { 
+	clone = "GER_medium_flame_tank_entity"
+	name = "BLR_medium_flame_tank_entity"
+}
+entity = { 
+	clone = "GER_medium_flame_tank_entity"
+	name = "UKR_medium_flame_tank_entity"
+}
+entity = { 
+	clone = "GER_medium_flame_tank_entity"
+	name = "AUS_medium_flame_tank_entity"
+}
+entity = { 
+	clone = "GER_medium_flame_tank_entity"
+	name = "POL_medium_flame_tank_entity"
+}
+entity = { 
+	clone = "GER_medium_flame_tank_entity"
+	name = "GRU_medium_flame_tank_entity"
+}
+
+##########################
+# ENGLAND #
+##########################
+
+### ENG_heavy_flame_tank_entity
+entity = { 
+	clone = "ENG_heavy_flame_tank_entity"
+	name = "IMP_heavy_flame_tank_entity"
+}
+entity = { 
+	clone = "ENG_heavy_flame_tank_entity"
+	name = "SAF_heavy_flame_tank_entity"
+}
+entity = { 
+	clone = "ENG_heavy_flame_tank_entity"
+	name = "AST_heavy_flame_tank_entity"
+}
+
+##########################
+# FRANCE #
+##########################
+
+### FRA_heavy_flame_tank_entity
+entity = { 
+	clone = "FRA_heavy_flame_tank_entity"
+	name = "NFA_heavy_flame_tank_entity"
+}
+
+##########################
+# JAPAN #
+##########################
+
+### JAP_light_flame_tank_entity
+entity = { 
+	clone = "JAP_light_flame_tank_entity"
+	name = "FNG_light_flame_tank_entity"
+}
+
+##########################
+# ITALY #
+##########################
+
+### ITA_light_flame_tank_entity
+entity = { 
+	clone = "ITA_light_flame_tank_entity"
+	name = "SRI_light_flame_tank_entity"
+}
+entity = { 
+	clone = "ITA_light_flame_tank_entity"
+	name = "SIC_light_flame_tank_entity"
+}
+entity = { 
+	clone = "ITA_light_flame_tank_entity"
+	name = "SRD_light_flame_tank_entity"
+}
+entity = { 
+	clone = "ITA_light_flame_tank_entity"
+	name = "PAP_light_flame_tank_entity"
+}
+
+
+##########################
+# SOVIET #
+##########################
+
+### SOV_light_flame_tank_entity
+entity = { 
+	clone = "SOV_light_flame_tank_entity"
+	name = "RUS_light_flame_tank_entity"
+}
+
+##########################
+# USA #
+##########################
+
+
+### USA_light_flame_tank_entity
+entity = { 
+	clone = "USA_light_flame_tank_entity"
+	name = "CSA_light_flame_tank_entity"
+}
+entity = { 
+	clone = "USA_light_flame_tank_entity"
+	name = "PSA_light_flame_tank_entity"
+}
+entity = { 
+	clone = "USA_light_flame_tank_entity"
+	name = "TEX_light_flame_tank_entity"
+}
+entity = { 
+	clone = "USA_light_flame_tank_entity"
+	name = "NEE_light_flame_tank_entity"
+}
+
+### USA_medium_flame_tank_entity
+entity = { 
+	clone = "USA_medium_flame_tank_entity"
+	name = "CSA_medium_flame_tank_entity"
+}
+entity = { 
+	clone = "USA_medium_flame_tank_entity"
+	name = "PSA_medium_flame_tank_entity"
+}
+entity = { 
+	clone = "USA_medium_flame_tank_entity"
+	name = "TEX_medium_flame_tank_entity"
+}
+entity = { 
+	clone = "USA_medium_flame_tank_entity"
+	name = "NEE_medium_flame_tank_entity"
+}

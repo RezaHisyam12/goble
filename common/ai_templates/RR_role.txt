@@ -34,20 +34,18 @@ RR_Werwolf_generic = {
 		}
 	}
 
-	RR_Werwolf_template_late = {
+	RR_Werwolf_template_mid = {
 		reinforce_prio = 2
 
 		upgrade_prio = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = { has_tech = sp_helicopter_artillery_observers_tech }
-				NOT = { has_tech = sp_helicopter_med_evac_tech }
-				NOT = { has_tech = sp_helicopter_transport_pods_tech }
+				NOT = { has_tech = RR_Werwolf_tech }
 			}
 			modifier = {
 				factor = 3
-				num_of_military_factories > 99
+				num_of_military_factories > 50
 			}
 			modifier = {
 				add = 1
@@ -71,21 +69,19 @@ RR_Werwolf_generic = {
 			}
 		}
 	}
-	RR_Motorized_template_late = {
+
+	RR_Werwolf_template_late = {
 		reinforce_prio = 2
 
 		upgrade_prio = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = { has_tech = sp_helicopter_artillery_observers_tech }
-				NOT = { has_tech = sp_helicopter_med_evac_tech }
-				NOT = { has_tech = sp_helicopter_transport_pods_tech }
 				NOT = { has_tech = RR_1_motorized_tech }
 			}
 			modifier = {
 				factor = 3
-				num_of_military_factories > 149
+				num_of_military_factories > 75
 			}
 			modifier = {
 				add = 1

@@ -1,0 +1,189 @@
+####################################################### AUSTRIA ###########################################################
+
+#Doblhoff WNF 342
+### AUS_helicopter_brigade_entity
+entity = { 
+	clone = "AUS_helicopter_brigade_entity"
+	name = "CZE_helicopter_brigade_entity"
+}
+
+####################################################### ENGLAND ###########################################################
+
+#Cierva W.9
+### ENG_helicopter_brigade_entity
+entity = { 
+	clone = "ENG_helicopter_brigade_entity"
+	name = "IMP_helicopter_brigade_entity"
+}
+entity = { 
+	clone = "ENG_helicopter_brigade_entity"
+	name = "SAF_helicopter_brigade_entity"
+}
+entity = { 
+	clone = "ENG_helicopter_brigade_entity"
+	name = "AST_helicopter_brigade_entity"
+}
+
+###################################################### FRANCE ##########################################################
+
+#Dorand Gyroplane G.20 G.II
+### FRA_helicopter_brigade_entity
+entity = { 
+	clone = "ENG_helicopter_brigade_entity"
+	name = "NFA_helicopter_brigade_entity"
+}
+
+###################################################### GERMANY ##########################################################
+
+#Focke-Wulf Fw 61
+### GER_helicopter_brigade_entity
+entity = { 
+	clone = "GER_helicopter_brigade_entity"
+	name = "MAF_helicopter_brigade_entity"
+}
+entity = { 
+	clone = "GER_helicopter_brigade_entity"
+	name = "GEA_helicopter_brigade_entity"
+}
+entity = { 
+	clone = "GER_helicopter_brigade_entity"
+	name = "BAT_helicopter_brigade_entity"
+}
+entity = { 
+	clone = "GER_helicopter_brigade_entity"
+	name = "LIT_helicopter_brigade_entity"
+}
+entity = { 
+	clone = "GER_helicopter_brigade_entity"
+	name = "BLR_helicopter_brigade_entity"
+}
+entity = { 
+	clone = "GER_helicopter_brigade_entity"
+	name = "UKR_helicopter_brigade_entity"
+}
+entity = { 
+	clone = "GER_helicopter_brigade_entity"
+	name = "POL_helicopter_brigade_entity"
+}
+entity = { 
+	clone = "GER_helicopter_brigade_entity"
+	name = "GRU_helicopter_brigade_entity"
+}
+
+#Flettner Fl 282 Kolibri
+### GER_helicopter_brigade_alt_0_entity
+entity = { 
+	clone = "GER_helicopter_brigade_alt_0_entity"
+	name = "MAF_helicopter_brigade_alt_0_entity"
+}
+entity = { 
+	clone = "GER_helicopter_brigade_alt_0_entity"
+	name = "GEA_helicopter_brigade_alt_0_entity"
+}
+entity = { 
+	clone = "GER_helicopter_brigade_alt_0_entity"
+	name = "BAT_helicopter_brigade_alt_0_entity"
+}
+entity = { 
+	clone = "GER_helicopter_brigade_alt_0_entity"
+	name = "LIT_helicopter_brigade_alt_0_entity"
+}
+entity = { 
+	clone = "GER_helicopter_brigade_alt_0_entity"
+	name = "BLR_helicopter_brigade_alt_0_entity"
+}
+entity = { 
+	clone = "GER_helicopter_brigade_alt_0_entity"
+	name = "UKR_helicopter_brigade_alt_0_entity"
+}
+entity = { 
+	clone = "GER_helicopter_brigade_alt_0_entity"
+	name = "AUS_helicopter_brigade_alt_0_entity"
+}
+entity = { 
+	clone = "GER_helicopter_brigade_alt_0_entity"
+	name = "POL_helicopter_brigade_alt_0_entity"
+}
+entity = { 
+	clone = "GER_helicopter_brigade_alt_0_entity"
+	name = "GRU_helicopter_brigade_alt_0_entity"
+}
+
+
+####################################################### ITALY ###########################################################
+
+#Cierva C.30 (Italy)
+### ITA_helicopter_brigade_entity
+entity = { 
+	clone = "ITA_helicopter_brigade_entity"
+	name = "SRI_helicopter_brigade_entity"
+}
+entity = { 
+	clone = "ITA_helicopter_brigade_entity"
+	name = "SIC_helicopter_brigade_entity"
+}
+entity = { 
+	clone = "ITA_helicopter_brigade_entity"
+	name = "SRD_helicopter_brigade_entity"
+}
+entity = { 
+	clone = "ITA_helicopter_brigade_entity"
+	name = "PAP_helicopter_brigade_entity"
+}
+####################################################### JAPAN ###########################################################
+
+#Kayaba Ka-1
+### JAP_helicopter_brigade_entity
+entity = { 
+	clone = "ITA_helicopter_brigade_entity"
+	name = "FNG_helicopter_brigade_entity"
+}
+
+######################################################## USA ############################################################
+
+#Vought-Sikorsky VS-300
+### USA_helicopter_brigade_entity
+entity = { 
+	clone = "USA_helicopter_brigade_entity"
+	name = "CSA_helicopter_brigade_entity"
+}
+entity = { 
+	clone = "USA_helicopter_brigade_entity"
+	name = "PSA_helicopter_brigade_entity"
+}
+entity = { 
+	clone = "USA_helicopter_brigade_entity"
+	name = "TEX_helicopter_brigade_entity"
+}
+entity = { 
+	clone = "USA_helicopter_brigade_entity"
+	name = "NEE_helicopter_brigade_entity"
+}
+
+#Sikorsky R-4
+### USA_helicopter_brigade_alt_0_entity
+entity = { 
+	clone = "USA_helicopter_brigade_alt_0_entity"
+	name = "CSA_helicopter_brigade_alt_0_entity"
+}
+entity = { 
+	clone = "USA_helicopter_brigade_alt_0_entity"
+	name = "PSA_helicopter_brigade_alt_0_entity"
+}
+entity = { 
+	clone = "USA_helicopter_brigade_alt_0_entity"
+	name = "TEX_helicopter_brigade_alt_0_entity"
+}
+entity = { 
+	clone = "USA_helicopter_brigade_alt_0_entity"
+	name = "NEE_helicopter_brigade_alt_0_entity"
+}
+
+####################################################### SOVIET ###########################################################
+
+#Kamov A-7
+### SOV_helicopter_brigade_entity
+entity = { 
+	clone = "SOV_helicopter_brigade_entity"
+	name = "RUS_helicopter_brigade_entity"
+}

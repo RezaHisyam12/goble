@@ -1,0 +1,998 @@
+###########################
+## Zollverein Decisions ##
+###########################
+
+VKB_ostwall_decision_category = {
+	VKB_ostwall_kurland = {
+		icon = GFX_decision_generic_construction
+		allowed = { always = no }
+		available = {
+			has_full_control_of_state = 190
+		}
+
+		visible = {
+			owns_state = 190
+		}
+
+		highlight_states = {
+			highlight_provinces = { 3255 11358 }
+		}
+
+		custom_cost_text = VKB_2_forts_cost
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 999 }
+			has_equipment = { support_equipment > 149 }
+		}
+
+		days_remove = 30
+		fire_only_once = yes
+		cancel_if_not_visible = yes
+
+		ai_will_do = { factor = 20 }
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel VKB_ostwall_kurland"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 150
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete VKB_ostwall_kurland"
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -150
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VKB_ostwall_kurland"
+			190 = {
+				add_building_construction = {
+					type = bunker
+					province = 3255
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11358
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_country_flag = VKB_ostwall_kurland_completed
+		}
+	}
+
+	VKB_ostwall_livland = {
+		icon = GFX_decision_generic_construction
+		allowed = { always = no }
+		available = {
+			has_full_control_of_state = 12
+		}
+
+		visible = {
+			owns_state = 12
+		}
+
+		highlight_states = {
+			highlight_provinces = { 3298 11222 }
+		}
+
+		custom_cost_text = VKB_2_forts_cost
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 999 }
+			has_equipment = { support_equipment > 149 }
+		}
+
+		days_remove = 30
+		fire_only_once = yes
+		cancel_if_not_visible = yes
+
+		ai_will_do = { factor = 20 }
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel VKB_ostwall_livland"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 150
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete VKB_ostwall_livland"
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -150
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VKB_ostwall_livland"
+			12 = {
+				add_building_construction = {
+					type = bunker
+					province = 3298
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11222
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_country_flag = VKB_ostwall_livland_completed
+		}
+	}
+
+	VKB_ostwall_estland = {
+		icon = GFX_decision_generic_construction
+		allowed = { always = no }
+		available = {
+			has_full_control_of_state = 191
+			has_full_control_of_state = 13
+		}
+
+		visible = {
+			owns_state = 191
+			owns_state = 13
+		}
+
+		highlight_states = {
+			highlight_provinces = { 592 4640 }
+		}
+
+		custom_cost_text = VKB_2_forts_cost
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 999 }
+			has_equipment = { support_equipment > 149 }
+		}
+
+		days_remove = 30
+		fire_only_once = yes
+		cancel_if_not_visible = yes
+
+		ai_will_do = { factor = 20 }
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel VKB_ostwall_estland"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 150
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete VKB_ostwall_estland"
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -150
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VKB_ostwall_estland"
+			191 = {
+				add_building_construction = {
+					type = bunker
+					province = 592
+					level = 2
+					instant_build = yes
+				}
+			}
+			13 = {
+				add_building_construction = {
+					type = bunker
+					province = 4640
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_country_flag = VKB_ostwall_estland_completed
+		}
+	}
+
+	VKB_ostwall_second_level = {
+		icon = GFX_decision_generic_construction
+		allowed = { always = no }
+		available = {
+			has_country_flag = VKB_ostwall_estland_completed
+			has_country_flag = VKB_ostwall_livland_completed
+			has_country_flag = VKB_ostwall_kurland_completed
+			has_full_control_of_state = 191
+			has_full_control_of_state = 13
+			has_full_control_of_state = 12
+			has_full_control_of_state = 190
+		}
+
+		visible = {
+			owns_state = 191
+			owns_state = 13
+			owns_state = 12
+			owns_state = 190
+		}
+
+		highlight_states = {
+			highlight_provinces = { 592 4640 3298 11222 3255 11358 }
+		}
+
+		custom_cost_text = VKB_second_fort_level_cost
+		custom_cost_trigger = {
+			has_equipment = { artillery_equipment > 249 }
+			has_equipment = { support_equipment > 299 }
+		}
+
+		days_remove = 30
+		fire_only_once = yes
+		cancel_if_not_visible = yes
+
+		ai_will_do = { factor = 20 }
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel VKB_ostwall_second_level"
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 250
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 300
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete VKB_ostwall_second_level"
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = -250
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -300
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VKB_ostwall_second_level"
+			custom_effect_tooltip = VKB_second_fort_level
+			hidden_effect = {
+				191 = {
+					add_building_construction = {
+						type = bunker
+						province = 592
+						level = 1
+						instant_build = yes
+					}
+				}
+				13 = {
+					add_building_construction = {
+						type = bunker
+						province = 4640
+						level = 1
+						instant_build = yes
+					}
+				}
+				12 = {
+					add_building_construction = {
+						type = bunker
+						province = 3298
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 11222
+						level = 1
+						instant_build = yes
+					}
+				}
+				190 = {
+					add_building_construction = {
+						type = bunker
+						province = 3255
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 11358
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			set_country_flag = VKB_ostwall_second_level_completed
+		}
+	}
+
+	VKB_ostwall_repair_stations = {
+		icon = GFX_decision_generic_motorized
+		allowed = { always = no }
+		available = {
+			has_country_flag = VKB_ostwall_estland_completed
+			has_country_flag = VKB_ostwall_livland_completed
+			has_country_flag = VKB_ostwall_kurland_completed
+			has_full_control_of_state = 842
+		}
+
+		visible = {
+			owns_state = 842
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 842 }
+		}
+
+		custom_cost_text = VKB_repair_stations_cost
+		custom_cost_trigger = {
+			has_equipment = { motorized_equipment > 499 }
+		}
+
+		days_remove = 30
+		fire_only_once = yes
+		cancel_if_not_visible = yes
+
+		ai_will_do = { factor = 20 }
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel VKB_ostwall_repair_stations"
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 500
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete VKB_ostwall_repair_stations"
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -500
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VKB_ostwall_repair_stations"
+			add_ideas = VKB_ostwall_idea_1
+			set_country_flag = VKB_ostwall_repair_stations_completed
+		}
+	}
+
+	VKB_ostwall_aa_stations = {
+		icon = GFX_decision_AA_small
+		allowed = { always = no }
+		available = {
+			has_country_flag = VKB_ostwall_estland_completed
+			has_country_flag = VKB_ostwall_livland_completed
+			has_country_flag = VKB_ostwall_kurland_completed
+			has_full_control_of_state = 13
+			has_full_control_of_state = 12
+		}
+
+		visible = {
+			owns_state = 13
+			owns_state = 12
+		}
+
+		highlight_states = {
+			highlight_provinces = { 83 185 496 567 3074 3152 4640 6201 9079 11057 11127 11426 11443 3298 3388 9240 9317 9501 10323 10493 11222 11302 }
+		}
+
+		custom_cost_text = VKB_aa_stations_cost
+		custom_cost_trigger = {
+			has_equipment = { anti_air_equipment > 249 }
+			has_equipment = { support_equipment > 299 }
+		}
+
+		days_remove = 30
+		fire_only_once = yes
+		cancel_if_not_visible = yes
+
+		ai_will_do = { factor = 20 }
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel VKB_ostwall_aa_stations"
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment
+				amount = 250
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 300
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete VKB_ostwall_aa_stations"
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment
+					amount = -250
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -300
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VKB_ostwall_aa_stations"
+			13 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+			12 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_country_flag = VKB_ostwall_aa_stations_completed
+		}
+	}
+
+	VKB_ostwall_third_level = {
+		icon = GFX_decision_generic_construction
+		allowed = { always = no }
+		available = {
+			has_country_flag = VKB_ostwall_second_level_completed
+			has_country_flag = VKB_ostwall_repair_stations_completed
+			has_country_flag = VKB_ostwall_aa_stations_completed
+			has_full_control_of_state = 191
+			has_full_control_of_state = 13
+			has_full_control_of_state = 12
+			has_full_control_of_state = 190
+		}
+
+		visible = {
+			owns_state = 191
+			owns_state = 13
+			owns_state = 12
+			owns_state = 190
+		}
+
+		highlight_states = {
+			highlight_provinces = { 592 4640 3298 11222 3255 11358 }
+		}
+
+		custom_cost_text = VKB_third_fort_level_cost
+		custom_cost_trigger = {
+			has_equipment = { anti_tank_equipment > 249 }
+			has_equipment = { support_equipment > 299 }
+		}
+
+		days_remove = 30
+		fire_only_once = yes
+		cancel_if_not_visible = yes
+
+		ai_will_do = { factor = 20 }
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel VKB_ostwall_third_level"
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = 250
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 300
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete VKB_ostwall_third_level"
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment
+					amount = -250
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -300
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VKB_ostwall_third_level"
+			custom_effect_tooltip = VKB_second_fort_level
+			hidden_effect = {
+				191 = {
+					add_building_construction = {
+						type = bunker
+						province = 592
+						level = 1
+						instant_build = yes
+					}
+				}
+				13 = {
+					add_building_construction = {
+						type = bunker
+						province = 4640
+						level = 1
+						instant_build = yes
+					}
+				}
+				12 = {
+					add_building_construction = {
+						type = bunker
+						province = 3298
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 11222
+						level = 1
+						instant_build = yes
+					}
+				}
+				190 = {
+					add_building_construction = {
+						type = bunker
+						province = 3255
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 11358
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	VKB_ostwall_underground_railroad = {
+		icon = GFX_decision_train
+		allowed = { always = no }
+		available = {
+			has_country_flag = VKB_ostwall_second_level_completed
+			has_country_flag = VKB_ostwall_repair_stations_completed
+			has_country_flag = VKB_ostwall_aa_stations_completed
+			has_full_control_of_state = 842
+		}
+
+		visible = {
+			owns_state = 842
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 842 }
+		}
+
+		custom_cost_text = VKB_underground_railroad_cost
+		custom_cost_trigger = {
+			has_equipment = { support_equipment > 599 }
+		}
+
+		days_remove = 30
+		fire_only_once = yes
+		cancel_if_not_visible = yes
+
+		ai_will_do = { factor = 20 }
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel VKB_ostwall_underground_railroad"
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 600
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete VKB_ostwall_underground_railroad"
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -600
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VKB_ostwall_underground_railroad"
+			swap_ideas = {
+				remove_idea = VKB_ostwall_idea_1
+				add_idea = VKB_ostwall_idea_2
+			}
+		}
+	}
+
+	VKB_ostwall_redoubt = {
+		icon = GFX_decision_generic_construction
+
+		available = {
+			has_full_control_of_state = 842
+			if = {
+				limit = { has_country_flag = VKB_ostwall_coasts_redoubt }
+				has_full_control_of_state = 13
+			}
+			else = {
+				has_full_control_of_state = 190
+			}
+		}
+
+		visible = {
+			has_country_flag = VKB_ostwall_redoubt_flag
+			owns_state = 842
+			if = {
+				limit = { has_country_flag = VKB_ostwall_coasts_redoubt }
+				owns_state = 13
+			}
+			else = {
+				owns_state = 190
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				OR = {
+					state = 842
+					if = {
+						limit = {
+							ROOT = { has_country_flag = VKB_ostwall_coasts_redoubt }
+						}
+						state = 13
+					}
+					else = {
+						state = 190
+					}
+				}
+			}
+		}
+
+		custom_cost_text = VKB_redoubt_cost
+		custom_cost_trigger = {
+			has_equipment = { infantry_equipment > 999 }
+			has_equipment = { support_equipment > 249 }
+		}
+
+		days_remove = 30
+		fire_only_once = yes
+
+		ai_will_do = { factor = 20 }
+
+		cancel_trigger = {
+			OR = {
+				NOT = { controls_state = 842 }
+				if = {
+					limit = {
+						ROOT = { has_country_flag = VKB_ostwall_coasts_redoubt }
+					}
+					NOT = { controls_state = 13 }
+				}
+				else = {
+					NOT = { controls_state = 190 }
+				}
+			}
+		}
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel VKB_ostwall_redoubt"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 250
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete VKB_ostwall_redoubt"
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -250
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove VKB_ostwall_redoubt"
+			if = {
+				limit = { has_country_flag = VKB_ostwall_coasts_redoubt }
+				13 = {
+					add_building_construction = {
+						type = bunker
+						province = 3152
+						level = 3
+						instant_build = yes
+					}
+				}
+				clr_country_flag = VKB_ostwall_coasts_redoubt
+			}
+			else = {
+				190 = {
+					add_building_construction = {
+						type = bunker
+						province = 265
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			842 = {
+				add_building_construction = {
+					type = bunker
+					province = 9340
+					level = 3
+					instant_build = yes
+				}
+			}
+			clr_country_flag = VKB_ostwall_redoubt_flag
+		}
+	}
+
+	VKB_buy_small_arms = {
+		icon = ger_military_buildup
+		allowed = { always = no }
+		visible = {
+			FROM = {
+				is_faction_leader = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		days_remove = 60
+		cost = 25
+		cancel_if_not_visible = yes
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				stockpile_ratio = {
+					archetype = infantry_equipment
+					ratio < 0.75
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete VKB_buy_small_arms target: [From.GetName]"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = GRU
+			}
+		}
+	}
+
+	VKB_buy_support_equipment = {
+		icon = ger_military_buildup
+		allowed = { always = no }
+		visible = {
+			FROM = {
+				is_faction_leader = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		days_remove = 60
+		cost = 25
+		cancel_if_not_visible = yes
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				stockpile_ratio = {
+					archetype = support_equipment
+					ratio < 0.75
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete VKB_buy_support_equipment target: [From.GetName]"
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 200
+				producer = GRU
+			}
+		}
+	}
+
+	VKB_buy_artillery = {
+		icon = ger_military_buildup
+		allowed = { always = no }
+		visible = {
+			FROM = {
+				is_faction_leader = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		days_remove = 60
+		cost = 25
+		cancel_if_not_visible = yes
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				stockpile_ratio = {
+					archetype = artillery_equipment
+					ratio < 0.75
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete VKB_buy_artillery target: [From.GetName]"
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 150
+				producer = GRU
+			}
+		}
+	}
+
+	VKB_buy_motorised = {
+		icon = ger_military_buildup
+		allowed = { always = no }
+		visible = {
+			FROM = {
+				is_faction_leader = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		days_remove = 60
+		cost = 25
+		cancel_if_not_visible = yes
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				stockpile_ratio = {
+					archetype = motorized_equipment
+					ratio < 0.75
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete VKB_buy_motorised target: [From.GetName]"
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 100
+				producer = GRU
+			}
+		}
+	}
+
+	VKB_buy_anti_tank = {
+		icon = ger_military_buildup
+		allowed = { always = no }
+		visible = {
+			FROM = {
+				is_faction_leader = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		days_remove = 60
+		cost = 25
+		cancel_if_not_visible = yes
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				stockpile_ratio = {
+					archetype = anti_tank_equipment
+					ratio < 0.75
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete VKB_buy_anti_tank target: [From.GetName]"
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = 100
+				producer = GRU
+			}
+		}
+	}
+
+	VKB_buy_anti_air = {
+		icon = ger_military_buildup
+		allowed = { always = no }
+		visible = {
+			FROM = {
+				is_faction_leader = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		days_remove = 60
+		cost = 25
+		cancel_if_not_visible = yes
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				stockpile_ratio = {
+					archetype = anti_air_equipment
+					ratio < 0.75
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete VKB_buy_anti_air target: [From.GetName]"
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment
+				amount = 100
+				producer = GRU
+			}
+		}
+	}
+}

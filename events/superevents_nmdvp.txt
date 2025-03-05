@@ -285,7 +285,7 @@ country_event = { #Second Weltkrieg
 					has_global_flag = KX_superevent_sounds_off
 				}
 			}
-			scoped_sound_effect = "superev_weltkrieg"
+			scoped_sound_effect = "superev_goebb_2wk"
 		}
 	}
 }

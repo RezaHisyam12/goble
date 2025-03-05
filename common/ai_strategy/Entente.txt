@@ -959,3 +959,181 @@ CAN_build_up_troops = {
 		value = 100
 	}
 }
+
+ENT_dont_invade_britain_before_france = {
+	allowed = {
+		is_in_faction_with = ENT
+	}
+	enable = {
+		has_war_with = ENG
+		has_war_with = FRA
+		FRA = { has_capitulated = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invade
+		id = ENG
+		value = -500
+	}
+	ai_strategy = {
+		type = invade
+		id = IRE
+		value = -500
+	}
+	ai_strategy = {
+		type = invade
+		id = NOR
+		value = -500
+	}
+	ai_strategy = {
+		type = invade
+		id = ICE
+		value = -500
+	}
+	ai_strategy = {
+		type = invade
+		id = HOL
+		value = -500
+	}
+	ai_strategy = {
+		type = invade
+		id = BEL
+		value = -500
+	}
+}
+
+ENT_dont_invade_france_italy_spain_if_not_in_position = {
+	allowed = {
+		is_in_faction_with = ENT
+		is_in_faction_with = NFA
+	}
+	enable = {
+		num_divisions > 19
+		FRA = { has_capitulated = no }
+		NOT = {
+			divisions_in_state = { state = 459 size > 0 }
+			divisions_in_state = { state = 805 size > 0 }
+			divisions_in_state = { state = 460 size > 0 }
+			divisions_in_state = { state = 458 size > 0 }
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invade
+		id = FRA
+		value = -500
+	}
+	ai_strategy = {
+		type = invade
+		id = SRI
+		value = -500
+	}
+	ai_strategy = {
+		type = invade
+		id = CNT
+		value = -500
+	}
+}
+
+ENT_support_invasion_of_france = {
+	allowed = {
+		is_in_faction_with = ENT
+	}
+	enable = {
+		has_war_with = FRA
+		FRA = {
+			has_capitulated = no
+			any_home_area_neighbor_country = { is_ally_with = ENT }
+		}
+
+		#not if any dangerous neighbours
+		surrender_progress < 0.05
+		NOT = {
+			any_home_area_neighbor_country = {
+				has_war_with = PREV
+				has_capitulated = no
+				NOT = { tag = FRA }
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = FRA
+		value = 200
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = FRA
+		value = 50
+	}
+}
+
+ENT_support_invasion_of_britain = {
+	allowed = {
+		is_in_faction_with = ENT
+	}
+	enable = {
+		has_war_with = ENG
+		ENG = {
+			has_capitulated = no
+			any_home_area_neighbor_country = { is_ally_with = ENT }
+		}
+
+		#not if any dangerous neighbours
+		surrender_progress < 0.05
+		NOT = {
+			any_home_area_neighbor_country = {
+				has_war_with = PREV
+				has_capitulated = no
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = ENG
+		value = 200
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = ENG
+		value = 50
+	}
+}
+
+ENT_sync_invasions = {
+	allowed = {
+		is_in_faction_with = ENT
+	}
+	enable = {
+		has_war_with = INT
+		OR = {
+			FRA = {
+				exists = yes
+				has_capitulated = no
+			}
+			ENG = {
+				exists = yes
+				has_capitulated = no
+			}
+		}
+
+		#activate every 60 days
+		set_temp_variable = { days = global.num_days }
+		modulo_temp_variable = { days = 90 }
+		check_variable = { days < 60 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		area = mainland_europe
+		ordertype = invasion
+		execute_order = no
+	}
+}

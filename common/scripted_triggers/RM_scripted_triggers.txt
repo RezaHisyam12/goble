@@ -374,3 +374,11 @@ GRU_is_zollverein_member = {
 	is_in_array = { global.zollverein_members = THIS }
 }
 
+GRU_VK_EAST = {
+		AND = {
+			country_exists = VKB
+			country_exists = VKR
+			country_exists = VKK
+	}
+}
+

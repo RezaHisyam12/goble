@@ -1,0 +1,35 @@
+﻿l_english:
+
+########################
+##### GERMAN SUPPORT #######
+########################
+
+ GRU_ostwall_courland: "Kurland-Stellung"
+ GRU_ostwall_courland_desc: "The construction of the Ostwall continues - let us extend it into [FROM.GetNameDef] and protect it from Russian incursion."
+ GRU_ostwall_belarus: "Weißruthenien-Stellung"
+ GRU_ostwall_belarus_desc: "The construction of the Ostwall continues - let us extend it into [FROM.GetNameDef] and protect it from Russian incursion."
+ GRU_ostwall_kiev: "Kiew-Tscherkassy-Stellung"
+ GRU_ostwall_kiev_desc: "The construction of the Ostwall continues - let us extend it into Northern Ukraine and protect it from Russian incursion."
+ GRU_ostwall_kherson: "Cherson-Jekaterinoslaw-Stellung"
+ GRU_ostwall_kherson_desc: "The construction of the Ostwall continues - let us extend it into Southern Ukraine and protect it from Russian incursion."
+
+########################
+##### BALTIC/VKB #######
+########################
+
+ VKB_ostwall_decision_category: "Ostwallprogramm"
+ VKB_ostwall_decision_category_desc: "Envisioned by the top brass of the Baltische Landeswehr in the late 1920s, the Ostwall ('Eastern Wall') programme is the United Baltic Duchy's response to growing Russian power - a series of fortifications and defensive measures along the eastern border to serve as deterrence and potentially defence against a full frontal offensive towards Riga and Reval. While a costly measure, it is bound to leave the Baltic German state prepared against any attack should it be implemented completely.\n\nDuring the §YOstwallprogramm§!, you are able to construct §YLand Forts§! and gain defence-oriented §YNational Spirits§! by spending various types of £rifle_texticon §YEquipment§!. The Ostwallprogramm is composed of several stages, completing all construction initiatives in a stage will unlock new, advanced and more expensive decisions to unlock. Completing the §YPurchase Material§! National Focus will grant you permanent decisions to purchase Equipment to spend on Ostwall initiatives - or your own army."
+ VKB_ostwall_kurland: "Basic Kurland Fortifications"
+ VKB_ostwall_livland: "Basic Livland Fortifications"
+ VKB_ostwall_estland: "Basic Estland Fortifications"
+ VKB_ostwall_second_level: "Ostwall Artillery Stations"
+ VKB_ostwall_repair_stations: "Establish Repair Stations"
+ VKB_ostwall_aa_stations: "Construct Static Anti-Air Guns"
+ VKB_ostwall_third_level: "Ostwall Anti-Tank Stations"
+ VKB_ostwall_underground_railroad: "Underground Railroad Networks"
+ VKB_buy_small_arms: "Purchase German Rifles"
+ VKB_buy_support_equipment: "Purchase German Construction Material"
+ VKB_buy_artillery: "Purchase German Artillery"
+ VKB_buy_motorised: "Purchase German Trucks"
+ VKB_buy_anti_tank: "Purchase German AT Guns"
+ VKB_buy_anti_air: "Purchase German AA Guns"

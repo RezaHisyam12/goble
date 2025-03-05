@@ -1922,3 +1922,16 @@ GRU_zollverein_infrastructure_effect = {
 	}
 }
 
+VKB_setup_ostwallprogramm_decisions = {
+	activate_targeted_decision = { target = THIS decision = VKB_ostwall_kurland }
+	activate_targeted_decision = { target = THIS decision = VKB_ostwall_livland }
+	activate_targeted_decision = { target = THIS decision = VKB_ostwall_estland }
+	activate_targeted_decision = { target = THIS decision = VKB_ostwall_second_level }
+	activate_targeted_decision = { target = THIS decision = VKB_ostwall_repair_stations }
+	activate_targeted_decision = { target = THIS decision = VKB_ostwall_aa_stations }
+	activate_targeted_decision = { target = THIS decision = VKB_ostwall_third_level }
+	hidden_effect = {
+		activate_targeted_decision = { target = THIS decision = VKB_ostwall_underground_railroad }
+		activate_targeted_decision = { target = THIS decision = VKB_ostwall_redoubt }
+	}
+}
