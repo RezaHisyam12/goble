@@ -453,7 +453,9 @@ SOV_Spreading_The_Revolution_decisions = {
 					NOT = { has_global_flag = second_weltkrieg_has_started }
 				}
 				OR = {
-					has_completed_focus = SOV_The_Final_Battle
+				has_completed_focus = RUS_The_Fourth_Internationale
+				has_completed_focus = RUS_Join_The_Internationale
+				has_completed_focus = DKB_Into_The_Future
 				}
 			}
 		}
@@ -788,6 +790,7 @@ RUS_MIO_decisions = {
 		available = { 
 			owns_state = 223 
 			mio:RUS_toz_organisation = { has_mio_size > 5 }			
+			NOT = { has_variable = RUS_TOZ_total_medals > 350 }
 		}
 		visible = { RUS_has_one_TOZ_medal_trait = yes }
 

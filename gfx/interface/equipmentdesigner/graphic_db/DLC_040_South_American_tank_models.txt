@@ -1,0 +1,986 @@
+
+ARG = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_light_armor_1_alt_entity
+				ARG_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_light_armor_2_alt_entity
+				ARG_light_armor_1_alt_entity
+				ARG_light_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_medium_armor_1_alt_entity
+				ARG_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_medium_armor_2_alt_entity
+				ARG_medium_armor_1_alt_entity
+				ARG_medium_armor_0_alt_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_heavy_armor_0_alt_entity
+			}
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_heavy_armor_1_alt_entity
+				ARG_heavy_armor_0_alt_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_heavy_armor_2_alt_entity
+				ARG_heavy_armor_1_alt_entity
+				ARG_heavy_armor_0_alt_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_super_heavy_armor_alt_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_modern_armor_alt_entity
+				ARG_medium_armor_2_alt_entity
+				ARG_heavy_armor_2_alt_entity
+				ARG_super_heavy_armor_alt_entity
+			}
+		}
+	}
+}
+FOP = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_light_armor_1_alt_entity
+				ARG_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_light_armor_2_alt_entity
+				ARG_light_armor_1_alt_entity
+				ARG_light_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_medium_armor_1_alt_entity
+				ARG_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_medium_armor_2_alt_entity
+				ARG_medium_armor_1_alt_entity
+				ARG_medium_armor_0_alt_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_heavy_armor_0_alt_entity
+			}
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_heavy_armor_1_alt_entity
+				ARG_heavy_armor_0_alt_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_heavy_armor_2_alt_entity
+				ARG_heavy_armor_1_alt_entity
+				ARG_heavy_armor_0_alt_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_super_heavy_armor_alt_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				ARG_modern_armor_alt_entity
+				ARG_medium_armor_2_alt_entity
+				ARG_heavy_armor_2_alt_entity
+				ARG_super_heavy_armor_alt_entity
+			}
+		}
+	}
+}
+BRA = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_2_alt_entity
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_1_alt_entity
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_2_alt_entity
+				BRA_medium_armor_1_alt_entity
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_heavy_armor_0_alt_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_super_heavy_armor_alt_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_2_alt_entity
+				BRA_super_heavy_armor_alt_entity
+			}
+		}
+	}
+}
+AMA = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_2_alt_entity
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_1_alt_entity
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_2_alt_entity
+				BRA_medium_armor_1_alt_entity
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_heavy_armor_0_alt_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_super_heavy_armor_alt_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_2_alt_entity
+				BRA_super_heavy_armor_alt_entity
+			}
+		}
+	}
+}
+BAH = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_2_alt_entity
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_1_alt_entity
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_2_alt_entity
+				BRA_medium_armor_1_alt_entity
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_heavy_armor_0_alt_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_super_heavy_armor_alt_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_2_alt_entity
+				BRA_super_heavy_armor_alt_entity
+			}
+		}
+	}
+}
+GOY = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_2_alt_entity
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_1_alt_entity
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_2_alt_entity
+				BRA_medium_armor_1_alt_entity
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_heavy_armor_0_alt_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_super_heavy_armor_alt_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_2_alt_entity
+				BRA_super_heavy_armor_alt_entity
+			}
+		}
+	}
+}
+GRP = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_2_alt_entity
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_1_alt_entity
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_2_alt_entity
+				BRA_medium_armor_1_alt_entity
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_heavy_armor_0_alt_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_super_heavy_armor_alt_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_2_alt_entity
+				BRA_super_heavy_armor_alt_entity
+			}
+		}
+	}
+}
+PIR = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_2_alt_entity
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_1_alt_entity
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_2_alt_entity
+				BRA_medium_armor_1_alt_entity
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_heavy_armor_0_alt_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_super_heavy_armor_alt_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_2_alt_entity
+				BRA_super_heavy_armor_alt_entity
+			}
+		}
+	}
+}
+VCR = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_2_alt_entity
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_1_alt_entity
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_2_alt_entity
+				BRA_medium_armor_1_alt_entity
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_heavy_armor_0_alt_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_super_heavy_armor_alt_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_2_alt_entity
+				BRA_super_heavy_armor_alt_entity
+			}
+		}
+	}
+}
+SPO = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_2_alt_entity
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_1_alt_entity
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_2_alt_entity
+				BRA_medium_armor_1_alt_entity
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_heavy_armor_0_alt_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_super_heavy_armor_alt_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_2_alt_entity
+				BRA_super_heavy_armor_alt_entity
+			}
+		}
+	}
+}
+URG = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_light_armor_2_alt_entity
+				BRA_light_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_1_alt_entity
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_2_alt_entity
+				BRA_medium_armor_1_alt_entity
+				BRA_medium_armor_0_alt_entity
+			}
+		}
+	}
+	heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_heavy_armor_0_alt_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_super_heavy_armor_alt_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				BRA_medium_armor_2_alt_entity
+				BRA_super_heavy_armor_alt_entity
+			}
+		}
+	}
+}
+CHL = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				CHL_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				CHL_light_armor_0_alt_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				CHL_light_armor_2_alt_entity
+				CHL_light_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 0.9
+			models = {
+				CHL_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_2 = {
+		pool = {
+			weight = 0.9
+			models = {
+				CHL_medium_armor_1_alt_entity
+				CHL_medium_armor_0_alt_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 0.9
+			models = {
+				CHL_medium_armor_2_alt_entity
+				CHL_medium_armor_1_alt_entity
+				CHL_medium_armor_0_alt_entity
+			}
+		}
+	}
+	heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				CHL_heavy_armor_0_alt_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				CHL_medium_armor_2_alt_entity
+			}
+		}
+	}
+}

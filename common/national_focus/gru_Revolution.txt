@@ -6966,7 +6966,6 @@ shared_focus = {
 				8 = {
 				add_claim_by = GRU
 				}
-			set_global_flag = GER_Second_Weltkrieg
 		}
 		prerequisite = { focus = GRU_NMDVP_allignment  }
 		mutually_exclusive = { focus = GRU_NMDVP_PRESSURE_SORELIAN_FRANCE }

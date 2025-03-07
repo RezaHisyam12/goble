@@ -15,6 +15,9 @@ country_event = { #paneuropeanism embraced
 
 	option = {
 		name = "This concept seems interesting..."
+		ai_chance = {
+            		base = 100        
+       		}
 		set_country_leader_ideology = tot_euro_mosleyism
 		hidden_effect = {
 			country_event = {
@@ -22,9 +25,6 @@ country_event = { #paneuropeanism embraced
 				days = 1
 			}
 		}
-		ai_chance = {
-            		base = 100        
-       		}
 	}
 
 	

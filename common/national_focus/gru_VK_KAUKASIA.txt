@@ -1,4 +1,4 @@
-	focus_tree = {
+focus_tree = {
 	id = gru_VKK
 	continuous_focus_position = { x = 2700 y = 300 }
 	country = {
@@ -20,7 +20,7 @@
 		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_KAUKASIA_START_COLONIZING"
-			990 = {
+			218 = {
 				add_core_of = VKK
 			}
 			swap_ideas = {
@@ -38,41 +38,82 @@
 		id = VK_FOCUS_KAUKASIA_COLONIZE_ONE
 		icon = VKK_COLONIZE_ONE
 		relative_position_id = VK_FOCUS_KAUKASIA_START_COLONIZING
-		x = -3
+		x = -2
 		y = 1
 		available = {
 							VKK = {
-								controls_state = 229
-								controls_state = 998
-								controls_state = 230
-								controls_state = 1082
-								controls_state = 231
-								controls_state = 1080
-								controls_state = 1081
+								controls_state = 1265
+								controls_state = 245
+								controls_state = 1264
+								controls_state = 1263
+								controls_state = 238
+								controls_state = 1226
+								controls_state = 237
+								controls_state = 1266
 							}
 		}
 		cost = 18
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_KAUKASIA_COLONIZE_ONE"
-			229 = {
+			1265 = {
 				add_core_of = VKK
 			}
+			245 = {
+				add_core_of = VKK
+			}
+			1264 = {
+				add_core_of = VKK
+			}
+			1263 = {
+				add_core_of = VKK
+			}
+			238 = {
+				add_core_of = VKK
+			}
+			237 = {
+				add_core_of = VKK
+			}
+			1226 = {
+				add_core_of = VKK
+			}
+			1266 = {
+				add_core_of = VKK
+			}		}
+		prerequisite = { focus = VK_FOCUS_KAUKASIA_START_COLONIZING  }
+	}
+
+	focus = {
+		id = VK_FOCUS_KAUKASIA_COLONIZE_TWO
+		icon = VKK_COLONIZE_TWO
+		relative_position_id = VK_FOCUS_KAUKASIA_START_COLONIZING
+		x = 0
+		y = 1
+		available = {
+							VKK = {
+								controls_state = 998
+								controls_state = 229
+								controls_state = 230
+								controls_state = 1298
+								controls_state = 1299								
+								controls_state = 990								
+								controls_state = 1300								
+								controls_state = 1301								
+								controls_state = 1303								
+								controls_state = 1302								
+								controls_state = 1304								
+								controls_state = 1081
+							}
+		}
+		cost = 18
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_KAUKASIA_COLONIZE_TWO"
 			998 = {
 				add_core_of = VKK
 			}
+			229 = {
+				add_core_of = VKK
+			}
 			230 = {
-				add_core_of = VKK
-			}
-			1082 = {
-				add_core_of = VKK
-			}
-			231 = {
-				add_core_of = VKK
-			}
-			1080 = {
-				add_core_of = VKK
-			}
-			1081 = {
 				add_core_of = VKK
 			}
 			1298 = {
@@ -81,42 +122,56 @@
 			1299 = {
 				add_core_of = VKK
 			}
-			1302 = {
-				add_core_of = VKK
-			}
-			1301 = {
+			990 = {
 				add_core_of = VKK
 			}
 			1300 = {
 				add_core_of = VKK
 			}
+			1301 = {
+				add_core_of = VKK
+			}
+			1302 = {
+				add_core_of = VKK
+			}
 			1303 = {
 				add_core_of = VKK
 			}
+			1304 = {
+				add_core_of = VKK
+			}			
+			1081 = {
+				add_core_of = VKK
+			}	
 		}
 		prerequisite = { focus = VK_FOCUS_KAUKASIA_START_COLONIZING  }
 	}
 
 	focus = {
-		id = VK_FOCUS_KAUKASIA_COLONIZE_TWO
-		icon = VKK_COLONIZE_TWO
+		id = VK_FOCUS_KAUKASIA_COLONIZE_THREE
+		icon = VKK_COLONIZE_THREE
 		relative_position_id = VK_FOCUS_KAUKASIA_START_COLONIZING
-		x = -1
+		x = 2
 		y = 1
 		available = {
 							VKK = {
 								controls_state = 232
 								controls_state = 233
 								controls_state = 787
-								controls_state = 1190
 								controls_state = 1189
 								controls_state = 1186
 								controls_state = 1187
+								controls_state = 1267
+								controls_state = 1191
+
+								controls_state = 235
+								controls_state = 1227
+								controls_state = 234
 							}
 		}
 		cost = 18
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_KAUKASIA_COLONIZE_TWO"
+			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_KAUKASIA_COLONIZE_THREE"
 			232 = {
 				add_core_of = VKK
 			}
@@ -124,9 +179,6 @@
 				add_core_of = VKK
 			}
 			787 = {
-				add_core_of = VKK
-			}
-			1190 = {
 				add_core_of = VKK
 			}
 			1189 = {
@@ -141,51 +193,17 @@
 			1267 = {
 				add_core_of = VKK
 			}
-		}
-		prerequisite = { focus = VK_FOCUS_KAUKASIA_START_COLONIZING  }
-	}
-
-	focus = {
-		id = VK_FOCUS_KAUKASIA_COLONIZE_THREE
-		icon = VKK_COLONIZE_THREE
-		relative_position_id = VK_FOCUS_KAUKASIA_START_COLONIZING
-		x = 1
-		y = 1
-		available = {
-							VKK = {
-								controls_state = 1188
-								controls_state = 1191
-								controls_state = 235
-								controls_state = 234
-								controls_state = 238
-								controls_state = 237
-							}
-		}
-		cost = 18
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_KAUKASIA_COLONIZE_THREE"
-			1188 = {
-				add_core_of = VKK
-			}
 			1191 = {
 				add_core_of = VKK
 			}
+
 			235 = {
-				add_core_of = VKK
-			}
-			234 = {
-				add_core_of = VKK
-			}
-			238 = {
-				add_core_of = VKK
-			}
-			237 = {
 				add_core_of = VKK
 			}
 			1227 = {
 				add_core_of = VKK
 			}
-			1266 = {
+			234 = {
 				add_core_of = VKK
 			}
 		}
@@ -196,17 +214,70 @@
 		id = VK_FOCUS_KAUKASIA_COLONIZE_FOUR
 		icon = VKK_COLONIZE_FOUR
 		relative_position_id = VK_FOCUS_KAUKASIA_START_COLONIZING
-		x = 3
-		y = 1
+		x = -1
+		y = 2
 		available = {
 							VKK = {
+								controls_state = 1188
+								controls_state = 1190
+								controls_state = 1080
+								controls_state = 231
+								controls_state = 1082
+							}
+		}
+		cost = 18
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_KAUKASIA_COLONIZE_FOUR"
+			1188 = {
+				add_core_of = VKK
+			}
+			1190 = {
+				add_core_of = VKK
+			}
+			1080 = {
+				add_core_of = VKK
+			}
+			231 = {
+				add_core_of = VKK
+			}
+			1082 = {
+				add_core_of = VKK
+			}
+		}
+		prerequisite = { focus = VK_FOCUS_KAUKASIA_START_COLONIZING  }
+	}
+	focus = {
+		id = VK_FOCUS_KAUKASIA_COLONIZE_FIVE
+		icon = VKK_COLONIZE_FOUR
+		relative_position_id = VK_FOCUS_KAUKASIA_START_COLONIZING
+		x = 1
+		y = 2
+		available = {
+							VKK = {
+								controls_state = 230
+								controls_state = 1000
+								controls_state = 1001
+								controls_state = 1213
+
 								controls_state = 236
 								controls_state = 217
 							}
 		}
 		cost = 18
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_KAUKASIA_COLONIZE_FOUR"
+			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_KAUKASIA_COLONIZE_FIVE"
+			230 = {
+				add_core_of = VKK
+			}
+			1000 = {
+				add_core_of = VKK
+			}
+			1001 = {
+				add_core_of = VKK
+			}
+			1213 = {
+				add_core_of = VKK
+			}
 			236 = {
 				add_core_of = VKK
 			}
@@ -222,7 +293,7 @@
 		icon = VKK_COLONIZED
 		relative_position_id = VK_FOCUS_KAUKASIA_START_COLONIZING
 		x = 0
-		y = 2
+		y = 3
 		available = {
 		}
 		cost = 6
@@ -238,6 +309,7 @@
 		prerequisite = { focus =  VK_FOCUS_KAUKASIA_COLONIZE_TWO }
 		prerequisite = { focus =  VK_FOCUS_KAUKASIA_COLONIZE_THREE }
 		prerequisite = { focus =  VK_FOCUS_KAUKASIA_COLONIZE_FOUR }
+		prerequisite = { focus =  VK_FOCUS_KAUKASIA_COLONIZE_FIVE }
 	}
 	shared_focus = VK_FOCUS_SHARED_ESTABLISH_VK
 	#shared_focus = GRU_formation_of_the_nva

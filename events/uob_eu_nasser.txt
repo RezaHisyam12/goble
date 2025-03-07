@@ -372,6 +372,9 @@ country_event = { # Francja - francuzi decydują
 
 	option = { #wycofają się
 		name = "We need to retreat..."
+		ai_chance = {
+            		base = 0        
+       		}
 		EGY = {
 			country_event = {
 					id = nasser.12
@@ -382,6 +385,9 @@ country_event = { # Francja - francuzi decydują
 	
 	option = { #wycofają się
 		name = "Come and take it!"
+		ai_chance = {
+            		base = 100        
+       		}
 		EGY = {
 			country_event = {
 					id = nasser.13

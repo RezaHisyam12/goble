@@ -6455,7 +6455,7 @@ focus_tree = {
 		}
 		x = 18
 		y = 18
-		ai_will_do = { factor = 100 }
+		ai_will_do = { factor = 50 }
 		
 		completion_reward = {
 			country_event = {	
@@ -6483,7 +6483,7 @@ focus_tree = {
 		}
 		x = 20
 		y = 18
-		ai_will_do = { factor = 100 }
+		ai_will_do = { factor = 50 }
 		
 		completion_reward = {
 			country_event = {	
@@ -6511,7 +6511,7 @@ focus_tree = {
 		}
 		x = 21
 		y = 19
-		ai_will_do = { factor = 100 }
+		ai_will_do = { factor = 50 }
 		
 		completion_reward = {
 			country_event = {	
@@ -6540,7 +6540,7 @@ focus_tree = {
 		}
 		x = 19
 		y = 19
-		ai_will_do = { factor = 100 }
+		ai_will_do = { factor = 50 }
 		
 		completion_reward = {
 			country_event = {	
@@ -6568,7 +6568,7 @@ focus_tree = {
 		}
 		x = 17
 		y = 19
-		ai_will_do = { factor = 100 }
+		ai_will_do = { factor = 50 }
 		
 		completion_reward = {
 			country_event = {	
@@ -6597,7 +6597,7 @@ focus_tree = {
 		}
 		x = 18
 		y = 20
-		ai_will_do = { factor = 100 }
+		ai_will_do = { factor = 50 }
 		
 		completion_reward = {
 			country_event = {	
@@ -6626,7 +6626,7 @@ focus_tree = {
 		}
 		x = 20
 		y = 20
-		ai_will_do = { factor = 100 }
+		ai_will_do = { factor = 50 }
 		
 		completion_reward = {
 			country_event = {	
@@ -6654,7 +6654,7 @@ focus_tree = {
 		}
 		x = 19
 		y = 21
-		ai_will_do = { factor = 100 }
+		ai_will_do = { factor = 75 }
 		
 		completion_reward = {
 			custom_effect_tooltip = nassser_bop_explanation_tt
@@ -7534,6 +7534,8 @@ focus_tree = {
 		cost = 1.00
 		prerequisite = { focus = EGY_unity_of_arab_people focus = EGY_pan_arab_front focus = EGY_new_face_of_arabia }
 		available = {
+			has_global_flag = AXIS_VICTORY
+			is_subject = no
 			OR = {
 				has_country_leader = {
 						name = "Gamal Abdel Nasser"

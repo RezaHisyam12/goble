@@ -1,0 +1,64 @@
+﻿##############################################
+################KAISERREICH AI################
+##############################################
+#This file will allow more specific control over the AI that cannot be achieved through other means
+add_namespace = ai_events
+
+#2nd Weltkrieg
+country_event = {
+	id = ai_events.301
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ai_events.301" }
+	hidden = yes
+
+	trigger = {
+		tag = GRU
+		has_war_with = INT
+		NOT = { has_global_flag = second_weltkrieg_has_started }
+	}
+
+	fire_only_once = yes
+
+	option = {
+		news_event = { id = worldnews.5 days = 1 }
+		country_event = { id = gerdom.101 days = 10 random_days = 30 }
+		INT = { country_event = worldtension.1 }
+		SWI = {
+			country_event = { id = swiss.135 days = 2 random_days = 4 }
+		}
+		SWE = {
+			country_event = { id = swe.50 days = 15 random_days = 10 }
+		}
+		DEN = {
+			country_event = { id = den.33 days = 4 random_days = 8 }
+		}
+		BRA = {
+			country_event = { id = bra.209 days = 15 random_days = 45 } #The New Rubber Boom
+			country_event = { id = bra.701 days = 180 random_days = 540 } #Carlos Drummond de Andrade Publishes 'Sentimento do Mundo'
+		}
+		LEC = {
+			country_event = { id = lec.97 days = 15 random_days = 15 }
+		}
+		set_global_flag = second_weltkrieg_has_started
+		clr_global_flag = KR_italy_balance
+	}
+}
+
+#Third Weltkrieg Entente vs Germany
+country_event = {
+	id = ai_events.302
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ai_events.302 FROM = [From.GetName]" }
+	hidden = yes
+
+	trigger = {
+		tag = GRU
+		has_war_with = ENT
+		has_global_flag = second_weltkrieg_has_started
+		NOT = { country_exists = INT } #WK2 has ended
+	}
+
+	fire_only_once = yes
+
+	option = {
+		news_event = worldnews.456
+	}
+}

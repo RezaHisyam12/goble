@@ -1,0 +1,790 @@
+### GER
+GER = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_GER_small_plane_airframe_5_medium
+			}
+			models = {
+				GER_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_GER_small_plane_airframe_5_medium
+			}
+			models = {
+				GER_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+MAF = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_GER_small_plane_airframe_5_medium
+			}
+			models = {
+				GER_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_GER_small_plane_airframe_5_medium
+			}
+			models = {
+				GER_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+GEA = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_GER_small_plane_airframe_5_medium
+			}
+			models = {
+				GER_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_GER_small_plane_airframe_5_medium
+			}
+			models = {
+				GER_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+BAT = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_GER_small_plane_airframe_5_medium
+			}
+			models = {
+				GER_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_GER_small_plane_airframe_5_medium
+			}
+			models = {
+				GER_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+LIT = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_GER_small_plane_airframe_5_medium
+			}
+			models = {
+				GER_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_GER_small_plane_airframe_5_medium
+			}
+			models = {
+				GER_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+BLR = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_GER_small_plane_airframe_5_medium
+			}
+			models = {
+				GER_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_GER_small_plane_airframe_5_medium
+			}
+			models = {
+				GER_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+UKR = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_GER_small_plane_airframe_5_medium
+			}
+			models = {
+				GER_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_GER_small_plane_airframe_5_medium
+			}
+			models = {
+				GER_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+AUS = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_GER_small_plane_airframe_5_medium
+			}
+			models = {
+				GER_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_GER_small_plane_airframe_5_medium
+			}
+			models = {
+				GER_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+POL = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_GER_small_plane_airframe_5_medium
+			}
+			models = {
+				GER_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_GER_small_plane_airframe_5_medium
+			}
+			models = {
+				GER_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+
+### ITA
+ITA = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_ITA_small_plane_airframe_5_medium
+			}
+			models = {
+				ITA_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_ITA_small_plane_airframe_5_medium
+			}
+			models = {
+				ITA_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+SRI = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_ITA_small_plane_airframe_5_medium
+			}
+			models = {
+				ITA_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_ITA_small_plane_airframe_5_medium
+			}
+			models = {
+				ITA_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+SIC = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_ITA_small_plane_airframe_5_medium
+			}
+			models = {
+				ITA_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_ITA_small_plane_airframe_5_medium
+			}
+			models = {
+				ITA_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+SRD = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_ITA_small_plane_airframe_5_medium
+			}
+			models = {
+				ITA_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_ITA_small_plane_airframe_5_medium
+			}
+			models = {
+				ITA_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+PAP = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_ITA_small_plane_airframe_5_medium
+			}
+			models = {
+				ITA_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_ITA_small_plane_airframe_5_medium
+			}
+			models = {
+				ITA_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+
+### JAP
+JAP = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_JAP_small_plane_airframe_5_medium
+			}
+			models = {
+				JAP_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_JAP_small_plane_airframe_5_medium
+			}
+			models = {
+				JAP_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+FNG = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_JAP_small_plane_airframe_5_medium
+			}
+			models = {
+				JAP_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_JAP_small_plane_airframe_5_medium
+			}
+			models = {
+				JAP_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+
+### SOV
+RUS = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_SOV_small_plane_airframe_5_medium
+			}
+			models = {
+				SOV_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_SOV_small_plane_airframe_5_medium
+			}
+			models = {
+				SOV_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+
+### ENG
+ENG = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_ENG_small_plane_airframe_5_medium
+			}
+			models = {
+				ENG_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_ENG_small_plane_airframe_5_medium
+			}
+			models = {
+				ENG_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+IMP = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_ENG_small_plane_airframe_5_medium
+			}
+			models = {
+				ENG_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_ENG_small_plane_airframe_5_medium
+			}
+			models = {
+				ENG_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+D01 = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_ENG_small_plane_airframe_5_medium
+			}
+			models = {
+				ENG_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_ENG_small_plane_airframe_5_medium
+			}
+			models = {
+				ENG_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+AST = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_ENG_small_plane_airframe_5_medium
+			}
+			models = {
+				ENG_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_ENG_small_plane_airframe_5_medium
+			}
+			models = {
+				ENG_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+SAF = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_ENG_small_plane_airframe_5_medium
+			}
+			models = {
+				ENG_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_ENG_small_plane_airframe_5_medium
+			}
+			models = {
+				ENG_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+
+### FRA
+FRA = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_FRA_small_plane_airframe_5_medium
+			}
+			models = {
+				FRA_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_FRA_small_plane_airframe_5_medium
+			}
+			models = {
+				FRA_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+NFA = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_FRA_small_plane_airframe_5_medium
+			}
+			models = {
+				FRA_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_FRA_small_plane_airframe_5_medium
+			}
+			models = {
+				FRA_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+
+### USA
+USA = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_USA_small_plane_airframe_5_medium
+			}
+			models = {
+				USA_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_USA_small_plane_airframe_5_medium
+			}
+			models = {
+				USA_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+CSA = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_USA_small_plane_airframe_5_medium
+			}
+			models = {
+				USA_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_USA_small_plane_airframe_5_medium
+			}
+			models = {
+				USA_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+TEX = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_USA_small_plane_airframe_5_medium
+			}
+			models = {
+				USA_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_USA_small_plane_airframe_5_medium
+			}
+			models = {
+				USA_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+PSA = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_USA_small_plane_airframe_5_medium
+			}
+			models = {
+				USA_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_USA_small_plane_airframe_5_medium
+			}
+			models = {
+				USA_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+NEE = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_USA_small_plane_airframe_5_medium
+			}
+			models = {
+				USA_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_USA_small_plane_airframe_5_medium
+			}
+			models = {
+				USA_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+
+### SWE
+SWE = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_SWE_small_plane_airframe_5_medium
+			}
+			models = {
+				SWE_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_SWE_small_plane_airframe_5_medium
+			}
+			models = {
+				SWE_supersonic_jet_plane_entity
+			}
+		}
+	}
+}
+SCA = {
+	small_plane_airframe_5 = {
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_SWE_small_plane_airframe_5_medium
+			}
+			models = {
+				SWE_supersonic_jet_plane_entity
+			}
+		}
+	}
+
+	supersonic_fighter_equipment_1 = { #Supersonic Jet (Non-BBA version) #MM: This equipment was implemented as the same air unit as the old Jet Plane so those old models will be the ones hooked-in
+		pool = {
+			weight = 3 #This weight is necessary due to weight being necessary in the generic pool due to being in a different file 
+			icons = {
+				GFX_SWE_small_plane_airframe_5_medium
+			}
+			models = {
+				SWE_supersonic_jet_plane_entity
+			}
+		}
+	}
+}

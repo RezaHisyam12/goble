@@ -12508,34 +12508,25 @@ GRU_expansion_four_volksreichskommissariat_ruthenia = {
 				AND = {	
 						OR = {
 							GRU = {
-								owns_state = 229
+								owns_state = 1265
 							}
 							any_other_country = {
 								is_subject_of = GRU
-								owns_state = 229
+								owns_state = 1265
 							}
 						}
 						OR = {
 							GRU = {
-								owns_state = 990
+								owns_state = 245
 							}
 							any_other_country = {
 								is_subject_of = GRU
-								owns_state = 990
+								owns_state = 245
 							}
 						}
 						OR = {
 							GRU = {
-								owns_state = 1082
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								owns_state = 1082
-							}
-						}
-						OR = {
-							GRU = {
-								owns_state = 231
+								owns_state = 1264
 							}
 							any_other_country = {
 								is_subject_of = GRU
@@ -12544,104 +12535,41 @@ GRU_expansion_four_volksreichskommissariat_ruthenia = {
 						}
 						OR = {
 							GRU = {
-								owns_state = 1080
+								owns_state = 1263
 							}
 							any_other_country = {
 								is_subject_of = GRU
-								owns_state = 1080
+								owns_state = 1263
 							}
 						}
 						OR = {
 							GRU = {
-								owns_state = 1081
+								owns_state = 238
 							}
 							any_other_country = {
 								is_subject_of = GRU
-								owns_state = 1081
+								owns_state = 238
 							}
 						}
 						OR = {
 							GRU = {
-								owns_state = 1227
+								owns_state = 1226
 							}
 							any_other_country = {
 								is_subject_of = GRU
-								owns_state = 1227
+								owns_state = 1226
 							}
 						}
 						OR = {
 							GRU = {
-								owns_state = 1190
+								owns_state = 237
 							}
 							any_other_country = {
 								is_subject_of = GRU
-								owns_state = 1190
+								owns_state = 237
 							}
 						}
 						
-						OR = {
-							GRU = {
-								owns_state = 1302
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								owns_state = 1302
-							}
-						}
-						OR = {
-							GRU = {
-								owns_state = 1300
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								owns_state = 1300
-							}
-						}
-						OR = {
-							GRU = {
-								owns_state = 1303
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								owns_state = 1303
-							}
-						}
-						OR = {
-							GRU = {
-								owns_state = 1301
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								owns_state = 1301
-							}
-						}	
-						OR = {
-							GRU = {
-								owns_state = 1304
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								owns_state = 1304
-							}
-						}	
-						OR = {
-							GRU = {
-								owns_state = 1188 
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								owns_state = 1188 
-							}
-						}	
-						OR = {
-							GRU = {
-								owns_state = 1266  
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								owns_state = 1266  
-							}
-						}						
 				}
 			}
 		
@@ -12652,22 +12580,13 @@ GRU_expansion_four_volksreichskommissariat_ruthenia = {
 		
 			complete_effect = {
 					VKK = {
-								transfer_state = 229
-								transfer_state = 990
-								#transfer_state = 230
-								transfer_state = 1082
-								transfer_state = 231
-								transfer_state = 1080
-								transfer_state = 1081
-								transfer_state = 1227
-								#transfer_state = 1226
-								transfer_state = 1302
-								transfer_state = 1190
-								transfer_state = 1300
-								transfer_state = 1303
-								transfer_state = 1301	
-								transfer_state = 1304								
-								transfer_state = 1188
+								transfer_state = 1265
+								transfer_state = 245
+								transfer_state = 1264
+								transfer_state = 1263
+								transfer_state = 238
+								transfer_state = 1226
+								transfer_state = 237
 								transfer_state = 1266
 					}
 					hidden_effect = {
@@ -12694,11 +12613,29 @@ GRU_expansion_four_volksreichskommissariat_ruthenia = {
 				AND = {	
 						OR = {
 							GRU = {
+								owns_state = 1267
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 1267
+							}
+						}
+						OR = {
+							GRU = {
 								owns_state = 998
 							}
 							any_other_country = {
 								is_subject_of = GRU
 								owns_state = 998
+							}
+						}
+						OR = {
+							GRU = {
+								owns_state = 229
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 229
 							}
 						}
 						OR = {
@@ -12728,6 +12665,69 @@ GRU_expansion_four_volksreichskommissariat_ruthenia = {
 								owns_state = 1299
 							}
 						}						
+						OR = {
+							GRU = {
+								owns_state = 990
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 990
+							}
+						}						
+						OR = {
+							GRU = {
+								owns_state = 1300
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 1300
+							}
+						}						
+						OR = {
+							GRU = {
+								owns_state = 1301
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 1301
+							}
+						}						
+						OR = {
+							GRU = {
+								owns_state = 1302
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 1302
+							}
+						}						
+						OR = {
+							GRU = {
+								owns_state = 1303
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 1303
+							}
+						}						
+						OR = {
+							GRU = {
+								owns_state = 1304
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 1304
+							}
+						}						
+						OR = {
+							GRU = {
+								owns_state = 1081
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 1081
+							}
+						}						
 				}
 			}
 		
@@ -12738,10 +12738,19 @@ GRU_expansion_four_volksreichskommissariat_ruthenia = {
 		
 			complete_effect = {
 					VKK = {
+								transfer_state = 1267
 								transfer_state = 998
+								transfer_state = 229
 								transfer_state = 230
 								transfer_state = 1298
 								transfer_state = 1299								
+								transfer_state = 990								
+								transfer_state = 1300								
+								transfer_state = 1301								
+								transfer_state = 1303								
+								transfer_state = 1302								
+								transfer_state = 1304								
+								transfer_state = 1081								
 					}
 					hidden_effect = {
 				VKK = {	country_event = rotermorgenmisc.300 }
@@ -12792,15 +12801,6 @@ GRU_expansion_two_volksreichskommissariat_kaukasia = {
 								owns_state = 787
 							}
 						}
-						#OR = {
-						#	GRU = {
-						#		owns_state = 1190
-						#	}
-						#	any_other_country = {
-						#		is_subject_of = GRU
-						#		owns_state = 1190
-						#	}
-						#}
 						OR = {
 							GRU = {
 								owns_state = 1189
@@ -12835,6 +12835,15 @@ GRU_expansion_two_volksreichskommissariat_kaukasia = {
 							any_other_country = {
 								is_subject_of = GRU
 								owns_state = 1267
+							}
+						}
+						OR = {
+							GRU = {
+								owns_state = 1191
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 1191
 							}
 						}
 				}
@@ -12850,12 +12859,11 @@ GRU_expansion_two_volksreichskommissariat_kaukasia = {
 								transfer_state = 232
 								transfer_state = 233
 								transfer_state = 787
-								#transfer_state = 1190
 								transfer_state = 1189
 								transfer_state = 1186
 								transfer_state = 1187
-
 								transfer_state = 1267
+								transfer_state = 1191
 					}
 					hidden_effect = {
 				VKK = {	country_event = rotermorgenmisc.300 }
@@ -12888,74 +12896,38 @@ GRU_expansion_three_volksreichskommissariat_kaukasia = {
 						}
 						OR = {
 							GRU = {
-								owns_state = 1191
+								owns_state = 1190
 							}
 							any_other_country = {
 								is_subject_of = GRU
-								owns_state = 1191
+								owns_state = 1190
 							}
 						}
 						OR = {
 							GRU = {
-								owns_state = 235
+								owns_state = 1080
 							}
 							any_other_country = {
 								is_subject_of = GRU
-								owns_state = 235
+								owns_state = 1080
 							}
 						}
 						OR = {
 							GRU = {
-								owns_state = 234
+								owns_state = 231
 							}
 							any_other_country = {
 								is_subject_of = GRU
-								owns_state = 234
+								owns_state = 231
 							}
 						}
 						OR = {
 							GRU = {
-								owns_state = 238
+								owns_state = 1082
 							}
 							any_other_country = {
 								is_subject_of = GRU
-								owns_state = 238
-							}
-						}
-						OR = {
-							GRU = {
-								owns_state = 237
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								owns_state = 237
-							}
-						}
-						OR = {
-							GRU = {
-								owns_state = 1265
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								owns_state = 1265
-							}
-						}
-						OR = {
-							GRU = {
-								owns_state = 1266
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								owns_state = 1266
-							}
-						}
-						OR = {
-							GRU = {
-								owns_state = 1226
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								owns_state = 1226
+								owns_state = 1082
 							}
 						}
 				}
@@ -12969,19 +12941,10 @@ GRU_expansion_three_volksreichskommissariat_kaukasia = {
 			complete_effect = {
 					VKK = {
 								transfer_state = 1188
-								transfer_state = 1191
-								transfer_state = 235
-								transfer_state = 234
-								transfer_state = 238
-								transfer_state = 237
-								
-								transfer_state = 245
-								transfer_state = 1263
-								transfer_state = 1264
-								transfer_state = 1265
-								
-								transfer_state = 1266
-								transfer_state = 1226
+								transfer_state = 1190
+								transfer_state = 1080
+								transfer_state = 231
+								transfer_state = 1082
 					}
 					hidden_effect = {
 						VKK = {	country_event = rotermorgenmisc.300 }
@@ -13005,20 +12968,29 @@ GRU_expansion_four_volksreichskommissariat_kaukasia = {
 				AND = {	
 						OR = {
 							GRU = {
-								owns_state = 236
+								owns_state = 235
 							}
 							any_other_country = {
 								is_subject_of = GRU
-								owns_state = 236
+								owns_state = 235
 							}
 						}
 						OR = {
 							GRU = {
-								owns_state = 217
+								owns_state = 1227
 							}
 							any_other_country = {
 								is_subject_of = GRU
-								owns_state = 217
+								owns_state = 1227
+							}
+						}
+						OR = {
+							GRU = {
+								owns_state = 234
+							}
+							any_other_country = {
+								is_subject_of = GRU
+								owns_state = 234
 							}
 						}
 				}
@@ -13031,8 +13003,9 @@ GRU_expansion_four_volksreichskommissariat_kaukasia = {
 		
 			complete_effect = {
 					VKK = {
-								transfer_state = 236
-								transfer_state = 217
+								transfer_state = 235
+								transfer_state = 1227
+								transfer_state = 234
 					}
 					hidden_effect = {
 				VKK = {	country_event = rotermorgenmisc.300 }
@@ -13058,9 +13031,6 @@ GRU_lebensraum_decisions = {
 			can_declare_war_on = FROM
 			FROM = {
 				OR = {
-				tag = DKB
-				tag = KUB
-				tag = MTR
 				tag = GEO
 				tag = AZE
 				tag = ARM
@@ -13080,9 +13050,6 @@ GRU_lebensraum_decisions = {
 			can_declare_war_on = FROM
 			FROM = {
 				OR = {
-				tag = DKB
-				tag = KUB
-				tag = MTR
 				tag = GEO
 				tag = AZE
 				tag = ARM
@@ -13281,7 +13248,7 @@ GRU_lebensraum_decisions = {
 			can_declare_war_on = FROM
 		}
 
-		targets = { LIT EST LAT BAT WHR UKR }
+		targets = { LIT EST LAT BAT WHR UKR DKB KUB MTR KLY }
 		target_root_trigger = {
 			has_completed_focus = GRU_NMDVP_LEBENSRAUM
 		}
