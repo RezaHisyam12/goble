@@ -3282,19 +3282,14 @@ shared_focus = {
 			}
 		}
 		completion_reward = {
-					log = "[GetDateText]: [Root.GetName]: Focus GRU_nationales_volksheer"
-					add_doctrine_cost_reduction = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_nationales_volksheer"
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
-				uses = 1
+				uses = 2
 				category = land_doctrine
-						}
-					army_experience = 25
-			add_breakthrough_progress = {
-				specialization = specialization_land
-				value = 0.5
 			}
-			custom_effect_tooltip = tooltip_white_line
+			army_experience = 25
 		}
 
 		prerequisite = { focus = GRU_elected_officers focus = GRU_skilled_officers focus = GRU_political_officers  }
@@ -3327,19 +3322,14 @@ shared_focus = {
 			}
 		}
 		completion_reward = {
-					log = "[GetDateText]: [Root.GetName]: Focus GRU_nationale_volksmarine"
-					add_doctrine_cost_reduction = {
-				name = naval_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = naval_doctrine
-						}
-					navy_experience = 25
-			add_breakthrough_progress = {
-				specialization = specialization_naval
-				value = 0.5
-			}
-			custom_effect_tooltip = tooltip_white_line
+		log = "[GetDateText]: [Root.GetName]: Focus GRU_nationale_volksmarine"
+		add_doctrine_cost_reduction = {
+			name = naval_doc_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = naval_doctrine
+		}
+		navy_experience = 25
 		}
 
 
@@ -3362,19 +3352,14 @@ shared_focus = {
 			}
 		}
 		completion_reward = {
-					log = "[GetDateText]: [Root.GetName]: Focus GRU_nationale_luftwaffe"
-					add_doctrine_cost_reduction = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_nationale_luftwaffe"
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
 				cost_reduction = 0.5
-				uses = 1
+				uses = 2
 				category = air_doctrine
-						}
-					air_experience  = 25
-			add_breakthrough_progress = {
-				specialization = specialization_air
-				value = 0.5
 			}
-			custom_effect_tooltip = tooltip_white_line
+			air_experience  = 25
 		}
 
 		prerequisite = { focus = GRU_elected_officers focus = GRU_skilled_officers focus = GRU_political_officers  }
@@ -3713,7 +3698,12 @@ shared_focus = {
 			else={
 			custom_effect_tooltip = GRU_tt_OKW_boni
 			}
-			army_experience = 50
+			army_experience = 75
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+			custom_effect_tooltip = tooltip_white_line
 		}
 		
 		prerequisite = { focus = GRU_panzergrenadiere focus = GRU_overwhelming_firepower  }
@@ -3805,7 +3795,12 @@ shared_focus = {
 			else={
 			custom_effect_tooltip = GRU_tt_OKW_boni
 			}
-			navy_experience = 50
+			navy_experience = 75
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.5
+			}
+			custom_effect_tooltip = tooltip_white_line
 		}
 		
 		prerequisite = { focus = GRU_cruiser_focus focus = GRU_submarine_focus  }
@@ -3939,7 +3934,12 @@ shared_focus = {
 			else={
 			custom_effect_tooltip = GRU_tt_OKW_boni
 			}
-			air_experience = 50
+			air_experience = 75
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+			custom_effect_tooltip = tooltip_white_line
 		}
 		
 		prerequisite = { focus = GRU_ground_support_focus focus = GRU_naval_support_focus  }
@@ -6980,6 +6980,9 @@ shared_focus = {
 		available = {
 					FRA = { has_country_leader = { ruling_only = yes name = "Marcel Déat" } }
 				}
+		ai_will_do = {
+			factor = 0
+		}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_PRESSURE_SORELIAN_FRANCE"
 					add_political_power = 100
@@ -7580,7 +7583,7 @@ shared_focus = {
 		cost = 5
 
 		relative_position_id = GRU_new_order
-		x = 0
+		x = -2
 		y = 1
 
 		ai_will_do = { factor = 5 }
@@ -7610,12 +7613,12 @@ shared_focus = {
 		cost = 15
 
 		relative_position_id = GRU_new_order
-		x = -2
-		y = 1
+		x = -1
+		y = 2
 
 		ai_will_do = { factor = 5 }
 		prerequisite = {
-			focus = GRU_new_order
+			focus = GRU_ostwall
 		}
 
 		completion_reward = {
@@ -7686,7 +7689,7 @@ shared_focus = {
 		cost = 6
 		relative_position_id = GRU_new_order
 		x = -2
-		y = 2
+		y = 3
 
 		ai_will_do = {
 			factor = 5
@@ -7789,15 +7792,14 @@ shared_focus = {
 
 		relative_position_id = GRU_new_order
 		x = 0
-		y = 2
+		y = 1
 
 		ai_will_do = { factor = 30 }
 		prerequisite = {
-			focus = GRU_ostwall
+			focus = GRU_new_order
 		}
 		available = {
 			has_war_with = FRA
-			has_war_with = RUS
 		}
 
 		completion_reward = {
@@ -8078,14 +8080,14 @@ shared_focus = {
 		cost = 2
 
 		relative_position_id = GRU_new_order
-		x = 2
-		y = 3
+		x = 1
+		y = 2
 
 		prerequisite = {
 			focus = GRU_first_plan
 		}
 		mutually_exclusive = {
-			focus = GRU_prepare_for_france
+			focus = GRU_prepare_for_russia_2
 		}
 
 		ai_will_do = { factor = 50 }
@@ -8114,8 +8116,8 @@ shared_focus = {
 		cost = 2
 
 		relative_position_id = GRU_new_order
-		x = 4
-		y = 3
+		x = 3
+		y = 2
 
 		prerequisite = {
 			focus = GRU_first_plan
@@ -8150,8 +8152,8 @@ shared_focus = {
 		cost = 10
 
 		relative_position_id = GRU_new_order
-		x = 3
-		y = 4
+		x = 2
+		y = 3
 
 		prerequisite = {
 			focus = GRU_prepare_for_russia

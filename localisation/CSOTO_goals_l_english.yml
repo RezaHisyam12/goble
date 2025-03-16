@@ -1,5 +1,4 @@
 ﻿l_english:
-  arab_dream_egypt_tt:0 "§GPan-Arab Dream starts to become reality§!"
   #decision#
   SUE_coring_decisions_category:0 "Integrate New Lands"
   SUE_core_egypt:0 "Integrate §GÄgypten§!"
@@ -46,6 +45,8 @@
   nasserism_subtype:0 "Nasserism"
   nasserism_subtype_desc:0 "§Y(Nasserism)§!\n\nUnique socialistic ideology developed by Gamal Abdel Nasser, Nasserism is combination of Arab socialism with charterist Totalism. Combining Arab nationalism with radical anti-colonialism, state ownership of public utilities and natural resources, state control over the trade, and workers representation in profit-sharing. All of that system is protected by one party - an Arab party, that protects all people across the land it governs. \n \nThis revolutionary ideology is obviously hard to enforce on traditionalist Arab population, but the Chairman - Gamal Abdel Nasser - shall ensure that progress will reach the Arab world"
   #tooltips
+  arab_dream_egypt_tt:0 "§GPan-Arab Dream starts to become reality§!"
+  arab_dream_egypt_tt_NOT:0 "§GPan-Arab Dream starts to become reality§!"
   influence_mechanic_tt:0 "§YThe Power Struggle Shall Begin!§!"
   nazi_influence_rising_tt:0 "§OVolkist Influence Will Rise§!"
   monarchist_influence_rising_tt:0 "§gImperial Influence Will Rise§!"

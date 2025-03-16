@@ -1,6 +1,8 @@
 add_namespace = rotermorgen
 add_namespace = rmgoebbnews
+add_namespace = rmruss
 add_namespace = wll
+add_namespace = gruothernews
 
 
 country_event = { # GRU setup
@@ -4736,258 +4738,507 @@ country_event = { #
 	}
 }
 
-add_namespace = rotermorgenrussiandoom
 
 country_event = { #
-	id = rotermorgenrussiandoom.2
+	id = rmruss.1
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rmruss.1" }
+	title = rmruss.1.t
+	desc = rmruss.1.d
+	picture = GFX_report_event_goebb_russ
 
-	hidden = yes
 	fire_only_once = yes
 
 	trigger = {
-		tag = RUS
-		has_war_with = GRU
-		surrender_progress > 0.90
+		tag = GRU
+		has_war_with = RUS
+		GRU = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
 		OR = {
-			OR = {
-				GRU = { controls_state = 219 }
-				any_other_country = { is_subject_of = GRU controls_state = 219 }
+			RUS = { surrender_progress > 0.90 }
+			GRU = {
+				controls_state = 195
+				controls_state = 219
+				controls_state = 252
+				controls_state = 217
 			}
-			OR = {
-				GRU = { controls_state = 195 }
-				any_other_country = { is_subject_of = GRU controls_state = 195 }
+			any_other_country = {
+				is_subject_of = GRU
+				controls_state = 195
+				controls_state = 219
+				controls_state = 252
+				controls_state = 217
 			}
-			OR = {
-				GRU = { controls_state = 217 }
-				any_other_country = { is_subject_of = GRU controls_state = 217 }
-			}
-			OR = {
-				GRU = { controls_state = 252 }
-				any_other_country = { is_subject_of = GRU controls_state = 252 }
+			any_other_country = {
+				is_in_faction_with = GRU
+				controls_state = 195
+				controls_state = 219
+				controls_state = 252
+				controls_state = 217
 			}
 		}
-		GRU = { has_completed_focus = GRU_nmdvp_victory }
 	}
-
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event rotermorgenrussiandoom.2"
-		create_dynamic_country = {
-			original_tag = MUR
-			tag = MUR
-			MUR = {
-				hidden_effect = {		
-					create_country_leader = {
-						name = GRU_ldr_Vaino_I
-						picture = "gfx/leaders/FIN/Portrait_FIN_Vaino_I.png"
-						expire = "1.1.1"
-						ideology = absolute_monarchy_subtype
+	option = {
+		name = rmruss.1.a
+		ai_chance = {
+			factor = 75
+		}
+		add_stability = 0.25
+		RUS = {
+			leave_faction = yes
+		    separate_peace_all_wars = yes
+		}
+		hidden_effect = {
+			every_state = {
+				limit = {
+					country_exists = MOS
+					OR = {
+						state = 205
+				        state = 246
+				        state = 247
+				        state = 248
+				        state = 253
+				        state = 254
+				        state = 258
+				        state = 223
+				        state = 263
+				        state = 208
+				        state = 244
+				        state = 195
+				        state = 1328
+				        state = 264
+				        state = 252
+				        state = 1204
+				        state = 1205
+				        state = 255
+				        state = 239
+				        state = 401
+				        state = 265
+				        state = 260
+				        state = 257
+				        state = 250
+				        state = 258
+				        state = 222
+				        state = 224
+				        state = 242
+				        state = 250
+				        state = 1198
+				        state = 256
+				        state = 219
 					}
-					set_politics = {
-						ruling_party = paternal_autocrat
-						last_election = "1.1.1"
-						elections_allowed = no
-					}
-					add_popularity = {
-						ideology = paternal_autocrat
-						popularity = 1
-					}
-					set_party_name = { ideology = paternal_autocrat long_name = GRU_party_1_long name = GRU_party_1 }
-					set_capital = { state = 213 }
-
-					set_cosmetic_tag = MUR
-
-					set_country_flag = GRU_MUR_VISIBLE
-					set_country_flag = LEADER_GUI_VISIBLE
+				}
+				MOS = {
+					transfer_state = PREV
 				}
 			}
 			every_state = {
 				limit = {
+					NOT = { country_exists = MOS }
 					OR = {
-						state = 213
-						state = 722
-						state = 1274
+						state = 205
+				        state = 246
+				        state = 247
+				        state = 248
+				        state = 253
+				        state = 254
+				        state = 258
+				        state = 223
+				        state = 263
+				        state = 208
+				        state = 244
+				        state = 195
+				        state = 1328
+				        state = 264
+				        state = 252
+				        state = 1204
+				        state = 1205
+				        state = 255
+				        state = 239
+				        state = 401
+				        state = 265
+				        state = 260
+				        state = 257
+				        state = 250
+				        state = 258
+				        state = 222
+				        state = 224
+				        state = 242
+				        state = 250
+				        state = 1198
+				        state = 256
+				        state = 219
 					}
 				}
-				if = {
-					limit = { is_claimed_by = MUR }
-					remove_claim_by = MUR
-				}
-				if = {
-					limit = { 
-						NOT = { is_core_of = MUR }
-					}
-					add_core_of = MUR
-					MUR = { transfer_state = PREV }
+				GRU = {
+					transfer_state = PREV
 				}
 			}
-		}
-		create_dynamic_country = {
 			every_state = {
 				limit = {
+					country_exists = RUT
 					OR = {
-						state = 215
+						state = 202
+				        state = 1240
+				        state = 1244
+				        state = 201
+				        state = 198
+				        state = 194
+				        state = 1228
+				        state = 199
+				        state = 1245
+				        state = 792
+				        state = 95
+				        state = 997
+				        state = 93
+				        state = 791
+				        state = 192
+				        state = 1232
+				        state = 197
+				        state = 226
+				        state = 1233
+				        state = 203
+				        state = 1241
+						state = 196
+				        state = 1234
+				        state = 200
+				        state = 1286
+				        state = 228
+				        state = 241
+				        state = 1238
+				        state = 259
+				        state = 1243
+				        state = 1237
+				        state = 193
+				        state = 241
+				        state = 1230
+				        state = 1242
+				        state = 225
+				        state = 1239
+				        state = 221
+				        state = 1285
+				        state = 1282
+				        state = 1283
+				        state = 227
+				        state = 1284
+				        state = 1231
+				        state = 1220
+				        state = 137
+				        state = 1221
+						state = 240
+				        state = 821
+				        state = 220
+				        state = 1229
 					}
 				}
-				if = {
-					limit = { is_claimed_by = KBL }
-					remove_claim_by = KBL
-				}
-				if = {
-					limit = { 
-						NOT = { is_core_of = KBL }
-					}
-					add_core_of = KBL
-					KBL = { transfer_state = PREV }
+				RUT = {
+					transfer_state = PREV
 				}
 			}
-			original_tag = KBL
-			tag = KBL
-			KBL = {
-				hidden_effect = {		
-					inherit_technology = RUS
-					add_equipment_to_stockpile = {
-					type = infantry_equipment_2
-					amount = 10000
-					}
-					add_equipment_to_stockpile = {
-					type = support_equipment
-					amount = 1000
-					}
-					create_country_leader = {
-						name = GRU_ldr_Paavo_Talvela
-						picture = "gfx/leaders/FIN/Portrait_FIN_Paavo_Talvela_KX.png"
-						expire = "1.1.1"
-						ideology = junta_subtype
-					}
-					set_politics = {
-						ruling_party = paternal_autocrat
-						last_election = "1.1.1"
-						elections_allowed = no
-					}
-					add_popularity = {
-						ideology = paternal_autocrat
-						popularity = 1
-					}
-					set_party_name = { ideology = paternal_autocrat long_name = GRU_party_2_long name = GRU_party_2 }
-					set_capital = { state = 215 }
-
-					set_cosmetic_tag = KBL
-				}
-			}
-			MUR = {
-				set_autonomy = { target = KBL autonomy_state = kr_autonomy_personal_union }
-			}
-		}
-		create_dynamic_country = {
 			every_state = {
 				limit = {
+					NOT = { country_exists = RUT }
 					OR = {
-						state = 1326
+						state = 202
+				        state = 1240
+				        state = 1244
+				        state = 201
+				        state = 198
+				        state = 194
+				        state = 1228
+				        state = 199
+				        state = 1245
+				        state = 792
+				        state = 95
+				        state = 997
+				        state = 93
+				        state = 791
+				        state = 192
+				        state = 1232
+				        state = 197
+				        state = 226
+				        state = 1233
+				        state = 203
+				        state = 1241
+						state = 196
+				        state = 1234
+				        state = 200
+				        state = 1286
+				        state = 228
+				        state = 241
+				        state = 1238
+				        state = 259
+				        state = 1243
+				        state = 1237
+				        state = 193
+				        state = 241
+				        state = 1230
+				        state = 1242
+				        state = 225
+				        state = 1239
+				        state = 221
+				        state = 1285
+				        state = 1282
+				        state = 1283
+				        state = 227
+				        state = 1284
+				        state = 1231
+				        state = 1220
+				        state = 137
+				        state = 1221
+						state = 240
+				        state = 821
+				        state = 220
+				        state = 1229
 					}
 				}
-				if = {
-					limit = { is_claimed_by = BLK }
-					remove_claim_by = BLK
-				}
-				if = {
-					limit = { 
-						NOT = { is_core_of = BLK }
-					}
-					add_core_of = BLK
-					BLK = { transfer_state = PREV }
+				GRU = {
+					transfer_state = PREV
 				}
 			}
-			original_tag = BLK
-			tag = BLK
-			BLK = {
-				hidden_effect = {
-					inherit_technology = RUS
-					add_equipment_to_stockpile = {
-					type = infantry_equipment_2
-					amount = 10000
+			every_state = {
+				limit = {
+					country_exists = BAL
+					OR = {
+						state = 12
+				        state = 191
+				        state = 13
+				        state = 190
+				        state = 189
+				        state = 11
+				        state = 655
+				        state = 1329
+				        state = 1091
+						state = 209
+				        state = 880
+				        state = 207
+				        state = 96
+				        state = 94
+				        state = 1295
+				        state = 204
+				        state = 206
+				        state = 1294
+				        state = 1287
+				        state = 1290
+						state = 1289
+				        state = 1291
+				        state = 210
+				        state = 755
+				        state = 1288
+				        state = 1087
+				        state = 243
 					}
-					add_equipment_to_stockpile = {
-					type = support_equipment
-					amount = 1000
+				}
+				BAL = {
+					transfer_state = PREV
+				}
+			}
+			every_state = {
+				limit = {
+					NOT = { country_exists = BAL }
+					OR = {
+						state = 12
+				        state = 191
+				        state = 13
+				        state = 190
+				        state = 189
+				        state = 11
+				        state = 655
+				        state = 1329
+				        state = 1091
+						state = 209
+				        state = 880
+				        state = 207
+				        state = 96
+				        state = 94
+				        state = 1295
+				        state = 204
+				        state = 206
+				        state = 1294
+				        state = 1287
+				        state = 1290
+						state = 1289
+				        state = 1291
+				        state = 210
+				        state = 755
+				        state = 1288
+				        state = 1087
+				        state = 243
 					}
-					create_country_leader = {
-						name = GRU_ldr_Ukki_Vainamoinen
-						picture = "gfx/leaders/KAR/Portrait_KAR_Ukki_Vainamoinen_KX.png"
-						expire = "1.1.1"
-						ideology = occultism_subtype
-					}
-					set_politics = {
-						ruling_party = national_populist
-						elections_allowed = no
-					}
-					add_popularity = {
-						ideology = national_populist
-						popularity = 1
-					}
-					set_party_name = { ideology = national_populist long_name = GRU_party_3_long name = GRU_party_3 }
-					set_capital = { state = 1326 }
+				}
+				GRU = {
+					transfer_state = PREV
+				}
+			}
+			RUS = {
+				country_event = { id = rmruss.2 days = 30 }
+				every_owned_state = {
+			    	limit = {
+						country_exists = SKN
+			    		OR = {
+			    			state = 216
+			    	        state = 1327
+			    	        state = 146
+							state = 1325
+							state = 1324
+							state = 1326
+							state = 1274
+							state = 215
+							state = 147
+							state = 213
+							state = 722
+			    		}
+			    	}
+			    	SKN = {
+			    		transfer_state = PREV
+			    	}
+			    }
+				every_owned_state = {
+			    	limit = {
+						NOT = { country_exists = SKN }
+			    		OR = {
+			    			state = 216
+			    	        state = 1327
+			    	        state = 146
+							state = 1325
+							state = 1324
+							state = 1326
+							state = 1274
+							state = 215
+							state = 147
+							state = 213
+							state = 722
+			    		}
+			    	}
+			    	GRU = {
+			    		transfer_state = PREV
+			    	}
+			    }
+				every_owned_state = {
+			    	limit = {
+						country_exists = DKS
+			    		OR = {
+			    			state = 1263
+			    	        state = 234
+			    	        state = 245
+			    	        state = 1227
+			    	        state = 1190
+			    	        state = 1080
+			    	        state = 1188
+			    	        state = 1187
+			    	        state = 1186
+			    	        state = 233
+			    	        state = 1189
+			    	        state = 1191
+			    	        state = 232
+			    	        state = 1266
+			    	        state = 1267
+			    	        state = 237
+			    	        state = 1264
+			    	        state = 1226
+			    	        state = 1265
+			    	        state = 218
+			    	        state = 235
+			    	        state = 238
+			    	        state = 787
+			    	        state = 218
+							state = 231
+    			            state = 1301
+    			            state = 1300
+    			            state = 1081
+    			            state = 229
+    			            state = 990
+    			            state = 1304
+						    state = 236
+    			            state = 217
+						    state = 230
+    			            state = 1082
+    			            state = 1298
+    			            state = 1299
+    			            state = 1303
+    			            state = 998
+    			            state = 1302
+			    		}
+			    	}
+			    	DKS = {
+			    		transfer_state = PREV
+			    	}
+			    }
+				every_owned_state = {
+			    	limit = {
+						NOT = { country_exists = DKS }
+			    		OR = {
+			    			state = 1263
+			    	        state = 234
+			    	        state = 245
+			    	        state = 1227
+			    	        state = 1190
+			    	        state = 1080
+			    	        state = 1188
+			    	        state = 1187
+			    	        state = 1186
+			    	        state = 233
+			    	        state = 1189
+			    	        state = 1191
+			    	        state = 232
+			    	        state = 1266
+			    	        state = 1267
+			    	        state = 237
+			    	        state = 1264
+			    	        state = 1226
+			    	        state = 1265
+			    	        state = 218
+			    	        state = 235
+			    	        state = 238
+			    	        state = 787
+			    	        state = 218
+							state = 231
+    			            state = 1301
+    			            state = 1300
+    			            state = 1081
+    			            state = 229
+    			            state = 990
+    			            state = 1304
+						    state = 236
+    			            state = 217
+						    state = 230
+    			            state = 1082
+    			            state = 1298
+    			            state = 1299
+    			            state = 1303
+    			            state = 998
+    			            state = 1302
+			    		}
+			    	}
+			    	GRU = {
+			    		transfer_state = PREV
+			    	}
+			    }
+			}
+		}
+	}
+	option = {
+		name = rmruss.1.b
+		ai_chance = {
+			factor = 25
+		}
+		add_stability = -0.25
+		add_war_support = -0.40
+	}
+}
+country_event = { #
+	id = rmruss.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rmruss.2" }
+	title = rmruss.2.t
+	desc = rmruss.2.d
+	picture = GFX_report_event_goebb_russ_2
 
-					set_cosmetic_tag = BLK
-				}
-			}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = rmruss.2.a
+		ai_chance = {
+			factor = 99
 		}
-		PTZ = {
-			hidden_effect = {
-				inherit_technology = RUS
-				add_equipment_to_stockpile = {
-				type = infantry_equipment_2
-				amount = 20000
-				}
-				add_equipment_to_stockpile = {
-				type = support_equipment
-				amount = 1000
-				}
-				add_equipment_to_stockpile = {
-					type = anti_tank_equipment
-					amount = 300
-				}
-				create_country_leader = {
-					name = GRU_ldr_Yuri_Andropov
-					desc = "POLITICS_YURI_ANDROPOV_DESC"
-					picture = "gfx/leaders/KAR/Portrait_KAR_Yuri_Andropov.png"
-					expire = "1.1.1"
-					ideology = authcom_subtype
-				}
-				set_politics = {
-					ruling_party = totalist
-					last_election = "1.1.1"
-					election_frequency = 48
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = totalist
-					popularity = 1
-				}
-				set_party_name = { ideology = totalist long_name = GRU_party_4_long name = GRU_party_4 }
-				set_capital = { state = 216 }
-				
-				set_cosmetic_tag = PTZ
-			}
-		}
-	    every_state = {
-			limit = {
-				OR = {
-					state = 216
-					state = 1327
-				}
-			}
-			if = {
-				limit = { is_claimed_by = PTZ }
-				remove_claim_by = PTZ
-			}
-			if = {
-				limit = { 
-					NOT = { is_core_of = PTZ }
-				}
-				add_core_of = PTZ
-				PTZ = { transfer_state = PREV }
-			}
-		}
+
 		create_dynamic_country = {
 			every_state = {
 				limit = {
@@ -5263,7 +5514,7 @@ country_event = { #
 					set_cosmetic_tag = RVA_TSAR
 
 					set_country_flag = GRU_VYT_VISIBLE
-					set_country_flag = LEADER_GUI_VISIBLE
+					set_country_flag = GRU_LEADER_GUI_VISIBLE
 				}
 			}
 		}
@@ -5325,7 +5576,7 @@ country_event = { #
 			hidden_effect = {
 				set_politics = {
 					ruling_party = paternal_autocrat
-					last_election = "1930.11.9"
+					last_election = "1.1.1"
 					election_frequency = 48
 					elections_allowed = no
 				}
@@ -5874,7 +6125,7 @@ country_event = { #
 		    	    }
 
 					set_country_flag = GRU_RRV_VISIBLE
-			        set_country_flag = LEADER_GUI_VISIBLE
+			        set_country_flag = GRU_LEADER_GUI_VISIBLE
 				}
 			}
 		}
@@ -5999,7 +6250,7 @@ country_event = { #
 						name = GRU_ldr_Oskar_Dirlewanger
 						picture = "gfx/leaders/GRU/Portrait_Dirlewanger_Brigade_Oskar_Dirlewanger.png"
 						expire = "1.1.1"
-						ideology = national_socialism_spartanism_subtype
+						ideology = natpop_neo_feudalism_subtype
 						traits = { kcap_white_knight }
 					}
 					set_politics = {
@@ -6170,7 +6421,7 @@ country_event = { #
 					set_cosmetic_tag = GGL
 
 					set_country_flag = STALIN_ORDZ_VISIBLE
-					set_country_flag = LEADER_GUI_VISIBLE
+					set_country_flag = GRU_LEADER_GUI_VISIBLE
 				}
 			}
 		}
@@ -6454,7 +6705,7 @@ country_event = { #
 					set_cosmetic_tag = SUG
 
 					set_country_flag = SUG_triumvirate
-			        set_country_flag = LEADER_GUI_VISIBLE
+			        set_country_flag = GRU_LEADER_GUI_VISIBLE
 				}
 			}
 		}
@@ -6506,7 +6757,7 @@ country_event = { #
 					set_cosmetic_tag = SHE
 
 					set_country_flag = GRU_SHE_VISIBLE
-					set_country_flag = LEADER_GUI_VISIBLE
+					set_country_flag = GRU_LEADER_GUI_VISIBLE
 				}
 			}
 		}
@@ -6935,7 +7186,7 @@ country_event = { #
 					set_cosmetic_tag = AMR
 
 					set_country_flag = GRU_AMR_VISIBLE
-					set_country_flag = LEADER_GUI_VISIBLE
+					set_country_flag = GRU_LEADER_GUI_VISIBLE
 				}
 			}
 		}
@@ -7053,7 +7304,7 @@ country_event = { #
 					set_cosmetic_tag = MGD
 
 					set_country_flag = GRU_MGD_VISIBLE
-					set_country_flag = LEADER_GUI_VISIBLE
+					set_country_flag = GRU_LEADER_GUI_VISIBLE
 
 					create_faction = gru_far_eastern_union_for_the_liberation_of_russia_faction
 				}
@@ -7113,6 +7364,7 @@ country_event = { #
 						state = 644
 						state = 516
 						state = 1201
+						state = 1273
 					}
 				}
 				if = {
@@ -7143,7 +7395,7 @@ country_event = { #
 						elections_allowed = no
 					}
 					set_party_name = { ideology = radical_socialist long_name = GRU_party_34_long name = GRU_party_34 }
-					set_capital = { state = 219 }
+					set_capital = { state = 1273 }
 
 					set_cosmetic_tag = OMO
 				}
@@ -7393,26 +7645,6 @@ country_event = { #
 
 		GRU = {
 			diplomatic_relation = { 
-				country = KBL
-				relation = non_aggression_pact 
-			}
-			diplomatic_relation = { 
-				country = MUR
-				relation = non_aggression_pact 
-			}
-			diplomatic_relation = { 
-				country = BLK
-				relation = non_aggression_pact 
-			}
-			diplomatic_relation = { 
-				country = ING
-				relation = non_aggression_pact 
-			}
-			diplomatic_relation = { 
-				country = PTZ
-				relation = non_aggression_pact 
-			}
-			diplomatic_relation = { 
 				country = VLG
 				relation = non_aggression_pact 
 			}
@@ -7591,24 +7823,31 @@ country_event = { #
 		}
 
 		news_event = {
-			id = rotermorgenrussiandoom.3
+			id = gruothernews.5
 			days = 1
+		}
+	}
+
+	option = {
+		name = rmruss.2.b
+		ai_chance = {
+			factor = 1
 		}
 	}
 }
 
 news_event = { #
-	id = rotermorgenrussiandoom.3
-	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenrussiandoom.3" }
-	title = rotermorgenrussiandoom.3.t
-	desc = rotermorgenrussiandoom.3.d
+	id = gruothernews.5
+	immediate = { log = "[GetDateText]: [Root.GetName]: event gruothernews.5" }
+	title = gruothernews.5.t
+	desc = gruothernews.5.d
 	picture = GFX_news_event_capture_moscow
 
 	major = yes
 	is_triggered_only = yes
 
 	option = {
-		name = rotermorgenrussiandoom.3.a
+		name = gruothernews.5.a
 		trigger = {
 			NOT = {
 				GRU = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
@@ -7616,7 +7855,7 @@ news_event = { #
 		}
 	}
 	option = {
-		name = rotermorgenrussiandoom.3.b
+		name = gruothernews.5.b
 		trigger = {
 			GRU = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
 		}
@@ -8006,7 +8245,7 @@ country_event = { #Two-front war with France and Russia, only available when Rus
 		name = rotermorgen.1101.a
 		add_timed_idea = {
 			idea = GER_two_front_idea
-			days = 730
+			days = 365
 		}
 	}
 }
@@ -8023,7 +8262,7 @@ country_event = { # Puppet Buff
 		name = rotermorgenmisc.1102.a
 		add_timed_idea = {
 			idea = VK_COLONY_TRAINING_ARMY
-			days = 500
+			days = 365
 		}
 	}
 }

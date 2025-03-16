@@ -145,3 +145,55 @@ if = {
 		transport = 1
 	}
 }
+
+create_field_marshal = {
+	name = GRU_general_Helmuth_von_Pannwitz
+	portrait_path = "gfx/leaders/DKB/Portrait_DKB_Helmuth_von_Pannwitz.png"
+	traits = { cavalry_leader cavalry_officer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = GRU_general_Adrian_Guselschikov
+	portrait_path = "gfx/leaders/DKB/Portrait_DKB_Adrian_Guselschikov.png"
+	traits = {
+		old_guard
+		cavalry_leader
+		cossack_leader
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = GRU_general_Konstantin_Mamontov
+	portrait_path = "gfx/leaders/RUS/Portrait_RUS_Konstantin_Mamontov.png"
+	traits = {
+		old_guard
+		cavalry_leader
+		cossack_leader
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = GRU_general_Sergey_Pavlov
+	portrait_path = "gfx/leaders/DKB/Portrait_DKB_Sergey_Pavlov.png"
+	traits = {
+		air_commander
+		cavalry_officer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}

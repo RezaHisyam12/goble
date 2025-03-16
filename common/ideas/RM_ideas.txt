@@ -57,7 +57,7 @@ ideas = {
 				research_sharing_per_country_bonus = 0.1
 				research_speed_factor = 0.05
 				party_popularity_stability_factor = 0.25
-				consumer_goods_factor = -0.15
+				resistance_growth = -0.15
 			}
 		}
 		gru_red_imperialism2 = {
@@ -183,7 +183,6 @@ ideas = {
 				production_speed_dockyard_factor = 0.05
 				production_speed_arms_factory_factor = 0.10
 				industry_repair_factor = 0.10
-				stability_weekly = 0.001
 				political_power_gain = 0.02
 				production_factory_max_efficiency_factor = 0.10
 				production_factory_efficiency_gain_factor = 0.05
@@ -191,6 +190,7 @@ ideas = {
 				production_oil_factor = 0.01
 				research_speed_factor = 0.05
 				local_resources_factor = 0.05
+				consumer_goods_factor = -0.05
 			}
 		}
 		
@@ -203,7 +203,6 @@ ideas = {
 				production_speed_dockyard_factor = 0.10
 				production_speed_arms_factory_factor = 0.20
 				industry_repair_factor = 0.10
-				stability_weekly = 0.001
 				political_power_gain = 0.05
 				production_factory_max_efficiency_factor = 0.15
 				production_factory_efficiency_gain_factor = 0.05
@@ -211,6 +210,7 @@ ideas = {
 				production_oil_factor = 0.05
 				research_speed_factor = 0.1
 				local_resources_factor = 0.1
+				consumer_goods_factor = -0.1
 			}
 		}
 		
@@ -1036,7 +1036,7 @@ ideas = {
 			breakthrough_factor = 0.1			
 			max_planning_factor = 0.1
 			planning_speed = 0.15
-			initiative_factor = 0.1
+			initiative_factor = 0.05
 			}
 		}
 		GRU_masses_generals = {
@@ -1055,7 +1055,7 @@ ideas = {
 			railway_gun_bombardment_factor = 0.25			
 			max_planning_factor = 0.15
 			planning_speed = 0.1
-			coordination_bonus = 0.1
+			coordination_bonus = 0.05
 			}
 		}
 		###officers
@@ -1634,7 +1634,6 @@ ideas = {
 				monthly_population = 0.10
 				production_speed_buildings_factor = 0.1
 				global_building_slots_factor = 0.2
-				unit_limit_bonus = 20
 			}
 		}
 		
@@ -1652,7 +1651,6 @@ ideas = {
 				monthly_population = 0.05
 				production_speed_buildings_factor = 0.2
 				global_building_slots_factor = 0.2
-				unit_limit_bonus = 40
 			}
 		}
 		
@@ -1673,7 +1671,6 @@ ideas = {
 				monthly_population = 0.10
 				production_speed_buildings_factor = 0.20
 				global_building_slots_factor = 0.3
-				unit_limit_bonus = 80
 			}
 		}
 		
@@ -2786,18 +2783,18 @@ ideas = {
 			picture = natmarxdiplo
 		}
 		GRU_okw = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_weltpolitik_1" }
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_okw" }
 			picture = german_advisors
 			allowed = { always = no }
 			modifier = {
-				send_volunteer_size = 2
+				unit_limit_bonus = 25
 				experience_gain_army = 0.02
 				experience_gain_navy = 0.02
 				experience_gain_air = 0.02
 			}
 		}
 		GRU_ostwall_idea = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_ostwall_idea" }
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_ostwall_idea" }
 			picture = advisors_germany
 			allowed = { always = no }
 			available = {
@@ -2808,7 +2805,7 @@ ideas = {
 			}
 		}
 		GRU_MAF_stabilisation = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_MAF_stabilisation" }
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_MAF_stabilisation" }
 			picture = gru_cops
 			allowed = { always = no }
 			modifier = {
@@ -2816,7 +2813,7 @@ ideas = {
 			}
 		}
 		GRU_financing_colonies = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_financing_colonies" }
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_financing_colonies" }
 			picture = VK_COLONYTHREE
 			allowed = { always = no }
 			modifier = {
@@ -2826,7 +2823,7 @@ ideas = {
 			}
 		}
 		GRU_financing_colonies_received = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GER_financing_colonies_received" }
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_financing_colonies_received" }
 			picture = GRU_heavy_industry
 			allowed = { always = no }
 			modifier = {
@@ -2864,7 +2861,6 @@ ideas = {
 		}
 		GRU_expanded_espionage_non_lar = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_expanded_espionage_non_lar" }
-			name = GER_expanded_espionage
 			picture = generic_spy_political
 			allowed = { always = no }
 			modifier = {

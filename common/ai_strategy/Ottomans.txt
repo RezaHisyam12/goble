@@ -52,10 +52,7 @@ TUR_invade_egypt = {
 			}
 		}
 		PER = {
-			OR = {
-				has_capitulated = yes
-				exists = no
-			}
+			NOT = { has_war_with = TUR }
 		}
 	}
 	abort_when_not_enabled = yes

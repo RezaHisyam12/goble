@@ -239,6 +239,118 @@ TRM_russian_expansion = {
 }
 
 RUS_Foreign_Policy_decisions = {
+	RUS_Attack_Eastern_Europe = {
+		name = RUS_Attack_Region
+		icon = hol_draw_up_staff_plans
+
+		available = {
+			OR = {
+				is_owner_neighbor_of = FROM
+				any_allied_country = { is_owner_neighbor_of = FROM }
+			}
+			FROM = {
+				is_in_faction = no
+			}
+		}
+
+		visible = {
+			can_declare_war_on = FROM
+			NOT = { has_global_flag = danzig_treaty_active }
+		}
+
+		targets = { BAT EST LAT LIT UKR WHR CRM }
+		target_root_trigger = {
+			OR = {
+				has_completed_focus = RUS_Enemy_In_The_West
+				has_completed_focus = RUS_Destroy_German_Imperialists
+				has_completed_focus = RUS_Solving_Territorial_Disputes
+				has_completed_focus = RUS_Return_Imperial_Splinter_States
+			}
+		}
+		target_trigger = {
+			can_declare_war_on = FROM
+		}
+		
+
+		cost = 10
+		days_remove = 14
+		fire_only_once = yes
+		war_with_target_on_remove = yes
+
+		ai_will_do = {
+			factor = 100
+			# don't invade future co-belligerents
+			modifier = {
+				factor = 0
+				has_completed_focus = RUS_Realpolitik
+				country_exists = BAT
+				FROM = { tag = LAT }
+			}
+			# don't invade possible allies
+			modifier = {
+				factor = 0
+				has_completed_focus = RUS_Realpolitik
+				FROM = {
+					OR = {
+						tag = LIT
+						tag = EST
+					}
+					has_socialist_government = no
+					is_valid_peace_target = yes
+				}
+				NOT = { has_country_flag = RUS_alliance_refused_@FROM }
+			}
+			modifier = {
+				factor = 0
+				FROM = { tag = UKR }
+				has_global_flag = UKR_secret_collusion_with_russia
+			}
+			modifier = {
+				factor = 0
+				RUS_dont_attack_if_vulnerable_or_preparing = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = { RUS_dont_attack_if_target_is_stronger = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { RUS_dont_attack_if_faction_is_stronger = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { RUS_dont_attack_if_overlord_is_stronger = yes }
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision RUS_Attack_Eastern_Europe target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 20 value = 1 }
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove RUS_Attack_Eastern_Europe target: [From.GetName]"
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
+			}
+		}
+	}
+
 	RUS_Intervene_Germany = {
 		icon = GFX_decision_category_gerrivals
 		priority = 150
@@ -790,7 +902,6 @@ RUS_MIO_decisions = {
 		available = { 
 			owns_state = 223 
 			mio:RUS_toz_organisation = { has_mio_size > 5 }			
-			NOT = { has_variable = RUS_TOZ_total_medals > 350 }
 		}
 		visible = { RUS_has_one_TOZ_medal_trait = yes }
 

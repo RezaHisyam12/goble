@@ -1,0 +1,176 @@
+GRU_Update_MIO_XP_Gains = {
+	#Volksmarine Werft
+	mio:GRU_volksmarine_organisation = {
+		set_variable = { Previous_Week_Funds = Current_Week_Funds }
+		set_variable = { Current_Week_Funds = funds }
+		set_variable = { Funds_Difference = Current_Week_Funds }
+		subtract_from_variable = { Funds_Difference = Previous_Week_Funds }
+		set_variable = { Funds_Difference_loc = Funds_Difference }
+		divide_variable = { Funds_Difference_loc = 7 }
+	}
+	if = { #Remove if below threshold
+		limit = {
+			mio:GRU_volksmarine_organisation = { check_variable = { Funds_Difference < weekly_funds_requirement } }
+			OR = {
+				has_idea = GRU_volksmarine_navy_xp
+				has_idea = GRU_volksmarine_navy_xp_2
+			}
+			check_variable = { volksmarine_Research_Number < 1 }
+		}
+		remove_ideas = {
+			GRU_volksmarine_navy_xp
+			GRU_volksmarine_navy_xp_2
+		}
+	}
+	else_if = { #Add if above threshold
+		limit = {
+			OR = {
+				mio:GRU_volksmarine_organisation = { check_variable = { Funds_Difference > weekly_funds_requirement } }
+				check_variable = { volksmarine_Research_Number > 0 }
+			}
+			NOT = {
+				has_idea = GRU_volksmarine_navy_xp
+				has_idea = GRU_volksmarine_navy_xp_2
+			}
+		}
+		if = {
+			limit = {
+				mio:GRU_volksmarine_organisation = {
+					is_mio_trait_completed = volksmarine_upgrade_5
+				}
+			}
+			add_ideas = GRU_volksmarine_navy_xp_2
+		}
+		else = {
+			add_ideas = GRU_volksmarine_navy_xp
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = GRU_volksmarine_navy_xp
+				has_idea = GRU_volksmarine_navy_xp_2
+			}
+		}
+		mio:GRU_volksmarine_organisation = {
+			set_temp_variable = { total_xp_to_be_added = xp_gain_loc }
+			multiply_temp_variable = { total_xp_to_be_added = 7 }
+			add_to_variable = { total_campaign_xp = total_xp_to_be_added }
+		}
+	}
+	#Junkers
+	mio:GRU_junkers_organisation = {
+		set_variable = { Previous_Week_Funds = Current_Week_Funds }
+		set_variable = { Current_Week_Funds = funds }
+		set_variable = { Funds_Difference = Current_Week_Funds }
+		subtract_from_variable = { Funds_Difference = Previous_Week_Funds }
+		set_variable = { Funds_Difference_loc = Funds_Difference }
+		divide_variable = { Funds_Difference_loc = 7 }
+	}
+	if = { #Remove if below threshold
+		limit = {
+			mio:GRU_junkers_organisation = { check_variable = { Funds_Difference < weekly_funds_requirement } }
+			OR = {
+				has_idea = GRU_junkers_air_xp
+				has_idea = GRU_junkers_air_xp_2
+			}
+			check_variable = { junkers_Research_Number < 1 }
+		}
+		remove_ideas = {
+			GRU_junkers_air_xp
+			GRU_junkers_air_xp_2
+		}
+	}
+	else_if = { #Add if above threshold
+		limit = {
+			OR = {
+				mio:GRU_junkers_organisation = { check_variable = { Funds_Difference > weekly_funds_requirement } }
+				check_variable = { junkers_Research_Number > 0 }
+			}
+			NOT = {
+				has_idea = GRU_junkers_air_xp
+				has_idea = GRU_junkers_air_xp_2
+			}
+		}
+		if = {
+			limit = {
+				mio:GRU_junkers_organisation = {
+					is_mio_trait_completed = junkers_upgrade_1
+				}
+			}
+			add_ideas = GRU_junkers_air_xp_2
+		}
+		else = {
+			add_ideas = GRU_junkers_air_xp
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = GRU_junkers_air_xp
+				has_idea = GRU_junkers_air_xp_2
+			}
+		}
+		mio:GRU_junkers_organisation = {
+			set_temp_variable = { total_xp_to_be_added = xp_gain_loc }
+			multiply_temp_variable = { total_xp_to_be_added = 7 }
+			add_to_variable = { total_campaign_xp = total_xp_to_be_added }
+		}
+	}
+}
+
+GRU_Update_MIO_Research_Speeds = {
+	#Rheinmetall
+	mio:GRU_rheinmetall_organisation = {
+		set_variable = { Previous_Week_Funds = Current_Week_Funds }
+		set_variable = { Current_Week_Funds = funds }
+		set_variable = { Funds_Difference = Current_Week_Funds }
+		subtract_from_variable = { Funds_Difference = Previous_Week_Funds }
+		set_variable = { Funds_Difference_loc = Funds_Difference }
+		divide_variable = { Funds_Difference_loc = 7 }
+	}
+	if = { #Weekly trigger for giving incremental research bonus to MIO Rheinmetall
+		limit = {
+			check_variable = { MIO_Rheinmetall_assigned_manufacturer_number > 0 } #So that the MIO can only gain research speed from manufacturing weapons
+			mio:GRU_Rheinmetall_organisation = { check_variable = { Funds_Difference > weekly_funds_requirement } }
+		}
+		if = {
+			limit = { mio:GRU_Rheinmetall_organisation = { check_variable = { research_bonus < max_research_speed } } }
+			mio:GRU_rheinmetall_organisation = { add_mio_research_bonus = weekly_research_speed_gain }
+			mio:GRU_rheinmetall_organisation = { add_to_variable = { total_campaign_research_speed = weekly_research_speed_gain_loc } }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					mio:GRU_rheinmetall_organisation = {
+						check_variable = { research_bonus > max_research_speed }
+					}
+					mio:GRU_rheinmetall_organisation = {
+						check_variable = { research_bonus = max_research_speed }
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { has_country_flag = GRU_Rheinmetall_RS_Notification } }
+				set_country_flag = GRU_Rheinmetall_RS_Notification
+				mio:GRU_rheinmetall_organisation = {
+					set_temp_variable = {
+						var = GRU_MIO_research_speed_temp
+						value = research_bonus
+					}
+					multiply_temp_variable = {
+						var = GRU_MIO_research_speed_temp
+						value = 100
+					}
+					ROOT = {
+						set_variable = { GRU_MIO_alert_name = PREV }
+						set_variable = { GRU_MIO_research_speed = GRU_MIO_research_speed_temp }
+					}
+				}
+				add_to_array = { GRU_MIO_alerts = THIS }
+				scoped_sound_effect = diplomatic_notification
+				set_variable_to_random = global.kaiserreich_alerts_dirty
+			}
+		}
+	}
+}

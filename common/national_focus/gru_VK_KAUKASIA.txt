@@ -52,7 +52,7 @@ focus_tree = {
 								controls_state = 1266
 							}
 		}
-		cost = 18
+		cost = 10
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_KAUKASIA_COLONIZE_ONE"
 			1265 = {
@@ -92,8 +92,8 @@ focus_tree = {
 							VKK = {
 								controls_state = 998
 								controls_state = 229
-								controls_state = 230
 								controls_state = 1298
+								controls_state = 1267
 								controls_state = 1299								
 								controls_state = 990								
 								controls_state = 1300								
@@ -104,16 +104,13 @@ focus_tree = {
 								controls_state = 1081
 							}
 		}
-		cost = 18
+		cost = 10
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_KAUKASIA_COLONIZE_TWO"
 			998 = {
 				add_core_of = VKK
 			}
 			229 = {
-				add_core_of = VKK
-			}
-			230 = {
 				add_core_of = VKK
 			}
 			1298 = {
@@ -143,6 +140,9 @@ focus_tree = {
 			1081 = {
 				add_core_of = VKK
 			}	
+			1267 = {
+				add_core_of = VKK
+			}
 		}
 		prerequisite = { focus = VK_FOCUS_KAUKASIA_START_COLONIZING  }
 	}
@@ -161,7 +161,6 @@ focus_tree = {
 								controls_state = 1189
 								controls_state = 1186
 								controls_state = 1187
-								controls_state = 1267
 								controls_state = 1191
 
 								controls_state = 235
@@ -169,7 +168,7 @@ focus_tree = {
 								controls_state = 234
 							}
 		}
-		cost = 18
+		cost = 10
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_KAUKASIA_COLONIZE_THREE"
 			232 = {
@@ -188,9 +187,6 @@ focus_tree = {
 				add_core_of = VKK
 			}
 			1187 = {
-				add_core_of = VKK
-			}
-			1267 = {
 				add_core_of = VKK
 			}
 			1191 = {
@@ -225,7 +221,7 @@ focus_tree = {
 								controls_state = 1082
 							}
 		}
-		cost = 18
+		cost = 10
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_KAUKASIA_COLONIZE_FOUR"
 			1188 = {
@@ -263,7 +259,7 @@ focus_tree = {
 								controls_state = 217
 							}
 		}
-		cost = 18
+		cost = 10
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_KAUKASIA_COLONIZE_FIVE"
 			230 = {

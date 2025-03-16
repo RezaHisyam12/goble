@@ -484,7 +484,7 @@ RUS_okmo_kr_organisation = {
 		position = { x = 0 y = 0 }
 
 		equipment_bonus = {
-			defense = 0.05
+			defense = 0.075
 		}
 
 		on_complete = {
@@ -503,7 +503,7 @@ RUS_okmo_kr_organisation = {
 		position = { x = 4 y = 0 }
 
 		equipment_bonus = {
-			hard_attack = 0.05
+			hard_attack = 0.075
 		}
 
 		on_complete = {
@@ -522,7 +522,7 @@ RUS_okmo_kr_organisation = {
 		position = { x = 8 y = 0 }
 
 		equipment_bonus = {
-			reliability = 0.05
+			reliability = 0.075
 		}
 
 		on_complete = {
@@ -541,7 +541,7 @@ RUS_okmo_kr_organisation = {
 		position = { x = 0 y = 4 }
 
 		equipment_bonus = {
-			hardness = 0.05
+			hardness = 0.075
 		}
 
 		on_complete = {
@@ -560,7 +560,7 @@ RUS_okmo_kr_organisation = {
 		position = { x = 4 y = 4 }
 
 		equipment_bonus = {
-			maximum_speed = 0.05
+			maximum_speed = 0.075
 		}
 
 		on_complete = {
@@ -579,7 +579,7 @@ RUS_okmo_kr_organisation = {
 		position = { x = 8 y = 4 }
 
 		equipment_bonus = {
-			breakthrough = 0.05
+			breakthrough = 0.075
 		}
 
 		on_complete = {
@@ -606,7 +606,7 @@ RUS_okmo_kr_organisation = {
 		position = { x = 4 y = 2 }
 
 		equipment_bonus = {
-			soft_attack = 0.05
+			soft_attack = 0.075
 		}
 
 		on_complete = {
@@ -634,7 +634,7 @@ RUS_okmo_kr_organisation = {
 		position = { x = 4 y = 2 }
 
 		equipment_bonus = {
-			soft_attack = 0.05
+			soft_attack = 0.075
 		}
 
 		on_complete = {
@@ -658,11 +658,11 @@ RUS_okmo_kr_organisation = {
 			FROM = {
 				set_variable = {
 					var = okmo_kr_xp_requirement
-					value = 5
+					value = 10
 				}
 				set_variable = {
 					var = okmo_kr_xp_cost
-					value = 5
+					value = -10
 				}
 			}
 		}
@@ -694,7 +694,7 @@ RUS_okmo_kr_organisation = {
 		position = { x = 0 y = 2 }
 
 		equipment_bonus = {
-			ap_attack = 0.05
+			ap_attack = 0.075
 		}
 
 		on_complete = {
@@ -713,7 +713,7 @@ RUS_okmo_kr_organisation = {
 		position = { x = 8 y = 2 }
 
 		equipment_bonus = {
-			armor_value = 0.05
+			armor_value = 0.075
 		}
 
 		on_complete = {
@@ -737,7 +737,7 @@ RUS_okmo_kr_organisation = {
 		position = { x = 0 y = 0 }
 
 		equipment_bonus = {
-			defense = 0.1
+			defense = 0.15
 		}
 
 		on_complete = {
@@ -771,7 +771,7 @@ RUS_okmo_kr_organisation = {
 		position = { x = 4 y = 0 }
 
 		equipment_bonus = {
-			hard_attack = 0.1
+			hard_attack = 0.15
 		}
 
 		on_complete = {
@@ -805,7 +805,7 @@ RUS_okmo_kr_organisation = {
 		position = { x = 8 y = 0 }
 
 		equipment_bonus = {
-			reliability = 0.1
+			reliability = 0.15
 		}
 
 		on_complete = {
@@ -839,7 +839,7 @@ RUS_okmo_kr_organisation = {
 		position = { x = 0 y = 4 }
 
 		equipment_bonus = {
-			hardness = 0.1
+			hardness = 0.15
 		}
 
 		on_complete = {
@@ -873,7 +873,7 @@ RUS_okmo_kr_organisation = {
 		position = { x = 4 y = 4 }
 
 		equipment_bonus = {
-			maximum_speed = 0.1
+			maximum_speed = 0.15
 		}
 
 		on_complete = {
@@ -907,7 +907,7 @@ RUS_okmo_kr_organisation = {
 		position = { x = 8 y = 4 }
 
 		equipment_bonus = {
-			breakthrough = 0.1
+			breakthrough = 0.15
 		}
 
 		on_complete = {
@@ -951,7 +951,7 @@ RUS_okmo_kr_organisation = {
 		position = { x = 4 y = 2 }
 
 		equipment_bonus = {
-			soft_attack = 0.1
+			soft_attack = 0.15
 		}
 
 		on_complete = {
@@ -995,7 +995,7 @@ RUS_okmo_kr_organisation = {
 		position = { x = 4 y = 2 }
 
 		equipment_bonus = {
-			soft_attack = 0.1
+			soft_attack = 0.15
 		}
 
 		on_complete = {
@@ -1029,7 +1029,7 @@ RUS_okmo_kr_organisation = {
 		position = { x = 0 y = 2 }
 
 		equipment_bonus = {
-			ap_attack = 0.1
+			ap_attack = 0.15
 		}
 
 		on_complete = {
@@ -1063,7 +1063,7 @@ RUS_okmo_kr_organisation = {
 		position = { x = 8 y = 2 }
 
 		equipment_bonus = {
-			armor_value = 0.1
+			armor_value = 0.15
 		}
 
 		on_complete = {
@@ -4872,10 +4872,6 @@ RUS_chtz_organisation = {
 			}
 		}
 		custom_effect_tooltip = RUS_manufacturer_research_reset_tt
-	}
-
-	on_tech_research_cancelled = {
-		FROM = { add_political_power = -35 }
 		custom_effect_tooltip = tooltip_white_line
 	}
 
@@ -5039,6 +5035,15 @@ RUS_chtz_organisation = {
 
 		equipment_bonus = {
 			build_cost_ic = -0.02
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_assign_cost = 3
+		}
+
+		on_complete = {
+			custom_effect_tooltip = RUS_manufacturer_research_no_reset_tt
+			set_mio_flag = RUS_disable_research_speed_loss
 		}
 	}
 
@@ -6534,10 +6539,6 @@ RUS_as_organisation = {
 			}
 		}
 		custom_effect_tooltip = RUS_manufacturer_research_reset_tt
-	}
-
-	on_tech_research_cancelled = {
-		FROM = { add_political_power = -35 }
 		custom_effect_tooltip = tooltip_white_line
 	}
 
@@ -6710,9 +6711,16 @@ RUS_as_organisation = {
 			production_capacity_factor = 0.1
 		}
 
+		organization_modifier = {
+			military_industrial_organization_design_team_assign_cost = 3
+		}
+
 		on_complete = {
 			add_mio_research_bonus = 0.07
 			add_to_variable = { total_campaign_xp = 7 }
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = RUS_manufacturer_research_no_reset_tt
+			set_mio_flag = RUS_disable_research_speed_loss
 		}
 	}
 
@@ -8476,8 +8484,9 @@ RUS_tsagi_organisation = {
 				}
 				clr_country_flag = RUS_TSAGI_RS_Notification
 			}
+			custom_effect_tooltip = RUS_manufacturer_research_reset_tt
+			custom_effect_tooltip = tooltip_white_line
 		}
-		custom_effect_tooltip = RUS_manufacturer_research_reset_tt
 		FROM = {
 			if = {
 				limit = { has_character = RUS_igor_sikorsky }
@@ -8491,7 +8500,15 @@ RUS_tsagi_organisation = {
 	}
 
 	on_tech_research_cancelled = {
-		FROM = { add_political_power = -35 }
+		hidden_effect = {
+			FROM = {
+				mio:RUS_tsagi_organisation = {
+					set_mio_research_bonus = 0
+				}
+				clr_country_flag = RUS_TSAGI_RS_Notification
+			}
+		}
+		custom_effect_tooltip = RUS_manufacturer_research_reset_tt
 		custom_effect_tooltip = tooltip_white_line
 	}
 
@@ -8621,9 +8638,16 @@ RUS_tsagi_organisation = {
 			build_cost_ic = -0.05
 		}
 
+		organization_modifier = {
+			military_industrial_organization_design_team_assign_cost = 3
+		}
+
 		on_complete = {
 			add_mio_research_bonus = 0.09
 			add_to_variable = { total_campaign_xp = 9 }
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = RUS_manufacturer_research_no_reset_tt
+			set_mio_flag = RUS_disable_research_speed_loss
 		}
 	}
 
@@ -10245,7 +10269,7 @@ RUS_sokol_organisation = {
 		position = { x = 3 y = 4 }
 
 		equipment_bonus = {
-			air_defence = -0.05
+			air_defence = 0.05
 			build_cost_ic = -0.05
 		}
 	}
@@ -10261,7 +10285,7 @@ RUS_sokol_organisation = {
 
 		equipment_bonus = {
 			build_cost_ic = -0.05
-			air_agility = -0.05
+			air_agility = 0.05
 		}
 	}
 }
@@ -10622,7 +10646,7 @@ RUS_sokol_construction_organisation = {
 		position = { x = 3 y = 4 }
 
 		equipment_bonus = {
-			air_defence = -0.05
+			air_defence = 0.05
 			build_cost_ic = -0.05
 		}
 	}
@@ -10638,7 +10662,7 @@ RUS_sokol_construction_organisation = {
 
 		equipment_bonus = {
 			build_cost_ic = -0.05
-			air_agility = -0.05
+			air_agility = 0.05
 		}
 	}
 }
@@ -11001,7 +11025,7 @@ RUS_sokol_production_organisation = {
 		position = { x = 3 y = 4 }
 
 		equipment_bonus = {
-			air_defence = -0.05
+			air_defence = 0.05
 			build_cost_ic = -0.05
 		}
 	}
@@ -11017,7 +11041,7 @@ RUS_sokol_production_organisation = {
 
 		equipment_bonus = {
 			build_cost_ic = -0.05
-			air_agility = -0.05
+			air_agility = 0.05
 		}
 	}
 }
@@ -11077,14 +11101,12 @@ RUS_toz_organisation = {
 
 		on_complete = {
 			if = {
-				limit = { RUS_has_one_TOZ_medal_trait = no }
+				limit = { NOT = { has_mio_flag = TOZ_Medal_Decision_Taken } }
 				FROM = { unlock_decision_tooltip = { decision = RUS_TOZ_Medals show_effect_tooltip = yes } }
 				custom_effect_tooltip = RUS_TOZ_Medal_cost_tt
 				custom_effect_tooltip = tooltip_white_line
-			}
-			else_if = {
-				limit = { RUS_has_one_TOZ_medal_trait = yes }
 				RUS_unlock_TOZ_medal_decision = yes
+				set_mio_flag = TOZ_Medal_Decision_Taken
 			}
 			custom_effect_tooltip = toz_upgrade_2_tt
 		}
@@ -11116,14 +11138,12 @@ RUS_toz_organisation = {
 
 		on_complete = {
 			if = {
-				limit = { RUS_has_one_TOZ_medal_trait = no }
+				limit = { NOT = { has_mio_flag = TOZ_Medal_Decision_Taken } }
 				FROM = { unlock_decision_tooltip = { decision = RUS_TOZ_Medals show_effect_tooltip = yes } }
 				custom_effect_tooltip = RUS_TOZ_Medal_cost_tt
 				custom_effect_tooltip = tooltip_white_line
-			}
-			else_if = {
-				limit = { RUS_has_one_TOZ_medal_trait = yes }
 				RUS_unlock_TOZ_medal_decision = yes
+				set_mio_flag = TOZ_Medal_Decision_Taken
 			}
 			custom_effect_tooltip = toz_upgrade_4_tt
 		}
@@ -11159,14 +11179,12 @@ RUS_toz_organisation = {
 
 		on_complete = {
 			if = {
-				limit = { RUS_has_one_TOZ_medal_trait = no }
+				limit = { NOT = { has_mio_flag = TOZ_Medal_Decision_Taken } }
 				FROM = { unlock_decision_tooltip = { decision = RUS_TOZ_Medals show_effect_tooltip = yes } }
 				custom_effect_tooltip = RUS_TOZ_Medal_cost_tt
 				custom_effect_tooltip = tooltip_white_line
-			}
-			else_if = {
-				limit = { RUS_has_one_TOZ_medal_trait = yes }
 				RUS_unlock_TOZ_medal_decision = yes
+				set_mio_flag = TOZ_Medal_Decision_Taken
 			}
 			custom_effect_tooltip = toz_upgrade_1_2_tt
 		}
@@ -11217,14 +11235,12 @@ RUS_toz_organisation = {
 
 		on_complete = {
 			if = {
-				limit = { RUS_has_one_TOZ_medal_trait = no }
+				limit = { NOT = { has_mio_flag = TOZ_Medal_Decision_Taken } }
 				FROM = { unlock_decision_tooltip = { decision = RUS_TOZ_Medals show_effect_tooltip = yes } }
 				custom_effect_tooltip = RUS_TOZ_Medal_cost_tt
 				custom_effect_tooltip = tooltip_white_line
-			}
-			else_if = {
-				limit = { RUS_has_one_TOZ_medal_trait = yes }
 				RUS_unlock_TOZ_medal_decision = yes
+				set_mio_flag = TOZ_Medal_Decision_Taken
 			}
 			custom_effect_tooltip = toz_upgrade_1_5_tt
 		}
@@ -11500,6 +11516,22 @@ RUS_vpoz_organisation = {
 	}
 
 	on_tech_research_completed = {
+		if = {
+			limit = { NOT = { has_mio_flag = RUS_disable_research_speed_loss } }
+			hidden_effect = {
+				FROM = {
+					mio:RUS_vpoz_organisation = {
+						set_mio_research_bonus = 0
+					}
+					clr_country_flag = RUS_VPOZ_RS_Notification
+				}
+			}
+			custom_effect_tooltip = RUS_manufacturer_research_reset_tt
+			custom_effect_tooltip = tooltip_white_line
+		}
+	}
+
+	on_tech_research_cancelled = {
 		hidden_effect = {
 			FROM = {
 				mio:RUS_vpoz_organisation = {
@@ -11509,10 +11541,6 @@ RUS_vpoz_organisation = {
 			}
 		}
 		custom_effect_tooltip = RUS_manufacturer_research_reset_tt
-	}
-
-	on_tech_research_cancelled = {
-		FROM = { add_political_power = -35 }
 		custom_effect_tooltip = tooltip_white_line
 	}
 
@@ -11552,6 +11580,15 @@ RUS_vpoz_organisation = {
 		equipment_bonus = {
 			hard_attack = 1.0
 			ap_attack = 1.0
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_assign_cost = 1
+		}
+
+		on_complete = {
+			custom_effect_tooltip = RUS_manufacturer_research_no_reset_tt
+			set_mio_flag = RUS_disable_research_speed_loss
 		}
 	}
 
@@ -12828,6 +12865,22 @@ RUS_bmz_organisation = {
 	}
 
 	on_tech_research_completed = {
+		if = {
+			limit = { NOT = { has_mio_flag = RUS_disable_research_speed_loss } }
+			hidden_effect = {
+				FROM = {
+					mio:RUS_bmz_organisation = {
+						set_mio_research_bonus = 0
+					}
+					clr_country_flag = RUS_BMZ_RS_Notification
+				}
+			}
+			custom_effect_tooltip = RUS_manufacturer_research_reset_tt
+			custom_effect_tooltip = tooltip_white_line
+		}
+	}
+
+	on_tech_research_cancelled = {
 		hidden_effect = {
 			FROM = {
 				mio:RUS_bmz_organisation = {
@@ -12837,10 +12890,6 @@ RUS_bmz_organisation = {
 			}
 		}
 		custom_effect_tooltip = RUS_manufacturer_research_reset_tt
-	}
-
-	on_tech_research_cancelled = {
-		FROM = { add_political_power = -35 }
 		custom_effect_tooltip = tooltip_white_line
 	}
 
@@ -12900,7 +12949,6 @@ RUS_bmz_organisation = {
 			FROM = {
 				build_railway = {
 					level = 1
-					fallback = yes
 					start_province = 3189
 					target_province = 9119
 				}
@@ -12955,9 +13003,16 @@ RUS_bmz_organisation = {
 			build_cost_ic = -0.025
 		}
 
+		organization_modifier = {
+			military_industrial_organization_design_team_assign_cost = 1
+		}
+
 		on_complete = {
 			add_mio_research_bonus = 0.17
 			add_to_variable = { total_campaign_xp = 17 }
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = RUS_manufacturer_research_no_reset_tt
+			set_mio_flag = RUS_disable_research_speed_loss
 		}
 	}
 
@@ -15124,6 +15179,7 @@ RUS_laz_organisation = {
 
 		equipment_bonus = {
 			hardness = 0.1
+			maximum_speed = -0.1
 		}
 
 		on_complete = {
@@ -15149,6 +15205,7 @@ RUS_laz_organisation = {
 
 		equipment_bonus = {
 			hardness = 0.2
+			maximum_speed = -0.1
 		}
 
 		production_bonus = {
@@ -15179,6 +15236,7 @@ RUS_laz_organisation = {
 		equipment_bonus = {
 			hardness = 0.3
 			build_cost_ic = 0.1
+			maximum_speed = -0.1
 		}
 
 		production_bonus = {
@@ -15247,6 +15305,7 @@ RUS_laz_organisation = {
 
 		equipment_bonus = {
 			soft_attack = 0.05
+			maximum_speed = -0.1
 		}
 
 		on_complete = {
@@ -15271,6 +15330,7 @@ RUS_laz_organisation = {
 
 		equipment_bonus = {
 			soft_attack = 0.1
+			maximum_speed = -0.1
 		}
 
 		production_bonus = {
@@ -15300,6 +15360,7 @@ RUS_laz_organisation = {
 		equipment_bonus = {
 			soft_attack = 0.15
 			build_cost_ic = 0.1
+			maximum_speed = -0.1
 		}
 
 		production_bonus = {
@@ -15330,7 +15391,7 @@ RUS_laz_organisation = {
 
 		equipment_bonus = {
 			breakthrough = 0.25
-			maximum_speed = -0.2
+			maximum_speed = -0.1
 		}
 	}
 
@@ -15440,7 +15501,7 @@ RUS_laz_organisation = {
 
 		equipment_bonus = {
 			breakthrough = 0.25
-			maximum_speed = -0.2
+			maximum_speed = -0.1
 		}
 	}
 

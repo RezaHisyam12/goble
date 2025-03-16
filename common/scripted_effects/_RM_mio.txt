@@ -516,8 +516,8 @@ RUS_Update_MIO_XP_Gains = {
 			add_to_variable = { total_campaign_xp = total_xp_to_be_added }
 		}
 	}
-	#Gamayun
-	mio:RUS_gamayun_organisation = {
+	#OSOAVIA
+	mio:RUS_osoavia_organisation = {
 		set_variable = { Previous_Week_Funds = Current_Week_Funds }
 		set_variable = { Current_Week_Funds = funds }
 		set_variable = { Funds_Difference = Current_Week_Funds }
@@ -527,49 +527,49 @@ RUS_Update_MIO_XP_Gains = {
 	}
 	if = { #Remove if below threshold
 		limit = {
-			mio:RUS_gamayun_organisation = { check_variable = { Funds_Difference < weekly_funds_requirement } }
+			mio:RUS_osoavia_organisation = { check_variable = { Funds_Difference < weekly_funds_requirement } }
 			OR = {
-				has_idea = RUS_gamayun_air_xp
-				has_idea = RUS_gamayun_air_xp_2
+				has_idea = RUS_osoavia_air_xp
+				has_idea = RUS_osoavia_air_xp_2
 			}
-			check_variable = { Gamayun_Research_Number < 1 }
+			check_variable = { OSOAVIA_Research_Number < 1 }
 		}
 		remove_ideas = {
-			RUS_gamayun_air_xp
-			RUS_gamayun_air_xp_2
+			RUS_osoavia_air_xp
+			RUS_osoavia_air_xp_2
 		}
 	}
 	else_if = { #Add if above threshold
 		limit = {
 			OR = {
-				mio:RUS_gamayun_organisation = { check_variable = { Funds_Difference > weekly_funds_requirement } }
-				check_variable = { Gamayun_Research_Number > 0 }
+				mio:RUS_osoavia_organisation = { check_variable = { Funds_Difference > weekly_funds_requirement } }
+				check_variable = { OSOAVIA_Research_Number > 0 }
 			}
 			NOT = {
-				has_idea = RUS_gamayun_air_xp
-				has_idea = RUS_gamayun_air_xp_2
+				has_idea = RUS_osoavia_air_xp
+				has_idea = RUS_osoavia_air_xp_2
 			}
 		}
 		if = {
 			limit = {
-				mio:RUS_gamayun_organisation = {
-					is_mio_trait_completed = gamayun_upgrade_1
+				mio:RUS_osoavia_organisation = {
+					is_mio_trait_completed = osoavia_upgrade_1
 				}
 			}
-			add_ideas = RUS_gamayun_air_xp_2
+			add_ideas = RUS_osoavia_air_xp_2
 		}
 		else = {
-			add_ideas = RUS_gamayun_air_xp
+			add_ideas = RUS_osoavia_air_xp
 		}
 	}
 	if = {
 		limit = {
 			OR = {
-				has_idea = RUS_gamayun_air_xp
-				has_idea = RUS_gamayun_air_xp_2
+				has_idea = RUS_osoavia_air_xp
+				has_idea = RUS_osoavia_air_xp_2
 			}
 		}
-		mio:RUS_gamayun_organisation = {
+		mio:RUS_osoavia_organisation = {
 			set_temp_variable = { total_xp_to_be_added = xp_gain_loc }
 			multiply_temp_variable = { total_xp_to_be_added = 7 }
 			add_to_variable = { total_campaign_xp = total_xp_to_be_added }
@@ -1073,7 +1073,7 @@ RUS_complete_sokol_upgrade_2 = {
 }
 
 RUS_AV_set_random_decaying_funds_bonus = {
-	log = "[GetDateText]: [Root.GetName]: Executed scripted effect RUS_AV_set_random_decaying_funds_bonus"
+	log = "[GetLogRoot]: Executed scripted effect RUS_AV_set_random_decaying_funds_bonus"
 	custom_effect_tooltip = RUS_AV_Number_Of_Funds_Bonus_Granted_tt
 	RUS_execute_AV = yes
 	FROM = { mio:RUS_av_organisation = { add_to_variable = { total_campaign_funds_bonus = 1 } } }
@@ -1102,7 +1102,7 @@ RUS_AV_set_random_decaying_funds_bonus = {
 }
 
 RUS_execute_AV = {
-	log = "[GetDateText]: [Root.GetName]: Executed scripted effect RUS_execute_AV"
+	log = "[GetLogRoot]: Executed scripted effect RUS_execute_AV"
 	hidden_effect = {
 		FROM = {
 			mio:RUS_av_organisation = { set_temp_variable = { Temp_Funds_Bonus = Funds_Bonus } }
@@ -1340,7 +1340,7 @@ RUS_execute_AV = {
 }
 
 RUS_Update_Decaying_Funds_Bonus = {
-	log = "[GetDateText]: [Root.GetName]: Executed scripted effect RUS_Update_Decaying_Funds_Bonus"
+	log = "[GetLogRoot]: Executed scripted effect RUS_Update_Decaying_Funds_Bonus"
 	mio:RUS_av_organisation = { set_temp_variable = { Temp_Weekly_funds_decay = Weekly_funds_decay } }
 	set_variable = { visible_Weekly_funds_decay = Temp_Weekly_funds_decay }
 	every_military_industrial_organization = {
@@ -2085,7 +2085,7 @@ RUS_TOZ_Hand_Out_Medals = {
 	set_variable = { TOZ_Divisions = TOZ_Divisions_Save }
 }
 
-RUS_OSOAVIA_Factories = {
+RUS_Gamayun_Factories = {
 	ROOT = {
 		set_variable_to_random = {
 			var = RUS_damage
@@ -2097,8 +2097,8 @@ RUS_OSOAVIA_Factories = {
 	if = {
 		limit = {
 			ROOT = {
-				mio:RUS_osoavia_organisation = {
-					is_mio_trait_completed = osoavia_upgrade_1_3
+				mio:RUS_gamayun_organisation = {
+					is_mio_trait_completed = gamayun_upgrade_1_3
 				}
 			}
 		}
@@ -2112,7 +2112,7 @@ RUS_OSOAVIA_Factories = {
 	if = {
 		limit = {
 			ROOT = {
-				mio:RUS_osoavia_organisation = {
+				mio:RUS_gamayun_organisation = {
 					has_mio_policy_active = RUS_mio_policy_hire_state_construction_companies
 				}
 			}
@@ -2125,10 +2125,10 @@ RUS_OSOAVIA_Factories = {
 		}
 	}
 	random_list = {
-		var:RUS_OSOAVIA_Civ_Chance = {
+		var:RUS_Gamayun_Civ_Chance = {
 			ROOT = {
-				set_variable = { RUS_OSOAVIA_building = 1 }
-				mio:RUS_osoavia_organisation = {
+				set_variable = { RUS_Gamayun_building = 1 }
+				mio:RUS_gamayun_organisation = {
 					add_to_variable = { total_campaign_civs = 1 }
 					set_temp_variable = { progress_sub_total = 1 }
 					subtract_from_temp_variable = { progress_sub_total = ROOT.RUS_damage }
@@ -2137,10 +2137,10 @@ RUS_OSOAVIA_Factories = {
 				}
 			}
 		}
-		var:RUS_OSOAVIA_Mil_Chance = {
+		var:RUS_Gamayun_Mil_Chance = {
 			ROOT = {
-				set_variable = { RUS_OSOAVIA_building = 2 }
-				mio:RUS_osoavia_organisation = {
+				set_variable = { RUS_Gamayun_building = 2 }
+				mio:RUS_gamayun_organisation = {
 					add_to_variable = { total_campaign_mils = 1 }
 					set_temp_variable = { progress_sub_total = 1 }
 					subtract_from_temp_variable = { progress_sub_total = ROOT.RUS_damage }
@@ -2149,10 +2149,10 @@ RUS_OSOAVIA_Factories = {
 				}
 			}
 		}
-		var:RUS_OSOAVIA_Dockyard_Chance = {
+		var:RUS_Gamayun_Dockyard_Chance = {
 			ROOT = {
-				set_variable = { RUS_OSOAVIA_building = 3 }
-				mio:RUS_osoavia_organisation = {
+				set_variable = { RUS_Gamayun_building = 3 }
+				mio:RUS_gamayun_organisation = {
 					add_to_variable = { total_campaign_dockyards = 1 }
 					set_temp_variable = { progress_sub_total = 1 }
 					subtract_from_temp_variable = { progress_sub_total = ROOT.RUS_damage }
@@ -2162,7 +2162,7 @@ RUS_OSOAVIA_Factories = {
 			}
 		}
 	}
-	mio:RUS_osoavia_organisation = {
+	mio:RUS_gamayun_organisation = {
 		add_to_variable = { total_campaign_factories = 1 }
 		set_variable = { average_campaign_factory_progress = total_campaign_factory_progress }
 		divide_variable = { average_campaign_factory_progress = total_campaign_factories }
@@ -2171,11 +2171,11 @@ RUS_OSOAVIA_Factories = {
 		text = {
 			ROOT = {
 				if = {
-					limit = { check_variable = { RUS_OSOAVIA_building = 1 } }
+					limit = { check_variable = { RUS_Gamayun_building = 1 } }
 					random_owned_controlled_state = {
 						limit = {
 							state_population > 1
-							NOT = { has_state_flag = RUS_OSOAVIA_Recent_Building }
+							NOT = { has_state_flag = RUS_Gamayun_Recent_Building }
 						}
 						add_building_construction = {
 							type = industrial_complex
@@ -2187,18 +2187,18 @@ RUS_OSOAVIA_Factories = {
 							damage = [RUS_DAMAGE]
 						}
 						set_state_flag = {
-							flag = RUS_OSOAVIA_Recent_Building
+							flag = RUS_Gamayun_Recent_Building
 							days = 160
 							value = 1
 						}
 					}
 				}
 				else_if = {
-					limit = { check_variable = { RUS_OSOAVIA_building = 2 } }
+					limit = { check_variable = { RUS_Gamayun_building = 2 } }
 					random_owned_controlled_state = {
 						limit = {
 							state_population > 1
-							NOT = { has_state_flag = RUS_OSOAVIA_Recent_Building }
+							NOT = { has_state_flag = RUS_Gamayun_Recent_Building }
 						}
 						add_building_construction = {
 							type = arms_factory
@@ -2210,19 +2210,19 @@ RUS_OSOAVIA_Factories = {
 							damage = [RUS_DAMAGE]
 						}
 						set_state_flag = {
-							flag = RUS_OSOAVIA_Recent_Building
+							flag = RUS_Gamayun_Recent_Building
 							days = 160
 							value = 1
 						}
 					}
 				}
 				else_if = {
-					limit = { check_variable = { RUS_OSOAVIA_building = 3 } }
+					limit = { check_variable = { RUS_Gamayun_building = 3 } }
 					random_owned_controlled_state = {
 						limit = {
 							state_population > 1
 							is_coastal = yes
-							NOT = { has_state_flag = RUS_OSOAVIA_Recent_Building }
+							NOT = { has_state_flag = RUS_Gamayun_Recent_Building }
 						}
 						add_building_construction = {
 							type = dockyard
@@ -2234,7 +2234,7 @@ RUS_OSOAVIA_Factories = {
 							damage = [RUS_DAMAGE]
 						}
 						set_state_flag = {
-							flag = RUS_OSOAVIA_Recent_Building
+							flag = RUS_Gamayun_Recent_Building
 							days = 160
 							value = 1
 						}
@@ -2300,7 +2300,7 @@ RUS_bz_add_political_interference = {
 	}
 }
 
-RUS_unlock_osoavia_policies = {
+RUS_unlock_gamayun_policies = {
 	custom_effect_tooltip = tooltip_white_line
 	unlock_mio_policy_tooltip = { policy = RUS_mio_policy_hire_state_construction_companies show_modifiers = no }
 	unlock_mio_policy_tooltip = { policy = RUS_mio_policy_buy_out_land_holdings show_modifiers = no }
@@ -2316,8 +2316,8 @@ RUS_show_obukhov_political_interference = {
 	show_ideas_tooltip = RUS_obukhov_political_interference
 }
 
-RUS_show_gamayun_political_interference = {
-	show_ideas_tooltip = RUS_gamayun_political_interference
+RUS_show_osoavia_political_interference = {
+	show_ideas_tooltip = RUS_osoavia_political_interference
 }
 
 RUS_add_laz_upgrade_4_1 = {
@@ -2710,183 +2710,6 @@ RUS_unlock_as_trait = {
 					mio:RUS_as_organisation = { check_variable = { research_bonus < 1.7 } }
 				}
 				mio:RUS_as_organisation = { complete_mio_trait = as_upgrade_4_1_16 }
-			}
-		}
-	}
-}
-
-GRU_Update_MIO_XP_Gains = {
-	#Volksmarine Werft
-	mio:GRU_volksmarine_organisation = {
-		set_variable = { Previous_Week_Funds = Current_Week_Funds }
-		set_variable = { Current_Week_Funds = funds }
-		set_variable = { Funds_Difference = Current_Week_Funds }
-		subtract_from_variable = { Funds_Difference = Previous_Week_Funds }
-		set_variable = { Funds_Difference_loc = Funds_Difference }
-		divide_variable = { Funds_Difference_loc = 7 }
-	}
-	if = { #Remove if below threshold
-		limit = {
-			mio:GRU_volksmarine_organisation = { check_variable = { Funds_Difference < weekly_funds_requirement } }
-			OR = {
-				has_idea = GRU_volksmarine_navy_xp
-				has_idea = GRU_volksmarine_navy_xp_2
-			}
-			check_variable = { volksmarine_Research_Number < 1 }
-		}
-		remove_ideas = {
-			GRU_volksmarine_navy_xp
-			GRU_volksmarine_navy_xp_2
-		}
-	}
-	else_if = { #Add if above threshold
-		limit = {
-			OR = {
-				mio:GRU_volksmarine_organisation = { check_variable = { Funds_Difference > weekly_funds_requirement } }
-				check_variable = { volksmarine_Research_Number > 0 }
-			}
-			NOT = {
-				has_idea = GRU_volksmarine_navy_xp
-				has_idea = GRU_volksmarine_navy_xp_2
-			}
-		}
-		if = {
-			limit = {
-				mio:GRU_volksmarine_organisation = {
-					is_mio_trait_completed = volksmarine_upgrade_5
-				}
-			}
-			add_ideas = GRU_volksmarine_navy_xp_2
-		}
-		else = {
-			add_ideas = GRU_volksmarine_navy_xp
-		}
-	}
-	if = {
-		limit = {
-			OR = {
-				has_idea = GRU_volksmarine_navy_xp
-				has_idea = GRU_volksmarine_navy_xp_2
-			}
-		}
-		mio:GRU_volksmarine_organisation = {
-			set_temp_variable = { total_xp_to_be_added = xp_gain_loc }
-			multiply_temp_variable = { total_xp_to_be_added = 7 }
-			add_to_variable = { total_campaign_xp = total_xp_to_be_added }
-		}
-	}
-	#Junkers
-	mio:GRU_junkers_organisation = {
-		set_variable = { Previous_Week_Funds = Current_Week_Funds }
-		set_variable = { Current_Week_Funds = funds }
-		set_variable = { Funds_Difference = Current_Week_Funds }
-		subtract_from_variable = { Funds_Difference = Previous_Week_Funds }
-		set_variable = { Funds_Difference_loc = Funds_Difference }
-		divide_variable = { Funds_Difference_loc = 7 }
-	}
-	if = { #Remove if below threshold
-		limit = {
-			mio:GRU_junkers_organisation = { check_variable = { Funds_Difference < weekly_funds_requirement } }
-			OR = {
-				has_idea = GRU_junkers_air_xp
-				has_idea = GRU_junkers_air_xp_2
-			}
-			check_variable = { junkers_Research_Number < 1 }
-		}
-		remove_ideas = {
-			GRU_junkers_air_xp
-			GRU_junkers_air_xp_2
-		}
-	}
-	else_if = { #Add if above threshold
-		limit = {
-			OR = {
-				mio:GRU_junkers_organisation = { check_variable = { Funds_Difference > weekly_funds_requirement } }
-				check_variable = { junkers_Research_Number > 0 }
-			}
-			NOT = {
-				has_idea = GRU_junkers_air_xp
-				has_idea = GRU_junkers_air_xp_2
-			}
-		}
-		if = {
-			limit = {
-				mio:GRU_junkers_organisation = {
-					is_mio_trait_completed = junkers_upgrade_1
-				}
-			}
-			add_ideas = GRU_junkers_air_xp_2
-		}
-		else = {
-			add_ideas = GRU_junkers_air_xp
-		}
-	}
-	if = {
-		limit = {
-			OR = {
-				has_idea = GRU_junkers_air_xp
-				has_idea = GRU_junkers_air_xp_2
-			}
-		}
-		mio:GRU_junkers_organisation = {
-			set_temp_variable = { total_xp_to_be_added = xp_gain_loc }
-			multiply_temp_variable = { total_xp_to_be_added = 7 }
-			add_to_variable = { total_campaign_xp = total_xp_to_be_added }
-		}
-	}
-}
-
-GRU_Update_MIO_Research_Speeds = {
-	#Rheinmetall
-	mio:GRU_rheinmetall_organisation = {
-		set_variable = { Previous_Week_Funds = Current_Week_Funds }
-		set_variable = { Current_Week_Funds = funds }
-		set_variable = { Funds_Difference = Current_Week_Funds }
-		subtract_from_variable = { Funds_Difference = Previous_Week_Funds }
-		set_variable = { Funds_Difference_loc = Funds_Difference }
-		divide_variable = { Funds_Difference_loc = 7 }
-	}
-	if = { #Weekly trigger for giving incremental research bonus to MIO Rheinmetall
-		limit = {
-			check_variable = { MIO_Rheinmetall_assigned_manufacturer_number > 0 } #So that the MIO can only gain research speed from manufacturing weapons
-			mio:GRU_Rheinmetall_organisation = { check_variable = { Funds_Difference > weekly_funds_requirement } }
-		}
-		if = {
-			limit = { mio:GRU_Rheinmetall_organisation = { check_variable = { research_bonus < max_research_speed } } }
-			mio:GRU_rheinmetall_organisation = { add_mio_research_bonus = weekly_research_speed_gain }
-			mio:GRU_rheinmetall_organisation = { add_to_variable = { total_campaign_research_speed = weekly_research_speed_gain_loc } }
-		}
-		else_if = {
-			limit = {
-				OR = {
-					mio:GRU_rheinmetall_organisation = {
-						check_variable = { research_bonus > max_research_speed }
-					}
-					mio:GRU_rheinmetall_organisation = {
-						check_variable = { research_bonus = max_research_speed }
-					}
-				}
-			}
-			if = {
-				limit = { NOT = { has_country_flag = GRU_Rheinmetall_RS_Notification } }
-				set_country_flag = GRU_Rheinmetall_RS_Notification
-				mio:GRU_rheinmetall_organisation = {
-					set_temp_variable = {
-						var = GRU_MIO_research_speed_temp
-						value = research_bonus
-					}
-					multiply_temp_variable = {
-						var = GRU_MIO_research_speed_temp
-						value = 100
-					}
-					ROOT = {
-						set_variable = { GRU_MIO_alert_name = PREV }
-						set_variable = { GRU_MIO_research_speed = GRU_MIO_research_speed_temp }
-					}
-				}
-				add_to_array = { GRU_MIO_alerts = THIS }
-				scoped_sound_effect = diplomatic_notification
-				set_variable_to_random = global.kaiserreich_alerts_dirty
 			}
 		}
 	}

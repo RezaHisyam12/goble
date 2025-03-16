@@ -322,7 +322,7 @@ GRU_aid_plan:0 "Aid to Eastern Volkskommissariat"
 GRU_aid_plan_2:0 "Another Aid to Eastern Volkskommissariat"
 GRU_prepare_for_russia:0 "Defend At All Cost"
 GRU_prepare_for_russia_2:0 "Prepare for Counter Attacks"
-GRU_panzer_divisions:0 "Panzer Divisions"
+GRU_panzer_divisions:0 "Send the Panzer Divisions"
 
 GRU_SMEPD_DIPLO:0 "World Revolution"
 GRU_SMEPD_DIPLO_desc:0 "We will carry the torch of the revolution into the world!"
@@ -2253,6 +2253,11 @@ GRU_ostwall_idea:0 "Ostwall Program"
 GRU_MAF_stabilisation:0 "Stabilisation Priority"
 GRU_financing_colonies:0 "Financing the Volkskommissariat"
 GRU_financing_colonies_received:0 "Influx of Investment"
+GRU_wide_front_operations_idea:0 "Iron Wall Operations"
+GRU_wide_front_operations_idea_desc:0 "Retreat is not an option—we will fight for every inch of soil."
+GRU_break_fortifications_idea:0 "Interdiction Tactics"
+GRU_break_fortifications_idea_desc:0 "When the enemy charges forward, our bombers will leave their columns in flames."
+GRU_expanded_espionage_non_lar:0 "Wartime Espionage"
 
 ####puppets##  
 
@@ -5130,4 +5135,22 @@ GRU_general_Konrad_Sundlo:0 "Konrad Sundlo"
  RUS_order_of_glory: "Order of Glory"
  RUS_order_of_victory: "Order of Victory"
  RUS_order_of_red_star: "Order of the Red Star"
+
+
+### RUSSIA COLLAPSE
+rmruss.1.t: "The success of Operation Drang nach Osten"
+rmruss.1.d: "The Russians are at their last gasp. Our glorious flags are raised over the entire cradle of Russia. Key cities have been captured and the enemy army defeated. The ‘Drang nach Osten’ plan is a success! However, all success has a downside - our exhaustion. Armies, economies - all need resuscitation. We must not only celebrate our victories, but also manage our resources wisely so as not to exhaust them completely.\n\nThe plan ‘Drang nach Osten’ is aimed at reaching the line Astrakhan - Volga - Murmansk. This is a rational disposition, for all of Russia's wealth - resources, factories, enterprises - is in our hands. To seize more territory would threaten us with endless partisanship and unjustified expenditure. So we must follow the plan to the end, not get carried away by irrational victory relaa tions to unnecessary lands.\n\nOur advantage must not be undermined. The Uralbombers will send regular ‘hellos’ to the other side of the barricades, lest the enemy should regain his power, which is not long to come. Internal strife is tormenting their country, and we must press this to hasten the doom.\n\nTheir collapse is near, and our Eagle has spread his wings even more!"
+rmruss.1.a: "We have a clear plan and we will stick to it."
+rmruss.1.b: "Only their unconditional surrender!"
+
+rmruss.2.t: "TNO reFERENCE???" ### Sorry...
+rmruss.2.d: "YOU GOT FUCKED BY A MIDGET. ARE YOU SERIOUS? THIS FUCKING CLAIM WILL LIVE WITH YOU NOW. All right, let's cut to the chase. TNO REFERENCE? Calm down... DO YOU WANT IT? YES? NO?"
+rmruss.2.a: "§VI HAVE A FUCKING HEAD TNO. Come on, bro, don't be mad!§!"
+rmruss.2.b: "FUCK YOU! GIVE THE SECOND WESTERN RUSSIAN IN THE KX WITHOUT DISTURBING THE FUCKING PIECE!"
+
+### NEWS
+gruothernews.5.t: "The death of Russia"
+gruothernews.5.d: "Today the whole world has witnessed a terrible upheaval, the Russian armies have been broken, the Germans like a thunderbolt have descended upon Eastern Europe, and in the chaos that has erupted since the fall of the defeat of the Russian army, civil order has collapsed throughout the once United and undivided State, one can now only state the great triumph of Germany and the eternal horror for the civilian population of former Russia.\n\n‟ The heavy consciousness of the imminent destruction of the country commands me in these dreadful moments to call upon all Russian people to save the dying Motherland. All those who have a Russian heart beating in their chests, all those who believe in God - to the temples, pray to the Lord God for the appearance of the greatest miracle of the salvation of the native land. „\n\n- Lavr Kornilov"
+gruothernews.5.a: "The end of an entire era..."
+gruothernews.5.b: "The Kaiser could only dream of such a..."
 

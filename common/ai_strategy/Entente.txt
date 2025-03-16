@@ -1137,3 +1137,23 @@ ENT_sync_invasions = {
 		execute_order = no
 	}
 }
+
+ENT_dont_justify = {
+	allowed = {
+		OR = {
+			original_tag = CAN
+			original_tag = NFA
+			original_tag = SRD
+			is_ally_with = ENT
+		}
+	}
+	enable = { always = yes }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = ignore_claim id = ENG value = 100 }
+	ai_strategy = { type = ignore_claim id = FRA value = 100 }
+	ai_strategy = { type = ignore_claim id = LIB value = 100 }
+	ai_strategy = { type = ignore_claim id = SRI value = 100 }
+	ai_strategy = { type = ignore_claim id = SIC value = 100 }
+	ai_strategy = { type = ignore_claim id = ITA value = 100 }
+}

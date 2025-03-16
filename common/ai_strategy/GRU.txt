@@ -136,32 +136,32 @@ GRU_dont_justify = {
 	enable = { always = yes }
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = ignore_claim id = FRA value = 1 }
-	ai_strategy = { type = ignore_claim id = ENG value = 1 }
-	ai_strategy = { type = ignore_claim id = AUS value = 1 }
-	ai_strategy = { type = ignore_claim id = CZE value = 1 }
-	ai_strategy = { type = ignore_claim id = GAL value = 1 }
-	ai_strategy = { type = ignore_claim id = HUN value = 1 }
-	ai_strategy = { type = ignore_claim id = CRO value = 1 }
-	ai_strategy = { type = ignore_claim id = FRA value = 1 }
-	ai_strategy = { type = ignore_claim id = SWI value = 1 }
-	ai_strategy = { type = ignore_claim id = HOL value = 1 }
-	ai_strategy = { type = ignore_claim id = LUX value = 1 }
-	ai_strategy = { type = ignore_claim id = BEL value = 1 }
-	ai_strategy = { type = ignore_claim id = DEN value = 1 }
-	ai_strategy = { type = ignore_claim id = FLA value = 1 }
-	ai_strategy = { type = ignore_claim id = WLL value = 1 }
-	ai_strategy = { type = ignore_claim id = NOR value = 1 }
-	ai_strategy = { type = ignore_claim id = SWE value = 1 }
-	ai_strategy = { type = ignore_claim id = FIN value = 1 }
-	ai_strategy = { type = ignore_claim id = ICE value = 1 }
-	ai_strategy = { type = ignore_claim id = WHR value = 1 }
-	ai_strategy = { type = ignore_claim id = POL value = 1 }
-	ai_strategy = { type = ignore_claim id = UKR value = 1 }
-	ai_strategy = { type = ignore_claim id = WSU value = 1 }
-	ai_strategy = { type = ignore_claim id = LIT value = 1 }
-	ai_strategy = { type = ignore_claim id = BAT value = 1 }
-	ai_strategy = { type = ignore_claim id = EST value = 1 }
+	ai_strategy = { type = ignore_claim id = FRA value = 100 }
+	ai_strategy = { type = ignore_claim id = ENG value = 100 }
+	ai_strategy = { type = ignore_claim id = AUS value = 100 }
+	ai_strategy = { type = ignore_claim id = CZE value = 100 }
+	ai_strategy = { type = ignore_claim id = GAL value = 100 }
+	ai_strategy = { type = ignore_claim id = HUN value = 100 }
+	ai_strategy = { type = ignore_claim id = CRO value = 100 }
+	ai_strategy = { type = ignore_claim id = FRA value = 100 }
+	ai_strategy = { type = ignore_claim id = SWI value = 100 }
+	ai_strategy = { type = ignore_claim id = HOL value = 100 }
+	ai_strategy = { type = ignore_claim id = LUX value = 100 }
+	ai_strategy = { type = ignore_claim id = BEL value = 100 }
+	ai_strategy = { type = ignore_claim id = DEN value = 100 }
+	ai_strategy = { type = ignore_claim id = FLA value = 100 }
+	ai_strategy = { type = ignore_claim id = WLL value = 100 }
+	ai_strategy = { type = ignore_claim id = NOR value = 100 }
+	ai_strategy = { type = ignore_claim id = SWE value = 100 }
+	ai_strategy = { type = ignore_claim id = FIN value = 100 }
+	ai_strategy = { type = ignore_claim id = ICE value = 100 }
+	ai_strategy = { type = ignore_claim id = WHR value = 100 }
+	ai_strategy = { type = ignore_claim id = POL value = 100 }
+	ai_strategy = { type = ignore_claim id = UKR value = 100 }
+	ai_strategy = { type = ignore_claim id = WSU value = 100 }
+	ai_strategy = { type = ignore_claim id = LIT value = 100 }
+	ai_strategy = { type = ignore_claim id = BAT value = 100 }
+	ai_strategy = { type = ignore_claim id = EST value = 100 }
 }
 
 GRU_Volunteer = {
@@ -377,38 +377,6 @@ GRU_eyes_on_france = {
 		type = front_unit_request
 		tag = FRA
 		value = 50
-	}
-}
-
-GRU_eyes_on_Russia = {
-	allowed = {
-		original_tag = GRU
-	}
-	enable = {
-		has_war_with = RUS
-		NOT = { has_war_with = FRA }
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = conquer
-		id = RUS
-		value = 300
-	}
-	ai_strategy = {
-		type = front_armor_score
-		id = RUS
-		value = 100
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = RUS
-		value = 50
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = FRA
-		value = -50
 	}
 }
 
@@ -953,6 +921,7 @@ GRU_take_the_fight_to_england = {
 		has_navy_size = { size > 0 }
 		ENG = { naval_strength_comparison = { other = ROOT ratio < 0.6 } }
 		surrender_progress < 0.05
+		NOT = { has_war_with = RUS }
 	}
 	abort_when_not_enabled = yes
 
@@ -1011,6 +980,7 @@ GRU_take_the_fight_to_sweden = {
 		has_navy_size = { size > 0 }
 		SWE = { naval_strength_comparison = { other = ROOT ratio < 0.6 } }
 		surrender_progress < 0.05
+		NOT = { has_war_with = RUS }
 	}
 	abort_when_not_enabled = yes
 
@@ -1207,6 +1177,42 @@ STP_defend_eastern_front = {
 	}
 }
 
+STP_eyes_on_Russia = {
+	allowed = {
+		OR = {
+			is_polish_tag = yes
+			is_baltic_tag = yes
+			is_balkan_tag = yes
+			is_danubian_tag = yes
+		}
+	}
+	enable = {
+		OR = {
+			country_exists = RUS
+			RUS = { has_capitulated = no }
+			has_war_with = RUS
+		}
+		is_ally_with = GRU
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = RUS
+		value = 400
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = RUS
+		value = 25
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = FRA
+		value = -25
+	}
+}
+
 ################
 ### Industry/2WK ###
 ################
@@ -1254,6 +1260,92 @@ GRU_finish_russia_off = {
 		ordertype = front
 		execution_type = rush_weak
 		execute_order = yes
+	}
+}
+
+GRU_less_focus_on_russia = {
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		FRA = {
+			has_capitulated = no
+			is_faction_leader = yes
+		}
+		NOT = {
+			VKB = {
+				is_in_faction_with = ROOT
+				surrender_progress > 0.40
+			}
+			VKR = {
+				is_in_faction_with = ROOT
+				surrender_progress > 0.40
+			}
+			VKK = {
+				is_in_faction_with = ROOT
+				surrender_progress > 0.40
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = RUS
+		value = -100
+	}
+}
+
+GRU_finish_russia_off_air = {
+	allowed = {
+		OR = {
+			original_tag = GRU
+			is_ally_with = GRU
+		}
+		is_in_europe = yes
+	}
+	enable = {
+		has_war_with = RUS
+		OR = {
+			NOT = { country_exists = FRA }
+			FRA = { has_capitulated = yes }
+		}
+		OR = {
+			NOT = { country_exists = SRI }
+			SRI = { has_capitulated = yes }
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 130 # West Ukraine
+		value = 15000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 165 # East Ukraine
+		value = 15000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 132 #Northern Russia
+		value = 15000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 133 #Central Russia
+		value = 15000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 137 #Volga
+		value = 15000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 244 #Caspian Lowlands
+		value = 15000
 	}
 }
 
