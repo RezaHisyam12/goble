@@ -5137,7 +5137,61 @@ GRU_general_Konrad_Sundlo:0 "Konrad Sundlo"
  RUS_order_of_red_star: "Order of the Red Star"
 
 
-### RUSSIA COLLAPSE
+
+########################
+#### New Decision ####
+########################
+
+GRU_Demand_Sudovia: "Demand Sudovia Back"
+GRU_Demand_Sudovia_desc: ""
+GRU_Demand_Submission: "Demand [From.GetNameDefCap] Submission"
+GRU_Demand_Submission_desc: ""
+
+####################
+#### New Event ####
+####################
+
+rotermorgenmisc.1180.t: "German Demands Sudovia"
+rotermorgenmisc.1180.d.RUS: "Yesterday, the Germany government demanded the return of the Sudovia region. If we agree with Germany claims, we will lose a major part of our territory, but if we refuse, we shall face an immediate Germany invasion.\n\nHow should we react to these awful demands from the Germany leadership?"
+rotermorgenmisc.1180.d.RUS_overlord: "Yesterday, the Germany government demanded the return of the Sudovia region. If we agree with Germany claims, Russia will lose very small of its territory, but if we refuse, we shall both face an immediate Germany invasion.\n\nHow should we react to these awful demands from the Germany leadership?"
+rotermorgenmisc.1180.a: "Accept their terms."
+rotermorgenmisc.1180.b: "Never!"
+
+rotermorgenmisc.1181.t: "[From.GetNameDefCap] Refuses!"
+rotermorgenmisc.1181.d: "The [From.GetAdjective] government published a note where it insists that Sudovia is rightfully Russian territory, and German will never get it back.\n\nThe only solution to this problem for us is war with [From.GetNameDef]."
+rotermorgenmisc.1181.d.ally: "The [From.GetAdjective] government has politely refused our request, stating their hard-won conflict against the Russians and their wish to preserve goodwill between themselves and their subservient government in Bucharest."
+rotermorgenmisc.1181.a: "Then it is war."
+rotermorgenmisc.1181.b: "Back down."
+rotermorgenmisc.1181.c: "Cheeky bastards."
+
+rotermorgenmisc.1182.t: "The Transfer of Sudovia"
+rotermorgenmisc.1182.d: "[From.GetNameDefCap] has agreed to transfer the larger part of Sudovia in return for monetary and material compensation as well as the guarantee of the security of their new borders!"
+rotermorgenmisc.1182.d.ally: "[From.GetNameDefCap] has agreed to transfer the larger part of Sudovia as a sign of goodwill to their valiant allies!"
+rotermorgenmisc.1182.a: "Another victory for Germany diplomacy!"
+
+rotermorgenmisc.1201.t: "An Offer From Goebbels"
+rotermorgenmisc.1201.d: "Joseph Goebbels has issued an ultimatum to [FROM.GetName], a former puppet state of the German Empire. Claiming that their independence is a threat to regional stability, Berlin demands full submission to German authority. Goebbels has framed this as a necessary step to restore order in Eastern Europe and ensure the region remains secure from external threats — particularly from Russia. The message is clear: comply and become a subordinate state under German control, or face the consequences of defiance."
+rotermorgenmisc.1201.a: "What choice do we have?"
+rotermorgenmisc.1201.b: "No way! [FROM.GetName] is independent!"
+
+rotermorgenmisc.1202.t: "[FROM.GetName] Agrees!"
+rotermorgenmisc.1202.d: "[FROM.GetName] has chosen to submit to German demands, accepting their status as a protectorate under Joseph Goebbels' regime."
+rotermorgenmisc.1202.a: "A Wise Decision"
+
+rotermorgenmisc.1203.t: "[FROM.GetName] Wants to Stay Independent"
+rotermorgenmisc.1203.d: "[FROM.GetName] has outright rejected Joseph Goebbels' demand for submission, defying Berlin’s ultimatum."
+rotermorgenmisc.1203.a: "A Reckless Gamble."
+
+########################
+#### New ToolTip ####
+########################
+
+GRU_will_declare_war_on_ROOT: "§R[GRU.GetNameDefCap] may declare war on us!§!"
+
+########################
+### RUSSIA COLLAPSE ####
+########################
+
 rmruss.1.t: "The success of Operation Drang nach Osten"
 rmruss.1.d: "The Russians are at their last gasp. Our glorious flags are raised over the entire cradle of Russia. Key cities have been captured and the enemy army defeated. The ‘Drang nach Osten’ plan is a success! However, all success has a downside - our exhaustion. Armies, economies - all need resuscitation. We must not only celebrate our victories, but also manage our resources wisely so as not to exhaust them completely.\n\nThe plan ‘Drang nach Osten’ is aimed at reaching the line Astrakhan - Volga - Murmansk. This is a rational disposition, for all of Russia's wealth - resources, factories, enterprises - is in our hands. To seize more territory would threaten us with endless partisanship and unjustified expenditure. So we must follow the plan to the end, not get carried away by irrational victory relaa tions to unnecessary lands.\n\nOur advantage must not be undermined. The Uralbombers will send regular ‘hellos’ to the other side of the barricades, lest the enemy should regain his power, which is not long to come. Internal strife is tormenting their country, and we must press this to hasten the doom.\n\nTheir collapse is near, and our Eagle has spread his wings even more!"
 rmruss.1.a: "We have a clear plan and we will stick to it."
@@ -5148,7 +5202,10 @@ rmruss.2.d: "YOU GOT FUCKED BY A MIDGET. ARE YOU SERIOUS? THIS FUCKING CLAIM WIL
 rmruss.2.a: "§VI HAVE A FUCKING HEAD TNO. Come on, bro, don't be mad!§!"
 rmruss.2.b: "FUCK YOU! GIVE THE SECOND WESTERN RUSSIAN IN THE KX WITHOUT DISTURBING THE FUCKING PIECE!"
 
-### NEWS
+################
+### NEWS ####
+################
+
 gruothernews.5.t: "The death of Russia"
 gruothernews.5.d: "Today the whole world has witnessed a terrible upheaval, the Russian armies have been broken, the Germans like a thunderbolt have descended upon Eastern Europe, and in the chaos that has erupted since the fall of the defeat of the Russian army, civil order has collapsed throughout the once United and undivided State, one can now only state the great triumph of Germany and the eternal horror for the civilian population of former Russia.\n\n‟ The heavy consciousness of the imminent destruction of the country commands me in these dreadful moments to call upon all Russian people to save the dying Motherland. All those who have a Russian heart beating in their chests, all those who believe in God - to the temples, pray to the Lord God for the appearance of the greatest miracle of the salvation of the native land. „\n\n- Lavr Kornilov"
 gruothernews.5.a: "The end of an entire era..."

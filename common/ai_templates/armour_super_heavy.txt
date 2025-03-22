@@ -1,0 +1,43 @@
+######################
+## Super Heavy ROLE ##
+######################
+
+armour_super_heavy_generic = {
+
+	role = armour_super_heavy
+
+	upgrade_prio = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = { has_tech = super_heavy_tank_chassis }
+		}
+	}
+
+	armour_super_heavy_template = {
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			factor = 2
+		}
+
+		can_upgrade_in_field = {
+			surrender_progress < 0.15
+		}
+
+		target_template = {
+			regiments = {
+				super_heavy_armor = 6
+				mechanized = 6
+			}
+
+			support = {
+				helicopter_recon = 1
+				armored_engineer = 1
+				armored_signal = 1
+				helicopter_transport = 1
+				armored_maintenance = 1
+			}
+		}
+	}
+}

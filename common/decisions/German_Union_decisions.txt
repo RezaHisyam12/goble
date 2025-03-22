@@ -4708,6 +4708,163 @@ GRU_germania_plan_decisions = {
 	
 
 	
+	GRU_Demand_Sudovia = {
+		icon = generic_civil_support
+
+		available = {
+			OR = {
+				is_neighbor_of = FROM
+				any_allied_country = { is_neighbor_of = FROM }
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_subject = yes
+						NOT = { is_subject_of = ROOT }
+					}
+				}
+				NOT = { has_non_aggression_pact_with = FROM }
+				NOT = { has_non_aggression_pact_with = FROM.overlord }
+				NOT = { has_guaranteed = FROM }
+				NOT = { has_guaranteed = FROM.overlord }
+			}
+			else_if = {
+				limit = { NOT = { is_ally_with = FROM } }
+				NOT = { has_non_aggression_pact_with = FROM }
+				NOT = { has_guaranteed = FROM }
+			}
+		}
+
+		cancel_trigger = {
+			if = {
+				limit = { is_ally_with = FROM }
+				OR = {
+					NOT = { 
+						655 = { is_owned_by = FROM } 
+					}
+					AND = {
+						NOT = { can_declare_war_on = FROM }
+						NOT = {
+							FROM = {
+								is_subject = yes
+								overlord = { is_ally_with = ROOT }
+							}
+						}
+					}
+				}
+			}
+			else = {
+				OR = {
+					NOT = { 
+						655 = { is_owned_by = FROM } 
+					}
+					AND = {
+						NOT = { can_declare_war_on = FROM }
+						NOT = {
+							FROM = {
+								is_subject = yes
+								overlord = { is_ally_with = ROOT }
+							}
+						}
+					}
+					has_non_aggression_pact_with = FROM
+					has_guaranteed = FROM
+				}
+			}
+		}
+
+		targets = { RUS }
+		target_root_trigger = {
+			OR = {
+				has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+			}
+		}
+		target_trigger = {
+			FROM = { owns_state = 655 }
+			OR = {
+				can_declare_war_on = FROM
+				FROM = {
+					is_subject = yes
+					overlord = { is_ally_with = ROOT }
+				}
+			}
+		}
+
+		cost = 10
+		days_remove = 40
+		fire_only_once = yes
+		war_with_target_on_remove = yes
+
+		ai_will_do = {
+			factor = 100
+			# don't invade possible allies
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = no
+					OR = {
+						is_in_faction = no
+						is_in_faction_with = FRA
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					FROM = { GRU_dont_attack_if_target_is_stronger = yes }
+					FROM = { GRU_dont_attack_if_faction_is_stronger = yes }
+					FROM = { GRU_dont_attack_if_overlord_is_stronger = yes }
+				}
+			}
+		}
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel GRU_Demand_Sudovia target: [From.GetName]"
+			clear_decision_attack_AI = yes
+			add_political_power = 10
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete GRU_Demand_Sudovia target: [From.GetName]"
+			setup_decision_attack_AI = yes
+			if = {
+				limit = {
+					FROM = { 
+						is_subject = yes 
+						NOT = { is_subject_of = ROOT }
+					}
+				}
+				var:FROM.overlord = {
+					country_event = { id = rotermorgenmisc.1180 days = 2 random_days = 2 } #warning event
+				}
+			}
+			else = {
+				FROM = {
+					country_event = { id = rotermorgenmisc.1180 days = 2 random_days = 2 } #warning event
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Demand_Sudovia target: [From.GetName]"
+			clear_decision_attack_AI = yes
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 655
+							state = 1329
+						}
+						is_owned_by = FROM
+					}
+					transfer_state_to = ROOT
+				}
+			}
+			custom_effect_tooltip = if_they_refuse_tt
+		}
+	}
+
 	GRU_pan_germanism_core_austria_decision = {
 		icon = GFX_pangermanictwo
 
@@ -10581,6 +10738,12 @@ GRU_expansion_three_volksland_hypoborea = {
 								election_frequency = 48
 								elections_allowed = no
 							}
+							remove_all_ministers = yes
+							add_ideas = {
+								UKR_Andriy_Melnyk_for_pau
+								UKR_Yakiv_Moralevych_eco_npo
+								UKR_Roman_Bzheskyi_sec_npo
+							}
 						}
 					}
 				}
@@ -10703,6 +10866,9 @@ GRU_expansion_three_volksland_hypoborea = {
 						amount = 1000
 						}
 						add_manpower = 40000
+						remove_ideas = BAT_black_monday
+						remove_ideas = BAT_black_monday_1
+						remove_ideas = BAT_black_monday_2
 					}
 				VKB = {	country_event = rotermorgenmisc.400 }
 				if = {
@@ -10718,6 +10884,12 @@ GRU_expansion_three_volksland_hypoborea = {
 								last_election = "1936.1.1"
 								election_frequency = 48
 								elections_allowed = no
+							}
+							remove_all_ministers = yes
+							add_ideas = {
+							BAT_Siegfried_von_Sivers_for_npo
+							BAT_Friedrich_von_der_Ropp_eco_npo
+							BAT_Max_Hildebert_Boehm_sec_npo
 							}
 						}
 					}
@@ -15580,6 +15752,125 @@ GRU_stahlpakt_alliance_decisions = {
 			FROM = {	country_event = rotermorgenmisc.801 }
 		}
 	}
+
+	GRU_Demand_Submission = {
+		icon = hol_draw_up_staff_plans
+
+		visible = {
+			can_declare_war_on = FROM
+		}
+		available = {
+			OR = {
+				is_neighbor_of = FROM
+				any_allied_country = { is_neighbor_of = FROM }
+			}
+			NOT = { is_ally_with = FROM }
+			NOT = { has_non_aggression_pact_with = FROM }
+			NOT = { has_guaranteed = FROM }
+			NOT = { is_subject_of = ROOT }
+		}
+
+		cancel_trigger = {
+			NOT = { can_declare_war_on = FROM }
+			NOT = {
+				FROM = {
+					is_subject = yes
+					overlord = { is_ally_with = ROOT }
+				}
+			}
+			has_non_aggression_pact_with = FROM
+			has_guaranteed = FROM
+		}
+
+		targets = { BAT EST LAT LIT WHR UKR CRM }
+		target_root_trigger = {
+			OR = {
+				has_completed_focus = GRU_nmdvp_victory
+				has_completed_focus = GRU_volksfuhrer
+			}
+		}
+		target_trigger = {
+			OR = {
+				can_declare_war_on = FROM
+				FROM = {
+					is_subject = yes
+					overlord = { is_ally_with = ROOT }
+				}
+			}
+		}
+
+		cost = 10
+		days_remove = 40
+		fire_only_once = yes
+		war_with_target_on_remove = yes
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				FROM = {
+					is_in_faction_with = RUS
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					FROM = { GRU_dont_attack_if_target_is_stronger = yes }
+					FROM = { GRU_dont_attack_if_faction_is_stronger = yes }
+					FROM = { GRU_dont_attack_if_overlord_is_stronger = yes }
+				}
+			}
+		}
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel GRU_Demand_Submission target: [From.GetName]"
+			clear_decision_attack_AI = yes
+			add_political_power = 10
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete GRU_Demand_Submission target: [From.GetName]"
+			setup_decision_attack_AI = yes
+			if = {
+				limit = {
+					FROM = { 
+						is_subject = yes 
+						NOT = { is_subject_of = ROOT }
+					}
+				}
+				var:FROM.overlord = {
+					country_event = { id = rotermorgenmisc.1201 days = 2 random_days = 2 } #warning event
+				}
+			}
+			else = {
+				FROM = {
+					country_event = { id = rotermorgenmisc.1201 days = 2 random_days = 2 } #warning event
+				}
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Demand_Submission target: [From.GetName]"
+			clear_decision_attack_AI = yes
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				FROM = { get_current_government_type = yes }
+					set_autonomy = {
+						target = FROM
+						autonomous_state = kr_autonomous_puppet
+						freedom_level = 0.75
+				}
+			}
+			custom_effect_tooltip = if_they_refuse_tt
+			effect_tooltip = {
+				declare_war_on = {
+					target = FROM
+					type = annex_everything
+				}
+			}
+		}
+	}
+
 }
 
 GRU_new_order_decisions = {

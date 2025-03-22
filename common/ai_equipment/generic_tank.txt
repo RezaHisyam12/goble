@@ -562,3 +562,93 @@ generic_medium_tank_destroyer = {
 	}
 }
 
+generic_super_heavy_tanks = {
+	category = land
+
+	roles = {
+		land_super_heavy_tank
+	}
+
+	priority = {
+		factor = 200
+		modifier = {
+			num_of_factories < 100
+			factor = 0
+		}
+	}
+
+	basic_super_heavy_tank_default = {
+		priority = {
+			factor = 100
+		}
+
+		target_variant = {
+			match_value = 5000
+			type = super_heavy_tank_chassis_1
+			modules = {
+				main_armament_slot = { 
+					any_of = { 
+						tank_super_heavy_cannon 
+						tank_heavy_cannon_3 
+						tank_high_velocity_cannon_3 
+						tank_heavy_cannon_2 
+						tank_high_velocity_cannon_2 
+						tank_heavy_cannon 
+					} 
+				}
+				turret_type_slot = tank_super_heavy_three_man_tank_turret
+				suspension_type_slot = tank_christie_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 > tank_radio_1
+				special_type_slot_2 = easy_maintenance
+				special_type_slot_3 = auto_loader
+				special_type_slot_4 = wet_ammo_storage
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 12
+				tank_nsb_armor_upgrade = {
+					base = 10
+					modifier = {
+						add = 5
+						has_war = yes
+					}
+					modifier = {
+						any_enemy_country = {
+							is_major = yes
+						}
+						add = 5
+					}
+				}
+			}
+		}
+
+		allowed_modules = {
+			
+			tank_high_velocity_cannon_2 
+			tank_high_velocity_cannon_3 
+			tank_heavy_cannon 
+			tank_heavy_cannon_2 
+			tank_heavy_cannon_3 
+			tank_super_heavy_cannon
+			tank_super_heavy_three_man_tank_turret
+			tank_super_heavy_four_man_tank_turret
+			tank_christie_suspension
+			tank_interleaved_suspension
+			tank_welded_armor
+			tank_cast_armor
+			tank_diesel_engine
+			tank_gas_turbine_engine
+			tank_petrol_electric_engine
+			tank_radio_1
+			tank_radio_2
+			tank_radio_3
+			easy_maintenance
+			auto_loader
+			wet_ammo_storage
+			secondary_turret_hmg
+			sloped_armor
+		}
+	}
+}
+

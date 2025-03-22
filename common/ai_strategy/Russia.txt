@@ -99,7 +99,6 @@ RUS_focus_on_ukraine = {
 	}
 	enable = {
 		is_faction_leader = yes
-		has_war_with = GER
 		OR = {
 			has_war = no
 			has_war_with = UKR
@@ -115,7 +114,7 @@ RUS_focus_on_ukraine = {
 	ai_strategy = {
 		type = conquer
 		id = UKR
-		value = 200
+		value = 300
 	}
 	ai_strategy = {
 		type = front_armor_score
@@ -125,7 +124,12 @@ RUS_focus_on_ukraine = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = UKR
-		value = 80
+		value = 120
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = WHR
+		value = -25
 	}
 	ai_strategy = {
 		type = strategic_air_importance
@@ -145,9 +149,9 @@ RUS_crush_ukraine = {
 	}
 	enable = {
 		has_war_with = UKR
-		has_war_with = GER
 		UKR = { has_capitulated = no }
-		has_equipment = { infantry_equipment > -10000 }
+		has_manpower > 250000
+		stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
 		num_planes_stationed_in_regions = {
 			value > 1000
 			regions = { 130 165 } #Ukraine
@@ -222,7 +226,8 @@ RUS_mop_up_white_ruthenia = {
 			UKR = { has_capitulated = yes }
 		}
 		WHR = { has_capitulated = no }
-		has_equipment = { infantry_equipment > -10000 }
+		has_manpower > 250000
+		stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
 		num_planes_stationed_in_regions = {
 			value > 1000
 			regions = { 39 } #Belarus
@@ -293,7 +298,8 @@ RUS_mop_up_lithuania = {
 			WHR = { has_capitulated = yes }
 		}
 		LIT = { has_capitulated = no }
-		has_equipment = { infantry_equipment > -10000 }
+		has_manpower > 250000
+		stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
 		num_planes_stationed_in_regions = {
 			value > 1000
 			regions = { 37 } #Baltic States
@@ -322,7 +328,6 @@ RUS_focus_on_baltic_duchy = {
 	}
 	enable = {
 		has_war_with = BAT
-		has_war_with = GER
 		OR = {
 			NOT = { has_war_with = UKR }
 			UKR = { has_capitulated = yes }
@@ -354,13 +359,13 @@ RUS_mop_up_baltic_duchy = {
 	}
 	enable = {
 		has_war_with = BAT
-		has_war_with = GER
 		OR = {
 			NOT = { has_war_with = UKR }
 			UKR = { has_capitulated = yes }
 		}
 		BAT = { has_capitulated = no }
-		has_equipment = { infantry_equipment > -10000 }
+		has_manpower > 250000
+		stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
 		num_planes_stationed_in_regions = {
 			value > 1000
 			regions = { 37 } #Baltic States
@@ -500,7 +505,8 @@ RUS_mop_up_estonia = {
 			UKR = { has_capitulated = yes }
 		}
 		EST = { has_capitulated = no }
-		has_equipment = { infantry_equipment > -10000 }
+		has_manpower > 250000
+		stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
 		num_planes_stationed_in_regions = {
 			value > 1000
 			regions = { 37 } #Baltic States
@@ -602,7 +608,8 @@ RUS_crush_poland = {
 			LIT = { has_capitulated = yes }
 		}
 		POL = { has_capitulated = no }
-		has_equipment = { infantry_equipment > -10000 }
+		has_manpower > 250000
+		stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
 		num_planes_stationed_in_regions = {
 			value > 1000
 			regions = { 38 } #Poland
@@ -765,6 +772,9 @@ RUS_mop_up_georgia = {
 		original_tag = RUS
 	}
 	enable = {
+		GEO = {
+			exists = yes
+		}
 		has_war_with = GEO
 		GEO = { has_capitulated = no }
 	}
@@ -792,6 +802,9 @@ RUS_mop_up_abkhazia = {
 		original_tag = RUS
 	}
 	enable = {
+		ABK = {
+			exists = yes
+		}
 		has_war_with = ABK
 		ABK = { has_capitulated = no }
 	}
@@ -819,6 +832,9 @@ RUS_mop_up_azerbaijan = {
 		original_tag = RUS
 	}
 	enable = {
+		AZE = {
+			exists = yes
+		}
 		has_war_with = AZE
 		AZE = { has_capitulated = no }
 	}
@@ -827,7 +843,7 @@ RUS_mop_up_azerbaijan = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = AZE
-		value = 50
+		value = 25
 	}
 	ai_strategy = {
 		type = conquer
@@ -954,6 +970,16 @@ RUS_focus_on_germansocialist = {
 		id = 8 #Lower Germany
 		value = 30000
 	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 38 #Poland
+		value = 30000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 155 #Galicia
+		value = 30000
+	}
 }
 
 RUS_crush_germansocialist = {
@@ -1016,7 +1042,7 @@ RUS_crush_transamur = {
 	}
 	enable = {
 		has_war_with = TRM
-		surrender_progress < 0.3 #Once RUS starts losing heavily, it'll focus less on TRM.
+		surrender_progress < 0.3 #Once RUS starts losing heavily, it'll focus less on FER.
 	}
 	abort_when_not_enabled = yes
 
@@ -1529,7 +1555,6 @@ RUS_total_war_against_germansocialist = {
 		value = 1
 	}
 }
-
 russia_is_democratic_strategy = {
 	allowed = {
 		tag = RUS
@@ -1544,6 +1569,27 @@ russia_is_democratic_strategy = {
 		type = pp_spend_priority
 		id = decision
 		value = 100
+	}
+}
+russia_not_yet_in_revolution = {
+	allowed = {
+		tag = RUS
+	}
+	enable = {
+		has_country_flag = soviet_russia_restored
+		NOT = {
+			has_global_flag = RCW_begun
+			has_global_flag = RCW_over
+		}
+		russian_civil_war = no
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = pp_spend_priority
+		id = idea
+		value = -200
 	}
 }
 RUS_protect_petrograd = {
@@ -1689,6 +1735,7 @@ RUS_crush_central_asia = {
 			has_war_with = ALO
 			has_war_with = TRK
 			has_war_with = UZB
+			has_war_with = KHI
 			has_war_with = KYR
 		}
 	}
@@ -1697,6 +1744,7 @@ RUS_crush_central_asia = {
 	ai_strategy = {
 		type = front_control
 		tag = ALO
+		ratio = 0.25
 		priority = 100
 		ordertype = front
 		execution_type = rush_weak
@@ -1705,6 +1753,7 @@ RUS_crush_central_asia = {
 	ai_strategy = {
 		type = front_control
 		tag = UZB
+		ratio = 0.25
 		priority = 100
 		ordertype = front
 		execution_type = rush_weak
@@ -1713,6 +1762,7 @@ RUS_crush_central_asia = {
 	ai_strategy = {
 		type = front_control
 		tag = KYR
+		ratio = 0.25
 		priority = 100
 		ordertype = front
 		execution_type = rush_weak
@@ -1721,6 +1771,16 @@ RUS_crush_central_asia = {
 	ai_strategy = {
 		type = front_control
 		tag = TRK
+		ratio = 0.25
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		tag = KHI
+		ratio = 0.25
 		priority = 100
 		ordertype = front
 		execution_type = rush_weak

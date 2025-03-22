@@ -310,6 +310,29 @@ default_RR_Werwolf_production = {
 	}
 }
 
+default_armour_super_heavy_production = {
+	allowed = {
+		OR = {
+			tag = GRU
+		}
+	}
+	enable = {
+		has_tech = super_heavy_tank_chassis
+	}
+	abort_when_not_enabled = yes 
+	
+	ai_strategy = {
+		type = role_ratio
+		id = armour_super_heavy
+		value = 5
+	}
+	ai_strategy = {
+		type = template_prio
+		id = super_heavy_armor
+		value = 100
+	}
+}
+
 GRU_destroy_german = {
 	allowed = {
 		original_tag = GRU
@@ -1174,6 +1197,45 @@ STP_defend_eastern_front = {
 		type = force_defend_ally_borders
 		id = VKR
 		value = 100
+	}
+}
+
+GRU_eyes_on_Russia = {
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		OR = {
+			NOT = { country_exists = VKB }
+			VKB = { has_capitulated = yes }
+		}
+		OR = {
+			NOT = { country_exists = VKR }
+			VKR = { has_capitulated = yes }
+		}
+		has_war_with = RUS
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = RUS
+		value = 300
+	}
+	ai_strategy = {
+		type = front_armor_score
+		id = RUS
+		value = 100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = RUS
+		value = 50
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = FRA
+		value = -50
 	}
 }
 

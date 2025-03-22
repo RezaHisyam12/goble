@@ -168,7 +168,7 @@ shared_focus = {
 		y = 4
 		cost = 5
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_form_the_stasi"
@@ -693,7 +693,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 10
+			factor = 15
 		}
 		completion_reward = {
                   country_event = { id =  rotermorgenmisc.401 days = 1 }
@@ -713,7 +713,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 10
+			factor = 15
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_nationalize_ufa"
@@ -759,7 +759,7 @@ shared_focus = {
 		y = 4
 		cost = 5
 		ai_will_do = {
-			factor = 20
+			factor = 100
 		}
 		offset = {
 			x = -1
@@ -829,7 +829,7 @@ shared_focus = {
 		y = 5
 		cost = 5
 		ai_will_do = {
-			factor = 20
+			factor = 100
 		}
 		offset = {
 			x = -1
@@ -1101,7 +1101,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 10
+			factor = 15
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_form_the_stasi"
@@ -1125,7 +1125,7 @@ shared_focus = {
 		y = 3
 		cost = 5
 		ai_will_do = {
-			factor = 10
+			factor = 15
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_form_the_stasi"
@@ -1147,7 +1147,7 @@ shared_focus = {
 		y = 3
 		cost = 5
 		ai_will_do = {
-			factor = 10
+			factor = 15
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_volksgesundheitsamt"
@@ -1167,7 +1167,7 @@ shared_focus = {
 		y = 1
 		cost = 5
 		ai_will_do = {
-			factor = 5
+			factor = 15
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_volkssturm"
@@ -1259,6 +1259,9 @@ shared_focus = {
 		x = -1
 		y = 1
 		cost = 5
+		ai_will_do = {
+			factor = 15
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_proclaim_victory_over_judeo_capitalism"
 			add_popularity = {
@@ -2003,7 +2006,7 @@ shared_focus = {
 		y = 6
 		cost = 5
 		ai_will_do = {
-			factor = 25
+			factor = 100
 		}
 		allow_branch = {
 			OR = {
@@ -3187,7 +3190,7 @@ shared_focus = {
 		}
 		cost = 5
 		ai_will_do = {
-			factor = 20
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_formation_of_the_nva"
@@ -7492,6 +7495,7 @@ shared_focus = {
 		available = {
 			has_country_flag = VKB_established
 			has_country_flag = VKR_established
+			NOT = { has_country_flag = VKM_established }
 		}
 
 		ai_will_do = { factor = 6 }

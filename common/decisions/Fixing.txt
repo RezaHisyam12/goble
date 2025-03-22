@@ -248,102 +248,142 @@ RUS_Foreign_Policy_decisions = {
 				is_owner_neighbor_of = FROM
 				any_allied_country = { is_owner_neighbor_of = FROM }
 			}
-			FROM = {
-				is_in_faction = no
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							is_in_faction = yes
+							is_guaranteed_by = GER
+						}
+					}
+				}
+				has_completed_focus = RUS_The_Final_Battle
 			}
+			NOT = { has_non_aggression_pact_with = FROM }
 		}
 
 		visible = {
 			can_declare_war_on = FROM
+			if = {
+				limit = { FROM = { tag = UKR } }
+				NOT = { has_global_flag = UKR_secret_collusion_with_russia }		
+			}			
+			if = {
+				limit = { FROM = { tag = KAR } }
+				KAR = {
+					NOT = { 
+						is_guaranteed_by = FIN 
+						is_ally_with = FIN
+					}
+				}		
+			}			
 			NOT = { has_global_flag = danzig_treaty_active }
 		}
 
-		targets = { BAT EST LAT LIT UKR WHR CRM }
+		targets = { BAT EST LAT LIT WHR UKR CRM KAR MOL }
 		target_root_trigger = {
 			OR = {
 				has_completed_focus = RUS_Enemy_In_The_West
 				has_completed_focus = RUS_Destroy_German_Imperialists
 				has_completed_focus = RUS_Solving_Territorial_Disputes
-				has_completed_focus = RUS_Return_Imperial_Splinter_States
+				has_completed_focus = ORE_Minsk_Mistakes
+				has_completed_focus = DKB_Minsk_Mistakes
 			}
 		}
 		target_trigger = {
 			can_declare_war_on = FROM
+		}	
+
+		cancel_trigger = {
+			if = {
+				limit = { has_completed_focus = RUS_The_Final_Battle }
+				OR = {
+					NOT = { can_declare_war_on = FROM }
+					has_non_aggression_pact_with = FROM
+				}
+			}
+			else = {
+				OR = {
+					NOT = { can_declare_war_on = FROM }
+					has_non_aggression_pact_with = FROM
+					FROM = { is_in_faction = yes }
+					FROM = { is_guaranteed_by = GER }
+				}
+			}
 		}
-		
 
 		cost = 10
-		days_remove = 14
-		fire_only_once = yes
+		days_remove = 30
+		fire_only_once = no
 		war_with_target_on_remove = yes
 
 		ai_will_do = {
 			factor = 100
-			# don't invade future co-belligerents
+			# don't invade possible allies
 			modifier = {
 				factor = 0
-				has_completed_focus = RUS_Realpolitik
-				country_exists = BAT
-				FROM = { tag = LAT }
+				FROM = { tag = EST }
+				has_game_rule = { rule = EST_FORPOL option = EST_FORPOL_RUSSIA }
 			}
-			# don't invade possible allies
+			modifier = {
+				factor = 0
+				FROM = {
+					is_in_faction_with = GRU
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject_of = GRU
+				}
+			}
 			modifier = {
 				factor = 0
 				has_completed_focus = RUS_Realpolitik
 				FROM = {
 					OR = {
-						tag = LIT
-						tag = EST
+						original_tag = BAT
+						original_tag = LIT
+						original_tag = EST
+						original_tag = WHR
+						original_tag = CRM
+						original_tag = UKR
 					}
-					has_socialist_government = no
+					both_socialist_or_both_not_socialist = yes
 					is_valid_peace_target = yes
 				}
 				NOT = { has_country_flag = RUS_alliance_refused_@FROM }
 			}
 			modifier = {
 				factor = 0
-				FROM = { tag = UKR }
-				has_global_flag = UKR_secret_collusion_with_russia
-			}
-			modifier = {
-				factor = 0
+				NOT = { FROM = { is_in_faction_with = GER } }
 				RUS_dont_attack_if_vulnerable_or_preparing = yes
 			}
 			modifier = {
 				factor = 0
-				FROM = { RUS_dont_attack_if_target_is_stronger = yes }
+				OR = {
+					FROM = { RUS_dont_attack_if_target_is_stronger = yes }
+					FROM = { RUS_dont_attack_if_faction_is_stronger = yes }
+					FROM = { RUS_dont_attack_if_overlord_is_stronger = yes }
+				}
 			}
-			modifier = {
-				factor = 0
-				FROM = { RUS_dont_attack_if_faction_is_stronger = yes }
-			}
-			modifier = {
-				factor = 0
-				FROM = { RUS_dont_attack_if_overlord_is_stronger = yes }
-			}
+		}
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel RUS_Attack_Europe target: [From.GetName]"
+			clear_decision_attack_AI = yes
+			add_political_power = 10
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision RUS_Attack_Eastern_Europe target: [From.GetName]"
-			set_country_flag = { flag = imminent_war days = 20 value = 1 }
-			FROM = {
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = ROOT
-					value = 1000
-				}
-			}
+			log = "[GetDateText]: [Root.GetName]: Decision complete RUS_Attack_Europe target: [From.GetName]"
+			FROM = { incoming_war_notification_effect = yes }
+			setup_decision_attack_AI = yes
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove RUS_Attack_Eastern_Europe target: [From.GetName]"
-			FROM = {
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = ROOT
-					value = -1000
-				}
-			}
+			log = "[GetDateText]: [Root.GetName]: Decision remove RUS_Attack_Europe target: [From.GetName]"
+			clear_decision_attack_AI = yes
 			declare_war_on = {
 				target = FROM
 				type = annex_everything
@@ -366,6 +406,7 @@ RUS_Foreign_Policy_decisions = {
 					tag = FROM
 				}
 			}
+			NOT = { has_non_aggression_pact_with = FROM }
 		}
 
 		visible = {

@@ -437,6 +437,9 @@ focus_tree = {
 		x = 3
 		y = 5
 		relative_position_id = ENG_tuc
+		ai_will_do = {
+			factor = 50
+		}
 		available = {
 			has_country_flag = mosley_chairman
 		}
@@ -611,7 +614,7 @@ focus_tree = {
 		icon = GFX_RUS_National_Agrarian_Fund
 		cost = 5.00
 
-		x = 13
+		x = 14
 		y = 0
 		
 		available = {
@@ -1163,7 +1166,7 @@ focus_tree = {
 			has_country_flag = ENG_manual_complete_tuc_focus
 		}
 
-		x = 23
+		x = 24
 		y = 0
 
 		ai_will_do = {
@@ -2667,7 +2670,7 @@ focus_tree = {
 		}
 		cost = 5.00
 
-		x = 32
+		x = 33
 		y = 0
 
 		available = {
@@ -7697,9 +7700,8 @@ focus_tree = {
 		x = 2
 		y = 3
 		relative_position_id = ENG_tuc
-		prerequisite = {
-			focus = ENG_united_britain
-		}
+		prerequisite = { focus = ENG_united_britain }
+		prerequisite = { focus = ENG_merge }
 		mutually_exclusive = {
 			focus = ENG_devolution
 			focus = ENG_evolution
@@ -7712,7 +7714,7 @@ focus_tree = {
 				custom_effect_tooltip = ENG_revolution_tp
 				hidden_effect = {
 				country_event = uob.213
-					days = 30
+					days = 365
 				}	
 				country_event = {
 				    id = uob_eu.0
@@ -7760,7 +7762,6 @@ focus_tree = {
 		x = 3
 		y = 2
 		relative_position_id = ENG_the_alternative
-		prerequisite = { focus = ENG_the_alternative }
 		prerequisite = { focus = ENG_leaving_antieuropeanists_behind }
 		available = { 
 			has_country_leader_ideology = tot_euro_mosleyism
