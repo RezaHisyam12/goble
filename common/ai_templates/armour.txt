@@ -48,7 +48,7 @@ armour_generic = {
 
 			support = {
 				mot_recon = 1
-				artillery = 1
+				medium_flame_tank = 1
 				anti_air = 1
 				logistics_company = 1
 				maintenance_company = 1
@@ -71,7 +71,7 @@ armour_generic = {
 
 			support = {
 				mot_recon = 1
-				artillery = 1
+				medium_flame_tank = 1
 				anti_air = 1
 				logistics_company = 1
 				maintenance_company = 1
@@ -102,7 +102,7 @@ armour_generic = {
 
 			support = {
 				mot_recon = 1
-				armored_engineer = 1
+				medium_flame_tank = 1
 				anti_air = 1
 				logistics_company = 1
 				armored_maintenance = 1
@@ -138,7 +138,7 @@ armour_generic = {
 
 			support = {
 				helicopter_recon = 1
-				armored_engineer = 1
+				medium_flame_tank = 1
 				armored_signal = 1
 				logistics_company = 1
 				armored_maintenance = 1

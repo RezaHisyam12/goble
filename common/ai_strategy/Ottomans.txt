@@ -51,8 +51,8 @@ TUR_invade_egypt = {
 				exists = no
 			}
 		}
-		PER = {
-			NOT = { has_war_with = TUR }
+		TUR = {
+			NOT = { has_war_with = PER }
 		}
 	}
 	abort_when_not_enabled = yes

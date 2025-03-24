@@ -27,17 +27,95 @@ armour_super_heavy_generic = {
 
 		target_template = {
 			regiments = {
-				super_heavy_armor = 6
-				mechanized = 6
+				infantry = 4
+				motorized = 4
+				medium_armor = 1
 			}
 
 			support = {
-				helicopter_recon = 1
-				armored_engineer = 1
-				armored_signal = 1
-				helicopter_transport = 1
-				armored_maintenance = 1
+				super_heavy_armor = 1
+				engineer = 1
+				medium_flame_tank = 1
+				field_hospital = 1
+				logistics_company = 1
 			}
 		}
 	}
+
+	armour_super_heavy_template_mid = {
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			base = 1
+			modifier = {
+				factor = 0
+				NOT = { has_tech = mechanised_infantry }
+			}
+			modifier = {
+				factor = 2
+				num_of_military_factories > 99
+			}
+		}
+
+		can_upgrade_in_field = {
+			surrender_progress < 0.15
+		}
+
+		target_template = {
+			regiments = {
+				mechanized = 4
+				motorized = 4
+				medium_armor = 1
+			}
+
+			support = {
+				super_heavy_armor = 1
+				assault_engineer = 1
+				medium_flame_tank = 1
+				helicopter_field_hospital = 1
+				helicopter_transport = 1
+			}
+		}
+	}
+
+	armour_super_heavy_template_late = {
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			base = 1
+			modifier = {
+				add = 1
+				has_reached_maximum_divisions = yes
+			}
+			modifier = {
+				add = 2
+				num_of_military_factories > 200
+			}
+			modifier = {
+				factor = 0
+				NOT = { is_special_project_completed = sp:sp_land_land_cruiser }
+			}
+		}
+
+		can_upgrade_in_field = {
+			surrender_progress < 0.15
+		}
+
+		target_template = {
+			regiments = {
+				mechanized = 4
+				motorized = 4
+				medium_armor = 1
+			}
+
+			support = {
+				land_cruiser = 1
+				assault_engineer = 1
+				medium_flame_tank = 1
+				helicopter_field_hospital = 1
+				helicopter_transport = 1
+			}
+		}
+	}
+
 }

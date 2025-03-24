@@ -199,13 +199,13 @@ ideas = {
 			picture = GRU_heavy_industry
 			allowed = { always = no }
             modifier = {
-				production_speed_industrial_complex_factor = 0.15
+				production_speed_industrial_complex_factor = 0.10
 				production_speed_dockyard_factor = 0.10
-				production_speed_arms_factory_factor = 0.20
-				industry_repair_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				industry_repair_factor = 0.15
 				political_power_gain = 0.05
 				production_factory_max_efficiency_factor = 0.15
-				production_factory_efficiency_gain_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
 				line_change_production_efficiency_factor = 0.1
 				production_oil_factor = 0.05
 				research_speed_factor = 0.1
@@ -2791,6 +2791,16 @@ ideas = {
 				experience_gain_army = 0.02
 				experience_gain_navy = 0.02
 				experience_gain_air = 0.02
+			}
+		}
+		GRU_okw_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_okw" }
+			picture = german_advisors
+			allowed = { always = no }
+			modifier = {
+				experience_gain_army = 0.06
+				experience_gain_navy = 0.06
+				experience_gain_air = 0.06
 			}
 		}
 		GRU_ostwall_idea = {

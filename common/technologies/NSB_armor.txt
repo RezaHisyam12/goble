@@ -236,7 +236,7 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 10
+				add = 5
 				is_eligible_for_armor_production = yes
 			}
 		}
@@ -352,7 +352,7 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 10
+				add = 5
 				is_eligible_for_armor_production = yes
 			}
 		}
@@ -607,6 +607,10 @@ technologies = {
 				add = 15
 				is_eligible_for_armor_production = yes
 			}
+			modifier = {
+				factor = 100
+				tag = GRU
+			}
 		}
 
 		categories = {
@@ -650,6 +654,10 @@ technologies = {
 			modifier = {
 				add = 15
 				is_eligible_for_armor_production = yes
+			}
+			modifier = {
+				factor = 100
+				tag = GRU
 			}
 		}
 
@@ -760,6 +768,10 @@ technologies = {
 			modifier = {
 				add = 50
 				is_eligible_for_armor_production = yes
+			}
+			modifier = {
+				factor = 100
+				tag = GRU
 			}
 		}
 

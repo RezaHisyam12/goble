@@ -4121,6 +4121,12 @@ GRU_germania_plan_decisions = {
 			}
 			modifier = {
 				factor = 0
+				FROM = {
+				is_in_faction_with = CAN
+				}
+			}
+			modifier = {
+				factor = 0
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.8
@@ -5938,33 +5944,63 @@ GRU_germania_plan_decisions = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_core_galicia_decision"
 			1124 = {
 				add_core_of = GRU
+				GRU = {
+					transfer_state = PREV
+				}
 			}
 			88 = {
 				add_core_of = GRU
+				GRU = {
+					transfer_state = PREV
+				}
 			}
 			1125 = {
 				add_core_of = GRU
+				GRU = {
+					transfer_state = PREV
+				}
 			}
 			1127 = {
 				add_core_of = GRU
+				GRU = {
+					transfer_state = PREV
+				}
 			}
 			1126 = {
 				add_core_of = GRU
+				GRU = {
+					transfer_state = PREV
+				}
 			}
 			91 = {
 				add_core_of = GRU
+				GRU = {
+					transfer_state = PREV
+				}
 			}
 			1140 = {
 				add_core_of = GRU
+				GRU = {
+					transfer_state = PREV
+				}
 			}
 			89 = {
 				add_core_of = GRU
+				GRU = {
+					transfer_state = PREV
+				}
 			}
 			1314 = {
 				add_core_of = GRU
+				GRU = {
+					transfer_state = PREV
+				}
 			}
 			1319 = {
 				add_core_of = GRU
+				GRU = {
+					transfer_state = PREV
+				}
 			}
 			set_country_flag = galicia_cored
 			set_province_name = { id = 9427 name = "Krakau"}
@@ -7768,6 +7804,12 @@ GRU_kill_entente_decisions = {
 			}
 			modifier = {
 				factor = 0
+				FRA = {
+					exists = yes
+				}
+			}
+			modifier = {
+				factor = 0
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.8
@@ -7844,6 +7886,12 @@ GRU_kill_entente_decisions = {
 			modifier = {
 				factor = 0
 				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				FRA = {
+					exists = yes
+				}
 			}
 			modifier = {
 				factor = 0
@@ -10721,6 +10769,9 @@ GRU_expansion_three_volksland_hypoborea = {
 						remove_ideas = UKR_brotfrieden_idea_GER
 						remove_ideas = UKR_KUB_Convention
 						remove_ideas = UKR_KUB_Convention_2
+						remove_ideas = UKR_social_nationalist_resistance
+						remove_ideas = UKR_social_nationalist_resistance_1
+						remove_ideas = UKR_social_nationalist_resistance_2
 					}
 				VKR = {	country_event = rotermorgenmisc.200 }
 				VKR = {	country_event = { id = rotermorgenmisc.201 days = 2 } }
@@ -10854,7 +10905,17 @@ GRU_expansion_three_volksland_hypoborea = {
 				create_VKB = yes
 
 				hidden_effect = {
+					GRU = {
+						annex_country = {
+							target = LIT
+							transfer_troops = yes
+						}
+					}
 					VKB = {
+						annex_country = {
+							target = WHR
+							transfer_troops = yes
+						}
 						transfer_state = 1091
 						
 						add_equipment_to_stockpile = {
@@ -10870,8 +10931,8 @@ GRU_expansion_three_volksland_hypoborea = {
 						remove_ideas = BAT_black_monday_1
 						remove_ideas = BAT_black_monday_2
 					}
-				VKB = {	country_event = rotermorgenmisc.400 }
-				if = {
+					VKB = {	country_event = rotermorgenmisc.400 }
+					if = {
 						limit = {
 							GRU = { has_country_flag = NMDVP_R_RULE }
 						}
@@ -13243,6 +13304,12 @@ GRU_lebensraum_decisions = {
 			modifier = {
 				factor = 0
 				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				AUS = {
+					exists = yes
+				}
 			}
 			modifier = {
 				factor = 0

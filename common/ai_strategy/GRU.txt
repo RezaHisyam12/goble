@@ -331,6 +331,11 @@ default_armour_super_heavy_production = {
 		id = super_heavy_armor
 		value = 100
 	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = super_heavy_tank_chassis
+		value = 15
+	}
 }
 
 GRU_destroy_german = {

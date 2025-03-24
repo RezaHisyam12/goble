@@ -73,8 +73,8 @@ default_transition_production = {
 		value = 2
 	}
 	ai_strategy = {
-		type = equipment_production_min_factories
-		id = artillery
+		type = equipment_production_min_factories_archetype
+		id = artillery_equipment
 		value = 1
 	}
 	ai_strategy = {
@@ -83,8 +83,8 @@ default_transition_production = {
 		value = 1
 	}
 	ai_strategy = {
-		type = equipment_production_min_factories
-		id = motorized
+		type = equipment_production_min_factories_archetype
+		id = motorized_equipment
 		value = 1
 	}
 }
@@ -101,8 +101,8 @@ default_specialised_production = {
 		value = 2
 	}
 	ai_strategy = {
-		type = equipment_production_min_factories
-		id = artillery
+		type = equipment_production_min_factories_archetype
+		id = artillery_equipment
 		value = 3
 	}
 	ai_strategy = {
@@ -123,8 +123,8 @@ default_specialised_production = {
 	}
 
 	ai_strategy = {
-		type = equipment_production_min_factories
-		id = motorized
+		type = equipment_production_min_factories_archetype
+		id = motorized_equipment
 		value = 1
 	}
 
@@ -322,9 +322,7 @@ default_marine_production = {
 	enable = {
 		ai_wants_divisions > 49
 		num_of_naval_factories > 1
-			  
 	}
-
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
@@ -562,6 +560,36 @@ late_mobile_production = {
 	}
 }
 
+default_flame_tank_and_support_production = {
+	enable = {
+		is_eligible_for_armor_production = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = medium_tank_flame_chassis
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = medium_flame_tank
+		value = 1
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armored_support_vehicle
+		value = 10
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = helicopter_equipment
+		value = 10
+	}
+}
+
 default_tank_production = {
 	enable = {
 		is_eligible_for_armor_production = yes
@@ -666,85 +694,6 @@ increased_tank_production_6 = {
 	}
 }
 
-more_armor_focused_nation = {
-	enable = {
-		num_of_military_factories > 49
-		is_eligible_for_armor_production = yes
-		is_major = yes
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = -10
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = armor_role
-		value = 10
-	}
-}
-
-default_antitank_production = {
-	enable = {
-		num_of_military_factories > 10
-		has_tech = interwar_antitank
-		has_tech = tech_engineers
-		OR = {
-			any_enemy_country = {
-				ROOT = { estimated_intel_max_armor = { tag = PREV value > 25 } }
-			}
-			any_neighbor_country = {
-				NOT = {
-					is_in_faction_with = ROOT
-					is_subject_of = ROOT
-					ROOT = { is_subject_of = PREV }
-					has_war_with = ROOT
-					same_government_type_as_ROOT = yes
-				}
-				ROOT = { estimated_intel_max_armor = { tag = PREV value > 25 } }
-			}
-		}
-	}
-	abort = {
-		NOT = {
-			num_of_military_factories < 10
-			OR = {
-				any_enemy_country = {
-					ROOT = { estimated_intel_max_armor = { tag = PREV value > 25 } }
-				}
-				any_neighbor_country = {
-					NOT = {
-						is_in_faction_with = ROOT
-						is_subject_of = ROOT
-						ROOT = { is_subject_of = PREV }
-						has_war_with = ROOT
-						same_government_type_as_ROOT = yes
-					}
-					ROOT = { estimated_intel_max_armor = { tag = PREV value > 25 } }
-				}
-			}
-		}
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = -3
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = mobile
-		value = -2
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = anti_tank
-		value = 5
-	}
-}
-
 stockpile_less_early_game = {
 	enable = {
 		date < 1940.1.1
@@ -817,13 +766,13 @@ DEFAULT_template_design_industrial_country = {
 	ai_strategy = {
 		type = template_prio
 		id = medium_armor
-		value = 20
+		value = 10
 	}
 
 	ai_strategy = {
 		type = template_prio
 		id = infantry
-		value = 60
+		value = 70
 	}
 }
 

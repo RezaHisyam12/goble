@@ -1,0 +1,8715 @@
+GER = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity #Flakpanzer I
+
+				GER_light_sp_artillery_brigade_0_entity #Sturmpanzer I Bison
+				GER_light_sp_artillery_brigade_1_entity #Wespe
+
+				GER_light_tank_destroyer_brigade_0_entity #Marder II
+				GER_light_tank_destroyer_brigade_1_entity #Marder III
+
+				GER_light_armor_0_entity
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity #Marder III
+				GER_light_tank_destroyer_brigade_0_entity #Marder II
+			}
+		}
+	}
+	light_tank_destroyer_chassis_3 = {
+		pool = {
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity #Marder III
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity #Flakpanzer III Möbelwagen (Basic Medium SPAA)
+				GER_medium_sp_anti_air_brigade_1_entity #Flakpanzer IV Ostwind (Improved Medium SPAA)
+				GER_medium_sp_anti_air_brigade_2_entity #Flakpanzer V Wirbelwind (Advanced Medium SPAA)
+
+				GER_medium_sp_artillery_brigade_0_entity #Grille (Basic Medium SPART)
+				GER_medium_sp_artillery_brigade_1_entity #Hummel (Improved Medium SPART)
+				GER_medium_sp_artillery_brigade_2_entity #Brummbär (Advanced Medium SPART)
+
+				GER_medium_tank_destroyer_brigade_0_entity #Sturmgeschütz III (Basic Medium Tank Destroyer)
+				GER_medium_tank_destroyer_brigade_1_entity #Jagdpanzer IV (Improved Medium Tank Destroyer)
+				GER_medium_tank_destroyer_brigade_2_entity #Jagdpanther (Advanced Medium Tank Destroyer)
+				
+				GER_medium_armor_0_entity
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity #Sturmgeschütz III (Basic Medium Tank Destroyer)
+				GER_medium_tank_destroyer_brigade_1_entity #Jagdpanzer IV (Improved Medium Tank Destroyer)
+				GER_medium_tank_destroyer_brigade_2_entity #Jagdpanther (Advanced Medium Tank Destroyer)
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity #Grille (Basic Medium SPART)
+				GER_medium_sp_artillery_brigade_1_entity #Hummel (Improved Medium SPART)
+				GER_medium_sp_artillery_brigade_2_entity #Brummbär (Advanced Medium SPART)
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_2 = {
+		pool = {
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis = {
+		pool = {
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity #Flakpanzer III Möbelwagen (Basic Medium SPAA)
+				GER_medium_sp_anti_air_brigade_1_entity #Flakpanzer IV Ostwind (Improved Medium SPAA)
+				GER_medium_sp_anti_air_brigade_2_entity #Flakpanzer V Wirbelwind (Advanced Medium SPAA)
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				GER_heavy_sp_artillery_brigade_1_entity #Sturmtiger (Improved Heavy SPART)
+
+				GER_heavy_tank_destroyer_brigade_0_entity #Selbstfahrlafette auf VK3001(H) Sturer Emil (Basic Heavy Tank Destroyer)
+				GER_heavy_tank_destroyer_brigade_1_entity #Panzerjäger Tiger (P) (Improved Heavy Tank Destroyer)
+				GER_heavy_tank_destroyer_brigade_2_entity #Panzerjäger Tiger Ausf. B (Advanced Heavy Tank Destroyer)
+
+				GER_heavy_armor_0_entity
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+
+	heavy_tank_destroyer_chassis_0 = {
+		pool = {
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_1 = {
+		pool = {
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	super_heavy_tank_destroyer_chassis = {
+		pool = {
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+		pool = {
+			weight = 0.9
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+				GER_modern_sp_anti_air_brigade_0_entity #Kugelblitz (Modern SPAA)
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+
+MAF = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+GEA = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+AZR = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+BUL = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+DEI = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+FIN = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+FLA = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+ICE = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+IRE = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+MOR = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+HOL = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+NMB = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+BAT = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+VIN = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+WAL = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+LEP = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+QIE = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+SWI = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+GRU = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+NGF = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+PRE = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+RHI = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+BAY = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+BEL = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+DEN = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+SCA = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+SWE = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+IRQ = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+PAL = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+TUR = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}
+SYR = {
+	light_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_0_entity
+			}
+		}
+	}
+	light_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_armor_2_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_light_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_0_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_armor_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_1_entity
+			}
+		}
+	}
+	medium_tank_aa_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_chassis_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_0_entity
+			}
+		}
+	}
+	heavy_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_armor_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+				GER_heavy_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	super_heavy_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_super_heavy_armor_entity
+			}
+		}
+	}
+	modern_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_armor_entity
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_heavy_tank_destroyer_brigade_0_entity
+				GER_heavy_tank_destroyer_brigade_1_entity
+				GER_heavy_tank_destroyer_brigade_2_entity
+				GER_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	modern_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_modern_sp_anti_air_brigade_0_entity
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				GER_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+}

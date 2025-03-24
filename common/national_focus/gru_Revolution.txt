@@ -3260,6 +3260,7 @@ shared_focus = {
 				}
 			}
 			add_command_power = 100
+			add_ideas = GRU_okw_2
 		}
 		available = {
 				has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH
@@ -3292,7 +3293,7 @@ shared_focus = {
 				uses = 2
 				category = land_doctrine
 			}
-			army_experience = 25
+			army_experience = 50
 		}
 
 		prerequisite = { focus = GRU_elected_officers focus = GRU_skilled_officers focus = GRU_political_officers  }
@@ -3332,7 +3333,7 @@ shared_focus = {
 			uses = 2
 			category = naval_doctrine
 		}
-		navy_experience = 25
+		navy_experience = 50
 		}
 
 
@@ -3362,7 +3363,7 @@ shared_focus = {
 				uses = 2
 				category = air_doctrine
 			}
-			air_experience  = 25
+			air_experience  = 50
 		}
 
 		prerequisite = { focus = GRU_elected_officers focus = GRU_skilled_officers focus = GRU_political_officers  }
@@ -3701,7 +3702,7 @@ shared_focus = {
 			else={
 			custom_effect_tooltip = GRU_tt_OKW_boni
 			}
-			army_experience = 75
+			army_experience = 100
 			add_breakthrough_progress = {
 				specialization = specialization_land
 				value = 0.5
@@ -3798,7 +3799,7 @@ shared_focus = {
 			else={
 			custom_effect_tooltip = GRU_tt_OKW_boni
 			}
-			navy_experience = 75
+			navy_experience = 100
 			add_breakthrough_progress = {
 				specialization = specialization_naval
 				value = 0.5
@@ -3937,7 +3938,7 @@ shared_focus = {
 			else={
 			custom_effect_tooltip = GRU_tt_OKW_boni
 			}
-			air_experience = 75
+			air_experience = 100
 			add_breakthrough_progress = {
 				specialization = specialization_air
 				value = 0.5

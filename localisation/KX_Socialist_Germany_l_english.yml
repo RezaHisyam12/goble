@@ -2246,8 +2246,10 @@ GRU_Germania_Stadt_decisions:0 "Construction of Germania"
 GRU_Germania_Stadt_decisions_desc: "\n\n£germania_stadt£\n\n\n"
 GRU_Germania_Stadt_decision:0 "Start the construction of a new capital city."
 
-GRU_okw:0 "Oberkommando Nationales Volksheer"
+GRU_okw:0 "Oberkommando Nationales Volksarmee"
 GRU_okw_desc: "the German Armed Forces High Command is also responsible for training and overseeing army of the Volkskommissariat"
+GRU_okw_2:0 "Oberkommando Nationales Volksarmee"
+GRU_okw_2_desc: "The Oberkommando Nationales Volksarmee serves as the supreme command structure of our armed forces, ensuring centralized coordination and strategic planning."
 
 GRU_ostwall_idea:0 "Ostwall Program"
 GRU_MAF_stabilisation:0 "Stabilisation Priority"
