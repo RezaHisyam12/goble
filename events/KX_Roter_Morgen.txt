@@ -8529,7 +8529,7 @@ country_event = { # Fate of Ex-Puppet
 		ai_chance = {
 			base = 5
 			modifier = {
-				factor = 0
+				factor = 40
 				GRU = {
 					NOT = {
 						surrender_progress > 0
@@ -8573,14 +8573,15 @@ country_event = { # accept
 	
 	option = {
 		name = rotermorgenmisc.1202.a
-		FROM = { get_current_government_type = yes }
+		FROM = { 
+			add_popularity = { ideology = national_populist popularity = 0.4 }
+			set_politics = { ruling_party = national_populist elections_allowed = no }
+			drop_cosmetic_tag = yes
+		}
 		set_autonomy = {
 			target = FROM
 			autonomous_state = kr_autonomous_puppet
 			freedom_level = 0.75
-		}
-		FROM = { 
-			restore_previous_government_type = yes
 		}
 	}	
 }

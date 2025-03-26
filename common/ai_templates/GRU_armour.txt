@@ -5,7 +5,7 @@
 armour_generic = {
 	role = armor_role #to distinguish from armor, a hardcoded keyword for all tank equipment types
 
-	blocked_for = { GRU }
+	available_for = { GRU }
 
 	upgrade_prio = {
 		factor = 10
@@ -50,8 +50,8 @@ armour_generic = {
 
 			support = {
 				mot_recon = 1
-				artillery = 1
-				anti_air = 1
+				medium_flame_tank = 1
+				signal_company = 1
 				logistics_company = 1
 				maintenance_company = 1
 			}
@@ -73,8 +73,8 @@ armour_generic = {
 
 			support = {
 				mot_recon = 1
-				artillery = 1
-				anti_air = 1
+				medium_flame_tank = 1
+				signal_company = 1
 				logistics_company = 1
 				maintenance_company = 1
 			}
@@ -91,6 +91,14 @@ armour_generic = {
 				NOT = { has_tech = mechanised_infantry }
 			}
 			modifier = {
+				factor = 0
+				NOT = { has_tech = sp_armored_maintenance_tech }
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_tech = sp_armored_signal_tech }
+			}
+			modifier = {
 				factor = 2
 				num_of_military_factories > 99
 			}
@@ -104,10 +112,10 @@ armour_generic = {
 
 			support = {
 				mot_recon = 1
-				artillery = 1
-				anti_air = 1
+				medium_flame_tank = 1
+				armored_signal = 1
 				logistics_company = 1
-				maintenance_company = 1
+				armored_maintenance = 1
 			}
 		}
 	}
@@ -120,6 +128,10 @@ armour_generic = {
 			modifier = {
 				factor = 0
 				NOT = { has_tech = mechanised_infantry }
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_tech = sp_helicopter_artillery_observers_tech }
 			}
 			modifier = {
 				factor = 0
@@ -139,11 +151,11 @@ armour_generic = {
 			}
 
 			support = {
-				mot_recon = 1
-				artillery = 1
-				anti_air = 1
+				helicopter_recon = 1
+				medium_flame_tank = 1
+				armored_signal = 1
 				logistics_company = 1
-				maintenance_company = 1
+				armored_maintenance = 1
 			}
 		}
 	}

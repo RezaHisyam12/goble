@@ -6,6 +6,20 @@ ideas = {
 
 	country = {
 		
+		GRU_foreign_aid = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_foreign_aid"}
+			allowed = { always = no }
+			name = SOV_foreign_aid
+			available = {
+				NOT = { has_country_flag = GRU_GCW_ENDED }
+			}
+			picture = advisors_france
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.15
+				industrial_capacity_factory = 0.08
+				out_of_supply_factor = -0.2
+			}
+		}
 		GRU_Stasi = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_Stasi"}
 			picture = GRU_Stasi
@@ -2801,6 +2815,11 @@ ideas = {
 				experience_gain_army = 0.06
 				experience_gain_navy = 0.06
 				experience_gain_air = 0.06
+				unit_light_armor_design_cost_factor = -1
+				unit_medium_armor_design_cost_factor = -1
+				unit_modern_armor_design_cost_factor = -1
+				unit_heavy_armor_design_cost_factor = -1
+				unit_mechanized_design_cost_factor = -1
 			}
 		}
 		GRU_ostwall_idea = {

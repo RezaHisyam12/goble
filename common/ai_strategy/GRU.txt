@@ -324,7 +324,7 @@ default_armour_super_heavy_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = armour_super_heavy
-		value = 5
+		value = 10
 	}
 	ai_strategy = {
 		type = template_prio
@@ -334,6 +334,11 @@ default_armour_super_heavy_production = {
 	ai_strategy = {
 		type = equipment_variant_production_factor
 		id = super_heavy_tank_chassis
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = medium_tank_aa_chassis
 		value = 15
 	}
 }
@@ -1219,6 +1224,7 @@ GRU_eyes_on_Russia = {
 			VKR = { has_capitulated = yes }
 		}
 		has_war_with = RUS
+		is_neighbor_of = RUS
 	}
 	abort_when_not_enabled = yes
 
@@ -1240,7 +1246,7 @@ GRU_eyes_on_Russia = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = FRA
-		value = -50
+		value = -25
 	}
 }
 
@@ -1359,6 +1365,11 @@ GRU_less_focus_on_russia = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = RUS
+		value = -100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = TRM
 		value = -100
 	}
 }

@@ -2039,6 +2039,7 @@ GRU_pan_germanism_elsas_decision:0 "Attack Elsas-Lothringen"
 GRU_pan_germanism_westukraine_decision:0 "Attack [From.GetNameDef]"
 GRU_pan_germanism_iceland_decision:0 "Attack [From.GetNameDef]"
 GRU_pan_germanism_italy_decision:0 "Attack [From.GetNameDef]"
+GRU_pan_germanism_fiume_decision:0 "Attack [From.GetNameDef]"
 
 GRU_pan_germanism_core_austria_decision:0 "Core Austria"
 GRU_pan_germanism_core_slovenia_decision:0 "Core Slovenia"

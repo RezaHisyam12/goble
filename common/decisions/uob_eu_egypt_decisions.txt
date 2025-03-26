@@ -8,7 +8,7 @@ EGY_panarabist_power_balance_decisions = {
 		allowed = {
 			tag = EGY 
 		}
-		ai_will_do = { factor = 50 }
+		ai_will_do = { factor = 5 }
 		cost = 100
 		priority = 10
 		complete_effect = {

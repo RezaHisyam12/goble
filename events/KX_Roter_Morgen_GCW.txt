@@ -522,6 +522,7 @@ country_event = { # GRU setup
 				country_event = { id = nmdvpsuper.3 days = 4 }
 				
 				add_ideas = GERMAN_CIVIL_WAR_participant
+				add_ideas = GRU_foreign_aid
 				transfer_state = 781
 				transfer_state = 51
 				transfer_state = 42
@@ -940,6 +941,7 @@ country_event = {
 			clr_country_flag = GRU_REBELLION
 			separate_peace_all_wars = yes
 			set_country_flag = GRU_GCW_ENDED
+			remove_ideas = GRU_foreign_aid
 			swap_ideas = {
 				remove_idea = GERMAN_CIVIL_WAR_participant
 				add_idea = GRU_RUINED_ECONOMY_TOALLY_RUINED

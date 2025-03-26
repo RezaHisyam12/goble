@@ -3259,6 +3259,10 @@ GRU_germania_plan_decisions = {
 		icon = GFX_pangermanicone
 		allowed = { original_tag = GRU }
 		available = {
+			OR = {
+				is_owner_neighbor_of = FROM
+				any_allied_country = { is_owner_neighbor_of = FROM }
+			}
 			is_subject = no
 			country_exists = ITA
 		}
@@ -3362,6 +3366,10 @@ GRU_germania_plan_decisions = {
 		icon = GFX_pangermanicone
 		allowed = { original_tag = GRU }
 		available = {
+			OR = {
+				is_owner_neighbor_of = FROM
+				any_allied_country = { is_owner_neighbor_of = FROM }
+			}
 			is_subject = no
 			country_exists = SLO
 			SLO = {
@@ -3456,6 +3464,111 @@ GRU_germania_plan_decisions = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_slovenia_decision target: [From.GetName]"
 			clear_decision_attack_AI = yes
 			declare_war_on = {	type = annex_everything	target = SLO }
+		}
+	}
+	#
+	GRU_pan_germanism_fiume_decision = {
+		icon = GFX_pangermanicone
+		allowed = { original_tag = GRU }
+		available = {
+			OR = {
+				is_owner_neighbor_of = FROM
+				any_allied_country = { is_owner_neighbor_of = FROM }
+			}
+			is_subject = no
+			country_exists = FIU
+			FIU = {
+				NOT = { is_in_faction_with = FRA }
+			}
+		}
+		visible = {
+			has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = FIU
+				}
+			}
+		}
+		targets = { FIU }
+		target_root_trigger = {
+			has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = FIU
+				}	
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 135
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = RUS
+				}
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					any_allied_country = {
+						is_faction_leader = yes
+						overlord = {
+							strength_ratio = {
+								tag = ROOT
+								ratio > 0.7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_pan_germanism_fiume_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			setup_decision_attack_AI = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_fiume_decision target: [From.GetName]"
+			clear_decision_attack_AI = yes
+			declare_war_on = {	type = annex_everything	target = FIU }
 		}
 	}
 	#
@@ -10772,6 +10885,11 @@ GRU_expansion_three_volksland_hypoborea = {
 						remove_ideas = UKR_social_nationalist_resistance
 						remove_ideas = UKR_social_nationalist_resistance_1
 						remove_ideas = UKR_social_nationalist_resistance_2
+						remove_ideas = UKR_impending_failure
+						remove_ideas = UKR_impending_failure_1
+						remove_ideas = UKR_impending_failure_2
+						remove_ideas = UKR_impending_failure_3
+						remove_ideas = UKR_impending_failure_4
 					}
 				VKR = {	country_event = rotermorgenmisc.200 }
 				VKR = {	country_event = { id = rotermorgenmisc.201 days = 2 } }
@@ -15827,10 +15945,6 @@ GRU_stahlpakt_alliance_decisions = {
 			can_declare_war_on = FROM
 		}
 		available = {
-			OR = {
-				is_neighbor_of = FROM
-				any_allied_country = { is_neighbor_of = FROM }
-			}
 			NOT = { is_ally_with = FROM }
 			NOT = { has_non_aggression_pact_with = FROM }
 			NOT = { has_guaranteed = FROM }

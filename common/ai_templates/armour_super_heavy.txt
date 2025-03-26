@@ -7,7 +7,7 @@ armour_super_heavy_generic = {
 	role = armour_super_heavy
 
 	upgrade_prio = {
-		factor = 2
+		factor = 10
 		modifier = {
 			factor = 0
 			NOT = { has_tech = super_heavy_tank_chassis }
@@ -18,7 +18,7 @@ armour_super_heavy_generic = {
 		reinforce_prio = 2
 
 		upgrade_prio = {
-			factor = 2
+			base = 1
 		}
 
 		can_upgrade_in_field = {
@@ -27,9 +27,11 @@ armour_super_heavy_generic = {
 
 		target_template = {
 			regiments = {
-				infantry = 4
-				motorized = 4
 				medium_armor = 1
+				medium_tank_destroyer_brigade = 1
+				medium_sp_anti_air_brigade = 4
+				infantry = 3
+				motorized = 3
 			}
 
 			support = {
@@ -52,8 +54,16 @@ armour_super_heavy_generic = {
 				NOT = { has_tech = mechanised_infantry }
 			}
 			modifier = {
+				factor = 0
+				NOT = { has_tech = sp_helicopter_med_evac_tech }
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_tech = sp_helicopter_transport_pods_tech }
+			}
+			modifier = {
 				factor = 2
-				num_of_military_factories > 99
+				num_of_military_factories > 199
 			}
 		}
 
@@ -63,9 +73,11 @@ armour_super_heavy_generic = {
 
 		target_template = {
 			regiments = {
-				mechanized = 4
-				motorized = 4
 				medium_armor = 1
+				medium_tank_destroyer_brigade = 1
+				medium_sp_anti_air_brigade = 4
+				mechanized = 3
+				motorized = 3
 			}
 
 			support = {
@@ -84,16 +96,21 @@ armour_super_heavy_generic = {
 		upgrade_prio = {
 			base = 1
 			modifier = {
+				factor = 0
+				NOT = { has_tech = main_battle_tank }
+				NOT = { has_tech = main_battle_tank_chassis }
+			}
+			modifier = {
+				factor = 0
+				NOT = { is_special_project_completed = sp:sp_land_land_cruiser }
+			}
+			modifier = {
 				add = 1
 				has_reached_maximum_divisions = yes
 			}
 			modifier = {
 				add = 2
-				num_of_military_factories > 200
-			}
-			modifier = {
-				factor = 0
-				NOT = { is_special_project_completed = sp:sp_land_land_cruiser }
+				num_of_military_factories > 249
 			}
 		}
 
@@ -103,9 +120,11 @@ armour_super_heavy_generic = {
 
 		target_template = {
 			regiments = {
-				mechanized = 4
-				motorized = 4
-				medium_armor = 1
+				modern_armor = 1
+				medium_tank_destroyer_brigade = 1
+				modern_sp_anti_air_brigade = 4
+				mechanized = 3
+				motorized = 3
 			}
 
 			support = {
