@@ -1185,7 +1185,6 @@ shared_focus = {
 						RR_Werwolf = { x = 0 y = 0 }
 						RR_Werwolf = { x = 0 y = 1 }
 						RR_Werwolf = { x = 0 y = 2 }
-						RR_Werwolf = { x = 0 y = 3 }
 						
 						RR_Werwolf = { x = 1 y = 0 }
 						RR_Werwolf = { x = 1 y = 1 }

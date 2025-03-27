@@ -599,3 +599,25 @@ define_text = {
 		localization_key = GRU_Air_XP_icon
 	}
 }
+
+defined_text = {
+	name = unit_limit_factor
+	text = {
+		trigger = {
+			NOT = { check_variable = { modifier@unit_limit_factor = 0 } }
+		}
+		localization_key = unit_limit_factor_desc
+	}
+}
+
+defined_text = {
+	name = unit_limit_reached_ceiling
+	text = {
+		trigger = {
+			set_temp_variable = { ceiling = constant:unit_limits.max }
+			check_variable = { uncapped_max_divisions > ceiling }
+		}
+		localization_key = unit_limit_reached_ceiling_desc
+	}
+}
+

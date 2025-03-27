@@ -295,6 +295,12 @@ naval_unit_role_ratios_GRU = {
 
 	ai_strategy = {
 		type = role_ratio
+		id = naval_capital_shbb
+		value = 10
+	}
+
+	ai_strategy = {
+		type = role_ratio
 		id = naval_capital_bb
 		value = 15
 	}
@@ -314,7 +320,7 @@ naval_unit_role_ratios_GRU = {
 	ai_strategy = {
 		type = role_ratio
 		id = naval_screen
-		value = 120
+		value = 100
 	}
 
 	ai_strategy = {
@@ -585,7 +591,6 @@ naval_unit_role_ratios_majors_lategame = {
 		has_dlc_mtg = yes
 		OR = {
 			tag = GER
-			tag = GRU
 			tag = FRA
 			tag = NFA
 			tag = ENG

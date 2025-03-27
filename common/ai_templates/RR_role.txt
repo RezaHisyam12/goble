@@ -14,7 +14,7 @@ RR_Werwolf_generic = {
 		reinforce_prio = 2
 
 		upgrade_prio = {
-			base = 1
+			base = 2
 		}
 
 		can_upgrade_in_field = {

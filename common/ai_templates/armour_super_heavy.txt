@@ -3,8 +3,9 @@
 ######################
 
 armour_super_heavy_generic = {
-
 	role = armour_super_heavy
+
+	available_for = { GRU }
 
 	upgrade_prio = {
 		factor = 10

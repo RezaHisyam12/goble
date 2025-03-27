@@ -8241,10 +8241,10 @@ country_event = { #Two-front war with France and Russia, only available when Rus
 		}
 	}
 
-	option = { # Activates defense and org buff for 730 days.
+	option = { # Activates defense buff for 365 days.
 		name = rotermorgen.1101.a
 		add_timed_idea = {
-			idea = GER_two_front_idea
+			idea = GRU_two_front_idea
 			days = 365
 		}
 	}
