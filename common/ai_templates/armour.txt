@@ -5,7 +5,7 @@
 armour_generic = {
 	role = armor_role #to distinguish from armor, a hardcoded keyword for all tank equipment types
 
-	blocked_for = { GRU }
+	blocked_for = { GRU GER }
 
 	upgrade_prio = {
 		factor = 10

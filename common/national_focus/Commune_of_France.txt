@@ -1937,14 +1937,19 @@ focus_tree = {
 		relative_position_id = FRA_Demand_Alsace_Lorraine
 		available = {
 		OR = {
-			GER = {
-				exists = yes
-				NOT = {
-					is_subject_of = FRA
+				GER = {
+					exists = yes
+					NOT = {
+						is_subject_of = FRA
+					}
 				}
-			}
-			GRU = {
-				exists = no
+				GRU = {
+					exists = yes
+					NOT = {
+						is_subject_of = FRA
+					}
+					has_country_flag = VKB_established
+					has_country_flag = VKR_established
 				}
 			}
 			date > 1939.10.5
@@ -1979,25 +1984,49 @@ focus_tree = {
 					controls_state = 28
 				}
 			}
+			modifier = {
+				factor = 0
+				country_exists = AUS
+			}
 		}
 		mutually_exclusive = {
 			focus = FRA_peace_with_germany
 		}
 		will_lead_to_war_with = GER
+		will_lead_to_war_with = GRU
 		bypass = {
 			OR = {
-				GER = {
-					exists = no
-				}
 				has_war_with = GER
+				has_war_with = GRU
 			}
-			has_war_with = GRU
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_War_with_germany"
-			create_wargoal = {
-				type = annex_everything
-				target = GER
+			if = {
+				limit = {
+					country_exists = GER
+				}
+				create_wargoal = {
+					target = GER
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = GRU
+					NOT = {
+						GRU = {
+							is_in_faction_with = FRA
+						}
+						GRU = {
+							has_socialist_government = yes
+						}
+					}
+				}
+				create_wargoal = {
+					target = GRU
+					type = annex_everything
+				}
 			}
 		}
 	}

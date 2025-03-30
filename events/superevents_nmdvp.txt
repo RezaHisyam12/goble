@@ -236,6 +236,23 @@ country_event = { #CIVIL WAR
 				value = 1000
 			}
 		}
+		BHC = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = GRU
+				value = 1000
+			}
+			add_ai_strategy = {
+				type = send_lend_lease_desire
+				id = GRU
+				value = 1000
+			}
+			add_ai_strategy = {
+				type = support
+				id = GRU
+				value = 1000
+			}
+		}
 		set_global_flag = Super_Event_Visible
 		set_global_flag = ger_civl
 		every_country = {
@@ -262,7 +279,7 @@ country_event = { #Second Weltkrieg
 		GRU = {
 			AND = {
 			has_country_leader = { name = "Josef Goebbels" ruling_only = yes }
-			has_war_with = FRA 
+			has_offensive_war_with = FRA 
 			is_subject = no
 			}
 		}

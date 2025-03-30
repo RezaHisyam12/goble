@@ -3264,23 +3264,27 @@ GRU_germania_plan_decisions = {
 				any_allied_country = { is_owner_neighbor_of = FROM }
 			}
 			is_subject = no
-			country_exists = ITA
+			country_exists = FROM
 		}
 		visible = {
 			has_completed_focus = GRU_NMDVP_PAN_GERMANISM
 			can_declare_war_on = FROM
 			FROM = {
 				OR = {
-				tag = ITA
+					tag = ITA
+					tag = SRI
 				}
 			}
 			783 = { 
 				owner = {
-					tag = ITA
+					OR = {
+						tag = ITA
+						tag = SRI
+					}
 				}
 			}
 		}
-		targets = { ITA }
+		targets = { ITA SRI }
 		target_root_trigger = {
 			has_completed_focus = GRU_NMDVP_PAN_GERMANISM
 		}
@@ -3289,7 +3293,8 @@ GRU_germania_plan_decisions = {
 			can_declare_war_on = FROM
 			FROM = {
 				OR = {
-				tag = ITA
+					tag = ITA
+					tag = SRI
 				}	
 			}
 		}
@@ -3358,7 +3363,7 @@ GRU_germania_plan_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_italy_decision target: [From.GetName]"
 			clear_decision_attack_AI = yes
-			declare_war_on = {	type = annex_everything	target = ITA }
+			declare_war_on = {	type = annex_everything	target = FROM }
 		}
 	}
 	#
@@ -10913,9 +10918,19 @@ GRU_expansion_three_volksland_hypoborea = {
 								UKR_Yakiv_Moralevych_eco_npo
 								UKR_Roman_Bzheskyi_sec_npo
 							}
+							remove_from_tech_sharing_group = kyiv_conf_research
+							clr_country_flag = KCN_is_member_economic
+							hidden_effect = {
+								remove_from_array = { global.KCN_economic_members = THIS }
+								remove_ideas = {
+									KCN_kect_0
+									KCN_kect_1
+								}
+							}
 						}
 					}
 				}
+
 				set_autonomy = { target = VKR autonomy_state = RM_Volkskommissariat }
 				set_country_flag = VKR_established
 				VKR = { set_country_flag = IS_VKR }

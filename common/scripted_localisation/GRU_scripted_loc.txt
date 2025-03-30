@@ -611,6 +611,16 @@ defined_text = {
 }
 
 defined_text = {
+	name = unit_limit_base
+	text = {
+		trigger = {
+			set_temp_variable = { base = constant:unit_limits.base }
+		}
+		localization_key = unit_limit_base_desc
+	}
+}
+
+defined_text = {
 	name = unit_limit_reached_ceiling
 	text = {
 		trigger = {

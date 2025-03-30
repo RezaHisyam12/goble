@@ -240,7 +240,6 @@ TRM_russian_expansion = {
 
 RUS_Foreign_Policy_decisions = {
 	RUS_Attack_Eastern_Europe = {
-		name = RUS_Attack_Region
 		icon = hol_draw_up_staff_plans
 
 		available = {
@@ -280,7 +279,7 @@ RUS_Foreign_Policy_decisions = {
 			NOT = { has_global_flag = danzig_treaty_active }
 		}
 
-		targets = { BAT EST LAT LIT WHR UKR CRM KAR MOL }
+		targets = { EST LAT LIT WHR UKR CRM KAR MOL }
 		target_root_trigger = {
 			OR = {
 				has_completed_focus = RUS_Enemy_In_The_West
@@ -319,17 +318,17 @@ RUS_Foreign_Policy_decisions = {
 
 		ai_will_do = {
 			factor = 100
+			# don't invade future co-belligerents
+			modifier = {
+				factor = 0
+				FROM = { original_tag = LAT }
+				country_exists = BAT
+			}
 			# don't invade possible allies
 			modifier = {
 				factor = 0
 				FROM = { tag = EST }
 				has_game_rule = { rule = EST_FORPOL option = EST_FORPOL_RUSSIA }
-			}
-			modifier = {
-				factor = 0
-				FROM = {
-					is_in_faction_with = GRU
-				}
 			}
 			modifier = {
 				factor = 0
@@ -342,7 +341,6 @@ RUS_Foreign_Policy_decisions = {
 				has_completed_focus = RUS_Realpolitik
 				FROM = {
 					OR = {
-						original_tag = BAT
 						original_tag = LIT
 						original_tag = EST
 						original_tag = WHR
@@ -443,6 +441,18 @@ RUS_Foreign_Policy_decisions = {
 			factor = 3000
 			modifier = {
 				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
+			}
+			modifier = {
+				factor = 0
+				has_war_with = TRM
+			}
+			modifier = {
+				factor = 0
 				date < 1939.6.1
 			}
 			modifier = {
@@ -516,188 +526,6 @@ RUS_Foreign_Policy_decisions = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove RUS_Intervene_Germany target: [From.GetName]"
-			clear_decision_attack_AI = yes
-			news_event = worldnews.472
-			effect_tooltip = {
-				every_other_country = {
-					limit = {
-						OR = {
-							is_in_europe = yes
-							tag = DKB
-							tag = GEO
-							tag = AZE
-						}
-						is_in_faction_with = GRU
-						ROOT = {
-							can_declare_war_on = PREV
-							is_neighbor_of = PREV
-						}
-						if = {
-							limit = { tag = VKR }
-							NOT = { has_global_flag = UKR_secret_collusion_with_russia }
-						}
-					}
-					ROOT = {
-						declare_war_on = {
-							target = PREV
-							type = annex_everything
-						}
-					}
-				}
-			} 
-			every_other_country = {
-				limit = {
-					ROOT = { has_country_flag = RUS_prepare_for_war_@PREV }
-				}
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = ROOT
-					value = -1000
-				}
-				ROOT = {
-					clr_country_flag = RUS_prepare_for_war_@PREV
-					add_ai_strategy = {
-						type = prepare_for_war
-						id = PREV
-						value = -1000
-					}
-					declare_war_on = {
-						target = PREV
-						type = annex_everything
-					}
-				}
-			}
-		}
-	}
-}
-
-SOV_Spreading_The_Revolution_decisions = {
-	SOV_Intervene_Germany = {
-		icon = GFX_decision_category_gerrivals
-		priority = 150
-
-		available = {
-			has_army_manpower = { size > 1500000 }
-			FROM = {
-				has_war_with = INT
-			}
-			any_neighbor_country = {
-				OR = {
-					is_ally_with = FROM
-					tag = FROM
-				}
-			}
-		}
-
-		visible = {
-			OR = {
-				has_completed_focus = RUS_The_Fourth_Internationale
-				has_completed_focus = RUS_Join_The_Internationale
-				has_completed_focus = DKB_Into_The_Future
-			}
-			can_declare_war_on = FROM
-			NOT = { has_global_flag = danzig_treaty_active }
-		}
-
-		targets = { GRU }
-		target_root_trigger = {
-			if = {
-				limit = {
-					NOT = { has_global_flag = second_weltkrieg_has_started }
-				}
-				OR = {
-				has_completed_focus = RUS_The_Fourth_Internationale
-				has_completed_focus = RUS_Join_The_Internationale
-				has_completed_focus = DKB_Into_The_Future
-				}
-			}
-		}
-		target_trigger = {
-			can_declare_war_on = FROM
-		}
-		
-		cost = 0
-		days_remove = 30
-		fire_only_once = yes
-		war_with_target_on_remove = yes
-
-		ai_will_do = {
-			factor = 3000
-			modifier = {
-				factor = 0
-				date < 1939.6.1
-			}
-			modifier = {
-				factor = 0
-				date < 1941.1.1
-				OR = {
-					has_war_with = TRK
-					has_war_with = UZB
-					has_war_with = KYR
-				}
-			}
-			modifier = {
-				factor = 0
-				VKR = {
-					is_in_faction_with = GRU
-					RUS_dont_attack_if_target_is_stronger = yes
-				}
-			}
-			modifier = {
-				factor = 0
-				VKB = {
-					is_in_faction_with = GRU
-					RUS_dont_attack_if_target_is_stronger = yes
-				}
-			}
-		}
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision SOV_Intervene_Germany target: [From.GetName]"
-			set_country_flag = { flag = imminent_war days = 42 value = 1 }
-			setup_decision_attack_AI = yes
-			for_each_scope_loop = {
-				array = FROM.faction_members
-				if = {
-					limit = {
-						OR = {
-							is_in_europe = yes
-							tag = DKB
-							tag = KUB
-							tag = KLY
-							tag = MTR
-							tag = GEO
-							tag = AZE
-						}
-						is_in_faction_with = GRU
-						ROOT = {
-							can_declare_war_on = PREV
-							is_neighbor_of = PREV
-						}
-						if = {
-							limit = { tag = VKR }
-							NOT = { has_global_flag = UKR_secret_collusion_with_russia }
-						}
-					}
-					add_ai_strategy = {
-						type = prepare_for_war
-						id = ROOT
-						value = 1000
-					}
-					ROOT = {
-						set_country_flag = RUS_prepare_for_war_@PREV
-						add_ai_strategy = {
-							type = prepare_for_war
-							id = PREV
-							value = 1000
-						}
-					}
-				}
-			}			
-		}
-
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove SOV_Intervene_Germany target: [From.GetName]"
 			clear_decision_attack_AI = yes
 			news_event = worldnews.472
 			effect_tooltip = {

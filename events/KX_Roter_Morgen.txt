@@ -2271,9 +2271,10 @@ country_event = { # allignment
 			factor = 90
 			modifier = {
 				factor = 0
-				has_same_government_as_ROOT = no
+				FROM = {
+					has_same_government_as_ROOT = no
+					}
 				}
-			}
 		}
 		separate_peace_all_wars = yes
 		if = {
@@ -8573,15 +8574,27 @@ country_event = { # accept
 	
 	option = {
 		name = rotermorgenmisc.1202.a
-		FROM = { 
-			add_popularity = { ideology = national_populist popularity = 0.4 }
-			set_politics = { ruling_party = national_populist elections_allowed = no }
-			drop_cosmetic_tag = yes
+		if = {
+			limit = {
+				GRU = { has_country_flag = GRU_NMDVP_rule }
+			}
+			FROM = {	
+				set_popularities = {
+					national_populist = 100
+				}
+				set_politics = {
+					ruling_party = national_populist
+					last_election = "1936.1.1"
+					election_frequency = 48
+					elections_allowed = no
+				}
+			remove_all_ministers = yes
+			}
 		}
+		remove_all_ministers = yes
 		set_autonomy = {
 			target = FROM
 			autonomous_state = kr_autonomous_puppet
-			freedom_level = 0.75
 		}
 	}	
 }

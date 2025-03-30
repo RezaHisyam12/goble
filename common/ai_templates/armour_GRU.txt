@@ -5,7 +5,7 @@
 armour_generic = {
 	role = armor_role #to distinguish from armor, a hardcoded keyword for all tank equipment types
 
-	available_for = { GRU }
+	available_for = { GRU GER }
 
 	upgrade_prio = {
 		factor = 10
@@ -19,8 +19,8 @@ armour_generic = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { has_tech = basic_medium_tank }
-			NOT = { has_tech = basic_medium_tank_chassis }
+			NOT = { has_tech = basic_heavy_tank }
+			NOT = { has_tech = basic_heavy_tank_chassis }
 		}
 		modifier = {
 			factor = 20
@@ -44,7 +44,7 @@ armour_generic = {
 
 		target_template = {
 			regiments = {
-				medium_armor = 6
+				heavy_armor = 6
 				motorized = 6
 			}
 
@@ -67,7 +67,7 @@ armour_generic = {
 
 		target_template = {
 			regiments = {
-				medium_armor = 6
+				heavy_armor = 6
 				motorized = 6
 			}
 
@@ -106,7 +106,7 @@ armour_generic = {
 
 		target_template = {
 			regiments = {
-				medium_armor = 6
+				heavy_armor = 6
 				mechanized = 6
 			}
 

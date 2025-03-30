@@ -1128,11 +1128,15 @@ shared_focus = {
 			factor = 15
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GRU_form_the_stasi"
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_gleichschaltung"
 			add_popularity = {
-							ideology = totalist
-							popularity = 0.10
-						}
+				ideology = totalist
+				popularity = 0.25
+			}
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.30
+			}
 		}
 
 		prerequisite = { focus = GRU_found_the_fdj }

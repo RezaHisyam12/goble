@@ -3,6 +3,8 @@
 generic_armour = {
 	category = land
 
+	blocked_for = { GER GRU }
+
 	roles = {
 		land_armour
 	}
