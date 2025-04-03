@@ -15,6 +15,10 @@ division_limiter = {
 	ai_strategy = { type = build_army id = marine				value = -1000 }
 	ai_strategy = { type = build_army id = mountaineer			value = -1000 }
 	ai_strategy = { type = build_army id = suppression			value = -1000 }
+	ai_strategy = { type = build_army id = bicycle				value = -1000 }
+	ai_strategy = { type = build_army id = elite_infantry			value = -1000 }
+	ai_strategy = { type = build_army id = RR_Werwolf			value = -1000 }
+	ai_strategy = { type = build_army id = armour_super_heavy		value = -1000 }
 }
 
 default_unit_production = {
@@ -29,11 +33,6 @@ default_unit_production = {
 	ai_strategy = {
 		type = equipment_variant_production_factor
 		id = light_tank_chassis
-		value = -100
-	}
-	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = heavy_tank_chassis
 		value = -100
 	}
 }

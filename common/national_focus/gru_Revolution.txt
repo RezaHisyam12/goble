@@ -1880,7 +1880,7 @@ shared_focus = {
 		y = 7
 		cost = 5
 		ai_will_do = {
-			factor = 20
+			factor = 15
 		}
 		prerequisite = { focus = GRU_union_trade_committee focus = GRU_neue_schwerindustrie  }
 		completion_reward = {
@@ -3193,7 +3193,15 @@ shared_focus = {
 		}
 		cost = 5
 		ai_will_do = {
-			factor = 15
+			factor = 2
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+			modifier = {
+				factor = 50
+				has_completed_focus = GRU_form_the_guard
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_formation_of_the_nva"
@@ -3430,9 +3438,9 @@ shared_focus = {
 		y = 1
 		cost = 5
 		ai_will_do = {
-			base = 1
+			factor = 3
 			modifier = {
-				add = 10
+				factor = 10
 				has_war = yes
 			}
 		}

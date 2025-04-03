@@ -5201,7 +5201,8 @@ GRU_Demand_Sudovia: "Demand Sudovia Back"
 GRU_Demand_Sudovia_desc: ""
 GRU_Demand_Submission: "Demand [From.GetNameDefCap] Submission"
 GRU_Demand_Submission_desc: ""
-
+GRU_Flip_Ideology: "Force our New Ideology to [From.GetNameDefCap]"
+GRU_Flip_Ideology_desc: ""
 ####################
 #### New Event ####
 ####################
@@ -5236,6 +5237,10 @@ rotermorgenmisc.1202.a: "A Wise Decision"
 rotermorgenmisc.1203.t: "[FROM.GetName] Wants to Stay Independent"
 rotermorgenmisc.1203.d: "[FROM.GetName] has outright rejected Joseph Goebbels' demand for submission, defying Berlin’s ultimatum."
 rotermorgenmisc.1203.a: "A Reckless Gamble."
+
+rotermorgenmisc.1204.t: "A New Ideology"
+rotermorgenmisc.1204.d: ""
+rotermorgenmisc.1204.a: "What choice do we have?"
 
 ########################
 #### New ToolTip ####

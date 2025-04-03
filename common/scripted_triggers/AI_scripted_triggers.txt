@@ -43,6 +43,7 @@ willing_to_send_volunteers_to_FROM = {
 		maf_collapse_volunteers = yes
 		levantine_war_volunteers = yes
 		winter_war_volunteers = yes
+		indochinese_revolution_volunteers = yes
 	}
 }
 
@@ -893,6 +894,38 @@ winter_war_volunteers = {
 	}
 	has_socialist_government = no
 	log = "willing_to_send_volunteers_to_FROM -- winter_war_volunteers --- THIS = [THIS.GetName] FROM = [FROM.GetName]"
+}
+
+indochinese_revolution_volunteers = {
+	INC = { has_war_with = GEA }
+	OR = {
+		AND = {
+			FROM = { original_tag = INC }
+			is_subject = no
+			OR = {
+				original_tag = CHI
+				original_tag = BHC
+				original_tag = JAP
+				AND = {
+					original_tag = AST
+					has_socialist_government = yes
+				}
+			}
+		}
+		AND = {
+			FROM = { original_tag = GEA }
+			OR = {
+				original_tag = GER
+				original_tag = DEH
+				original_tag = MAF
+				AND = {
+					original_tag = AST
+					has_socialist_government = no
+				}
+			}
+		}
+	}
+	log = "willing_to_send_volunteers_to_FROM -- indochinese_revolution_volunteers --- THIS = [THIS.GetName] FROM = [FROM.GetName]"
 }
 
 ############################

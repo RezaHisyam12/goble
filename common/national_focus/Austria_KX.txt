@@ -7265,7 +7265,11 @@ focus_tree = {
 				factor = 0
 				date < 1938.1.1
 				}
-			}
+			modifier = {
+				factor = 10
+				has_war = yes
+			}	
+		}
 			available = {
 					OR = {
 					has_country_leader = {
@@ -7306,6 +7310,10 @@ focus_tree = {
 		y = 8
 			ai_will_do = { 
 				factor = 10
+				modifier = {
+					factor = 10
+					has_war = yes
+				}
 			}
 			available = {
 			has_government = paternal_autocrat

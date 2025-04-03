@@ -20,44 +20,6 @@
 		cost = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_GOUVERMENT_START_COLONIZING"
-			hidden_effect = {
-				713 = {
-					remove_claim_by = ROOT
-				}
-				80 = {
-					remove_claim_by = ROOT
-				}
-				199 = {
-					remove_claim_by = ROOT
-				}
-				1228 = {
-					remove_claim_by = ROOT
-				}
-				792 = {
-					remove_claim_by = ROOT
-				}
-				95 = {
-					remove_claim_by = ROOT
-				}
-				997 = {
-					remove_claim_by = ROOT
-				}
-				93 = {
-					remove_claim_by = ROOT
-				}
-				1295 = {
-					remove_claim_by = ROOT
-				}
-				94 = {
-					remove_claim_by = ROOT
-				}
-				207 = {
-					remove_claim_by = ROOT
-				}
-				96 = {
-					remove_claim_by = ROOT
-				}
-			}
 			swap_ideas = {
 				remove_idea = VK_COLONY_ONE
 				add_idea = VK_COLONY_TWO

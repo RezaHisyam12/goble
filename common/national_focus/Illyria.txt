@@ -2662,6 +2662,7 @@ focus_tree = {
 		mutually_exclusive = { focus = CRO_loyalty_remains }
 		
 		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
 			custom_effect_tooltip = CRO_revolution
 		}
 	}
@@ -3023,15 +3024,19 @@ focus_tree = {
 		available = {
 			has_country_flag = aus_slovenia_crisis_resolved
 		}
+		
 		bypass = {
+			OR = {
 				AUS = { has_country_flag = HRE_rise }
+				has_country_flag = aus_slovenia_crisis_resolved
 			}
-
+		}
+		
 		mutually_exclusive = { focus = CRO_stir_the_spirits }
 		
 		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
 			custom_effect_tooltip = CRO_loyal
-			add_stability = -0.1
 		}
 	}
 	
@@ -3315,6 +3320,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
 			add_political_power = 50
 		}
 	}
@@ -4234,6 +4240,7 @@ focus_tree = {
 		
 		
 		completion_reward = {
+			custom_effect_tooltip = unlock_focuses
 		}
 	}
 	focus = {

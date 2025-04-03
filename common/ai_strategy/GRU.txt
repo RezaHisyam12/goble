@@ -429,14 +429,14 @@ GRU_eyes_on_austria = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = conquer
+		type = contain
 		id = AUS
-		value = 400
+		value = 100
 	}
 	ai_strategy = {
-		type = front_unit_request
-		tag = FRA
-		value = -25
+		type = ignore
+		id = FRA
+		value = 500
 	}
 }
 
@@ -1159,6 +1159,7 @@ STP_ignore_western_front = {
 			tag = VKB
 			tag = VKR
 			tag = VKK
+			tag = VKP
 		}
 	}
 	enable = {
@@ -1182,6 +1183,7 @@ STP_ignore_western_front = {
 STP_defend_eastern_front = {
 	allowed = {
 		OR = {
+			tag = VKP
 			is_polish_tag = yes
 			is_baltic_tag = yes
 			is_balkan_tag = yes
@@ -1253,6 +1255,7 @@ GRU_eyes_on_Russia = {
 STP_eyes_on_Russia = {
 	allowed = {
 		OR = {
+			tag = VKP
 			is_polish_tag = yes
 			is_baltic_tag = yes
 			is_balkan_tag = yes
@@ -1289,6 +1292,33 @@ STP_eyes_on_Russia = {
 ################
 ### Industry/2WK ###
 ################
+
+default_heavy_tank_production = {
+	enable = {
+		is_eligible_for_armor_production = yes
+		num_divisions > 49 #build enough infantry first
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = heavy_tank_chassis
+		value = 15
+	}
+}
+
+increased_heavy_tank_production_2 = {
+	enable = {
+		num_of_military_factories > 99
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = heavy_tank_chassis
+		value = 25
+	}
+}
 
 GRU_finish_russia_off = {
 	allowed = {
@@ -1466,6 +1496,13 @@ GRU_endsieg_aus = { #Cease attacks if losing against Austria and has low equipme
 	ai_strategy = {
 		type = front_control
 		tag = GAL
+		priority = 150
+		ordertype = front
+		execute_order = no
+	}
+	ai_strategy = {
+		type = front_control
+		tag = POL
 		priority = 150
 		ordertype = front
 		execute_order = no

@@ -2965,6 +2965,10 @@ GRU_germania_plan_decisions = {
 			}
 			modifier = {
 				factor = 0
+				FROM = { default_attack_AI_trigger_FROM = yes }
+			}
+			modifier = {
+				factor = 0
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.8
@@ -4073,6 +4077,10 @@ GRU_germania_plan_decisions = {
 		icon = GFX_pangermanicone
 
 		available = {
+			OR = {
+				is_neighbor_of = FROM
+				any_allied_country = { is_neighbor_of = FROM }
+			}
 			is_subject = no
 			country_exists = HOL
 			HOL = {
@@ -6191,62 +6199,6 @@ GRU_germania_plan_decisions = {
 					}
 				}
 			}
-			10 = { 
-				owner = {
-					OR = {
-						tag = GRU
-						is_subject_of = GRU
-					}
-				}
-				controller = {
-					OR = {
-						tag = GRU
-						is_subject_of = GRU
-					}
-				}
-			}
-			90 = { 
-				owner = {
-					OR = {
-						tag = GRU
-						is_subject_of = GRU
-					}
-				}
-				controller = {
-					OR = {
-						tag = GRU
-						is_subject_of = GRU
-					}
-				}
-			}
-			92 = { 
-				owner = {
-					OR = {
-						tag = GRU
-						is_subject_of = GRU
-					}
-				}
-				controller = {
-					OR = {
-						tag = GRU
-						is_subject_of = GRU
-					}
-				}
-			}
-			1088 = { 
-				owner = {
-					OR = {
-						tag = GRU
-						is_subject_of = GRU
-					}
-				}
-				controller = {
-					OR = {
-						tag = GRU
-						is_subject_of = GRU
-					}
-				}
-			}
 		}
 
 		fire_only_once = yes
@@ -6278,30 +6230,6 @@ GRU_germania_plan_decisions = {
 				}
 			}
 			97 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			10 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			90 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			92 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			1088 = { 
 				add_core_of = GRU
 				GRU = {
 					transfer_state = PREV
@@ -16067,6 +15995,84 @@ GRU_stahlpakt_alliance_decisions = {
 		}
 	}
 
+	GRU_Flip_Ideology = {
+		icon = hol_draw_up_staff_plans
+
+		visible = {
+			has_country_flag = NMDVP_R_RULE
+			FROM = {
+				is_subject_of = GRU
+				has_socialist_government = yes
+			}
+		}
+		available = {
+			FROM = {
+				is_subject_of = GRU
+				has_socialist_government = yes
+			}
+		}
+
+		cancel_trigger = {
+			NOT = {
+				FROM = {
+					is_subject = no
+					has_socialist_government = no
+				}
+			}
+		}
+
+		targets = { BAT EST LAT LIT WHR UKR CRM }
+		target_root_trigger = {
+			OR = {
+				has_completed_focus = GRU_volksfuhrer
+			}
+		}
+		target_trigger = {
+			OR = {
+				FROM = {
+				has_socialist_government = yes
+				}
+			}
+		}
+
+		cost = 10
+		days_remove = 7
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel GRU_Demand_Submission target: [From.GetName]"
+			add_political_power = 10
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete GRU_Demand_Submission target: [From.GetName]"
+			FROM = {
+				country_event = { id = rotermorgenmisc.1204 days = 2 random_days = 2 } #warning event
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Demand_Submission target: [From.GetName]"
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+			FROM = {	
+				add_popularity = {
+					ideology = national_populist
+					popularity = 1.0
+				}
+				set_politics = {
+					ruling_party = national_populist
+					last_election = "1936.11.16"
+					elections_allowed = no
+					}
+				}
+			}
+		}
+	}
 }
 
 GRU_new_order_decisions = {
@@ -16468,6 +16474,7 @@ GRU_new_order_decisions = {
 			available = {
 				has_completed_focus = GRU_NMDVP_PAN_GERMANISM
 				tag = GRU 
+				POL = { exists = NO }
 				AND = {
 					OR = {
 						GRU = {

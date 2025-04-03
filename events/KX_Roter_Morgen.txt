@@ -4775,6 +4775,7 @@ country_event = { #
 		1140 = { remove_claim_by = GRU }
 		1124 = { remove_claim_by = GRU }
 		91 = { remove_claim_by = GRU }
+		89 = { remove_claim_by = GRU }
 
 		10 = { remove_core_of = GRU }
 		90 = { remove_core_of = GRU }
@@ -4789,7 +4790,7 @@ country_event = { #
 		1140 = { remove_core_of = GRU }
 		1124 = { remove_core_of = GRU }
 		91 = { remove_core_of = GRU }
-
+		89 = { remove_core_of = GRU }
 	}
 }
 
@@ -8642,7 +8643,6 @@ country_event = { # accept
 					election_frequency = 48
 					elections_allowed = no
 				}
-			remove_all_ministers = yes
 			}
 		}
 		remove_all_ministers = yes
@@ -8696,4 +8696,36 @@ country_event = { # refuses!
 			type = annex_everything
 		}
 	}
+}
+
+country_event = { # accept
+	id = rotermorgenmisc.1204
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.1204" }
+	title = rotermorgenmisc.1204.t
+	desc = rotermorgenmisc.1204.d
+	is_triggered_only = yes
+	
+	option = {
+		name = rotermorgenmisc.1204.a
+		ai_chance = {
+			factor = 100
+		}
+		if = {
+			limit = {
+				GRU = { has_country_flag = NMDVP_R_RULE }
+			}
+			ROOT = {	
+				add_popularity = {
+					ideology = national_populist
+					popularity = 1.0
+				}
+				set_politics = {
+					ruling_party = national_populist
+					last_election = "1936.11.16"
+					elections_allowed = no
+					}
+			remove_all_ministers = yes
+			}
+		}
+	}	
 }
