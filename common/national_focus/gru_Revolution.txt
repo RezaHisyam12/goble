@@ -6973,7 +6973,6 @@ shared_focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_END_FRANCE"
 			clear_decision_attack_AI = yes
 			add_stability = -0.1
-			add_country_leader_trait = gru_froncophobe
 			declare_war_on = {	type = annex_everything	target = FRA }
 				28 = {
 				add_claim_by = GRU

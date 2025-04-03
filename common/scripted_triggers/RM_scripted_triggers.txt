@@ -157,7 +157,6 @@ is_not_excluded_from_stahlpakt_alliance = {
 		tag = LEC
 		tag = RVA
 		tag = RRV
-		tag = ALO
 		tag = TRK
 		tag = UZB
 		tag = KYR
