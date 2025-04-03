@@ -4739,6 +4739,60 @@ country_event = { #
 	}
 }
 
+country_event = { #
+	id = rotermorgenmisc.958
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.957" }
+	title = rotermorgenmisc.958.t
+	desc = rotermorgenmisc.958.d
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		10 = { add_core_of = VKP }
+		90 = { add_core_of = VKP }
+		88 = { add_core_of = VKP }
+		1314 = { add_core_of = VKP }
+		92 = { add_core_of = VKP }
+		1125 = { add_core_of = VKP }
+		1319 = { add_core_of = VKP }
+		1088 = { add_core_of = VKP }
+		1127 = { add_core_of = VKP }
+		1126 = { add_core_of = VKP }
+		1140 = { add_core_of = VKP }
+		89 = { add_core_of = VKP }
+		1124 = { add_core_of = VKP }
+		91 = { add_core_of = VKP }
+
+		10 = { remove_claim_by = GRU }
+		90 = { remove_claim_by = GRU }
+		88 = { remove_claim_by = GRU }
+		1314 = { remove_claim_by = GRU }
+		92 = { remove_claim_by = GRU }
+		1125 = { remove_claim_by = GRU }
+		1319 = { remove_claim_by = GRU }
+		1088 = { remove_claim_by = GRU }
+		1127 = { remove_claim_by = GRU }
+		1126 = { remove_claim_by = GRU }
+		1140 = { remove_claim_by = GRU }
+		1124 = { remove_claim_by = GRU }
+		91 = { remove_claim_by = GRU }
+
+		10 = { remove_core_of = GRU }
+		90 = { remove_core_of = GRU }
+		88 = { remove_core_of = GRU }
+		1314 = { remove_core_of = GRU }
+		92 = { remove_core_of = GRU }
+		1125 = { remove_core_of = GRU }
+		1319 = { remove_core_of = GRU }
+		1088 = { remove_core_of = GRU }
+		1127 = { remove_core_of = GRU }
+		1126 = { remove_core_of = GRU }
+		1140 = { remove_core_of = GRU }
+		1124 = { remove_core_of = GRU }
+		91 = { remove_core_of = GRU }
+
+	}
+}
+
 
 country_event = { #
 	id = rmruss.1

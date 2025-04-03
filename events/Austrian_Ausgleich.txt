@@ -3972,15 +3972,34 @@ country_event = { #The Terms of the Treaty of Budapest
 
 	option = {
 		name = ausgleich.new.805.a
-		every_owned_state = {
+		if  = {
 			limit = {
-				OR = {
-					region = 145 #Slovakia
-					region = 27 #Hungary
+				43 = {
+					is_owned_by = AUS
+					owner = { is_subject_of = AUS }
 				}
-				NOT = { state = 45 } #Vojvodina
 			}
-			AUS = { transfer_state = PREV }
+			every_owned_state = {
+				limit = {
+					region = 27 #Hungary
+					NOT = { state = 45 } #Vojvodina
+				}
+				AUS = { transfer_state = PREV }
+			}
+		}
+		if = {
+			limit = {
+				1123 = {
+					is_owned_by = AUS
+					owner = { is_subject_of = AUS }
+				}
+			}
+			every_owned_state = {
+				limit = {
+					region = 145 #Slovakia
+				}
+				AUS = { transfer_state = PREV }
+			}
 		}
 	}
 }
@@ -4351,9 +4370,19 @@ country_event = { #Slovenia Demands Representation
 			factor = 33
 			modifier = {
 				factor = 100
-				has_game_rule = {
-					rule = ILL_slovenia_crisis
-					option = CRO_SLOVENIA_CRISIS_RESOLVED
+				OR = {
+					has_game_rule = {
+						rule = ILL_slovenia_crisis
+						option = CRO_SLOVENIA_CRISIS_RESOLVED
+					}
+					has_game_rule = {
+						rule = ILL_slovenia_crisis
+						option = CRO_SLOVENIA_CRISIS_RESOLVED_INDEPENDENCE
+					}
+					has_game_rule = {
+						rule = ILL_slovenia_crisis
+						option = CRO_SLOVENIA_CRISIS_RESOLVED_LOYALTY
+					}
 				}
 			}
 		}
@@ -4386,9 +4415,19 @@ country_event = { #Slovenia Demands Representation
 			factor = 33
 			modifier = {
 				factor = 100
-				has_game_rule = {
-					rule = ILL_slovenia_crisis
-					option = CRO_SLOVENIA_CRISIS_RESOLVED
+				OR = {
+					has_game_rule = {
+						rule = ILL_slovenia_crisis
+						option = CRO_SLOVENIA_CRISIS_RESOLVED
+					}
+					has_game_rule = {
+						rule = ILL_slovenia_crisis
+						option = CRO_SLOVENIA_CRISIS_RESOLVED_INDEPENDENCE
+					}
+					has_game_rule = {
+						rule = ILL_slovenia_crisis
+						option = CRO_SLOVENIA_CRISIS_RESOLVED_LOYALTY
+					}
 				}
 			}
 		}

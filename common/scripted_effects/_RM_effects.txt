@@ -1616,6 +1616,46 @@ create_VKN = {
 	}
 }
 
+create_VKP = {
+	VKP = {
+		set_politics = {
+			ruling_party = totalist
+			last_election = "1936.1.1"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		set_party_name = { ideology = totalist long_name = "NSDVP-Generalgouvernement" name = "NSDVP-G"}
+		set_party_name = { ideology = national_populist long_name = "NSDVP-Generalgouvernement" name = "NSDVP-G"}
+		set_popularities = {
+			totalist = 100
+		}
+
+		create_country_leader = {
+			name = "Paul Hausser"
+			desc = "POLITICS_Hausser_DESC"
+			picture = "gfx/leaders/GRU/Portrait_Germany_Paul_Hausser.png"
+			expire = "1.1.1"
+			ideology = tot_left_nationalism_subtype
+			traits = {
+				gru_military_admin
+			}
+		}
+
+		create_country_leader = {
+			name = "Paul Hausser"
+			desc = "POLITICS_Hausser_DESC"
+			picture = "gfx/leaders/GRU/Portrait_Germany_Paul_Hausser.png"
+			expire = "1.1.1"
+			ideology = natpop_goebbels_subtype
+			traits = { 
+				gru_military_admin
+			}
+		}
+		set_cosmetic_tag = VKP
+		load_focus_tree = gru_VKP
+	}
+}
+
 create_BFE = {
 	CRO = {
 		set_politics = {

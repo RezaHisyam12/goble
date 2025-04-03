@@ -4657,7 +4657,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 100
+			factor = 125
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -16441,6 +16441,215 @@ GRU_new_order_decisions = {
 			}
 	}
 
+	GRU_VK_generalgouverment = {
+
+		icon = GFX_goebb_decision_burg
+		ai_will_do = { factor = 2000 }
+		highlight_states = {
+		    highlight_state_targets = {
+				state = 10
+				state = 90
+				state = 88
+				state = 1314
+				state = 92
+				state = 1125
+				state = 1319
+				state = 1088
+				state = 1127
+				state = 1126
+				state = 1140
+				state = 89
+				state = 91
+				state = 1124
+				}
+			}
+			fire_only_once = yes
+				
+			available = {
+				has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+				tag = GRU 
+				AND = {
+					OR = {
+						GRU = {
+							controls_state = 10
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 10
+						}
+						GRU = {
+							controls_state = 90
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 90
+						}
+						GRU = {
+							controls_state = 88
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 88
+						}
+						GRU = {
+							controls_state = 1314
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 1314
+						}
+						GRU = {
+							controls_state = 92
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 92
+						}
+						GRU = {
+							controls_state = 1125
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 1125
+						}
+						GRU = {
+							controls_state = 1319
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 1319
+						}
+						GRU = {
+							controls_state = 1088
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 1088
+						}
+						GRU = {
+							controls_state = 1127
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 1127
+						}
+						GRU = {
+							controls_state = 1126
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 1126
+						}
+						GRU = {
+							controls_state = 1140
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 1140
+						}
+						GRU = {
+							controls_state = 89
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 89
+						}
+						GRU = {
+							controls_state = 91
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 89
+						}
+						GRU = {
+							controls_state = 1124
+						}
+						any_other_country = {
+							is_subject_of = GRU
+							controls_state = 1124
+						}
+					}
+				}
+			}
+		
+			visible = {
+				has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+			}
+		
+			complete_effect = {
+				create_VKP = yes
+
+				hidden_effect = {
+					VKP = {
+						transfer_state = 10
+						transfer_state = 90
+						transfer_state = 88
+						transfer_state = 1314
+						transfer_state = 92
+						transfer_state = 1125
+						transfer_state = 1319
+						transfer_state = 1088
+						transfer_state = 1127
+						transfer_state = 1126
+						transfer_state = 1140
+						transfer_state = 89
+						transfer_state = 91
+						transfer_state = 1124
+						
+						add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
+						add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 30000 }
+						add_equipment_to_stockpile = { type = support_equipment amount = 3000 }
+						add_equipment_to_stockpile = { type = artillery_equipment amount = 1000 }
+						add_equipment_to_stockpile = { type = anti_tank_equipment amount = 600 }
+						add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 5000 }
+						add_manpower = 40000
+						remove_all_ministers = yes
+						add_ideas = extensive_conscription
+						add_ideas = limited_exports
+						add_ideas = war_economy
+
+						add_ideas = {
+							GRU_pol_off
+							POL_warsaw_garrison3
+							GRU_okw
+							VKP_militarism
+                  		}
+						create_field_marshal = {
+							name = "Paul Hausser"
+							portrait_path = "gfx/leaders/GRU/Portrait_Germany_Paul_Hausser.png"
+							traits = { trickster panzer_leader ranger war_hero RR_OFFICER }
+							skill = 3
+
+							attack_skill = 4
+							defense_skill = 3
+							planning_skill = 4
+							logistics_skill = 3
+						}
+				}
+				VKP = {	country_event = rotermorgenmisc.958 }
+				if = {
+						limit = {
+							GRU = { has_country_flag = NMDVP_R_RULE }
+						}
+						VKP = {	
+							set_popularities = {
+								national_populist = 100
+							}
+							set_politics = {
+								ruling_party = national_populist
+								last_election = "1936.1.1"
+								election_frequency = 48
+								elections_allowed = no
+							}
+						}
+					}
+				}
+				set_autonomy = { target = VKP autonomy_state = Generalgouvernement }
+				set_country_flag = VKP_established
+				VKP = { set_country_flag = IS_VKP }
+				VKP = { inherit_technology = GRU }
+			}
+	}
 }
 
 

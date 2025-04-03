@@ -1018,12 +1018,12 @@ ideas = {
 			}
 			equipment_bonus = {
 				motorized_equipment = {
-					reliability_factor = 0.1
+					reliability = 0.1
 					build_cost_ic = 0.1
 					instant = yes
 				}
 				mechanized_equipment = {
-					reliability_factor = 0.1
+					reliability = 0.1
 					build_cost_ic = 0.1
 					instant = yes
 				}
@@ -1085,17 +1085,17 @@ ideas = {
 			}
 			equipment_bonus = {
 				motorized_equipment = {
-					reliability_factor = 0.1
+					reliability = 0.1
 					build_cost_ic = 0.1
 					instant = yes
 				}				
 				mechanized_equipment = {
-					reliability_factor = 0.1
+					reliability = 0.1
 					build_cost_ic = 0.1
 					instant = yes
 				}	
 				armor = {
-					reliability_factor = 0.1
+					reliability = 0.1
 					build_cost_ic = 0.1
 					instant = yes
 				}
@@ -2970,6 +2970,14 @@ ideas = {
 				civilian_intel_factor = 0.05
 				navy_intel_factor = 0.05
 				airforce_intel_factor = 0.05
+			}
+		}
+		VKP_militarism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VKP_militarism"}
+			picture = GRU_guard_2
+			allowed = { always = no }
+           		modifier = {
+				conscription = 0.05
 			}
 		}
 		

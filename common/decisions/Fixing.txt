@@ -484,6 +484,7 @@ RUS_Foreign_Policy_decisions = {
 			log = "[GetDateText]: [Root.GetName]: Decision RUS_Intervene_Germany target: [From.GetName]"
 			set_country_flag = { flag = imminent_war days = 42 value = 1 }
 			setup_decision_attack_AI = yes
+			FROM = { incoming_war_notification_effect = yes }
 			for_each_scope_loop = {
 				array = FROM.faction_members
 				if = {

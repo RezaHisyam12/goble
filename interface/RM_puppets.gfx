@@ -31,4 +31,8 @@ spriteTypes = {
 		name = "GFX_crownland_icon"
 		textureFile = "gfx/interface/autonomy/autonomy_crownland_icon.png"
 	}
+	spriteType = {
+		name = "GFX_Generalgouvernement_icon"
+		textureFile = "gfx/interface/autonomy/autordenstaat.png"
+	}
 }

@@ -509,6 +509,17 @@ VK_FOCUS_NETHERLAND_COLONIZE_THREE_desc:0 "The German FDJ must be expanded into 
 VK_FOCUS_NETHERLAND_COLONIZED:0 "Finish Niederlanden Germanization"
 VK_FOCUS_NETHERLAND_COLONIZED_desc:0 "Niederlandes Germanization will be finished"
 
+VK_FOCUS_GOUVERMENT_START_COLONIZING:0 "Beginning of Germanization"
+VK_FOCUS_GOUVERMENT_START_COLONIZING_desc:0 "We will begin the Germanization."
+VK_FOCUS_GOUVERMENT_COLONIZE_ONE:0 "Lebensborn"
+VK_FOCUS_GOUVERMENT_COLONIZE_ONE_desc:0 "It is time to bring the National family model to our people too."
+VK_FOCUS_GOUVERMENT_COLONIZE_TWO:0 "Germanic Society"
+VK_FOCUS_GOUVERMENT_COLONIZE_TWO_desc:0 "We must model our new society after that of our liberators!"
+VK_FOCUS_GOUVERMENT_COLONIZE_THREE:0 "The FDJ"
+VK_FOCUS_GOUVERMENT_COLONIZE_THREE_desc:0 "The German FDJ must be expanded!"
+VK_FOCUS_GOUVERMENT_COLONIZED:0 "Finish The Germanization"
+VK_FOCUS_GOUVERMENT_COLONIZED_desc:0 "The Germanization will be finished"
+
 HYPOBOREA_START:0 "Skandinavien"
 HYPOBOREA_START_desc:0 "The northern lands are ours, liberated by our Germanic brothers from the south we will safeguard the Skandinavienn lands they trusted us."
 HYPOBOREA_germanize_PEOPLE:0 "Skandinaviennisation"
@@ -1336,6 +1347,9 @@ Nazbol_rev_leaders_desc:0 "One of the leaders of the NM-KV or Nationalmarxistisc
 
 Nazbol_rev_vet_leaders:0 "NM-KV/SNF Veteran"
 Nazbol_rev_vet_leaders_desc:0 "One of the early leaders of the NM-KV or Nationalmarxistische Kampfverbände or the similar SNF or Sozialnationalistische Front."
+
+gru_military_admin:0 "Military Administrator\n\§gPaul Hausser has been tasked with overseeing Poland as a militarized protectorate. His focus is on maintaining stability, crushing partisan resistance, and ensuring the region serves as a frontline bastion against Russia.§!"
+gru_military_admin_desc:0 "Paul Hausser has been tasked with overseeing Poland as a militarized protectorate. His focus is on maintaining stability, crushing partisan resistance, and ensuring the region serves as a frontline bastion against Russia."
 
 ####ministers####
 GRU_Joseph_Goebbels_hog_tot:0 "Joseph Goebbels"
@@ -2263,13 +2277,15 @@ GRU_break_fortifications_idea:0 "Interdiction Tactics"
 GRU_break_fortifications_idea_desc:0 "When the enemy charges forward, our bombers will leave their columns in flames."
 GRU_expanded_espionage_non_lar:0 "Wartime Espionage"
 
+VKP_militarism:0 "State Serve Military"
+
 ####puppets##  
 
 RM_Stahlpakt_member:0 "Stahlpakt Member"
 RM_Volkskommissariat:0 "Volkskommissariat"
 RM_Volksland:0 "Volksland"
 RM_Volksstaat:0 "Volksstaat"
-
+Generalgouvernement:0 "Generalgouvernement"
 
 ###Party names###
 GRU_occu_long:0 "Occupational Government"
@@ -3668,6 +3684,40 @@ VKN_national_populist_RM_Volkskommissariat:0 "Reichskommissariat Niederlande"
 VKN_national_populist_RM_Volkskommissariat_ADJ:0 "Dutch"
 VKN_national_populist_RM_Volkskommissariat_DEF:0 "The Reichskommissariat Niederlande"
 ###VKN###
+
+###VKP###
+
+VKP_totalist:0 "Generalgouvernement Polen"
+VKP_totalist_ADJ:0 "German"
+VKP_totalist_DEF:0 "das Generalgouvernement Polen"
+VKP_syndicalist:0 "Generalgouvernement Polen"
+VKP_syndicalist_ADJ:0 "German"
+VKP_syndicalist_DEF:0 "das Generalgouvernement Polen"
+VKP_radical_socialist:0 "Generalgouvernement Polen"
+VKP_radical_socialist_ADJ:0 "German"
+VKP_radical_socialist_DEF:0 "das Generalgouvernement Polen"
+VKP_social_democrat:0 "Generalgouvernement Polen"
+VKP_social_democrat_ADJ:0 "German"
+VKP_social_democrat_DEF:0 "das Generalgouvernement Polen"
+VKP_social_liberal:0 "Generalgouvernement Polen"
+VKP_social_liberal_ADJ:0 "German"
+VKP_social_liberal_DEF:0 "das Generalgouvernement Polen"
+VKP_market_liberal:0 "Generalgouvernement Polen"
+VKP_market_liberal_ADJ:0 "German"
+VKP_market_liberal_DEF:0 "das Generalgouvernement Polen"
+VKP_social_conservative:0 "Generalgouvernement Polen"
+VKP_social_conservative_ADJ:0 "German"
+VKP_social_conservative_DEF:0 "das Generalgouvernement Polen"
+VKP_authoritarian_democrat:0 "Generalgouvernement Polen"
+VKP_authoritarian_democrat_ADJ:0 "German"
+VKP_authoritarian_democrat_DEF:0 "das Generalgouvernement Polen"
+VKP_paternal_autocrat:0 "Generalgouvernement Polen"
+VKP_paternal_autocrat_ADJ:0 "German"
+VKP_paternal_autocrat_DEF:0 "das Generalgouvernement Polen"
+VKP_national_populist:0 "Generalgouvernement Polen"
+VKP_national_populist_ADJ:0 "German"
+VKP_national_populist_DEF:0 "das Generalgouvernement Polen"
+
 ###HYP###
 
 HYP_totalist:0 "Skandinavien"
@@ -4519,6 +4569,7 @@ GRU_new_order_decisions: "£national_populist_texticon£  §8The New Order§!"
 GRU_new_order_decisions_desc: "\n\n£goebb_new_order£\n\n\n\nAfter long years of £violence_damage_texticon£ §8humiliation§! and £heroism_texticon£ §Vstruggle§!, the world must appear before our nation in all its glory, and as for the first time, it will mean either our §Rcomplete destruction§! or a grand triumph.\n\nWe have enemies from both §9East§! and §4West§!, and it is now that we will once again show the world that we remain on top, and that is true\n£national_populist_texticon£ §8our rightful place.§!\n\nThrough careful £war_plans_texticon£ §7planning§! and §6modernized tactics§! as well as the paramilitaryization of our youth and the strengthening of our own influence, and the combined efforts of our £luftwaffe_texticon£ air power, the fate of our enemies £new_germany_texticon£ §gis sealed§! and our plans and operations £increase_texticon£ §7ready§! to be realized"
 GRU_Ordenstaat_Burgundy: "§XРР-Ordensstaat Burgund§!  §X---»§!  £trigger_yes£ §Gapprove§! the project" # RR-Ordensstaat Burgund
 GRU_VK_netherland:0 "Establish the VK §ONiederlande§!."
+GRU_VK_generalgouverment:0 "Establish the §WGeneralgouvernement§!."
 
 VSJ_terror_bombing: "Luftwaffe Training Ground"
 VSJ_terror_bombing_desc: "With depressing regularity, Luftwaffe bombers from the airfields of Reichskommissariat Moskowien fly over the Volkskommissariat Judea of eastern Russia, bombing everything they can see and severely affecting nearly every aspect of Jews and Russian life as a result."

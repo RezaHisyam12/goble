@@ -4650,6 +4650,10 @@ VKN = {
 	color = rgb { 75 75 75 }
 	color_ui = rgb { 85 85 85 }
 }
+VKP = {
+	color = rgb { 75 75 75 }
+	color_ui = rgb { 85 85 85 }
+}
 ###
 PPS = {
 	color = rgb { 123 0 28 }

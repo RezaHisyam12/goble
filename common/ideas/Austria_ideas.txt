@@ -511,7 +511,10 @@ ideas = {
 				army_strength_factor = 0.1
 				org_loss_at_low_org_factor = -0.15
 				out_of_supply_factor = -0.1
-				no_supply_grace = 24
+				no_supply_grace = 48
+				compliance_growth = 0.1
+				stability_factor = 0.1
+				coordination_bonus = 0.05
 			}
 		}
 
@@ -520,9 +523,12 @@ ideas = {
 			allowed = { always = no }
 			picture = AUS_HRE_restored
 			modifier = {
+				conscription_factor = 0.1
 				political_power_factor = 0.10
 				resistance_growth = -0.15
 				compliance_growth = 0.10
+				party_popularity_stability_factor = 0.2
+				paternal_autocrat_drift = 0.01
 			}
 		}
 
@@ -532,7 +538,7 @@ ideas = {
 			picture = church_of_all_religions
 			modifier = {
 				political_power_gain = 0.05
-				stability_weekly = 0.001
+				stability_weekly = 0.002
 				monthly_population = 0.2
 			}
 		}

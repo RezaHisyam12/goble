@@ -5098,6 +5098,15 @@ country_event = {
 
 	option = {
 		name = beng.110.a #We shall be the Internationale's Sword in Asia!
+		trigger = {
+			OR = {
+				NOT = { country_exists = INT }
+				AND = {
+					INT = { is_faction_leader = yes }
+					at_peace_or_same_enemies_as_INT = yes
+				}
+			}
+		}
 		ai_chance = {
 			factor = 75
 			modifier = {
@@ -5111,33 +5120,8 @@ country_event = {
 						rule = BHC_foreign
 						option = BHC_FOREIGN_NEUTRAL
 					}
+					has_government = radical_socialist #The Radsocs in HND are isolationists
 				}
-			}
-			modifier = {
-				factor = 0
-				has_government = radical_socialist
-				NOT = {
-					has_game_rule = {
-						rule = BHC_foreign
-						option = BHC_FOREIGN_INT
-					}
-				}
-			}
-			modifier = {
-				factor = 0.5
-				has_government = totalist
-				NOT = {
-					has_game_rule = {
-						rule = BHC_foreign
-						option = BHC_FOREIGN_INT
-					}
-				}
-			}
-		}
-		trigger = {
-			FRA = {
-				has_socialist_government = yes
-				is_faction_leader = yes
 			}
 		}
 		add_political_power = 40
@@ -5160,26 +5144,7 @@ country_event = {
 						rule = BHC_foreign
 						option = BHC_FOREIGN_NEUTRAL
 					}
-				}
-			}
-			modifier = {
-				factor = 0
-				has_government = radical_socialist
-				NOT = {
-					has_game_rule = {
-						rule = BHC_foreign
-						option = BHC_FOREIGN_FACTION
-					}
-				}
-			}
-			modifier = {
-				factor = 0.5
-				has_government = syndicalist
-				NOT = {
-					has_game_rule = {
-						rule = BHC_foreign
-						option = BHC_FOREIGN_FACTION
-					}
+					NOT = { has_government = radical_socialist } #The Radsocs in HND are isolationists
 				}
 			}
 		}
@@ -5208,16 +5173,7 @@ country_event = {
 						rule = BHC_foreign
 						option = BHC_FOREIGN_INT
 					}
-				}
-			}
-			modifier = {
-				factor = 0
-				NOT = {
-					has_government = radical_socialist
-					has_game_rule = {
-						rule = BHC_foreign
-						option = BHC_FOREIGN_NEUTRAL
-					}
+					NOT = { has_government = radical_socialist } #The Radsocs in HND are isolationists
 				}
 			}
 		}

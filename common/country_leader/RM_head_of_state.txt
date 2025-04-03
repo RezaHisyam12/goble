@@ -84,4 +84,13 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	gru_military_admin = {
+		resistance_growth = -0.05
+		conscription_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+		random = no
+	}
 }
