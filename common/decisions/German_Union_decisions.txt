@@ -3380,8 +3380,8 @@ GRU_germania_plan_decisions = {
 				any_allied_country = { is_owner_neighbor_of = FROM }
 			}
 			is_subject = no
-			country_exists = SLO
-			SLO = {
+			country_exists = FROM
+			FROM = {
 				NOT = { is_in_faction_with = FRA }
 			}
 		}
@@ -3391,10 +3391,11 @@ GRU_germania_plan_decisions = {
 			FROM = {
 				OR = {
 				tag = SLO
+				tag = CRO
 				}
 			}
 		}
-		targets = { SLO }
+		targets = { SLO CRO }
 		target_root_trigger = {
 			has_completed_focus = GRU_NMDVP_PAN_GERMANISM
 		}
@@ -3404,6 +3405,7 @@ GRU_germania_plan_decisions = {
 			FROM = {
 				OR = {
 				tag = SLO
+				tag = CRO
 				}	
 			}
 		}
@@ -3422,6 +3424,12 @@ GRU_germania_plan_decisions = {
 				factor = 0
 				FROM = {
 				is_in_faction_with = RUS
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = ENT
 				}
 			}
 			modifier = {
@@ -3472,7 +3480,7 @@ GRU_germania_plan_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_slovenia_decision target: [From.GetName]"
 			clear_decision_attack_AI = yes
-			declare_war_on = {	type = annex_everything	target = SLO }
+			declare_war_on = {	type = annex_everything	target = FROM }
 		}
 	}
 	#
