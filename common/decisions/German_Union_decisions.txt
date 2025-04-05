@@ -1687,12 +1687,12 @@ GRU_breitspurbahn_decisions = {
 		available = {
 			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 			and ={
-			64 = { is_owned_and_controlled_by = ROOT }
-			68 = { is_owned_and_controlled_by = ROOT }
-			86 = { is_owned_and_controlled_by = ROOT }
-			776 = { is_owned_and_controlled_by = ROOT }
-			777 = { is_owned_and_controlled_by = ROOT }
-			5 = { is_owned_and_controlled_by = ROOT }
+			64 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			68 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			86 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			776 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			777 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			5 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
 			}
 		}
 		fire_only_once = yes
@@ -2091,9 +2091,9 @@ GRU_breitspurbahn_decisions = {
 		available = {
 			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 			and ={
-			86 = { is_owned_and_controlled_by = ROOT }
-			87 = { is_owned_and_controlled_by = ROOT }
-			10 = { is_owned_and_controlled_by = ROOT }
+			86 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			87 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			10 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
 			}
 		}
 		fire_only_once = yes
@@ -2157,10 +2157,10 @@ GRU_breitspurbahn_decisions = {
 		available = {
 			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 			and ={
-			5 = { is_owned_and_controlled_by = ROOT }
-			777 = { is_owned_and_controlled_by = ROOT }
-			98 = { is_owned_and_controlled_by = ROOT }
-			10 = { is_owned_and_controlled_by = ROOT }
+			5 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			777 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			98 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			10 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
 			}
 		}
 		fire_only_once = yes
@@ -2232,13 +2232,13 @@ GRU_breitspurbahn_decisions = {
 		available = {
 			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 			and ={
-			    66 = { is_owned_and_controlled_by = ROOT }
-				67 = { is_owned_and_controlled_by = ROOT }
-				1124 = { is_owned_and_controlled_by = ROOT }
-				88 = { is_owned_and_controlled_by = ROOT }
-				1125 = { is_owned_and_controlled_by = ROOT }
-				1127 = { is_owned_and_controlled_by = ROOT }
-				91 = { is_owned_and_controlled_by = ROOT }
+			    66 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+				67 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+				1124 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+				88 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+				1125 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+				1127 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+				91 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
 			}
 		}
 		fire_only_once = yes
@@ -2326,11 +2326,11 @@ GRU_breitspurbahn_decisions = {
 		available = {
 			NOT = { has_country_flag = GRU_TRAIN_BUILDING }
 			and ={
-			10 = { is_owned_and_controlled_by = ROOT }
-			92 = { is_owned_and_controlled_by = ROOT }
-			1125 = { is_owned_and_controlled_by = ROOT }
-			1127 = { is_owned_and_controlled_by = ROOT }
-			91 = { is_owned_and_controlled_by = ROOT }
+			10 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			92 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			1125 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			1127 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+			91 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
 			}
 		}
 		fire_only_once = yes
@@ -13228,7 +13228,7 @@ GRU_lebensraum_decisions = {
 				}
 			}
 			is_subject = no
-			country_exists = RUS
+			country_exists = FROM
 		}
 		visible = {
 			can_declare_war_on = FROM
@@ -13310,7 +13310,7 @@ GRU_lebensraum_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_lebensraum_russia_conquest_decision target: [From.GetName]"
 			clear_decision_attack_AI = yes
-			declare_war_on = {	type = annex_everything	target = RUS }
+			declare_war_on = {	type = annex_everything	target = FROM }
 		}
 	}
 	GRU_lebensraum_baltic_conquest_decision = {
@@ -16386,7 +16386,9 @@ GRU_new_order_decisions = {
 						transfer_state = 89
 						transfer_state = 91
 						transfer_state = 1124
-						
+
+						set_capital = { state = 1124 }
+					
 						add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
 						add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 30000 }
 						add_equipment_to_stockpile = { type = support_equipment amount = 3000 }
