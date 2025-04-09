@@ -415,4 +415,37 @@ country_event = {		#Austria Declares War
 	}
 }
 
+country_event = {	#Second Weltkrieg
+	id = nmdvpsuper.8
+	title = nmdvpsuper.8.t
+	desc = nmdvpsuper.8.d
+	picture = GFX_report_event_diplomatic_message
+
+	is_triggered_only = no
+	
+	trigger = {
+		FRA = { has_offensive_war_with = GRU }		
+		NOT = { has_global_flag = KX_superevent_total_off }
+	}
+
+	fire_only_once = yes
+	
+	hidden = yes
+
+	option = {
+		name = nmdvpsuper.8.a
+
+		set_global_flag = Super_Event_Visible
+		set_global_flag = GER_Second_Weltkrieg
+		every_country = {
+			limit = {
+				NOT = {
+					is_ai = yes
+					has_global_flag = KX_superevent_sounds_off
+				}
+			}
+			scoped_sound_effect = "superev_weltkrieg"
+		}
+	}
+}
 

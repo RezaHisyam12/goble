@@ -150,7 +150,7 @@ ideas = {
 				war_support_factor = 0.2
 				encryption_factor = 0.05
 				local_intel_to_enemies = -0.15
-				army_org_Factor = 0.10
+				army_org_factor = 0.10
 				max_training = 0.25
 				out_of_supply_factor = -0.15
 				army_core_attack_factor = 0.05
@@ -159,6 +159,9 @@ ideas = {
 				max_command_power = 25
 				conscription_factor = -0.2
 				mobilization_speed = 0.10
+				coordination_bonus = 0.05
+				initiative_factor = 0.02
+				max_planning = 0.1
 			}
 		}
 		GRU_lager = {
@@ -176,7 +179,7 @@ ideas = {
           		modifier = {
 				surrender_limit = 0.50
 				stability_weekly_factor = 0.001
-				MONTHLY_POPULATION = 0.15
+				monthly_population = 0.15
 				political_power_gain = 0.25
 				conscription_factor = 0.05
 				justify_war_goal_time = -0.5
@@ -215,6 +218,8 @@ ideas = {
 				research_speed_factor = 0.05
 				local_resources_factor = 0.05
 				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
 			}
 		}
 		
@@ -235,6 +240,8 @@ ideas = {
 				research_speed_factor = 0.1
 				local_resources_factor = 0.1
 				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
 			}
 		}
 		
@@ -1019,12 +1026,12 @@ ideas = {
 			equipment_bonus = {
 				motorized_equipment = {
 					reliability = 0.1
-					build_cost_ic = 0.1
+					build_cost_ic = 0.05
 					instant = yes
 				}
 				mechanized_equipment = {
 					reliability = 0.1
-					build_cost_ic = 0.1
+					build_cost_ic = 0.05
 					instant = yes
 				}
 			}				
@@ -1086,17 +1093,17 @@ ideas = {
 			equipment_bonus = {
 				motorized_equipment = {
 					reliability = 0.1
-					build_cost_ic = 0.1
+					build_cost_ic = 0.05
 					instant = yes
 				}				
 				mechanized_equipment = {
 					reliability = 0.1
-					build_cost_ic = 0.1
+					build_cost_ic = 0.05
 					instant = yes
 				}	
 				armor = {
 					reliability = 0.1
-					build_cost_ic = 0.1
+					build_cost_ic = 0.05
 					instant = yes
 				}
 			}
@@ -1209,7 +1216,7 @@ ideas = {
 			allowed = { always = no }
             modifier = {
 				stability_weekly_factor = 0.001
-				MONTHLY_POPULATION = 0.05
+				monthly_population = 0.05
 			}
 		}
 		
@@ -1322,7 +1329,7 @@ ideas = {
 			allowed = { always = no }
             modifier = {
 				local_resources_factor = 0.10
-				MONTHLY_POPULATION = 0.05
+				monthly_population = 0.05
 			}
 		}
 		
@@ -1921,7 +1928,7 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.1
 				production_factory_start_efficiency_factor = 0.1
 				local_resources_factor = 0.10
-				MONTHLY_POPULATION = 0.15
+				monthly_population = 0.15
 			}
 		}
 		
@@ -1932,7 +1939,7 @@ ideas = {
 			picture = VK_COLONYONE
 			modifier = {
 				stability_weekly_factor = 0.001
-				MONTHLY_POPULATION = -0.05
+				monthly_population = -0.05
 				political_power_gain = 0.15
 				conscription_factor = -0.05
 			}
@@ -1942,7 +1949,7 @@ ideas = {
 			picture = VK_COLONYTWO
 			modifier = {
 				stability_weekly_factor = 0.001
-				MONTHLY_POPULATION = 0.05
+				monthly_population = 0.05
 				political_power_gain = 0.15
 				conscription_factor = 0.05
 				special_forces_cap = 0.05
@@ -1956,7 +1963,7 @@ ideas = {
 			picture = VK_COLONYTHREE
 			modifier = {
 				stability_weekly_factor = 0.001
-				MONTHLY_POPULATION = 0.10
+				monthly_population = 0.10
 				political_power_gain = 0.25
 				conscription_factor = 0.1
 				special_forces_cap = 0.1
@@ -1971,7 +1978,7 @@ ideas = {
 			picture = GRU_family
 			modifier = {
 				weekly_manpower = 125
-				MONTHLY_POPULATION = 0.10
+				monthly_population = 0.10
 			}
 		}
 		VK_COLONY_SETTLERS_TWO = {
@@ -1979,7 +1986,7 @@ ideas = {
 			picture = GRU_family
 			modifier = {
 				weekly_manpower = 250
-				MONTHLY_POPULATION = 0.20
+				monthly_population = 0.20
 			}
 		}
 		VK_COLONY_INDUSTRY_ONE = {
@@ -2035,7 +2042,7 @@ ideas = {
 			modifier = {
 				surrender_limit = 0.25
 				stability_weekly_factor = 0.001
-				MONTHLY_POPULATION = 0.10
+				monthly_population = 0.10
 				political_power_gain = 0.15
 				conscription_factor = 0.05
 				special_forces_cap = 0.1
@@ -2047,7 +2054,7 @@ ideas = {
 			modifier = {
 				surrender_limit = 0.50
 				stability_weekly_factor = 0.001
-				MONTHLY_POPULATION = 0.15
+				monthly_population = 0.15
 				political_power_gain = 0.25
 				conscription_factor = 0.05
 				special_forces_cap = 0.1
@@ -2712,7 +2719,7 @@ ideas = {
 			modifier = {
 				surrender_limit = 0.10
 				stability_weekly_factor = 0.001
-				MONTHLY_POPULATION = 0.05
+				monthly_population = 0.05
 				political_power_gain = 0.05
 				conscription_factor = 0.01
 			}
@@ -2723,7 +2730,7 @@ ideas = {
 			modifier = {
 				surrender_limit = 0.15
 				stability_weekly_factor = 0.002
-				MONTHLY_POPULATION = 0.07
+				monthly_population = 0.07
 				political_power_gain = 0.08
 				conscription_factor = 0.02
 			}
@@ -2734,7 +2741,7 @@ ideas = {
 			modifier = {
 				surrender_limit = 0.20
 				stability_weekly_factor = 0.002
-				MONTHLY_POPULATION = 0.1
+				monthly_population = 0.1
 				political_power_gain = 0.10
 				conscription_factor = 0.07
 			}
@@ -2786,7 +2793,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VSJ_ASHKENAZI_IMMIGRATION"}
 			picture = VSJ_ASHKENAZI_IMMIGRATE
 			modifier = {
-				MONTHLY_POPULATION = 0.08
+				monthly_population = 0.08
 				conscription_factor = 0.05
 			}
 		}
@@ -2794,7 +2801,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VSJ_ASHKENAZI_SUPREMACISM"}
 			picture = VSJ_JUDEA_IDEA
 			modifier = {
-				MONTHLY_POPULATION = 0.10
+				monthly_population = 0.10
 				conscription_factor = 0.09
 				stability_weekly_factor = 0.001
 				political_power_gain = 0.15
@@ -2823,7 +2830,7 @@ ideas = {
 				surrender_limit = 0.40
 				political_power_gain = 0.05
 				conscription_factor = 0.01
-				MONTHLY_POPULATION = 0.05
+				monthly_population = 0.05
 				supply_consumption_factor = -0.15
 				out_of_supply_factor = -0.1
 				training_time_factor = -0.3
@@ -2945,7 +2952,7 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = RUS
-				defense_bonus_against = 0.05
+				defense_bonus_against = 0.1
 			}
 		}
 		GRU_break_fortifications_idea = {
@@ -2958,6 +2965,7 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = RUS
+				attack_bonus_against = 0.05
 				defense_bonus_against = 0.05
 			}
 		}

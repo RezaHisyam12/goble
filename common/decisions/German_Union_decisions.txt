@@ -3050,6 +3050,7 @@ GRU_germania_plan_decisions = {
 		available = {
 			is_subject = no
 			country_exists = SWI
+			1235 = { is_owned_by = FROM } 
 			SWI = {
 				NOT = { is_in_faction_with = FRA }
 			}
@@ -3057,9 +3058,47 @@ GRU_germania_plan_decisions = {
 		visible = {
 			has_completed_focus = GRU_NMDVP_PAN_GERMANISM
 			can_declare_war_on = FROM
+			1235 = { is_owned_by = FROM } 
 			FROM = {
 				OR = {
 				tag = SWI
+				}
+			}
+		}
+		cancel_trigger = {
+			if = {
+				limit = { is_ally_with = FROM }
+				OR = {
+					NOT = { 
+						1235 = { is_owned_by = FROM } 
+					}
+					AND = {
+						NOT = { can_declare_war_on = FROM }
+						NOT = {
+							FROM = {
+								is_subject = yes
+								overlord = { is_ally_with = ROOT }
+							}
+						}
+					}
+				}
+			}
+			else = {
+				OR = {
+					NOT = { 
+						1235 = { is_owned_by = FROM } 
+					}
+					AND = {
+						NOT = { can_declare_war_on = FROM }
+						NOT = {
+							FROM = {
+								is_subject = yes
+								overlord = { is_ally_with = ROOT }
+							}
+						}
+					}
+					has_non_aggression_pact_with = FROM
+					has_guaranteed = FROM
 				}
 			}
 		}
@@ -3069,20 +3108,23 @@ GRU_germania_plan_decisions = {
 		}
 
 		target_trigger = {
-			can_declare_war_on = FROM
-			FROM = {
-				OR = {
-				tag = SWI
-				}	
+			FROM = { owns_state = 1235 }
+			OR = {
+				can_declare_war_on = FROM
+				FROM = {
+					is_subject = yes
+					overlord = { is_ally_with = ROOT }
+				}
 			}
 		}
+
 
 		fire_only_once = yes
 		cost = 50
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 100
+			factor = 130
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -3140,17 +3182,47 @@ GRU_germania_plan_decisions = {
 			log = "[GetDateText]: [Root.GetName]: Decision GRU_pan_germanism_swiss_decision target: [From.GetName]"
 			set_country_flag = { flag = imminent_war days = 30 value = 1 }
 			setup_decision_attack_AI = yes
+			if = {
+				limit = {
+					FROM = { 
+						is_subject = yes 
+						NOT = { is_subject_of = ROOT }
+					}
+				}
+				var:FROM.overlord = {
+					country_event = { id = rotermorgenmisc.1205 days = 2 random_days = 2 } #warning event
+				}
+			}
+			else = {
+				FROM = {
+					country_event = { id = rotermorgenmisc.1205 days = 2 random_days = 2 } #warning event
+				}
+			}
 		}
+
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_swiss_decision target: [From.GetName]"
 			clear_decision_attack_AI = yes
-			declare_war_on = {	type = annex_everything	target = SWI }
-			151 = {
-				add_claim_by = ROOT
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 942
+							state = 1235
+						}
+						is_owned_by = FROM
+					}
+					transfer_state_to = ROOT
+				}
 			}
-			3 = {
-				add_claim_by = ROOT
+			custom_effect_tooltip = if_they_refuse_tt
+			effect_tooltip = {
+				declare_war_on = {
+					target = FROM
+					type = annex_everything
+				}
 			}
 		}
 	}
@@ -3419,6 +3491,12 @@ GRU_germania_plan_decisions = {
 			modifier = {
 				factor = 0
 				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = FRA
+				}
 			}
 			modifier = {
 				factor = 0
@@ -10568,6 +10646,10 @@ GRU_expansion_three_volksland_hypoborea = {
 				create_VKR = yes
 				hidden_effect = {
 					VKR = {
+						annex_country = {
+							target = CRM
+							transfer_troops = yes
+						}
 						transfer_state = 202
 						
 						add_equipment_to_stockpile = {
@@ -13142,7 +13224,7 @@ GRU_lebensraum_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 130
+			factor = 125
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -13162,7 +13244,7 @@ GRU_lebensraum_decisions = {
 			modifier = {
 				factor = 0
 				FROM = {
-				is_in_faction_with = AUS
+				is_in_faction_with = FRA
 				}
 			}
 			modifier = {
@@ -16012,6 +16094,12 @@ GRU_new_order_decisions = {
 				create_VOB = yes
 
 				hidden_effect = {
+					GRU = {
+						random_unit_leader = {
+							limit = { has_id = 66602 }			
+							remove_unit_leader = yes
+						}
+					}
 					VOB = {
 						transfer_state = 29
 						transfer_state = 980
@@ -16043,7 +16131,7 @@ GRU_new_order_decisions = {
 						add_ideas = {
 							GRU_pol_off
 							GRU_guard
-                    					GRU_lager
+                    		GRU_lager
 							VK_COLONY_INDUSTRY_TWO
                   				}
 						create_field_marshal = {
@@ -16056,7 +16144,7 @@ GRU_new_order_decisions = {
 							defense_skill = 2
 							planning_skill = 2
 							logistics_skill = 4
-								}
+						}
 				}
 				VOB = {	country_event = rotermorgenmisc.956 }
 				if = {
@@ -16104,56 +16192,56 @@ GRU_new_order_decisions = {
 				AND = {
 					OR = {
 						GRU = {
-							controls_state = 979
+							owns_state = 979
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							controls_state = 979
+							owns_state = 979
 						}
 					}
 					OR = {
 						GRU = {
-							controls_state = 35
+							owns_state = 35
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							controls_state = 35
+							owns_state = 35
 						}
 					}
 					OR = {
 						GRU = {
-							controls_state = 866
+							owns_state = 866
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							controls_state = 866
+							owns_state = 866
 						}
 					}
 					OR = {
 						GRU = {
-							controls_state = 7
+							owns_state = 7
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							controls_state = 7
+							owns_state = 7
 						}
 					}
 					OR = {
 						GRU = {
-							controls_state = 36
+							owns_state = 36
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							controls_state = 36
+							owns_state = 36
 						}
 					}
 					OR = {
 						GRU = {
-							controls_state = 978
+							owns_state = 978
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							controls_state = 978
+							owns_state = 978
 						}
 					}
 				}
@@ -16253,120 +16341,126 @@ GRU_new_order_decisions = {
 			fire_only_once = yes
 				
 			available = {
-				has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+				has_completed_focus = GRU_NMDVP_SLAV_LAND_EXPANSION
 				tag = GRU 
 				AND = {
 					OR = {
 						GRU = {
-							controls_state = 10
+							owns_state = 10
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							controls_state = 10
+							owns_state = 10
 						}
 						GRU = {
-							controls_state = 90
+							owns_state = 90
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							controls_state = 90
+							owns_state = 90
 						}
 						GRU = {
-							controls_state = 88
+							owns_state = 88
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							controls_state = 88
+							owns_state = 88
 						}
 						GRU = {
-							controls_state = 1314
+							owns_state = 1314
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							controls_state = 1314
+							owns_state = 1314
 						}
 						GRU = {
-							controls_state = 92
+							owns_state = 92
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							controls_state = 92
+							owns_state = 92
 						}
 						GRU = {
-							controls_state = 1125
+							owns_state = 1125
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							controls_state = 1125
+							owns_state = 1125
 						}
 						GRU = {
-							controls_state = 1319
+							owns_state = 1319
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							controls_state = 1319
+							owns_state = 1319
 						}
 						GRU = {
-							controls_state = 1088
+							owns_state = 1088
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							controls_state = 1088
+							owns_state = 1088
 						}
 						GRU = {
-							controls_state = 1127
+							owns_state = 1127
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							controls_state = 1127
+							owns_state = 1127
 						}
 						GRU = {
-							controls_state = 1126
+							owns_state = 1126
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							controls_state = 1126
+							owns_state = 1126
 						}
 						GRU = {
-							controls_state = 1140
+							owns_state = 1140
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							controls_state = 1140
+							owns_state = 1140
 						}
 						GRU = {
-							controls_state = 89
+							owns_state = 89
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							controls_state = 89
+							owns_state = 89
 						}
 						GRU = {
-							controls_state = 91
+							owns_state = 91
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							controls_state = 89
+							owns_state = 89
 						}
 						GRU = {
-							controls_state = 1124
+							owns_state = 1124
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							controls_state = 1124
+							owns_state = 1124
 						}
 					}
 				}
 			}
 		
 			visible = {
-				has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+				has_completed_focus = GRU_NMDVP_SLAV_LAND_EXPANSION
 			}
 		
 			complete_effect = {
 				create_VKP = yes
 
 				hidden_effect = {
+					GRU = {
+						random_unit_leader = {
+							limit = { has_id = 66601 }			
+							remove_unit_leader = yes
+						}
+					}	
 					VKP = {
 						annex_country = {
 							target = POL
@@ -16388,14 +16482,21 @@ GRU_new_order_decisions = {
 						transfer_state = 1124
 
 						set_capital = { state = 1124 }
-					
+						set_victory_points = {
+							province = 9427
+							value = 40
+						}
+						set_victory_points = {
+							province = 3544
+							value = 20
+						}					
 						add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
 						add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 30000 }
 						add_equipment_to_stockpile = { type = support_equipment amount = 3000 }
 						add_equipment_to_stockpile = { type = artillery_equipment amount = 1000 }
 						add_equipment_to_stockpile = { type = anti_tank_equipment amount = 600 }
 						add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 5000 }
-						add_manpower = 40000
+						add_manpower = 90000
 						remove_all_ministers = yes
 						add_ideas = extensive_conscription
 						add_ideas = limited_exports

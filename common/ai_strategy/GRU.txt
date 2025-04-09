@@ -70,9 +70,12 @@ stahlpakt_hates_russia = {
 			original_tag = VKR
 			original_tag = VKK
 			original_tag = VKM
+			original_tag = VKN
+			original_tag = VKP
 			original_tag = VSJ
 			original_tag = VST
 			original_tag = HYP
+			original_tag = VOB
 		}
 	}
 	enable = {
@@ -285,6 +288,7 @@ default_RR_Werwolf_production = {
 			tag = VST
 			tag = HYP
 			tag = VKN
+			tag = VKP
 			tag = VOB
 		}
 	}
@@ -318,18 +322,19 @@ default_armour_super_heavy_production = {
 	}
 	enable = {
 		has_tech = super_heavy_tank_chassis
+		num_of_military_factories > 199
 	}
-	abort_when_not_enabled = yes 
+	abort_when_not_enabled = yes
 	
 	ai_strategy = {
 		type = role_ratio
 		id = armour_super_heavy
-		value = 10
+		value = 5
 	}
 	ai_strategy = {
 		type = template_prio
 		id = super_heavy_armor
-		value = 100
+		value = 50
 	}
 	ai_strategy = {
 		type = equipment_variant_production_factor
@@ -346,22 +351,15 @@ default_armour_super_heavy_production = {
 GRU_destroy_german = {
 	allowed = {
 		original_tag = GRU
-
+	}
 	enable = {
 		has_country_flag = GRU_REBELLION
 	}
-	abort = {
-		has_country_flag = GRU_GCW_ENDED
-	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = garrison
 		value = -60
-	}
-	ai_strategy = {
-		type = invade
-		id = GER
-		value = 10 #just enough to overcome the AI's reluctance to invade when directly bordering an enemy
 	}
 	ai_strategy = {
 		type = front_unit_request
@@ -377,7 +375,87 @@ GRU_destroy_german = {
 		type = ignore
 		id = AUS
 		value = 500
+	}
+	ai_strategy = {
+		type = ignore
+		id = HOL
+		value = 500
+	}
+}
+
+GRU_ignore_balkan = {
+	allowed = {
+		OR = {
+			tag = GRU
+			tag = VKB
+			tag = VKR
+			tag = VKK
+			tag = VKM
+			tag = VKN
+			tag = VKP
+			tag = VSJ
+			tag = VST
+			tag = HYP
+			tag = VOB
+			is_ally_with = GRU
 		}
+	}
+	enable = {
+		has_war_with = RUS
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore
+		id = ROM
+		value = 500
+	}
+	ai_strategy = {
+		type = ignore
+		id = SER
+		value = 500
+	}
+}
+
+GRU_ignore_swiss = {
+	allowed = {
+		OR = {
+			tag = GRU
+			tag = VKB
+			tag = VKR
+			tag = VKK
+			tag = VKM
+			tag = VKN
+			tag = VKP
+			tag = VSJ
+			tag = VST
+			tag = HYP
+			tag = VOB
+			is_ally_with = GRU
+		}
+	}
+	enable = {
+		1235 = { is_owned_by = GRU }
+		SWI = {
+			NOT = { is_in_faction_with = FRA }
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore
+		id = SWI
+		value = 500
+	}
+	ai_strategy = {
+		type = front_armor_score
+		id = SWI
+		value = -500
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = SWI
+		value = -500
 	}
 }
 
@@ -1097,6 +1175,7 @@ STP_ignore_northern_oststaaten = {
 	allowed = {
 		OR = {
 			is_italian_tag = yes
+			is_ukrainian_tag = yes
 			tag = VKR
 
 			#Banned from Eastern Front in general
@@ -1107,6 +1186,7 @@ STP_ignore_northern_oststaaten = {
 	}
 	enable = {
 		is_ally_with = GRU
+		NOT = { has_war_with = AUS }
 	}
 	abort_when_not_enabled = yes
 
@@ -1127,6 +1207,7 @@ STP_ignore_southern_oststaaten = { #Rest of Reichspakt should focus on BLR/BAT f
 		OR = {
 			tag = VKB
 			tag = VKK
+			tag = VKP
 			is_baltic_tag = yes
 
 			#Banned from Eastern Front in general
@@ -1138,6 +1219,7 @@ STP_ignore_southern_oststaaten = { #Rest of Reichspakt should focus on BLR/BAT f
 	}
 	enable = {
 		is_ally_with = GRU
+		NOT = { has_war_with = AUS }
 	}
 	abort_when_not_enabled = yes
 
@@ -1156,6 +1238,7 @@ STP_ignore_western_front = {
 			is_balkan_tag = yes
 			is_scandinavian_tag = yes
 			is_danubian_tag = yes
+			is_ukrainian_tag = yes
 			tag = VKB
 			tag = VKR
 			tag = VKK
@@ -1165,6 +1248,8 @@ STP_ignore_western_front = {
 	enable = {
 		is_ally_with = GRU
 		FRA = { is_faction_leader = yes }
+		NOT = { has_war_with = AUS }
+		russian_civil_war = no
 	}
 	abort_when_not_enabled = yes
 
@@ -1180,14 +1265,12 @@ STP_ignore_western_front = {
 	}
 }
 
-STP_defend_eastern_front = {
+STP_defend_eastern_front_northern_oststaaten = {
 	allowed = {
 		OR = {
 			tag = VKP
 			is_polish_tag = yes
 			is_baltic_tag = yes
-			is_balkan_tag = yes
-			is_danubian_tag = yes
 		}
 	}
 	enable = {
@@ -1197,12 +1280,41 @@ STP_defend_eastern_front = {
 			has_war_with = RUS
 		}
 		is_ally_with = GRU
+		NOT = { has_war_with = AUS }
+		russian_civil_war = no
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = force_defend_ally_borders
 		id = VKB
+		value = 100
+	}
+}
+
+STP_defend_eastern_front_southern_oststaaten = {
+	allowed = {
+		OR = {
+			is_balkan_tag = yes
+			is_danubian_tag = yes
+			is_ukrainian_tag = yes
+		}
+	}
+	enable = {
+		OR = {
+			country_exists = RUS
+			RUS = { has_capitulated = no }
+			has_war_with = RUS
+		}
+		is_ally_with = GRU
+		NOT = { has_war_with = AUS }
+		russian_civil_war = no
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = VKK
 		value = 100
 	}
 	ai_strategy = {
@@ -1302,6 +1414,11 @@ default_heavy_tank_production = {
 
 	ai_strategy = {
 		type = equipment_variant_production_factor
+		id = medium_tank_chassis
+		value = -15
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
 		id = heavy_tank_chassis
 		value = 15
 	}
@@ -1313,6 +1430,11 @@ increased_heavy_tank_production_2 = {
 	}
 	abort_when_not_enabled = yes
 
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = medium_tank_chassis
+		value = -25
+	}
 	ai_strategy = {
 		type = equipment_variant_production_factor
 		id = heavy_tank_chassis
@@ -1532,7 +1654,6 @@ GRU_endsieg = { #Cease attacks if losing against France and has low equipment
 		original_tag = GRU
 	}
 	enable = {
-		surrender_progress > 0.25
 		stockpile_ratio = { archetype = infantry_equipment ratio < 0.1 }
 		FRA = {
 			has_war_with = ROOT

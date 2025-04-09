@@ -1,9 +1,5 @@
-line_infantry = {
-	blocked_for = {
-		TRP ETS SIK TAN KYR KHI TRK UZB ALO KYR MON XSM #uses line_cavalry
-		LBA SAU JBS TRU IKH YEM OMA #uses line_camelry
-		FRA ENG IMP USA CSA COR WCC TEX NEE CAL GRU VKB VKK VKR VKM VKN VKP VOB VSJ VST HYP #uses infantry_artillery_focus
-	}
+GRU_infantry = {
+	available_for = { GRU VKB VKK VKR VKM VKN VKP VOB VSJ VST HYP }
 
 	role = infantry
 
@@ -11,39 +7,9 @@ line_infantry = {
 		factor = 10
 	}
 
-	infantry_default = {
+	GRU_infantry_default = {
 		upgrade_prio = {
-			base = 1
-		}
-
-		can_upgrade_in_field = {
-			surrender_progress < 0.15
-		}
-
-		target_template = {
-			regiments = {
-				infantry = 9
-				artillery_brigade = 1
-			}
-
-			support = {
-				artillery = 1
-				anti_air = 1
-				engineer = 1
-				logistics_company = 1
-				field_hospital = 1
-			}
-		}
-	}
-
-	infantry_upgraded = {
-
-		upgrade_prio = {
-			base = 1
-			modifier = {
-				add = 1
-				has_reached_maximum_divisions = yes
-			}
+			factor = 2
 		}
 
 		can_upgrade_in_field = {
@@ -57,7 +23,7 @@ line_infantry = {
 			}
 
 			support = {
-				artillery = 1
+				signal_company = 1
 				anti_air = 1
 				engineer = 1
 				logistics_company = 1
@@ -66,8 +32,7 @@ line_infantry = {
 		}
 	}
 
-	infantry_motorised = {
-
+	GRU_infantry_motorised = {
 		upgrade_prio = {
 			base = 1
 			modifier = {
@@ -100,7 +65,7 @@ line_infantry = {
 
 			support = {
 				engineer = 1
-				artillery = 1
+				signal_company = 1
 				anti_air = 1
 				logistics_company = 1
 				field_hospital = 1
@@ -108,8 +73,7 @@ line_infantry = {
 		}
 	}
 
-	infantry_mechanised = {
-
+	GRU_infantry_mechanised = {
 		upgrade_prio = {
 			base = 1
 			modifier = {
@@ -141,7 +105,7 @@ line_infantry = {
 			}
 
 			support = {
-				artillery = 1
+				signal_company = 1
 				anti_air = 1
 				engineer = 1
 				logistics_company = 1

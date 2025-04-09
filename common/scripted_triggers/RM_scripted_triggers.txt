@@ -234,7 +234,7 @@ GRU_GREATER_DONE = {
 			has_country_flag = poland_cored
 			#has_country_flag = galicia_cored
 			has_country_flag = bohemia_cored
-			has_country_flag = swiss_cored
+			#has_country_flag = swiss_cored
 			has_country_flag = slovenia_cored
 			has_country_flag = austria_cored
 	}

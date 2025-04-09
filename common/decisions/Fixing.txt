@@ -394,6 +394,7 @@ RUS_Foreign_Policy_decisions = {
 		priority = 150
 
 		available = {
+			russian_civil_war = no
 			has_army_manpower = { size > 1500000 }
 			FROM = {
 				has_war_with = INT
@@ -405,6 +406,7 @@ RUS_Foreign_Policy_decisions = {
 				}
 			}
 			NOT = { has_non_aggression_pact_with = FROM }
+			date > 1941.6.1
 		}
 
 		visible = {
@@ -441,7 +443,7 @@ RUS_Foreign_Policy_decisions = {
 			factor = 3000
 			modifier = {
 				factor = 0
-				has_war = yes
+				any_enemy_country = { is_actual_major = yes }
 			}
 			modifier = {
 				factor = 0

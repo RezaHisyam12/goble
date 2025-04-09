@@ -379,7 +379,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 20
-				surrender_progress > 0
+				has_war = yes
 			}
 		}
 
@@ -418,7 +418,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 20
-				surrender_progress > 0
+				has_war = yes
 			}
 		}
 
@@ -457,7 +457,7 @@ focus_tree = {
 			factor = 1
 			modifier = {
 				factor = 20
-				surrender_progress > 0
+				has_war = yes
 			}
 		}
 
@@ -4205,7 +4205,9 @@ focus_tree = {
 		prerequisite = {
 			focus = AUS_status_quo
 		}
-
+		ai_will_do = {
+			factor = 10
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_cisleithanian_development_scheme"
 			add_ideas = AUS_imperial_development_scheme

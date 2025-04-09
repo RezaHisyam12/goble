@@ -2037,7 +2037,7 @@ GRU_pan_germanism_integrate_iceland_decision:0 "Integrate Iceland"
 GRU_pan_germanism_integrate_polarisland_decision:0 "Integrate Polar Islands"
 
 GRU_pan_germanism_austria_decision:0 "Attack [FROM.GetNameDef]"
-GRU_pan_germanism_swiss_decision:0 "Attack [FROM.GetNameDef]"
+GRU_pan_germanism_swiss_decision:0 "Demand our Rightful Teritory From [FROM.GetNameDef]"
 GRU_pan_germanism_slovenia_decision:0 "Attack [FROM.GetNameDef]"
 GRU_pan_germanism_bohemia_decision:0 "Attack [FROM.GetNameDef]"
 GRU_pan_germanism_galicia_decision:0 "Attack [FROM.GetNameDef]"
@@ -5241,6 +5241,24 @@ rotermorgenmisc.1203.a: "A Reckless Gamble."
 rotermorgenmisc.1204.t: "A New Ideology"
 rotermorgenmisc.1204.d: ""
 rotermorgenmisc.1204.a: "What choice do we have?"
+
+rotermorgenmisc.1205.t: "German Demands Liechtenstein"
+rotermorgenmisc.1205.d: "Yesterday, the Germany government demanded the return of the Liechtenstein region. If we agree with Germany claims, we will lose some part of our territory, but if we refuse, we shall face an immediate Germany invasion.\n\nHow should we react to these awful demands from the Germany leadership?"
+rotermorgenmisc.1205.a: "Accept their terms."
+rotermorgenmisc.1205.b: "Never!"
+
+rotermorgenmisc.1206.t: "The Transfer of Liechtenstein"
+rotermorgenmisc.1206.d: "[From.GetNameDefCap] has agreed to transfer the larger part of Liechtenstein in return for monetary and material compensation as well as the guarantee of the security of their new borders!"
+rotermorgenmisc.1206.d.ally: "[From.GetNameDefCap] has agreed to transfer the larger part of Liechtenstein as a sign of goodwill to their valiant allies!"
+rotermorgenmisc.1206.a: "Another victory for Germany diplomacy!"
+
+rotermorgenmisc.1207.t: "[From.GetNameDefCap] Refuses!"
+rotermorgenmisc.1207.d: "The [From.GetAdjective] government published a note where it insists that Liechtenstein is rightfully Switzerland territory, and German will never get it back.\n\nThe only solution to this problem for us is war with [From.GetNameDef]."
+rotermorgenmisc.1207.d.ally: "The [From.GetAdjective] government has politely refused our request, stating their hard-won conflict against the Switzerland and their wish to preserve goodwill between themselves and their subservient government in Bucharest."
+rotermorgenmisc.1207.a: "Then it is war."
+rotermorgenmisc.1207.b: "Back down."
+rotermorgenmisc.1207.c: "Cheeky bastards."
+
 
 ########################
 #### New ToolTip ####

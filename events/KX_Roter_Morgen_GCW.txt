@@ -1012,6 +1012,12 @@ country_event = { # victory Intro
 				add_opinion_modifier = { target = GRU modifier = KR_hostile }
 				remove_ideas = {
 					MAF_Colonial_Nation
+					MAF_French_Settlers
+					MAF_Belgian_Investors
+					MAF_British_Protectorates
+					MAF_old_new_guard_divide
+					MAF_old_new_guard_divide2
+					MAF_old_new_guard_divide2_goering
 				}
 				set_politics = {
 					ruling_party = authoritarian_democrat
@@ -1021,47 +1027,41 @@ country_event = { # victory Intro
 					can_decline_call_to_war = yes
 					can_not_declare_war = no
 				}
+				random_unit_leader = {
+					limit = { has_id = 198 }			
+					remove_unit_leader = yes
+				}
+				event_target:Mittelafrika_Target = { transfer_technology = yes }
+				event_target:Mittelafrika_Target = {
+					set_global_flag = GER_became_GEX
+				}
+		        event_target:current_german_exile_government = {
+		        	clr_country_flag = current_german_exile_government
+		        }
+		        clear_global_event_target = current_german_exile_government
+	           	save_global_event_target_as = current_german_exile_government
 
-				create_field_marshal = {
-                	name = GRU_general_August_Mackensen
-                	portrait_path = "gfx/leaders/GER/Portrait_Germany_August_Mackensen_kr.png"
-                	traits = { offensive_doctrine old_guard }
-                	skill = 4
-                	attack_skill = 3
-                	defense_skill = 3
-                	planning_skill = 4
-                	logistics_skill = 3
-                }
-				create_field_marshal = {
-                	name = GRU_general_Wilhelm_III
-                	portrait_path = "gfx/leaders/GER/Portrait_Germany_Wilhelm_III_field_marshall.png"
-                	traits = { old_guard }
-                	skill = 3
-                	attack_skill = 2
-                	defense_skill = 2
-                	planning_skill = 4
-                	logistics_skill = 2
-                }
-				create_field_marshal = {
-                	name = GRU_general_Rupprecht_Bayern
-                	portrait_path = "gfx/leaders/GER/Portrait_Germany_Rupprecht_Bayern_kr.png"
-                	traits = { trait_cautious inflexible_strategist defensive_doctrine organizer thorough_planner }
-                	skill = 4
-                	attack_skill = 2
-                	defense_skill = 4
-                	planning_skill = 4
-                	logistics_skill = 3
-                }
-				create_field_marshal = {
-                	name = GRU_general_Paul_von_Lettow_Vorbeck
-                	portrait_path = "gfx/leaders/GER/Portrait_Germany_Paul_von_Lettow_Vorbeck.png"
-                	traits = { trickster war_hero media_personality jungle_rat}
-                	skill = 4
-                	attack_skill = 3
-                	defense_skill = 3
-                	planning_skill = 2
-                	logistics_skill = 5
-                }
+	            GER = {
+	            	take_occupied_states_in_africa = yes
+	            	every_owned_state = {
+	            		limit = {
+	            			OR = {
+	            				is_on_continent = africa
+	            				state = 710 #Diego Garcia
+	            			}
+	            			is_controlled_by = GER
+	            		}
+	            		event_target:Mittelafrika_Target = { transfer_state = PREV }
+	            	}
+	            }
+	
+	            add_manpower = 400000
+	            set_major = yes
+	            add_ideas = GEX_GEX_idea
+	            add_timed_idea = {
+	            	idea = GEX_trauma
+	            	days = 120
+	            }
 
 	            GER = {
 		            # transfer a sizeable amount of equipment
@@ -1154,6 +1154,50 @@ country_event = { # victory Intro
 	            	send_equipment = { target = PREV type = convoy amount = temp }
 	            }
 
+				if = {
+					limit = {
+						NOT = { tag = GEA }
+						country_exists = GEA
+						GEA = { is_subject_of = GER }
+					}
+					"GEA" = { get_current_government_type = yes }
+					puppet = "GEA"
+					"GEA" = { restore_previous_government_type = yes }
+				}
+				else = {
+					GER = {
+						set_autonomy = {
+							target = GEA
+							autonomy_state = autonomy_free
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { tag = LEP }
+						country_exists = LEP
+						LEP = { is_subject_of = GER }
+					}
+					"LEP" = { get_current_government_type = yes }
+					puppet = "LEP"
+					"LEP" = { restore_previous_government_type = yes }
+				}
+				else = {
+					GER = {
+						set_autonomy = {
+							target = LEP
+							autonomy_state = autonomy_free
+						}
+					}
+				}
+				every_unit_leader = {
+					set_unit_leader_flag = GEX_exile_leader
+					set_nationality = event_target:Mittelafrika_Target
+				}
+				every_navy_leader = {
+					set_unit_leader_flag = GEX_exile_leader
+					set_nationality = event_target:Mittelafrika_Target
+				}
 				germany_capitulates = yes
 				create_faction = gru_alldeutschpakt_faction
 				MAF = {
@@ -1166,8 +1210,8 @@ country_event = { # victory Intro
 			    			has_country_flag = MLT_germ_cuck_knights
 			    		}
 			    		MAF = { add_to_faction = MLT }
-		            }
-			    }
+					}
+				}
 			}
 		}
 	}

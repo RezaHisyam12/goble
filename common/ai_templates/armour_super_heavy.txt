@@ -16,8 +16,6 @@ armour_super_heavy_generic = {
 	}
 
 	armour_super_heavy_template = {
-		reinforce_prio = 2
-
 		upgrade_prio = {
 			base = 1
 		}
@@ -28,7 +26,7 @@ armour_super_heavy_generic = {
 
 		target_template = {
 			regiments = {
-				medium_armor = 1
+				heavy_armor = 1
 				medium_tank_destroyer_brigade = 1
 				medium_sp_anti_air_brigade = 4
 				infantry = 3
@@ -46,8 +44,6 @@ armour_super_heavy_generic = {
 	}
 
 	armour_super_heavy_template_mid = {
-		reinforce_prio = 2
-
 		upgrade_prio = {
 			base = 1
 			modifier = {
@@ -74,7 +70,7 @@ armour_super_heavy_generic = {
 
 		target_template = {
 			regiments = {
-				medium_armor = 1
+				heavy_armor = 1
 				medium_tank_destroyer_brigade = 1
 				medium_sp_anti_air_brigade = 4
 				mechanized = 3
@@ -92,8 +88,6 @@ armour_super_heavy_generic = {
 	}
 
 	armour_super_heavy_template_late = {
-		reinforce_prio = 2
-
 		upgrade_prio = {
 			base = 1
 			modifier = {

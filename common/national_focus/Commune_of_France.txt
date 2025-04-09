@@ -1947,6 +1947,7 @@ focus_tree = {
 					exists = yes
 					NOT = {
 						is_subject_of = FRA
+						country_exists = AUS
 					}
 					has_country_flag = VKB_established
 					has_country_flag = VKR_established
@@ -1986,7 +1987,8 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 0
-				country_exists = AUS
+				date < 1942.1.1
+				GRU = { exists = yes }
 			}
 		}
 		mutually_exclusive = {

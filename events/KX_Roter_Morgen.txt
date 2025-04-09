@@ -1053,7 +1053,7 @@ country_event = { #
 			portrait_path = "gfx/leaders/GRU/Portrait_Germany_Heinrich_Himmler.png"
 			traits = {politically_connected RR_OFFICER }
 			skill = 3
-
+			id = 66602
 			attack_skill = 2
 			defense_skill = 2
 			planning_skill = 2
@@ -1152,7 +1152,7 @@ country_event = { #
 			portrait_path = "gfx/leaders/GRU/Portrait_Germany_Paul_Hausser.png"
 			traits = { trickster panzer_leader ranger war_hero RR_OFFICER }
 			skill = 3
-
+			id = 66601
 			attack_skill = 4
 			defense_skill = 3
 			planning_skill = 4
@@ -8729,3 +8729,122 @@ country_event = { # accept
 		}
 	}	
 }
+
+country_event = { #German demands Liechtenstein
+	id = rotermorgenmisc.1205
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.1205" }
+	title = rotermorgenmisc.1205.t
+	desc = rotermorgenmisc.1205.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = rotermorgenmisc.1205.a #accept
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 2
+				FROM = { same_government_type_as_ROOT = yes }
+			}
+			modifier = {
+				factor = 2
+				has_war = yes
+				surrender_progress > 0.1
+			}
+		}
+		add_political_power = -100
+		effect_tooltip = {
+				every_owned_state = {
+					limit = { 
+						OR = {
+							state = 942
+							state = 1235
+							is_claim_or_core_of_FROM = yes
+						}
+					}
+					transfer_state_to = FROM
+			}
+		}
+		FROM = {
+			country_event = {
+				id = rotermorgenmisc.1206
+				days = 2
+			}
+		}
+	}
+
+	option = {
+		name = rotermorgenmisc.1205.b #Never!
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 0.2
+				any_owned_state = { 
+					OR = {
+						state = 942
+						state = 1235
+					}
+				}
+			}
+			modifier = {
+				factor = 0.6
+				FROM = { same_government_type_as_ROOT = yes  }
+			}
+		}
+		add_political_power = 10
+		FROM = {
+			country_event = {
+				id = rotermorgenmisc.1207
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = { #Swiss accepts!
+	id = rotermorgenmisc.1206
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.1206" }
+	title = rotermorgenmisc.1206.t
+	desc = rotermorgenmisc.1206.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = rotermorgenmisc.1206.a #Hurray!
+		add_political_power = 30
+		add_opinion_modifier = {
+			target = ROOT
+			modifier = medium_increase
+		}
+		FROM = {
+			every_owned_state = {
+				limit = { 
+					OR = {
+						state = 942
+						state = 1235
+						is_claim_or_core_of_ROOT = yes
+					}
+				}
+				transfer_state_to = ROOT
+			}
+		}
+	}
+}
+
+country_event = { #Swiss refuses
+	id = rotermorgenmisc.1207
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.1207" }
+	title = rotermorgenmisc.1207.t
+	desc = rotermorgenmisc.1207.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = rotermorgenmisc.1207.a #war
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+}
+
