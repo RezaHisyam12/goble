@@ -329,7 +329,7 @@ default_armour_super_heavy_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = armour_super_heavy
-		value = 5
+		value = 10
 	}
 	ai_strategy = {
 		type = template_prio
