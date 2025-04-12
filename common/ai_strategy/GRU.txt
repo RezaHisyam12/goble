@@ -1338,7 +1338,6 @@ GRU_eyes_on_Russia = {
 			VKR = { has_capitulated = yes }
 		}
 		has_war_with = RUS
-		is_neighbor_of = RUS
 	}
 	abort_when_not_enabled = yes
 
@@ -1360,7 +1359,7 @@ GRU_eyes_on_Russia = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = FRA
-		value = -25
+		value = -20
 	}
 }
 
@@ -1877,6 +1876,42 @@ GRU_build_large_caliber_posen = {
 	}
 }
 
+GRU_build_large_caliber_munich = {
+	allowed = {
+		original_tag = GRU
+		threat > 0.6
+	}
+	enable = {
+		52 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = mega_gun_emplacement
+		target = 52
+		value = 2000
+	}
+}
+
+GRU_build_large_caliber_franconia = {
+	allowed = {
+		original_tag = GRU
+		threat > 0.6
+	}
+	enable = {
+		54 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = mega_gun_emplacement
+		target = 54
+		value = 2000
+	}
+}
+
 GRU_build_rocket_site_wurttemberg = {
 	allowed = {
 		original_tag = GRU
@@ -1912,4 +1947,3 @@ GRU_build_rocket_site_masuria = {
 		value = 2000
 	}
 }
-

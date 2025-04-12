@@ -20,6 +20,7 @@ GRU_infantry = {
 			regiments = {
 				infantry = 9
 				artillery_brigade = 3
+				anti_air_brigade = 1
 			}
 
 			support = {
@@ -61,6 +62,7 @@ GRU_infantry = {
 			regiments = {
 				motorized = 9
 				mot_artillery_brigade = 3
+				mot_anti_air_brigade = 1
 			}
 
 			support = {
@@ -102,6 +104,7 @@ GRU_infantry = {
 			regiments = {
 				mechanized = 9
 				mot_artillery_brigade = 3
+				mot_anti_air_brigade = 1
 			}
 
 			support = {

@@ -1,6 +1,7 @@
 ﻿oob = "empty"
 
 starting_train_buffer = 2.0
+set_research_slots = 4
 ### Starting Technologies ###
 if = {
 	limit = { NOT = { has_dlc = "No Step Back" } }

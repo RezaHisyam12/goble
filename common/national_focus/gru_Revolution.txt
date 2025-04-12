@@ -784,7 +784,7 @@ shared_focus = {
 				uses = 1
 				category = industry
 			}
-			add_research_slot_until_five = yes
+			add_research_slot_until_six = yes
 		}
 
 		prerequisite = { focus = GRU_factory_network_unions focus = GRU_national_labour_service }
@@ -1886,6 +1886,7 @@ shared_focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_mfsp"
 			add_ideas = GRU_MFSP
+			add_research_slot_until_six = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		}
 }

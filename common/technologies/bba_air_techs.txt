@@ -1093,6 +1093,10 @@ technologies = {
 				is_eligible_for_light_aircraft_production = no
 			}
 			modifier = {
+				factor = 20
+				is_major = yes
+			}
+			modifier = {
 				factor = 1.5
 				has_tech = improved_small_airframe
 			}

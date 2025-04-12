@@ -8175,7 +8175,9 @@ GRU_kill_rivals_decisions = {
 					}
 			hidden_effect = {
 				MVA = {
-					inherit_technology = GRU
+					GRU = {
+						MVA = { transfer_technology_without_doctrines = yes }
+					}
 
 					set_cosmetic_tag = MVA
 
@@ -8670,7 +8672,9 @@ GRU_kill_rivals_decisions = {
 					}
 			hidden_effect = {
 				MTA = {
-					inherit_technology = GRU
+					GRU = {
+						MTA = { transfer_technology_without_doctrines = yes }
+					}
 
 					set_cosmetic_tag = MTA
 
@@ -9009,7 +9013,9 @@ GRU_kill_rivals_decisions = {
 					}
 			hidden_effect = {
 				MOA = {
-					inherit_technology = GRU
+					GRU = {
+						MOA = { transfer_technology_without_doctrines = yes }
+					}
 
 					set_cosmetic_tag = MOA
 
@@ -9204,7 +9210,9 @@ GRU_kill_rivals_decisions = {
 					}
 			hidden_effect = {
 				MZA = {
-					inherit_technology = GRU
+					GRU = {
+						MZA = { transfer_technology_without_doctrines = yes }
+					}
 
 					set_cosmetic_tag = MZA
 
@@ -10126,7 +10134,9 @@ GRU_volksreichskommissariat_decisions = {
 				set_autonomy = { target = HYP autonomy_state = RM_Volksland }
 				set_country_flag = HYP_established
 				HYP = { set_country_flag = IS_HYP }
-				HYP = { inherit_technology = GRU }
+				GRU = {
+					HYP = { transfer_technology_without_doctrines = yes }
+				}
 			}
 	}
 	
@@ -10685,7 +10695,11 @@ GRU_expansion_three_volksland_hypoborea = {
 						remove_ideas = UKR_impending_failure_1
 						remove_ideas = UKR_impending_failure_2
 						remove_ideas = UKR_impending_failure_3
-						remove_ideas = UKR_impending_failure_4
+						remove_ideas = UKR_ivan_po_influence_idea_1
+						remove_ideas = UKR_ivan_po_influence_idea_2
+						remove_ideas = UKR_ivan_po_influence_idea_3
+						remove_ideas = UKR_ivan_po_influence_idea_4
+						remove_ideas = UKR_ivan_po_influence_idea_5
 					}
 				VKR = {	country_event = rotermorgenmisc.200 }
 				VKR = {	country_event = { id = rotermorgenmisc.201 days = 2 } }
@@ -10725,7 +10739,9 @@ GRU_expansion_three_volksland_hypoborea = {
 				set_autonomy = { target = VKR autonomy_state = RM_Volkskommissariat }
 				set_country_flag = VKR_established
 				VKR = { set_country_flag = IS_VKR }
-				VKR = { inherit_technology = GRU }
+				GRU = {
+					VKR = { transfer_technology_without_doctrines = yes }
+				}
 			}
 	}
 	
@@ -10795,7 +10811,9 @@ GRU_expansion_three_volksland_hypoborea = {
 				set_autonomy = { target = VKK autonomy_state = RM_Volkskommissariat }
 				set_country_flag = VKK_established
 				VKK = { set_country_flag = IS_VKK }
-				VKK = { inherit_technology = GRU }
+				GRU = {
+					VKK = { transfer_technology_without_doctrines = yes }
+				}
 			}
 	}
 	
@@ -10854,6 +10872,9 @@ GRU_expansion_three_volksland_hypoborea = {
 						remove_ideas = BAT_black_monday
 						remove_ideas = BAT_black_monday_1
 						remove_ideas = BAT_black_monday_2
+						remove_ideas = BAT_emigration
+						remove_ideas = BAT_emigration_2
+						remove_ideas = BAT_emigration_3
 					}
 					VKB = {	country_event = rotermorgenmisc.400 }
 					if = {
@@ -10882,7 +10903,9 @@ GRU_expansion_three_volksland_hypoborea = {
 				set_autonomy = { target = VKB autonomy_state = RM_Volkskommissariat }
 				set_country_flag = VKB_established
 				VKB = { set_country_flag = IS_VKB }
-				VKB = { inherit_technology = GRU }
+				GRU = {
+					VKB = { transfer_technology_without_doctrines = yes }
+				}
 			}
 	}
 	
@@ -10955,7 +10978,9 @@ GRU_expansion_three_volksland_hypoborea = {
 				set_autonomy = { target = VKM autonomy_state = RM_Volkskommissariat }
 				set_country_flag = VKM_established
 				VKM = { set_country_flag = IS_VKM }
-				VKM = { inherit_technology = GRU }
+				GRU = {
+					VKM = { transfer_technology_without_doctrines = yes }
+				}
 			}
 	}
 	
@@ -13718,7 +13743,9 @@ GRU_beyond_lebensraum_decisions = {
 				set_autonomy = { target = VSJ autonomy_state = RM_Volksstaat }
 				set_country_flag = VSJ_established
 				VSJ = { set_country_flag = IS_VSJ }
-				VSJ = { inherit_technology = GRU }
+				GRU = {
+					VSJ = { transfer_technology_without_doctrines = yes }
+				}
 			}
 	}
 	
@@ -14261,7 +14288,9 @@ GRU_expansion_two_volksstaat_Judea = {
 				set_autonomy = { target = VST autonomy_state = RM_Volksstaat }
 				set_country_flag = VST_established
 				VST = { set_country_flag = IS_VST }
-				VST = { inherit_technology = GRU }
+				GRU = {
+					VST = { transfer_technology_without_doctrines = yes }
+				}
 			}
 	}
 	
@@ -16167,7 +16196,9 @@ GRU_new_order_decisions = {
 				set_autonomy = { target = VOB autonomy_state = RM_Volksstaat }
 				set_country_flag = VOB_established
 				VOB = { set_country_flag = IS_VOB }
-				VOB = { inherit_technology = GRU }
+				GRU = {
+					VOB = { transfer_technology_without_doctrines = yes }
+				}
 			}
 	}
 	GRU_VK_netherland = {
@@ -16312,7 +16343,9 @@ GRU_new_order_decisions = {
 				set_autonomy = { target = VKN autonomy_state = RM_Volkskommissariat }
 				set_country_flag = VKN_established
 				VKN = { set_country_flag = IS_VKN }
-				VKN = { inherit_technology = GRU }
+				GRU = {
+					VKN = { transfer_technology_without_doctrines = yes }
+				}
 			}
 	}
 
@@ -16352,6 +16385,8 @@ GRU_new_order_decisions = {
 							is_subject_of = GRU
 							owns_state = 10
 						}
+					}
+					OR = {
 						GRU = {
 							owns_state = 90
 						}
@@ -16359,6 +16394,8 @@ GRU_new_order_decisions = {
 							is_subject_of = GRU
 							owns_state = 90
 						}
+					}
+					OR = {
 						GRU = {
 							owns_state = 88
 						}
@@ -16366,6 +16403,8 @@ GRU_new_order_decisions = {
 							is_subject_of = GRU
 							owns_state = 88
 						}
+					}
+					OR = {
 						GRU = {
 							owns_state = 1314
 						}
@@ -16373,6 +16412,8 @@ GRU_new_order_decisions = {
 							is_subject_of = GRU
 							owns_state = 1314
 						}
+					}
+					OR = {
 						GRU = {
 							owns_state = 92
 						}
@@ -16380,6 +16421,8 @@ GRU_new_order_decisions = {
 							is_subject_of = GRU
 							owns_state = 92
 						}
+					}
+					OR = {
 						GRU = {
 							owns_state = 1125
 						}
@@ -16387,6 +16430,8 @@ GRU_new_order_decisions = {
 							is_subject_of = GRU
 							owns_state = 1125
 						}
+					}
+					OR = {
 						GRU = {
 							owns_state = 1319
 						}
@@ -16394,6 +16439,8 @@ GRU_new_order_decisions = {
 							is_subject_of = GRU
 							owns_state = 1319
 						}
+					}
+					OR = {
 						GRU = {
 							owns_state = 1088
 						}
@@ -16401,6 +16448,8 @@ GRU_new_order_decisions = {
 							is_subject_of = GRU
 							owns_state = 1088
 						}
+					}
+					OR = {
 						GRU = {
 							owns_state = 1127
 						}
@@ -16408,6 +16457,8 @@ GRU_new_order_decisions = {
 							is_subject_of = GRU
 							owns_state = 1127
 						}
+					}
+					OR = {
 						GRU = {
 							owns_state = 1126
 						}
@@ -16415,6 +16466,8 @@ GRU_new_order_decisions = {
 							is_subject_of = GRU
 							owns_state = 1126
 						}
+					}
+					OR = {
 						GRU = {
 							owns_state = 1140
 						}
@@ -16422,6 +16475,8 @@ GRU_new_order_decisions = {
 							is_subject_of = GRU
 							owns_state = 1140
 						}
+					}
+					OR = {
 						GRU = {
 							owns_state = 89
 						}
@@ -16429,6 +16484,8 @@ GRU_new_order_decisions = {
 							is_subject_of = GRU
 							owns_state = 89
 						}
+					}
+					OR = {
 						GRU = {
 							owns_state = 91
 						}
@@ -16436,6 +16493,8 @@ GRU_new_order_decisions = {
 							is_subject_of = GRU
 							owns_state = 89
 						}
+					}
+					OR = {
 						GRU = {
 							owns_state = 1124
 						}
@@ -16541,7 +16600,9 @@ GRU_new_order_decisions = {
 				set_autonomy = { target = VKP autonomy_state = Generalgouvernement }
 				set_country_flag = VKP_established
 				VKP = { set_country_flag = IS_VKP }
-				VKP = { inherit_technology = GRU }
+				GRU = {
+					VKP = { transfer_technology_without_doctrines = yes }
+				}
 			}
 	}
 }

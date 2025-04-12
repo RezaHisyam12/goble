@@ -2,12 +2,15 @@ autonomy_state = {
 	id = crownland
 
 	is_puppet = yes
+	use_overlord_color = yes
 	default = yes
 
 	min_freedom_level = 0.5
 	manpower_influence = 0.5
 
 	rule = {
+		desc = RULE_DESC_IS_A_SUBJECT
+
 		can_not_declare_war = yes
 		can_decline_call_to_war = no
 		can_be_spymaster = no

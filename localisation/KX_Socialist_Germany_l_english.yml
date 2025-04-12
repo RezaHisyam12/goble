@@ -5191,7 +5191,41 @@ GRU_general_Konrad_Sundlo:0 "Konrad Sundlo"
  RUS_order_of_victory: "Order of Victory"
  RUS_order_of_red_star: "Order of the Red Star"
 
+#Tactics
+ tactic_breakthrough_preferred_weight_factor: "Additional §YBreakthrough§! Tactic Chance if it is Preferred tactic"
+ tactic_backhand_blow_preferred_weight_factor: "Additional §YBackhand Blow§! Tactic Chance if it is Preferred tactic"
+ tactic_tactical_withdrawal_preferred_weight_factor: "Additional §YTactical Withdrawal§! Tactic Chance if it is Preferred tactic"
 
+#Theorist
+KR_mechanised_wave_school: "Mechanised Wave"
+mechanised_wave_school: "§YArmy High Command Focus§! - Mechanised Wave"
+mechanised_wave_school_desc: ""
+mass_offensive_school: "§YArmy High Command Focus§! - Mass Offensive"
+shock_theorist: "§YH.C. Focus§! §W- Shock§!"
+shock_theorist_desc: ""
+firepower_theorist: "§YH.C. Focus§! §W- Firepower§!"
+firepower_theorist_desc: ""
+small_army_theorist: "§YH.C. Focus§! §W- Small Army§!"
+small_army_theorist_desc: ""
+
+ ### Army Advisor traits ###
+ KR_shock_assault_2: "Shock Assault\n(Expert)"
+ KR_army_breakthrough_2: "Army Breakthrough\n(Expert)"
+ KR_army_management_2: "Army Management\n(Expert)"
+ KR_head_of_staff_2: "Head of Staff\n(Expert)"
+ KR_partisan_warfare_2: "Partisan Warfare\n(Expert)"
+ KR_opportunistic_naval_reformer: "Opportunistic Naval Reformer"
+
+ KR_firepower_theorist: "Firepower Proponent"
+ KR_shock_theorist: "Shock Proponent"
+ KR_deep_operation_theorist: "Deep Operations Proponent"
+ KR_total_war_theorist: "Total War Proponent"
+ KR_small_army_theorist: "Small Army Proponent"
+
+ KR_air_force_bombing_2: "Bombing Air Fleet\n(Expert)"
+ KR_air_chief_tactical_support: "Tactical Support Proponent"
+ KR_air_chief_strategic_bomber: "Strategic Destruction\n(Expert)"
+ KR_MHC_organiser: "Military Marxist\n(Expert)"
 
 ########################
 #### New Decision ####

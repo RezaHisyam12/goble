@@ -1,0 +1,92 @@
+﻿every_possible_country = {
+	limit = { 
+		OR = {
+			is_ukrainian_tag = yes 
+			tag = UKR
+			tag = VKR
+		}
+	}
+	generate_character = {
+		token_base = mechanised_wave_school
+		advisor = {
+			name = mechanised_wave_school
+			desc = mechanised_wave_school_desc
+			slot = high_command
+			traits = { KR_mechanised_wave_school }
+			cost = 150
+		}
+		portraits = {
+			army = { small = "gfx/interface/ideas/UKR/UKR_mechanisation_of_agriculture.png" }
+		}
+	}
+	generate_character = {
+		token_base = mass_offensive_school
+		advisor = {
+			name = mass_offensive_school
+			desc = mass_offensive_school_desc
+			slot = high_command
+			traits = { KR_mass_offensive_school }
+			cost = 150
+		}
+		portraits = {
+			army = { small = "gfx/interface/ideas/ideas/NFA_mass.png" }
+		}
+	}
+}
+
+every_possible_country = {
+	limit = { 
+		OR = {
+			tag = GRU
+			tag = VKB
+			tag = VKR
+			tag = VKK
+			tag = VKM
+			tag = VKN
+			tag = VKP
+			tag = VSJ
+			tag = VST
+			tag = HYP
+			tag = VOB
+		}
+	}
+	generate_character = {
+		token_base = shock_theorist
+		advisor = {
+			name = shock_theorist
+			desc = shock_theorist_desc
+			slot = high_command
+			traits = { KR_shock_theorist }
+			cost = 150
+		}
+		portraits = {
+			army = { small = "gfx/interface/ideas/GRU/GRU_OKNVHP.png" }
+		}
+	}
+	generate_character = {
+		token_base = firepower_theorist
+		advisor = {
+			name = firepower_theorist
+			desc = firepower_theorist_desc
+			slot = high_command
+			traits = { KR_firepower_theorist }
+			cost = 150
+		}
+		portraits = {
+			army = { small = "gfx/interface/ideas/GRU/GRU_OKNVHM.png" }
+		}
+	}
+	generate_character = {
+		token_base = small_army_theorist
+		advisor = {
+			name = small_army_theorist
+			desc = small_army_theorist_desc
+			slot = high_command
+			traits = { KR_small_army_theorist }
+			cost = 150
+		}
+		portraits = {
+			army = { small = "gfx/interface/ideas/GRU/GRU_skill_off.png" }
+		}
+	}
+}

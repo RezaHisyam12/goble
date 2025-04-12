@@ -960,6 +960,23 @@ CAN_build_up_troops = {
 	}
 }
 
+ENT_dont_invade_if_too_minor = { #support fronts instead
+	allowed = {
+		is_in_faction_with = ENT
+	}
+	enable = {
+		has_war_with = INT
+		num_divisions < 20
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invasion_unit_request
+		area = globally
+		value = -500
+	}
+}
+
 ENT_dont_invade_britain_before_france = {
 	allowed = {
 		is_in_faction_with = ENT
@@ -1037,6 +1054,73 @@ ENT_dont_invade_france_italy_spain_if_not_in_position = {
 	}
 }
 
+ENT_buffer_troops_for_invasion_of_france = {
+	allowed = {
+		is_in_faction_with = ENT
+	}
+	enable = {
+		FRA = {
+			has_war_with_major = yes
+			has_capitulated = no
+			NOT = { any_home_area_neighbor_country = { is_ally_with = ENT } }
+		}
+
+		#only if large enough
+		num_divisions > 19
+
+		#not if any dangerous neighbours
+		surrender_progress < 0.05
+		NOT = {
+			any_home_area_neighbor_country = {
+				has_war_with = PREV
+				has_capitulated = no
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		order_id = 1
+		states = {
+			459 #Algiers
+			805 #Oran
+			460 #Constantine
+			458 #Tunis
+		}
+		ratio = 0.5
+		area = mainland_europe
+		subtract_invasions_from_need = yes
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		order_id = 1
+		states = {
+			1 #Corsica
+			114 #Sardinia
+		}
+		ratio = 0.3
+		area = mainland_europe
+		subtract_invasions_from_need = yes
+	}
+
+	ai_strategy = {
+		type = invade
+		id = FRA
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = FRA
+		value = 100
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		tag = FRA
+		value = 100
+	}
+}
+
 ENT_support_invasion_of_france = {
 	allowed = {
 		is_in_faction_with = ENT
@@ -1069,6 +1153,76 @@ ENT_support_invasion_of_france = {
 		type = front_unit_request
 		tag = FRA
 		value = 50
+	}
+}
+
+ENT_buffer_troops_for_invasion_of_britain = {
+	allowed = {
+		is_in_faction_with = ENT
+		NOT = { tag = IRE }
+	}
+	enable = {
+		has_war_with = ENG
+		OR = {
+			NOT = { country_exists = FRA }
+			FRA = { has_capitulated = yes }
+		}
+		ENG = {
+			has_capitulated = no
+			NOT = { any_home_area_neighbor_country = { is_ally_with = ENT } }
+		}
+
+		#only if large enough
+		num_divisions > 19
+
+		#not if any dangerous neighbours
+		surrender_progress < 0.05
+		NOT = {
+			any_home_area_neighbor_country = {
+				has_war_with = PREV
+				has_capitulated = no
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		order_id = 2
+		states = {
+			14 #Upper Brittany
+			15 #Normandy
+			17 #Pas-de-Calais
+			29 #Dunkirk
+			983 #Brittany
+		}
+		ratio = 0.5
+		area = mainland_europe
+		subtract_invasions_from_need = yes
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		order_id = 2
+		states = {
+			113 #Leinster
+			119 #Northern Ireland
+			134 #Connacht
+			135 #Munster
+		}
+		ratio = 0.3
+		area = mainland_europe
+		subtract_invasions_from_need = yes
+	}
+
+	ai_strategy = {
+		type = invade
+		id = ENG
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = ENG
+		value = 100
 	}
 }
 
@@ -1156,4 +1310,312 @@ ENT_dont_justify = {
 	ai_strategy = { type = ignore_claim id = SRI value = 100 }
 	ai_strategy = { type = ignore_claim id = SIC value = 100 }
 	ai_strategy = { type = ignore_claim id = ITA value = 100 }
+}
+
+################
+### Military ###
+################
+ENT_prepare_for_intervention_against_CSA = {
+	allowed = {
+		is_in_faction_with = ENT
+		NOT = { tag = CAN }
+		is_american_tag = no
+	}
+
+	enable = {
+		NOT = { has_global_flag = USA_civil_war_over_flag }
+		OR = {
+			has_war_with = CSA
+			AND = {
+				is_in_faction_with = CAN
+				check_variable = { CAN.ai_strategy_prepare_for_war@CSA > 0 }
+			}
+			AND = {
+				is_in_faction_with = NEE
+				check_variable = { NEE.ai_strategy_prepare_for_war@CSA > 0 }
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = avoid_starting_wars
+		value = -400
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = CAN
+		value = 100
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = NEE
+		value = 100
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = CSA
+		value = 60
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = CSA
+		value = 400
+	}
+	ai_strategy = {
+		type = conquer
+		id = CSA
+		value = 400 #counters avoid_starting_wars
+	}
+	ai_strategy = {
+		type = invade
+		id = CSA
+		value = -500
+	}
+}
+
+ENT_prepare_for_intervention_against_USA = {
+	allowed = {
+		is_in_faction_with = ENT
+		NOT = { tag = CAN }
+		is_american_tag = no
+	}
+
+	enable = {
+		NOT = { has_global_flag = USA_civil_war_over_flag }
+		OR = {
+			has_war_with = USA
+			AND = {
+				is_in_faction_with = CAN
+				check_variable = { CAN.ai_strategy_prepare_for_war@USA > 0 }
+			}
+			AND = {
+				is_in_faction_with = NEE
+				check_variable = { NEE.ai_strategy_prepare_for_war@USA > 0 }
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = avoid_starting_wars
+		value = -400
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = CAN
+		value = 100
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = NEE
+		value = 100
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = USA
+		value = 60
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = USA
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = USA
+		value = 400 #counters avoid_starting_wars
+	}
+	ai_strategy = {
+		type = invade
+		id = USA
+		value = -500
+	}
+}
+
+ENT_prepare_for_intervention_against_CAL = {
+	allowed = {
+		is_in_faction_with = ENT
+		NOT = { tag = CAN }
+		is_american_tag = no
+	}
+
+	enable = {
+		NOT = { has_global_flag = USA_civil_war_over_flag }
+		OR = {
+			has_war_with = CAL
+			AND = {
+				is_in_faction_with = CAN
+				check_variable = { CAN.ai_strategy_prepare_for_war@CAL > 0 }
+			}
+			AND = {
+				is_in_faction_with = NEE
+				check_variable = { NEE.ai_strategy_prepare_for_war@CAL > 0 }
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = avoid_starting_wars
+		value = -400
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = CAN
+		value = 100
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = NEE
+		value = 100
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = CAL
+		value = 60
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = CAL
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = CAL
+		value = 400 #counters avoid_starting_wars
+	}
+	ai_strategy = {
+		type = invade
+		id = CAL
+		value = -500
+	}
+}
+
+ENT_prepare_for_intervention_against_TEX = {
+	allowed = {
+		is_in_faction_with = ENT
+		NOT = { tag = CAN }
+		is_american_tag = no
+	}
+
+	enable = {
+		NOT = { has_global_flag = USA_civil_war_over_flag }
+		OR = {
+			has_war_with = TEX
+			AND = {
+				is_in_faction_with = CAN
+				check_variable = { CAN.ai_strategy_prepare_for_war@TEX > 0 }
+			}
+			AND = {
+				is_in_faction_with = NEE
+				check_variable = { NEE.ai_strategy_prepare_for_war@TEX > 0 }
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = avoid_starting_wars
+		value = -400
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = CAN
+		value = 100
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = NEE
+		value = 100
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = TEX
+		value = 60
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = TEX
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = TEX
+		value = 400 #counters avoid_starting_wars
+	}
+	ai_strategy = {
+		type = invade
+		id = TEX
+		value = -500
+	}
+}
+
+ENT_prepare_for_intervention_against_COR = {
+	allowed = {
+		is_in_faction_with = ENT
+		NOT = { tag = CAN }
+		is_american_tag = no
+	}
+
+	enable = {
+		NOT = { has_global_flag = USA_civil_war_over_flag }
+		OR = {
+			has_war_with = COR
+			AND = {
+				is_in_faction_with = CAN
+				check_variable = { CAN.ai_strategy_prepare_for_war@COR > 0 }
+			}
+			AND = {
+				is_in_faction_with = NEE
+				check_variable = { NEE.ai_strategy_prepare_for_war@COR > 0 }
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = avoid_starting_wars
+		value = -400
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = CAN
+		value = 100
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = NEE
+		value = 100
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = COR
+		value = 60
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = COR
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = COR
+		value = 400 #counters avoid_starting_wars
+	}
+	ai_strategy = {
+		type = invade
+		id = COR
+		value = -500
+	}
 }

@@ -1987,7 +1987,7 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 0
-				date < 1942.1.1
+				date < 1942.6.1
 				GRU = { exists = yes }
 			}
 		}

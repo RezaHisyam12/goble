@@ -2,6 +2,7 @@
 
 oob = "empty"
 starting_train_buffer = 2.0
+set_research_slots = 4
 ### Starting Technologies ###
 if = {
 	limit = {
@@ -165,7 +166,6 @@ complete_special_project = {
 	project = sp:sp_naval_super_heavy_battleship
 }
 
-set_research_slots = 3
 set_convoys = 100
 
 set_politics = {

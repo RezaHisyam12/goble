@@ -2895,11 +2895,8 @@ ideas = {
 				experience_gain_army = 0.06
 				experience_gain_navy = 0.06
 				experience_gain_air = 0.06
-				unit_light_armor_design_cost_factor = -0.5
-				unit_medium_armor_design_cost_factor = -0.5
-				unit_modern_armor_design_cost_factor = -0.5
-				unit_heavy_armor_design_cost_factor = -0.5
-				unit_mechanized_design_cost_factor = -0.5
+				army_leader_start_level = 1
+				army_leader_start_planning_level = 1
 			}
 		}
 		GRU_ostwall_idea = {

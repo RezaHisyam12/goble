@@ -553,7 +553,6 @@ country_event = { # GRU setup
 		        	set_demilitarized_zone = no
 		        }
 
-				inherit_technology = GER		
 				add_equipment_to_stockpile = {
 				type = infantry_equipment_2
 				amount = 40000
@@ -621,7 +620,7 @@ country_event = { # GRU setup
 					picture = "gfx/leaders/GRU/Portrait_Germany_Kurt_Schuhmacher.png"
 					expire = "1.1.1"
 					ideology = socdem_democratic_socialism_subtype
-		        }
+		       		}
 				
 				
 				create_field_marshal = {

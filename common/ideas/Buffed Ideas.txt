@@ -257,7 +257,6 @@ ideas = {
 				conscription = 0.02
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.05
-				unit_limit_bonus = 25
 			}
 			targeted_modifier = {
 				tag = GER
