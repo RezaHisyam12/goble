@@ -695,49 +695,6 @@ CAN_keep_garrison = {
    	}
 }
 
-CAN_prepare_home_isles_invasion = {
-	allowed = { tag = CAN }
-	enable = {
-		is_faction_leader = yes
-		has_war_with = ENG
-		OR = {
-			owns_state = 100 #Iceland
-			is_in_faction_with = ICE
-			is_in_faction_with = IRE
-			IRE = { gives_military_access_to = CAN }
-			ICE = { gives_military_access_to = CAN }
-		}
-		NOT = {
-			country_exists = CSA
-			has_war_with = USA
-			has_war_with = CAL
-			has_war_with = TEX
-			has_war_with = NEE
-			has_war_with = COR
-			has_war_with = WCC
-		}
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = put_unit_buffers
-
-		order_id = 1
-
-		states = {
-			100
-			113
-		}
-
-		ratio = 0.3
-
-		area = british_isles
-
-		subtract_invasions_from_need = no
-	}
-}
-
 CAN_naval_invasion_focus = {
 	allowed = {
 		tag = CAN
