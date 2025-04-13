@@ -6903,15 +6903,15 @@ shared_focus = {
 			factor = 2
 			modifier = {
 				factor = 0
-				date < 1941.6.1
+				date < 1942.6.1
+			}
+			modifier = {
+				factor = 1000
+				date > 1942.6.2
 			}
 			modifier = {
 				factor = 0
 				has_country_flag = imminent_war
-			}
-			modifier = {
-				factor = 0
-				NOT = { has_country_flag = denmark_cored }
 			}
 			modifier = {
 				factor = 0

@@ -330,8 +330,8 @@ ideas = {
 			allowed = { always = no }
             modifier = {
 				army_speed_factor_for_controller = 0.05
-				stability_weekly = 0.001
 				consumer_goods_factor = 0.05
+				stability_factor = 0.05
 			}
 		}
 		
@@ -1938,7 +1938,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VK_COLONY_ONE"}
 			picture = VK_COLONYONE
 			modifier = {
-				stability_weekly_factor = 0.001
+				stability_weekly = 0.001
 				monthly_population = -0.05
 				political_power_gain = 0.15
 				conscription_factor = -0.05
@@ -1948,7 +1948,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VK_COLONY_TWO"}
 			picture = VK_COLONYTWO
 			modifier = {
-				stability_weekly_factor = 0.001
+				stability_weekly = 0.001
 				monthly_population = 0.05
 				political_power_gain = 0.15
 				conscription_factor = 0.05
@@ -1962,7 +1962,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea VK_COLONY_THREE"}
 			picture = VK_COLONYTHREE
 			modifier = {
-				stability_weekly_factor = 0.001
+				stability_weekly = 0.001
 				monthly_population = 0.10
 				political_power_gain = 0.25
 				conscription_factor = 0.1
@@ -2041,7 +2041,7 @@ ideas = {
 			picture = HYP_NATURE_PROTECT
 			modifier = {
 				surrender_limit = 0.25
-				stability_weekly_factor = 0.001
+				stability_weekly = 0.001
 				monthly_population = 0.10
 				political_power_gain = 0.15
 				conscription_factor = 0.05
@@ -2053,7 +2053,7 @@ ideas = {
 			picture = HYP_NATURE_PROTECT
 			modifier = {
 				surrender_limit = 0.50
-				stability_weekly_factor = 0.001
+				stability_weekly = 0.001
 				monthly_population = 0.15
 				political_power_gain = 0.25
 				conscription_factor = 0.05
