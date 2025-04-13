@@ -331,6 +331,9 @@ entente_take_west_indies = {
 	enable = {
 		has_war_with = CAF
 		is_in_faction_with = ENT
+		NOT = {
+			any_enemy_country = { is_actual_major = yes }
+		}
 	}
 
 	abort_when_not_enabled = yes
