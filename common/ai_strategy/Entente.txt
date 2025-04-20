@@ -17,7 +17,7 @@ CAN_GBR_hates_socialists = {
 	reversed = yes
 
 	enable_reverse = {
-		IMP = { is_in_faction_with = ENT }
+		CAN = { is_in_faction_with = ENT }
 	}
 	enable = {
 		has_socialist_government = yes
@@ -27,13 +27,13 @@ CAN_GBR_hates_socialists = {
 
 	ai_strategy = {
 		type = antagonize
-		id = IMP #CAN/GBR
+		id = CAN #CAN/GBR
 		value = 1000
 	}
 	ai_strategy = {
 		type = diplo_action_acceptance
 		target = market_access_rights
-		id = IMP #CAN/GBR
+		id = CAN #CAN/GBR
 		value = -1000
 	}
 }
@@ -41,7 +41,7 @@ CAN_dislikes_germany = {
 	reversed = yes
 
 	enable_reverse = {
-		IMP = { is_in_faction_with = ENT }
+		CAN = { is_in_faction_with = ENT }
 		GER = { is_faction_leader = yes }
 		NOT = { has_global_flag = GER_stay_out_france_uk }
 	}
@@ -54,22 +54,22 @@ CAN_dislikes_germany = {
 
 	ai_strategy = {
 		type = ignore
-		id = IMP #CAN/GBR
+		id = CAN #CAN/GBR
 		value = 300
 	}
 	ai_strategy = {
 		type = alliance
-		id = IMP #CAN/GBR
+		id = CAN #CAN/GBR
 		value = -300
 	}
 	ai_strategy = {
 		type = befriend
-		id = IMP #CAN/GBR
+		id = CAN #CAN/GBR
 		value = -300
 	}
 	ai_strategy = {
 		type = support
-		id = IMP #CAN/GBR
+		id = CAN #CAN/GBR
 		value = -1000
 	}
 }
@@ -345,7 +345,7 @@ entente_protect_new_zealand = {
 		is_in_faction_with = NZL
 		NOT = {
 			tag = NZL
-			any_enemy_country = { is_actual_major = yes }
+			has_war_with = ENG
 		}
 	}
 
@@ -404,7 +404,7 @@ entente_take_panama = {
 		has_war_with = PAN
 		is_in_faction_with = ENT
 		NOT = {
-			any_enemy_country = { is_actual_major = yes }
+			has_war_with = ENG
 		}
 	}
 
@@ -427,7 +427,7 @@ entente_protect_costa_rica = {
 		has_war_with = PAN
 		is_in_faction_with = COS
 		NOT = {
-			any_enemy_country = { is_actual_major = yes }
+			has_war_with = ENG
 		}
 	}
 
@@ -457,7 +457,7 @@ entente_take_west_indies = {
 		has_war_with = CAF
 		is_in_faction_with = ENT
 		NOT = {
-			any_enemy_country = { is_actual_major = yes }
+			has_war_with = ENG
 		}
 	}
 
@@ -520,6 +520,75 @@ entente_protect_leader = {
 		type = send_volunteers_desire
 		id = ENT
 		value = 10000
+	}
+}
+
+entente_protect_sand_france = {
+	enable = {
+		is_in_faction_with = NFA
+		NOT = { tag = NFA }
+		NFA = { surrender_progress > 0 }
+		num_divisions > 4
+		NOT = { surrender_progress > 0 }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = protect
+		id = NFA
+		value = 500
+	}
+	ai_strategy = {
+		type = support
+		id = NFA
+		value = 500
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = NFA
+		value = 10000
+	}
+}
+
+entente_take_prf_first = {
+	enable = {
+		is_in_faction_with = DEH
+		num_divisions > 10
+		has_war_with = BHC
+		has_war_with = PRF
+		NOT = { tag = DEH }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invade
+		id = "BHC"
+		value = -500
+	}
+	ai_strategy = {
+		type = invade
+		id = "PRF"
+		value = 200
+	}
+}
+
+entente_invade_bhc = {
+	enable = {
+		is_in_faction_with = DEH
+		num_divisions > 10
+		has_war_with = BHC
+		NOT = { has_war_with = PRF }
+		NOT = { tag = DEH }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invade
+		id = "BHC"
+		value = 200
 	}
 }
 
@@ -657,10 +726,7 @@ entente_hold_france = {
 
 entente_assist_portugal = {
 	allowed = {
-		is_italian_tag = yes
-		is_french_tag = yes
-		is_CANZACAF_tag = yes
-		is_indian_unifier_tag = yes
+		NOT = { tag = POR }
 	}
 	enable = {
 		is_in_faction_with = POR
@@ -771,8 +837,14 @@ CAN_keep_garrison = {
 			has_war_with = FRA
 			has_war_with = ENG
 		}
+		NOT = {
+			OR = {
+				is_in_faction_with = CAL
+				is_in_faction_with = USA
+				is_in_faction_with = COR
+			}
+		}
 	}
-
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
@@ -791,22 +863,6 @@ CAN_keep_garrison = {
   		type = garrison
    		value = 50
    	}
-}
-
-CAN_naval_invasion_focus = {
-	allowed = {
-		tag = CAN
-	}
-	enable = {
-		surrender_progress < 0.05
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = naval_invasion_focus
-		value = 80
-	}
 }
 
 GBR_retreat_to_the_isles = {
@@ -881,21 +937,6 @@ canada_protect_britain = {
 		type = invasion_unit_request
 		area = british_isles
 		value = 25
-	}
-}
-
-CAN_build_up_troops = {
-	allowed = {
-		tag = CAN
-	}
-	enable = {
-		NOT = { country_exists = GBR }
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = force_build_armies
-		value = 100
 	}
 }
 
@@ -1001,6 +1042,7 @@ ENT_buffer_troops_for_invasion_of_france = {
 		FRA = {
 			has_war_with_major = yes
 			has_capitulated = no
+			NOT = { any_home_area_neighbor_country = { is_ally_with = ENT } }
 		}
 
 		#only if large enough
@@ -1067,25 +1109,17 @@ ENT_support_invasion_of_france = {
 		has_war_with = FRA
 		FRA = {
 			has_capitulated = no
-			any_home_area_neighbor_country = { is_ally_with = ENT }
 		}
 
 		#not if any dangerous neighbours
 		surrender_progress < 0.05
-		NOT = {
-			any_home_area_neighbor_country = {
-				has_war_with = PREV
-				has_capitulated = no
-				NOT = { tag = FRA }
-			}
-		}
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = conquer
 		id = FRA
-		value = 200
+		value = 300
 	}
 	ai_strategy = {
 		type = front_unit_request
@@ -1107,6 +1141,7 @@ ENT_buffer_troops_for_invasion_of_britain = {
 		}
 		ENG = {
 			has_capitulated = no
+			NOT = { any_home_area_neighbor_country = { is_ally_with = ENT } }
 		}
 
 		#only if large enough
@@ -1197,38 +1232,6 @@ ENT_support_invasion_of_britain = {
 	}
 }
 
-ENT_sync_invasions = {
-	allowed = {
-		is_in_faction_with = ENT
-	}
-	enable = {
-		has_war_with = INT
-		OR = {
-			FRA = {
-				exists = yes
-				has_capitulated = no
-			}
-			ENG = {
-				exists = yes
-				has_capitulated = no
-			}
-		}
-
-		#activate every 60 days
-		set_temp_variable = { days = global.num_days }
-		modulo_temp_variable = { days = 90 }
-		check_variable = { days < 60 }
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = front_control
-		area = mainland_europe
-		ordertype = invasion
-		execute_order = no
-	}
-}
-
 ENT_dont_justify = {
 	allowed = {
 		OR = {
@@ -1247,6 +1250,37 @@ ENT_dont_justify = {
 	ai_strategy = { type = ignore_claim id = SRI value = 100 }
 	ai_strategy = { type = ignore_claim id = SIC value = 100 }
 	ai_strategy = { type = ignore_claim id = ITA value = 100 }
+}
+
+ENT_ignore_malta = {
+	allowed = {
+		is_in_faction_with = ENT
+	}
+	enable = {
+		has_war_with = MLT
+		OR = {
+			FRA = {
+				exists = yes
+				has_capitulated = no
+			}
+			ENG = {
+				exists = yes
+				has_capitulated = no
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore
+		id = MLT
+		value = 500
+	}
+	ai_strategy = {
+		type = invade
+		id = MLT
+		value = -500
+	}
 }
 
 ################

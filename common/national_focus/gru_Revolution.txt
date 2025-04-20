@@ -3292,7 +3292,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 2
+			factor = 3
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3321,7 +3321,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 2
+			factor = 3
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3362,7 +3362,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 2
+			factor = 3
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -4740,7 +4740,7 @@ shared_focus = {
 	}
 	shared_focus = {
 		id = GRU_SMEPD_fourth_internationale
-		icon = GFX_goal_RUS_fourth
+		icon = GRU_SMEPD_fourth_internationale
 		relative_position_id = GRU_SMEPD_DIPLO
 		available = {
 			has_government = totalist
@@ -6900,14 +6900,14 @@ shared_focus = {
 			tag = GRU
 		}
 		ai_will_do = {
-			factor = 2
+			factor = 1000
 			modifier = {
 				factor = 0
-				date < 1942.6.1
+				date < 1942.1.1
 			}
 			modifier = {
-				factor = 1000
-				date > 1942.6.2
+				factor = 0
+				INT = { default_attack_AI_trigger_FROM = yes }
 			}
 			modifier = {
 				factor = 0
@@ -6975,7 +6975,10 @@ shared_focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_END_FRANCE"
 			clear_decision_attack_AI = yes
 			add_stability = -0.1
-			declare_war_on = {	type = annex_everything	target = FRA }
+				declare_war_on = {
+					target = FRA
+					type = topple_government
+				}
 				28 = {
 				add_claim_by = GRU
 				}

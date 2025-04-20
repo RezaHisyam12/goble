@@ -2528,35 +2528,35 @@ GRU_germania_plan_decisions = {
 		}
 	}
 	#
-	GRU_pan_germanism_integrate_poland_decision = {
-		icon = GFX_pangermanicone
-
-		visible = {
-			has_completed_focus = GRU_NMDVP_SLAV_LAND_EXPANSION
-			country_exists = POL
-			 POL = { is_subject_of = GRU }
-		}
-		available = {
-			country_exists = POL
-			POL = { is_subject_of = GRU }
-		}
-
-		fire_only_once = yes
-		cost = 20
-		days_remove = 0
-
-		ai_will_do = {
-			factor = 6
-		}
-
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_integrate_poland_decision"
-			annex_country = {
-				target = POL
-				transfer_troops = yes
-			}
-		}
-	}
+#	GRU_pan_germanism_integrate_poland_decision = {
+#		icon = GFX_pangermanicone
+#
+#		visible = {
+#			has_completed_focus = GRU_NMDVP_SLAV_LAND_EXPANSION
+#			country_exists = POL
+#			 POL = { is_subject_of = GRU }
+#		}
+#		available = {
+#			country_exists = POL
+#			POL = { is_subject_of = GRU }
+#		}
+#
+#		fire_only_once = yes
+#		cost = 20
+#		days_remove = 0
+#
+#		ai_will_do = {
+#			factor = 6
+#		}
+#
+#		remove_effect = {
+#			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_integrate_poland_decision"
+#			annex_country = {
+#				target = POL
+#				transfer_troops = yes
+#			}
+#		}
+#	}
 	#
 	GRU_pan_germanism_integrate_suwalki_decision = {
 		icon = GFX_pangermanicone
@@ -10875,6 +10875,10 @@ GRU_expansion_three_volksland_hypoborea = {
 						remove_ideas = BAT_emigration
 						remove_ideas = BAT_emigration_2
 						remove_ideas = BAT_emigration_3
+						remove_ideas = BAT_byzantine_government
+						remove_ideas = BAT_byzantine_government_2
+						remove_ideas = BAT_byzantine_government_3
+						remove_ideas = BAT_byzantine_government_4
 					}
 					VKB = {	country_event = rotermorgenmisc.400 }
 					if = {
@@ -16539,7 +16543,8 @@ GRU_new_order_decisions = {
 						transfer_state = 89
 						transfer_state = 91
 						transfer_state = 1124
-
+						
+						add_manpower = 500000
 						set_capital = { state = 1124 }
 						set_victory_points = {
 							province = 9427
@@ -16555,7 +16560,7 @@ GRU_new_order_decisions = {
 						add_equipment_to_stockpile = { type = artillery_equipment amount = 1000 }
 						add_equipment_to_stockpile = { type = anti_tank_equipment amount = 600 }
 						add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 5000 }
-						add_manpower = 90000
+
 						remove_all_ministers = yes
 						add_ideas = extensive_conscription
 						add_ideas = limited_exports
@@ -16578,7 +16583,7 @@ GRU_new_order_decisions = {
 							planning_skill = 4
 							logistics_skill = 3
 						}
-				}
+					}
 				VKP = {	country_event = rotermorgenmisc.958 }
 				if = {
 						limit = {

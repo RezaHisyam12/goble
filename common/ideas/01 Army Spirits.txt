@@ -18,8 +18,8 @@ ideas = {
 				}
 			}
 			modifier = {
-				army_strength_factor = 0.1
-				army_core_defence_factor = 0.10
+				army_strength_factor = 0.10
+				defence = 0.10
 				dig_in_speed_factor = 0.15
 			}
 			ai_will_do = {

@@ -469,8 +469,7 @@ country_event = { # GRU setup
 				transfer_state = 779
 				transfer_state = 28
 				transfer_state = 8
-			
-				}
+			}
 			if={
 				limit = { country_exists = BEL  }	
 				BEL = {
@@ -536,18 +535,18 @@ country_event = { # GRU setup
 				every_state = {
 		        	limit = {
 		        		OR = {
-					state = 781
-					state = 51
-					state = 42
-					state = 55
-					state = 57
-					state = 56
-					state = 50
-					state = 780
-					state = 28
-					state = 779
-					state = 8
-					state = 741
+							state = 781
+							state = 51
+							state = 42
+							state = 55
+							state = 57
+							state = 56
+							state = 50
+							state = 780
+							state = 28
+							state = 779
+							state = 8
+							state = 741
 		        		}
 		        	}
 		        	set_demilitarized_zone = no
@@ -574,25 +573,25 @@ country_event = { # GRU setup
 					GRU_Joseph_Goebbels_sec_tot
 				}
 				create_country_leader = {
-							name = "Zentralkommando der Revolution"
-							desc = "GRU_REB_DESC"
-							picture = "gfx/leaders/GRU/ZKDR.png"
-							expire = "1.1.1"
-							ideology = syndicalist_subtype
+					name = "Zentralkommando der Revolution"
+					desc = "GRU_REB_DESC"
+					picture = "gfx/leaders/GRU/ZKDR.png"
+					expire = "1.1.1"
+					ideology = syndicalist_subtype
 				}
 				create_country_leader = {
-							name = "FAUD - Oberkommando"
-							desc = "GRU_REB_DESC"
-							picture = "gfx/leaders/GRU/FAUD.png"
-							expire = "1.1.1"
-							ideology = radsoc_anarcho_syndicalist_subtype
+					name = "FAUD - Oberkommando"
+					desc = "GRU_REB_DESC"
+					picture = "gfx/leaders/GRU/FAUD.png"
+					expire = "1.1.1"
+					ideology = radsoc_anarcho_syndicalist_subtype
 				}
 				create_country_leader = {
-							name = "Nationalmarxistische Kampfverbände"
-							desc = "GRU_REB_DESC"
-							picture = "gfx/leaders/GRU/NMKF.png"
-							expire = "1.1.1"
-							ideology = tot_left_nationalism_subtype
+					name = "Nationalmarxistische Kampfverbände"
+					desc = "GRU_REB_DESC"
+					picture = "gfx/leaders/GRU/NMKF.png"
+					expire = "1.1.1"
+					ideology = tot_left_nationalism_subtype
 				}
 				create_country_leader = {
 					name = "Konrad Adenauer"
@@ -620,7 +619,7 @@ country_event = { # GRU setup
 					picture = "gfx/leaders/GRU/Portrait_Germany_Kurt_Schuhmacher.png"
 					expire = "1.1.1"
 					ideology = socdem_democratic_socialism_subtype
-		       		}
+		       	}
 				
 				
 				create_field_marshal = {
@@ -834,9 +833,7 @@ country_event = { # GRU setup
 				every_army_leader = {
 					set_unit_leader_flag = revolutionary_leader
 				}
-				
-				
-				
+
 				set_politics = {
 					ruling_party = syndicalist
 					last_election = "1936.11.16"
@@ -870,9 +867,7 @@ country_event = { # GRU setup
 						ideology = radical_socialist
 						long_name = GRU_REBELLION_FAUD_PARTY
 						name = GRU_REBELLION_FAUD_PARTY
-				}
-				
-				
+				}								
 				set_party_name = {
 						ideology = social_liberal
 						long_name = GRU_SOCLIB_PARTY_long
@@ -892,7 +887,7 @@ country_event = { # GRU setup
 			GER = {
 				add_ideas = GERMAN_CIVIL_WAR_participant
 				set_country_flag = GER_LEFT_REVOLT
-				transfer_units_fraction= {
+				transfer_units_fraction = {
 					target = GRU
 					size = 0.3
 					stockpile_ratio = 0.5
@@ -903,7 +898,6 @@ country_event = { # GRU setup
 						NOT = { has_unit_leader_flag = my_test_flag }
 					}
 				}
-					
 				dismantle_faction = yes
 			}
 		}	
@@ -1007,6 +1001,90 @@ country_event = { # victory Intro
 				add_opinion_modifier = { target = MAG modifier = KR_hostile }
 
 			}
+			if = {
+				limit {
+					NOT = { has_country_flag = GRU_OCCUPIED_START }
+				}
+					every_state = {
+					limit = {
+						OR = {
+							is_core_of = COG
+							state = 956
+							state = 955
+							state = 970
+							state = 547
+							state = 969
+							state = 548
+							state = 925
+							state = 558
+							state = 662
+							state = 878
+							state = 913
+							state = 973
+							state = 876
+							state = 877
+							state = 1322
+							state = 1321
+							state = 274
+							state = 871
+							state = 957
+							state = 958
+						}
+					}
+					MAF = {
+						add_state_core = PREV
+						transfer_state = PREV
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 963
+							state = 807
+							state = 1323
+						}
+					}
+					NFA = {
+						transfer_state = PREV
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 892
+							state = 268
+						}
+					}
+					SOM = {
+						transfer_state = PREV
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 813
+						}
+					}
+					ZIM = {
+						add_state_core = PREV
+						transfer_state = PREV
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 964
+							state = 541
+						}
+					}
+					SAF = {
+						transfer_state = PREV
+					}
+					MAF = {
+						remove_core_of = PREV
+					}
+				}
+			}
 			MAF = {
 				add_opinion_modifier = { target = GRU modifier = KR_hostile }
 				remove_ideas = {
@@ -1017,6 +1095,7 @@ country_event = { # victory Intro
 					MAF_old_new_guard_divide
 					MAF_old_new_guard_divide2
 					MAF_old_new_guard_divide2_goering
+					MAF_border_shit_show
 				}
 				set_politics = {
 					ruling_party = authoritarian_democrat
@@ -1028,7 +1107,7 @@ country_event = { # victory Intro
 				}
 				random_unit_leader = {
 					limit = { has_id = 198 }			
-					remove_unit_leader = yes
+					set_nationality = GRU
 				}
 				event_target:Mittelafrika_Target = { transfer_technology = yes }
 				event_target:Mittelafrika_Target = {
@@ -1061,6 +1140,48 @@ country_event = { # victory Intro
 	            	idea = GEX_trauma
 	            	days = 120
 	            }
+				set_cosmetic_tag = MAF_SWA
+
+				create_field_marshal = {
+                	name = GRU_general_August_Mackensen
+                	portrait_path = "gfx/leaders/GER/Portrait_Germany_August_Mackensen_kr.png"
+                	traits = { offensive_doctrine old_guard }
+                	skill = 4
+                	attack_skill = 3
+                	defense_skill = 3
+                	planning_skill = 4
+                	logistics_skill = 3
+                }
+				create_field_marshal = {
+                	name = GRU_general_Wilhelm_III
+                	portrait_path = "gfx/leaders/GER/Portrait_Germany_Wilhelm_III_field_marshall.png"
+                	traits = { old_guard }
+                	skill = 3
+                	attack_skill = 2
+                	defense_skill = 2
+                	planning_skill = 4
+                	logistics_skill = 2
+                }
+				create_field_marshal = {
+                	name = GRU_general_Rupprecht_Bayern
+                	portrait_path = "gfx/leaders/GER/Portrait_Germany_Rupprecht_Bayern_kr.png"
+                	traits = { trait_cautious inflexible_strategist defensive_doctrine organizer thorough_planner }
+                	skill = 4
+                	attack_skill = 2
+                	defense_skill = 4
+                	planning_skill = 4
+                	logistics_skill = 3
+                }
+				create_field_marshal = {
+                	name = GRU_general_Paul_von_Lettow_Vorbeck
+                	portrait_path = "gfx/leaders/GER/Portrait_Germany_Paul_von_Lettow_Vorbeck.png"
+                	traits = { trickster war_hero media_personality jungle_rat}
+                	skill = 4
+                	attack_skill = 3
+                	defense_skill = 3
+                	planning_skill = 2
+                	logistics_skill = 5
+                }
 
 	            GER = {
 		            # transfer a sizeable amount of equipment
@@ -1188,14 +1309,6 @@ country_event = { # victory Intro
 							autonomy_state = autonomy_free
 						}
 					}
-				}
-				every_unit_leader = {
-					set_unit_leader_flag = GEX_exile_leader
-					set_nationality = event_target:Mittelafrika_Target
-				}
-				every_navy_leader = {
-					set_unit_leader_flag = GEX_exile_leader
-					set_nationality = event_target:Mittelafrika_Target
 				}
 				germany_capitulates = yes
 				create_faction = gru_alldeutschpakt_faction

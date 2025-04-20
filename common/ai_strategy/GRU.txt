@@ -464,13 +464,12 @@ GRU_eyes_on_france = {
 		original_tag = GRU
 	}
 	enable = {
-		has_war = no
 		GRU = {
 			is_subject = no
 			has_socialist_government = no
 		}
 		is_neighbor_of = FRA
-		FRA = { has_capitulated = no }
+		has_war_with = FRA
 	}
 	abort_when_not_enabled = yes
 
@@ -1344,22 +1343,17 @@ GRU_eyes_on_Russia = {
 	ai_strategy = {
 		type = conquer
 		id = RUS
-		value = 300
+		value = 200
 	}
 	ai_strategy = {
 		type = front_armor_score
 		id = RUS
-		value = 100
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = RUS
 		value = 50
 	}
 	ai_strategy = {
 		type = front_unit_request
-		tag = FRA
-		value = -20
+		tag = RUS
+		value = 25
 	}
 }
 

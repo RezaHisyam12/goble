@@ -4661,6 +4661,10 @@ rotermorgenrussiandoom.3.b:0 "The Kaiser could only dream of such a..."
 AFRICAN_HRE_GOEBB: "African Kaiserreich"
 AFRICAN_HRE_GOEBB_ADJ: "German"
 AFRICAN_HRE_GOEBB_DEF: "the German Reich in Exile"
+MAF_SWA: "Mittelafrika"
+MAF_SWA_ADJ: "German"
+MAF_SWA_DEF: "the German Empire in Exile"
+
 
 RUS_Intervene_Germany: "Intervene the Weltkrieg"
 RUS_Intervene_Germany_desc: "The time has come for us to end the injustices inflicted from the Weltkrieg and strike back at the damnable German. Brest-Litovsk shall be avenged!"
@@ -5008,6 +5012,7 @@ GRU_general_Albert_Schreiner:0 "Albert Schreiner"
 GRU_general_Emil_Barth:0 "Emil Barth"
 
 ### Exile Germany
+GRU_general_Wilhelm_III:0 "Wilhelm III"
 GRU_general_August_Mackensen:0 "August von Mackenzen"
 GRU_general_Rupprecht_Bayern:0 "Ruprecht von Bavaria"
 GRU_general_Paul_von_Lettow_Vorbeck:0 "Paul von Lettow-Forbeck"

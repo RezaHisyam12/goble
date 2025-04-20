@@ -276,7 +276,6 @@ austria_hates_italy = {
 			is_subject_of = AUS
 			is_in_faction_with = AUS
 		}
-		AUS = { is_subject = no }
 		ITA = {
 			has_government = national_populist
 			is_subject = no
@@ -308,7 +307,10 @@ AUS_hates_serbia = {
 		original_tag = AUS
 	}
 	enable = {
-		NOT = { is_ally_with = SER }
+		NOT = {
+			is_ally_with = SER
+		}
+		has_war = no
 	}
 	abort_when_not_enabled = yes
 
@@ -336,12 +338,12 @@ AUS_crownlands_watch_serbia = {
 			is_subject_of = AUS
 			is_in_faction_with = AUS
 		}
-		AUS = { is_subject = no }
 		SER = {
 			is_subject = no
 			NOT = { is_in_faction_with = AUS }
 			has_capitulated = no
 		}
+		has_war = no
 	}
 
 	abort_when_not_enabled = yes
@@ -410,11 +412,11 @@ AUS_crownlands_crush_ser = {
 			is_subject_of = AUS
 			is_in_faction_with = AUS
 		}
-		AUS = { is_subject = no }
 		SER = {
 			is_subject = no
 			NOT = { is_in_faction_with = AUS }
 		}
+		has_war_with = SER
 	}
 
 	abort_when_not_enabled = yes
@@ -446,6 +448,7 @@ AUS_hates_romania = {
 			owns_state = 84
 			84 = { owner = { has_autonomy_state = crownland } }
 		}
+		has_war = no
 	}
 	abort_when_not_enabled = yes
 
@@ -473,12 +476,12 @@ AUS_crownlands_watch_romania = {
 			is_subject_of = AUS
 			is_in_faction_with = AUS
 		}
-		AUS = { is_subject = no }
 		ROM = {
 			is_subject = no
 			NOT = { is_in_faction_with = AUS }
 			has_capitulated = no
 		}
+		has_war = no
 	}
 
 	abort_when_not_enabled = yes
@@ -547,11 +550,11 @@ AUS_crownlands_crush_rom = {
 			is_subject_of = AUS
 			is_in_faction_with = AUS
 		}
-		AUS = { is_subject = no }
 		ROM = {
 			is_subject = no
 			NOT = { is_in_faction_with = AUS }
 		}
+		has_war_with = ROM
 	}
 	abort_when_not_enabled = yes
 
@@ -605,7 +608,6 @@ AUS_crownlands_watch_ukraine = {
 			is_subject_of = AUS
 			is_in_faction_with = AUS
 		}
-		AUS = { is_subject = no }
 		UKR = {
 			is_subject = no
 			NOT = { is_in_faction_with = AUS }
@@ -722,7 +724,6 @@ AUS_crownlands_watch_gru = {
 			is_subject_of = AUS
 			is_in_faction_with = AUS
 		}
-		AUS = { is_subject = no }
 		GRU = {
 			is_subject = no
 			NOT = { is_in_faction_with = AUS }

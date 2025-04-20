@@ -1,4 +1,4 @@
-﻿instant_effect = {
+instant_effect = {
 	### Variants ###
 	if = {
 		limit = { has_dlc_nsb = yes }
@@ -44,8 +44,9 @@
 	### Production ###
 	add_equipment_production = {
 		equipment = {
-			type = infantry_equipment_0
+			type = infantry_equipment_1
 		}
+		industrial_manufacturer = mio:SWE_husqvarna_vapenfabriks_organisation
 		requested_factories = 4
 		progress = 0.82
 		efficiency = 100
@@ -54,6 +55,7 @@
 		equipment = {
 			type = artillery_equipment_1
 		}
+		industrial_manufacturer = mio:SWE_bofors_organisation
 		requested_factories = 1
 		progress = 0.83
 		efficiency = 100
@@ -62,6 +64,7 @@
 		equipment = {
 			type = support_equipment_1
 		}
+		industrial_manufacturer = mio:SWE_carl_gustavs_stad_organisation
 		requested_factories = 1
 		progress = 0.44
 		efficiency = 100

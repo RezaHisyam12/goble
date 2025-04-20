@@ -1,4 +1,4 @@
-﻿instant_effect = {
+instant_effect = {
 	create_equipment_variant = {
 		name = "ZG 1"
 		type = medium_plane_airframe_0
@@ -33,6 +33,7 @@ instant_effect = {
 			creator = "SWI"
 			version_name = "JG 1"
 		}
+		industrial_manufacturer = mio:SWI_eidgenossisches_flugzeugwerk_organisation
 		requested_factories = 1
 		progress = 0.85
 		efficiency = 100

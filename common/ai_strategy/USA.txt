@@ -386,7 +386,7 @@ CSA_keep_garrison = {
 	ai_strategy = {
 		type = put_unit_buffers
 
-		ratio = 0.15
+		ratio = 0.05
 
 		states = {
 			360 #Pennsylvania
@@ -430,45 +430,12 @@ america_naval_invasion_focus = {
 			has_global_flag = USA_civil_war_over_flag
 			has_global_flag = USA_civil_war_avoided_flag
 		}
+		surrender_progress < 0.05
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = naval_invasion_focus
 		value = 55
-	}
-}
-
-america_hates_german_russia = {
-	allowed = {
-		is_american_tag = yes
-	}
-	enable = {
-		OR = {
-			has_global_flag = USA_civil_war_over_flag
-			has_global_flag = USA_civil_war_avoided_flag
-		}
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = antagonize
-		id = GER
-		value = 1000
-	}
-	ai_strategy = {
-		type = antagonize
-		id = GRU
-		value = 1000
-	}
-	ai_strategy = {
-		type = antagonize
-		id = RUS
-		value = 1000
-	}
-	ai_strategy = {
-		type = antagonize
-		id = AUS
-		value = 1000
 	}
 }
