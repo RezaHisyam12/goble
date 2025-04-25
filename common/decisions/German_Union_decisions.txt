@@ -10879,6 +10879,11 @@ GRU_expansion_three_volksland_hypoborea = {
 						remove_ideas = BAT_byzantine_government_2
 						remove_ideas = BAT_byzantine_government_3
 						remove_ideas = BAT_byzantine_government_4
+
+						random_unit_leader = {
+							limit = { has_id = 555008 }
+							remove_unit_leader = yes
+						}
 					}
 					VKB = {	country_event = rotermorgenmisc.400 }
 					if = {
@@ -16170,6 +16175,7 @@ GRU_new_order_decisions = {
 						create_field_marshal = {
 							name = "Heinrich Himmler"
 							portrait_path = "gfx/leaders/GRU/Portrait_RRB_Heinrich_Himmler.png"
+							desc = "POLITICS_HENRICH_HIMMLER_DESC"
 							traits = { trickster panzer_leader war_hero RR_OFFICER }
 							skill = 4
 
