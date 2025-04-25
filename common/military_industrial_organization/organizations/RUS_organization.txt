@@ -231,7 +231,7 @@ RUS_putilovets_organisation = {
 	name = putilovets_non_socrus
 	icon = GFX_idea_putilovets
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = {
 		FROM = {
@@ -447,7 +447,7 @@ RUS_okmo_kr_organisation = {
 	name = okmo_kr
 	icon = GFX_idea_okmo_kr
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = {
 		FROM = {
@@ -1090,7 +1090,7 @@ RUS_uztm_organisation = {
 		}
 	}
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 
 	equipment_type = {
@@ -2000,7 +2000,7 @@ RUS_tstz_organisation = {
 	name = tstz
 	icon = GFX_idea_tstz
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = {
 		FROM = {
@@ -4823,7 +4823,7 @@ RUS_chtz_organisation = {
 	name = chtz
 	icon = GFX_idea_chtz
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = {
 		FROM = {
@@ -5720,7 +5720,7 @@ RUS_bz_organisation = {
 	name = bz
 	icon = GFX_idea_bz
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = { FROM = { owns_state = 195 } } #Petrograd
 
@@ -6157,7 +6157,7 @@ RUS_av_organisation = {
 	name = av
 	icon = GFX_idea_av
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = { FROM = { owns_state = 195 } } #Petrograd
 
@@ -6484,7 +6484,7 @@ RUS_as_organisation = {
 	name = as
 	icon = GFX_idea_as
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = { FROM = { owns_state = 218 } } #Rostov
 
@@ -7271,7 +7271,7 @@ RUS_dalzavod_organisation = {
 	name = dalzavod
 	icon = GFX_idea_dalzavod
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = { FROM = { owns_state = 408 } } #Vladivostok
 
@@ -7657,7 +7657,7 @@ RUS_osoavia_organisation = {
 	name = osoavia
 	icon = GFX_idea_osoavia
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = {
 		FROM = {
@@ -8123,7 +8123,7 @@ RUS_duks_organisation = {
 	name = duks
 	icon = GFX_idea_duks
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = { FROM = { owns_state = 219 } } #Moscow
 
@@ -8436,7 +8436,7 @@ RUS_tsagi_organisation = {
 	name = tsagi
 	icon = GFX_idea_tsagi
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = { FROM = { owns_state = 219 } } #Moscow
 
@@ -9282,7 +9282,7 @@ RUS_gamayun_organisation = {
 	name = gamayun_non_socrus
 	icon = GFX_idea_gamayun
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = { FROM = { owns_state = 249 } } #Kazan
 
@@ -9606,7 +9606,7 @@ RUS_skorost_organisation = {
 	name = skorost_non_socrus
 	icon = GFX_idea_skorost
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = { FROM = { owns_state = 219 } } #Moscow
 
@@ -9957,7 +9957,7 @@ RUS_sokol_organisation = {
 	name = sokol
 	icon = GFX_idea_sokol
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = { FROM = { owns_state = 252 } } #Nizhny Novgorod
 
@@ -10293,7 +10293,7 @@ RUS_sokol_construction_organisation = {
 	name = sokol
 	icon = GFX_idea_sokol
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = { FROM = { owns_state = 252 } } #Nizhny Novgorod
 
@@ -10670,7 +10670,7 @@ RUS_sokol_production_organisation = {
 	name = sokol
 	icon = GFX_idea_sokol
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = { FROM = { owns_state = 252 } } #Nizhny Novgorod
 
@@ -11052,7 +11052,7 @@ RUS_toz_organisation = {
 	name = toz
 	icon = GFX_idea_toz
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = { FROM = { owns_state = 223 } } #Tula
 
@@ -11474,7 +11474,7 @@ RUS_vpoz_organisation = {
 	name = vpoz
 	icon = GFX_idea_vpoz
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = { FROM = { owns_state = 400 } }
 
@@ -11738,7 +11738,7 @@ RUS_imz_organisation = {
 	name = imz
 	icon = GFX_idea_imz
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = { FROM = { owns_state = 399 } } #Izhevsk
 
@@ -11957,7 +11957,7 @@ RUS_obukhov_organisation = {
 	name = obukhov_non_socrus
 	icon = GFX_idea_obukhov
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = { FROM = { owns_state = 195 } } #Petrograd
 
@@ -12833,7 +12833,7 @@ RUS_bmz_organisation = {
 	name = bmz
 	icon = GFX_idea_bmz
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = {
 		FROM = {
@@ -13239,7 +13239,7 @@ RUS_amo_organisation = { ### For those with AAT and LaR ###
 	name = amo_non_socrus
 	icon = GFX_idea_amo
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = {
 		FROM = {
@@ -13608,7 +13608,7 @@ RUS_amo_organisation_non_nsb = { ### For those with AAT but not NSB ###
 	name = amo_non_socrus
 	icon = GFX_idea_amo
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = { FROM = { owns_state = 219 } } #Moscow
 
@@ -13963,7 +13963,7 @@ RUS_naz_organisation = { ### For those with AAT but, not LaR
 	name = naz_non_socrus
 	icon = GFX_idea_naz
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	visible = {
 		has_dlc_lar = no
@@ -14460,7 +14460,7 @@ RUS_naz_organisation_lar = { ### For those with AAT and LaR
 	name = naz
 	icon = GFX_idea_naz
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	visible = {
 		has_dlc_lar = yes
@@ -14965,7 +14965,7 @@ RUS_laz_organisation = {
 	name = laz_non_socrus
 	icon = GFX_idea_laz
 	allowed = {
-		is_russian_tag = yes
+		is_russian_tag_that_can_integrate = yes
 	}
 	available = { FROM = { owns_state = 248 } } #Yaroslav
 

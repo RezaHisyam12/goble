@@ -464,12 +464,12 @@ GRU_eyes_on_france = {
 		original_tag = GRU
 	}
 	enable = {
+		has_war = no
 		GRU = {
 			is_subject = no
 			has_socialist_government = no
 		}
 		is_neighbor_of = FRA
-		has_war_with = FRA
 	}
 	abort_when_not_enabled = yes
 
@@ -1323,40 +1323,6 @@ STP_defend_eastern_front_southern_oststaaten = {
 	}
 }
 
-GRU_eyes_on_Russia = {
-	allowed = {
-		original_tag = GRU
-	}
-	enable = {
-		OR = {
-			NOT = { country_exists = VKB }
-			VKB = { has_capitulated = yes }
-		}
-		OR = {
-			NOT = { country_exists = VKR }
-			VKR = { has_capitulated = yes }
-		}
-		has_war_with = RUS
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = conquer
-		id = RUS
-		value = 200
-	}
-	ai_strategy = {
-		type = front_armor_score
-		id = RUS
-		value = 50
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = RUS
-		value = 25
-	}
-}
-
 STP_eyes_on_Russia = {
 	allowed = {
 		OR = {
@@ -1644,7 +1610,7 @@ GRU_dont_naval_invade_if_fighting_in_two_fronts = {
 
 GRU_endsieg = { #Cease attacks if losing against France and has low equipment
 	allowed = {
-		original_tag = GRU
+		tag = GRU
 	}
 	enable = {
 		stockpile_ratio = { archetype = infantry_equipment ratio < 0.1 }
@@ -1685,8 +1651,10 @@ GRU_build_tanks_if_france_is_aggressive = {
 	}
 	enable = {
 		is_neighbor_of = FRA
-		FRA = { has_capitulated = no }
-		FRA = { has_government = totalist }
+		FRA = { 
+			has_capitulated = no
+			has_government = totalist
+		}
 		AUS = {
 			OR = {
 				has_capitulated = yes
@@ -1714,6 +1682,63 @@ GRU_build_tanks_if_france_is_aggressive = {
 	ai_strategy = {
 		type = railway_gun_divisions_ratio
 		value = 4
+	}
+}
+
+GRU_war_against_france = {
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		FRA = {
+			has_war_with = ROOT
+			has_capitulated = no
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_armor_score
+		id = FRA
+		value = 100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = FRA
+		value = 50
+	}
+	ai_strategy = {
+		type = railway_gun_divisions_ratio
+		value = 1
+	}
+}
+
+GRU_secure_eastern_front = {
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		OR = {
+			NOT = { country_exists = VKB }
+			VKB = { has_capitulated = yes }
+		}
+		OR = {
+			NOT = { country_exists = VKR }
+			VKR = { has_capitulated = yes }
+		}
+		has_war_with = RUS
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_armor_score
+		id = RUS
+		value = 50
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = RUS
+		value = 25
 	}
 }
 
