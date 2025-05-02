@@ -2153,6 +2153,7 @@ GRU_lebensraum_decisions_desc:0 "The time for mere words has passed—our destin
 GRU_lebensraum_conquest_decision:0 "Conquest of [From.GetNameDef]."
 GRU_lebensraum_russia_conquest_decision:0 "Conquest of [From.GetNameDef]."
 GRU_lebensraum_baltic_conquest_decision:0 "Conquest of [From.GetNameDef]."
+GRU_lebensraum_conquest_2: "Liberate §R[From.GetNameDef]§!"
 
 GRU_beyond_lebensraum_decisions:0 "Lebensraum beyond the Urals"
 GRU_beyond_lebensraum_conquest_decision:0 "Conquest of [From.GetNameDef]."
@@ -4622,6 +4623,18 @@ rotermorgen.1101.a:0 "But we will hold."
 rotermorgenmisc.1102.t:0 "Before the Storm"
 rotermorgenmisc.1102.d:0 "Following the Weltkrieg, Russia was absolutely humiliated and cut down to size. Despite their expansionist agenda as of late, most policy experts within Germany agreed that Ivan would never again challenge our might--Today, we were proven horrendously wrong. Russian troops have mobilized across the borders and reports are coming in of upcoming attacks. It's debatable if we were ready for a war with the Communards, let alone this..."
 rotermorgenmisc.1102.a:0 "We shall be ready."
+
+
+### Germany Defeat ###
+rmfallgoebb.1.t: "Total-Ainzatz Mission"
+rmfallgoebb.1.d: "„Base is Squadron Selbstopfer - Aingerier, approaching the target. Time of arrival 2 min.“\n\n„Copy that, Aingerer. Do you have visual contact? Any signs of enemy activity?“\n\n„Affirmative. I can see the bridge, but no Russians. Should I retreat to base?“\n\n„Negative. The bridge is the primary target. Proceed as normal.“\n\n„Roger that.“\n\n„I can see the bridge clearly now. Estimated time of arrival is 1 minute.“\n\n„Copy that, Eingerer. Proceed as usual.“\n\n„(...)“\n\n„Aingerier, when do you estimate the time of impact to be?“\n\n„(...)“\n\n„Aingerier?“\n\n„(...)“\n\n„Aingerier?-Great, I think he crashed into the bridge.“\n\n„I'm sorry I'm here. I had to make another run. I couldn't make it.“\n\n„Aingerier, know that there is no turning back. You accepted this mission by swearing allegiance to Germany and to the Volkführer himself. Anything else is desertion. Do you understand?“\n\n„... ... Yes. ... Estimated time to impact 30 seconds.“\n\n„Understand. Aingerier?“\n\n„Roger that. Take care of my children. ... God save Germany! God, I'm meeting those, um. ... ...“"
+rmfallgoebb.1.d2: ":::::::: INTERCEPTION REPORT ::::::::\n\n„Base is Squadron Selbstopfer - Aingerier, approaching the target. Time of arrival 2 min.“\n\n„Copy that, Aingerer. Do you have visual contact? Any signs of enemy activity?“\n\n„Affirmative. I can see the bridge, but no Russians. Should I retreat to base?“\n\n„Negative. The bridge is the primary target. Proceed as normal.“\n\n„Roger that.“\n\n„I can see the bridge clearly now. Estimated time of arrival is 1 minute.“\n\n„Copy that, Eingerer. Proceed as usual.“\n\n„(...)“\n\n„Aingerier, when do you estimate the time of impact to be?“\n\n„(...)“\n\n„Aingerier?“\n\n„(...)“\n\n„Aingerier?-Great, I think he crashed into the bridge.“\n\n„I'm sorry I'm here. I had to make another run. I couldn't make it.“\n\n„Aingerier, know that there is no turning back. You accepted this mission by swearing allegiance to Germany and to the Volkführer himself. Anything else is desertion. Do you understand?“\n\n„... ... Yes. ... Estimated time to impact 30 seconds.“\n\n„Understand. Aingerier?“\n\n„Roger that. Take care of my children. ... God save Germany! God, I'm meeting those, um. ... ...“\n\n:::::::: T O P S E C R E T ::::::::"
+rmfallgoebb.1.a: "„ I'm so sorry... “"
+rmfallgoebb.1.a2: "Crazy Krauts!"
+
+rmfallgoebb.3.t: "The death of Goebbels"
+rmfallgoebb.3.d: "After years of brutal fighting, a squad of soldiers entered the heart of Germany today. A grim dawn illuminated the ruins of a once majestic city, where the echoes of battles shook the air not so long ago. They quickly located the Reich's last stronghold, the Volksführerbunker, the dark heart of the vanishing empire where Goebbels and his last loyal supporters had taken refuge. In the eerie silence of the underground shelter, amid the remains of a shattered dream, the soldiers advanced step by step toward the center of the bunker. Their footsteps resounded in the stone corridors filled with the lingering odor of fear and hopelessness. Suddenly an ominous scene appeared before them: the former Volksführer, who had lost his mind and his country, lay dead. Goebbels had committed suicide in a desperate attempt to find the freedom he could no longer find in this world. Beside him lay his wife Magda and their children, all dead. Victims of madness and fanaticism, they had chosen death over a life without the ideals that had shrouded the last years.\nThe city, once impregnable, like a silent lightning bolt spread the news that the resistance of the last German soldiers had ended. The rumbling of guns and battle cries were silenced, giving way to an ominous silence. This silence was deafening, as if history itself held its breath, realizing the significance of the moment. Everyone understood: this was the end. Almost certainly, in the coming hours, a complete cessation of hostilities would be announced, and with it would come the realization of the colossal loss that had cost millions of lives."
+rmfallgoebb.3.a: "The end of everything?"
 
 
 

@@ -10928,9 +10928,6 @@ GRU_expansion_three_volksland_hypoborea = {
 				
 			available = {
 				has_completed_focus = GRU_NMDVP_LEBENSRAUM
-				has_country_flag = VKB_established
-				has_country_flag = VKK_established
-				has_country_flag = VKR_established
 				tag = GRU 
 						OR = {
 							GRU = {
@@ -13021,15 +13018,6 @@ GRU_expansion_two_volksreichskommissariat_kaukasia = {
 						}
 						OR = {
 							GRU = {
-								owns_state = 1267
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								owns_state = 1267
-							}
-						}
-						OR = {
-							GRU = {
 								owns_state = 1191
 							}
 							any_other_country = {
@@ -13053,7 +13041,6 @@ GRU_expansion_two_volksreichskommissariat_kaukasia = {
 								transfer_state = 1189
 								transfer_state = 1186
 								transfer_state = 1187
-								transfer_state = 1267
 								transfer_state = 1191
 					}
 					hidden_effect = {
@@ -13527,6 +13514,132 @@ GRU_lebensraum_decisions = {
 				target = FROM
 				type = annex_everything
 			}
+		}
+	}
+	GRU_lebensraum_conquest_2 = {
+		icon = generic_prepare_civil_war
+
+		visible = {
+			has_completed_focus = GRU_NMDVP_LEBENSRAUM
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				    tag = VLG
+				    tag = RRF
+				    tag = GOR
+				    tag = GVV
+				    tag = TTR
+				    tag = PRM
+				    tag = BSK
+				    tag = RRV
+				    tag = ORB
+				    tag = URP
+				    tag = ZLT
+				    tag = DRL
+				    tag = NWP
+				    tag = KZK
+				    tag = ALO
+				    tag = PTS
+				    tag = PVD
+				    tag = TMN
+				    tag = SVD
+				    tag = SUG
+				    tag = SHE
+				    tag = NVS
+				    tag = OMS
+				    tag = SBR
+				    tag = KNS
+				    tag = SAT
+				    tag = IRK
+				    tag = BRY
+				    tag = CHT
+				    tag = YAK
+				    tag = AMR
+				    tag = OHT
+				    tag = KMC
+				    tag = KAZ
+				    tag = KST
+				    tag = HRZ
+				    tag = BUH
+				    tag = ISM
+
+					tag = IZH
+					tag = GGL
+					tag = SMR
+					tag = ALT
+					tag = MGD
+					tag = OMO
+				}
+			}
+		}
+		target_root_trigger = {
+			has_completed_focus = GRU_NMDVP_LEBENSRAUM
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				    tag = VLG
+				    tag = RRF
+				    tag = GOR
+				    tag = VYT
+				    tag = TTR
+				    tag = PRM
+				    tag = BSK
+				    tag = RRV
+				    tag = ORB
+				    tag = URP
+				    tag = ZLT
+				    tag = DRL
+				    tag = NWP
+				    tag = KZK
+				    tag = ALO
+				    tag = PTS
+				    tag = PVD
+				    tag = TMN
+				    tag = SVD
+				    tag = SUG
+				    tag = SHE
+				    tag = NVS
+				    tag = OMS
+				    tag = SBR
+				    tag = KNS
+				    tag = SAT
+				    tag = IRK
+				    tag = BRY
+				    tag = CHT
+				    tag = YAK
+				    tag = AMR
+				    tag = OHT
+				    tag = KMC
+				    tag = KAZ
+				    tag = KST
+				    tag = HRZ
+				    tag = BUH
+				    tag = ISM
+					
+					tag = IZH
+					tag = GGL
+					tag = SMR
+					tag = ALT
+					tag = MGD
+					tag = OMO
+				}	
+			}
+		}
+
+		fire_only_once = no
+		cost = 40
+		days_remove = 160
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_lebensraum_conquest_2"
+			declare_war_on = {	type = annex_everything	target = FROM }
 		}
 	}
 
@@ -15807,7 +15920,7 @@ GRU_stahlpakt_alliance_decisions = {
 			has_guaranteed = FROM
 		}
 
-		targets = { BAT EST LAT LIT WHR UKR CRM }
+		targets = { BAT EST LAT LIT WHR UKR POL }
 		target_root_trigger = {
 			OR = {
 				has_completed_focus = GRU_nmdvp_victory
@@ -15922,7 +16035,7 @@ GRU_stahlpakt_alliance_decisions = {
 			}
 		}
 
-		targets = { BAT EST LAT LIT WHR UKR CRM }
+		targets = { BAT EST LAT LIT WHR UKR POL SER ROM BUL CRO BOS }
 		target_root_trigger = {
 			OR = {
 				has_completed_focus = GRU_volksfuhrer

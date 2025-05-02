@@ -11,6 +11,83 @@ spriteTypes = {
 ##### GER #####
 ###############
   
+  ### GRU
+	SpriteType = {
+		name = "GFX_GRU_land_cruiser_chassis_medium"
+		texturefile = "gfx/interface/technologies/GER_land_cruiser_armor.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRU_land_cruiser_armor_medium"
+		texturefile = "gfx/interface/technologies/GER_land_cruiser_armor.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRU_land_cruiser_armor_2_medium"
+		texturefile = "gfx/interface/technologies/GER_land_cruiser_armor_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRU_armored_support_vehicle_crossing_medium" #Bridge Layer
+		texturefile = "gfx/interface/technologies/GER_armored_support_vehicle_crossing.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRU_armored_support_vehicle_recovery_medium" #Recovery Tank
+		texturefile = "gfx/interface/technologies/GER_armored_support_vehicle_recovery.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRU_armored_support_vehicle_medium" #Mine Clearance
+		texturefile = "gfx/interface/technologies/GER_armored_support_vehicle.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRU_armored_support_vehicle_command_medium"
+		texturefile = "gfx/interface/technologies/GER_armored_support_vehicle_command.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRU_self_propelled_super_heavy_artillery_equipment_medium"
+		texturefile = "gfx/interface/technologies/GER_self_propelled_super_heavy_artillery.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRU_super_heavy_artillery_equipment_medium"
+		texturefile = "gfx/interface/technologies/GER_super_heavy_artillery.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRU_light_flame_tank_medium"
+		texturefile = "gfx/interface/technologies/GER_light_flame_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRU_medium_flame_tank_medium"
+		texturefile = "gfx/interface/technologies/GER_medium_flame_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRU_helicopter_equipment_medium"
+		texturefile = "gfx/interface/technologies/GER_helicopter.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRU_helicopter_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/GER_helicopter_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRU_mothership_equipment_medium"
+		texturefile = "gfx/interface/technologies/GER_mothership.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRU_strat_bomber_intercontinental_equipment_medium"
+		texturefile = "gfx/interface/technologies/GER_strategic_bomber_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRU_strat_bomber_intercontinental_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/GER_strategic_bomber_4_var_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRU_supersonic_fighter1_medium"
+		texturefile = "gfx/interface/technologies/GER_supersonic_jet_plane.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRU_small_plane_airframe_5_medium"
+		texturefile = "gfx/interface/technologies/GER_supersonic_jet_plane.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRU_nuclear_missile_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/GER_nuclear_missile_equipment_2.dds"
+	}
   ### MAF
 	SpriteType = {
 		name = "GFX_MAF_land_cruiser_chassis_medium"
@@ -319,81 +396,81 @@ spriteTypes = {
 		name = "GFX_LIT_nuclear_missile_equipment_2_medium"
 		texturefile = "gfx/interface/technologies/GER_nuclear_missile_equipment_2.dds"
 	}
-  ### BLR
+  ### WHR
 	SpriteType = {
-		name = "GFX_BLR_land_cruiser_chassis_medium"
+		name = "GFX_WHR_land_cruiser_chassis_medium"
 		texturefile = "gfx/interface/technologies/GER_land_cruiser_armor.dds"
 	}
 	SpriteType = {
-		name = "GFX_BLR_land_cruiser_armor_medium"
+		name = "GFX_WHR_land_cruiser_armor_medium"
 		texturefile = "gfx/interface/technologies/GER_land_cruiser_armor.dds"
 	}
 	SpriteType = {
-		name = "GFX_BLR_land_cruiser_armor_2_medium"
+		name = "GFX_WHR_land_cruiser_armor_2_medium"
 		texturefile = "gfx/interface/technologies/GER_land_cruiser_armor_2.dds"
 	}
 	SpriteType = {
-		name = "GFX_BLR_armored_support_vehicle_crossing_medium" #Bridge Layer
+		name = "GFX_WHR_armored_support_vehicle_crossing_medium" #Bridge Layer
 		texturefile = "gfx/interface/technologies/GER_armored_support_vehicle_crossing.dds"
 	}
 	SpriteType = {
-		name = "GFX_BLR_armored_support_vehicle_recovery_medium" #Recovery Tank
+		name = "GFX_WHR_armored_support_vehicle_recovery_medium" #Recovery Tank
 		texturefile = "gfx/interface/technologies/GER_armored_support_vehicle_recovery.dds"
 	}
 	SpriteType = {
-		name = "GFX_BLR_armored_support_vehicle_medium" #Mine Clearance
+		name = "GFX_WHR_armored_support_vehicle_medium" #Mine Clearance
 		texturefile = "gfx/interface/technologies/GER_armored_support_vehicle.dds"
 	}
 	SpriteType = {
-		name = "GFX_BLR_armored_support_vehicle_command_medium"
+		name = "GFX_WHR_armored_support_vehicle_command_medium"
 		texturefile = "gfx/interface/technologies/GER_armored_support_vehicle_command.dds"
 	}
 	SpriteType = {
-		name = "GFX_BLR_self_propelled_super_heavy_artillery_equipment_medium"
+		name = "GFX_WHR_self_propelled_super_heavy_artillery_equipment_medium"
 		texturefile = "gfx/interface/technologies/GER_self_propelled_super_heavy_artillery.dds"
 	}
 	SpriteType = {
-		name = "GFX_BLR_super_heavy_artillery_equipment_medium"
+		name = "GFX_WHR_super_heavy_artillery_equipment_medium"
 		texturefile = "gfx/interface/technologies/GER_super_heavy_artillery.dds"
 	}
 	SpriteType = {
-		name = "GFX_BLR_light_flame_tank_medium"
+		name = "GFX_WHR_light_flame_tank_medium"
 		texturefile = "gfx/interface/technologies/GER_light_flame_tank.dds"
 	}
 	SpriteType = {
-		name = "GFX_BLR_medium_flame_tank_medium"
+		name = "GFX_WHR_medium_flame_tank_medium"
 		texturefile = "gfx/interface/technologies/GER_medium_flame_tank.dds"
 	}
 	SpriteType = {
-		name = "GFX_BLR_helicopter_equipment_medium"
+		name = "GFX_WHR_helicopter_equipment_medium"
 		texturefile = "gfx/interface/technologies/GER_helicopter.dds"
 	}
 	SpriteType = {
-		name = "GFX_BLR_helicopter_equipment_2_medium"
+		name = "GFX_WHR_helicopter_equipment_2_medium"
 		texturefile = "gfx/interface/technologies/GER_helicopter_2.dds"
 	}
 	SpriteType = {
-		name = "GFX_BLR_mothership_equipment_medium"
+		name = "GFX_WHR_mothership_equipment_medium"
 		texturefile = "gfx/interface/technologies/GER_mothership.dds"
 	}
 	SpriteType = {
-		name = "GFX_BLR_strat_bomber_intercontinental_equipment_medium"
+		name = "GFX_WHR_strat_bomber_intercontinental_equipment_medium"
 		texturefile = "gfx/interface/technologies/GER_strategic_bomber_4.dds"
 	}
 	SpriteType = {
-		name = "GFX_BLR_strat_bomber_intercontinental_equipment_2_medium"
+		name = "GFX_WHR_strat_bomber_intercontinental_equipment_2_medium"
 		texturefile = "gfx/interface/technologies/GER_strategic_bomber_4_var_1.dds"
 	}
 	SpriteType = {
-		name = "GFX_BLR_supersonic_fighter1_medium"
+		name = "GFX_WHR_supersonic_fighter1_medium"
 		texturefile = "gfx/interface/technologies/GER_supersonic_jet_plane.dds"
 	}
 	SpriteType = {
-		name = "GFX_BLR_small_plane_airframe_5_medium"
+		name = "GFX_WHR_small_plane_airframe_5_medium"
 		texturefile = "gfx/interface/technologies/GER_supersonic_jet_plane.dds"
 	}
 	SpriteType = {
-		name = "GFX_BLR_nuclear_missile_equipment_2_medium"
+		name = "GFX_WHR_nuclear_missile_equipment_2_medium"
 		texturefile = "gfx/interface/technologies/GER_nuclear_missile_equipment_2.dds"
 	}
   ### UKR

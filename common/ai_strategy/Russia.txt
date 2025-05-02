@@ -159,7 +159,10 @@ RUS_focus_on_ukraine = {
 		UKR = {
 			exists = yes
 			has_capitulated = no
-			NOT = { is_ally_with = ROOT }
+			NOT = { 
+				is_ally_with = ROOT 
+				has_country_flag = IS_VKR
+			}
 		}
 	}
 	abort_when_not_enabled = yes
@@ -202,7 +205,12 @@ RUS_crush_ukraine = {
 	}
 	enable = {
 		has_war_with = UKR
-		UKR = { has_capitulated = no }
+		UKR = {
+			has_capitulated = no
+			NOT = { 
+				has_country_flag = IS_VKR
+			}
+		}
 		has_manpower > 250000
 		stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
 		num_planes_stationed_in_regions = {
@@ -385,7 +393,12 @@ RUS_focus_on_baltic_duchy = {
 			NOT = { has_war_with = UKR }
 			UKR = { has_capitulated = yes }
 		}
-		BAT = { has_capitulated = no }
+		BAT = {
+			has_capitulated = no
+			NOT = { 
+				has_country_flag = IS_VKB
+			}
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -416,7 +429,12 @@ RUS_mop_up_baltic_duchy = {
 			NOT = { has_war_with = UKR }
 			UKR = { has_capitulated = yes }
 		}
-		BAT = { has_capitulated = no }
+		BAT = {
+			has_capitulated = no
+			NOT = { 
+				has_country_flag = IS_VKB
+			}
+		}
 		has_manpower > 250000
 		stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
 		num_planes_stationed_in_regions = {
@@ -990,7 +1008,7 @@ RUS_crush_germany = {
 	}
 }
 
-RUS_focus_on_germansocialist = {
+RUS_focus_on_german_socialist = {
 	allowed = {
 		original_tag = RUS
 	}
@@ -1035,7 +1053,7 @@ RUS_focus_on_germansocialist = {
 	}
 }
 
-RUS_crush_germansocialist = {
+RUS_crush_german_socialist = {
 	allowed = {
 		original_tag = RUS
 	}
@@ -1555,7 +1573,7 @@ RUS_total_war_against_germany = {
 	}
 }
 
-RUS_total_war_against_germansocialist = {
+RUS_total_war_against_german_socialist = {
 	allowed = {
 		original_tag = RUS
 	}

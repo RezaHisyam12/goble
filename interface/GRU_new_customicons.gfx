@@ -12152,7 +12152,7 @@ spriteTypes = {
 
 	##Icon Shine For: 
 	SpriteType = { 
-		name = "GRU_spheres_of_influence_shine"
+		name = "GRU_SMEPD_fourth_internationale_shine"
 		texturefile = "gfx/interface/goals/GRU_SMEPD_fourth_internationale.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {

@@ -6900,7 +6900,7 @@ shared_focus = {
 			tag = GRU
 		}
 		ai_will_do = {
-			factor = 1000
+			factor = 10
 			modifier = {
 				factor = 0
 				date < 1942.1.1
@@ -7148,7 +7148,7 @@ shared_focus = {
 		y = 3
 		cost = 6
 		ai_will_do = {
-			factor = 75
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_PAN_GERMANISM_RELOADED"
@@ -7328,7 +7328,7 @@ shared_focus = {
 		y = 3
 		cost = 6
 		ai_will_do = {
-			factor = 75
+			factor = 1000
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_SLAV_LAND_EXPANSION"
@@ -7500,13 +7500,20 @@ shared_focus = {
 		y = 0
 		relative_position_id = GRU_NMDVP_LEBENSRAUM
 		available = {
-			has_country_flag = VKB_established
-			has_country_flag = VKR_established
-			NOT = { has_country_flag = VKM_established }
+			OR = {
+				has_country_flag = VKB_established
+				has_country_flag = VKR_established
+				NOT = { has_country_flag = VKM_established }
+			}
 		}
 
-		ai_will_do = { factor = 50 }
-
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 0
+				date < 1941.1.1
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_new_order"
 			every_subject_country = {
