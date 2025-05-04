@@ -411,7 +411,6 @@ country_event = { # flavour about united front
 					state = 28
 					state = 779
 					state = 8
-					state = 741
 				}
 			}
 			set_demilitarized_zone = yes
@@ -546,7 +545,6 @@ country_event = { # GRU setup
 							state = 28
 							state = 779
 							state = 8
-							state = 741
 		        		}
 		        	}
 		        	set_demilitarized_zone = no

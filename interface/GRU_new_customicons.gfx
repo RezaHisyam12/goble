@@ -3536,16 +3536,16 @@ spriteTypes = {
 	
 	SpriteType = { 
 		name = "GRU_NEW_DEM_ALLIANCE"
-		texturefile = "gfx/interface/goals/GRU_NEW_DEM_ALLIANCE.png"
+		texturefile = "gfx/interface/goals/GRU_NEW_DEM_ALLIANCE.dds"
 	}
 
 	##Icon Shine For: 
 	SpriteType = { 
 		name = "GRU_NEW_DEM_ALLIANCE_shine"
-		texturefile = "gfx/interface/goals/GRU_NEW_DEM_ALLIANCE.png"
+		texturefile = "gfx/interface/goals/GRU_NEW_DEM_ALLIANCE.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GRU_NEW_DEM_ALLIANCE.png"
+			animationmaskfile = "gfx/interface/goals/GRU_NEW_DEM_ALLIANCE.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -3557,7 +3557,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GRU_NEW_DEM_ALLIANCE.png"
+			animationmaskfile = "gfx/interface/goals/GRU_NEW_DEM_ALLIANCE.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -6616,21 +6616,21 @@ spriteTypes = {
 	
 	SpriteType = { 
 		name = "GRU_SOCIAL_DEM"
-		texturefile = "gfx/interface/goals/GRU_SOCIAL_DEM.png"
+		texturefile = "gfx/interface/goals/GRU_SOCIAL_DEM.dds"
 	}
 	
 	SpriteType = { 
 		name = "GRU_UNION_DEM"
-		texturefile = "gfx/interface/goals/GRU_UNION_DEM.png"
+		texturefile = "gfx/interface/goals/GRU_UNION_DEM.dds"
 	}
 
 	##Icon Shine For: 
 	SpriteType = { 
 		name = "GRU_UNION_DEM_shine"
-		texturefile = "gfx/interface/goals/GRU_UNION_DEM.png"
+		texturefile = "gfx/interface/goals/GRU_UNION_DEM.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GRU_UNION_DEM.png"
+			animationmaskfile = "gfx/interface/goals/GRU_UNION_DEM.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -6642,7 +6642,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GRU_UNION_DEM.png"
+			animationmaskfile = "gfx/interface/goals/GRU_UNION_DEM.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -6732,16 +6732,16 @@ spriteTypes = {
 	
 	SpriteType = { 
 		name = "GRU_RED_PATRIOT"
-		texturefile = "gfx/interface/goals/GRU_RED_PATRIOT.png"
+		texturefile = "gfx/interface/goals/GRU_RED_PATRIOT.dds"
 	}
 
 	##Icon Shine For: 
 	SpriteType = { 
 		name = "GRU_RED_PATRIOT_shine"
-		texturefile = "gfx/interface/goals/GRU_RED_PATRIOT.png"
+		texturefile = "gfx/interface/goals/GRU_RED_PATRIOT.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GRU_RED_PATRIOT.png"
+			animationmaskfile = "gfx/interface/goals/GRU_RED_PATRIOT.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -6753,7 +6753,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GRU_RED_PATRIOT.png"
+			animationmaskfile = "gfx/interface/goals/GRU_RED_PATRIOT.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -6917,16 +6917,16 @@ spriteTypes = {
 	
 	SpriteType = { 
 		name = "GRU_CULTURE_REV"
-		texturefile = "gfx/interface/goals/GRU_CULTURE_REV.png"
+		texturefile = "gfx/interface/goals/GRU_CULTURE_REV.dds"
 	}
 
 	##Icon Shine For: 
 	SpriteType = { 
 		name = "GRU_CULTURE_REV_shine"
-		texturefile = "gfx/interface/goals/GRU_CULTURE_REV.png"
+		texturefile = "gfx/interface/goals/GRU_CULTURE_REV.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GRU_CULTURE_REV.png"
+			animationmaskfile = "gfx/interface/goals/GRU_CULTURE_REV.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -6938,7 +6938,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GRU_CULTURE_REV.png"
+			animationmaskfile = "gfx/interface/goals/GRU_CULTURE_REV.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -6991,16 +6991,16 @@ spriteTypes = {
 	
 	SpriteType = { 
 		name = "GRU_THALMANN_GERMANY"
-		texturefile = "gfx/interface/goals/GRU_THALMANN_GERMANY.png"
+		texturefile = "gfx/interface/goals/GRU_THALMANN_GERMANY.dds"
 	}
 
 	##Icon Shine For: 
 	SpriteType = { 
 		name = "GRU_THALMANN_GERMANY_shine"
-		texturefile = "gfx/interface/goals/GRU_THALMANN_GERMANY.png"
+		texturefile = "gfx/interface/goals/GRU_THALMANN_GERMANY.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GRU_THALMANN_GERMANY.png"
+			animationmaskfile = "gfx/interface/goals/GRU_THALMANN_GERMANY.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -7012,7 +7012,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GRU_THALMANN_GERMANY.png"
+			animationmaskfile = "gfx/interface/goals/GRU_THALMANN_GERMANY.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -7213,16 +7213,16 @@ spriteTypes = {
 	
 	SpriteType = { 
 		name = "GRU_PIECK_propaganda"
-		texturefile = "gfx/interface/goals/GRU_PIECK_propaganda.png"
+		texturefile = "gfx/interface/goals/GRU_PIECK_propaganda.dds"
 	}
 
 	##Icon Shine For: 
 	SpriteType = { 
 		name = "GRU_PIECK_propaganda_shine"
-		texturefile = "gfx/interface/goals/GRU_PIECK_propaganda.png"
+		texturefile = "gfx/interface/goals/GRU_PIECK_propaganda.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GRU_PIECK_propaganda.png"
+			animationmaskfile = "gfx/interface/goals/GRU_PIECK_propaganda.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -7234,7 +7234,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GRU_PIECK_propaganda.png"
+			animationmaskfile = "gfx/interface/goals/GRU_PIECK_propaganda.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -10550,16 +10550,16 @@ spriteTypes = {
 	##Icon For: 
 	SpriteType = { 
 		name = "GFX_GRU_artisan_communes-3982"
-		texturefile = "gfx/interface/goals/GFX_GRU_artisan_communes-3982.png"
+		texturefile = "gfx/interface/goals/GFX_GRU_artisan_communes-3982.dds"
 	}
 
 	##Icon Shine For: 
 	SpriteType = { 
 		name = "GFX_GRU_artisan_communes-3982_shine"
-		texturefile = "gfx/interface/goals/GFX_GRU_artisan_communes-3982.png"
+		texturefile = "gfx/interface/goals/GFX_GRU_artisan_communes-3982.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_GRU_artisan_communes-3982.png"
+			animationmaskfile = "gfx/interface/goals/GFX_GRU_artisan_communes-3982.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -10571,7 +10571,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/GFX_GRU_artisan_communes-3982.png"
+			animationmaskfile = "gfx/interface/goals/GFX_GRU_artisan_communes-3982.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -12181,6 +12181,121 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
+	##Icon For: 
+	SpriteType = { 
+		name = "GRU_Entente"
+		texturefile = "gfx/interface/goals/GRU_Entente.png"
+	}
+
+	##Icon Shine For: 
+	SpriteType = { 
+		name = "GRU_Entente_shine"
+		texturefile = "gfx/interface/goals/GRU_Entente.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GRU_Entente.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GRU_Entente.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: 
+	SpriteType = { 
+		name = "GRU_True_Internationalism"
+		texturefile = "gfx/interface/goals/GRU_True_Internationalism.png"
+	}
+
+	##Icon Shine For: 
+	SpriteType = { 
+		name = "GRU_True_Internationalism_shine"
+		texturefile = "gfx/interface/goals/GRU_True_Internationalism.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GRU_True_Internationalism.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GRU_True_Internationalism.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: 
+	SpriteType = { 
+		name = "GRU_RED_SCARE"
+		texturefile = "gfx/interface/goals/GRU_RED_SCARE.png"
+	}
+
+	##Icon Shine For: 
+	SpriteType = { 
+		name = "GRU_RED_SCARE_shine"
+		texturefile = "gfx/interface/goals/GRU_RED_SCARE.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GRU_RED_SCARE.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GRU_RED_SCARE.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
 
 
 

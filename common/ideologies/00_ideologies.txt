@@ -90,14 +90,6 @@ ideologies = {
 			tot_left_nationalism_subtype = {can_be_randomly_selected = no} #Left Nationalism
 			british_maximism_subtype = {can_be_randomly_selected = no} #British Maximism
 			left_boulangism_subtype = {can_be_randomly_selected = no} #Left Boulangism
-			#NE SUBIDEOLOGIES
-			ingsoc_subtype = { can_be_randomly_selected = no }  #INGSOC
-			tot_sansepolcrismo = { can_be_randomly_selected = no } #Sansepolcrismo
-			tot_euro_mosleyism = { can_be_randomly_selected = no } #Oswald Mosley Thought
-			tot_neosocialism_subtype = { can_be_randomly_selected = no } #Neosocialism
-			tot_francism_subtype = { can_be_randomly_selected = no } #Francism
-			tot_natcol_subtype = { can_be_randomly_selected = no } #National Collectivism
-			tot_canaanism_subtype = {can_be_randomly_selected = no} #Canaanism
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_TOTALIST_1"
@@ -183,8 +175,6 @@ ideologies = {
 			syn_utopian_technocracy_subtype = {can_be_randomly_selected = no} #Utopian Technocracy
 			syn_broad_communism_subtype = {can_be_randomly_selected = no} #Broad Communism
 			syn_popcom_subtype = {can_be_randomly_selected = no} #Popular Communism
-			#NE 
-			syn_united_front = {can_be_randomly_selected = no} #United Front
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_SYNDICALIST_1"
@@ -302,13 +292,6 @@ ideologies = {
 			radsoc_syndicalist_subtype = {can_be_randomly_selected = no} #Syndicalist
 			radsoc_jeffersonianism_subtype = {can_be_randomly_selected = no} #Jeffersonianism
 			radsoc_kritarchy_subtype = {can_be_randomly_selected = no} #Kritarchy
-
-			#NE
-			radsoc_reformed_germanism = {can_be_randomly_selected = no} #Reformed Germanism
-			radsoc_sansepolcrismo = {can_be_randomly_selected = no}
-			radsoc_nasserism = { can_be_randomly_selected = no }
-			radsoc_brownism = { can_be_randomly_selected = no }
-			radsoc_canaanism_subtype = {can_be_randomly_selected = no} #Canaanism
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_RADICAL_SOCIALIST_1"
@@ -421,9 +404,6 @@ ideologies = {
 			chinese_federalism_subtype = {can_be_randomly_selected = no } #Chinese Federalism
 			socdem_normal_dixiecrat_subtype = {can_be_randomly_selected = no} #Populist Dixiecrat
 			socdem_iberian_federalism_subtype = {can_be_randomly_selected = no} #Iberian Federalism
-
-			#NE
-			socdem_reformed_germanism = {can_be_randomly_selected = no} #Reformed Germanism
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_SOCIAL_DEMOCRAT_1"

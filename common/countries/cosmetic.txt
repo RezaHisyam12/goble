@@ -4919,4 +4919,3 @@ MAF_SWA = {
 	color = rgb { 136 104 60 }
 	color_ui = rgb { 136 104 60 }
 }
-

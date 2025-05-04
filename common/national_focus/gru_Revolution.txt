@@ -6030,7 +6030,7 @@ shared_focus = {
 	
 	shared_focus = {
 		id = GRU_RED_SCARE
-		icon = GFX_HOL_red_scare
+		icon = GRU_RED_SCARE
 		relative_position_id = GRU_CORPORATE_DICTATORSHIP
 		x = 0
 		y = 3
@@ -6661,7 +6661,7 @@ shared_focus = {
 	#####smoll diplo####
 	shared_focus = {
 		id = GRU_REJOIN_INTERNATIONALE
-		icon = GFX_goal_comfrance
+		icon = GRU_True_Internationalism
 		relative_position_id = GRU_SOCIAL_LIBERALS_ELECTED
 		x = 2
 		y = 4
@@ -6713,7 +6713,7 @@ shared_focus = {
 	
 	shared_focus = {
 		id = GRU_JOIN_ENTENTE
-		icon = GFX_goal_canada
+		icon = GRU_Entente
 		relative_position_id = GRU_SOCIAL_LIBERALS_ELECTED
 		x = -2
 		y = 4
@@ -7865,13 +7865,13 @@ shared_focus = {
 	shared_focus = {
 		id = GRU_aid_plan
 		icon = VKB_COLONIZED
-		cost = 10
+		cost = 5
 
 		relative_position_id = GRU_new_order
 		x = 0
 		y = 3
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 5 }
 		prerequisite = {
 			focus = GRU_first_plan
 		}
@@ -7979,13 +7979,13 @@ shared_focus = {
 	shared_focus = {
 		id = GRU_aid_plan_2
 		icon = VKR_COLONIZE_ONE
-		cost = 10
+		cost = 5
 
 		relative_position_id = GRU_new_order
 		x = 0
 		y = 4
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 5 }
 		prerequisite = {
 			focus = GRU_aid_plan
 		}

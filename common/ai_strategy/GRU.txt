@@ -317,6 +317,7 @@ default_RR_Werwolf_production = {
 default_armour_super_heavy_production = {
 	allowed = {
 		OR = {
+			tag = GER
 			tag = GRU
 		}
 	}
@@ -439,6 +440,7 @@ GRU_ignore_swiss = {
 		SWI = {
 			NOT = { is_in_faction_with = FRA }
 		}
+		NOT = { has_war_with = SWI }
 	}
 	abort_when_not_enabled = yes
 
@@ -665,15 +667,18 @@ GRU_eyes_on_switzerland = {
 		original_tag = GRU
 	}
 	enable = {
+		has_war = no
+		is_neighbor_of = SWI
 		GRU = {
 			is_subject = no
 			has_socialist_government = no
 		}
-		is_neighbor_of = SWI
-		has_war = no
 		SWI = {
 			has_socialist_government = yes
 			has_capitulated = no
+		}
+		SWI = {
+			is_in_faction_with = FRA
 		}
 	}
 	abort_when_not_enabled = yes
@@ -1365,6 +1370,12 @@ STP_eyes_on_Russia = {
 ################
 
 default_heavy_tank_production = {
+	allowed = {
+		OR = {
+			tag = GER
+			tag = GRU
+		}
+	}
 	enable = {
 		is_eligible_for_armor_production = yes
 		num_divisions > 49 #build enough infantry first
@@ -1384,6 +1395,12 @@ default_heavy_tank_production = {
 }
 
 increased_heavy_tank_production_2 = {
+	allowed = {
+		OR = {
+			tag = GER
+			tag = GRU
+		}
+	}
 	enable = {
 		num_of_military_factories > 99
 	}
