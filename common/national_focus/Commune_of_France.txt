@@ -4288,6 +4288,38 @@ focus_tree = {
 		available = {
 			has_government = totalist
 		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				date > 1938.1.1
+				NOT = {
+					controls_state = 779
+					controls_state = 28
+				}
+			}
+			modifier = {
+				factor = 100
+				date > 1939.11.23
+				NOT = {
+					controls_state = 779
+					controls_state = 28
+				}
+			}
+			modifier = {
+				factor = 1000
+				date > 1940.11.6
+				AND = {
+					controls_state = 779
+					controls_state = 28
+				}
+			}
+			modifier = {
+				factor = 0
+				date < 1942.6.1
+				GRU = { exists = yes }
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_no_nationalism"
 			create_wargoal = {

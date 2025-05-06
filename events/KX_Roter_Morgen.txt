@@ -331,7 +331,7 @@ country_event = { # CONGRESS
 					}
 					has_game_rule = {
 						rule = GRU_congress
-						option = GRU_CONGRESS_NMDVP
+						option = GRU_CONGRESS_GSVP
 					}
 				}
 			}
@@ -612,7 +612,7 @@ country_event = { # CONGRESS
 					}
 					has_game_rule = {
 						rule = GRU_congress
-						option = GRU_CONGRESS_NMDVP
+						option = GRU_CONGRESS_GSVP
 					}
 				}
 			}
@@ -4796,7 +4796,7 @@ country_event = { #
 }
 
 
-country_event = { #
+{ #
 	id = rmruss.1
 	immediate = { log = "[GetDateText]: [Root.GetName]: event rmruss.1" }
 	title = rmruss.1.t
@@ -4978,7 +4978,6 @@ country_event = { #
 				        state = 1231
 				        state = 1220
 				        state = 137
-				        state = 1221
 						state = 240
 				        state = 821
 				        state = 220
@@ -5125,7 +5124,19 @@ country_event = { #
 				}
 			}
 			RUS = {
-				country_event = { id = rmruss.2 days = 30 }
+				every_owned_state = {
+		        	limit = {
+		        		is_core_of = RUS
+		        	}
+		        	set_demilitarized_zone = yes
+		        }
+				every_owned_state = {
+		        	limit = {
+		        		is_core_of = RUS
+		        	}
+		        	set_border_war = yes
+		        }
+				country_event = { id = rmruss.2 days = 60 }
 				every_owned_state = {
 			    	limit = {
 						country_exists = HYP
@@ -5276,8 +5287,8 @@ country_event = { #
 		ai_chance = {
 			factor = 25
 		}
-		add_stability = -0.25
-		add_war_support = -0.40
+		add_stability = -0.35
+		add_war_support = -0.50
 	}
 }
 country_event = { #
@@ -5295,7 +5306,18 @@ country_event = { #
 		ai_chance = {
 			factor = 99
 		}
-
+		every_state = {
+			limit = {
+				is_core_of = RUS
+			}
+			set_demilitarized_zone = no
+		}
+		every_state = {
+			limit = {
+				is_core_of = RUS
+			}
+			set_border_war = no
+		}
 		create_dynamic_country = {
 			every_state = {
 				limit = {
@@ -6664,7 +6686,7 @@ country_event = { #
 					set_party_name = { ideology = totalist long_name = GRU_party_19_long name = GRU_party_19 }
 					set_capital = { state = 403 }
 
-					set_cosmetic_tag = TMN
+					set_cosmetic_tag = RM_TMN
 				}
 			}
 		}
@@ -7241,9 +7263,6 @@ country_event = { #
 					set_capital = { state = 657 }
 
 					set_cosmetic_tag = AMR
-
-					set_country_flag = GRU_AMR_VISIBLE
-					set_country_flag = GRU_LEADER_GUI_VISIBLE
 				}
 			}
 		}

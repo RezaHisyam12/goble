@@ -1468,7 +1468,7 @@ country_event = { # CONGRESS
 					}
 					has_game_rule = {
 						rule = GRU_congress
-						option = GRU_CONGRESS_NMDVP
+						option = GRU_CONGRESS_GSVP
 					}
 				}
 			}
@@ -1749,7 +1749,7 @@ country_event = { # CONGRESS
 					}
 					has_game_rule = {
 						rule = GRU_congress
-						option = GRU_CONGRESS_NMDVP
+						option = GRU_CONGRESS_GSVP
 					}
 				}
 			}

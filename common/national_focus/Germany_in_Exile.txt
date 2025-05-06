@@ -568,7 +568,7 @@
 			}
 		}
 		will_lead_to_war_with = FRA
-
+		will_lead_to_war_with = GRU
 		bypass = {
 			OR = {
 				NOT = { country_exists = FRA }
@@ -582,6 +582,23 @@
 			create_wargoal = {
 				type = annex_everything
 				target = FRA
+			}
+			if = {
+				limit = {
+					country_exists = GRU
+					NOT = {
+						GRU = {
+							is_in_faction_with = FRA
+						}
+						GRU = {
+							has_socialist_government = yes
+						}
+					}
+				}
+				create_wargoal = {
+					target = GRU
+					type = annex_everything
+				}
 			}
 			every_state = {
 				limit = {

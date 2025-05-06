@@ -2437,36 +2437,36 @@ GRU_germania_plan_decisions = {
 		}
 	}
 	#
-	GRU_pan_germanism_integrate_swiss_decision = {
-
-		icon = GFX_pangermanicone
-
-		visible = {
-			has_completed_focus = GRU_NMDVP_PAN_GERMANISM
-			country_exists = SWI
-			 SWI = { is_subject_of = GRU }
-		}
-		available = {
-			country_exists = SWI
-			SWI = { is_subject_of = GRU }
-		}
-
-		fire_only_once = yes
-		cost = 20
-		days_remove = 0
-
-		ai_will_do = {
-			factor = 6
-		}
-
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_integrate_swiss_decision"
-			annex_country = {
-				target = SWI
-				transfer_troops = yes
-			}
-		}
-	}
+#	GRU_pan_germanism_integrate_swiss_decision = {
+#
+#		icon = GFX_pangermanicone
+#
+#		visible = {
+#			has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+#			country_exists = SWI
+#			 SWI = { is_subject_of = GRU }
+#		}
+#		available = {
+#			country_exists = SWI
+#			SWI = { is_subject_of = GRU }
+#		}
+#
+#		fire_only_once = yes
+#		cost = 20
+#		days_remove = 0
+#
+#		ai_will_do = {
+#			factor = 6
+#		}
+#
+#		remove_effect = {
+#			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_integrate_swiss_decision"
+#			annex_country = {
+#				target = SWI
+#				transfer_troops = yes
+#			}
+#		}
+#	}
 	#
 	GRU_pan_germanism_integrate_bohemia_decision = {
 		icon = GFX_pangermanicone
@@ -3125,10 +3125,6 @@ GRU_germania_plan_decisions = {
 
 		ai_will_do = {
 			factor = 130
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
 			modifier = {
 				factor = 0
 				FROM = {
@@ -16467,7 +16463,7 @@ GRU_new_order_decisions = {
 				set_country_flag = VKN_established
 				VKN = { set_country_flag = IS_VKN }
 				GRU = {
-					VKN = { transfer_technology_without_doctrines = yes }
+					VKN = { transfer_technology = yes }
 				}
 			}
 	}
@@ -16614,7 +16610,7 @@ GRU_new_order_decisions = {
 						}
 						any_other_country = {
 							is_subject_of = GRU
-							owns_state = 89
+							owns_state = 91
 						}
 					}
 					OR = {
@@ -16725,7 +16721,7 @@ GRU_new_order_decisions = {
 				set_country_flag = VKP_established
 				VKP = { set_country_flag = IS_VKP }
 				GRU = {
-					VKP = { transfer_technology_without_doctrines = yes }
+					VKP = { transfer_technology = yes }
 				}
 			}
 	}

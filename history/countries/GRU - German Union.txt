@@ -270,5 +270,28 @@ create_navy_leader = {
 	maneuvering_skill = 3
 	coordination_skill = 4
 }
+#### SCIENTISTS
+
+## NUCLEAR
+
+recruit_character = GER_Ludwig_Bieberbach
+recruit_character = GER_Max_Planck
+
+## LAND
+
+recruit_character = GER_Fritz_Haber
+recruit_character = GER_Emil_Becker
+
+## NAVY
+
+recruit_character = GER_Admiral_Peter_Strasser
+recruit_character = GER_Alfred_Ritscher
+
+## AIR
+
+recruit_character = GER_Von_Braun
+
+
 
 GRU_start_naval_variant = yes
+

@@ -1886,7 +1886,18 @@ shared_focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_mfsp"
 			add_ideas = GRU_MFSP
+			custom_effect_tooltip = tooltip_white_line
 			add_research_slot_until_six = yes
+			custom_effect_tooltip = tooltip_white_line
+			GRU_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GRU_wunderwaffen_special_project_speed_factor = 0.1
+				tooltip = special_project_speed_factor_tt
+			}
+			add_to_variable = { 
+				GRU_wunderwaffen_production_speed_facility_factor = 0.1
+				tooltip = production_speed_facility_factor_tt
+			}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		}
 }
@@ -2075,6 +2086,10 @@ shared_focus = {
 		cost = 5
 		ai_will_do = {
 			factor = 4
+			modifier = {
+				factor = 5
+				date > 1940.1.1
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_spzproj_uran"
@@ -2116,6 +2131,24 @@ shared_focus = {
 					construct_building_in_random_province = { nuclear_facility = 1 }
 				}
 			}
+			custom_effect_tooltip = tooltip_white_line
+			GRU_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_nuclear_reactor_speed_factor = 0.1
+				tooltip = sp_nuclear_reactor_speed_factor_tt
+			}
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_commercial_nuclear_reactor_speed_factor = 0.1
+				tooltip = sp_commercial_nuclear_reactor_speed_factor_tt
+			}
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_nuclear_warheads_speed_factor = 0.1
+				tooltip = sp_nuclear_warheads_speed_factor_tt
+			}
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_nuclear_bomb_speed_factor = 0.1
+				tooltip = sp_nuclear_bomb_speed_factor_tt
+			}
 		}
 	}
 
@@ -2129,17 +2162,26 @@ shared_focus = {
 		cost = 5
 		ai_will_do = {
 			factor = 4
+			modifier = {
+				factor = 5
+				date > 1940.1.1
+			}
 		}
 		completion_reward = {
-					log = "[GetDateText]: [Root.GetName]: Focus GRU_spzprojpfeil"
-					add_tech_bonus = {
-							name = GRU_spzprojpfeil
-							bonus = 1
-							uses = 1
-							category = rocketry
-						}
-				}
-		
+				log = "[GetDateText]: [Root.GetName]: Focus GRU_spzprojpfeil"
+				add_tech_bonus = {
+						name = GRU_spzprojpfeil
+						bonus = 1
+						uses = 1
+						category = rocketry
+					}
+			custom_effect_tooltip = tooltip_white_line
+			GRU_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_tag_rocket_speed_factor = 0.15
+				tooltip = sp_tag_rocket_speed_factor_tt
+			}
+		}
 		prerequisite = { focus = GRU_mfsp  }
 	}
 	
@@ -2152,7 +2194,7 @@ shared_focus = {
 		y = 9
 		cost = 5
 		ai_will_do = {
-			factor = 4
+			factor = 25
 		}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_autobahnen"
@@ -2427,7 +2469,7 @@ shared_focus = {
 			num_faction_members > 2
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 25
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_zollverein_goal"
@@ -3297,6 +3339,10 @@ shared_focus = {
 				factor = 10
 				has_war = yes
 			}
+			modifier = {
+				factor = 5
+				surrender_progress > 0
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_nationales_volksheer"
@@ -3322,13 +3368,6 @@ shared_focus = {
 		cost = 5
 		ai_will_do = {
 			factor = 3
-			modifier = {
-				factor = 10
-				has_war = yes
-			}
-		}
-		ai_will_do = {
-			factor = 1
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3366,6 +3405,10 @@ shared_focus = {
 			modifier = {
 				factor = 10
 				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				surrender_progress > 0
 			}
 		}
 		completion_reward = {
@@ -3442,7 +3485,7 @@ shared_focus = {
 		ai_will_do = {
 			factor = 3
 			modifier = {
-				factor = 10
+				factor = 20
 				has_war = yes
 			}
 		}
@@ -3528,6 +3571,12 @@ shared_focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_carrier_focus"
 			add_ideas = GRU_carrier
+			custom_effect_tooltip = tooltip_white_line
+			GRU_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_naval_modern_carrier_speed_factor = 0.05
+				tooltip = sp_naval_modern_carrier_speed_factor_tt
+			}
 		}
 		
 		prerequisite = { focus = GRU_nationale_volksmarine  }
@@ -3552,6 +3601,12 @@ shared_focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_battleship_focus"
 			add_ideas = GRU_battleship
+			custom_effect_tooltip = tooltip_white_line
+			GRU_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_naval_modern_battleship_speed_factor = 0.05
+				tooltip = sp_naval_modern_battleship_speed_factor_tt
+			}
 		}
 		
 		prerequisite = { focus = GRU_nationale_volksmarine  }
@@ -3592,9 +3647,14 @@ shared_focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_panzergrenadiere"
 			swap_ideas = {
-							remove_idea = GRU_panzer
-							add_idea = GRU_panzer_two
-						}
+				remove_idea = GRU_panzer
+				add_idea = GRU_panzer_two
+			}
+			GRU_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_tag_tank_speed_factor = 0.1
+				tooltip = sp_tag_tank_speed_factor_tt
+			}	
 		}
 		
 		prerequisite = { focus = GRU_panzertruppe  }
@@ -3633,6 +3693,12 @@ shared_focus = {
 			}
 			else={
 			custom_effect_tooltip = GRU_tt_army_boni
+			}
+			custom_effect_tooltip = tooltip_white_line
+			GRU_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_tag_submarine_speed_factor = 0.05
+				tooltip = sp_tag_submarine_speed_factor_tt
 			}
 		}
 		
@@ -3675,6 +3741,12 @@ shared_focus = {
 			else={
 			custom_effect_tooltip = GRU_tt_army_boni
 			}
+			custom_effect_tooltip = tooltip_white_line
+			GRU_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_naval_aa_cruiser_speed_factor = 0.05
+				tooltip = sp_naval_aa_cruiser_speed_factor_tt
+			}
 		}
 		
 		prerequisite = { focus = GRU_carrier_focus focus = GRU_battleship_focus  }
@@ -3711,16 +3783,28 @@ shared_focus = {
 							remove_idea = GRU_masses_two
 							add_idea = GRU_masses_generals
 						}
+				custom_effect_tooltip = tooltip_white_line
 			}
 			else={
 			custom_effect_tooltip = GRU_tt_OKW_boni
 			}
 			custom_effect_tooltip = tooltip_white_line
-			army_experience = 100
+			GRU_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_tag_tank_speed_factor = 0.05
+				tooltip = sp_tag_tank_speed_factor_tt
+			}		
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_tag_artillery_speed_factor = 0.05
+				tooltip = sp_tag_artillery_speed_factor_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_breakthrough_progress = {
 				specialization = specialization_land
 				value = 0.5
 			}
+			custom_effect_tooltip = tooltip_white_line
+			army_experience = 100
 		}
 		
 		prerequisite = { focus = GRU_panzergrenadiere focus = GRU_overwhelming_firepower  }
@@ -3756,9 +3840,14 @@ shared_focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_overwhelming_firepower"
 			swap_ideas = {
-							remove_idea = GRU_masses
-							add_idea = GRU_masses_two
-						}
+				remove_idea = GRU_masses
+				add_idea = GRU_masses_two
+			}
+			GRU_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_tag_artillery_speed_factor = 0.1
+				tooltip = sp_tag_artillery_speed_factor_tt
+			}
 		}
 		
 		prerequisite = { focus = GRU_mass_conscription  }
@@ -3813,11 +3902,18 @@ shared_focus = {
 			custom_effect_tooltip = GRU_tt_OKW_boni
 			}
 			custom_effect_tooltip = tooltip_white_line
-			navy_experience = 100
+			GRU_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_tag_surface_ship_speed_factor = 0.10
+				tooltip = sp_tag_surface_ship_speed_factor_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_breakthrough_progress = {
 				specialization = specialization_naval
 				value = 0.5
 			}
+			custom_effect_tooltip = tooltip_white_line
+			navy_experience = 100
 		}
 		
 		prerequisite = { focus = GRU_cruiser_focus focus = GRU_submarine_focus  }
@@ -3856,6 +3952,12 @@ shared_focus = {
 			}
 			else={
 			custom_effect_tooltip = GRU_tt_army_boni
+			}
+			custom_effect_tooltip = tooltip_white_line
+			GRU_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_tag_jet_speed_factor = 0.10
+				tooltip = sp_tag_jet_speed_factor_tt
 			}
 		}
 		
@@ -3896,6 +3998,12 @@ shared_focus = {
 			}
 			else={
 			custom_effect_tooltip = GRU_tt_army_boni
+			}
+			custom_effect_tooltip = tooltip_white_line
+			GRU_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_tag_jet_speed_factor = 0.10
+				tooltip = sp_tag_jet_speed_factor_tt
 			}
 		}
 		
@@ -3952,11 +4060,32 @@ shared_focus = {
 			custom_effect_tooltip = GRU_tt_OKW_boni
 			}
 			custom_effect_tooltip = tooltip_white_line
-			air_experience = 100
+			GRU_add_or_modify_wunderwaffen = yes
+			if = {
+				limit = {
+					NOT = { is_special_project_completed = sp_air_intercontinental_bomber }
+				}
+				add_to_variable = { 
+					GRU_wunderwaffen_sp_air_intercontinental_bomber_speed_factor = 0.2 #MM: This is the focus of this focus, so extra speed
+					tooltip = sp_air_intercontinental_bomber_speed_factor_tt
+				}
+			}
+			if = {
+				limit = {
+					NOT = { is_special_project_completed = sp_air_mothership_aircraft }
+				}
+				add_to_variable = { 
+					GRU_wunderwaffen_sp_air_mothership_aircraft_speed_factor = 0.1
+					tooltip = sp_air_mothership_aircraft_speed_factor_tt
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_breakthrough_progress = {
 				specialization = specialization_air
 				value = 0.5
 			}
+			custom_effect_tooltip = tooltip_white_line
+			air_experience = 100
 		}
 		
 		prerequisite = { focus = GRU_ground_support_focus focus = GRU_naval_support_focus  }
@@ -3971,7 +4100,7 @@ shared_focus = {
 		y = 8
 		cost = 5
 		ai_will_do = {
-			factor = 4
+			factor = 10
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_hydroelectric_power"
@@ -6903,7 +7032,7 @@ shared_focus = {
 			factor = 10
 			modifier = {
 				factor = 0
-				date < 1942.1.1
+				date < 1942.6.1
 			}
 			modifier = {
 				factor = 0
@@ -7216,6 +7345,9 @@ shared_focus = {
 		x = 3
 		y = 4
 		cost = 6
+		ai_will_do = {
+			factor = 1000
+		}
 		available = {
 			GRU_GREATER_DONE = yes
 			is_subject = no
@@ -7707,7 +7839,7 @@ shared_focus = {
 						is_in_faction_with = GRU
 					}
 				}
-				10 = {
+				1124 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = stronghold_network

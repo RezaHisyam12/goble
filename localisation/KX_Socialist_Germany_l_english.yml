@@ -1230,6 +1230,11 @@ GERMAN_CIVIL_WAR_participant:0 "German Civil War Participant"
 GRU_RUINED_ECONOMY_TOALLY_RUINED:0 "Totally Ruined Economy"
 GRU_RUINED_ECONOMY_TOALLY_BETTER:0 "Recovering Economy"
 
+ GRU_wunderwaffen_modifier: "Wunderwaffen"
+ GRU_wunderwaffen_modifier_desc: "The Wunderwaffe programs are a bold initiative aimed at forging the future of warfare through radical technological breakthroughs. Our scientists and engineers are pushing the boundaries of what is possible, developing revolutionary weapons that will secure Germany's dominance in the skies, over the seas, and on land. These innovations hold the potential to change the course of the world and deliver a decisive blow to any adversary who dares oppose us!"
+ GRU_add_wunderwaffen_modifier_tt: "Add §Y$GRU_wunderwaffen_modifier$§! which grants:"
+ GRU_modify_wunderwaffen_modifier_tt: "Modify §Y$GRU_wunderwaffen_modifier$§! by:"
+
 
 VST_GOKTURK:0 "Göktürk"
 VST_TENGRI:0 "Tengriism"

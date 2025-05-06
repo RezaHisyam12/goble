@@ -1,7 +1,7 @@
 
 	
 GRU_new_germania_modifier = {
-	icon = "GFX_idea_GER_the_two_principles"
+	icon = "GFX_idea_GRU_the_two_principles"
 	enable = { always = yes }
 	remove_trigger = {
 		NOT = { is_owned_by = GRU }
@@ -30,5 +30,31 @@ GRU_zollverein_economic_sphere_member = {
 	political_power_gain = 0.05
 	research_speed_factor = global.zollverein_goods_boost_member
 	production_factory_max_efficiency_factor = global.zollverein_resources_boost_member
+}
+
+GRU_wunderwaffen_modifier = { #Wunderwaffen NS
+	enable = { always = yes }
+	icon = GFX_idea_GRU_wunderwaffen
+
+	special_project_speed_factor = GRU_wunderwaffen_special_project_speed_factor
+	production_speed_facility_factor = GRU_wunderwaffen_production_speed_facility_factor
+	sp_air_helicopter_speed_factor = GRU_wunderwaffen_sp_air_helicopter_speed_factor
+	sp_tag_jet_speed_factor = GRU_wunderwaffen_sp_tag_jet_speed_factor
+	sp_tag_rocket_speed_factor = GRU_wunderwaffen_sp_tag_rocket_speed_factor
+	sp_tag_tank_speed_factor = GRU_wunderwaffen_sp_tag_tank_speed_factor
+	sp_tag_artillery_speed_factor = GRU_wunderwaffen_sp_tag_artillery_speed_factor
+	sp_tag_submarine_speed_factor = GRU_wunderwaffen_sp_tag_submarine_speed_factor
+	sp_naval_modern_battleship_speed_factor = GRU_wunderwaffen_sp_naval_modern_battleship_speed_factor
+	sp_naval_modern_carrier_speed_factor = GRU_wunderwaffen_sp_naval_modern_carrier_speed_factor
+	sp_naval_aa_cruiser_speed_factor = GRU_wunderwaffen_sp_naval_aa_cruiser_speed_factor
+	sp_nuclear_reactor_speed_factor = GRU_wunderwaffen_sp_nuclear_reactor_speed_factor
+	sp_commercial_nuclear_reactor_speed_factor = GRU_wunderwaffen_sp_commercial_nuclear_reactor_speed_factor
+	sp_nuclear_warheads_speed_factor = GRU_wunderwaffen_sp_nuclear_warheads_speed_factor
+	sp_nuclear_bomb_speed_factor = GRU_wunderwaffen_sp_nuclear_bomb_speed_factor
+	production_speed_nuclear_reactor_factor = GRU_wunderwaffen_production_speed_nuclear_reactor_factor
+	production_speed_nuclear_facility_factor = GRU_wunderwaffen_production_speed_nuclear_facility_factor
+	sp_air_intercontinental_bomber_speed_factor = GRU_wunderwaffen_sp_air_intercontinental_bomber_speed_factor
+	sp_air_mothership_aircraft_speed_factor = GRU_wunderwaffen_sp_air_mothership_aircraft_speed_factor
+	sp_tag_surface_ship_speed_factor = GRU_wunderwaffen_sp_tag_surface_ship_speed_factor
 }
 					

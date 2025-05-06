@@ -1,7 +1,7 @@
 ﻿l_english:
 
-RULE_OPTION_GRU_CONGRESS_NMDVP:0 "£GFX_KR_game_rule_flag_GRU_NMDVP  NMDVP Victory"
-RULE_OPTION_GRU_CONGRESS_NMDVP_DESC:0 "The Nationalmarxistische Deutsche Volkspartei will come out in a shocking dark horse victory during the First Congress of German Unions, leading the German worker under their own brand of Totalism to protect German tradition and greatness against any whom would oppose it, capitalists, communards and all others be damned."
+RULE_OPTION_GRU_CONGRESS_GSVP:0 "£GFX_KR_game_rule_flag_GRU_NMDVP  NMDVP Victory"
+RULE_OPTION_GRU_CONGRESS_GSVP_DESC:0 "The Nationalmarxistische Deutsche Volkspartei will come out in a shocking dark horse victory during the First Congress of German Unions, leading the German worker under their own brand of Totalism to protect German tradition and greatness against any whom would oppose it, capitalists, communards and all others be damned."
 GRU_BALANCE:0 "£GFX_KR_game_rule_flag_GRU_REBELLION   Balance of the Game Following the German Revolution"
 RULE_OPTION_GRU_BALANCE_YES:0 "£GFX_KR_game_rule_flag_GRU_REBELLION    £KR_game_rule_flag_GBR   Entente/Third International Balance"
 RULE_OPTION_GRU_BALANCE_YES_DESC:0 "Following the German revolution, the United Kingdom will be automatically restored if controlled by the AI to balance the forces of the Entente and the Third International."

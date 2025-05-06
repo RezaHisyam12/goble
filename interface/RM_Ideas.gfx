@@ -1032,6 +1032,10 @@ spriteTypes = {
 		name = "GFX_volkswohlfahrt_desc"
 		texturefile = "gfx/interface/decisions/volkswohlfahrt.png"
 	}
+	spriteType = {
+		name = "GFX_idea_GRU_wunderwaffen"
+		texturefile = "gfx/interface/ideas/GRU/GRU_wunderwaffen.png"
+	}
 	### ROEM
 	spriteType = {
 		name = "GFX_roem_dismantle"
