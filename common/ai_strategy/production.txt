@@ -132,6 +132,12 @@ default_specialised_production = {
 		id = medium_tank_chassis
 		value = 5
 	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = heavy_tank_chassis
+		value = 5
+	}
 }
 
 we_need_civ_factories_1 = {
@@ -560,6 +566,12 @@ late_mobile_production = {
 }
 
 default_flame_tank_and_support_production = {
+	allowed = {
+		OR = {
+			tag = GER
+			tag = GRU
+		}
+	}
 	enable = {
 		is_eligible_for_armor_production = yes
 	}
@@ -567,15 +579,14 @@ default_flame_tank_and_support_production = {
 
 	ai_strategy = {
 		type = equipment_production_factor
-		id = medium_tank_flame_chassis
+		id = heavy_tank_flame_chassis
 		value = 15
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
-		id = medium_flame_tank
+		id = heavy_flame_tank
 		value = 1
 	}
-
 	ai_strategy = {
 		type = equipment_production_factor
 		id = armored_support_vehicle
@@ -770,6 +781,12 @@ DEFAULT_template_design_industrial_country = {
 
 	ai_strategy = {
 		type = template_prio
+		id = heavy_armor
+		value = 10
+	}
+
+	ai_strategy = {
+		type = template_prio
 		id = infantry
 		value = 70
 	}
@@ -797,6 +814,12 @@ LATE_template_design_industrial_country = {
 	ai_strategy = {
 		type = template_prio
 		id = medium_armor
+		value = 50
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
 		value = 50
 	}
 
@@ -897,7 +920,7 @@ we_need_nuclear_reactor = {
 	enable = {
 		is_special_project_completed = sp:sp_nuclear_reactor
 		nuclear_reactor < 10
-		num_of_military_factories > 150
+		num_of_military_factories > 249
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
@@ -911,7 +934,7 @@ we_need_nuclear_reactor_commercial = {
 	enable = {
 		is_special_project_completed = sp:sp_commercial_nuclear_reactor
 		commercial_nuclear_reactor < 10
-		num_of_military_factories > 150
+		num_of_military_factories > 249
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {

@@ -1093,7 +1093,7 @@ technologies = {
 				is_eligible_for_light_aircraft_production = no
 			}
 			modifier = {
-				factor = 20
+				factor = 10
 				is_major = yes
 			}
 			modifier = {

@@ -530,6 +530,8 @@ shared_focus = {
 			custom_effect_tooltip = RR_1_motorized_tech_effect
 			custom_effect_tooltip = tooltip_white_line
 			add_ideas = GRU_guard
+			custom_effect_tooltip = tooltip_white_line
+			add_ideas = GRU_recruitment
 			hidden_effect = {
 			set_technology = { RR_1_motorized_tech  = 1 } 
 				division_template = {
@@ -1110,7 +1112,11 @@ shared_focus = {
 				name = "Stasi"
 				icon = GFX_intelligence_agency_logo_RM_GRU
 			}
-			
+			custom_effect_tooltip = tooltip_white_line	
+			custom_effect_tooltip = tech_improved_encryption_effect
+			hidden_effect = {
+				set_technology = { tech_improved_encryption = 1 popup = no }
+			}			
 		}
 
 		prerequisite = { focus = GRU_volkssturm  }
@@ -3627,6 +3633,11 @@ shared_focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_panzertruppe"
 			add_ideas = GRU_panzer
+			custom_effect_tooltip = tooltip_white_line	
+			custom_effect_tooltip = masterful_blitz_effect
+			hidden_effect = {
+				set_technology = { masterful_blitz = 1 popup = no }
+			}
 		}
 		
 		prerequisite = { focus = GRU_nationales_volksheer  }
@@ -3650,6 +3661,12 @@ shared_focus = {
 				remove_idea = GRU_panzer
 				add_idea = GRU_panzer_two
 			}
+			custom_effect_tooltip = tooltip_white_line	
+			custom_effect_tooltip = tech_railway_troops_effect
+			hidden_effect = {
+				set_technology = { tech_railway_troops = 1 popup = no }
+			}
+			custom_effect_tooltip = tooltip_white_line	
 			GRU_add_or_modify_wunderwaffen = yes
 			add_to_variable = { 
 				GRU_wunderwaffen_sp_tag_tank_speed_factor = 0.1
@@ -3744,8 +3761,8 @@ shared_focus = {
 			custom_effect_tooltip = tooltip_white_line
 			GRU_add_or_modify_wunderwaffen = yes
 			add_to_variable = { 
-				GRU_wunderwaffen_sp_naval_aa_cruiser_speed_factor = 0.05
-				tooltip = sp_naval_aa_cruiser_speed_factor_tt
+				GRU_wunderwaffen_sp_naval_torpedo_cruiser_speed_factor = 0.05
+				tooltip = sp_naval_torpedo_cruiser_speed_factor_tt
 			}
 		}
 		
@@ -3823,6 +3840,11 @@ shared_focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_mass_conscription"
 			add_ideas = GRU_masses
+			custom_effect_tooltip = tooltip_white_line	
+			custom_effect_tooltip = tech_human_wave_tactics_effect
+			hidden_effect = {
+				set_technology = { tech_human_wave_tactics = 1 popup = no }
+			}
 		}
 		
 		prerequisite = { focus = GRU_nationales_volksheer  }
@@ -3843,6 +3865,12 @@ shared_focus = {
 				remove_idea = GRU_masses
 				add_idea = GRU_masses_two
 			}
+			custom_effect_tooltip = tooltip_white_line	
+			custom_effect_tooltip = anti_fortification_artillery_effect
+			hidden_effect = {
+				set_technology = { anti_fortification_artillery = 1 popup = no }
+			}
+			custom_effect_tooltip = tooltip_white_line	
 			GRU_add_or_modify_wunderwaffen = yes
 			add_to_variable = { 
 				GRU_wunderwaffen_sp_tag_artillery_speed_factor = 0.1
@@ -7355,6 +7383,8 @@ shared_focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_PROCLAIM_GERMANIC_STATE"
 			set_cosmetic_tag = GRU_NMDVP_BIG
+			custom_effect_tooltip = tooltip_white_line
+			add_ideas = GRU_germania
 			#custom_effect_tooltip = GRU_GREATER_DONE
 			set_global_flag = Super_Event_Visible
 			set_global_flag = greater_germanic_state_goebbels

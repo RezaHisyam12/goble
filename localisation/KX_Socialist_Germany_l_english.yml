@@ -2,7 +2,8 @@
 
 
 has_same_government_as_ROOT_tt_NOT: "Does not have the same government as §Y[ROOT.GetNameWithFlag]§!."
-
+tech_human_wave_tactics_effect: "Enables Tactic: §Y$tactic_human_wave_tactics$§!"
+CAN_invite_german_halifax_decision: "Invite [From.GetNameDef] into the Halifax Conference"
 
 ###################
 ####Zollverein#####
@@ -14,7 +15,7 @@ has_same_government_as_ROOT_tt_NOT: "Does not have the same government as §Y[RO
  KR_zollverein_name_GRU:0 "Leader of the §HZollverein§!"
  KR_zollverein_name:0 "Member of the §HZollverein§!"
 
- KR_zollverein_desc_GRU:0 "The §HZollverein§! is an economic and political alliance that is working together to overthrow the influence of Western Imperialism in Europe. As the leader of the East Zollverein, German provides investments, technologies and specialists to the members of the Sphere, at the expense of exploiting their resources and entrenching its political influence.\n\nCurrent members of Zollverein: [GRU_ally0][GRU_ally1][GRU_ally2][GRU_ally3][GRU_ally4][GRU_ally5][GRU_ally6][GRU_ally7][GRU_ally8][JAP_ally9][JAP_ally10][JAP_ally11][JAP_ally12][JAP_ally13][JAP_ally14]"
+ KR_zollverein_desc_GRU:0 "The §HZollverein§! is an economic and political alliance that is working together to overthrow the influence of Western Imperialism in Europe. As the leader of the Zollverein, Germany provides investments, technologies and specialists to the members of the Sphere, at the expense of exploiting their resources and entrenching its political influence.\n\nCurrent members of Zollverein: [GRU_ally0][GRU_ally1][GRU_ally2][GRU_ally3][GRU_ally4][GRU_ally5][GRU_ally6][GRU_ally7][GRU_ally8][GRU_ally9][GRU_ally10][GRU_ally11][GRU_ally12][GRU_ally13][GRU_ally14]"
  KR_zollverein_desc:0 "The §HZollverein§! is an economic and political alliance that is working together to overthrow the influence of Western Imperialism in Europe. German, as its leader, gives economic support to its other members, at the price of exploiting its natural resources and entrenching its political influence.\n\nCurrent members of Zollverein: [GRU_ally0][GRU_ally1][GRU_ally2][GRU_ally3][GRU_ally4][GRU_ally5][GRU_ally6][GRU_ally7][GRU_ally8][GRU_ally9][GRU_ally10][GRU_ally11][GRU_ally12][GRU_ally13][GRU_ally14]"
 
  KR_zollverein_effects_GRU:0 "$MODIFIER_RESEARCH_SPEED_FACTOR$: [?global.zollverein_goods_boost|+=%]\n$MODIFIER_GLOBAL_BUILDING_SLOTS_FACTOR$: [?global.zollverein_slots_boost|+=%]\n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: [?global.zollverein_industry_boost|+=%]"
@@ -874,12 +875,18 @@ GRU_breitspur_desc:0 "\n£goebb_breitspur£\n\n\n\nThe Breitspurbahnen is an ong
 GRU_guard:0 "£RR_guard£ R.R. - Revolutionäres Regiment"
 GRU_guard_desc:0 "\n£goebb_rr£\n\n\n\nThe Revolutionary Regiment.\nThese men fear no one, in fact everyone else fears them now not only in Germany as their reputation has already reached neighboring countries.\nThe Revolutionary Regiment, dressed in all black uniforms with their crimson runic 'RR' symbols serves as a small elite force under direct command of the party. They are responsible for the deportation and removal of enemies of the state in Germany and beyond."
 
+GRU_recruitment:0 "£RR_guard£ R.R. - Strict Recruitment"
+GRU_recruitment_desc:0 "Recruited only from the most ideologically faithful and physically capable, the Regiment is not just a fighting force—it is a weapon of political terror. Trained for speed, shock, and suppression, they are deployed against enemies of the state, at home and abroad. While the broader army remains conventional, the Revolutionary Regiment embodies the regime’s vision of purity, fear, and absolute control."
+
 GRU_lager:0 "Anhaltelager"
 GRU_lager_desc:0 "\n£goebb_lager£\n\n\n\nThese camps are run by the R.R. and no one knows for sure what happens to those that end up in them. All the people know is that products that only require manual labor have gotten cheaper recently. Best not to think about it..."
 
 
 GRU_new_germany:0 "Das neue Deutschland!"
 GRU_new_germany_desc:0 "\n£goebb_new_germany£\n\n\n\nThe new Germany.\n\nGermany has been reborn, risen from the ashes when it was crushed by foreign forces and the kaiser, but no more! Now we have been reborn like a phoenix and we shall forever vanguard our glorious Fatherland!"
+
+GRU_germania:0 "Die neue Ordnung!"
+GRU_germania_desc:0 "\n£goebb_new_germany£\n\n\n\nThe new Order.\n\nGermany, forged in fire and war, has now proclaimed its rebirth into something greater.\nOnce a fractured authoritarian entity, has now become a major player in the heart of Europe. Now, Germany marches into a new era—not merely a state, but the nucleus of a continental empire."
 
 GRU_deutsche_architecture:0 "Deutschsozialistische Architektur"
 GRU_deutsche_architecture_desc:0 "\n£architecture£\n\n\n\nGerman Socialist Architecture.\nThe Volksführer has developed a special interest in the architectural image of Germany.\nSome might question why chose a reactionary as his new national architect but who knows what Albert Speer might accomplish if guided by the hand of the revolution."
@@ -1230,7 +1237,7 @@ GERMAN_CIVIL_WAR_participant:0 "German Civil War Participant"
 GRU_RUINED_ECONOMY_TOALLY_RUINED:0 "Totally Ruined Economy"
 GRU_RUINED_ECONOMY_TOALLY_BETTER:0 "Recovering Economy"
 
- GRU_wunderwaffen_modifier: "Wunderwaffen"
+ GRU_wunderwaffen_modifier: "Wunderwaffe"
  GRU_wunderwaffen_modifier_desc: "The Wunderwaffe programs are a bold initiative aimed at forging the future of warfare through radical technological breakthroughs. Our scientists and engineers are pushing the boundaries of what is possible, developing revolutionary weapons that will secure Germany's dominance in the skies, over the seas, and on land. These innovations hold the potential to change the course of the world and deliver a decisive blow to any adversary who dares oppose us!"
  GRU_add_wunderwaffen_modifier_tt: "Add §Y$GRU_wunderwaffen_modifier$§! which grants:"
  GRU_modify_wunderwaffen_modifier_tt: "Modify §Y$GRU_wunderwaffen_modifier$§! by:"
@@ -2037,6 +2044,7 @@ GRU_pan_germanism_integrate_wallonia_decision:0 "Integrate Wallonia"
 GRU_pan_germanism_integrate_luxembourg_decision:0 "Integrate Luxembourg"
 GRU_pan_germanism_integrate_denmark_decision:0 "Integrate Denmark"
 GRU_pan_germanism_integrate_elsas_decision:0 "Integrate French"
+GRU_pan_germanism_integrate_croatia_decision:0 "Annex Croatia"
 
 GRU_pan_germanism_integrate_iceland_decision:0 "Integrate Iceland"
 GRU_pan_germanism_integrate_polarisland_decision:0 "Integrate Polar Islands"

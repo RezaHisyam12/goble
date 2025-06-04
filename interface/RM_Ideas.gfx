@@ -1036,6 +1036,14 @@ spriteTypes = {
 		name = "GFX_idea_GRU_wunderwaffen"
 		texturefile = "gfx/interface/ideas/GRU/GRU_wunderwaffen.png"
 	}
+	spriteType = {
+		name = "GFX_idea_GRU_recruitment"
+		texturefile = "gfx/interface/ideas/GRU/GRU_recruitment.png"
+	}
+	spriteType = {
+		name = "GFX_idea_GRU_germania"
+		texturefile = "gfx/interface/ideas/GRU/GRU_germania.png"
+	}
 	### ROEM
 	spriteType = {
 		name = "GFX_roem_dismantle"

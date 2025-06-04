@@ -162,6 +162,97 @@ RUS_Siberian_War = {
 }
 
 RUS_Foreign_Policy_decisions = {
+	RUS_Attack_Country_default = {
+		name = RUS_Attack_Region
+		icon = hol_draw_up_staff_plans
+		allowed = { always = no }  #activated manually 
+		available = {
+			can_declare_war_on = FROM
+			OR = {
+				is_owner_neighbor_of = FROM
+				any_allied_country = { is_owner_neighbor_of = FROM }
+			}
+		}
+		visible = {
+			if = {
+				limit = { FROM = { is_in_europe = yes } }
+				if = {
+					limit = {
+						FROM = { is_ally_with = GER }
+					}
+					NOT = { has_global_flag = danzig_treaty_active }
+				}
+				else_if = {
+					limit = {
+						FROM = { is_ally_with = GER }
+					}
+					NOT = { has_global_flag = budapest_treaty_active }
+				}
+			}
+		}
+
+		cost = 10
+		days_remove = 30
+		fire_only_once = yes
+		cancel_if_not_visible = yes
+		war_with_target_on_remove = yes
+
+		ai_will_do = {
+			factor = 100			
+			modifier = {
+				factor = 0
+				RUS_dont_attack_if_vulnerable_or_preparing = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = { RUS_dont_attack_if_target_is_stronger = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { RUS_dont_attack_if_faction_is_stronger = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { RUS_dont_attack_if_overlord_is_stronger = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject_of = GRU
+				}
+			}
+		}
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel RUS_Attack_Country_default target: [From.GetName]"
+			clear_decision_attack_AI = yes
+			add_political_power = 10
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete RUS_Attack_Country_default target: [From.GetName]"
+			FROM = { incoming_war_notification_effect = yes }
+			setup_decision_attack_AI = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove RUS_Attack_Country_default target: [From.GetName]"
+			clear_decision_attack_AI = yes
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
+			}
+			if = {
+				limit = { FROM = { tag = FIN } }
+				activate_mission = RUS_defeat_finland
+				FIN = { activate_mission = FIN_survive_russia }
+			}
+			if = {
+				limit = { FROM = { tag = MON } }
+				activate_mission = RUS_defeat_mongolia
+			}
+		}
+	}	
 	RUS_Attack_Eastern_Europe = {
 		icon = hol_draw_up_staff_plans
 
@@ -230,6 +321,7 @@ RUS_Foreign_Policy_decisions = {
 					has_non_aggression_pact_with = FROM
 					FROM = { is_in_faction = yes }
 					FROM = { is_guaranteed_by = GER }
+					FROM = { is_subject_of = GRU }
 				}
 			}
 		}
@@ -379,6 +471,10 @@ RUS_Foreign_Policy_decisions = {
 					has_war_with = UZB
 					has_war_with = KYR
 				}
+			}
+			modifier = {
+				factor = 0
+				has_war_with = JAP
 			}
 			modifier = {
 				factor = 0
@@ -1058,6 +1154,46 @@ NFA_reclaim_metropole_cat = {
 			hidden_effect = {
 				FRA = { country_event =  nfa.110 } #Inform CoF that they will be attacked soon.
 			}
+		}
+	}
+}
+
+CAN_returning_home_decisions = {
+	CAN_invite_german_halifax_decision = {
+		icon = generic_political_actions
+
+		allowed = {
+			tag = ENT
+		}
+		available = {
+			has_war_with = INT
+			GRU = { has_war_with = INT }
+		}
+		visible = {
+			FROM = {
+				OR = {
+					tag = GRU
+				}
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					tag = GRU
+				}	
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		days_remove = 7
+		fire_only_once = yes
+		cost = 25
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_invite_german_halifax_decision target: [From.GetName]"
+			FROM = { country_event = rmorgenentente.300 }
 		}
 	}
 }

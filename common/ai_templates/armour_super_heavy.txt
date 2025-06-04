@@ -27,8 +27,8 @@ armour_super_heavy_generic = {
 		target_template = {
 			regiments = {
 				heavy_armor = 1
-				medium_tank_destroyer_brigade = 1
-				medium_sp_anti_air_brigade = 4
+				heavy_tank_destroyer_brigade = 1
+				heavy_sp_anti_air_brigade = 4
 				infantry = 3
 				motorized = 3
 			}
@@ -36,7 +36,7 @@ armour_super_heavy_generic = {
 			support = {
 				super_heavy_armor = 1
 				engineer = 1
-				medium_flame_tank = 1
+				heavy_flame_tank = 1
 				field_hospital = 1
 				logistics_company = 1
 			}
@@ -51,14 +51,6 @@ armour_super_heavy_generic = {
 				NOT = { has_tech = mechanised_infantry }
 			}
 			modifier = {
-				factor = 0
-				NOT = { has_tech = sp_helicopter_med_evac_tech }
-			}
-			modifier = {
-				factor = 0
-				NOT = { has_tech = sp_helicopter_transport_pods_tech }
-			}
-			modifier = {
 				factor = 2
 				num_of_military_factories > 199
 			}
@@ -71,8 +63,8 @@ armour_super_heavy_generic = {
 		target_template = {
 			regiments = {
 				heavy_armor = 1
-				medium_tank_destroyer_brigade = 1
-				medium_sp_anti_air_brigade = 4
+				heavy_tank_destroyer_brigade = 1
+				heavy_sp_anti_air_brigade = 4
 				mechanized = 3
 				motorized = 3
 			}
@@ -80,9 +72,9 @@ armour_super_heavy_generic = {
 			support = {
 				super_heavy_armor = 1
 				assault_engineer = 1
-				medium_flame_tank = 1
-				helicopter_field_hospital = 1
-				helicopter_transport = 1
+				heavy_flame_tank = 1
+				field_hospital = 1
+				logistics_company = 1
 			}
 		}
 	}
@@ -116,7 +108,7 @@ armour_super_heavy_generic = {
 		target_template = {
 			regiments = {
 				modern_armor = 1
-				medium_tank_destroyer_brigade = 1
+				heavy_tank_destroyer_brigade = 1
 				modern_sp_anti_air_brigade = 4
 				mechanized = 3
 				motorized = 3
@@ -125,7 +117,7 @@ armour_super_heavy_generic = {
 			support = {
 				land_cruiser = 1
 				assault_engineer = 1
-				medium_flame_tank = 1
+				heavy_flame_tank = 1
 				helicopter_field_hospital = 1
 				helicopter_transport = 1
 			}

@@ -932,14 +932,6 @@ RUS_has_TOZ_breakthrough_medal = {
 	}
 }
 
-RUS_has_OSOAVIA_upgrade_3 = {
-	FROM = {
-		mio:RUS_osoavia_organisation = {
-			is_mio_trait_completed = osoavia_upgrade_3
-		}
-	}
-}
-
 RUS_has_OSOAVIA_upgrade_1_3 = {
 	FROM = {
 		mio:RUS_osoavia_organisation = {
@@ -1033,5 +1025,12 @@ RUS_has_obukhov_upgrade_5_or_6 = {
 				is_mio_trait_completed = obukhov_upgrade_6
 			}
 		}
+	}
+}
+
+RUS_is_in_moscow_economic_council = {
+	OR = {
+		has_idea = RUS_moscow_eco_treaty_RUS
+		has_idea = RUS_moscow_eco_treaty_member
 	}
 }

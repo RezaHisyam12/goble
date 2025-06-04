@@ -1170,6 +1170,10 @@ technologies = {
 				factor = 8
 				num_of_military_factories > 50
 			}
+			modifier = {
+				factor = 8
+				synthetic_refinery > 10
+			}
 		}
 
 		ai_research_weights = {
@@ -1219,6 +1223,10 @@ technologies = {
 			modifier = {
 				factor = 8
 				num_of_military_factories > 50
+			}
+			modifier = {
+				factor = 8
+				synthetic_refinery > 10
 			}
 		}
 
@@ -1270,6 +1278,10 @@ technologies = {
 				factor = 8
 				num_of_military_factories > 50
 			}
+			modifier = {
+				factor = 8
+				synthetic_refinery > 10
+			}
 		}
 
 		ai_research_weights = {
@@ -1315,6 +1327,10 @@ technologies = {
 				factor = 8
 				num_of_military_factories > 50
 			}
+			modifier = {
+				factor = 8
+				synthetic_refinery > 10
+			}	
 		}
 
 		ai_research_weights = {
@@ -1368,6 +1384,10 @@ technologies = {
 				factor = 0.5
 				rubber > 30
 			}
+			modifier = {
+				is_major = yes
+				factor = 100
+			}
 		}
 
 		ai_research_weights = {
@@ -1419,6 +1439,10 @@ technologies = {
 			modifier = {
 				factor = 0.5
 				rubber > 30
+			}
+			modifier = {
+				factor = 8
+				synthetic_refinery > 10
 			}
 		}
 
@@ -1472,6 +1496,10 @@ technologies = {
 				factor = 0.5
 				rubber > 30
 			}
+			modifier = {
+				factor = 8
+				synthetic_refinery > 10
+			}
 		}
 
 		ai_research_weights = {
@@ -1519,6 +1547,10 @@ technologies = {
 				factor = 0.5
 				rubber > 30
 			}
+			modifier = {
+				factor = 8
+				synthetic_refinery > 10
+			}	
 		}
 
 		ai_research_weights = {

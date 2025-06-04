@@ -33,6 +33,7 @@ ideas = {
 				ai_focus_defense_factor = 0.25
 				defence = 0.1
 				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
 			}
 		}
 		GRU_Stasi = {
@@ -68,7 +69,7 @@ ideas = {
 			picture = GRU_volkssturm
 			modifier = {
 				political_power_gain = 0.1
-				conscription_factor = 0.05
+				conscription = 0.03
 				stability_factor = -0.05
 			}
 		}
@@ -158,6 +159,7 @@ ideas = {
 				max_training = 0.25
 				out_of_supply_factor = -0.15
 				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
 				org_loss_when_moving = -0.15
 				local_manpower = 0.05
 				max_command_power = 25
@@ -2885,10 +2887,11 @@ ideas = {
 			picture = german_advisors
 			allowed = { always = no }
 			modifier = {
-				unit_limit_bonus = 25
-				experience_gain_army = 0.02
-				experience_gain_navy = 0.02
-				experience_gain_air = 0.02
+				unit_limit_bonus = 20
+				surrender_limit = 0.10
+				experience_gain_army = 0.05
+				experience_gain_navy = 0.05
+				experience_gain_air = 0.05
 			}
 		}
 		GRU_okw_2 = {
@@ -2896,9 +2899,10 @@ ideas = {
 			picture = german_advisors
 			allowed = { always = no }
 			modifier = {
-				experience_gain_army = 0.06
-				experience_gain_navy = 0.06
-				experience_gain_air = 0.06
+				unit_limit_bonus = 25
+				experience_gain_army = 0.1
+				experience_gain_navy = 0.1
+				experience_gain_air = 0.1
 				army_leader_start_level = 1
 				army_leader_start_planning_level = 1
 			}
@@ -2912,6 +2916,7 @@ ideas = {
 			}
 			modifier = {
 				production_speed_bunker_factor = 0.1
+				land_bunker_effectiveness_factor = 0.1
 			}
 		}
 		GRU_MAF_stabilisation = {
@@ -2930,6 +2935,19 @@ ideas = {
 				consumer_goods_factor = 0.4
 				industrial_capacity_factory = -0.1
 				industrial_capacity_dockyard = -0.1
+			}
+		}
+		GRU_recruitment = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_recruitment" }
+			picture = GRU_recruitment
+			allowed = { always = no }
+			modifier = {
+				conscription = -0.01
+   				training_time_army_factor = -0.15        
+    				army_attack_factor = 0.05                
+   				resistance_target = -0.20                    
+   				compliance_growth_on_our_occupied_states = 0.05  
+    				foreign_subversive_activites = -0.25
 			}
 		}
 		GRU_financing_colonies_received = {
@@ -2987,6 +3005,19 @@ ideas = {
 			allowed = { always = no }
            		modifier = {
 				conscription = 0.05
+			}
+		}
+		GRU_germania = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_germania" }
+			picture = GRU_germania
+			allowed = { always = no }
+			modifier = {
+        			stability_factor = 0.05
+        			political_power_gain = 0.25
+        			compliance_growth = 0.02
+        			weekly_manpower = 100
+        			drift_defence_factor = 0.05
+        			resistance_target_on_our_occupied_states = -0.05
 			}
 		}
 		

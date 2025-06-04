@@ -118,15 +118,15 @@
 # `RUS_dalzavod_mines_number` and `RUS_dalzavod_total_mines_launched`). Very simple stuff here.
 #
 ###############
-### OSOAVIA ###
+### Gamayun ###
 ###############
 # Another very complex MIO to conver. The display tooltip works similar to AV with the variables set from `RUS_setup_custom_russian_MIOs`.
 #
-# There are 2 things that controls how the building effects work: event russia.1002 and scripted effect `RUS_OSOAVIA_Factories`.
+# There are 2 things that controls how the building effects work: event russia.1002 and scripted effect `RUS_Gamayun_Factories`.
 #
-# The event russia.1002 controls how often the `RUS_OSOAVIA_Factories` is continually fired depending on the traits/policies unlocked.
+# The event russia.1002 controls how often the `RUS_Gamayun_Factories` is continually fired depending on the traits/policies unlocked.
 #
-# `RUS_OSOAVIA_Factories` on the other hand builds a randomly chosen factory instantly in a random state, damages it in a specific range depending on upgrades and finally sets a state flag to prevent factories being spawned in the same place too often.
+# `RUS_Gamayun_Factories` on the other hand builds a randomly chosen factory instantly in a random state, damages it in a specific range depending on upgrades and finally sets a state flag to prevent factories being spawned in the same place too often.
 #
 ############
 ### Duks ###
@@ -207,7 +207,7 @@
 # scripted GUI notification informing the player of it so that the player doesn't have to constantly check every minute to see if the MIO has indeed reached the research speed cap.
 #
 #########################################
-### XP MIOs (BZ, Gamayun and Obukhov) ###
+### XP MIOs (BZ, OSOAVIA and Obukhov) ###
 #########################################
 # The display tooltip works the same way that the R&D MIOs work, you know the drill by now. However, the way that these XP MIOs actually give XP is through hidden_ideas (see the hidden ideas section in RUS_ideas file).
 #
@@ -7653,20 +7653,13 @@ RUS_dalzavod_organisation = {
 ##################
 ### Plane MIOs ###
 ##################
-RUS_osoavia_organisation = {
-	name = osoavia
-	icon = GFX_idea_osoavia
+RUS_gamayun_organisation = {
+	name = gamayun_non_socrus
+	icon = GFX_idea_gamayun
 	allowed = {
 		is_russian_tag_that_can_integrate = yes
 	}
-	available = {
-		FROM = {
-			OR = {
-				owns_state = 219  #Moscow
-				owns_state = 566 #Irkutsk
-			}
-		}
-	}
+	available = { FROM = { owns_state = 249 } } #Kazan
 
 	equipment_type = {
 		small_plane_naval_bomber_airframe
@@ -7682,35 +7675,22 @@ RUS_osoavia_organisation = {
 		plane_modules_tech
 	}
 
-	on_tech_research_completed = {
-		FROM = {
-			if = {
-				limit = { has_character = RUS_igor_sikorsky }
-				if = {
-					limit = { RUS_igor_sikorsky = { is_hired_as_advisor = yes } }
-					set_temp_variable = { ideology_change_var = 2 }
-					change_ruling_party_popularity = yes
-				}
-			}
-		}
-	}
-
 	on_industrial_manufacturer_assigned = {
 		if = {
 			limit = {
-				RUS_has_OSOAVIA_upgrade_3 = yes
+				RUS_has_gamayun_upgrade_3 = yes
 			}
-			custom_effect_tooltip = RUS_osoavia_random_factories_tt
+			custom_effect_tooltip = RUS_gamayun_random_factories_tt
 		}
 		else = {
-			custom_effect_tooltip = RUS_osoavia_random_factories_required_tt
+			custom_effect_tooltip = RUS_gamayun_random_factories_required_tt
 		}
 	}
 
 	ai_will_do = { base = 1 }
 
 	initial_trait = {
-		name = RUS_osoavia_mio_desc
+		name = RUS_gamayun_mio_desc
 
 		organization_modifier = {
 			military_industrial_organization_size_up_requirement = -0.25
@@ -7718,15 +7698,15 @@ RUS_osoavia_organisation = {
 	}
 
 	trait = {
-		token = osoavia_upgrade_1
-		name = osoavia_upgrade_1
+		token = gamayun_upgrade_1
+		name = gamayun_upgrade_1
 		icon = GFX_generic_mio_trait_icon_sub_detection
 
-		all_parents = { osoavia_upgrade_3 }
+		all_parents = { gamayun_upgrade_3 }
 
 		position = { x = 1 y = 0 }
 
-		mutually_exclusive = { osoavia_upgrade_2 }
+		mutually_exclusive = { gamayun_upgrade_2 }
 
 		equipment_bonus = {
 			sub_detection = 0.2
@@ -7735,15 +7715,15 @@ RUS_osoavia_organisation = {
 	}
 
 	trait = {
-		token = osoavia_upgrade_2
-		name = osoavia_upgrade_2
+		token = gamayun_upgrade_2
+		name = gamayun_upgrade_2
 		icon = GFX_generic_mio_trait_icon_surface_detection
 
-		all_parents = { osoavia_upgrade_3 }
+		all_parents = { gamayun_upgrade_3 }
 
 		position = { x = 2 y = 0 }
 
-		mutually_exclusive = { osoavia_upgrade_1 }
+		mutually_exclusive = { gamayun_upgrade_1 }
 
 		equipment_bonus = {
 			sub_detection = 0.1
@@ -7752,9 +7732,9 @@ RUS_osoavia_organisation = {
 	}
 
 	trait = {
-		token = osoavia_upgrade_3
-		name = osoavia_upgrade_3
-		icon = GFX_icon_osoavia_investment
+		token = gamayun_upgrade_3
+		name = gamayun_upgrade_3
+		icon = GFX_icon_gamayun_investment
 
 		position = { x = 4 y = 0 }
 
@@ -7764,29 +7744,29 @@ RUS_osoavia_organisation = {
 
 		on_complete = {
 			hidden_effect = {
-				FROM = { set_variable = { RUS_OSOAVIA_Civ_Chance = 33 } }
-				FROM = { set_variable = { RUS_OSOAVIA_Mil_Chance = 33 } }
-				FROM = { set_variable = { RUS_OSOAVIA_Dockyard_Chance = 33 } }
+				FROM = { set_variable = { RUS_Gamayun_Civ_Chance = 33 } }
+				FROM = { set_variable = { RUS_Gamayun_Mil_Chance = 33 } }
+				FROM = { set_variable = { RUS_Gamayun_Dockyard_Chance = 33 } }
 				FROM = {
 					country_event = { id = russia.1002 days = 4 }
 				}
 			}
-			custom_effect_tooltip = RUS_osoavia_upgrade_3_tt
+			custom_effect_tooltip = RUS_gamayun_upgrade_3_tt
 			custom_effect_tooltip = tooltip_white_line
-			FROM = { RUS_unlock_osoavia_policies = yes } # `unlock_mio_policy_tooltip` doesn't work in the MIO scope for some reason
+			FROM = { RUS_unlock_gamayun_policies = yes } # `unlock_mio_policy_tooltip` doesn't work in the MIO scope for some reason
 		}
 	}
 
 	trait = {
-		token = osoavia_upgrade_4
-		name = osoavia_upgrade_4
+		token = gamayun_upgrade_4
+		name = gamayun_upgrade_4
 		icon = GFX_generic_mio_trait_icon_air_range
 
-		all_parents = { osoavia_upgrade_3 }
+		all_parents = { gamayun_upgrade_3 }
 
 		position = { x = 6 y = 0 }
 
-		mutually_exclusive = { osoavia_upgrade_5 }
+		mutually_exclusive = { gamayun_upgrade_5 }
 
 		equipment_bonus = {
 			air_range = 0.15
@@ -7794,15 +7774,15 @@ RUS_osoavia_organisation = {
 	}
 
 	trait = {
-		token = osoavia_upgrade_5
-		name = osoavia_upgrade_5
+		token = gamayun_upgrade_5
+		name = gamayun_upgrade_5
 		icon = GFX_generic_mio_trait_icon_air_range
 
-		all_parents = { osoavia_upgrade_3 }
+		all_parents = { gamayun_upgrade_3 }
 
 		position = { x = 7 y = 0 }
 
-		mutually_exclusive = { osoavia_upgrade_4 }
+		mutually_exclusive = { gamayun_upgrade_4 }
 
 		equipment_bonus = {
 			air_range = 0.3
@@ -7811,15 +7791,15 @@ RUS_osoavia_organisation = {
 	}
 
 	trait = {
-		token = osoavia_upgrade_1_1
-		name = osoavia_upgrade_1_1
+		token = gamayun_upgrade_1_1
+		name = gamayun_upgrade_1_1
 		icon = GFX_generic_mio_trait_icon_naval_strike_targetting
 
-		any_parent = { osoavia_upgrade_1 osoavia_upgrade_2 }
+		any_parent = { gamayun_upgrade_1 gamayun_upgrade_2 }
 
 		position = { x = 0 y = 1 }
 
-		mutually_exclusive = { osoavia_upgrade_1_2 }
+		mutually_exclusive = { gamayun_upgrade_1_2 }
 
 		equipment_bonus = {
 			naval_strike_targetting = 0.1
@@ -7827,15 +7807,15 @@ RUS_osoavia_organisation = {
 	}
 
 	trait = {
-		token = osoavia_upgrade_1_2
-		name = osoavia_upgrade_1_2
+		token = gamayun_upgrade_1_2
+		name = gamayun_upgrade_1_2
 		icon = GFX_generic_mio_trait_icon_naval_strike_targetting
 
-		any_parent = { osoavia_upgrade_1 osoavia_upgrade_2 }
+		any_parent = { gamayun_upgrade_1 gamayun_upgrade_2 }
 
 		position = { x = 1 y = 1 }
 
-		mutually_exclusive = { osoavia_upgrade_1_1 }
+		mutually_exclusive = { gamayun_upgrade_1_1 }
 
 		equipment_bonus = {
 			naval_strike_targetting = 0.15
@@ -7844,51 +7824,51 @@ RUS_osoavia_organisation = {
 	}
 
 	trait = {
-		token = osoavia_upgrade_1_3
-		name = osoavia_upgrade_1_3
+		token = gamayun_upgrade_1_3
+		name = gamayun_upgrade_1_3
 		icon = GFX_generic_mio_department_icon_facilities
 
-		all_parents = { osoavia_upgrade_3 }
+		all_parents = { gamayun_upgrade_3 }
 
 		position = { x = 3 y = 1 }
 
-		mutually_exclusive = { osoavia_upgrade_1_4 }
+		mutually_exclusive = { gamayun_upgrade_1_4 }
 
 		on_complete = {
 			add_to_variable = { Min_Progress_loc = 20 }
 			add_to_variable = { Max_Progress_loc = 20 }
-			custom_effect_tooltip = osoavia_upgrade_1_3_tt
+			custom_effect_tooltip = gamayun_upgrade_1_3_tt
 		}
 	}
 
 	trait = {
-		token = osoavia_upgrade_1_4
-		name = osoavia_upgrade_1_4
+		token = gamayun_upgrade_1_4
+		name = gamayun_upgrade_1_4
 		icon = GFX_generic_mio_department_icon_facilities
 
-		all_parents = { osoavia_upgrade_3 }
+		all_parents = { gamayun_upgrade_3 }
 
 		position = { x = 5 y = 1 }
 
-		mutually_exclusive = { osoavia_upgrade_1_3 }
+		mutually_exclusive = { gamayun_upgrade_1_3 }
 
 		on_complete = {
 			subtract_from_variable = { Min_Days_loc = 50 }
 			subtract_from_variable = { Max_Days_loc = 50 }
-			custom_effect_tooltip = osoavia_upgrade_1_4_tt
+			custom_effect_tooltip = gamayun_upgrade_1_4_tt
 		}
 	}
 
 	trait = {
-		token = osoavia_upgrade_1_5
-		name = osoavia_upgrade_1_5
+		token = gamayun_upgrade_1_5
+		name = gamayun_upgrade_1_5
 		icon = GFX_generic_mio_trait_icon_maximum_speed
 
-		any_parent = { osoavia_upgrade_4 osoavia_upgrade_5 }
+		any_parent = { gamayun_upgrade_4 gamayun_upgrade_5 }
 
 		position = { x = 7 y = 1 }
 
-		mutually_exclusive = { osoavia_upgrade_1_6 }
+		mutually_exclusive = { gamayun_upgrade_1_6 }
 
 		equipment_bonus = {
 			maximum_speed = 0.1
@@ -7896,15 +7876,15 @@ RUS_osoavia_organisation = {
 	}
 
 	trait = {
-		token = osoavia_upgrade_1_6
-		name = osoavia_upgrade_1_6
+		token = gamayun_upgrade_1_6
+		name = gamayun_upgrade_1_6
 		icon = GFX_generic_mio_trait_icon_maximum_speed
 
-		any_parent = { osoavia_upgrade_4 osoavia_upgrade_5 }
+		any_parent = { gamayun_upgrade_4 gamayun_upgrade_5 }
 
 		position = { x = 8 y = 1 }
 
-		mutually_exclusive = { osoavia_upgrade_1_5 }
+		mutually_exclusive = { gamayun_upgrade_1_5 }
 
 		equipment_bonus = {
 			maximum_speed = 0.15
@@ -7916,15 +7896,15 @@ RUS_osoavia_organisation = {
 	}
 
 	trait = {
-		token = osoavia_upgrade_2_1
-		name = osoavia_upgrade_2_1
+		token = gamayun_upgrade_2_1
+		name = gamayun_upgrade_2_1
 		icon = GFX_generic_mio_trait_icon_reliability
 
-		any_parent = { osoavia_upgrade_1_1 osoavia_upgrade_1_2 }
+		any_parent = { gamayun_upgrade_1_1 gamayun_upgrade_1_2 }
 
 		position = { x = 0 y = 3 }
 
-		mutually_exclusive = { osoavia_upgrade_2_2 }
+		mutually_exclusive = { gamayun_upgrade_2_2 }
 
 		equipment_bonus = {
 			reliability = 0.1
@@ -7932,15 +7912,15 @@ RUS_osoavia_organisation = {
 	}
 
 	trait = {
-		token = osoavia_upgrade_2_2
-		name = osoavia_upgrade_2_2
+		token = gamayun_upgrade_2_2
+		name = gamayun_upgrade_2_2
 		icon = GFX_generic_mio_trait_icon_maximum_speed
 
-		any_parent = { osoavia_upgrade_1_1 osoavia_upgrade_1_2 }
+		any_parent = { gamayun_upgrade_1_1 gamayun_upgrade_1_2 }
 
 		position = { x = 1 y = 3 }
 
-		mutually_exclusive = { osoavia_upgrade_2_1 }
+		mutually_exclusive = { gamayun_upgrade_2_1 }
 
 		equipment_bonus = {
 			maximum_speed = 0.05
@@ -7948,15 +7928,15 @@ RUS_osoavia_organisation = {
 	}
 
 	trait = {
-		token = osoavia_upgrade_2_3
-		name = osoavia_upgrade_2_3
-		icon = GFX_icon_osoavia_civ_chance
+		token = gamayun_upgrade_2_3
+		name = gamayun_upgrade_2_3
+		icon = GFX_icon_gamayun_civ_chance
 
-		any_parent = { osoavia_upgrade_1_3 osoavia_upgrade_1_4 }
+		any_parent = { gamayun_upgrade_1_3 gamayun_upgrade_1_4 }
 
 		position = { x = 2 y = 2 }
 
-		mutually_exclusive = { osoavia_upgrade_2_4 osoavia_upgrade_2_5 }
+		mutually_exclusive = { gamayun_upgrade_2_4 gamayun_upgrade_2_5 }
 
 		on_complete = {
 			add_to_variable = { Civ_chance_loc = 27 }
@@ -7964,26 +7944,26 @@ RUS_osoavia_organisation = {
 			subtract_from_variable = { Dockyard_chance_loc = 13 }
 			FROM = {
 				add_to_variable = {
-					var = RUS_OSOAVIA_Civ_Chance
+					var = RUS_Gamayun_Civ_Chance
 					value = 66
 				}
 			}
-			custom_effect_tooltip = osoavia_upgrade_2_3_tt
+			custom_effect_tooltip = gamayun_upgrade_2_3_tt
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = osoavia_upgrade_2_3_exclusive_tt
+			custom_effect_tooltip = gamayun_upgrade_2_3_exclusive_tt
 		}
 	}
 
 	trait = {
-		token = osoavia_upgrade_2_4
-		name = osoavia_upgrade_2_4
-		icon = GFX_icon_osoavia_mil_chance
+		token = gamayun_upgrade_2_4
+		name = gamayun_upgrade_2_4
+		icon = GFX_icon_gamayun_mil_chance
 
-		any_parent = { osoavia_upgrade_1_3 osoavia_upgrade_1_4 }
+		any_parent = { gamayun_upgrade_1_3 gamayun_upgrade_1_4 }
 
 		position = { x = 4 y = 2 }
 
-		mutually_exclusive = { osoavia_upgrade_2_3 osoavia_upgrade_2_5 }
+		mutually_exclusive = { gamayun_upgrade_2_3 gamayun_upgrade_2_5 }
 
 		on_complete = {
 			add_to_variable = { Mil_chance_loc = 27 }
@@ -7991,26 +7971,26 @@ RUS_osoavia_organisation = {
 			subtract_from_variable = { Dockyard_chance_loc = 13 }
 			FROM = {
 				add_to_variable = {
-					var = RUS_OSOAVIA_Mil_Chance
+					var = RUS_Gamayun_Mil_Chance
 					value = 66
 				}
 			}
-			custom_effect_tooltip = osoavia_upgrade_2_4_tt
+			custom_effect_tooltip = gamayun_upgrade_2_4_tt
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = osoavia_upgrade_2_4_exclusive_tt
+			custom_effect_tooltip = gamayun_upgrade_2_4_exclusive_tt
 		}
 	}
 
 	trait = {
-		token = osoavia_upgrade_2_5
-		name = osoavia_upgrade_2_5
-		icon = GFX_icon_osoavia_dockyard_chance
+		token = gamayun_upgrade_2_5
+		name = gamayun_upgrade_2_5
+		icon = GFX_icon_gamayun_dockyard_chance
 
-		any_parent = { osoavia_upgrade_1_3 osoavia_upgrade_1_4 }
+		any_parent = { gamayun_upgrade_1_3 gamayun_upgrade_1_4 }
 
 		position = { x = 6 y = 2 }
 
-		mutually_exclusive = { osoavia_upgrade_2_3 osoavia_upgrade_2_4 }
+		mutually_exclusive = { gamayun_upgrade_2_3 gamayun_upgrade_2_4 }
 
 		on_complete = {
 			add_to_variable = { Dockyard_chance_loc = 27 }
@@ -8018,26 +7998,26 @@ RUS_osoavia_organisation = {
 			subtract_from_variable = { Civ_chance_loc = 13 }
 			FROM = {
 				add_to_variable = {
-					var = RUS_OSOAVIA_Dockyard_Chance
+					var = RUS_Gamayun_Dockyard_Chance
 					value = 66
 				}
 			}
-			custom_effect_tooltip = osoavia_upgrade_2_5_tt
+			custom_effect_tooltip = gamayun_upgrade_2_5_tt
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = osoavia_upgrade_2_5_exclusive_tt
+			custom_effect_tooltip = gamayun_upgrade_2_5_exclusive_tt
 		}
 	}
 
 	trait = {
-		token = osoavia_upgrade_2_6
-		name = osoavia_upgrade_2_6
+		token = gamayun_upgrade_2_6
+		name = gamayun_upgrade_2_6
 		icon = GFX_generic_mio_trait_icon_naval_strike_attack
 
-		any_parent = { osoavia_upgrade_1_5 osoavia_upgrade_1_6 }
+		any_parent = { gamayun_upgrade_1_5 gamayun_upgrade_1_6 }
 
 		position = { x = 7 y = 3 }
 
-		mutually_exclusive = { osoavia_upgrade_2_7 }
+		mutually_exclusive = { gamayun_upgrade_2_7 }
 
 		equipment_bonus = {
 			naval_strike_attack = 0.1
@@ -8045,15 +8025,15 @@ RUS_osoavia_organisation = {
 	}
 
 	trait = {
-		token = osoavia_upgrade_2_7
-		name = osoavia_upgrade_2_7
+		token = gamayun_upgrade_2_7
+		name = gamayun_upgrade_2_7
 		icon = GFX_generic_mio_trait_icon_naval_strike_attack
 
-		any_parent = { osoavia_upgrade_1_5 osoavia_upgrade_1_6 }
+		any_parent = { gamayun_upgrade_1_5 gamayun_upgrade_1_6 }
 
 		position = { x = 8 y = 3 }
 
-		mutually_exclusive = { osoavia_upgrade_2_6 }
+		mutually_exclusive = { gamayun_upgrade_2_6 }
 
 		equipment_bonus = {
 			naval_strike_attack = 0.15
@@ -8062,8 +8042,8 @@ RUS_osoavia_organisation = {
 	}
 
 	trait = {
-		token = osoavia_upgrade_3_1
-		name = osoavia_upgrade_3_1
+		token = gamayun_upgrade_3_1
+		name = gamayun_upgrade_3_1
 		icon = GFX_generic_mio_trait_icon_mines
 
 		visible = {
@@ -8073,7 +8053,7 @@ RUS_osoavia_organisation = {
 
 		position = { x = 3 y = 3 }
 
-		mutually_exclusive = { osoavia_upgrade_3_2 }
+		mutually_exclusive = { gamayun_upgrade_3_2 }
 
 		equipment_bonus = {
 			mines_planting = 0.2
@@ -8082,8 +8062,8 @@ RUS_osoavia_organisation = {
 	}
 
 	trait = {
-		token = osoavia_upgrade_3_2
-		name = osoavia_upgrade_3_2
+		token = gamayun_upgrade_3_2
+		name = gamayun_upgrade_3_2
 		icon = GFX_generic_mio_trait_icon_mines
 
 		visible = {
@@ -8093,7 +8073,7 @@ RUS_osoavia_organisation = {
 
 		position = { x = 5 y = 3 }
 
-		mutually_exclusive = { osoavia_upgrade_3_1 }
+		mutually_exclusive = { gamayun_upgrade_3_1 }
 
 		equipment_bonus = {
 			mines_planting = 0.1
@@ -8102,13 +8082,44 @@ RUS_osoavia_organisation = {
 	}
 
 	trait = {
-		token = osoavia_upgrade_4_1
-		name = osoavia_upgrade_4_1
-		icon = GFX_icon_osoavia_MIO
+		token = gamayun_upgrade_4_1
+		name = gamayun_upgrade_4_1
+		icon = GFX_icon_gamayun_MIO
 
-		any_parent = { osoavia_upgrade_2_1 osoavia_upgrade_2_2 }
-		any_parent = { osoavia_upgrade_2_3 osoavia_upgrade_2_4 osoavia_upgrade_2_5 }
-		any_parent = { osoavia_upgrade_2_6 osoavia_upgrade_2_7 }
+		any_parent = { gamayun_upgrade_2_1 gamayun_upgrade_2_2 }
+		any_parent = { gamayun_upgrade_2_3 gamayun_upgrade_2_4 gamayun_upgrade_2_5 }
+		any_parent = { gamayun_upgrade_2_6 gamayun_upgrade_2_7 }
+
+		special_trait_background = yes
+
+		position = { x = 4 y = 4 }
+
+		equipment_bonus = {
+			defense = 0.15
+		}
+	}
+
+	trait = {
+		token = gamayun_upgrade_4_1_soc_rus
+		name = gamayun_upgrade_4_1_soc_rus
+		icon = GFX_icon_gamayun_MIO
+
+		visible = {
+			FROM = {
+				has_country_flag = RUS_rename_industries
+			}
+		}
+
+		available = {
+			if = {
+				limit = { FROM = { original_tag = RUS } }
+				FROM = { has_completed_focus = RUS_enter_hundred }
+			}
+		}
+
+		any_parent = { gamayun_upgrade_2_1 gamayun_upgrade_2_2 }
+		any_parent = { gamayun_upgrade_2_3 gamayun_upgrade_2_4 gamayun_upgrade_2_5 }
+		any_parent = { gamayun_upgrade_2_6 gamayun_upgrade_2_7 }
 
 		special_trait_background = yes
 
@@ -9278,13 +9289,20 @@ RUS_tsagi_organisation = {
 		}
 	}
 }
-RUS_gamayun_organisation = {
-	name = gamayun_non_socrus
-	icon = GFX_idea_gamayun
+RUS_osoavia_organisation = {
+	name = osoavia
+	icon = GFX_idea_osoavia
 	allowed = {
 		is_russian_tag_that_can_integrate = yes
 	}
-	available = { FROM = { owns_state = 249 } } #Kazan
+	available = {
+		FROM = {
+			owns_any_state_of = {
+				219 #Moscow
+				566 #Irkutsk
+			}
+		}
+	}
 
 	equipment_type = {
 		small_plane_cas_airframe
@@ -9300,10 +9318,10 @@ RUS_gamayun_organisation = {
 
 	on_design_team_assigned_to_tech = {
 		if = {
-			limit = { FROM = { NOT = { has_variable = Gamayun_Research_Number } } }
+			limit = { FROM = { NOT = { has_variable = OSOAVIA_Research_Number } } }
 			FROM = {
 				set_variable = {
-					var = Gamayun_Research_Number
+					var = OSOAVIA_Research_Number
 					value = 1
 				}
 			}
@@ -9311,7 +9329,7 @@ RUS_gamayun_organisation = {
 		else = {
 			FROM = {
 				add_to_variable = {
-					var = Gamayun_Research_Number
+					var = OSOAVIA_Research_Number
 					value = 1
 				}
 			}
@@ -9321,7 +9339,7 @@ RUS_gamayun_organisation = {
 	on_tech_research_cancelled = {
 		FROM = {
 			subtract_from_variable = {
-				var = Gamayun_Research_Number
+				var = OSOAVIA_Research_Number
 				value = 1
 			}
 		}
@@ -9330,7 +9348,7 @@ RUS_gamayun_organisation = {
 	on_tech_research_completed = {
 		FROM = {
 			subtract_from_variable = {
-				var = Gamayun_Research_Number
+				var = OSOAVIA_Research_Number
 				value = 1
 			}
 		}
@@ -9353,32 +9371,32 @@ RUS_gamayun_organisation = {
 	ai_will_do = { base = 10 }
 
 	initial_trait = {
-		name = RUS_gamayun_mio_desc
+		name = RUS_osoavia_mio_desc
 	}
 
 	trait = {
-		token = gamayun_upgrade_1
-		name = gamayun_upgrade_1
+		token = osoavia_upgrade_1
+		name = osoavia_upgrade_1
 		icon = GFX_KR_generic_mio_trait_icon_air_xp
 
 		position = { x = 0 y = 0 }
 
-		mutually_exclusive = { gamayun_upgrade_2 }
+		mutually_exclusive = { osoavia_upgrade_2 }
 
 		on_complete = {
 			multiply_variable = { xp_gain_loc = 1.5 }
-			custom_effect_tooltip = RUS_manufacturer_trait_air_xp_gamayun_tt
+			custom_effect_tooltip = RUS_manufacturer_trait_air_xp_osoavia_tt
 		}
 	}
 
 	trait = {
-		token = gamayun_upgrade_2
-		name = gamayun_upgrade_2
+		token = osoavia_upgrade_2
+		name = osoavia_upgrade_2
 		icon = GFX_generic_mio_trait_icon_air_ground_attack
 
 		position = { x = 2 y = 0 }
 
-		mutually_exclusive = { gamayun_upgrade_1 }
+		mutually_exclusive = { osoavia_upgrade_1 }
 
 		equipment_bonus = {
 			air_ground_attack = 0.1
@@ -9393,29 +9411,29 @@ RUS_gamayun_organisation = {
 	}
 
 	trait = {
-		token = gamayun_upgrade_3
-		name = gamayun_upgrade_3
+		token = osoavia_upgrade_3
+		name = osoavia_upgrade_3
 		icon = GFX_KR_generic_mio_trait_icon_funds
 
 		position = { x = 6 y = 0 }
 
-		mutually_exclusive = { gamayun_upgrade_4 }
+		mutually_exclusive = { osoavia_upgrade_4 }
 
 		on_complete = {
 			multiply_variable = { weekly_funds_requirement = 0.33 }
 			multiply_variable = { weekly_funds_requirement_loc = 0.33 }
-			custom_effect_tooltip = RUS_manufacturer_trait_air_xp_min_funds_gamayun_tt
+			custom_effect_tooltip = RUS_manufacturer_trait_air_xp_min_funds_osoavia_tt
 		}
 	}
 
 	trait = {
-		token = gamayun_upgrade_4
-		name = gamayun_upgrade_4
+		token = osoavia_upgrade_4
+		name = osoavia_upgrade_4
 		icon = GFX_generic_mio_trait_icon_build_cost_ic
 
 		position = { x = 8 y = 0 }
 
-		mutually_exclusive = { gamayun_upgrade_3 }
+		mutually_exclusive = { osoavia_upgrade_3 }
 
 		equipment_bonus = {
 			build_cost_ic = -0.05
@@ -9430,11 +9448,11 @@ RUS_gamayun_organisation = {
 	}
 
 	trait = {
-		token = gamayun_upgrade_1_1
-		name = gamayun_upgrade_1_1
+		token = osoavia_upgrade_1_1
+		name = osoavia_upgrade_1_1
 		icon = GFX_generic_mio_trait_icon_air_ground_attack
 
-		any_parent = { gamayun_upgrade_1 gamayun_upgrade_2 }
+		any_parent = { osoavia_upgrade_1 osoavia_upgrade_2 }
 
 		position = { x = 1 y = 1 }
 
@@ -9444,13 +9462,13 @@ RUS_gamayun_organisation = {
 	}
 
 	trait = {
-		token = gamayun_upgrade_1_2
-		name = gamayun_upgrade_1_2
+		token = osoavia_upgrade_1_2
+		name = osoavia_upgrade_1_2
 		icon = GFX_generic_mio_trait_icon_air_range
 
 		position = { x = 3 y = 1 }
 
-		mutually_exclusive = { gamayun_upgrade_1_3 }
+		mutually_exclusive = { osoavia_upgrade_1_3 }
 
 		equipment_bonus = {
 			air_range = 0.15
@@ -9458,13 +9476,13 @@ RUS_gamayun_organisation = {
 	}
 
 	trait = {
-		token = gamayun_upgrade_1_3
-		name = gamayun_upgrade_1_3
+		token = osoavia_upgrade_1_3
+		name = osoavia_upgrade_1_3
 		icon = GFX_generic_mio_trait_icon_air_agility
 
 		position = { x = 5 y = 1 }
 
-		mutually_exclusive = { gamayun_upgrade_1_2 }
+		mutually_exclusive = { osoavia_upgrade_1_2 }
 
 		equipment_bonus = {
 			air_agility = 0.1
@@ -9472,11 +9490,11 @@ RUS_gamayun_organisation = {
 	}
 
 	trait = {
-		token = gamayun_upgrade_1_4
-		name = gamayun_upgrade_1_4
+		token = osoavia_upgrade_1_4
+		name = osoavia_upgrade_1_4
 		icon = GFX_generic_mio_trait_icon_build_cost_ic
 
-		any_parent = { gamayun_upgrade_3 gamayun_upgrade_4 }
+		any_parent = { osoavia_upgrade_3 osoavia_upgrade_4 }
 
 		position = { x = 7 y = 1 }
 
@@ -9486,12 +9504,12 @@ RUS_gamayun_organisation = {
 	}
 
 	trait = {
-		token = gamayun_upgrade_2_1
-		name = gamayun_upgrade_2_1
+		token = osoavia_upgrade_2_1
+		name = osoavia_upgrade_2_1
 		icon = GFX_generic_mio_trait_icon_maximum_speed
 
-		all_parents = { gamayun_upgrade_1_1 }
-		any_parent = { gamayun_upgrade_1_2 gamayun_upgrade_1_3 }
+		all_parents = { osoavia_upgrade_1_1 }
+		any_parent = { osoavia_upgrade_1_2 osoavia_upgrade_1_3 }
 
 		position = { x = 2 y = 2 }
 
@@ -9502,12 +9520,12 @@ RUS_gamayun_organisation = {
 	}
 
 	trait = {
-		token = gamayun_upgrade_2_2
-		name = gamayun_upgrade_2_2
+		token = osoavia_upgrade_2_2
+		name = osoavia_upgrade_2_2
 		icon = GFX_generic_mio_trait_icon_reliability
 
-		any_parent = { gamayun_upgrade_1_2 gamayun_upgrade_1_3 }
-		all_parents = { gamayun_upgrade_1_4 }
+		any_parent = { osoavia_upgrade_1_2 osoavia_upgrade_1_3 }
+		all_parents = { osoavia_upgrade_1_4 }
 
 		position = { x = 6 y = 2 }
 
@@ -9518,15 +9536,15 @@ RUS_gamayun_organisation = {
 	}
 
 	trait = {
-		token = gamayun_upgrade_3_1
-		name = gamayun_upgrade_3_1
+		token = osoavia_upgrade_3_1
+		name = osoavia_upgrade_3_1
 		icon = GFX_generic_mio_trait_icon_maximum_speed
 
-		all_parents = { gamayun_upgrade_2_1 gamayun_upgrade_2_2 }
+		all_parents = { osoavia_upgrade_2_1 osoavia_upgrade_2_2 }
 
 		position = { x = 3 y = 3 }
 
-		mutually_exclusive = { gamayun_upgrade_3_2 }
+		mutually_exclusive = { osoavia_upgrade_3_2 }
 
 		equipment_bonus = {
 			maximum_speed = 0.1
@@ -9534,15 +9552,15 @@ RUS_gamayun_organisation = {
 	}
 
 	trait = {
-		token = gamayun_upgrade_3_2
-		name = gamayun_upgrade_3_2
+		token = osoavia_upgrade_3_2
+		name = osoavia_upgrade_3_2
 		icon = GFX_generic_mio_trait_icon_reliability
 
-		all_parents = { gamayun_upgrade_2_1 gamayun_upgrade_2_2 }
+		all_parents = { osoavia_upgrade_2_1 osoavia_upgrade_2_2 }
 
 		position = { x = 5 y = 3 }
 
-		mutually_exclusive = { gamayun_upgrade_3_1 }
+		mutually_exclusive = { osoavia_upgrade_3_1 }
 
 		equipment_bonus = {
 			reliability = 0.15
@@ -9550,50 +9568,13 @@ RUS_gamayun_organisation = {
 	}
 
 	trait = {
-		token = gamayun_upgrade_4_1
-		name = gamayun_upgrade_4_1
-		icon = GFX_icon_gamayun_MIO
-
-		visible = {
-			FROM = {
-				NOT = {
-					has_country_flag = RUS_rename_industries
-				}
-			}
-		}
+		token = osoavia_upgrade_4_1
+		name = osoavia_upgrade_4_1
+		icon = GFX_icon_osoavia_MIO
 
 		special_trait_background = yes
 
-		any_parent = { gamayun_upgrade_3_1 gamayun_upgrade_3_2 }
-
-		position = { x = 4 y = 4 }
-
-		equipment_bonus = {
-			air_ground_attack = 0.1
-		}
-	}
-
-	trait = {
-		token = gamayun_upgrade_4_1_soc_rus
-		name = gamayun_upgrade_4_1_soc_rus
-		icon = GFX_icon_gamayun_MIO
-
-		visible = {
-			FROM = {
-				has_country_flag = RUS_rename_industries
-			}
-		}
-
-		special_trait_background = yes
-
-		any_parent = { gamayun_upgrade_3_1 gamayun_upgrade_3_2 }
-
-		available = {
-			if = {
-				limit = { FROM = { original_tag = RUS } }
-				FROM = { has_completed_focus = RUS_enter_hundred }
-			}
-		}
+		any_parent = { osoavia_upgrade_3_1 osoavia_upgrade_3_2 }
 
 		position = { x = 4 y = 4 }
 

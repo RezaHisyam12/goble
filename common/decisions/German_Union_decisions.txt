@@ -2498,6 +2498,36 @@ GRU_germania_plan_decisions = {
 		}
 	}
 	#
+	GRU_pan_germanism_integrate_croatia_decision = {
+		icon = GFX_pangermanicone
+
+		visible = {
+			has_completed_focus = GRU_NMDVP_SLAV_LAND_EXPANSION
+			country_exists = CRO
+			CRO = { is_subject_of = GRU }
+		}
+		available = {
+			country_exists = CRO
+			CRO = { is_subject_of = GRU }
+		}
+
+		fire_only_once = no
+		cost = 20
+		days_remove = 0
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_integrate_croatia_decision"
+			annex_country = {
+				target = CRO
+				transfer_troops = yes
+			}
+		}
+	}
+	#
 	GRU_pan_germanism_integrate_galicia_decision = {
 		icon = GFX_pangermanicone
 
@@ -4197,7 +4227,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 145
+			factor = 130
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -4643,7 +4673,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 100
+			factor = 135
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -4747,7 +4777,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 30
 
 		ai_will_do = {
-			factor = 125
+			factor = 135
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -5590,104 +5620,102 @@ GRU_germania_plan_decisions = {
 		
 	}
 	
-	GRU_pan_germanism_core_swiss_decision = {
-		icon = GFX_pangermanictwo
-
-		visible = {
-			has_completed_focus = GRU_NMDVP_PAN_GERMANISM
-		}
-		available = {
-			3 = { 
-				owner = {
-					OR = {
-						tag = GRU
-						is_subject_of = GRU
-					}
-				}
-				controller = {
-					OR = {
-						tag = GRU
-						is_subject_of = GRU
-					}
-				}
-			}
-			151 = { 
-				owner = {
-					OR = {
-						tag = GRU
-						is_subject_of = GRU
-					}
-				}
-				controller = {
-					OR = {
-						tag = GRU
-						is_subject_of = GRU
-					}
-				}
-			}
-			761 = { 
-				owner = {
-					OR = {
-						tag = GRU
-						is_subject_of = GRU
-					}
-				}
-				controller = {
-					OR = {
-						tag = GRU
-						is_subject_of = GRU
-					}
-				}
-			}
-		}
-
-		fire_only_once = yes
-		cost = 20
-		days_remove = 100
-
-		ai_will_do = {
-			factor = 6
-		}
-
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_core_swiss_decision"
-			151 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			3 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			761 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			set_country_flag = swiss_cored
-			create_corps_commander = {
-				name = "Eugen Bircher"
-				desc = "POLITICS_SWI_EUGEN_BIRCHER_ARMY_DESC"
-				portrait_path = "gfx/leaders/SWI/Portrait_Switzerland_Eugen_Bircher.png"
-				id = 26701
-				traits = {
-					trait_cautious
-					hill_fighter
-					skilled_staffer
-				}
-				skill = 3
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 3
-			}
-		}
-	}
+#	GRU_pan_germanism_core_swiss_decision = {
+#		icon = GFX_pangermanictwo
+#
+#		visible = {
+#			has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+#		}
+#		available = {
+#			3 = { 
+#				owner = {
+#					OR = {
+#						tag = GRU
+#						is_subject_of = GRU
+#					}
+#				}
+#				controller = {
+#					OR = {
+#						tag = GRU
+#						is_subject_of = GRU
+#					}
+#				}
+#			}
+#			151 = { 
+#				owner = {
+#					OR = {
+#						tag = GRU
+#						is_subject_of = GRU
+#				controller = {
+#					OR = {
+#						tag = GRU
+#						is_subject_of = GRU
+#					}
+#				}
+#			}
+#			761 = { 
+#				owner = {
+#					OR = {
+#						tag = GRU
+#						is_subject_of = GRU
+#					}
+#				}
+#				controller = {
+#					OR = {
+#						tag = GRU
+#						is_subject_of = GRU
+#					}
+#				}
+#			}
+#		}
+#
+#		fire_only_once = yes
+#		cost = 20
+#		days_remove = 100
+#
+#		ai_will_do = {
+#			factor = 6
+#		}
+#
+#		remove_effect = {
+#			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_core_swiss_decision"
+#			151 = { 
+#				add_core_of = GRU
+#				GRU = {
+#					transfer_state = PREV
+#				}
+#			}
+#			3 = { 
+#				add_core_of = GRU
+#				GRU = {
+#					transfer_state = PREV
+#				}
+#			}
+#			761 = { 
+#				add_core_of = GRU
+#				GRU = {
+#					transfer_state = PREV
+#				}
+#			}
+#			set_country_flag = swiss_cored
+#			create_corps_commander = {
+#				name = "Eugen Bircher"
+#				desc = "POLITICS_SWI_EUGEN_BIRCHER_ARMY_DESC"
+#				portrait_path = "gfx/leaders/SWI/Portrait_Switzerland_Eugen_Bircher.png"
+#				id = 26701
+#				traits = {
+#					trait_cautious
+#					hill_fighter
+#					skilled_staffer
+#				}
+#				skill = 3
+#				attack_skill = 2
+#				defense_skill = 3
+#				planning_skill = 2
+#				logistics_skill = 3
+#			}
+#		}
+#	}
 	GRU_pan_germanism_core_bohemia_decision = {
 		icon = GFX_pangermanictwo
 
@@ -6403,18 +6431,13 @@ GRU_germania_plan_decisions = {
 			has_completed_focus = GRU_NMDVP_PAN_GERMANISM_RELOADED
 		}
 		available = {
-			8 = { 
-				owner = {
-					OR = {
-						tag = GRU
-						is_subject_of = GRU
-					}
+			OR = {
+				GRU = {
+					controls_state = 8
 				}
-				controller = {
-					OR = {
-						tag = GRU
-						is_subject_of = GRU
-					}
+				any_other_country = {
+					is_subject_of = GRU
+					controls_state = 8
 				}
 			}
 		}
@@ -10109,7 +10132,6 @@ GRU_volksreichskommissariat_decisions = {
 						}
 						add_manpower = 40000
 					}
-				HYP = {	country_event = rotermorgenmisc.900 }
 					if = {
 						limit = {
 							GRU = { has_country_flag = NMDVP_R_RULE }
@@ -10126,6 +10148,7 @@ GRU_volksreichskommissariat_decisions = {
 							}
 						}
 					}
+				HYP = {	country_event = { id = rotermorgenmisc.900 days = 2 } }
 				}
 				set_autonomy = { target = HYP autonomy_state = RM_Volksland }
 				set_country_flag = HYP_established
@@ -10697,7 +10720,7 @@ GRU_expansion_three_volksland_hypoborea = {
 						remove_ideas = UKR_ivan_po_influence_idea_4
 						remove_ideas = UKR_ivan_po_influence_idea_5
 					}
-				VKR = {	country_event = rotermorgenmisc.200 }
+				VKR = {	country_event = { id = rotermorgenmisc.200 days = 2 } }
 				VKR = {	country_event = { id = rotermorgenmisc.201 days = 2 } }
 				if = {
 						limit = {
@@ -10784,8 +10807,7 @@ GRU_expansion_three_volksland_hypoborea = {
 						}
 						add_manpower = 40000
 					}
-				VKK = {	country_event = rotermorgenmisc.300 }
-				VKK = {	country_event = { id = rotermorgenmisc.301 days = 2 } }
+					VKK = {	country_event = { id = rotermorgenmisc.301 days = 2 } }
 				if = {
 						limit = {
 							GRU = { has_country_flag = NMDVP_R_RULE }
@@ -10802,6 +10824,7 @@ GRU_expansion_three_volksland_hypoborea = {
 							}
 						}
 					}
+				VKK = {	country_event = { id = rotermorgenmisc.300 days = 2 } }
 				}
 				
 				set_autonomy = { target = VKK autonomy_state = RM_Volkskommissariat }
@@ -10881,7 +10904,7 @@ GRU_expansion_three_volksland_hypoborea = {
 							remove_unit_leader = yes
 						}
 					}
-					VKB = {	country_event = rotermorgenmisc.400 }
+					VKB = {	country_event = { id = rotermorgenmisc.400 days = 2 } }
 					if = {
 						limit = {
 							GRU = { has_country_flag = NMDVP_R_RULE }
@@ -10957,9 +10980,8 @@ GRU_expansion_three_volksland_hypoborea = {
 						type = support_equipment
 						amount = 100
 						}
-						add_manpower = 40000
+						add_manpower = 40000					
 					}
-				VKM = {	country_event = rotermorgenmisc.500 }
 				if = {
 						limit = {
 							GRU = { has_country_flag = NMDVP_R_RULE }
@@ -10976,6 +10998,7 @@ GRU_expansion_three_volksland_hypoborea = {
 							}
 						}
 					}
+				VKM = {	country_event = { id = rotermorgenmisc.500 days = 2 } }
 				}
 				set_autonomy = { target = VKM autonomy_state = RM_Volkskommissariat }
 				set_country_flag = VKM_established
@@ -13840,7 +13863,7 @@ GRU_beyond_lebensraum_decisions = {
 						add_manpower = 40000
 						add_ideas = VSJ_terror_bombing
 					}
-				VSJ = {	country_event = rotermorgenmisc.950 }
+				VSJ = {	country_event = { id = rotermorgenmisc.950 days = 2 } }
 				if = {
 						limit = {
 							GRU = { has_country_flag = NMDVP_R_RULE }
@@ -14385,7 +14408,7 @@ GRU_expansion_two_volksstaat_Judea = {
 						}
 						add_manpower = 40000
 					}
-				VST = {	country_event = rotermorgenmisc.951 }
+				VST = {	country_event = { id = rotermorgenmisc.951 days = 2 } }
 				if = {
 						limit = {
 							GRU = { has_country_flag = NMDVP_R_RULE }
@@ -16100,8 +16123,6 @@ GRU_new_order_decisions = {
 				state = 18
 				state = 779
 				state = 27
-				state = 760
-				state = 943
 				state = 741
 				state = 34
 				state = 6
@@ -16187,24 +16208,6 @@ GRU_new_order_decisions = {
 					}
 					OR = {
 						GRU = {
-							controls_state = 760
-						}
-						any_other_country = {
-							is_subject_of = GRU
-							controls_state = 760
-						}
-					}
-					OR = {
-						GRU = {
-							controls_state = 943
-						}
-						any_other_country = {
-							is_subject_of = GRU
-							controls_state = 943
-						}
-					}
-					OR = {
-						GRU = {
 							controls_state = 741
 						}
 						any_other_country = {
@@ -16256,8 +16259,6 @@ GRU_new_order_decisions = {
 						transfer_state = 18
 						transfer_state = 779
 						transfer_state = 27
-						transfer_state = 760
-						transfer_state = 943
 						transfer_state = 741
 						transfer_state = 34
 						transfer_state = 6
@@ -16419,7 +16420,7 @@ GRU_new_order_decisions = {
 						add_equipment_to_stockpile = { type = artillery_equipment amount = 1000 }
 						add_equipment_to_stockpile = { type = anti_tank_equipment amount = 600 }
 						add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 5000 }
-						add_manpower = 40000
+						add_manpower = 120000
 						remove_all_ministers = yes
 						add_ideas = limited_conscription
 						add_ideas = limited_exports

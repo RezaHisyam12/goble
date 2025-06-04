@@ -4,6 +4,7 @@ add_namespace = rmruss
 add_namespace = wll
 add_namespace = gruothernews
 add_namespace = rmfallgoebb
+add_namespace = rmorgenentente
 
 
 country_event = { # GRU setup
@@ -4694,8 +4695,6 @@ country_event = { #
 		18 = { add_core_of = VOB }
 		779 = { add_core_of = VOB }
 		27 = { add_core_of = VOB }
-		760 = { add_core_of = VOB }
-		943 = { add_core_of = VOB }
 		741 = { add_core_of = VOB }
 		34 = { add_core_of = VOB }
 		6 = { add_core_of = VOB }
@@ -8944,3 +8943,1262 @@ country_event = {
 	}
 }
 
+# The Halifax Conference - Germany invited (fired by decision)
+country_event = {
+	id = rmorgenentente.300
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.300" }
+	title = entente.300.t
+	desc = entente.300.d
+	picture = GFX_report_event_CAN_parliament1
+
+	is_triggered_only = yes
+
+	option = {
+		name = entente.300.a
+		ENT = {
+			country_event = { id = rmorgenentente.302 days = 3 }
+		}
+	}
+	option = {
+		name = entente.300.b #Refuse
+		trigger = { is_ai = no }
+		ENT = {
+			add_opinion_modifier = { target = ROOT modifier = KR_disapproves_of_govt }
+			country_event = { id = rmorgenentente.301 days = 3 }
+		}
+	}
+}
+
+# Germany refused
+country_event = {
+	id = rmorgenentente.301
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.301" }
+	title = entente.301.t
+	desc = entente.301.d
+	picture = GFX_report_event_GER_reichstag2
+
+	is_triggered_only = yes
+
+	option = {
+		name = entente.301.a
+		add_political_power = -25
+	}
+}
+
+# Germany agrees
+country_event = {
+	id = rmorgenentente.302
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.302" }
+	title = entente.302.t
+	desc = entente.302.d
+	picture = GFX_report_event_GER_reichstag2
+
+	is_triggered_only = yes
+
+	trigger = {
+		ENT = {
+			OR = {
+				tag = CAN
+				tag = NFA
+				tag = GBR
+			}
+			is_faction_leader = yes
+			has_war_with = FRA
+			NOT = { has_war_with = GRU }
+		}
+		GRU = {
+			is_faction_leader = yes
+			has_war_with = FRA
+		}
+	}
+
+	option = {
+		name = entente.302.a
+		add_political_power = 25
+		hidden_effect = {
+			random_country = {
+				limit = {
+					NOT = {
+						tag = ENT
+						tag = GRU
+					}
+					OR = {
+						is_in_faction_with = ENT
+						is_in_faction_with = GRU
+					}
+				}
+				country_event = { id = rmorgenentente.303 days = 1 } #inform everyone
+			}
+			country_event = { id = rmorgenentente.304 days = 8 } #conference begins
+			GRU = {
+				country_event = { id = rmorgenentente.305 days = 9 } #ponders first demand
+			}
+		}
+	}
+}
+
+# The Halifax Conference - scheduled to begin
+country_event = {
+	id = rmorgenentente.303
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.303" }
+	title = entente.303.t
+	desc = entente.303.d
+	picture = GFX_report_event_CAN_parliament1
+
+	is_triggered_only = yes
+	major = yes
+
+	show_major = {
+		NOT = {
+			tag = ENT
+			tag = GRU
+			tag = GBR
+		}
+		OR = {
+			is_in_faction_with = ENT
+			is_in_faction_with = GRU
+		}
+	}
+
+	trigger = {
+		ENT = {
+			OR = {
+				tag = CAN
+				tag = NFA
+				tag = GBR
+			}
+			is_faction_leader = yes
+			has_war_with = FRA
+			NOT = { has_war_with = GRU }
+		}
+		GRU = {
+			is_faction_leader = yes
+			has_war_with = FRA
+		}
+	}
+
+	option = {
+		name = entente.303.a
+	}
+}
+
+# The Halifax Conference - begins
+country_event = {
+	id = rmorgenentente.304
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.304" }
+	title = entente.304.t
+	desc = entente.304.d
+	picture = GFX_report_event_generic_conference2
+
+	is_triggered_only = yes
+	major = yes
+
+	show_major = {
+		OR = {
+			is_in_faction_with = ENT
+			is_in_faction_with = GRU
+		}
+	}
+
+	trigger = {
+		ENT = {
+			OR = {
+				tag = CAN
+				tag = NFA
+				tag = GBR
+			}
+			is_faction_leader = yes
+			has_war_with = FRA
+			NOT = { has_war_with = GRU }
+		}
+		GRU = {
+			is_faction_leader = yes
+			has_war_with = FRA
+		}
+	}
+
+	option = {
+		name = entente.304.a
+	}
+}
+
+# The Halifax Conference - Germany ponders demands
+country_event = {
+	id = rmorgenentente.305
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.305" }
+	picture = GFX_report_event_generic_conference1
+
+	is_triggered_only = yes
+
+	title = {
+		text = entente.305.t
+		trigger = {
+			NOT = {
+				has_country_flag = GRU_conf_demand_alsace
+			}
+		}
+	}
+	title = {
+		text = entente.305.t.return
+		trigger = {
+			OR = {
+				has_country_flag = GRU_conf_demand_alsace
+			}
+		}
+	}
+	desc = {
+		text = entente.305.d
+		trigger = {
+			NOT = {
+				has_country_flag = GRU_conf_demand_alsace
+			}
+		}
+	}
+	desc = {
+		text = entente.305.d.return
+		trigger = {
+			OR = {
+				has_country_flag = GRU_conf_demand_alsace
+			}
+		}
+	}
+
+	trigger = {
+		ENT = {
+			OR = {
+				tag = CAN
+				tag = NFA
+				tag = GBR
+			}
+			is_faction_leader = yes
+			has_war_with = FRA
+			NOT = { has_war_with = GRU }
+		}
+		GRU = {
+			is_faction_leader = yes
+			has_war_with = FRA
+		}
+	}
+
+	option = {
+		name = entente.305.a # France must give up on Alsace-Lorraine
+		trigger = {
+			NOT = { has_war_with = NFA }
+			NFA = { is_in_faction_with = ENT }
+			NOT = { has_country_flag = GRU_conf_demand_alsace }
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0.1
+				has_game_rule = {
+					rule = CAN_halifax_conference_rule
+					option = CAN_HALIFAX_FAVOR_ENTENTE
+				}
+			}
+		}
+		set_country_flag = GRU_conf_demand_alsace
+		NFA = {
+			country_event = { id = rmorgenentente.307 days = 1 }
+		}
+	}
+	option = {
+		name = entente.305.f # We're good to proceed
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.2
+				NOT = { has_war_with = NFA }
+				NFA = { is_in_faction_with = ENT }
+				NOT = { has_country_flag = GRU_conf_demand_france_mitt }
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_war_with = NFA }
+				NFA = { is_in_faction_with = ENT }
+				NOT = {
+					has_country_flag = GRU_conf_demand_alsace
+					has_game_rule = {
+						rule = CAN_halifax_conference_rule
+						option = CAN_HALIFAX_FAVOR_ENTENTE
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = {
+					rule = CAN_halifax_conference_rule
+					option = CAN_HALIFAX_FAVOR_ENTENTE
+				}
+			}
+		}
+		ENT = {
+			news_event = { id = rmorgenentente.319 days = 1 }
+		}
+		hidden_effect = {
+			ENT = {
+				country_event = { id = rmorgenentente.325 days = 1 }
+			}
+			GRU = {
+				country_event = { id = rmorgenentente.326 days = 1 }
+			}
+			every_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = ENT
+						is_in_faction_with = GRU
+					}
+					NOT = {
+						tag = ENT
+						tag = GRU
+					}
+				}
+				country_event = { id = rmorgenentente.327 days = 1 }
+			}
+		}
+	}
+	option = {
+		name = entente.305.g # We don't want this
+		trigger = {
+			is_ai = no
+			NOT = {
+				has_country_flag = GRU_conf_demand_alsace
+			}
+		}
+		country_event = { id = rmorgenentente.306 days = 1 }
+	}
+}
+
+# Halifax Conference - Germany shuts it down
+country_event = {
+	id = rmorgenentente.306
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.306" }
+	title = entente.306.t
+	desc = entente.306.d
+	picture = GFX_report_event_generic_conference2
+
+	is_triggered_only = yes
+	major = yes
+
+	show_major = {
+		OR = {
+			is_in_faction_with = ENT
+			is_in_faction_with = GRU
+		}
+	}
+
+	trigger = {
+		ENT = {
+			OR = {
+				tag = CAN
+				tag = NFA
+				tag = GBR
+			}
+			is_faction_leader = yes
+			has_war_with = FRA
+			NOT = { has_war_with = GRU }
+		}
+		GRU = {
+			is_faction_leader = yes
+			has_war_with = FRA
+		}
+	}
+
+	option = {
+		name = entente.306.a
+		trigger = { tag = GRU }
+	}
+	option = {
+		name = entente.306.b
+		trigger = { tag = ENT }
+		add_political_power = -25
+	}
+	option = {
+		name = entente.306.b
+		trigger = {
+			NOT = { tag = GRU }
+			is_in_faction_with = GRU
+		}
+	}
+	option = {
+		name = entente.306.b
+		trigger = {
+			NOT = { tag = ENT }
+			is_in_faction_with = ENT
+		}
+	}
+}
+
+# Halifax Conference - NFA asked to give up Alsace-Lorraine
+country_event = {
+	id = rmorgenentente.307
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.307" }
+	title = entente.307.t
+	desc = entente.307.d
+	picture = GFX_report_event_generic_conference1
+
+	is_triggered_only = yes
+
+	trigger = {
+		ENT = {
+			OR = {
+				tag = CAN
+				tag = NFA
+				tag = GBR
+			}
+			is_faction_leader = yes
+			has_war_with = FRA
+			NOT = { has_war_with = GRU }
+		}
+		GRU = {
+			is_faction_leader = yes
+			has_war_with = FRA
+		}
+	}
+
+	option = {
+		name = entente.307.a #Never!
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 1.5
+				has_authoritarian_government = yes
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAN_halifax_conference_rule
+					option = CAN_HALIFAX_FAVOR_GERMANY
+				}
+			}
+		}
+		GRU = {
+			add_opinion_modifier = { target = ROOT modifier = KR_disapproves_of_govt }
+			country_event = { id = rmorgenentente.308 days = 1 }
+		}
+	}
+	option = {
+		name = entente.307.b #Agree
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 1.5
+				has_elected_government = yes
+			}
+			modifier = {
+				factor = 0
+				has_government = national_populist
+				NOT = {
+					has_game_rule = {
+						rule = CAN_halifax_conference_rule
+						option = CAN_HALIFAX_FAVOR_GERMANY
+					}
+				}
+			}
+		}
+		GRU = {
+			add_opinion_modifier = { target = ROOT modifier = KR_approves_of_govt }
+			country_event = { id = rmorgenentente.309 days = 1 }
+		}
+	}
+}
+
+# Halifax Conference - NFA refuses
+country_event = {
+	id = rmorgenentente.308
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.308" }
+	title = entente.308.t
+	desc = entente.308.d
+	picture = GFX_report_event_generic_conference1
+
+	is_triggered_only = yes
+
+	trigger = {
+		ENT = {
+			OR = {
+				tag = CAN
+				tag = NFA
+				tag = GBR
+			}
+			is_faction_leader = yes
+			has_war_with = FRA
+			NOT = { has_war_with = GRU }
+		}
+		GRU = {
+			is_faction_leader = yes
+			has_war_with = FRA
+		}
+	}
+
+	option = {
+		name = entente.308.a #That it, then
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = CAN_halifax_conference_rule
+					option = CAN_HALIFAX_FAVOR_ENTENTE
+				}
+			}
+		}
+		ENT = {
+			set_country_flag = ENT_france_refuse_alsace
+			news_event = entente.320
+			hidden_effect = { country_event = entente.328 }
+		}
+	}
+	option = {
+		name = entente.308.b #We'll put it aside for now
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = -100
+		country_event = entente.305
+	}
+}
+
+# Halifax Conference - NFA agrees to give up Alsace-Lorraine
+country_event = {
+	id = rmorgenentente.309
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.309" }
+	title = entente.309.t
+	desc = entente.309.d
+	picture = GFX_report_event_generic_conference2
+
+	is_triggered_only = yes
+	major = yes
+
+	show_major = {
+		OR = {
+			is_in_faction_with = ENT
+			is_in_faction_with = GRU
+		}
+	}
+
+	trigger = {
+		ENT = {
+			OR = {
+				tag = CAN
+				tag = NFA
+				tag = GBR
+			}
+			is_faction_leader = yes
+			has_war_with = FRA
+			NOT = { has_war_with = GRU }
+		}
+		GRU = {
+			is_faction_leader = yes
+			has_war_with = FRA
+		}
+	}
+
+	option = {
+		name = entente.309.a
+		trigger = { tag = ENT }
+		set_country_flag = ENT_france_agree_alsace
+	}
+	option = {
+		name = entente.309.b
+		trigger = { tag = GRU }
+		add_political_power = 50
+		country_event = { id = rmorgenentente.305 days = 1 }
+	}
+	option = {
+		name = entente.309.c
+		trigger = {
+			tag = NFA
+			NOT = { tag = ENT }
+		}
+	}
+	option = {
+		name = entente.309.e
+		trigger = {
+			NOT = {
+				tag = ENT
+				tag = GRU
+				tag = NFA
+			}
+		}
+	}
+}
+
+# Halifax Conference - Conference succeeds
+news_event = {
+	id = rmorgenentente.319
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.319" }
+	title = entente.319.t
+	desc = entente.319.d
+	picture = GFX_news_event_CAN_conference
+
+	is_triggered_only = yes
+	major = yes
+
+	trigger = {
+		ENT = {
+			OR = {
+				tag = CAN
+				tag = NFA
+				tag = GBR
+			}
+			is_faction_leader = yes
+			has_war_with = FRA
+			NOT = { has_war_with = GRU }
+		}
+		GRU = {
+			is_faction_leader = yes
+			has_war_with = FRA
+		}
+	}
+
+	option = {
+		name = entente.319.a
+		trigger = { tag = ENT }
+		effect_tooltip = {
+			add_political_power = 50
+			if = {
+				limit = { has_country_flag = ENT_france_agree_alsace }
+				28 = { remove_claim_by = NFA }
+			}
+			every_country = {
+				limit = { is_in_faction_with = GRU }
+				add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference_op }
+				if = {
+					limit = {
+						NOT = { gives_military_access_to = ROOT }
+					}
+					give_military_access = ROOT
+				}
+			}
+		}
+	}
+	option = {
+		name = entente.319.b
+		trigger = { tag = GRU }
+		effect_tooltip = {
+			if = {
+				limit = {
+					ENT = { has_country_flag = ENT_france_agree_alsace }
+					28 = { is_claimed_by = NFA }
+				}
+				28 = { remove_claim_by = NFA }
+			}
+			every_country = {
+				limit = { is_in_faction_with = ENT }
+				add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference_op }
+				if = {
+					limit = {
+						NOT = { gives_military_access_to = ROOT }
+					}
+					give_military_access = ROOT
+				}
+			}
+		}
+	}
+	option = {
+		name = entente.319.c
+		trigger = {
+			NOT = {
+				tag = ENT
+				tag = GRU
+			}
+			is_in_faction_with = ENT
+		}
+		effect_tooltip = {
+			add_political_power = 25
+			if = {
+				limit = {
+					ENT = { has_country_flag = ENT_france_agree_alsace }
+					28 = { is_claimed_by = NFA }
+				}
+				28 = { remove_claim_by = NFA }
+			}
+			every_country = {
+				limit = { is_in_faction_with = GRU }
+				add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference_op }
+				if = {
+					limit = {
+						NOT = { gives_military_access_to = ROOT }
+					}
+					give_military_access = ROOT
+				}
+			}
+		}
+	}
+	option = {
+		name = entente.319.c
+		trigger = {
+			NOT = {
+				tag = ENT
+				tag = GRU
+			}
+			is_in_faction_with = GRU
+		}
+		effect_tooltip = {
+			add_political_power = 25
+			if = {
+				limit = {
+					ENT = { has_country_flag = ENT_france_agree_alsace }
+					28 = { is_claimed_by = NFA }
+				}
+				28 = { remove_claim_by = NFA }
+			}
+			every_country = {
+				limit = { is_in_faction_with = ENT }
+				add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference_op }
+				if = {
+					limit = {
+						NOT = { gives_military_access_to = ROOT }
+					}
+					give_military_access = ROOT
+				}
+			}
+		}
+	}
+	option = {
+		name = entente.319.e
+		trigger = {
+			has_socialist_government = yes
+			NOT = {
+				is_in_faction_with = ENT
+				is_in_faction_with = GRU
+			}
+		}
+	}
+	option = {
+		name = entente.319.f
+		trigger = {
+			NOT = {
+				has_socialist_government = yes
+				is_in_faction_with = ENT
+				is_in_faction_with = GRU
+			}
+		}
+	}
+}
+
+# Halifax Conference - Conference ends with disagreement
+news_event = {
+	id = rmorgenentente.320
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.320" }
+	title = entente.320.t
+	picture = GFX_news_event_CAN_conference
+
+	desc = {
+		text = entente.320.d.alsace
+		trigger = { ENT = { has_country_flag = ENT_france_refuse_alsace } }
+	}
+	desc = {
+		text = entente.320.d.mittel
+		trigger = { ENT = { has_country_flag = ENT_france_refuse_mittel } }
+	}
+	desc = {
+		text = entente.320.d.colonies
+		trigger = { ENT = { has_country_flag = ENT_refuse_colonies } }
+	}
+	desc = {
+		text = entente.320.d.northire
+		trigger = { ENT = { has_country_flag = ENT_britain_refuse_northire } }
+	}
+
+	is_triggered_only = yes
+	major = yes
+
+	trigger = {
+		ENT = {
+			OR = {
+				tag = CAN
+				tag = NFA
+				tag = GBR
+			}
+			is_faction_leader = yes
+			has_war_with = FRA
+			NOT = { has_war_with = GRU }
+		}
+		GRU = {
+			is_faction_leader = yes
+			has_war_with = FRA
+		}
+	}
+
+	option = {
+		name = entente.320.a
+		trigger = { tag = ENT }
+	}
+	option = {
+		name = entente.320.b
+		trigger = { tag = GRU }
+	}
+	option = {
+		name = entente.320.c
+		trigger = {
+			NOT = {
+				tag = ENT
+				tag = GRU
+			}
+			OR = {
+				is_in_faction_with = ENT
+				is_in_faction_with = GRU
+			}
+		}
+	}
+	option = {
+		name = entente.320.e
+		trigger = {
+			has_socialist_government = yes
+			NOT = {
+				is_in_faction_with = ENT
+				is_in_faction_with = GRU
+			}
+		}
+	}
+	option = {
+		name = entente.320.f
+		trigger = {
+			NOT = {
+				has_socialist_government = yes
+				is_in_faction_with = ENT
+				is_in_faction_with = GRU
+			}
+		}
+	}
+}
+
+# Promises dropped if war between Germany/Entente begins
+country_event = {
+	id = rmorgenentente.321
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.321" }
+	title = entente.321.t
+	desc = entente.321.d
+	picture = GFX_report_event_generic_conference2
+
+	trigger = {
+		OR = {
+			tag = GRU
+			tag = NFA
+			tag = CAN
+			tag = GBR
+		}
+		if = {
+			limit = { tag = GRU }
+			has_global_flag = GRU_stay_out_france_uk
+			is_faction_leader = yes
+			has_war_with = ENT
+		}
+		if = {
+			limit = { tag = CAN }
+			NOT = { country_exists = GBR }
+		}
+		if = {
+			limit = {
+				OR = {
+					tag = CAN
+					tag = GBR
+				}
+			}
+			OR = {
+				has_global_flag = ENT_britain_agree_northire
+				has_global_flag = ENT_agree_colonies
+			}
+			has_war_with = GRU
+		}
+		if = {
+			limit = { tag = NFA }
+			OR = {
+				has_global_flag = ENT_france_agree_alsace
+				has_global_flag = ENT_france_agree_mittel
+				has_global_flag = ENT_agree_colonies
+			}
+			has_war_with = GRU
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = {
+		name = entente.321.a
+		if = {
+			limit = { tag = GRU }
+			clr_global_flag = GRU_stay_out_france_uk
+		}
+		if = {
+			limit = {
+				OR = {
+					tag = CAN
+					tag = GBR
+				}
+			}
+			clr_global_flag = ENT_britain_agree_northire
+			clr_global_flag = ENT_agree_colonies
+		}
+		if = {
+			limit = {
+				tag = NFA
+				has_global_flag = ENT_france_agree_alsace
+			}
+			clr_global_flag = ENT_france_agree_alsace
+			if = {
+				limit = { 28 = { is_not_claim_or_core_of_ROOT = yes } }
+				28 = { add_claim_by = NFA }
+			}
+		}
+		if = {
+			limit = { tag = NFA }
+			clr_global_flag = ENT_france_agree_mittel
+			clr_global_flag = ENT_agree_colonies
+		}
+	}
+}
+
+# Return French territory?
+country_event = {
+	id = rmorgenentente.322
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.322" }
+	title = entente.322.t
+	desc = entente.322.d
+	picture = GFX_report_event_generic_conference2
+
+	trigger = {
+		tag = GRU
+		has_global_flag = GRU_stay_out_france_uk
+		NOT = { country_exists = FRA }
+		OR = {
+			NFA = {
+				exists = yes
+				NOT = { has_war_with = ROOT }
+			}
+			ENT = {
+				exists = yes
+				is_faction_leader = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		any_owned_state = {
+			is_not_claim_or_core_of_ROOT = yes
+			is_european_france = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = {
+		name = entente.322.a
+		if = {
+			limit = {
+				NFA = {
+					exists = yes
+					NOT = { has_war_with = ROOT }
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_not_claim_or_core_of_ROOT = yes
+					is_european_france = yes
+				}
+				NFA = { transfer_state = PREV }
+			}
+		}
+		else = {
+			every_owned_state = {
+				limit = {
+					is_not_claim_or_core_of_ROOT = yes
+					is_european_france = yes
+				}
+				ENT = { transfer_state = PREV }
+			}
+		}
+	}
+	option = {
+		name = entente.322.b
+		trigger = { is_ai = no }
+		add_political_power = -250
+		add_stability = -0.10
+		clr_global_flag = GRU_stay_out_france_uk
+		clr_global_flag = ENT_britain_agree_northire
+		clr_global_flag = ENT_agree_colonies
+		clr_global_flag = ENT_france_agree_mittel
+		if = {
+			limit = { has_global_flag = ENT_france_agree_alsace }
+			clr_global_flag = ENT_france_agree_alsace
+			28 = { add_claim_by = NFA }
+		}
+		every_country = {
+			limit = { is_in_faction_with = ENT }
+			country_event = entente.324
+		}
+	}
+}
+
+# Return British territory?
+country_event = {
+	id = rmorgenentente.323
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.323" }
+	title = entente.323.t
+	desc = entente.323.d
+	picture = GFX_report_event_generic_conference2
+
+	trigger = {
+		tag = GRU
+		has_global_flag = GRU_stay_out_france_uk
+		NOT = { country_exists = ENG }
+		OR = {
+			GBR = {
+				exists = yes
+				NOT = { has_war_with = ROOT }
+			}
+			ENT = {
+				exists = yes
+				is_faction_leader = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		any_owned_state = {
+			is_not_claim_or_core_of_ROOT = yes
+			is_british_isles = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	option = {
+		name = entente.323.a
+		if = {
+			limit = {
+				GBR = {
+					exists = yes
+					NOT = { has_war_with = ROOT }
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_not_claim_or_core_of_ROOT = yes
+					is_british_isles = yes
+				}
+				GBR = { transfer_state = PREV }
+			}
+		}
+		else = {
+			every_owned_state = {
+				limit = {
+					is_not_claim_or_core_of_ROOT = yes
+					is_british_isles = yes
+				}
+				ENT = { transfer_state = PREV }
+			}
+		}
+	}
+	option = {
+		name = entente.323.b
+		trigger = { is_ai = no }
+		add_political_power = -250
+		add_stability = -0.10
+		clr_global_flag = GRU_stay_out_france_uk
+		clr_global_flag = ENT_britain_agree_northire
+		clr_global_flag = ENT_agree_colonies
+		clr_global_flag = ENT_france_agree_mittel
+		if = {
+			limit = { has_global_flag = ENT_france_agree_alsace }
+			clr_global_flag = ENT_france_agree_alsace
+			28 = { add_claim_by = NFA }
+		}
+		every_country = {
+			limit = { is_in_faction_with = ENT }
+			country_event = entente.324
+		}
+	}
+}
+
+# Germany betrays Halifax Conf terms
+country_event = {
+	id = rmorgenentente.324
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.324" }
+	title = entente.324.t
+	desc = entente.324.d
+	picture = GFX_report_event_generic_conference2
+
+	is_triggered_only = yes
+
+	option = {
+		name = entente.324.a
+		every_country = {
+			limit = { is_in_faction_with = FROM }
+			remove_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference_op }
+			ROOT = {
+				remove_opinion_modifier = { target = PREV modifier = CAN_halifax_conference_op }
+			}
+			if = {
+				limit = { ROOT = { gives_military_access_to = PREV } }
+				diplomatic_relation = {
+					country = ROOT
+					relation = military_access
+					active = no
+				}
+			}
+			if = {
+				limit = { gives_military_access_to = ROOT }
+				ROOT = {
+					diplomatic_relation = {
+						country = PREV
+						relation = military_access
+						active = no
+					}
+				}
+			}
+		}
+	}
+}
+
+# Hidden events
+country_event = {
+	id = rmorgenentente.325
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event rmorgenentente.325"
+		add_political_power = 50
+		clr_country_flag = ENT_france_refuse_alsace
+		clr_country_flag = ENT_france_refuse_mittel
+		clr_country_flag = ENT_refuse_colonies
+		clr_country_flag = ENT_britain_refuse_northire
+		if = {
+			limit = { has_country_flag = ENT_france_agree_alsace }
+			clr_country_flag = ENT_france_agree_alsace
+			set_global_flag = ENT_france_agree_alsace
+			28 = { remove_claim_by = NFA }
+		}
+		if = {
+			limit = { has_country_flag = ENT_france_agree_mittel }
+			clr_country_flag = ENT_france_agree_mittel
+			set_global_flag = ENT_france_agree_mittel
+		}
+		if = {
+			limit = { has_country_flag = ENT_agree_colonies }
+			clr_country_flag = ENT_agree_colonies
+			set_global_flag = ENT_agree_colonies
+		}
+		if = {
+			limit = { has_country_flag = ENT_britain_agree_northire }
+			clr_country_flag = ENT_britain_agree_northire
+			set_global_flag = ENT_britain_agree_northire
+		}
+		every_country = {
+			limit = { is_in_faction_with = GRU }
+			add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference_op }
+			if = {
+				limit = {
+					NOT = { gives_military_access_to = ROOT }
+					OR = {
+						any_neighbor_country = { has_war_with = ROOT }
+						tag = IRE
+						tag = ICE
+					}
+				}
+				give_military_access = ROOT
+			}
+		}
+	}
+}
+
+country_event = {
+	id = rmorgenentente.326
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event rmorgenentente.326"
+		clr_country_flag = GRU_conf_demand_alsace
+		clr_country_flag = GRU_conf_demand_france_mitt
+		clr_country_flag = GRU_conf_demand_colonies
+		clr_country_flag = GRU_conf_demand_northireland
+		set_global_flag = GRU_stay_out_france_uk
+		every_country = {
+			limit = { is_in_faction_with = ENT }
+			add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference_op }
+			if = {
+				limit = {
+					NOT = { gives_military_access_to = ROOT }
+					any_neighbor_country = { has_war_with = ROOT }
+				}
+				give_military_access = ROOT
+			}
+		}
+	}
+}
+
+country_event = {
+	id = rmorgenentente.327
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event rmorgenentente.327"
+		add_political_power = 25
+		if = {
+			limit = { is_in_faction_with = ENT }
+			every_country = {
+				limit = { is_in_faction_with = GRU }
+				add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference_op }
+				if = {
+					limit = {
+						NOT = { gives_military_access_to = ROOT }
+						OR = {
+							any_neighbor_country = { has_war_with = ROOT }
+							tag = IRE
+							tag = ICE
+						}
+					}
+					give_military_access = ROOT
+				}
+			}
+		}
+		if = {
+			limit = { is_in_faction_with = GRU }
+			every_country = {
+				limit = { is_in_faction_with = ENT }
+				add_opinion_modifier = { target = ROOT modifier = CAN_halifax_conference_op }
+				if = {
+					limit = {
+						NOT = { gives_military_access_to = ROOT }
+						any_neighbor_country = { has_war_with = ROOT }
+					}
+					give_military_access = ROOT
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = rmorgenentente.328
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event rmorgenentente.328"
+		clr_country_flag = ENT_france_refuse_alsace
+		clr_country_flag = ENT_france_agree_alsace
+		clr_country_flag = ENT_france_refuse_mittel
+		clr_country_flag = ENT_france_agree_mittel
+		clr_country_flag = ENT_refuse_colonies
+		clr_country_flag = ENT_agree_colonies
+		clr_country_flag = ENT_britain_refuse_northire
+		clr_country_flag = ENT_britain_agree_northire
+		GRU = {
+			clr_country_flag = GRU_conf_demand_alsace
+			clr_country_flag = GRU_conf_demand_france_mitt
+			clr_country_flag = GRU_conf_demand_colonies
+			clr_country_flag = GRU_conf_demand_northireland
+		}
+	}
+}

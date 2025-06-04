@@ -272,7 +272,6 @@ fourth_balkan_war_volunteers = {
 					tag = ALB
 					tag = TUR
 				}
-				has_country_flag = SER_supported_bulgaria
 			}
 		}
 		AND = {

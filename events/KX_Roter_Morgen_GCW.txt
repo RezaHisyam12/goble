@@ -997,7 +997,6 @@ country_event = { # victory Intro
 				add_opinion_modifier = { target = MAF modifier = KR_hostile }
 				add_opinion_modifier = { target = GEA modifier = KR_hostile }
 				add_opinion_modifier = { target = MAG modifier = KR_hostile }
-
 			}
 			if = {
 				limit {

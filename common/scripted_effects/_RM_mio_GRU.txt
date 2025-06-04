@@ -15,7 +15,7 @@ GRU_Update_MIO_XP_Gains = {
 				has_idea = GRU_volksmarine_navy_xp
 				has_idea = GRU_volksmarine_navy_xp_2
 			}
-			check_variable = { volksmarine_Research_Number < 1 }
+			check_variable = { Volksmarine_Research_Number < 1 }
 		}
 		remove_ideas = {
 			GRU_volksmarine_navy_xp
@@ -26,7 +26,7 @@ GRU_Update_MIO_XP_Gains = {
 		limit = {
 			OR = {
 				mio:GRU_volksmarine_organisation = { check_variable = { Funds_Difference > weekly_funds_requirement } }
-				check_variable = { volksmarine_Research_Number > 0 }
+				check_variable = { Volksmarine_Research_Number > 0 }
 			}
 			NOT = {
 				has_idea = GRU_volksmarine_navy_xp
@@ -74,7 +74,7 @@ GRU_Update_MIO_XP_Gains = {
 				has_idea = GRU_junkers_air_xp
 				has_idea = GRU_junkers_air_xp_2
 			}
-			check_variable = { junkers_Research_Number < 1 }
+			check_variable = { Junkers_Research_Number < 1 }
 		}
 		remove_ideas = {
 			GRU_junkers_air_xp
@@ -85,7 +85,7 @@ GRU_Update_MIO_XP_Gains = {
 		limit = {
 			OR = {
 				mio:GRU_junkers_organisation = { check_variable = { Funds_Difference > weekly_funds_requirement } }
-				check_variable = { junkers_Research_Number > 0 }
+				check_variable = { Junkers_Research_Number > 0 }
 			}
 			NOT = {
 				has_idea = GRU_junkers_air_xp

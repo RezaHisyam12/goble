@@ -237,118 +237,6 @@ GRU_Volunteer = {
 ################
 ### Military ###
 ################
-GRU_build_army = {
-	allowed = {
-		tag = GRU
-		is_subject = no
-	}
-	enable = {
-		has_army_manpower = { size < 1250000 }
-	}
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = build_army
-		id = mobile
-		value = 1000
-	}
-
-	ai_strategy = {
-		type = build_army
-		id = armor
-		value = 1000
-	}
-	ai_strategy = {
-		type = build_army
-		id = militia
-		value = 1000
-	}
-
-	ai_strategy = {
-		type = build_army
-		id = cavalry
-		value = 1000
-	}
-
-	ai_strategy = {
-		type = build_army
-		id = infantry
-		value = 1000
-	}
-}
-
-default_RR_Werwolf_production = {
-	allowed = {
-		OR = {
-			tag = GRU
-			tag = VKB
-			tag = VKR
-			tag = VKK
-			tag = VKM
-			tag = VSJ
-			tag = VST
-			tag = HYP
-			tag = VKN
-			tag = VKP
-			tag = VOB
-		}
-	}
-	enable = {
-		has_tech = RR_Werwolf_tech
-	}
-	abort_when_not_enabled = yes 
-	
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = -10
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = RR_Werwolf
-		value = 10
-	}
-	ai_strategy = {
-		type = template_prio
-		id = RR_Werwolf
-		value = 100
-	}
-}
-
-default_armour_super_heavy_production = {
-	allowed = {
-		OR = {
-			tag = GER
-			tag = GRU
-		}
-	}
-	enable = {
-		has_tech = super_heavy_tank_chassis
-		num_of_military_factories > 199
-	}
-	abort_when_not_enabled = yes
-	
-	ai_strategy = {
-		type = role_ratio
-		id = armour_super_heavy
-		value = 10
-	}
-	ai_strategy = {
-		type = template_prio
-		id = super_heavy_armor
-		value = 50
-	}
-	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = super_heavy_tank_chassis
-		value = 15
-	}
-	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = medium_tank_aa_chassis
-		value = 15
-	}
-}
-
 GRU_destroy_german = {
 	allowed = {
 		original_tag = GRU
@@ -1185,6 +1073,7 @@ STP_ignore_northern_oststaaten = {
 			#Banned from Eastern Front in general
 			is_belgian_tag = yes
 			is_scandinavian_tag = yes
+			is_danubian_tag = yes
 			tag = VKN
 		}
 	}
@@ -1217,6 +1106,7 @@ STP_ignore_southern_oststaaten = { #Rest of Reichspakt should focus on BLR/BAT f
 			#Banned from Eastern Front in general
 			is_belgian_tag = yes
 			is_scandinavian_tag = yes
+			is_danubian_tag = yes
 			tag = VKN
 
 		}
@@ -1241,7 +1131,6 @@ STP_ignore_western_front = {
 			is_baltic_tag = yes
 			is_balkan_tag = yes
 			is_scandinavian_tag = yes
-			is_danubian_tag = yes
 			is_ukrainian_tag = yes
 			tag = VKB
 			tag = VKR
@@ -1300,7 +1189,6 @@ STP_defend_eastern_front_southern_oststaaten = {
 	allowed = {
 		OR = {
 			is_balkan_tag = yes
-			is_danubian_tag = yes
 			is_ukrainian_tag = yes
 		}
 	}
@@ -1331,11 +1219,13 @@ STP_defend_eastern_front_southern_oststaaten = {
 STP_eyes_on_Russia = {
 	allowed = {
 		OR = {
+			tag = VKB
+			tag = VKR
+			tag = VKK
 			tag = VKP
 			is_polish_tag = yes
 			is_baltic_tag = yes
 			is_balkan_tag = yes
-			is_danubian_tag = yes
 		}
 	}
 	enable = {
@@ -1368,6 +1258,78 @@ STP_eyes_on_Russia = {
 ################
 ### Industry/2WK ###
 ################
+default_RR_Werwolf_production = {
+	allowed = {
+		OR = {
+			tag = GRU
+			tag = VKB
+			tag = VKR
+			tag = VKK
+			tag = VKM
+			tag = VSJ
+			tag = VST
+			tag = HYP
+			tag = VKN
+			tag = VKP
+			tag = VOB
+		}
+	}
+	enable = {
+		has_tech = RR_Werwolf_tech
+	}
+	abort_when_not_enabled = yes 
+	
+	ai_strategy = {
+		type = role_ratio
+		id = RR_Werwolf
+		value = 10
+	}
+	ai_strategy = {
+		type = template_prio
+		id = RR_Werwolf
+		value = 100
+	}
+}
+
+default_armour_super_heavy_production = {
+	allowed = {
+		OR = {
+			tag = GER
+			tag = GRU
+		}
+	}
+	enable = {
+		has_tech = super_heavy_tank_chassis
+		num_of_military_factories > 199
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = role_ratio
+		id = armour_super_heavy
+		value = 5
+	}
+	ai_strategy = {
+		type = template_prio
+		id = super_heavy_armor
+		value = 20
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = super_heavy_tank_chassis
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = heavy_tank_aa_chassis
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = heavy_tank_destroyer_chassis
+		value = 10
+	}
+}
 
 default_heavy_tank_production = {
 	allowed = {

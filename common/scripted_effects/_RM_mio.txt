@@ -2410,6 +2410,88 @@ RUS_setup_custom_russian_MIOs = {
 	}
 }
 
+RUS_setup_custom_russian_MIOs = {
+	if = {
+		limit = { has_dlc_aat = yes }
+		#Setup the R&D MIOs
+		every_military_industrial_organization = {
+			limit = {
+				OR = {
+					is_military_industrial_organization = RUS_chtz_organisation
+					is_military_industrial_organization = RUS_tsagi_organisation
+					is_military_industrial_organization = RUS_as_organisation
+					is_military_industrial_organization = RUS_vpoz_organisation
+					is_military_industrial_organization = RUS_bmz_organisation
+				}
+			}
+			set_variable = { max_research_speed = 0.5 }
+			set_variable = { weekly_research_speed_gain = 0.01 }
+			set_variable = { weekly_funds_requirement = 9 }
+			set_variable = { max_research_speed_loc = 50 }
+			set_variable = { weekly_research_speed_gain_loc = 1 }
+			set_variable = { weekly_funds_requirement_loc = weekly_funds_requirement }
+			divide_variable = { weekly_funds_requirement_loc = 7 }
+			set_variable = { total_campaign_research_speed = 0 }
+		}
+		#Setup the XP MIOs
+		every_military_industrial_organization = {
+			limit = {
+				OR = {
+					is_military_industrial_organization = RUS_obukhov_organisation
+					is_military_industrial_organization = RUS_osoavia_organisation
+					is_military_industrial_organization = RUS_bz_organisation
+				}
+			}
+			set_variable = { weekly_funds_requirement = 9 }
+			set_variable = { xp_gain_loc = 0.2 }
+			set_variable = { weekly_funds_requirement_loc = weekly_funds_requirement }
+			divide_variable = { weekly_funds_requirement_loc = 7 }
+			set_variable = { total_campaign_xp = 0 }
+		}
+		#Setup AMO
+		mio:RUS_amo_organisation = {
+			set_variable = { CIC_bonus = 500 }
+			set_variable = { total_campaign_CIC = 0 }
+		}
+		mio:RUS_amo_organisation_non_nsb = {
+			set_variable = { CIC_bonus = 500 }
+			set_variable = { total_campaign_CIC = 0 }
+		}
+		#Setup Gamayun
+		mio:RUS_gamayun_organisation = {
+			set_variable = { Civ_chance_loc = 33 }
+			set_variable = { Mil_chance_loc = 33 }
+			set_variable = { Dockyard_chance_loc = 33 }
+			set_variable = { Min_Progress_loc = 0 }
+			set_variable = { Max_Progress_loc = 20 }
+			set_variable = { Min_Days_loc = 160 }
+			set_variable = { Max_Days_loc = 200 }
+			set_variable = { total_campaign_factories = 0 }
+			set_variable = { total_campaign_civs = 0 }
+			set_variable = { total_campaign_mils = 0 }
+			set_variable = { total_campaign_dockyards = 0 }
+			set_variable = { total_campaign_factory_progress = 0 }
+			set_variable = { average_campaign_factory_progress = 0 }
+		}
+		#Setup AV
+		mio:RUS_av_organisation = {
+			set_variable = { Funds_Bonus = 1.00 }
+			set_variable = { Weekly_funds_decay = 0.03 }
+			set_variable = { Number_of_funds_decay_granted = 1 }
+			set_variable = { Funds_Bonus_loc = 100 }
+			set_variable = { Weekly_funds_decay_loc = 3 }
+			set_variable = { total_campaign_funds_bonus = 0 }
+		}
+		#Setup TsTZ
+		mio:RUS_tstz_organisation = {
+			set_variable = { tstz_eff_cap_counter = 9 }
+			set_variable = { tstz_eff_gro_counter = 9 }
+			set_variable = { tstz_resources_counter = 9 }
+			set_variable = { tstz_conversion_counter = 9 }
+		}
+	}
+}
+
 RUS_unlock_chtz_trait = {
 	FROM = {
 		hidden_effect = {
