@@ -885,8 +885,8 @@ GRU_lager_desc:0 "\n£goebb_lager£\n\n\n\nThese camps are run by the R.R. and n
 GRU_new_germany:0 "Das neue Deutschland!"
 GRU_new_germany_desc:0 "\n£goebb_new_germany£\n\n\n\nThe new Germany.\n\nGermany has been reborn, risen from the ashes when it was crushed by foreign forces and the kaiser, but no more! Now we have been reborn like a phoenix and we shall forever vanguard our glorious Fatherland!"
 
-GRU_germania:0 "Die neue Ordnung!"
-GRU_germania_desc:0 "\n£goebb_new_germany£\n\n\n\nThe new Order.\n\nGermany, forged in fire and war, has now proclaimed its rebirth into something greater.\nOnce a fractured authoritarian entity, has now become a major player in the heart of Europe. Now, Germany marches into a new era—not merely a state, but the nucleus of a continental empire."
+GRU_germania:0 "Die Neue Ordnung!"
+GRU_germania_desc:0 "\n£goebb_new_germany£\n\n\n\nThe New Order.\n\nGermany, forged in fire and war, has now proclaimed its rebirth into something greater.\nOnce a fractured authoritarian entity, has now become a major player in the heart of Europe. Now, Germany marches into a new era—not merely a state, but the nucleus of a continental empire."
 
 GRU_deutsche_architecture:0 "Deutschsozialistische Architektur"
 GRU_deutsche_architecture_desc:0 "\n£architecture£\n\n\n\nGerman Socialist Architecture.\nThe Volksführer has developed a special interest in the architectural image of Germany.\nSome might question why chose a reactionary as his new national architect but who knows what Albert Speer might accomplish if guided by the hand of the revolution."
@@ -2045,6 +2045,7 @@ GRU_pan_germanism_integrate_luxembourg_decision:0 "Integrate Luxembourg"
 GRU_pan_germanism_integrate_denmark_decision:0 "Integrate Denmark"
 GRU_pan_germanism_integrate_elsas_decision:0 "Integrate French"
 GRU_pan_germanism_integrate_croatia_decision:0 "Annex Croatia"
+GRU_pan_germanism_integrate_slovakia_decision:0 "Annex Slovakia"
 
 GRU_pan_germanism_integrate_iceland_decision:0 "Integrate Iceland"
 GRU_pan_germanism_integrate_polarisland_decision:0 "Integrate Polar Islands"

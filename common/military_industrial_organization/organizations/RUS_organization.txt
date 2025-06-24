@@ -653,17 +653,11 @@ RUS_okmo_kr_organisation = {
 
 		on_complete = {
 			custom_effect_tooltip = okmo_kr_stats_for_xp_on_traits_tt
-			FROM = { set_country_flag = okmo_kr_stats_for_xp }
-			FROM = { set_country_flag = okmo_kr_bonus_chosen }
 			FROM = {
-				set_variable = {
-					var = okmo_kr_xp_requirement
-					value = 10
-				}
-				set_variable = {
-					var = okmo_kr_xp_cost
-					value = -10
-				}
+				set_country_flag = okmo_kr_stats_for_xp
+				set_country_flag = okmo_kr_bonus_chosen
+				set_variable = { okmo_kr_xp_requirement = 10 }
+				set_variable = { okmo_kr_xp_cost = -10 }
 			}
 		}
 	}
@@ -743,14 +737,8 @@ RUS_okmo_kr_organisation = {
 		on_complete = {
 			FROM = {
 				army_experience = okmo_kr_xp_cost
-				add_to_variable = {
-					var = okmo_kr_xp_requirement
-					value = 5
-				}
-				subtract_from_variable = {
-					var = okmo_kr_xp_cost
-					value = 5
-				}
+				add_to_variable = { okmo_kr_xp_requirement = 5 }
+				subtract_from_variable = { okmo_kr_xp_cost = 5 }
 			}
 		}
 	}
@@ -777,14 +765,8 @@ RUS_okmo_kr_organisation = {
 		on_complete = {
 			FROM = {
 				army_experience = okmo_kr_xp_cost
-				add_to_variable = {
-					var = okmo_kr_xp_requirement
-					value = 5
-				}
-				subtract_from_variable = {
-					var = okmo_kr_xp_cost
-					value = 5
-				}
+				add_to_variable = { okmo_kr_xp_requirement = 5 }
+				subtract_from_variable = { okmo_kr_xp_cost = 5 }
 			}
 		}
 	}
@@ -811,14 +793,8 @@ RUS_okmo_kr_organisation = {
 		on_complete = {
 			FROM = {
 				army_experience = okmo_kr_xp_cost
-				add_to_variable = {
-					var = okmo_kr_xp_requirement
-					value = 5
-				}
-				subtract_from_variable = {
-					var = okmo_kr_xp_cost
-					value = 5
-				}
+				add_to_variable = { okmo_kr_xp_requirement = 5 }
+				subtract_from_variable = { okmo_kr_xp_cost = 5 }
 			}
 		}
 	}
@@ -845,14 +821,8 @@ RUS_okmo_kr_organisation = {
 		on_complete = {
 			FROM = {
 				army_experience = okmo_kr_xp_cost
-				add_to_variable = {
-					var = okmo_kr_xp_requirement
-					value = 5
-				}
-				subtract_from_variable = {
-					var = okmo_kr_xp_cost
-					value = 5
-				}
+				add_to_variable = { okmo_kr_xp_requirement = 5 }
+				subtract_from_variable = { okmo_kr_xp_cost = 5 }
 			}
 		}
 	}
@@ -879,14 +849,8 @@ RUS_okmo_kr_organisation = {
 		on_complete = {
 			FROM = {
 				army_experience = okmo_kr_xp_cost
-				add_to_variable = {
-					var = okmo_kr_xp_requirement
-					value = 5
-				}
-				subtract_from_variable = {
-					var = okmo_kr_xp_cost
-					value = 5
-				}
+				add_to_variable = { okmo_kr_xp_requirement = 5 }
+				subtract_from_variable = { okmo_kr_xp_cost = 5 }
 			}
 		}
 	}
@@ -913,14 +877,8 @@ RUS_okmo_kr_organisation = {
 		on_complete = {
 			FROM = {
 				army_experience = okmo_kr_xp_cost
-				add_to_variable = {
-					var = okmo_kr_xp_requirement
-					value = 5
-				}
-				subtract_from_variable = {
-					var = okmo_kr_xp_cost
-					value = 5
-				}
+				add_to_variable = { okmo_kr_xp_requirement = 5 }
+				subtract_from_variable = { okmo_kr_xp_cost = 5 }
 			}
 		}
 	}
@@ -957,14 +915,8 @@ RUS_okmo_kr_organisation = {
 		on_complete = {
 			FROM = {
 				army_experience = okmo_kr_xp_cost
-				add_to_variable = {
-					var = okmo_kr_xp_requirement
-					value = 5
-				}
-				subtract_from_variable = {
-					var = okmo_kr_xp_cost
-					value = 5
-				}
+				add_to_variable = { okmo_kr_xp_requirement = 5 }
+				subtract_from_variable = { okmo_kr_xp_cost = 5 }
 			}
 		}
 	}
@@ -1001,14 +953,8 @@ RUS_okmo_kr_organisation = {
 		on_complete = {
 			FROM = {
 				army_experience = okmo_kr_xp_cost
-				add_to_variable = {
-					var = okmo_kr_xp_requirement
-					value = 5
-				}
-				subtract_from_variable = {
-					var = okmo_kr_xp_cost
-					value = 5
-				}
+				add_to_variable = { okmo_kr_xp_requirement = 5 }
+				subtract_from_variable = { okmo_kr_xp_cost = 5 }
 			}
 		}
 	}
@@ -1035,14 +981,8 @@ RUS_okmo_kr_organisation = {
 		on_complete = {
 			FROM = {
 				army_experience = okmo_kr_xp_cost
-				add_to_variable = {
-					var = okmo_kr_xp_requirement
-					value = 5
-				}
-				subtract_from_variable = {
-					var = okmo_kr_xp_cost
-					value = 5
-				}
+				add_to_variable = { okmo_kr_xp_requirement = 5 }
+				subtract_from_variable = { okmo_kr_xp_cost = 5 }
 			}
 		}
 	}
@@ -1069,14 +1009,8 @@ RUS_okmo_kr_organisation = {
 		on_complete = {
 			FROM = {
 				army_experience = okmo_kr_xp_cost
-				add_to_variable = {
-					var = okmo_kr_xp_requirement
-					value = 5
-				}
-				subtract_from_variable = {
-					var = okmo_kr_xp_cost
-					value = 5
-				}
+				add_to_variable = { okmo_kr_xp_requirement = 5 }
+				subtract_from_variable = { okmo_kr_xp_cost = 5 }
 			}
 		}
 	}
@@ -4840,26 +4774,14 @@ RUS_chtz_organisation = {
 	}
 
 	on_industrial_manufacturer_assigned = {
-		FROM = {
-			if = {
-				limit = { NOT = { has_variable = MIO_CHTZ_assigned_manufacturer_number } }
-				set_variable = {
-					var = MIO_CHTZ_assigned_manufacturer_number
-					value = 1
-				}
-			}
-			else = {
-				add_to_variable = { MIO_CHTZ_assigned_manufacturer_number = 1 }
-			}
-		}
+		FROM = { add_to_variable = { MIO_CHTZ_assigned_manufacturer_number = 1 } }
+		RUS_calculate_daily_funds_gain_and_requirement = yes
 		custom_effect_tooltip = RUS_MIO_Research_Gain_tt
 		custom_effect_tooltip = tooltip_white_line
 	}
 
 	on_industrial_manufacturer_unassigned = {
-		FROM = {
-			subtract_from_variable = { MIO_CHTZ_assigned_manufacturer_number = 1 }
-		}
+		FROM = { subtract_from_variable = { MIO_CHTZ_assigned_manufacturer_number = 1 } }
 	}
 
 	on_tech_research_completed = {
@@ -4911,9 +4833,7 @@ RUS_chtz_organisation = {
 		mutually_exclusive = { chtz_upgrade_1 chtz_upgrade_3 }
 
 		on_complete = {
-			custom_effect_tooltip = RUS_manufacturer_trait_research_cap_chtz_tt
-			add_to_variable = { max_research_speed = 0.25 }
-			add_to_variable = { max_research_speed_loc = 25 }
+			add_to_variable = { max_research_speed = 0.25 tooltip = RUS_manufacturer_trait_research_cap_tt }
 		}
 	}
 
@@ -4967,9 +4887,7 @@ RUS_chtz_organisation = {
 		mutually_exclusive = { chtz_upgrade_4 chtz_upgrade_6 }
 
 		on_complete = {
-			custom_effect_tooltip = RUS_manufacturer_trait_research_cap_chtz_tt
-			add_to_variable = { max_research_speed = 0.25 }
-			add_to_variable = { max_research_speed_loc = 25 }
+			add_to_variable = { max_research_speed = 0.25 tooltip = RUS_manufacturer_trait_research_cap_tt }
 		}
 	}
 
@@ -5057,7 +4975,7 @@ RUS_chtz_organisation = {
 		mutually_exclusive = { chtz_upgrade_1_2 }
 
 		organization_modifier = {
-			military_industrial_organization_design_team_change_cost = -1.0
+			military_industrial_organization_funds_gain = 0.1
 		}
 
 		on_complete = {
@@ -5736,45 +5654,22 @@ RUS_bz_organisation = {
 	}
 
 	on_design_team_assigned_to_tech = {
-		if = {
-			limit = { FROM = { NOT = { has_variable = BZ_Research_Number } } }
-			FROM = {
-				set_variable = {
-					var = BZ_Research_Number
-					value = 1
-				}
-			}
-		}
-		else = {
-			FROM = {
-				add_to_variable = {
-					var = BZ_Research_Number
-					value = 1
-				}
-			}
-		}
+		FROM = { add_to_variable = { BZ_Research_Number = 1 } }
 	}
 
 	on_tech_research_cancelled = {
-		FROM = {
-			subtract_from_variable = {
-				var = BZ_Research_Number
-				value = 1
-			}
-		}
+		FROM = { subtract_from_variable = { BZ_Research_Number = 1 } }
 	}
 
 	on_tech_research_completed = {
-		FROM = {
-			subtract_from_variable = {
-				var = BZ_Research_Number
-				value = 1
-			}
-		}
+		FROM = { subtract_from_variable = { BZ_Research_Number = 1 } }
 	}
 
 	on_industrial_manufacturer_assigned = {
-		custom_effect_tooltip = RUS_MIO_XP_Gain_tt
+		RUS_calculate_daily_funds_gain_and_requirement = yes
+		custom_effect_tooltip = {
+			localization_key = RUS_MIO_XP_Gain_tt XP_ICON = RUS_Navy_XP_icon
+		}
 	}
 
 	ai_will_do = { base = 1000 }
@@ -5800,11 +5695,8 @@ RUS_bz_organisation = {
 
 		on_complete = {
 			multiply_variable = { weekly_funds_requirement = 0.33 }
-			multiply_variable = { weekly_funds_requirement_loc = 0.33 }
+			custom_effect_tooltip = RUS_manufacturer_trait_xp_min_funds_tt
 			FROM = {
-				custom_effect_tooltip = RUS_manufacturer_trait_navy_xp_min_funds_bz_tt
-				custom_effect_tooltip = tooltip_white_line
-				custom_effect_tooltip = tooltip_white_line
 				set_temp_variable = { RUS_dalzavod_upgrade_MIO = 1 }
 				RUS_upgrade_dalzavod_idea_check = yes
 			}
@@ -5900,10 +5792,11 @@ RUS_bz_organisation = {
 
 		on_complete = {
 			multiply_variable = { xp_gain_loc = 1.5 }
+			custom_effect_tooltip = {
+				localization_key = RUS_manufacturer_trait_xp_gained_tt
+				XP = RUS_Navy_XP_icon
+			}
 			FROM = {
-				custom_effect_tooltip = RUS_manufacturer_trait_navy_xp_bz_tt
-				custom_effect_tooltip = tooltip_white_line
-				custom_effect_tooltip = tooltip_white_line
 				set_temp_variable = { RUS_dalzavod_upgrade_MIO = 1 }
 				RUS_upgrade_dalzavod_idea_check = yes
 			}
@@ -6507,18 +6400,8 @@ RUS_as_organisation = {
 	}
 
 	on_industrial_manufacturer_assigned = {
-		FROM = {
-			if = {
-				limit = { NOT = { has_variable = MIO_AS_assigned_manufacturer_number } }
-				set_variable = {
-					var = MIO_AS_assigned_manufacturer_number
-					value = 1
-				}
-			}
-			else = {
-				add_to_variable = { MIO_AS_assigned_manufacturer_number = 1 }
-			}
-		}
+		FROM = { add_to_variable = { MIO_AS_assigned_manufacturer_number = 1 } }
+		RUS_calculate_daily_funds_gain_and_requirement = yes
 		custom_effect_tooltip = RUS_MIO_Research_Gain_tt
 		custom_effect_tooltip = tooltip_white_line
 	}
@@ -6632,10 +6515,9 @@ RUS_as_organisation = {
 		mutually_exclusive = { as_upgrade_3 }
 
 		on_complete = {
-			custom_effect_tooltip = RUS_manufacturer_trait_research_min_funds_as_tt
+			custom_effect_tooltip = RUS_manufacturer_trait_xp_min_funds_tt
 			custom_effect_tooltip = tooltip_white_line
 			multiply_variable = { weekly_funds_requirement = 0.33 }
-			multiply_variable = { weekly_funds_requirement_loc = 0.33 }
 			FROM = {
 				set_temp_variable = { RUS_dalzavod_upgrade_MIO = 3 }
 				RUS_upgrade_dalzavod_idea_check = yes
@@ -6676,9 +6558,7 @@ RUS_as_organisation = {
 		mutually_exclusive = { as_upgrade_1_1 }
 
 		on_complete = {
-			custom_effect_tooltip = RUS_manufacturer_trait_research_gain_as_tt
-			add_to_variable = { weekly_research_speed_gain = 0.03 }
-			add_to_variable = { weekly_research_speed_gain_loc = 3 }
+			add_to_variable = { weekly_research_speed_gain = 0.03 tooltip = RUS_manufacturer_trait_research_gain_tt }
 		}
 	}
 
@@ -6736,9 +6616,7 @@ RUS_as_organisation = {
 		mutually_exclusive = { as_upgrade_1_4 }
 
 		on_complete = {
-			custom_effect_tooltip = RUS_manufacturer_trait_research_cap_as_tt
-			add_to_variable = { max_research_speed = 0.5 }
-			add_to_variable = { max_research_speed_loc = 50 }
+			add_to_variable = { max_research_speed = 0.5 tooltip = RUS_manufacturer_trait_research_cap_tt }
 		}
 	}
 
@@ -7359,10 +7237,7 @@ RUS_dalzavod_organisation = {
 		on_complete = {
 			FROM = {
 				activate_targeted_decision = { decision = RUS_dalzavod_mining_baltic_sea target = FROM }
-				set_variable = {
-					var = RUS_dalzavod_mines_number
-					value = 100
-				}
+				set_variable = { RUS_dalzavod_mines_number = 100 }
 			}
 			custom_effect_tooltip = tooltip_white_line
 			FROM = {
@@ -7451,12 +7326,7 @@ RUS_dalzavod_organisation = {
 
 		on_complete = {
 			custom_effect_tooltip = RUS_dalzavod_increase_mines_tt
-			FROM = {
-				add_to_variable = {
-					var = RUS_dalzavod_mines_number
-					value = 50
-				}
-			}
+			FROM = { add_to_variable = { RUS_dalzavod_mines_number = 50 } }
 			custom_effect_tooltip = tooltip_white_line
 		}
 	}
@@ -7517,12 +7387,7 @@ RUS_dalzavod_organisation = {
 
 		on_complete = {
 			custom_effect_tooltip = RUS_dalzavod_increase_mines_tt
-			FROM = {
-				add_to_variable = {
-					var = RUS_dalzavod_mines_number
-					value = 50
-				}
-			}
+			FROM = { add_to_variable = { RUS_dalzavod_mines_number = 50 } }
 			custom_effect_tooltip = tooltip_white_line
 		}
 	}
@@ -7583,12 +7448,7 @@ RUS_dalzavod_organisation = {
 
 		on_complete = {
 			custom_effect_tooltip = RUS_dalzavod_increase_mines_tt
-			FROM = {
-				add_to_variable = {
-					var = RUS_dalzavod_mines_number
-					value = 50
-				}
-			}
+			FROM = { add_to_variable = { RUS_dalzavod_mines_number = 50 } }
 			custom_effect_tooltip = tooltip_white_line
 		}
 	}
@@ -7683,7 +7543,9 @@ RUS_gamayun_organisation = {
 			custom_effect_tooltip = RUS_gamayun_random_factories_tt
 		}
 		else = {
-			custom_effect_tooltip = RUS_gamayun_random_factories_required_tt
+			custom_effect_tooltip = {
+				localization_key = RUS_has_completed_trait_NOT TRAIT = gamayun_upgrade_3
+			}
 		}
 	}
 
@@ -7942,15 +7804,13 @@ RUS_gamayun_organisation = {
 			add_to_variable = { Civ_chance_loc = 27 }
 			subtract_from_variable = { Mil_chance_loc = 13 }
 			subtract_from_variable = { Dockyard_chance_loc = 13 }
-			FROM = {
-				add_to_variable = {
-					var = RUS_Gamayun_Civ_Chance
-					value = 66
-				}
-			}
+			FROM = { add_to_variable = { RUS_Gamayun_Civ_Chance = 66 } }
 			custom_effect_tooltip = gamayun_upgrade_2_3_tt
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = gamayun_upgrade_2_3_exclusive_tt
+			custom_effect_tooltip = {
+				localization_key = RUS_mutually_exclusive_with
+				TRAIT_1 = gamayun_upgrade_2_4 TRAIT_2 = gamayun_upgrade_2_5
+			}
 		}
 	}
 
@@ -7969,15 +7829,13 @@ RUS_gamayun_organisation = {
 			add_to_variable = { Mil_chance_loc = 27 }
 			subtract_from_variable = { Civ_chance_loc = 13 }
 			subtract_from_variable = { Dockyard_chance_loc = 13 }
-			FROM = {
-				add_to_variable = {
-					var = RUS_Gamayun_Mil_Chance
-					value = 66
-				}
-			}
+			FROM = { add_to_variable = { RUS_Gamayun_Civ_Chance = 66 } }
 			custom_effect_tooltip = gamayun_upgrade_2_4_tt
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = gamayun_upgrade_2_4_exclusive_tt
+			custom_effect_tooltip = {
+				localization_key = RUS_mutually_exclusive_with
+				TRAIT_1 = gamayun_upgrade_2_3 TRAIT_2 = gamayun_upgrade_2_5
+			}
 		}
 	}
 
@@ -7996,15 +7854,13 @@ RUS_gamayun_organisation = {
 			add_to_variable = { Dockyard_chance_loc = 27 }
 			subtract_from_variable = { Mil_chance_loc = 13 }
 			subtract_from_variable = { Civ_chance_loc = 13 }
-			FROM = {
-				add_to_variable = {
-					var = RUS_Gamayun_Dockyard_Chance
-					value = 66
-				}
-			}
+			FROM = { add_to_variable = { RUS_Gamayun_Civ_Chance = 66 } }
 			custom_effect_tooltip = gamayun_upgrade_2_5_tt
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = gamayun_upgrade_2_5_exclusive_tt
+			custom_effect_tooltip = {
+				localization_key = RUS_mutually_exclusive_with
+				TRAIT_1 = gamayun_upgrade_2_3 TRAIT_2 = gamayun_upgrade_2_4
+			}
 		}
 	}
 
@@ -8465,26 +8321,14 @@ RUS_tsagi_organisation = {
 	}
 
 	on_industrial_manufacturer_assigned = {
-		FROM = {
-			if = {
-				limit = { NOT = { has_variable = MIO_TSAGI_assigned_manufacturer_number } }
-				set_variable = {
-					var = MIO_TSAGI_assigned_manufacturer_number
-					value = 1
-				}
-			}
-			else = {
-				add_to_variable = { MIO_TSAGI_assigned_manufacturer_number = 1 }
-			}
-		}
+		FROM = { add_to_variable = { MIO_TSAGI_assigned_manufacturer_number = 1 } }
+		RUS_calculate_daily_funds_gain_and_requirement = yes
 		custom_effect_tooltip = RUS_MIO_Research_Gain_tt
 		custom_effect_tooltip = tooltip_white_line
 	}
 
 	on_industrial_manufacturer_unassigned = {
-		FROM = {
-			subtract_from_variable = { MIO_TSAGI_assigned_manufacturer_number = 1 }
-		}
+		FROM = { subtract_from_variable = { MIO_TSAGI_assigned_manufacturer_number = 1 } }
 	}
 
 	on_tech_research_completed = {
@@ -8556,9 +8400,7 @@ RUS_tsagi_organisation = {
 		mutually_exclusive = { tsagi_upgrade_1 }
 
 		on_complete = {
-			custom_effect_tooltip = RUS_manufacturer_trait_research_gain_tsagi_tt
-			add_to_variable = { weekly_research_speed_gain = 0.01 }
-			add_to_variable = { weekly_research_speed_gain_loc = 1 }
+			add_to_variable = { weekly_research_speed_gain = 0.01 tooltip = RUS_manufacturer_trait_research_gain_tt }
 		}
 	}
 
@@ -8596,9 +8438,7 @@ RUS_tsagi_organisation = {
 		mutually_exclusive = { tsagi_upgrade_1_1 }
 
 		on_complete = {
-			custom_effect_tooltip = RUS_manufacturer_trait_research_gain_tsagi_tt
-			add_to_variable = { weekly_research_speed_gain = 0.01 }
-			add_to_variable = { weekly_research_speed_gain_loc = 1 }
+			add_to_variable = { weekly_research_speed_gain = 0.01 tooltip = RUS_manufacturer_trait_research_gain_tt }
 		}
 	}
 
@@ -8672,9 +8512,7 @@ RUS_tsagi_organisation = {
 		mutually_exclusive = { tsagi_upgrade_1_4 }
 
 		on_complete = {
-			custom_effect_tooltip = RUS_manufacturer_trait_research_gain_tsagi_tt
-			add_to_variable = { weekly_research_speed_gain = 0.01 }
-			add_to_variable = { weekly_research_speed_gain_loc = 1 }
+			add_to_variable = { weekly_research_speed_gain = 0.01 tooltip = RUS_manufacturer_trait_research_gain_tt }
 		}
 	}
 
@@ -9317,42 +9155,16 @@ RUS_osoavia_organisation = {
 	}
 
 	on_design_team_assigned_to_tech = {
-		if = {
-			limit = { FROM = { NOT = { has_variable = OSOAVIA_Research_Number } } }
-			FROM = {
-				set_variable = {
-					var = OSOAVIA_Research_Number
-					value = 1
-				}
-			}
-		}
-		else = {
-			FROM = {
-				add_to_variable = {
-					var = OSOAVIA_Research_Number
-					value = 1
-				}
-			}
-		}
+		FROM = { add_to_variable = { OSOAVIA_Research_Number = 1 } }
 	}
 
 	on_tech_research_cancelled = {
-		FROM = {
-			subtract_from_variable = {
-				var = OSOAVIA_Research_Number
-				value = 1
-			}
-		}
+		FROM = { subtract_from_variable = { OSOAVIA_Research_Number = 1 } }
 	}
 
 	on_tech_research_completed = {
 		FROM = {
-			subtract_from_variable = {
-				var = OSOAVIA_Research_Number
-				value = 1
-			}
-		}
-		FROM = {
+			subtract_from_variable = { OSOAVIA_Research_Number = 1 }
 			if = {
 				limit = { has_character = RUS_igor_sikorsky }
 				if = {
@@ -9365,7 +9177,10 @@ RUS_osoavia_organisation = {
 	}
 
 	on_industrial_manufacturer_assigned = {
-		custom_effect_tooltip = RUS_MIO_XP_Gain_tt
+		RUS_calculate_daily_funds_gain_and_requirement = yes
+		custom_effect_tooltip = {
+			localization_key = RUS_MIO_XP_Gain_tt XP_ICON = RUS_Air_XP_icon
+		}
 	}
 
 	ai_will_do = { base = 10 }
@@ -9385,7 +9200,10 @@ RUS_osoavia_organisation = {
 
 		on_complete = {
 			multiply_variable = { xp_gain_loc = 1.5 }
-			custom_effect_tooltip = RUS_manufacturer_trait_air_xp_osoavia_tt
+			custom_effect_tooltip = {
+				localization_key = RUS_manufacturer_trait_xp_gained_tt
+				XP = RUS_Air_XP_icon
+			}
 		}
 	}
 
@@ -9404,9 +9222,7 @@ RUS_osoavia_organisation = {
 
 		on_complete = {
 			add_to_variable = { total_campaign_xp = 70 }
-			FROM = {
-				air_experience = 70
-			}
+			FROM = { air_experience = 70 }
 		}
 	}
 
@@ -9421,8 +9237,7 @@ RUS_osoavia_organisation = {
 
 		on_complete = {
 			multiply_variable = { weekly_funds_requirement = 0.33 }
-			multiply_variable = { weekly_funds_requirement_loc = 0.33 }
-			custom_effect_tooltip = RUS_manufacturer_trait_air_xp_min_funds_osoavia_tt
+			custom_effect_tooltip = RUS_manufacturer_trait_xp_min_funds_tt
 		}
 	}
 
@@ -9441,9 +9256,7 @@ RUS_osoavia_organisation = {
 
 		on_complete = {
 			add_to_variable = { total_campaign_xp = 25 }
-			FROM = {
-				air_experience = 25
-			}
+			FROM = { air_experience = 25 }
 		}
 	}
 
@@ -9969,7 +9782,10 @@ RUS_sokol_organisation = {
 	}
 
 	on_design_team_assigned_to_tech = {
-		custom_effect_tooltip = RUS_sokol_trait_req
+		custom_effect_tooltip = {
+			localization_key = RUS_has_completed_trait_2_NOT
+			TRAIT_1 = sokol_upgrade_1 TRAIT_2 = sokol_upgrade_2
+		}
 	}
 
 	on_tech_research_completed = {
@@ -10313,23 +10129,7 @@ RUS_sokol_construction_organisation = {
 			limit = { FROM = { NOT = { has_country_flag = Sokol_Research } } }
 			FROM = { set_country_flag = Sokol_Research }
 		}
-		if = {
-			limit = { FROM = { NOT = { has_variable = Sokol_Research_Number } } }
-			FROM = {
-				set_variable = {
-					var = Sokol_Research_Number
-					value = 1
-				}
-			}
-		}
-		else = {
-			FROM = {
-				add_to_variable = {
-					var = Sokol_Research_Number
-					value = 1
-				}
-			}
-		}
+		FROM = { add_to_variable = { Sokol_Research_Number = 1 } }
 	}
 
 	on_tech_research_cancelled = {
@@ -10337,12 +10137,7 @@ RUS_sokol_construction_organisation = {
 			limit = { FROM = { check_variable = { Sokol_Research_Number = 1 } } }
 			FROM = { clr_country_flag = Sokol_Research }
 		}
-		FROM = {
-			subtract_from_variable = {
-				var = Sokol_Research_Number
-				value = 1
-			}
-		}
+		FROM = { subtract_from_variable = { Sokol_Research_Number = 1 } }
 	}
 
 	on_tech_research_completed = {
@@ -10351,12 +10146,7 @@ RUS_sokol_construction_organisation = {
 			FROM = { clr_country_flag = Sokol_Research }
 		}
 		FROM = {
-			subtract_from_variable = {
-				var = Sokol_Research_Number
-				value = 1
-			}
-		}
-		FROM = {
+			subtract_from_variable = { Sokol_Research_Number = 1 }
 			if = {
 				limit = { has_character = RUS_igor_sikorsky }
 				if = {
@@ -10692,23 +10482,7 @@ RUS_sokol_production_organisation = {
 			limit = { FROM = { NOT = { has_country_flag = Sokol_Research } } }
 			FROM = { set_country_flag = Sokol_Research }
 		}
-		if = {
-			limit = { FROM = { NOT = { has_variable = Sokol_Research_Number } } }
-			FROM = {
-				set_variable = {
-					var = Sokol_Research_Number
-					value = 1
-				}
-			}
-		}
-		else = {
-			FROM = {
-				add_to_variable = {
-					var = Sokol_Research_Number
-					value = 1
-				}
-			}
-		}
+		FROM = { add_to_variable = { Sokol_Research_Number = 1 } }
 	}
 
 	on_tech_research_cancelled = {
@@ -10716,12 +10490,7 @@ RUS_sokol_production_organisation = {
 			limit = { FROM = { check_variable = { Sokol_Research_Number = 1 } } }
 			FROM = { clr_country_flag = Sokol_Research }
 		}
-		FROM = {
-			subtract_from_variable = {
-				var = Sokol_Research_Number
-				value = 1
-			}
-		}
+		FROM = { subtract_from_variable = { Sokol_Research_Number = 1 } }
 	}
 
 	on_tech_research_completed = {
@@ -10730,12 +10499,7 @@ RUS_sokol_production_organisation = {
 			FROM = { clr_country_flag = Sokol_Research }
 		}
 		FROM = {
-			subtract_from_variable = {
-				var = Sokol_Research_Number
-				value = 1
-			}
-		}
-		FROM = {
+			subtract_from_variable = { Sokol_Research_Number = 1 }
 			if = {
 				limit = { has_character = RUS_igor_sikorsky }
 				if = {
@@ -11245,11 +11009,11 @@ RUS_toz_organisation = {
 		}
 
 		on_complete = {
-			custom_effect_tooltip = toz_upgrade_2_1_tt
+			set_variable = { FROM.TOZ_Required_Funds = 400 tooltip = RUS_toz_medals_decision_cost_tt }
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = toz_upgrade_2_1_exclusive_tt
-			FROM = {
-				set_variable = { TOZ_Required_Funds = 400 }
+			custom_effect_tooltip = {
+				localization_key = RUS_mutually_exclusive_with
+				TRAIT_1 = toz_upgrade_2_2 TRAIT_2 = toz_upgrade_2_3
 			}
 		}
 	}
@@ -11272,11 +11036,11 @@ RUS_toz_organisation = {
 		}
 
 		on_complete = {
-			custom_effect_tooltip = toz_upgrade_2_2_tt
+			set_variable = { FROM.TOZ_Required_Funds = 300 tooltip = RUS_toz_medals_decision_cost_tt }
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = toz_upgrade_2_2_exclusive_tt
-			FROM = {
-				set_variable = { TOZ_Required_Funds = 300 }
+			custom_effect_tooltip = {
+				localization_key = RUS_mutually_exclusive_with
+				TRAIT_1 = toz_upgrade_2_1 TRAIT_2 = toz_upgrade_2_3
 			}
 		}
 	}
@@ -11299,11 +11063,11 @@ RUS_toz_organisation = {
 		}
 
 		on_complete = {
-			custom_effect_tooltip = toz_upgrade_2_3_tt
+			set_variable = { FROM.TOZ_Required_Funds = 200 tooltip = RUS_toz_medals_decision_cost_tt }
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = toz_upgrade_2_3_exclusive_tt
-			FROM = {
-				set_variable = { TOZ_Required_Funds = 200 }
+			custom_effect_tooltip = {
+				localization_key = RUS_mutually_exclusive_with
+				TRAIT_1 = toz_upgrade_2_1 TRAIT_2 = toz_upgrade_2_2
 			}
 		}
 	}
@@ -11339,14 +11103,11 @@ RUS_toz_organisation = {
 		}
 
 		on_complete = {
-			custom_effect_tooltip = toz_upgrade_2_5_tt
+			add_to_variable = { FROM.TOZ_Divisions = 2 tooltip = RUS_toz_medals_division_num_tt }
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = toz_upgrade_2_5_exclusive_tt
-			FROM = {
-				add_to_variable = {
-					var = TOZ_Divisions
-					value = 2
-				}
+			custom_effect_tooltip = {
+				localization_key = RUS_mutually_exclusive_with
+				TRAIT_1 = toz_upgrade_2_6 TRAIT_2 = toz_upgrade_2_7
 			}
 		}
 	}
@@ -11372,14 +11133,11 @@ RUS_toz_organisation = {
 		}
 
 		on_complete = {
-			custom_effect_tooltip = toz_upgrade_2_6_tt
+			add_to_variable = { FROM.TOZ_Divisions = 4 tooltip = RUS_toz_medals_division_num_tt }
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = toz_upgrade_2_6_exclusive_tt
-			FROM = {
-				add_to_variable = {
-					var = TOZ_Divisions
-					value = 4
-				}
+			custom_effect_tooltip = {
+				localization_key = RUS_mutually_exclusive_with
+				TRAIT_1 = toz_upgrade_2_5 TRAIT_2 = toz_upgrade_2_7
 			}
 		}
 	}
@@ -11405,14 +11163,11 @@ RUS_toz_organisation = {
 		}
 
 		on_complete = {
-			custom_effect_tooltip = toz_upgrade_2_7_tt
+			add_to_variable = { FROM.TOZ_Divisions = 6 tooltip = RUS_toz_medals_division_num_tt }
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = toz_upgrade_2_7_exclusive_tt
-			FROM = {
-				add_to_variable = {
-					var = TOZ_Divisions
-					value = 6
-				}
+			custom_effect_tooltip = {
+				localization_key = RUS_mutually_exclusive_with
+				TRAIT_1 = toz_upgrade_2_5 TRAIT_2 = toz_upgrade_2_6
 			}
 		}
 	}
@@ -11474,26 +11229,14 @@ RUS_vpoz_organisation = {
 	}
 
 	on_industrial_manufacturer_assigned = {
-		FROM = {
-			if = {
-				limit = { NOT = { has_variable = MIO_VPOZ_assigned_manufacturer_number } }
-				set_variable = {
-					var = MIO_VPOZ_assigned_manufacturer_number
-					value = 1
-				}
-			}
-			else = {
-				add_to_variable = { MIO_VPOZ_assigned_manufacturer_number = 1 }
-			}
-		}
+		FROM = { add_to_variable = { MIO_VPOZ_assigned_manufacturer_number = 1 } }
+		RUS_calculate_daily_funds_gain_and_requirement = yes
 		custom_effect_tooltip = RUS_MIO_Research_Gain_tt
 		custom_effect_tooltip = tooltip_white_line
 	}
 
 	on_industrial_manufacturer_unassigned = {
-		FROM = {
-			subtract_from_variable = { MIO_VPOZ_assigned_manufacturer_number = 1 }
-		}
+		FROM = { subtract_from_variable = { MIO_VPOZ_assigned_manufacturer_number = 1 } }
 	}
 
 	on_tech_research_completed = {
@@ -11543,7 +11286,7 @@ RUS_vpoz_organisation = {
 		limit_to_equipment_type = { infantry_equipment }
 
 		equipment_bonus = {
-			maximum_speed = 0.25
+			maximum_speed = 0.15
 		}
 	}
 
@@ -11615,7 +11358,7 @@ RUS_vpoz_organisation = {
 		limit_to_equipment_type = { infantry_equipment }
 
 		equipment_bonus = {
-			maximum_speed = 0.25
+			maximum_speed = 0.15
 		}
 	}
 
@@ -11654,10 +11397,7 @@ RUS_vpoz_organisation = {
 
 		on_complete = {
 			set_temp_variable = { max_research_speed_to_add = research_bonus }
-			multiply_temp_variable = { max_research_speed_to_add = 100 }
 			custom_effect_tooltip = RUS_manufacturer_trait_research_cap_vpoz_tt
-			add_to_variable = { max_research_speed_loc = max_research_speed_to_add }
-			divide_temp_variable = { max_research_speed_to_add = 100 }
 			add_to_variable = { max_research_speed = max_research_speed_to_add }
 		}
 	}
@@ -11958,49 +11698,29 @@ RUS_obukhov_organisation = {
 	on_industrial_manufacturer_assigned = {
 		if = { #Check if the trait to give army xp is unlocked
 			limit = { RUS_has_obukhov_upgrade_5_or_6 = yes }
-			custom_effect_tooltip = RUS_MIO_XP_Gain_tt
+			RUS_calculate_daily_funds_gain_and_requirement = yes
+			custom_effect_tooltip = {
+				localization_key = RUS_MIO_XP_Gain_tt XP_ICON = RUS_Army_XP_icon
+			}
 		}
 		else = {
-			custom_effect_tooltip = RUS_obukhov_army_xp_trigger
+			custom_effect_tooltip = {
+				localization_key = RUS_has_completed_trait_2_NOT
+				TRAIT_1 = obukhov_upgrade_5 TRAIT_2 = obukhov_upgrade_6
+			}
 		}
 	}
 
 	on_design_team_assigned_to_tech = {
-		if = {
-			limit = { FROM = { NOT = { has_variable = Obukhov_Research_Number } } }
-			FROM = {
-				set_variable = {
-					var = Obukhov_Research_Number
-					value = 1
-				}
-			}
-		}
-		else = {
-			FROM = {
-				add_to_variable = {
-					var = Obukhov_Research_Number
-					value = 1
-				}
-			}
-		}
+		FROM = { add_to_variable = { Obukhov_Research_Number = 1 } }
 	}
 
 	on_tech_research_cancelled = {
-		FROM = {
-			subtract_from_variable = {
-				var = Obukhov_Research_Number
-				value = 1
-			}
-		}
+		FROM = { subtract_from_variable = { Obukhov_Research_Number = 1 } }
 	}
 
 	on_tech_research_completed = {
-		FROM = {
-			subtract_from_variable = {
-				var = Obukhov_Research_Number
-				value = 1
-			}
-		}
+		FROM = { subtract_from_variable = { Obukhov_Research_Number = 1 } }
 	}
 
 	ai_will_do = { base = 1000 }
@@ -12032,7 +11752,10 @@ RUS_obukhov_organisation = {
 		}
 
 		on_complete = {
-			custom_effect_tooltip = obukhov_upgrade_1_exclusive_tt
+			custom_effect_tooltip = {
+				localization_key = RUS_mutually_exclusive_with
+				TRAIT_1 = obukhov_upgrade_2 TRAIT_2 = obukhov_upgrade_3
+			}
 		}
 	}
 
@@ -12048,12 +11771,15 @@ RUS_obukhov_organisation = {
 		mutually_exclusive = { obukhov_upgrade_1 obukhov_upgrade_3 }
 
 		equipment_bonus = {
-			air_attack = 0.1
+			air_attack = 0.15
 			build_cost_ic = -0.1
 		}
 
 		on_complete = {
-			custom_effect_tooltip = obukhov_upgrade_2_exclusive_tt
+			custom_effect_tooltip = {
+				localization_key = RUS_mutually_exclusive_with
+				TRAIT_1 = obukhov_upgrade_1 TRAIT_2 = obukhov_upgrade_3
+			}
 		}
 	}
 
@@ -12071,12 +11797,15 @@ RUS_obukhov_organisation = {
 		equipment_bonus = {
 			air_attack = 0.07
 			hard_attack = 1.0
-			ap_attack = 0.5
+			ap_attack = 0.1
 			build_cost_ic = 0.1
 		}
 
 		on_complete = {
-			custom_effect_tooltip = obukhov_upgrade_3_exclusive_tt
+			custom_effect_tooltip = {
+				localization_key = RUS_mutually_exclusive_with
+				TRAIT_1 = obukhov_upgrade_1 TRAIT_2 = obukhov_upgrade_2
+			}
 		}
 	}
 
@@ -12104,7 +11833,10 @@ RUS_obukhov_organisation = {
 		}
 
 		on_complete = {
-			custom_effect_tooltip = RUS_MIO_XP_Gain_tt
+			RUS_calculate_daily_funds_gain_and_requirement = yes
+			custom_effect_tooltip = {
+				localization_key = RUS_MIO_XP_Gain_tt XP_ICON = RUS_Army_XP_icon
+			}
 			custom_effect_tooltip = tooltip_white_line
 			FROM = {
 				RUS_unlock_obukhov_policies = yes # `unlock_mio_policy_tooltip` doesn't work in the MIO scope for some reason
@@ -12148,7 +11880,10 @@ RUS_obukhov_organisation = {
 		}
 
 		on_complete = {
-			custom_effect_tooltip = RUS_MIO_XP_Gain_tt
+			RUS_calculate_daily_funds_gain_and_requirement = yes
+			custom_effect_tooltip = {
+				localization_key = RUS_MIO_XP_Gain_tt XP_ICON = RUS_Army_XP_icon
+			}
 			custom_effect_tooltip = tooltip_white_line
 			FROM = {
 				RUS_unlock_obukhov_policies = yes # `unlock_mio_policy_tooltip` doesn't work in the MIO scope for some reason
@@ -12187,7 +11922,10 @@ RUS_obukhov_organisation = {
 
 		on_complete = {
 			multiply_variable = { xp_gain_loc = 1.5 }
-			custom_effect_tooltip = RUS_manufacturer_trait_army_xp_obukhov_tt
+			custom_effect_tooltip = {
+				localization_key = RUS_manufacturer_trait_xp_gained_tt
+				XP = RUS_Army_XP_icon
+			}
 		}
 	}
 
@@ -12209,8 +11947,7 @@ RUS_obukhov_organisation = {
 
 		on_complete = {
 			multiply_variable = { weekly_funds_requirement = 0.33 }
-			multiply_variable = { weekly_funds_requirement_loc = 0.33 }
-			custom_effect_tooltip = RUS_manufacturer_trait_army_xp_min_funds_obukhov_tt
+			custom_effect_tooltip = RUS_manufacturer_trait_xp_min_funds_tt
 			custom_effect_tooltip = tooltip_white_line
 			FROM = { army_experience = 50 }
 			add_to_variable = { total_campaign_xp = 50 }
@@ -12823,26 +12560,14 @@ RUS_bmz_organisation = {
 	}
 
 	on_industrial_manufacturer_assigned = {
-		FROM = {
-			if = {
-				limit = { NOT = { has_variable = MIO_BMZ_assigned_manufacturer_number } }
-				set_variable = {
-					var = MIO_BMZ_assigned_manufacturer_number
-					value = 1
-				}
-			}
-			else = {
-				add_to_variable = { MIO_BMZ_assigned_manufacturer_number = 1 }
-			}
-		}
+		FROM = { add_to_variable = { MIO_BMZ_assigned_manufacturer_number = 1 } }
+		RUS_calculate_daily_funds_gain_and_requirement = yes
 		custom_effect_tooltip = RUS_MIO_Research_Gain_tt
 		custom_effect_tooltip = tooltip_white_line
 	}
 
 	on_industrial_manufacturer_unassigned = {
-		FROM = {
-			subtract_from_variable = { MIO_BMZ_assigned_manufacturer_number = 1 }
-		}
+		FROM = { subtract_from_variable = { MIO_BMZ_assigned_manufacturer_number = 1 } }
 	}
 
 	on_tech_research_completed = {
@@ -12960,13 +12685,9 @@ RUS_bmz_organisation = {
 		}
 
 		on_complete = {
-			set_temp_variable = { current_research_bonus = research_bonus }
-			multiply_temp_variable = { current_research_bonus = 100 }
-			set_temp_variable = { weekly_research_speed_to_add = current_research_bonus }
+			set_temp_variable = { weekly_research_speed_to_add = research_bonus }
 			multiply_temp_variable = { weekly_research_speed_to_add = 0.04 }
 			custom_effect_tooltip = RUS_manufacturer_trait_research_gain_bmz_tt
-			add_to_variable = { weekly_research_speed_gain_loc = weekly_research_speed_to_add }
-			divide_temp_variable = { weekly_research_speed_to_add = 100 }
 			add_to_variable = { weekly_research_speed_gain = weekly_research_speed_to_add }
 		}
 	}
@@ -13044,9 +12765,7 @@ RUS_bmz_organisation = {
 		}
 
 		on_complete = {
-			custom_effect_tooltip = RUS_manufacturer_trait_research_cap_bmz_tt
-			add_to_variable = { max_research_speed = 0.25 }
-			add_to_variable = { max_research_speed_loc = 25 }
+			add_to_variable = { max_research_speed = 0.25 tooltip = RUS_manufacturer_trait_research_cap_tt }
 		}
 	}
 
@@ -13727,7 +13446,7 @@ RUS_amo_organisation_non_nsb = { ### For those with AAT but not NSB ###
 
 		equipment_bonus = {
 			maximum_speed = 0.2
-			fuel_consumption = 0.2
+			fuel_consumption = 0.1
 		}
 
 		production_bonus = {
@@ -13895,8 +13614,6 @@ RUS_amo_organisation_non_nsb = { ### For those with AAT but not NSB ###
 				FROM = { has_country_flag = RUS_rename_industries }
 			}
 		}
-
-		special_trait_background = yes
 
 		position = { x = 1 y = 2 }
 		relative_position_id = amo_upgrade_1_3
@@ -14967,9 +14684,6 @@ RUS_laz_organisation = {
 				mio:RUS_naz_organisation = {
 					add_mio_funds = 1000
 				}
-				mio:RUS_naz_organisation_lar = {
-					add_mio_funds = 1000
-				}
 			}
 			custom_effect_tooltip = laz_research_funds_share_tt
 		}
@@ -15051,7 +14765,7 @@ RUS_laz_organisation = {
 		mutually_exclusive = { laz_upgrade_1_2 }
 
 		equipment_bonus = {
-			hardness = 0.2
+			breakthrough = 0.1
 		}
 
 		on_complete = {
@@ -15118,7 +14832,7 @@ RUS_laz_organisation = {
 		mutually_exclusive = { laz_upgrade_1_1 }
 
 		equipment_bonus = {
-			hardness = 0.2
+			breakthrough = 0.1
 		}
 
 		on_complete = {
@@ -15265,7 +14979,7 @@ RUS_laz_organisation = {
 		}
 
 		organization_modifier = {
-			military_industrial_organization_design_team_change_cost = -0.5
+			military_industrial_organization_funds_gain = 0.1
 		}
 	}
 

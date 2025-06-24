@@ -2505,10 +2505,12 @@ GRU_germania_plan_decisions = {
 			has_completed_focus = GRU_NMDVP_SLAV_LAND_EXPANSION
 			country_exists = CRO
 			CRO = { is_subject_of = GRU }
+			HUN = { is_subject_of = GRU }
 		}
 		available = {
 			country_exists = CRO
 			CRO = { is_subject_of = GRU }
+			HUN = { is_subject_of = GRU }
 		}
 
 		fire_only_once = no
@@ -2523,6 +2525,38 @@ GRU_germania_plan_decisions = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_integrate_croatia_decision"
 			annex_country = {
 				target = CRO
+				transfer_troops = yes
+			}
+		}
+	}
+	#
+	GRU_pan_germanism_integrate_slovakia_decision = {
+		icon = GFX_pangermanicone
+
+		visible = {
+			has_completed_focus = GRU_NMDVP_SLAV_LAND_EXPANSION
+			country_exists = SVK
+			SVK = { is_subject_of = GRU }
+			HUN = { is_subject_of = GRU }
+		}
+		available = {
+			country_exists = SVK
+			SVK = { is_subject_of = GRU }
+			HUN = { is_subject_of = GRU }
+		}
+
+		fire_only_once = no
+		cost = 20
+		days_remove = 0
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_integrate_slovakia_decision"
+			annex_country = {
+				target = SVK
 				transfer_troops = yes
 			}
 		}
@@ -9653,8 +9687,11 @@ GRU_scandi_decisions = {
 		visible = {
 			has_completed_focus = GRU_NMDVP_SCANDINAVIA
 			country_exists = SWE
-			NOT = { is_subject_of = GRU }
-			#NOT = { SWE = { has_government = totalist } }
+			SWE = {
+				NOT = { 
+					is_subject_of = GRU 
+				}
+			}
 		}
 		available = {
 			country_exists = SWE
@@ -9735,7 +9772,11 @@ GRU_scandi_decisions = {
 		visible = {
 			has_completed_focus = GRU_NMDVP_SCANDINAVIA
 			country_exists = NOR
-			NOT = { is_subject_of = GRU }
+			NOR = {
+				NOT = { 
+					is_subject_of = GRU 
+				}
+			}
 			#NOT = { NOR = { has_government = totalist } }
 		}
 		available = {
@@ -9817,7 +9858,11 @@ GRU_scandi_decisions = {
 		visible = {
 			has_completed_focus = GRU_NMDVP_SCANDINAVIA
 			country_exists = FIN
-			NOT = { is_subject_of = GRU }
+			FIN = {
+				NOT = { 
+					is_subject_of = GRU 
+				}
+			}
 			#NOT = { FIN = { has_government = totalist } }
 		}
 		available = {

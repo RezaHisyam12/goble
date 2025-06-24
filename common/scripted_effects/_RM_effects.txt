@@ -1479,6 +1479,7 @@ create_VSJ = {
 		set_popularities = {
 			totalist = 100
 		}
+		set_capital = { state = 653 }
 
 		create_country_leader = {
 			name = "Avraham Stern"
@@ -1516,6 +1517,7 @@ create_VST = {
 		set_popularities = {
 			totalist = 100
 		}
+		set_capital = { state = 407 }
 
 		create_country_leader = {
 			name = "Mirsaid Sultangaliev"

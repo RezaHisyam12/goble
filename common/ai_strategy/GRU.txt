@@ -1354,6 +1354,11 @@ default_heavy_tank_production = {
 		id = heavy_tank_chassis
 		value = 15
 	}
+	ai_strategy = {
+		type = role_ratio
+		id = armor_role
+		value = 8
+	}
 }
 
 increased_heavy_tank_production_2 = {
@@ -1377,6 +1382,11 @@ increased_heavy_tank_production_2 = {
 		type = equipment_variant_production_factor
 		id = heavy_tank_chassis
 		value = 25
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = armor_role
+		value = 8
 	}
 }
 

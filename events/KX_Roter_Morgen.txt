@@ -3166,6 +3166,43 @@ country_event = { # VSJ claims
 	is_triggered_only = yes
 	hidden = yes
 	immediate = {
+		403 = { remove_core_of = VSJ }
+		516 = { remove_core_of = VSJ }
+		568 = { remove_core_of = VSJ }
+		569 = { remove_core_of = VSJ }
+		570 = { remove_core_of = VSJ }
+		571 = { remove_core_of = VSJ }
+		572 = { remove_core_of = VSJ }
+		576 = { remove_core_of = VSJ }
+		577 = { remove_core_of = VSJ }
+		578 = { remove_core_of = VSJ }
+		580 = { remove_core_of = VSJ }
+		653 = { remove_core_of = VSJ }
+		811 = { remove_core_of = VSJ }
+		1200 = { remove_core_of = VSJ }
+		1201 = { remove_core_of = VSJ }
+		1202 = { remove_core_of = VSJ }
+		329 = { remove_core_of = VSJ }
+		644 = { remove_core_of = VSJ }
+		565 = { remove_core_of = VSJ }
+		564 = { remove_core_of = VSJ }
+		563 = { remove_core_of = VSJ }
+		574 = { remove_core_of = VSJ }
+		657 = { remove_core_of = VSJ }
+		562 = { remove_core_of = VSJ }
+		637 = { remove_core_of = VSJ }
+		561 = { remove_core_of = VSJ }
+		560 = { remove_core_of = VSJ }
+		409 = { remove_core_of = VSJ }
+		1246 = { remove_core_of = VSJ }
+		408 = { remove_core_of = VSJ }
+		566 = { remove_core_of = VSJ }
+		567 = { remove_core_of = VSJ }
+		575 = { remove_core_of = VSJ }
+		588 = { remove_core_of = VSJ }
+		583 = { remove_core_of = VSJ }
+		582 = { remove_core_of = VSJ }
+
 		403 = { add_claim_by = VSJ }
 		516 = { add_claim_by = VSJ }
 		568 = { add_claim_by = VSJ }
@@ -3199,6 +3236,12 @@ country_event = { # VSJ claims
 		566 = { add_claim_by = VSJ }
 		567 = { add_claim_by = VSJ }
 		575 = { add_claim_by = VSJ }
+		1293 = { add_claim_by = VSJ }
+		1292 = { add_claim_by = VSJ }
+
+		588 = { remove_claim_by = VSJ }
+		583 = { remove_claim_by = VSJ }
+		582 = { remove_claim_by = VSJ }
 	}
 }
 
@@ -3259,6 +3302,10 @@ country_event = { # VST claims
 		1275 = { add_claim_by = VST }
 		1217 = { add_claim_by = VST }
 		1218 = { add_claim_by = VST }
+
+
+		406 = { remove_claim_by = VSJ }
+		406 = { remove_core_of = VSJ }
 	}
 }
 

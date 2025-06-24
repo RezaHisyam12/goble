@@ -1467,6 +1467,8 @@
  RUS_TOZ_Medals_desc: "Total Medals given out during this campaign: [?RUS_TOZ_total_medals]"
  RUS_TOZ_Funds_Medals_Requirement: "[?TOZ_Required_Funds] §Y$toz$§! Funds"
  RUS_TOZ_Funds_Medals_Requirement_blocked: "§R[?TOZ_Required_Funds] $toz$ Funds§!"
+ RUS_toz_medals_decision_cost_tt: "§gTaking the decision £decision_icon_small §Y$RUS_TOZ_Medals$§! will now cost $RIGHT|0$ §YFunds§!§!"
+ RUS_toz_medals_division_num_tt: "§gTaking the decision £decision_icon_small §Y$RUS_TOZ_Medals$§! will now grant the '§Y$RUS_TOZ_Medal_name$§!' medal to $RIGHT|G0$ more random divisions§!"
  obukhov_upgrade_1_exclusive_tt: "§gMutually exclusive with §Y$obukhov_upgrade_2$§! and §Y$obukhov_upgrade_3$§!§!"
  obukhov_upgrade_2_exclusive_tt: "§gMutually exclusive with §Y$obukhov_upgrade_1$§! and §Y$obukhov_upgrade_3$§!§!"
  obukhov_upgrade_3_exclusive_tt: "§gMutually exclusive with §Y$obukhov_upgrade_1$§! and §Y$obukhov_upgrade_2$§!§!"
@@ -1626,11 +1628,28 @@
  RUS_manufacturer_trait_research_cap_vpoz_tt: "§gWill increase £research_speed_icon §HResearch Speed§! Soft Cap by §G+1.00%§! for every §W1%§! £research_speed_icon §HResearch Speed§! that §H$vpoz$§! currently has\n\nAs §H$vpoz$§! currently has §W[?max_research_speed_to_add]%§! £research_speed_icon §HResearch Speed§! this will increase £research_speed_icon §HResearch Speed§! Soft Cap by §G+[?max_research_speed_to_add|.2]%§!"
  RUS_manufacturer_trait_research_cap_bmz_tt: "§gWill increase £research_speed_icon §HResearch Speed§! Soft Cap by §G+25.00%§!"
  RUS_manufacturer_trait_research_gain_bmz_tt: "§gWill increase Weekly £research_speed_icon §HResearch Speed§! Gain by §G+0.04%§! for every §W1%§! £research_speed_icon §HResearch Speed§! that §H$bmz$§! currently has\n\nAs §H$bmz$§! currently has §W[?current_research_bonus]%§! £research_speed_icon §HResearch Speed§! this will increase Weekly £research_speed_icon §HResearch Speed§! Gain by §G+[?weekly_research_speed_to_add|.2]%§!"
+### MIO Variable Tooltips ###
+ RUS_manufacturer_trait_research_gain_tt: "§gWill increase £research_speed_icon Weekly §HResearch Bonus§! Gain by§! $RIGHT|+=2%$"
+ RUS_manufacturer_trait_research_cap_tt: "§gWill increase £research_speed_icon §HResearch Bonus§! Soft Cap by§! $RIGHT|+=2%$"
  RUS_manufacturer_trait_research_gain_tsagi_tt: "§gWill increase £research_speed_icon Weekly §HResearch Speed§! Gain by §G+1.00%§!"
  RUS_manufacturer_trait_research_gain_as_tt: "§gWill increase £research_speed_icon Weekly §HResearch Speed§! Gain by §G+3.00%§!"
  RUS_manufacturer_trait_research_cap_as_tt: "§gWill increase £research_speed_icon §HResearch Speed§! Soft Cap by §G+50.00%§!"
  RUS_manufacturer_trait_research_min_funds_as_tt: "§gWill decrease minimum daily §HFunds§! requirement by §G-66.00%§!§!"
  RUS_manufacturer_trait_research_cap_chtz_tt: "§gWill increase £research_speed_icon §HResearch Speed§! Soft Cap by §G+25.00%§!"
+
+ RUS_Army_XP_icon: "£army_experience §HArmy Experience§!"
+ RUS_Air_XP_icon: "£air_experience §HAir Experience§!"
+ RUS_Navy_XP_icon: "£navy_experience §HNavy Experience§!"
+ RUS_manufacturer_trait_xp_gained_tt: "§gWill increase $XP$ gained by [?0.5|+=2%]§!"
+
+ RUS_MIO_Research_Gain_positive_tt: "§GCurrently gaining§!"
+ RUS_MIO_Research_Gain_negative_tt: "§RCurrently not gaining§!"
+
+
+
+
+
+
 
  dalzavod_mio_upgrade_tt1: "§gUnlocking certain traits will begin building up Dalzavod idea towards:§!"
  dalzavod_mio_upgrade_tt2: "§gThe next trait will:§!\n"
@@ -2132,3 +2151,14 @@
 
  RUS_manufacturer_research_reset_tt: "§gWill reset £research_speed_icon §HResearch Bonus§! to §R0%§!§!"
  RUS_manufacturer_research_no_reset_tt: "§g£research_speed_icon §HResearch Bonus§! will no longer be reset to §R0%§! when assigned technology is completed§!"
+ RUS_manufacturer_trait_xp_min_funds_tt: "§gWill decrease minimum daily §HFunds§! requirement by§! [?-0.66|-=2%]"
+
+### MIO Bound Tooltips ###
+
+ RUS_mutually_exclusive_with: "§gMutually exclusive with $TRAIT_1|H$ and $TRAIT_2|H$§!"
+ RUS_available_mio_tt: "$available_mio_tt$\n$MIO$ ($TYPE|H$)"
+ RUS_has_completed_trait: "£GFX_trigger_yes §gHas completed trait $TRAIT|Y$§!"
+ RUS_has_completed_trait_NOT: "£GFX_trigger_no §gHas completed trait $TRAIT|Y$§!"
+ RUS_has_completed_trait_2: "£GFX_trigger_yes §gHas completed trait $TRAIT_1|Y$ or trait $TRAIT_2|Y$§!"
+ RUS_has_completed_trait_2_NOT: "£GFX_trigger_no §gHas completed trait $TRAIT_1|Y$ or trait $TRAIT_2|Y$§!"
+

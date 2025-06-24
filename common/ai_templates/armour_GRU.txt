@@ -58,29 +58,6 @@ armour_generic = {
 		}
 	}
 
-	motorised_armour_template = {
-		reinforce_prio = 2
-
-		upgrade_prio = {
-			base = 1
-		}
-
-		target_template = {
-			regiments = {
-				heavy_armor = 6
-				motorized = 6
-			}
-
-			support = {
-				mot_recon = 1
-				heavy_flame_tank = 1
-				signal_company = 1
-				logistics_company = 1
-				maintenance_company = 1
-			}
-		}
-	}
-
 	mechanised_armour_template = {
 		reinforce_prio = 2
 

@@ -2796,3 +2796,12 @@ RUS_unlock_as_trait = {
 		}
 	}
 }
+
+RUS_calculate_daily_funds_gain_and_requirement = {
+	# Daily Funds Gained
+	set_temp_variable = { daily_funds_gained = Funds_Difference }
+	divide_temp_variable = { daily_funds_gained = 7 }
+	# Daily Funds Required for Bonus
+	set_temp_variable = { daily_funds_requirement = weekly_funds_requirement }
+	divide_temp_variable = { daily_funds_requirement = 7 }
+}

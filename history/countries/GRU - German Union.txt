@@ -276,20 +276,37 @@ create_navy_leader = {
 
 recruit_character = GRU_Ludwig_Bieberbach
 recruit_character = GRU_Max_Planck
+recruit_character = GRU_Gustav_Ludwig_Hertz
+recruit_character = GRU_Otto_Hahn
+recruit_character = GRU_Werner_Heisenberg
 
 ## LAND
 
 recruit_character = GRU_Fritz_Haber
 recruit_character = GRU_Emil_Becker
+recruit_character = GRU_Erich_Muller
+recruit_character = GRU_Ernst_Kniepkamp
+recruit_character = GRU_Erwin_Aders
+recruit_character = GRU_Hermann_Burkhardt
+recruit_character = GRU_Adolf_Butenandt
 
 ## NAVY
 
 recruit_character = GRU_Admiral_Peter_Strasser
 recruit_character = GRU_Alfred_Ritscher
+recruit_character = GRU_Hellmuth_Walter
+recruit_character = GRU_Wilhelm_Hadeler
 
 ## AIR
 
 recruit_character = GRU_Von_Braun
+recruit_character = GRU_Hans_von_Ohain
+recruit_character = GRU_Henrich_Focke
+recruit_character = GRU_Konrad_Zuse
+recruit_character = GRU_Kurt_Tank
+recruit_character = GRU_Manfred_von_Ardenne
+recruit_character = GRU_Max_Otto_Kramer
+recruit_character = GRU_Walter_Dornberger
 
 
 

@@ -79,6 +79,42 @@ armour_super_heavy_generic = {
 		}
 	}
 
+	armour_super_heavy_template_mid_2 = {
+		upgrade_prio = {
+			base = 1
+			modifier = {
+				factor = 0
+				NOT = { is_special_project_completed = sp:sp_land_land_cruiser }
+			}
+			modifier = {
+				factor = 2
+				num_of_military_factories > 249
+			}
+		}
+
+		can_upgrade_in_field = {
+			surrender_progress < 0.15
+		}
+
+		target_template = {
+			regiments = {
+				heavy_armor = 1
+				heavy_tank_destroyer_brigade = 1
+				heavy_sp_anti_air_brigade = 4
+				mechanized = 3
+				motorized = 3
+			}
+
+			support = {
+				land_cruiser = 1
+				assault_engineer = 1
+				heavy_flame_tank = 1
+				helicopter_field_hospital = 1
+				helicopter_transport = 1
+			}
+		}
+	}
+
 	armour_super_heavy_template_late = {
 		upgrade_prio = {
 			base = 1
