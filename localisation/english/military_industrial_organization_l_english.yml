@@ -1645,8 +1645,13 @@
  RUS_MIO_Research_Gain_positive_tt: "§GCurrently gaining§!"
  RUS_MIO_Research_Gain_negative_tt: "§RCurrently not gaining§!"
 
+ RUS_obukhov_if_trait_not_completed_before: "§gIf this trait is not completed before $TRAIT_1|H$, $TRAIT_2|H$ or $TRAIT_3|H$ then the effects of this trait will continue to §Rhalve§!§!"
 
+ #LEFT is the value before the variable effect executes!
+ RUS_tstz_trait_reset_num_times: "§CThis trait can be reset $LEFT|Y0$ more time(s).§!"
+ RUS_tstz_upgrade_double_effect: "§gWill double the effect received from the resettable trait $TRAIT|H$.§!"
 
+ RUS_naz_laz_funds_share_tt: "§HFunds§! §gthat are gained through §HResearch§! by $MIO_1|H$ will also be shared with $MIO_2|H$.§!"
 
 
 

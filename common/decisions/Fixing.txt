@@ -1175,11 +1175,8 @@ CAN_returning_home_decisions = {
 			GRU = { has_war_with = INT }
 		}
 		visible = {
-			FROM = {
-				OR = {
-					tag = GRU
-				}
-			}
+			is_faction_leader = yes
+			is_subject = no
 		}
 
 		target_trigger = {

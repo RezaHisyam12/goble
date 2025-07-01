@@ -193,8 +193,6 @@ RUS_Update_MIO_Research_Speeds = {
 		set_variable = { Current_Week_Funds = funds }
 		set_variable = { Funds_Difference = Current_Week_Funds }
 		subtract_from_variable = { Funds_Difference = Previous_Week_Funds }
-		set_variable = { Funds_Difference_loc = Funds_Difference }
-		divide_variable = { Funds_Difference_loc = 7 }
 	}
 	if = { #Weekly trigger for giving incremental research bonus to MIO ChTZ
 		limit = {
@@ -204,15 +202,12 @@ RUS_Update_MIO_Research_Speeds = {
 		if = {
 			limit = { mio:RUS_chtz_organisation = { check_variable = { research_bonus < max_research_speed } } }
 			mio:RUS_chtz_organisation = { add_mio_research_bonus = weekly_research_speed_gain }
-			mio:RUS_chtz_organisation = { add_to_variable = { total_campaign_research_speed = weekly_research_speed_gain_loc } }
 		}
 		else_if = {
 			limit = {
-				OR = {
-					mio:RUS_chtz_organisation = {
+				mio:RUS_chtz_organisation = {
+					OR = {
 						check_variable = { research_bonus > max_research_speed }
-					}
-					mio:RUS_chtz_organisation = {
 						check_variable = { research_bonus = max_research_speed }
 					}
 				}
@@ -221,14 +216,8 @@ RUS_Update_MIO_Research_Speeds = {
 				limit = { NOT = { has_country_flag = RUS_CHTZ_RS_Notification } }
 				set_country_flag = RUS_CHTZ_RS_Notification
 				mio:RUS_chtz_organisation = {
-					set_temp_variable = {
-						var = RUS_MIO_research_speed_temp
-						value = research_bonus
-					}
-					multiply_temp_variable = {
-						var = RUS_MIO_research_speed_temp
-						value = 100
-					}
+					set_temp_variable = { RUS_MIO_research_speed_temp = research_bonus }
+					multiply_temp_variable = { RUS_MIO_research_speed_temp = 100 }
 					ROOT = {
 						set_variable = { RUS_MIO_alert_name = PREV }
 						set_variable = { RUS_MIO_research_speed = RUS_MIO_research_speed_temp }
@@ -246,8 +235,6 @@ RUS_Update_MIO_Research_Speeds = {
 		set_variable = { Current_Week_Funds = funds }
 		set_variable = { Funds_Difference = Current_Week_Funds }
 		subtract_from_variable = { Funds_Difference = Previous_Week_Funds }
-		set_variable = { Funds_Difference_loc = Funds_Difference }
-		divide_variable = { Funds_Difference_loc = 7 }
 	}
 	if = { #Weekly trigger for giving incremental research bonus to MIO VPOZ
 		limit = {
@@ -257,15 +244,12 @@ RUS_Update_MIO_Research_Speeds = {
 		if = {
 			limit = { mio:RUS_vpoz_organisation = { check_variable = { research_bonus < max_research_speed } } }
 			mio:RUS_vpoz_organisation = { add_mio_research_bonus = weekly_research_speed_gain }
-			mio:RUS_vpoz_organisation = { add_to_variable = { total_campaign_research_speed = weekly_research_speed_gain_loc } }
 		}
 		else_if = {
 			limit = {
-				OR = {
-					mio:RUS_vpoz_organisation = {
+				mio:RUS_vpoz_organisation = {
+					OR = {
 						check_variable = { research_bonus > max_research_speed }
-					}
-					mio:RUS_vpoz_organisation = {
 						check_variable = { research_bonus = max_research_speed }
 					}
 				}
@@ -274,14 +258,8 @@ RUS_Update_MIO_Research_Speeds = {
 				limit = { NOT = { has_country_flag = RUS_VPOZ_RS_Notification } }
 				set_country_flag = RUS_VPOZ_RS_Notification
 				mio:RUS_vpoz_organisation = {
-					set_temp_variable = {
-						var = RUS_MIO_research_speed_temp
-						value = research_bonus
-					}
-					multiply_temp_variable = {
-						var = RUS_MIO_research_speed_temp
-						value = 100
-					}
+					set_temp_variable = { RUS_MIO_research_speed_temp = research_bonus }
+					multiply_temp_variable = { RUS_MIO_research_speed_temp = 100 }
 					ROOT = {
 						set_variable = { RUS_MIO_alert_name = PREV }
 						set_variable = { RUS_MIO_research_speed = RUS_MIO_research_speed_temp }
@@ -299,8 +277,6 @@ RUS_Update_MIO_Research_Speeds = {
 		set_variable = { Current_Week_Funds = funds }
 		set_variable = { Funds_Difference = Current_Week_Funds }
 		subtract_from_variable = { Funds_Difference = Previous_Week_Funds }
-		set_variable = { Funds_Difference_loc = Funds_Difference }
-		divide_variable = { Funds_Difference_loc = 7 }
 	}
 	if = { #Weekly trigger for giving incremental research bonus to MIO BMZ
 		limit = {
@@ -310,15 +286,12 @@ RUS_Update_MIO_Research_Speeds = {
 		if = {
 			limit = { mio:RUS_bmz_organisation = { check_variable = { research_bonus < max_research_speed } } }
 			mio:RUS_bmz_organisation = { add_mio_research_bonus = weekly_research_speed_gain }
-			mio:RUS_bmz_organisation = { add_to_variable = { total_campaign_research_speed = weekly_research_speed_gain_loc } }
 		}
 		else_if = {
 			limit = {
-				OR = {
-					mio:RUS_bmz_organisation = {
+				mio:RUS_bmz_organisation = {
+					OR = {
 						check_variable = { research_bonus > max_research_speed }
-					}
-					mio:RUS_bmz_organisation = {
 						check_variable = { research_bonus = max_research_speed }
 					}
 				}
@@ -327,14 +300,8 @@ RUS_Update_MIO_Research_Speeds = {
 				limit = { NOT = { has_country_flag = RUS_BMZ_RS_Notification } }
 				set_country_flag = RUS_BMZ_RS_Notification
 				mio:RUS_bmz_organisation = {
-					set_temp_variable = {
-						var = RUS_MIO_research_speed_temp
-						value = research_bonus
-					}
-					multiply_temp_variable = {
-						var = RUS_MIO_research_speed_temp
-						value = 100
-					}
+					set_temp_variable = { RUS_MIO_research_speed_temp = research_bonus }
+					multiply_temp_variable = { RUS_MIO_research_speed_temp = 100 }
 					ROOT = {
 						set_variable = { RUS_MIO_alert_name = PREV }
 						set_variable = { RUS_MIO_research_speed = RUS_MIO_research_speed_temp }
@@ -352,8 +319,6 @@ RUS_Update_MIO_Research_Speeds = {
 		set_variable = { Current_Week_Funds = funds }
 		set_variable = { Funds_Difference = Current_Week_Funds }
 		subtract_from_variable = { Funds_Difference = Previous_Week_Funds }
-		set_variable = { Funds_Difference_loc = Funds_Difference }
-		divide_variable = { Funds_Difference_loc = 7 }
 	}
 	if = { #Weekly trigger for giving incremental research bonus to MIO TSAGI
 		limit = {
@@ -363,15 +328,12 @@ RUS_Update_MIO_Research_Speeds = {
 		if = {
 			limit = { mio:RUS_tsagi_organisation = { check_variable = { research_bonus < max_research_speed } } }
 			mio:RUS_tsagi_organisation = { add_mio_research_bonus = weekly_research_speed_gain }
-			mio:RUS_tsagi_organisation = { add_to_variable = { total_campaign_research_speed = weekly_research_speed_gain_loc } }
 		}
 		else_if = {
 			limit = {
-				OR = {
-					mio:RUS_tsagi_organisation = {
+				mio:RUS_tsagi_organisation = {
+					OR = {
 						check_variable = { research_bonus > max_research_speed }
-					}
-					mio:RUS_tsagi_organisation = {
 						check_variable = { research_bonus = max_research_speed }
 					}
 				}
@@ -380,14 +342,8 @@ RUS_Update_MIO_Research_Speeds = {
 				limit = { NOT = { has_country_flag = RUS_TSAGI_RS_Notification } }
 				set_country_flag = RUS_TSAGI_RS_Notification
 				mio:RUS_tsagi_organisation = {
-					set_temp_variable = {
-						var = RUS_MIO_research_speed_temp
-						value = research_bonus
-					}
-					multiply_temp_variable = {
-						var = RUS_MIO_research_speed_temp
-						value = 100
-					}
+					set_temp_variable = { RUS_MIO_research_speed_temp = research_bonus }
+					multiply_temp_variable = { RUS_MIO_research_speed_temp = 100 }
 					ROOT = {
 						set_variable = { RUS_MIO_alert_name = PREV }
 						set_variable = { RUS_MIO_research_speed = RUS_MIO_research_speed_temp }
@@ -405,8 +361,6 @@ RUS_Update_MIO_Research_Speeds = {
 		set_variable = { Current_Week_Funds = funds }
 		set_variable = { Funds_Difference = Current_Week_Funds }
 		subtract_from_variable = { Funds_Difference = Previous_Week_Funds }
-		set_variable = { Funds_Difference_loc = Funds_Difference }
-		divide_variable = { Funds_Difference_loc = 7 }
 	}
 	if = { #Weekly trigger for giving incremental research bonus to MIO AS
 		limit = {
@@ -416,15 +370,12 @@ RUS_Update_MIO_Research_Speeds = {
 		if = {
 			limit = { mio:RUS_as_organisation = { check_variable = { research_bonus < max_research_speed } } }
 			mio:RUS_as_organisation = { add_mio_research_bonus = weekly_research_speed_gain }
-			mio:RUS_as_organisation = { add_to_variable = { total_campaign_research_speed = weekly_research_speed_gain_loc } }
 		}
 		else_if = {
 			limit = {
-				OR = {
-					mio:RUS_as_organisation = {
+				mio:RUS_as_organisation = {
+					OR = {
 						check_variable = { research_bonus > max_research_speed }
-					}
-					mio:RUS_as_organisation = {
 						check_variable = { research_bonus = max_research_speed }
 					}
 				}
@@ -433,14 +384,8 @@ RUS_Update_MIO_Research_Speeds = {
 				limit = { NOT = { has_country_flag = RUS_AS_RS_Notification } }
 				set_country_flag = RUS_AS_RS_Notification
 				mio:RUS_as_organisation = {
-					set_temp_variable = {
-						var = RUS_MIO_research_speed_temp
-						value = research_bonus
-					}
-					multiply_temp_variable = {
-						var = RUS_MIO_research_speed_temp
-						value = 100
-					}
+					set_temp_variable = { RUS_MIO_research_speed_temp = research_bonus }
+					multiply_temp_variable = { RUS_MIO_research_speed_temp = 100 }
 					ROOT = {
 						set_variable = { RUS_MIO_alert_name = PREV }
 						set_variable = { RUS_MIO_research_speed = RUS_MIO_research_speed_temp }
@@ -461,8 +406,6 @@ RUS_Update_MIO_XP_Gains = {
 		set_variable = { Current_Week_Funds = funds }
 		set_variable = { Funds_Difference = Current_Week_Funds }
 		subtract_from_variable = { Funds_Difference = Previous_Week_Funds }
-		set_variable = { Funds_Difference_loc = Funds_Difference }
-		divide_variable = { Funds_Difference_loc = 7 }
 	}
 	if = { #Remove if below threshold
 		limit = {
@@ -522,8 +465,6 @@ RUS_Update_MIO_XP_Gains = {
 		set_variable = { Current_Week_Funds = funds }
 		set_variable = { Funds_Difference = Current_Week_Funds }
 		subtract_from_variable = { Funds_Difference = Previous_Week_Funds }
-		set_variable = { Funds_Difference_loc = Funds_Difference }
-		divide_variable = { Funds_Difference_loc = 7 }
 	}
 	if = { #Remove if below threshold
 		limit = {
@@ -581,8 +522,6 @@ RUS_Update_MIO_XP_Gains = {
 		set_variable = { Current_Week_Funds = funds }
 		set_variable = { Funds_Difference = Current_Week_Funds }
 		subtract_from_variable = { Funds_Difference = Previous_Week_Funds }
-		set_variable = { Funds_Difference_loc = Funds_Difference }
-		divide_variable = { Funds_Difference_loc = 7 }
 	}
 	if = { #Remove if below threshold
 		limit = {
@@ -640,10 +579,7 @@ RUS_Update_Sokol = {
 	#Construction Sokol
 	if = {
 		limit = { NOT = { has_variable = RUS_sokol_limit } }
-		set_variable = {
-			var = RUS_sokol_limit
-			value = 0.05
-		}
+		set_variable = { RUS_sokol_limit = 0.05 }
 	}
 	if = {
 		limit = {
@@ -669,10 +605,7 @@ RUS_Update_Sokol = {
 					is_researching_technology = excavation5
 				}
 			}
-			add_to_variable = {
-				var = design_team_assign_cost_dif
-				value = -0.01
-			}
+			add_to_variable = { design_team_assign_cost_dif = -0.01 }
 		}
 		if = {
 			limit = { #Increase design team assign cost if researching air tech
@@ -718,23 +651,13 @@ RUS_Update_Sokol = {
 					is_researching_technology = aerial_hangars
 				}
 			}
-			add_to_variable = {
-				var = design_team_assign_cost_dif
-				value = 0.01
-			}
+			add_to_variable = { design_team_assign_cost_dif = 0.01 }
 		}
 		if = {
-			limit = {
-				check_variable = { design_team_assign_cost_dif = 0.01 }
-			}
+			limit = { check_variable = { design_team_assign_cost_dif = 0.01 } }
 			if = {
-				limit = {
-					check_variable = { RUS_sokol_limit < 0.20 }
-				}
-				add_to_variable = {
-					var = RUS_sokol_limit
-					value = design_team_assign_cost_dif
-				}
+				limit = { check_variable = { RUS_sokol_limit < 0.20 } }
+				add_to_variable = { RUS_sokol_limit = design_team_assign_cost_dif }
 				set_temp_variable = { RUS_sokol_limit_temp = RUS_sokol_limit }
 				mio:RUS_sokol_construction_organisation = {
 					set_mio_design_team_assign_cost = RUS_sokol_limit_temp
@@ -743,17 +666,10 @@ RUS_Update_Sokol = {
 			}
 		}
 		else_if = {
-			limit = {
-				check_variable = { design_team_assign_cost_dif = -0.01 }
-			}
+			limit = { check_variable = { design_team_assign_cost_dif = -0.01 } }
 			if = {
-				limit = {
-					check_variable = { RUS_sokol_limit > 0.00 }
-				}
-				add_to_variable = {
-					var = RUS_sokol_limit
-					value = design_team_assign_cost_dif
-				}
+				limit = { check_variable = { RUS_sokol_limit > 0.00 } }
+				add_to_variable = { RUS_sokol_limit = design_team_assign_cost_dif }
 				set_temp_variable = { RUS_sokol_limit_temp = RUS_sokol_limit }
 				mio:RUS_sokol_construction_organisation = {
 					set_mio_design_team_assign_cost = RUS_sokol_limit_temp
@@ -795,10 +711,7 @@ RUS_Update_Sokol = {
 					is_researching_technology = dispersed_industry5
 				}
 			}
-			add_to_variable = {
-				var = design_team_assign_cost_dif
-				value = -0.01
-			}
+			add_to_variable = { design_team_assign_cost_dif = -0.01 }
 		}
 		if = {
 			limit = { #Increase design team assign cost if researching air tech
@@ -844,23 +757,13 @@ RUS_Update_Sokol = {
 					is_researching_technology = aerial_hangars
 				}
 			}
-			add_to_variable = {
-				var = design_team_assign_cost_dif
-				value = 0.01
-			}
+			add_to_variable = { design_team_assign_cost_dif = 0.01 }
 		}
 		if = {
-			limit = {
-				check_variable = { design_team_assign_cost_dif = 0.01 }
-			}
+			limit = { check_variable = { design_team_assign_cost_dif = 0.01 } }
 			if = {
-				limit = {
-					check_variable = { RUS_sokol_limit < 0.20 }
-				}
-				add_to_variable = {
-					var = RUS_sokol_limit
-					value = design_team_assign_cost_dif
-				}
+				limit = { check_variable = { RUS_sokol_limit < 0.20 } }
+				add_to_variable = { RUS_sokol_limit = design_team_assign_cost_dif }
 				set_temp_variable = { RUS_sokol_limit_temp = RUS_sokol_limit }
 				mio:RUS_sokol_production_organisation = {
 					set_mio_design_team_assign_cost = RUS_sokol_limit_temp
@@ -869,17 +772,10 @@ RUS_Update_Sokol = {
 			}
 		}
 		else_if = {
-			limit = {
-				check_variable = { design_team_assign_cost_dif = -0.01 }
-			}
+			limit = { check_variable = { design_team_assign_cost_dif = -0.01 } }
 			if = {
-				limit = {
-					check_variable = { RUS_sokol_limit > 0.00 }
-				}
-				add_to_variable = {
-					var = RUS_sokol_limit
-					value = design_team_assign_cost_dif
-				}
+				limit = { check_variable = { RUS_sokol_limit > 0.00 } }
+				add_to_variable = { RUS_sokol_limit = design_team_assign_cost_dif }
 				set_temp_variable = { RUS_sokol_limit_temp = RUS_sokol_limit }
 				mio:RUS_sokol_production_organisation = {
 					set_mio_design_team_assign_cost = RUS_sokol_limit_temp
@@ -925,7 +821,10 @@ RUS_obukhov_eff_cap_tt = {
 				}
 			}
 		}
-		custom_effect_tooltip = RUS_obukhov_eff_cap_tt
+		custom_effect_tooltip = {
+			localization_key = RUS_obukhov_if_trait_not_completed_before
+			TRAIT_1 = obukhov_upgrade_3_2 TRAIT_2 = obukhov_upgrade_3_3 TRAIT_3 = obukhov_upgrade_3_4
+		}
 	}
 }
 
@@ -964,7 +863,10 @@ RUS_obukhov_eff_gro_tt = {
 				}
 			}
 		}
-		custom_effect_tooltip = RUS_obukhov_eff_gro_tt
+		custom_effect_tooltip = {
+			localization_key = RUS_obukhov_if_trait_not_completed_before
+			TRAIT_1 = obukhov_upgrade_3_1 TRAIT_2 = obukhov_upgrade_3_3 TRAIT_3 = obukhov_upgrade_3_4
+		}
 	}
 }
 
@@ -1003,7 +905,10 @@ RUS_obukhov_resource_need_tt = {
 				}
 			}
 		}
-		custom_effect_tooltip = RUS_obukhov_resource_need_tt
+		custom_effect_tooltip = {
+			localization_key = RUS_obukhov_if_trait_not_completed_before
+			TRAIT_1 = obukhov_upgrade_3_1 TRAIT_2 = obukhov_upgrade_3_2 TRAIT_3 = obukhov_upgrade_3_4
+		}
 	}
 }
 
@@ -1042,7 +947,10 @@ RUS_obukhov_conversion_tt = {
 				}
 			}
 		}
-		custom_effect_tooltip = RUS_obukhov_conversion_tt
+		custom_effect_tooltip = {
+			localization_key = RUS_obukhov_if_trait_not_completed_before
+			TRAIT_1 = obukhov_upgrade_3_1 TRAIT_2 = obukhov_upgrade_3_2 TRAIT_3 = obukhov_upgrade_3_3
+		}
 	}
 }
 
@@ -1307,21 +1215,7 @@ RUS_execute_AV = {
 					clear_variable = RUS_AV_Recent_Funds_Bonus_Added
 				}
 			}
-			mio:RUS_amo_organisation_non_nsb = {
-				if = {
-					limit = { has_variable = RUS_AV_Recent_Funds_Bonus_Added }
-					PREV = { mio:RUS_av_organisation = { set_variable = { av_amo_research_speed = PREV.PREV.RUS_AV_Recent_Funds_Bonus_Added } } }
-					clear_variable = RUS_AV_Recent_Funds_Bonus_Added
-				}
-			}
 			mio:RUS_naz_organisation = {
-				if = {
-					limit = { has_variable = RUS_AV_Recent_Funds_Bonus_Added }
-					PREV = { mio:RUS_av_organisation = { set_variable = { av_naz_research_speed = PREV.PREV.RUS_AV_Recent_Funds_Bonus_Added } } }
-					clear_variable = RUS_AV_Recent_Funds_Bonus_Added
-				}
-			}
-			mio:RUS_naz_organisation_lar = {
 				if = {
 					limit = { has_variable = RUS_AV_Recent_Funds_Bonus_Added }
 					PREV = { mio:RUS_av_organisation = { set_variable = { av_naz_research_speed = PREV.PREV.RUS_AV_Recent_Funds_Bonus_Added } } }
@@ -1609,21 +1503,7 @@ RUS_Update_Decaying_Funds_Bonus = {
 			clear_variable = RUS_AV_Recent_Funds_Reduced
 		}
 	}
-	mio:RUS_amo_organisation_non_nsb = {
-		if = {
-			limit = { has_variable = RUS_AV_Recent_Funds_Reduced }
-			ROOT = { mio:RUS_av_organisation = { subtract_from_variable = { av_amo_research_speed = PREV.PREV.RUS_AV_Recent_Funds_Reduced } } }
-			clear_variable = RUS_AV_Recent_Funds_Reduced
-		}
-	}
 	mio:RUS_naz_organisation = {
-		if = {
-			limit = { has_variable = RUS_AV_Recent_Funds_Reduced }
-			ROOT = { mio:RUS_av_organisation = { subtract_from_variable = { av_naz_research_speed = PREV.PREV.RUS_AV_Recent_Funds_Reduced } } }
-			clear_variable = RUS_AV_Recent_Funds_Reduced
-		}
-	}
-	mio:RUS_naz_organisation_lar = {
 		if = {
 			limit = { has_variable = RUS_AV_Recent_Funds_Reduced }
 			ROOT = { mio:RUS_av_organisation = { subtract_from_variable = { av_naz_research_speed = PREV.PREV.RUS_AV_Recent_Funds_Reduced } } }
@@ -2087,12 +1967,7 @@ RUS_TOZ_Hand_Out_Medals = {
 
 RUS_Gamayun_Factories = {
 	ROOT = {
-		set_variable_to_random = {
-			var = RUS_damage
-			min = 0.8
-			max = 1.0
-			integer = no
-		}
+		set_variable_to_random = { var = RUS_damage min = 0.8 max = 1.0 integer = no }
 	}
 	if = {
 		limit = {
@@ -2103,10 +1978,7 @@ RUS_Gamayun_Factories = {
 			}
 		}
 		ROOT = {
-			subtract_from_variable = {
-				var = RUS_damage
-				value = 0.2
-			}
+			subtract_from_variable = { RUS_damage = 0.2 }
 		}
 	}
 	if = {
@@ -2118,10 +1990,7 @@ RUS_Gamayun_Factories = {
 			}
 		}
 		ROOT = {
-			subtract_from_variable = {
-				var = RUS_damage
-				value = 0.2
-			}
+			subtract_from_variable = { RUS_damage = 0.2 }
 		}
 	}
 	random_list = {
@@ -2167,82 +2036,70 @@ RUS_Gamayun_Factories = {
 		set_variable = { average_campaign_factory_progress = total_campaign_factory_progress }
 		divide_variable = { average_campaign_factory_progress = total_campaign_factories }
 	}
-	meta_effect = {
-		text = {
-			ROOT = {
-				if = {
-					limit = { check_variable = { RUS_Gamayun_building = 1 } }
-					random_owned_controlled_state = {
-						limit = {
-							state_population > 1
-							NOT = { has_state_flag = RUS_Gamayun_Recent_Building }
-						}
-						add_building_construction = {
-							type = industrial_complex
-							level = 1
-							instant_build = yes
-						}
-						damage_building = {
-							type = industrial_complex
-							damage = [RUS_DAMAGE]
-						}
-						set_state_flag = {
-							flag = RUS_Gamayun_Recent_Building
-							days = 160
-							value = 1
-						}
-					}
-				}
-				else_if = {
-					limit = { check_variable = { RUS_Gamayun_building = 2 } }
-					random_owned_controlled_state = {
-						limit = {
-							state_population > 1
-							NOT = { has_state_flag = RUS_Gamayun_Recent_Building }
-						}
-						add_building_construction = {
-							type = arms_factory
-							level = 1
-							instant_build = yes
-						}
-						damage_building = {
-							type = arms_factory
-							damage = [RUS_DAMAGE]
-						}
-						set_state_flag = {
-							flag = RUS_Gamayun_Recent_Building
-							days = 160
-							value = 1
-						}
-					}
-				}
-				else_if = {
-					limit = { check_variable = { RUS_Gamayun_building = 3 } }
-					random_owned_controlled_state = {
-						limit = {
-							state_population > 1
-							is_coastal = yes
-							NOT = { has_state_flag = RUS_Gamayun_Recent_Building }
-						}
-						add_building_construction = {
-							type = dockyard
-							level = 1
-							instant_build = yes
-						}
-						damage_building = {
-							type = dockyard
-							damage = [RUS_DAMAGE]
-						}
-						set_state_flag = {
-							flag = RUS_Gamayun_Recent_Building
-							days = 160
-							value = 1
-						}
-					}
-				}
+
+	if = {
+		limit = { check_variable = { RUS_Gamayun_building = 1 } }
+		random_owned_controlled_state = {
+			limit = {
+				state_population > 1
+				NOT = { has_state_flag = RUS_Gamayun_Recent_Building }
+				impassable = no
+				free_building_slots = { building = industrial_complex size > 0 include_locked = no }
 			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			meta_effect = {
+				text = { damage_building = { type = industrial_complex damage = [DAMAGE] } }
+				RUS_DAMAGE = "[?ROOT.RUS_damage|.2]"
+			}
+			set_state_flag = { flag = RUS_Gamayun_Recent_Building days = 160 value = 1 }
 		}
-		RUS_DAMAGE = "[?RUS_damage|.2]"
+	}
+	else_if = {
+		limit = { check_variable = { RUS_Gamayun_building = 2 } }
+		random_owned_controlled_state = {
+			limit = {
+				state_population > 1
+				NOT = { has_state_flag = RUS_Gamayun_Recent_Building }
+				impassable = no
+				free_building_slots = { building = arms_factory size > 0 include_locked = no }
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			meta_effect = {
+				text = { damage_building = { type = arms_factory damage = [DAMAGE] } }
+				RUS_DAMAGE = "[?ROOT.RUS_damage|.2]"
+			}
+			set_state_flag = { flag = RUS_Gamayun_Recent_Building days = 160 value = 1 }
+		}
+	}
+	else_if = {
+		limit = { check_variable = { RUS_Gamayun_building = 3 } }
+		random_owned_controlled_state = {
+			limit = {
+				state_population > 1
+				is_coastal = yes
+				NOT = { has_state_flag = RUS_Gamayun_Recent_Building }
+				impassable = no
+				free_building_slots = { building = dockyard size > 0 include_locked = no }
+			}
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+			meta_effect = {
+				text = { damage_building = { type = dockyard damage = [DAMAGE] } }
+				RUS_DAMAGE = "[?ROOT.RUS_damage|.2]"
+			}
+			set_state_flag = { flag = RUS_Gamayun_Recent_Building days = 160 value = 1 }
+		}
 	}
 }
 
@@ -2332,85 +2189,6 @@ RUS_add_laz_upgrade_4_1 = {
 }
 
 RUS_setup_custom_russian_MIOs = {
-	#Setup the R&D MIOs
-	every_military_industrial_organization = {
-		limit = {
-			OR = {
-				is_military_industrial_organization = RUS_chtz_organisation
-				is_military_industrial_organization = RUS_tsagi_organisation
-				is_military_industrial_organization = RUS_as_organisation
-				is_military_industrial_organization = RUS_vpoz_organisation
-				is_military_industrial_organization = RUS_bmz_organisation
-			}
-		}
-		set_variable = { max_research_speed = 0.5 }
-		set_variable = { weekly_research_speed_gain = 0.01 }
-		set_variable = { weekly_funds_requirement = 9 }
-		set_variable = { max_research_speed_loc = 50 }
-		set_variable = { weekly_research_speed_gain_loc = 1 }
-		set_variable = { weekly_funds_requirement_loc = weekly_funds_requirement }
-		divide_variable = { weekly_funds_requirement_loc = 7 }
-		set_variable = { total_campaign_research_speed = 0 }
-	}
-	#Setup the XP MIOs
-	every_military_industrial_organization = {
-		limit = {
-			OR = {
-				is_military_industrial_organization = RUS_obukhov_organisation
-				is_military_industrial_organization = RUS_gamayun_organisation
-				is_military_industrial_organization = RUS_bz_organisation
-			}
-		}
-		set_variable = { weekly_funds_requirement = 9 }
-		set_variable = { xp_gain_loc = 0.2 }
-		set_variable = { weekly_funds_requirement_loc = weekly_funds_requirement }
-		divide_variable = { weekly_funds_requirement_loc = 7 }
-		set_variable = { total_campaign_xp = 0 }
-	}
-	#Setup AMO
-	mio:RUS_amo_organisation = {
-		set_variable = { CIC_bonus = 500 }
-		set_variable = { total_campaign_CIC = 0 }
-	}
-	mio:RUS_amo_organisation_non_nsb = {
-		set_variable = { CIC_bonus = 500 }
-		set_variable = { total_campaign_CIC = 0 }
-	}
-	#Setup OSOAVIA
-	mio:RUS_osoavia_organisation = {
-		set_variable = { Civ_chance_loc = 33 }
-		set_variable = { Mil_chance_loc = 33 }
-		set_variable = { Dockyard_chance_loc = 33 }
-		set_variable = { Min_Progress_loc = 0 }
-		set_variable = { Max_Progress_loc = 20 }
-		set_variable = { Min_Days_loc = 160 }
-		set_variable = { Max_Days_loc = 200 }
-		set_variable = { total_campaign_factories = 0 }
-		set_variable = { total_campaign_civs = 0 }
-		set_variable = { total_campaign_mils = 0 }
-		set_variable = { total_campaign_dockyards = 0 }
-		set_variable = { total_campaign_factory_progress = 0 }
-		set_variable = { average_campaign_factory_progress = 0 }
-	}
-	#Setup AV
-	mio:RUS_av_organisation = {
-		set_variable = { Funds_Bonus = 1.00 }
-		set_variable = { Weekly_funds_decay = 0.03 }
-		set_variable = { Number_of_funds_decay_granted = 1 }
-		set_variable = { Funds_Bonus_loc = 100 }
-		set_variable = { Weekly_funds_decay_loc = 3 }
-		set_variable = { total_campaign_funds_bonus = 0 }
-	}
-	#Setup TsTZ
-	mio:RUS_tstz_organisation = {
-		set_variable = { tstz_eff_cap_counter = 9 }
-		set_variable = { tstz_eff_gro_counter = 9 }
-		set_variable = { tstz_resources_counter = 9 }
-		set_variable = { tstz_conversion_counter = 9 }
-	}
-}
-
-RUS_setup_custom_russian_MIOs = {
 	if = {
 		limit = { has_dlc_aat = yes }
 		#Setup the R&D MIOs
@@ -2427,11 +2205,6 @@ RUS_setup_custom_russian_MIOs = {
 			set_variable = { max_research_speed = 0.5 }
 			set_variable = { weekly_research_speed_gain = 0.01 }
 			set_variable = { weekly_funds_requirement = 9 }
-			set_variable = { max_research_speed_loc = 50 }
-			set_variable = { weekly_research_speed_gain_loc = 1 }
-			set_variable = { weekly_funds_requirement_loc = weekly_funds_requirement }
-			divide_variable = { weekly_funds_requirement_loc = 7 }
-			set_variable = { total_campaign_research_speed = 0 }
 		}
 		#Setup the XP MIOs
 		every_military_industrial_organization = {
@@ -2444,16 +2217,10 @@ RUS_setup_custom_russian_MIOs = {
 			}
 			set_variable = { weekly_funds_requirement = 9 }
 			set_variable = { xp_gain_loc = 0.2 }
-			set_variable = { weekly_funds_requirement_loc = weekly_funds_requirement }
-			divide_variable = { weekly_funds_requirement_loc = 7 }
 			set_variable = { total_campaign_xp = 0 }
 		}
 		#Setup AMO
 		mio:RUS_amo_organisation = {
-			set_variable = { CIC_bonus = 500 }
-			set_variable = { total_campaign_CIC = 0 }
-		}
-		mio:RUS_amo_organisation_non_nsb = {
 			set_variable = { CIC_bonus = 500 }
 			set_variable = { total_campaign_CIC = 0 }
 		}
@@ -2805,3 +2572,29 @@ RUS_calculate_daily_funds_gain_and_requirement = {
 	set_temp_variable = { daily_funds_requirement = weekly_funds_requirement }
 	divide_temp_variable = { daily_funds_requirement = 7 }
 }
+
+RUS_upgrade_uztm = {
+	if = { #Unlocking the trait based on number of allies
+		limit = { check_variable = { uztm_upgrade_eff_cap = 1 } }
+		#Ranges from 0 to 10, all integers
+		meta_effect = {
+			text = {
+				complete_mio_trait = uztm_upgrade_eff_cap_[UZTM_UPGRADE]
+			}
+			UZTM_UPGRADE = "[?uztm_allies_and_puppets_no|0]"
+		}
+	}
+	else_if = {
+		limit = { check_variable = { uztm_upgrade_eff_gro = 1 } }
+		#Ranges from 0 to 10, all integers
+		meta_effect = {
+			text = {
+				complete_mio_trait = uztm_upgrade_eff_gro_[UZTM_UPGRADE]
+			}
+			UZTM_UPGRADE = "[?uztm_allies_and_puppets_no|0]"
+		}
+	}
+	# For visibility checks
+	set_variable = { uztm_upgrade_level = uztm_allies_and_puppets_no }
+}
+
