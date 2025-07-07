@@ -2029,6 +2029,9 @@ GRU_Breitspur_hindenburg_lemberg_decision:0 "Construction of the £rail_texticon
 
 GRU_germania_plan_decisions:0 "The Germania Plan"
 GRU_pan_germanism_complete_germania_plan_decision:0 "Finish the Germania Plan"
+landmark_berlin_volkshalle: "Volkshalle"
+landmark_berlin_volkshalle_plural: "$landmark_berlin_volkshalle$"
+landmark_berlin_volkshalle_desc: "The Volkshalle stands as a symbol of our people's unbreakable will and their righteous desire to dominate the world. It will show all nations that through the power of conquest, anything can be achieved — and that our homeland is capable of turning even the most impossible dreams into reality..."
 
 
 GRU_pan_germanism_integrate_austria_decision:0 "Integrate Austria"

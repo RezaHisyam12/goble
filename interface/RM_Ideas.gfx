@@ -1044,6 +1044,10 @@ spriteTypes = {
 		name = "GFX_idea_GRU_germania"
 		texturefile = "gfx/interface/ideas/GRU/GRU_germania.png"
 	}
+	spriteType = {
+		name = "GFX_dynamic_GRU_germania"
+		texturefile = "gfx/interface/dynamic_modifiers/dyn_GRU_Germania.dds"
+	}
 	### ROEM
 	spriteType = {
 		name = "GFX_roem_dismantle"

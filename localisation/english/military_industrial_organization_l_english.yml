@@ -2161,3 +2161,4 @@
  RUS_has_completed_trait_2: "£GFX_trigger_yes §gHas completed trait $TRAIT_1|Y$ or trait $TRAIT_2|Y$§!"
  RUS_has_completed_trait_2_NOT: "£GFX_trigger_no §gHas completed trait $TRAIT_1|Y$ or trait $TRAIT_2|Y$§!"
 
+RUS_MIO_Start: "Setup MIOs"

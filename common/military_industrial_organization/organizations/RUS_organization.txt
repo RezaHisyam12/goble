@@ -1813,8 +1813,6 @@ RUS_tstz_organisation = {
 		mio_cat_tech_all_armor_and_modules
 	}
 
-	ai_will_do = { base = 100 }
-
 	initial_trait = {
 		name = RUS_tstz_mio_desc
 
@@ -4575,6 +4573,8 @@ RUS_chtz_organisation = {
 	research_categories = {
 		mio_cat_tech_all_armor_and_modules
 	}
+
+	ai_will_do = { base = 1000 }
 
 	on_industrial_manufacturer_assigned = {
 		FROM = { add_to_variable = { MIO_CHTZ_assigned_manufacturer_number = 1 } }
@@ -7374,7 +7374,7 @@ RUS_gamayun_organisation = {
 		}
 	}
 
-	ai_will_do = { base = 1 }
+	ai_will_do = { base = 10 }
 
 	initial_trait = {
 		name = RUS_gamayun_mio_desc
@@ -7435,7 +7435,7 @@ RUS_gamayun_organisation = {
 				FROM = { set_variable = { RUS_Gamayun_Mil_Chance = 33 } }
 				FROM = { set_variable = { RUS_Gamayun_Dockyard_Chance = 33 } }
 				FROM = {
-					country_event = { id = russia.1002 days = 4 }
+					country_event = { id = rotermorgenmisc.1208 days = 4 }
 				}
 			}
 			custom_effect_tooltip = RUS_gamayun_upgrade_3_tt
@@ -7835,7 +7835,7 @@ RUS_duks_organisation = {
 		}
 	}
 
-	ai_will_do = { base = 1 }
+	ai_will_do = { base = 100 }
 
 	initial_trait = {
 		name = RUS_duks_mio_desc
@@ -8135,6 +8135,8 @@ RUS_tsagi_organisation = {
 		jet_technology
 		plane_modules_tech
 	}
+
+	ai_will_do = { base = 1000 }
 
 	on_industrial_manufacturer_assigned = {
 		FROM = { add_to_variable = { MIO_TSAGI_assigned_manufacturer_number = 1 } }
@@ -9250,8 +9252,6 @@ RUS_skorost_organisation = {
 			}
 		}
 	}
-
-	ai_will_do = { base = 100 }
 
 	initial_trait = {
 		name = RUS_skorost_mio_desc
@@ -11032,6 +11032,8 @@ RUS_vpoz_organisation = {
 		cat_special_forces_generic
 	}
 
+	ai_will_do = { base = 1000 }
+
 	on_industrial_manufacturer_assigned = {
 		FROM = { add_to_variable = { MIO_VPOZ_assigned_manufacturer_number = 1 } }
 		RUS_calculate_daily_funds_gain_and_requirement = yes
@@ -11281,8 +11283,6 @@ RUS_imz_organisation = {
 		cat_special_forces_generic
 	}
 
-	ai_will_do = { base = 1000 }
-
 	initial_trait = {
 		name = RUS_imz_mio_desc
 
@@ -11526,8 +11526,6 @@ RUS_obukhov_organisation = {
 	on_tech_research_completed = {
 		FROM = { subtract_from_variable = { Obukhov_Research_Number = 1 } }
 	}
-
-	ai_will_do = { base = 1000 }
 
 	initial_trait = {
 		name = RUS_obukhov_mio_desc
@@ -12415,7 +12413,7 @@ RUS_bmz_organisation = {
 		train_tech
 	}
 
-	ai_will_do = { base = 10 }
+	ai_will_do = { base = 1000 }
 
 	initial_trait = {
 		name = RUS_bmz_mio_desc
@@ -12786,7 +12784,7 @@ RUS_amo_organisation = {
 		mio_cat_tech_all_armor_and_modules
 	}
 
-	ai_will_do = { base = 1 }
+	ai_will_do = { base = 1000 }
 
 	initial_trait = {
 		name = RUS_amo_mio_desc
@@ -13029,13 +13027,6 @@ RUS_amo_organisation = {
 
 		special_trait_background = yes
 
-		available = {
-			if = {
-				limit = { FROM = { original_tag = RUS } }
-				FROM = { has_country_flag = improve_amo }
-			}
-		}
-
 		position = { x = 1 y = 2 }
 		relative_position_id = amo_upgrade_1_3
 
@@ -13125,8 +13116,6 @@ RUS_naz_organisation = {
 			}
 		}
 	}
-
-	ai_will_do = { base = 1000 }
 
 	initial_trait = {
 		name = RUS_naz_mio_desc

@@ -1,7 +1,7 @@
 
 	
 GRU_new_germania_modifier = {
-	icon = "GFX_idea_GRU_the_two_principles"
+	icon = "GFX_dynamic_GRU_germania"
 	enable = { always = yes }
 	remove_trigger = {
 		NOT = { is_owned_by = GRU }

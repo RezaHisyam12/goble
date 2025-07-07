@@ -2954,7 +2954,7 @@ ideas = {
 			picture = GRU_heavy_industry
 			allowed = { always = no }
 			modifier = {
-				consumer_goods_factor = -0.3
+				consumer_goods_factor = -0.15
 				industrial_capacity_factory = 0.1
 				production_factory_max_efficiency_factor = 0.1
 				weekly_manpower = 150

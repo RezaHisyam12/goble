@@ -1,0 +1,618 @@
+### MIO Scripted Loc ###
+defined_text = {
+	name = RUS_AV_None
+	text = {
+		trigger = {
+			FROM = {
+				NOT = {
+					any_military_industrial_organization = {
+						has_mio_flag = RUS_AV_decaying_funds_bonus
+					}
+				}
+			}
+		}
+		localization_key = RUS_AV_Notification_None
+	}
+}
+defined_text = {
+	name = RUS_AV_Putilovets_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_putilovets_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = putilovets_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_OKMO_KR_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_okmo_kr_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = okmo_kr_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_UZTM_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_uztm_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = uztm_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_TSTZ_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_tstz_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = tstz_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_CHTZ_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_chtz_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = chtz_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_BZ_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_bz_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = bz_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_AV_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_av_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = av_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_AS_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_as_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = as_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_Dalzavod_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_dalzavod_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = dalzavod_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_OSOAVIA_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_osoavia_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = osoavia_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_Duks_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_duks_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = duks_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_TSAGI_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_tsagi_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = tsagi_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_Gamayun_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_gamayun_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = gamayun_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_Skorost_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_skorost_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = skorost_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_Sokol_Funds
+	text = {
+		trigger = {
+			FROM = {
+				OR = {
+					mio:RUS_sokol_organisation = {
+						has_mio_flag = RUS_AV_decaying_funds_bonus
+					}
+					mio:RUS_sokol_construction_organisation = {
+						has_mio_flag = RUS_AV_decaying_funds_bonus
+					}
+					mio:RUS_sokol_production_organisation = {
+						has_mio_flag = RUS_AV_decaying_funds_bonus
+					}
+				}
+			}
+		}
+		localization_key = sokol_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_TOZ_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_toz_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = toz_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_VPOZ_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_vpoz_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = vpoz_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_IMZ_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_imz_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = imz_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_Obukhov_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_obukhov_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = obukhov_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_BMZ_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_bmz_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = bmz_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_AMO_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_amo_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = amo_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_NAZ_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_naz_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = naz_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_AV_LAZ_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_laz_organisation = {
+					has_mio_flag = RUS_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = laz_AV_MIO_List
+	}
+}
+defined_text = {
+	name = RUS_Dalzavod_BZ_Upgrade
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_bz_organisation = {
+					has_mio_number_of_completed_traits < 1
+				}
+			}
+		}
+		localization_key = dalzavod_mio_bz_list
+	}
+}
+defined_text = {
+	name = RUS_Dalzavod_AV_Upgrade
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_av_organisation = {
+					has_mio_number_of_completed_traits < 1
+				}
+			}
+		}
+		localization_key = dalzavod_mio_av_list
+	}
+}
+defined_text = {
+	name = RUS_Dalzavod_AS_Upgrade
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_as_organisation = {
+					has_mio_number_of_completed_traits < 1
+				}
+			}
+		}
+		localization_key = dalzavod_mio_as_list
+	}
+}
+defined_text = {
+	name = RUS_Dalzavod_Dalzavod_Upgrade
+	text = {
+		trigger = {
+			FROM = {
+				mio:RUS_dalzavod_organisation = {
+					has_mio_number_of_completed_traits < 1
+				}
+			}
+		}
+		localization_key = dalzavod_mio_dalzavod_list
+	}
+}
+
+defined_text = {
+	name = RUS_Dynamic_Putilovets_Name
+	text = {
+		trigger = {
+			FROM = { has_country_flag = RUS_rename_industries }
+		}
+		localization_key = putilovets_socrus
+	}
+	text = {
+		localization_key = putilovets_non_socrus
+	}
+}
+
+defined_text = {
+	name = RUS_Dynamic_Skorost_Name
+	text = {
+		trigger = {
+			FROM = { has_country_flag = RUS_rename_industries }
+		}
+		localization_key = skorost_socrus
+	}
+	text = {
+		localization_key = skorost_non_socrus
+	}
+}
+
+defined_text = {
+	name = RUS_Dynamic_Sikorsky_Name
+	text = {
+		trigger = {
+			FROM = { has_country_flag = RUS_rename_industries }
+		}
+		localization_key = sikorsky_socrus
+	}
+	text = {
+		localization_key = sikorsky_non_socrus
+	}
+}
+
+defined_text = {
+	name = RUS_Dynamic_Gamayun_Name
+	text = {
+		trigger = {
+			FROM = { has_country_flag = RUS_rename_industries }
+		}
+		localization_key = gamayun_socrus
+	}
+	text = {
+		localization_key = gamayun_non_socrus
+	}
+}
+
+defined_text = {
+	name = RUS_Dynamic_Seversky_Name
+	text = {
+		trigger = {
+			FROM = { has_country_flag = RUS_rename_industries }
+		}
+		localization_key = seversky_socrus
+	}
+	text = {
+		localization_key = seversky_non_socrus
+	}
+}
+
+defined_text = {
+	name = RUS_Dynamic_NAZ_Name
+	text = {
+		trigger = {
+			FROM = { has_country_flag = RUS_rename_industries }
+		}
+		localization_key = naz_socrus
+	}
+	text = {
+		localization_key = naz_non_socrus
+	}
+}
+
+defined_text = {
+	name = RUS_Dynamic_LAZ_Name
+	text = {
+		trigger = {
+			FROM = { has_country_flag = RUS_rename_industries }
+		}
+		localization_key = laz_socrus
+	}
+	text = {
+		localization_key = laz_non_socrus
+	}
+}
+
+defined_text = {
+	name = RUS_Dynamic_AMO_Name
+	text = {
+		trigger = {
+			has_country_flag = RUS_rename_industries
+		}
+		localization_key = amo_socrus
+	}
+	text = {
+		localization_key = amo_non_socrus
+	}
+}
+
+defined_text = {
+	name = RUS_Dynamic_Obukhov_Name
+	text = {
+		trigger = {
+			FROM = { has_country_flag = RUS_rename_industries }
+		}
+		localization_key = obukhov_socrus
+	}
+	text = {
+		localization_key = obukhov_non_socrus
+	}
+}
+
+define_text = {
+	name = RUS_MIO_Funds_Requirement
+	text = {
+		trigger = {
+			check_variable = { Funds_Difference > weekly_funds_requirement }
+		}
+		localization_key = RUS_MIO_Research_Gain_positive_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { Funds_Difference < weekly_funds_requirement }
+		}
+		localization_key = RUS_MIO_Research_Gain_negative_tt
+	}
+}
+
+define_text = {
+	name = RUS_UnlockMIOFocusTrigger
+	# THIS = country scope
+	# PREV = MIO scope
+	text = {
+		#RSA always only requires this focus to get the decisions to unlock the MIOs
+		# UZTM, CHTZ, TSTZ
+		trigger = { original_tag = RSA }
+		localization_key = RUS_secret_weapons_development
+	}
+	text = {
+		# UZTM, CHTZ
+		trigger = {
+			original_tag = FER
+			PREV = { NOT = { is_military_industrial_organization = RUS_tstz_organisation } }
+		}
+		localization_key = RUS_mio_FER_complete_decision_in_foci_tooltip #Both Siberian and Russian FER can get these MIOs
+	}
+	text = {
+		# TSTZ
+		trigger = { original_tag = FER }
+		localization_key = FER_return_to_kremlin #Only Russian FER can get this MIO
+	}
+	# RUS is assumed country scope from this point onwards
+	text = {
+		# UZTM, CHTZ
+		trigger = {
+			PREV = {
+				OR = {
+					is_military_industrial_organization = RUS_uztm_organisation
+					is_military_industrial_organization = RUS_chtz_organisation
+				}
+			}
+		}
+		localization_key = RUS_industrialise_urals
+	}
+	text = {
+		#TSTZ
+		trigger = {
+			PREV = { is_military_industrial_organization = RUS_tstz_organisation }
+		}
+		localization_key = RUS_industrialise_eastern_europe
+	}
+}
+
+define_text = {
+	name = RUS_UnlockTankogradTrigger
+	text = {
+		trigger = { original_tag = RSA }
+		localization_key = RUS_secret_weapons_development
+	}
+	text = {
+		trigger = { original_tag = FER }
+		localization_key = RUS_mio_FER_complete_decision_in_foci_tooltip
+	}
+	text = {
+		localization_key = RUS_industrialise_urals
+	}
+}
+
+define_text = {
+	name = RUS_ChtzUpgradeFocusTrigger
+	# THIS = country scope
+	text = {
+		trigger = { original_tag = RSA }
+		localization_key = RUS_secret_weapons_development
+	}
+	text = {
+		trigger = { original_tag = FER }
+		localization_key = RUS_mio_FER_complete_decision_in_foci_tooltip
+	}
+	text = {
+		localization_key = RUS_military_production
+	}
+}
+
+define_text = {
+	name = RUS_TozUpgradeFocusTrigger
+	# THIS = country scope
+	text = {
+		trigger = { original_tag = RSA }
+		localization_key = RUS_secret_weapons_development
+	}
+	text = {
+		trigger = { original_tag = FER }
+		localization_key = FER_return_to_kremlin
+	}
+	text = {
+		localization_key = RUS_artillery_production
+	}
+}
+
+define_text = {
+	name = RUS_AmoImzUpgradeFocusTrigger
+	# Shared by AMO And IMZ Upgrades
+	# THIS = country scope
+	text = {
+		trigger = { original_tag = RSA }
+		localization_key = RUS_secret_weapons_development
+	}
+	text = {
+		trigger = { original_tag = FER }
+		localization_key = FER_return_to_kremlin
+	}
+	text = {
+		localization_key = RUS_military_production
+	}
+}
+
