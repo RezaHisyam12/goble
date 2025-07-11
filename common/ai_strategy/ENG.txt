@@ -325,7 +325,7 @@ ENG_build_radars_sussex = {
 	}
 	enable = {
 		127 = { #Sussex
-			controller = { is_ally_with = FROM }
+			is_owned_and_controlled_by_ROOT_or_ally = yes
 			free_building_slots = { building = radar_station size > 0 }
 		}
 	}
@@ -347,7 +347,7 @@ ENG_build_radars_london = {
 	}
 	enable = {
 		126 = { #Greater London
-			controller = { is_ally_with = FROM }
+			is_owned_and_controlled_by_ROOT_or_ally = yes
 			free_building_slots = { building = radar_station size > 0 }
 		}
 	}
@@ -369,7 +369,7 @@ ENG_build_radars_east_anglia = {
 	}
 	enable = {
 		125 = { #East Anglia
-			controller = { is_ally_with = FROM }
+			is_owned_and_controlled_by_ROOT_or_ally = yes
 			free_building_slots = { building = radar_station size > 0 }
 		}
 	}
@@ -391,7 +391,7 @@ ENG_build_radars_cornwall = {
 	}
 	enable = {
 		123 = { #Cornwall
-			controller = { is_ally_with = FROM }
+			is_owned_and_controlled_by_ROOT_or_ally = yes
 			free_building_slots = { building = radar_station size > 0 }
 		}
 	}
@@ -413,7 +413,7 @@ ENG_build_radars_yorkshire = {
 	}
 	enable = {
 		130 = { #Yorkshire
-			controller = { is_ally_with = FROM }
+			is_owned_and_controlled_by_ROOT_or_ally = yes
 			free_building_slots = { building = radar_station size > 0 }
 		}
 	}
@@ -435,7 +435,7 @@ ENG_build_radars_lothian = {
 	}
 	enable = {
 		121 = { #Lothian
-			controller = { is_ally_with = FROM }
+			is_owned_and_controlled_by_ROOT_or_ally = yes
 			free_building_slots = { building = radar_station size > 0 }
 		}
 	}
