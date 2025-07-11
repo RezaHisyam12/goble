@@ -10728,7 +10728,7 @@ GRU_expansion_three_volksland_hypoborea = {
 						
 						add_equipment_to_stockpile = {
 						type = infantry_equipment_1
-						amount = 40000
+						amount = 4000
 						} 
 						add_equipment_to_stockpile = {
 						type = support_equipment
@@ -10844,7 +10844,7 @@ GRU_expansion_three_volksland_hypoborea = {
 						
 						add_equipment_to_stockpile = {
 						type = infantry_equipment_1
-						amount = 40000
+						amount = 4000
 						} 
 						add_equipment_to_stockpile = {
 						type = support_equipment
@@ -10926,7 +10926,7 @@ GRU_expansion_three_volksland_hypoborea = {
 						
 						add_equipment_to_stockpile = {
 						type = infantry_equipment_1
-						amount = 40000
+						amount = 4000
 						} 
 						add_equipment_to_stockpile = {
 						type = support_equipment

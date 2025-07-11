@@ -318,6 +318,7 @@ RUS_Foreign_Policy_decisions = {
 				OR = {
 					NOT = { can_declare_war_on = FROM }
 					has_non_aggression_pact_with = FROM
+					FROM = { is_subject_of = GRU }
 				}
 			}
 			else = {
@@ -414,7 +415,7 @@ RUS_Foreign_Policy_decisions = {
 		priority = 150
 
 		available = {
-			has_army_manpower = { size > 1500000 }
+			has_army_manpower = { size > 2000000 }
 			FROM = {
 				has_war_with = INT
 			}
@@ -424,6 +425,7 @@ RUS_Foreign_Policy_decisions = {
 					tag = FROM
 				}
 			}
+			NOT = { has_war_with = TRM }
 			NOT = { has_non_aggression_pact_with = FROM }
 			date > 1941.6.1
 		}

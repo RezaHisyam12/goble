@@ -2294,6 +2294,7 @@ GRU_wide_front_operations_idea_desc:0 "Retreat is not an option—we will fight 
 GRU_break_fortifications_idea:0 "Interdiction Tactics"
 GRU_break_fortifications_idea_desc:0 "When the enemy charges forward, our bombers will leave their columns in flames."
 GRU_expanded_espionage_non_lar:0 "Wartime Espionage"
+GRU_german_investment_oststaat_idea:0 "Growing German Economic Control"
 
 VKP_militarism:0 "State Serve Military"
 

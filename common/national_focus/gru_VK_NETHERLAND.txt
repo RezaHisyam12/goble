@@ -20,13 +20,10 @@
 		cost = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_NETHERLAND_START_COLONIZING"
-			219 = {
-				add_core_of = VKN
-			}
 			swap_ideas = {
-							remove_idea = VK_COLONY_ONE
-							add_idea = VK_COLONY_TWO
-						}
+				remove_idea = VK_COLONY_ONE
+				add_idea = VK_COLONY_TWO
+			}
 		}
 		prerequisite = { focus = VK_FOCUS_SHARED_MORE_SETTLERS  }
 		prerequisite = { focus = VK_FOCUS_SHARED_OUR_OWN_RR  }

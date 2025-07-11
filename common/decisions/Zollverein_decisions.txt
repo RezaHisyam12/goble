@@ -39,7 +39,10 @@ GRU_zollverein_category = {
 		}
 
 		visible = {
-			is_in_faction_with = FROM
+			OR = {
+				is_subject_of = FROM
+				is_in_faction_with = FROM
+			}
 			FROM = {
 				exists = yes
 				is_in_tech_sharing_group = zollverein_research
@@ -135,6 +138,7 @@ GRU_zollverein_category = {
 				STATE = "[?GRU_num_target_states]"
 			}
 			FROM = {
+				add_ideas = GRU_german_investment_oststaat_idea
 				country_event = rotermorgen.1004
 				effect_tooltip = { GRU_zollverein_effect = yes }
 			}

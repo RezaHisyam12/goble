@@ -2953,11 +2953,38 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_financing_colonies_received" }
 			picture = GRU_heavy_industry
 			allowed = { always = no }
+			available = {
+				country_exists = GRU
+				is_subject_of = GRU
+				NOT = {
+					has_war_with = GRU
+				}
+			}
 			modifier = {
 				consumer_goods_factor = -0.15
 				industrial_capacity_factory = 0.1
 				production_factory_max_efficiency_factor = 0.1
 				weekly_manpower = 150
+			}
+		}
+		GRU_german_investment_oststaat_idea = {
+			picture = LIB_ger_bailout
+			allowed = { always = no }
+			available = {
+				country_exists = GRU
+				is_subject_of = GRU
+				NOT = {
+					has_war_with = GRU
+				}
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				political_power_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = GRU
+				extra_trade_to_target_factor = 0.5
+				mic_to_target_factor = 0.1
 			}
 		}
 		GRU_wide_front_operations_idea = {
