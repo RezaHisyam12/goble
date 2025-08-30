@@ -1,5 +1,5 @@
 ################################
-# 		Insulindia Tree		#
+# 		Indonesia Tree		#
 ################################
 # By Thomahawk2k			#
 ################################
@@ -263,7 +263,7 @@ focus_tree = {
 
 	focus = {
 		id = INS_socialize_foreign_capital
-		icon = VK_NATIONALIZE
+		icon = GFX_VK_NATIONALIZE
 		cost = 6.00
 		available = {
 			has_government = radical_socialist
@@ -864,6 +864,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus INS_political_stability"
 			add_stability = 0.2
+			if = {
+				limit = {
+					has_government = radical_socialist
+				}
+				country_event = ins.118
+			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -921,19 +927,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus INS_contacts_with_the_westerners"
-			add_political_power = 70
 			every_country = {
 				limit = {
 					OR = {
-						is_in_europe = yes
-						is_in_north_america = yes
-						tag = TRM
-						tag = GEA
-					}
-					num_of_naval_factories > 0
-					OR = {
-						num_of_controlled_factories > 15
-						is_major = yes
+						tag = AST
+						tag = HOL
+						tag = GER
+						tag = POR
 					}
 				}
 				add_opinion_modifier = { target = INS modifier = hol_likes_govt }
@@ -946,25 +946,28 @@ focus_tree = {
 		icon = GFX_goal_germany
 		cost = 5.00
 		available = {
-			is_subject = no
-			is_in_faction = no
-			has_socialist_government = no
-			OR = {
-				AND = {
-					has_government = paternal_autocrat
-					has_country_flag = ins_sultans_countercoup
-				}
-				AND = {
-					has_war_with = JAP
-					GER = { has_war_with = JAP }
+			INS = {
+				is_in_faction = no
+				OR = {
+					AND = {
+						has_government = paternal_autocrat
+						has_country_flag = ins_sultans_countercoup
+					}
+					AND = {
+						NOT = {
+							has_government = radical_socialist
+						}
+						has_war_with = JAP
+						GER = {
+							has_war_with = JAP
+						}
+					}
 				}
 			}
 			GER = {
 				is_faction_leader = yes
-				is_in_faction_with = GEA
-				NOT = { has_war_with = ROOT }
 			}
-			at_peace_or_same_enemies_as_GER = yes
+			country_exists = GEA
 		}
 		prerequisite = {
 			focus = INS_contacts_with_the_westerners
@@ -1024,16 +1027,12 @@ focus_tree = {
 		icon = GFX_goal_canada
 		cost = 5.00
 		available = {
-			is_subject = no
-			is_in_faction = no
-			has_government = paternal_autocrat
-			has_country_flag = ins_sultans_countercoup
-			ENT = {
-				is_faction_leader = yes
-				is_in_faction_with = AST
-				NOT = { has_war_with = ROOT }
+			INS = {
+				has_government = paternal_autocrat
+				has_country_flag = ins_sultans_countercoup
+				is_in_faction = no
 			}
-			at_peace_or_same_enemies_as_ENT = yes
+			AST = { is_in_faction_with = ENT }
 		}
 		bypass = {
 			is_in_faction_with = ENT
@@ -1067,18 +1066,10 @@ focus_tree = {
 		icon = GFX_goal_CAN_isac
 		cost = 7
 		available = {
-			is_in_faction = no
-			is_subject = no
-			has_socialist_government = yes
-			has_completed_focus = INS_negara_buruh_tani_dan_pekerja
-			INT = {
-				is_faction_leader = yes
-				NOT = { has_war_with = ROOT }
+			is_in_faction_with = ENT
+			ENT = {
+				is_in_tech_sharing_group = entente_research
 			}
-			at_peace_or_same_enemies_as_INT = yes
-		}
-		bypass = {
-			is_in_faction_with = INT
 		}
 		prerequisite = {
 			focus = INS_alliance_with_australasia
@@ -1128,17 +1119,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus INS_contacts_within_asia"
-			add_political_power = 70
 			every_country = {
 				limit = {
 					is_in_asia = yes
-					NOT = { tag = TRM }
-					NOT = { tag = GEA }
-					any_owned_state = { is_coastal = yes }
-					OR = {
-						num_of_controlled_factories > 8
-						is_major = yes
-					}
 				}
 				add_opinion_modifier = { target = INS modifier = hol_likes_govt }
 			}
@@ -1253,11 +1236,15 @@ focus_tree = {
 		icon = GFX_goal_japan
 		cost = 5.00
 		available = {
-			is_in_faction = no
-			is_subject = no
-			has_socialist_government = no
-			JAP = { is_faction_leader = yes }
-			at_peace_or_same_enemies_as_JAP = yes
+			INS = {
+				is_in_faction = no
+				NOT = {
+					has_government = radical_socialist
+				}
+			}
+			JAP = {
+				is_faction_leader = yes
+			}
 		}
 		prerequisite = {
 			focus = INS_contacts_within_asia
@@ -1861,9 +1848,6 @@ focus_tree = {
 			every_country = {
 				limit = {
 					is_in_asia = yes
-					is_subject = no
-					both_socialist_or_both_not_socialist = yes
-					at_war_with_or_justifying_wargoal_against_ROOT = no
 				}
 				add_opinion_modifier = { target = INS modifier = CAL_trade_relations }
 				reverse_add_opinion_modifier = { target = INS modifier = CAL_trade_relations }
@@ -2278,7 +2262,7 @@ focus_tree = {
 			focus = INS_guerilla_force
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 75
 			modifier = {
 				factor = 2
 				has_war = yes

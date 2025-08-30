@@ -57,6 +57,8 @@ GER_adler_organisation = {
 		is_germany_or_german_colonial_tag = yes
 	}
 
+	ai_will_do = { base = 10 }
+
 	#Porsche traits from vanilla
 	tree_header_text = {
 		text = mio_header_engine_and_drive_system

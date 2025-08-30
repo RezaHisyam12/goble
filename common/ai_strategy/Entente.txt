@@ -10,122 +10,6 @@
 # protect
 # influence
 
-#################
-### Diplomacy ###
-#################
-CAN_GBR_hates_socialists = {
-	reversed = yes
-
-	enable_reverse = {
-		CAN = { is_in_faction_with = ENT }
-	}
-	enable = {
-		has_socialist_government = yes
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = antagonize
-		id = CAN #CAN/GBR
-		value = 1000
-	}
-	ai_strategy = {
-		type = diplo_action_acceptance
-		target = market_access_rights
-		id = CAN #CAN/GBR
-		value = -1000
-	}
-}
-CAN_dislikes_germany = {
-	reversed = yes
-
-	enable_reverse = {
-		CAN = { is_in_faction_with = ENT }
-		GER = { is_faction_leader = yes }
-		NOT = { has_global_flag = GER_stay_out_france_uk }
-	}
-	enable = {
-		is_in_faction_with = GER
-	}
-	abort_when_not_enabled = yes
-
-	target_array = GER.faction_members
-
-	ai_strategy = {
-		type = ignore
-		id = CAN #CAN/GBR
-		value = 300
-	}
-	ai_strategy = {
-		type = alliance
-		id = CAN #CAN/GBR
-		value = -300
-	}
-	ai_strategy = {
-		type = befriend
-		id = CAN #CAN/GBR
-		value = -300
-	}
-	ai_strategy = {
-		type = support
-		id = CAN #CAN/GBR
-		value = -1000
-	}
-}
-entente_dislikes_germany = {
-	enable = {
-		is_in_faction_with = ENT
-		GER = { is_faction_leader = yes }
-		NOT = { has_global_flag = GER_stay_out_france_uk }
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = ignore
-		id = GER
-		value = 300
-	}
-	ai_strategy = {
-		type = alliance
-		id = GER
-		value = -300
-	}
-	ai_strategy = {
-		type = befriend
-		id = GER
-		value = -300
-	}
-	ai_strategy = {
-		type = support
-		id = GER
-		value = -1000
-	}
-}
-entente_dont_fight_russia = {
-	enable = {
-		is_in_faction_with = ENT
-		RUS = {
-			is_faction_leader = yes
-			has_socialist_government = no
-		}
-		NOT = { country_exists = GER }
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = diplo_action_desire
-		id = RUS
-		value = 100
-		target = non_aggression_pact
-	}
-	ai_strategy = {
-		type = befriend
-		id = RUS
-		value = 300
-	}
-}
-
 ################
 ### Domestic ###
 ################
@@ -190,6 +74,28 @@ entente_britain = {
 		type = antagonize
 		id = ENG
 		value = 100
+	}
+}
+
+entente_take_ireland = {
+	allowed = {
+		OR = {
+			tag = CAN
+			tag = NFA
+			tag = POR
+		}
+	}
+	enable = {
+		has_war_with = IRE
+		is_in_faction_with = ENT
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invade
+		id = IRE
+		value = 200
 	}
 }
 
@@ -471,6 +377,9 @@ entente_take_west_indies = {
 }
 
 entente_dont_worry_about_mexico = {
+	allowed = {
+		is_in_faction_with = ENT
+	}
 	enable = {
 		has_war_with = MEX
 		is_in_faction_with = ENT
@@ -496,6 +405,9 @@ entente_dont_worry_about_mexico = {
 }
 
 entente_protect_leader = {
+	allowed = {
+		is_in_faction_with = ENT
+	}
 	enable = {
 		is_in_faction_with = ENT
 		NOT = { tag = ENT }
@@ -524,6 +436,9 @@ entente_protect_leader = {
 }
 
 entente_protect_sand_france = {
+	allowed = {
+		is_in_faction_with = ENT
+	}
 	enable = {
 		is_in_faction_with = NFA
 		NOT = { tag = NFA }
@@ -630,6 +545,7 @@ entente_assist_delhi = {
 
 entente_assist_carlists = {
 	allowed = {
+		is_in_faction_with = ENT
 		is_spanish_tag = no
 	}
 	enable = {
@@ -665,6 +581,7 @@ entente_assist_carlists = {
 
 entente_assist_spain_kingdom = {
 	allowed = {
+		is_in_faction_with = ENT
 		is_spanish_tag = no
 	}
 	enable = {
@@ -699,6 +616,9 @@ entente_assist_spain_kingdom = {
 }
 
 entente_hold_france = {
+	allowed = {
+		is_in_faction_with = ENT
+	}
 	enable = {
 		is_in_faction_with = NFA
 		num_divisions > 4
@@ -726,6 +646,7 @@ entente_hold_france = {
 
 entente_assist_portugal = {
 	allowed = {
+		is_in_faction_with = ENT
 		NOT = { tag = POR }
 	}
 	enable = {
@@ -762,6 +683,44 @@ entente_assist_portugal = {
 	ai_strategy = {
 		type = area_priority
 		id = iberia
+		value = 500
+	}
+}
+
+entente_assist_sardinia = {
+	allowed = {
+		is_in_faction_with = ENT
+	}
+	enable = {
+		is_in_faction_with = SRD
+		num_divisions > 4
+		has_war_with = FRA
+		NOT = { surrender_progress > 0 }
+		SRD = {
+			owns_state = 162
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = support
+		id = SRD
+		value = 200
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = SRD
+		value = 500
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SRD
+		value = 10000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = italy
 		value = 500
 	}
 }
@@ -1087,7 +1046,7 @@ ENT_buffer_troops_for_invasion_of_france = {
 	ai_strategy = {
 		type = invade
 		id = FRA
-		value = 100
+		value = 200
 	}
 	ai_strategy = {
 		type = prepare_for_war
@@ -1109,10 +1068,18 @@ ENT_support_invasion_of_france = {
 		has_war_with = FRA
 		FRA = {
 			has_capitulated = no
+			any_home_area_neighbor_country = { is_ally_with = ENT }
 		}
 
 		#not if any dangerous neighbours
 		surrender_progress < 0.05
+		NOT = {
+			any_home_area_neighbor_country = {
+				has_war_with = PREV
+				has_capitulated = no
+				NOT = { tag = FRA }
+			}
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -1189,7 +1156,7 @@ ENT_buffer_troops_for_invasion_of_britain = {
 	ai_strategy = {
 		type = invade
 		id = ENG
-		value = 100
+		value = 200
 	}
 	ai_strategy = {
 		type = prepare_for_war
@@ -1274,12 +1241,12 @@ ENT_ignore_malta = {
 	ai_strategy = {
 		type = ignore
 		id = MLT
-		value = 500
+		value = 1000
 	}
 	ai_strategy = {
 		type = invade
 		id = MLT
-		value = -500
+		value = -1000
 	}
 }
 

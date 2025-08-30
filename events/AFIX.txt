@@ -1,0 +1,196 @@
+###########################
+# Transamur Events
+###########################
+# By Anbory
+# Assistance from DSFDarker
+# reworked by soclibdictator
+###########################
+
+add_namespace = tram
+
+country_event = {
+	id = tram.400
+	immediate = {
+		hidden_effect = {
+			every_state = {
+				limit = {
+					NOT = {
+						state = 408
+						state = 1246
+						state = 409
+						state = 560
+						state = 561
+						state = 657
+						state = 563
+						state = 564
+						state = 565
+						state = 574
+						state = 562
+						state = 637
+					}
+				}
+				remove_core_of = TRM
+				remove_claim_by = TRM
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 408
+						state = 1246
+						state = 409
+						state = 560
+						state = 561
+						state = 657
+						state = 563
+						state = 564
+						state = 565
+						state = 574
+						state = 562
+						state = 637
+					}
+				}
+				add_core_of = TRM
+				add_core_of = RUS
+			}
+		}
+	}
+	title = tram.400.t
+	desc = tram.400.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			tag = SOV
+			tag = RUS
+		}
+		NOT = { has_country_flag = SOV_restored_in_transamur }
+	}
+	option = {
+		name = tram.400.a
+		ai_chance = {
+			factor = 100
+		}
+		add_to_array = { RUS_integration_array = TRM }
+		if = {
+			limit = {
+				TRM = { has_socialist_government = no }
+				ROOT = { has_socialist_government = no }
+			}
+			country_event = {
+				id = tram.401
+				days = 5
+			}
+		}
+		if = {
+			limit = {
+				TRM = { NOT = { has_country_flag = Aleksandr_Kolchak_dead } }
+			}
+			country_event = {
+				id = tram.404
+				days = 6
+			}
+		}
+	}
+	option = {
+		name = tram.400.b
+		trigger = {
+			ROOT = {
+				OR = {
+					has_socialist_government = yes
+					has_government = social_democrat
+					has_government = social_liberal
+				}
+			}
+			NOT = { has_country_flag = RUS_cannot_release_TRM }
+		}
+		ai_chance = {
+			factor = 0
+		}
+		every_owned_state = {
+			limit = {
+				is_core_of = TRM
+				is_claim_or_core_of_ROOT = no
+				NOT = {
+					OR = {
+						state = 1246
+						state = 408
+						state = 409
+						state = 560
+						state = 561
+						state = 657
+					}
+				}
+			}
+			add_core_of = ROOT
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 1246
+					state = 408
+					state = 409
+					state = 560
+					state = 561
+					state = 657
+				}
+			}
+			TRM = { transfer_state = PREV }
+		}
+		ROOT = { puppet = TRM }
+		if = {
+			limit = {
+				ROOT = {
+					has_socialist_government = yes
+				}
+			}
+			TRM = {
+				set_political_party = {
+					ideology = totalist
+					popularity = 30
+				}
+				set_political_party = {
+					ideology = syndicalist
+					popularity = 15
+				}
+				set_political_party = {
+					ideology = radical_socialist
+					popularity = 30
+				}
+				remove_ideas = TRM_dream
+				set_cosmetic_tag = TRM_SOV
+			}
+			if = {
+				limit = {
+					ROOT = { has_country_flag = soviet_russia_restored }
+				}
+				set_temp_variable = { target = TRM }
+				SOV_puppet_TARGET_effect = yes
+			}
+		}
+		else_if = {
+			limit = {
+				ROOT = {
+					OR = {
+						has_government = social_democrat
+						has_government = social_liberal
+					}
+				}
+			}
+			TRM = {
+				set_politics = {
+					ruling_party = social_democrat
+					elections_allowed = no
+				}
+				set_political_party = {
+					ideology = social_democrat
+					popularity = 30
+				}
+				set_political_party = {
+					ideology = social_liberal
+					popularity = 15
+				}
+				remove_ideas = TRM_dream
+			}
+		}
+	}
+}

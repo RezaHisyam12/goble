@@ -298,45 +298,22 @@ GRU_volksmarine_organisation = {
 	}
 
 	on_design_team_assigned_to_tech = {
-		if = {
-			limit = { FROM = { NOT = { has_variable = Volksmarine_Research_Number } } }
-			FROM = {
-				set_variable = {
-					var = Volksmarine_Research_Number
-					value = 1
-				}
-			}
-		}
-		else = {
-			FROM = {
-				add_to_variable = {
-					var = Volksmarine_Research_Number
-					value = 1
-				}
-			}
-		}
+		FROM = { add_to_variable = { Volksmarine_Research_Number = 1 } }
 	}
 
 	on_tech_research_cancelled = {
-		FROM = {
-			subtract_from_variable = {
-				var = Volksmarine_Research_Number
-				value = 1
-			}
-		}
+		FROM = { subtract_from_variable = { Volksmarine_Research_Number = 1 } }
 	}
 
 	on_tech_research_completed = {
-		FROM = {
-			subtract_from_variable = {
-				var = Volksmarine_Research_Number
-				value = 1
-			}
-		}
+		FROM = { subtract_from_variable = { Volksmarine_Research_Number = 1 } }
 	}
 
 	on_industrial_manufacturer_assigned = {
-		custom_effect_tooltip = GRU_MIO_XP_Gain_volksmarine_tt
+		GRU_calculate_daily_funds_gain_and_requirement = yes
+		custom_effect_tooltip = {
+			localization_key = GRU_MIO_XP_Gain_tt XP_ICON = GRU_Navy_XP_icon
+		}
 	}
 
 	ai_will_do = { base = 1000 }
@@ -1058,45 +1035,24 @@ GRU_junkers_organisation = {
 	}
 
 	on_design_team_assigned_to_tech = {
-		if = {
-			limit = { FROM = { NOT = { has_variable = Junkers_Research_Number } } }
-			FROM = {
-				set_variable = {
-					var = Junkers_Research_Number
-					value = 1
-				}
-			}
-		}
-		else = {
-			FROM = {
-				add_to_variable = {
-					var = Junkers_Research_Number
-					value = 1
-				}
-			}
-		}
+		FROM = { add_to_variable = { Junkers_Research_Number = 1 } }
 	}
 
 	on_tech_research_cancelled = {
-		FROM = {
-			subtract_from_variable = {
-				var = Junkers_Research_Number
-				value = 1
-			}
-		}
+		FROM = { subtract_from_variable = { Junkers_Research_Number = 1 } }
 	}
 
 	on_tech_research_completed = {
 		FROM = {
-			subtract_from_variable = {
-				var = Junkers_Research_Number
-				value = 1
-			}
+			subtract_from_variable = { Junkers_Research_Number = 1 }
 		}
 	}
 
 	on_industrial_manufacturer_assigned = {
-		custom_effect_tooltip = GRU_MIO_XP_Gain_junkers_tt
+		GRU_calculate_daily_funds_gain_and_requirement = yes
+		custom_effect_tooltip = {
+			localization_key = GRU_MIO_XP_Gain_tt XP_ICON = GRU_Air_XP_icon
+		}
 	}
 
 	ai_will_do = { base = 1000 }
@@ -2118,42 +2074,42 @@ GRU_rheinmetall_organisation = {
 		}
 	}
 	on_industrial_manufacturer_assigned = {
-		FROM = {
-			if = {
-				limit = { NOT = { has_variable = MIO_Rheinmetall_assigned_manufacturer_number } }
-				set_variable = {
-					var = MIO_Rheinmetall_assigned_manufacturer_number
-					value = 1
-				}
-			}
-			else = {
-				add_to_variable = { MIO_Rheinmetall_assigned_manufacturer_number = 1 }
-			}
-		}
+		FROM = { add_to_variable = { MIO_Rheinmetall_assigned_manufacturer_number = 1 } }
+		GRU_calculate_daily_funds_gain_and_requirement = yes
 		custom_effect_tooltip = GRU_MIO_Research_Gain_tt
 		custom_effect_tooltip = tooltip_white_line
 	}
 
 	on_industrial_manufacturer_unassigned = {
-		FROM = {
-			subtract_from_variable = { MIO_Rheinmetall_assigned_manufacturer_number = 1 }
-		}
+		FROM = { subtract_from_variable = { MIO_Rheinmetall_assigned_manufacturer_number = 1 } }
 	}
 
 	on_tech_research_completed = {
-		hidden_effect = {
-			FROM = {
-				mio:GRU_rheinmetall_organisation = {
-					set_mio_research_bonus = 0
+		if = {
+			limit = { NOT = { has_mio_flag = RUS_disable_research_speed_loss } }
+			hidden_effect = {
+				FROM = {
+					mio:RUS_chtz_organisation = {
+						set_mio_research_bonus = 0
+					}
+					clr_country_flag = RUS_Rheinmetall_RS_Notification
 				}
-				clr_country_flag = GRU_rheinmetall_RS_Notification
 			}
+			custom_effect_tooltip = RUS_manufacturer_research_reset_tt
+			custom_effect_tooltip = tooltip_white_line
 		}
-		custom_effect_tooltip = GRU_manufacturer_research_reset_tt
 	}
 
 	on_tech_research_cancelled = {
-		FROM = { add_political_power = -35 }
+		hidden_effect = {
+			FROM = {
+				mio:RUS_chtz_organisation = {
+					set_mio_research_bonus = 0
+				}
+				clr_country_flag = RUS_CHTZ_RS_Notification
+			}
+		}
+		custom_effect_tooltip = RUS_manufacturer_research_reset_tt
 		custom_effect_tooltip = tooltip_white_line
 	}
 

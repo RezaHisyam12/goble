@@ -936,6 +936,29 @@ GRU_DAF_decisions = {
 
 GRU_blut_boden_decisions = {
 
+	GRU_MIO_Start = {
+		icon = GFX_decision_generic_focus
+		
+		visible = {
+			has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = freedec?0
+		fire_only_once = yes
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision RUS_MIO_Start"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision RUS_MIO_Start"
+			GRU_setup_custom_germans_MIOs = yes
+		}
+	}
+
 	GRU_blut_boden_volksgesundheitsamt_decision = {
 		icon = generic_political_actions
 
@@ -10735,6 +10758,7 @@ GRU_expansion_three_volksland_hypoborea = {
 						amount = 1000
 						}
 						add_manpower = 40000
+						army_experience = 500
 						remove_dynamic_modifier = { modifier = UKR_breadbasket_of_europe_modifier }
 						remove_dynamic_modifier = { modifier = UKR_ukrainian_army }
 						remove_dynamic_modifier = { modifier = UKR_borotbyst_uprising_state }
@@ -10851,6 +10875,7 @@ GRU_expansion_three_volksland_hypoborea = {
 						amount = 1000
 						}
 						add_manpower = 40000
+						army_experience = 500
 					}
 					VKK = {	country_event = { id = rotermorgenmisc.301 days = 2 } }
 				if = {
@@ -10933,6 +10958,7 @@ GRU_expansion_three_volksland_hypoborea = {
 						amount = 1000
 						}
 						add_manpower = 40000
+						army_experience = 500
 						remove_ideas = BAT_black_monday
 						remove_ideas = BAT_black_monday_1
 						remove_ideas = BAT_black_monday_2
@@ -11025,7 +11051,8 @@ GRU_expansion_three_volksland_hypoborea = {
 						type = support_equipment
 						amount = 100
 						}
-						add_manpower = 40000					
+						add_manpower = 40000
+						army_experience = 500
 					}
 				if = {
 						limit = {
@@ -16315,7 +16342,7 @@ GRU_new_order_decisions = {
 						add_equipment_to_stockpile = { type = artillery_equipment amount = 1000 }
 						add_equipment_to_stockpile = { type = anti_tank_equipment amount = 600 }
 						add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 5000 }
-						add_manpower = 40000
+						add_manpower = 400000
 						remove_all_ministers = yes
 						add_ideas = limited_conscription
 						add_ideas = limited_exports
@@ -16466,6 +16493,7 @@ GRU_new_order_decisions = {
 						add_equipment_to_stockpile = { type = anti_tank_equipment amount = 600 }
 						add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 5000 }
 						add_manpower = 120000
+						army_experience = 500
 						remove_all_ministers = yes
 						add_ideas = limited_conscription
 						add_ideas = limited_exports
@@ -16509,7 +16537,7 @@ GRU_new_order_decisions = {
 				set_country_flag = VKN_established
 				VKN = { set_country_flag = IS_VKN }
 				GRU = {
-					VKN = { transfer_technology = yes }
+					VKN = { transfer_technology_without_doctrines = yes }
 				}
 			}
 	}
@@ -16706,6 +16734,7 @@ GRU_new_order_decisions = {
 						transfer_state = 1124
 						
 						add_manpower = 500000
+						army_experience = 500
 						set_capital = { state = 1124 }
 						set_victory_points = {
 							province = 9427
@@ -16767,7 +16796,7 @@ GRU_new_order_decisions = {
 				set_country_flag = VKP_established
 				VKP = { set_country_flag = IS_VKP }
 				GRU = {
-					VKP = { transfer_technology = yes }
+					VKP = { transfer_technology_without_doctrines = yes }
 				}
 			}
 	}

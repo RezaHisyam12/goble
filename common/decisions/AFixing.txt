@@ -410,6 +410,106 @@ RUS_Foreign_Policy_decisions = {
 		}
 	}
 
+	SOV_Attack_Europe = {
+		name = RUS_Attack_Region
+		icon = hol_draw_up_staff_plans
+		available = {
+			can_declare_war_on = FROM
+			NOT = {
+				has_non_aggression_pact_with = FROM
+				has_guaranteed = FROM
+			}
+			OR = {
+				is_owner_neighbor_of = FROM
+				any_allied_country = { is_owner_neighbor_of = FROM }
+			}
+		}
+		target_array = global.european_tags_array
+		target_root_trigger = {
+			has_country_flag = soviet_russia_restored
+			has_completed_focus = RUS_Eastern_Bloc
+		}
+		target_trigger = {
+			FROM = { 
+				is_ally_of_ROOT = no
+				has_socialist_government = no
+				NOT = { has_government = social_democrat }
+			}
+		}
+		cancel_trigger = {
+			if = {
+				limit = { has_completed_focus = RUS_The_Final_Battle }
+				OR = {
+					NOT = { can_declare_war_on = FROM }
+					has_non_aggression_pact_with = FROM
+					FROM = { is_subject_of = GRU }
+				}
+			}
+			else = {
+				OR = {
+					NOT = { can_declare_war_on = FROM }
+					has_non_aggression_pact_with = FROM
+					FROM = { is_in_faction = yes }
+					FROM = { is_guaranteed_by = GER }
+					FROM = { is_subject_of = GRU }
+				}
+			}
+		}
+
+		cost = 10
+		days_remove = 30
+		fire_only_once = yes
+		cancel_if_not_visible = yes
+		war_with_target_on_remove = yes
+
+		ai_will_do = {
+			factor = 100			
+			modifier = {
+				factor = 0
+				RUS_dont_attack_if_vulnerable_or_preparing = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = { RUS_dont_attack_if_target_is_stronger = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { RUS_dont_attack_if_faction_is_stronger = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { RUS_dont_attack_if_overlord_is_stronger = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject_of = GRU
+				}
+			}
+		}
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel RUS_Attack_Country_default target: [From.GetName]"
+			clear_decision_attack_AI = yes
+			add_political_power = 10
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete RUS_Attack_Country_default target: [From.GetName]"
+			FROM = { incoming_war_notification_effect = yes }
+			setup_decision_attack_AI = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove RUS_Attack_Country_default target: [From.GetName]"
+			clear_decision_attack_AI = yes
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
+			}
+		}
+	}		
+
 	RUS_Intervene_Germany = {
 		icon = GFX_decision_category_gerrivals
 		priority = 150
@@ -456,7 +556,7 @@ RUS_Foreign_Policy_decisions = {
 		}
 		
 		cost = 0
-		days_remove = 42
+		days_remove = 30
 		fire_only_once = yes
 		war_with_target_on_remove = yes
 
@@ -477,24 +577,6 @@ RUS_Foreign_Policy_decisions = {
 					has_war_with = TRK
 					has_war_with = UZB
 					has_war_with = KYR
-				}
-			}
-			modifier = {
-				factor = 0
-				has_war_with = JAP
-			}
-			modifier = {
-				factor = 0
-				VKR = {
-					is_in_faction_with = GRU
-					RUS_dont_attack_if_target_is_stronger = yes
-				}
-			}
-			modifier = {
-				factor = 0
-				VKB = {
-					is_in_faction_with = GRU
-					RUS_dont_attack_if_target_is_stronger = yes
 				}
 			}
 		}
@@ -1002,16 +1084,134 @@ AFG_india_conquest = {
 	}
 }
 
+NFA_reclaim_metropole_cat = {
+
+	NFA_La_Lutte_Finale = {
+		icon = generic_ignite_civil_war
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_country_flag = NFA_active_rebellion
+			}
+			modifier = {
+				factor = 0
+				ROOT_is_threatened = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = { default_attack_AI_trigger_FROM = yes }
+			}
+			modifier = {
+				factor = 0
+				FRA = {
+					has_war_with_major = no
+				}
+			}
+		}
+		visible = {
+			owns_state = 459
+			can_declare_war_on = FRA
+			NOT = {
+				has_annex_war_goal = FRA
+			}
+		}
+		cost = 30
+		available = {
+			controls_state = 459
+			OR = {
+				FRA = { has_war_with = GER }
+				date > 1940.1.1
+			}
+			FRA = {
+				OR = {
+					has_war_with = GER
+					has_war_with = GRU
+				}
+			}
+		}
+		cancel_trigger = {
+			NOT = {
+				FRA = {
+					OR = {
+						has_war_with = GER
+						has_war_with = GRU
+					}
+				}
+			}
+		}
+
+		days_remove = 30
+		fire_only_once = yes
+
+		remove_effect = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				create_wargoal = {
+					target = FRA
+					type = annex_everything
+				}
+			}
+			else = {
+				declare_war_on = { target = FRA type = annex_everything }
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				FRA = { country_event =  nfa.110 } #Inform CoF that they will be attacked soon.
+			}
+		}
+	}
+}
+
 CAN_returning_home_decisions = {
+
+	CAN_invite_german_halifax_decision = {
+		icon = generic_political_actions
+
+		allowed = {
+			tag = CAN
+		}
+		available = {
+			has_war_with = INT
+			GRU = { has_war_with = INT }
+		}
+		visible = {
+			is_faction_leader = yes
+			is_subject = no
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+		days_remove = 7
+		fire_only_once = yes
+		cost = 25
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_invite_german_halifax_decision target: [From.GetName]"
+			GRU = { country_event = rmorgenentente.300 }
+		}
+	}
+
 	CAN_attack_uob = {
 		icon = generic_tank
 
 		allowed = { tag = CAN }
 
-		available = {
+		available = {	
 			ROOT = {
 				controls_all_owned_states = yes
 				has_completed_focus = CAN_project_plough
+			}
+			FROM = {
+				OR = {
+					has_war_with = GER
+					has_war_with = GRU
+				}
 			}
 		}
 
@@ -1025,7 +1225,7 @@ CAN_returning_home_decisions = {
 		priority = 100
 		cost = 0
 		fire_only_once = yes
-		days_remove = 30
+		days_remove = 21
 		war_with_target_on_remove = yes
 
 		targets = { ENG GBP }
@@ -1048,6 +1248,18 @@ CAN_returning_home_decisions = {
 				FROM = {
 					original_tag = ENG
 					has_war_with_major = no
+				}
+				NOT = {
+					AND = {
+						OR = {
+							has_tech = mtg_transport
+							has_tech = transport
+						}
+						has_completed_focus = CAN_economic_recovery
+						has_completed_focus = CAN_deal_with_admiralty
+						has_completed_focus = CAN_new_munitions_plants
+						has_completed_focus = CAN_contact_loyalists
+					}
 				}
 			}
 			modifier = {
@@ -1119,110 +1331,6 @@ CAN_returning_home_decisions = {
 					}
 				}
 			}
-		}
-	}
-}
-
-NFA_reclaim_metropole_cat = {
-
-	NFA_La_Lutte_Finale = {
-		icon = generic_ignite_civil_war
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				factor = 0
-				has_country_flag = NFA_active_rebellion
-			}
-			modifier = {
-				factor = 0
-				ROOT_is_threatened = yes
-			}
-			modifier = {
-				factor = 0
-				FROM = { default_attack_AI_trigger_FROM = yes }
-			}
-			modifier = {
-				factor = 0
-				FRA = {
-					has_war_with_major = no
-				}
-			}
-		}
-		visible = {
-			owns_state = 459
-			can_declare_war_on = FRA
-			NOT = {
-				has_annex_war_goal = FRA
-			}
-		}
-		cost = 30
-		available = {
-			controls_state = 459
-			OR = {
-				FRA = { has_war_with = GER }
-				date > 1940.1.1
-			}
-		}
-
-		days_remove = 30
-		fire_only_once = yes
-
-		remove_effect = {
-			if = {
-				limit = {
-					is_ai = no
-				}
-				create_wargoal = {
-					target = FRA
-					type = annex_everything
-				}
-			}
-			else = {
-				declare_war_on = { target = FRA type = annex_everything }
-			}
-		}
-
-		complete_effect = {
-			hidden_effect = {
-				FRA = { country_event =  nfa.110 } #Inform CoF that they will be attacked soon.
-			}
-		}
-	}
-}
-
-CAN_returning_home_decisions = {
-	CAN_invite_german_halifax_decision = {
-		icon = generic_political_actions
-
-		allowed = {
-			tag = ENT
-		}
-		available = {
-			has_war_with = INT
-			GRU = { has_war_with = INT }
-		}
-		visible = {
-			is_faction_leader = yes
-			is_subject = no
-		}
-
-		target_trigger = {
-			FROM = {
-				OR = {
-					tag = GRU
-				}	
-			}
-		}
-		ai_will_do = {
-			factor = 1000
-		}
-		days_remove = 7
-		fire_only_once = yes
-		cost = 25
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision CAN_invite_german_halifax_decision target: [From.GetName]"
-			FROM = { country_event = rmorgenentente.300 }
 		}
 	}
 }

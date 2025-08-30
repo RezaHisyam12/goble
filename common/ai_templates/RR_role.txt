@@ -14,7 +14,7 @@ RR_Werwolf_generic = {
 		reinforce_prio = 2
 
 		upgrade_prio = {
-			base = 2
+			base = 1
 		}
 
 		can_upgrade_in_field = {
@@ -25,13 +25,12 @@ RR_Werwolf_generic = {
 			regiments = {
 				RR_Werwolf = 9
 				artillery_brigade = 3
-				anti_air_brigade = 1
 			}
 
 			support = {
 				engineer = 1
 				signal_company = 1
-				recon = 1
+				anti_air = 1
 				field_hospital = 1
 				logistics_company = 1
 			}
@@ -52,10 +51,6 @@ RR_Werwolf_generic = {
 				num_of_military_factories < 75 #90% of previous threshold
 			}
 			modifier = {
-				add = 1
-				has_reached_maximum_divisions = yes
-			}
-			modifier = {
 				add = 2
 				num_of_military_factories > 129
 			}
@@ -69,13 +64,12 @@ RR_Werwolf_generic = {
 			regiments = {
 				RR_1_motorized = 9
 				mot_artillery_brigade = 3
-				mot_anti_air_brigade = 1
 			}
 
 			support = {
 				engineer = 1
 				signal_company = 1
-				mot_recon = 1
+				anti_air = 1
 				field_hospital = 1
 				logistics_company = 1
 			}

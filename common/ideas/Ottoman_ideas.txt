@@ -1125,7 +1125,7 @@ ideas = {
 
 		ott_balkan_military_accords = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ott_balkan_military_accords"}
-			picture = MTG_naval_treaty_adherent
+			picture = TUR_ottoman_hegemony
 			available = {
 				has_war = no
 			}
@@ -1141,7 +1141,7 @@ ideas = {
 
 		ott_balkan_military_accords_2 = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ott_balkan_military_accords_2"}
-			picture = MTG_naval_treaty_adherent
+			picture = TUR_ottoman_hegemony
 			available = {
 				has_war = no
 			}
@@ -1158,13 +1158,13 @@ ideas = {
 
 		ott_greco_turkish_accord = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea ott_greco_turkish_accord"}
-			picture = MTG_naval_treaty_adherent
-			allowed = { always = yes }
+			picture = Greek_Autonomy
 			available = {
 				NOT = { has_war_with = GRE }
 				NOT = { has_war_with = TUR }
 			}
-			modifier = {
+			allowed = { always = no }
+            modifier = {
 				consumer_goods_factor = -0.15
 				production_speed_buildings_factor = 0.15
 				stability_factor = 0.10

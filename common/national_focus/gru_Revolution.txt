@@ -781,8 +781,8 @@ shared_focus = {
 			add_political_power = 50
 			add_stability = 0.05
 			add_ideas = GRU_heavy_industry_a
-			add_tech_bonus = {
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				cost_reduction = 1
 				uses = 1
 				category = industry
 			}
@@ -1920,8 +1920,8 @@ shared_focus = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_agrarian_collectivisation"
-			add_tech_bonus = {
-				bonus = 2
+			add_doctrine_cost_reduction = {
+				cost_reduction = 2
 				uses = 1
 				category = industry
 			}
@@ -1973,12 +1973,12 @@ shared_focus = {
 			}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_agrarian_subsides"
-			add_tech_bonus = {
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				cost_reduction = 1
 				uses = 2
 				category = industry
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				uses = 2
 				bonus = 0.75
 				technology = excavation1
@@ -2070,9 +2070,9 @@ shared_focus = {
 				    instant_build = yes
 				}
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = synth_resources
-				bonus = 1
+				cost_reduction = 1
 				uses = 1
 				category = synth_resources
 			}
@@ -2099,9 +2099,9 @@ shared_focus = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_spzproj_uran"
-				add_tech_bonus = {
+				add_doctrine_cost_reduction = {
 						name = GRU_spzproj_uran
-						bonus = 1
+						cost_reduction = 1
 						uses = 1
 						technology = atomic_research
 					}
@@ -2109,6 +2109,10 @@ shared_focus = {
 						specialization = specialization_nuclear
 						value = 0.25
 					}
+				if = {
+					limit = { NOT = { is_special_project_being_researched = sp:sp_nuclear_reactor } }
+					sp:sp_nuclear_reactor = { add_project_progress_ratio = 0.1 }
+				}
 			custom_effect_tooltip = tooltip_white_line
 			if = {
 				limit = {
@@ -2179,9 +2183,9 @@ shared_focus = {
 		}
 		completion_reward = {
 				log = "[GetDateText]: [Root.GetName]: Focus GRU_spzprojpfeil"
-				add_tech_bonus = {
+				add_doctrine_cost_reduction = {
 						name = GRU_spzprojpfeil
-						bonus = 1
+						cost_reduction = 1
 						uses = 1
 						category = rocketry
 					}
@@ -2491,9 +2495,9 @@ shared_focus = {
 			add_to_array = { global.zollverein_members = THIS }
 			hidden_effect = {
 				add_dynamic_modifier = { modifier = GRU_zollverein_economic_sphere }
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = GRU_found_the_zollverein
-				bonus = 1
+				cost_reduction = 1
 				uses = 1
 				category = construction_tech
 			}
@@ -2563,9 +2567,9 @@ shared_focus = {
 		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_new_industries"
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = industrial_bonus
-				bonus = 1
+				cost_reduction = 1
 				uses = 2
 				category = electronics
 			}
@@ -3343,7 +3347,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 3
+			factor = 8
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3382,7 +3386,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 3
+			factor = 8
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3403,7 +3407,7 @@ shared_focus = {
 		custom_effect_tooltip = tooltip_white_line	
 		custom_effect_tooltip = tech_marine_bonus_effect
 		hidden_effect = {
-			set_technology = { tech_marine_bonus = 1 popup = no }
+			set_technology = { tech_marine_cost_reduction = 1 popup = no }
 		}
 		custom_effect_tooltip = tooltip_white_line	
 		navy_experience = 50
@@ -3422,7 +3426,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 3
+			factor = 8
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3510,7 +3514,7 @@ shared_focus = {
 		y = 1
 		cost = 5
 		ai_will_do = {
-			factor = 3
+			factor = 15
 			modifier = {
 				factor = 50
 				has_war = yes
@@ -3541,7 +3545,7 @@ shared_focus = {
 		y = 3
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3565,7 +3569,7 @@ shared_focus = {
 		y = 3
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3589,7 +3593,7 @@ shared_focus = {
 		y = 3
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3619,7 +3623,7 @@ shared_focus = {
 		y = 3
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3707,7 +3711,7 @@ shared_focus = {
 		y = 4
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3754,7 +3758,7 @@ shared_focus = {
 		y = 4
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3800,7 +3804,7 @@ shared_focus = {
 		y = 5
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 10
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3840,6 +3844,10 @@ shared_focus = {
 			add_breakthrough_progress = {
 				specialization = specialization_land
 				value = 0.5
+			}
+			if = {
+				limit = { NOT = { is_special_project_being_researched = sp:sp_land_land_cruiser } }
+				sp:sp_land_land_cruiser = { add_project_progress_ratio = 0.2 }
 			}
 			custom_effect_tooltip = tooltip_white_line
 			army_experience = 100
@@ -3911,7 +3919,7 @@ shared_focus = {
 		y = 5
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 10
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3961,6 +3969,10 @@ shared_focus = {
 				specialization = specialization_naval
 				value = 0.5
 			}
+			if = {
+				limit = { NOT = { is_special_project_being_researched = sp:sp_naval_nuclear_torpedo } }
+				sp:sp_naval_nuclear_torpedo = { add_project_progress_ratio = 0.2 }
+			}
 			custom_effect_tooltip = tooltip_white_line
 			navy_experience = 100
 		}
@@ -3977,7 +3989,7 @@ shared_focus = {
 		y = 4
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -4023,7 +4035,7 @@ shared_focus = {
 		y = 4
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -4069,7 +4081,7 @@ shared_focus = {
 		y = 5
 		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 10
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -4132,6 +4144,10 @@ shared_focus = {
 			add_breakthrough_progress = {
 				specialization = specialization_air
 				value = 0.5
+			}
+			if = {
+				limit = { NOT = { is_special_project_being_researched = sp:sp_air_intercontinental_bomber } }
+				sp:sp_air_intercontinental_bomber = { add_project_progress_ratio = 0.2 }
 			}
 			custom_effect_tooltip = tooltip_white_line
 			air_experience = 100
@@ -6148,9 +6164,9 @@ shared_focus = {
 					instant_build = yes
 				}
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = tank_bonus
-				bonus = 1
+				cost_reduction = 1
 				uses = 1
 				category = armor
 			}
@@ -6175,9 +6191,9 @@ shared_focus = {
 			}
 			}
 			
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = infantry_weapons_bonus
-				bonus = 2
+				cost_reduction = 2
 				uses = 1
 				category = armor
 			}
@@ -7298,7 +7314,7 @@ shared_focus = {
 		y = 2
 		cost = 6
 		ai_will_do = {
-			factor = 15
+			factor = 75
 		}
 		available = {
 			is_subject = no
@@ -7683,6 +7699,7 @@ shared_focus = {
 		y = 0
 		relative_position_id = GRU_NMDVP_LEBENSRAUM
 		available = {
+		has_completed_focus = GRU_NMDVP_LEBENSRAUM
 			OR = {
 				has_country_flag = VKB_established
 				has_country_flag = VKR_established
@@ -7710,16 +7727,19 @@ shared_focus = {
 	shared_focus = {
 		id = GRU_support_colonies
 		icon = GRU_spheres_of_influence
-		cost = 10
+		cost = 7
 		relative_position_id = GRU_new_order
 		x = 2
 		y = 1
+		available = {
+		has_completed_focus = GRU_NMDVP_LEBENSRAUM
+		}
 
 		ai_will_do = {
-			factor = 2
+			factor = 1
 			modifier = {
 				factor = 50
-				has_completed_focus = GRU_NMDVP_SLAV_LAND_EXPANSION
+				has_completed_focus = GRU_NMDVP_LEBENSRAUM
 			}
 		}
 		prerequisite = {
@@ -7785,13 +7805,13 @@ shared_focus = {
 	shared_focus = {
 		id = GRU_ostwall
 		icon = GFX_goal_GER_Ostwall
-		cost = 5
+		cost = 3
 
 		relative_position_id = GRU_new_order
 		x = -2
 		y = 1
 
-		ai_will_do = { factor = 5 }
+		ai_will_do = { factor = 10 }
 		prerequisite = {
 			focus = GRU_new_order
 		}
@@ -7815,13 +7835,13 @@ shared_focus = {
 	shared_focus = {
 		id = GRU_reinforce_bunker
 		icon = GFX_goal_nested_fortifications
-		cost = 15
+		cost = 10
 
 		relative_position_id = GRU_new_order
 		x = -1
 		y = 2
 
-		ai_will_do = { factor = 5 }
+		ai_will_do = { factor = 4 }
 		prerequisite = {
 			focus = GRU_ostwall
 		}
@@ -8048,13 +8068,13 @@ shared_focus = {
 	shared_focus = {
 		id = GRU_aid_plan
 		icon = VKB_COLONIZED
-		cost = 5
+		cost = 4
 
 		relative_position_id = GRU_new_order
 		x = 0
 		y = 3
 
-		ai_will_do = { factor = 5 }
+		ai_will_do = { factor = 3 }
 		prerequisite = {
 			focus = GRU_first_plan
 		}
@@ -8162,13 +8182,13 @@ shared_focus = {
 	shared_focus = {
 		id = GRU_aid_plan_2
 		icon = VKR_COLONIZE_ONE
-		cost = 5
+		cost = 4
 
 		relative_position_id = GRU_new_order
 		x = 0
 		y = 4
 
-		ai_will_do = { factor = 5 }
+		ai_will_do = { factor = 3 }
 		prerequisite = {
 			focus = GRU_aid_plan
 		}
@@ -8376,7 +8396,7 @@ shared_focus = {
 	shared_focus = {
 		id = GRU_panzer_divisions
 		icon = GFX_focus_ger_heavy_tanks
-		cost = 10
+		cost = 6
 
 		relative_position_id = GRU_new_order
 		x = 2
@@ -8390,7 +8410,7 @@ shared_focus = {
 		ai_will_do = {
 			factor = 2
 			modifier = {
-				factor = 10
+				factor = 5
 				has_war_with = RUS
 			}
 		}

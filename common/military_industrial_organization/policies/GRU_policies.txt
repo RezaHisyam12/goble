@@ -10,13 +10,10 @@ GRU_mio_policy_RD_Cap = {
 		military_industrial_organization_funds_gain = -0.05
 	}
 	on_add = {
-		custom_effect_tooltip = GRU_mio_policy_RD_Cap_tt
-		add_to_variable = { max_research_speed = 0.25 }
-		add_to_variable = { max_research_speed_loc = 25 }
+		add_to_variable = { max_research_speed = 0.25 tooltip = GRU_manufacturer_trait_research_cap_tt }
 	}
 	on_remove = {
 		subtract_from_variable = { max_research_speed = 0.25 }
-		subtract_from_variable = { max_research_speed_loc = 25 }
 	}
 	ai_will_do = { base = 10 }
 }
@@ -33,15 +30,12 @@ GRU_mio_policy_RD_Growth = {
 		military_industrial_organization_funds_gain = -0.05
 	}
 	on_add = {
-		custom_effect_tooltip = RUS_mio_policy_RD_Growth_tt
-		add_to_variable = { weekly_research_speed_gain = 0.01 }
-		add_to_variable = { weekly_research_speed_gain_loc = 1 }
+		add_to_variable = { weekly_research_speed_gain = 0.01 tooltip = GRU_manufacturer_trait_research_gain_tt }
 	}
 	on_remove = {
 		subtract_from_variable = { weekly_research_speed_gain = 0.01 }
-		subtract_from_variable = { weekly_research_speed_gain_loc = 1 }
 	}
-	ai_will_do = { base = 1000 }
+	ai_will_do = { base = 10 }
 }
 
 GRU_mio_policy_improved_external_equipment = {

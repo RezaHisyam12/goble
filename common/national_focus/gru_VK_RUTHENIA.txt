@@ -276,8 +276,11 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_THREE"
 			add_manpower = 15000
 		}
-		prerequisite = { focus = VK_FOCUS_RUTHENIA_COLONIZE_ONE }
-		prerequisite = { focus = VK_FOCUS_RUTHENIA_COLONIZE_TWO  }
+		prerequisite = { 
+			focus = VK_FOCUS_RUTHENIA_START_COLONIZING
+			focus = VK_FOCUS_RUTHENIA_COLONIZE_ONE 
+			focus = VK_FOCUS_RUTHENIA_COLONIZE_TWO
+		}
 	}
 	
 	focus = {
@@ -302,8 +305,11 @@ focus_tree = {
 				add_core_of = VKR
 			}
 		}
-		prerequisite = { focus = VK_FOCUS_RUTHENIA_COLONIZE_ONE }
-		prerequisite = { focus = VK_FOCUS_RUTHENIA_COLONIZE_TWO  }
+		prerequisite = { 
+			focus = VK_FOCUS_RUTHENIA_START_COLONIZING
+			focus = VK_FOCUS_RUTHENIA_COLONIZE_ONE 
+			focus = VK_FOCUS_RUTHENIA_COLONIZE_TWO
+		}
 	}
 	
 	focus = {
@@ -328,8 +334,11 @@ focus_tree = {
 				add_core_of = VKR
 			}
 		}
-		prerequisite = { focus = VK_FOCUS_RUTHENIA_COLONIZE_ONE }
-		prerequisite = { focus = VK_FOCUS_RUTHENIA_COLONIZE_TWO  }
+		prerequisite = { 
+			focus = VK_FOCUS_RUTHENIA_START_COLONIZING
+			focus = VK_FOCUS_RUTHENIA_COLONIZE_ONE 
+			focus = VK_FOCUS_RUTHENIA_COLONIZE_TWO
+		}
 	}
 	
 	focus = {
@@ -350,8 +359,11 @@ focus_tree = {
 				add_core_of = VKR
 			}
 		}
-		prerequisite = { focus = VK_FOCUS_RUTHENIA_COLONIZE_ONE }
-		prerequisite = { focus = VK_FOCUS_RUTHENIA_COLONIZE_TWO  }
+		prerequisite = { 
+			focus = VK_FOCUS_RUTHENIA_START_COLONIZING
+			focus = VK_FOCUS_RUTHENIA_COLONIZE_ONE 
+			focus = VK_FOCUS_RUTHENIA_COLONIZE_TWO
+		}
 	}
 	
 	focus = {
@@ -359,7 +371,7 @@ focus_tree = {
 		icon = VKR_COLONIZED
 		relative_position_id = VK_FOCUS_BALTENLAND_START_COLONIZING
 		x = 0
-		y = 3
+		y = 6
 		available = {
 		}
 		cost = 6

@@ -502,7 +502,7 @@ generic_super_heavy_tanks = {
 						tank_heavy_cannon 
 					} 
 				}
-				turret_type_slot = tank_super_heavy_three_man_tank_turret
+				turret_type_slot = tank_super_heavy_four_man_tank_turret
 				suspension_type_slot = tank_christie_suspension
 				armor_type_slot = tank_welded_armor
 				engine_type_slot = tank_diesel_engine
@@ -512,7 +512,7 @@ generic_super_heavy_tanks = {
 				special_type_slot_4 = wet_ammo_storage
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 10
+				tank_nsb_engine_upgrade = 14
 				tank_nsb_armor_upgrade = 8
 			}
 		}
@@ -866,7 +866,7 @@ generic_heavy_tank_destroyer = {
 						tank_heavy_cannon 
 					} 
 				}
-				turret_type_slot = tank_heavy_fixed_superstructure_turret
+				turret_type_slot = tank_heavy_three_man_tank_turret
 				suspension_type_slot = tank_torsion_bar_suspension
 				armor_type_slot = tank_riveted_armor
 				engine_type_slot = tank_gasoline_engine
@@ -923,7 +923,7 @@ generic_heavy_tank_destroyer = {
 						tank_heavy_cannon 
 					} 
 				}
-				turret_type_slot = tank_heavy_fixed_superstructure_turret
+				turret_type_slot = tank_heavy_three_man_tank_turret
 				suspension_type_slot = tank_torsion_bar_suspension
 				armor_type_slot = tank_riveted_armor
 				engine_type_slot = tank_gasoline_engine
@@ -984,7 +984,7 @@ generic_heavy_tank_destroyer = {
 						tank_heavy_cannon_2 
 					} 
 				}
-				turret_type_slot = tank_heavy_fixed_superstructure_turret
+				turret_type_slot = tank_heavy_three_man_tank_turret
 				suspension_type_slot = tank_torsion_bar_suspension
 				armor_type_slot = tank_riveted_armor
 				engine_type_slot = tank_gasoline_engine

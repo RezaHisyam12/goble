@@ -3,7 +3,7 @@
 
 has_same_government_as_ROOT_tt_NOT: "Does not have the same government as §Y[ROOT.GetNameWithFlag]§!."
 tech_human_wave_tactics_effect: "Enables Tactic: §Y$tactic_human_wave_tactics$§!"
-CAN_invite_german_halifax_decision: "Invite [From.GetNameDef] into the Halifax Conference"
+CAN_invite_german_halifax_decision: "Invite Berlin into the Halifax Conference"
 
 ###################
 ####Zollverein#####
@@ -27,7 +27,7 @@ GRU_zollverein: "Zollverein"
 GRU_may_now_invite_sphere:0 "Unaligned and subject nations may now be invited into German's sphere of economic influence\n"
 
 GRU_zollverein_category:0 "The Zollverein"
-GRU_zollverein_category_desc:0 "During the International Congress, we have decided to embark on an ambitious plan of industrial and economic investment for all developing nations that wish to apply. We will work together to make the world a better place for us all."
+GRU_zollverein_category_desc:0 "During the Congress, we have decided to embark on an ambitious plan of industrial and economic investment for all developing nations that wish to apply. We will work together to make the world a better place for us all."
 
 GRU_zollverein_economic_sphere:0 "Zollverein"
 GRU_zollverein_economic_sphere_desc:0 "This represents the overall boost to our economy received from our central place within the Zollverein. The more members we add, and the greater their industry, the better off we become."
@@ -99,7 +99,7 @@ GRU_economic_sphere_member:0 "Is a member of German's economic sphere"
 
 ### Techs ###
  zollverein_research_name: "Zollverein"
- zollverein_research_desc: "During the meeting of the Internationale we decided on the establishment of a worldwide plan to combine the efforts and technological advances of socialist nations. This plan has since evolved into a more ambitious plan, the Phalanstère International, aimed at helping socialist regimes around the world."
+ zollverein_research_desc: "During the meeting of the Stahlpakt we decided on the establishment of a worldwide plan to combine the efforts and technological advances. This plan has since evolved into a more ambitious plan, the Zollverein, aimed at helping members of the Sphere"
 
 
 ####

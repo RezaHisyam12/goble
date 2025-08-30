@@ -88,7 +88,7 @@ armour_generic = {
 			}
 
 			support = {
-				mot_recon = 1
+				assault_engineer = 1
 				heavy_flame_tank = 1
 				armored_signal = 1
 				logistics_company = 1
@@ -108,7 +108,7 @@ armour_generic = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { has_tech = sp_helicopter_artillery_observers_tech }
+				NOT = { has_tech = sp_helicopter_transport_pods_tech }
 			}
 			modifier = {
 				factor = 0
@@ -128,7 +128,7 @@ armour_generic = {
 			}
 
 			support = {
-				helicopter_recon = 1
+				assault_engineer = 1
 				heavy_flame_tank = 1
 				armored_signal = 1
 				logistics_company = 1

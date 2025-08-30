@@ -558,12 +558,20 @@
 		cost = 5
 
 		ai_will_do = {
-			factor = 100
+			factor = 10
 			modifier = {
 				factor = 0
 				OR = {
 					ROOT_is_threatened = yes
 					FRA = { default_attack_AI_trigger_FROM = yes }
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					country_is_in_dangerous_war = yes
+					var:64.owner = { dont_start_major_faction_wars = yes }
+					var:64.owner = { default_attack_AI_trigger = yes }
 				}
 			}
 		}
@@ -791,7 +799,7 @@
 		cost = 5
 
 		ai_will_do = {
-			factor = 99
+			factor = 1
 			modifier = {
 				factor = 0
 				has_game_rule = {

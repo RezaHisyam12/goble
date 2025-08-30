@@ -18,8 +18,8 @@ FRA_infantry = {
 
 		target_template = {
 			regiments = {
-				infantry = 8
-				artillery_brigade = 4
+				infantry = 9
+				artillery_brigade = 3
 			}
 
 			support = {
@@ -41,15 +41,15 @@ FRA_infantry = {
 			}
 			modifier = {
 				factor = 0
-				num_of_military_factories < 50
+				num_of_military_factories < 90 #90% of previous threshold
 			}
 			modifier = {
 				add = 1
 				has_reached_maximum_divisions = yes
 			}
 			modifier = {
-				add = 2
-				num_of_military_factories > 99
+				add = 1
+				num_of_military_factories > 149
 			}
 		}
 
@@ -82,15 +82,15 @@ FRA_infantry = {
 			}
 			modifier = {
 				factor = 0
-				num_of_military_factories < 75
+				num_of_military_factories < 135 #90% of previous threshold
 			}
 			modifier = {
 				add = 1
 				has_reached_maximum_divisions = yes
 			}
 			modifier = {
-				add = 3
-				num_of_military_factories > 149
+				add = 2
+				num_of_military_factories > 199
 			}
 		}
 

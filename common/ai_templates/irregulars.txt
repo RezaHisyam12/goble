@@ -1,5 +1,7 @@
-GRU_infantry = {
-	available_for = { GRU VKB VKK VKR VKM VKN VKP VOB VSJ VST HYP }
+line_irregulars = {
+	available_for = {
+		ANQ CHI FNG GXC HNN LEP MAN QIE SHX SIK SHD SZC XSM YUN KUM
+	}
 
 	role = infantry
 
@@ -7,9 +9,47 @@ GRU_infantry = {
 		factor = 10
 	}
 
-	GRU_infantry_default = {
+	irregulars_default = {
 		upgrade_prio = {
 			base = 1
+		}
+
+		can_upgrade_in_field = {
+			surrender_progress < 0.15
+		}
+
+		target_template = {
+			regiments = {
+				irregular_infantry = 9
+			}
+
+			support = {
+				artillery = 1
+				engineer = 1
+			}
+		}
+	}
+
+	irregulars_upgraded = {
+		upgrade_prio = {
+			base = 1
+			modifier = {
+				factor = 0
+				num_of_military_factories < 20
+			}
+			modifier = {
+				add = 1
+				has_global_flag = china_united
+			}
+			modifier = {
+				add = 1
+				has_reached_maximum_divisions = yes
+			}
+			modifier = {
+				add = 1
+				num_of_military_factories > 49
+				has_reached_ninety_percent_of_maximum_divisions = yes
+			}
 		}
 
 		can_upgrade_in_field = {
@@ -23,7 +63,7 @@ GRU_infantry = {
 			}
 
 			support = {
-				signal_company = 1
+				artillery = 1
 				anti_air = 1
 				engineer = 1
 				logistics_company = 1
@@ -32,7 +72,7 @@ GRU_infantry = {
 		}
 	}
 
-	GRU_infantry_upgraded = {
+	irregulars_artillery = {
 		upgrade_prio = {
 			base = 1
 			modifier = {
@@ -41,11 +81,16 @@ GRU_infantry = {
 			}
 			modifier = {
 				add = 1
-				has_reached_maximum_divisions = yes
+				has_global_flag = china_united
 			}
 			modifier = {
 				add = 1
+				has_reached_maximum_divisions = yes
+			}
+			modifier = {
+				add = 2
 				num_of_military_factories > 99
+				has_reached_ninety_percent_of_maximum_divisions = yes
 			}
 		}
 
@@ -60,7 +105,7 @@ GRU_infantry = {
 			}
 
 			support = {
-				signal_company = 1
+				artillery = 1
 				anti_air = 1
 				engineer = 1
 				logistics_company = 1
@@ -69,7 +114,7 @@ GRU_infantry = {
 		}
 	}
 
-	GRU_infantry_motorised = {
+	irregulars_motorised = {
 		upgrade_prio = {
 			base = 1
 			modifier = {
@@ -82,11 +127,16 @@ GRU_infantry = {
 			}
 			modifier = {
 				add = 1
+				has_global_flag = china_united
+			}
+			modifier = {
+				add = 1
 				has_reached_maximum_divisions = yes
 			}
 			modifier = {
-				add = 2
+				add = 3
 				num_of_military_factories > 149
+				has_reached_ninety_percent_of_maximum_divisions = yes
 			}
 		}
 
@@ -102,7 +152,7 @@ GRU_infantry = {
 
 			support = {
 				engineer = 1
-				signal_company = 1
+				artillery = 1
 				anti_air = 1
 				logistics_company = 1
 				field_hospital = 1
@@ -110,7 +160,7 @@ GRU_infantry = {
 		}
 	}
 
-	GRU_infantry_mechanised = {
+	irregulars_mechanised = {
 		upgrade_prio = {
 			base = 1
 			modifier = {
@@ -123,11 +173,16 @@ GRU_infantry = {
 			}
 			modifier = {
 				add = 1
+				has_global_flag = china_united
+			}
+			modifier = {
+				add = 1
 				has_reached_maximum_divisions = yes
 			}
 			modifier = {
-				add = 3
+				add = 4
 				num_of_military_factories > 199
+				has_reached_ninety_percent_of_maximum_divisions = yes
 			}
 		}
 
@@ -142,7 +197,7 @@ GRU_infantry = {
 			}
 
 			support = {
-				signal_company = 1
+				artillery = 1
 				anti_air = 1
 				engineer = 1
 				logistics_company = 1

@@ -48,10 +48,11 @@ GRU_zollverein_category = {
 				is_in_tech_sharing_group = zollverein_research
 				has_same_government_as_ROOT = yes
 			}
+			NOT = { has_country_flag = GRU_zollverein_member }
 		}
 
 		cost = 0
-		fire_only_once = yes
+		fire_only_once = no
 
 		targets = { GRU }
 		target_root_trigger = { is_in_faction = yes }

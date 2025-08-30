@@ -469,6 +469,12 @@ defined_text = { #SUPER EVENT TITLES
 	}
 	text = {
 		trigger = {
+			has_global_flag = RUSSIAN_UNIFICATION_internationalists
+		}
+		localization_key = "GFX_SPEVNT_RUSSIAN_UNIFICATION_internationalists"
+	}
+	text = {
+		trigger = {
 			has_global_flag = RUSSIAN_UNIFICATION_proletkultists
 		}
 		localization_key = "GFX_SPEVNT_RUSSIAN_UNIFICATION_proletkultists"
@@ -1207,6 +1213,12 @@ defined_text = { #SUPER EVENT QUOTES
 			has_global_flag = RUSSIAN_UNIFICATION_molotov
 		}
 		localization_key = "GFX_SPEVNT_RUSSIAN_UNIFICATION_molotov_TEXT"
+	}
+	text = {
+		trigger = {
+			has_global_flag = RUSSIAN_UNIFICATION_internationalists
+		}
+		localization_key = "GFX_SPEVNT_RUSSIAN_UNIFICATION_internationalists_TEXT"
 	}
 	text = {
 		trigger = {
@@ -1950,6 +1962,12 @@ defined_text = { #SUPER EVENT REMARKS
 	}
 	text = {
 		trigger = {
+			has_global_flag = RUSSIAN_UNIFICATION_internationalists
+		}
+		localization_key = "GFX_SPEVNT_RUSSIAN_UNIFICATION_internationalists_REMARK"
+	}
+	text = {
+		trigger = {
 			has_global_flag = RUSSIAN_UNIFICATION_proletkultists
 		}
 		localization_key = "GFX_SPEVNT_RUSSIAN_UNIFICATION_proletkultists_REMARK"
@@ -2686,6 +2704,12 @@ defined_text = { #SUPER EVENT DESCS
 			has_global_flag = RUSSIAN_UNIFICATION_molotov
 		}
 		localization_key = "GFX_SPEVNT_RUSSIAN_UNIFICATION_molotov_DESC"
+	}
+	text = {
+		trigger = {
+			has_global_flag = RUSSIAN_UNIFICATION_internationalists
+		}
+		localization_key = "GFX_SPEVNT_RUSSIAN_UNIFICATION_internationalists_DESC"
 	}
 	text = {
 		trigger = {

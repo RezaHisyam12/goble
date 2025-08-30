@@ -41,44 +41,324 @@
 		x = -2
 		y = 1
 		available = {
-							VKM = {
-								controls_state = 205
-								controls_state = 246
-								controls_state = 247
-								controls_state = 248
-								controls_state = 253
-								controls_state = 254
-								controls_state = 258
-								controls_state = 223
-							}
+			VKM = {
+				OR = {
+					VKM = {
+						controls_state = 205
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 205
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 246
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 246
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 247
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 247
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 248
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 248
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 253
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 253
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 254
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 254
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 258
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 258
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 223
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 223
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 263
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 263
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 208
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 208
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 244
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 244
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 195
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 195
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 1328
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 1328
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 264
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 264
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 252
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 252
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 1204
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 1204
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 1205
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 1205
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 255
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 255
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 239
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 239
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 401
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 401
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 265
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 265
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 260
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 260
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 257
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 257
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 258
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 258
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 222
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 222
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 224
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 224
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 242
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 242
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 250
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 250
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 1198
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 1198
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 256
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 256
+					}
+				}
+			}
 		}
 		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_MOSKOWIA_COLONIZE_ONE"
-			205 = {
-				add_core_of = VKM
+			every_state = {
+				limit = {
+					OR = {
+						state = 205
+				        state = 246
+				        state = 247
+				        state = 248
+				        state = 253
+				        state = 254
+				        state = 258
+				        state = 223
+				        state = 263
+				        state = 208
+				        state = 244
+				        state = 195
+				        state = 1328
+				        state = 264
+				        state = 252
+				        state = 1204
+				        state = 1205
+				        state = 255
+				        state = 239
+				        state = 401
+				        state = 265
+				        state = 260
+				        state = 257
+				        state = 250
+				        state = 258
+				        state = 222
+				        state = 224
+				        state = 242
+				        state = 250
+				        state = 1198
+				        state = 256
+				        state = 219
+					}
+				}
+				VKM = {
+					add_state_core = PREV
+					transfer_state = PREV
+				}
 			}
-			246 = {
-				add_core_of = VKM
-			}
-			247 = {
-				add_core_of = VKM
-			}
-			248 = {
-				add_core_of = VKM
-			}
-			253 = {
-				add_core_of = VKM
-			}
-			254 = {
-				add_core_of = VKM
-			}
-			258 = {
-				add_core_of = VKM
-			}
-			223 = {
-				add_core_of = VKM
-						}
 		}
 		prerequisite = { focus = VK_FOCUS_MOSKOWIA_START_COLONIZING  }
 	}
@@ -90,112 +370,203 @@
 		x = 0
 		y = 1
 		available = {
-							VKM = {
-								controls_state = 263
-								controls_state = 208
-								controls_state = 244
-								controls_state = 195
-								controls_state = 1328
-								controls_state = 264
-								controls_state = 252
-								controls_state = 1204
-								controls_state = 1205
-								controls_state = 255
-								controls_state = 239
-								controls_state = 401
-								controls_state = 265
-								controls_state = 260
-								controls_state = 257
-								controls_state = 250
-								controls_state = 258
-								controls_state = 222
-								controls_state = 224
-								controls_state = 262
-								controls_state = 242
-								controls_state = 250
-								controls_state = 1198
-								controls_state = 256
-							}
+			VKM = {
+				OR = {
+					VKM = {
+						controls_state = 351
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 351
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 214
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 214
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 397
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 397
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 400
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 400
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 1193
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 1193
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 399
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 399
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 249
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 249
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 1199
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 1199
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 251
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 251
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 1207
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 1207
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 1224
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 1224
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 406
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 406
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 652
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 652
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 1194
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 1194
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 1197
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 1197
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 651
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 651
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 398
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 398
+					}
+				}
+				OR = {
+					VKM = {
+						controls_state = 1208
+					}
+					any_other_country = {
+						is_subject_of = VKM
+						controls_state = 1208
+					}
+				}
+			}
 		}
 		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_MOSKOWIA_COLONIZE_TWO"
-			263 = {
-				add_core_of = VKM
+			every_state = {
+				limit = {
+					OR = {
+						state = 351
+				        state = 214
+				        state = 397
+				        state = 400
+				        state = 1193
+				        state = 399
+				        state = 249
+				        state = 1199
+				        state = 251
+				        state = 1207
+				        state = 1224
+				        state = 406
+				        state = 652
+				        state = 1194
+				        state = 1197
+				        state = 651
+				        state = 398
+				        state = 1208
+				        state = 262
+					}
+				}
+				VKM = {
+					add_state_core = PREV
+					transfer_state = PREV
+				}
 			}
-			208 = {
-				add_core_of = VKM
-			}
-			244 = {
-				add_core_of = VKM
-			}
-			195 = {
-				add_core_of = VKM
-			}
-			1328 = {
-				add_core_of = VKM
-			}
-			264 = {
-				add_core_of = VKM
-			}
-			252 = {
-				add_core_of = VKM
-			}
-			1204 = {
-				add_core_of = VKM
-			}
-			1205 = {
-				add_core_of = VKM
-			}
-			255 = {
-				add_core_of = VKM
-			}
-			239 = {
-				add_core_of = VKM
-			}
-			401 = {
-				add_core_of = VKM
-			}
-			1328 = {
-				add_core_of = VKM
-			}
-			265 = {
-				add_core_of = VKM
-			}
-			260 = {
-				add_core_of = VKM
-			}
-			257 = {
-				add_core_of = VKM
-			}
-			250 = {
-				add_core_of = VKM
-			}
-			258 = {
-				add_core_of = VKM
-			}
-			222 = {
-				add_core_of = VKM
-			}
-			224 = {
-				add_core_of = VKM
-			}
-			262 = {
-				add_core_of = VKM
-			}
-			242 = {
-				add_core_of = VKM
-			}
-			250 = {
-				add_core_of = VKM
-			}
-			1198 = {
-				add_core_of = VKM
-			}
-			256 = {
-				add_core_of = VKM
-			}
-
 		}
 		prerequisite = { focus = VK_FOCUS_MOSKOWIA_START_COLONIZING  }
 	}
@@ -206,86 +577,11 @@
 		relative_position_id = VK_FOCUS_MOSKOWIA_START_COLONIZING
 		x = 2
 		y = 1
-		available = {
-							VKM = {
-								controls_state = 351
-								controls_state = 214
-								controls_state = 397
-								controls_state = 400
-								controls_state = 1193
-								controls_state = 399
-								controls_state = 249
-								controls_state = 1199
-								controls_state = 251
-								controls_state = 1207
-								controls_state = 1224
-								controls_state = 406
-								controls_state = 652
-								controls_state = 1194
-								controls_state = 1197
-								controls_state = 651
-								controls_state = 398
-								controls_state = 1208
-							}
-		}
+
 		cost = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_MOSKOWIA_COLONIZE_THREE"
-
-			351 = {
-				add_core_of = VKM
-			}
-			214 = {
-				add_core_of = VKM
-			}
-			397 = {
-				add_core_of = VKM
-			}
-			400 = {
-				add_core_of = VKM
-			}
-			1193 = {
-				add_core_of = VKM
-			}
-			399 = {
-				add_core_of = VKM
-			}
-			249 = {
-				add_core_of = VKM
-			}
-			1199 = {
-				add_core_of = VKM
-			}
-			251 = {
-				add_core_of = VKM
-			}
-			1207 = {
-				add_core_of = VKM
-			}
-			1224 = {
-				add_core_of = VKM
-			}
-			406 = {
-				add_core_of = VKM
-			}
-			652 = {
-				add_core_of = VKM
-			}
-			1194 = {
-				add_core_of = VKM
-			}
-			1197 = {
-				add_core_of = VKM
-			}
-			651 = {
-				add_core_of = VKM
-			}
-			398 = {
-				add_core_of = VKM
-			}
-			1208 = {
-				add_core_of = VKM
-							}
+			add_manpower = 35000
 		}
 		prerequisite = { focus = VK_FOCUS_MOSKOWIA_START_COLONIZING  }
 	}

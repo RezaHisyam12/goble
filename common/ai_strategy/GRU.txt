@@ -100,15 +100,12 @@ stahlpakt_hates_russia = {
 GRU_dislikes_entente = {
 	reversed = yes
 
-	enable_reverse = {
-		GRU = { is_faction_leader = yes }
-	}
 	enable = {
 		is_in_faction_with = ENT
+		GRU = { is_faction_leader = yes }
+		NOT = { has_global_flag = GRU_stay_out_france_uk }
 	}
 	abort_when_not_enabled = yes
-
-	target_array = ENT.faction_members
 
 	ai_strategy = {
 		type = ignore
@@ -751,31 +748,6 @@ GRU_destroy_invasion_beachheads_hanover = {
 	}
 }
 
-GRU_destroy_invasion_beachheads_hanover = {
-	allowed = {
-		original_tag = GRU
-	}
-	enable = {
-		NOT = { has_full_control_of_state = 59 } #Hanover
-		has_war_with = ENG
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = front_unit_request
-		state = 59 #Hanover
-		value = 50
-	}
-	ai_strategy = {
-		type = front_control
-		state = 59 #Hanover
-		priority = 100
-		ordertype = front
-		execution_type = rush_weak
-		execute_order = yes
-	}
-}
-
 GRU_destroy_invasion_beachheads_schleswig = {
 	allowed = {
 		original_tag = GRU
@@ -1287,7 +1259,7 @@ default_RR_Werwolf_production = {
 	ai_strategy = {
 		type = template_prio
 		id = RR_Werwolf
-		value = 100
+		value = 20
 	}
 }
 
@@ -1300,7 +1272,7 @@ default_armour_super_heavy_production = {
 	}
 	enable = {
 		has_tech = super_heavy_tank_chassis
-		num_of_military_factories > 199
+		num_of_military_factories > 299
 	}
 	abort_when_not_enabled = yes
 	
@@ -1311,12 +1283,12 @@ default_armour_super_heavy_production = {
 	}
 	ai_strategy = {
 		type = template_prio
-		id = super_heavy_armor
+		id = land_cruiser
 		value = 20
 	}
 	ai_strategy = {
 		type = equipment_variant_production_factor
-		id = super_heavy_tank_chassis
+		id = land_cruiser_chassis
 		value = 10
 	}
 	ai_strategy = {
@@ -1328,6 +1300,39 @@ default_armour_super_heavy_production = {
 		type = equipment_variant_production_factor
 		id = heavy_tank_destroyer_chassis
 		value = 10
+	}
+}
+
+GRU_build_tanks_focus = {
+	allowed = {
+		OR = {
+			tag = GRU
+			tag = VKB
+			tag = VKR
+			tag = VKK
+			tag = VKM
+			tag = VSJ
+			tag = VST
+			tag = HYP
+			tag = VKN
+			tag = VKP
+			tag = VOB
+		}
+	}
+	enable = {
+		has_government = national_populist
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor_role
+		value = 10
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -10
 	}
 }
 
@@ -1346,18 +1351,18 @@ default_heavy_tank_production = {
 
 	ai_strategy = {
 		type = equipment_variant_production_factor
-		id = medium_tank_chassis
-		value = -15
-	}
-	ai_strategy = {
-		type = equipment_variant_production_factor
 		id = heavy_tank_chassis
 		value = 15
 	}
 	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = armored_support_vehicle
+		value = 10
+	}
+	ai_strategy = {
 		type = role_ratio
 		id = armor_role
-		value = 8
+		value = 10
 	}
 }
 
@@ -1375,18 +1380,13 @@ increased_heavy_tank_production_2 = {
 
 	ai_strategy = {
 		type = equipment_variant_production_factor
-		id = medium_tank_chassis
-		value = -25
-	}
-	ai_strategy = {
-		type = equipment_variant_production_factor
 		id = heavy_tank_chassis
 		value = 25
 	}
 	ai_strategy = {
 		type = role_ratio
 		id = armor_role
-		value = 8
+		value = 10
 	}
 }
 
@@ -1394,7 +1394,7 @@ GRU_finish_russia_off = {
 	allowed = {
 		OR = {
 			original_tag = GRU
-			original_tag = HUN
+			original_tag = VKP
 			is_ally_with = GRU
 		}
 		is_in_europe = yes
@@ -1722,12 +1722,12 @@ GRU_secure_eastern_front = {
 	ai_strategy = {
 		type = front_armor_score
 		id = RUS
-		value = 50
+		value = 10
 	}
 	ai_strategy = {
 		type = front_unit_request
 		tag = RUS
-		value = 25
+		value = 20
 	}
 }
 

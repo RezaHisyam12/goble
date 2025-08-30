@@ -8975,6 +8975,8 @@ RUS_osoavia_organisation = {
 		plane_modules_tech
 	}
 
+	ai_will_do = { base = 10 }
+
 	on_design_team_assigned_to_tech = {
 		FROM = { add_to_variable = { OSOAVIA_Research_Number = 1 } }
 	}
@@ -9239,6 +9241,8 @@ RUS_skorost_organisation = {
 		mio_cat_all_heavy_aircraft_and_modules
 		plane_modules_tech
 	}
+
+	ai_will_do = { base = 1 }
 
 	on_tech_research_completed = {
 		FROM = {

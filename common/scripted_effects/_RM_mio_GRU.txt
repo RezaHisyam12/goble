@@ -1,3 +1,12 @@
+GRU_calculate_daily_funds_gain_and_requirement = {
+	# Daily Funds Gained
+	set_temp_variable = { daily_funds_gained = Funds_Difference }
+	divide_temp_variable = { daily_funds_gained = 7 }
+	# Daily Funds Required for Bonus
+	set_temp_variable = { daily_funds_requirement = weekly_funds_requirement }
+	divide_temp_variable = { daily_funds_requirement = 7 }
+}
+
 GRU_Update_MIO_XP_Gains = {
 	#Volksmarine Werft
 	mio:GRU_volksmarine_organisation = {
@@ -5,8 +14,6 @@ GRU_Update_MIO_XP_Gains = {
 		set_variable = { Current_Week_Funds = funds }
 		set_variable = { Funds_Difference = Current_Week_Funds }
 		subtract_from_variable = { Funds_Difference = Previous_Week_Funds }
-		set_variable = { Funds_Difference_loc = Funds_Difference }
-		divide_variable = { Funds_Difference_loc = 7 }
 	}
 	if = { #Remove if below threshold
 		limit = {
@@ -64,8 +71,6 @@ GRU_Update_MIO_XP_Gains = {
 		set_variable = { Current_Week_Funds = funds }
 		set_variable = { Funds_Difference = Current_Week_Funds }
 		subtract_from_variable = { Funds_Difference = Previous_Week_Funds }
-		set_variable = { Funds_Difference_loc = Funds_Difference }
-		divide_variable = { Funds_Difference_loc = 7 }
 	}
 	if = { #Remove if below threshold
 		limit = {
@@ -95,7 +100,7 @@ GRU_Update_MIO_XP_Gains = {
 		if = {
 			limit = {
 				mio:GRU_junkers_organisation = {
-					is_mio_trait_completed = junkers_upgrade_1
+					is_mio_trait_completed = osoavia_upgrade_1
 				}
 			}
 			add_ideas = GRU_junkers_air_xp_2
@@ -126,26 +131,21 @@ GRU_Update_MIO_Research_Speeds = {
 		set_variable = { Current_Week_Funds = funds }
 		set_variable = { Funds_Difference = Current_Week_Funds }
 		subtract_from_variable = { Funds_Difference = Previous_Week_Funds }
-		set_variable = { Funds_Difference_loc = Funds_Difference }
-		divide_variable = { Funds_Difference_loc = 7 }
 	}
-	if = { #Weekly trigger for giving incremental research bonus to MIO Rheinmetall
+	if = { #Weekly trigger for giving incremental research bonus to MIO ChTZ
 		limit = {
 			check_variable = { MIO_Rheinmetall_assigned_manufacturer_number > 0 } #So that the MIO can only gain research speed from manufacturing weapons
-			mio:GRU_Rheinmetall_organisation = { check_variable = { Funds_Difference > weekly_funds_requirement } }
+			mio:GRU_rheinmetall_organisation = { check_variable = { Funds_Difference > weekly_funds_requirement } }
 		}
 		if = {
-			limit = { mio:GRU_Rheinmetall_organisation = { check_variable = { research_bonus < max_research_speed } } }
+			limit = { mio:GRU_rheinmetall_organisation = { check_variable = { research_bonus < max_research_speed } } }
 			mio:GRU_rheinmetall_organisation = { add_mio_research_bonus = weekly_research_speed_gain }
-			mio:GRU_rheinmetall_organisation = { add_to_variable = { total_campaign_research_speed = weekly_research_speed_gain_loc } }
 		}
 		else_if = {
 			limit = {
-				OR = {
-					mio:GRU_rheinmetall_organisation = {
+				mio:GRU_rheinmetall_organisation = {
+					OR = {
 						check_variable = { research_bonus > max_research_speed }
-					}
-					mio:GRU_rheinmetall_organisation = {
 						check_variable = { research_bonus = max_research_speed }
 					}
 				}
@@ -154,14 +154,8 @@ GRU_Update_MIO_Research_Speeds = {
 				limit = { NOT = { has_country_flag = GRU_Rheinmetall_RS_Notification } }
 				set_country_flag = GRU_Rheinmetall_RS_Notification
 				mio:GRU_rheinmetall_organisation = {
-					set_temp_variable = {
-						var = GRU_MIO_research_speed_temp
-						value = research_bonus
-					}
-					multiply_temp_variable = {
-						var = GRU_MIO_research_speed_temp
-						value = 100
-					}
+					set_temp_variable = { GRU_MIO_research_speed_temp = research_bonus }
+					multiply_temp_variable = { GRU_MIO_research_speed_temp = 100 }
 					ROOT = {
 						set_variable = { GRU_MIO_alert_name = PREV }
 						set_variable = { GRU_MIO_research_speed = GRU_MIO_research_speed_temp }
@@ -171,6 +165,35 @@ GRU_Update_MIO_Research_Speeds = {
 				scoped_sound_effect = diplomatic_notification
 				set_variable_to_random = global.kaiserreich_alerts_dirty
 			}
+		}
+	}
+}
+
+GRU_setup_custom_germans_MIOs = {
+	if = {
+		limit = { has_dlc = "Arms Against Tyranny" }
+		#Setup the R&D MIOs
+		every_military_industrial_organization = {
+			limit = {
+				OR = {
+					is_military_industrial_organization = GRU_rheinmetall_organisation
+				}
+			}
+			set_variable = { max_research_speed = 0.5 }
+			set_variable = { weekly_research_speed_gain = 0.01 }
+			set_variable = { weekly_funds_requirement = 9 }
+		}
+		#Setup the XP MIOs
+		every_military_industrial_organization = {
+			limit = {
+				OR = {
+					is_military_industrial_organization = GRU_volksmarine_organisation
+					is_military_industrial_organization = GRU_junkers_organisation
+				}
+			}
+			set_variable = { weekly_funds_requirement = 9 }
+			set_variable = { xp_gain_loc = 0.2 }
+			set_variable = { total_campaign_xp = 0 }
 		}
 	}
 }

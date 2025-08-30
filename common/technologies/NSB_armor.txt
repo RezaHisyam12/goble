@@ -424,7 +424,7 @@ technologies = {
 				is_eligible_for_armor_production = yes
 			}
 			modifier = {
-				factor = 0.1
+				factor = 0
 				tag = GRU
 			}
 		}
@@ -467,7 +467,7 @@ technologies = {
 				is_eligible_for_armor_production = yes
 			}
 			modifier = {
-				factor = 0.1
+				factor = 0
 				tag = GRU
 			}
 		}
@@ -1177,6 +1177,10 @@ technologies = {
 				add = 15
 				is_eligible_for_armor_production = yes
 			}
+			modifier = {
+				factor = 100
+				tag = GRU
+			}
 		}
 
 		categories = {
@@ -1237,6 +1241,10 @@ technologies = {
 			modifier = {
 				add = 15
 				is_eligible_for_armor_production = yes
+			}
+			modifier = {
+				factor = 100
+				tag = GRU
 			}
 		}
 
@@ -1324,6 +1332,10 @@ technologies = {
 				add = 15
 				is_eligible_for_armor_production = yes
 			}
+			modifier = {
+				factor = 100
+				tag = GRU
+			}
 		}
 
 		categories = {
@@ -1380,6 +1392,10 @@ technologies = {
 				add = 15
 				is_eligible_for_armor_production = yes
 			}
+			modifier = {
+				factor = 100
+				tag = GRU
+			}
 		}
 
 		categories = {
@@ -1429,6 +1445,10 @@ technologies = {
 			modifier = {
 				add = 15
 				is_eligible_for_armor_production = yes
+			}
+			modifier = {
+				factor = 100
+				tag = GRU
 			}
 		}
 
