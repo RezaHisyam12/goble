@@ -13,70 +13,6 @@
 ################
 ### Domestic ###
 ################
-entente_france = {
-	allowed = {
-		OR = {
-			tag = CAN
-			tag = NFA
-			tag = SRD
-		}
-	}
-	enable = {
-		is_in_faction_with = NFA
-		country_exists = FRA
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = contain
-		id = FRA
-		value = 100
-	}
-	ai_strategy = {
-		type = conquer
-		id = FRA
-		value = 100
-	}
-	ai_strategy = {
-		type = antagonize
-		id = FRA
-		value = 100
-	}
-}
-
-entente_britain = {
-	allowed = {
-		OR = {
-			tag = CAN
-			tag = NFA
-			tag = AST
-		}
-	}
-	enable = {
-		is_in_faction_with = ENT
-		country_exists = ENG
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = contain
-		id = ENG
-		value = 100
-	}
-	ai_strategy = {
-		type = conquer
-		id = ENG
-		value = 100
-	}
-	ai_strategy = {
-		type = antagonize
-		id = ENG
-		value = 100
-	}
-}
-
 entente_take_ireland = {
 	allowed = {
 		OR = {
@@ -133,9 +69,8 @@ entente_sri = {
 entente_bhc = {
 	allowed = {
 		OR = {
-			tag = CAN
+			tag = AST
 			tag = DEH
-			tag = NFA
 		}
 	}
 	enable = {
@@ -469,6 +404,7 @@ entente_protect_sand_france = {
 entente_take_prf_first = {
 	enable = {
 		is_in_faction_with = DEH
+		is_in_asia = yes
 		num_divisions > 10
 		has_war_with = BHC
 		has_war_with = PRF
@@ -492,6 +428,7 @@ entente_take_prf_first = {
 entente_invade_bhc = {
 	enable = {
 		is_in_faction_with = DEH
+		is_in_asia = yes
 		num_divisions > 10
 		has_war_with = BHC
 		NOT = { has_war_with = PRF }
@@ -509,7 +446,9 @@ entente_invade_bhc = {
 
 entente_assist_delhi = {
 	allowed = {
+		is_in_faction_with = ENT
 		is_indian_tag = no
+		is_in_asia = yes
 	}
 	enable = {
 		is_in_faction_with = DEH
@@ -612,35 +551,6 @@ entente_assist_spain_kingdom = {
 		type = area_priority
 		id = iberia
 		value = 500
-	}
-}
-
-entente_hold_france = {
-	allowed = {
-		is_in_faction_with = ENT
-	}
-	enable = {
-		is_in_faction_with = NFA
-		num_divisions > 4
-		has_war_with = FRA
-		FRA = { has_capitulated = no }
-		NOT = { surrender_progress > 0 }
-		NFA = {
-			any_controlled_state = {
-				OR = {
-					region = 20 #Southern France
-					region = 164 #Western France
-				}
-			}
-		}
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = area_priority
-		id = france
-		value = 1000
 	}
 }
 
@@ -1225,6 +1135,7 @@ ENT_ignore_malta = {
 	}
 	enable = {
 		has_war_with = MLT
+		MLT = { has_socialist_government = yes }
 		OR = {
 			FRA = {
 				exists = yes
