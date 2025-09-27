@@ -1112,9 +1112,10 @@ STP_ignore_western_front = {
 	}
 	enable = {
 		is_ally_with = GRU
-		FRA = { is_faction_leader = yes }
+		FRA = { is_faction_leader = yes }			
 		NOT = { has_war_with = AUS }
 		russian_civil_war = no
+		NOT = { RUS = { controls_state = 5 } }
 	}
 	abort_when_not_enabled = yes
 
@@ -1254,12 +1255,12 @@ default_RR_Werwolf_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = RR_Werwolf
-		value = 10
+		value = 20
 	}
 	ai_strategy = {
 		type = template_prio
 		id = RR_Werwolf
-		value = 20
+		value = 100
 	}
 }
 
@@ -1284,7 +1285,7 @@ default_armour_super_heavy_production = {
 	ai_strategy = {
 		type = template_prio
 		id = land_cruiser
-		value = 20
+		value = 100
 	}
 	ai_strategy = {
 		type = equipment_variant_production_factor
@@ -1326,7 +1327,7 @@ GRU_build_tanks_focus = {
 
 	ai_strategy = {
 		type = role_ratio
-		id = armor_role
+		id = heavy_armor_role
 		value = 10
 	}
 	ai_strategy = {
@@ -1358,30 +1359,6 @@ default_heavy_tank_production = {
 		type = equipment_variant_production_factor
 		id = armored_support_vehicle
 		value = 10
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = armor_role
-		value = 10
-	}
-}
-
-increased_heavy_tank_production_2 = {
-	allowed = {
-		OR = {
-			tag = GER
-			tag = GRU
-		}
-	}
-	enable = {
-		num_of_military_factories > 99
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = heavy_tank_chassis
-		value = 25
 	}
 	ai_strategy = {
 		type = role_ratio
@@ -1446,17 +1423,19 @@ GRU_less_focus_on_russia = {
 			is_faction_leader = yes
 		}
 		NOT = {
-			VKB = {
-				is_in_faction_with = ROOT
-				surrender_progress > 0.40
-			}
-			VKR = {
-				is_in_faction_with = ROOT
-				surrender_progress > 0.40
-			}
-			VKK = {
-				is_in_faction_with = ROOT
-				surrender_progress > 0.40
+			OR = {
+				VKB = {
+					is_in_faction_with = ROOT
+					surrender_progress > 0.40
+				}
+				VKR = {
+					is_in_faction_with = ROOT
+					surrender_progress > 0.40
+				}
+				VKK = {
+					is_in_faction_with = ROOT
+					surrender_progress > 0.40
+				}
 			}
 		}
 	}
@@ -1707,15 +1686,8 @@ GRU_secure_eastern_front = {
 		original_tag = GRU
 	}
 	enable = {
-		OR = {
-			NOT = { country_exists = VKB }
-			VKB = { has_capitulated = yes }
-		}
-		OR = {
-			NOT = { country_exists = VKR }
-			VKR = { has_capitulated = yes }
-		}
 		has_war_with = RUS
+		is_neighbor_of = RUS
 	}
 	abort_when_not_enabled = yes
 
@@ -1727,7 +1699,7 @@ GRU_secure_eastern_front = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = RUS
-		value = 20
+		value = 15
 	}
 }
 

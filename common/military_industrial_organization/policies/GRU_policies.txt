@@ -4,6 +4,7 @@ GRU_mio_policy_RD_Cap = {
 	allowed = {
 		OR = {
 			is_military_industrial_organization = GRU_rheinmetall_organisation
+			is_military_industrial_organization = GRU_DWM_organisation
 		}
 	}
 	organization_modifier = {
@@ -24,6 +25,7 @@ GRU_mio_policy_RD_Growth = {
 	allowed = {
 		OR = {
 			is_military_industrial_organization = GRU_rheinmetall_organisation
+			is_military_industrial_organization = GRU_DWM_organisation
 		}
 	}
 	organization_modifier = {
@@ -44,6 +46,7 @@ GRU_mio_policy_improved_external_equipment = {
 	allowed = {
 		OR = {
 			is_military_industrial_organization = GRU_krupp_organisation
+			is_military_industrial_organization = GRU_henschel_organisation
 		}
 	}
 	available = {

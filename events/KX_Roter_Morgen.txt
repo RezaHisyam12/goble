@@ -5001,7 +5001,7 @@ country_event = { #
 				        state = 219
 					}
 				}
-				MOS = {
+				VKM = {
 					transfer_state = PREV
 				}
 			}
@@ -5249,21 +5249,21 @@ country_event = { #
 		        		is_core_of = RUS
 		        	}
 		        	set_demilitarized_zone = yes
-		        }
+		       		}
 				every_owned_state = {
 		        	limit = {
 		        		is_core_of = RUS
 		        	}
 		        	set_border_war = yes
-		        }
+		       		}
 				country_event = { id = rmruss.2 days = 60 }
 				every_owned_state = {
 			    	limit = {
-						country_exists = HYP
+					country_exists = HYP
 			    		OR = {
 			    			state = 216
-			    	        state = 1327
-			    	        state = 146
+			    	        	state = 1327
+			    	        	state = 146
 							state = 1325
 							state = 1324
 							state = 1326
@@ -5274,7 +5274,7 @@ country_event = { #
 							state = 722
 			    		}
 			    	}
-			    	SKN = {
+			    	HYP = {
 			    		transfer_state = PREV
 			    	}
 			    }
@@ -5345,7 +5345,7 @@ country_event = { #
     			            state = 1302
 			    		}
 			    	}
-			    	DKS = {
+			    	VKK = {
 			    		transfer_state = PREV
 			    	}
 			    }
@@ -5424,7 +5424,7 @@ country_event = { #
 	option = {
 		name = rmruss.2.a
 		ai_chance = {
-			factor = 99
+			factor = 1
 		}
 		every_state = {
 			limit = {
@@ -8027,7 +8027,7 @@ country_event = { #
 	option = {
 		name = rmruss.2.b
 		ai_chance = {
-			factor = 1
+			factor = 99
 		}
 		RUS = {
 			set_country_flag = GRU_RUS_NO_WESTERN_RUSSIA
@@ -8037,6 +8037,12 @@ country_event = { #
 				}
 				set_demilitarized_zone = no
 			}
+			every_owned_state = {
+		        	limit = {
+		        		is_core_of = RUS
+		        	}
+		        	set_border_war = no
+		        }
 		}
 	}
 }

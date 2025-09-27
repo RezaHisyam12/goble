@@ -5,8 +5,6 @@
 armour_generic = {
 	role = armor_role #to distinguish from armor, a hardcoded keyword for all tank equipment types
 
-	blocked_for = { GRU GER }
-
 	upgrade_prio = {
 		factor = 10
 		modifier = {
@@ -49,11 +47,11 @@ armour_generic = {
 			}
 
 			support = {
-				mot_recon = 1
-				artillery = 1
 				anti_air = 1
+				medium_flame_tank = 1
+				armored_engineer = 1
+				signal_company = 1
 				logistics_company = 1
-				maintenance_company = 1
 			}
 		}
 	}
@@ -80,11 +78,11 @@ armour_generic = {
 			}
 
 			support = {
-				mot_recon = 1
-				artillery = 1
 				anti_air = 1
+				medium_flame_tank = 1
+				armored_engineer = 1
+				signal_company = 1
 				logistics_company = 1
-				maintenance_company = 1
 			}
 		}
 	}
@@ -116,11 +114,11 @@ armour_generic = {
 			}
 
 			support = {
-				mot_recon = 1
-				artillery = 1
 				anti_air = 1
+				armored_engineer = 1
+				field_hospital = 1
 				logistics_company = 1
-				maintenance_company = 1
+				signal_company = 1
 			}
 		}
 	}

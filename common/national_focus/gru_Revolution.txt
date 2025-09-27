@@ -304,7 +304,7 @@ shared_focus = {
 		y = 1
 		cost = 5
 		ai_will_do = {
-			factor = 10
+			factor = 12
 		}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_DAF"
@@ -3603,10 +3603,13 @@ shared_focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_carrier_focus"
 			add_ideas = GRU_carrier
 			custom_effect_tooltip = tooltip_white_line
+			if = {
+			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
 			GRU_add_or_modify_wunderwaffen = yes
 			add_to_variable = { 
 				GRU_wunderwaffen_sp_naval_modern_carrier_speed_factor = 0.05
 				tooltip = sp_naval_modern_carrier_speed_factor_tt
+			}
 			}
 		}
 		
@@ -3633,10 +3636,13 @@ shared_focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_battleship_focus"
 			add_ideas = GRU_battleship
 			custom_effect_tooltip = tooltip_white_line
+			if = {
+			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
 			GRU_add_or_modify_wunderwaffen = yes
 			add_to_variable = { 
 				GRU_wunderwaffen_sp_naval_modern_battleship_speed_factor = 0.05
 				tooltip = sp_naval_modern_battleship_speed_factor_tt
+			}
 			}
 		}
 		
@@ -3692,11 +3698,14 @@ shared_focus = {
 				set_technology = { tech_railway_troops = 1 popup = no }
 			}
 			custom_effect_tooltip = tooltip_white_line	
+			if = {
+			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
 			GRU_add_or_modify_wunderwaffen = yes
 			add_to_variable = { 
 				GRU_wunderwaffen_sp_tag_tank_speed_factor = 0.1
 				tooltip = sp_tag_tank_speed_factor_tt
 			}	
+			}
 		}
 		
 		prerequisite = { focus = GRU_panzertruppe  }
@@ -3737,10 +3746,13 @@ shared_focus = {
 			custom_effect_tooltip = GRU_tt_army_boni
 			}
 			custom_effect_tooltip = tooltip_white_line
+			if = {
+			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
 			GRU_add_or_modify_wunderwaffen = yes
 			add_to_variable = { 
 				GRU_wunderwaffen_sp_tag_submarine_speed_factor = 0.05
 				tooltip = sp_tag_submarine_speed_factor_tt
+			}
 			}
 		}
 		
@@ -3784,10 +3796,13 @@ shared_focus = {
 			custom_effect_tooltip = GRU_tt_army_boni
 			}
 			custom_effect_tooltip = tooltip_white_line
+			if = {
+			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
 			GRU_add_or_modify_wunderwaffen = yes
 			add_to_variable = { 
 				GRU_wunderwaffen_sp_naval_torpedo_cruiser_speed_factor = 0.05
 				tooltip = sp_naval_torpedo_cruiser_speed_factor_tt
+			}
 			}
 		}
 		
@@ -3831,6 +3846,8 @@ shared_focus = {
 			custom_effect_tooltip = GRU_tt_OKW_boni
 			}
 			custom_effect_tooltip = tooltip_white_line
+			if = {
+			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
 			GRU_add_or_modify_wunderwaffen = yes
 			add_to_variable = { 
 				GRU_wunderwaffen_sp_tag_tank_speed_factor = 0.05
@@ -3848,6 +3865,7 @@ shared_focus = {
 			if = {
 				limit = { NOT = { is_special_project_being_researched = sp:sp_land_land_cruiser } }
 				sp:sp_land_land_cruiser = { add_project_progress_ratio = 0.2 }
+			}
 			}
 			custom_effect_tooltip = tooltip_white_line
 			army_experience = 100
@@ -3900,10 +3918,13 @@ shared_focus = {
 				set_technology = { anti_fortification_artillery = 1 popup = no }
 			}
 			custom_effect_tooltip = tooltip_white_line	
+			if = {
+			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
 			GRU_add_or_modify_wunderwaffen = yes
 			add_to_variable = { 
 				GRU_wunderwaffen_sp_tag_artillery_speed_factor = 0.1
 				tooltip = sp_tag_artillery_speed_factor_tt
+			}
 			}
 		}
 		
@@ -3959,6 +3980,8 @@ shared_focus = {
 			custom_effect_tooltip = GRU_tt_OKW_boni
 			}
 			custom_effect_tooltip = tooltip_white_line
+			if = {
+			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
 			GRU_add_or_modify_wunderwaffen = yes
 			add_to_variable = { 
 				GRU_wunderwaffen_sp_tag_surface_ship_speed_factor = 0.10
@@ -3972,6 +3995,7 @@ shared_focus = {
 			if = {
 				limit = { NOT = { is_special_project_being_researched = sp:sp_naval_nuclear_torpedo } }
 				sp:sp_naval_nuclear_torpedo = { add_project_progress_ratio = 0.2 }
+			}
 			}
 			custom_effect_tooltip = tooltip_white_line
 			navy_experience = 100
@@ -4015,10 +4039,13 @@ shared_focus = {
 			custom_effect_tooltip = GRU_tt_army_boni
 			}
 			custom_effect_tooltip = tooltip_white_line
+			if = {
+			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
 			GRU_add_or_modify_wunderwaffen = yes
 			add_to_variable = { 
 				GRU_wunderwaffen_sp_tag_jet_speed_factor = 0.10
 				tooltip = sp_tag_jet_speed_factor_tt
+			}
 			}
 		}
 		
@@ -4061,10 +4088,13 @@ shared_focus = {
 			custom_effect_tooltip = GRU_tt_army_boni
 			}
 			custom_effect_tooltip = tooltip_white_line
+			if = {
+			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
 			GRU_add_or_modify_wunderwaffen = yes
 			add_to_variable = { 
 				GRU_wunderwaffen_sp_tag_jet_speed_factor = 0.10
 				tooltip = sp_tag_jet_speed_factor_tt
+			}
 			}
 		}
 		
@@ -4121,6 +4151,8 @@ shared_focus = {
 			custom_effect_tooltip = GRU_tt_OKW_boni
 			}
 			custom_effect_tooltip = tooltip_white_line
+			if = {
+			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
 			GRU_add_or_modify_wunderwaffen = yes
 			if = {
 				limit = {
@@ -4148,6 +4180,7 @@ shared_focus = {
 			if = {
 				limit = { NOT = { is_special_project_being_researched = sp:sp_air_intercontinental_bomber } }
 				sp:sp_air_intercontinental_bomber = { add_project_progress_ratio = 0.2 }
+			}
 			}
 			custom_effect_tooltip = tooltip_white_line
 			air_experience = 100
@@ -7075,7 +7108,7 @@ shared_focus = {
 		y = 1
 		cost = 6
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_imperialism"

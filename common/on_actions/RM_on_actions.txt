@@ -1,0 +1,573 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+				    has_game_rule = {
+						rule = GER_REV
+						option = GER_REV_MAYBE
+					}
+				}
+				set_global_flag = KX_GER_REV_MAYBE
+			}
+			if = {
+				limit = {
+				    has_game_rule = {
+						rule = GER_REV
+						option = GER_REV_ALWAYS
+					}
+				}
+				set_global_flag = KX_GER_REV_ALWAYS
+			}
+			if = {
+				limit = {
+				    has_game_rule = {
+						rule = GRU_KAISER
+						option = GRU_KAISER_OFF
+					}
+				}
+				set_global_flag = RM_GRU_KAISER_OFF
+			}
+			if = {
+				limit = {
+				    has_game_rule = {
+						rule = GRU_goebb_off_gui
+						option = GRU_GOEBB_GUI_OFF
+					}
+				}
+				set_global_flag = RM_GRU_GOEBB_GUI_OFF
+			}
+			if = {
+				limit = {
+				    GER = { is_ai = yes }
+				}
+				set_global_flag = RM_GRU_GOEBB_GUI_OFF
+			}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					tag = GRU
+		            has_war_with = GER
+					GER = { surrender_progress > 0.70 }
+		            GRU = { has_country_leader = { character = GRU_ZKDR ruling_only = yes } }
+		            GRU = { controls_province = 6521 }
+				}
+				country_event = rotermorgen.4004
+				country_event = { id = rotermorgen.4005 days = 1 }
+			}
+			if = {
+				limit = {
+					tag = GRU
+		            127 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            126 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            338 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            125 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            129 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            128 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            132 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            130 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            131 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            123 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1315 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            29 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            980 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            17 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            24 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            785 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            18 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            779 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            27 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            760 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            943 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            983 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            14 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            15 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            30 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            33 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            16 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            23 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            25 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            26 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            19 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            984 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1334 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            817 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            22 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            31 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            21 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            763 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            32 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            20 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            817 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            172 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            940 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            165 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1313 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            176 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            166 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            41 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            175 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            167 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            168 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            795 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            173 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            169 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            170 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1316 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            179 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            112 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            181 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            951 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            180 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            174 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            171 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            793 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            177 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            118 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            2 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1149 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            764 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1005 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            162 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            157	 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            161 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1004 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            838 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            158 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1003 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            735 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            762 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            159 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            160 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            759 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            761 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1236 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1144 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            742 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            117 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            837 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1006 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            156 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            115 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            116 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            114 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1002 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            766 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            44 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1268 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            105 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            103 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            163 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1098 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1145 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            105 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1270 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1097 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            765 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1271 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            758 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            185 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1076 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            768 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            47 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            939 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            186 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            182 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1337 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1336 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1343 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1342 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1341 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1340 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1344 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1338 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1339 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            183 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            341 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            773 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            184 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            769 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            731 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            106 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            989 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            212 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1089 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            211 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            771 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            77 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            772 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            770 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            48 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1090 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            841 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            767 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            765 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            108 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            107 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1128 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1269 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            104 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1141 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1102 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            794 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            109 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1142 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1143 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1099 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1105 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1101 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1100 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            736 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            783 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            39 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            81 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            46 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            79 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1222 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            78 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1320 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1116 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            789 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            84 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1113 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            82 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            122 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1225 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            121 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            133 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            136 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            120 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            938 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            337 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            100 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            119 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            134 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            113 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            135 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            875 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            45 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1106 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1111 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            155 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            784 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1272 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1104 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1103 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            102 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            835 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            836 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            153 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            942 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            151 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            3 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            28 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            8 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            741 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            34 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            6 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            978 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            979 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            35 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            7 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            866 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            36 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            781 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            42 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1114 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            83 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1115 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1112 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1117 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1110 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            76 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1119 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            73 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1118 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            154 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            43 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1136 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1123 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1135 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            664 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1107 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1108 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            775 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            836 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            152 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            4 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1235 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1137 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            53 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            52 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            50 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            780 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            42 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1206 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            54 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            55 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            51 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            57 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            56 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            59 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            55 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            60 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            65 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            64 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            66 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            67 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            68 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            63 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1357 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            62 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            61 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            58 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            839 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            782 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            99 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            37 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            86 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            776 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            777 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            5 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            188 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            786 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1139 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1133 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            69 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1138 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1129 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            9 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1132 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1134 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            75 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            74 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1131 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1120 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            70 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1109 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1122 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1121 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1130 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            71 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            713 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            80 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            89 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1126 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1319 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1314 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            88 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1124 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1127 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1125 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            90 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            87 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            10 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            92 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1088 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1140 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            91 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            98 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1148 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            97 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            93 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            792 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1228 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            199 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1245 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            791 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            192 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1232 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            997 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            94 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1329 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            655 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            96 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            11 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            189 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            95 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1295 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            206 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            207 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            190 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1091 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            12 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            191 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            13 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            880 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1294 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            197 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            196 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1220 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            137 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1221 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1234 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            228 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            227 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1284 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1231 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1263 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            218 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1226 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            237 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1266 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            238 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1265 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            245 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            217 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            236 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1224 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            406 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1208 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1195 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            573 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            581 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            397 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            262 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            214 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            400 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            351 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1274 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            213 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            722 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            215 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1264 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            234 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            235 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1227 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1189 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1191 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1187 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1186 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            233 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            787 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            232 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            652 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1194 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            651 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            398 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            399 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            249 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1199 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            251 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            250 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            239 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            401 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1207 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            255 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1198 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            256 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1197 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1193 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            252 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1204 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1205 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            254 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            219 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            248 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            253 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            247 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            265 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            260 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            240 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            257 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            258 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            222 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1229 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            220 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            821 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1282 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1285 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            221 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1283 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1239 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1286 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            200 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            226 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1233 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            203 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1241 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            198 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1245 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1238 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            259 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            225 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1243 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1237 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            193 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1242 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1230 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            241 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            202 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1244 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1240 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            201 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            194 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            204 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1087 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            243 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            242 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            224 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            205 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            223 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            205 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            755 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1287 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            210 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1290 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1289 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            263 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            246 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            247 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            209 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1291 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1288 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            208 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            244 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            264 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1328 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            195 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            216 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1327 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            146 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1324 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1325 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            865 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            840 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            863 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            145 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            864 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            111 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            149 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            150 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            147 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            936 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1326 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            844 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            148 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            909 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            666 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            960 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            144 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            937 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            1147 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            143 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            110 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            142 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            908 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            140 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            138 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            139 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            141 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            124 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            38 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+		            778 = { owner = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_subject_of = GRU } } controller = { OR = { tag = GRU is_in_faction_with = GRU } } }
+				}
+				GRU = { set_country_flag = FAUD_europe_controll }
+			}
+		}
+	}
+}

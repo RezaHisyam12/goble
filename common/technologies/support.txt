@@ -1392,7 +1392,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			factor = 1
 			modifier = {
 				factor = 4
 				date > "1946.1.1"
@@ -1404,6 +1404,11 @@ technologies = {
 			modifier = {
 				factor = 4
 				date > "1948.1.1"
+			}
+			
+			modifier = {
+				factor = 30
+				tag = GRU
 			}
 		}
 	}
@@ -1443,30 +1448,29 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
+			base = 0
 			modifier = {
-				factor = 2
-				is_major = yes
+				add = 2
+				is_eligible_for_armor_production = yes
 			}
-
 			modifier = {
 				factor = 1.2
 				date > "1937.1.1"
 			}
 
 			modifier = {
-				factor = 2
+				factor = 1.2
 				date > "1938.1.1"
 			}
 
 			modifier = {
-				factor = 2
+				factor = 1.2
 				date > "1939.1.1"
 			}
+			
 			modifier = {
-				factor = 10
-				date > "1940.1.1"
+				factor = 30
+				tag = GRU
 			}
 		}
 	}
@@ -1505,16 +1509,29 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-
+			base = 0
 			modifier = {
-				factor = 2
-				is_major = yes
+				add = 2
+				is_eligible_for_armor_production = yes
 			}
 			modifier = {
-				factor = 4
-				tag = GRU
+				factor = 1.2
 				date > "1940.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1941.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1942.1.1"
+			}
+			
+			modifier = {
+				factor = 30
+				tag = GRU
 			}
 		}
 	}
@@ -1556,13 +1573,23 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				factor = 4
-				tag = GRU
+				factor = 1.2
 				date > "1943.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1944.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1945.1.1"
+			}
+			
+			modifier = {
+				factor = 30
+				tag = GRU
 			}
 		}
 	}
@@ -1598,13 +1625,23 @@ technologies = {
 			factor = 1
 
 			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				factor = 4
-				tag = GRU
+				factor = 1.2
 				date > "1946.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1947.1.1"
+			}
+
+			modifier = {
+				factor = 1.2
+				date > "1948.1.1"
+			}
+			
+			modifier = {
+				factor = 30
+				tag = GRU
 			}
 		}
 	}
@@ -1703,10 +1740,22 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 0
+			base = 2
 			modifier = {
-				add = 5
-				num_of_military_factories > 25
+				has_war = yes
+				factor = 20
+			}
+			modifier = {
+				factor = 1.2
+				date > "1940.1.1"
+			}
+			modifier = {
+				factor = 1.2
+				date > "1941.1.1"
+			}
+			modifier = {
+				factor = 1.2
+				date > "1942.1.1"
 			}
 		}
 	}
@@ -1782,19 +1831,25 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
-			modifier = {
-				add = 15
-				is_eligible_for_armor_production = yes
-			}
-			
+			base = 2
+
 			modifier = {
 				factor = 2
+				is_major = yes
+			}
+
+			modifier = {
+				factor = 5
+				NOT = {has_tech = mass_assault}
+			}
+
+			modifier = {
+				factor = 1.5
 				date > "1940.1.1"
 			}
 			
 			modifier = {
-				factor = 4
+				factor = 1.5
 				date > "1944.1.1"
 			}
 		}
@@ -1835,19 +1890,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			base = 1
+			base = 2
+
 			modifier = {
-				add = 15
-				is_eligible_for_armor_production = yes
+				factor = 2
+				is_major = yes
 			}
 			
 			modifier = {
-				factor = 2
+				factor = 1.5
 				date > "1940.1.1"
 			}
 			
 			modifier = {
-				factor = 4
+				factor = 1.5
 				date > "1944.1.1"
 			}
 		}
@@ -1909,8 +1965,9 @@ technologies = {
 				factor = 1.5
 				date > "1944.1.1"
 			}
+			
 			modifier = {
-				factor = 10
+				factor = 30
 				tag = GRU
 			}
 		}

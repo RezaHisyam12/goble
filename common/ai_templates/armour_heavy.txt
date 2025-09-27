@@ -1,0 +1,159 @@
+######################
+#	HEAVY ARMOUR ROLE
+######################
+
+heavy_armour_generic = {
+    role = heavy_armor_role
+
+	blocked_for = { GRU GER	}
+
+    upgrade_prio = {
+		factor = 5
+		modifier = {
+			factor = 0
+			is_eligible_for_heavy_armor_production = no
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_tech = motorised_infantry }
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_tech = basic_heavy_tank }
+			NOT = { has_tech = basic_heavy_tank_chassis }
+		}
+	}
+
+	motorized_heavy_1 = {
+        can_upgrade_in_field = { always = yes }
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			base = 100
+		}
+
+        target_template = {
+			regiments = {
+				heavy_armor = 4
+				motorized = 6
+			}
+
+			support = {
+				mot_recon = 1
+				artillery = 1
+				anti_air = 1
+				logistics_company = 1
+				maintenance_company = 1
+			}
+		}
+    }
+
+	motorized_heavy_2 = {
+        can_upgrade_in_field = { always = yes }
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			base = 100
+			modifier = {
+				factor = 0
+				num_of_military_factories < 100
+			}
+			modifier = {
+				factor = 2
+				num_of_military_factories > 100
+			}
+		}
+
+        target_template = {
+			regiments = {
+				heavy_armor = 6
+				motorized = 6
+			}
+
+			support = {
+				mot_recon = 1
+				artillery = 1
+				anti_air = 1
+				logistics_company = 1
+				maintenance_company = 1
+			}
+		}
+    }
+
+    mechanized_heavy = {
+        can_upgrade_in_field = { always = yes }
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			base = 100
+            modifier = {
+				factor = 0
+				NOT = { has_tech = mechanised_infantry }
+			}
+            modifier = {
+				factor = 0
+				num_of_military_factories < 125
+			}
+			modifier = {
+				factor = 4
+				num_of_military_factories > 125
+			}
+		}
+
+        target_template = {
+			regiments = {
+				heavy_armor = 6
+				mechanized = 6
+			}
+
+			support = {
+				mot_recon = 1
+				artillery = 1
+				anti_air = 1
+				logistics_company = 1
+				maintenance_company = 1
+			}
+		}
+    }
+
+	big_modern_armour = {
+		can_upgrade_in_field = { always = yes }
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			base = 100
+			modifier = {
+				factor = 0
+				NOT = { has_tech = main_battle_tank }
+				NOT = { has_tech = main_battle_tank_chassis }
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_tech = mechanised_infantry }
+			}
+			modifier = {
+				factor = 0
+				num_of_military_factories < 150
+			}
+			modifier = {
+				factor = 6
+				num_of_military_factories > 150
+			}
+		}
+
+		target_template = {
+			regiments = {
+				modern_armor = 6
+				mechanized = 6
+			}
+
+			support = {
+				mot_recon = 1
+				artillery = 1
+				anti_air = 1
+				logistics_company = 1
+				maintenance_company = 1
+			}
+		}
+	}
+}

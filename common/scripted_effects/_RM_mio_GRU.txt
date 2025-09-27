@@ -167,6 +167,73 @@ GRU_Update_MIO_Research_Speeds = {
 			}
 		}
 	}
+	#DWM
+	mio:GRU_DWM_organisation = {
+		set_variable = { Previous_Week_Funds = Current_Week_Funds }
+		set_variable = { Current_Week_Funds = funds }
+		set_variable = { Funds_Difference = Current_Week_Funds }
+		subtract_from_variable = { Funds_Difference = Previous_Week_Funds }
+	}
+	if = { #Weekly trigger for giving incremental research bonus to MIO DWM
+		limit = {
+			check_variable = { MIO_DWM_assigned_manufacturer_number > 0 } #So that the MIO can only gain research speed from manufacturing weapons
+			mio:GRU_DWM_organisation = { check_variable = { Funds_Difference > weekly_funds_requirement } }
+		}
+		if = {
+			limit = { mio:GRU_DWM_organisation = { check_variable = { research_bonus < max_research_speed } } }
+			mio:GRU_DWM_organisation = { add_mio_research_bonus = weekly_research_speed_gain }
+		}
+		else_if = {
+			limit = {
+				mio:GRU_DWM_organisation = {
+					OR = {
+						check_variable = { research_bonus > max_research_speed }
+						check_variable = { research_bonus = max_research_speed }
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { has_country_flag = GRU_DWM_RS_Notification } }
+				set_country_flag = GRU_DWM_RS_Notification
+				mio:GRU_DWM_organisation = {
+					set_temp_variable = { GRU_MIO_research_speed_temp = research_bonus }
+					multiply_temp_variable = { GRU_MIO_research_speed_temp = 100 }
+					ROOT = {
+						set_variable = { GRU_MIO_alert_name = PREV }
+						set_variable = { GRU_MIO_research_speed = GRU_MIO_research_speed_temp }
+					}
+				}
+				add_to_array = { GRU_MIO_alerts = THIS }
+				scoped_sound_effect = diplomatic_notification
+				set_variable_to_random = global.kaiserreich_alerts_dirty
+			}
+		}
+	}
+}
+
+GRU_upgrade_henschel = {
+	if = { #Unlocking the trait based on number of allies
+		limit = { check_variable = { henschel_upgrade_eff_cap = 1 } }
+		#Ranges from 0 to 10, all integers
+		meta_effect = {
+			text = {
+				complete_mio_trait = henschel_upgrade_eff_cap_[HENSCHEL_UPGRADE]
+			}
+			HENSCHEL_UPGRADE = "[?henschel_allies_and_puppets_no|0]"
+		}
+	}
+	else_if = {
+		limit = { check_variable = { henschel_upgrade_eff_gro = 1 } }
+		#Ranges from 0 to 10, all integers
+		meta_effect = {
+			text = {
+				complete_mio_trait = henschel_upgrade_eff_gro_[HENSCHEL_UPGRADE]
+			}
+			HENSCHEL_UPGRADE = "[?henschel_allies_and_puppets_no|0]"
+		}
+	}
+	# For visibility checks
+	set_variable = { henschel_upgrade_level = henschel_allies_and_puppets_no }
 }
 
 GRU_setup_custom_germans_MIOs = {
@@ -177,6 +244,7 @@ GRU_setup_custom_germans_MIOs = {
 			limit = {
 				OR = {
 					is_military_industrial_organization = GRU_rheinmetall_organisation
+					is_military_industrial_organization = GRU_DWM_organisation
 				}
 			}
 			set_variable = { max_research_speed = 0.5 }

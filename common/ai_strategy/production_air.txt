@@ -60,6 +60,11 @@ strat_bomber_air_production = {
 		value = 5
 	}
 	ai_strategy = {
+		type = unit_ratio
+		id = heavy_fighter
+		value = 5
+	}
+	ai_strategy = {
 		type = equipment_production_factor
 		id = strategic_bomber
 		value = 15
@@ -115,6 +120,11 @@ transport_aircraft_production = {
 	ai_strategy = {
 		type = equipment_production_min_factories
 		id = air_transport
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = scout_plane
 		value = 1
 	}
 }

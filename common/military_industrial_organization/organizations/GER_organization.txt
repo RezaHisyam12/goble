@@ -15,6 +15,13 @@ GER_henschel_organisation = {
 	allowed = {
 		is_germany_or_german_colonial_tag = yes
 	}
+	visible = {
+		GRU = {
+			NOT = {
+				has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH
+			}
+		}			
+	}
 
 	add_trait = {
 		token = GER_mio_trait_krupp_contacts
@@ -1879,6 +1886,13 @@ GER_dwm_organisation = {
 
 	allowed = {
 		is_germany_or_german_colonial_tag = yes
+	}
+	visible = {
+		GRU = {
+			NOT = {
+				has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH
+			}
+		}			
 	}
 
 	#Walther traits from vanilla

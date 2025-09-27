@@ -1,0 +1,470 @@
+# FRONTLINE AI - CLEAN EXCLUSIVE VERSION
+# Order of evaluation in-game is based on file order
+# This list is arranged so higher priority modes are above lower ones
+
+############################################
+# 1. STOP - Can't fight effectively
+############################################
+ai_front_management_stop = {
+    enable = {
+        has_war = yes
+        has_manpower < 500
+        surrender_progress > 0.3
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = front_control
+        country_trigger = {
+            enemies_strength_ratio > 0.4
+        }
+        ordertype = front
+        execution_type = careful
+        execute_order = no
+        manual_attack = no
+    }
+}
+
+############################################
+# 2. DESPERATION RUSH - Low manpower, losing badly, but enemy weak
+############################################
+ai_front_management_rush_desperation = {
+    enable = {
+        has_war = yes
+        has_manpower < 500
+        surrender_progress > 0.4
+        enemies_strength_ratio < 0.8
+        NOT = { surrender_progress > 0.6 } # ensures extreme cases go to Stop instead
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = front_control
+        ordertype = front
+        execution_type = rush
+        execute_order = yes
+        manual_attack = yes
+    }
+}
+
+############################################
+# 3. FAILING RUSH - Losing but enemy clearly weaker
+############################################
+ai_front_management_rush_failing = {
+    enable = {
+        has_war = yes
+        surrender_progress > 0.2
+        surrender_progress < 0.4
+        has_manpower > 499
+        enemies_strength_ratio < 0.9
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = front_control
+        ordertype = front
+        execution_type = rush
+        execute_order = yes
+        manual_attack = yes
+    }
+}
+
+############################################
+# 4. FAILING CAREFUL - Losing, enemy slightly stronger or equal
+############################################
+ai_front_management_careful_failing = {
+    enable = {
+        has_war = yes
+        surrender_progress > 0.2
+        surrender_progress < 0.4
+        has_manpower > 499
+        NOT = { enemies_strength_ratio < 0.9 }
+        enemies_strength_ratio < 1.3
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = front_control
+        ordertype = front
+        execution_type = careful
+        execute_order = yes
+        manual_attack = yes
+    }
+}
+
+############################################
+# 5. NORMAL RUSH - Stronger side, not losing badly
+############################################
+ai_front_management_rush = {
+    enable = {
+        has_war = yes
+        any_enemy_country = { is_major = yes }
+        surrender_progress < 0.2
+        has_manpower > 499
+        enemies_strength_ratio < 1.6
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = front_control
+        ordertype = front
+        execution_type = rush
+        execute_order = yes
+        manual_attack = yes
+    }
+}
+
+############################################
+# 6. NORMAL CAREFUL - Weaker side, not losing badly
+############################################
+ai_front_management_careful = {
+    enable = {
+        has_war = yes
+        any_enemy_country = { is_major = yes }
+        surrender_progress < 0.2
+        has_manpower > 499
+        NOT = { enemies_strength_ratio < 1.6 }
+        enemies_strength_ratio < 3.0
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = front_control
+        ordertype = front
+        execution_type = careful
+        execute_order = yes
+        manual_attack = yes
+    }
+}
+
+############################################
+# 7. NORMAL RUSH VS MINORS - Aggressive push vs only minor enemies
+############################################
+ai_front_management_rush_vs_minors = {
+    enable = {
+        has_war = yes
+        is_major = yes
+        surrender_progress < 0.2
+        has_manpower > 499
+        enemies_strength_ratio < 3.0
+        NOT = { any_enemy_country = { is_major = yes } } # ensures only minors are enemies
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = front_control
+        ordertype = front
+        execution_type = rush
+        execute_order = yes
+        manual_attack = yes
+    }
+}
+
+############################################
+# 8. NORMAL CAREFUL VS MINORS - Defensive play vs strong minors
+############################################
+ai_front_management_careful_vs_minors = {
+    enable = {
+        has_war = yes
+        is_major = yes
+        surrender_progress < 0.2
+        has_manpower > 499
+        enemies_strength_ratio > 2.5
+        enemies_strength_ratio < 4.0
+        NOT = { any_enemy_country = { is_major = yes } } # ensures only minors are enemies
+    }
+
+    abort_when_not_enabled = yes
+
+    ai_strategy = {
+        type = front_control
+        ordertype = front
+        execution_type = careful
+        execute_order = yes
+        manual_attack = yes
+    }
+}
+
+ai_homeland_defense = {
+	enable = {
+        has_war = yes
+        surrender_progress > 0.2
+    }
+
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = front_unit_request
+		state_trigger = { 
+			any_state = {
+				is_core_of = FROM.FROM
+				owner = {
+					has_war_with = FROM.FROM
+				}
+			}
+		}
+		value = 100							# Will be added as a factor over regular requests.
+	}
+}
+
+defend_your_home_please = {
+	enable = {
+		surrender_progress > 0.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = spare_unit_factor
+		value = -100
+	}
+	
+	ai_strategy = {
+		type = garrison
+		value = -100
+	}
+}
+
+dont_waste_troops_please = {
+	enable = {
+		num_of_controlled_states > 70
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = garrison
+		value = -100
+	}
+}
+
+end_pocket = {
+	enable = {
+		always = yes
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = front_control
+		state_trigger = {
+			OR = {
+				AND = {
+					is_controlled_by = FROM.FROM
+					NOT = {
+						is_fully_controlled_by = FROM.FROM
+					}
+				}
+				controller = {
+					has_war_with = FROM.FROM
+				}
+			}
+			all_neighbor_state = {
+				controller = {
+					NOT = {
+						has_war_with = FROM.FROM
+					}
+				}
+			}
+		}
+		ratio = 0.0
+		priority = 110
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+	
+	ai_strategy = {
+		type = front_unit_request
+	
+		state_trigger = {
+			OR = {
+				AND = {
+					is_controlled_by = FROM.FROM
+					NOT = {
+						is_fully_controlled_by = FROM.FROM
+					}
+				}
+				controller = {
+					has_war_with = FROM.FROM
+				}
+			}
+			all_neighbor_state = {
+				controller = {
+					NOT = {
+						has_war_with = FROM.FROM
+					}
+				}
+			}
+		}		
+		value = 40 
+	}	
+}
+
+forced_check_omega_lul = {
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	
+	ai_strategy = {
+		type = front_unit_request
+		state_trigger = {
+			is_controlled_by = FROM
+			NOT = {
+				any_province_building_level = {
+					province = {
+						all_provinces = yes
+					}
+					building = supply_node
+					level > 0
+				}
+			}
+		}
+		value = -5
+	}
+	ai_strategy = {
+		type = front_unit_request
+		state_trigger = { 
+			OR = {
+				is_capital = yes
+				any_neighbor_state = { is_capital = yes }
+			}
+		}
+		value = 15
+	}
+	ai_strategy = {
+		type = front_unit_request
+		state_trigger = { 
+			is_capital = yes
+			owner = { tag = FROM.FROM }
+		}
+		value = 50
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		state_trigger = {
+			NOT = { has_state_flag = recent_naval_invasion_flag }
+			check_variable = { state_strategic_value < 3 }
+		}
+		value = -5
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		state_trigger = { 
+			NOT = { is_core_of = FROM.FROM }
+			NOT = { has_state_flag = recent_naval_invasion_flag }
+			check_variable = { state_strategic_value < 8 }
+		}
+		value = -3
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		state_trigger = { 
+			NOT = { is_core_of = FROM.FROM }
+			NOT = { has_state_flag = recent_naval_invasion_flag }
+		}
+		value = -3
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		state_trigger = { 
+			NOT = { is_core_of = FROM.FROM }
+			NOT = { has_state_flag = recent_naval_invasion_flag }
+			NOT = {
+				any_province_building_level = {
+					province = {
+						all_provinces = yes
+					}
+					building = supply_node
+					level > 0
+				}
+			}
+		}
+		value = -2
+	}
+}
+
+going_slow = {
+	enable = {
+		has_equipment = { infantry_equipment < 500 }
+		has_civil_war = no
+		enemies_strength_ratio > 0.90
+	}
+	abort = {
+	
+		OR = {
+		has_equipment = { infantry_equipment > 5000 }
+		has_civil_war = yes
+		}
+	}
+	
+	ai_strategy = {
+		type = front_control
+
+		country_trigger = {
+			has_war_with = FROM
+		}
+
+		ratio > 0.0
+
+		priority = 400
+		ordertype = front
+		execution_type = balanced
+	}
+}
+
+this_state_is_empty = {
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	
+	ai_strategy = {
+		type = front_control
+
+		state_trigger = {
+			FROM = { has_war_with = FROM.FROM }
+			FROM = {
+				divisions_in_state = { state = ROOT size < 3 }
+			}
+		}
+
+		ratio = 0.8
+
+		priority = 5000
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+}
+
+always_prioritize_our_core = {
+	enable = {
+		surrender_progress > 0.05
+	}
+	abort = {
+		OR = {
+			surrender_progress < 0.01
+			has_capitulated = yes
+		}
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		state_trigger = {
+			NOT = { is_core_of = FROM.FROM }
+		}
+		value = -3
+	}
+}

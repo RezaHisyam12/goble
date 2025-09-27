@@ -2448,7 +2448,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 0
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -2509,7 +2509,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 0
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -2541,7 +2541,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 0
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -2573,7 +2573,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 0
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -2603,7 +2603,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 0
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -4246,10 +4246,6 @@ GRU_germania_plan_decisions = {
 		icon = GFX_pangermanicone
 
 		available = {
-			OR = {
-				is_neighbor_of = FROM
-				any_allied_country = { is_neighbor_of = FROM }
-			}
 			is_subject = no
 			country_exists = HOL
 			HOL = {
@@ -4287,13 +4283,13 @@ GRU_germania_plan_decisions = {
 			factor = 130
 			modifier = {
 				factor = 0
-				has_war = yes
+				HOL = {
+					is_in_faction_with = FRA
+				}
 			}
 			modifier = {
 				factor = 0
-				FROM = {
-				is_in_faction_with = FRA
-				}
+				has_war = yes
 			}
 			modifier = {
 				factor = 0
@@ -5379,7 +5375,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 100
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -5625,7 +5621,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 100
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -5983,7 +5979,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 100
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -6146,7 +6142,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 100
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -6231,7 +6227,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 100
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -6504,7 +6500,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 100
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -6561,7 +6557,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 100
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -6616,7 +6612,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 0
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -6673,7 +6669,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 0
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -6736,7 +6732,7 @@ GRU_germania_plan_decisions = {
 		days_remove = 100
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 
 		remove_effect = {
@@ -6805,12 +6801,12 @@ GRU_Germania_Stadt_decisions = {
 		}
 		fire_only_once = yes
 		cost = 500
-		days_remove = 250
+		days_remove = 50
 
 		modifier = { consumer_goods_factor = 0.15 }
 
 		ai_will_do = {
-			factor = 1000
+			factor = 10
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Germania_Stadt_decision"
@@ -10943,10 +10939,6 @@ GRU_expansion_three_volksland_hypoborea = {
 						}
 					}
 					VKB = {
-						annex_country = {
-							target = WHR
-							transfer_troops = yes
-						}
 						transfer_state = 1091
 						
 						add_equipment_to_stockpile = {
@@ -11889,14 +11881,18 @@ GRU_expansion_three_volksland_hypoborea = {
 		
 			complete_effect = {
 					VKB = {
-				transfer_state = 207
-				transfer_state = 96
-				transfer_state = 94
-				transfer_state = 1295
-				transfer_state = 204
-				transfer_state = 206
-				transfer_state = 1294
-				transfer_state = 1087
+						annex_country = {
+							target = WHR
+							transfer_troops = yes
+						}
+					transfer_state = 207
+					transfer_state = 96
+					transfer_state = 94
+					transfer_state = 1295
+					transfer_state = 204
+					transfer_state = 206
+					transfer_state = 1294
+					transfer_state = 1087
 					}
 					hidden_effect = {
 				VKB = {	country_event = rotermorgenmisc.400 }

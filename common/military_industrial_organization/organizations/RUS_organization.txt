@@ -1813,6 +1813,8 @@ RUS_tstz_organisation = {
 		mio_cat_tech_all_armor_and_modules
 	}
 
+	ai_will_do = { base = 10 }
+
 	initial_trait = {
 		name = RUS_tstz_mio_desc
 

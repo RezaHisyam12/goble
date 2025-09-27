@@ -91,7 +91,7 @@ GRU_krupp_organisation = {
 		mio_cat_tech_all_armor_and_modules
 	}
 
-	ai_will_do = { base = 1000 }
+	ai_will_do = { base = 10 }
 
 	initial_trait = {
 		name = GRU_krupp_mio_desc
@@ -262,6 +262,785 @@ GRU_krupp_organisation = {
 			hard_attack = 0.1
 			ap_attack = 0.1
 			build_cost_ic = 0.1
+		}
+	}
+}
+
+GRU_henschel_organisation = {
+	name = henschel
+	icon = GFX_idea_henschel
+	allowed = {
+		is_germany_or_german_colonial_tag = yes
+	}
+	available = {
+		FROM = {
+			owns_state = 51
+		}
+	}
+	visible = {
+		FROM = {
+			has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH
+		}
+	}
+
+	equipment_type = {
+		light_tank_artillery_chassis
+		medium_tank_artillery_chassis
+		heavy_tank_artillery_chassis
+		light_tank_destroyer_chassis
+		medium_tank_destroyer_chassis
+		heavy_tank_destroyer_chassis
+		light_tank_aa_chassis
+		medium_tank_aa_chassis
+		heavy_tank_aa_chassis
+	}
+
+	research_categories = {
+		mio_cat_tech_all_armor_and_modules
+	}
+
+	ai_will_do = { base = 1000 }
+
+	initial_trait = {
+		name = GRU_henschel_mio_desc
+
+		organization_modifier = {
+			military_industrial_organization_size_up_requirement = -0.25
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_cap_0
+		name = henschel_upgrade_1_2
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		visible = {
+			has_variable = henschel_upgrade_level
+			check_variable = { henschel_upgrade_level = 0 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_gro_0 }
+
+		position = { x = 3 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0
+			production_efficiency_gain_factor = 0
+			production_resource_need_factor = 0
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_gro_0
+		name = henschel_upgrade_1_3
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		visible = {
+			has_variable = henschel_upgrade_level
+			check_variable = { henschel_upgrade_level = 0 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_cap_0 }
+
+		position = { x = 5 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0
+			production_efficiency_gain_factor = 0
+			production_resource_need_factor = 0
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_cap_1
+		name = henschel_upgrade_1_2
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		visible = {
+			check_variable = { henschel_upgrade_level = 1 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_gro_1 }
+
+		position = { x = 3 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.02
+			production_efficiency_gain_factor = 0.02
+			production_resource_need_factor = 0.02
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_gro_1
+		name = henschel_upgrade_1_3
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		visible = {
+			check_variable = { henschel_upgrade_level = 1 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_cap_1 }
+
+		position = { x = 5 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.01
+			production_efficiency_gain_factor = 0.04
+			production_resource_need_factor = 0.02
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_cap_2
+		name = henschel_upgrade_1_2
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		visible = {
+			check_variable = { henschel_upgrade_level = 2 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_gro_2 }
+
+		position = { x = 3 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.04
+			production_efficiency_gain_factor = 0.04
+			production_resource_need_factor = 0.04
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_gro_2
+		name = henschel_upgrade_1_3
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		visible = {
+			check_variable = { henschel_upgrade_level = 2 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_cap_2 }
+
+		position = { x = 5 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.02
+			production_efficiency_gain_factor = 0.08
+			production_resource_need_factor = 0.04
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_cap_3
+		name = henschel_upgrade_1_2
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		visible = {
+			check_variable = { henschel_upgrade_level = 3 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_gro_3 }
+
+		position = { x = 3 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.06
+			production_efficiency_gain_factor = 0.06
+			production_resource_need_factor = 0.06
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_gro_3
+		name = henschel_upgrade_1_3
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		visible = {
+			check_variable = { henschel_upgrade_level = 3 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_cap_3 }
+
+		position = { x = 5 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.03
+			production_efficiency_gain_factor = 0.12
+			production_resource_need_factor = 0.06
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_cap_4
+		name = henschel_upgrade_1_2
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		visible = {
+			check_variable = { henschel_upgrade_level = 4 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_gro_4 }
+
+		position = { x = 3 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.08
+			production_efficiency_gain_factor = 0.08
+			production_resource_need_factor = 0.08
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_gro_4
+		name = henschel_upgrade_1_3
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		visible = {
+			check_variable = { henschel_upgrade_level = 4 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_cap_4 }
+
+		position = { x = 5 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.04
+			production_efficiency_gain_factor = 0.16
+			production_resource_need_factor = 0.08
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_cap_5
+		name = henschel_upgrade_1_2
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		visible = {
+			check_variable = { henschel_upgrade_level = 5 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_gro_5 }
+
+		position = { x = 3 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.1
+			production_efficiency_gain_factor = 0.1
+			production_resource_need_factor = 0.1
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_gro_5
+		name = henschel_upgrade_1_3
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		visible = {
+			check_variable = { henschel_upgrade_level = 5 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_cap_5 }
+
+		position = { x = 5 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+			production_efficiency_gain_factor = 0.20
+			production_resource_need_factor = 0.1
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_cap_6
+		name = henschel_upgrade_1_2
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		visible = {
+			check_variable = { henschel_upgrade_level = 6 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_gro_6 }
+
+		position = { x = 3 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.12
+			production_efficiency_gain_factor = 0.12
+			production_resource_need_factor = 0.12
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_gro_6
+		name = henschel_upgrade_1_3
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		visible = {
+			check_variable = { henschel_upgrade_level = 6 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_cap_6 }
+
+		position = { x = 5 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.06
+			production_efficiency_gain_factor = 0.24
+			production_resource_need_factor = 0.12
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_cap_7
+		name = henschel_upgrade_1_2
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		visible = {
+			check_variable = { henschel_upgrade_level = 7 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_gro_7 }
+
+		position = { x = 3 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.14
+			production_efficiency_gain_factor = 0.14
+			production_resource_need_factor = 0.14
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_gro_7
+		name = henschel_upgrade_1_3
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		visible = {
+			check_variable = { henschel_upgrade_level = 7 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_cap_7 }
+
+		position = { x = 5 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.07
+			production_efficiency_gain_factor = 0.28
+			production_resource_need_factor = 0.14
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_cap_8
+		name = henschel_upgrade_1_2
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		visible = {
+			check_variable = { henschel_upgrade_level = 8 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_gro_8 }
+
+		position = { x = 3 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.16
+			production_efficiency_gain_factor = 0.16
+			production_resource_need_factor = 0.16
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_gro_8
+		name = henschel_upgrade_1_3
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		visible = {
+			check_variable = { henschel_upgrade_level = 8 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_cap_8 }
+
+		position = { x = 5 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.08
+			production_efficiency_gain_factor = 0.32
+			production_resource_need_factor = 0.16
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_cap_9
+		name = henschel_upgrade_1_2
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		visible = {
+			check_variable = { henschel_upgrade_level = 9 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_gro_9 }
+
+		position = { x = 3 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.18
+			production_efficiency_gain_factor = 0.18
+			production_resource_need_factor = 0.18
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_gro_9
+		name = henschel_upgrade_1_3
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		visible = {
+			check_variable = { henschel_upgrade_level = 9 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_cap_9 }
+
+		position = { x = 5 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.09
+			production_efficiency_gain_factor = 0.36
+			production_resource_need_factor = 0.18
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_cap_10
+		name = henschel_upgrade_1_2
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		visible = {
+			check_variable = { henschel_upgrade_level = 10 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_gro_10 }
+
+		position = { x = 3 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.2
+			production_efficiency_gain_factor = 0.2
+			production_resource_need_factor = 0.2
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_eff_gro_10
+		name = henschel_upgrade_1_3
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		visible = {
+			check_variable = { henschel_upgrade_level = 10 }
+		}
+
+		mutually_exclusive = { henschel_upgrade_eff_cap_10 }
+
+		position = { x = 5 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.1
+			production_efficiency_gain_factor = 0.4
+			production_resource_need_factor = 0.2
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_1
+		name = henschel_upgrade_1
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		position = { x = 0 y = 0 }
+
+		mutually_exclusive = { henschel_upgrade_2 }
+
+		equipment_bonus = {
+			reliability = 0.15
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_2
+		name = henschel_upgrade_2
+		icon = GFX_generic_mio_trait_icon_hardness
+
+		position = { x = 2 y = 0 }
+
+		mutually_exclusive = { henschel_upgrade_1 }
+
+		equipment_bonus = {
+			hardness = 0.15
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_3_nsb
+		name = henschel_upgrade_3_nsb
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+
+		visible = {
+			has_dlc_nsb = yes
+		}
+
+		position = { x = 3 y = 0 }
+
+		mutually_exclusive = { henschel_upgrade_4_nsb }
+
+		equipment_bonus = {
+			fuel_capacity = 2.0
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_4_nsb
+		name = henschel_upgrade_4_nsb
+		icon = GFX_generic_mio_trait_icon_entrenchment
+
+		visible = {
+			has_dlc_nsb = yes
+		}
+
+		position = { x = 5 y = 0 }
+
+		mutually_exclusive = { henschel_upgrade_3_nsb }
+
+		equipment_bonus = {
+			entrenchment = 1.0
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_3
+		name = henschel_upgrade_3
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		visible = {
+			has_dlc_nsb = no
+		}
+
+		position = { x = 3 y = 0 }
+
+		mutually_exclusive = { henschel_upgrade_4 }
+
+		equipment_bonus = {
+			breakthrough = 0.15
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_4
+		name = henschel_upgrade_4
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+
+		visible = {
+			has_dlc_nsb = no
+		}
+
+		position = { x = 5 y = 0 }
+
+		mutually_exclusive = { henschel_upgrade_3 }
+
+		equipment_bonus = {
+			fuel_consumption = -0.5
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_5
+		name = henschel_upgrade_5
+		icon = GFX_generic_mio_trait_icon_armor_value
+
+		position = { x = 6 y = 0 }
+
+		mutually_exclusive = { henschel_upgrade_6 }
+
+		equipment_bonus = {
+			armor_value = 0.15
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_6
+		name = henschel_upgrade_6
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+
+		position = { x = 8 y = 0 }
+
+		mutually_exclusive = { henschel_upgrade_5 }
+
+		equipment_bonus = {
+			fuel_consumption = -0.5
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_1_1
+		name = henschel_upgrade_1_1
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		any_parent = { henschel_upgrade_1 henschel_upgrade_2 }
+
+		position = { x = 1 y = 2 }
+
+		equipment_bonus = {
+			soft_attack = 0.07
+			defense = 0.07
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_1_2
+		name = henschel_upgrade_1_2
+		icon = GFX_generic_mio_trait_icon_efficiency_cap
+
+		visible = { NOT = { has_variable = henschel_upgrade_level } }
+
+		mutually_exclusive = { henschel_upgrade_1_3 }
+
+		any_parent = { henschel_upgrade_1 henschel_upgrade_2 }
+		any_parent = { henschel_upgrade_5 henschel_upgrade_6 }
+
+		position = { x = 3 y = 2 }
+
+		on_complete = {
+			custom_effect_tooltip = henschel_upgrade_based_on_allies_and_puppets_eff_cap_tt
+			set_temp_variable = { henschel_allies_and_puppets_no = FROM.allies }
+			add_to_temp_variable = { henschel_allies_and_puppets_no = FROM.num_subjects }
+			clamp_temp_variable = { var = henschel_allies_and_puppets_no min = 0 max = 10 }
+
+			set_temp_variable = { henschel_upgrade_eff_cap = 1 }
+			hidden_effect = { GRU_upgrade_henschel = yes }
+			set_temp_variable = { henschel_eff_cap = henschel_allies_and_puppets_no }
+			multiply_temp_variable = { henschel_eff_cap = 2 }
+			set_temp_variable = { henschel_eff_gain = henschel_allies_and_puppets_no }
+			multiply_temp_variable = { henschel_eff_gain = 2 }
+			set_temp_variable = { henschel_resource = henschel_allies_and_puppets_no }
+			multiply_temp_variable = { henschel_resource = 2 }
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = henschel_upgrade_will_get
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_1_3
+		name = henschel_upgrade_1_3
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		visible = { NOT = { has_variable = henschel_upgrade_level } }
+
+		mutually_exclusive = { henschel_upgrade_1_2 }
+
+		any_parent = { henschel_upgrade_1 henschel_upgrade_2 }
+		any_parent = { henschel_upgrade_5 henschel_upgrade_6 }
+
+		position = { x = 5 y = 2 }
+
+		on_complete = {
+			custom_effect_tooltip = henschel_upgrade_based_on_allies_and_puppets_eff_gro_tt
+			set_temp_variable = { henschel_allies_and_puppets_no = FROM.allies }
+			add_to_temp_variable = { henschel_allies_and_puppets_no = FROM.num_subjects }
+			clamp_temp_variable = { var = henschel_allies_and_puppets_no min = 0 max = 10 }
+
+			set_temp_variable = { henschel_upgrade_eff_gro = 1 }
+			hidden_effect = { GRU_upgrade_henschel = yes }
+			set_temp_variable = { henschel_eff_cap = henschel_allies_and_puppets_no }
+			set_temp_variable = { henschel_eff_gain = henschel_allies_and_puppets_no }
+			multiply_temp_variable = { henschel_eff_gain = 4 }
+			set_temp_variable = { henschel_resource = henschel_allies_and_puppets_no }
+			multiply_temp_variable = { henschel_resource = 2 }
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = henschel_upgrade_will_get
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_1_4
+		name = henschel_upgrade_1_4
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+
+		any_parent = { henschel_upgrade_5 henschel_upgrade_6 }
+
+		position = { x = 7 y = 2 }
+
+		limit_to_equipment_type = {
+			light_tank_aa_chassis
+			medium_tank_aa_chassis
+			heavy_tank_aa_chassis
+		}
+
+		equipment_bonus = {
+			air_attack = 0.1
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_2_1
+		name = henschel_upgrade_2_1
+		icon = GFX_generic_mio_trait_icon_defense
+
+		all_parents = { henschel_upgrade_1_1 }
+
+		position = { x = 2 y = 3 }
+
+		equipment_bonus = {
+			soft_attack = 0.08
+			defense = 0.08
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_2_2
+		name = henschel_upgrade_2_2
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		any_parent = { henschel_upgrade_3 henschel_upgrade_4 henschel_upgrade_3_nsb henschel_upgrade_4_nsb }
+
+		position = { x = 4 y = 1 }
+
+		equipment_bonus = {
+			hard_attack = 0.07
+			ap_attack = 0.07
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_2_3
+		name = henschel_upgrade_2_3
+		icon = GFX_generic_mio_trait_icon_anti_air_attack
+
+		all_parents = { henschel_upgrade_1_4 }
+
+		position = { x = 6 y = 3 }
+
+		limit_to_equipment_type = {
+			light_tank_aa_chassis
+			medium_tank_aa_chassis
+			heavy_tank_aa_chassis
+		}
+
+		equipment_bonus = {
+			air_attack = 0.1
+		}
+	}
+
+	trait = {
+		token = henschel_upgrade_3_1
+		name = henschel_upgrade_3_1
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		all_parents = { henschel_upgrade_2_2 }
+
+		position = { x = 4 y = 4 }
+
+		equipment_bonus = {
+			hard_attack = 0.08
+			ap_attack = 0.08
 		}
 	}
 }
@@ -1305,7 +2084,7 @@ GRU_mauser_organisation = {
 		cat_special_forces_generic
 	}
 
-	ai_will_do = { base = 1000 }
+	ai_will_do = { base = 10 }
 
 	initial_trait = {
 		name = GRU_mauser_mio_desc
@@ -1499,6 +2278,267 @@ GRU_mauser_organisation = {
 			production_efficiency_cap_factor = 0.025
 			production_resource_need_factor = -0.05
 			production_cost_factor = -0.025
+		}
+	}
+}
+
+GRU_DWM_organisation = {
+	name = dwm
+	icon = GFX_idea_dwm
+	allowed = {
+		tag = GRU
+	}
+	available = {
+		FROM = {
+			owns_state = 50
+		}
+	}
+	visible = {
+		FROM = {
+			has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH
+		}
+	}
+
+	equipment_type = {
+		infantry_equipment
+		support_equipment
+	}
+
+	research_categories = {
+		infantry_weapons
+		support_tech
+		battlefield_support_tree
+		cat_battlefield_support
+		night_vision
+		cat_special_forces_generic
+	}
+
+	ai_will_do = { base = 1000 }
+
+	on_industrial_manufacturer_assigned = {
+		FROM = { add_to_variable = { MIO_DWM_assigned_manufacturer_number = 1 } }
+		GRU_calculate_daily_funds_gain_and_requirement = yes
+		custom_effect_tooltip = GRU_MIO_Research_Gain_tt
+		custom_effect_tooltip = tooltip_white_line
+	}
+
+	on_industrial_manufacturer_unassigned = {
+		FROM = { subtract_from_variable = { MIO_DWM_assigned_manufacturer_number = 1 } }
+	}
+
+	on_tech_research_completed = {
+		if = {
+			limit = { NOT = { has_mio_flag = GRU_disable_research_speed_loss } }
+			hidden_effect = {
+				FROM = {
+					mio:GRU_DWM_organisation = {
+						set_mio_research_bonus = 0
+					}
+					clr_country_flag = GRU_DWM_RS_Notification
+				}
+			}
+			custom_effect_tooltip = GRU_manufacturer_research_reset_tt
+			custom_effect_tooltip = tooltip_white_line
+		}
+	}
+
+	on_tech_research_cancelled = {
+		hidden_effect = {
+			FROM = {
+				mio:GRU_DWM_organisation = {
+					set_mio_research_bonus = 0
+				}
+				clr_country_flag = GRU_DWM_RS_Notification
+			}
+		}
+		custom_effect_tooltip = GRU_manufacturer_research_reset_tt
+		custom_effect_tooltip = tooltip_white_line
+	}
+
+	ai_will_do = { base = 10 }
+
+	initial_trait = {
+		name = GRU_DWM_mio_desc
+	}
+
+	trait = {
+		token = dwm_upgrade_1
+		name = dwm_upgrade_1
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		mutually_exclusive = { dwm_upgrade_2 }
+
+		position = { x = 0 y = 0 }
+
+		limit_to_equipment_type = { infantry_equipment }
+
+		equipment_bonus = {
+			maximum_speed = 0.15
+		}
+	}
+
+	trait = {
+		token = dwm_upgrade_2
+		name = dwm_upgrade_2
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		mutually_exclusive = { dwm_upgrade_1 }
+
+		position = { x = 2 y = 0 }
+
+		limit_to_equipment_type = { infantry_equipment }
+
+		equipment_bonus = {
+			hard_attack = 1.0
+			ap_attack = 1.0
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_assign_cost = 1
+		}
+
+		on_complete = {
+			custom_effect_tooltip = GRU_manufacturer_research_no_reset_tt
+			set_mio_flag = GRU_disable_research_speed_loss
+		}
+	}
+
+	trait = {
+		token = dwm_upgrade_4
+		name = dwm_upgrade_4
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		mutually_exclusive = { dwm_upgrade_5 }
+
+		position = { x = 6 y = 0 }
+
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+
+	trait = {
+		token = dwm_upgrade_5
+		name = dwm_upgrade_5
+		icon = GFX_generic_mio_trait_icon_defense
+
+		mutually_exclusive = { dwm_upgrade_4 }
+
+		position = { x = 8 y = 0 }
+
+		limit_to_equipment_type = { infantry_equipment }
+
+		equipment_bonus = {
+			defense = 0.05
+		}
+	}
+
+	trait = {
+		token = dwm_upgrade_1_1
+		name = dwm_upgrade_1_1
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		position = { x = 0 y = 2 }
+
+		any_parent = { dwm_upgrade_1 dwm_upgrade_2 }
+
+		limit_to_equipment_type = { infantry_equipment }
+
+		equipment_bonus = {
+			maximum_speed = 0.15
+		}
+	}
+
+	trait = {
+		token = dwm_upgrade_1_2
+		name = dwm_upgrade_1_2
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		mutually_exclusive = { dwm_upgrade_1_3 }
+
+		position = { x = 2 y = 2 }
+
+		any_parent = { dwm_upgrade_1 dwm_upgrade_2 }
+
+		limit_to_equipment_type = { infantry_equipment }
+
+		equipment_bonus = {
+			hard_attack = 1.0
+			ap_attack = 1.0
+		}
+
+		on_complete = {
+			add_mio_research_bonus = 0.14
+			add_to_variable = { total_campaign_xp = 14 }
+		}
+	}
+
+	trait = {
+		token = dwm_upgrade_1_3
+		name = dwm_upgrade_1_3
+		icon = GFX_KR_generic_mio_trait_icon_research_speed
+
+		mutually_exclusive = { dwm_upgrade_1_2 dwm_upgrade_1_4 }
+
+		position = { x = 4 y = 2 }
+
+		on_complete = {
+			set_temp_variable = { max_research_speed_to_add = research_bonus }
+			custom_effect_tooltip = GRU_manufacturer_trait_research_cap_dwm_tt
+			add_to_variable = { max_research_speed = max_research_speed_to_add }
+		}
+	}
+
+	trait = {
+		token = dwm_upgrade_1_4
+		name = dwm_upgrade_1_4
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		mutually_exclusive = { dwm_upgrade_1_3 }
+
+		position = { x = 6 y = 2 }
+
+		any_parent = { dwm_upgrade_4 dwm_upgrade_5 }
+
+		limit_to_equipment_type = { infantry_equipment }
+
+		equipment_bonus = {
+			soft_attack = 0.05
+		}
+
+		on_complete = {
+			add_mio_research_bonus = 0.08
+			add_to_variable = { total_campaign_xp = 8 }
+		}
+	}
+
+	trait = {
+		token = dwm_upgrade_2_1
+		name = dwm_upgrade_2_1
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		position = { x = 2 y = 4 }
+
+		all_parents = { dwm_upgrade_1_1 }
+		any_parent = { dwm_upgrade_1_2 dwm_upgrade_1_3 dwm_upgrade_1_4 }
+
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+
+	trait = {
+		token = dwm_upgrade_2_2
+		name = dwm_upgrade_2_2
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		position = { x = 6 y = 4 }
+
+		all_parents = { dwm_upgrade_1_1 }
+		any_parent = { dwm_upgrade_1_2 dwm_upgrade_1_3 dwm_upgrade_1_4 }
+
+		equipment_bonus = {
+			reliability = 0.05
 		}
 	}
 }
@@ -2086,16 +3126,16 @@ GRU_rheinmetall_organisation = {
 
 	on_tech_research_completed = {
 		if = {
-			limit = { NOT = { has_mio_flag = RUS_disable_research_speed_loss } }
+			limit = { NOT = { has_mio_flag = GRU_disable_research_speed_loss } }
 			hidden_effect = {
 				FROM = {
-					mio:RUS_chtz_organisation = {
+					mio:GRU_rheinmetall_organisation = {
 						set_mio_research_bonus = 0
 					}
-					clr_country_flag = RUS_Rheinmetall_RS_Notification
+					clr_country_flag = GRU_Rheinmetall_RS_Notification
 				}
 			}
-			custom_effect_tooltip = RUS_manufacturer_research_reset_tt
+			custom_effect_tooltip = GRU_manufacturer_research_reset_tt
 			custom_effect_tooltip = tooltip_white_line
 		}
 	}
@@ -2103,13 +3143,13 @@ GRU_rheinmetall_organisation = {
 	on_tech_research_cancelled = {
 		hidden_effect = {
 			FROM = {
-				mio:RUS_chtz_organisation = {
+				mio:GRU_rheinmetall_organisation = {
 					set_mio_research_bonus = 0
 				}
-				clr_country_flag = RUS_CHTZ_RS_Notification
+				clr_country_flag = GRU_Rheinmetall_RS_Notification
 			}
 		}
-		custom_effect_tooltip = RUS_manufacturer_research_reset_tt
+		custom_effect_tooltip = GRU_manufacturer_research_reset_tt
 		custom_effect_tooltip = tooltip_white_line
 	}
 

@@ -2,8 +2,8 @@
 #	ARMOUR ROLE
 ######################
 
-armour_generic = {
-	role = armor_role #to distinguish from armor, a hardcoded keyword for all tank equipment types
+heavy_armour_generic = {
+	role = heavy_armor_role #to distinguish from armor, a hardcoded keyword for all tank equipment types
 
 	available_for = { GRU GER }
 
@@ -11,7 +11,7 @@ armour_generic = {
 		factor = 10
 		modifier = {
 			factor = 0
-			is_eligible_for_armor_production = no
+			is_eligible_for_heavy_armor_production = no
 		}
 		modifier = {
 			factor = 0
@@ -45,6 +45,8 @@ armour_generic = {
 		target_template = {
 			regiments = {
 				heavy_armor = 6
+				heavy_tank_destroyer_brigade = 2
+				heavy_sp_anti_air_brigade = 1
 				motorized = 6
 			}
 
@@ -84,6 +86,8 @@ armour_generic = {
 		target_template = {
 			regiments = {
 				heavy_armor = 6
+				heavy_tank_destroyer_brigade = 2
+				heavy_sp_anti_air_brigade = 1
 				mechanized = 6
 			}
 
@@ -97,7 +101,7 @@ armour_generic = {
 		}
 	}
 
-	modern_armour_template = {
+	big_modern_armour = {
 		reinforce_prio = 2
 
 		upgrade_prio = {
@@ -124,6 +128,8 @@ armour_generic = {
 		target_template = {
 			regiments = {
 				modern_armor = 6
+				modern_tank_destroyer_brigade = 2
+				modern_sp_anti_air_brigade = 1
 				mechanized = 6
 			}
 

@@ -255,3 +255,56 @@
  junkers_improved_GRU: "Heavy Bomber Manufacturer"
 
 
+### DWM ###
+ GRU_manufacturer_trait_research_cap_dwm_tt: "§gWill increase £research_speed_icon §HResearch Bonus§! Soft Cap by §G+1.00%§! for every §W1%§! £research_speed_icon §HResearch Bonus§! that §H$dwm$§! currently has.\n\nAs §H$dwm$§! currently has [?max_research_speed_to_add|2W%]£research_speed_icon §HResearch Bonus§! this will increase £research_speed_icon §HResearch Bonus§! Soft Cap by [?max_research_speed_to_add|+=2%].§!"
+ dwm_AV_MIO_List: "\n$dwm$ §W(§7+[?av_dwm_research_speed|.2]%§!)§!"
+
+ GRU_DWM_mio_desc: "$dwm_GRU_MIO$\n§L$dwm_desc$§!\n"
+ GRU_DWM_no_mio_desc: "[?GRU_MIO_name_to_display.GetName] (§H$dwm_GRU_MIO$§!)"
+
+ dwm: "DWM"
+ dwm_desc: "Established in anticipation of the war, DWM Arms Factory was originally created as a bobbin factory, but quickly became a military manufacturer. With the growing need of the army for firearms, leading engineers of the factory such as Shpagin quickly were tasked with simplifying the process of firearms and support equipment production."
+ dwm_GRU: "Infantry Equipment Manufacturer"
+ dwm_GRU_MIO: "R&D Infantry Equipment Designer"
+
+ dwm_upgrade_1: "Lighter Infantry Equipment"
+ dwm_upgrade_2: "Incendiary Bottles"
+ dwm_upgrade_4: "Clear Jamming Design Faults"
+ dwm_upgrade_5: "Increased Fire-Rate"
+ dwm_upgrade_1_1: "Repurposed Civilian Motorcycles"
+ dwm_upgrade_1_2: "Incendiary Anti-Tank Ampulla-Throwers"
+ dwm_upgrade_1_3: "Government Enticement"
+ dwm_upgrade_1_4: "Extended SMG/LMG Magazines"
+ dwm_upgrade_2_1: "Easily Breaks, Easily Fixed"
+ dwm_upgrade_2_2: "Emergency Replacement Parts"
+
+### HENSCHEL ###
+ henschel_upgrade_1: "Spare On-Board Parts"
+ henschel_upgrade_2: "Eliminate Small Arms Weak Spots"
+ henschel_upgrade_3: "Refined Gearbox"
+ henschel_upgrade_4: "Increased Internal Ammunition Capacity"
+ henschel_upgrade_3_nsb: "Additional Space For Fuel Drums"
+ henschel_upgrade_4_nsb: "Improved Dozers"
+ henschel_upgrade_5: "Thicker Plates"
+ henschel_upgrade_6: "Efficient Engine Design"
+ henschel_upgrade_1_1: "Experimental HEI Ammunition"
+ henschel_upgrade_1_2: "Joint Allied Research Department"
+ henschel_upgrade_1_3: "Joint Allied Production Department"
+ henschel_upgrade_1_4: "Inspiration From Anti-Air Gun Designs"
+ henschel_upgrade_2_1: "Faster SPA Firerate"
+ henschel_upgrade_2_2: "Faster SPAT Firerate"
+ henschel_upgrade_2_3: "Faster SPAA Firerate"
+ henschel_upgrade_3_1: "SPAT APCR Shells"
+
+ henschel_GRU_MIO: "Self Propelled Platform Tank Designer"
+ henschel_AV_MIO_List: "\n$henschel$ §W(§7+[?av_henschel_research_speed|.2]%§!)§!"
+ henschel_upgrade_based_on_allies_and_puppets_eff_cap_tt: "§gEfficiency Cap, Gain and Resource Need effects received when this trait is completed are dependent on how many allies and subjects German has, with every allied and subject country contributing an additional:§!\nProduction efficiency cap: §G+2.00%§!\nProduction efficiency gain: §G+2.00%§!\nProduction resource need: §R+2.00%§!\n\n§gUp towards a maximum of:§!\nProduction efficiency cap: §G+20.00%§!\nProduction efficiency gain: §G+20.00%§!\nProduction resource need: §R+20.00%§!"
+ henschel_upgrade_based_on_allies_and_puppets_eff_gro_tt: "§gEfficiency Cap, Gain and Resource Need effects received when this trait is completed are dependent on how many allies and subjects German has, with every allied and subject country contributing an additional:§!\nProduction efficiency cap: §G+1.00%§!\nProduction efficiency gain: §G+4.00%§!\nProduction resource need: §R+2.00%§!\n\n§gUp towards a maximum of:§!\nProduction efficiency cap: §G+10.00%§!\nProduction efficiency gain: §G+40.00%§!\nProduction resource need: §R+20.00%§!"
+ henschel_upgrade_will_get: "§1As [FROM.GetNameDef] has §W[?henschel_allies_and_puppets_no]§! combined Allies and Subjects, this will grant the following effects:\n§WProduction efficiency cap: §G+[?henschel_eff_cap|.2]%§!\nProduction efficiency gain: §G+[?henschel_eff_gain|.2]%§!\nProduction resource need: §R+[?henschel_resource|.2]%§!§!§!"
+
+ GRU_henschel_mio_desc: "$henschel_GRU_MIO$\n§L$henschel_desc$§!\n"
+ GRU_henschel_no_mio_desc: "[?GRU_MIO_name_to_display.GetName] (§H$henschel_GRU_MIO$§!)"
+
+ henschel: "Henschel"
+ henschel_desc: "Created thanks to recent efforts of the government, the Urals Heavy Machinery Factory is a whole city near Yekaterinburg with its own park, residential area and, of course, the biggest machine-building factory in the Urals. One of the many departments inside henschel is the armament department led by promising young engineers."
+ henschel_GRU: "Tank Manufacturer"

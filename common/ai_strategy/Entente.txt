@@ -15,11 +15,7 @@
 ################
 entente_take_ireland = {
 	allowed = {
-		OR = {
-			tag = CAN
-			tag = NFA
-			tag = POR
-		}
+		is_in_faction_with = ENT
 	}
 	enable = {
 		has_war_with = IRE
@@ -1003,6 +999,46 @@ ENT_support_invasion_of_france = {
 		tag = FRA
 		value = 50
 	}
+	ai_strategy = {
+		type = front_armor_score
+		id = RUS
+		value = 10
+	}
+}
+
+ENT_secure_iberia = {
+	allowed = {
+		is_in_faction_with = ENT
+	}
+	enable = {
+		has_war_with = CNT
+		CNT = {
+			has_capitulated = no
+			any_home_area_neighbor_country = { is_ally_with = ENT }
+		}
+
+		#not if any dangerous neighbours
+		surrender_progress < 0.05
+		NOT = {
+			any_home_area_neighbor_country = {
+				has_war_with = PREV
+				has_capitulated = no
+				NOT = { tag = CNT }
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = CNT
+		value = 300
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = CNT
+		value = 50
+	}
 }
 
 ENT_buffer_troops_for_invasion_of_britain = {
@@ -1041,12 +1077,10 @@ ENT_buffer_troops_for_invasion_of_britain = {
 		states = {
 			14 #Upper Brittany
 			15 #Normandy
-			17 #Pas-de-Calais
-			29 #Dunkirk
 			983 #Brittany
 		}
 		ratio = 0.5
-		area = british_isles
+		area = mainland_europe
 		subtract_invasions_from_need = yes
 	}
 	ai_strategy = {
@@ -1059,7 +1093,7 @@ ENT_buffer_troops_for_invasion_of_britain = {
 			135 #Munster
 		}
 		ratio = 0.3
-		area = british_isles
+		area = mainland_europe
 		subtract_invasions_from_need = yes
 	}
 

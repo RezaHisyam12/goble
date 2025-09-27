@@ -615,4 +615,30 @@ define_text = {
 		localization_key = RUS_military_production
 	}
 }
+defined_text = {
+	name = GRU_AV_DWM_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:GRU_DWM_organisation = {
+					has_mio_flag = GRU_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = dwm_AV_MIO_List
+	}
+}
+defined_text = {
+	name = GRU_AV_HENSCHEL_Funds
+	text = {
+		trigger = {
+			FROM = {
+				mio:GRU_henschel_organisation = {
+					has_mio_flag = GRU_AV_decaying_funds_bonus
+				}
+			}
+		}
+		localization_key = henschel_AV_MIO_List
+	}
+}
 
