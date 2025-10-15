@@ -946,13 +946,13 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.75
+			factor = 1
 			modifier = {
 				factor = 0
 				has_navy_size = { size < 10 }
 			}
 			modifier = {
-				factor = 3
+				factor = 5
 				is_major = yes
 			}
 		}
@@ -1003,7 +1003,11 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
+			modifier = {
+				factor = 9
+				is_eligible_for_heavy_aircraft_production = yes
+			}
 		}
 
 		categories = {
@@ -1033,7 +1037,11 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
+			modifier = {
+				factor = 9
+				is_eligible_for_heavy_aircraft_production = yes
+			}
 		}
 
 		categories = {

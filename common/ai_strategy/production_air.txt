@@ -10,12 +10,12 @@ light_aircraft_production = {
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = unit_ratio id = fighter value = 35 }
-	ai_strategy = { type = unit_ratio id = cas value = 65 }
-	ai_strategy = { type = air_factory_balance value = 30 }
+	ai_strategy = { type = unit_ratio id = fighter value = 70 }
+	ai_strategy = { type = unit_ratio id = cas value = 30 }
+	ai_strategy = { type = air_factory_balance value = 40 }
 }
 
-tac_bomber_production = {
+tac_bomber_production_default = {
 	enable = {
 		is_eligible_for_medium_aircraft_production = yes
 	}
@@ -24,21 +24,35 @@ tac_bomber_production = {
 	ai_strategy = {
 		type = unit_ratio
 		id = cas
-		value = -25
+		value = -5
 	}
 	ai_strategy = {
 		type = unit_ratio
 		id = tactical_bomber
-		value = 25
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = tactical_bomber
-		value = 50
+		value = 5
 	}
 }
 
-strat_bomber_air_production = {
+tac_bomber_production_operational_integrity = {
+	enable = {
+		is_eligible_for_medium_aircraft_production = yes
+		has_tech = force_rotation
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = -10
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = 10
+	}
+}
+
+strat_bomber_air_production_default = {
 	enable = {
 		is_eligible_for_heavy_aircraft_production = yes
 	}
@@ -47,32 +61,51 @@ strat_bomber_air_production = {
 	ai_strategy = {
 		type = unit_ratio
 		id = cas
-		value = -15
-	}
-	ai_strategy = {
-		type = unit_ratio
-		id = tactical_bomber
-		value = 10
+		value = -5
 	}
 	ai_strategy = {
 		type = unit_ratio
 		id = strategic_bomber
 		value = 5
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = -5
 	}
 	ai_strategy = {
 		type = unit_ratio
 		id = heavy_fighter
 		value = 5
 	}
+}
+
+strat_bomber_air_production_strategic_destruction = {
+	enable = {
+		is_eligible_for_heavy_aircraft_production = yes
+		has_tech = air_superiority
+	}
+	abort_when_not_enabled = yes
+
 	ai_strategy = {
-		type = equipment_production_factor
-		id = strategic_bomber
-		value = 15
+		type = unit_ratio
+		id = cas
+		value = -5
 	}
 	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = large_plane_airframe
-		value = 10
+		type = unit_ratio
+		id = strategic_bomber
+		value = 5
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = -5
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = heavy_fighter
+		value = 5
 	}
 }
 
@@ -97,23 +130,20 @@ CV_aircraft_production = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = unit_ratio
+		type = equipment_production_min_factories
 		id = cv_fighter
 		value = 1
 	}
 	ai_strategy = {
-		type = unit_ratio
+		type = equipment_production_min_factories
 		id = cv_naval_bomber
 		value = 1
 	}
 }
 
-transport_aircraft_production = {
-	allowed = {
-		is_major = yes
-	}
+other_aircraft_production = {
 	enable = {
-		num_of_military_factories > 50
+		is_eligible_for_medium_aircraft_production = yes
 	}
 	abort_when_not_enabled = yes
 
@@ -126,5 +156,24 @@ transport_aircraft_production = {
 		type = equipment_production_min_factories
 		id = scout_plane
 		value = 1
+	}
+}
+
+mothership_air_production = {
+	enable = {
+		is_eligible_for_heavy_aircraft_production = yes
+		is_special_project_completed = sp:sp_air_mothership_aircraft
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = -5
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = mothership
+		value = 5
 	}
 }

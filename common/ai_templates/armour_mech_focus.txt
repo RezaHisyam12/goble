@@ -1,17 +1,21 @@
 ######################
-#	HEAVY ARMOUR ROLE
+#	MA ARMOUR ROLE
 ######################
 
-heavy_armour_generic = {
-    role = heavy_armor_role
+armour_more_trucks = {
+	role = armor_role #to distinguish from armor, a hardcoded keyword for all tank equipment types
 
 	blocked_for = { GRU GER	}
 
-    upgrade_prio = {
-		factor = 5
+	upgrade_prio = {
+		factor = 10
 		modifier = {
 			factor = 0
-			is_eligible_for_heavy_armor_production = no
+			NOT = {has_tech = mass_assault}
+		}
+		modifier = {
+			factor = 0
+			is_eligible_for_armor_production = no
 		}
 		modifier = {
 			factor = 0
@@ -19,12 +23,12 @@ heavy_armour_generic = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { has_tech = basic_heavy_tank }
-			NOT = { has_tech = basic_heavy_tank_chassis }
+			NOT = { has_tech = basic_light_tank }
+			NOT = { has_tech = basic_light_tank_chassis }
 		}
 	}
 
-	motorized_heavy_1 = {
+	ma_motorized_light = {
         can_upgrade_in_field = { always = no }
 		reinforce_prio = 2
 
@@ -34,89 +38,95 @@ heavy_armour_generic = {
 
         target_template = {
 			regiments = {
-				heavy_armor = 4
+				light_armor = 4
 				motorized = 6
 			}
 
 			support = {
+				artillery = 1
 				anti_air = 1
-				light_tank_recon = 1
-				medium_flame_tank = 1
-				assault_engineer = 1
-				logistics_company = 1
+				engineer = 1
 			}
 		}
     }
 
-	motorized_heavy_2 = {
-        can_upgrade_in_field = { always = no }
+	ma_motorised_medium = {
+		can_upgrade_in_field = { always = no }
 		reinforce_prio = 2
 
 		upgrade_prio = {
 			base = 100
 			modifier = {
 				factor = 0
-				num_of_military_factories < 100
+				NOT = { has_tech = basic_medium_tank }
+				NOT = { has_tech = basic_medium_tank_chassis }
+			}
+			modifier = {
+				factor = 0
+				is_eligible_for_medium_armor_production = no
 			}
 			modifier = {
 				factor = 2
-				num_of_military_factories > 100
+				is_eligible_for_medium_armor_production = yes
 			}
 		}
 
-        target_template = {
+		target_template = {
 			regiments = {
-				heavy_armor = 6
-				motorized = 6
+				medium_armor = 5
+				motorized = 7
 			}
 
 			support = {
+				artillery = 1
 				anti_air = 1
-				light_tank_recon = 1
-				medium_flame_tank = 1
-				assault_engineer = 1
-				logistics_company = 1
+				engineer = 1
 			}
 		}
-    }
+	}
 
-    mechanized_heavy = {
-        can_upgrade_in_field = { always = no }
+	ma_mechanized_medium = {
+		can_upgrade_in_field = { always = no }
 		reinforce_prio = 2
 
 		upgrade_prio = {
 			base = 100
-            modifier = {
+			modifier = {
+				factor = 0
+				NOT = { has_tech = basic_medium_tank }
+				NOT = { has_tech = basic_medium_tank_chassis }
+			}
+			modifier = {
 				factor = 0
 				NOT = { has_tech = mechanised_infantry }
 			}
-            modifier = {
+			modifier = {
 				factor = 0
-				num_of_military_factories < 125
+				num_of_military_factories < 75
 			}
 			modifier = {
 				factor = 4
-				num_of_military_factories > 125
+				num_of_military_factories > 75
 			}
 		}
 
-        target_template = {
+		target_template = {
 			regiments = {
-				heavy_armor = 8
-				mechanized = 7
+				medium_armor = 6
+				mechanized = 9
 			}
 
 			support = {
+				artillery = 1
 				anti_air = 1
-				light_tank_recon = 1
-				medium_flame_tank = 1
-				assault_engineer = 1
+				engineer = 1
 				logistics_company = 1
+				signal_company = 1
 			}
 		}
-    }
+	}
 
-	big_modern_armour = {
+	ma_modern_armour = {
 		can_upgrade_in_field = { always = no }
 		reinforce_prio = 2
 
@@ -133,25 +143,25 @@ heavy_armour_generic = {
 			}
 			modifier = {
 				factor = 0
-				num_of_military_factories < 150
+				num_of_military_factories < 75
 			}
 			modifier = {
 				factor = 6
-				num_of_military_factories > 150
+				num_of_military_factories > 75
 			}
 		}
 
 		target_template = {
 			regiments = {
-				modern_armor = 10
-				mechanized = 8
+				modern_armor = 6
+				mechanized = 9
 			}
 
 			support = {
+				artillery = 1
 				anti_air = 1
 				assault_engineer = 1
 				logistics_company = 1
-				maintenance_company = 1
 				signal_company = 1
 			}
 		}

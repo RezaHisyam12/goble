@@ -81,6 +81,9 @@
 							}
 		}
 		cost = 6
+		ai_will_do = {
+			factor = 100
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_TWO"
 			207 = {
@@ -131,6 +134,9 @@
 									}
 		}
 		cost = 6
+		ai_will_do = {
+			factor = 100
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_THREE"
 			1289 = {

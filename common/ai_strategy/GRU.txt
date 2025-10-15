@@ -1292,16 +1292,6 @@ default_armour_super_heavy_production = {
 		id = land_cruiser_chassis
 		value = 10
 	}
-	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = heavy_tank_aa_chassis
-		value = 10
-	}
-	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = heavy_tank_destroyer_chassis
-		value = 10
-	}
 }
 
 GRU_build_tanks_focus = {
@@ -1362,7 +1352,7 @@ default_heavy_tank_production = {
 	}
 	ai_strategy = {
 		type = role_ratio
-		id = armor_role
+		id = armor
 		value = 10
 	}
 }
@@ -1426,16 +1416,17 @@ GRU_less_focus_on_russia = {
 			OR = {
 				VKB = {
 					is_in_faction_with = ROOT
-					surrender_progress > 0.40
+					surrender_progress > 0.60
 				}
 				VKR = {
 					is_in_faction_with = ROOT
-					surrender_progress > 0.40
+					surrender_progress > 0.60
 				}
 				VKK = {
 					is_in_faction_with = ROOT
-					surrender_progress > 0.40
+					surrender_progress > 0.60
 				}
+				has_full_control_of_state = 5
 			}
 		}
 	}
@@ -1450,6 +1441,40 @@ GRU_less_focus_on_russia = {
 		type = front_unit_request
 		tag = TRM
 		value = -100
+	}
+}
+
+GRU_secure_eastern_front = {
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		FRA = {
+			has_capitulated = no
+			is_faction_leader = yes
+		}
+		OR = {
+			VKB = {
+				is_in_faction_with = ROOT
+				surrender_progress > 0.40
+			}
+			VKR = {
+				is_in_faction_with = ROOT
+				surrender_progress > 0.40
+			}
+			VKK = {
+				is_in_faction_with = ROOT
+				surrender_progress > 0.40
+			}
+		}
+		has_war_with = RUS
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = RUS
+		value = -15
 	}
 }
 
@@ -1681,31 +1706,9 @@ GRU_war_against_france = {
 	}
 }
 
-GRU_secure_eastern_front = {
-	allowed = {
-		original_tag = GRU
-	}
-	enable = {
-		has_war_with = RUS
-		is_neighbor_of = RUS
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = front_armor_score
-		id = RUS
-		value = 10
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = RUS
-		value = 15
-	}
-}
-
 GRU_total_war_against_russia = {
 	allowed = {
-		original_tag = GRU
+		tag = GRU
 	}
 	enable = {
 		RUS = { is_faction_leader = yes }

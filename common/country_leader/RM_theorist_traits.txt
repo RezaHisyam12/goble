@@ -10,9 +10,9 @@ leader_traits = {
 		unit_medium_armor_design_cost_factor = -0.5
 		unit_heavy_armor_design_cost_factor = -0.5
 		ai_will_do = {
-			factor = 1
+			base = 0
 			modifier = {
-				factor = 100
+				add = 100
 				has_tech = mobile_warfare
 			}
 		}
@@ -27,9 +27,9 @@ leader_traits = {
 		unit_artillery_design_cost_factor = -1
 		unit_rocket_artillery_design_cost_factor = -1
 		ai_will_do = {
-			factor = 1
+			base = 0
 			modifier = {
-				factor = 100
+				add = 100
 				has_tech = superior_firepower
 			}
 		}
@@ -45,9 +45,9 @@ leader_traits = {
 		unit_medium_armor_design_cost_factor = -0.5
 		unit_heavy_armor_design_cost_factor = -0.5
 		ai_will_do = {
-			factor = 1
+			base = 0
 			modifier = {
-				factor = 100
+				add = 100
 				has_tech = trench_warfare
 			}
 		}

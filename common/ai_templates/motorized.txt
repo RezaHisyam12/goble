@@ -1,0 +1,149 @@
+######################
+#	MOTORIZED ROLE
+######################
+
+motorized_infantry = {
+    role = motorized
+
+	upgrade_prio = {
+		factor = 5
+		modifier = {
+			factor = 0
+			is_eligible_for_armor_production = no
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_tech = motorised_infantry }
+		}
+	}
+
+	trucks_1 = {
+		can_upgrade_in_field = { always = no }
+		reinforce_prio = 2
+		
+		upgrade_prio = {
+			base = 100
+		}
+
+		target_template = {
+			regiments = {
+				motorized = 8
+			}
+
+			support = {
+				anti_air = 1
+				mot_recon = 1
+				engineer = 1
+				field_hospital = 1
+				logistics_company = 1
+			}
+		}
+	}
+
+	trucks_2 = {
+		can_upgrade_in_field = { always = no }
+		reinforce_prio = 2
+		
+		upgrade_prio = {
+			base = 100
+			modifier = {
+				factor = 0
+				is_eligible_for_medium_armor_production = no
+			}
+			modifier = {
+				factor = 2
+				is_eligible_for_medium_armor_production = yes
+			}
+		}
+
+		target_template = {
+			regiments = {
+				motorized = 8
+				mot_artillery_brigade = 1
+				mot_anti_air_brigade = 1
+			}
+
+			support = {
+				anti_tank = 1
+				mot_recon = 1
+				engineer = 1
+				field_hospital = 1
+				logistics_company = 1
+			}
+		}
+	}
+
+    trucks_3 = {
+		can_upgrade_in_field = { always = no }
+		reinforce_prio = 2
+		
+		upgrade_prio = {
+			base = 100
+            modifier = {
+				factor = 0
+				NOT = { has_tech = motorized_rocket_unit }
+			}
+            modifier = {
+				factor = 0
+				is_eligible_for_medium_armor_production = no
+			}
+			modifier = {
+				factor = 4
+				is_eligible_for_medium_armor_production = yes
+			}
+		}
+
+		target_template = {
+			regiments = {
+				motorized = 8
+				motorized_rocket_brigade = 1
+				mot_anti_air_brigade = 1
+			}
+
+			support = {
+				anti_tank = 1
+				mot_recon = 1
+				engineer = 1
+				field_hospital = 1
+				logistics_company = 1
+			}
+		}
+	}
+
+	trucks_4 = {
+		can_upgrade_in_field = { always = no }
+		reinforce_prio = 2
+		
+		upgrade_prio = {
+			base = 100
+            modifier = {
+				factor = 0
+				NOT = { has_tech = motorized_rocket_unit }
+			}
+            modifier = {
+				factor = 0
+				num_of_military_factories < 75
+			}
+			modifier = {
+				factor = 6
+				num_of_military_factories > 75
+			}
+		}
+
+		target_template = {
+			regiments = {
+				motorized = 8
+				motorized_rocket_brigade = 4
+				mot_anti_air_brigade = 2
+			}
+
+			support = {
+				anti_tank = 1
+				mot_recon = 1
+				engineer = 1
+				field_hospital = 1
+				logistics_company = 1
+			}
+		}
+	}
+}

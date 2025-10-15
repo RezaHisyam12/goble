@@ -191,6 +191,10 @@ technologies = {
 
 		ai_will_do = {
 			base = 0
+			modifier = {
+				add = 25
+				is_eligible_for_armor_production = yes
+			}
 		}
 
 		categories = {
@@ -231,6 +235,10 @@ technologies = {
 
 		ai_will_do = {
 			base = 0
+			modifier = {
+				add = 25
+				is_eligible_for_armor_production = yes
+			}
 		}
 
 		categories = {

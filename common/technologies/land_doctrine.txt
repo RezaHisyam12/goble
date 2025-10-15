@@ -2196,6 +2196,10 @@ technologies = {
 				factor = 100
 				is_chinese_tag = yes
 			}
+			modifier = {
+				factor = 100
+				is_russian_tag = yes
+			}
 		}
 
 		ai_research_weights = {
@@ -2668,6 +2672,10 @@ technologies = {
 			modifier = {
 				factor = 0.8
 				has_army_experience < 120
+			}
+			modifier = {
+				factor = 100
+				tag = SOV
 			}
 		}
 

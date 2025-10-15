@@ -3327,8 +3327,14 @@ shared_focus = {
 					}
 				}
 			}
-			add_command_power = 100
+			add_doctrine_cost_reduction = {
+				name = GRU_formation_of_the_nva
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
 			add_ideas = GRU_okw_2
+			add_command_power = 100
 		}
 		available = {
 				has_country_flag = GRU_INDUSTRIAL_CAPACITY_ENOUGH
@@ -7348,6 +7354,10 @@ shared_focus = {
 		cost = 6
 		ai_will_do = {
 			factor = 75
+			modifier = {
+				factor = 50
+				has_completed_focus = GRU_NMDVP_BORDER_FORTIFICATIONS
+			}
 		}
 		available = {
 			is_subject = no

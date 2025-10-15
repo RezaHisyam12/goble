@@ -4289,6 +4289,12 @@ GRU_germania_plan_decisions = {
 			}
 			modifier = {
 				factor = 0
+				HOL = {
+					is_in_faction_with = RUS
+				}
+			}
+			modifier = {
+				factor = 0
 				has_war = yes
 			}
 			modifier = {
@@ -16490,6 +16496,7 @@ GRU_new_order_decisions = {
 						add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 5000 }
 						add_manpower = 120000
 						army_experience = 500
+						set_capital = { state = 7 }
 						remove_all_ministers = yes
 						add_ideas = limited_conscription
 						add_ideas = limited_exports

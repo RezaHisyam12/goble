@@ -1,5 +1,169 @@
 # AI tank design for testing
 
+generic_light_tanks = {
+	category = land
+
+	roles = {
+		land_light_tank
+	}
+
+	priority = {
+		factor = 1000
+		modifier = { 
+			is_eligible_for_armor_production = no
+			factor = 0
+		}
+	}
+
+	great_war_tank_default = {
+		priority = {
+			factor = 1
+			modifier = { 
+				has_tech = basic_light_tank_chassis
+				factor = 0 #let's not waste XP here
+			}
+		}
+
+		target_variant = {
+			match_value = 1000
+			type = light_tank_chassis_0
+			modules = {
+				main_armament_slot = tank_heavy_machine_gun
+				turret_type_slot = tank_light_one_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = empty
+				special_type_slot_2 = empty
+				special_type_slot_3 = empty
+				special_type_slot_4 = empty
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 0
+				tank_nsb_armor_upgrade = 0
+			}
+		}
+
+		requirements = {}
+		allowed_modules = {}
+	}
+
+	basic_light_tank_default = {
+		priority = {
+			factor = 10
+			modifier = { 
+				has_tech = improved_light_tank_chassis 
+				factor = 0 #let's not waste XP here
+			}
+		}
+
+		target_variant = {
+			match_value = 2000
+			type = light_tank_chassis_1
+			modules = {
+				main_armament_slot = { 
+					any_of = { 
+						tank_close_support_gun 
+						tank_auto_cannon 
+						tank_small_cannon 
+					} 
+				}
+				turret_type_slot = tank_light_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = empty
+				special_type_slot_2 = empty
+				special_type_slot_3 = empty
+				special_type_slot_4 = empty
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 4
+				tank_nsb_armor_upgrade = 0
+			}
+		}
+
+		requirements = {}
+		allowed_modules = {}
+	}
+
+	improved_light_tank_default = {
+		priority = {
+			factor = 10
+			modifier = { 
+				has_tech = advanced_light_tank_chassis 
+				factor = 0 #let's not waste XP here
+			}
+		}
+
+		target_variant = {
+			match_value = 3000
+			type = light_tank_chassis_2
+			modules = {
+				main_armament_slot = { 
+					any_of = {  
+						tank_small_cannon_2 
+						tank_auto_cannon_2 
+						tank_close_support_gun 
+						tank_auto_cannon 
+						tank_small_cannon 
+					} 
+				}
+				turret_type_slot = tank_light_three_man_tank_turret
+				suspension_type_slot = tank_christie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_module
+				special_type_slot_2 = additional_machine_guns
+				special_type_slot_3 = additional_machine_guns
+				special_type_slot_4 = smoke_launchers
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 9
+				tank_nsb_armor_upgrade = 4
+			}
+		}
+
+		requirements = {}
+		allowed_modules = {}
+	}
+
+	advanced_light_tank_default = {
+		priority = {
+			factor = 10
+		}
+
+		target_variant = {
+			match_value = 4000
+			type = light_tank_chassis_3
+			modules = {
+				main_armament_slot = { 
+					any_of = { 
+						tank_small_cannon_2 
+						tank_auto_cannon_2 
+						tank_close_support_gun 
+					} 
+				}
+				turret_type_slot = tank_light_three_man_tank_turret
+				suspension_type_slot = tank_christie_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_gasoline_engine
+				special_type_slot_1 = tank_radio_module
+				special_type_slot_2 = secondary_turret_hmg
+				special_type_slot_3 = additional_machine_guns
+				special_type_slot_4 = smoke_launchers
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 14
+				tank_nsb_armor_upgrade = 9
+			}
+		}
+
+		requirements = {}
+		allowed_modules = {}
+	}
+}
+
 generic_medium_tanks = {
 	category = land
 
@@ -28,7 +192,14 @@ generic_medium_tanks = {
 			match_value = 1000
 			type = medium_tank_chassis_0
 			modules = {
-				main_armament_slot > tank_small_cannon
+				main_armament_slot = { 
+					any_of = { 
+						tank_medium_cannon 
+						tank_small_cannon_2 
+						tank_close_support_gun 
+						tank_high_velocity_cannon 
+					} 
+				}
 				turret_type_slot = tank_medium_two_man_tank_turret
 				suspension_type_slot = tank_torsion_bar_suspension
 				armor_type_slot = tank_riveted_armor
@@ -68,7 +239,14 @@ generic_medium_tanks = {
 			match_value = 2000
 			type = medium_tank_chassis_1
 			modules = {
-				main_armament_slot = tank_medium_cannon
+				main_armament_slot = { 
+					any_of = { 
+						tank_medium_cannon 
+						tank_small_cannon_2 
+						tank_close_support_gun 
+						tank_high_velocity_cannon 
+					} 
+				}
 				turret_type_slot = tank_medium_three_man_tank_turret
 				suspension_type_slot = tank_torsion_bar_suspension
 				armor_type_slot = tank_riveted_armor
@@ -110,7 +288,14 @@ generic_medium_tanks = {
 			match_value = 3000
 			type = medium_tank_chassis_2
 			modules = {
-				main_armament_slot = tank_medium_cannon
+				main_armament_slot = { 
+					any_of = { 
+						tank_medium_cannon_2 
+						tank_medium_cannon 
+						tank_small_cannon_2 
+						tank_high_velocity_cannon 
+					} 
+				}
 				turret_type_slot = tank_medium_three_man_tank_turret
 				suspension_type_slot = tank_torsion_bar_suspension
 				armor_type_slot = tank_riveted_armor
@@ -154,7 +339,7 @@ generic_medium_tanks = {
 			match_value = 4000
 			type = medium_tank_chassis_3
 			modules = {
-				main_armament_slot > tank_medium_cannon
+				main_armament_slot = { any_of = { tank_medium_cannon_2 tank_high_velocity_cannon_2 } }
 				turret_type_slot = tank_medium_three_man_tank_turret
 				suspension_type_slot = tank_torsion_bar_suspension
 				armor_type_slot = tank_riveted_armor
@@ -1067,7 +1252,6 @@ generic_heavy_tank_destroyer = {
 						tank_high_velocity_cannon_3 
 						tank_heavy_cannon_3 
 						tank_high_velocity_cannon_2 
-						tank_heavy_cannon 
 						tank_heavy_cannon_2 
 					} 
 				}
@@ -1126,7 +1310,6 @@ generic_heavy_tank_destroyer = {
 						tank_high_velocity_cannon_3 
 						tank_heavy_cannon_3 
 						tank_high_velocity_cannon_2 
-						tank_heavy_cannon 
 						tank_heavy_cannon_2 
 					} 
 				}

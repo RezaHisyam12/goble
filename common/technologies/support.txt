@@ -1906,6 +1906,10 @@ technologies = {
 				factor = 1.5
 				date > "1944.1.1"
 			}
+			modifier = {
+				factor = 10
+				tag = GRU
+			}
 		}
 	}
 
@@ -2014,10 +2018,6 @@ technologies = {
 			modifier = {
 				factor = 3
 				date > "1944.1.1"
-			}
-			modifier = {
-				factor = 10
-				tag = GRU
 			}
 		}
 	}

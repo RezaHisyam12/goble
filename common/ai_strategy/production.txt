@@ -218,7 +218,7 @@ less_infantry_1 = {
 		has_army_size = { size > 75 type = infantry }
 	}
 
-	ai_strategy = { type = role_ratio                          id = infantry             value = -25 }
+	ai_strategy = { type = role_ratio                          id = infantry             value = -20 }
 }
 
 less_infantry_2 = {
@@ -227,7 +227,7 @@ less_infantry_2 = {
 		has_army_size = { size > 150 type = infantry }
 	}
 
-	ai_strategy = { type = role_ratio                          id = infantry             value = -25 }
+	ai_strategy = { type = role_ratio                          id = infantry             value = -20 }
 }
 
 less_infantry_3 = {
@@ -236,7 +236,7 @@ less_infantry_3 = {
 		has_army_size = { size > 225 type = infantry }
 	}
 
-	ai_strategy = { type = role_ratio                          id = infantry             value = -25 }
+	ai_strategy = { type = role_ratio                          id = infantry             value = -20 }
 }
 
 
