@@ -1,5 +1,5 @@
 ###########################
-## Zollverein Decisions ##
+## East Decisions ##
 ###########################
 
 VKB_ostwall_decision_category = {

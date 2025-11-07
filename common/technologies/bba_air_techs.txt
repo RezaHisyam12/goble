@@ -832,11 +832,19 @@ technologies = {
 			}
 			modifier = {
 				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				factor = 2
 				is_eligible_for_medium_aircraft_production = yes
 			}
 			modifier = {
 				factor = 5
 				is_eligible_for_heavy_aircraft_production = yes
+			}
+			modifier = {
+				factor = 10
+				tag = GRU
 			}
 		}
 	}
@@ -895,11 +903,19 @@ technologies = {
 			}
 			modifier = {
 				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				factor = 2
 				is_eligible_for_medium_aircraft_production = yes
 			}
 			modifier = {
 				factor = 5
 				is_eligible_for_heavy_aircraft_production = yes
+			}
+			modifier = {
+				factor = 10
+				tag = GRU
 			}
 		}
 	}
@@ -2396,6 +2412,18 @@ technologies = {
 		special_project_specialization = { specialization_air }
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 2
+				is_eligible_for_medium_aircraft_production = yes
+			}
+			modifier = {
+				factor = 5
+				is_eligible_for_heavy_aircraft_production = yes
+			}
+			modifier = {
+				factor = 10
+				tag = GRU
+			}
 		}
 	}
 
@@ -2441,6 +2469,18 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 2
+				is_eligible_for_medium_aircraft_production = yes
+			}
+			modifier = {
+				factor = 5
+				is_eligible_for_heavy_aircraft_production = yes
+			}
+			modifier = {
+				factor = 10
+				tag = GRU
+			}
 		}
 	}
 
@@ -2481,6 +2521,18 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 2
+				is_eligible_for_medium_aircraft_production = yes
+			}
+			modifier = {
+				factor = 5
+				is_eligible_for_heavy_aircraft_production = yes
+			}
+			modifier = {
+				factor = 10
+				tag = GRU
+			}
 		}
 	}
 }

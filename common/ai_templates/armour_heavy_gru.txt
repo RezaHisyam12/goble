@@ -38,6 +38,10 @@ heavy_armour_generic = {
 			base = 100
 		}
 
+		can_upgrade_in_field = {
+			AI_trigger_can_upgrade_in_field = yes
+		}
+
 		target_template = {
 			regiments = {
 				heavy_armor = 6
@@ -77,6 +81,10 @@ heavy_armour_generic = {
 				factor = 2
 				num_of_military_factories > 99
 			}
+		}
+
+		can_upgrade_in_field = {
+			AI_trigger_can_upgrade_in_field = yes
 		}
 
 		target_template = {
@@ -119,6 +127,10 @@ heavy_armour_generic = {
 				factor = 3
 				num_of_military_factories > 149
 			}
+		}
+
+		can_upgrade_in_field = {
+			AI_trigger_can_upgrade_in_field = yes
 		}
 
 		target_template = {

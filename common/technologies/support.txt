@@ -1852,6 +1852,10 @@ technologies = {
 				factor = 1.5
 				date > "1944.1.1"
 			}
+			modifier = {
+				factor = 4
+				tag = GRU
+			}
 		}
 	}
 
@@ -2070,7 +2074,7 @@ technologies = {
 				date > "1940.1.1"
 			}
 			modifier = {
-				factor = 10
+				factor = 2
 				tag = GRU
 			}
 		}
@@ -2129,7 +2133,7 @@ technologies = {
 				date > "1944.1.1"
 			}
 			modifier = {
-				factor = 10
+				factor = 4
 				tag = GRU
 			}
 		}

@@ -223,12 +223,6 @@ GRU_Volunteer = {
 		id = CHI
 		value = 10000
 	}
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = FIN
-		value = 10000
-	}
-
 }
 
 ################
@@ -1426,7 +1420,7 @@ GRU_less_focus_on_russia = {
 					is_in_faction_with = ROOT
 					surrender_progress > 0.60
 				}
-				has_full_control_of_state = 5
+				NOT = { has_full_control_of_state = 5 } #Konigsberg
 			}
 		}
 	}
@@ -1456,15 +1450,15 @@ GRU_secure_eastern_front = {
 		OR = {
 			VKB = {
 				is_in_faction_with = ROOT
-				surrender_progress > 0.40
+				surrender_progress > 0.60
 			}
 			VKR = {
 				is_in_faction_with = ROOT
-				surrender_progress > 0.40
+				surrender_progress > 0.60
 			}
 			VKK = {
 				is_in_faction_with = ROOT
-				surrender_progress > 0.40
+				surrender_progress > 0.60
 			}
 		}
 		has_war_with = RUS

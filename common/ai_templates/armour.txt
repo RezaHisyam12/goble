@@ -40,6 +40,10 @@ armour_generic = {
 			base = 100
 		}
 
+		can_upgrade_in_field = {
+			AI_trigger_can_upgrade_in_field = yes
+		}
+
 		target_template = {
 			regiments = {
 				medium_armor = 6
@@ -73,6 +77,10 @@ armour_generic = {
 				factor = 4
 				num_of_military_factories > 75
 			}
+		}
+
+		can_upgrade_in_field = {
+			AI_trigger_can_upgrade_in_field = yes
 		}
 
 		target_template = {
@@ -113,6 +121,10 @@ armour_generic = {
 				factor = 6
 				num_of_military_factories > 75
 			}
+		}
+
+		can_upgrade_in_field = {
+			AI_trigger_can_upgrade_in_field = yes
 		}
 
 		target_template = {

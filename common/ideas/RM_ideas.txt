@@ -79,8 +79,7 @@ ideas = {
 			picture = gru_red_imperialism
 			modifier = {
 				justify_war_goal_time = -0.10
-				stability_factor = 0.05
-				
+				stability_factor = 0.05				
 				offensive_war_stability_factor = 0.1
 				trade_opinion_factor = 0.1
 				research_sharing_per_country_bonus = 0.1
@@ -147,26 +146,26 @@ ideas = {
 			allowed = { always = no }
             modifier = {
 				army_morale_factor = 0.1
-				experience_gain_army_factor = 0.25
-				stability_factor = 0.10
-				land_reinforce_rate = 0.05
-				army_speed_factor = 0.05
-				war_support_factor = 0.2
-				encryption_factor = 0.05
-				local_intel_to_enemies = -0.15
 				army_org_factor = 0.10
-				max_training = 0.25
-				out_of_supply_factor = -0.15
+				army_speed_factor = 0.05
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.05
+				experience_gain_army_factor = 0.25
+				stability_factor = 0.10
+				war_support_factor = 0.2
+				land_reinforce_rate = 0.05
+				local_intel_to_enemies = -0.15
+				out_of_supply_factor = -0.15
 				org_loss_when_moving = -0.15
-				local_manpower = 0.05
 				max_command_power = 25
-				conscription_factor = -0.2
 				mobilization_speed = 0.10
 				coordination_bonus = 0.05
 				initiative_factor = 0.02
 				max_planning = 0.1
+				max_training = 0.25
+				special_forces_training_time_factor = -0.25
+				conscription_factor = -0.2
+				experience_loss_factor = -0.25
 			}
 		}
 		GRU_lager = {
@@ -657,6 +656,10 @@ ideas = {
 					instant = yes
 				}
 			}
+           		modifier = {
+				experience_gain_air_factor = 0.1
+				air_superiority_efficiency = 0.1
+			}
 		}
 		GRU_fighter_ground = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_fighter_ground"}
@@ -683,6 +686,11 @@ ideas = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
+			}
+           		modifier = {
+				experience_gain_air_factor = 0.1
+				air_superiority_efficiency = 0.1
+				air_cas_efficiency = 0.1
 			}
 		}
 		GRU_fighter_sea = {
@@ -721,6 +729,11 @@ ideas = {
 					instant = yes
 				}
 			}
+           		modifier = {
+				experience_gain_air_factor = 0.1
+				air_superiority_efficiency = 0.1
+				air_nav_efficiency = 0.1
+			}
 		}
 		GRU_fighter_ground_OK_NLW = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_fighter_ground_OK_NLW"}
@@ -758,13 +771,13 @@ ideas = {
 				}
 			}
 			allowed = { always = no }
-            modifier = {
-			experience_gain_air_factor = 0.1
-			air_ace_generation_chance_factor = 0.25
-
-			air_superiority_efficiency = 0.1
-			air_intercept_efficiency = 0.1
-			air_cas_efficiency = 0.1
+           		modifier = {
+				experience_gain_air_factor = 0.1
+				air_ace_generation_chance_factor = 0.25
+				air_superiority_efficiency = 0.1
+				air_superiority_bonus_in_combat = 0.1
+				air_cas_efficiency = 0.1
+				air_cas_present_factor = 0.1
 			}
 		}
 		GRU_fighter_sea_OK_NLW = {
@@ -808,13 +821,13 @@ ideas = {
 				}
 			}
 			allowed = { always = no }
-            modifier = {
-			experience_gain_air_factor = 0.1
-			air_ace_generation_chance_factor = 0.25
-
-			air_superiority_efficiency = 0.1
-			air_intercept_efficiency = 0.1
-			air_nav_efficiency = 0.1
+           		modifier = {
+				experience_gain_air_factor = 0.1
+				air_ace_generation_chance_factor = 0.25
+				air_superiority_efficiency = 0.1
+				air_superiority_bonus_in_combat = 0.1
+				air_nav_efficiency = 0.1
+				air_night_penalty = -0.10
 			}
 		}
 		###bomber###
@@ -833,6 +846,10 @@ ideas = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
+			}
+ 		        modifier = {
+				experience_gain_air_factor = 0.1
+				air_bombing_targetting = 0.1
 			}
 		}
 		GRU_bomber_ground = {
@@ -866,6 +883,11 @@ ideas = {
 					instant = yes
 				}
 			}
+ 		        modifier = {
+				experience_gain_air_factor = 0.1
+				air_cas_efficiency = 0.1
+				air_bombing_targetting = 0.1
+			}
 		}
 		GRU_bomber_sea = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_bomber_sea"}
@@ -897,6 +919,11 @@ ideas = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
+			}
+            		modifier = {
+				experience_gain_air_factor = 0.1
+				air_nav_efficiency = 0.1
+				air_bombing_targetting = 0.1
 			}
 		}
 		GRU_bomber_ground_OK_NLW = {
@@ -940,14 +967,13 @@ ideas = {
 				}
 			}
 			allowed = { always = no }
-            modifier = {
-			experience_gain_air_factor = 0.1
-			air_cas_efficiency = 0.1
-
-			air_range_factor = 0.2
-			air_strategic_bomber_bombing_factor = 0.1
-			air_bombing_targetting = 0.1
-			air_strategic_bomber_bombing_factor = 0.1
+ 		        modifier = {
+				experience_gain_air_factor = 0.1
+				air_range_factor = 0.2
+				air_strategic_bomber_bombing_factor = 0.1
+				air_bombing_targetting = 0.1
+				air_cas_efficiency = 0.1
+				air_cas_present_factor = 0.1
 			}
 		}
 		GRU_bomber_sea_OK_NLW = {
@@ -991,15 +1017,13 @@ ideas = {
 				}
 			}
 			allowed = { always = no }
-            modifier = {
-
-			experience_gain_air_factor = 0.1
-			air_nav_efficiency = 0.1
-			
-			air_range_factor = 0.2
-			air_strategic_bomber_bombing_factor = 0.1
-			air_bombing_targetting = 0.1
-			air_strategic_bomber_bombing_factor = 0.1
+            		modifier = {
+				experience_gain_air_factor = 0.1
+				air_range_factor = 0.2
+				air_strategic_bomber_bombing_factor = 0.1
+				air_bombing_targetting = 0.1
+				air_nav_efficiency = 0.1
+				air_night_penalty = -0.10
 			}
 		}
 		###ground###
@@ -1007,28 +1031,26 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_panzer"}
 			picture = GRU_panzers
 			allowed = { always = no }
-            modifier = {
-			
-			army_armor_attack_factor = 0.05
-			army_armor_defence_factor = 0.05
-			army_armor_speed_factor = 0.05
-			
+            		modifier = {			
+				army_armor_attack_factor = 0.05
+				army_armor_defence_factor = 0.05
+				army_armor_speed_factor = 0.05
 			}
 		}
 		GRU_panzer_two = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_panzer_two"}
 			picture = GRU_panzerstwo
 			allowed = { always = no }
-            modifier = {
-			
-			army_armor_attack_factor = 0.10
-			army_armor_defence_factor = 0.10
-			army_armor_speed_factor = 0.05
-			
-			mechanized_attack_factor = 0.10
-			mechanized_defence_factor = 0.10
-			motorized_attack_factor = 0.10
-			motorized_defence_factor = 0.10
+        		modifier = {			
+				army_armor_attack_factor = 0.10
+				army_armor_defence_factor = 0.10
+				army_armor_speed_factor = 0.05				
+				mechanized_attack_factor = 0.10
+				mechanized_defence_factor = 0.10
+				motorized_attack_factor = 0.10
+				motorized_defence_factor = 0.10
+				breakthrough_factor = 0.1			
+				planning_speed = 0.15
 			}
 			equipment_bonus = {
 				motorized_equipment = {
@@ -1047,24 +1069,23 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_masses"}
 			picture = GRU_masses
 			allowed = { always = no }
-            modifier = {
-			
-			army_infantry_attack_factor = 0.05
-			army_infantry_defence_factor = 0.05
-			recruitable_population_factor = 0.10
-			
+            		modifier = {			
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+				recruitable_population_factor = 0.10			
 			}
 		}
 		GRU_masses_two = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_masses_two"}
 			picture = GRU_massestwo
 			allowed = { always = no }
-            modifier = {			
+            		modifier = {			
 				army_infantry_attack_factor = 0.10
 				army_infantry_defence_factor = 0.10
-				recruitable_population_factor = 0.10
 				army_artillery_attack_factor = 0.10
 				army_artillery_defence_factor = 0.10
+				combat_width_factor = -0.1
+				recruitable_population_factor = 0.15
 			}
 			equipment_bonus = {
 				infantry_equipment = {
@@ -1085,19 +1106,19 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_mobile_generals"}
 			picture = GRU_OK_NVHP
 			allowed = { always = no }
-            modifier = {
+            		modifier = {
 				experience_gain_army_unit_factor = 0.1
+				army_speed_factor = 0.05
 				army_armor_attack_factor = 0.10
 				army_armor_defence_factor = 0.10
-				army_armor_speed_factor = 0.10			
 				mechanized_attack_factor = 0.10
 				mechanized_defence_factor = 0.10
 				motorized_attack_factor = 0.10
 				motorized_defence_factor = 0.10
 				breakthrough_factor = 0.1			
-				max_planning = 0.1
-				planning_speed = 0.15
-				initiative_factor = 0.05
+				max_planning = 0.15
+				planning_speed = 0.1
+				initiative_factor = 0.15
 			}
 			equipment_bonus = {
 				motorized_equipment = {
@@ -1121,42 +1142,43 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_masses_generals"}
 			picture = GRU_OK_NVHM
 			allowed = { always = no }
-            modifier = {
-			experience_gain_army_unit_factor = 0.1
-			army_infantry_attack_factor = 0.10
-			army_infantry_defence_factor = 0.10
-			recruitable_population_factor = 0.20		
-			army_artillery_attack_factor = 0.10
-			army_artillery_defence_factor = 0.10
-			shore_bombardment_bonus = 0.25
-			railway_gun_bombardment_factor = 0.25			
-			max_planning = 0.15
-			planning_speed = 0.1
-			coordination_bonus = 0.05
+            		modifier = {
+				experience_gain_army_unit_factor = 0.1
+				army_infantry_attack_factor = 0.10
+				army_infantry_defence_factor = 0.10
+				army_artillery_attack_factor = 0.10
+				army_artillery_defence_factor = 0.10
+				recruitable_population_factor = 0.20		
+				shore_bombardment_bonus = 0.25
+				railway_gun_bombardment_factor = 0.25			
+				max_planning = 0.1
+				planning_speed = 0.15
+				coordination_bonus = 0.1
+				combat_width_factor = -0.1
 			}
 			equipment_bonus = {
 				infantry_equipment = {
 					soft_attack = 0.1
 					breakthrough = 0.05
-					build_cost_ic = 0.1
+					build_cost_ic = 0.05
 					instant = yes
 				}
 				artillery_equipment = {
 					soft_attack = 0.1
 					breakthrough = 0.05
-					build_cost_ic = 0.1
+					build_cost_ic = 0.05
 					instant = yes
 				}
 				anti_tank_equipment = {
 					hard_attack = 0.1
 					breakthrough = 0.05
-					build_cost_ic = 0.1
+					build_cost_ic = 0.05
 					instant = yes
 				}
 				anti_air_equipment = {
 					air_attack = 0.05
 					hard_attack = 0.05
-					build_cost_ic = 0.1
+					build_cost_ic = 0.05
 					instant = yes
 				}
 			}		
@@ -2836,13 +2858,13 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GERMANIA_STADT"}
 			picture = Germania_building
 			modifier = {
-				surrender_limit = 0.40
-				political_power_gain = 0.05
-				conscription_factor = 0.01
-				monthly_population = 0.05
+				surrender_limit = 0.10
+				political_power_gain = 0.1
+				conscription_factor = 0.1
+				monthly_population = 0.15
 				supply_consumption_factor = -0.15
 				out_of_supply_factor = -0.1
-				training_time_factor = -0.3
+				training_time_factor = -0.2
 				planning_speed = 0.2
 			}
 		}
@@ -3045,10 +3067,10 @@ ideas = {
 			picture = GRU_germania
 			allowed = { always = no }
 			modifier = {
-        			stability_factor = 0.05
-        			political_power_gain = 0.25
-        			compliance_growth = 0.02
-        			weekly_manpower = 100
+				global_building_slots_factor = 0.1
+				political_power_gain = 0.15
+				monthly_population = 0.3
+				production_speed_buildings_factor = 0.05
         			drift_defence_factor = 0.05
         			resistance_target_on_our_occupied_states = -0.05
 			}

@@ -1539,3 +1539,94 @@ generic_heavy_tanks = {
 	}
 }
 
+generic_medium_amphibious_tanks = {
+	category = land
+
+	roles = {
+		land_amphibious_tank
+	}
+
+	priority = {
+		factor = 100
+		modifier = { 
+			is_eligible_for_medium_armor_production = no
+			factor = 0
+		}
+	}
+
+	improved_medium_amphibious_tank_default = {
+		priority = {
+			factor = 100
+			modifier = { 
+				has_tech = advanced_medium_tank_chassis 
+				factor = 0 #let's not waste XP here
+			}
+		}
+		
+		target_variant = {
+			type = medium_tank_amphibious_chassis_2
+			match_value = 3000
+
+			modules = {
+				main_armament_slot = { any_of = { tank_medium_cannon_2 tank_medium_cannon tank_close_support_gun } }
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = tank_radio_module
+				special_type_slot_2 = amphibious_drive
+				special_type_slot_3 = smoke_launchers
+				special_type_slot_4 = {
+					any_of = {
+						easy_maintenance
+						wet_ammo_storage
+					}
+				}
+			}
+
+			upgrades = {
+				tank_nsb_engine_upgrade = 9
+				tank_nsb_armor_upgrade = 9
+			}
+		}
+
+		requirements = {}
+		allowed_modules = {}
+	}
+
+	advanced_medium_amphibious_tank_default = {
+		priority = {
+			factor = 100
+		}
+
+		target_variant = {
+			type = medium_tank_amphibious_chassis_3
+			match_value = 4000
+
+			modules = {
+				main_armament_slot = { any_of = { tank_medium_cannon_2 tank_medium_cannon } }
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_torsion_bar_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = tank_radio_module
+				special_type_slot_2 = amphibious_drive
+				special_type_slot_3 = smoke_launchers
+				special_type_slot_4 = {
+					any_of = {
+						easy_maintenance
+						wet_ammo_storage
+					}
+				}
+			}
+
+			upgrades = {
+				tank_nsb_engine_upgrade = 14
+				tank_nsb_armor_upgrade = 14
+			}
+		}
+
+		requirements = {}
+		allowed_modules = {}
+	}
+}

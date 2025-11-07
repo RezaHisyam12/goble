@@ -23,8 +23,9 @@ RR_Werwolf_generic = {
 
 		target_template = {
 			regiments = {
-				RR_Werwolf = 9
+				RR_Werwolf = 12
 				artillery_brigade = 3
+				anti_air_brigade = 1
 			}
 
 			support = {
@@ -62,8 +63,9 @@ RR_Werwolf_generic = {
 
 		target_template = {
 			regiments = {
-				RR_1_motorized = 9
+				RR_1_motorized = 12
 				mot_artillery_brigade = 3
+				mot_anti_air_brigade = 1
 			}
 
 			support = {

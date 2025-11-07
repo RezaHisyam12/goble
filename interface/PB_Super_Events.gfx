@@ -194,12 +194,6 @@ spriteTypes = {
 		texturefile = "gfx/super_events/SPEVNT_Gamelin_Coup.png"
 		legacy_lazy_load = no
 	}
-
-	spriteType = {
-		name = "GFX_SPEVNT_Caucasus_Chaos"
-		texturefile = "gfx/super_events/SPEVNT_Caucasus_Chaos.png"
-		legacy_lazy_load = no
-	}
 	
 	spriteType = {
 		name = "GFX_SPEVNT_Capone_CSA"
@@ -432,6 +426,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_SPEVNT_RUSSIAN_UNIFICATION_molotov"
 		texturefile = "gfx/super_events/Super_Event_Image_RUSSIAN_UNIFICATION_molotov.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_SPEVNT_RUSSIAN_UNIFICATION_internationalists"
+		texturefile = "gfx/super_events/Super_Event_Image_RUSSIAN_UNIFICATION_internationalists.png"
 		legacy_lazy_load = no
 	}
 	spriteType = {

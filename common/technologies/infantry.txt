@@ -611,6 +611,14 @@ technologies = {
 
 		ai_will_do = {
 			factor = 0.7
+			modifier = {
+				factor = 3
+				num_of_military_factories > 20
+			}
+			modifier = {
+				factor = 3
+				is_major = yes
+			}
 		}
 	}
 
@@ -640,6 +648,10 @@ technologies = {
 
 		ai_will_do = {
 			factor = 0.7
+			modifier = {
+				factor = 3
+				num_of_military_factories > 20
+			}
 		}
 	}
 
@@ -663,6 +675,10 @@ technologies = {
 
 		ai_will_do = {
 			factor = 0.7
+			modifier = {
+				factor = 3
+				num_of_military_factories > 20
+			}
 		}
 	}
 
@@ -708,6 +724,10 @@ technologies = {
 
 		ai_will_do = {
 			factor = 0.7
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
 		}
 	}
 
@@ -744,6 +764,10 @@ technologies = {
 
 		ai_will_do = {
 			factor = 0.7
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
 		}
 	}
 
@@ -777,6 +801,10 @@ technologies = {
 
 		ai_will_do = {
 			factor = 0.7
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
 		}
 	}
 
@@ -811,6 +839,10 @@ technologies = {
 
 		ai_will_do = {
 			factor = 0.7
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
 		}
 	}
 
@@ -844,6 +876,10 @@ technologies = {
 
 		ai_will_do = {
 			factor = 0.7
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
 		}
 	}
 
@@ -871,6 +907,10 @@ technologies = {
 
 		ai_will_do = {
 			factor = 0.7
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
 		}
 	}
 
@@ -1341,7 +1381,18 @@ technologies = {
 		start_year = 1939
 
 		ai_will_do = {
-			factor = 1
+			base = 0
+			modifier = {
+				add = 15
+				is_eligible_for_medium_armor_production = yes
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_tech = mobile_warfare
+					has_tech = mass_assault
+				}
+			}
 		}
 
 		categories = {
@@ -1530,13 +1581,8 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 15
-				OR = {
-					has_tech = improved_medium_tank_chassis
-					has_tech = improved_medium_tank
-					has_tech = improved_heavy_tank_chassis
-					has_tech = improved_heavy_tank
-				}
+				add = 20
+				is_eligible_for_medium_armor_production = yes
 			}
 		}
 	}
@@ -1577,7 +1623,15 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			base = 0   # Disabled in KR
+			base = 0
+			modifier = {
+				add = 5
+				is_eligible_for_medium_armor_production = yes
+			}
+			modifier = {
+				factor = 2
+				is_naval_power = yes
+			}
 		}
 	}
 
@@ -1605,7 +1659,15 @@ technologies = {
 		special_project_specialization = { specialization_land }
 
 		ai_will_do = {
-			base = 0   # Disabled in KR
+			base = 0
+			modifier = {
+				add = 5
+				is_eligible_for_medium_armor_production = yes
+			}
+			modifier = {
+				factor = 2
+				is_naval_power = yes
+			}
 		}
 	}
 
@@ -1637,12 +1699,8 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 15
-				OR = {
-					has_tech = improved_medium_tank_chassis
-					has_tech = improved_medium_tank
-					has_tech = improved_heavy_tank_chassis
-				}
+				add = 20
+				is_eligible_for_medium_armor_production = yes
 			}
 		}
 	}
@@ -1676,12 +1734,8 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 15
-				OR = {
-					has_tech = improved_medium_tank_chassis
-					has_tech = improved_medium_tank
-					has_tech = improved_heavy_tank_chassis
-				}
+				add = 20
+				is_eligible_for_medium_armor_production = yes
 			}
 		}
 	}
@@ -1811,5 +1865,4 @@ technologies = {
 			}
 		}
 	}	
-
 }

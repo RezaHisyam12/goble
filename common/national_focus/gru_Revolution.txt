@@ -218,7 +218,7 @@ shared_focus = {
 		y = 1
 		cost = 5
 		ai_will_do = {
-			factor = 20
+			factor = 25
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_breitspurbahnen"
@@ -304,7 +304,7 @@ shared_focus = {
 		y = 1
 		cost = 5
 		ai_will_do = {
-			factor = 12
+			factor = 20
 		}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_DAF"
@@ -2208,7 +2208,7 @@ shared_focus = {
 		y = 9
 		cost = 5
 		ai_will_do = {
-			factor = 25
+			factor = 20
 		}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_autobahnen"
@@ -2477,13 +2477,12 @@ shared_focus = {
 		x = -5
 		y = 9
 		cost = 5
-		prerequisite = { focus = GRU_deutschsozialistische_architektur  }
+		ai_will_do = {
+			factor = 25
+		}
 		available = {
 			is_faction_leader = yes
 			num_faction_members > 2
-		}
-		ai_will_do = {
-			factor = 25
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_zollverein_goal"
@@ -2504,6 +2503,7 @@ shared_focus = {
 			country_event = { id = rotermorgen.1005 days = 30 }
 		}
 	}
+	prerequisite = { focus = GRU_deutschsozialistische_architektur  }
 }
 
 	#Industrial Unionisation
@@ -3353,7 +3353,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 8
+			factor = 9
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3432,7 +3432,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 8
+			factor = 9
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3551,7 +3551,7 @@ shared_focus = {
 		y = 3
 		cost = 5
 		ai_will_do = {
-			factor = 5
+			factor = 6
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3575,7 +3575,7 @@ shared_focus = {
 		y = 3
 		cost = 5
 		ai_will_do = {
-			factor = 5
+			factor = 6
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -4019,7 +4019,7 @@ shared_focus = {
 		y = 4
 		cost = 5
 		ai_will_do = {
-			factor = 5
+			factor = 6
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -4068,7 +4068,7 @@ shared_focus = {
 		y = 4
 		cost = 5
 		ai_will_do = {
-			factor = 5
+			factor = 6
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -4117,7 +4117,7 @@ shared_focus = {
 		y = 5
 		cost = 5
 		ai_will_do = {
-			factor = 10
+			factor = 11
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -7081,7 +7081,7 @@ shared_focus = {
 		}
 		cost = 6
 		ai_will_do = {
-			factor = 20
+			factor = 30
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_PATH"
@@ -7779,7 +7779,7 @@ shared_focus = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 2
 			modifier = {
 				factor = 50
 				has_completed_focus = GRU_NMDVP_LEBENSRAUM
@@ -7834,6 +7834,21 @@ shared_focus = {
 					}
 				}
 				VKK = {
+					add_ideas = GRU_financing_colonies_received
+					add_timed_idea = {
+						idea = GRU_MAF_stabilisation
+						days = 365
+					}
+				}
+			}
+			if = {
+				limit = {
+					country_exists = VKN
+					VKN = {
+						is_subject_of = GRU
+					}
+				}
+				VKN = {
 					add_ideas = GRU_financing_colonies_received
 					add_timed_idea = {
 						idea = GRU_MAF_stabilisation

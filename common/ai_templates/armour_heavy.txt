@@ -25,7 +25,7 @@ heavy_armour_generic = {
 	}
 
 	motorized_heavy_1 = {
-        can_upgrade_in_field = { always = no }
+        can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
 		upgrade_prio = {
@@ -49,7 +49,7 @@ heavy_armour_generic = {
     }
 
 	motorized_heavy_2 = {
-        can_upgrade_in_field = { always = no }
+        can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
 		upgrade_prio = {
@@ -81,7 +81,7 @@ heavy_armour_generic = {
     }
 
     mechanized_heavy = {
-        can_upgrade_in_field = { always = no }
+        can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
 		upgrade_prio = {
@@ -117,7 +117,7 @@ heavy_armour_generic = {
     }
 
 	big_modern_armour = {
-		can_upgrade_in_field = { always = no }
+		can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
 		upgrade_prio = {

@@ -10,7 +10,9 @@ shared_focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_SHARED_ESTABLISH_VK"
 			hidden_effect = {
 				country_event = { id =  rotermorgenmisc.1102 days = 30 }
+				hidden_effect = { set_technology = { RR_Werwolf_tech  = 1 } }	
 			}
+			custom_effect_tooltip = RR_Werwolf_tech_effect
 			add_ideas = VK_COLONY_ONE
 		}
 	}
@@ -74,7 +76,10 @@ shared_focus = {
 		cost = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_SHARED_OUR_OWN_RR"
-			add_ideas = GRU_guard
+			custom_effect_tooltip = RR_1_motorized_tech_effect			add_ideas = GRU_guard
+			hidden_effect = {
+			set_technology = { RR_1_motorized_tech  = 1 } 
+			}
 		}
 		prerequisite = { focus = VK_FOCUS_SHARED_SETTLERS  }
 		prerequisite = { focus = VK_FOCUS_SHARED_NATIONALISATION  }

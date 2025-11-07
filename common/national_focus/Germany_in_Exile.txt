@@ -710,7 +710,7 @@
 		}
 
 		ai_will_do = {
-			factor = 99
+			factor = 1
 			modifier = {
 				factor = 0
 				has_game_rule = {
@@ -799,7 +799,7 @@
 		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			factor = 99
 			modifier = {
 				factor = 0
 				has_game_rule = {
@@ -868,7 +868,7 @@
 		cost = 5
 
 		ai_will_do = {
-			factor = 50
+			factor = 0
 			modifier = {
 				factor = 0
 				OR = {

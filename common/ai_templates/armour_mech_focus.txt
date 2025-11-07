@@ -29,7 +29,7 @@ armour_more_trucks = {
 	}
 
 	ma_motorized_light = {
-        can_upgrade_in_field = { always = no }
+        can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
 		upgrade_prio = {
@@ -51,7 +51,7 @@ armour_more_trucks = {
     }
 
 	ma_motorised_medium = {
-		can_upgrade_in_field = { always = no }
+		can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
 		upgrade_prio = {
@@ -86,7 +86,7 @@ armour_more_trucks = {
 	}
 
 	ma_mechanized_medium = {
-		can_upgrade_in_field = { always = no }
+		can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
 		upgrade_prio = {
@@ -127,7 +127,7 @@ armour_more_trucks = {
 	}
 
 	ma_modern_armour = {
-		can_upgrade_in_field = { always = no }
+		can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
 		upgrade_prio = {

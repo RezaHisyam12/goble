@@ -43,7 +43,7 @@ FRA_infantry = {
 		target_template = {
 			regiments = {
 				infantry = 9
-                artillery_brigade = 1
+               			artillery_brigade = 1
 			}
 
 			support = {

@@ -1820,7 +1820,7 @@ country_event = { # Germania Start
 		name = rotermorgenmisc.2000.a
 		set_country_flag = Germania_berlin
 		hidden_effect = {
-			country_event = { id =  rotermorgenmisc.2001 days = 200 }
+			country_event = { id =  rotermorgenmisc.2001 days = 100 }
 			add_ideas = BUILDING_GERMANIA
 		}
 	}
@@ -1828,7 +1828,7 @@ country_event = { # Germania Start
 		name = rotermorgenmisc.2000.b
 		set_country_flag = Germania_imursil
 		hidden_effect = {
-			country_event = { id =  rotermorgenmisc.2001 days = 200 }
+			country_event = { id =  rotermorgenmisc.2001 days = 100 }
 			add_ideas = BUILDING_GERMANIA
 		}
 	}
@@ -1836,7 +1836,7 @@ country_event = { # Germania Start
 		name = rotermorgenmisc.2000.c
 		set_country_flag = Germania_north_sea
 		hidden_effect = {
-			country_event = { id =  rotermorgenmisc.2001 days = 200 }
+			country_event = { id =  rotermorgenmisc.2001 days = 100 }
 			add_ideas = BUILDING_GERMANIA
 		}
 	}
@@ -1844,7 +1844,7 @@ country_event = { # Germania Start
 		name = rotermorgenmisc.2000.e
 		set_country_flag = Germania_pommerania
 		hidden_effect = {
-			country_event = { id =  rotermorgenmisc.2001 days = 200 }
+			country_event = { id =  rotermorgenmisc.2001 days = 100 }
 			add_ideas = BUILDING_GERMANIA
 		}
 	}
@@ -1852,7 +1852,7 @@ country_event = { # Germania Start
 		name = rotermorgenmisc.2000.f
 		set_country_flag = Germania_franconia
 		hidden_effect = {
-			country_event = { id =  rotermorgenmisc.2001 days = 200 }
+			country_event = { id =  rotermorgenmisc.2001 days = 100 }
 			add_ideas = BUILDING_GERMANIA
 		}
 	}
@@ -1867,7 +1867,7 @@ country_event = { # Germania city rings
 	option = { 
 		name = rotermorgenmisc.2001.a
 		hidden_effect = {
-			country_event = { id =  rotermorgenmisc.2002 days = 120 }
+			country_event = { id =  rotermorgenmisc.2002 days = 60 }
 		}
 	}
 }
@@ -1882,7 +1882,7 @@ country_event = { # Germania Arc
 	option = { 
 		name = rotermorgenmisc.2002.a
 		hidden_effect = {
-			country_event = { id =  rotermorgenmisc.2003 days = 140 }
+			country_event = { id =  rotermorgenmisc.2003 days = 70 }
 		}
 	}
 }
@@ -1897,7 +1897,7 @@ country_event = { # Germania Hermann
 	option = { 
 		name = rotermorgenmisc.2003.a
 		hidden_effect = {
-			country_event = { id =  rotermorgenmisc.2004 days = 100 }
+			country_event = { id =  rotermorgenmisc.2004 days = 50 }
 		}
 	}
 }
@@ -1912,7 +1912,7 @@ country_event = { # Germania Stadtbahn
 	option = { 
 		name = rotermorgenmisc.2004.a
 		hidden_effect = {
-			country_event = { id =  rotermorgenmisc.2005 days = 120 }
+			country_event = { id =  rotermorgenmisc.2005 days = 60 }
 		}
 	}
 }
@@ -1934,10 +1934,10 @@ country_event = { # Germania Lufthafen
 						GRU = { has_country_flag = Germania_pommerania }
 					}
 				}
-				country_event = { id =  rotermorgenmisc.2006 days = 80 }
+				country_event = { id =  rotermorgenmisc.2006 days = 40 }
 			}
 			else = {
-				country_event = { id =  rotermorgenmisc.2007 days = 120 }
+				country_event = { id =  rotermorgenmisc.2007 days = 60 }
 			}
 		}
 	}
@@ -1953,7 +1953,7 @@ country_event = { # Germania harbor
 	option = { 
 		name = rotermorgenmisc.2006.a
 		hidden_effect = {
-			country_event = { id =  rotermorgenmisc.2007 days = 100 }
+			country_event = { id =  rotermorgenmisc.2007 days = 50 }
 		}
 	}
 }
@@ -1968,7 +1968,7 @@ country_event = { # Germania stadium
 	option = { 
 		name = rotermorgenmisc.2007.a
 		hidden_effect = {
-			country_event = { id =  rotermorgenmisc.2008 days = 125 }
+			country_event = { id =  rotermorgenmisc.2008 days = 65 }
 		}
 	}
 }
@@ -1983,7 +1983,7 @@ country_event = { # Germania Hero hall
 	option = { 
 		name = rotermorgenmisc.2008.a
 		hidden_effect = {
-			country_event = { id =  rotermorgenmisc.2009 days = 100 }
+			country_event = { id =  rotermorgenmisc.2009 days = 50 }
 		}
 	}
 }
@@ -1998,7 +1998,7 @@ country_event = { # Germania Volkshalle
 	option = { 
 		name = rotermorgenmisc.2009.a
 		hidden_effect = {
-			country_event = { id =  rotermorgenmisc.2010 days = 70 }
+			country_event = { id =  rotermorgenmisc.2010 days = 35 }
 		}
 	}
 }
@@ -9548,7 +9548,7 @@ country_event = {
 	option = {
 		name = entente.307.a #Never!
 		ai_chance = {
-			factor = 40
+			factor = 1
 			modifier = {
 				factor = 1.5
 				has_authoritarian_government = yes
@@ -9569,7 +9569,7 @@ country_event = {
 	option = {
 		name = entente.307.b #Agree
 		ai_chance = {
-			factor = 60
+			factor = 99
 			modifier = {
 				factor = 1.5
 				has_elected_government = yes
@@ -10152,7 +10152,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 3
+		days = 1
 	}
 
 	option = {
