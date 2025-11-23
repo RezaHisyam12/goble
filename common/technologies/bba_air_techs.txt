@@ -476,6 +476,66 @@ technologies = {
 		}
 	}
 
+	supersonic_small_airframe = { #supersonic
+
+		allow = { always = no }
+
+		enable_equipments = {
+			small_plane_airframe_5
+		}
+		
+		research_cost = 2
+		start_year = 1950
+		
+		categories = {
+			light_air
+			light_fighter
+		}
+		special_project_specialization = { specialization_air }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	airship_airframes = {
+
+		enable_equipments = {
+			large_airship_airframe_0
+		}
+		
+		enable_equipment_modules = {
+			large_bomb_bay_airship
+			bombardment_cannons_1
+			bombardment_cannons_2
+			airship_torpedo_launchers_1
+			airship_torpedo_launchers_2
+			airship_engine_1_sc
+			airship_engine_2_sc
+			airship_engine_1_dc
+			airship_engine_2_dc
+			airship_recon_camera
+			airship_rocket_rails
+			airship_plane_carrier
+		}
+	
+		research_cost = 1
+		start_year = 1926
+		#folder = {
+		#	name = bba_air_techs_folder
+		#	position = { x = 2 y = 0 }
+		#}
+		
+		categories = {
+			airship_tech
+			mio_cat_all_heavy_aircraft_and_modules
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
 	iw_medium_airframe = {
 
 		enable_equipments = {
@@ -776,6 +836,7 @@ technologies = {
 			heavy_air
 			air_equipment
 			cat_strategic_bomber
+			cat_maritime_patrol
 			mio_cat_all_heavy_aircraft_and_modules
 		}
 		special_project_specialization = { specialization_air }
@@ -820,6 +881,7 @@ technologies = {
 			heavy_air
 			air_equipment
 			cat_strategic_bomber
+			cat_maritime_patrol
 			mio_cat_all_heavy_aircraft_and_modules
 		}
 		special_project_specialization = { specialization_air }
@@ -891,6 +953,7 @@ technologies = {
 			heavy_air
 			air_equipment
 			cat_strategic_bomber
+			cat_maritime_patrol
 			mio_cat_all_heavy_aircraft_and_modules
 		}
 		special_project_specialization = { specialization_air }
@@ -943,6 +1006,7 @@ technologies = {
 			heavy_air
 			air_equipment
 			cat_strategic_bomber
+			cat_maritime_patrol
 			mio_cat_all_heavy_aircraft_and_modules
 		}
 		special_project_specialization = { specialization_air }
@@ -992,6 +1056,7 @@ technologies = {
 			heavy_air
 			jet_technology
 			cat_strategic_bomber
+			cat_maritime_patrol
 			mio_cat_all_heavy_aircraft_and_modules
 		}
 		special_project_specialization = { specialization_air }
@@ -1254,6 +1319,7 @@ technologies = {
 			air_equipment
 			plane_modules_tech
 			cat_air_bombs
+			cat_maritime_patrol
 			mio_cat_all_naval_bomber_and_modules
 			mio_cat_all_medium_aircraft_and_modules
 			mio_cat_all_heavy_aircraft_and_modules
@@ -1304,6 +1370,7 @@ technologies = {
 			air_equipment
 			plane_modules_tech
 			cat_air_bombs
+			cat_maritime_patrol
 			mio_cat_all_naval_bomber_and_modules
 			mio_cat_all_medium_aircraft_and_modules
 			mio_cat_all_heavy_aircraft_and_modules

@@ -2259,6 +2259,10 @@ country_event = { #HUN liberation
 					remove_ideas = AUS_drastic_together
 				}
 				if = {
+					limit = { has_idea = AUS_budapest_treaty }
+					remove_ideas = AUS_budapest_treaty
+				}
+				if = {
 					limit = {
 						109 = { is_owned_and_controlled_by = GRU }
 					}
@@ -10489,6 +10493,10 @@ country_event = { #Fate of America
 	option = { #Liberate USA
 		trigger = {
 			has_socialist_government = no
+			NOT = {
+				tag = MEX
+				tag = HAW
+			}
 		}
 		name = annex.52.a
 		ai_chance = {
@@ -10511,6 +10519,10 @@ country_event = { #Fate of America
 				remove_claim_by = TEX
 				remove_core_of = CAL
 				remove_claim_by = CAL
+				remove_core_of = COR
+				remove_claim_by = COR
+				remove_core_of = WCC
+				remove_claim_by = WCC
 			}
 			USA = {
 				transfer_state = PREV
@@ -10724,6 +10736,10 @@ country_event = { #Fate of America
 		name = annex.52.b
 		ai_chance = {
 			factor = 20
+			modifier = {
+				factor = 0
+				tag = MEX
+			}
 		}
 		trigger = {
 			has_socialist_government = no
@@ -10762,6 +10778,10 @@ country_event = { #Fate of America
 				remove_claim_by = TEX
 				remove_core_of = CAL
 				remove_claim_by = CAL
+				remove_core_of = COR
+				remove_claim_by = COR
+				remove_core_of = WCC
+				remove_claim_by = WCC
 			}
 		}
 
@@ -10782,6 +10802,10 @@ country_event = { #Fate of America
 				remove_claim_by = TEX
 				remove_core_of = CAL
 				remove_claim_by = CAL
+				remove_core_of = COR
+				remove_claim_by = COR
+				remove_core_of = WCC
+				remove_claim_by = WCC
 			}
 			USA = {
 				transfer_state = PREV
@@ -10996,6 +11020,13 @@ country_event = { #Fate of America
 		trigger = { BBR = { exists = no } }
 		ai_chance = {
 			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					tag = MEX
+					tag = HAW
+				}
+			}
 		}
 		
 		hidden_effect = {
@@ -11049,6 +11080,13 @@ country_event = { #Fate of America
 		name = annex.52.f
 		ai_chance = {
 			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					tag = MEX
+					tag = HAW
+				}
+			}
 		}
 		
 		hidden_effect = {
@@ -11102,6 +11140,10 @@ country_event = { #Fate of America
 	option = { #Liberate CSA
 		trigger = {
 			has_socialist_government = yes
+			NOT = {
+				tag = MEX
+				tag = HAW
+			}
 		}
 		name = annex.52.c
 		ai_chance = {
@@ -11124,6 +11166,10 @@ country_event = { #Fate of America
 				remove_claim_by = TEX
 				remove_core_of = CAL
 				remove_claim_by = CAL
+				remove_core_of = COR
+				remove_claim_by = COR
+				remove_core_of = WCC
+				remove_claim_by = WCC
 			}
 			CSA = {
 				transfer_state = PREV
@@ -11256,6 +11302,10 @@ country_event = { #Fate of America
 				remove_claim_by = TEX
 				remove_core_of = CAL
 				remove_claim_by = CAL
+				remove_core_of = COR
+				remove_claim_by = COR
+				remove_core_of = WCC
+				remove_claim_by = WCC
 				add_core_of = HAW
 				}
 			}
@@ -11291,7 +11341,7 @@ country_event = { #Fate of America
 		}
 		name = annex.52.h
 		ai_chance = {
-			factor = 60
+			factor = 99
 		}
 		every_owned_state = {
 			limit = {
@@ -11310,6 +11360,10 @@ country_event = { #Fate of America
 				remove_claim_by = TEX
 				remove_core_of = CAL
 				remove_claim_by = CAL
+				remove_core_of = COR
+				remove_claim_by = COR
+				remove_core_of = WCC
+				remove_claim_by = WCC
 			}
 			USA = {
 				transfer_state = PREV
@@ -11361,6 +11415,10 @@ country_event = { #Fate of America
 				remove_claim_by = TEX
 				remove_core_of = CAL
 				remove_claim_by = CAL
+				remove_core_of = COR
+				remove_claim_by = COR
+				remove_core_of = WCC
+				remove_claim_by = WCC
 			}
 		}
 		add_to_temp_array = { target_cores_to_release = USA }
@@ -12247,67 +12305,6 @@ country_event = { #The Fate of Guatemala
 				}
 			}
 		}
-		if = {
-			limit = {
-				OR = {
-					has_socialist_government = yes
-				}
-			}
-			GUA = {
-				set_politics = {
-					ruling_party = radical_socialist
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = radical_socialist
-					popularity = 0.40
-				}
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					has_government = social_conservative
-					has_government = market_liberal
-					has_government = social_liberal
-					AND = {
-						NOT = {
-							tag = NIC
-						}
-						has_government = social_democrat
-					}
-				}
-			}
-			GUA = {
-				set_politics = {
-					ruling_party = social_conservative
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = social_conservative
-					popularity = 0.40
-				}
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					has_government = national_populist
-					has_government = paternal_autocrat
-					has_government = authoritarian_democrat
-				}
-			}
-			GUA = {
-				set_politics = {
-					ruling_party = paternal_autocrat
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = paternal_autocrat
-					popularity = 0.40
-				}
-			}
-		}
 		GUA_setleaders = yes
 	}
 
@@ -12332,65 +12329,6 @@ country_event = { #The Fate of Guatemala
 		set_temp_variable = { tag_to_release = GUA }
 		release_targeted_tag = yes
 
-		if = {
-			limit = {
-				has_socialist_government = yes
-			}
-			GUA = {
-				set_politics = {
-					ruling_party = radical_socialist
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = radical_socialist
-					popularity = 0.40
-				}
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					has_government = social_conservative
-					has_government = market_liberal
-					has_government = social_liberal
-					AND = {
-						NOT = {
-							tag = NIC
-						}
-						has_government = social_democrat
-					}
-				}
-			}
-			GUA = {
-				set_politics = {
-					ruling_party = social_conservative
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = social_conservative
-					popularity = 0.40
-				}
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					has_government = national_populist
-					has_government = paternal_autocrat
-					has_government = authoritarian_democrat
-				}
-			}
-			GUA = {
-				set_politics = {
-					ruling_party = paternal_autocrat
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = paternal_autocrat
-					popularity = 0.40
-				}
-			}
-		}
 		GUA_setleaders = yes
 	}
 
@@ -12422,65 +12360,6 @@ country_event = { #The Fate of El Salvador
 		set_temp_variable = { tag_to_release = ELS }
 		release_targeted_tag = yes
 
-		if = {
-			limit = {
-				has_socialist_government = yes
-			}
-			ELS = {
-				set_politics = {
-					ruling_party = syndicalist
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = syndicalist
-					popularity = 0.40
-				}
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					has_government = social_conservative
-					has_government = market_liberal
-					has_government = social_liberal
-					AND = {
-						NOT = {
-							tag = NIC
-						}
-						has_government = social_democrat
-					}
-				}
-			}
-			ELS = {
-				set_politics = {
-					ruling_party = social_democrat
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = social_democrat
-					popularity = 0.40
-				}
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					has_government = national_populist
-					has_government = paternal_autocrat
-					has_government = authoritarian_democrat
-				}
-			}
-			ELS = {
-				set_politics = {
-					ruling_party = paternal_autocrat
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = paternal_autocrat
-					popularity = 0.40
-				}
-			}
-		}
 		ELS_setleaders = yes
 	}
 
@@ -13920,6 +13799,22 @@ country_event = { #Releasing Spain (if not POR)
 	desc = annexation_SPA_CONQ_desc
 	is_triggered_only = yes
 
+	immediate = { 
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_spain = no
+				}
+				remove_core_of = SPR
+				remove_claim_by = SPR
+				remove_core_of = CNT
+				remove_claim_by = CNT
+				remove_core_of = CAR
+				remove_claim_by = CAR
+			}
+		}
+	}
+
 	##RedDawn##
 	option = { #Release/Give to CNT
 		name = annex.73.k
@@ -14093,6 +13988,7 @@ country_event = { #Releasing Spain (if not POR)
 			}
 		}	
 	}
+
 	option = { #Give to Carlists
 		name = annex.73.a
 		trigger = {
@@ -16350,6 +16246,37 @@ country_event = { #The Annexation of Yemen
 				add_to_variable = {
 					var = var_LOA_members
 					value = 0.01
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					1024 = {
+						is_owned_by = ROOT
+						is_claim_or_core_of_ROOT = no
+					}
+				}
+				if = {
+					limit = {
+						1024 = { is_claimed_by = YEM }
+						OMA = {
+							is_ally_of_ROOT = no
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+					YEM = { transfer_state = 1024 }
+				}
+				else_if = {
+					limit = {
+						OMA = {
+							OR = {
+								is_ally_of_ROOT = yes
+								is_subject_of = ROOT
+							}
+						}
+					}
+					OMA = { transfer_state = 1024 }
 				}
 			}
 		}
@@ -30776,13 +30703,19 @@ country_event = { #Fate of Canada
 				tag = COR
 				has_country_leader = { ruling_only = yes name = "George W. Christians" }
 			}
-		CAN = { 
+		set_autonomy = {
+		target = CAN
+		autonomous_state = kx_colored_puppet
+		}
+		CAN = {
+			set_cosmetic_tag = CAN_KLAN
 			set_politics = {
 			ruling_party = national_populist
 			elections_allowed = no
 			}
 		add_popularity = { ideology = national_populist popularity = 0.60 }
 				}
+			
 			}
 		}
 	}
@@ -30927,13 +30860,19 @@ country_event = { #Fate of Canada
 				tag = COR
 				has_country_leader = { ruling_only = yes name = "George W. Christians" }
 			}
-		CAN = { 
+		set_autonomy = {
+		target = CAN
+		autonomous_state = kx_colored_puppet
+		}
+		CAN = {
+			set_cosmetic_tag = CAN_KLAN
 			set_politics = {
 			ruling_party = national_populist
 			elections_allowed = no
 			}
 		add_popularity = { ideology = national_populist popularity = 0.60 }
 				}
+			
 			}
 		}
 	}
@@ -35535,65 +35474,6 @@ country_event = { #The Fate of Honduras
 		set_temp_variable = { tag_to_release = HON }
 		release_targeted_tag = yes
 
-		if = {
-			limit = {
-				has_socialist_government = yes
-			}
-			HON = {
-				set_politics = {
-					ruling_party = totalist
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = totalist
-					popularity = 0.40
-				}
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					has_government = social_conservative
-					has_government = market_liberal
-					has_government = social_liberal
-					AND = {
-						NOT = {
-							tag = NIC
-						}
-						has_government = social_democrat
-					}
-				}
-			}
-			HON = {
-				set_politics = {
-					ruling_party = social_liberal
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = social_liberal
-					popularity = 0.40
-				}
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					has_government = national_populist
-					has_government = paternal_autocrat
-					has_government = authoritarian_democrat
-				}
-			}
-			HON = {
-				set_politics = {
-					ruling_party = paternal_autocrat
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = paternal_autocrat
-					popularity = 0.40
-				}
-			}
-		}
 		HON_setleaders = yes
 	}
 
@@ -35638,60 +35518,6 @@ country_event = { #The Fate of Nicaragua
 			}
 		}
 
-		if = {
-			limit = {
-				has_socialist_government = yes
-			}
-			NIC = {
-				set_politics = {
-					ruling_party = syndicalist
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = syndicalist
-					popularity = 0.40
-				}
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					has_government = social_conservative
-					has_government = market_liberal
-					has_government = social_liberal
-					has_government = social_democrat
-				}
-			}
-			NIC = {
-				set_politics = {
-					ruling_party = social_liberal
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = social_liberal
-					popularity = 0.40
-				}
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					has_government = national_populist
-					has_government = paternal_autocrat
-					has_government = authoritarian_democrat
-				}
-			}
-			NIC = {
-				set_politics = {
-					ruling_party = paternal_autocrat
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = paternal_autocrat
-					popularity = 0.40
-				}
-			}
-		}
 		NIC_setleaders = yes
 		NIC = { clr_country_flag = NIC_USA_JUNTA }
 	}
@@ -35843,7 +35669,7 @@ country_event = { # The fate of an unified central America
 					set_party_name = {
 						ideology = social_democrat
 						name = CEN_social_democrat_liberal
-						long_name = CEN_social_democrat_liberal
+						long_name = CEN_social_democrat_liberal_long
 					}
 				}
 				else_if = {
@@ -44867,7 +44693,7 @@ country_event = { #Fate of South Seas Islands
 				}
 				set_party_name = {
 					ideology = paternal_autocrat
-					name = SSI__paternal_autocrat_party
+					name = SSI_paternal_autocrat_party
 					long_name = SSI_paternal_autocrat_party_long
 				}
 				set_party_name = {
@@ -56863,8 +56689,8 @@ country_event = { #Fate of the Crimea
 country_event = { #Fate of the East Galicia
 	id = annex.404
 	immediate = { log = "[GetDateText]: [Root.GetName]: event annex.404" }
-	title = annexation_WSU_CONQ
-	desc = annexation_WSU_CONQ_desc
+	title = annexation_WSU_FIX_CONQ
+	desc = annexation_WSU_FIX_CONQ_desc
 	immediate = {
 		hidden_effect = {
 			WSU = { drop_cosmetic_tag = yes }

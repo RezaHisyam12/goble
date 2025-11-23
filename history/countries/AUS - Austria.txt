@@ -204,7 +204,11 @@ set_autonomy = {
 	autonomy_state = crownland
 }
 
-create_faction = ah_empire_faction
+create_faction_from_template = {
+	template = faction_template_austria
+	name = ah_empire_faction
+	icon = GFX_faction_austria_hungary
+}
 add_to_faction = HUN
 add_to_faction = CZE
 add_to_faction = CRO

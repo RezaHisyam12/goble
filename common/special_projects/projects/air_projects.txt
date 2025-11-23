@@ -24,7 +24,7 @@ sp_air_bouncing_bomb = {
 		# THIS/ROOT is project
 		if = {
 			limit = {
-				has_dlc = "By Blood Alone"
+				has_dlc_bba = yes
 			}
 			FROM = {
 				has_tech = heavy_bombs
@@ -202,7 +202,7 @@ sp_air_earthshaker_bomb = {
 
 	available = { 
 		if = {
-			limit = { has_dlc = "By Blood Alone" }
+			limit = { has_dlc_bba = yes }
 			FROM = {
 				has_tech = heavy_bombs
 			}
@@ -234,7 +234,9 @@ sp_air_earthshaker_bomb = {
 			custom_effect_tooltip = sp_air_earthshaker_bomb_completion_tt
 		}
 		enable_equipment_modules = {
-			limit = { has_dlc = "By Blood Alone" }
+			limit = {
+				has_dlc = "By Blood Alone"
+			}
 			earthshaker_bomb_release
 		}
 	}
@@ -275,7 +277,7 @@ sp_air_earthshaker_bomb = {
 				iteration_output = {
 					country_effects = {
 						if = {
-							limit = { has_dlc = "By Blood Alone"}							
+							limit = { has_dlc_bba = yes }
 						
 							add_equipment_bonus = {
 								name = sp_earthshaker_bomb_naval_targetting
@@ -306,7 +308,7 @@ sp_air_earthshaker_bomb = {
 				iteration_output = {
 					country_effects = {
 						if = {
-							limit = { has_dlc = "By Blood Alone"}							
+							limit = { has_dlc_bba = yes }
 						
 							add_equipment_bonus = {
 								name = sp_earthshaker_bomb_power
@@ -339,7 +341,7 @@ sp_air_earthshaker_bomb = {
 				iteration_output = {
 					country_effects = {
 						if = {
-							limit = { has_dlc = "By Blood Alone"}							
+							limit = { has_dlc_bba = yes }
 						
 							add_equipment_bonus = {
 								name = sp_earthshaker_bomb_both
@@ -398,7 +400,7 @@ sp_air_intercontinental_bomber = {
 		FROM = {
 			if = {
 				limit = { 
-					has_dlc = "By Blood Alone"
+					has_dlc_bba = yes
 				}
 				has_tech = improved_large_airframe
 			}
@@ -467,7 +469,7 @@ sp_air_intercontinental_bomber = {
 				iteration_output = {
 					country_effects = {
 						if = {
-							limit = { has_dlc = "By Blood Alone"}							
+							limit = { has_dlc_bba = yes }
 						
 							add_equipment_bonus = {
 								name = sp_air_intercontinental_bomber_balanced
@@ -498,7 +500,7 @@ sp_air_intercontinental_bomber = {
 				iteration_output = {
 					country_effects = {
 						if = {
-							limit = { has_dlc = "By Blood Alone"}							
+							limit = { has_dlc_bba = yes }
 						
 							add_equipment_bonus = {
 								name = sp_air_intercontinental_bomber_bombing_payload
@@ -533,7 +535,7 @@ sp_air_intercontinental_bomber = {
 				iteration_output = {
 					country_effects = {
 						if = {
-							limit = { has_dlc = "By Blood Alone"}							
+							limit = { has_dlc_bba = yes }
 						
 							add_equipment_bonus = {
 								name = sp_air_intercontinental_bomber_protection
@@ -605,7 +607,7 @@ sp_air_mothership_aircraft = {
 	available = { 
 		if = {
 			limit = {
-				has_dlc = "By Blood Alone"
+				has_dlc_bba = yes
 			}
 			FROM = {
 				has_tech = improved_large_airframe
@@ -671,7 +673,7 @@ sp_air_mothership_aircraft = {
 				iteration_output = {
 					country_effects = {
 						if = {
-							limit = { has_dlc = "By Blood Alone"}							
+							limit = { has_dlc_bba = yes }
 						
 							add_equipment_bonus = {
 								name = sp_air_mothership_speed_agility
@@ -706,7 +708,7 @@ sp_air_mothership_aircraft = {
 				iteration_output = {
 					country_effects = {
 						if = {
-							limit = { has_dlc = "By Blood Alone"}							
+							limit = { has_dlc_bba = yes }
 						
 							add_equipment_bonus = {
 								name = sp_air_mothership_balanced
@@ -737,7 +739,7 @@ sp_air_mothership_aircraft = {
 				iteration_output = {
 					country_effects = {
 						if = {
-							limit = { has_dlc = "By Blood Alone"}							
+							limit = { has_dlc_bba = yes }
 						
 							add_equipment_bonus = {
 								name = sp_air_mothership_strength
@@ -778,8 +780,6 @@ sp_air_mothership_aircraft = {
  #    #  #         #    #    # 
   ####   ######    #     ####  
 
-
-
 sp_air_jet_engine = {
 	specialization = specialization_air 	
 	icon = GFX_sp_air_jet_engine
@@ -792,7 +792,7 @@ sp_air_jet_engine = {
 	available = { 
 		FROM = {
 			if = {
-				limit = { has_dlc = "By Blood Alone" }
+				limit = { has_dlc_bba = yes }
 				has_tech = engines_2
 				OR = {
 					has_tech = improved_small_airframe
@@ -837,9 +837,9 @@ sp_air_jet_engine = {
 				}
 			}
 			if =  {	
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
+				limit = { has_dlc_bba = yes }
+				if = {
+					limit = { date > 1936.1.1 } #ignore calls from the history files
 				add_design_template_bonus = {
 					name = air_equipment
 					uses = 1
@@ -856,6 +856,7 @@ sp_air_jet_engine = {
 					equipment = medium_plane_airframe
 					equipment = large_plane_airframe
 				}				
+			}
 			}
 			else = {
 				custom_effect_tooltip = {
@@ -890,7 +891,9 @@ sp_air_jet_engine = {
 		}	
 
 		enable_equipment_modules = {
-			limit = { has_dlc = "By Blood Alone" }
+			limit = {
+				has_dlc = "By Blood Alone"
+			}
 			jet_engine_1x
 			jet_engine_2x
 			jet_engine_3x
@@ -899,7 +902,9 @@ sp_air_jet_engine = {
 		}
 		
 		enable_equipment_modules = {
-			limit = { has_dlc = "No Step Back"}
+			limit = {
+				has_dlc = "No Step Back"
+			}
 			tank_gas_turbine_engine
 		}
 	}
@@ -940,7 +945,7 @@ sp_air_jet_engine = {
 				iteration_output = {
 					country_effects = {
 						if = {
-							limit = { has_dlc = "By Blood Alone"}							
+							limit = { has_dlc_bba = yes }
 							add_tech_bonus = {
 								name = sp_air_light_air_tech_bonus
 								bonus = 0.5
@@ -974,15 +979,13 @@ sp_air_jet_engine = {
 				}
 			}
 		
-
 			option = {
 				token = sp_air_jet_engine_preference_compromise
 				default = yes
 				iteration_output = {
 					country_effects = {
 						if = {
-							limit = { has_dlc = "By Blood Alone"}							
-						
+							limit = { has_dlc_bba = yes }
 
 							add_tech_bonus = {
 								name = sp_air_air_equipment_tech_bonus
@@ -1019,7 +1022,7 @@ sp_air_jet_engine = {
 				iteration_output = {
 					country_effects = {
 						if = {
-							limit = { has_dlc = "By Blood Alone"}							
+							limit = { has_dlc_bba = yes }
 							add_tech_bonus = {
 								name = sp_air_medium_air_tech_bonus
 								bonus = 0.5
@@ -1072,7 +1075,7 @@ sp_air_axial_jet_engine = {
 	available = { 
 		FROM = {
 			if = {
-				limit = { has_dlc = "By Blood Alone" }
+				limit = { has_dlc_bba = yes }
 				has_tech = engines_3
 				OR = {
 					has_tech = advanced_small_airframe
@@ -1107,7 +1110,7 @@ sp_air_axial_jet_engine = {
 	project_output = {
 		country_effects = {
 			if = {
-				limit = { has_dlc = "By Blood Alone" }
+				limit = { has_dlc_bba = yes }
 				custom_effect_tooltip = {
 					localization_key = SP_UNLOCK_TECH
 					TECH = modern_small_airframe
@@ -1121,6 +1124,8 @@ sp_air_axial_jet_engine = {
 					TECH = modern_large_airframe
 				}
 						
+				if = {
+					limit = { date > 1936.1.1 } #ignore calls from the history files
 				add_design_template_bonus = {
 					name = air_equipment
 					uses = 1
@@ -1137,6 +1142,7 @@ sp_air_axial_jet_engine = {
 					equipment = medium_plane_airframe
 					equipment = large_plane_airframe
 				}				
+			}
 			}
 			else = {
 				custom_effect_tooltip = {
@@ -1184,7 +1190,9 @@ sp_air_axial_jet_engine = {
 		}		
 
 		enable_equipment_modules = {
-			limit = { has_dlc = "By Blood Alone"}
+			limit = {
+				has_dlc = "By Blood Alone"
+			}
 			jet_engine_axial_1x
 			jet_engine_axial_2x
 			jet_engine_axial_3x
@@ -1229,7 +1237,7 @@ sp_air_axial_jet_engine = {
 				iteration_output = {
 					country_effects = {
 						if = {
-							limit = { has_dlc = "By Blood Alone"}												
+							limit = { has_dlc_bba = yes }
 							add_tech_bonus = {
 								name = sp_air_light_air_tech_bonus
 								bonus = 0.5
@@ -1263,14 +1271,13 @@ sp_air_axial_jet_engine = {
 				}
 			}
 		
-
 			option = {
 				token = sp_air_axial_jet_engine_preference_compromise
 				default = yes
 				iteration_output = {
 					country_effects = {
 						if = {
-							limit = { has_dlc = "By Blood Alone"}							
+							limit = { has_dlc_bba = yes }
 
 							add_tech_bonus = {
 								name = sp_air_air_equipment_tech_bonus
@@ -1307,7 +1314,7 @@ sp_air_axial_jet_engine = {
 				iteration_output = {
 					country_effects = {
 						if = {
-							limit = { has_dlc = "By Blood Alone"}												
+							limit = { has_dlc_bba = yes }
 							add_tech_bonus = {
 								name = sp_air_medium_air_tech_bonus
 								bonus = 0.5
@@ -1380,7 +1387,9 @@ sp_air_supersonic_jet = {
 	project_output = {
 		country_effects = {
 			if = {
-				limit = { has_dlc = "By Blood Alone" }
+				limit = {
+					has_dlc_bba = yes
+					date > 1936.1.1 #ignore calls from the history files
 			}
 			add_design_template_bonus = {
 				name = sp_air_supersonic_jet_fighter_free_design
@@ -1389,6 +1398,7 @@ sp_air_supersonic_jet = {
 				equipment = small_plane_airframe_5
 			}		
 		}	
+		}
 
 		enable_equipments = {
 			limit = {
@@ -1441,7 +1451,7 @@ sp_air_supersonic_jet = {
 				iteration_output = {
 					country_effects = {
 						if = {
-							limit = { has_dlc = "By Blood Alone"}							
+							limit = { has_dlc_bba = yes }
 							add_equipment_bonus = {
 								name = sp_air_supersonic_jet_cost_reduction
 								bonus = {
@@ -1471,14 +1481,13 @@ sp_air_supersonic_jet = {
 				}
 			}
 		
-
 			option = {
 				token = sp_air_supersonic_jet_preference_compromise
 				default = yes
 				iteration_output = {
 					country_effects = {
 						if = {
-							limit = { has_dlc = "By Blood Alone"}												
+							limit = { has_dlc_bba = yes }
 							add_equipment_bonus = {
 								name = sp_air_supersonic_jet_compromise
 								bonus = {
@@ -1508,7 +1517,7 @@ sp_air_supersonic_jet = {
 				iteration_output = {
 					country_effects = {
 						if = {
-							limit = { has_dlc = "By Blood Alone"}							
+							limit = { has_dlc_bba = yes }
 							add_equipment_bonus = {
 								name = sp_air_supersonic_jet_cost_increase
 								bonus = {
@@ -1608,10 +1617,6 @@ sp_air_helicopter = {
 		}
 
 		enable_equipment_modules = {
-			limit = {
-				has_dlc = "Gotterdammerung"
-				has_dlc = "No Step Back"
-			}
 			lc_helipad #Module for Land Cruiser
 		}
 	}
@@ -1667,10 +1672,9 @@ sp_air_helicopter = {
 				}
 			}
 		
-
 			option = {
 				token = sp_air_helicopter_preference_compromise
-				
+				default = yes
 				iteration_output = {
 					country_effects = {
 						add_equipment_bonus = {

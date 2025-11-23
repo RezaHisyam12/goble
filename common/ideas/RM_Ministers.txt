@@ -1033,5 +1033,1079 @@ ideas = {
 			cancel_if_invalid = yes
 		}
 	}
+################################################################################################################################################################################################### GRU ################################################################################################################################################################################################
 
+	head_of_government = { ### Head of Government ###
+		GRU_Ernst_Thaelmann_hog_tot = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Ernst_Thaelmann_hog_tot"
+			}
+			traits = {
+				head_of_government
+				totalist
+				hog_backroom_backstabber
+			}
+		}
+
+		GRU_Karl_Liebknecht_hog_syn = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Karl_Liebknecht_hog_syn"
+			}
+			traits = {
+				head_of_government
+				syndicalist
+				hog_ambitious_union_boss
+			}
+		}
+
+		GRU_Milly_Witkop_hog_rso = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Milly_Witkop_hog_rso"
+			}
+			traits = {
+				head_of_government
+				radical_socialist
+				hog_happy_amateur
+			}
+		}
+
+		GRU_Hans_Vogel_hog_sde = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Hans_Vogel_hog_sde"
+			}
+			traits = {
+				head_of_government
+				social_democrat
+				hog_ambitious_union_boss
+			}
+		}
+
+		GRU_Alex_Moeller_hog_sli = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Alex_Moeller_hog_sli"
+			}
+			traits = {
+				head_of_government
+				social_liberal
+				hog_corporate_suit
+			}
+		}
+
+		GRU_Paul_von_Lettow_Vorbeck_hog_mli = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Paul_von_Lettow_Vorbeck_hog_mli"
+			}
+			traits = {
+				head_of_government
+				market_liberal
+				hog_old_general
+			}
+		}
+
+		GRU_Alfried_Krupp_hog_sco = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Alfried_Krupp_hog_sco"
+			}
+			traits = {
+				head_of_government
+				social_conservative
+				hog_corporate_suit
+			}
+		}
+
+		GRU_Alfred_Hugenberg_hog_pau = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_gov_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Alfred_Hugenberg_hog_pau"
+			}
+			traits = {
+				head_of_government
+				paternal_autocrat
+				hog_local_tyrant
+			}
+		}
+	}
+
+	person_of_influence = { ### Person of Influence ###
+		## Foreign Minister ##
+		GRU_Walter_Ulbricht_for_tot = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Walter_Ulbricht_for_tot"
+			}
+			traits = {
+				foreign_minister
+				totalist
+				for_the_cloak_n_dagger_schemer
+			}
+		}
+
+		GRU_Paul_Levi_for_syn = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Paul_Levi_for_syn"
+			}
+			traits = {
+				foreign_minister
+				syndicalist
+				for_apologetic_clerk
+			}
+		}
+
+		GRU_Heinrich_Mann_for_rso = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Heinrich_Mann_for_rso"
+			}
+			traits = {
+				foreign_minister
+				radical_socialist
+				for_ideological_crusader
+			}
+		}
+
+		GRU_Erich_Ollenhauer_for_sde = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Erich_Ollenhauer_for_sde"
+			}
+			traits = {
+				foreign_minister
+				social_democrat
+				for_iron_fisted_brute
+			}
+		}
+
+		GRU_Albert_Dufour_Feronce_for_sli = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Albert_Dufour_Feronce_for_sli"
+			}
+			traits = {
+				foreign_minister
+				social_liberal
+				for_great_compromiser
+			}
+		}
+
+		GRU_Thomas_Dehler_for_mli = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Thomas_Dehler_for_mli"
+			}
+			traits = {
+				foreign_minister
+				market_liberal
+				for_apologetic_clerk
+			}
+		}
+
+		GRU_Karl_Arnold_for_sco = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Karl_Arnold_for_sco"
+			}
+			traits = {
+				foreign_minister
+				social_conservative
+				for_apologetic_clerk
+			}
+		}
+
+		GRU_Ludwig_Kaas_for_ade = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Ludwig_Kaas_for_ade"
+			}
+			traits = {
+				foreign_minister
+				authoritarian_democrat
+				for_great_compromiser
+			}
+		}
+
+		GRU_Richard_Darre_for_pau = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Richard_Darre_for_pau"
+			}
+			traits = {
+				foreign_minister
+				paternal_autocrat
+				for_apologetic_clerk
+			}
+		}
+
+		GRU_Hans_Hinkel_for_npo = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Hans_Hinkel_for_npo"
+			}
+			traits = {
+				foreign_minister
+				national_populist
+				for_iron_fisted_brute
+			}
+		}
+
+
+		## Economy Minister ##
+		GRU_Willi_Muenzenberg_eco_tot = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Willi_Muenzenberg_eco_tot"
+			}
+			traits = {
+				economy_minister
+				totalist
+				eco_administrative_genius
+			}
+		}
+
+		GRU_Rudolf_Egelhofer_eco_syn = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Rudolf_Egelhofer_eco_syn"
+			}
+			traits = {
+				economy_minister
+				syndicalist
+				eco_military_entrepreneur
+			}
+		}
+
+		GRU_Augustin_Souchy_eco_rso = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Augustin_Souchy_eco_rso"
+			}
+			traits = {
+				economy_minister
+				radical_socialist
+				eco_military_entrepreneur
+			}
+		}
+
+		GRU_Gustav_Bauer_eco_sde = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Gustav_Bauer_eco_sde"
+			}
+			traits = {
+				economy_minister
+				social_democrat
+				eco_keynesian_economy
+			}
+		}
+
+		GRU_Heinrich_Wilhelm_Kopf_eco_sli = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Heinrich_Wilhelm_Kopf_eco_sli"
+			}
+			traits = {
+				economy_minister
+				social_liberal
+				eco_resource_industrialist
+			}
+		}
+
+		GRU_Walther_von_Rathenau_eco_mli = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Walther_von_Rathenau_eco_mli"
+			}
+			traits = {
+				economy_minister
+				market_liberal
+				eco_administrative_genius
+			}
+		}
+
+		GRU_Fritz_Schaeffer_eco_sco = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Fritz_Schaeffer_eco_sco"
+			}
+			traits = {
+				economy_minister
+				social_conservative
+				eco_laissez_faire_capitalist
+			}
+		}
+
+		GRU_Max_Winkler_eco_ade = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Max_Winkler_eco_ade"
+			}
+			traits = {
+				economy_minister
+				authoritarian_democrat
+				eco_laissez_faire_capitalist
+			}
+		}
+
+		GRU_Gottfried_Feder_eco_npo = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Gottfried_Feder_eco_npo"
+			}
+			traits = {
+				economy_minister
+				national_populist
+				eco_resource_industrialist
+			}
+		}
+
+
+		## Security Minister ##
+		GRU_Hilde_Benjamin_sec_tot = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Hilde_Benjamin_sec_tot"
+			}
+			traits = {
+				security_minister
+				totalist
+				sec_crime_fighter
+			}
+		}
+
+		GRU_Eugen_Levine_sec_syn = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Eugen_Levine_sec_syn"
+			}
+			traits = {
+				security_minister
+				syndicalist
+				sec_man_of_the_people
+			}
+		}
+
+		GRU_Fritz_Kater_sec_rso = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Fritz_Kater_sec_rso"
+			}
+			traits = {
+				security_minister
+				radical_socialist
+				sec_man_of_the_people
+			}
+		}
+
+		GRU_Georg_August_Zinn_sec_sde = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Georg_August_Zinn_sec_sde"
+			}
+			traits = {
+				security_minister
+				social_democrat
+				sec_prince_of_terror
+			}
+		}
+
+		GRU_Reinhold_Maier_sec_sli = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Reinhold_Maier_sec_sli"
+			}
+			traits = {
+				security_minister
+				social_liberal
+				sec_compassionate_gentleman
+			}
+		}
+
+		GRU_Wilhelm_Marx_sec_mli = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Wilhelm_Marx_sec_mli"
+			}
+			traits = {
+				security_minister
+				market_liberal
+				sec_silent_lawyer
+			}
+		}
+
+		GRU_Konrad_Adenauer_sec_sco = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Konrad_Adenauer_sec_sco"
+			}
+			traits = {
+				security_minister
+				social_conservative
+				sec_crime_fighter
+			}
+		}
+
+		GRU_Otto_Bradfisch_sec_ade = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Otto_Bradfisch_sec_ade"
+			}
+			traits = {
+				security_minister
+				authoritarian_democrat
+				sec_prince_of_terror
+			}
+		}
+
+		GRU_Kurt_Daluege_sec_pau = {
+			allowed = { original_tag = GRU }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Kurt_Daluege_sec_pau"
+			}
+			traits = {
+				security_minister
+				paternal_autocrat
+				sec_silent_lawyer
+			}
+		}
+
+	}
+
+	chief_of_staff = { ### Chief of Staff ###
+		GRU_Georg_von_Alten_cos_tot = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Georg_von_Alten_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Georg_von_Alten_cos_tot"
+			}
+			traits = {
+				chief_of_staff
+				cos_school_of_mass_combat
+			}
+			cancel_if_invalid = yes
+		}
+
+		GRU_Hans_Speidel_cos_sco = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Hans_Speidel_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Hans_Speidel_cos_sco"
+			}
+			traits = {
+				chief_of_staff
+				cos_school_of_fire_support
+			}
+			cancel_if_invalid = yes
+		}
+
+		GRU_Heinz_Guderian_cos_ade = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Heinz_Guderian_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Heinz_Guderian_cos_ade"
+			}
+			traits = {
+				chief_of_staff
+				cos_school_of_manoeuvre
+			}
+			cancel_if_invalid = yes
+		}
+
+		GRU_Friedrich_Jeckeln_cos_npo = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Friedrich_Jeckeln_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Friedrich_Jeckeln_cos_npo"
+			}
+			traits = {
+				chief_of_staff
+				cos_school_of_psychology
+			}
+			cancel_if_invalid = yes
+		}
+
+		GRU_Friedrich_Paulus_cos_npo = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Friedrich_Paulus_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Friedrich_Paulus_cos_npo"
+			}
+			traits = {
+				chief_of_staff
+				cos_school_of_defence
+			}
+			cancel_if_invalid = yes
+		}
+
+		GRU_Wilhelm_Ritter_von_Leeb_cos_npo = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Wilhelm_Ritter_von_Leeb_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Wilhelm_Ritter_von_Leeb_cos_npo"
+			}
+			traits = {
+				chief_of_staff
+				cos_school_of_manoeuvre
+			}
+			cancel_if_invalid = yes
+		}
+
+	}
+
+	chief_of_army = { ### Chief of Army ###
+		GRU_Hans_Kahle_carm_tot = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Hans_Kahle_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Hans_Kahle_carm_tot"
+			}
+			traits = {
+				chief_of_army
+				carm_decisive_battle_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+
+		GRU_Rudolf_Egelhofer_carm_syn = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Rudolf_Egelhofer_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Rudolf_Egelhofer_carm_syn"
+			}
+			traits = {
+				chief_of_army
+				carm_decisive_battle_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+
+		GRU_Fedor_von_Bock_carm_sco = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Fedor_von_Bock_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Fedor_von_Bock_carm_sco"
+			}
+			traits = {
+				chief_of_army
+				carm_elastic_defence_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+
+		GRU_Hans_Oster_carm_sco = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Hans_Oster_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Hans_Oster_carm_sco"
+			}
+			traits = {
+				chief_of_army
+				carm_guns_and_butter_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+
+		GRU_Ernst_Volckheim_carm_ade = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Ernst_Volckheim_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Ernst_Volckheim_carm_ade"
+			}
+			traits = {
+				chief_of_army
+				carm_armoured_spearhead_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+
+		GRU_Heinz_Guderian_carm_ade = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Heinz_Guderian_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Heinz_Guderian_carm_ade"
+			}
+			traits = {
+				chief_of_army
+				carm_armoured_spearhead_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+
+		GRU_Friedrich_Paulus_carm_npo = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Friedrich_Paulus_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Friedrich_Paulus_carm_npo"
+			}
+			traits = {
+				chief_of_army
+				carm_static_defence_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+
+	}
+
+	chief_of_navy = { ### Chief of Navy ###
+		GRU_Ernst_Wollweber_cnav_tot = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Ernst_Wollweber_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Ernst_Wollweber_cnav_tot"
+			}
+			traits = {
+				chief_of_navy
+				cnav_open_seas_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+
+		GRU_Lothar_von_Arnauld_cnav_mli = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Lothar_von_Arnauld_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Lothar_von_Arnauld_cnav_mli"
+			}
+			traits = {
+				chief_of_navy
+				cnav_indirect_approach_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+
+		GRU_Rolf_Carls_cnav_sco = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Rolf_Carls_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Rolf_Carls_cnav_sco"
+			}
+			traits = {
+				chief_of_navy
+				cnav_power_projection_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+
+		GRU_Wilhelm_Canaris_cnav_ade = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Wilhelm_Canaris_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Wilhelm_Canaris_cnav_ade"
+			}
+			traits = {
+				chief_of_navy
+				cnav_open_seas_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+
+		GRU_Conrad_Patzig_cnav_pau = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Conrad_Patzig_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Conrad_Patzig_cnav_pau"
+			}
+			traits = {
+				chief_of_navy
+				cnav_decisive_battle_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+
+		GRU_Erich_Raeder_cnav_pau = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Erich_Raeder_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Erich_Raeder_cnav_pau"
+			}
+			traits = {
+				chief_of_navy
+				cnav_decisive_battle_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+
+	}
+
+	chief_of_air_force = { ### Chief of Air Force ###
+		GRU_Josef_Kammhuber_cair_mli = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Josef_Kammhuber_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Josef_Kammhuber_cair_mli"
+			}
+			traits = {
+				chief_of_air_force
+				cair_battlefield_support_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+
+		GRU_Alfred_Buelowius_cair_sco = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Alfred_Buelowius_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Alfred_Buelowius_cair_sco"
+			}
+			traits = {
+				chief_of_air_force
+				cair_air_superiority_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+
+		GRU_Kurt_Student_cair_ade = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Kurt_Student_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Kurt_Student_cair_ade"
+			}
+			traits = {
+				chief_of_air_force
+				cair_vertical_envelopment_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+
+		GRU_Rudolf_Hess_cair_npo = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Rudolf_Hess_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Rudolf_Hess_cair_npo"
+			}
+			traits = {
+				chief_of_air_force
+				cair_carpet_bombing_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+
+	}
 }

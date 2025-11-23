@@ -1258,36 +1258,6 @@ default_RR_Werwolf_production = {
 	}
 }
 
-default_armour_super_heavy_production = {
-	allowed = {
-		OR = {
-			tag = GER
-			tag = GRU
-		}
-	}
-	enable = {
-		has_tech = super_heavy_tank_chassis
-		num_of_military_factories > 299
-	}
-	abort_when_not_enabled = yes
-	
-	ai_strategy = {
-		type = role_ratio
-		id = armour_super_heavy
-		value = 5
-	}
-	ai_strategy = {
-		type = template_prio
-		id = land_cruiser
-		value = 100
-	}
-	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = land_cruiser_chassis
-		value = 10
-	}
-}
-
 GRU_build_tanks_focus = {
 	allowed = {
 		OR = {

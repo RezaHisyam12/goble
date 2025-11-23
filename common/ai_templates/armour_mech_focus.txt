@@ -11,7 +11,7 @@ armour_more_trucks = {
 		factor = 10
 		modifier = {
 			factor = 0
-			NOT = {has_tech = mass_assault}
+			NOT = { has_doctrine = mass_assault }
 		}
 		modifier = {
 			factor = 0

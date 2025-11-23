@@ -5,7 +5,7 @@
 armour_super_heavy_generic = {
 	role = armour_super_heavy
 
-	available_for = { GRU GER }
+	available_for = { RUS USA CSA COR WCC TEX NEE CAL }
 
 	upgrade_prio = {
 		factor = 10
@@ -16,20 +16,15 @@ armour_super_heavy_generic = {
 	}
 
 	armour_super_heavy_template = {
+		can_upgrade_in_field = { always = yes }
+		reinforce_prio = 2
+
 		upgrade_prio = {
 			base = 100
 			modifier = {
-				factor = 0
-				NOT = { is_special_project_completed = sp:sp_land_land_cruiser }
+				factor = 6
+				num_of_military_factories > 150
 			}
-			modifier = {
-				factor = 4
-				num_of_military_factories > 299
-			}
-		}
-
-		can_upgrade_in_field = {
-			AI_trigger_can_upgrade_in_field = yes
 		}
 
 		target_template = {
@@ -42,16 +37,19 @@ armour_super_heavy_generic = {
 			}
 
 			support = {
-				land_cruiser = 1
-				assault_engineer = 1
-				heavy_flame_tank = 1
-				helicopter_field_hospital = 1
+				super_heavy_armor = 1
+				armored_engineer = 1
+				medium_flame_tank = 1
+				light_tank_recon = 1
 				logistics_company = 1
 			}
 		}
 	}
 
 	armour_super_heavy_template_late = {
+		can_upgrade_in_field = { always = yes }
+		reinforce_prio = 2
+
 		upgrade_prio = {
 			base = 100
 			modifier = {
@@ -60,21 +58,13 @@ armour_super_heavy_generic = {
 				NOT = { has_tech = main_battle_tank_chassis }
 			}
 			modifier = {
-				factor = 0
-				NOT = { is_special_project_completed = sp:sp_land_land_cruiser }
-			}
-			modifier = {
 				factor = 2
 				has_reached_maximum_divisions = yes
 			}
 			modifier = {
-				factor = 4
-				num_of_military_factories > 299
+				factor = 6
+				num_of_military_factories > 150
 			}
-		}
-
-		can_upgrade_in_field = {
-			AI_trigger_can_upgrade_in_field = yes
 		}
 
 		target_template = {
@@ -87,10 +77,10 @@ armour_super_heavy_generic = {
 			}
 
 			support = {
-				land_cruiser = 1
-				assault_engineer = 1
-				heavy_flame_tank = 1
-				helicopter_field_hospital = 1
+				super_heavy_armor = 1
+				armored_engineer = 1
+				medium_flame_tank = 1
+				light_tank_recon = 1
 				logistics_company = 1
 			}
 		}

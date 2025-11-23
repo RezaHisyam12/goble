@@ -1,0 +1,96 @@
+######################
+## Landcruiser ROLE ##
+######################
+
+armour_landcruiser_generic = {
+	role = armour_landcruiser
+
+	available_for = { GRU GER }
+
+	upgrade_prio = {
+		factor = 10
+		modifier = {
+			factor = 0
+			NOT = { has_tech = super_heavy_tank_chassis }
+		}
+	}
+
+	landcruiser_template = {
+		can_upgrade_in_field = { always = yes }
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			base = 100
+			modifier = {
+				factor = 0
+				NOT = { is_special_project_completed = sp:sp_land_land_cruiser }
+			}
+			modifier = {
+				factor = 6
+				num_of_military_factories > 200
+			}
+		}
+
+		target_template = {
+			regiments = {
+				heavy_armor = 1
+				heavy_tank_destroyer_brigade = 1
+				heavy_sp_anti_air_brigade = 4
+				mechanized = 3
+				motorized = 3
+			}
+
+			support = {
+				land_cruiser = 1
+				armored_engineer = 1
+				heavy_flame_tank = 1
+				light_tank_recon = 1
+				logistics_company = 1
+			}
+		}
+	}
+
+	landcruiser_template_late = {
+		can_upgrade_in_field = { always = yes }
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			base = 100
+			modifier = {
+				factor = 0
+				NOT = { has_tech = main_battle_tank }
+				NOT = { has_tech = main_battle_tank_chassis }
+			}
+			modifier = {
+				factor = 0
+				NOT = { is_special_project_completed = sp:sp_land_land_cruiser }
+			}
+			modifier = {
+				factor = 2
+				has_reached_maximum_divisions = yes
+			}
+			modifier = {
+				factor = 6
+				num_of_military_factories > 200
+			}
+		}
+
+		target_template = {
+			regiments = {
+				modern_armor = 1
+				modern_tank_destroyer_brigade = 1
+				modern_sp_anti_air_brigade = 4
+				mechanized = 3
+				motorized = 3
+			}
+
+			support = {
+				land_cruiser = 1
+				armored_engineer = 1
+				heavy_flame_tank = 1
+				light_tank_recon = 1
+				logistics_company = 1
+			}
+		}
+	}
+}

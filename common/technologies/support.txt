@@ -877,7 +877,7 @@ technologies = {
 		
 		armored_maintenance = {
 			reliability_factor = 0.02
-			recovery = 0.3
+			recovery = 0.03
 
 			battalion_mult = {
 				category = category_all_armor
@@ -1448,7 +1448,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 0
+			factor = 4
 			modifier = {
 				add = 2
 				is_eligible_for_armor_production = yes
@@ -1509,7 +1509,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			base = 0
+			factor = 2
 			modifier = {
 				add = 2
 				is_eligible_for_armor_production = yes
@@ -1839,11 +1839,6 @@ technologies = {
 			}
 
 			modifier = {
-				factor = 5
-				NOT = {has_tech = mass_assault}
-			}
-
-			modifier = {
 				factor = 1.5
 				date > "1940.1.1"
 			}
@@ -1853,7 +1848,7 @@ technologies = {
 				date > "1944.1.1"
 			}
 			modifier = {
-				factor = 4
+				factor = 10
 				tag = GRU
 			}
 		}
@@ -2073,10 +2068,6 @@ technologies = {
 				factor = 4
 				date > "1940.1.1"
 			}
-			modifier = {
-				factor = 2
-				tag = GRU
-			}
 		}
 	}
 
@@ -2131,10 +2122,6 @@ technologies = {
 			modifier = {
 				factor = 1.5
 				date > "1944.1.1"
-			}
-			modifier = {
-				factor = 4
-				tag = GRU
 			}
 		}
 	}

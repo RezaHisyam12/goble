@@ -2546,9 +2546,79 @@ GRU_germania_plan_decisions = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_integrate_croatia_decision"
-			annex_country = {
-				target = CRO
-				transfer_troops = yes
+			HUN = {
+				annex_country = {
+					target = CRO
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+	#
+	GRU_pan_germanism_integrate_bosnia_decision = {
+		icon = GFX_pangermanicone
+
+		visible = {
+			has_completed_focus = GRU_NMDVP_SLAV_LAND_EXPANSION
+			country_exists = BOS
+			BOS = { is_subject_of = GRU }
+			SER = { is_subject_of = GRU }
+		}
+		available = {
+			country_exists = BOS
+			BOS = { is_subject_of = GRU }
+			SER = { is_subject_of = GRU }
+		}
+
+		fire_only_once = no
+		cost = 20
+		days_remove = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_integrate_bosnia_decision"
+			SER = {
+				annex_country = {
+					target = BOS
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+	#
+	GRU_pan_germanism_integrate_montenegro_decision = {
+		icon = GFX_pangermanicone
+
+		visible = {
+			has_completed_focus = GRU_NMDVP_SLAV_LAND_EXPANSION
+			country_exists = MNT
+			MNT = { is_subject_of = GRU }
+			SER = { is_subject_of = GRU }
+		}
+		available = {
+			country_exists = MNT
+			MNT = { is_subject_of = GRU }
+			SER = { is_subject_of = GRU }
+		}
+
+		fire_only_once = no
+		cost = 20
+		days_remove = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_integrate_montenegro_decision"
+			SER = {
+				annex_country = {
+					target = MNT
+					transfer_troops = yes
+				}
 			}
 		}
 	}
@@ -10938,7 +11008,7 @@ GRU_expansion_three_volksland_hypoborea = {
 				create_VKB = yes
 
 				hidden_effect = {
-					GRU = {
+					BAT = {
 						annex_country = {
 							target = LIT
 							transfer_troops = yes
@@ -16109,13 +16179,13 @@ GRU_stahlpakt_alliance_decisions = {
 			has_country_flag = NMDVP_R_RULE
 			FROM = {
 				is_subject_of = GRU
-				has_socialist_government = yes
+				has_same_government_as_ROOT = no
 			}
 		}
 		available = {
 			FROM = {
 				is_subject_of = GRU
-				has_socialist_government = yes
+				has_same_government_as_ROOT = no
 			}
 		}
 
@@ -16123,7 +16193,7 @@ GRU_stahlpakt_alliance_decisions = {
 			NOT = {
 				FROM = {
 					is_subject = no
-					has_socialist_government = no
+					has_same_government_as_ROOT = yes
 				}
 			}
 		}
@@ -16137,7 +16207,8 @@ GRU_stahlpakt_alliance_decisions = {
 		target_trigger = {
 			OR = {
 				FROM = {
-				has_socialist_government = yes
+					is_subject_of = GRU
+					has_same_government_as_ROOT = no
 				}
 			}
 		}

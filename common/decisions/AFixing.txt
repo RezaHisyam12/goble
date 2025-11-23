@@ -434,6 +434,7 @@ RUS_Foreign_Policy_decisions = {
 				is_ally_of_ROOT = no
 				has_socialist_government = no
 				NOT = { has_government = social_democrat }
+				NOT = { tag = GRU }
 			}
 		}
 		cancel_trigger = {
@@ -443,6 +444,7 @@ RUS_Foreign_Policy_decisions = {
 					NOT = { can_declare_war_on = FROM }
 					has_non_aggression_pact_with = FROM
 					FROM = { is_subject_of = GRU }
+					FROM = { tag = GRU }
 				}
 			}
 			else = {
@@ -731,7 +733,7 @@ RUS_MIO_decisions = {
 
 		days_remove = 60
 
-		ai_will_do = { base = 5 }
+		ai_will_do = { base = 1 }
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete RUS_dalzavod_mining_baltic_sea"
 			hidden_effect = {
@@ -784,7 +786,7 @@ RUS_MIO_decisions = {
 
 		days_remove = 60
 
-		ai_will_do = { base = 5 }
+		ai_will_do = { base = 1 }
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete RUS_dalzavod_mining_black_sea"
 			hidden_effect = {
@@ -821,7 +823,7 @@ RUS_MIO_decisions = {
 
 		days_remove = 60
 
-		ai_will_do = { base = 5 }
+		ai_will_do = { base = 1 }
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete RUS_dalzavod_mining_far_east"
 			hidden_effect = {
@@ -874,7 +876,7 @@ RUS_MIO_decisions = {
 
 		days_remove = 60
 
-		ai_will_do = { base = 5 }
+		ai_will_do = { base = 1 }
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete RUS_dalzavod_mining_barents"
 			hidden_effect = {

@@ -328,7 +328,7 @@ shared_focus = {
 		y = 3
 		cost = 1
 		ai_will_do = {
-			factor = 20
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_germany_reborn"
@@ -2478,7 +2478,7 @@ shared_focus = {
 		y = 9
 		cost = 5
 		ai_will_do = {
-			factor = 25
+			factor = 50
 		}
 		available = {
 			is_faction_leader = yes
@@ -3868,10 +3868,7 @@ shared_focus = {
 				specialization = specialization_land
 				value = 0.5
 			}
-			if = {
-				limit = { NOT = { is_special_project_being_researched = sp:sp_land_land_cruiser } }
-				sp:sp_land_land_cruiser = { add_project_progress_ratio = 0.2 }
-			}
+			sp:sp_land_land_cruiser = { add_project_progress_ratio = 0.2 }
 			}
 			custom_effect_tooltip = tooltip_white_line
 			army_experience = 100
@@ -3998,10 +3995,7 @@ shared_focus = {
 				specialization = specialization_naval
 				value = 0.5
 			}
-			if = {
-				limit = { NOT = { is_special_project_being_researched = sp:sp_naval_nuclear_torpedo } }
-				sp:sp_naval_nuclear_torpedo = { add_project_progress_ratio = 0.2 }
-			}
+			sp:sp_naval_nuclear_torpedo = { add_project_progress_ratio = 0.2 }
 			}
 			custom_effect_tooltip = tooltip_white_line
 			navy_experience = 100
@@ -4183,10 +4177,7 @@ shared_focus = {
 				specialization = specialization_air
 				value = 0.5
 			}
-			if = {
-				limit = { NOT = { is_special_project_being_researched = sp:sp_air_intercontinental_bomber } }
-				sp:sp_air_intercontinental_bomber = { add_project_progress_ratio = 0.2 }
-			}
+			sp:sp_air_intercontinental_bomber = { add_project_progress_ratio = 0.2 }
 			}
 			custom_effect_tooltip = tooltip_white_line
 			air_experience = 100
@@ -7079,14 +7070,18 @@ shared_focus = {
 			is_major = yes
 			has_army_manpower = { size > 300000 }
 		}
-		cost = 6
+		cost = 1
 		ai_will_do = {
 			factor = 30
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_PATH"
 			custom_effect_tooltip = GRU_tt_faction
-			create_faction = "Stahlpakt"
+			create_faction_from_template = { 
+				template = faction_template_stahlpakt           
+				name = "Stahlpakt"
+				icon = GFX_faction_stahlpakt
+			}
 		}
 	}
 	
@@ -8395,7 +8390,7 @@ shared_focus = {
 			focus = GRU_prepare_for_russia_2
 		}
 
-		ai_will_do = { factor = 50 }
+		ai_will_do = { factor = 1000 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_prepare_for_russia"
@@ -8431,7 +8426,7 @@ shared_focus = {
 			focus = GRU_prepare_for_russia
 		}
 
-		ai_will_do = { factor = 50 }
+		ai_will_do = { factor = 1000 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_prepare_for_russia_2"

@@ -11,7 +11,7 @@ armour_more_tanks = {
 		factor = 10
 		modifier = {
 			factor = 0
-			NOT = {has_tech = mobile_warfare}
+			NOT = { has_doctrine = new_mobile_warfare }
 		}
 		modifier = {
 			factor = 0

@@ -507,8 +507,8 @@ technologies = {
 			modifier = {
 				factor = 2
 				OR = {
-					has_tech = mobile_warfare
-					has_tech = mass_assault
+					has_doctrine = new_mobile_warfare
+					has_doctrine = mass_assault
 				}
 			}
 		}
@@ -522,16 +522,7 @@ technologies = {
 
 	rocket_artillery2 = {
 
-		rocket_artillery = {
-			soft_attack = 0.15
-		}
-		rocket_artillery_brigade = {
-			soft_attack = 0.15
-		}
-		mot_rocket_artillery_brigade = {
-			soft_attack = 0.15
-		}
-		motorized_rocket_brigade = {
+		category_rocket_artillery = {
 			soft_attack = 0.15
 		}
 
@@ -566,16 +557,7 @@ technologies = {
 
 	rocket_artillery3 = {
 
-		rocket_artillery = {
-			soft_attack = 0.15
-		}
-		rocket_artillery_brigade = {
-			soft_attack = 0.15
-		}
-		mot_rocket_artillery_brigade = {
-			soft_attack = 0.15
-		}
-		motorized_rocket_brigade = {
+		category_rocket_artillery = {
 			soft_attack = 0.15
 		}
 
@@ -1066,21 +1048,13 @@ technologies = {
 
 	antitank1 = {
 
-		category_tank_destroyers = {
-			hard_attack = 0.15
+		category_anti_tank = {
+			hard_attack = 0.1
 			ap_attack = 0.2
 		}
 
-		anti_tank = {
-			hard_attack = 0.1
-			ap_attack = 0.2
-		}
-		anti_tank_brigade = {
-			hard_attack = 0.1
-			ap_attack = 0.2
-		}
-		mot_anti_tank_brigade = {
-			hard_attack = 0.1
+		category_tank_destroyers = {
+			hard_attack = 0.15
 			ap_attack = 0.2
 		}
 
@@ -1204,18 +1178,12 @@ technologies = {
 		enable_equipment_modules = {
 			tank_medium_cannon_2
 		}
-		anti_tank = {
+		
+		category_anti_tank = {
 			hard_attack = 0.1
 			ap_attack = 0.1
 		}
-		anti_tank_brigade = {
-			hard_attack = 0.1
-			ap_attack = 0.1
-		}
-		mot_anti_tank_brigade = {
-			hard_attack = 0.1
-			ap_attack = 0.1
-		}
+
 		category_tank_destroyers = {
 			hard_attack = 0.1
 			ap_attack = 0.05
@@ -1277,18 +1245,12 @@ technologies = {
 		enable_equipment_modules = {
 			tank_high_velocity_cannon_2
 		}
-		anti_tank = {
+		
+		category_anti_tank = {
 			hard_attack = 0.1
 			ap_attack = 0.1
 		}
-		anti_tank_brigade = {
-			hard_attack = 0.1
-			ap_attack = 0.1
-		}
-		mot_anti_tank_brigade = {
-			hard_attack = 0.05
-			ap_attack = 0.1
-		}
+
 		category_tank_destroyers = {
 			hard_attack = 0.05
 			ap_attack = 0.05

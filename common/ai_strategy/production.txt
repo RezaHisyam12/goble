@@ -28,6 +28,7 @@ division_limiter = {
 	ai_strategy = { type = build_army 	id = elite_infantry		value = -1000 }
 	ai_strategy = { type = build_army 	id = RR_Werwolf			value = -1000 }
 	ai_strategy = { type = build_army 	id = armour_super_heavy		value = -1000 }
+	ai_strategy = { type = build_army 	id = armour_landcruiser		value = -1000 }
 }
 
 default_army_composition = {
@@ -56,7 +57,7 @@ base_armor_production = {
 mw_offset = {
 	enable = {
 		is_eligible_for_armor_production = yes
-		has_tech = mobile_warfare
+		has_doctrine = new_mobile_warfare
 	}
 
 	ai_strategy = { type = role_ratio                          id = motorized                    value = 10 }
@@ -66,7 +67,7 @@ mw_offset = {
 mobile_infantry_offset = {
 	enable = {
 		is_eligible_for_medium_armor_production = yes
-		has_tech = mobile_infantry
+		has_doctrine = mobile_infantry
 	}
 
 	ai_strategy = { type = role_ratio                          id = motorized                    value = 10 }
@@ -75,7 +76,7 @@ mobile_infantry_offset = {
 armored_spearhead_offset = {
 	enable = {
 		is_eligible_for_medium_armor_production = yes
-		has_tech = armored_spearhead
+		has_doctrine = armored_spearhead
 	}
 
 	ai_strategy = { type = role_ratio                          id = armor_role                   value = 10 }
@@ -84,7 +85,7 @@ armored_spearhead_offset = {
 sp_offset = {
 	enable = {
 		is_eligible_for_armor_production = yes
-		has_tech = superior_firepower
+		has_doctrine = superior_firepower
 	}
 
 	ai_strategy = { type = role_ratio                          id = motorized                    value = 5 }
@@ -94,7 +95,7 @@ sp_offset = {
 concentrated_fire_plans_offset = {
 	enable = {
 		is_eligible_for_medium_armor_production = yes
-		has_tech = concentrated_fire_plans
+		has_doctrine = concentrated_fire_plans
 	}
 
 	ai_strategy = { type = role_ratio                          id = armor_role                   value = 10 }
@@ -103,7 +104,7 @@ concentrated_fire_plans_offset = {
 centralized_fire_control_offset = {
 	enable = {
 		is_eligible_for_medium_armor_production = yes
-		has_tech = centralized_fire_control
+		has_doctrine = centralized_fire_control
 	}
 	ai_strategy = { type = role_ratio                          id = motorized                    value = 10 }
 }
@@ -111,7 +112,7 @@ centralized_fire_control_offset = {
 gbp_offset = {
 	enable = {
 		is_eligible_for_armor_production = yes
-		has_tech = trench_warfare
+		has_doctrine = trench_warfare
 	}
 
 	ai_strategy = { type = role_ratio                          id = motorized                    value = 5 }
@@ -121,7 +122,7 @@ gbp_offset = {
 grand_mechanized_offensive_offset = {
 	enable = {
 		is_eligible_for_medium_armor_production = yes
-		has_tech = grand_mechanized_offensive
+		has_doctrine = grand_mechanized_offensive
 	}
 
 	ai_strategy = { type = role_ratio                          id = motorized                    value = 10 }
@@ -131,7 +132,7 @@ grand_mechanized_offensive_offset = {
 ma_offset = {
 	enable = {
 		is_eligible_for_armor_production = yes
-		has_tech = mass_assault
+		has_doctrine = mass_assault
 	}
 
 	ai_strategy = { type = role_ratio                          id = motorized                    value = 5 }
@@ -141,7 +142,7 @@ ma_offset = {
 large_front_operations_offset = {
 	enable = {
 		is_eligible_for_medium_armor_production = yes
-		has_tech = large_front_operations
+		has_doctrine = large_front_operations
 	}
 
 	ai_strategy = { type = role_ratio                          id = motorized                    value = 5 }
@@ -554,6 +555,66 @@ minors_need_dockyards = {
 #	SPECIAL FORCES
 ############################################################################################################
 
+default_armour_super_heavy_production = {
+	allowed = {
+		OR = {
+			tag = RUS
+			is_american_tag = yes
+		}
+	}
+	enable = {
+		has_tech = super_heavy_tank_chassis
+		num_of_military_factories > 150
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = role_ratio
+		id = armour_super_heavy
+		value = 5
+	}
+	ai_strategy = {
+		type = template_prio
+		id = super_heavy_armor
+		value = 100
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = super_heavy_tank_chassis
+		value = 10
+	}
+}
+
+default_armour_landcruiser_production = {
+	allowed = {
+		OR = {
+			tag = GER
+			tag = GRU
+		}
+	}
+	enable = {
+		has_tech = super_heavy_tank_chassis
+		num_of_military_factories > 200
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = role_ratio
+		id = armour_landcruiser
+		value = 5
+	}
+	ai_strategy = {
+		type = template_prio
+		id = land_cruiser
+		value = 100
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = land_cruiser_chassis
+		value = 10
+	}
+}
+
 default_mountaineer_production = {	
 	enable = {
 		has_tech = tech_mountaineers
@@ -938,6 +999,8 @@ always_upgrade_tanks = {
 	ai_strategy = { type = production_upgrade_desire_offset id = heavy_tank_chassis_2 value = 100 }
 	ai_strategy = { type = production_upgrade_desire_offset id = heavy_tank_chassis_3 value = 100 }
 	ai_strategy = { type = production_upgrade_desire_offset id = modern_tank_chassis value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = super_heavy_tank_chassis_1 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = land_cruiser_chassis_1 value = 100 }
 }
 
 always_upgrade_mech = {
@@ -1000,6 +1063,89 @@ default_railway_gun_production = {
 	ai_strategy = {
 		type = equipment_production_min_factories
 		id = railway_gun
+		value = 1
+	}
+}
+
+default_build_facility_land_powers = {
+	allowed = {
+		OR = {
+			tag = GRU
+			tag = RUS
+		}
+	}
+	enable = {
+		is_major = yes
+		num_of_civilian_factories > 40
+		num_of_military_factories > 40
+		OR = {
+			has_tech = improved_light_tank_chassis
+			has_tech = basic_medium_tank_chassis
+			has_tech = improved_heavy_tank_chassis
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = land_facility
+		value = 2
+	}
+	ai_strategy = {
+		type = build_building
+		id = air_facility
+		value = 1
+	}
+}
+
+default_build_a_lw_facility_minor = {
+	enable = {
+		is_major = no
+		NOT = { has_facility_specialization = specialization_land }
+		num_of_civilian_factories > 40
+		num_of_military_factories > 40
+		OR = {
+			has_tech = improved_light_tank_chassis
+			has_tech = basic_medium_tank_chassis
+			has_tech = improved_heavy_tank_chassis
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = land_facility
+		value = 1
+	}
+}
+
+default_build_an_air_facility_minor = {
+	enable = {
+		is_major = no
+		NOT = { has_facility_specialization = specialization_air }
+		num_of_military_factories > 40
+		if = {
+			limit = { has_dlc_bba = yes }
+			OR = {
+				has_tech = basic_small_airframe
+				has_tech = basic_medium_airframe
+				has_tech = basic_large_airframe
+			}
+		}
+		else = {
+			OR = {
+				has_tech = fighter1
+				has_tech = heavy_fighter1
+				has_tech = tactical_bomber1
+				has_tech = strategic_bomber1
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = air_facility
 		value = 1
 	}
 }

@@ -1471,7 +1471,7 @@ focus_tree = {
 				name = GEA_strikegroup2
 				bonus = 1.5
 				uses = 1
-				category = cl_tech
+				category = ca_tech
 			}
 			custom_effect_tooltip = tooltip_white_line
 			if = {
@@ -2823,6 +2823,14 @@ focus_tree = {
 				bonus = 1
 				uses = 1
 				category = industry
+			}
+			if = {
+				limit = { has_idea = GEA_colonial_instability_idea }
+				remove_ideas = GEA_colonial_instability_idea
+			}
+			if = {
+				limit = { has_idea = GEA_colonial_disaster_idea }
+				remove_ideas = GEA_colonial_disaster_idea
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }

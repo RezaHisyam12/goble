@@ -1308,7 +1308,11 @@ country_event = { # victory Intro
 					}
 				}
 				germany_capitulates = yes
-				create_faction = gru_alldeutschpakt_faction
+				create_faction_from_template = { 
+					template = faction_template_reichspakt         
+					name = "gru_alldeutschpakt_faction"
+					icon = GFX_faction_icon_reichspakt
+				}
 				MAF = {
 					add_to_faction = GEA
 					add_to_faction = MAG

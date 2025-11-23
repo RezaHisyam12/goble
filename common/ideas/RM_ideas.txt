@@ -2912,11 +2912,10 @@ ideas = {
 			picture = german_advisors
 			allowed = { always = no }
 			modifier = {
-				unit_limit_bonus = 20
 				surrender_limit = 0.10
-				experience_gain_army = 0.05
-				experience_gain_navy = 0.05
-				experience_gain_air = 0.05
+				experience_gain_army = 0.1
+				experience_gain_navy = 0.1
+				experience_gain_air = 0.1
 			}
 		}
 		GRU_okw_2 = {

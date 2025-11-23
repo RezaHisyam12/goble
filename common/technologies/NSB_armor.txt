@@ -265,10 +265,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		allow_branch = {
-			has_dlc = "Man the Guns"
-		}
-
 		research_cost = 2
 		start_year = 1938
 
@@ -714,10 +710,6 @@ technologies = {
 				add = 25
 				is_eligible_for_armor_production = yes
 			}
-			modifier = {
-				add = 500
-				tag = GRU
-			}
 		}
 
 		categories = {
@@ -793,6 +785,10 @@ technologies = {
 				add = 500
 				tag = GRU
 			}
+			modifier = {
+				add = 500
+				tag = RUS
+			}
 		}
 
 		categories = {
@@ -834,7 +830,7 @@ technologies = {
 			}
 			modifier = {
 				factor = 2
-				has_tech = mobile_warfare
+				has_doctrine = new_mobile_warfare
 			}
 		}
 
@@ -878,7 +874,7 @@ technologies = {
 			}
 			modifier = {
 				factor = 2
-				has_tech = mobile_warfare
+				has_doctrine = new_mobile_warfare
 			}
 		}
 
@@ -923,7 +919,7 @@ technologies = {
 			}
 			modifier = {
 				factor = 2
-				has_tech = mobile_warfare
+				has_doctrine = new_mobile_warfare
 			}
 		}
 
@@ -959,7 +955,7 @@ technologies = {
 			}
 			modifier = {
 				factor = 2
-				has_tech = mobile_warfare
+				has_doctrine = new_mobile_warfare
 			}
 		}
 
@@ -998,7 +994,7 @@ technologies = {
 			}
 			modifier = {
 				factor = 2
-				has_tech = mobile_warfare
+				has_doctrine = new_mobile_warfare
 			}
 		}
 
@@ -1039,7 +1035,7 @@ technologies = {
 			}
 			modifier = {
 				factor = 2
-				has_tech = mobile_warfare
+				has_doctrine = new_mobile_warfare
 			}
 		}
 
@@ -1078,7 +1074,7 @@ technologies = {
 			}
 			modifier = {
 				factor = 2
-				has_tech = mobile_warfare
+				has_doctrine = new_mobile_warfare
 			}
 		}
 
@@ -1112,7 +1108,7 @@ technologies = {
 			}
 			modifier = {
 				factor = 2
-				has_tech = mobile_warfare
+				has_doctrine = new_mobile_warfare
 			}
 		}
 

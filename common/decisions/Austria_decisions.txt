@@ -149,7 +149,7 @@ political_actions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision complete AUS_syndie_threat target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_syndie_threat"
 			FROM = { save_event_target_as = threat_country }
 			GER = { country_event = aus.tree.4011 }
 		}
@@ -288,7 +288,7 @@ political_actions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision complete AUS_russian_threat target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision AUS_russian_threat"
 			FROM = { save_event_target_as = threat_country }
 			GER = { country_event = aus.tree.4011 }
 		}
@@ -329,7 +329,12 @@ political_actions = {
 				leave_faction = yes
 				GER = { country_event = aus.tree.4015 }
 			}
-			create_faction = austrian_sphere
+			create_faction_from_template = { 
+				template = faction_template_generic_dominance              
+				name = austrian_sphere
+				icon = GFX_faction_austria_hungary
+			}			
+
 			every_country = {
 				limit = {
 					has_country_flag = AUS_former_faction_member

@@ -1,0 +1,17 @@
+spriteTypes = {
+	
+	#########################
+	##### Faction Logos #####
+	#########################
+	
+	spriteType = {
+		name = "GFX_faction_stahlpakt"
+		texturefile = "gfx/interface/factions/faction_logos/faction_logo_axis.dds"
+		noOfFrames = 2
+	}
+	### Faction Logos - Miniatures ###
+	spriteType = {
+		name = "GFX_faction_stahlpakt_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/faction_logo_axis_miniature.dds"
+	}
+}

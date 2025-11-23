@@ -138,6 +138,7 @@ if = {
 			iw_large_airframe = 1
 			basic_large_airframe = 1
 			air_torpedoe_1 = 1
+			bba_early_transport_plane = 1
 		}
 		FRA_BBA_air_variants = yes
 	else = {
@@ -151,6 +152,7 @@ if = {
 			cv_CAS1 = 1
 			naval_bomber1 = 1
 			cv_naval_bomber1 = 1
+			early_transport_plane = 1
 		}
 	}
 }
@@ -183,7 +185,7 @@ if = {
 		## Modules##
 		basic_battery = 1
 		basic_light_battery = 1
-		basic_medium_battery = 1
+		
 		basic_heavy_battery = 1
 		basic_depth_charges = 1
 		basic_torpedo = 1
@@ -259,7 +261,7 @@ set_popularities = {
     national_populist = 2
 }
 
-create_faction = Third_International
+create_faction_from_template = faction_template_internationale
 
 add_to_faction = ENG
 add_to_faction = SRI

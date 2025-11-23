@@ -12,7 +12,7 @@ mass_infantry = {
 		factor = 15
 		modifier = {
 			factor = 0
-			NOT = {has_tech = mass_assault}
+			NOT = {has_doctrine = mass_assault}
 		}
 	}
 

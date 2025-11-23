@@ -4527,7 +4527,7 @@ country_event = { # Ideology Switch
 			create_country_leader = {
 				name = "Josef Goebbels"
 				desc = "GRU_GOEBBELS_DESC"
-				picture = "gfx/leaders/GRU/Portrait_Germany_Josef_Goebbels_14.png"
+				picture = "gfx/leaders/GRU/Portrait_Germany_Josef_Goebbels_Normal.png"
 				expire = "1.1.1"
 				ideology = natpop_goebbels_subtype
 				traits = {
@@ -8900,6 +8900,7 @@ country_event = { # accept
 					elections_allowed = no
 				}
 				remove_all_ministers = yes
+				mark_focus_tree_layout_dirty = yes
 			}
 		}
 	}	

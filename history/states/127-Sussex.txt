@@ -3,6 +3,9 @@ state = {
 	name = "STATE_127" # Sussex
 	manpower = 3046487
 	state_category = eleven
+	resources = {
+		coal = 11
+	}
 
 	local_supplies = 16.0 
 	history = {

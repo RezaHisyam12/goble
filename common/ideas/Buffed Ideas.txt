@@ -145,13 +145,14 @@ ideas = {
 			name = RUS_Royal_Constitution_idea
 			modifier = {
 				stability_weekly = 0.01
-				war_support_factor = 0.2
-				political_power_gain = 0.1
+				weekly_casualties_war_support = 0.003
+				political_power_gain = 0.15
 				surrender_limit = 0.2
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.1
 				research_speed_factor = 0.05
 				compliance_growth = 0.1
+				conscription_factor = 0.25
 			}
 		}
 

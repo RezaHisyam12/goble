@@ -116,10 +116,6 @@ heavy_armour_generic = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { has_tech = sp_helicopter_transport_pods_tech }
-			}
-			modifier = {
-				factor = 0
 				NOT = { has_tech = main_battle_tank }
 				NOT = { has_tech = main_battle_tank_chassis }
 			}
