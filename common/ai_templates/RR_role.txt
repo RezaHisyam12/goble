@@ -11,14 +11,11 @@ RR_Werwolf_generic = {
 	}
 
 	RR_Werwolf_template_early = {
+        can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
 		upgrade_prio = {
 			base = 100
-		}
-
-		can_upgrade_in_field = {
-			surrender_progress < 0.15
 		}
 
 		target_template = {
@@ -39,6 +36,7 @@ RR_Werwolf_generic = {
 	}
 
 	RR_Werwolf_template_late = {
+        can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
 		upgrade_prio = {
@@ -55,10 +53,6 @@ RR_Werwolf_generic = {
 				add = 2
 				num_of_military_factories > 129
 			}
-		}
-
-		can_upgrade_in_field = {
-			surrender_progress < 0.15
 		}
 
 		target_template = {

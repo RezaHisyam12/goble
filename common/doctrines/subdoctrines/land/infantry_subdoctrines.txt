@@ -13,6 +13,10 @@ mobile_infantry = {
 			factor = 0.5
 			is_major = no
 		}
+		modifier = {
+			factor = 2
+			has_doctrine = new_mobile_warfare
+		}
 	}
 
 	# EFFECTS
@@ -117,6 +121,10 @@ large_unit_tactics = {
 		modifier = {
 			factor = 0.5
 			is_major = no
+		}
+		modifier = {
+			factor = 2
+			has_doctrine = mass_assault
 		}
 	}
 
@@ -508,6 +516,10 @@ irregulars = {
 			factor = 0
 			is_major = yes
 		}
+      		modifier = {
+            		factor = 100
+            		is_chinese_tag = yes
+        	}
 	}
 
 	irregular_infantry = {

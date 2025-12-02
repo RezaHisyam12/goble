@@ -2865,7 +2865,7 @@ ideas = {
 				supply_consumption_factor = -0.15
 				out_of_supply_factor = -0.1
 				training_time_factor = -0.2
-				planning_speed = 0.2
+				max_planning = 0.1
 			}
 		}
 		

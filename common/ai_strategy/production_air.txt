@@ -36,7 +36,7 @@ tac_bomber_production_default = {
 tac_bomber_production_operational_integrity = {
 	enable = {
 		is_eligible_for_medium_aircraft_production = yes
-		has_tech = force_rotation
+		has_doctrine = new_operational_integrity
 	}
 	abort_when_not_enabled = yes
 
@@ -83,7 +83,7 @@ strat_bomber_air_production_default = {
 strat_bomber_air_production_strategic_destruction = {
 	enable = {
 		is_eligible_for_heavy_aircraft_production = yes
-		has_tech = air_superiority
+		has_doctrine = new_strategic_destruction
 	}
 	abort_when_not_enabled = yes
 

@@ -73,7 +73,13 @@ last_stand = {
 	# EFFECTS
 	conscription = 0.05
 
-	ai_will_do = { base = 0 }
+	ai_will_do = {
+		base = 1
+		modifier = {
+			factor = 6
+			has_doctrine = mass_assault
+		}
+	}
 
 	rewards = {
 		werwolf_groups = {
@@ -284,6 +290,10 @@ deep_battle = {
 		modifier = {
 			factor = 0.5
 			is_major = no
+		}
+		modifier = {
+			factor = 2
+			has_doctrine = new_mobile_warfare
 		}
 	}
 
@@ -510,6 +520,10 @@ guerilla_war = {
 				has_template_containing_unit = militia
 			}
 		}
+      		modifier = {
+            		factor = 100
+            		is_chinese_tag = yes
+        	}
 	}
 
 	# EFFECTS

@@ -13,14 +13,11 @@ elite_infantry_generic = {
 	}
 
 	elite_infantry_template = {
+        can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
 		upgrade_prio = {
-			factor = 10
-		}
-
-		can_upgrade_in_field = {
-			surrender_progress < 0.15
+			factor = 100
 		}
 
 		target_template = {

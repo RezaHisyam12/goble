@@ -10,12 +10,10 @@ line_irregulars = {
 	}
 
 	irregulars_default = {
+        can_upgrade_in_field = { always = yes }
+
 		upgrade_prio = {
 			base = 100
-		}
-
-		can_upgrade_in_field = {
-			surrender_progress < 0.15
 		}
 
 		target_template = {
@@ -31,6 +29,8 @@ line_irregulars = {
 	}
 
 	irregulars_upgraded = {
+        can_upgrade_in_field = { always = yes }
+
 		upgrade_prio = {
 			base = 100
 			modifier = {
@@ -52,13 +52,9 @@ line_irregulars = {
 			}
 		}
 
-		can_upgrade_in_field = {
-			surrender_progress < 0.15
-		}
-
 		target_template = {
 			regiments = {
-				infantry = 12
+				irregular_infantry = 12
 				artillery_brigade = 1
 			}
 
@@ -73,6 +69,8 @@ line_irregulars = {
 	}
 
 	irregulars_artillery = {
+        can_upgrade_in_field = { always = yes }
+
 		upgrade_prio = {
 			base = 100
 			modifier = {
@@ -94,13 +92,9 @@ line_irregulars = {
 			}
 		}
 
-		can_upgrade_in_field = {
-			surrender_progress < 0.15
-		}
-
 		target_template = {
 			regiments = {
-				infantry = 17
+				irregular_infantry = 17
 				artillery_brigade = 3
 			}
 
