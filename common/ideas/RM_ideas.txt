@@ -2037,7 +2037,7 @@ ideas = {
 				local_resources_factor = 0.14
 				production_factory_start_efficiency_factor = 0.1
 				industrial_capacity_factory = 0.16
-				national_populist_drift = 0.01
+				national_populist_drift = 0.02
 				consumer_goods_factor = -0.12
 			}
 			targeted_modifier = {
@@ -2916,6 +2916,8 @@ ideas = {
 				experience_gain_army = 0.1
 				experience_gain_navy = 0.1
 				experience_gain_air = 0.1
+				special_forces_cap_flat = 12
+				special_forces_min = 48
 			}
 		}
 		GRU_okw_2 = {
@@ -3059,6 +3061,9 @@ ideas = {
 			allowed = { always = no }
            		modifier = {
 				conscription = 0.05
+				unit_limit_bonus = 20
+				special_forces_cap_flat = 12
+				special_forces_min = 48
 			}
 		}
 		GRU_germania = {

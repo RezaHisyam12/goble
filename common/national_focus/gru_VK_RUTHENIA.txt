@@ -25,9 +25,11 @@ focus_tree = {
 			}
 			set_province_name = { id = 525 name = "Kønugarðr"}
 			swap_ideas = {
-							remove_idea = VK_COLONY_ONE
-							add_idea = VK_COLONY_TWO
-						}
+				remove_idea = VK_COLONY_ONE
+				add_idea = VK_COLONY_TWO
+			}
+			custom_effect_tooltip = elite_infantry_tech_effect
+			hidden_effect = { set_technology = { elite_infantry_tech  = 1 } }
 		}
 		prerequisite = { focus = VK_FOCUS_SHARED_MORE_SETTLERS  }
 		prerequisite = { focus = VK_FOCUS_SHARED_OUR_OWN_RR  }
@@ -41,7 +43,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		available = {
-							VKR = {
+			VKR = {
 				controls_state = 1320
 				controls_state = 78
 				controls_state = 1222
@@ -369,9 +371,9 @@ focus_tree = {
 	focus = {
 		id = VK_FOCUS_RUTHENIA_COLONIZED
 		icon = VKR_COLONIZED
-		relative_position_id = VK_FOCUS_BALTENLAND_START_COLONIZING
+		relative_position_id = VK_FOCUS_RUTHENIA_START_COLONIZING
 		x = 0
-		y = 6
+		y = 3
 		available = {
 		}
 		cost = 6

@@ -103,7 +103,8 @@ heavy_armour_generic = {
         target_template = {
 			regiments = {
 				heavy_armor = 8
-				mechanized = 7
+				mechanized = 8
+				medium_sp_anti_air_brigade = 1
 			}
 
 			support = {

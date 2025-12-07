@@ -326,7 +326,7 @@ shared_focus = {
 		relative_position_id = GRU_volksfuhrer
 		x = 0
 		y = 3
-		cost = 1
+		cost = 2
 		ai_will_do = {
 			factor = 100
 		}
@@ -7091,7 +7091,7 @@ shared_focus = {
 		relative_position_id = GRU_NMDVP_PATH
 		x = -1
 		y = 1
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -7107,7 +7107,7 @@ shared_focus = {
 		relative_position_id = GRU_NMDVP_PATH
 		x = 3
 		y = 1
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 1000
 		}
@@ -7330,7 +7330,7 @@ shared_focus = {
 		relative_position_id = GRU_NMDVP_PATH
 		x = 1
 		y = 1
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -7671,13 +7671,13 @@ shared_focus = {
 		relative_position_id = GRU_NMDVP_PATH
 		x = 0
 		y = 3
-		cost = 6
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_RED_COLONIALISM"
-					add_political_power = 50
+					add_political_power = 150
 					add_stability = 0.05
 		}
 		prerequisite = { focus = GRU_NMDVP_imperialism  }
@@ -7693,6 +7693,102 @@ shared_focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_KILL_COLONIES"
 			custom_effect_tooltip = GRU_tt_killcolonies_decisions
+			hidden_effect = {
+				298 = { add_claim_by = GRU }
+				966 = { add_claim_by = GRU }
+				807 = { add_claim_by = GRU }
+				963 = { add_claim_by = GRU }
+				1321 = { add_claim_by = GRU }
+				1323 = { add_claim_by = GRU }
+				877 = { add_claim_by = GRU }
+				1322 = { add_claim_by = GRU }
+				876 = { add_claim_by = GRU }
+				973 = { add_claim_by = GRU }
+				558 = { add_claim_by = GRU }
+				662 = { add_claim_by = GRU }
+				878 = { add_claim_by = GRU }
+				913 = { add_claim_by = GRU }
+				274 = { add_claim_by = GRU }
+				1192 = { add_claim_by = GRU }
+				809 = { add_claim_by = GRU }
+				808 = { add_claim_by = GRU }
+				556 = { add_claim_by = GRU }
+				806 = { add_claim_by = GRU }
+				700 = { add_claim_by = GRU }
+				296 = { add_claim_by = GRU }
+				272 = { add_claim_by = GRU }
+				834 = { add_claim_by = GRU }
+				557 = { add_claim_by = GRU }
+				927 = { add_claim_by = GRU }
+				952 = { add_claim_by = GRU }
+				297 = { add_claim_by = GRU }
+				971 = { add_claim_by = GRU }
+				962 = { add_claim_by = GRU }
+				975 = { add_claim_by = GRU }
+				660 = { add_claim_by = GRU }
+				974 = { add_claim_by = GRU }
+				1180 = { add_claim_by = GRU }
+				718 = { add_claim_by = GRU }
+				1025 = { add_claim_by = GRU }
+				1026 = { add_claim_by = GRU }
+				1181 = { add_claim_by = GRU }
+				977 = { add_claim_by = GRU }
+				953 = { add_claim_by = GRU }
+				539 = { add_claim_by = GRU }
+				928 = { add_claim_by = GRU }
+				914 = { add_claim_by = GRU }
+				881 = { add_claim_by = GRU }
+				916 = { add_claim_by = GRU }
+				540 = { add_claim_by = GRU }
+				917 = { add_claim_by = GRU }
+				959 = { add_claim_by = GRU }
+				957 = { add_claim_by = GRU }
+				958 = { add_claim_by = GRU }
+				813 = { add_claim_by = GRU }
+				956 = { add_claim_by = GRU }
+				879 = { add_claim_by = GRU }
+				1183 = { add_claim_by = GRU }
+				976 = { add_claim_by = GRU }
+				295 = { add_claim_by = GRU }
+				1185 = { add_claim_by = GRU }
+				538 = { add_claim_by = GRU }
+				949 = { add_claim_by = GRU }
+				1184 = { add_claim_by = GRU }
+				1182 = { add_claim_by = GRU }
+				948 = { add_claim_by = GRU }
+				515 = { add_claim_by = GRU }
+				548 = { add_claim_by = GRU }
+				969 = { add_claim_by = GRU }
+				547 = { add_claim_by = GRU }
+				925 = { add_claim_by = GRU }
+				970 = { add_claim_by = GRU }
+				965 = { add_claim_by = GRU }
+				544 = { add_claim_by = GRU }
+				950 = { add_claim_by = GRU }
+				954 = { add_claim_by = GRU }
+				955 = { add_claim_by = GRU }
+				871 = { add_claim_by = GRU }
+				899 = { add_claim_by = GRU }
+				1032 = { add_claim_by = GRU }
+				546 = { add_claim_by = GRU }
+				870 = { add_claim_by = GRU }
+				918 = { add_claim_by = GRU }
+				869 = { add_claim_by = GRU }
+				905 = { add_claim_by = GRU }
+				964 = { add_claim_by = GRU }
+				541 = { add_claim_by = GRU }
+				542 = { add_claim_by = GRU }
+				545 = { add_claim_by = GRU }
+				275 = { add_claim_by = GRU }
+				738 = { add_claim_by = GRU }
+				719 = { add_claim_by = GRU }
+				946 = { add_claim_by = GRU }
+				681 = { add_claim_by = GRU }
+				1176 = { add_claim_by = GRU }
+				945 = { add_claim_by = GRU }
+				947 = { add_claim_by = GRU }
+				85 = { add_claim_by = GRU }
+			}
 		}	
 		prerequisite = { focus = GRU_NMDVP_RED_COLONIALISM  }
 	}
@@ -7702,7 +7798,7 @@ shared_focus = {
 		relative_position_id = GRU_NMDVP_RED_COLONIALISM
 		x = 1
 		y = 2
-		cost = 7	
+		cost = 6	
 		ai_will_do = {
 			factor = 100
 		}
@@ -7732,7 +7828,7 @@ shared_focus = {
 	shared_focus = {
 		id = GRU_new_order
 		icon = GFX_GRU_order
-		cost = 5
+		cost = 4
 		x = -6
 		y = 0
 		relative_position_id = GRU_NMDVP_LEBENSRAUM
@@ -8081,7 +8177,7 @@ shared_focus = {
 	shared_focus = {
 		id = GRU_first_plan
 		icon = GFX_GRU_nmdvp_victory-3943
-		cost = 4
+		cost = 3
 
 		relative_position_id = GRU_new_order
 		x = 0

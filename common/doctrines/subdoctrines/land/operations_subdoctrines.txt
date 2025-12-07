@@ -75,10 +75,6 @@ last_stand = {
 
 	ai_will_do = {
 		base = 1
-		modifier = {
-			factor = 6
-			has_doctrine = mass_assault
-		}
 	}
 
 	rewards = {
@@ -204,7 +200,13 @@ grand_assault = {
 	xp_cost = 100
 	xp_type = army
 
-	ai_will_do = { base = 2 }
+	ai_will_do = { 
+		base = 2 
+		modifier = {
+			factor = 6
+			has_doctrine = mass_assault
+		}
+	}
 
 	# EFFECTS
 	max_planning = 0.1
@@ -286,13 +288,13 @@ deep_battle = {
 	}
 
 	ai_will_do = {
-		base = 2
+		base = 1
 		modifier = {
 			factor = 0.5
 			is_major = no
 		}
 		modifier = {
-			factor = 2
+			factor = 3
 			has_doctrine = new_mobile_warfare
 		}
 	}
@@ -508,11 +510,7 @@ guerilla_war = {
 		has_dlc_ncns = yes
 	}
 	ai_will_do = {
-		base = 2
-		modifier = {
-			factor = 0
-			is_major = yes
-		}
+		base = 1
 		modifier = {
 			factor = 0
 			NOT = {
@@ -698,9 +696,11 @@ expeditionary_warfare = {
 	}
 
 	ai_will_do = {
-
 		base = 0
-
+		modifier = {
+			add = 10
+			tag = CAN
+		}
 	}
 
 	# EFFECTS

@@ -238,19 +238,21 @@ DEFAULT_template_design_industrial_country = {
 make_civs = {
 	allowed = {
 		NOT = {
-			is_american_tag = yes
 			tag = GER
+			tag = GRU
+			is_american_tag = yes
 		}
 	}
 	enable = {
-		date < 1936.8.1
+		date < 1937.1.1
 		has_war = no
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = added_military_to_civilian_factory_ratio
-		value = -1000
+		type = building_target
+		id = industrial_complex
+		value = 1000
 	}
 }
 
@@ -258,7 +260,7 @@ make_mils = {
 	enable = {
 		num_of_civilian_factories > 15
 		OR = {
-			date > 1936.8.1
+			date > 1937.1.1
 			has_war = yes
 		}
 	}
@@ -533,7 +535,7 @@ naval_powers_make_more_marines = {
 	allowed = {
 		OR = {
 			is_american_tag = yes
-			is_CANZACAF_tag = yes
+			is_commonwealth_tag = yes
 			tag = GBR
 			tag = ENG
 			tag = NFA
@@ -664,7 +666,7 @@ default_flame_tank_and_support_production = {
 
 majors_build_some_refineries_1 = {
 	enable = {
-		date > 1936.8.1
+		date > 1938.1.1
 		is_actual_major = yes
 		has_tech = synth_oil_experiments
 		OR = {
@@ -683,7 +685,7 @@ majors_build_some_refineries_1 = {
 
 majors_build_some_refineries_2 = {
 	enable = {
-		date > 1936.8.1
+		date > 1938.1.1
 		is_actual_major = yes
 		has_tech = synth_oil_experiments
 		OR = {
@@ -702,7 +704,7 @@ majors_build_some_refineries_2 = {
 
 majors_build_some_refineries_3 = {
 	enable = {
-		date > 1936.8.1
+		date > 1938.1.1
 		is_actual_major = yes
 		has_tech = synth_oil_experiments
 		check_variable = { resource_imported@rubber > 60 }
@@ -718,7 +720,7 @@ majors_build_some_refineries_3 = {
 
 majors_build_some_refineries_4 = {
 	enable = {
-		date > 1936.8.1
+		date > 1938.1.1
 		is_actual_major = yes
 		has_tech = synth_oil_experiments
 		check_variable = { resource_imported@rubber > 90 }
@@ -734,7 +736,7 @@ majors_build_some_refineries_4 = {
 
 majors_build_some_silos_1 = {
 	enable = {
-		date > 1936.8.1
+		date > 1938.1.1
 		is_actual_major = yes
 		has_tech = fuel_silos
 		fuel_silo < 5
@@ -755,7 +757,7 @@ majors_build_some_silos_1 = {
 
 majors_build_some_silos_2 = {
 	enable = {
-		date > 1936.8.1
+		date > 1938.1.1
 		is_actual_major = yes
 		has_tech = fuel_silos
 		fuel_silo < 10
@@ -776,7 +778,7 @@ majors_build_some_silos_2 = {
 
 majors_build_some_silos_3 = {
 	enable = {
-		date > 1936.8.1
+		date > 1938.1.1
 		is_actual_major = yes
 		has_tech = fuel_silos
 		fuel_silo < 15
@@ -797,7 +799,7 @@ majors_build_some_silos_3 = {
 
 majors_build_some_silos_4 = {
 	enable = {
-		date > 1936.8.1
+		date > 1938.1.1
 		is_actual_major = yes
 		has_tech = fuel_silos
 		fuel_silo < 20
@@ -856,24 +858,14 @@ always_upgrade_tanks = {
 	ai_strategy = { type = production_upgrade_desire_offset id = land_cruiser_chassis_1 value = 100 }
 }
 
-always_upgrade_mech = {
+always_upgrade_fighters = {
 	enable = { always = yes }
 	abort_when_not_enabled = yes
 	
-	ai_strategy = { type = production_upgrade_desire_offset id = mechanized_equipment_1 value = 100 }
-	ai_strategy = { type = production_upgrade_desire_offset id = mechanized_equipment_2 value = 100 }
-	ai_strategy = { type = production_upgrade_desire_offset id = mechanized_equipment_3 value = 100 }
-}
-
-always_upgrade_planes = {
-	enable = { always = yes }
-	abort_when_not_enabled = yes
-	
-	ai_strategy = { type = production_upgrade_desire_offset id = small_plane_airframe value = 100 }
-	ai_strategy = { type = production_upgrade_desire_offset id = cv_small_plane_airframe value = 100 }
-	ai_strategy = { type = production_upgrade_desire_offset id = medium_plane_airframe value = 100 }
-	ai_strategy = { type = production_upgrade_desire_offset id = large_plane_airframe value = 100 }
-	ai_strategy = { type = production_upgrade_desire_offset id = transport_plane_equipment value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = small_plane_airframe_1 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = small_plane_airframe_2 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = small_plane_airframe_3 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = small_plane_airframe_4 value = 100 }
 }
 
 we_need_nuclear_reactor = {

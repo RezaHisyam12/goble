@@ -11,7 +11,7 @@ armour_more_tanks = {
 		factor = 10
 		modifier = {
 			factor = 0
-			NOT = { has_doctrine = new_mobile_warfare }
+			NOT = {has_doctrine = new_mobile_warfare}
 		}
 		modifier = {
 			factor = 0
@@ -116,8 +116,9 @@ armour_more_tanks = {
 
 		target_template = {
 			regiments = {
-				medium_armor = 8
+				medium_armor = 7
 				mechanized = 7
+				medium_sp_anti_air_brigade = 1
 			}
 
 			support = {

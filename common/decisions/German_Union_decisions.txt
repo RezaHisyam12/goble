@@ -3209,7 +3209,10 @@ GRU_germania_plan_decisions = {
 			country_exists = SWI
 			1235 = { is_owned_by = FROM } 
 			SWI = {
-				NOT = { is_in_faction_with = FRA }
+				NOT = { 
+					is_in_faction_with = FRA 
+					is_guaranteed_by = CAN
+				}
 			}
 		}
 		visible = {
@@ -3255,7 +3258,6 @@ GRU_germania_plan_decisions = {
 						}
 					}
 					has_non_aggression_pact_with = FROM
-					has_guaranteed = FROM
 				}
 			}
 		}
@@ -3324,10 +3326,6 @@ GRU_germania_plan_decisions = {
 						}
 					}
 				}
-			}
-			modifier = {
-				factor = 0
-				has_country_flag = imminent_war
 			}
 		}
 
@@ -3491,6 +3489,10 @@ GRU_germania_plan_decisions = {
 			OR = {
 				is_owner_neighbor_of = FROM
 				any_allied_country = { is_owner_neighbor_of = FROM }
+				NOT = { 
+					is_in_faction_with = FRA 
+					is_guaranteed_by = CAN
+				}
 			}
 			is_subject = no
 			country_exists = FROM
@@ -4319,7 +4321,10 @@ GRU_germania_plan_decisions = {
 			is_subject = no
 			country_exists = HOL
 			HOL = {
-				NOT = { is_in_faction_with = FRA }
+				NOT = { 
+					is_in_faction_with = FRA 
+					is_guaranteed_by = CAN
+				}
 			}
 		}
 		visible = {
@@ -4444,7 +4449,10 @@ GRU_germania_plan_decisions = {
 			is_subject = no
 			country_exists = BEL
 			BEL = {
-				NOT = { is_in_faction_with = FRA }
+				NOT = { 
+					is_in_faction_with = FRA 
+					is_guaranteed_by = CAN
+				}
 			}
 		}
 		visible = {
@@ -4560,7 +4568,10 @@ GRU_germania_plan_decisions = {
 			is_subject = no
 			country_exists = FLN
 			FLN = {
-				NOT = { is_in_faction_with = FRA }
+				NOT = { 
+					is_in_faction_with = FRA 
+					is_guaranteed_by = CAN
+				}
 			}
 		}
 		visible = {
@@ -4664,7 +4675,10 @@ GRU_germania_plan_decisions = {
 			is_subject = no
 			country_exists = WLL
 			WLL = {
-				NOT = { is_in_faction_with = FRA }
+				NOT = { 
+					is_in_faction_with = FRA 
+					is_guaranteed_by = CAN
+				}
 			}
 		}
 		visible = {
@@ -4982,7 +4996,10 @@ GRU_germania_plan_decisions = {
 			is_subject = no
 			country_exists = ICE
 			ICE = {
-				NOT = { is_in_faction_with = FRA }
+				NOT = { 
+					is_in_faction_with = FRA 
+					is_guaranteed_by = CAN
+				}
 			}
 		}
 		visible = {
@@ -6882,7 +6899,7 @@ GRU_Germania_Stadt_decisions = {
 		modifier = { consumer_goods_factor = 0.15 }
 
 		ai_will_do = {
-			factor = 10
+			factor = 5
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Germania_Stadt_decision"
@@ -16113,14 +16130,6 @@ GRU_stahlpakt_alliance_decisions = {
 					is_in_faction_with = RUS
 				}
 			}
-			modifier = {
-				factor = 0
-				OR = {
-					FROM = { GRU_dont_attack_if_target_is_stronger = yes }
-					FROM = { GRU_dont_attack_if_faction_is_stronger = yes }
-					FROM = { GRU_dont_attack_if_overlord_is_stronger = yes }
-				}
-			}
 		}
 
 		cancel_effect = {
@@ -16409,6 +16418,10 @@ GRU_new_order_decisions = {
 						transfer_state = 6
 						
 						set_capital = { state = 779 }
+						set_victory_points = {
+							province = 11516
+							value = 35
+						}
 						add_equipment_to_stockpile = { type = train_equipment_1 amount = 25 }
 						add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 30000 }
 						add_equipment_to_stockpile = { type = support_equipment amount = 3000 }
@@ -16424,7 +16437,7 @@ GRU_new_order_decisions = {
 						add_ideas = {
 							GRU_pol_off
 							GRU_guard
-                    		GRU_lager
+                    					GRU_lager
 							VK_COLONY_INDUSTRY_TWO
                   				}
 						create_field_marshal = {

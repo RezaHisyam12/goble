@@ -18,7 +18,7 @@ armored_spearhead = {
 			is_major = no
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			has_doctrine = new_mobile_warfare
 		}
 	}
@@ -153,10 +153,6 @@ armored_infantry_support = {
 		modifier = {
 			factor = 0.5
 			is_major = no
-		}
-		modifier = {
-			factor = 2
-			has_doctrine = mass_assault
 		}
 	}
 
@@ -379,7 +375,7 @@ armored_cavalry = {
 		has_dlc_lar = yes
 	}
 
-	ai_will_do = { base = 1 }
+	ai_will_do = { base = 0 }
 
 	armored_car = {
 		max_organisation = 5
@@ -561,7 +557,7 @@ tank_destroyer_force = {
 		has_dlc_ncns = yes
 	}
 
-	ai_will_do = { base = 0 }
+	ai_will_do = { base = 1 }
 
 	category_all_armor = {
 		defense = 0.1

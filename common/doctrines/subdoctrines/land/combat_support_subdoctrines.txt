@@ -7,7 +7,13 @@ fire_concentration = {
 	xp_cost = 100
 	xp_type = army
 
-	ai_will_do = { base = 3 }
+	ai_will_do = {
+		base = 3
+		modifier = {
+			factor = 0
+			is_major = yes
+		}
+	}
 
 	 # EFFECTS
 	enable_tactic = tactic_overwhelming_fire
@@ -565,7 +571,13 @@ siege_artillery = {
 		has_dlc_gtd = yes
 	}
 
-	ai_will_do = { base = 0 }
+	ai_will_do = {
+		base = 3
+		modifier = {
+			factor = 0
+			is_major = no
+		}
+	}
 
 	super_heavy_artillery = {
 		battalion_mult = {

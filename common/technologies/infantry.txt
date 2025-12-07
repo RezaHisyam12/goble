@@ -1714,10 +1714,6 @@ technologies = {
 			amphibious_mechanized_equipment_1
 		}
 
-		allow_branch = {
-			has_dlc = "Man the Guns"
-		}
-
 		enable_subunits = {
 			amphibious_mechanized
 		}
@@ -1812,6 +1808,7 @@ technologies = {
 
 		categories = {
 			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
 			infantry_tech
 			cat_mechanized_equipment
 		}
@@ -1986,4 +1983,5 @@ technologies = {
 			}
 		}
 	}	
+
 }
