@@ -193,10 +193,14 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 800
+				factor = 60
 				modifier = { #one step at a time
 					factor = 0
 					NOT = { has_idea = partial_economic_mobilisation }
+				}
+				modifier = {
+					factor = 20
+					manpower_per_military_factory > 3000
 				}
 			}
 		}
@@ -229,22 +233,20 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 1
+				factor = 10
 				modifier = { #one step at a time
 					factor = 0
 					NOT = { has_idea = war_economy }
 				}
-				modifier = {
-					#Block  unless nation has a lot of manpower
+				modifier = { #don't increase if it would drop conscription to zero
 					factor = 0
 					OR = {
 						current_conscription_amount < 0.06
 						manpower_per_military_factory < 10000
 					}
 				}
-				modifier = {
-					factor = 900
-					#Prio this if nation has a lot of manpower compared to MIC
+				modifier = { #Weight will overly overtake war economy if the AI has plenty of manpower
+					factor = 100
 					manpower_per_military_factory > 15000
 				}
 			}
@@ -710,14 +712,7 @@ ideas = {
 				conscription = 0.015
 			}
 
-			ai_will_do = {
-   				factor = 1
-
-   				modifier = {
-					factor = 60 # being disarmed is bad in a wargame yo
-					has_idea = disarmed_nation
-				}
-			}
+			ai_will_do = { factor = 10 }
 		}
 
 		limited_conscription = {
@@ -772,20 +767,21 @@ ideas = {
 			}
 
 			ai_will_do = {
-   				factor = 1
-				modifier = {
-					# Ignore if high on manpower
-					factor = 0.5
-					manpower_per_military_factory > 5000
-				}
-				modifier = {
-					#Prio if low on manpower
-					factor = 20
-					manpower_per_military_factory < 2000
-				}
-				modifier = {
+				factor = 10
+				modifier = { #one step at a time
 					factor = 0
 					NOT = { has_idea = volunteer_only }
+				}
+				modifier = { # the economy is mobilised enough - conscript people!
+					factor = 50
+					OR = {
+						has_idea = partial_economic_mobilisation
+						has_idea = war_economy
+				}
+					}
+				modifier = { #prio if low on manpower
+					factor = 20
+					manpower_per_military_factory < 1500
 				}
 			}
 		}
@@ -848,20 +844,19 @@ ideas = {
 			}
 
 			ai_will_do = {
-   				factor = 1
-				modifier = {
-					# Ignore if high on manpower
-					factor = 0.5
-					manpower_per_military_factory > 3000
-				}
-				modifier = {
-					#Prio if low on manpower
-					factor = 20
-					manpower_per_military_factory <  800
-				}
-				modifier = {
+				factor = 10
+				modifier = { #one step at a time
 					factor = 0
 					NOT = { has_idea = limited_conscription }
+				}
+				modifier = {
+					factor = 50  #The tag has enough equipment stockpiled but doesn't have manpower
+					amount_manpower_in_deployment_queue < 40000   # Less than 4 divs in training
+					has_equipment = { infantry_equipment > 5000 } # And has enough equipment in stockpile to train new divisions
+					}
+				modifier = { #prio if low on manpower
+					factor = 20
+					manpower_per_military_factory < 2000
 				}
 			}
 		}
@@ -921,28 +916,26 @@ ideas = {
 			}
 
 			ai_will_do = {
-   				factor = 1
-				modifier = {
-					#Prio if low on manpower
-					factor = 20
-					manpower_per_military_factory <  700
-				}
-				modifier = {
-					#Lower chance if has decent amount
-					factor = 0.5
-					manpower_per_military_factory >  1000
-				}
-				modifier = { #ignore if high on manpower
-					factor = 0
-					manpower_per_military_factory > 3000
-				}
-				modifier = {
+				factor = 10
+				modifier = { #one step at a time
 					factor = 0
 					NOT = { has_idea = extensive_conscription }
 				}
 				modifier = { #already mobilising
 					factor = 0
 					NOT = { check_variable = { target_conscription_amount = current_conscription_amount } }
+				}
+				modifier = { #ignore if high on manpower
+					factor = 0
+					manpower_per_military_factory > 3000
+				}
+				modifier = { #lower if decent manpower
+					factor = 0.5
+					manpower_per_military_factory > 1000
+					}
+				modifier = { #prio if low on manpower
+					factor = 20
+					manpower_per_military_factory < 700
 				}
 			}
 		}
@@ -1000,28 +993,26 @@ ideas = {
 			}
 
 			ai_will_do = {
-   				factor = 1
-				modifier = {
-					#Prio if low on manpower
-					factor = 20
-					manpower_per_military_factory <  600
-				}
-				modifier = {
-					#Lower chance if has decent amount
-					factor = 0.5
-					manpower_per_military_factory >  1000
-				}
-				modifier = { #ignore if high on manpower
-					factor = 0
-					manpower_per_military_factory > 2800
-				}
-				modifier = {
+				factor = 10
+				modifier = { #one step at a time
 					factor = 0
 					NOT = { has_idea = service_by_requirement }
 				}
 				modifier = { #already mobilising
 					factor = 0
 					NOT = { check_variable = { target_conscription_amount = current_conscription_amount } }
+				}
+				modifier = { #ignore if high on manpower
+					factor = 0
+					manpower_per_military_factory > 2800
+				}
+				modifier = { #lower if decent manpower
+					factor = 0.5
+					manpower_per_military_factory > 1000
+				}
+				modifier = { #prio if low on manpower
+					factor = 20
+					manpower_per_military_factory < 600
 				}
 			}
 		}
@@ -1068,29 +1059,26 @@ ideas = {
 			}
 
 			ai_will_do = {
-   				factor = 1
-				modifier = {
-					#Prio if low on manpower
-					factor = 20
-					manpower_per_military_factory <  500
-				}
-				modifier = {
-					#Lower chance if has decent amount
-					factor = 0.5
-					manpower_per_military_factory >  1000
-				}
-				modifier = {
-					#Block has plenty manpower
-					factor = 0
-					manpower_per_military_factory >  5000
-				}
-				modifier = {
+				factor = 10
+				modifier = { #one step at a time
 					factor = 0
 					NOT = { has_idea = all_adults_serve }
 				}
 				modifier = { #already mobilising
 					factor = 0
 					NOT = { check_variable = { target_conscription_amount = current_conscription_amount } }
+				}
+				modifier = { #ignore if high on manpower
+					factor = 0
+					manpower_per_military_factory >  5000
+				}
+				modifier = { #lower if decent manpower
+					factor = 0.5
+					manpower_per_military_factory > 1000
+				}
+				modifier = { #prio if low on manpower
+					factor = 20
+					manpower_per_military_factory < 500
 				}
 			}
 		}

@@ -1,7 +1,13 @@
 faction_template_stahlpakt = {
 	name = faction_stahlpakt
 	icon = GFX_faction_stahlpakt
-	manifest = faction_manifest_generic_a_new_world_order_gru
+	manifest = faction_manifest_a_new_world_order_gru
+
+	goals = {
+		faction_goal_GRU_start_rearmament # short
+		faction_goal_GRU_restore_eastern_borders # medium
+		faction_goal_GRU_defeat_internationale # large
+	}
 
 	default_rules = {
 		joining_rule_non_socialist

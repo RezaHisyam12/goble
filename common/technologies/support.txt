@@ -1834,17 +1834,17 @@ technologies = {
 			base = 2
 
 			modifier = {
-				factor = 2
+				factor = 6
 				is_major = yes
 			}
 
 			modifier = {
-				factor = 1.5
+				factor = 2
 				date > "1940.1.1"
 			}
 			
 			modifier = {
-				factor = 1.5
+				factor = 2
 				date > "1944.1.1"
 			}
 			modifier = {

@@ -4323,6 +4323,7 @@ GRU_germania_plan_decisions = {
 			HOL = {
 				NOT = { 
 					is_in_faction_with = FRA 
+					is_in_faction_with = CAN 
 					is_guaranteed_by = CAN
 				}
 			}
@@ -4451,6 +4452,7 @@ GRU_germania_plan_decisions = {
 			BEL = {
 				NOT = { 
 					is_in_faction_with = FRA 
+					is_in_faction_with = CAN 
 					is_guaranteed_by = CAN
 				}
 			}
@@ -6900,6 +6902,10 @@ GRU_Germania_Stadt_decisions = {
 
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				factor = 0
+				FRA = { has_capitulated = no }
+			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Germania_Stadt_decision"

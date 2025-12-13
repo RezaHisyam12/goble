@@ -1020,7 +1020,7 @@ generic_land_cruiser_tanks = {
 				lc_additional_armament_slot_4 = lc_high_velocity_cannon_turret
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 6
+				tank_nsb_engine_upgrade = 10
 				tank_nsb_armor_upgrade = 0
 			}
 		}

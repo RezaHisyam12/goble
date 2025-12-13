@@ -8,7 +8,7 @@ heavy_armour_generic = {
 	available_for = { GRU GER }
 
 	upgrade_prio = {
-		factor = 10
+		factor = 15
 		modifier = {
 			factor = 0
 			is_eligible_for_heavy_armor_production = no
@@ -32,14 +32,11 @@ heavy_armour_generic = {
 	}
 
 	motorised_armour_template = {
+        can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
 		upgrade_prio = {
 			base = 100
-		}
-
-		can_upgrade_in_field = {
-			AI_trigger_can_upgrade_in_field = yes
 		}
 
 		target_template = {
@@ -61,6 +58,7 @@ heavy_armour_generic = {
 	}
 
 	mechanised_armour_template = {
+        can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
 		upgrade_prio = {
@@ -71,28 +69,20 @@ heavy_armour_generic = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { has_tech = sp_armored_maintenance_tech }
-			}
-			modifier = {
-				factor = 0
-				NOT = { has_tech = sp_armored_signal_tech }
+				num_of_military_factories < 125
 			}
 			modifier = {
 				factor = 2
-				num_of_military_factories > 99
+				num_of_military_factories > 125
 			}
-		}
-
-		can_upgrade_in_field = {
-			AI_trigger_can_upgrade_in_field = yes
 		}
 
 		target_template = {
 			regiments = {
-				heavy_armor = 6
+				heavy_armor = 8
 				heavy_tank_destroyer_brigade = 2
-				heavy_sp_anti_air_brigade = 1
-				mechanized = 6
+				heavy_sp_anti_air_brigade = 2
+				mechanized = 8
 			}
 
 			support = {
@@ -106,35 +96,36 @@ heavy_armour_generic = {
 	}
 
 	big_modern_armour = {
+        can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
 		upgrade_prio = {
 			base = 100
 			modifier = {
 				factor = 0
-				NOT = { has_tech = mechanised_infantry }
-			}
-			modifier = {
-				factor = 0
 				NOT = { has_tech = main_battle_tank }
 				NOT = { has_tech = main_battle_tank_chassis }
 			}
 			modifier = {
-				factor = 3
-				num_of_military_factories > 149
+				factor = 0
+				NOT = { has_tech = mechanised_infantry }
 			}
-		}
-
-		can_upgrade_in_field = {
-			AI_trigger_can_upgrade_in_field = yes
+			modifier = {
+				factor = 0
+				num_of_military_factories < 150
+			}
+			modifier = {
+				factor = 6
+				num_of_military_factories > 150
+			}
 		}
 
 		target_template = {
 			regiments = {
-				modern_armor = 6
+				modern_armor = 8
 				modern_tank_destroyer_brigade = 2
-				modern_sp_anti_air_brigade = 1
-				mechanized = 6
+				modern_sp_anti_air_brigade = 2
+				mechanized = 8
 			}
 
 			support = {

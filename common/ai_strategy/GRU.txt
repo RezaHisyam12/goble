@@ -467,7 +467,7 @@ GRU_eyes_on_netherlands = {
 	ai_strategy = {
 		type = conquer
 		id = HOL
-		value = 200
+		value = 300
 	}
 }
 
@@ -482,22 +482,17 @@ GRU_crush_netherlands = {
 		}
 		has_war_with = HOL
 		HOL = { has_capitulated = no }
-		OR = {
-			FRA = {
-				has_war_with = ROOT
-				has_capitulated = no
-			}
-			var:219.owner = {
-				has_war_with = ROOT
-				has_capitulated = no
-			}
-		}
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
+		type = conquer
+		id = HOL
+		value = 300
+	}
+	ai_strategy = {
 		type = front_unit_request
-		tag = FRA
+		tag = RUS
 		value = -20
 	}
 	ai_strategy = {
@@ -940,6 +935,33 @@ GRU_take_the_fight_to_scandinavia = {
 	}
 }
 
+GRU_eyes_on_sweden = {
+	allowed = {
+		original_tag = GRU
+		has_socialist_government = no
+	}
+	enable = {
+		GRU = {
+			is_subject = no
+			has_socialist_government = no
+		}
+		SWE = {
+			has_socialist_government = yes
+			has_capitulated = no
+			is_in_faction_with = FRA
+		}
+		has_war_with = SWE
+		is_neighbor_of = SWE
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = SWE
+		value = 100
+	}
+}
+
 GRU_take_the_fight_to_sweden = {
 	allowed = {
 		original_tag = GRU
@@ -962,6 +984,11 @@ GRU_take_the_fight_to_sweden = {
 		type = invasion_unit_request
 		tag = SWE
 		value = 10
+	}
+	ai_strategy = {
+		type = conquer
+		id = SWE
+		value = 100
 	}
 }
 
@@ -1064,10 +1091,10 @@ STP_ignore_northern_oststaaten = {
 STP_ignore_southern_oststaaten = { #Rest of Reichspakt should focus on BLR/BAT front
 	allowed = {
 		OR = {
+			tag = BAT
 			tag = VKB
 			tag = VKK
 			tag = VKP
-			is_baltic_tag = yes
 
 			#Banned from Eastern Front in general
 			is_belgian_tag = yes
@@ -1094,10 +1121,10 @@ STP_ignore_western_front = {
 	allowed = {
 		OR = {
 			is_polish_tag = yes
-			is_baltic_tag = yes
 			is_balkan_tag = yes
 			is_scandinavian_tag = yes
 			is_ukrainian_tag = yes
+			tag = BAT
 			tag = VKB
 			tag = VKR
 			tag = VKK
@@ -1128,9 +1155,9 @@ STP_ignore_western_front = {
 STP_defend_eastern_front_northern_oststaaten = {
 	allowed = {
 		OR = {
+			tag = BAT
 			tag = VKP
 			is_polish_tag = yes
-			is_baltic_tag = yes
 		}
 	}
 	enable = {
@@ -1438,7 +1465,7 @@ GRU_secure_eastern_front = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = RUS
-		value = -15
+		value = -20
 	}
 }
 
@@ -1644,11 +1671,11 @@ GRU_build_tanks_if_france_is_aggressive = {
 
 GRU_war_against_france = {
 	allowed = {
-		original_tag = GRU
+		tag = GRU
 	}
 	enable = {
 		FRA = {
-			has_war_with = ROOT
+			has_war_with = GRU
 			has_capitulated = no
 		}
 	}
@@ -1662,7 +1689,7 @@ GRU_war_against_france = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = FRA
-		value = 50
+		value = 75
 	}
 	ai_strategy = {
 		type = railway_gun_divisions_ratio
@@ -1676,11 +1703,9 @@ GRU_total_war_against_russia = {
 	}
 	enable = {
 		RUS = { is_faction_leader = yes }
-		FRA = {
-			OR = {
-				has_capitulated = yes
-				exists = no
-			}
+		OR = {
+			NOT = { country_exists = FRA }
+			FRA = { has_capitulated = yes }
 		}
 	}
 	abort_when_not_enabled = yes

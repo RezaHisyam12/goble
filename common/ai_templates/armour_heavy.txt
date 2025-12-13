@@ -104,7 +104,7 @@ heavy_armour_generic = {
 			regiments = {
 				heavy_armor = 8
 				mechanized = 8
-				medium_sp_anti_air_brigade = 1
+				medium_sp_anti_air_brigade = 2
 			}
 
 			support = {

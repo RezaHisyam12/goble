@@ -38,6 +38,19 @@ default_army_composition = {
 	ai_strategy = { type = role_ratio                          id = infantry                     value = 100 }
 }
 
+division_upgrades_are_very_important = {
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = land_xp_spend_priority
+		id = division_template
+		value = 100
+	}
+}
+
 base_armor_production = {
 	enable = {
 		is_eligible_for_armor_production = yes
@@ -48,11 +61,25 @@ base_armor_production = {
 	ai_strategy = { type = role_ratio                          id = armor_role                   value = 10 }
 }
 
+switch_to_mediums_asap = {
+	enable = {
+		is_eligible_for_medium_armor_production = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 100
+	}
+}
+
 mw_offset = {
 	enable = {
 		is_eligible_for_medium_armor_production = yes
 		has_doctrine = new_mobile_warfare
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = { type = role_ratio                          id = motorized                    value = 10 }
 	ai_strategy = { type = role_ratio                          id = armor_role                   value = 15 }
@@ -63,6 +90,7 @@ sp_offset = {
 		is_eligible_for_medium_armor_production = yes
 		has_doctrine = superior_firepower
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = { type = role_ratio                          id = motorized                    value = 5 }
 	ai_strategy = { type = role_ratio                          id = armor_role                   value = 10 }
@@ -73,6 +101,7 @@ gbp_offset = {
 		is_eligible_for_medium_armor_production = yes
 		has_doctrine = grand_battleplan
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = { type = role_ratio                          id = motorized                    value = 10 }
 	ai_strategy = { type = role_ratio                          id = armor_role                   value = 10 }
@@ -83,6 +112,7 @@ ma_offset = {
 		is_eligible_for_medium_armor_production = yes
 		has_doctrine = mass_assault
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = { type = role_ratio                          id = motorized                    value = 5 }
 	ai_strategy = { type = role_ratio                          id = armor_role                   value = 5 }
@@ -138,97 +168,6 @@ more_breakthrough_divisions_4 = {
 	ai_strategy = { type = role_ratio                          id = mechanized                   value = 5 }
 	ai_strategy = { type = role_ratio                          id = armor_role                   value = 5 }
 	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 10 }
-}
-
-############################################################################################################
-#	TEMPLATE DESIGN
-############################################################################################################
-
-division_upgrades_are_very_important = {
-	enable = { always = yes }
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = land_xp_spend_priority
-		id = division_template
-		value = 100
-	}
-}
-
-DEFAULT_template_design_low_factories = {
-	enable = {
-		is_eligible_for_armor_production = no
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = template_prio
-		id = motorized
-		value = -100
-	}
-	ai_strategy = {
-		type = template_prio
-		id = mechanized
-		value = -100
-	}
-	ai_strategy = {
-		type = template_prio
-		id = light_armor
-		value = -100
-	}
-	ai_strategy = {
-		type = template_prio
-		id = medium_armor
-		value = -100
-	}
-	ai_strategy = {
-		type = template_prio
-		id = modern_armor
-		value = -100
-	}
-	ai_strategy = {
-		type = template_prio
-		id = heavy_armor
-		value = -100
-	}
-}
-
-DEFAULT_template_design_industrial_country = {
-	enable = {
-		is_eligible_for_armor_production = yes
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = template_prio
-		id = motorized
-		value = 40
-	}
-	ai_strategy = {
-		type = template_prio
-		id = mechanized
-		value = 40
-	}
-	ai_strategy = {
-		type = template_prio
-		id = light_armor
-		value = 60
-	}
-	ai_strategy = {
-		type = template_prio
-		id = medium_armor
-		value = 60
-	}
-	ai_strategy = {
-		type = template_prio
-		id = modern_armor
-		value = 60
-	}
-	ai_strategy = {
-		type = template_prio
-		id = heavy_armor
-		value = 40
-	}
 }
 
 ############################################################################################################

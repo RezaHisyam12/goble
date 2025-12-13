@@ -668,6 +668,10 @@ technologies = {
 				is_eligible_for_armor_production = yes
 			}
 			modifier = {
+				factor = 2
+				is_eligible_for_heavy_armor_production = yes
+			}
+			modifier = {
 				add = 500
 				tag = GRU
 			}	

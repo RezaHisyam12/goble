@@ -8,7 +8,7 @@ armour_super_heavy_generic = {
 	available_for = { RUS USA CSA COR WCC TEX NEE CAL }
 
 	upgrade_prio = {
-		factor = 10
+		factor = 15
 		modifier = {
 			factor = 0
 			NOT = { has_tech = super_heavy_tank_chassis }

@@ -87,8 +87,8 @@ CAN_invite_german_halifax_decision: "Invite Berlin into the Halifax Conference"
 ###################
  
 faction_stahlpakt: "Stahlpakt"
- faction_manifest_generic_a_new_world_order_gru_name: "A New World Order"
- faction_manifest_generic_a_new_world_order_gru_desc: "Ensure all countries in the world are either of the following ideologies:\n$authoritarian_democrat_coloured$\n$paternal_autocrat_coloured$\n$national_populist_coloured$"
+ faction_manifest_a_new_world_order_gru_name: "A New World Order"
+ faction_manifest_a_new_world_order_gru_desc: "Ensure all countries in the world are either of the following ideologies:\n$authoritarian_democrat_coloured$\n$paternal_autocrat_coloured$\n$national_populist_coloured$"
 
  KR_zollverein_tooltip:0 "[GetZollvereinSphereName]\n[GetZollvereinSphereEffects]"
  KR_zollverein_tooltip_desc:0 "§L[GetZollvereinSphereDesc]§!"
@@ -5505,4 +5505,20 @@ gruothernews.5.t: "The death of Russia"
 gruothernews.5.d: "Today the whole world has witnessed a terrible upheaval, the Russian armies have been broken, the Germans like a thunderbolt have descended upon Eastern Europe, and in the chaos that has erupted since the fall of the defeat of the Russian army, civil order has collapsed throughout the once United and undivided State, one can now only state the great triumph of Germany and the eternal horror for the civilian population of former Russia.\n\n‟ The heavy consciousness of the imminent destruction of the country commands me in these dreadful moments to call upon all Russian people to save the dying Motherland. All those who have a Russian heart beating in their chests, all those who believe in God - to the temples, pray to the Lord God for the appearance of the greatest miracle of the salvation of the native land. „\n\n- Lavr Kornilov"
 gruothernews.5.a: "The end of an entire era..."
 gruothernews.5.b: "The Kaiser could only dream of such a..."
+
+################
+### FACTION ####
+################
+
+# Short Term #
+goal_GRU_start_rearmament_name: "Initial Rearmament"
+goal_GRU_start_rearmament_desc: "We should expand our arms production in order to bolster our efforts in Europe."
+# Medium Term #
+goal_GRU_restore_eastern_borders_name: "Restore the Eastern Borders"
+goal_GRU_restore_eastern_borders_desc: ""
+# Long Term #
+goal_GRU_defeat_internationale_name: "Defeat the internationale"
+goal_GRU_defeat_internationale_desc: "The France and British envision themselves as the masterminds of a new era, yet their hour of reckoning draws near. Our forces have set their sights on Paris and London, poised to dismantle their dominion over Europe and beyond."
+goal_GRU_defeat_russia_name: "Crush the Russian"
+goal_GRU_defeat_russia_desc: ""
 

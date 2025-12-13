@@ -32,11 +32,11 @@ GRU_infantry = {
 			base = 100
 			modifier = {
 				factor = 0
-				num_of_military_factories < 30
+				num_of_military_factories < 25
 			}
 			modifier = {
 				factor = 2
-				num_of_military_factories > 30
+				num_of_military_factories > 25
 			}
 		}
 
@@ -60,11 +60,11 @@ GRU_infantry = {
 			base = 100
 			modifier = {
 				factor = 0
-				num_of_military_factories < 60
+				num_of_military_factories < 50
 			}
 			modifier = {
 				factor = 3
-				num_of_military_factories > 60
+				num_of_military_factories > 50
 			}
 		}
 
@@ -91,11 +91,11 @@ GRU_infantry = {
 			base = 100
 			modifier = {
 				factor = 0
-				num_of_military_factories < 120
+				num_of_military_factories < 100
 			}
 			modifier = {
 				factor = 4
-				num_of_military_factories > 120
+				num_of_military_factories > 100
 			}
 		}
 
@@ -122,11 +122,11 @@ GRU_infantry = {
 			base = 100
 			modifier = {
 				factor = 0
-				num_of_military_factories < 180
+				num_of_military_factories < 150
 			}
 			modifier = {
 				factor = 5
-				num_of_military_factories > 180
+				num_of_military_factories > 150
 			}
 		}
 

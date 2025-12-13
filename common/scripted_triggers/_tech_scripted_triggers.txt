@@ -36,7 +36,7 @@ is_eligible_for_cv_aircraft_production = {
 }
 
 is_naval_power = {
-	has_navy_size = { size > 50 }
+	has_navy_size = { size > 100 }
 }
 
 is_eligible_for_naval_production = {
@@ -56,6 +56,7 @@ is_eligible_for_heavy_ship_production = {
 	num_of_naval_factories > 25
 	OR = {
 		tag = GER
+		tag = GRU
 		tag = FRA
 		tag = NFA
 		tag = ENG
@@ -63,5 +64,32 @@ is_eligible_for_heavy_ship_production = {
 		tag = JAP
 		tag = CAN
 		is_american_tag = yes
+	}
+}
+
+is_eligible_for_carrier_production = {
+	### See production file for reference
+	OR = {
+		tag = GER
+		tag = GRU
+		tag = FRA
+		tag = NFA
+		tag = ENG
+		tag = GBR
+		tag = JAP
+		tag = CAN
+		is_american_tag = yes
+	}
+	date > 1942.1.1
+}
+
+is_eligible_for_naval_upgrades_research = {
+	has_navy_size = { size > 20 }
+}
+
+has_any_heavy_ships = {
+	OR = {
+		has_navy_size = { size > 0 unit = heavy_cruiser }
+		has_navy_size = { size > 0 archetype = ship_hull_heavy }
 	}
 }

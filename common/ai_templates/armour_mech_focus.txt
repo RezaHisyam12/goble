@@ -8,7 +8,7 @@ armour_more_trucks = {
 	blocked_for = { GRU GER	}
 
 	upgrade_prio = {
-		factor = 10
+		factor = 15
 		modifier = {
 			factor = 0
 			NOT = {has_doctrine = mass_assault}
