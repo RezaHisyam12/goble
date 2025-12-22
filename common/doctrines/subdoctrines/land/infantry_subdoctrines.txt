@@ -32,7 +32,7 @@ mobile_infantry = {
 
 	rewards = {
 		cavalry_charge = {
-			category_cavalry = {
+			category_mounted_inf = {
 				breakthrough = 0.20
 			}
 		}
@@ -74,7 +74,7 @@ defensive_postures = {
 	ai_will_do = { base = 5 }
 
 	#OTHER BASE REWARDS
-	category_cavalry = {
+	category_mounted_inf = {
 		supply_consumption = -0.01
 	}
 	category_all_infantry = {
@@ -302,7 +302,7 @@ mounted_infantry = {
 
 	mastery = {
 		categories = {
-			category_cavalry
+			category_mounted_inf
 			category_all_infantry
 		}
 	}
@@ -319,7 +319,7 @@ mounted_infantry = {
 		}
 	}
 
-	category_cavalry = {
+	category_mounted_inf = {
 		soft_attack = 0.1
 		breakthrough = 0.1
 	}
@@ -329,7 +329,7 @@ mounted_infantry = {
 
 	rewards = {
 		dragoon_traditions = {
-			category_cavalry = {
+			category_mounted_inf = {
 				breakthrough = 0.20
 				defense = 0.1
 			}
@@ -349,17 +349,17 @@ mounted_infantry = {
 					add = yes
 				}
 			}
-			category_cavalry = {
+			category_mounted_inf = {
 				max_organisation = 5
 			}
 		}
 		anti_mechanized_cavalry_groups = {
-			category_cavalry = {
+			category_mounted_inf = {
 				hard_attack = 0.2
 				ap_attack = 0.2
 			}
 			}        beasts_of_war = {
-			category_cavalry = {
+			category_mounted_inf = {
 				maximum_speed = 0.5
 				max_strength = 0.05
 			}
@@ -668,7 +668,7 @@ great_war_infantry = {
 	ai_will_do = { base = 5 }
 	 # EFFECTS
 	#OTHER BASE REWARDS
-	category_cavalry = {
+	category_mounted_inf = {
 		supply_consumption = -0.02
 	}
 	category_light_infantry = {

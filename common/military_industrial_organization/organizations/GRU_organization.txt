@@ -3204,6 +3204,8 @@ GRU_rheinmetall_organisation = {
 
 		position = { x = 5 y = 0 }
 
+		ai_will_do = { base = 100 }
+
 		equipment_bonus = {
 			build_cost_ic = -0.025
 		}

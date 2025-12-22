@@ -1886,7 +1886,7 @@ shared_focus = {
 		y = 7
 		cost = 5
 		ai_will_do = {
-			factor = 15
+			factor = 21
 		}
 		prerequisite = { focus = GRU_union_trade_committee focus = GRU_neue_schwerindustrie  }
 		completion_reward = {
@@ -2056,7 +2056,7 @@ shared_focus = {
 		y = 8
 		cost = 5
 		ai_will_do = {
-			factor = 8
+			factor = 15
 		}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_rev_oil"
@@ -2177,7 +2177,7 @@ shared_focus = {
 		ai_will_do = {
 			factor = 4
 			modifier = {
-				factor = 5
+				factor = 4
 				date > 1940.1.1
 			}
 		}
@@ -2208,7 +2208,7 @@ shared_focus = {
 		y = 9
 		cost = 5
 		ai_will_do = {
-			factor = 20
+			factor = 10
 		}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_autobahnen"
@@ -3560,6 +3560,13 @@ shared_focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_bomber_focus"
 			add_ideas = GRU_bomber
+			custom_effect_tooltip = tooltip_white_line
+			add_mastery_bonus = {
+				name = GRU_bomber_focus
+				bonus = 0.1
+				days = 365
+				track = heavy_aircraft
+			}
 		}
 		
 		prerequisite = { focus = GRU_nationale_luftwaffe  }
@@ -3584,6 +3591,13 @@ shared_focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_fighter_focus"
 			add_ideas = GRU_fighter
+			custom_effect_tooltip = tooltip_white_line
+			add_mastery_bonus = {
+				name = GRU_fighter_focus
+				bonus = 0.1
+				days = 365
+				track = fighter_aircraft
+			}
 		}
 		
 		prerequisite = { focus = GRU_nationale_luftwaffe  }
@@ -3616,6 +3630,13 @@ shared_focus = {
 				GRU_wunderwaffen_sp_naval_modern_carrier_speed_factor = 0.05
 				tooltip = sp_naval_modern_carrier_speed_factor_tt
 			}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_mastery_bonus = {
+				name = GRU_carrier_focus
+				bonus = 0.1
+				days = 365
+				track = carriers
 			}
 		}
 		
@@ -3650,6 +3671,13 @@ shared_focus = {
 				tooltip = sp_naval_modern_battleship_speed_factor_tt
 			}
 			}
+			custom_effect_tooltip = tooltip_white_line
+			add_mastery_bonus = {
+				name = GRU_battleship_focus
+				bonus = 0.1
+				days = 365
+				track = capital_ships
+			}
 		}
 		
 		prerequisite = { focus = GRU_nationale_volksmarine  }
@@ -3672,6 +3700,13 @@ shared_focus = {
 			add_ideas = GRU_panzer
 			custom_effect_tooltip = tooltip_white_line	
 			custom_effect_tooltip = masterful_blitz_effect
+			custom_effect_tooltip = tooltip_white_line
+			add_mastery_bonus = {
+				name = GRU_panzertruppe
+				bonus = 0.1
+				days = 365
+				track = armor
+			}
 			hidden_effect = {
 				set_technology = { masterful_blitz = 1 popup = no }
 			}
@@ -3868,7 +3903,7 @@ shared_focus = {
 				specialization = specialization_land
 				value = 0.5
 			}
-			sp:sp_land_land_cruiser = { add_project_progress_ratio = 0.2 }
+			sp:sp_land_land_cruiser = { add_project_progress_ratio = 0.25 }
 			}
 			custom_effect_tooltip = tooltip_white_line
 			army_experience = 100
@@ -3892,6 +3927,13 @@ shared_focus = {
 			add_ideas = GRU_masses
 			custom_effect_tooltip = tooltip_white_line	
 			custom_effect_tooltip = tech_human_wave_tactics_effect
+			custom_effect_tooltip = tooltip_white_line
+			add_mastery_bonus = {
+				name = GRU_mass_conscription
+				bonus = 0.1
+				days = 365
+				track = combat_support
+			}
 			hidden_effect = {
 				set_technology = { tech_human_wave_tactics = 1 popup = no }
 			}

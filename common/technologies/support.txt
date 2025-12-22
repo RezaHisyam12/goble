@@ -1834,7 +1834,7 @@ technologies = {
 			base = 2
 
 			modifier = {
-				factor = 6
+				factor = 4
 				is_major = yes
 			}
 
@@ -1848,7 +1848,7 @@ technologies = {
 				date > "1944.1.1"
 			}
 			modifier = {
-				factor = 10
+				factor = 5
 				tag = GRU
 			}
 		}
@@ -1906,7 +1906,7 @@ technologies = {
 				date > "1944.1.1"
 			}
 			modifier = {
-				factor = 10
+				factor = 5
 				tag = GRU
 			}
 		}
@@ -1970,7 +1970,7 @@ technologies = {
 			}
 			
 			modifier = {
-				factor = 30
+				factor = 5
 				tag = GRU
 			}
 		}
@@ -2060,12 +2060,12 @@ technologies = {
 			}
 			
 			modifier = {
-				factor = 2
+				factor = 1.2
 				date > "1939.1.1"
 			}
 
 			modifier = {
-				factor = 4
+				factor = 1.2
 				date > "1940.1.1"
 			}
 		}

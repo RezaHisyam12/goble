@@ -891,7 +891,7 @@ GRU_take_the_fight_to_england = {
 
 	ai_strategy = {
 		type = invade
-		id = "ENG"
+		id = ENG
 		value = 200
 	}
 	ai_strategy = {
@@ -920,7 +920,7 @@ GRU_take_the_fight_to_scandinavia = {
 
 	ai_strategy = {
 		type = invade
-		id = "SCA"
+		id = SCA
 		value = 200
 	}
 	ai_strategy = {
@@ -950,7 +950,7 @@ GRU_eyes_on_sweden = {
 			has_capitulated = no
 			is_in_faction_with = FRA
 		}
-		has_war_with = SWE
+		has_war = no
 		is_neighbor_of = SWE
 	}
 	abort_when_not_enabled = yes
@@ -1242,11 +1242,6 @@ STP_eyes_on_Russia = {
 		tag = RUS
 		value = 25
 	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = FRA
-		value = -25
-	}
 }
 
 ################
@@ -1302,7 +1297,31 @@ GRU_build_tanks_focus = {
 		}
 	}
 	enable = {
-		has_government = national_populist
+		is_eligible_for_armor_production = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -10
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = armor_role
+		value = 10
+	}
+}
+
+German_default_heavy_tank_production = {
+	allowed = {
+		OR = {
+			tag = GER
+			tag = GRU
+		}
+	}
+	enable = {
+		is_eligible_for_armor_production = yes
 	}
 	abort_when_not_enabled = yes
 
@@ -1312,26 +1331,6 @@ GRU_build_tanks_focus = {
 		value = 10
 	}
 	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = -10
-	}
-}
-
-default_heavy_tank_production = {
-	allowed = {
-		OR = {
-			tag = GER
-			tag = GRU
-		}
-	}
-	enable = {
-		is_eligible_for_armor_production = yes
-		num_divisions > 49 #build enough infantry first
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
 		type = equipment_variant_production_factor
 		id = heavy_tank_chassis
 		value = 15
@@ -1339,11 +1338,6 @@ default_heavy_tank_production = {
 	ai_strategy = {
 		type = equipment_variant_production_factor
 		id = armored_support_vehicle
-		value = 10
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = armor
 		value = 10
 	}
 }
@@ -1689,7 +1683,7 @@ GRU_war_against_france = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = FRA
-		value = 75
+		value = 100
 	}
 	ai_strategy = {
 		type = railway_gun_divisions_ratio
@@ -1819,6 +1813,7 @@ GRU_build_large_caliber_palatinate = {
 	}
 	enable = {
 		42 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+		num_of_civilian_factories > 120
 	}
 	abort_when_not_enabled = yes
 
@@ -1837,6 +1832,7 @@ GRU_build_large_caliber_posen = {
 	}
 	enable = {
 		86 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+		num_of_civilian_factories > 120
 	}
 	abort_when_not_enabled = yes
 
@@ -1855,6 +1851,7 @@ GRU_build_large_caliber_munich = {
 	}
 	enable = {
 		52 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+		num_of_civilian_factories > 120
 	}
 	abort_when_not_enabled = yes
 
@@ -1873,6 +1870,7 @@ GRU_build_large_caliber_franconia = {
 	}
 	enable = {
 		54 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+		num_of_civilian_factories > 120
 	}
 	abort_when_not_enabled = yes
 

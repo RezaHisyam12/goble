@@ -155,7 +155,7 @@ infiltration_tactics = {
 					soft_attack = 0.1
 				}
 				battalion_mult = {
-					category = category_cavalry
+					category = category_mounted_inf
 					soft_attack = 0.1
 				}
 			}
@@ -165,7 +165,7 @@ infiltration_tactics = {
 					soft_attack = 0.1
 				}
 				battalion_mult = {
-					category = category_cavalry
+					category = category_mounted_inf
 					soft_attack = 0.1
 				}
 			}
@@ -175,7 +175,7 @@ infiltration_tactics = {
 					soft_attack = 0.1
 				}
 				battalion_mult = {
-					category = category_cavalry
+					category = category_mounted_inf
 					soft_attack = 0.1
 				}
 			}
@@ -534,7 +534,7 @@ guerilla_war = {
 	rewards = {
 		catch_and_seize = {
 		#1
-			category_cavalry = {
+			category_mounted_inf = {
 				equipment_capture_factor = 0.01
 				plains = {
 					movement = 0.1
