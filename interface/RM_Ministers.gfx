@@ -381,6 +381,10 @@ spriteTypes = {
 		name = "GFX_idea_GRU_Wilhelm_Ritter_von_Leeb_cos_npo"
 		texturefile = "gfx/interface/ministers/GRU/GRU_Wilhelm_Ritter_von_Leeb.png"
 	}
+	spriteType = {
+		name = "GFX_idea_GRU_Erich_von_Manstein_cos_npo"
+		texturefile = "gfx/interface/ministers/GRU/GRU_Erich_von_Manstein.png"
+	}
 
 	### Chief of Army
 	spriteType = {

@@ -92,4 +92,175 @@ leader_traits = {
 		send_volunteer_size = 1
 	}
 
+	##### Unique Traits #####
+	# Counterattack Genius
+	CoStaff_Counterattack_Genius = {
+		army_attack_factor = 0.05
+		army_defence_factor = 0.1
+		army_speed_factor = 0.1
+		experience_gain_army = 0.02
+		experience_gain_navy = 0.02
+		experience_gain_air = 0.02
+		random = no
+	}
+	# Popular Military Leader
+	CoStaff_Popular_Military_Leader = {
+		# + Stability
+		army_org_Factor = 0.1
+		experience_gain_army = 0.02
+		experience_gain_navy = 0.02
+		experience_gain_air = 0.02
+		random = no
+	}
+	# Stubborn Disciplinarian
+	CoStaff_Stubborn_Disciplinarian = {
+		army_attack_factor = 0.05
+		army_defence_factor = -0.1
+		army_artillery_attack_factor = 0.05
+		equipment_bonus = {
+			artillery_equipment = { build_cost_ic = -0.05 instant = yes }
+		}
+		experience_gain_army = 0.02
+		experience_gain_navy = 0.02
+		experience_gain_air = 0.02
+		random = no
+	}
+	# Deep Battle Proponent
+	CoStaff_Deep_Battle_Proponent = {
+		army_armor_attack_factor = 0.05
+		army_armor_defence_factor = -0.05
+		motorized_attack_factor = 0.05
+		motorized_defence_factor = -0.05
+		#mechanized_attack_factor = 0.05 Not working
+		#mechanized_defence_factor = -0.05
+		army_infantry_attack_factor = 0.025
+		army_infantry_defence_factor = -0.025
+		equipment_bonus = {
+			tac_bomber_equipment = { air_ground_attack = 0.025 air_defence = 0.025 instant = yes }
+		}
+		experience_gain_army = 0.02
+		experience_gain_navy = 0.02
+		experience_gain_air = 0.02
+		random = no
+	}
+	# Fortifications Supporter
+	CoStaff_Fortifications_Supporter = {
+		production_speed_bunker_factor = 0.10
+		production_speed_coastal_bunker_factor = 0.10
+		army_speed_factor = -0.1
+		army_core_defence_factor = 0.05
+		experience_gain_army = 0.02
+		experience_gain_navy = 0.02
+		experience_gain_air = 0.02
+		random = no
+	}
+	# Hedgehoge Defender
+	CoStaff_Hedgehoge_Defender = {
+		army_core_defence_factor = 0.05
+		max_dig_in = 5
+		dig_in_speed_factor = 0.10
+		army_morale_factor = 0.1
+		experience_gain_army = 0.02
+		experience_gain_navy = 0.02
+		experience_gain_air = 0.02
+	}
+	# Lakeitel
+	CoStaff_Lakeitel = {
+		army_org_factor = -0.05
+		political_power_gain = 0.05
+		max_command_power = 50
+		command_power_gain = 0.2
+		High_Command_cost_factor = -0.15
+		random = no
+	}
+	# Architect of Blitzkrieg
+	CoStaff_Architect_of_Blitzkrieg = {
+		army_speed_factor = 0.1
+		army_armor_attack_factor = 0.1
+		army_armor_defence_factor = 0.1
+		breakthrough_factor = 0.05
+		planning_speed = -0.05
+		equipment_bonus = {
+			motorized_equipment = { soft_attack = 0.1 instant = yes }
+		}
+		experience_gain_army = 0.04
+		experience_gain_navy = 0.04
+		experience_gain_air = 0.04
+		random = no
+	}
+
+	################################################################################
+	## Chief of Army traits
+	################################################################################
+
+	##### Unique Traits #####
+	# Innovative Offensive General
+	CoArmy_Innovative_Offensive_General = {
+		army_attack_factor = 0.1
+		army_speed_factor = -0.05
+		army_artillery_attack_factor = 0.1
+		cavalry_attack_factor = -0.15
+		experience_gain_army = 0.05
+		random = no
+	}
+	# Guerilla Warfare Doctrine (we need more modifiers once we add Militias)
+	CoArmy_Guerilla_Warfare_Doctrine = {
+		equipment_bonus = {
+			#cavalry = { training_time = -0.05 instant = yes } Not working
+			#infantry = { training_time = 0.1 instant = yes }
+		}
+		army_speed_factor = 0.1
+		army_org_Factor = 0.05
+		supply_consumption_factor = -0.10
+		experience_gain_army = 0.05
+		random = no
+	}
+	# Undersecretary of War
+	CoArmy_Undersecretary_Of_War = {
+		army_org_Factor = 0.03
+		army_infantry_defence_factor = -0.1
+		experience_gain_army = 0.05
+		random = no
+	}
+	# Static Defense Supporter
+	CoArmy_Static_Defense_Supporter = {
+		equipment_bonus = {
+			infantry_equipment = { build_cost_ic = -0.05 instant = yes }
+			artillery_equipment = { build_cost_ic = -0.05 instant = yes }
+			anti_tank_equipment = { build_cost_ic = -0.05 instant = yes }
+			light_tank_chassis = { build_cost_ic = 0.05 instant = yes }
+			medium_tank_chassis = { build_cost_ic = 0.05 instant = yes }
+			motorized_equipment = { build_cost_ic = 0.05 instant = yes }
+			mechanized_equipment = { build_cost_ic = 0.05 instant = yes }
+		}
+		experience_gain_army = 0.05
+		random = no
+	}
+	# The Father of Blitzkrieg
+	CoArmy_The_Father_of_Blitzkrieg = {
+		army_attack_factor = 0.05
+		army_armor_attack_factor = 0.025
+		army_armor_speed_factor = 0.025
+		equipment_bonus = {
+			motorized_equipment = { maximum_speed = 0.1 instant = yes }
+			mechanized_equipment = { maximum_speed = 0.1 instant = yes }
+			light_tank_chassis = { maximum_speed = 0.1 breakthrough = 0.1 instant = yes }
+			medium_tank_chassis = { maximum_speed = 0.1 breakthrough = 0.1 instant = yes }
+			heavy_tank_chassis = { maximum_speed = 0.1 breakthrough = 0.1 instant = yes }
+		}
+		experience_gain_army = 0.12
+		random = no
+	}
+	# Vernichtungskrieg
+	CoArmy_Vernichtungskrieg = {
+		army_attack_factor = 0.05
+		planning_speed = 0.05
+		army_defence_factor = -0.1
+		army_org_factor = -0.1
+		attrition = 0.1
+		experience_gain_army = 0.03
+		war_support_factor = 0.025
+		random = no
+	}
+
 }

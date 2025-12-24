@@ -1,4 +1,5 @@
 add_namespace = rotermorgen
+add_namespace = rotermorgenspicy
 add_namespace = rmgoebbnews
 add_namespace = rmruss
 add_namespace = wll
@@ -1028,7 +1029,6 @@ country_event = {
 	
 }
 
-add_namespace = rotermorgenspicy
 
 country_event = { #
 	id = rotermorgenspicy.1
@@ -1041,8 +1041,8 @@ country_event = { #
 	hidden = yes
 	immediate = {
 		create_field_marshal = {
-			name = "Josef Goebbels"
-			portrait_path = "gfx/leaders/GRU/Portrait_Germany_Josef_Goebbels_14.png"
+			name = "Paul Josef Goebbels"
+			portrait_path = "gfx/leaders/GRU/Portrait_Germany_Josef_Goebbels_Normal.png"
 			traits = { politically_connected RR_OFFICER }
 			skill = 4
 			attack_skill = 3
@@ -1215,7 +1215,7 @@ country_event = { #
 			planning_skill = 2
 			logistics_skill = 2
 		}
-            create_corps_commander = {
+            	create_corps_commander = {
 			name = "Wolf-Heinrich Graf von Helldorff"
 			portrait_path = "gfx/leaders/GRU/Portrait_Germany_Karl_Vonheldoff.png"
 			traits = { politically_connected volkssturm_leader }

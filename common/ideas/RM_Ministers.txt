@@ -1778,6 +1778,22 @@ ideas = {
 			cancel_if_invalid = yes
 		}
 
+		GRU_Erich_von_Manstein_cos_npo = {
+			allowed = { original_tag = GRU }
+			available = { }
+			visible = {
+				NOT = { has_country_flag = Erich_von_Manstein_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea GRU_Erich_von_Manstein_cos_npo"
+			}
+			traits = {
+				chief_of_staff
+				CoStaff_Architect_of_Blitzkrieg
+			}
+			cancel_if_invalid = yes
+		}
+
 		GRU_Friedrich_Jeckeln_cos_npo = {
 			allowed = { original_tag = GRU }
 			available = { }
@@ -1920,7 +1936,7 @@ ideas = {
 			}
 			traits = {
 				chief_of_army
-				carm_armoured_spearhead_doctrine
+				CoArmy_The_Father_of_Blitzkrieg
 			}
 			cancel_if_invalid = yes
 		}

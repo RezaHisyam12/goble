@@ -560,11 +560,11 @@ shared_focus = {
 					limit = {
 						has_country_flag = NVA_FORMED
 					}
-					country_event = { id =  rotermorgenspicy.1  }
+					country_event = { id = rotermorgenspicy.1 }
 				}
 				set_country_flag = RR_FORMED
 				country_event = { id =  rotermorgenmisc.15 days = 50 }
-                        country_event = { id =  rotermorgenmisc.999 days = 1 }
+                country_event = { id =  rotermorgenmisc.999 days = 1 }
 			}
 		}
 		prerequisite = { focus = GRU_volksfuhrer  }
@@ -1973,16 +1973,19 @@ shared_focus = {
 			}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_agrarian_subsides"
-			add_doctrine_cost_reduction = {
-				cost_reduction = 1
+			add_tech_bonus = {
+				name = GRU_agrarian_subsides
+				bonus = 1
 				uses = 2
 				category = industry
 			}
-			add_doctrine_cost_reduction = {
+			add_tech_bonus = {
+				name = GRU_agrarian_subsides
 				uses = 2
 				bonus = 0.75
 				technology = excavation1
 				technology = excavation2
+				category = industry
 			}
 		}
 
@@ -3263,16 +3266,15 @@ shared_focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_formation_of_the_nva"
 			hidden_effect = {
-				country_event = { id =  rotermorgenmisc.150 }
+				country_event = { id = rotermorgenmisc.150 }
 				set_country_flag = gru_military_build_up
+				set_country_flag = NVA_FORMED
 				if = {
 					limit = {
 						has_country_flag = RR_FORMED
 					}
-					country_event = { id =  rotermorgenspicy.1  }
-				}
-				set_country_flag = NVA_FORMED
-				
+					country_event = { id = rotermorgenspicy.1 }
+				}		
 				if = {
 					limit = {
 						has_country_flag = GRU_SPD_rule
@@ -7879,8 +7881,8 @@ shared_focus = {
 			OR = {
 				has_country_flag = VKB_established
 				has_country_flag = VKR_established
-				NOT = { has_country_flag = VKM_established }
 			}
+		NOT = { has_country_flag = VKM_established }
 		}
 
 		ai_will_do = {

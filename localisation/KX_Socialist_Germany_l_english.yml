@@ -58,6 +58,7 @@ CAN_invite_german_halifax_decision: "Invite Berlin into the Halifax Conference"
 	GRU_Friedrich_Jeckeln_cos_npo:0 "Friedrich Jeckeln"
 	GRU_Friedrich_Paulus_cos_npo:0 "Friedrich Paulus"
 	GRU_Wilhelm_Ritter_von_Leeb_cos_npo:0 "Wilhelm Ritter von Leeb"
+	GRU_Erich_von_Manstein_cos_npo:0 "Erich von Manstein"
 
 	### Chief of Army ###
 	GRU_Hans_Kahle_carm_tot:0 "Hans Kahle"
@@ -67,6 +68,9 @@ CAN_invite_german_halifax_decision: "Invite Berlin into the Halifax Conference"
 	GRU_Ernst_Volckheim_carm_ade:0 "Ernst Volckheim"
 	GRU_Heinz_Guderian_carm_ade:0 "Heinz Guderian"
 	GRU_Friedrich_Paulus_carm_npo:0 "Friedrich Paulus"
+
+	CoArmy_The_Father_of_Blitzkrieg:0 "The Father of Blitzkrieg"
+	CoStaff_Architect_of_Blitzkrieg:0 "Architect of Blitzkrieg"
 
 	### Chief of Navy ###
 	GRU_Ernst_Wollweber_cnav_tot:0 "Ernst Wollweber"
@@ -81,6 +85,7 @@ CAN_invite_german_halifax_decision: "Invite Berlin into the Halifax Conference"
 	GRU_Alfred_Buelowius_cair_sco:0 "Alfred Bülowius"
 	GRU_Kurt_Student_cair_ade:0 "Kurt Student"
 	GRU_Rudolf_Hess_cair_npo:0 "Rudolf Heß"
+
 
 ###################
 ####Zollverein#####
