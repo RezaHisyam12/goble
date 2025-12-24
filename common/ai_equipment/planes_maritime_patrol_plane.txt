@@ -8,14 +8,14 @@ generic_maritime_patrol_plane = {
 	priority = {
 		base = 0
 		modifier = {
-			add = 500
+			add = 100
 			is_eligible_for_naval_aircraft_production = yes
 		}
 	}
 
 	early_maritime_patrol_plane_1933 = {
 		priority = {
-			factor = 10
+			factor = 1
 			modifier = {
 				has_tech = basic_large_airframe
 				factor = 0 #let's not waste XP here
@@ -47,7 +47,7 @@ generic_maritime_patrol_plane = {
 
 	basic_maritime_patrol_plane_1936 = {
 		priority = {
-			factor = 10
+			factor = 100
 			modifier = {
 				has_tech = improved_large_airframe
 				factor = 0 #let's not waste XP here
@@ -83,7 +83,7 @@ generic_maritime_patrol_plane = {
 
 	improved_maritime_patrol_plane_1940 = {
 		priority = {
-			factor = 10
+			factor = 100
 			modifier = {
 				has_tech = advanced_large_airframe
 				factor = 0 #let's not waste XP here
@@ -128,7 +128,7 @@ generic_maritime_patrol_plane = {
 
 	advanced_maritime_patrol_plane_1944 = {
 		priority = {
-			factor = 10
+			factor = 100
 			modifier = {
 				has_tech = modern_large_airframe
 				factor = 0 #let's not waste XP here
@@ -181,7 +181,7 @@ generic_maritime_patrol_plane = {
 
 	modern_maritime_patrol_plane_1945 = {
 		priority = {
-			factor = 10
+			factor = 100
 		}
 
 		target_variant = {

@@ -10959,6 +10959,8 @@ GRU_expansion_three_volksland_hypoborea = {
 				hidden_effect = {
 					VKK = {
 						transfer_state = 218
+						218 = { add_core_of = VKK }
+				
 						remove_all_ministers = yes
 						
 						add_equipment_to_stockpile = {

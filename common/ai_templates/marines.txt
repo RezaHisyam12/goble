@@ -12,7 +12,7 @@ marine_generic = {
 			NOT = { has_tech = marines }
 		}
 		modifier = {
-			factor = 25
+			factor = 10
 			is_naval_power = yes
 		}
 	}

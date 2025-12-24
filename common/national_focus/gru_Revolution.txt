@@ -8543,7 +8543,10 @@ shared_focus = {
 					}
 					is_in_faction_with = GRU
 				}
-				add_ideas = GRU_wide_front_operations_idea
+				add_timed_idea = {
+					idea = GRU_wide_front_operations_idea
+					days = 365
+				}
 			}
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = GRU_war_preparedness_buff_tt
@@ -8579,7 +8582,10 @@ shared_focus = {
 					}
 					is_in_faction_with = GRU
 				}
-				add_ideas = GRU_break_fortifications_idea
+				add_timed_idea = {
+					idea = GRU_break_fortifications_idea
+					days = 365
+				}
 			}
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = GRU_war_preparedness_buff_tt

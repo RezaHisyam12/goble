@@ -6,7 +6,11 @@ generic_naval_bomber = {
 	}
 
 	priority = {
-		factor = 0 #only for generating player presets
+		base = 0
+		modifier = {
+			add = 100
+			is_eligible_for_naval_aircraft_production = yes
+		}
 	}
 
 	early_naval_bomber_1933 = {

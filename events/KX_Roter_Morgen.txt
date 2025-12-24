@@ -8473,7 +8473,7 @@ country_event = { # Puppet Buff
 		name = rotermorgenmisc.1102.a
 		add_timed_idea = {
 			idea = VK_COLONY_TRAINING_ARMY
-			days = 365
+			days = 150
 		}
 	}
 }
