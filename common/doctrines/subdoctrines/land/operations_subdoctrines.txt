@@ -203,7 +203,7 @@ grand_assault = {
 	ai_will_do = { 
 		base = 2 
 		modifier = {
-			factor = 6
+			factor = 2
 			has_doctrine = mass_assault
 		}
 	}
@@ -515,7 +515,7 @@ guerilla_war = {
 			}
 		}
       		modifier = {
-            		factor = 100
+            		factor = 4
             		is_chinese_tag = yes
         	}
 	}
@@ -695,7 +695,7 @@ expeditionary_warfare = {
 
 		base = 0
 		modifier = {
-			add = 10
+			add = 4
 			tag = CAN
 		}
 	}

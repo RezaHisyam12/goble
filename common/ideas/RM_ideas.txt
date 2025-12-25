@@ -1697,7 +1697,6 @@ ideas = {
 				local_resources_factor = 0.20
 				production_speed_buildings_factor = 0.2
 				global_building_slots_factor = 0.2
-				unit_limit_bonus = 25
 			}
 		}
 		
@@ -1716,7 +1715,6 @@ ideas = {
 				monthly_population = 0.05
 				production_speed_buildings_factor = 0.2
 				global_building_slots_factor = 0.2
-				unit_limit_bonus = 50
 			}
 		}
 		
@@ -1736,7 +1734,6 @@ ideas = {
 				monthly_population = 0.10
 				production_speed_buildings_factor = 0.3
 				global_building_slots_factor = 0.3
-				unit_limit_bonus = 100
 			}
 		}
 		
@@ -2917,7 +2914,6 @@ ideas = {
 			picture = german_advisors
 			allowed = { always = no }
 			modifier = {
-				unit_limit_bonus = 25
 				experience_gain_army = 0.1
 				experience_gain_navy = 0.1
 				experience_gain_air = 0.1
@@ -3053,7 +3049,7 @@ ideas = {
 			allowed = { always = no }
            		modifier = {
 				conscription = 0.05
-				unit_limit_bonus = 20
+				unit_limit_bonus = 10
 				special_forces_cap_flat = 12
 				special_forces_min = 48
 			}
