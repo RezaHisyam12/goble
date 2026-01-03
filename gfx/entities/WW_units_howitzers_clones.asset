@@ -158,7 +158,7 @@ entity = {
 }
 entity = { 
 	clone = "USA_super_heavy_artillery_entity"
-	name = "PSA_super_heavy_artillery_entity"
+	name = "CAL_super_heavy_artillery_entity"
 }
 entity = { 
 	clone = "USA_super_heavy_artillery_entity"
@@ -167,6 +167,10 @@ entity = {
 entity = { 
 	clone = "USA_super_heavy_artillery_entity"
 	name = "NEE_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "USA_super_heavy_artillery_entity"
+	name = "PHI_super_heavy_artillery_entity"
 }
 
 ####################################################### SOVIET ############################################################

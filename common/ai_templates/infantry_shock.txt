@@ -1,0 +1,80 @@
+heavy_infantry = {
+	role = shock_infantry
+	front_role_override = offence
+
+	upgrade_prio = {
+		factor = 5
+		modifier = {
+			factor = 0
+			is_eligible_for_heavy_armor_production = no
+		}
+		modifier = {
+			factor = 3
+			has_doctrine = superior_firepower
+		}
+		modifier = {
+			factor = 2
+			has_doctrine = mass_assault
+		}
+	}
+
+	shock_infantry_0 = {
+		can_upgrade_in_field = { always = yes }
+		reinforce_prio = 2
+		custom_icon = 3
+		
+		upgrade_prio = {
+			base = 100
+		}
+
+		target_template = {
+			regiments = {
+				infantry = 12
+				artillery_brigade = 2
+			}
+
+			support = {
+				anti_air = 1
+				anti_tank = 1
+				engineer = 1
+				field_hospital = 1
+				logistics_company = 1
+			}
+		}
+	}
+
+	shock_infantry_1 = {
+		can_upgrade_in_field = { always = yes }
+		reinforce_prio = 2
+		custom_icon = 3
+		
+		upgrade_prio = {
+			base = 100
+			modifier = {
+				factor = 0
+				num_of_military_factories < 125
+			}
+			modifier = {
+				factor = 2
+				num_of_military_factories > 125
+			}
+		}
+
+		target_template = {
+			regiments = {
+				infantry = 16
+				artillery_brigade = 3
+				anti_air_brigade = 1
+                anti_tank_brigade = 1
+			}
+
+			support = {
+				medium_flame_tank = 1
+				assault_engineer = 1
+				field_hospital = 1
+				logistics_company = 1
+                signal_company = 1
+			}
+		}
+	}
+}

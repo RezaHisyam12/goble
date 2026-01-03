@@ -10,8 +10,8 @@ mobile_infantry = {
 	ai_will_do = {
 		base = 5
 		modifier = {
-			factor = 0.5
-			is_major = no
+			factor = 0
+			NOT = {has_doctrine = new_mobile_warfare}
 		}
 		modifier = {
 			factor = 2
@@ -71,7 +71,17 @@ defensive_postures = {
 	xp_cost = 100
 	xp_type = army
 
-	ai_will_do = { base = 5 }
+	ai_will_do = {
+		base = 5
+		modifier = {
+			factor = 0
+			OR = {
+				tag = CAN
+				tag = NFA
+				is_russian_tag = yes
+			}
+		}
+	}
 
 	#OTHER BASE REWARDS
 	category_mounted_inf = {
@@ -119,7 +129,7 @@ large_unit_tactics = {
 	ai_will_do = {
 		base = 5
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			is_major = no
 		}
 		modifier = {
@@ -190,10 +200,6 @@ assault_infantry = {
 
 	ai_will_do = {
 		base = 5
-		modifier = {
-			factor = 0.5
-			is_major = no
-		}
 	}
 
 	# EFFECTS
@@ -312,10 +318,29 @@ mounted_infantry = {
 	}
 
 	ai_will_do = {
-		base = 5
+		base = 0
 		modifier = {
-			factor = 0.5
-			is_major = yes
+			add = 10
+			OR = {
+				tag = LBA
+				tag = SAU
+				tag = JBS
+				tag = TRU
+				tag = IKH
+				tag = YEM
+				tag = OMA
+				tag = TRP
+				tag = ETS
+				tag = SIK
+				tag = TAN
+				tag = KHI
+				tag = KYR
+				tag = TRK
+				tag = UZB
+				tag = ALO
+				tag = MON
+				tag = XSM
+			}
 		}
 	}
 
@@ -521,7 +546,7 @@ irregulars = {
 	ai_will_do = {
 		base = 2
       		modifier = {
-            		factor = 100
+            		factor = 4
             		is_chinese_tag = yes
         	}
 	}
@@ -665,7 +690,14 @@ great_war_infantry = {
 	xp_cost = 50
 	xp_type = army
 
-	ai_will_do = { base = 5 }
+	ai_will_do = {
+		base = 5
+		modifier = {
+			factor = 0
+			is_major = yes
+		}
+	}
+	
 	 # EFFECTS
 	#OTHER BASE REWARDS
 	category_mounted_inf = {

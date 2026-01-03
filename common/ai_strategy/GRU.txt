@@ -1459,7 +1459,12 @@ GRU_secure_eastern_front = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = RUS
-		value = -20
+		value = -75
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = TRM
+		value = -75
 	}
 }
 

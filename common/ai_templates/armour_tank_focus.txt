@@ -4,9 +4,10 @@
 
 armour_more_tanks = {
 	role = armor_role #to distinguish from armor, a hardcoded keyword for all tank equipment types
+	front_role_override = offence
 
 	upgrade_prio = {
-		factor = 15
+		factor = 25
 		modifier = {
 			factor = 0
 			NOT = {has_doctrine = new_mobile_warfare}

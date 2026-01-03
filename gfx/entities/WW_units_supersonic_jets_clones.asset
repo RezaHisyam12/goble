@@ -123,7 +123,7 @@ entity = {
 }
 entity = { 
 	clone = "USA_supersonic_jet_plane_entity"
-	name = "PSA_supersonic_jet_plane_entity"
+	name = "CAL_supersonic_jet_plane_entity"
 }
 entity = { 
 	clone = "USA_supersonic_jet_plane_entity"

@@ -64,6 +64,7 @@ if = {
 			basic_medium_airframe = 1
 			basic_large_airframe = 1
 			air_torpedoe_1 = 1
+			bba_early_transport_plane = 1
 		}
 		GRU_BBA_air_variants = yes
 	else = {
@@ -78,6 +79,7 @@ if = {
 			cv_early_fighter = 1
 			cv_naval_bomber1 = 1
 			cv_CAS1 = 1
+			early_transport_plane = 1
 		}
 	}
 }
@@ -143,6 +145,162 @@ set_popularities = {
 	authoritarian_democrat = 62
 	paternal_autocrat = 7
 	national_populist = 4
+}
+
+if = {
+	limit = { has_dlc_nsb = yes }
+### Obsolete armor
+	create_equipment_variant = {
+		name = "St.Pzw. II"
+		type = light_tank_chassis_0
+		show_position = no
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = additional_machine_guns
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 2
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {										# Based on Neubaufahrzeug
+		name = "H.Pz.Kpfw. II"
+		type = heavy_tank_chassis_0
+		show_position = no
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_close_support_gun					# 7.5 cm KwK 37 L/24
+			turret_type_slot = tank_heavy_three_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = secondary_turret_small_cannon         # coaxial 3.7 cm KwK
+			special_type_slot_3 = secondary_turret_hmg
+			special_type_slot_4 = secondary_turret_hmg
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 7
+			tank_nsb_armor_upgrade = 1
+		}
+	}
+### Light armor
+	create_equipment_variant = {
+		name = "Sp.Pz. I"
+		type = light_tank_chassis_1
+		show_position = no
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun				# MG13/MG17 twin
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = secondary_turret_hmg				# Represent 2nd MG in twinned pair
+			special_type_slot_2 = tank_radio_1
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 6
+			tank_nsb_armor_upgrade = 1
+		}
+	}
+	create_equipment_variant = {									# Bison
+		name = "G.W. I"
+		type = light_tank_artillery_chassis_1
+		show_position = no
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_close_support_gun				# 7.5 cm leIG 18
+			turret_type_slot = tank_light_fixed_superstructure_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 3
+			tank_nsb_armor_upgrade = 1
+		}
+	}
+### Medium armor
+	create_equipment_variant = {									# Based on Begleitwagen
+		name = "St.Pz.Kpfw. II"
+		type = medium_tank_chassis_0
+		show_position = no
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon					# 3.7 cm KwK 36 - but using AT gun here is a bit too much for early prototype
+			turret_type_slot = tank_medium_three_man_tank_turret	# Same turret as Pz.III
+			suspension_type_slot = tank_torsion_bar_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = additional_machine_guns
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 4
+			tank_nsb_armor_upgrade = 2
+		}
+	}
+	create_equipment_variant = {									# Bison II
+		name = "W.T. II"
+		type = medium_tank_artillery_chassis_0
+		show_position = no
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_close_support_gun				# 7.5 cm leIG 18
+			turret_type_slot = tank_medium_fixed_superstructure_turret
+			suspension_type_slot = tank_torsion_bar_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 4
+			tank_nsb_armor_upgrade = 2
+		}
+	}
+### Heavy armor
+	create_equipment_variant = {										# Based on VK 30.01
+		name = "H.Pz.Kpfw. III"
+		type = heavy_tank_chassis_1
+		show_position = no
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_close_support_gun					# 7.5 cm KwK 37 L/24
+			turret_type_slot = tank_heavy_three_man_tank_turret
+			suspension_type_slot = tank_torsion_bar_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = additional_machine_guns				# 2x MG34
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 4
+			tank_nsb_armor_upgrade = 2
+		}
+	}
+	create_equipment_variant = {										# Based on Sturer Emil
+		name = "Jg.Pz. III"
+		type = heavy_tank_destroyer_chassis_1
+		show_position = no
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_high_velocity_cannon				# 10 cm sK 18
+			turret_type_slot = tank_heavy_fixed_superstructure_turret
+			suspension_type_slot = tank_torsion_bar_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 3
+			tank_nsb_armor_upgrade = 2
+		}
+	}
 }
 
 create_country_leader = {

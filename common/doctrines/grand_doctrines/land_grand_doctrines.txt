@@ -19,7 +19,7 @@ new_mobile_warfare = {
             is_major = no
         }
          modifier = {
-            factor = 100
+            add = 100
             tag = GRU
         }
    }

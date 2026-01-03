@@ -58,7 +58,7 @@ entity = {
 }
 entity = { 
 	clone = "USA_super_heavy_railway_gun_entity"
-	name = "PSA_super_heavy_railway_gun_entity"
+	name = "CAL_super_heavy_railway_gun_entity"
 }
 entity = { 
 	clone = "USA_super_heavy_railway_gun_entity"
@@ -67,4 +67,8 @@ entity = {
 entity = { 
 	clone = "USA_super_heavy_railway_gun_entity"
 	name = "NEE_super_heavy_railway_gun_entity"
+}
+entity = { 
+	clone = "USA_super_heavy_railway_gun_entity"
+	name = "PHI_super_heavy_railway_gun_entity"
 }

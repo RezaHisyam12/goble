@@ -149,7 +149,7 @@ entity = {
 }
 entity = { 
 	clone = "USA_helicopter_brigade_entity"
-	name = "PSA_helicopter_brigade_entity"
+	name = "CAL_helicopter_brigade_entity"
 }
 entity = { 
 	clone = "USA_helicopter_brigade_entity"
@@ -158,6 +158,10 @@ entity = {
 entity = { 
 	clone = "USA_helicopter_brigade_entity"
 	name = "NEE_helicopter_brigade_entity"
+}
+entity = { 
+	clone = "USA_helicopter_brigade_entity"
+	name = "PHI_helicopter_brigade_entity"
 }
 
 #Sikorsky R-4
@@ -168,7 +172,7 @@ entity = {
 }
 entity = { 
 	clone = "USA_helicopter_brigade_alt_0_entity"
-	name = "PSA_helicopter_brigade_alt_0_entity"
+	name = "CAL_helicopter_brigade_alt_0_entity"
 }
 entity = { 
 	clone = "USA_helicopter_brigade_alt_0_entity"
@@ -177,6 +181,10 @@ entity = {
 entity = { 
 	clone = "USA_helicopter_brigade_alt_0_entity"
 	name = "NEE_helicopter_brigade_alt_0_entity"
+}
+entity = { 
+	clone = "USA_helicopter_brigade_alt_0_entity"
+	name = "PHI_helicopter_brigade_alt_0_entity"
 }
 
 ####################################################### SOVIET ###########################################################

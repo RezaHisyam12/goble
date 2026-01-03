@@ -4,6 +4,7 @@
 
 motorized_infantry = {
     role = motorized
+	front_role_override = offence
 
 	upgrade_prio = {
 		factor = 5
@@ -14,6 +15,20 @@ motorized_infantry = {
 		modifier = {
 			factor = 0
 			NOT = { has_tech = motorised_infantry }
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_doctrine = new_mobile_warfare
+				has_doctrine = mass_assault
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_doctrine = superior_firepower
+				has_doctrine = grand_battleplan
+			}
 		}
 	}
 
@@ -48,11 +63,11 @@ motorized_infantry = {
 			base = 100
 			modifier = {
 				factor = 0
-				is_eligible_for_medium_armor_production = no
+				num_of_military_factories < 75
 			}
 			modifier = {
 				factor = 2
-				is_eligible_for_medium_armor_production = yes
+				num_of_military_factories > 75
 			}
 		}
 
@@ -85,11 +100,11 @@ motorized_infantry = {
 			}
             modifier = {
 				factor = 0
-				is_eligible_for_medium_armor_production = no
+				num_of_military_factories < 75
 			}
 			modifier = {
 				factor = 4
-				is_eligible_for_medium_armor_production = yes
+				num_of_military_factories > 75
 			}
 		}
 
@@ -122,11 +137,11 @@ motorized_infantry = {
 			}
             modifier = {
 				factor = 0
-				num_of_military_factories < 75
+				num_of_military_factories < 125
 			}
 			modifier = {
 				factor = 6
-				num_of_military_factories > 75
+				num_of_military_factories > 125
 			}
 		}
 

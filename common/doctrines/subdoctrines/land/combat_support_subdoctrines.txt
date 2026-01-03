@@ -8,10 +8,11 @@ fire_concentration = {
 	xp_type = army
 
 	ai_will_do = {
-		base = 3
+		base = 2
 		modifier = {
-			factor = 0
+			factor = 1.5
 			is_major = yes
+			has_doctrine = superior_firepower
 		}
 	}
 
@@ -76,7 +77,13 @@ anti_tank_frontline = {
 	xp_cost = 100
 	xp_type = army
 
-	ai_will_do = { base = 0 }
+	ai_will_do = {
+		base = 2
+		modifier = {
+			factor = 0
+			is_major = no
+		}
+	}
 
 	 # EFFECTS
 
@@ -144,7 +151,7 @@ flying_batteries = {
 	}
 
 	ai_will_do = {
-		base = 3
+		base = 2
 		modifier = {
 			factor = 0
 			NOT = { has_tech = rocket_artillery }
@@ -310,10 +317,14 @@ mobile_recon_and_assault = {
 	}
 
 	ai_will_do = {
-		base = 3
+		base = 2
 		modifier = {
 			factor = 0
 			is_major = no
+		}
+		modifier = {
+			factor = 0
+			has_doctrine = mass_assault
 		}
 	}
 
@@ -391,10 +402,14 @@ mobile_recon_and_assault_no_lar = {
 	}
 
 	ai_will_do = {
-		base = 1
+		base = 2
 		modifier = {
 			factor = 0
 			is_major = no
+		}
+		modifier = {
+			factor = 0
+			has_doctrine = mass_assault
 		}
 	}
 
@@ -576,7 +591,7 @@ siege_artillery = {
 	}
 
 	ai_will_do = {
-		base = 3
+		base = 2
 		modifier = {
 			factor = 0
 			is_major = no
@@ -700,7 +715,7 @@ field_engineering = {
 	xp_cost = 100
 	xp_type = army
 
-	ai_will_do = { base = 3 }
+	ai_will_do = { base = 2 }
 
 	engineer = {
 		river = {

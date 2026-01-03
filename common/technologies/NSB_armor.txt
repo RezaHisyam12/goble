@@ -126,7 +126,7 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 50
+				add = 500
 				is_eligible_for_armor_production = yes
 			}
 		}
@@ -192,7 +192,7 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 25
+				add = 500
 				is_eligible_for_armor_production = yes
 			}
 		}
@@ -236,7 +236,7 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 25
+				add = 15
 				is_eligible_for_armor_production = yes
 			}
 		}
@@ -276,12 +276,9 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 5
-				is_eligible_for_medium_armor_production = yes
-			}
-			modifier = {
-				factor = 2
+				add = 10
 				is_naval_power = yes
+				is_eligible_for_medium_armor_production = yes
 			}
 		}
 
@@ -326,12 +323,9 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 5
-				is_eligible_for_medium_armor_production = yes
-			}
-			modifier = {
-				factor = 2
+				add = 10
 				is_naval_power = yes
+				is_eligible_for_medium_armor_production = yes
 			}
 		}
 
@@ -471,7 +465,7 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 35
+				add = 500
 				is_eligible_for_armor_production = yes
 			}
 		}
@@ -510,7 +504,7 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 35
+				add = 500
 				is_eligible_for_armor_production = yes
 			}
 		}
@@ -547,7 +541,7 @@ technologies = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 50
+				add = 500
 				is_eligible_for_armor_production = yes
 			}
 		}

@@ -134,7 +134,7 @@ entity = {
 }
 entity = { 
 	clone = "USA_ship_hull_cruiser_submarine_entity"
-	name = "PSA_ship_hull_cruiser_submarine_entity"
+	name = "CAL_ship_hull_cruiser_submarine_entity"
 }
 entity = { 
 	clone = "USA_ship_hull_cruiser_submarine_entity"
@@ -153,7 +153,7 @@ entity = {
 }
 entity = { 
 	clone = "USA_ship_hull_nuclear_powered_submarine_entity"
-	name = "PSA_ship_hull_nuclear_powered_submarine_entity"
+	name = "CAL_ship_hull_nuclear_powered_submarine_entity"
 }
 entity = { 
 	clone = "USA_ship_hull_nuclear_powered_submarine_entity"

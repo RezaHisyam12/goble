@@ -76,7 +76,7 @@ entity = {
 }
 entity = { 
 	clone = "USA_assault_engineer_entity"
-	name = "PSA_assault_engineer_entity"
+	name = "CAL_assault_engineer_entity"
 }
 entity = { 
 	clone = "USA_assault_engineer_entity"
@@ -86,6 +86,11 @@ entity = {
 	clone = "USA_assault_engineer_entity"
 	name = "NEE_assault_engineer_entity"
 }
+entity = { 
+	clone = "USA_assault_engineer_entity"
+	name = "PHI_assault_engineer_entity"
+}
+
 
 ##########################
 # CROSSING VEHICLES #
@@ -244,7 +249,7 @@ entity = {
 }
 entity = { 
 	clone = "USA_armored_maintenance_entity"
-	name = "PSA_armored_maintenance_entity"
+	name = "CAL_armored_maintenance_entity"
 }
 entity = { 
 	clone = "USA_armored_maintenance_entity"
@@ -253,4 +258,8 @@ entity = {
 entity = { 
 	clone = "USA_armored_maintenance_entity"
 	name = "NEE_armored_maintenance_entity"
+}
+entity = { 
+	clone = "USA_armored_maintenance_entity"
+	name = "PHI_armored_maintenance_entity"
 }

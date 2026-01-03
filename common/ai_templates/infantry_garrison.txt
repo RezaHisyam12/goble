@@ -1,0 +1,30 @@
+coast_guards = {
+	role = garrison
+
+	upgrade_prio = {
+		factor = 1
+		modifier = {
+			factor = 5
+			num_controlled_states > 10
+		}
+	}
+
+	garrison_infantry_0 = {
+		can_upgrade_in_field = { always = yes }
+		reinforce_prio = 0
+		custom_icon = 6
+		
+		upgrade_prio = {
+			base = 100
+		}
+
+		target_template = {
+			regiments = {
+				infantry = 6
+			}
+            support = {
+				artillery = 1
+			}
+		}
+	}
+}

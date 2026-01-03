@@ -21,7 +21,7 @@ ai_front_management_stop = {
         }
         ordertype = front
         execution_type = careful
-        execute_order = no
+        execute_order = yes
         manual_attack = no
     }
 }
@@ -192,57 +192,6 @@ ai_front_management_careful_vs_minors = {
     }
 }
 
-ai_homeland_defense = {
-	enable = {
-        has_war = yes
-        surrender_progress > 0.2
-    }
-
-	abort_when_not_enabled = yes
-	
-	ai_strategy = {
-		type = front_unit_request
-		state_trigger = { 
-			any_state = {
-				is_core_of = FROM.FROM
-				owner = {
-					has_war_with = FROM.FROM
-				}
-			}
-		}
-		value = 100							# Will be added as a factor over regular requests.
-	}
-}
-
-defend_your_home_please = {
-	enable = {
-		surrender_progress > 0.1
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = spare_unit_factor
-		value = -100
-	}
-	
-	ai_strategy = {
-		type = garrison
-		value = -100
-	}
-}
-
-dont_waste_troops_please = {
-	enable = {
-		num_of_controlled_states > 70
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = garrison
-		value = -100
-	}
-}
-
 end_pocket = {
 	enable = {
 		always = yes
@@ -273,7 +222,7 @@ end_pocket = {
 			}
 		}
 		ratio = 0.0
-		priority = 110
+		priority = 55
 		ordertype = front
 		execution_type = rush
 		execute_order = yes
@@ -449,22 +398,25 @@ this_state_is_empty = {
 	}
 }
 
-always_prioritize_our_core = {
+there_is_no_place_for_coward_in_a_civil_war = {
 	enable = {
-		surrender_progress > 0.05
-	}
-	abort = {
-		OR = {
-			surrender_progress < 0.01
-			has_capitulated = yes
-		}
+		has_civil_war = yes
 	}
 
+	abort_when_not_enabled = yes
+
 	ai_strategy = {
-		type = front_unit_request
-		state_trigger = {
-			NOT = { is_core_of = FROM.FROM }
+		type = front_control
+		country_trigger = {
+			has_war_with = FROM
+			original_tag = FROM
 		}
-		value = -3
+
+		ratio = 0.3
+
+		priority = 1000
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
 	}
 }

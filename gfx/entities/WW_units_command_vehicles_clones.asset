@@ -137,7 +137,7 @@ entity = {
 }
 entity = { 
 	clone = "USA_armored_signal_entity"
-	name = "PSA_armored_signal_entity"
+	name = "CAL_armored_signal_entity"
 }
 entity = { 
 	clone = "USA_armored_signal_entity"
@@ -146,4 +146,8 @@ entity = {
 entity = { 
 	clone = "USA_armored_signal_entity"
 	name = "NEE_armored_signal_entity"
+}
+entity = { 
+	clone = "USA_armored_signal_entity"
+	name = "PHI_armored_signal_entity"
 }

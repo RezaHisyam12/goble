@@ -2040,7 +2040,6 @@ ideas = {
 			picture = GRU_guard_2
 			allowed = { always = no }
 			modifier = {
-				conscription_factor = 0.25
 				national_populist_drift = 0.05
 				mobilization_speed = 0.15
 				training_time_factor = -0.50
@@ -2101,6 +2100,37 @@ ideas = {
 			}
 		}
 		
+		GER_mass_tank_production_idea = {
+			picture = GER_mass_tank_production
+		    	traits = {
+		   	     ZZZ_blank_idea_trait
+		    	}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				modern_tank_chassis = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				light_tank_chassis = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				medium_tank_chassis = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+				heavy_tank_chassis = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+		}
 		
 		FAUD_SOCIETY_ONE = {
 			on_add = {log = "[GetDateText]: [Root.GetName]: add idea FAUD_SOCIETY_ONE"}

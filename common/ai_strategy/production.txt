@@ -17,6 +17,8 @@ division_limiter = {
 
 	#AI roles
 	ai_strategy = { type = build_army 	id = infantry			value = -1000 }
+	ai_strategy = { type = build_army 	id = garrison			value = -1000 }
+	ai_strategy = { type = build_army 	id = shock_infantry		value = -1000 }
 	ai_strategy = { type = build_army 	id = motorized			value = -1000 }
 	ai_strategy = { type = build_army 	id = mechanized			value = -1000 }
 	ai_strategy = { type = build_army	id = armor_role			value = -1000 }
@@ -49,125 +51,487 @@ division_upgrades_are_very_important = {
 		id = division_template
 		value = 100
 	}
-}
-
-base_armor_production = {
-	enable = {
-		is_eligible_for_armor_production = yes
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = 100
 	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = { type = role_ratio                          id = motorized                    value = 5 }
-	ai_strategy = { type = role_ratio                          id = armor_role                   value = 10 }
-}
-
-switch_to_mediums_asap = {
-	enable = {
-		is_eligible_for_medium_armor_production = yes
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = 100
 	}
-	abort_when_not_enabled = yes
-
+	ai_strategy = {
+		type = template_prio
+		id = artillery
+		value = 100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = 100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = mechanized
+		value = 100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 100
+	}
 	ai_strategy = {
 		type = template_prio
 		id = medium_armor
 		value = 100
 	}
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
+		value = 100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = modern_armor
+		value = 100
+	}
 }
 
-mw_offset = {
+light_armor_production = {
+	enable = {
+		is_eligible_for_armor_production = yes
+		is_eligible_for_medium_armor_production = no
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 6 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 4 }
+}
+
+medium_armor_production = {
 	enable = {
 		is_eligible_for_medium_armor_production = yes
+		is_eligible_for_heavy_armor_production = no
+		NOT = {has_doctrine = new_mobile_warfare}
+		NOT = {has_doctrine = superior_firepower}
+		NOT = {has_doctrine = grand_battleplan}
+		NOT = {has_doctrine = mass_assault}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 5 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 10 }
+}
+
+mw_offset_1 = {
+	enable = {
+		is_eligible_for_medium_armor_production = yes
+		is_eligible_for_heavy_armor_production = no
 		has_doctrine = new_mobile_warfare
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = role_ratio                          id = motorized                    value = 10 }
-	ai_strategy = { type = role_ratio                          id = armor_role                   value = 15 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 7 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 18 }
 }
 
-sp_offset = {
+sp_offset_1 = {
 	enable = {
 		is_eligible_for_medium_armor_production = yes
+		is_eligible_for_heavy_armor_production = no
 		has_doctrine = superior_firepower
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = role_ratio                          id = motorized                    value = 5 }
-	ai_strategy = { type = role_ratio                          id = armor_role                   value = 10 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 4 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 11 }
 }
 
-gbp_offset = {
+gbp_offset_1 = {
 	enable = {
 		is_eligible_for_medium_armor_production = yes
+		is_eligible_for_heavy_armor_production = no
 		has_doctrine = grand_battleplan
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = role_ratio                          id = motorized                    value = 10 }
-	ai_strategy = { type = role_ratio                          id = armor_role                   value = 10 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 5 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 15 }
 }
 
-ma_offset = {
+ma_offset_1 = {
 	enable = {
 		is_eligible_for_medium_armor_production = yes
+		is_eligible_for_heavy_armor_production = no
 		has_doctrine = mass_assault
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = role_ratio                          id = motorized                    value = 5 }
-	ai_strategy = { type = role_ratio                          id = armor_role                   value = 5 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 6 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 9 }
 }
 
-more_breakthrough_divisions_1 = {
+heavy_armor_production = {
 	enable = {
 		is_eligible_for_heavy_armor_production = yes
-		has_army_size = { size > 100 type = infantry }
+		NOT = {has_doctrine = new_mobile_warfare}
+		NOT = {has_doctrine = superior_firepower}
+		NOT = {has_doctrine = grand_battleplan}
+		NOT = {has_doctrine = mass_assault}
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = role_ratio                          id = infantry                     value = -10 }
-	ai_strategy = { type = role_ratio                          id = motorized                    value = 5 }
-	ai_strategy = { type = role_ratio                          id = armor_role                   value = 10 }
-	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 5 }
+	ai_strategy = { type = role_ratio                          id = shock_infantry               value = 3 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 3 }
+	ai_strategy = { type = role_ratio                          id = mechanized                   value = 2 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 10 }
+	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 2 }
 }
 
-more_breakthrough_divisions_2 = {
+mw_offset_2 = {
+	enable = {
+		is_eligible_for_heavy_armor_production = yes
+		has_doctrine = new_mobile_warfare
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = shock_infantry               value = 3 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 3 }
+	ai_strategy = { type = role_ratio                          id = mechanized                   value = 7 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 14 }
+	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 3 }
+}
+
+sp_offset_2 = {
+	enable = {
+		is_eligible_for_heavy_armor_production = yes
+		has_doctrine = superior_firepower
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = shock_infantry               value = 7 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 2 }
+	ai_strategy = { type = role_ratio                          id = mechanized                   value = 4 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 10 }
+	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 2 }
+}
+
+gbp_offset_2 = {
+	enable = {
+		is_eligible_for_heavy_armor_production = yes
+		has_doctrine = grand_battleplan
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = shock_infantry               value = 4 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 2 }
+	ai_strategy = { type = role_ratio                          id = mechanized                   value = 5 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 10 }
+	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 4 }
+}
+
+ma_offset_2 = {
+	enable = {
+		is_eligible_for_heavy_armor_production = yes
+		has_doctrine = mass_assault
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = shock_infantry               value = 5 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 3 }
+	ai_strategy = { type = role_ratio                          id = mechanized                   value = 2 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 9 }
+	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 1 }
+}
+
+mw_offset_3 = {
 	enable = {
 		num_of_military_factories > 150
-		has_army_size = { size > 150 type = infantry }
+		has_doctrine = new_mobile_warfare
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = shock_infantry               value = 1 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 1 }
+	ai_strategy = { type = role_ratio                          id = mechanized                   value = 2 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 5 }
+	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 1 }
+}
+
+sp_offset_3 = {
+	enable = {
+		num_of_military_factories > 150
+		has_doctrine = superior_firepower
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = shock_infantry               value = 2 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 1 }
+	ai_strategy = { type = role_ratio                          id = mechanized                   value = 1 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 5 }
+	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 1 }
+}
+
+gbp_offset_3 = {
+	enable = {
+		num_of_military_factories > 150
+		has_doctrine = grand_battleplan
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = shock_infantry               value = 1 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 1 }
+	ai_strategy = { type = role_ratio                          id = mechanized                   value = 2 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 4 }
+	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 2 }
+}
+
+ma_offset_3 = {
+	enable = {
+		num_of_military_factories > 150
+		has_doctrine = mass_assault
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = shock_infantry               value = 2 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 1 }
+	ai_strategy = { type = role_ratio                          id = mechanized                   value = 2 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 4 }
+	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 1 }
+}
+
+mw_offset_4 = {
+	enable = {
+		num_of_military_factories > 225
+		has_doctrine = new_mobile_warfare
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = shock_infantry               value = 1 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 1 }
+	ai_strategy = { type = role_ratio                          id = mechanized                   value = 2 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 5 }
+	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 1 }
+}
+
+sp_offset_4 = {
+	enable = {
+		num_of_military_factories > 225
+		has_doctrine = superior_firepower
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = shock_infantry               value = 2 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 1 }
+	ai_strategy = { type = role_ratio                          id = mechanized                   value = 1 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 5 }
+	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 1 }
+}
+
+gbp_offset_4 = {
+	enable = {
+		num_of_military_factories > 225
+		has_doctrine = grand_battleplan
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = shock_infantry               value = 1 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 1 }
+	ai_strategy = { type = role_ratio                          id = mechanized                   value = 2 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 4 }
+	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 2 }
+}
+
+ma_offset_4 = {
+	enable = {
+		num_of_military_factories > 225
+		has_doctrine = mass_assault
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = shock_infantry               value = 2 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 1 }
+	ai_strategy = { type = role_ratio                          id = mechanized                   value = 2 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 4 }
+	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 1 }
+}
+
+mw_offset_5 = {
+	enable = {
+		num_of_military_factories > 300
+		has_doctrine = new_mobile_warfare
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = shock_infantry               value = 1 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 1 }
+	ai_strategy = { type = role_ratio                          id = mechanized                   value = 2 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 5 }
+	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 1 }
+}
+
+sp_offset_5 = {
+	enable = {
+		num_of_military_factories > 300
+		has_doctrine = superior_firepower
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = shock_infantry               value = 2 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 1 }
+	ai_strategy = { type = role_ratio                          id = mechanized                   value = 1 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 5 }
+	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 1 }
+}
+
+gbp_offset_5 = {
+	enable = {
+		num_of_military_factories > 300
+		has_doctrine = grand_battleplan
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = shock_infantry               value = 1 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 1 }
+	ai_strategy = { type = role_ratio                          id = mechanized                   value = 2 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 4 }
+	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 2 }
+}
+
+ma_offset_5 = {
+	enable = {
+		num_of_military_factories > 300
+		has_doctrine = mass_assault
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = shock_infantry               value = 2 }
+	ai_strategy = { type = role_ratio                          id = motorized                    value = 1 }
+	ai_strategy = { type = role_ratio                          id = mechanized                   value = 2 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 4 }
+	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 1 }
+}
+
+less_inf_1 = {
+	enable = {
+		num_of_military_factories > 150
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = { type = role_ratio                          id = infantry                     value = -10 }
-	ai_strategy = { type = role_ratio                          id = mechanized                   value = 5 }
-	ai_strategy = { type = role_ratio                          id = armor_role                   value = 5 }
-	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 10 }
 }
 
-more_breakthrough_divisions_3 = {
+less_inf_2 = {
 	enable = {
 		num_of_military_factories > 225
-		has_army_size = { size > 200 type = infantry }
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = role_ratio                          id = infantry                     value = -15 }
-	ai_strategy = { type = role_ratio                          id = mechanized                   value = 5 }
-	ai_strategy = { type = role_ratio                          id = armor_role                   value = 5 }
-	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 10 }
+	ai_strategy = { type = role_ratio                          id = infantry                     value = -10 }
 }
 
-more_breakthrough_divisions_4 = {
+less_inf_3 = {
 	enable = {
 		num_of_military_factories > 300
-		has_army_size = { size > 250 type = infantry }
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = role_ratio                          id = infantry                     value = -15 }
-	ai_strategy = { type = role_ratio                          id = mechanized                   value = 5 }
-	ai_strategy = { type = role_ratio                          id = armor_role                   value = 5 }
-	ai_strategy = { type = role_ratio                          id = heavy_armor_role             value = 10 }
+	ai_strategy = { type = role_ratio                          id = infantry                     value = -10 }
+}
+
+############################################################################################################
+#	AREA DEFENSE
+############################################################################################################
+
+deploy_garrisons_1 = {
+	enable = {
+		num_controlled_states > 10
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = garrison                     value = 1 }
+}
+
+deploy_garrisons_2 = {
+	enable = {
+		num_controlled_states > 20
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = garrison                     value = 1 }
+}
+
+deploy_garrisons_3 = {
+	enable = {
+		num_controlled_states > 30
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = garrison                     value = 1 }
+}
+
+deploy_garrisons_4 = {
+	enable = {
+		num_controlled_states > 40
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = garrison                     value = 1 }
+}
+
+deploy_garrisons_5 = {
+	enable = {
+		num_controlled_states > 50
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = garrison                     value = 1 }
+}
+
+deploy_garrisons_6 = {
+	enable = {
+		num_controlled_states > 60
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = garrison                     value = 1 }
+}
+
+deploy_garrisons_7 = {
+	enable = {
+		num_controlled_states > 70
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = garrison                     value = 1 }
+}
+
+deploy_garrisons_8 = {
+	enable = {
+		num_controlled_states > 80
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = garrison                     value = 1 }
+}
+
+deploy_garrisons_9 = {
+	enable = {
+		num_controlled_states > 90
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = garrison                     value = 1 }
+}
+
+deploy_garrisons_10 = {
+	enable = {
+		num_controlled_states > 100
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = garrison                     value = 1 }
 }
 
 ############################################################################################################
@@ -452,7 +816,7 @@ land_powers_make_more_mountaineers = {
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineer
-		value = 30
+		value = 20
 	}
 }
 
@@ -499,7 +863,7 @@ naval_powers_make_more_marines = {
 	ai_strategy = {
 		type = role_ratio
 		id = marine
-		value = 30
+		value = 20
 	}
 }
 
@@ -603,17 +967,78 @@ default_flame_tank_and_support_production = {
 #	REFS AND SILOS
 ######################################
 
+research_processing_techs_1 = {
+	enable = {
+		date > 1937.1.1
+		has_tech = synth_oil_experiments
+		num_of_military_factories > 50
+		synthetic_refinery > 5
+	}
+
+	ai_strategy = {
+		type = research_tech
+		id = rubber_processing
+		value = 100
+	}
+}
+
+research_processing_techs_2 = {
+	enable = {
+		date > 1939.1.1
+		has_tech = rubber_processing
+		num_of_military_factories > 100
+		synthetic_refinery > 15
+	}
+
+	ai_strategy = {
+		type = research_tech
+		id = improved_rubber_processing
+		value = 100
+	}
+}
+
+research_processing_techs_3 = {
+	enable = {
+		date > 1941.1.1
+		has_tech = improved_rubber_processing
+		num_of_military_factories > 150
+		synthetic_refinery > 20
+	}
+
+	ai_strategy = {
+		type = research_tech
+		id = advanced_rubber_processing
+		value = 100
+	}
+}
+
+research_processing_techs_4 = {
+	enable = {
+		date > 1943.1.1
+		has_tech = advanced_rubber_processing
+		num_of_military_factories > 200
+		synthetic_refinery > 30
+	}
+
+	ai_strategy = {
+		type = research_tech
+		id = modern_rubber_processing
+		value = 100
+	}
+}
+
 majors_build_some_refineries_1 = {
 	enable = {
 		date > 1938.1.1
 		is_actual_major = yes
 		has_tech = synth_oil_experiments
-		OR = {
-			check_variable = { resource_imported@oil > 0 }
-			check_variable = { resource_imported@rubber > 0 }
+		num_of_military_factories > 30
+		NOT = {
+			any_subject_country = { check_variable = { resource_produced@rubber > 10 } }
+			resource_produced@rubber > 10
 		}
 	}
-	abort_when_not_enabled = yes
+	abort = { synthetic_refinery > 5 }
 
 	ai_strategy = {
 		type = building_target
@@ -627,17 +1052,18 @@ majors_build_some_refineries_2 = {
 		date > 1938.1.1
 		is_actual_major = yes
 		has_tech = synth_oil_experiments
-		OR = {
-			check_variable = { resource_imported@oil > 30 }
-			check_variable = { resource_imported@rubber > 30 }
+		num_of_military_factories > 60
+		NOT = {
+			any_subject_country = { check_variable = { resource_produced@rubber > 20 } }
+			resource_produced@rubber > 20
 		}
 	}
-	abort_when_not_enabled = yes
+	abort = { synthetic_refinery > 10 }
 
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 4
+		value = 2
 	}
 }
 
@@ -646,14 +1072,18 @@ majors_build_some_refineries_3 = {
 		date > 1938.1.1
 		is_actual_major = yes
 		has_tech = synth_oil_experiments
-		check_variable = { resource_imported@rubber > 60 }
+		num_of_military_factories > 90
+		NOT = {
+			any_subject_country = { check_variable = { resource_produced@rubber > 30 } }
+			resource_produced@rubber > 30
+		}
 	}
-	abort_when_not_enabled = yes
+	abort = { synthetic_refinery > 15 }
 
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 6
+		value = 2
 	}
 }
 
@@ -662,14 +1092,156 @@ majors_build_some_refineries_4 = {
 		date > 1938.1.1
 		is_actual_major = yes
 		has_tech = synth_oil_experiments
-		check_variable = { resource_imported@rubber > 90 }
+		num_of_military_factories > 120
+		NOT = {
+			any_subject_country = { check_variable = { resource_produced@rubber > 40 } }
+			resource_produced@rubber > 40
+		}
+	}
+	abort = { synthetic_refinery > 20 }
+
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 2
+	}
+}
+
+majors_build_some_refineries_5 = {
+	enable = {
+		date > 1938.1.1
+		is_actual_major = yes
+		has_tech = synth_oil_experiments
+		num_of_military_factories > 150
+		NOT = {
+			any_subject_country = { check_variable = { resource_produced@rubber > 50 } }
+			resource_produced@rubber > 50
+		}
+	}
+	abort = { synthetic_refinery > 25 }
+
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 2
+	}
+}
+
+majors_build_some_refineries_6 = {
+	enable = {
+		date > 1938.1.1
+		is_actual_major = yes
+		has_tech = synth_oil_experiments
+		num_of_military_factories > 180
+		NOT = {
+			any_subject_country = { check_variable = { resource_produced@rubber > 60 } }
+			resource_produced@rubber > 60
+		}
+	}
+	abort = { synthetic_refinery > 30 }
+
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 2
+	}
+}
+
+majors_build_some_refineries_7 = {
+	enable = {
+		date > 1938.1.1
+		is_actual_major = yes
+		has_tech = synth_oil_experiments
+		num_of_military_factories > 210
+		NOT = {
+			any_subject_country = { check_variable = { resource_produced@rubber > 70 } }
+			resource_produced@rubber > 70
+		}
+	}
+	abort = { synthetic_refinery > 35 }
+
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 2
+	}
+}
+
+majors_build_some_refineries_8 = {
+	enable = {
+		date > 1938.1.1
+		is_actual_major = yes
+		has_tech = synth_oil_experiments
+		num_of_military_factories > 240
+		NOT = {
+			any_subject_country = { check_variable = { resource_produced@rubber > 80 } }
+			resource_produced@rubber > 80
+		}
+	}
+	abort = { synthetic_refinery > 40 }
+
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 2
+	}
+}
+
+majors_build_some_refineries_9 = {
+	enable = {
+		date > 1938.1.1
+		is_actual_major = yes
+		has_tech = synth_oil_experiments
+		num_of_military_factories > 270
+		NOT = {
+			any_subject_country = { check_variable = { resource_produced@rubber > 90 } }
+			resource_produced@rubber > 90
+		}
+	}
+	abort = { synthetic_refinery > 45 }
+
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 2
+	}
+}
+
+majors_build_some_refineries_10 = {
+	enable = {
+		date > 1938.1.1
+		is_actual_major = yes
+		has_tech = synth_oil_experiments
+		num_of_military_factories > 300
+		NOT = {
+			any_subject_country = { check_variable = { resource_produced@rubber > 100 } }
+			resource_produced@rubber > 100
+		}
+	}
+	abort = { synthetic_refinery > 50 }
+
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 2
+	}
+}
+
+we_urgently_need_oil_or_rubber = {
+	enable = {
+		has_war = yes
+		has_tech = synth_oil_experiments
+		OR = {
+			has_fuel < 100
+			rubber < 0
+		}
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 8
+		value = 10
 	}
 }
 

@@ -171,7 +171,7 @@ shared_focus = {
 			factor = 100
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GRU_form_the_stasi"
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_volksfuhrer"
 			hidden_effect = {
 				country_event = { id =  rotermorgenmisc.777 days = 340 }
 				country_event = { id =  rotermorgenmisc.4 days = 100 }
@@ -218,7 +218,7 @@ shared_focus = {
 		y = 1
 		cost = 5
 		ai_will_do = {
-			factor = 25
+			factor = 60
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_breitspurbahnen"
@@ -253,10 +253,10 @@ shared_focus = {
 		y = 1
 		cost = 5
 		ai_will_do = {
-			factor = 20
+			factor = 50
 		}
 		completion_reward = {
-					log = "[GetDateText]: [Root.GetName]: Focus GRU_staatsfeind_nr1"
+		log = "[GetDateText]: [Root.GetName]: Focus GRU_staatsfeind_nr1"
 		64 = {
 			add_manpower = -169584
 		}
@@ -579,7 +579,7 @@ shared_focus = {
 		y = 1
 		cost = 5
 		ai_will_do = {
-			factor = 20
+			factor = 50
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_kulturkampf"
@@ -1177,7 +1177,7 @@ shared_focus = {
 		y = 1
 		cost = 5
 		ai_will_do = {
-			factor = 15
+			factor = 25
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_volkssturm"
@@ -1269,7 +1269,7 @@ shared_focus = {
 		y = 1
 		cost = 5
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_proclaim_victory_over_judeo_capitalism"
@@ -1291,7 +1291,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 20
+			factor = 50
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_anhaltelager"
@@ -1314,7 +1314,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 20
+			factor = 50
 		}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_night_of_the"
@@ -2185,13 +2185,14 @@ shared_focus = {
 			}
 		}
 		completion_reward = {
-				log = "[GetDateText]: [Root.GetName]: Focus GRU_spzprojpfeil"
-				add_doctrine_cost_reduction = {
-						name = GRU_spzprojpfeil
-						cost_reduction = 1
-						uses = 1
-						category = rocketry
-					}
+		log = "[GetDateText]: [Root.GetName]: Focus GRU_spzprojpfeil"
+			add_tech_bonus = {
+				name = GRU_spzprojpfeil
+				ahead_reduction = 1
+				bonus = 1
+				uses = 1
+				category = rocketry
+			}
 			custom_effect_tooltip = tooltip_white_line
 			GRU_add_or_modify_wunderwaffen = yes
 			add_to_variable = { 
@@ -2200,6 +2201,7 @@ shared_focus = {
 			}
 		}
 		prerequisite = { focus = GRU_mfsp  }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	
 	#Autobahn
@@ -3241,7 +3243,7 @@ shared_focus = {
 		id = GRU_formation_of_the_nva
 		icon = GFX_GRU_formation_of_the_nva-4002
 		relative_position_id = GRU_nmdvp_victory
-		x = 12
+		x = 14
 		y = 0
 		offset = {
 			x = -10
@@ -3267,6 +3269,7 @@ shared_focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_formation_of_the_nva"
 			hidden_effect = {
 				country_event = { id = rotermorgenmisc.150 }
+				country_event = { id = rotermorgenmisc.1102 days = 30 }
 				set_country_flag = gru_military_build_up
 				set_country_flag = NVA_FORMED
 				if = {
@@ -3335,7 +3338,10 @@ shared_focus = {
 				uses = 2
 				category = land_doctrine
 			}
-			add_ideas = GRU_okw_2
+			if = {
+				limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
+				add_ideas = GRU_okw_2
+			}
 			add_command_power = 100
 		}
 		available = {
@@ -3343,184 +3349,14 @@ shared_focus = {
 		}
 		
 	}
-
-
-
-	#Nationales Volksheer
-shared_focus = {
-		id = GRU_nationales_volksheer
-		icon = GFX_GRU_nationales_volksheer-4006
-		relative_position_id = GRU_formation_of_the_nva
-		x = 4
-		y = 2
-		cost = 5
-		ai_will_do = {
-			factor = 9
-			modifier = {
-				factor = 10
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				surrender_progress > 0
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GRU_nationales_volksheer"
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
-			}
-			custom_effect_tooltip = tooltip_white_line	
-			custom_effect_tooltip = tech_integrated_specialists_effect
-			hidden_effect = {
-				set_technology = { tech_integrated_specialists = 1 popup = no }
-			}
-			custom_effect_tooltip = tooltip_white_line	
-			army_experience = 50
-		}
-
-		prerequisite = { focus = GRU_elected_officers focus = GRU_skilled_officers focus = GRU_political_officers  }
-	}
-
-	#Nationale Volksmarine
-shared_focus = {
-		id = GRU_nationale_volksmarine
-		icon = GFX_GRU_nationale_volksmarine-4004
-		relative_position_id = GRU_formation_of_the_nva
-		x = -4
-		y = 2
-		cost = 5
-		ai_will_do = {
-			factor = 8
-			modifier = {
-				factor = 10
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				surrender_progress > 0
-			}
-		}
-		completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus GRU_nationale_volksmarine"
-		add_doctrine_cost_reduction = {
-			name = naval_doc_bonus
-			cost_reduction = 0.5
-			uses = 2
-			category = naval_doctrine
-		}
-		custom_effect_tooltip = tooltip_white_line	
-		custom_effect_tooltip = tech_marine_bonus_effect
-		hidden_effect = {
-			set_technology = { tech_marine_cost_reduction = 1 popup = no }
-		}
-		custom_effect_tooltip = tooltip_white_line	
-		navy_experience = 50
-		}
-
-
-		prerequisite = { focus = GRU_elected_officers focus = GRU_skilled_officers focus = GRU_political_officers  }
-	}
-
-	#Nationale Luftwaffe
-shared_focus = {
-		id = GRU_nationale_luftwaffe
-		icon = GFX_GRU_nationale_luftwaffe-4005
-		relative_position_id = GRU_formation_of_the_nva
-		x = 0
-		y = 2
-		cost = 5
-		ai_will_do = {
-			factor = 9
-			modifier = {
-				factor = 10
-				has_war = yes
-			}
-			modifier = {
-				factor = 5
-				surrender_progress > 0
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GRU_nationale_luftwaffe"
-			add_doctrine_cost_reduction = {
-				name = air_doc_bonus
-				cost_reduction = 0.5
-				uses = 2
-				category = air_doctrine
-			}
-			custom_effect_tooltip = tooltip_white_line	
-			custom_effect_tooltip = tech_better_paratroopers_effect
-			hidden_effect = {
-				set_technology = { tech_better_paratroopers = 1 popup = no }
-			}
-			custom_effect_tooltip = tooltip_white_line	
-			air_experience  = 50
-		}
-
-		prerequisite = { focus = GRU_elected_officers focus = GRU_skilled_officers focus = GRU_political_officers  }
-	}
-
-	#Skilled Officers
-shared_focus = {
-		id = GRU_skilled_officers
+	shared_focus = {
+		id = GRU_decentralized_off
 		icon = GFX_GRU_skilled_officers-4000
-		relative_position_id = GRU_formation_of_the_nva
-		x = 0
-		y = 1
-		cost = 5
-		available = {
-			OR={
-			has_country_flag = GRU_SMEPD_S_rule
-			has_country_flag = GRU_SMEPD_M_rule
-			has_country_flag = GRU_SPD_rule
-			}
-			is_subject = no
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GRU_skilled_officers"
-			add_ideas = GRU_skill_off
-		}
-		
-		prerequisite = { focus = GRU_formation_of_the_nva  }
-		mutually_exclusive = { focus = GRU_elected_officers  focus = GRU_political_officers  }
-	}
-
-	#Elected Officers
-shared_focus = {
-		id = GRU_elected_officers
-		icon = GFX_GRU_elected_officers-3999
 		relative_position_id = GRU_formation_of_the_nva
 		x = -2
 		y = 1
 		cost = 5
-		available = {
-			OR={
-			has_country_flag = GRU_SMEPD_S_rule
-			has_country_flag = GRU_FAUD_rule
-			}
-			is_subject = no
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GRU_elected_officers"
-			add_ideas = GRU_eleced_off
-		}
-		
-		prerequisite = { focus = GRU_formation_of_the_nva  }
-		mutually_exclusive = { focus = GRU_skilled_officers  focus = GRU_political_officers  }
-	}
-
-	#Political Officers
-shared_focus = {
-		id = GRU_political_officers
-		icon = GFX_GRU_political_officers-4001
-		relative_position_id = GRU_formation_of_the_nva
-		x = 2
-		y = 1
-		cost = 5
+		continue_if_invalid = yes
 		ai_will_do = {
 			factor = 15
 			modifier = {
@@ -3528,206 +3364,188 @@ shared_focus = {
 				has_war = yes
 			}
 		}
+		mutually_exclusive = {
+			focus = GRU_centralized_off
+		}
+		prerequisite = {
+			focus = GRU_formation_of_the_nva
+		}
 		available = {
 			OR={
-			has_country_flag = GRU_SMEPD_M_rule
-			has_country_flag = GRU_NMDVP_rule
+			has_country_flag = GRU_SMEPD_S_rule
+			has_country_flag = GRU_SPD_rule
+			has_country_flag = GRU_FAUD_rule
 			}
 			is_subject = no
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GRU_political_officers"
-			add_ideas = GRU_pol_off
+			log = "[GetDateText]: [Root.GetName]: Focus decentralized_off"
+			add_ideas = GRU_skill_off
 		}
-		
-		prerequisite = { focus = GRU_formation_of_the_nva  }
-		mutually_exclusive = { focus = GRU_skilled_officers  focus = GRU_elected_officers  }
 	}
-
-	#Bomber Focus
-shared_focus = {
-		id = GRU_bomber_focus
-		icon = GFX_GRU_bomber_focus-4012
-		relative_position_id = GRU_formation_of_the_nva
+	shared_focus = {
+		id = GER_armour_air_spearhead
+		icon = GFX_goal_FSA_total_war
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		relative_position_id = GRU_decentralized_off
+		prerequisite = {
+			focus = GRU_decentralized_off
+			focus = GRU_centralized_off
+		}
+		prerequisite = {
+			focus = GRU_nationale_luftwaffe
+			focus = GRU_nationales_volksheer
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed GER_armour_air_spearhead"
+			custom_effect_tooltip = tooltip_white_line
+			add_tech_bonus = {
+				name = GER_armour_air_spearhead
+				bonus = 0.75
+				uses = 2
+				category = cas_bomber
+			}
+			add_tech_bonus = {
+				name = GER_armour_air_spearhead
+				bonus = 0.75
+				uses = 2
+				category = cat_heavy_fighter
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	shared_focus = {
+		id = GER_tank_development
+		icon = GFX_focus_generic_mass_production
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		relative_position_id = GER_armour_air_spearhead
+		prerequisite = {
+			focus = GRU_fighter_focus
+			focus = GRU_bomber_focus
+		}
+		prerequisite = {
+			focus = GER_armour_air_spearhead
+		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed GER_tank_development"
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				name = mech_army_bonus
+				category = armor
+			}
+			add_timed_idea = {
+				idea = GER_mass_tank_production_idea
+				days = 175
+			}
+		}
+	}
+	shared_focus = {
+		id = GER_technology_annihilation
+		icon = GFX_goal_generic_tank_destroyer_german
 		x = -1
-		y = 3
-		cost = 5
-		ai_will_do = {
-			factor = 6
-			modifier = {
-				factor = 10
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GRU_bomber_focus"
-			add_ideas = GRU_bomber
-			custom_effect_tooltip = tooltip_white_line
-			add_mastery_bonus = {
-				name = GRU_bomber_focus
-				bonus = 0.1
-				days = 365
-				track = heavy_aircraft
-			}
-		}
-		
-		prerequisite = { focus = GRU_nationale_luftwaffe  }
-		mutually_exclusive = { focus = GRU_fighter_focus  }
-	}
-
-	#Fighter Focus
-shared_focus = {
-		id = GRU_fighter_focus
-		icon = GFX_GRU_fighter_focus-4011
-		relative_position_id = GRU_formation_of_the_nva
-		x = 1
-		y = 3
-		cost = 5
-		ai_will_do = {
-			factor = 6
-			modifier = {
-				factor = 10
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GRU_fighter_focus"
-			add_ideas = GRU_fighter
-			custom_effect_tooltip = tooltip_white_line
-			add_mastery_bonus = {
-				name = GRU_fighter_focus
-				bonus = 0.1
-				days = 365
-				track = fighter_aircraft
-			}
-		}
-		
-		prerequisite = { focus = GRU_nationale_luftwaffe  }
-		mutually_exclusive = { focus = GRU_bomber_focus  }
-	}
-
-	#Carrier Focus
-shared_focus = {
-		id = GRU_carrier_focus
-		icon = GFX_GRU_carrier_focus-4013
-		relative_position_id = GRU_formation_of_the_nva
-		x = -5
-		y = 3
-		cost = 5
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 10
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GRU_carrier_focus"
-			add_ideas = GRU_carrier
-			custom_effect_tooltip = tooltip_white_line
-			if = {
-			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
-			GRU_add_or_modify_wunderwaffen = yes
-			add_to_variable = { 
-				GRU_wunderwaffen_sp_naval_modern_carrier_speed_factor = 0.05
-				tooltip = sp_naval_modern_carrier_speed_factor_tt
-			}
-			}
-			custom_effect_tooltip = tooltip_white_line
-			add_mastery_bonus = {
-				name = GRU_carrier_focus
-				bonus = 0.1
-				days = 365
-				track = carriers
-			}
-		}
-		
-		prerequisite = { focus = GRU_nationale_volksmarine  }
-		mutually_exclusive = { focus = GRU_battleship_focus  }
-	}
-
-	#Battleship Focus
-shared_focus = {
-		id = GRU_battleship_focus
-		icon = GFX_GRU_battleship_focus-4014
-		relative_position_id = GRU_formation_of_the_nva
-		x = -3
-		y = 3
-		cost = 5
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 10
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GRU_battleship_focus"
-			add_ideas = GRU_battleship
-			custom_effect_tooltip = tooltip_white_line
-			if = {
-			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
-			GRU_add_or_modify_wunderwaffen = yes
-			add_to_variable = { 
-				GRU_wunderwaffen_sp_naval_modern_battleship_speed_factor = 0.05
-				tooltip = sp_naval_modern_battleship_speed_factor_tt
-			}
-			}
-			custom_effect_tooltip = tooltip_white_line
-			add_mastery_bonus = {
-				name = GRU_battleship_focus
-				bonus = 0.1
-				days = 365
-				track = capital_ships
-			}
-		}
-		
-		prerequisite = { focus = GRU_nationale_volksmarine  }
-		mutually_exclusive = { focus = GRU_carrier_focus  }
-	}
-
-	#Panzertruppe
-shared_focus = {
-		id = GRU_panzertruppe
-		icon = GFX_GRU_panzertruppe-4019
-		relative_position_id = GRU_formation_of_the_nva
-		x = 3
-		y = 3
-		cost = 5
-		ai_will_do = {
-			factor = 100
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GRU_panzertruppe"
-			add_ideas = GRU_panzer
-			custom_effect_tooltip = tooltip_white_line	
-			custom_effect_tooltip = masterful_blitz_effect
-			custom_effect_tooltip = tooltip_white_line
-			add_mastery_bonus = {
-				name = GRU_panzertruppe
-				bonus = 0.1
-				days = 365
-				track = armor
-			}
-			hidden_effect = {
-				set_technology = { masterful_blitz = 1 popup = no }
-			}
-		}
-		
-		prerequisite = { focus = GRU_nationales_volksheer  }
-		mutually_exclusive = { focus = GRU_mass_conscription }
-	}
-
-	#Panzergrenadiere
-shared_focus = {
-		id = GRU_panzergrenadiere
-		icon = GFX_GRU_panzergrenadiere-4020
-		relative_position_id = GRU_formation_of_the_nva
-		x = 3
 		y = 4
 		cost = 5
 		ai_will_do = {
-			factor = 100
+			factor = 10
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		relative_position_id = GRU_decentralized_off
+		prerequisite = {
+			focus = GER_tank_development
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed GER_technology_annihilation"
+			custom_effect_tooltip = tooltip_white_line
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 1.0
+			}
+			add_tech_bonus = {
+				name = GER_tank_destroyers
+				bonus = 1.0
+				uses = 1
+				category = cat_anti_tank
+			}
+			if = {
+				limit = {
+					has_dlc_nsb = yes
+				}
+				create_equipment_variant = {
+					name = "Jg.Pz. IV/70"
+					type = heavy_tank_destroyer_chassis_2
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_heavy_cannon_2
+						turret_type_slot = tank_heavy_three_man_tank_turret
+						suspension_type_slot = tank_torsion_bar_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+						special_type_slot_2 = additional_machine_guns
+						special_type_slot_3 = sloped_armor
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 9
+						tank_nsb_armor_upgrade = 4
+					}
+					design_team = mio:GRU_krupp_organisation
+					icon = GFX_GER_improved_heavy_td_jagdpanzer4_70v_heavy
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = GER_tank_destroyers
+					bonus = 1.0
+					uses = 1
+					category = armor
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+	}
+	shared_focus = {
+		id = GRU_panzergrenadiere
+		icon = GFX_GRU_panzergrenadiere-4020
+		x = 1
+		y = 4
+		cost = 5
+		ai_will_do = {
+		    base = 100
+		    }
+		relative_position_id = GRU_decentralized_off
+		prerequisite = {
+			focus = GRU_panzertruppe
+		}
+		prerequisite = {
+			focus = GER_invest_in_rnd
+		}
+		mutually_exclusive = {
+			focus = GRU_overwhelming_firepower
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_panzergrenadiere"
@@ -3750,311 +3568,12 @@ shared_focus = {
 			}	
 			}
 		}
-		
-		prerequisite = { focus = GRU_panzertruppe  }
 	}
-
-	#Submarine Focus
-shared_focus = {
-		id = GRU_submarine_focus
-		icon = GFX_GRU_submarine_focus-4016
-		relative_position_id = GRU_formation_of_the_nva
-		x = -5
-		y = 4
-		cost = 5
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 10
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GRU_submarine_focus"
-			if={
-				limit = { has_idea = GRU_carrier }
-				swap_ideas = {
-							remove_idea = GRU_carrier
-							add_idea = GRU_carrier_submarine
-						}
-			}
-			if={
-				limit = { has_idea = GRU_battleship }
-				swap_ideas = {
-							remove_idea = GRU_battleship
-							add_idea = GRU_battleship_submarine
-						}
-			}
-			else={
-			custom_effect_tooltip = GRU_tt_army_boni
-			}
-			custom_effect_tooltip = tooltip_white_line
-			if = {
-			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
-			GRU_add_or_modify_wunderwaffen = yes
-			add_to_variable = { 
-				GRU_wunderwaffen_sp_tag_submarine_speed_factor = 0.05
-				tooltip = sp_tag_submarine_speed_factor_tt
-			}
-			}
-		}
-		
-		
-		prerequisite = { focus = GRU_carrier_focus focus = GRU_battleship_focus  }
-		mutually_exclusive = { focus = GRU_cruiser_focus  }
-	}
-
-	#Cruiser Focus
-shared_focus = {
-		id = GRU_cruiser_focus
-		icon = GFX_GRU_cruiser_focus-4015
-		relative_position_id = GRU_formation_of_the_nva
-		x = -3
-		y = 4
-		cost = 5
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 10
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GRU_submarine_focus"
-			if={
-				limit = { has_idea = GRU_carrier }
-				swap_ideas = {
-							remove_idea = GRU_carrier
-							add_idea = GRU_carrier_cruiser
-						}
-			}
-			if={
-				limit = { has_idea = GRU_battleship }
-				swap_ideas = {
-							remove_idea = GRU_battleship
-							add_idea = GRU_battleship_cruiser
-						}
-			}
-			else={
-			custom_effect_tooltip = GRU_tt_army_boni
-			}
-			custom_effect_tooltip = tooltip_white_line
-			if = {
-			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
-			GRU_add_or_modify_wunderwaffen = yes
-			add_to_variable = { 
-				GRU_wunderwaffen_sp_naval_torpedo_cruiser_speed_factor = 0.05
-				tooltip = sp_naval_torpedo_cruiser_speed_factor_tt
-			}
-			}
-		}
-		
-		prerequisite = { focus = GRU_carrier_focus focus = GRU_battleship_focus  }
-		mutually_exclusive = { focus = GRU_submarine_focus  }
-	}
-
-	#OK-NVH
-shared_focus = {
-		id = GRU_oknvh
-		icon = GFX_GRU_oknvh-4009
-		relative_position_id = GRU_formation_of_the_nva
-		x = 4
-		y = 5
-		cost = 5
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 10
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GRU_oknvh"
-			if={
-				limit = { has_idea = GRU_panzer_two }
-				swap_ideas = {
-							remove_idea = GRU_panzer_two
-							add_idea = GRU_mobile_generals
-						}
-			}
-			if={
-				limit = { has_idea = GRU_masses_two }
-				swap_ideas = {
-							remove_idea = GRU_masses_two
-							add_idea = GRU_masses_generals
-						}
-				custom_effect_tooltip = tooltip_white_line
-			}
-			else={
-			custom_effect_tooltip = GRU_tt_OKW_boni
-			}
-			custom_effect_tooltip = tooltip_white_line
-			if = {
-			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
-			GRU_add_or_modify_wunderwaffen = yes
-			add_to_variable = { 
-				GRU_wunderwaffen_sp_tag_tank_speed_factor = 0.05
-				tooltip = sp_tag_tank_speed_factor_tt
-			}		
-			add_to_variable = { 
-				GRU_wunderwaffen_sp_tag_artillery_speed_factor = 0.05
-				tooltip = sp_tag_artillery_speed_factor_tt
-			}
-			custom_effect_tooltip = tooltip_white_line
-			add_breakthrough_progress = {
-				specialization = specialization_land
-				value = 0.5
-			}
-			sp:sp_land_land_cruiser = { add_project_progress_ratio = 0.25 }
-			}
-			custom_effect_tooltip = tooltip_white_line
-			army_experience = 100
-		}
-		
-		prerequisite = { focus = GRU_panzergrenadiere focus = GRU_overwhelming_firepower  }
-	}
-
-
-
-	#Mass Conscription
-shared_focus = {
-		id = GRU_mass_conscription
-		icon = GFX_GRU_mass_conscription-4021
-		relative_position_id = GRU_formation_of_the_nva
-		x = 5
-		y = 3
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GRU_mass_conscription"
-			add_ideas = GRU_masses
-			custom_effect_tooltip = tooltip_white_line	
-			custom_effect_tooltip = tech_human_wave_tactics_effect
-			custom_effect_tooltip = tooltip_white_line
-			add_mastery_bonus = {
-				name = GRU_mass_conscription
-				bonus = 0.1
-				days = 365
-				track = combat_support
-			}
-			hidden_effect = {
-				set_technology = { tech_human_wave_tactics = 1 popup = no }
-			}
-		}
-		
-		prerequisite = { focus = GRU_nationales_volksheer  }
-		mutually_exclusive = { focus = GRU_panzertruppe  }
-	}
-
-	#Overwhelming Firepower
-shared_focus = {
-		id = GRU_overwhelming_firepower
-		icon = GFX_GRU_overwhelming_firepower-4022
-		relative_position_id = GRU_formation_of_the_nva
-		x = 5
-		y = 4
-		cost = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GRU_overwhelming_firepower"
-			swap_ideas = {
-				remove_idea = GRU_masses
-				add_idea = GRU_masses_two
-			}
-			custom_effect_tooltip = tooltip_white_line	
-			custom_effect_tooltip = anti_fortification_artillery_effect
-			hidden_effect = {
-				set_technology = { anti_fortification_artillery = 1 popup = no }
-			}
-			custom_effect_tooltip = tooltip_white_line	
-			if = {
-			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
-			GRU_add_or_modify_wunderwaffen = yes
-			add_to_variable = { 
-				GRU_wunderwaffen_sp_tag_artillery_speed_factor = 0.1
-				tooltip = sp_tag_artillery_speed_factor_tt
-			}
-			}
-		}
-		
-		prerequisite = { focus = GRU_mass_conscription  }
-	}
-
-	#OK-NVM
-shared_focus = {
-		id = GRU_oknvm
-		icon = GFX_GRU_oknvm-4008
-		relative_position_id = GRU_formation_of_the_nva
+	shared_focus = {
+		id = GER_air_defence
+		icon = GFX_focus_generic_air_defense2
 		x = -4
-		y = 5
-		cost = 5
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 10
-				has_war = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GRU_submarine_focus"
-			if={
-				limit = { has_idea = GRU_carrier_cruiser }
-				swap_ideas = {
-							remove_idea = GRU_carrier_cruiser
-							add_idea = GRU_carrier_cruiser_OK_NVM
-						}
-			}
-			if={
-				limit = { has_idea = GRU_battleship_cruiser }
-				swap_ideas = {
-							remove_idea = GRU_battleship_cruiser
-							add_idea = GRU_battleship_cruiser_OK_NVM
-						}
-			}
-			if={
-				limit = { has_idea = GRU_battleship_submarine }
-				swap_ideas = {
-							remove_idea = GRU_battleship_submarine
-							add_idea = GRU_battleship_submarine_OK_NVM
-						}
-			}
-			if={
-				limit = { has_idea = GRU_carrier_submarine }
-				swap_ideas = {
-							remove_idea = GRU_carrier_submarine
-							add_idea = GRU_carrier_submarine_OK_NVM
-						}
-			}
-			else={
-			custom_effect_tooltip = GRU_tt_OKW_boni
-			}
-			custom_effect_tooltip = tooltip_white_line
-			if = {
-			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
-			GRU_add_or_modify_wunderwaffen = yes
-			add_to_variable = { 
-				GRU_wunderwaffen_sp_tag_surface_ship_speed_factor = 0.10
-				tooltip = sp_tag_surface_ship_speed_factor_tt
-			}
-			custom_effect_tooltip = tooltip_white_line
-			add_breakthrough_progress = {
-				specialization = specialization_naval
-				value = 0.5
-			}
-			sp:sp_naval_nuclear_torpedo = { add_project_progress_ratio = 0.2 }
-			}
-			custom_effect_tooltip = tooltip_white_line
-			navy_experience = 100
-		}
-		
-		prerequisite = { focus = GRU_cruiser_focus focus = GRU_submarine_focus  }
-	}
-
-	#Naval Support Focus
-shared_focus = {
-		id = GRU_naval_support_focus
-		icon = GFX_GRU_naval_support_focus-4017
-		relative_position_id = GRU_formation_of_the_nva
-		x = -1
-		y = 4
+		y = 1
 		cost = 5
 		ai_will_do = {
 			factor = 6
@@ -4063,23 +3582,163 @@ shared_focus = {
 				has_war = yes
 			}
 		}
+		relative_position_id = GRU_decentralized_off
+		prerequisite = {
+			focus = GRU_decentralized_off
+			focus = GRU_centralized_off
+		}
+		prerequisite = {
+			focus = GRU_nationale_luftwaffe
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed GER_air_defence"
+			if = {
+				limit = { NOT = { has_tech = antiair2 } }
+				every_owned_state = {
+					display_individual_scopes = yes
+					random_select_amount = 3
+					limit = {
+						is_core_of = ROOT
+						is_controlled_by = ROOT
+						non_damaged_building_level = { building = industrial_complex level > 3 }
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				custom_effect_tooltip = GER_air_defence_tt
+			}
+			else = {
+				every_owned_state = {
+					display_individual_scopes = yes
+					random_select_amount = 3
+					limit = {
+						is_core_of = ROOT
+						is_controlled_by = ROOT
+						non_damaged_building_level = { building = industrial_complex level > 3 }
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS FOCUS_FILTER_INDUSTRY }
+	}
+	shared_focus = {
+		id = GER_radar_detection
+		icon = GFX_goal_CSA_communications_infrastructure
+		x = -4
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 6
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		relative_position_id = GRU_decentralized_off
+		prerequisite = {
+			focus = GER_air_defence
+		}
+		prerequisite = {
+			focus = GRU_bomber_focus
+			focus = GRU_fighter_focus
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed GER_radar_detection"
+			custom_effect_tooltip = GER_radar_detection_tt
+			effect_tooltip = {
+				781 = {
+					add_building_construction = {
+						type = radar_station
+						level = 1
+						instant_build = yes
+					}
+				}
+				780 = {
+					add_building_construction = {
+						type = radar_station
+						level = 1
+						instant_build = yes
+					}
+				}
+				custom_effect_tooltip = GER_else_tt
+				add_breakthrough_progress = {
+					specialization = specialization_air
+					value = 1
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { is_special_project_completed = sp:sp_air_radar }
+					781 = {
+						add_building_construction = {
+							type = radar_station
+							level = 1
+							instant_build = yes
+						}
+					}
+					780 = {
+						add_building_construction = {
+							type = radar_station
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				else = {
+					add_breakthrough_progress = {
+						specialization = specialization_air
+						value = 1
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	shared_focus = {
+		id = GRU_naval_support_focus
+		icon = GFX_GRU_naval_support_focus-4017
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 6
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		relative_position_id = GER_radar_detection
+		prerequisite = {
+			focus = GER_radar_detection
+		}
+		mutually_exclusive = {
+			focus = GRU_ground_support_focus
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_naval_support_focus"
-			if={
+			if = {
 				limit = { has_idea = GRU_fighter }
 				swap_ideas = {
 							remove_idea = GRU_fighter
 							add_idea = GRU_fighter_sea
 						}
 			}
-			if={
+			if = {
 				limit = { has_idea = GRU_bomber }
 				swap_ideas = {
 							remove_idea = GRU_bomber
 							add_idea = GRU_bomber_sea
 						}
 			}
-			else={
+			else = {
 			custom_effect_tooltip = GRU_tt_army_boni
 			}
 			custom_effect_tooltip = tooltip_white_line
@@ -4089,21 +3748,15 @@ shared_focus = {
 			add_to_variable = { 
 				GRU_wunderwaffen_sp_tag_jet_speed_factor = 0.10
 				tooltip = sp_tag_jet_speed_factor_tt
-			}
+				}
 			}
 		}
-		
-		prerequisite = { focus = GRU_bomber_focus focus = GRU_fighter_focus  }
-		mutually_exclusive = { focus = GRU_ground_support_focus  }
 	}
-
-	#Ground Support Focus
-shared_focus = {
+	shared_focus = {
 		id = GRU_ground_support_focus
 		icon = GFX_GRU_ground_support_focus-4018
-		relative_position_id = GRU_formation_of_the_nva
 		x = 1
-		y = 4
+		y = 1
 		cost = 5
 		ai_will_do = {
 			factor = 6
@@ -4111,6 +3764,13 @@ shared_focus = {
 				factor = 10
 				has_war = yes
 			}
+		}
+		relative_position_id = GER_radar_detection
+		prerequisite = {
+			focus = GER_radar_detection
+		}
+		mutually_exclusive = {
+			focus = GRU_naval_support_focus
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_ground_support_focus"
@@ -4141,18 +3801,141 @@ shared_focus = {
 			}
 			}
 		}
-		
-		prerequisite = { focus = GRU_bomber_focus focus = GRU_fighter_focus  }
-		mutually_exclusive = { focus = GRU_naval_support_focus  }
 	}
-
-	#OK-NLW
-shared_focus = {
+	shared_focus = {
+		id = GRU_nationale_luftwaffe
+		icon = GFX_GRU_nationale_luftwaffe-4005
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 9
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				surrender_progress > 0
+			}
+		}
+		relative_position_id = GRU_decentralized_off
+		prerequisite = {
+			focus = GRU_decentralized_off
+			focus = GRU_centralized_off
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_nationale_luftwaffe"
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+			custom_effect_tooltip = tooltip_white_line	
+			custom_effect_tooltip = tech_better_paratroopers_effect
+			hidden_effect = {
+				set_technology = { tech_better_paratroopers = 1 popup = no }
+			}
+			custom_effect_tooltip = tooltip_white_line	
+			air_experience  = 50
+		}
+	}
+	shared_focus = {
+		id = GRU_bomber_focus
+		icon = GFX_GRU_bomber_focus-4012
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 6
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		relative_position_id = GRU_nationale_luftwaffe
+		prerequisite = {
+			focus = GRU_nationale_luftwaffe
+		}
+		mutually_exclusive = {
+			focus = GRU_fighter_focus
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_bomber_focus"
+			add_ideas = GRU_bomber
+			custom_effect_tooltip = tooltip_white_line
+			add_mastery_bonus = {
+				name = GRU_bomber_focus
+				bonus = 0.1
+				days = 365
+				track = heavy_aircraft
+			}
+		}
+	}
+	shared_focus = {
+		id = GRU_fighter_focus
+		icon = GFX_GRU_fighter_focus-4011
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 6
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		relative_position_id = GRU_nationale_luftwaffe
+		prerequisite = {
+			focus = GRU_nationale_luftwaffe
+		}
+		mutually_exclusive = {
+			focus = GRU_bomber_focus
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_fighter_focus"
+			add_ideas = GRU_fighter
+			custom_effect_tooltip = tooltip_white_line
+			add_mastery_bonus = {
+				name = GRU_fighter_focus
+				bonus = 0.1
+				days = 365
+				track = fighter_aircraft
+			}
+		}
+	}
+	shared_focus = {
+		id = GER_aircraft_industry
+		icon = GFX_goal_CZE_air_industry
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 6
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		relative_position_id = GRU_nationale_luftwaffe
+		prerequisite = {
+			focus = GRU_bomber_focus
+			focus = GRU_fighter_focus
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed GER_aircraft_industry"
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	shared_focus = {
 		id = GRU_oknlw
 		icon = GFX_GRU_oknlw-4007
-		relative_position_id = GRU_formation_of_the_nva
 		x = 0
-		y = 5
+		y = 2
 		cost = 5
 		ai_will_do = {
 			factor = 11
@@ -4160,6 +3943,14 @@ shared_focus = {
 				factor = 10
 				has_war = yes
 			}
+		}
+		relative_position_id = GER_aircraft_industry
+		prerequisite = {
+			focus = GER_aircraft_industry
+		}
+		prerequisite = {
+			focus = GRU_naval_support_focus
+			focus = GRU_ground_support_focus
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_oknlw"
@@ -4226,8 +4017,1221 @@ shared_focus = {
 			custom_effect_tooltip = tooltip_white_line
 			air_experience = 100
 		}
+	}
+	shared_focus = {
+		id = GRU_centralized_off
+		icon = GFX_GRU_political_officers-4001
+		relative_position_id = GRU_formation_of_the_nva
+		x = 2
+		y = 1
+		cost = 5
+		continue_if_invalid = yes
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 50
+				has_war = yes
+			}
+		}
+		mutually_exclusive = {
+			focus = GRU_decentralized_off
+		}
+		prerequisite = {
+			focus = GRU_formation_of_the_nva
+		}
+		available = {
+			OR={
+			has_country_flag = GRU_SMEPD_M_rule
+			has_country_flag = GRU_NMDVP_rule
+			}
+			is_subject = no
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_centralized_off"
+			add_ideas = GRU_pol_off
+		}
+	}
+	shared_focus = {
+		id = GER_expand_marines
+		icon = GFX_goal_generic_marines2
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		relative_position_id = GRU_centralized_off
+		prerequisite = {
+			focus = GRU_decentralized_off
+			focus = GRU_centralized_off
+		}
+		prerequisite = {
+			focus = GRU_nationale_volksmarine
+			focus = GRU_nationales_volksheer
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed GER_expand_marines"
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_create_division_template
+					NAME = "Seebataillon-Division"
+					LINE_1 = { localization_key = line_battalion_tt NAME = marine ICON = GFX_unit_marine_icon_small COUNT = 7 }
+					SUPPORT_1 = { localization_key = support_battalion_tt NAME = recon ICON = GFX_unit_recon_icon_small }
+					SUPPORT_2 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+					SUPPORT_3 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+				}
+				if = {
+					limit = { has_template = "Seebataillon-Division" }
+					delete_unit_template_and_units = { division_template = "Seebataillon-Division" disband = yes } #no cheating
+				}
+				division_template = {
+					name = "Seebataillon-Division"
+					division_names_group = GER_MEC_01
+					regiments = {
+						marine = { x = 0 y = 0 }
+						marine = { x = 0 y = 1 }
+						marine = { x = 0 y = 2 }
+						marine = { x = 0 y = 3 }
+						marine = { x = 1 y = 0 }
+						marine = { x = 1 y = 1 }
+						marine = { x = 1 y = 2 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = GER
+					valid_state_for_spawning_friendly_unit = yes
+				}
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = tooltip_spawn_unit
+						TYPE = "Seebataillon-Division"
+					}
+					create_unit = {
+						division = "division_template = \"Seebataillon-Division\" start_experience_factor = 0.5"
+						owner = ROOT
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = GER
+					valid_state_for_spawning_friendly_unit = yes
+				}
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = tooltip_spawn_unit
+						TYPE = "Seebataillon-Division"
+					}
+					create_unit = {
+						division = "division_template = \"Seebataillon-Division\" start_experience_factor = 0.5"
+						owner = ROOT
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+	shared_focus = {
+		id = GER_brabag
+		icon = GFX_goal_oil_derrick
+		x = 0
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		relative_position_id = GRU_centralized_off
+		prerequisite = {
+			focus = GRU_carrier_focus
+			focus = GRU_battleship_focus
+		}
+		prerequisite = {
+			focus = GER_expand_marines
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed GER_brabag"
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = rubber
+				amount = 3
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	shared_focus = {
+		id = GER_imperial_shipyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 4
+		y = 3
+		cost = 5
+		ai_will_do = {
+			base = 50
+		}
+		relative_position_id = GRU_centralized_off
+		prerequisite = {
+			focus = GRU_battleship_focus
+			focus = GRU_carrier_focus
+		}
+		prerequisite = {
+			focus = GER_naval_production
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed GER_imperial_shipyards"
+			if = {
+				limit = {
+					has_full_control_of_state = 56
+				}
+				56 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 58
+				}
+				58 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 776
+				}
+				776 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_tech_bonus = {
+				name = GER_imperial_shipyards
+				bonus = 1
+				uses = 2
+				category = naval_equipment
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+	shared_focus = {
+		id = GRU_overwhelming_firepower
+		icon = GFX_GRU_overwhelming_firepower-4022
+		x = -1
+		y = 4
+		cost = 5
+		ai_will_do = {
+			base = 0
+		}
+		relative_position_id = GRU_centralized_off
+		prerequisite = {
+			focus = GRU_mass_conscription
+		}
+		prerequisite = {
+			focus = GER_invest_in_rnd
+		}
+		mutually_exclusive = {
+			focus = GRU_panzergrenadiere
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_overwhelming_firepower"
+			swap_ideas = {
+				remove_idea = GRU_masses
+				add_idea = GRU_masses_two
+			}
+			custom_effect_tooltip = tooltip_white_line	
+			custom_effect_tooltip = anti_fortification_artillery_effect
+			hidden_effect = {
+				set_technology = { anti_fortification_artillery = 1 popup = no }
+			}
+			custom_effect_tooltip = tooltip_white_line	
+			if = {
+			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
+			GRU_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_tag_artillery_speed_factor = 0.1
+				tooltip = sp_tag_artillery_speed_factor_tt
+			}
+			}
+		}
+	}
+	shared_focus = {
+		id = GER_mechanised_infantry
+		icon = GFX_goal_generic_mechanized_wave
+		x = 1
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		relative_position_id = GRU_centralized_off
+		prerequisite = {
+			focus = GER_brabag
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed GER_mechanised_infantry"
+			if = {
+				limit = { has_tech = mechanised_infantry }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = tooltip_create_division_template
+						NAME = "Panzergrenadier-Division (Neue)"
+						LINE_1 = { localization_key = line_battalion_tt NAME = mechanized ICON = GFX_unit_mechanized_icon_small COUNT = 10 }
+						SUPPORT_1 = { localization_key = support_battalion_tt NAME = mot_recon ICON = GFX_unit_mot_recon_icon_small }
+						SUPPORT_2 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+						SUPPORT_3 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+					}
+					if = {
+						limit = { has_template = "Panzergrenadier-Division (Neue)" }
+						delete_unit_template_and_units = { division_template = "Panzergrenadier-Division (Neue)" disband = yes } #no cheating
+					}
+					division_template = {
+						name = "Panzergrenadier-Division (Neue)"
+						division_names_group = GER_MEC_01
+						regiments = {
+							mechanized = { x = 0 y = 0 }
+							mechanized = { x = 0 y = 1 }
+							mechanized = { x = 0 y = 2 }
+							mechanized = { x = 1 y = 0 }
+							mechanized = { x = 1 y = 1 }
+							mechanized = { x = 1 y = 2 }
+							mechanized = { x = 2 y = 0 }
+							mechanized = { x = 2 y = 1 }
+							mechanized = { x = 2 y = 2 }
+							mechanized = { x = 2 y = 3 }
+						}
+						support = {
+							mot_recon = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							artillery = { x = 0 y = 2 }
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = GRU
+						valid_state_for_spawning_friendly_unit = yes
+					}
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = tooltip_spawn_unit
+							TYPE = "Panzergrenadier-Division (Neue)"
+						}
+						create_unit = {
+							division = "division_template = \"Panzergrenadier-Division (Neue)\" start_experience_factor = 0.5"
+							owner = ROOT
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = GRU
+						valid_state_for_spawning_friendly_unit = yes
+					}
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = tooltip_spawn_unit
+							TYPE = "Panzergrenadier-Division (Neue)"
+						}
+						create_unit = {
+							division = "division_template = \"Panzergrenadier-Division (Neue)\" start_experience_factor = 0.5"
+							owner = ROOT
+						}
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = GER_mechanised_infantry_tt
+				custom_effect_tooltip = {
+					localization_key = tooltip_create_division_template
+					NAME = "Panzergrenadier-Division (Neue)"
+					LINE_1 = { localization_key = line_battalion_tt NAME = mechanized ICON = GFX_unit_mechanized_icon_small COUNT = 10 }
+					SUPPORT_1 = { localization_key = support_battalion_tt NAME = mot_recon ICON = GFX_unit_mot_recon_icon_small }
+					SUPPORT_2 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+					SUPPORT_3 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+				}
+				effect_tooltip = {
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = GRU
+							valid_state_for_spawning_friendly_unit = yes
+						}
+						custom_override_tooltip = {
+							tooltip = {
+								localization_key = tooltip_spawn_unit
+								TYPE = "Panzergrenadier-Division (Neue)"
+							}
+							create_unit = {
+								division = "division_template = \"Panzergrenadier-Division (Neue)\" start_experience_factor = 0.5"
+								owner = ROOT
+							}
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = GRU
+							valid_state_for_spawning_friendly_unit = yes
+						}
+						custom_override_tooltip = {
+							tooltip = {
+								localization_key = tooltip_spawn_unit
+								TYPE = "Panzergrenadier-Division (Neue)"
+							}
+							create_unit = {
+								division = "division_template = \"Panzergrenadier-Division (Neue)\" start_experience_factor = 0.5"
+								owner = ROOT
+							}
+						}
+					}
+				}
+				custom_effect_tooltip = GER_else_tt
+				add_tech_bonus = {
+					name = GER_mechanised_infantry
+					bonus = 1.0
+					ahead_reduction = 1
+					uses = 1
+					category = cat_mechanized_equipment
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+	}
+	shared_focus = {
+		id = GER_naval_production
+		icon = GFX_goal_generic_naval_industry
+		x = 4
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		relative_position_id = GRU_centralized_off
+		prerequisite = {
+			focus = GRU_decentralized_off
+			focus = GRU_centralized_off
+		}
+		prerequisite = {
+			focus = GRU_nationale_volksmarine
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed GER_naval_production"
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 1.0
+			}
+			custom_effect_tooltip = tooltip_white_line
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_coastal = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = dockyard size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_coastal = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = dockyard size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_in_home_area = yes
+					is_coastal = yes
+					is_valid_state_for_development = yes
+					free_building_slots = { building = dockyard size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	shared_focus = {
+		id = GRU_submarine_focus
+		icon = GFX_GRU_submarine_focus-4016
+		x = 3
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		relative_position_id = GRU_centralized_off
+		prerequisite = {
+			focus = GER_imperial_shipyards
+		}
+		available = {
+			TUR = {
+				NOT = {
+					has_country_leader = {
+						character = TUR_recep_tayyip_erdogan_char
+						ruling_only = yes
+					}
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = GRU_cruiser_focus
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_submarine_focus"
+			if={
+				limit = { has_idea = GRU_carrier }
+				swap_ideas = {
+							remove_idea = GRU_carrier
+							add_idea = GRU_carrier_submarine
+						}
+			}
+			if={
+				limit = { has_idea = GRU_battleship }
+				swap_ideas = {
+							remove_idea = GRU_battleship
+							add_idea = GRU_battleship_submarine
+						}
+			}
+			else={
+			custom_effect_tooltip = GRU_tt_army_boni
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
+			GRU_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_tag_submarine_speed_factor = 0.05
+				tooltip = sp_tag_submarine_speed_factor_tt
+			}
+			}
+		}
+	}
+	shared_focus = {
+		id = GRU_cruiser_focus
+		icon = GFX_GRU_cruiser_focus-4015
+		x = 5
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		relative_position_id = GRU_centralized_off
+		prerequisite = {
+			focus = GER_imperial_shipyards
+		}
+		mutually_exclusive = {
+			focus = GRU_submarine_focus
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_submarine_focus"
+			if={
+				limit = { has_idea = GRU_carrier }
+				swap_ideas = {
+							remove_idea = GRU_carrier
+							add_idea = GRU_carrier_cruiser
+						}
+			}
+			if={
+				limit = { has_idea = GRU_battleship }
+				swap_ideas = {
+							remove_idea = GRU_battleship
+							add_idea = GRU_battleship_cruiser
+						}
+			}
+			else={
+			custom_effect_tooltip = GRU_tt_army_boni
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
+			GRU_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_naval_torpedo_cruiser_speed_factor = 0.05
+				tooltip = sp_naval_torpedo_cruiser_speed_factor_tt
+			}
+			}
+		}
+	}
+	shared_focus = {
+		id = GRU_nationale_volksmarine
+		icon = GFX_GRU_nationale_volksmarine-4004
+		x = 2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 8
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				surrender_progress > 0
+			}
+		}
+		relative_position_id = GRU_centralized_off
+		prerequisite = {
+			focus = GRU_decentralized_off
+			focus = GRU_centralized_off
+		}
+		available = {
+		}
+		completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus GRU_nationale_volksmarine"
+		add_doctrine_cost_reduction = {
+			name = naval_doc_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = naval_doctrine
+		}
+		custom_effect_tooltip = tooltip_white_line	
+		custom_effect_tooltip = tech_marine_bonus_effect
+		hidden_effect = {
+			set_technology = { tech_marine_cost_reduction = 1 popup = no }
+		}
+		custom_effect_tooltip = tooltip_white_line	
+		navy_experience = 50
+		}
+	}
+	shared_focus = {
+		id = GRU_carrier_focus
+		icon = GFX_GRU_carrier_focus-4013
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		relative_position_id = GRU_nationale_volksmarine
+		prerequisite = {
+			focus = GRU_nationale_volksmarine
+		}
+		mutually_exclusive = {
+			focus = GRU_battleship_focus
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_carrier_focus"
+			add_ideas = GRU_carrier
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
+			GRU_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_naval_modern_carrier_speed_factor = 0.05
+				tooltip = sp_naval_modern_carrier_speed_factor_tt
+			}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_mastery_bonus = {
+				name = GRU_carrier_focus
+				bonus = 0.1
+				days = 365
+				track = carriers
+			}
+		}
+	}
+	shared_focus = {
+		id = GRU_battleship_focus
+		icon = GFX_GRU_battleship_focus-4014
+		x = 3
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		relative_position_id = GRU_centralized_off
+		prerequisite = {
+			focus = GRU_nationale_volksmarine
+		}
+		mutually_exclusive = {
+			focus = GRU_carrier_focus
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_battleship_focus"
+			add_ideas = GRU_battleship
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
+			GRU_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_naval_modern_battleship_speed_factor = 0.05
+				tooltip = sp_naval_modern_battleship_speed_factor_tt
+			}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_mastery_bonus = {
+				name = GRU_battleship_focus
+				bonus = 0.1
+				days = 365
+				track = capital_ships
+			}
+		}
+	}
+	shared_focus = {
+		id = GER_graf_zeppelin
+		icon = GFX_goal_generic_naval_carrier2
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		relative_position_id = GRU_nationale_volksmarine
+		prerequisite = {
+			focus = GRU_carrier_focus
+			focus = GRU_battleship_focus
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed GER_graf_zeppelin"
+			add_tech_bonus = {
+				name = GER_graf_zeppelin
+				bonus = 1
+				uses = 1
+				category = cv_tech
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = { has_tech = advanced_ship_hull_carrier }
+				if = {
+					limit = { has_tech = advanced_dp_light_battery }
+					create_equipment_variant = {
+						name = "Aurora Class"
+						type = ship_hull_carrier_3
+						name_group = SRI_CV_HISTORICAL
+						parent_version = 0
+						modules = {
+							fixed_ship_deck_slot_1 = ship_deck_space
+							fixed_ship_deck_slot_2 = ship_deck_space
+							fixed_ship_anti_air_slot = ship_anti_air_2
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = carrier_ship_engine_4
+							fixed_ship_secondaries_slot = dp_ship_secondaries_4
+							front_1_custom_slot = ship_deck_space
+						}
+					}
+				}
+				else_if = {
+					limit = { has_tech = improved_dp_light_battery }
+					create_equipment_variant = {
+						name = "Aurora Class"
+						type = ship_hull_carrier_3
+						name_group = SRI_CV_HISTORICAL
+						parent_version = 0
+						modules = {
+							fixed_ship_deck_slot_1 = ship_deck_space
+							fixed_ship_deck_slot_2 = ship_deck_space
+							fixed_ship_anti_air_slot = ship_anti_air_2
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = carrier_ship_engine_4
+							fixed_ship_secondaries_slot = dp_ship_secondaries_3
+							front_1_custom_slot = ship_deck_space
+						}
+					}
+				}
+				else_if = {
+					limit = { has_tech = basic_dp_light_battery }
+					create_equipment_variant = {
+						name = "Aurora Class"
+						type = ship_hull_carrier_3
+						name_group = SRI_CV_HISTORICAL
+						parent_version = 0
+						modules = {
+							fixed_ship_deck_slot_1 = ship_deck_space
+							fixed_ship_deck_slot_2 = ship_deck_space
+							fixed_ship_anti_air_slot = ship_anti_air_2
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = carrier_ship_engine_4
+							fixed_ship_secondaries_slot = dp_ship_secondaries_2
+							front_1_custom_slot = ship_deck_space
+						}
+					}
+				}
+				else = {
+					create_equipment_variant = {
+						name = "Aurora Class"
+						type = ship_hull_carrier_3
+						name_group = SRI_CV_HISTORICAL
+						parent_version = 0
+						modules = {
+							fixed_ship_deck_slot_1 = ship_deck_space
+							fixed_ship_deck_slot_2 = ship_deck_space
+							fixed_ship_anti_air_slot = ship_anti_air_2
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = carrier_ship_engine_4
+							fixed_ship_secondaries_slot = ship_secondaries_2
+							front_1_custom_slot = ship_deck_space
+						}
+					}
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_carrier_3
+						version_name = "Aurora Class"
+					}
+					name = "SMS Aurora"
+					requested_factories = 2
+					progress = 0.40
+				}
+			}
+			else_if = {
+				limit = { has_tech = improved_ship_hull_carrier }
+				if = {
+					limit = { has_tech = basic_dp_light_battery }
+					create_equipment_variant = {
+						name = "Aurora Class"
+						type = ship_hull_carrier_2
+						name_group = SRI_CV_HISTORICAL
+						parent_version = 0
+						modules = {
+							fixed_ship_deck_slot_1 = ship_deck_space
+							fixed_ship_deck_slot_2 = ship_deck_space
+							fixed_ship_anti_air_slot = ship_anti_air_2
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = carrier_ship_engine_3
+							fixed_ship_secondaries_slot = dp_ship_secondaries_2
+							front_1_custom_slot = ship_deck_space
+						}
+					}
+				}
+				else = {
+					create_equipment_variant = {
+						name = "Aurora Class"
+						type = ship_hull_carrier_2
+						name_group = SRI_CV_HISTORICAL
+						parent_version = 0
+						modules = {
+							fixed_ship_deck_slot_1 = ship_deck_space
+							fixed_ship_deck_slot_2 = ship_deck_space
+							fixed_ship_anti_air_slot = ship_anti_air_2
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = carrier_ship_engine_3
+							fixed_ship_secondaries_slot = ship_secondaries_2
+							front_1_custom_slot = ship_deck_space
+						}
+					}
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_carrier_2
+						version_name = "Aurora Class"
+					}
+					name = "SMS Aurora"
+					requested_factories = 2
+					progress = 0.40
+				}
+			}
+			else_if = {
+				limit = { has_tech = basic_ship_hull_carrier }
+				create_equipment_variant = {
+					name = "Aurora Class"
+					type = ship_hull_carrier_1
+					name_group = SRI_CV_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_deck_slot_1 = ship_deck_space
+						fixed_ship_deck_slot_2 = ship_deck_space
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = carrier_ship_engine_2
+						fixed_ship_secondaries_slot = ship_secondaries_2
+						front_1_custom_slot = ship_deck_space
+					}
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_carrier_1
+						version_name = "Aurora Class"
+					}
+					name = "SMS Aurora"
+					requested_factories = 2
+					progress = 0.40
+				}
+			}
+			else = {
+				create_equipment_variant = {
+					name = "Aurora Class"
+					type = ship_hull_carrier_conversion_bb
+					name_group = SRI_CV_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_deck_slot_1 = ship_deck_space
+						fixed_ship_deck_slot_2 = ship_deck_space
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = carrier_ship_engine_1
+						fixed_ship_secondaries_slot = ship_secondaries_1
+					}
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_carrier_conversion_bb
+						version_name = "Aurora Class"
+					}
+					name = "SMS Aurora"
+					requested_factories = 2
+					progress = 0.40
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+	shared_focus = {
+		id = GRU_oknvm
+		icon = GFX_GRU_oknvm-4008
+		x = 0
+		y = 2
+		cost = 5
+		relative_position_id = GER_graf_zeppelin
+		prerequisite = {
+			focus = GER_graf_zeppelin
+		}
+		prerequisite = {
+			focus = GRU_submarine_focus
+			focus = GRU_cruiser_focus
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_submarine_focus"
+			if={
+				limit = { has_idea = GRU_carrier_cruiser }
+				swap_ideas = {
+							remove_idea = GRU_carrier_cruiser
+							add_idea = GRU_carrier_cruiser_OK_NVM
+						}
+			}
+			if={
+				limit = { has_idea = GRU_battleship_cruiser }
+				swap_ideas = {
+							remove_idea = GRU_battleship_cruiser
+							add_idea = GRU_battleship_cruiser_OK_NVM
+						}
+			}
+			if={
+				limit = { has_idea = GRU_battleship_submarine }
+				swap_ideas = {
+							remove_idea = GRU_battleship_submarine
+							add_idea = GRU_battleship_submarine_OK_NVM
+						}
+			}
+			if={
+				limit = { has_idea = GRU_carrier_submarine }
+				swap_ideas = {
+							remove_idea = GRU_carrier_submarine
+							add_idea = GRU_carrier_submarine_OK_NVM
+						}
+			}
+			else={
+			custom_effect_tooltip = GRU_tt_OKW_boni
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
+			GRU_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_tag_surface_ship_speed_factor = 0.10
+				tooltip = sp_tag_surface_ship_speed_factor_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.5
+			}
+			sp:sp_naval_nuclear_torpedo = { add_project_progress_ratio = 0.2 }
+			}
+			custom_effect_tooltip = tooltip_white_line
+			navy_experience = 100
+		}
+	}
+	shared_focus = {
+		id = GRU_nationales_volksheer
+		icon = GFX_GRU_nationales_volksheer-4006
+		relative_position_id = GRU_formation_of_the_nva
+		x = 0
+		y = 2
+		cost = 5
+		continue_if_invalid = yes
+		prerequisite = {
+			focus = GRU_decentralized_off
+			focus = GRU_centralized_off
+		}
+		ai_will_do = {
+			factor = 9
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+			modifier = {
+				factor = 5
+				surrender_progress > 0
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_nationales_volksheer"
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			custom_effect_tooltip = tooltip_white_line	
+			custom_effect_tooltip = tech_integrated_specialists_effect
+			hidden_effect = {
+				set_technology = { tech_integrated_specialists = 1 popup = no }
+			}
+			custom_effect_tooltip = tooltip_white_line	
+			army_experience = 50
+		}
+	}
+	shared_focus = {
+		id = GRU_panzertruppe
+		icon = GFX_GRU_panzertruppe-4019
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			base = 100
+		}
+		relative_position_id = GRU_nationales_volksheer
+		prerequisite = {
+			focus = GRU_nationales_volksheer
+		}
+		mutually_exclusive = {
+			focus = GRU_mass_conscription
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_panzertruppe"
+			add_ideas = GRU_panzer
+			custom_effect_tooltip = tooltip_white_line	
+			custom_effect_tooltip = masterful_blitz_effect
+			custom_effect_tooltip = tooltip_white_line
+			add_mastery_bonus = {
+				name = GRU_panzertruppe
+				bonus = 0.1
+				days = 365
+				track = armor
+			}
+			hidden_effect = {
+				set_technology = { masterful_blitz = 1 popup = no }
+			}
+		}
+	}
+	shared_focus = {
+		id = GRU_mass_conscription
+		icon = GFX_GRU_mass_conscription-4021
+		relative_position_id = GRU_nationales_volksheer
+		x = 1
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		ai_will_do = {
+			base = 0
+		}
+		prerequisite = {
+			focus = GRU_nationales_volksheer
+		}
+		mutually_exclusive = {
+			focus = GRU_panzertruppe
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_mass_conscription"
+			add_ideas = GRU_masses
+			custom_effect_tooltip = tooltip_white_line	
+			custom_effect_tooltip = tech_human_wave_tactics_effect
+			custom_effect_tooltip = tooltip_white_line
+			add_mastery_bonus = {
+				name = GRU_mass_conscription
+				bonus = 0.1
+				days = 365
+				track = combat_support
+			}
+			hidden_effect = {
+				set_technology = { tech_human_wave_tactics = 1 popup = no }
+			}
+		}
+	}
+	shared_focus = {
+		id = GER_invest_in_rnd
+		icon = GFX_goal_NEE_join_ISAC
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		relative_position_id = GRU_nationales_volksheer
+		prerequisite = {
+			focus = GRU_mass_conscription
+			focus = GRU_panzertruppe
+		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			add_research_slot_until_six = yes
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.5
+			}
+		}
+	}
+	shared_focus = {
+		id = GRU_oknvh
+		icon = GFX_GRU_oknvh-4009
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			base = 50
+		}
+		relative_position_id = GER_invest_in_rnd
+		prerequisite = {
+			focus = GRU_panzergrenadiere
+			focus = GRU_overwhelming_firepower
+		}
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_oknvh"
+			if={
+				limit = { has_idea = GRU_panzer_two }
+				swap_ideas = {
+							remove_idea = GRU_panzer_two
+							add_idea = GRU_mobile_generals
+						}
+			}
+			if={
+				limit = { has_idea = GRU_masses_two }
+				swap_ideas = {
+							remove_idea = GRU_masses_two
+							add_idea = GRU_masses_generals
+						}
+				custom_effect_tooltip = tooltip_white_line
+			}
+			else={
+			custom_effect_tooltip = GRU_tt_OKW_boni
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+			limit = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
+			GRU_add_or_modify_wunderwaffen = yes
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_tag_tank_speed_factor = 0.05
+				tooltip = sp_tag_tank_speed_factor_tt
+			}		
+			add_to_variable = { 
+				GRU_wunderwaffen_sp_tag_artillery_speed_factor = 0.05
+				tooltip = sp_tag_artillery_speed_factor_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+			sp:sp_land_land_cruiser = { add_project_progress_ratio = 0.25 }
+			}
+			custom_effect_tooltip = tooltip_white_line
+			army_experience = 100
+		}
 		
-		prerequisite = { focus = GRU_ground_support_focus focus = GRU_naval_support_focus  }
+		prerequisite = { focus = GRU_panzergrenadiere focus = GRU_overwhelming_firepower  }
 	}
 
 	#Hydroelectric Power
@@ -7116,7 +8120,7 @@ shared_focus = {
 		}
 		cost = 1
 		ai_will_do = {
-			factor = 30
+			factor = 1000
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_PATH"
@@ -7135,7 +8139,7 @@ shared_focus = {
 		relative_position_id = GRU_NMDVP_PATH
 		x = -1
 		y = 1
-		cost = 5
+		cost = 4
 		ai_will_do = {
 			factor = 100
 		}
@@ -7151,7 +8155,7 @@ shared_focus = {
 		relative_position_id = GRU_NMDVP_PATH
 		x = 3
 		y = 1
-		cost = 5
+		cost = 4
 		ai_will_do = {
 			factor = 1000
 		}
@@ -7172,7 +8176,7 @@ shared_focus = {
 			tag = GRU
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 100
 			modifier = {
 				factor = 0
 				date < 1942.6.1
@@ -7374,7 +8378,7 @@ shared_focus = {
 		relative_position_id = GRU_NMDVP_PATH
 		x = 1
 		y = 1
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 100
 		}
@@ -7390,13 +8394,9 @@ shared_focus = {
 		relative_position_id = GRU_NMDVP_PATH
 		x = 3
 		y = 2
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 75
-			modifier = {
-				factor = 50
-				has_completed_focus = GRU_NMDVP_BORDER_FORTIFICATIONS
-			}
+			factor = 1000
 		}
 		available = {
 			is_subject = no
@@ -7422,7 +8422,7 @@ shared_focus = {
 		relative_position_id = GRU_NMDVP_PATH
 		x = 4
 		y = 3
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -7607,7 +8607,7 @@ shared_focus = {
 		relative_position_id = GRU_NMDVP_PATH
 		x = 2
 		y = 3
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 1000
 		}
@@ -7872,7 +8872,7 @@ shared_focus = {
 	shared_focus = {
 		id = GRU_new_order
 		icon = GFX_GRU_order
-		cost = 4
+		cost = 3
 		x = -6
 		y = 0
 		relative_position_id = GRU_NMDVP_LEBENSRAUM
@@ -7905,7 +8905,7 @@ shared_focus = {
 	shared_focus = {
 		id = GRU_support_colonies
 		icon = GRU_spheres_of_influence
-		cost = 7
+		cost = 6
 		relative_position_id = GRU_new_order
 		x = 2
 		y = 1
@@ -7916,7 +8916,7 @@ shared_focus = {
 		ai_will_do = {
 			factor = 2
 			modifier = {
-				factor = 50
+				factor = 40
 				has_completed_focus = GRU_NMDVP_LEBENSRAUM
 			}
 		}
@@ -8595,7 +9595,7 @@ shared_focus = {
 	shared_focus = {
 		id = GRU_panzer_divisions
 		icon = GFX_focus_ger_heavy_tanks
-		cost = 6
+		cost = 5
 
 		relative_position_id = GRU_new_order
 		x = 2
@@ -8840,3 +9840,4 @@ shared_focus = {
 			search_filters = { FOCUS_FILTER_ARMY_BONUS }
 		}
 	}
+

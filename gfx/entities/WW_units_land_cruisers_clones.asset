@@ -142,7 +142,7 @@ entity = {
 }
 entity = { 
 	clone = "USA_land_cruiser_entity"
-	name = "PSA_land_cruiser_entity"
+	name = "CAL_land_cruiser_entity"
 }
 entity = { 
 	clone = "USA_land_cruiser_entity"
@@ -151,4 +151,8 @@ entity = {
 entity = { 
 	clone = "USA_land_cruiser_entity"
 	name = "NEE_land_cruiser_entity"
+}
+entity = { 
+	clone = "USA_land_cruiser_entity"
+	name = "PHI_land_cruiser_entity"
 }

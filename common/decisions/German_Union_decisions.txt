@@ -3122,54 +3122,13 @@ GRU_germania_plan_decisions = {
 			}
 			modifier = {
 				factor = 0
-				FROM = { default_attack_AI_trigger_FROM = yes }
-			}
-			modifier = {
-				factor = 0
-				strength_ratio = {
-					tag = FROM
-					ratio < 0.8
-				}
-			}
-			modifier = {
-				factor = 0
-				FROM = {
-					any_allied_country = {
-						is_faction_leader = yes
-						overlord = {
-							strength_ratio = {
-								tag = ROOT
-								ratio > 0.7
-							}
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				FROM = {
-					is_subject = yes
-					overlord = {
-						strength_ratio = {
-							tag = ROOT
-							ratio > 0.7
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0
 				has_country_flag = imminent_war
-			}
-			modifier = {
-				factor = 0
-				has_army_manpower = { size < 1750000 }
 			}
 		}
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision GRU_pan_germanism_austria_decision target: [From.GetName]"
-			set_country_flag = { flag = imminent_war days = 31 value = 1 }
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
 			setup_decision_attack_AI = yes
 		}
 

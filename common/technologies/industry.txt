@@ -100,12 +100,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
-						
-			modifier = {
-				factor = 10
-				date > "1939.1.1"
-			}
+			factor = 40
 		}
 		
 		categories = {
@@ -138,12 +133,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
-			
-			modifier = {
-				factor = 10
-				date > "1941.1.1"
-			}			
+			factor = 40
 		}
 		
 		categories = {
@@ -170,12 +160,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
-						
-			modifier = {
-				factor = 10
-				date > "1943.1.1"
-			}
+			factor = 40
 		}
 		
 		categories = {
@@ -202,13 +187,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
-			
-			modifier = {
-				factor = 10
-				date > "1943.1.1"
-			}
-			
+			factor = 40
 		}
 		
 		categories = {
@@ -237,11 +216,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
 		}
 		
 		categories = {
@@ -266,11 +240,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-
-			modifier = {
-				factor = 2
-				date > "1937.1.1"
-			}
 		}
 		
 		categories = {
@@ -307,8 +276,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 25
-
+			factor = 40
 			modifier = {
 				factor = 0
 				has_tech = dispersed_industry
@@ -316,11 +284,6 @@ technologies = {
 			modifier = {
 				factor = 0
 				is_researching_technology = dispersed_industry
-			}
-
-			modifier = {
-				factor = 5
-				date > "1937.1.1"
 			}
 		}
 
@@ -356,12 +319,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 20
-
-			modifier = {
-				factor = 10
-				date > "1937.1.1"
-			}
+			factor = 40
 		}
 
 		categories = {
@@ -396,12 +354,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
-
-			modifier = {
-				factor = 10
-				date > "1939.1.1"
-			}
+			factor = 40
 		}
 
 		categories = {
@@ -436,12 +389,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
-
-			modifier = {
-				factor = 10
-				date > "1941.1.1"
-			}
+			factor = 40
 		}
 
 		categories = {
@@ -471,17 +419,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 4
-
-			modifier = {
-				factor = 5
-				date > "1942.1.9"
-			}
-
-			modifier = {
-				factor = 20
-				date > "1943.1.1"
-			}
+			factor = 40
 		}
 
 		categories = {
@@ -522,8 +460,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 25
-
+			factor = 40
 			modifier = {
 				factor = 0
 				has_tech = concentrated_industry
@@ -531,11 +468,6 @@ technologies = {
 			modifier = {
 				factor = 0
 				is_researching_technology = concentrated_industry
-			}
-
-			modifier = {
-				factor = 5
-				date > "1937.1.1"
 			}
 		}
 
@@ -574,12 +506,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 20
-
-			modifier = {
-				factor = 10
-				date > "1937.1.1"
-			}
+			factor = 40
 		}
 
 		categories = {
@@ -617,12 +544,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 15
-
-			modifier = {
-				factor = 10
-				date > "1939.1.1"
-			}
+			factor = 40
 		}
 
 		categories = {
@@ -660,12 +582,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
-						
-			modifier = {
-				factor = 10
-				date > "1941.1.1"
-			}
+			factor = 40
 		}
 		
 		categories = {
@@ -698,13 +615,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
-			
-			
-			modifier = {
-				factor = 10
-				date > "1943.1.1"
-			}
+			factor = 40
 		}
 		
 		categories = {
@@ -835,12 +746,12 @@ technologies = {
 		ai_will_do = {
 			factor = 5
 			modifier = {
-				has_war = yes
 				factor = 2
+				has_war = yes
 			}
 			modifier = {
-				is_major = no
 				factor = 0.25
+				is_major = no
 			}
 			modifier = {
 				factor = 1.5
@@ -894,12 +805,12 @@ technologies = {
 		ai_will_do = {
 			factor = 5
 			modifier = {
-				has_war = yes
 				factor = 2
+				has_war = yes
 			}
 			modifier = {
-				is_major = no
 				factor = 0.25
+				is_major = no
 			}
 			modifier = {
 				factor = 1.5
@@ -944,12 +855,12 @@ technologies = {
 		ai_will_do = {
 			factor = 5
 			modifier = {
-				has_war = yes
 				factor = 2
+				has_war = yes
 			}
 			modifier = {
-				is_major = no
 				factor = 0.25
+				is_major = no
 			}
 			modifier = {
 				factor = 1.5
@@ -986,12 +897,12 @@ technologies = {
 		ai_will_do = {
 			factor = 5
 			modifier = {
-				has_war = yes
 				factor = 2
+				has_war = yes
 			}
 			modifier = {
-				is_major = no
 				factor = 0.25
+				is_major = no
 			}
 			modifier = {
 				factor = 1.5
@@ -1024,12 +935,12 @@ technologies = {
 		ai_will_do = {
 			factor = 5
 			modifier = {
-				has_war = yes
 				factor = 2
+				has_war = yes
 			}
 			modifier = {
-				is_major = no
 				factor = 0.25
+				is_major = no
 			}
 			modifier = {
 				factor = 1.5

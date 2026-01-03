@@ -1821,7 +1821,7 @@ ideas = {
 			}
 			traits = {
 				chief_of_staff
-				cos_school_of_defence
+				CoStaff_Hedgehoge_Defender
 			}
 			cancel_if_invalid = yes
 		}

@@ -1991,9 +1991,8 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 0
-				date < 1942.6.1
+				date < 1941.6.1
 				GRU = { exists = yes }
-				AUS = { exists = no }
 			}
 		}
 		mutually_exclusive = {
@@ -4327,7 +4326,7 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 0
-				date < 1942.6.1
+				date < 1941.6.1
 				GRU = { exists = yes }
 			}
 		}
@@ -4418,7 +4417,7 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 0
-				date < 1942.6.1
+				date < 1941.6.1
 				GRU = { exists = yes }
 			}
 		}

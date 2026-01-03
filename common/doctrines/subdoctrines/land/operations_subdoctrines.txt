@@ -8,11 +8,7 @@ mission_type_tactics = {
 	xp_type = army
 
 	ai_will_do = {
-		base = 2
-		modifier = {
-			factor = 0.5
-			is_major = no
-		}
+		base = 3
 	}
 
 	# EFFECTS
@@ -117,7 +113,7 @@ infiltration_tactics = {
 	xp_cost = 100
 	xp_type = army
 
-	ai_will_do = { base = 2 }
+	ai_will_do = { base = 3 }
 
 	# EFFECTS
 	enable_tactic = tactic_infantry_assault
@@ -201,7 +197,7 @@ grand_assault = {
 	xp_type = army
 
 	ai_will_do = { 
-		base = 2 
+		base = 3 
 		modifier = {
 			factor = 2
 			has_doctrine = mass_assault
@@ -282,13 +278,13 @@ deep_battle = {
 	}
 
 	ai_will_do = {
-		base = 1
+		base = 3
 		modifier = {
 			factor = 0.5
 			is_major = no
 		}
 		modifier = {
-			factor = 3
+			factor = 2
 			has_doctrine = new_mobile_warfare
 		}
 	}
@@ -396,7 +392,7 @@ deep_battle_no_lar = {
 	}
 
 	ai_will_do = {
-		base = 1
+		base = 3
 		modifier = {
 			factor = 0.5
 			is_major = no
@@ -604,7 +600,7 @@ rapid_domination = {
 	xp_type = army
 
 	ai_will_do = {
-		base = 2
+		base = 3
 		modifier = {
 			factor = 0.5
 			is_major = no

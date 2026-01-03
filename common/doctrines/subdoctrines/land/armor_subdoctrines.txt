@@ -89,8 +89,8 @@ armored_spearhead_no_lar = {
 	ai_will_do = {
 		base = 1
 		modifier = {
-			factor = 0.5
-			is_major = no
+			factor = 2
+			has_doctrine = new_mobile_warfare
 		}
 	}
 
@@ -150,10 +150,6 @@ armored_infantry_support = {
 
 	ai_will_do = {
 		base = 1
-		modifier = {
-			factor = 0.5
-			is_major = no
-		}
 	}
 
 	# EFFECTS
@@ -297,7 +293,11 @@ mobile_defense = {
 	ai_will_do = {
 		base = 1
 		modifier = {
-			factor = 0.5
+			factor = 0
+			is_major = yes
+		}
+		modifier = {
+			factor = 2
 			is_major = no
 		}
 	}
@@ -375,7 +375,17 @@ armored_cavalry = {
 		has_dlc_lar = yes
 	}
 
-	ai_will_do = { base = 0 }
+	ai_will_do = {
+		base = 1
+		modifier = {
+			factor = 0
+			is_major = yes
+		}
+		modifier = {
+			factor = 2
+			is_major = no
+		}
+	}
 
 	armored_car = {
 		max_organisation = 5
@@ -471,7 +481,17 @@ armored_cavalry_no_lar = {
 		has_dlc_lar = no
 	}
 
-	ai_will_do = { base = 1 }
+	ai_will_do = {
+		base = 1
+		modifier = {
+			factor = 0
+			is_major = yes
+		}
+		modifier = {
+			factor = 2
+			is_major = no
+		}
+	}
 
 	motorized = {
 		max_organisation = 5
