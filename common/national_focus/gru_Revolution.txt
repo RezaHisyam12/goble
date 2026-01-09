@@ -3334,8 +3334,8 @@ shared_focus = {
 			}
 			add_doctrine_cost_reduction = {
 				name = GRU_formation_of_the_nva
-				cost_reduction = 0.5
-				uses = 2
+				cost_reduction = 1
+				uses = 1
 				category = land_doctrine
 			}
 			if = {
@@ -3457,7 +3457,7 @@ shared_focus = {
 			}
 			add_timed_idea = {
 				idea = GER_mass_tank_production_idea
-				days = 175
+				days = 365
 			}
 		}
 	}
@@ -3536,7 +3536,7 @@ shared_focus = {
 		cost = 5
 		ai_will_do = {
 		    base = 100
-		    }
+		}
 		relative_position_id = GRU_decentralized_off
 		prerequisite = {
 			focus = GRU_panzertruppe
@@ -3938,11 +3938,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 11
-			modifier = {
-				factor = 10
-				has_war = yes
-			}
+			base = 100
 		}
 		relative_position_id = GER_aircraft_industry
 		prerequisite = {
@@ -4965,6 +4961,9 @@ shared_focus = {
 		x = 0
 		y = 2
 		cost = 5
+		ai_will_do = {
+			base = 100
+		}
 		relative_position_id = GER_graf_zeppelin
 		prerequisite = {
 			focus = GER_graf_zeppelin
@@ -5038,7 +5037,7 @@ shared_focus = {
 			focus = GRU_centralized_off
 		}
 		ai_will_do = {
-			factor = 9
+			factor = 10
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -5051,7 +5050,7 @@ shared_focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_nationales_volksheer"
 			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
+				name = GRU_nationales_volksheer
 				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
@@ -5178,7 +5177,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			base = 50
+			base = 100
 		}
 		relative_position_id = GER_invest_in_rnd
 		prerequisite = {
@@ -8845,6 +8844,10 @@ shared_focus = {
 		cost = 6	
 		ai_will_do = {
 			factor = 100
+			modifier = {
+				factor = 0
+				AUS = { exists = yes }
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_LEBENSRAUM"

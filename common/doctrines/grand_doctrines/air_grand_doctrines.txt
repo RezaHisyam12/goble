@@ -13,6 +13,17 @@ new_strategic_destruction = {
 
     ai_will_do = { 
         base = 1
+        modifier = {
+            factor = 0
+            is_major = no
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                tag = CAN
+                tag = NFA
+            }
+        }
     }
 
     tracks = {

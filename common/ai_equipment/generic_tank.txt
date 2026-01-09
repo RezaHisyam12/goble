@@ -383,7 +383,7 @@ generic_medium_flame_tanks = {
 	priority = {
 		factor = 2000
 		modifier = { 
-			is_eligible_for_medium_armor_production = no
+			is_eligible_for_armor_production = no
 			factor = 0
 		}
 	}
@@ -1737,9 +1737,12 @@ generic_medium_amphibious_tanks = {
 	}
 
 	priority = {
-		factor = 100
-		modifier = { 
-			is_eligible_for_medium_armor_production = no
+		factor = 1000
+		modifier = {
+			OR = {
+				is_naval_power = no
+				is_eligible_for_armor_production = no
+			}
 			factor = 0
 		}
 	}

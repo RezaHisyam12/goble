@@ -102,7 +102,24 @@ ideas = {
 			default = yes
 			cancel_if_invalid = no
 
-			ai_will_do = { factor = 0 }
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 1000
+					OR = {
+						has_idea = undisturbed_isolation
+						has_idea = isolation
+					}
+				}
+				modifier = {
+					add = 250
+					has_idea = tot_economic_mobilisation
+					OR = {
+						max_available_manpower_k < 100
+						coal < -10
+					}
+				}
+			}
 		}
 
 		low_economic_mobilisation = {
@@ -130,7 +147,21 @@ ideas = {
 				factory_energy_consumption = -0.15
 			}
 
-			ai_will_do = { factor = 600 }
+			ai_will_do = {
+				base = 0
+				modifier = {
+					add = 1000
+					has_idea = civilian_economy
+				}
+				modifier = {
+					add = 500
+					has_idea = tot_economic_mobilisation
+					OR = {
+						max_available_manpower_k < 100
+						coal < -10
+					}
+				}
+			}
 		}
 
 		partial_economic_mobilisation = {
@@ -159,10 +190,23 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 700
-				modifier = { #one step at a time
-					factor = 0
-					NOT = { has_idea = low_economic_mobilisation }
+				base = 0
+				modifier = {
+					add = 1000
+					has_idea = low_economic_mobilisation
+				}
+				modifier = {
+					add = 1000
+					has_idea = war_economy
+					coal < -10
+				}
+				modifier = {
+					add = 750
+					has_idea = tot_economic_mobilisation
+					OR = {
+						max_available_manpower_k < 100
+						coal < -10
+					}
 				}
 			}
 		}
@@ -193,14 +237,19 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 60
-				modifier = { #one step at a time
-					factor = 0
-					NOT = { has_idea = partial_economic_mobilisation }
+				base = 0
+				modifier = {
+					add = 1000
+					has_idea = partial_economic_mobilisation
+					coal > 10
 				}
 				modifier = {
-					factor = 20
-					manpower_per_military_factory > 3000
+					add = 1000
+					has_idea = tot_economic_mobilisation
+					OR = {
+						max_available_manpower_k < 100
+						coal < -10
+					}
 				}
 			}
 		}
@@ -233,21 +282,12 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 10
-				modifier = { #one step at a time
-					factor = 0
-					NOT = { has_idea = war_economy }
-				}
-				modifier = { #don't increase if it would drop conscription to zero
-					factor = 0
-					OR = {
-						current_conscription_amount < 0.06
-						manpower_per_military_factory < 10000
-					}
-				}
-				modifier = { #Weight will overly overtake war economy if the AI has plenty of manpower
-					factor = 100
-					manpower_per_military_factory > 15000
+				base = 0
+				modifier = {
+					add = 1000
+					has_idea = war_economy
+					manpower_per_military_factory > 12000
+					coal > 10
 				}
 			}
 		}
@@ -334,39 +374,17 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 0.5
+				base = 0
 				modifier = {
-					factor = 0
-					AND = {
-						is_major = yes
-						any_enemy_country = {
-							is_major = yes
+					add = 1000
+					has_idea = export_focus
+					OR = {
+						is_major = no
+						AND = {
+							num_of_military_factories < 150
+							NOT = { any_enemy_country = { is_major = yes } }
 						}
 					}
-				}
-				modifier = {
-					check_variable = { resource@steel > 0 }
-					add = resource@steel
-				}
-				modifier = {
-					check_variable = { resource@oil > 0 }
-					add = resource@oil
-				}
-				modifier = {
-					check_variable = { resource@rubber > 0 }
-					add = resource@rubber
-				}
-				modifier = {
-					check_variable = { resource@aluminium > 0 }
-					add = resource@aluminium
-				}
-				modifier = {
-					check_variable = { resource@tungsten > 0 }
-					add = resource@tungsten
-				}
-				modifier = {
-					check_variable = { resource@chromium > 0 }
-					add = resource@chromium
 				}
 			}
 		}
@@ -392,63 +410,26 @@ ideas = {
 			default = yes
 
 			ai_will_do = {
-				factor = 1
-				# Portugal and Sweden are special tungsten snowflakes
+				base = 0
 				modifier = {
-					factor = 0
-
-					is_major = no
-					has_war = no
-					is_in_faction = no
+					add = 1000
+					has_idea = free_trade
+					is_major = yes
 					OR = {
-						tag = POR
-						tag = SWE
+						num_of_military_factories > 150
+						any_enemy_country = { is_major = yes }
 					}
 				}
 				modifier = {
-					factor = 0
-					AND = {
-						is_major = yes
-						any_enemy_country = {
-							is_major = yes
+					add = 1000
+					has_idea = limited_exports
+					OR = {
+						is_major = no
+						AND = {
+							num_of_military_factories < 225
+							NOT = { any_enemy_country = { is_major = yes } }
 						}
 					}
-				}
-				modifier = {
-					check_variable = { resource_produced@steel > 0 }
-
-					subtract_from_temp_variable = { steel_deficit = resource@steel }
-					add = steel_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@oil > 0 }
-
-					subtract_from_temp_variable = { oil_deficit = resource@oil }
-					add = oil_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@rubber > 0 }
-
-					subtract_from_temp_variable = { rubber_deficit = resource@rubber }
-					add = rubber_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@aluminium > 0 }
-
-					subtract_from_temp_variable = { aluminium_deficit = resource@aluminium }
-					add = aluminium_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@tungsten > 0 }
-
-					subtract_from_temp_variable = { tungsten_deficit = resource@tungsten }
-					add = tungsten_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@chromium > 0 }
-
-					subtract_from_temp_variable = { chromium_deficit = resource@chromium }
-					add = chromium_deficit
 				}
 			}
 		}
@@ -486,59 +467,27 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 1
+				base = 0
 				modifier = {
-					factor = 0
-					is_major = no #only majors should choose limited exports
-				}
-				modifier = {
-					factor = 0
-					has_war = no #if at peace, prioritise the bonuses
-				}
-				modifier = {
-					factor = 1000
-					AND = {
-						is_major = yes
-						any_enemy_country = {
-							is_major = yes
-						}
+					add = 1000
+					has_idea = export_focus
+					is_major = yes
+					OR = {
+						num_of_military_factories > 225
+						any_enemy_country = { is_major = yes }
 					}
 				}
 				modifier = {
-					check_variable = { resource_produced@steel > 0 }
-
-					subtract_from_temp_variable = { steel_deficit = resource@steel }
-					add = steel_deficit
+					add = 1000
+					has_idea = closed_economy
+					num_of_military_factories < 300
 				}
 				modifier = {
-					check_variable = { resource_produced@oil > 0 }
-
-					subtract_from_temp_variable = { oil_deficit = resource@oil }
-					add = oil_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@rubber > 0 }
-
-					subtract_from_temp_variable = { rubber_deficit = resource@rubber }
-					add = rubber_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@aluminium > 0 }
-
-					subtract_from_temp_variable = { aluminium_deficit = resource@aluminium }
-					add = aluminium_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@tungsten > 0 }
-
-					subtract_from_temp_variable = { tungsten_deficit = resource@tungsten }
-					add = tungsten_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@chromium > 0 }
-
-					subtract_from_temp_variable = { chromium_deficit = resource@chromium }
-					add = chromium_deficit
+					add = 1000
+					OR = {
+						has_idea = command_economy
+						has_idea = uncontrolled_exports
+					}
 				}
 			}
 		}
@@ -577,59 +526,12 @@ ideas = {
 			}
 
 			ai_will_do = {
-				factor = 1
+				base = 0
 				modifier = {
-					factor = 0
-					is_major = no #only majors should choose limited exports
-				}
-				modifier = {
-					factor = 0
-					has_war = no #if at peace, prioritise the bonuses
-				}
-				modifier = {
-					factor = 1000
-					AND = {
-						is_major = yes
-						any_enemy_country = {
-							is_major = yes
-						}
-					}
-				}
-				modifier = {
-					check_variable = { resource_produced@steel > 0 }
-
-					subtract_from_temp_variable = { steel_deficit = resource@steel }
-					add = steel_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@oil > 0 }
-
-					subtract_from_temp_variable = { oil_deficit = resource@oil }
-					add = oil_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@rubber > 0 }
-
-					subtract_from_temp_variable = { rubber_deficit = resource@rubber }
-					add = rubber_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@aluminium > 0 }
-
-					subtract_from_temp_variable = { aluminium_deficit = resource@aluminium }
-					add = aluminium_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@tungsten > 0 }
-
-					subtract_from_temp_variable = { tungsten_deficit = resource@tungsten }
-					add = tungsten_deficit
-				}
-				modifier = {
-					check_variable = { resource_produced@chromium > 0 }
-
-					subtract_from_temp_variable = { chromium_deficit = resource@chromium }
-					add = chromium_deficit
+					add = 1000
+					has_idea = limited_exports
+					is_major = yes
+					num_of_military_factories > 300
 				}
 			}
 		}

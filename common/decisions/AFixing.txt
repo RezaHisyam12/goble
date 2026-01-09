@@ -521,6 +521,16 @@ RUS_Foreign_Policy_decisions = {
 					is_subject_of = GRU
 				}
 			}
+			modifier = {
+				factor = 0
+				FROM = { is_in_faction_with = AUS }
+				NOT = { has_global_flag = second_weltkrieg_has_started }
+			}
+			modifier = {
+				factor = 0
+				FROM = { is_in_faction_with = ENT }
+				NOT = { has_global_flag = second_weltkrieg_has_started }
+			}
 		}
 
 		cancel_effect = {
@@ -1367,6 +1377,690 @@ CAN_returning_home_decisions = {
 						value = -1000
 					}
 				}
+			}
+		}
+	}
+}
+
+CAN_new_england_decisions = {
+
+	CAN_put_down_maine_rebellion = {
+		icon = us_flag
+
+		allowed = {
+			original_tag = CAN
+		}
+
+		highlight_states = {
+highlight_state_targets = {
+			state = 357
+		}
+}
+
+		available = {
+			controls_state = 357 #Maine
+			custom_trigger_tooltip = {
+				tooltip = CAN_not_currently_fighting_yank
+				NOT = {
+					has_decision = CAN_put_down_newhamp_rebellion
+					has_decision = CAN_put_down_verm_rebellion
+					has_decision = CAN_put_down_mass_rebellion
+					has_decision = CAN_put_down_rhode_rebellion
+					has_decision = CAN_put_down_conn_rebellion
+					has_decision = CAN_put_down_nyork_rebellion
+				}
+			}
+		}
+
+		visible = {
+			357 = {
+				is_owned_by = CAN
+				has_state_flag = CAN_in_rebellion
+			}
+		}
+
+		cancel_trigger = {
+			NOT = { controls_state = 357 }
+		}
+
+		modifier = {
+			political_power_cost = 0.075
+			army_morale_factor = -0.05
+		}
+
+		fire_only_once = no
+		days_remove = 20
+
+		cost = 25
+		ai_will_do = {
+			base = 100
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_put_down_maine_rebellion"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CAN_put_down_maine_rebellion"
+			add_political_power = 25
+			357 = {
+				clr_state_flag = CAN_in_rebellion
+				set_resistance = 0
+				add_compliance = 25
+			}
+			hidden_effect = {
+				ROOT = {
+					add_to_variable = { var = CAN_yankee_rebellion value = -1 }
+				}
+			}
+		}
+	}
+
+	CAN_put_down_newhamp_rebellion = {
+		icon = us_flag
+
+		allowed = {
+			original_tag = CAN
+		}
+
+		highlight_states = {
+highlight_state_targets = {
+			state = 934
+		}
+}
+
+		available = {
+			controls_state = 934 #New Hampshire
+			custom_trigger_tooltip = {
+				tooltip = CAN_not_currently_fighting_yank
+				NOT = {
+					has_decision = CAN_put_down_maine_rebellion
+					has_decision = CAN_put_down_verm_rebellion
+					has_decision = CAN_put_down_mass_rebellion
+					has_decision = CAN_put_down_rhode_rebellion
+					has_decision = CAN_put_down_conn_rebellion
+					has_decision = CAN_put_down_nyork_rebellion
+				}
+			}
+		}
+
+		visible = {
+			934 = {
+				is_owned_by = CAN
+				has_state_flag = CAN_in_rebellion
+			}
+		}
+
+		cancel_trigger = {
+			NOT = { controls_state = 934 }
+		}
+
+		modifier = {
+			political_power_cost = 0.075
+			army_morale_factor = -0.05
+		}
+
+		fire_only_once = no
+		days_remove = 15
+
+		cost = 25
+		ai_will_do = {
+			base = 100
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_put_down_newhamp_rebellion"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CAN_put_down_newhamp_rebellion"
+			add_political_power = 25
+			934 = {
+				clr_state_flag = CAN_in_rebellion
+				set_resistance = 0
+				add_compliance = 25
+			}
+			hidden_effect = {
+				ROOT = {
+					add_to_variable = { var = CAN_yankee_rebellion value = -1 }
+				}
+			}
+		}
+	}
+
+	CAN_put_down_verm_rebellion = {
+		icon = us_flag
+
+		allowed = {
+			original_tag = CAN
+		}
+
+		highlight_states = {
+highlight_state_targets = {
+			state = 933
+		}
+}
+
+		available = {
+			controls_state = 933 #Vermont
+			custom_trigger_tooltip = {
+				tooltip = CAN_not_currently_fighting_yank
+				NOT = {
+					has_decision = CAN_put_down_maine_rebellion
+					has_decision = CAN_put_down_newhamp_rebellion
+					has_decision = CAN_put_down_mass_rebellion
+					has_decision = CAN_put_down_rhode_rebellion
+					has_decision = CAN_put_down_conn_rebellion
+					has_decision = CAN_put_down_nyork_rebellion
+				}
+			}
+		}
+
+		visible = {
+			933 = {
+				is_owned_by = CAN
+				has_state_flag = CAN_in_rebellion
+			}
+		}
+
+		cancel_trigger = {
+			NOT = { controls_state = 933 }
+		}
+
+		modifier = {
+			political_power_cost = 0.075
+			army_morale_factor = -0.05
+		}
+
+		fire_only_once = no
+		days_remove = 15
+
+		cost = 25
+		ai_will_do = {
+			base = 100
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_put_down_verm_rebellion"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CAN_put_down_verm_rebellion"
+			add_political_power = 25
+			933 = {
+				clr_state_flag = CAN_in_rebellion
+				set_resistance = 0
+				add_compliance = 25
+			}
+			hidden_effect = {
+				ROOT = {
+					add_to_variable = { var = CAN_yankee_rebellion value = -1 }
+				}
+			}
+		}
+	}
+
+	CAN_put_down_mass_rebellion = {
+		icon = us_flag
+
+		allowed = {
+			original_tag = CAN
+		}
+
+		highlight_states = {
+highlight_state_targets = {
+			state = 932
+		}
+}
+
+		available = {
+			controls_state = 932 #Massachusetts
+			custom_trigger_tooltip = {
+				tooltip = CAN_not_currently_fighting_yank
+				NOT = {
+					has_decision = CAN_put_down_maine_rebellion
+					has_decision = CAN_put_down_newhamp_rebellion
+					has_decision = CAN_put_down_verm_rebellion
+					has_decision = CAN_put_down_rhode_rebellion
+					has_decision = CAN_put_down_conn_rebellion
+					has_decision = CAN_put_down_nyork_rebellion
+				}
+			}
+		}
+
+		visible = {
+			932 = {
+				is_owned_by = CAN
+				has_state_flag = CAN_in_rebellion
+			}
+		}
+
+		cancel_trigger = {
+			NOT = { controls_state = 932 }
+		}
+
+		modifier = {
+			political_power_cost = 0.075
+			army_morale_factor = -0.05
+		}
+
+		fire_only_once = no
+		days_remove = 40
+
+		cost = 25
+		ai_will_do = {
+			base = 100
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_put_down_mass_rebellion"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CAN_put_down_mass_rebellion"
+			add_political_power = 25
+			932 = {
+				clr_state_flag = CAN_in_rebellion
+				set_resistance = 0
+				add_compliance = 25
+			}
+			hidden_effect = {
+				ROOT = {
+					add_to_variable = { var = CAN_yankee_rebellion value = -1 }
+				}
+			}
+		}
+	}
+
+	CAN_put_down_rhode_rebellion = {
+		icon = us_flag
+
+		allowed = {
+			original_tag = CAN
+		}
+
+		highlight_states = {
+highlight_state_targets = {
+			state = 935
+		}
+}
+
+		available = {
+			controls_state = 935 #Rhode Island
+			custom_trigger_tooltip = {
+				tooltip = CAN_not_currently_fighting_yank
+				NOT = {
+					has_decision = CAN_put_down_maine_rebellion
+					has_decision = CAN_put_down_newhamp_rebellion
+					has_decision = CAN_put_down_verm_rebellion
+					has_decision = CAN_put_down_mass_rebellion
+					has_decision = CAN_put_down_conn_rebellion
+					has_decision = CAN_put_down_nyork_rebellion
+				}
+			}
+		}
+
+		visible = {
+			935 = {
+				is_owned_by = CAN
+				has_state_flag = CAN_in_rebellion
+			}
+		}
+
+		cancel_trigger = {
+			NOT = { controls_state = 935 }
+		}
+
+		modifier = {
+			political_power_cost = 0.075
+			army_morale_factor = -0.05
+		}
+
+		fire_only_once = no
+		days_remove = 10
+
+		cost = 25
+		ai_will_do = {
+			base = 100
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_put_down_rhode_rebellion"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CAN_put_down_rhode_rebellion"
+			add_political_power = 25
+			935 = {
+				clr_state_flag = CAN_in_rebellion
+				set_resistance = 0
+				add_compliance = 25
+			}
+			hidden_effect = {
+				ROOT = {
+					add_to_variable = { var = CAN_yankee_rebellion value = -1 }
+				}
+			}
+		}
+	}
+
+	CAN_put_down_conn_rebellion = {
+		icon = us_flag
+
+		allowed = {
+			original_tag = CAN
+		}
+
+		highlight_states = {
+highlight_state_targets = {
+			state = 931
+		}
+}
+
+		available = {
+			controls_state = 931 #Connecticut
+			custom_trigger_tooltip = {
+				tooltip = CAN_not_currently_fighting_yank
+				NOT = {
+					has_decision = CAN_put_down_maine_rebellion
+					has_decision = CAN_put_down_newhamp_rebellion
+					has_decision = CAN_put_down_verm_rebellion
+					has_decision = CAN_put_down_mass_rebellion
+					has_decision = CAN_put_down_rhode_rebellion
+					has_decision = CAN_put_down_nyork_rebellion
+				}
+			}
+		}
+
+		visible = {
+			931 = {
+				is_owned_by = CAN
+				has_state_flag = CAN_in_rebellion
+			}
+		}
+
+		cancel_trigger = {
+			NOT = { controls_state = 931 }
+		}
+
+		modifier = {
+			political_power_cost = 0.075
+			army_morale_factor = -0.05
+		}
+
+		fire_only_once = no
+		days_remove = 30
+
+		cost = 25
+		ai_will_do = {
+			base = 100
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_put_down_conn_rebellion"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CAN_put_down_conn_rebellion"
+			add_political_power = 25
+			931 = {
+				clr_state_flag = CAN_in_rebellion
+				set_resistance = 0
+				add_compliance = 25
+			}
+			hidden_effect = {
+				ROOT = {
+					add_to_variable = { var = CAN_yankee_rebellion value = -1 }
+				}
+			}
+		}
+	}
+
+	CAN_put_down_nyork_rebellion = {
+		icon = us_flag
+
+		allowed = {
+			original_tag = CAN
+		}
+
+		highlight_states = {
+highlight_state_targets = {
+			state = 796
+		}
+}
+
+		available = {
+			controls_state = 796 #Upstate New York
+			custom_trigger_tooltip = {
+				tooltip = CAN_not_currently_fighting_yank
+				NOT = {
+					has_decision = CAN_put_down_maine_rebellion
+					has_decision = CAN_put_down_newhamp_rebellion
+					has_decision = CAN_put_down_verm_rebellion
+					has_decision = CAN_put_down_mass_rebellion
+					has_decision = CAN_put_down_rhode_rebellion
+					has_decision = CAN_put_down_conn_rebellion
+				}
+			}
+		}
+
+		visible = {
+			796 = {
+				is_owned_by = CAN
+				has_state_flag = CAN_in_rebellion
+			}
+		}
+
+		cancel_trigger = {
+			NOT = { controls_state = 796 }
+		}
+
+		modifier = {
+			political_power_cost = 0.075
+			army_morale_factor = -0.05
+		}
+
+		fire_only_once = no
+		days_remove = 50
+
+		cost = 25
+		ai_will_do = {
+			base = 100
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_put_down_nyork_rebellion"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CAN_put_down_nyork_rebellion"
+			add_political_power = 25
+			796 = {
+				clr_state_flag = CAN_in_rebellion
+				set_resistance = 0
+				add_compliance = 25
+			}
+			hidden_effect = {
+				ROOT = {
+					add_to_variable = { var = CAN_yankee_rebellion value = -1 }
+				}
+			}
+		}
+	}
+
+	CAN_nee_recruitment1 = {
+		icon = generic_agreement
+
+		allowed = {
+			original_tag = CAN
+		}
+
+		available = {
+			932 = { is_owned_and_controlled_by = CAN } #Massachusetts
+			if = {
+				limit = { has_country_flag = CAN_yankee_rebellion }
+				custom_trigger_tooltip = {
+					tooltip = CAN_nee_order_restored
+					has_country_flag = CAN_yankee_rebellion_over
+				}
+			}
+		}
+
+		visible = {
+			is_subject = no
+			has_completed_focus = CAN_american_recruitment
+			932 = {
+				is_owned_by = CAN
+				NOT = {
+					has_dynamic_modifier = { modifier = CAN_nee_recruitment1 }
+					has_dynamic_modifier = { modifier = CAN_nee_recruitment2 }
+					has_dynamic_modifier = { modifier = CAN_nee_recruitment3 }
+				}
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 90
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_nee_recruitment1"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CAN_nee_recruitment1"
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 357 #Maine
+						state = 934 #New Hampshire
+						state = 933 #Vermont
+						state = 932 #Massachusetts
+						state = 935 #Rhode Island
+						state = 931 #Connecticut
+						state = 796 #Upstate New York
+					}
+				}
+				add_dynamic_modifier = { modifier = CAN_nee_recruitment1 }
+			}
+		}
+	}
+
+	CAN_nee_recruitment2 = {
+		icon = generic_agreement
+
+		allowed = {
+			original_tag = CAN
+		}
+
+		available = {
+			932 = { is_owned_and_controlled_by = CAN } #Massachusetts
+			OR = {
+				has_idea = extensive_conscription
+				has_idea = service_by_requirement
+				has_idea = all_adults_serve
+				has_idea = scraping_the_barrel
+			}
+		}
+
+		visible = {
+			is_subject = no
+			932 = {
+				is_owned_by = CAN
+				has_dynamic_modifier = { modifier = CAN_nee_recruitment1 }
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 90
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_nee_recruitment2"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CAN_nee_recruitment2"
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 357 #Maine
+						state = 934 #New Hampshire
+						state = 933 #Vermont
+						state = 932 #Massachusetts
+						state = 935 #Rhode Island
+						state = 931 #Connecticut
+						state = 796 #Upstate New York
+					}
+				}
+				if = {
+					limit = { has_dynamic_modifier = { modifier = CAN_nee_recruitment1 } }
+					remove_dynamic_modifier = { modifier = CAN_nee_recruitment1 }
+				}
+				add_dynamic_modifier = { modifier = CAN_nee_recruitment2 }
+			}
+		}
+	}
+
+	CAN_nee_recruitment3 = {
+		icon = generic_agreement
+
+		allowed = {
+			original_tag = CAN
+		}
+
+		available = {
+			932 = { is_owned_and_controlled_by = CAN } #Massachusetts
+			OR = {
+				has_idea = all_adults_serve
+				has_idea = scraping_the_barrel
+			}
+		}
+
+		visible = {
+			is_subject = no
+			932 = {
+				is_owned_by = CAN
+				has_dynamic_modifier = { modifier = CAN_nee_recruitment2 }
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 90
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CAN_nee_recruitment3"
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CAN_nee_recruitment3"
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 357 #Maine
+						state = 934 #New Hampshire
+						state = 933 #Vermont
+						state = 932 #Massachusetts
+						state = 935 #Rhode Island
+						state = 931 #Connecticut
+						state = 796 #Upstate New York
+					}
+				}
+				if = {
+					limit = { has_dynamic_modifier = { modifier = CAN_nee_recruitment1 } }
+					remove_dynamic_modifier = { modifier = CAN_nee_recruitment1 }
+				}
+				if = {
+					limit = { has_dynamic_modifier = { modifier = CAN_nee_recruitment2 } }
+					remove_dynamic_modifier = { modifier = CAN_nee_recruitment2 }
+				}
+				add_dynamic_modifier = { modifier = CAN_nee_recruitment3 }
 			}
 		}
 	}

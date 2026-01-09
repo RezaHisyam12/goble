@@ -3,11 +3,15 @@
 ######################
 
 RR_Werwolf_generic = {
-
 	role = RR_Werwolf
+	front_role_override = offence
 
 	upgrade_prio = {
 		factor = 10
+		modifier = {
+			factor = 0
+			NOT = { has_tech = RR_Werwolf_tech }
+		}
 	}
 
 	RR_Werwolf_template_early = {
@@ -41,6 +45,13 @@ RR_Werwolf_generic = {
 
 		upgrade_prio = {
 			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = combat_support }
+				}
+			}
 			modifier = {
 				factor = 0
 				NOT = { has_tech = RR_1_motorized_tech }

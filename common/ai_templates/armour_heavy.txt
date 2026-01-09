@@ -8,7 +8,14 @@ heavy_armour_generic = {
 	front_role_override = offence
 
     upgrade_prio = {
-		factor = 5
+		factor = 3
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_subdoctrine_in_track = infantry }
+				NOT = { has_subdoctrine_in_track = combat_support }
+			}
+		}
 		modifier = {
 			factor = 0
 			is_eligible_for_heavy_armor_production = no
@@ -23,12 +30,8 @@ heavy_armour_generic = {
 			NOT = { has_tech = basic_heavy_tank_chassis }
 		}
 		modifier = {
-			factor = 3
-			has_doctrine = grand_battleplan
-		}
-		modifier = {
 			factor = 2
-			has_doctrine = new_mobile_warfare
+			has_doctrine = grand_battleplan
 		}
 	}
 
@@ -62,25 +65,29 @@ heavy_armour_generic = {
 
 		upgrade_prio = {
 			base = 100
-            modifier = {
+			modifier = {
+				factor = 0
+				NOT = { has_tech = improved_heavy_tank }
+				NOT = { has_tech = improved_heavy_tank_chassis }
+			}
+			modifier = {
 				factor = 0
 				NOT = { has_tech = mechanised_infantry }
 			}
             modifier = {
 				factor = 0
-				num_of_military_factories < 100
+				num_of_military_factories < 150
 			}
 			modifier = {
 				factor = 2
-				num_of_military_factories > 100
+				num_of_military_factories > 150
 			}
 		}
 
         target_template = {
 			regiments = {
-				heavy_armor = 8
+				heavy_armor = 9
 				mechanized = 8
-				medium_sp_artillery_brigade = 1
 				medium_sp_anti_air_brigade = 1
 			}
 
@@ -111,11 +118,11 @@ heavy_armour_generic = {
 			}
 			modifier = {
 				factor = 0
-				num_of_military_factories < 125
+				num_of_military_factories < 150
 			}
 			modifier = {
 				factor = 4
-				num_of_military_factories > 125
+				num_of_military_factories > 150
 			}
 		}
 

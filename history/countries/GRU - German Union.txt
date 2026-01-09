@@ -28,58 +28,72 @@ if = {
 	}
 }
 set_technology = {
-	basic_train = 1
 	### General ###
 	electronic_mechanical_engineering = 1
 
 	### Infantry ###
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	tech_support = 1
 	tech_trucks = 1
 	motorised_infantry = 1
+	tech_mountaineers = 1
+	marines = 1
+
+	### Support ###
+	tech_support = 1
 	tech_recon = 1
 	tech_engineers = 1
-	tech_mountaineers = 1
+
+	### Artillery ###
 	gw_artillery = 1
 	interwar_antiair = 1
+	interwar_antitank = 1
 
+	### Industry ###
+	fuel_silos = 1
+	fuel_refining = 1
+
+	### Trains ###
+	basic_train = 1
 }
 
 if = {
 	limit = { has_dlc = "By Blood Alone" }
 		set_air_oob = "GRU_air_bba"
-
 		set_technology = {
 			aa_lmg = 1
 			aa_cannon_1 = 1
-			engines_2 = 1
-			aircraft_construction = 1
-			early_bombs = 1
 			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
 			iw_small_airframe = 1
 			basic_small_airframe = 1
 			iw_medium_airframe = 1
-			iw_large_airframe = 1
 			basic_medium_airframe = 1
+			iw_large_airframe = 1
 			basic_large_airframe = 1
 			air_torpedoe_1 = 1
 			bba_early_transport_plane = 1
 		}
-		GRU_BBA_air_variants = yes
+		if = {
+			limit = { has_dlc_lar = yes }
+			set_technology = { photo_reconnaisance = 1 }
+		}
+	GRU_BBA_air_variants = yes
 	else = {
 		set_air_oob = "GRU_air_legacy"
 		set_technology = {
 			early_fighter = 1
-			fighter1 = 1
-			naval_bomber1 = 1
-			early_bomber = 1
-			strategic_bomber1 = 1
-			CAS1 = 1
 			cv_early_fighter = 1
+			fighter1 = 1
+			CAS1 = 1
+			naval_bomber1 = 1
 			cv_naval_bomber1 = 1
-			cv_CAS1 = 1
+			early_bomber = 1
+			tactical_bomber1 = 1
 			early_transport_plane = 1
+			scout_plane1 = 1
 		}
 	}
 }

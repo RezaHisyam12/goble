@@ -7,7 +7,7 @@ motorized_infantry = {
 	front_role_override = offence
 
 	upgrade_prio = {
-		factor = 5
+		factor = 3
 		modifier = {
 			factor = 0
 			is_eligible_for_armor_production = no
@@ -17,17 +17,10 @@ motorized_infantry = {
 			NOT = { has_tech = motorised_infantry }
 		}
 		modifier = {
-			factor = 3
+			factor = 2
 			OR = {
 				has_doctrine = new_mobile_warfare
 				has_doctrine = mass_assault
-			}
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				has_doctrine = superior_firepower
-				has_doctrine = grand_battleplan
 			}
 		}
 	}
@@ -63,11 +56,18 @@ motorized_infantry = {
 			base = 100
 			modifier = {
 				factor = 0
-				num_of_military_factories < 75
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = combat_support }
+				}
+			}
+			modifier = {
+				factor = 0
+				num_of_military_factories < 60
 			}
 			modifier = {
 				factor = 2
-				num_of_military_factories > 75
+				num_of_military_factories > 60
 			}
 		}
 
@@ -96,15 +96,24 @@ motorized_infantry = {
 			base = 100
             modifier = {
 				factor = 0
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = combat_support }
+					NOT = { has_subdoctrine_in_track = operations }
+					NOT = { has_subdoctrine_in_track = armor }
+				}
+			}
+			modifier = {
+				factor = 0
 				NOT = { has_tech = motorized_rocket_unit }
 			}
             modifier = {
 				factor = 0
-				num_of_military_factories < 75
+				num_of_military_factories < 60
 			}
 			modifier = {
 				factor = 4
-				num_of_military_factories > 75
+				num_of_military_factories > 60
 			}
 		}
 
@@ -133,15 +142,24 @@ motorized_infantry = {
 			base = 100
             modifier = {
 				factor = 0
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = combat_support }
+					NOT = { has_subdoctrine_in_track = operations }
+					NOT = { has_subdoctrine_in_track = armor }
+				}
+			}
+			modifier = {
+				factor = 0
 				NOT = { has_tech = motorized_rocket_unit }
 			}
             modifier = {
 				factor = 0
-				num_of_military_factories < 125
+				num_of_military_factories < 120
 			}
 			modifier = {
 				factor = 6
-				num_of_military_factories > 125
+				num_of_military_factories > 120
 			}
 		}
 

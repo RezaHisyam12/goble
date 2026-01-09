@@ -278,7 +278,11 @@ technologies = {
 			modifier = {
 				add = 10
 				is_naval_power = yes
-				is_eligible_for_medium_armor_production = yes
+				is_eligible_for_armor_production = yes
+			}
+			modifier = {
+				factor = 10
+				has_tech = amphibious_mechanized_infantry
 			}
 		}
 
@@ -325,7 +329,7 @@ technologies = {
 			modifier = {
 				add = 10
 				is_naval_power = yes
-				is_eligible_for_medium_armor_production = yes
+				is_eligible_for_armor_production = yes
 			}
 		}
 

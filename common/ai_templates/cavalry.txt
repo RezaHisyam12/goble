@@ -1,12 +1,12 @@
 line_cavalry = {
 	available_for = {
-		TRP ETS SIK TAN KYR KHI TRK UZB ALO KYR MON XSM DKB KUB MTR
+		TRP ETS SIK TAN KYR KHI TRK UZB ALO KYR MON XSM
 	}
 
 	role = infantry
 
 	upgrade_prio = {
-		factor = 20
+		factor = 8
 	}
 
 	cavalry_0 = {

@@ -3,13 +3,15 @@
 ######################
 
 elite_infantry_generic = {
-	available_for = {
-		UKR
-	}
 	role = elite_infantry 
+	front_role_override = offence
 
 	upgrade_prio = {
 		factor = 10
+		modifier = {
+			factor = 0
+			NOT = { has_tech = elite_infantry_tech }
+		}
 	}
 
 	elite_infantry_template = {

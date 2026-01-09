@@ -631,6 +631,35 @@ entente_assist_sardinia = {
 	}
 }
 
+entente_assist_sicily = {
+	allowed = {
+		tag = NFA
+		is_CANZACAF_tag = yes
+	}
+	enable = {
+		is_ally_with = SIC
+		num_divisions > 4
+		OR = {
+			has_war_with = FRA
+			has_war_with = SRI
+			SIC = { surrender_progress > 0 }
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = support
+		id = SIC
+		value = 200
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = SIC
+		value = 500
+	}
+}
+
 DEH_keep_garrison = {
 	allowed = { tag = DEH }
 	enable = {

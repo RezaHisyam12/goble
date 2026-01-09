@@ -4,7 +4,7 @@ light_aircraft_production_default = {
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = air_factory_balance value = 20 }
+	ai_strategy = { type = air_factory_balance value = 30 }
 	ai_strategy = { type = unit_ratio id = fighter value = 65 }
 	ai_strategy = { type = unit_ratio id = cas value = 35 }
 }
@@ -53,17 +53,17 @@ tac_bomber_production_default = {
 
 	ai_strategy = {
 		type = air_factory_balance
-		value = 10
+		value = 5
 	}
 	ai_strategy = {
 		type = unit_ratio
 		id = cas
-		value = -5
+		value = -4
 	}
 	ai_strategy = {
 		type = unit_ratio
 		id = tactical_bomber
-		value = 5
+		value = 4
 	}
 }
 
@@ -77,12 +77,12 @@ operational_integrity_offset = {
 	ai_strategy = {
 		type = unit_ratio
 		id = cas
-		value = -10
+		value = -8
 	}
 	ai_strategy = {
 		type = unit_ratio
 		id = tactical_bomber
-		value = 10
+		value = 8
 	}
 }
 
@@ -99,22 +99,22 @@ strat_bomber_air_production_default = {
 	ai_strategy = {
 		type = unit_ratio
 		id = cas
-		value = -5
+		value = -4
 	}
 	ai_strategy = {
 		type = unit_ratio
 		id = strategic_bomber
-		value = 5
+		value = 4
 	}
 	ai_strategy = {
 		type = unit_ratio
 		id = fighter
-		value = -5
+		value = -4
 	}
 	ai_strategy = {
 		type = unit_ratio
 		id = heavy_fighter
-		value = 5
+		value = 4
 	}
 }
 
@@ -128,22 +128,22 @@ strategic_destruction_offset = {
 	ai_strategy = {
 		type = unit_ratio
 		id = cas
-		value = -5
+		value = -4
 	}
 	ai_strategy = {
 		type = unit_ratio
-		id = tactical_bomber
-		value = 5
+		id = strategic_bomber
+		value = 4
 	}
 	ai_strategy = {
 		type = unit_ratio
 		id = fighter
-		value = -5
+		value = -4
 	}
 	ai_strategy = {
 		type = unit_ratio
 		id = heavy_fighter
-		value = 5
+		value = 4
 	}
 }
 
@@ -188,9 +188,27 @@ CV_aircraft_production = {
 	}
 }
 
-other_aircraft_production = {
+other_aircraft_production_1 = {
 	enable = {
 		is_eligible_for_medium_aircraft_production = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = air_transport
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = scout_plane
+		value = 1
+	}
+}
+
+other_aircraft_production_2 = {
+	enable = {
+		is_eligible_for_heavy_aircraft_production = yes
 	}
 	abort_when_not_enabled = yes
 
@@ -226,10 +244,7 @@ mothership_air_production = {
 
 	ai_strategy = {
 		type = unit_ratio
-		id = fighter
-		value = -5
-	}
-	ai_strategy = {
-		type = unit_ratio
 		id = mothership
-		value = 5
+		value = 4
+	}
+}

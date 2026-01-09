@@ -6,7 +6,7 @@ line_camelry = {
 	role = infantry
 
 	upgrade_prio = {
-		factor = 20
+		factor = 8
 	}
 
 	camelry_0 = {

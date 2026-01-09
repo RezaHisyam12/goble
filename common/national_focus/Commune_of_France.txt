@@ -2012,9 +2012,9 @@ focus_tree = {
 				limit = {
 					country_exists = GER
 				}
-				create_wargoal = {
+				declare_war_on = {
+					type = topple_government
 					target = GER
-					type = annex_everything
 				}
 			}
 			if = {
@@ -2029,9 +2029,9 @@ focus_tree = {
 						}
 					}
 				}
-				create_wargoal = {
+				declare_war_on = {
+					type = topple_government
 					target = GRU
-					type = annex_everything
 				}
 			}
 		}
@@ -4326,7 +4326,7 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 0
-				date < 1941.6.1
+				date < 1941.10.1
 				GRU = { exists = yes }
 			}
 		}
@@ -4417,7 +4417,7 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 0
-				date < 1941.6.1
+				date < 1941.10.1
 				GRU = { exists = yes }
 			}
 		}

@@ -1054,18 +1054,6 @@ RUS_crush_german_socialist = {
 	enable = {
 		has_war_with = GRU
 		surrender_progress < 0.1
-		OR = {
-			NOT = { has_war_with = VKR }
-			VKR = { has_capitulated = yes }
-		}
-		OR = {
-			NOT = { has_war_with = VKB }
-			VKB = { has_capitulated = yes }
-		}
-		num_planes_stationed_in_regions = {
-			value > 1000
-			regions = { 8 } #Lower Germany
-		}
 
 		#activate every 25 days, then pause for another 25
 		set_temp_variable = { frequency = global.num_days }

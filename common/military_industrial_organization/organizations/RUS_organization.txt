@@ -229,6 +229,38 @@
 #################
 ### Tank MIOs ###
 #################
+RUS_mmz_organisation = {
+	include = generic_tank_refurbishment_plant_organization
+	name = mmz
+	icon = GFX_idea_mmz
+	allowed = {
+		is_russian_mio_tag = yes
+	}
+	available = { FROM = { owns_state = 219 } } #Moscow
+}
+RUS_sormovo_organisation = {
+	include = generic_mobile_tank_organization
+	name = sormovo
+	icon = GFX_idea_sormovo
+	allowed = {
+		is_russian_mio_tag = yes
+	}
+	available = { FROM = { owns_state = 252 } }
+}
+RUS_uralmash_organisation = {
+	include = generic_infantry_tank_organization
+	name = uralmash
+	icon = GFX_idea_uralmash
+	allowed = {
+		is_russian_mio_tag = yes
+	}
+	available = { 
+		FROM = { 
+			owns_state = 653 
+			has_country_flag = unlock_uztm
+		} 
+	}
+}
 RUS_putilovets_organisation = {
 	name = putilovets_non_socrus
 	icon = GFX_idea_putilovets
@@ -248,8 +280,6 @@ RUS_putilovets_organisation = {
 	research_categories = {
 		mio_cat_tech_all_armor_and_modules
 	}
-
-	ai_will_do = { base = 10 }
 
 	initial_trait = {
 		name = RUS_putilovets_mio_desc
@@ -5447,6 +5477,24 @@ RUS_chtz_organisation = {
 #################
 ### Ship MIOs ###
 #################
+RUS_rubin_organisation = {
+	include = generic_submarine_organization
+	name = rubin
+	icon = GFX_idea_rubin
+	allowed = {
+		is_russian_mio_tag = yes
+	}
+	available = { FROM = { owns_state = 195 } } #Saint Petersburg
+}
+RUS_chernomorskie_verfi_organisation = {
+    include = generic_task_force_ship_organization
+    name = chernomorskie_verfi
+    icon = GFX_idea_chernomorskie_verfi
+    allowed = {
+       is_russian_mio_tag = yes
+    }
+    available = { FROM = { owns_state = 1232 } } #Sevastopol
+}
 RUS_bz_organisation = {
 	name = bz
 	icon = GFX_idea_bz
@@ -7340,6 +7388,42 @@ RUS_dalzavod_organisation = {
 ##################
 ### Plane MIOs ###
 ##################
+RUS_yakovlev_organisation = {
+	include = generic_multi_role_aircraft_organization
+	name = yakovlev
+	icon = GFX_idea_yakovlev
+	allowed = {
+		is_russian_mio_tag = yes
+	}
+	available = { FROM = { owns_state = 219 } } #Moscow
+}
+RUS_seversky_aircraft_organisation = {
+	include = generic_range_focused_aircraft_organization
+	name = seversky_aircraft_non_socrus
+	icon = GFX_idea_seversky_aircraft
+	allowed = {
+		is_russian_mio_tag = yes
+	}
+	available = { FROM = { owns_state = 195 } } #Saint Petersburg
+}
+RUS_sikorsky_aircraft_organisation = {
+	include = generic_cas_aircraft_organization
+	name = sikorsky_aircraft_non_socrus
+	icon = GFX_idea_sikorsky_aircraft
+	allowed = {
+		is_russian_mio_tag = yes
+	}
+	available = { FROM = { owns_state = 195 } } #Saint Petersburg
+}
+RUS_anatra_rus_organisation = {
+	include = generic_naval_aircraft_organization
+	name = anatra_rus
+	icon = GFX_idea_anatra
+	allowed = {
+		is_russian_mio_tag = yes
+	}
+    available = { FROM = { owns_state = 192 } } #Odessa
+}
 RUS_gamayun_organisation = {
 	name = gamayun_non_socrus
 	icon = GFX_idea_gamayun
@@ -8977,7 +9061,7 @@ RUS_osoavia_organisation = {
 		plane_modules_tech
 	}
 
-	ai_will_do = { base = 10 }
+	ai_will_do = { base = 1000 }
 
 	on_design_team_assigned_to_tech = {
 		FROM = { add_to_variable = { OSOAVIA_Research_Number = 1 } }
@@ -9244,7 +9328,7 @@ RUS_skorost_organisation = {
 		plane_modules_tech
 	}
 
-	ai_will_do = { base = 1 }
+	ai_will_do = { base = 100 }
 
 	on_tech_research_completed = {
 		FROM = {
@@ -10601,8 +10685,27 @@ RUS_sokol_production_organisation = {
 	}
 }
 ###############################
-### Materiel Equipment MIOs ###
+### Material Equipment MIOs ###
 ###############################
+RUS_zlatoust_organisation = {
+	include = generic_support_equipment_organization
+	name = zlatoust
+	icon = GFX_idea_zlatoust
+	allowed = {
+		is_russian_mio_tag = yes
+	}
+	available = { FROM = { owns_state = 573 } } #Tula
+}
+RUS_motovilikha_organisation = {
+	include = generic_artillery_organization
+	name = motovilikha
+	icon = GFX_idea_motovilikha
+	allowed = {
+		is_russian_mio_tag = yes
+	}
+	available = { FROM = { owns_state = 398 } } #Perm
+	ai_will_do = { base = 0 }
+}
 RUS_toz_organisation = {
 	name = toz
 	icon = GFX_idea_toz
@@ -11288,6 +11391,8 @@ RUS_imz_organisation = {
 		night_vision
 		cat_special_forces_generic
 	}
+
+	ai_will_do = { base = 100 }
 
 	initial_trait = {
 		name = RUS_imz_mio_desc

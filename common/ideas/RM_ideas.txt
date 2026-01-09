@@ -1180,27 +1180,30 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_masses_generals"}
 			picture = GRU_pol_off
 			allowed = { always = no }
-            modifier = {
-			army_infantry_attack_factor = 0.1
-			army_morale_factor = 0.05
-			army_infantry_defence_factor = -0.05
+            	modifier = {
+				army_org_factor = 0.1
+				coordination_bonus = 0.1
+				max_planning = 0.1
+				land_reinforce_rate = 0.05
 			}
 		}
 		GRU_skill_off = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_masses_generals"}
 			picture = GRU_skill_off
 			allowed = { always = no }
-            modifier = {
-			army_infantry_attack_factor = 0.05
-			army_infantry_defence_factor = 0.05
-			army_org_factor = 0.05
+           	modifier = {
+				experience_loss_factor = -0.25
+				experience_gain_factor = 0.25
+				out_of_supply_factor = -0.1
+				planning_speed = 0.15
+				army_morale_factor = 0.1
 			}
 		}
 		GRU_eleced_off = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_masses_generals"}
 			picture = GRU_elected_off
 			allowed = { always = no }
-            modifier = {
+           	modifier = {
 			army_morale_factor = 0.15
 			army_org_factor = -0.10
 			}
@@ -2095,13 +2098,13 @@ ideas = {
 				stability_weekly_factor = 0.001
 				political_power_gain = 0.05
 				army_org_Factor = 0.05
-				conscription = 0.05
+				conscription_factor = 0.05
 				local_resources_factor = 0.05
 			}
 		}
 		
 		GER_mass_tank_production_idea = {
-			picture = GER_mass_tank_production
+			picture = generic_acquire_tanks
 		    	traits = {
 		   	     ZZZ_blank_idea_trait
 		    	}

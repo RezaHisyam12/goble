@@ -1792,6 +1792,9 @@ ideas = {
 				CoStaff_Architect_of_Blitzkrieg
 			}
 			cancel_if_invalid = yes
+			ai_will_do = {
+				factor = 10
+			}
 		}
 
 		GRU_Friedrich_Jeckeln_cos_npo = {
@@ -1939,6 +1942,9 @@ ideas = {
 				CoArmy_The_Father_of_Blitzkrieg
 			}
 			cancel_if_invalid = yes
+			ai_will_do = {
+				factor = 10
+			}
 		}
 
 		GRU_Friedrich_Paulus_carm_npo = {

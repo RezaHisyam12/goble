@@ -4,7 +4,7 @@ FRA_infantry = {
 	role = infantry
 
 	upgrade_prio = {
-		factor = 15
+		factor = 8
 	}
 
 	FRA_infantry_0 = {

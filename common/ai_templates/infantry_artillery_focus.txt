@@ -9,7 +9,7 @@ firepower_infantry = {
 	role = infantry
 
 	upgrade_prio = {
-		factor = 25
+		factor = 8
 		modifier = {
 			factor = 0
 			NOT = {has_doctrine = superior_firepower}
@@ -134,11 +134,11 @@ firepower_infantry = {
 			base = 100
 			modifier = {
 				factor = 0
-				num_of_military_factories < 200
+				num_of_military_factories < 225
 			}
 			modifier = {
 				factor = 5
-				num_of_military_factories > 200
+				num_of_military_factories > 225
 			}
 		}
 

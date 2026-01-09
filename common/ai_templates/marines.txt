@@ -6,18 +6,27 @@ marine_generic = {
 	role = marine
 
 	upgrade_prio = {
-		factor = 1
+		base = 0
 		modifier = {
-			factor = 0
-			NOT = { has_tech = marines }
+			add = 1
+			has_tech = marines
 		}
 		modifier = {
 			factor = 10
+			is_major = yes
 			is_naval_power = yes
+		}
+		modifier = {
+			factor = 2
+			has_tech = amphibious_mechanized_infantry
+			OR = {
+				has_tech = amphibious_tank
+				has_tech = amphibious_tank_chassis
+			}
 		}
 	}
 
-	marine_template = {
+	marine_1 = {
 		can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
@@ -27,26 +36,73 @@ marine_generic = {
 
 		target_template = {
 			regiments = {
-				marine = 12
-				artillery_brigade = 2
+				marine = 10
 			}
 
 			support = {
+				artillery = 1
 				anti_air = 1
 				anti_tank = 1
+				recon = 1
 				engineer = 1
-				field_hospital = 1
-				logistics_company = 1
 			}
 		}
 	}
 
-	amphibious_armor_template = {
+	marine_2 = {
 		can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
 		upgrade_prio = {
 			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = combat_support }
+				}
+			}
+			modifier = {
+				factor = 0
+				num_of_military_factories < 60
+			}
+			modifier = {
+				factor = 2
+				num_of_military_factories > 60
+			}
+		}
+
+		target_template = {
+			regiments = {
+				marine = 12
+				artillery_brigade = 2
+			}
+
+			support = {
+				artillery = 1
+				anti_air = 1
+				anti_tank = 1
+				medium_flame_tank = 1
+				pioneer_support = 1
+			}
+		}
+	}
+
+	amphibious_armor_1 = {
+		can_upgrade_in_field = { always = no }
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = combat_support }
+					NOT = { has_subdoctrine_in_track = operations }
+					NOT = { has_subdoctrine_in_track = armor }
+				}
+			}
 			modifier = {
 				factor = 0
 				NOT = { has_tech = amphibious_mechanized_infantry }
@@ -58,17 +114,17 @@ marine_generic = {
 			}
 			modifier = {
 				factor = 0
-				is_eligible_for_medium_armor_production = no
+				num_of_military_factories < 90
 			}
 			modifier = {
-				factor = 2
-				is_eligible_for_medium_armor_production = yes
+				factor = 4
+				num_of_military_factories > 90
 			}
 		}
 
 		target_template = {
 			regiments = {
-				amphibious_medium_armor = 6
+				amphibious_armor = 6
 				amphibious_mechanized = 6
 			}
 

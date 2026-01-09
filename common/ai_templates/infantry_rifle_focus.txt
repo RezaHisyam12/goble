@@ -9,7 +9,7 @@ mass_infantry = {
 	role = infantry
 
 	upgrade_prio = {
-		factor = 25
+		factor = 8
 		modifier = {
 			factor = 0
 			NOT = {has_doctrine = mass_assault}
@@ -56,6 +56,7 @@ mass_infantry = {
 
 			support = {
 				artillery = 1
+				engineer = 1
 			}
 		}
 	}
@@ -84,6 +85,7 @@ mass_infantry = {
 				artillery = 1
 				anti_air = 1
 				anti_tank = 1
+				engineer = 1
 			}
 		}
 	}
@@ -126,11 +128,11 @@ mass_infantry = {
 			base = 100
 			modifier = {
 				factor = 0
-				num_of_military_factories < 200
+				num_of_military_factories < 225
 			}
 			modifier = {
 				factor = 5
-				num_of_military_factories > 200
+				num_of_military_factories > 225
 			}
 		}
 

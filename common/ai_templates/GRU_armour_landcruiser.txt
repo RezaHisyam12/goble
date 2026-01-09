@@ -4,6 +4,7 @@
 
 armour_landcruiser_generic = {
 	role = armour_landcruiser
+	front_role_override = offence
 
 	available_for = { GRU GER }
 
@@ -12,6 +13,13 @@ armour_landcruiser_generic = {
 		modifier = {
 			factor = 0
 			NOT = { has_tech = super_heavy_tank_chassis }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { has_subdoctrine_in_track = infantry }
+				NOT = { has_subdoctrine_in_track = combat_support }
+			}
 		}
 	}
 
@@ -60,10 +68,6 @@ armour_landcruiser_generic = {
 				factor = 0
 				NOT = { has_tech = main_battle_tank }
 				NOT = { has_tech = main_battle_tank_chassis }
-			}
-			modifier = {
-				factor = 2
-				has_reached_maximum_divisions = yes
 			}
 			modifier = {
 				factor = 6

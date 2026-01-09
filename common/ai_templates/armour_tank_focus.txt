@@ -7,7 +7,7 @@ armour_more_tanks = {
 	front_role_override = offence
 
 	upgrade_prio = {
-		factor = 25
+		factor = 10
 		modifier = {
 			factor = 0
 			NOT = {has_doctrine = new_mobile_warfare}
@@ -22,34 +22,10 @@ armour_more_tanks = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { has_tech = basic_light_tank }
-			NOT = { has_tech = basic_light_tank_chassis }
+			NOT = { has_tech = basic_medium_tank }
+			NOT = { has_tech = basic_medium_tank_chassis }
 		}
 	}
-
-	mw_motorized_light = {
-        can_upgrade_in_field = { always = yes }
-		reinforce_prio = 2
-
-		upgrade_prio = {
-			base = 100
-		}
-
-        target_template = {
-			regiments = {
-				light_armor = 6
-				motorized = 4
-			}
-
-			support = {
-				artillery = 1
-				anti_air = 1
-				mot_recon = 1
-				engineer = 1
-				logistics_company = 1
-			}
-		}
-    }
 
 	mw_motorised_medium = {
 		can_upgrade_in_field = { always = yes }
@@ -57,19 +33,6 @@ armour_more_tanks = {
 
 		upgrade_prio = {
 			base = 100
-			modifier = {
-				factor = 0
-				NOT = { has_tech = basic_medium_tank }
-				NOT = { has_tech = basic_medium_tank_chassis }
-			}
-			modifier = {
-				factor = 0
-				is_eligible_for_medium_armor_production = no
-			}
-			modifier = {
-				factor = 2
-				is_eligible_for_medium_armor_production = yes
-			}
 		}
 
 		target_template = {
@@ -96,8 +59,8 @@ armour_more_tanks = {
 			base = 100
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_medium_tank }
-				NOT = { has_tech = basic_medium_tank_chassis }
+				NOT = { has_tech = improved_medium_tank }
+				NOT = { has_tech = improved_medium_tank_chassis }
 			}
 			modifier = {
 				factor = 0
@@ -105,11 +68,11 @@ armour_more_tanks = {
 			}
 			modifier = {
 				factor = 0
-				num_of_military_factories < 75
+				num_of_military_factories < 60
 			}
 			modifier = {
-				factor = 4
-				num_of_military_factories > 75
+				factor = 2
+				num_of_military_factories > 60
 			}
 		}
 
@@ -147,11 +110,11 @@ armour_more_tanks = {
 			}
 			modifier = {
 				factor = 0
-				num_of_military_factories < 75
+				num_of_military_factories < 60
 			}
 			modifier = {
-				factor = 6
-				num_of_military_factories > 75
+				factor = 4
+				num_of_military_factories > 60
 			}
 		}
 

@@ -53,38 +53,6 @@ SRD_full_marine_focus = {
 	}
 }
 
-SRD_invade_sri = {
-	allowed = {
-		original_tag = SRD
-	}
-	enable = {
-		focus_progress = {
-			focus = SRD_return_to_the_mainland
-			progress > 0
-		}
-	}
-	abort = {
-		OR = {
-			NOT = { has_war_with = SRI }
-			SRI = {
-				NOT = { has_war_with = ITA }
-				NOT = { has_war_with = SIC }
-			}
-		}
-	}
-
-	ai_strategy = {
-		type = invade
-		id = SRI
-		value = 200
-	}
-	ai_strategy = {
-		type = invasion_unit_request
-		tag = SRI
-		value = 100
-	}
-}
-
 ENT_support_sardinia = {
 	allowed = {
 		is_in_faction_with = ENT

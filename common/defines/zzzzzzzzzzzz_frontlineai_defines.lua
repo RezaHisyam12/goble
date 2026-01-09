@@ -2,6 +2,70 @@
 -- FRONTLINE AI
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
+---------------------------------------------------------------------------------------------
+-- DESIGNS
+---------------------------------------------------------------------------------------------
+NDefines.NAI.DEFAULT_MODULE_VARIANT_CREATION_XP_CUTOFF_LAND = 20 --50	-- Army XP needed before attempting to create a variant of a type that uses the tank designer (the tank designer DLC feature must be active).
+NDefines.NAI.DEFAULT_MODULE_VARIANT_CREATION_XP_CUTOFF_NAVY = 20 --50	-- Same as above but for the ship designer.
+NDefines.NAI.DEFAULT_MODULE_VARIANT_CREATION_XP_CUTOFF_AIR = 20 --25	-- Same as above but for the air designer.
+
+NDefines.NAI.VARIANT_CREATION_XP_RESERVE_LAND = 30 --50					-- If the AI lacks army XP to create a variant it will reserve this much XP for variant creation so that it will eventually be able to create a variant.
+NDefines.NAI.VARIANT_CREATION_XP_RESERVE_NAVY = 30 --50					-- Same as above but for navy XP.
+NDefines.NAI.VARIANT_CREATION_XP_RESERVE_AIR  = 30 --50					-- Same as above but for air XP.
+
+-- The AI uses the below values when selecting which design to make among the types that use the tank designer
+-- (the tank designer DLC feature must be active). For each role, the highest priority AI design that can be
+-- created, if any, is assigned a weight. Any design with a weight of zero or a weight that falls below the
+-- cutoff is dropped. A random design is then picked from the remaining.
+-- Weight is calculated as AlternativeFactor * DemandFactor.
+-- An "alternative" is a producible design of the same archetype (each specialized type is its own archetype).
+
+NDefines.NAI.LAND_DESIGN_ALTERNATIVE_ABSENT = 10 --30000
+NDefines.NAI.LAND_DESIGN_ALTERNATIVE_OF_LESSER_TECH = 1 --10000
+NDefines.NAI.LAND_DESIGN_ALTERNATIVE_OF_EQUAL_TECH = 1 --100
+NDefines.NAI.LAND_DESIGN_ALTERNATIVE_OF_GREATER_TECH = 1 --1
+
+-- If a template may be reinforced with the archetype it's considered to be "demanded". If multiple conditions
+-- are met, e.g. it's both in the field and in training, the largest value is used.
+
+NDefines.NAI.LAND_DESIGN_DEMAND_FIELD_DIVISION = 5000
+NDefines.NAI.LAND_DESIGN_DEMAND_TRAINING_DIVISION = 50
+NDefines.NAI.LAND_DESIGN_DEMAND_GARRISON_DIVISION = 10
+NDefines.NAI.LAND_DESIGN_DEMAND_UNUSED_TEMPLATE = 10 --1
+NDefines.NAI.LAND_DESIGN_DEMAND_ABSENT = 10 --0
+
+-- NDefines.NAI.AIR_DESIGN_ALTERNATIVE_ABSENT = 1
+-- NDefines.NAI.AIR_DESIGN_ALTERNATIVE_OF_LESSER_TECH = 1
+-- NDefines.NAI.AIR_DESIGN_ALTERNATIVE_OF_EQUAL_TECH = 1
+-- NDefines.NAI.AIR_DESIGN_ALTERNATIVE_OF_GREATER_TECH = 1
+
+-- If a design with a weight when divided by the largest weight falls below this value it's excluded from the
+-- selection. Valid values are in the range [0, 1] inclusive.
+
+NDefines.NAI.LAND_DESIGN_CUTOFF_AS_PERCENTAGE_OF_MAX = 0.01 --0.25
+
+-- The AI "desires" to spend XP on doctrines, templates, and equipment.
+-- The desire is built up over time and when XP is available it spends it on the action that has the highest accumulated desire. After spending XP the desire is reset, in effect balancing the desires.
+-- Below is the daily desire gain for each action.
+
+NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_LAND_DOCTRINE = 5.0    -- How quickly is desire to unlock land doctrines accumulated?
+NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_NAVAL_DOCTRINE = 5.0   -- How quickly is desire to unlock naval doctrines accumulated?
+NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_AIR_DOCTRINE = 5.0     -- How quickly is desire to unlock air doctrines accumulated?
+
+NDefines.NAI.DESIRE_USE_XP_TO_UPDATE_LAND_TEMPLATE = 100.0    -- How quickly is desire to update/create templates accumulated?
+NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_LAND_EQUIPMENT = 100.0  -- How quickly is desire to update/create land equipment variants accumulated?
+NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_NAVAL_EQUIPMENT = 100.0 -- How quickly is desire to update/create naval equipment variants accumulated?
+NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_AIR_EQUIPMENT = 100.0   -- How quickly is desire to update/create air equipment variants accumulated?
+
+NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_ARMY_SPIRIT = 0.1      -- How quickly is desire to unlock army spirits accumulated?
+NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_NAVY_SPIRIT = 0.1      -- How quickly is desire to unlock naval spirits accumulated?
+NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_AIR_SPIRIT = 0.1       -- How quickly is desire to unlock air spirits accumulated?
+
+---------------
+
+NDefines.NAI.REFIT_SHIP_RELUCTANCE = 5000 -- 28		          -- How often to consider refitting to new equipment variants for ships in the field
+NDefines.NAI.REFIT_SHIP_PERCENTAGE_OF_FORCES = 0.25 -- 0.1	  -- How big part of the navy that should be considered for refitting 
+
 --------------------------------------------------------------------------------------------------------------
 -- AGGRESSIVENESS
 --------------------------------------------------------------------------------------------------------------
@@ -34,32 +98,6 @@ NDefines.NAI.RESEARCH_LAND_DOCTRINE_NEED_GAIN_FACTOR = 0.12 -- Multiplies value 
 
 NDefines.NAI.RESEARCH_AHEAD_BONUS_FACTOR = 10.0
 NDefines.NAI.RESEARCH_BONUS_FACTOR = 2.0
-
----------------------------------------------------------------------------------------------
--- DESIGNS
----------------------------------------------------------------------------------------------
----- DECEMBER 2025 UPDATE : I commented most of the design defines out because they caused more bugs than they solved and made AI not design the equipment it needs
-
--- The AI uses the below values when selecting which design to make among the types that use the tank designer
--- (the tank designer DLC feature must be active). For each role, the highest priority AI design that can be
--- created, if any, is assigned a weight. Any design with a weight of zero or a weight that falls below the
--- cutoff is dropped. A random design is then picked from the remaining.
--- Weight is calculated as AlternativeFactor * DemandFactor.
--- An "alternative" is a producible design of the same archetype (each specialized type is its own archetype).
-
---EAI: make sure land template desire is always at the top, if the doctrine desire is high but the mod blocks it, AI wont create templates
---NDefines.NAI.DESIRE_USE_XP_TO_UPDATE_LAND_TEMPLATE = 100.0 -- 2.0    -- How quickly is desire to update/create templates accumulated?
-
---NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_AIR_EQUIPMENT = 100.0 -- 1.0   -- How quickly is desire to update/create air equipment variants accumulated?
-
---NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_ARMY_SPIRIT = 0.4 -- 0.35    -- How quickly is desire to unlock army spirits accumulated?
---NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_NAVY_SPIRIT = 0.4 -- 0.35    -- How quickly is desire to unlock naval spirits accumulated?
---NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_AIR_SPIRIT = 0.4 -- 0.35     -- How quickly is desire to unlock air spirits accumulated?
-
----------------
-
-NDefines.NAI.REFIT_SHIP_RELUCTANCE = 5000 -- 28		          -- How often to consider refitting to new equipment variants for ships in the field
-NDefines.NAI.REFIT_SHIP_PERCENTAGE_OF_FORCES = 0.5 -- 0.1	  -- How big part of the navy that should be considered for refitting 
 
 --------------------------------------------------------------------------------------------------------------
 -- DIVISION PRODUCTION & UPGRADES
@@ -149,8 +187,8 @@ NDefines.NAI.EASY_TARGET_FRONT_IMPORTANCE = 7.5
 
 NDefines.NAI.LAND_DEFENSE_SUPPLY_HUB_IMPORTANCE = 200
 
-NDefines.NAI.ASSIGN_TANKS_TO_WAR_FRONT = 10.0 -- Vanilla 6.0
-NDefines.NAI.ASSIGN_TANKS_TO_NON_WAR_FRONT = -10.0 -- Vanilla 0.4
+NDefines.NAI.ASSIGN_TANKS_TO_WAR_FRONT = 12.0 -- Vanilla 6.0
+NDefines.NAI.ASSIGN_TANKS_TO_NON_WAR_FRONT = 0.1 -- Vanilla 0.4
 
 NDefines.NAI.UPDATE_SUPPLY_MOTORIZATION_FREQUENCY_HOURS = 20 				-- Vanilla is 52  Check if activating motorization would improve supply situation this often.
 
@@ -212,8 +250,8 @@ NDefines.NAI.FRONT_BULGE_RATIO_LOWER_CUTOFF = 0.85	--- vanilla 0.95; If local bu
 NDefines.NAI.FRONT_BULGE_RATIO_UPPER_CUTOFF = 1.4	--- vanilla 1.5; If total bulginess is lower than this, the front is ignored.	
 
 NDefines.NAI.GARRISON_FRACTION = 0.0					-- DONT CHANGE THIS AS THIS FUCKS WITH VOLUNTEERS AND MAKE EM DO NOTHING AND BE PASSIVE How large part of a front should always be holding the line rather than advancing at the enemy
---NDefines.NAI.PLAN_ACTIVATION_MAJOR_WEIGHT_FACTOR = 1
---NDefines.NAI.PLAN_ACTIVATION_PLAYER_WEIGHT_FACTOR = 1 	
+NDefines.NAI.PLAN_ACTIVATION_MAJOR_WEIGHT_FACTOR = 1
+NDefines.NAI.PLAN_ACTIVATION_PLAYER_WEIGHT_FACTOR = 1 	
 
 NDefines.NAI.ASSIGN_FRONT_ARMY_SOFT_ATTACK_FACTOR = 0.1                 -- Importance of unit's ARMY_SOFT_ATTACK stat when assigning to a front
 NDefines.NAI.ASSIGN_FRONT_ARMY_HARD_ATTACK_FACTOR = 0.1                -- Importance of unit's ARMY_HARD_ATTACK stat when assigning to a front
@@ -744,7 +782,7 @@ NDefines.NAI.NAVAL_SHIP_IN_PORT_AIR_IMPORTANCE = 12        -- vanilla 8
 --------------------------------------
 ------ Macro-Strategy: Guarantees, Calling Allies, War Entry ----------
 --------------------------------------
-NDefines.NAI.MIN_DELIVERED_TRADE_FRACTION = 0.9               -- AI will cancel trade deals that are not able to deliver more than this fraction of the agreed amount   
+NDefines.NAI.MIN_DELIVERED_TRADE_FRACTION = 0.85               -- AI will cancel trade deals that are not able to deliver more than this fraction of the agreed amount   
 NDefines.NAI.MIN_AI_SCORE_TO_ECONOMY_LAW_OVERRIDE_HARD_CODED_SCORE = -100.0
 
 NDefines.NAI.DAYS_FUEL_REMAINING_TO_ENTER_FUEL_SAVING_MODE = 10

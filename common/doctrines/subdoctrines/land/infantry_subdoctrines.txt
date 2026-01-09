@@ -340,6 +340,9 @@ mounted_infantry = {
 				tag = ALO
 				tag = MON
 				tag = XSM
+				tag = DKB
+				tag = KUB
+				tag = MTR
 			}
 		}
 	}
@@ -547,7 +550,7 @@ irregulars = {
 		base = 2
       		modifier = {
             		factor = 4
-            		is_chinese_tag = yes
+            		is_han_chinese_tag = yes
         	}
 	}
 
