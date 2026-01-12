@@ -1924,7 +1924,7 @@ RUS_we_dont_need_garrisons = {
 
 	ai_strategy = {
 		type = garrison
-		value = -100
+		value = -200
 	}
 }
 
