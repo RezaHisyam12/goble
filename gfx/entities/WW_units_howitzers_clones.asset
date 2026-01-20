@@ -8,6 +8,10 @@ entity = {
 }
 entity = { 
 	clone = "ENG_super_heavy_artillery_entity"
+	name = "CAN_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "ENG_super_heavy_artillery_entity"
 	name = "SAF_super_heavy_artillery_entity"
 }
 entity = { 
@@ -163,6 +167,14 @@ entity = {
 entity = { 
 	clone = "USA_super_heavy_artillery_entity"
 	name = "TEX_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "USA_super_heavy_artillery_entity"
+	name = "COR_super_heavy_artillery_entity"
+}
+entity = { 
+	clone = "USA_super_heavy_artillery_entity"
+	name = "WCC_super_heavy_artillery_entity"
 }
 entity = { 
 	clone = "USA_super_heavy_artillery_entity"

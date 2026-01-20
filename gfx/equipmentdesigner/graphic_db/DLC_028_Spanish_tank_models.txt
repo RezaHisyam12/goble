@@ -1,0 +1,28 @@
+SPA = {
+	light_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				SPA_light_armor_entity
+			}
+		}
+	}
+CNT = {
+	light_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				SPA_light_armor_entity
+			}
+		}
+	}
+CAR = {
+	light_tank_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				SPA_light_armor_entity
+			}
+		}
+	}
+}

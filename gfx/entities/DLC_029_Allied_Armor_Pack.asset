@@ -547,6 +547,39 @@
 			name = "GBP_medium_sp_anti_air_brigade_entity"
 			clone = "ENG_medium_sp_anti_air_brigade_1_entity"
 		}
+	### CAN
+		entity = {
+			name = "CAN_light_tank_destroyer_brigade_entity"
+			clone = "ENG_light_tank_destroyer_brigade_2_entity"
+		}
+		entity = {
+			name = "CAN_light_tank_destroyer_brigade_0_entity"
+			clone = "ENG_light_tank_destroyer_brigade_0_entity"
+		}
+		entity = {
+			name = "CAN_light_sp_artillery_brigade_entity"
+			clone = "ENG_light_sp_artillery_brigade_2_entity"
+		}
+		entity = {
+			name = "CAN_heavy_sp_artillery_brigade_1_entity"
+			clone = "ENG_heavy_sp_artillery_brigade_1_entity"
+		}
+		entity = {
+			name = "CAN_medium_tank_destroyer_brigade_entity"
+			clone = "ENG_light_tank_destroyer_brigade_2_entity"
+		}
+		entity = {
+			name = "CAN_medium_sp_artillery_brigade_entity"
+			clone = "ENG_medium_sp_artillery_brigade_2_entity"
+		}
+		entity = {
+			name = "CAN_medium_sp_anti_air_brigade_0_entity"
+			clone = "ENG_medium_sp_anti_air_brigade_0_entity"
+		}
+		entity = {
+			name = "CAN_medium_sp_anti_air_brigade_entity"
+			clone = "ENG_medium_sp_anti_air_brigade_1_entity"
+		}
 	### SCO
 		entity = {
 			name = "SCO_light_tank_destroyer_brigade_entity"
@@ -3441,107 +3474,319 @@ entity = {
 }
 
 #######
-# PSA #
+# CAL #
 #######
 
 entity = {
-	name = "PSA_medium_tank_destroyer_brigade_0_entity"
+	name = "CAL_medium_tank_destroyer_brigade_0_entity"
 	pdxmesh = "USA_basic_medium_tank_destroyer_mesh"
 	clone = "USA_medium_tank_destroyer_brigade_0_entity"
 }
 
 entity = {
-	name = "PSA_medium_tank_destroyer_brigade_1_entity"
+	name = "CAL_medium_tank_destroyer_brigade_1_entity"
 	pdxmesh = "USA_improved_medium_tank_destroyer_mesh"
 	clone = "USA_medium_tank_destroyer_brigade_1_entity"
 }
 
 entity = {
-	name = "PSA_medium_tank_destroyer_brigade_2_entity"
+	name = "CAL_medium_tank_destroyer_brigade_2_entity"
 	pdxmesh = "USA_advanced_medium_tank_destroyer_mesh"
 	clone = "USA_medium_tank_destroyer_brigade_2_entity"
 }
 
 entity = {
-	name = "PSA_light_tank_destroyer_brigade_1_entity"
+	name = "CAL_light_tank_destroyer_brigade_1_entity"
 	pdxmesh = "USA_improved_light_tank_destroyer_mesh"
 	clone = "USA_light_tank_destroyer_brigade_1_entity"
 }
 
 entity = {
-	name = "PSA_light_tank_destroyer_brigade_2_entity"
+	name = "CAL_light_tank_destroyer_brigade_2_entity"
 	pdxmesh = "USA_advanced_light_tank_destroyer_mesh"
 	clone = "USA_light_tank_destroyer_brigade_2_entity"
 }
 
 entity = {
-	name = "PSA_light_tank_destroyer_brigade_0_entity"
+	name = "CAL_light_tank_destroyer_brigade_0_entity"
 	pdxmesh = "USA_basic_light_tank_destroyer_mesh"
 	clone = "USA_light_tank_destroyer_brigade_0_entity"
 }
 
 entity = {
-	name = "PSA_heavy_tank_destroyer_brigade_0_entity"
+	name = "CAL_heavy_tank_destroyer_brigade_0_entity"
 	pdxmesh = "USA_basic_heavy_tank_destroyer_mesh"
 	clone = "USA_heavy_tank_destroyer_brigade_0_entity"
 }
 
 entity = {
-	name = "PSA_light_sp_artillery_brigade_0_entity"
+	name = "CAL_light_sp_artillery_brigade_0_entity"
 	pdxmesh = "USA_basic_light_tank_artillery_mesh"
 	clone = "USA_light_sp_artillery_brigade_0_entity"
 }
 
 entity = {
-	name = "PSA_medium_sp_artillery_brigade_0_entity"
+	name = "CAL_medium_sp_artillery_brigade_0_entity"
 	pdxmesh = "USA_basic_medium_tank_artillery_mesh"
 	clone = "USA_medium_sp_artillery_brigade_0_entity"
 }
 
 entity = {
-	name = "PSA_light_sp_artillery_brigade_1_entity"
+	name = "CAL_light_sp_artillery_brigade_1_entity"
 	pdxmesh = "USA_improved_light_tank_artillery_mesh"
 	clone = "USA_light_sp_artillery_brigade_1_entity"
 }
 
 entity = {
-	name = "PSA_medium_sp_artillery_brigade_1_entity"
+	name = "CAL_medium_sp_artillery_brigade_1_entity"
 	pdxmesh = "USA_improved_medium_tank_artillery_mesh"
 	clone = "USA_medium_sp_artillery_brigade_1_entity"
 }
 
 entity = {
-	name = "PSA_medium_sp_artillery_brigade_2_entity"
+	name = "CAL_medium_sp_artillery_brigade_2_entity"
 	pdxmesh = "USA_advanced_medium_tank_artillery_mesh"
 	clone = "USA_medium_sp_artillery_brigade_2_entity"
 }
 
 entity = {
-	name = "PSA_heavy_sp_artillery_brigade_1_entity"
+	name = "CAL_heavy_sp_artillery_brigade_1_entity"
 	pdxmesh = "USA_improved_heavy_tank_artillery_mesh"
 	clone = "USA_heavy_sp_artillery_brigade_1_entity"
 }
 
 entity = {
-	name = "PSA_medium_sp_anti_air_brigade_1_entity"
+	name = "CAL_medium_sp_anti_air_brigade_1_entity"
 	pdxmesh = "USA_improved_medium_tank_aa_mesh"
 	clone = "USA_medium_sp_anti_air_brigade_1_entity"
 }
 
 entity = {
-	name = "PSA_light_sp_anti_air_brigade_1_entity"
+	name = "CAL_light_sp_anti_air_brigade_1_entity"
 	pdxmesh = "USA_improved_light_tank_aa_mesh"
 	clone = "USA_light_sp_anti_air_brigade_1_entity"
 }
 
 entity = {
-	name = "PSA_medium_sp_anti_air_brigade_0_entity"
+	name = "CAL_medium_sp_anti_air_brigade_0_entity"
 	pdxmesh = "USA_basic_medium_tank_aa_mesh"
 	clone = "USA_medium_sp_anti_air_brigade_0_entity"
 }
 
 entity = {
-	name = "PSA_light_sp_anti_air_brigade_2_entity"
+	name = "CAL_light_sp_anti_air_brigade_2_entity"
+	pdxmesh = "USA_advanced_light_tank_aa_mesh"
+	clone = "USA_light_sp_anti_air_brigade_2_entity"
+}
+
+#######
+# COR #
+#######
+
+entity = {
+	name = "COR_medium_tank_destroyer_brigade_0_entity"
+	pdxmesh = "USA_basic_medium_tank_destroyer_mesh"
+	clone = "USA_medium_tank_destroyer_brigade_0_entity"
+}
+
+entity = {
+	name = "COR_medium_tank_destroyer_brigade_1_entity"
+	pdxmesh = "USA_improved_medium_tank_destroyer_mesh"
+	clone = "USA_medium_tank_destroyer_brigade_1_entity"
+}
+
+entity = {
+	name = "COR_medium_tank_destroyer_brigade_2_entity"
+	pdxmesh = "USA_advanced_medium_tank_destroyer_mesh"
+	clone = "USA_medium_tank_destroyer_brigade_2_entity"
+}
+
+entity = {
+	name = "COR_light_tank_destroyer_brigade_1_entity"
+	pdxmesh = "USA_improved_light_tank_destroyer_mesh"
+	clone = "USA_light_tank_destroyer_brigade_1_entity"
+}
+
+entity = {
+	name = "COR_light_tank_destroyer_brigade_2_entity"
+	pdxmesh = "USA_advanced_light_tank_destroyer_mesh"
+	clone = "USA_light_tank_destroyer_brigade_2_entity"
+}
+
+entity = {
+	name = "COR_light_tank_destroyer_brigade_0_entity"
+	pdxmesh = "USA_basic_light_tank_destroyer_mesh"
+	clone = "USA_light_tank_destroyer_brigade_0_entity"
+}
+
+entity = {
+	name = "COR_heavy_tank_destroyer_brigade_0_entity"
+	pdxmesh = "USA_basic_heavy_tank_destroyer_mesh"
+	clone = "USA_heavy_tank_destroyer_brigade_0_entity"
+}
+
+entity = {
+	name = "COR_light_sp_artillery_brigade_0_entity"
+	pdxmesh = "USA_basic_light_tank_artillery_mesh"
+	clone = "USA_light_sp_artillery_brigade_0_entity"
+}
+
+entity = {
+	name = "COR_medium_sp_artillery_brigade_0_entity"
+	pdxmesh = "USA_basic_medium_tank_artillery_mesh"
+	clone = "USA_medium_sp_artillery_brigade_0_entity"
+}
+
+entity = {
+	name = "COR_light_sp_artillery_brigade_1_entity"
+	pdxmesh = "USA_improved_light_tank_artillery_mesh"
+	clone = "USA_light_sp_artillery_brigade_1_entity"
+}
+
+entity = {
+	name = "COR_medium_sp_artillery_brigade_1_entity"
+	pdxmesh = "USA_improved_medium_tank_artillery_mesh"
+	clone = "USA_medium_sp_artillery_brigade_1_entity"
+}
+
+entity = {
+	name = "COR_medium_sp_artillery_brigade_2_entity"
+	pdxmesh = "USA_advanced_medium_tank_artillery_mesh"
+	clone = "USA_medium_sp_artillery_brigade_2_entity"
+}
+
+entity = {
+	name = "COR_heavy_sp_artillery_brigade_1_entity"
+	pdxmesh = "USA_improved_heavy_tank_artillery_mesh"
+	clone = "USA_heavy_sp_artillery_brigade_1_entity"
+}
+
+entity = {
+	name = "COR_medium_sp_anti_air_brigade_1_entity"
+	pdxmesh = "USA_improved_medium_tank_aa_mesh"
+	clone = "USA_medium_sp_anti_air_brigade_1_entity"
+}
+
+entity = {
+	name = "COR_light_sp_anti_air_brigade_1_entity"
+	pdxmesh = "USA_improved_light_tank_aa_mesh"
+	clone = "USA_light_sp_anti_air_brigade_1_entity"
+}
+
+entity = {
+	name = "COR_medium_sp_anti_air_brigade_0_entity"
+	pdxmesh = "USA_basic_medium_tank_aa_mesh"
+	clone = "USA_medium_sp_anti_air_brigade_0_entity"
+}
+
+entity = {
+	name = "COR_light_sp_anti_air_brigade_2_entity"
+	pdxmesh = "USA_advanced_light_tank_aa_mesh"
+	clone = "USA_light_sp_anti_air_brigade_2_entity"
+}
+
+#######
+# WCC #
+#######
+
+entity = {
+	name = "WCC_medium_tank_destroyer_brigade_0_entity"
+	pdxmesh = "USA_basic_medium_tank_destroyer_mesh"
+	clone = "USA_medium_tank_destroyer_brigade_0_entity"
+}
+
+entity = {
+	name = "WCC_medium_tank_destroyer_brigade_1_entity"
+	pdxmesh = "USA_improved_medium_tank_destroyer_mesh"
+	clone = "USA_medium_tank_destroyer_brigade_1_entity"
+}
+
+entity = {
+	name = "WCC_medium_tank_destroyer_brigade_2_entity"
+	pdxmesh = "USA_advanced_medium_tank_destroyer_mesh"
+	clone = "USA_medium_tank_destroyer_brigade_2_entity"
+}
+
+entity = {
+	name = "WCC_light_tank_destroyer_brigade_1_entity"
+	pdxmesh = "USA_improved_light_tank_destroyer_mesh"
+	clone = "USA_light_tank_destroyer_brigade_1_entity"
+}
+
+entity = {
+	name = "WCC_light_tank_destroyer_brigade_2_entity"
+	pdxmesh = "USA_advanced_light_tank_destroyer_mesh"
+	clone = "USA_light_tank_destroyer_brigade_2_entity"
+}
+
+entity = {
+	name = "WCC_light_tank_destroyer_brigade_0_entity"
+	pdxmesh = "USA_basic_light_tank_destroyer_mesh"
+	clone = "USA_light_tank_destroyer_brigade_0_entity"
+}
+
+entity = {
+	name = "WCC_heavy_tank_destroyer_brigade_0_entity"
+	pdxmesh = "USA_basic_heavy_tank_destroyer_mesh"
+	clone = "USA_heavy_tank_destroyer_brigade_0_entity"
+}
+
+entity = {
+	name = "WCC_light_sp_artillery_brigade_0_entity"
+	pdxmesh = "USA_basic_light_tank_artillery_mesh"
+	clone = "USA_light_sp_artillery_brigade_0_entity"
+}
+
+entity = {
+	name = "WCC_medium_sp_artillery_brigade_0_entity"
+	pdxmesh = "USA_basic_medium_tank_artillery_mesh"
+	clone = "USA_medium_sp_artillery_brigade_0_entity"
+}
+
+entity = {
+	name = "WCC_light_sp_artillery_brigade_1_entity"
+	pdxmesh = "USA_improved_light_tank_artillery_mesh"
+	clone = "USA_light_sp_artillery_brigade_1_entity"
+}
+
+entity = {
+	name = "WCC_medium_sp_artillery_brigade_1_entity"
+	pdxmesh = "USA_improved_medium_tank_artillery_mesh"
+	clone = "USA_medium_sp_artillery_brigade_1_entity"
+}
+
+entity = {
+	name = "WCC_medium_sp_artillery_brigade_2_entity"
+	pdxmesh = "USA_advanced_medium_tank_artillery_mesh"
+	clone = "USA_medium_sp_artillery_brigade_2_entity"
+}
+
+entity = {
+	name = "WCC_heavy_sp_artillery_brigade_1_entity"
+	pdxmesh = "USA_improved_heavy_tank_artillery_mesh"
+	clone = "USA_heavy_sp_artillery_brigade_1_entity"
+}
+
+entity = {
+	name = "WCC_medium_sp_anti_air_brigade_1_entity"
+	pdxmesh = "USA_improved_medium_tank_aa_mesh"
+	clone = "USA_medium_sp_anti_air_brigade_1_entity"
+}
+
+entity = {
+	name = "WCC_light_sp_anti_air_brigade_1_entity"
+	pdxmesh = "USA_improved_light_tank_aa_mesh"
+	clone = "USA_light_sp_anti_air_brigade_1_entity"
+}
+
+entity = {
+	name = "WCC_medium_sp_anti_air_brigade_0_entity"
+	pdxmesh = "USA_basic_medium_tank_aa_mesh"
+	clone = "USA_medium_sp_anti_air_brigade_0_entity"
+}
+
+entity = {
+	name = "WCC_light_sp_anti_air_brigade_2_entity"
 	pdxmesh = "USA_advanced_light_tank_aa_mesh"
 	clone = "USA_light_sp_anti_air_brigade_2_entity"
 }

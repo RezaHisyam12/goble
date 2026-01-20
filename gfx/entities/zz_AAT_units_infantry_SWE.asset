@@ -1,0 +1,177 @@
+############
+#
+# Infantry
+#
+############
+############
+#
+# Motorized
+#
+############
+
+	entity = {
+		clone = "motorized_entity"
+		name = "SWE_motorized_alt_0_entity"
+
+		attach = { 	name = "vehicle"	vehicle = "SWE_AAT_motorized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "SWE_infantry_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "SWE_motorized_alt_0_entity_snow"
+
+		attach = { 	name = "vehicle"	vehicle = "SWE_AAT_motorized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "SWE_infantry_entity_snow" }
+	}
+
+#1#
+
+	entity = {
+		clone = "motorized_entity"
+		name = "SWE_motorized_0_alt_0_entity"
+
+		attach = { 	name = "vehicle"	vehicle = "SWE_AAT_motorized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "SWE_infantry_0_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "SWE_motorized_0_alt_0_entity_snow"
+
+		attach = { 	name = "vehicle"	vehicle = "SWE_AAT_motorized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "SWE_infantry_0_entity_snow" }
+	}
+
+#1#
+
+	entity = {
+		clone = "motorized_entity"
+		name = "SWE_motorized_1_alt_0_entity"
+
+		attach = { 	name = "vehicle"	vehicle = "SWE_AAT_motorized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "SWE_infantry_1_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "SWE_motorized_1_alt_0_entity_snow"
+
+		attach = { 	name = "vehicle"	vehicle = "SWE_AAT_motorized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "SWE_infantry_1_entity_snow" }
+	}
+
+#2#
+
+	entity = {
+		clone = "motorized_entity"
+		name = "SWE_motorized_2_alt_0_entity"
+
+		attach = { 	name = "vehicle"	vehicle = "SWE_AAT_motorized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "SWE_infantry_2_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "SWE_motorized_2_alt_0_entity_snow"
+
+		attach = { 	name = "vehicle"	vehicle = "SWE_AAT_motorized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "SWE_infantry_2_entity_snow" }
+	}
+
+
+#3#
+
+	entity = {
+		clone = "motorized_entity"
+		name = "SWE_motorized_3_alt_0_entity"
+
+		attach = { 	name = "vehicle"	vehicle = "SWE_AAT_motorized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "SWE_infantry_3_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "SWE_motorized_3_alt_0_entity_snow"
+
+		attach = { 	name = "vehicle"	vehicle = "SWE_AAT_motorized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "SWE_infantry_3_entity_snow" }
+	}
+
+############
+#
+# Mechanized
+#
+############
+
+
+	entity = {
+		clone = "motorized_entity"
+		name = "SWE_mechanized_alt_0_entity"
+
+		attach = { name = "vehicle" 	vehicle = "SWE_AAT_mechanized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "SWE_infantry_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "SWE_mechanized_alt_0_entity_snow"
+
+		attach = { name = "vehicle" 	vehicle = "SWE_AAT_mechanized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "SWE_infantry_entity_snow" }
+	}
+
+#1#
+
+	entity = {
+		clone = "motorized_entity"
+		name = "SWE_mechanized_0_alt_0_entity"
+
+		attach = { name = "vehicle" 	vehicle = "SWE_AAT_mechanized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "SWE_infantry_2_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "SWE_mechanized_0_alt_0_entity_snow"
+
+		attach = { name = "vehicle" 	vehicle = "SWE_AAT_mechanized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "SWE_infantry_2_entity_snow" }
+	}
+
+#2#
+
+	entity = {
+		clone = "motorized_entity"
+		name = "SWE_mechanized_1_alt_0_entity"
+
+		attach = { name = "vehicle" 	vehicle = "SWE_AAT_mechanized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "SWE_infantry_3_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "SWE_mechanized_1_alt_0_entity_snow"
+
+		attach = { name = "vehicle" 	vehicle = "SWE_AAT_mechanized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "SWE_infantry_3_entity_snow" }
+	}
+
+
+#3#
+
+	entity = {
+		clone = "motorized_entity"
+		name = "SWE_mechanized_2_alt_0_entity"
+
+		attach = { name = "vehicle" 	vehicle = "SWE_AAT_mechanized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "SWE_infantry_3_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "SWE_mechanized_2_alt_0_entity_snow"
+
+		attach = { name = "vehicle" 	vehicle = "SWE_AAT_mechanized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "SWE_infantry_3_entity_snow" }
+	}

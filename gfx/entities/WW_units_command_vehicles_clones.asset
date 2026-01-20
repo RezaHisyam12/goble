@@ -11,6 +11,10 @@ entity = {
 }
 entity = { 
 	clone = "ENG_armored_signal_entity"
+	name = "CAN_armored_signal_entity"
+}
+entity = { 
+	clone = "ENG_armored_signal_entity"
 	name = "SAF_armored_signal_entity"
 }
 entity = { 
@@ -142,6 +146,14 @@ entity = {
 entity = { 
 	clone = "USA_armored_signal_entity"
 	name = "TEX_armored_signal_entity"
+}
+entity = { 
+	clone = "USA_armored_signal_entity"
+	name = "COR_armored_signal_entity"
+}
+entity = { 
+	clone = "USA_armored_signal_entity"
+	name = "WCC_armored_signal_entity"
 }
 entity = { 
 	clone = "USA_armored_signal_entity"

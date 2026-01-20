@@ -49,12 +49,6 @@ scripted_gui = {
 					has_country_flag = GRU_GOEBB_GORING_VISIBLE
 				}
 			}
-			Rosa_Luxenburg_visible = {
-				AND = {
-					has_country_flag = GRU_HOG_veiw
-					has_country_flag = GRU_LIEBK_ROSA_VISIBLE
-				}
-			}
 			###
 			Britain_Charles_III_visible = {
 				AND = {
@@ -121,12 +115,6 @@ scripted_gui = {
 				AND = {
 					has_country_flag = GRU_HOG_veiw
 					has_country_flag = GRU_RRV_VISIBLE
-				}
-			}
-			Konstantin_Rodzaevsky_visible = {
-				AND = {
-					has_country_flag = GRU_HOG_veiw
-					has_country_flag = GRU_AMR_VISIBLE
 				}
 			}
 			Diterikhs_visible = {

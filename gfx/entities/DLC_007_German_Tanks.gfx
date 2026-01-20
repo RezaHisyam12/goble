@@ -311,11 +311,11 @@ objectTypes = {
 	}
 	pdxmesh = {
 		name = "EE_medium_armor_0_mesh"
-		file = "gfx/models/units/tanks/GER_heavy_armor_0.mesh"
+		file = "gfx/models/units/tanks/GER_medium_armor_0.mesh"
 
-		animation = { id = "idle"			type = "GER_heavy_armor_0_idle_animation" }
-		animation = { id = "move"			type = "GER_heavy_armor_0_moving_animation" }
-		animation = { id = "attack"			type = "GER_heavy_armor_0_attack_animation" }
+		animation = { id = "idle"			type = "GER_medium_armor_0_idle_animation" }
+		animation = { id = "move"			type = "GER_medium_armor_0_moving_animation" }
+		animation = { id = "attack"			type = "GER_medium_armor_0_attack_animation" }
 
 		meshsettings = {
 			index = 0

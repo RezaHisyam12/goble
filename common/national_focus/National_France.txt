@@ -5750,7 +5750,7 @@ focus_tree = {
 		relative_position_id = NFA_la_liberation
 		cost = 5
 		ai_will_do = {
-			factor = 80
+			factor = 100
 		}
 		select_effect = {
 			country_event = { id = natfra.137 days = 10 }
@@ -5804,7 +5804,7 @@ focus_tree = {
 		relative_position_id = NFA_la_liberation
 		cost = 6
 		ai_will_do = {
-			factor = 80
+			factor = 100
 		}
 		select_effect = {
 			country_event = { id = natfra.141 days = 20 }
@@ -5838,7 +5838,7 @@ focus_tree = {
 		relative_position_id = NFA_la_liberation
 		cost = 5
 		ai_will_do = {
-			factor = 80
+			factor = 100
 		}
 		select_effect = {
 			country_event = { id = natfra.142 days = 15 }
@@ -5862,7 +5862,7 @@ focus_tree = {
 		relative_position_id = NFA_la_liberation
 		cost = 6
 		ai_will_do = {
-			factor = 80
+			factor = 100
 		}
 		completion_reward = {
 			swap_ideas = {
@@ -5917,7 +5917,7 @@ focus_tree = {
 		relative_position_id = NFA_la_liberation
 		cost = 5
 		ai_will_do = {
-			factor = 80
+			factor = 100
 		}
 		completion_reward = {
 			add_political_power = 30
@@ -5939,7 +5939,7 @@ focus_tree = {
 		relative_position_id = NFA_la_liberation
 		cost = 5
 		ai_will_do = {
-			factor = 80
+			factor = 100
 		}
 		completion_reward = {
 			custom_effect_tooltip = NFA_syndie_resistance_medium_decline
@@ -5971,7 +5971,7 @@ focus_tree = {
 		relative_position_id = NFA_la_liberation
 		cost = 5
 		ai_will_do = {
-			factor = 80
+			factor = 100
 		}
 		select_effect = {
 			country_event = { id = natfra.146 days = 10 } #CoF officer corps
@@ -6000,7 +6000,7 @@ focus_tree = {
 		relative_position_id = NFA_la_liberation
 		cost = 5
 		ai_will_do = {
-			factor = 80
+			factor = 100
 		}
 		completion_reward = {
 			add_political_power = 50
@@ -6625,7 +6625,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = -0.02
 			add_war_support = 0.03
-			GER = { country_event = { id = natfra.188 days = 1 } }
+			var:64.owner = { country_event = { id = natfra.188 days = 1 } }
 		}
 	}
 
@@ -6692,7 +6692,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = NFA_lost_provinces
-			GER = {
+			var:64.owner = {
 				country_event = { id = natfra.189 days = 1 }
 			}
 			set_global_flag = CAN_german_tension
@@ -6732,7 +6732,7 @@ focus_tree = {
 					remove_idea = NFA_franco_german_trade
 					add_idea = NFA_lingering_tension
 				}
-				GER = {
+				var:64.owner = {
 					swap_ideas = {
 					remove_idea = NFA_franco_german_trade
 					add_idea = NFA_lingering_tension
@@ -6762,7 +6762,7 @@ focus_tree = {
 				remove_idea = NFA_franco_german_trade
 				add_idea = NFA_peace_in_our_time
 			}
-			GER = {
+			var:64.owner = {
 				swap_ideas = {
 					remove_idea = NFA_franco_german_trade
 					add_idea = NFA_peace_in_our_time
@@ -6793,7 +6793,7 @@ focus_tree = {
 			has_country_flag = NFA_mobilised_against_germany
 		}
 		bypass = {
-			GER = { is_subject_of = NFA }
+			var:64.owner = { is_subject_of = NFA }
 		}
 		completion_reward = {
 			declare_war_on = { target = GER type = annex_everything }
@@ -14378,7 +14378,10 @@ focus_tree = {
 		}
 		available = {
 			has_completed_focus = NFA_arms_length
-			country_exists = GER
+			OR = {
+				country_exists = GER
+				country_exists = GRU
+			}
 			NOT = {
 				has_country_flag = NFA_nap_pataut
 			}
@@ -14387,7 +14390,7 @@ focus_tree = {
 			custom_effect_tooltip = "It's time to end the German menace once and for all!"
 			create_wargoal = {
 				type = annex_everything
-				target = GER
+				target = var:64.owner
 			}
 			add_war_support = 0.02
 			add_manpower = 5000

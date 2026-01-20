@@ -8,6 +8,10 @@ entity = {
 }
 entity = { 
 	clone = "ENG_supersonic_jet_plane_entity"
+	name = "CAN_supersonic_jet_plane_entity"
+}
+entity = { 
+	clone = "ENG_supersonic_jet_plane_entity"
 	name = "SAF_supersonic_jet_plane_entity"
 }
 entity = { 
@@ -128,6 +132,14 @@ entity = {
 entity = { 
 	clone = "USA_supersonic_jet_plane_entity"
 	name = "TEX_supersonic_jet_plane_entity"
+}
+entity = { 
+	clone = "USA_supersonic_jet_plane_entity"
+	name = "COR_supersonic_jet_plane_entity"
+}
+entity = { 
+	clone = "USA_supersonic_jet_plane_entity"
+	name = "WCC_supersonic_jet_plane_entity"
 }
 entity = { 
 	clone = "USA_supersonic_jet_plane_entity"

@@ -4926,10 +4926,10 @@ country_event = { #
 
 	trigger = {
 		tag = GRU
-		has_war_with = RUS
+		has_war_with = var:219.owner
 		GRU = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
+		RUS = { surrender_progress > 0.85 }
 		OR = {
-			RUS = { surrender_progress > 0.85 }
 			GRU = {
 				controls_state = 195
 				controls_state = 219
@@ -4960,14 +4960,18 @@ country_event = { #
 		add_stability = 0.25
 		RUS = {
 			leave_faction = yes
-		    separate_peace_all_wars = yes
+		    	separate_peace_all_wars = yes
+			add_timed_idea = {
+				idea = RUS_postwar_devastation
+				days = 400
+			}
 		}
 		hidden_effect = {
 			every_state = {
 				limit = {
 					country_exists = VKM
 					OR = {
-						state = 205
+					state = 205
 				        state = 246
 				        state = 247
 				        state = 248
@@ -5009,7 +5013,7 @@ country_event = { #
 				limit = {
 					NOT = { country_exists = VKM }
 					OR = {
-						state = 205
+					state = 205
 				        state = 246
 				        state = 247
 				        state = 248
@@ -5051,7 +5055,7 @@ country_event = { #
 				limit = {
 					country_exists = VKR
 					OR = {
-						state = 202
+					state = 202
 				        state = 1240
 				        state = 1244
 				        state = 201
@@ -5072,7 +5076,7 @@ country_event = { #
 				        state = 1233
 				        state = 203
 				        state = 1241
-						state = 196
+					state = 196
 				        state = 1234
 				        state = 200
 				        state = 1286
@@ -5097,13 +5101,13 @@ country_event = { #
 				        state = 1231
 				        state = 1220
 				        state = 137
-						state = 240
+					state = 240
 				        state = 821
 				        state = 220
 				        state = 1229
 					}
 				}
-				RUT = {
+				VKR = {
 					transfer_state = PREV
 				}
 			}
@@ -5111,7 +5115,7 @@ country_event = { #
 				limit = {
 					NOT = { country_exists = VKR }
 					OR = {
-						state = 202
+					state = 202
 				        state = 1240
 				        state = 1244
 				        state = 201
@@ -5132,7 +5136,7 @@ country_event = { #
 				        state = 1233
 				        state = 203
 				        state = 1241
-						state = 196
+					state = 196
 				        state = 1234
 				        state = 200
 				        state = 1286
@@ -5158,7 +5162,7 @@ country_event = { #
 				        state = 1220
 				        state = 137
 				        state = 1221
-						state = 240
+					state = 240
 				        state = 821
 				        state = 220
 				        state = 1229
@@ -5172,7 +5176,7 @@ country_event = { #
 				limit = {
 					country_exists = VKB
 					OR = {
-						state = 12
+					state = 12
 				        state = 191
 				        state = 13
 				        state = 190
@@ -5181,7 +5185,7 @@ country_event = { #
 				        state = 655
 				        state = 1329
 				        state = 1091
-						state = 209
+					state = 209
 				        state = 880
 				        state = 207
 				        state = 96
@@ -5192,7 +5196,7 @@ country_event = { #
 				        state = 1294
 				        state = 1287
 				        state = 1290
-						state = 1289
+					state = 1289
 				        state = 1291
 				        state = 210
 				        state = 755
@@ -5201,7 +5205,7 @@ country_event = { #
 				        state = 243
 					}
 				}
-				BAL = {
+				VKB = {
 					transfer_state = PREV
 				}
 			}
@@ -5209,7 +5213,7 @@ country_event = { #
 				limit = {
 					NOT = { country_exists = VKB }
 					OR = {
-						state = 12
+					state = 12
 				        state = 191
 				        state = 13
 				        state = 190
@@ -5218,7 +5222,7 @@ country_event = { #
 				        state = 655
 				        state = 1329
 				        state = 1091
-						state = 209
+					state = 209
 				        state = 880
 				        state = 207
 				        state = 96
@@ -5229,7 +5233,7 @@ country_event = { #
 				        state = 1294
 				        state = 1287
 				        state = 1290
-						state = 1289
+					state = 1289
 				        state = 1291
 				        state = 210
 				        state = 755
@@ -5246,16 +5250,16 @@ country_event = { #
 				set_country_flag = GRU_RUS_NO_WESTERN_RUSSIA
 				every_owned_state = {
 		        	limit = {
-		        		is_core_of = RUS
+		        		is_core_of = var:219.owner
 		        	}
 		        	set_demilitarized_zone = yes
-		       		}
+		        	}
 				every_owned_state = {
 		        	limit = {
-		        		is_core_of = RUS
+		        		is_core_of = var:219.owner
 		        	}
 		        	set_border_war = yes
-		       		}
+		        	}
 				country_event = { id = rmruss.2 days = 60 }
 				every_owned_state = {
 			    	limit = {
@@ -5276,15 +5280,15 @@ country_event = { #
 			    	}
 			    	HYP = {
 			    		transfer_state = PREV
+			    		}
 			    	}
-			    }
 				every_owned_state = {
 			    	limit = {
 						NOT = { country_exists = HYP }
 			    		OR = {
 			    			state = 216
-			    	        state = 1327
-			    	        state = 146
+			    	        	state = 1327
+			    	       		state = 146
 							state = 1325
 							state = 1324
 							state = 1326
@@ -5297,8 +5301,8 @@ country_event = { #
 			    	}
 			    	GRU = {
 			    		transfer_state = PREV
+			    		}
 			    	}
-			    }
 				every_owned_state = {
 			    	limit = {
 						country_exists = VKK
@@ -5397,8 +5401,8 @@ country_event = { #
 			    	}
 			    	GRU = {
 			    		transfer_state = PREV
+			    		}
 			    	}
-			    }
 			}
 		}
 	}
@@ -5409,6 +5413,7 @@ country_event = { #
 		}
 		add_stability = -0.35
 		add_war_support = -0.50
+		set_country_flag = rm_russ_down
 	}
 }
 country_event = { #
@@ -5428,13 +5433,13 @@ country_event = { #
 		}
 		every_state = {
 			limit = {
-				is_core_of = RUS
+				is_core_of = var:653.owner
 			}
 			set_demilitarized_zone = no
 		}
 		every_state = {
 			limit = {
-				is_core_of = RUS
+				is_core_of = var:653.owner
 			}
 			set_border_war = no
 		}
@@ -5618,7 +5623,11 @@ country_event = { #
                     	logistics_skill = 1
                     }
 
-					create_faction = gru_west_russian_triumvirate_faction
+					create_faction_from_template = { 
+		            	template = faction_template_generic_dominance              
+		            	name = gru_west_russian_triumvirate_faction
+		            	icon = "GFX_faction_russian_alliance"
+		            }
 				}
 			}
 		}
@@ -5647,7 +5656,7 @@ country_event = { #
 				hidden_effect = {		
 					create_country_leader = {
 						name = GRU_ldr_Ivan_Chernyakhovsky
-						picture = "gfx/leaders/SOV/Ivan_Chernyakhovsky.png"
+						picture = "gfx/leaders/GRU/GOR_Ivan_Chernyakhovsky.png"
 						expire = "1.1.1"
 						ideology = national_communism_subtype
 					}
@@ -5714,6 +5723,7 @@ country_event = { #
 
 					set_country_flag = GRU_VYT_VISIBLE
 					set_country_flag = GRU_LEADER_GUI_VISIBLE
+					set_country_flag = HOG_veiw
 				}
 			}
 		}
@@ -6325,6 +6335,7 @@ country_event = { #
 
 					set_country_flag = GRU_RRV_VISIBLE
 			        set_country_flag = GRU_LEADER_GUI_VISIBLE
+					set_country_flag = HOG_veiw
 				}
 			}
 		}
@@ -6380,7 +6391,7 @@ country_event = { #
 				limit = {
 					OR = {
 						state = 581
-						state = 573
+						state = 1195
 					}
 				}
 				if = {
@@ -6415,7 +6426,7 @@ country_event = { #
 						popularity = 1
 					}
 					set_party_name = { ideology = social_conservative long_name = GRU_party_11_long name = GRU_party_11 }
-					set_capital = { state = 573 }
+					set_capital = { state = 1195 }
 
 					set_cosmetic_tag = URP
 				}
@@ -6426,7 +6437,6 @@ country_event = { #
 				limit = {
 					OR = {
 						state = 582
-						state = 1195
 					}
 				}
 				if = {
@@ -6539,10 +6549,9 @@ country_event = { #
 			tag = KZK
 			KZK = {
 				hidden_effect = {
-					create_faction = gru_cossack_pact_faction
 					create_country_leader = {
-						name = GRU_ldr_Bogaevskiy
-						picture = "gfx/leaders/DKB/Portrait_DKB_Bogaevskiy.png"
+						name = GRU_ldr_Aleksandr_Ionov
+						picture = "gfx/leaders/GRU/GRU_Aleksandr_Ionov.png"
 						expire = "1.1.1"
 						ideology = pataut_cossack_subtype
 						traits = { cossack_leader }
@@ -6621,6 +6630,7 @@ country_event = { #
 
 					set_country_flag = STALIN_ORDZ_VISIBLE
 					set_country_flag = GRU_LEADER_GUI_VISIBLE
+					set_country_flag = HOG_veiw
 				}
 			}
 		}
@@ -6631,6 +6641,7 @@ country_event = { #
 						state = 590
 						state = 810
 						state = 404
+						state = 583
 					}
 				}
 				if = {
@@ -6766,8 +6777,8 @@ country_event = { #
 				limit = {
 					OR = {
 						state = 572
+						state = 573
 						state = 403
-						state = 583
 					}
 				}
 				if = {
@@ -6786,10 +6797,14 @@ country_event = { #
 			tag = TMN
 			TMN = {
 				hidden_effect = {
-					create_faction = gru_trans_urals_all_union_bolshevik_association_faction
+					create_faction_from_template = { 
+		            	template = faction_template_regional
+		            	name = gru_trans_urals_all_union_bolshevik_association_faction
+		            	icon = GFX_faction_logo_comintern
+		            }
 					create_country_leader = {
 						name = GRU_ldr_Lazar_Kaganovich
-						picture = "gfx/leaders/SOV/Lazar_Kaganovich.png"
+						picture = "gfx/leaders/GRU/TMN_Lazar_Kaganovich.png"
 						expire = "1.1.1"
 						ideology = hardliner_bolshevism_subtype
 						traits = { hog_totalist_chairman }
@@ -6815,6 +6830,7 @@ country_event = { #
 				limit = {
 					OR = {
 						state = 653
+						state = 580
 					}
 				}
 				if = {
@@ -6834,15 +6850,14 @@ country_event = { #
 			SVD = {
 				hidden_effect = {
 					create_country_leader = {
-						name = GRU_ldr_Vyacheslav_Molotov
-						picture = "gfx/leaders/SOV/Portrait_SOV_Vyacheslav_Molotov.png"
+						name = GRU_ldr_Mikhail_Tukhachevsky
+						picture = "gfx/leaders/GRU/SVD_Mikhail_Tukhachevsky.png"
 						expire = "1.1.1"
-						ideology = nazbol_subtype
+						ideology = red_junta_subtype
 					}
 					set_politics = {
 						ruling_party = totalist
 						last_election = "1.1.1"
-						election_frequency = 48
 						elections_allowed = no
 					}
 					add_popularity = {
@@ -6860,8 +6875,9 @@ country_event = { #
 			every_state = {
 				limit = {
 					OR = {
-						state = 580
 						state = 1200
+						state = 1201
+						state = 577
 					}
 				}
 				if = {
@@ -6881,30 +6897,24 @@ country_event = { #
 			SUG = {
 				hidden_effect = {
 					create_country_leader = {
-						name = GRU_ldr_Mikhail_Frunze
-						picture = "gfx/leaders/RUS/Portrait_RUS_Mikhail_Frunze.png"
+						name = GRU_ldr_Jaba_Ioseliani
+						picture = "gfx/leaders/GRU/SUG_Yugra_Jaba_Ioseliani.png"
 						expire = "1.1.1"
-						ideology = red_junta_subtype
-					}
-					add_ideas = {
-						SOV_frunze_dictator
+						ideology = pataut_warlordism_subtype
 					}
 					set_politics = {
-						ruling_party = totalist
+						ruling_party = paternal_autocrat
 						last_election = "1.1.1"
 						elections_allowed = no
 					}
 					add_popularity = {
-						ideology = totalist
+						ideology = paternal_autocrat
 						popularity = 1
 					}
-					set_party_name = { ideology = totalist long_name = GRU_party_21_long name = GRU_party_21 }
+					set_party_name = { ideology = paternal_autocrat long_name = GRU_party_21_long name = GRU_party_21 }
 					set_capital = { state = 653 }
 
 					set_cosmetic_tag = SUG
-
-					set_country_flag = SUG_triumvirate
-			        set_country_flag = GRU_LEADER_GUI_VISIBLE
 				}
 			}
 		}
@@ -6957,6 +6967,7 @@ country_event = { #
 
 					set_country_flag = GRU_SHE_VISIBLE
 					set_country_flag = GRU_LEADER_GUI_VISIBLE
+					set_country_flag = HOG_veiw
 				}
 			}
 		}
@@ -7013,7 +7024,6 @@ country_event = { #
 			every_state = {
 				limit = {
 					OR = {
-						state = 577
 						state = 578
 						state = 570
 						state = 575
@@ -7035,7 +7045,11 @@ country_event = { #
 			tag = NVS
 			NVS = {
 				hidden_effect = {		
-					create_faction = gru_siberian_treaty_faction
+					create_faction_from_template = { 
+		            	template = faction_template_generic_dominance
+		            	name = gru_siberian_treaty_faction
+		            	icon = GFX_faction_atlantic_treaty_organization
+		            }
 
 					create_country_leader = {
 						name = GRU_ldr_Ivan_Lavrov
@@ -7086,7 +7100,7 @@ country_event = { #
 				hidden_effect = {		
 					create_country_leader = {
 						name = GRU_ldr_Dimitry_Karbaskyev
-						picture = "gfx/leaders/SOV/Portrait_SOV_Dimitry_Karbaskyev.png"
+						picture = "gfx/leaders/GRU/OMS_Dimitry_Karbaskyev.png"
 						expire = "1.1.1"
 						ideology = syn_red_junta_subtype
 					}
@@ -7222,22 +7236,22 @@ country_event = { #
 			SAT = {
 				hidden_effect = {		
 					create_country_leader = {
-						name = GRU_ldr_Nestor_Makhno
-						picture = "gfx/leaders/RUS/Portrait_SOV_Nestor_Makhno_General.png"
+						name = GRU_ldr_Siberian_Council
+						picture = "gfx/leaders/GRU/SAT_Siberian_Soviet.png"
 						expire = "1.1.1"
-						ideology = despotism_vanguard_anarchism_subtype
+						ideology = tot_anarcho_communism_subtype
 					}
 					set_politics = {
-						ruling_party = syndicalist
+						ruling_party = totalist
 						last_election = "1.1.1"
 						election_frequency = 48
 						elections_allowed = no
 					}
 					add_popularity = {
-						ideology = syndicalist
+						ideology = totalist
 						popularity = 1
 					}
-					set_party_name = { ideology = syndicalist long_name = GRU_party_28_long name = GRU_party_28 }
+					set_party_name = { ideology = totalist long_name = GRU_party_28_long name = GRU_party_28 }
 					set_capital = { state = 567 }
 
 					set_cosmetic_tag = SAT
@@ -7270,7 +7284,7 @@ country_event = { #
 				hidden_effect = {		
 					create_country_leader = {
 						name = GRU_ldr_Genrikh_Yagoda
-						picture = "gfx/leaders/SOV/Genrikh_Yagoda.png"
+						picture = "gfx/leaders/GRU/IRK_Genrikh_Yagoda.png"
 						expire = "1.1.1"
 						ideology = socialist_security_state_subtype
 					}
@@ -7293,33 +7307,16 @@ country_event = { #
 		}
 		create_dynamic_country = {
 			every_state = {
-				limit = {
-					OR = {
-						state = 574
-					}
-				}
-				if = {
-					limit = { is_claimed_by = YAK }
-					remove_claim_by = YAK
-				}
-				if = {
-					limit = { 
-						NOT = { is_core_of = YAK }
-					}
-					add_core_of = YAK
-					YAK = { transfer_state = PREV }
-				}
+			    limit = { 
+			    	state = 574
+			    }
+			    add_core_of = YAK
+			    YAK = { transfer_state = PREV }
 			}
 			original_tag = YAK
 			tag = YAK
 			YAK = {
 				hidden_effect = {		
-					create_country_leader = {
-						name = GRU_ldr_Georgy_Efimov
-						picture = "gfx/leaders/YAK/Portrait_YAK_Georgy_Efimov.png"
-						expire = "1.1.1"
-						ideology = authoritarian_democrat_subtype
-					}
 					set_politics = {
 						ruling_party = authoritarian_democrat
 						last_election = "1.1.1"
@@ -7391,7 +7388,6 @@ country_event = { #
 				limit = {
 					OR = {
 						state = 560
-						state = 409
 					}
 				}
 				if = {
@@ -7427,7 +7423,7 @@ country_event = { #
 						popularity = 1
 					}
 					set_party_name = { ideology = totalist long_name = GRU_party_31_long name = GRU_party_31 }
-					set_capital = { state = 409 }
+					set_capital = { state = 560 }
 
 					set_cosmetic_tag = OHT
 				}
@@ -7501,8 +7497,13 @@ country_event = { #
 
 					set_country_flag = GRU_MGD_VISIBLE
 					set_country_flag = GRU_LEADER_GUI_VISIBLE
+					set_country_flag = HOG_veiw
 
-					create_faction = gru_far_eastern_union_for_the_liberation_of_russia_faction
+					create_faction_from_template = { 
+		            	template = faction_template_moscow_accord
+		            	name = gru_far_eastern_union_for_the_liberation_of_russia_faction
+		            	icon = GFX_faction_russian_alliance
+		            }
 				}
 			}
 		}
@@ -7559,7 +7560,6 @@ country_event = { #
 						state = 1202
 						state = 644
 						state = 516
-						state = 1201
 						state = 1273
 					}
 				}
@@ -7642,36 +7642,16 @@ country_event = { #
 						state = 564
 					}
 				}
-				if = {
-					limit = { is_claimed_by = BRY }
-					remove_claim_by = BRY
-				}
-				if = {
-					limit = { 
-						NOT = { is_core_of = BRY }
-					}
-					add_core_of = BRY
-					BRY = { transfer_state = PREV }
-				}
+				add_core_of = BRY
+				BRY = { transfer_state = PREV }
 			}
 			original_tag = BRY
 			tag = BRY
 			BRY = {
 				hidden_effect = {		
-					create_country_leader = {
-			        	name = GRU_ldr_Grigory_Semyonov
-			        	picture = "gfx/leaders/TRM/Portrait_TRM_Grigory_Semyonov.png"
-			        	expire = "1.1.1"
-			        	ideology = pataut_cossack_subtype
-			        }
-			        set_party_name = {
-			        	ideology = paternal_autocrat
-			        	long_name = TRM_semyonov_party_long
-			        	name = TRM_semyonov_party
-			        }
-					add_popularity = {
-						ideology = paternal_autocrat
-						popularity = 1
+					set_politics = {
+						ruling_party = social_conservative
+						elections_allowed = no
 					}
 					set_capital = { state = 563 }
 				}
@@ -7739,9 +7719,7 @@ country_event = { #
 					state = 1196
 		    	}
 			}
-			KYR = {
-				create_faction = gru_pact_of_unity_faction
-				
+			KYR = {				
 				add_state_core = PREV
 				transfer_state = PREV
 			}
@@ -7809,6 +7787,7 @@ country_event = { #
 				OR = {
 					state = 1246
 					state = 408
+					state = 409
 				}
 			}
 			if = {
@@ -7827,7 +7806,6 @@ country_event = { #
 		GRF = { add_to_faction = RRV }
 
 		TMN = { add_to_faction = SVD }
-		TMN = { add_to_faction = SUG }
 		TMN = { add_to_faction = KAZ }
 
 		KYR = { add_to_faction = TRK }
@@ -8031,15 +8009,16 @@ country_event = { #
 		}
 		RUS = {
 			set_country_flag = GRU_RUS_NO_WESTERN_RUSSIA
+			activate_targeted_decision = { target = ENT decision = RUS_Join_Entente_2 }
 			every_owned_state = {
 				limit = {
-					is_core_of = RUS
+					is_core_of = var:653.owner
 				}
 				set_demilitarized_zone = no
 			}
 			every_owned_state = {
 		        	limit = {
-		        		is_core_of = RUS
+					is_core_of = var:653.owner
 		        	}
 		        	set_border_war = no
 		        }

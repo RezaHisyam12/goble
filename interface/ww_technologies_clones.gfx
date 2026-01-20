@@ -901,14 +901,14 @@ spriteTypes = {
 ##### SOV #####
 ###############
 
-	# SpriteType = {
-	# 	name = "GFX_RUS_land_cruiser_armor_medium"
-	# 	texturefile = "gfx/interface/technologies/SOV_land_cruiser_armor.dds"
-	# }
-	# SpriteType = {
-	# 	name = "GFX_RUS_land_cruiser_chassis_medium"
-	# 	texturefile = "gfx/interface/technologies/SOV_land_cruiser_armor.dds"
-	# }
+	SpriteType = {
+	 	name = "GFX_RUS_land_cruiser_armor_medium"
+	 	texturefile = "gfx/interface/technologies/SOV_land_cruiser_armor.dds"
+	}
+	SpriteType = {
+	 	name = "GFX_RUS_land_cruiser_chassis_medium"
+	 	texturefile = "gfx/interface/technologies/SOV_land_cruiser_armor.dds"
+	}
 	SpriteType = {
 		name = "GFX_RUS_armored_support_vehicle_crossing_medium"
 		texturefile = "gfx/interface/technologies/SOV_armored_support_vehicle_crossing.dds"
@@ -1049,6 +1049,77 @@ spriteTypes = {
 	}	
 	SpriteType = {
 		name = "GFX_IMP_nuclear_missile_submarine_medium" #Used for non-MTG Nuclear Missile Submarine
+		texturefile = "gfx/interface/technologies/ENG_ship_hull_nuclear_powered_submarine.dds"
+	}
+  ### CAN
+	SpriteType = {
+		name = "GFX_CAN_land_cruiser_armor_medium"
+		texturefile = "gfx/interface/technologies/ENG_land_cruiser_armor.dds"
+	}
+	SpriteType = {
+		name = "GFX_CAN_land_cruiser_chassis_medium"
+		texturefile = "gfx/interface/technologies/ENG_land_cruiser_armor.dds"
+	}
+	SpriteType = {
+		name = "GFX_CAN_armored_support_vehicle_crossing_medium"
+		texturefile = "gfx/interface/technologies/ENG_armored_support_vehicle_crossing.dds"
+	}
+	SpriteType = {
+		name = "GFX_CAN_armored_support_vehicle_recovery_1_medium"
+		texturefile = "gfx/interface/technologies/ENG_armored_support_vehicle_recovery_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_CAN_armored_support_vehicle_recovery_2_medium"
+		texturefile = "gfx/interface/technologies/ENG_armored_support_vehicle_recovery_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_CAN_armored_support_vehicle_medium"
+		texturefile = "gfx/interface/technologies/ENG_armored_support_vehicle.dds"
+	}
+	SpriteType = {
+		name = "GFX_CAN_armored_support_vehicle_command_medium"
+		texturefile = "gfx/interface/technologies/ENG_armored_support_vehicle_command.dds"
+	}
+	SpriteType = {
+		name = "GFX_CAN_super_heavy_artillery_equipment_medium"
+		texturefile = "gfx/interface/technologies/ENG_super_heavy_artillery.dds"
+	}
+	SpriteType = {
+		name = "GFX_CAN_heavy_flame_tank_medium"
+		texturefile = "gfx/interface/technologies/ENG_heavy_flame_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_CAN_super_heavy_railway_gun_equipment_medium"
+		texturefile = "gfx/interface/technologies/ENG_super_heavy_railway_gun.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CAN_helicopter_equipment_medium"
+		texturefile = "gfx/interface/technologies/ENG_helicopter.dds"
+	}
+	SpriteType = {
+		name = "GFX_CAN_strat_bomber_intercontinental_equipment_medium"
+		texturefile = "gfx/interface/technologies/ENG_strategic_bomber_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_CAN_supersonic_fighter1_medium"
+		texturefile = "gfx/interface/technologies/ENG_supersonic_jet_plane.dds"
+	}
+	SpriteType = {
+		name = "GFX_CAN_small_plane_airframe_5_medium"
+		texturefile = "gfx/interface/technologies/ENG_supersonic_jet_plane.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_CAN_ship_hull_nuclear_submarine_medium" #Used for MTG Nuclear Submarine
+		texturefile = "gfx/interface/technologies/ENG_ship_hull_nuclear_powered_submarine.dds"
+	}
+	SpriteType = {
+		name = "GFX_CAN_nuclear_submarine_medium" #Used for non-MTG Nuclear Submarine
+		texturefile = "gfx/interface/technologies/ENG_ship_hull_nuclear_powered_submarine.dds"
+	}	
+	SpriteType = {
+		name = "GFX_CAN_nuclear_missile_submarine_medium" #Used for non-MTG Nuclear Missile Submarine
 		texturefile = "gfx/interface/technologies/ENG_ship_hull_nuclear_powered_submarine.dds"
 	}
   ### AST
@@ -1334,88 +1405,88 @@ spriteTypes = {
 		name = "GFX_CSA_nuclear_missile_equipment_2_medium"
 		texturefile = "gfx/interface/technologies/USA_nuclear_missile_equipment_2.dds"
 	}
-  ## PSA
+  ## CAL
 	SpriteType = {
-		name = "GFX_PSA_land_cruiser_armor_medium"
+		name = "GFX_CAL_land_cruiser_armor_medium"
 		texturefile = "gfx/interface/technologies/USA_land_cruiser_armor.dds"
 	}
 	SpriteType = {
-		name = "GFX_PSA_land_cruiser_chassis_medium"
+		name = "GFX_CAL_land_cruiser_chassis_medium"
 		texturefile = "gfx/interface/technologies/USA_land_cruiser_armor.dds"
 	}
 	SpriteType = {
-		name = "GFX_PSA_armored_support_vehicle_medium"
+		name = "GFX_CAL_armored_support_vehicle_medium"
 		texturefile = "gfx/interface/technologies/USA_armored_support_vehicle.dds"
 	}
 	SpriteType = {
-		name = "GFX_PSA_armored_support_vehicle_recovery_medium"
+		name = "GFX_CAL_armored_support_vehicle_recovery_medium"
 		texturefile = "gfx/interface/technologies/USA_armored_support_vehicle_recovery.dds"
 	}
 	SpriteType = {
-		name = "GFX_PSA_armored_support_vehicle_command_medium"
+		name = "GFX_CAL_armored_support_vehicle_command_medium"
 		texturefile = "gfx/interface/technologies/USA_armored_support_vehicle_command.dds"
 	}
 	SpriteType = {
-		name = "GFX_PSA_super_heavy_artillery_equipment_medium"
+		name = "GFX_CAL_super_heavy_artillery_equipment_medium"
 		texturefile = "gfx/interface/technologies/USA_super_heavy_artillery.dds"
 	}
 	SpriteType = {
-		name = "GFX_PSA_light_flame_tank_medium"
+		name = "GFX_CAL_light_flame_tank_medium"
 		texturefile = "gfx/interface/technologies/USA_light_flame_tank.dds"
 	}
 	SpriteType = {
-		name = "GFX_PSA_medium_flame_tank_medium"
+		name = "GFX_CAL_medium_flame_tank_medium"
 		texturefile = "gfx/interface/technologies/USA_medium_flame_tank.dds"
 	}
 	SpriteType = {
-		name = "GFX_PSA_super_heavy_railway_gun_equipment_medium"
+		name = "GFX_CAL_super_heavy_railway_gun_equipment_medium"
 		texturefile = "gfx/interface/technologies/USA_super_heavy_railway_gun.dds"
 	}
 
 	SpriteType = {
-		name = "GFX_PSA_helicopter_equipment_medium"
+		name = "GFX_CAL_helicopter_equipment_medium"
 		texturefile = "gfx/interface/technologies/USA_helicopter.dds"
 	}
 	SpriteType = {
-		name = "GFX_PSA_helicopter_1_equipment_medium"
+		name = "GFX_CAL_helicopter_1_equipment_medium"
 		texturefile = "gfx/interface/technologies/USA_helicopter_1.dds"
 	}
 	SpriteType = {
-		name = "GFX_PSA_strat_bomber_intercontinental_equipment_medium"
+		name = "GFX_CAL_strat_bomber_intercontinental_equipment_medium"
 		texturefile = "gfx/interface/technologies/USA_strategic_bomber.dds"
 	}
 	SpriteType = {
-		name = "GFX_PSA_mothership_equipment_medium"
+		name = "GFX_CAL_mothership_equipment_medium"
 		texturefile = "gfx/interface/technologies/USA_mothership.dds"
 	}
 	SpriteType = {
-		name = "GFX_PSA_supersonic_fighter1_medium"
+		name = "GFX_CAL_supersonic_fighter1_medium"
 		texturefile = "gfx/interface/technologies/USA_supersonic_jet_plane.dds"
 	}
 	SpriteType = {
-		name = "GFX_PSA_small_plane_airframe_5_medium"
+		name = "GFX_CAL_small_plane_airframe_5_medium"
 		texturefile = "gfx/interface/technologies/USA_supersonic_jet_plane.dds"
 	}
 
 	SpriteType = {
-		name = "GFX_PSA_ship_hull_nuclear_submarine_medium" #Used for MTG Nuclear Submarine
+		name = "GFX_CAL_ship_hull_nuclear_submarine_medium" #Used for MTG Nuclear Submarine
 		texturefile = "gfx/interface/technologies/USA_ship_hull_nuclear_powered_submarine.dds"
 	}
 	SpriteType = {
-		name = "GFX_PSA_nuclear_submarine_medium" #Used for non-MTG Nuclear Submarine
+		name = "GFX_CAL_nuclear_submarine_medium" #Used for non-MTG Nuclear Submarine
 		texturefile = "gfx/interface/technologies/USA_ship_hull_nuclear_powered_submarine.dds"
 	}	
 	SpriteType = {
-		name = "GFX_PSA_nuclear_missile_submarine_medium" #Used for non-MTG Nuclear Missile Submarine
+		name = "GFX_CAL_nuclear_missile_submarine_medium" #Used for non-MTG Nuclear Missile Submarine
 		texturefile = "gfx/interface/technologies/USA_ship_hull_nuclear_powered_submarine.dds"
 	}
 
 	SpriteType = {
-		name = "GFX_PSA_nuclear_missile_equipment_1_medium"
+		name = "GFX_CAL_nuclear_missile_equipment_1_medium"
 		texturefile = "gfx/interface/technologies/USA_nuclear_missile_equipment_1.dds"
 	}
 	SpriteType = {
-		name = "GFX_PSA_nuclear_missile_equipment_2_medium"
+		name = "GFX_CAL_nuclear_missile_equipment_2_medium"
 		texturefile = "gfx/interface/technologies/USA_nuclear_missile_equipment_2.dds"
 	}
   ## TEX
@@ -1500,6 +1571,174 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_TEX_nuclear_missile_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/USA_nuclear_missile_equipment_2.dds"
+	}
+  ## COR
+	SpriteType = {
+		name = "GFX_COR_land_cruiser_armor_medium"
+		texturefile = "gfx/interface/technologies/USA_land_cruiser_armor.dds"
+	}
+	SpriteType = {
+		name = "GFX_COR_land_cruiser_chassis_medium"
+		texturefile = "gfx/interface/technologies/USA_land_cruiser_armor.dds"
+	}
+	SpriteType = {
+		name = "GFX_COR_armored_support_vehicle_medium"
+		texturefile = "gfx/interface/technologies/USA_armored_support_vehicle.dds"
+	}
+	SpriteType = {
+		name = "GFX_COR_armored_support_vehicle_recovery_medium"
+		texturefile = "gfx/interface/technologies/USA_armored_support_vehicle_recovery.dds"
+	}
+	SpriteType = {
+		name = "GFX_COR_armored_support_vehicle_command_medium"
+		texturefile = "gfx/interface/technologies/USA_armored_support_vehicle_command.dds"
+	}
+	SpriteType = {
+		name = "GFX_COR_super_heavy_artillery_equipment_medium"
+		texturefile = "gfx/interface/technologies/USA_super_heavy_artillery.dds"
+	}
+	SpriteType = {
+		name = "GFX_COR_light_flame_tank_medium"
+		texturefile = "gfx/interface/technologies/USA_light_flame_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_COR_medium_flame_tank_medium"
+		texturefile = "gfx/interface/technologies/USA_medium_flame_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_COR_super_heavy_railway_gun_equipment_medium"
+		texturefile = "gfx/interface/technologies/USA_super_heavy_railway_gun.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_COR_helicopter_equipment_medium"
+		texturefile = "gfx/interface/technologies/USA_helicopter.dds"
+	}
+	SpriteType = {
+		name = "GFX_COR_helicopter_1_equipment_medium"
+		texturefile = "gfx/interface/technologies/USA_helicopter_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_COR_strat_bomber_intercontinental_equipment_medium"
+		texturefile = "gfx/interface/technologies/USA_strategic_bomber.dds"
+	}
+	SpriteType = {
+		name = "GFX_COR_mothership_equipment_medium"
+		texturefile = "gfx/interface/technologies/USA_mothership.dds"
+	}
+	SpriteType = {
+		name = "GFX_COR_supersonic_fighter1_medium"
+		texturefile = "gfx/interface/technologies/USA_supersonic_jet_plane.dds"
+	}
+	SpriteType = {
+		name = "GFX_COR_small_plane_airframe_5_medium"
+		texturefile = "gfx/interface/technologies/USA_supersonic_jet_plane.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_COR_ship_hull_nuclear_submarine_medium" #Used for MTG Nuclear Submarine
+		texturefile = "gfx/interface/technologies/USA_ship_hull_nuclear_powered_submarine.dds"
+	}
+	SpriteType = {
+		name = "GFX_COR_nuclear_submarine_medium" #Used for non-MTG Nuclear Submarine
+		texturefile = "gfx/interface/technologies/USA_ship_hull_nuclear_powered_submarine.dds"
+	}	
+	SpriteType = {
+		name = "GFX_COR_nuclear_missile_submarine_medium" #Used for non-MTG Nuclear Missile Submarine
+		texturefile = "gfx/interface/technologies/USA_ship_hull_nuclear_powered_submarine.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_COR_nuclear_missile_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/USA_nuclear_missile_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_COR_nuclear_missile_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/USA_nuclear_missile_equipment_2.dds"
+	}
+  ## WCC
+	SpriteType = {
+		name = "GFX_WCC_land_cruiser_armor_medium"
+		texturefile = "gfx/interface/technologies/USA_land_cruiser_armor.dds"
+	}
+	SpriteType = {
+		name = "GFX_WCC_land_cruiser_chassis_medium"
+		texturefile = "gfx/interface/technologies/USA_land_cruiser_armor.dds"
+	}
+	SpriteType = {
+		name = "GFX_WCC_armored_support_vehicle_medium"
+		texturefile = "gfx/interface/technologies/USA_armored_support_vehicle.dds"
+	}
+	SpriteType = {
+		name = "GFX_WCC_armored_support_vehicle_recovery_medium"
+		texturefile = "gfx/interface/technologies/USA_armored_support_vehicle_recovery.dds"
+	}
+	SpriteType = {
+		name = "GFX_WCC_armored_support_vehicle_command_medium"
+		texturefile = "gfx/interface/technologies/USA_armored_support_vehicle_command.dds"
+	}
+	SpriteType = {
+		name = "GFX_WCC_super_heavy_artillery_equipment_medium"
+		texturefile = "gfx/interface/technologies/USA_super_heavy_artillery.dds"
+	}
+	SpriteType = {
+		name = "GFX_WCC_light_flame_tank_medium"
+		texturefile = "gfx/interface/technologies/USA_light_flame_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_WCC_medium_flame_tank_medium"
+		texturefile = "gfx/interface/technologies/USA_medium_flame_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_WCC_super_heavy_railway_gun_equipment_medium"
+		texturefile = "gfx/interface/technologies/USA_super_heavy_railway_gun.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_WCC_helicopter_equipment_medium"
+		texturefile = "gfx/interface/technologies/USA_helicopter.dds"
+	}
+	SpriteType = {
+		name = "GFX_WCC_helicopter_1_equipment_medium"
+		texturefile = "gfx/interface/technologies/USA_helicopter_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_WCC_strat_bomber_intercontinental_equipment_medium"
+		texturefile = "gfx/interface/technologies/USA_strategic_bomber.dds"
+	}
+	SpriteType = {
+		name = "GFX_WCC_mothership_equipment_medium"
+		texturefile = "gfx/interface/technologies/USA_mothership.dds"
+	}
+	SpriteType = {
+		name = "GFX_WCC_supersonic_fighter1_medium"
+		texturefile = "gfx/interface/technologies/USA_supersonic_jet_plane.dds"
+	}
+	SpriteType = {
+		name = "GFX_WCC_small_plane_airframe_5_medium"
+		texturefile = "gfx/interface/technologies/USA_supersonic_jet_plane.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_WCC_ship_hull_nuclear_submarine_medium" #Used for MTG Nuclear Submarine
+		texturefile = "gfx/interface/technologies/USA_ship_hull_nuclear_powered_submarine.dds"
+	}
+	SpriteType = {
+		name = "GFX_WCC_nuclear_submarine_medium" #Used for non-MTG Nuclear Submarine
+		texturefile = "gfx/interface/technologies/USA_ship_hull_nuclear_powered_submarine.dds"
+	}	
+	SpriteType = {
+		name = "GFX_WCC_nuclear_missile_submarine_medium" #Used for non-MTG Nuclear Missile Submarine
+		texturefile = "gfx/interface/technologies/USA_ship_hull_nuclear_powered_submarine.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_WCC_nuclear_missile_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/USA_nuclear_missile_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_WCC_nuclear_missile_equipment_2_medium"
 		texturefile = "gfx/interface/technologies/USA_nuclear_missile_equipment_2.dds"
 	}
   ## NEE

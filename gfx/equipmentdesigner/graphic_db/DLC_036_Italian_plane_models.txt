@@ -1,0 +1,3215 @@
+ITA = {
+	small_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_0_entity		# CR.32 (interwar fighter)
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity		# C.200 (fighter 1936)
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity			# Ba.65 (cas 1936)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity					# SM.79 (nav 1936)
+			}
+		}
+	}
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity		# C.202 (fighter 1940)
+			}
+		}
+	}
+	small_plane_cas_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_CAS_equipment_2_entity			# Ba.88 (cas 1940, currently icon doesn't match - FC.12)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity					# SM.84 (nav 1940)
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity		# G.55 (fighter 1944)
+			}
+		}
+	}
+	small_plane_cas_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_3_entity			# Ba.201 (cas 1944, currently icon doesn't match - SM.93)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_3 = {
+		pool = {
+			weight = 5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_3_entity # SM.89 (nav 1944)
+				ITA_nav_3_entity					 # SM.89 (nav 1944)
+			}
+		}
+	}
+	small_plane_airframe_4 = {						# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity
+			}
+		}
+	}
+	small_plane_cas_airframe_4 = {					# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_CAS_equipment_2_entity
+				ITA_CAS_equipment_3_entity
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_4 = {			# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_3_entity # SM.89 (nav 1944)
+				ITA_nav_3_entity					 # SM.89 (nav 1944)
+			}
+		}
+	}
+
+
+	cv_small_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_0_entity
+				ITA_cv_nav_bomber_equipment_1_entity	# Unknown biplane - definitely not SM.79
+				ITA_cv_fighter_equipment_0_entity		# ICR.32 (interwar fighter)
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_cv_fighter_equipment_1_entity	# IC.200 (cv fighter 1936, currently icon doesn't match)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_cv_CAS_equipment_1_entity		# Looks like shorter reskin of IC.200 or G.50 (currently icon doesn't match)
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 5
+			models = {
+				ITA_nav_1_entity					# SM.79 (nav 1936)
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_cv_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_cv_CAS_equipment_2_entity		# Reskin of the same model
+				ITA_cv_fighter_equipment_2_entity	# IC.202 (cv 1940)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_cv_CAS_equipment_1_entity
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_cv_nav_bomber_equipment_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_2_entity # SM.84 (nav 1940)
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_2_entity
+				ITA_cv_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity
+				ITA_cv_fighter_equipment_3_entity	# No clue, looks somewhat like re.2005 but PDX uses G.55 at this tier (which looks very different)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_2_entity
+				ITA_cv_CAS_equipment_2_entity
+				ITA_CAS_equipment_3_entity
+				ITA_cv_CAS_equipment_3_entity		# No clue, but looks different than Ba.201 which is used by PDX at this tier
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_2_entity
+				ITA_nav_3_entity
+				ITA_cv_nav_bomber_equipment_3_entity	# SM.89 (nav 1944)
+			}
+		}
+	}
+	cv_small_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_3_entity
+				ITA_cv_fighter_equipment_3_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_3_entity
+				ITA_cv_CAS_equipment_3_entity
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_3_entity
+				ITA_cv_nav_bomber_equipment_3_entity
+			}
+		}
+	}
+
+	medium_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_interwar_bomber_entity
+			}
+		}
+	}
+	medium_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_interwar_bomber_entity 				# SM.81 (medium plane 1936)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_equipment_1_entity	# Ro.57 (heavy fighter 1936)
+			}
+		}
+	}
+	medium_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_tac_bomber_1_entity
+				ITA_tac_bomber_2_entity					# Z.1007 (medium plane 1940)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_2_entity				# Ro.58 (heavy fighter 1940)
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_tac_bomber_2_entity
+				ITA_tac_bomber_3_entity					# Z.1018 (medium plane 1944)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_3_entity				# SM.92 (heavy fighter 1944)
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_3_entity
+				ITA_tac_bomber_3_entity	
+			}
+		}
+	}
+
+	large_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_1_entity					# P.50 (strat 1936)
+			}
+		}
+	}
+	large_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity			# P.108 (strat 1940)
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity
+				ITA_strat_bomber_equipment_3_entity			# P.133 (strat 1940)
+			}
+		}
+	}
+	large_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity
+				ITA_strat_bomber_equipment_3_entity
+			}
+		}
+	}
+}
+PAP = {
+	small_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_0_entity		# CR.32 (interwar fighter)
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity		# C.200 (fighter 1936)
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity			# Ba.65 (cas 1936)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity					# SM.79 (nav 1936)
+			}
+		}
+	}
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity		# C.202 (fighter 1940)
+			}
+		}
+	}
+	small_plane_cas_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_CAS_equipment_2_entity			# Ba.88 (cas 1940, currently icon doesn't match - FC.12)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity					# SM.84 (nav 1940)
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity		# G.55 (fighter 1944)
+			}
+		}
+	}
+	small_plane_cas_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_3_entity			# Ba.201 (cas 1944, currently icon doesn't match - SM.93)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_3 = {
+		pool = {
+			weight = 5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_3_entity # SM.89 (nav 1944)
+				ITA_nav_3_entity					 # SM.89 (nav 1944)
+			}
+		}
+	}
+	small_plane_airframe_4 = {						# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity
+			}
+		}
+	}
+	small_plane_cas_airframe_4 = {					# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_CAS_equipment_2_entity
+				ITA_CAS_equipment_3_entity
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_4 = {			# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_3_entity # SM.89 (nav 1944)
+				ITA_nav_3_entity					 # SM.89 (nav 1944)
+			}
+		}
+	}
+
+
+	cv_small_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_0_entity
+				ITA_cv_nav_bomber_equipment_1_entity	# Unknown biplane - definitely not SM.79
+				ITA_cv_fighter_equipment_0_entity		# ICR.32 (interwar fighter)
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_cv_fighter_equipment_1_entity	# IC.200 (cv fighter 1936, currently icon doesn't match)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_cv_CAS_equipment_1_entity		# Looks like shorter reskin of IC.200 or G.50 (currently icon doesn't match)
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 5
+			models = {
+				ITA_nav_1_entity					# SM.79 (nav 1936)
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_cv_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_cv_CAS_equipment_2_entity		# Reskin of the same model
+				ITA_cv_fighter_equipment_2_entity	# IC.202 (cv 1940)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_cv_CAS_equipment_1_entity
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_cv_nav_bomber_equipment_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_2_entity # SM.84 (nav 1940)
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_2_entity
+				ITA_cv_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity
+				ITA_cv_fighter_equipment_3_entity	# No clue, looks somewhat like re.2005 but PDX uses G.55 at this tier (which looks very different)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_2_entity
+				ITA_cv_CAS_equipment_2_entity
+				ITA_CAS_equipment_3_entity
+				ITA_cv_CAS_equipment_3_entity		# No clue, but looks different than Ba.201 which is used by PDX at this tier
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_2_entity
+				ITA_nav_3_entity
+				ITA_cv_nav_bomber_equipment_3_entity	# SM.89 (nav 1944)
+			}
+		}
+	}
+	cv_small_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_3_entity
+				ITA_cv_fighter_equipment_3_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_3_entity
+				ITA_cv_CAS_equipment_3_entity
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_3_entity
+				ITA_cv_nav_bomber_equipment_3_entity
+			}
+		}
+	}
+
+	medium_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_interwar_bomber_entity
+			}
+		}
+	}
+	medium_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_interwar_bomber_entity 				# SM.81 (medium plane 1936)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_equipment_1_entity	# Ro.57 (heavy fighter 1936)
+			}
+		}
+	}
+	medium_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_tac_bomber_1_entity
+				ITA_tac_bomber_2_entity					# Z.1007 (medium plane 1940)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_2_entity				# Ro.58 (heavy fighter 1940)
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_tac_bomber_2_entity
+				ITA_tac_bomber_3_entity					# Z.1018 (medium plane 1944)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_3_entity				# SM.92 (heavy fighter 1944)
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_3_entity
+				ITA_tac_bomber_3_entity	
+			}
+		}
+	}
+
+	large_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_1_entity					# P.50 (strat 1936)
+			}
+		}
+	}
+	large_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity			# P.108 (strat 1940)
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity
+				ITA_strat_bomber_equipment_3_entity			# P.133 (strat 1940)
+			}
+		}
+	}
+	large_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity
+				ITA_strat_bomber_equipment_3_entity
+			}
+		}
+	}
+}
+SRD = {
+	small_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_0_entity		# CR.32 (interwar fighter)
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity		# C.200 (fighter 1936)
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity			# Ba.65 (cas 1936)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity					# SM.79 (nav 1936)
+			}
+		}
+	}
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity		# C.202 (fighter 1940)
+			}
+		}
+	}
+	small_plane_cas_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_CAS_equipment_2_entity			# Ba.88 (cas 1940, currently icon doesn't match - FC.12)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity					# SM.84 (nav 1940)
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity		# G.55 (fighter 1944)
+			}
+		}
+	}
+	small_plane_cas_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_3_entity			# Ba.201 (cas 1944, currently icon doesn't match - SM.93)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_3 = {
+		pool = {
+			weight = 5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_3_entity # SM.89 (nav 1944)
+				ITA_nav_3_entity					 # SM.89 (nav 1944)
+			}
+		}
+	}
+	small_plane_airframe_4 = {						# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity
+			}
+		}
+	}
+	small_plane_cas_airframe_4 = {					# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_CAS_equipment_2_entity
+				ITA_CAS_equipment_3_entity
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_4 = {			# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_3_entity # SM.89 (nav 1944)
+				ITA_nav_3_entity					 # SM.89 (nav 1944)
+			}
+		}
+	}
+
+
+	cv_small_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_0_entity
+				ITA_cv_nav_bomber_equipment_1_entity	# Unknown biplane - definitely not SM.79
+				ITA_cv_fighter_equipment_0_entity		# ICR.32 (interwar fighter)
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_cv_fighter_equipment_1_entity	# IC.200 (cv fighter 1936, currently icon doesn't match)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_cv_CAS_equipment_1_entity		# Looks like shorter reskin of IC.200 or G.50 (currently icon doesn't match)
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 5
+			models = {
+				ITA_nav_1_entity					# SM.79 (nav 1936)
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_cv_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_cv_CAS_equipment_2_entity		# Reskin of the same model
+				ITA_cv_fighter_equipment_2_entity	# IC.202 (cv 1940)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_cv_CAS_equipment_1_entity
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_cv_nav_bomber_equipment_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_2_entity # SM.84 (nav 1940)
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_2_entity
+				ITA_cv_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity
+				ITA_cv_fighter_equipment_3_entity	# No clue, looks somewhat like re.2005 but PDX uses G.55 at this tier (which looks very different)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_2_entity
+				ITA_cv_CAS_equipment_2_entity
+				ITA_CAS_equipment_3_entity
+				ITA_cv_CAS_equipment_3_entity		# No clue, but looks different than Ba.201 which is used by PDX at this tier
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_2_entity
+				ITA_nav_3_entity
+				ITA_cv_nav_bomber_equipment_3_entity	# SM.89 (nav 1944)
+			}
+		}
+	}
+	cv_small_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_3_entity
+				ITA_cv_fighter_equipment_3_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_3_entity
+				ITA_cv_CAS_equipment_3_entity
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_3_entity
+				ITA_cv_nav_bomber_equipment_3_entity
+			}
+		}
+	}
+
+	medium_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_interwar_bomber_entity
+			}
+		}
+	}
+	medium_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_interwar_bomber_entity 				# SM.81 (medium plane 1936)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_equipment_1_entity	# Ro.57 (heavy fighter 1936)
+			}
+		}
+	}
+	medium_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_tac_bomber_1_entity
+				ITA_tac_bomber_2_entity					# Z.1007 (medium plane 1940)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_2_entity				# Ro.58 (heavy fighter 1940)
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_tac_bomber_2_entity
+				ITA_tac_bomber_3_entity					# Z.1018 (medium plane 1944)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_3_entity				# SM.92 (heavy fighter 1944)
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_3_entity
+				ITA_tac_bomber_3_entity	
+			}
+		}
+	}
+
+	large_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_1_entity					# P.50 (strat 1936)
+			}
+		}
+	}
+	large_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity			# P.108 (strat 1940)
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity
+				ITA_strat_bomber_equipment_3_entity			# P.133 (strat 1940)
+			}
+		}
+	}
+	large_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity
+				ITA_strat_bomber_equipment_3_entity
+			}
+		}
+	}
+}
+SRI = {
+	small_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_0_entity		# CR.32 (interwar fighter)
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity		# C.200 (fighter 1936)
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity			# Ba.65 (cas 1936)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity					# SM.79 (nav 1936)
+			}
+		}
+	}
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity		# C.202 (fighter 1940)
+			}
+		}
+	}
+	small_plane_cas_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_CAS_equipment_2_entity			# Ba.88 (cas 1940, currently icon doesn't match - FC.12)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity					# SM.84 (nav 1940)
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity		# G.55 (fighter 1944)
+			}
+		}
+	}
+	small_plane_cas_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_3_entity			# Ba.201 (cas 1944, currently icon doesn't match - SM.93)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_3 = {
+		pool = {
+			weight = 5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_3_entity # SM.89 (nav 1944)
+				ITA_nav_3_entity					 # SM.89 (nav 1944)
+			}
+		}
+	}
+	small_plane_airframe_4 = {						# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity
+			}
+		}
+	}
+	small_plane_cas_airframe_4 = {					# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_CAS_equipment_2_entity
+				ITA_CAS_equipment_3_entity
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_4 = {			# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_3_entity # SM.89 (nav 1944)
+				ITA_nav_3_entity					 # SM.89 (nav 1944)
+			}
+		}
+	}
+
+
+	cv_small_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_0_entity
+				ITA_cv_nav_bomber_equipment_1_entity	# Unknown biplane - definitely not SM.79
+				ITA_cv_fighter_equipment_0_entity		# ICR.32 (interwar fighter)
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_cv_fighter_equipment_1_entity	# IC.200 (cv fighter 1936, currently icon doesn't match)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_cv_CAS_equipment_1_entity		# Looks like shorter reskin of IC.200 or G.50 (currently icon doesn't match)
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 5
+			models = {
+				ITA_nav_1_entity					# SM.79 (nav 1936)
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_cv_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_cv_CAS_equipment_2_entity		# Reskin of the same model
+				ITA_cv_fighter_equipment_2_entity	# IC.202 (cv 1940)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_cv_CAS_equipment_1_entity
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_cv_nav_bomber_equipment_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_2_entity # SM.84 (nav 1940)
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_2_entity
+				ITA_cv_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity
+				ITA_cv_fighter_equipment_3_entity	# No clue, looks somewhat like re.2005 but PDX uses G.55 at this tier (which looks very different)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_2_entity
+				ITA_cv_CAS_equipment_2_entity
+				ITA_CAS_equipment_3_entity
+				ITA_cv_CAS_equipment_3_entity		# No clue, but looks different than Ba.201 which is used by PDX at this tier
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_2_entity
+				ITA_nav_3_entity
+				ITA_cv_nav_bomber_equipment_3_entity	# SM.89 (nav 1944)
+			}
+		}
+	}
+	cv_small_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_3_entity
+				ITA_cv_fighter_equipment_3_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_3_entity
+				ITA_cv_CAS_equipment_3_entity
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_3_entity
+				ITA_cv_nav_bomber_equipment_3_entity
+			}
+		}
+	}
+
+	medium_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_interwar_bomber_entity
+			}
+		}
+	}
+	medium_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_interwar_bomber_entity 				# SM.81 (medium plane 1936)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_equipment_1_entity	# Ro.57 (heavy fighter 1936)
+			}
+		}
+	}
+	medium_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_tac_bomber_1_entity
+				ITA_tac_bomber_2_entity					# Z.1007 (medium plane 1940)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_2_entity				# Ro.58 (heavy fighter 1940)
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_tac_bomber_2_entity
+				ITA_tac_bomber_3_entity					# Z.1018 (medium plane 1944)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_3_entity				# SM.92 (heavy fighter 1944)
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_3_entity
+				ITA_tac_bomber_3_entity	
+			}
+		}
+	}
+
+	large_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_1_entity					# P.50 (strat 1936)
+			}
+		}
+	}
+	large_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity			# P.108 (strat 1940)
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity
+				ITA_strat_bomber_equipment_3_entity			# P.133 (strat 1940)
+			}
+		}
+	}
+	large_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity
+				ITA_strat_bomber_equipment_3_entity
+			}
+		}
+	}
+}
+SIC = {
+	small_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_0_entity		# CR.32 (interwar fighter)
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity		# C.200 (fighter 1936)
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity			# Ba.65 (cas 1936)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity					# SM.79 (nav 1936)
+			}
+		}
+	}
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity		# C.202 (fighter 1940)
+			}
+		}
+	}
+	small_plane_cas_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_CAS_equipment_2_entity			# Ba.88 (cas 1940, currently icon doesn't match - FC.12)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity					# SM.84 (nav 1940)
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity		# G.55 (fighter 1944)
+			}
+		}
+	}
+	small_plane_cas_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_3_entity			# Ba.201 (cas 1944, currently icon doesn't match - SM.93)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_3 = {
+		pool = {
+			weight = 5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_3_entity # SM.89 (nav 1944)
+				ITA_nav_3_entity					 # SM.89 (nav 1944)
+			}
+		}
+	}
+	small_plane_airframe_4 = {						# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity
+			}
+		}
+	}
+	small_plane_cas_airframe_4 = {					# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_CAS_equipment_2_entity
+				ITA_CAS_equipment_3_entity
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_4 = {			# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_3_entity # SM.89 (nav 1944)
+				ITA_nav_3_entity					 # SM.89 (nav 1944)
+			}
+		}
+	}
+
+
+	cv_small_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_0_entity
+				ITA_cv_nav_bomber_equipment_1_entity	# Unknown biplane - definitely not SM.79
+				ITA_cv_fighter_equipment_0_entity		# ICR.32 (interwar fighter)
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_cv_fighter_equipment_1_entity	# IC.200 (cv fighter 1936, currently icon doesn't match)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_cv_CAS_equipment_1_entity		# Looks like shorter reskin of IC.200 or G.50 (currently icon doesn't match)
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 5
+			models = {
+				ITA_nav_1_entity					# SM.79 (nav 1936)
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_cv_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_cv_CAS_equipment_2_entity		# Reskin of the same model
+				ITA_cv_fighter_equipment_2_entity	# IC.202 (cv 1940)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_cv_CAS_equipment_1_entity
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_cv_nav_bomber_equipment_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_2_entity # SM.84 (nav 1940)
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_2_entity
+				ITA_cv_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity
+				ITA_cv_fighter_equipment_3_entity	# No clue, looks somewhat like re.2005 but PDX uses G.55 at this tier (which looks very different)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_2_entity
+				ITA_cv_CAS_equipment_2_entity
+				ITA_CAS_equipment_3_entity
+				ITA_cv_CAS_equipment_3_entity		# No clue, but looks different than Ba.201 which is used by PDX at this tier
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_2_entity
+				ITA_nav_3_entity
+				ITA_cv_nav_bomber_equipment_3_entity	# SM.89 (nav 1944)
+			}
+		}
+	}
+	cv_small_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_3_entity
+				ITA_cv_fighter_equipment_3_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_3_entity
+				ITA_cv_CAS_equipment_3_entity
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_3_entity
+				ITA_cv_nav_bomber_equipment_3_entity
+			}
+		}
+	}
+
+	medium_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_interwar_bomber_entity
+			}
+		}
+	}
+	medium_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_interwar_bomber_entity 				# SM.81 (medium plane 1936)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_equipment_1_entity	# Ro.57 (heavy fighter 1936)
+			}
+		}
+	}
+	medium_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_tac_bomber_1_entity
+				ITA_tac_bomber_2_entity					# Z.1007 (medium plane 1940)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_2_entity				# Ro.58 (heavy fighter 1940)
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_tac_bomber_2_entity
+				ITA_tac_bomber_3_entity					# Z.1018 (medium plane 1944)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_3_entity				# SM.92 (heavy fighter 1944)
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_3_entity
+				ITA_tac_bomber_3_entity	
+			}
+		}
+	}
+
+	large_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_1_entity					# P.50 (strat 1936)
+			}
+		}
+	}
+	large_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity			# P.108 (strat 1940)
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity
+				ITA_strat_bomber_equipment_3_entity			# P.133 (strat 1940)
+			}
+		}
+	}
+	large_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity
+				ITA_strat_bomber_equipment_3_entity
+			}
+		}
+	}
+}
+VNC = {
+	small_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_0_entity		# CR.32 (interwar fighter)
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity		# C.200 (fighter 1936)
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity			# Ba.65 (cas 1936)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity					# SM.79 (nav 1936)
+			}
+		}
+	}
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity		# C.202 (fighter 1940)
+			}
+		}
+	}
+	small_plane_cas_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_CAS_equipment_2_entity			# Ba.88 (cas 1940, currently icon doesn't match - FC.12)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity					# SM.84 (nav 1940)
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity		# G.55 (fighter 1944)
+			}
+		}
+	}
+	small_plane_cas_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_3_entity			# Ba.201 (cas 1944, currently icon doesn't match - SM.93)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_3 = {
+		pool = {
+			weight = 5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_3_entity # SM.89 (nav 1944)
+				ITA_nav_3_entity					 # SM.89 (nav 1944)
+			}
+		}
+	}
+	small_plane_airframe_4 = {						# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity
+			}
+		}
+	}
+	small_plane_cas_airframe_4 = {					# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_CAS_equipment_2_entity
+				ITA_CAS_equipment_3_entity
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_4 = {			# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_3_entity # SM.89 (nav 1944)
+				ITA_nav_3_entity					 # SM.89 (nav 1944)
+			}
+		}
+	}
+
+
+	cv_small_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_0_entity
+				ITA_cv_nav_bomber_equipment_1_entity	# Unknown biplane - definitely not SM.79
+				ITA_cv_fighter_equipment_0_entity		# ICR.32 (interwar fighter)
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_cv_fighter_equipment_1_entity	# IC.200 (cv fighter 1936, currently icon doesn't match)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_cv_CAS_equipment_1_entity		# Looks like shorter reskin of IC.200 or G.50 (currently icon doesn't match)
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 5
+			models = {
+				ITA_nav_1_entity					# SM.79 (nav 1936)
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_cv_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_cv_CAS_equipment_2_entity		# Reskin of the same model
+				ITA_cv_fighter_equipment_2_entity	# IC.202 (cv 1940)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_cv_CAS_equipment_1_entity
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_cv_nav_bomber_equipment_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_2_entity # SM.84 (nav 1940)
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_2_entity
+				ITA_cv_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity
+				ITA_cv_fighter_equipment_3_entity	# No clue, looks somewhat like re.2005 but PDX uses G.55 at this tier (which looks very different)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_2_entity
+				ITA_cv_CAS_equipment_2_entity
+				ITA_CAS_equipment_3_entity
+				ITA_cv_CAS_equipment_3_entity		# No clue, but looks different than Ba.201 which is used by PDX at this tier
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_2_entity
+				ITA_nav_3_entity
+				ITA_cv_nav_bomber_equipment_3_entity	# SM.89 (nav 1944)
+			}
+		}
+	}
+	cv_small_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_3_entity
+				ITA_cv_fighter_equipment_3_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_3_entity
+				ITA_cv_CAS_equipment_3_entity
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_3_entity
+				ITA_cv_nav_bomber_equipment_3_entity
+			}
+		}
+	}
+
+	medium_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_interwar_bomber_entity
+			}
+		}
+	}
+	medium_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_interwar_bomber_entity 				# SM.81 (medium plane 1936)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_equipment_1_entity	# Ro.57 (heavy fighter 1936)
+			}
+		}
+	}
+	medium_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_tac_bomber_1_entity
+				ITA_tac_bomber_2_entity					# Z.1007 (medium plane 1940)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_2_entity				# Ro.58 (heavy fighter 1940)
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_tac_bomber_2_entity
+				ITA_tac_bomber_3_entity					# Z.1018 (medium plane 1944)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_3_entity				# SM.92 (heavy fighter 1944)
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_3_entity
+				ITA_tac_bomber_3_entity	
+			}
+		}
+	}
+
+	large_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_1_entity					# P.50 (strat 1936)
+			}
+		}
+	}
+	large_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity			# P.108 (strat 1940)
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity
+				ITA_strat_bomber_equipment_3_entity			# P.133 (strat 1940)
+			}
+		}
+	}
+	large_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity
+				ITA_strat_bomber_equipment_3_entity
+			}
+		}
+	}
+}
+LOM = {
+	small_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_0_entity		# CR.32 (interwar fighter)
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity		# C.200 (fighter 1936)
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity			# Ba.65 (cas 1936)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity					# SM.79 (nav 1936)
+			}
+		}
+	}
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity		# C.202 (fighter 1940)
+			}
+		}
+	}
+	small_plane_cas_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_CAS_equipment_2_entity			# Ba.88 (cas 1940, currently icon doesn't match - FC.12)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity					# SM.84 (nav 1940)
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity		# G.55 (fighter 1944)
+			}
+		}
+	}
+	small_plane_cas_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_3_entity			# Ba.201 (cas 1944, currently icon doesn't match - SM.93)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_3 = {
+		pool = {
+			weight = 5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_3_entity # SM.89 (nav 1944)
+				ITA_nav_3_entity					 # SM.89 (nav 1944)
+			}
+		}
+	}
+	small_plane_airframe_4 = {						# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity
+			}
+		}
+	}
+	small_plane_cas_airframe_4 = {					# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_CAS_equipment_2_entity
+				ITA_CAS_equipment_3_entity
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_4 = {			# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_3_entity # SM.89 (nav 1944)
+				ITA_nav_3_entity					 # SM.89 (nav 1944)
+			}
+		}
+	}
+
+
+	cv_small_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_0_entity
+				ITA_cv_nav_bomber_equipment_1_entity	# Unknown biplane - definitely not SM.79
+				ITA_cv_fighter_equipment_0_entity		# ICR.32 (interwar fighter)
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_cv_fighter_equipment_1_entity	# IC.200 (cv fighter 1936, currently icon doesn't match)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_cv_CAS_equipment_1_entity		# Looks like shorter reskin of IC.200 or G.50 (currently icon doesn't match)
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 5
+			models = {
+				ITA_nav_1_entity					# SM.79 (nav 1936)
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_cv_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_cv_CAS_equipment_2_entity		# Reskin of the same model
+				ITA_cv_fighter_equipment_2_entity	# IC.202 (cv 1940)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_cv_CAS_equipment_1_entity
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_cv_nav_bomber_equipment_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_2_entity # SM.84 (nav 1940)
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_2_entity
+				ITA_cv_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity
+				ITA_cv_fighter_equipment_3_entity	# No clue, looks somewhat like re.2005 but PDX uses G.55 at this tier (which looks very different)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_2_entity
+				ITA_cv_CAS_equipment_2_entity
+				ITA_CAS_equipment_3_entity
+				ITA_cv_CAS_equipment_3_entity		# No clue, but looks different than Ba.201 which is used by PDX at this tier
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_2_entity
+				ITA_nav_3_entity
+				ITA_cv_nav_bomber_equipment_3_entity	# SM.89 (nav 1944)
+			}
+		}
+	}
+	cv_small_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_3_entity
+				ITA_cv_fighter_equipment_3_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_3_entity
+				ITA_cv_CAS_equipment_3_entity
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_3_entity
+				ITA_cv_nav_bomber_equipment_3_entity
+			}
+		}
+	}
+
+	medium_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_interwar_bomber_entity
+			}
+		}
+	}
+	medium_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_interwar_bomber_entity 				# SM.81 (medium plane 1936)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_equipment_1_entity	# Ro.57 (heavy fighter 1936)
+			}
+		}
+	}
+	medium_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_tac_bomber_1_entity
+				ITA_tac_bomber_2_entity					# Z.1007 (medium plane 1940)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_2_entity				# Ro.58 (heavy fighter 1940)
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_tac_bomber_2_entity
+				ITA_tac_bomber_3_entity					# Z.1018 (medium plane 1944)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_3_entity				# SM.92 (heavy fighter 1944)
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_3_entity
+				ITA_tac_bomber_3_entity	
+			}
+		}
+	}
+
+	large_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_1_entity					# P.50 (strat 1936)
+			}
+		}
+	}
+	large_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity			# P.108 (strat 1940)
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity
+				ITA_strat_bomber_equipment_3_entity			# P.133 (strat 1940)
+			}
+		}
+	}
+	large_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity
+				ITA_strat_bomber_equipment_3_entity
+			}
+		}
+	}
+}
+EMI = {
+	small_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_0_entity		# CR.32 (interwar fighter)
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity		# C.200 (fighter 1936)
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity			# Ba.65 (cas 1936)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity					# SM.79 (nav 1936)
+			}
+		}
+	}
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity		# C.202 (fighter 1940)
+			}
+		}
+	}
+	small_plane_cas_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_CAS_equipment_2_entity			# Ba.88 (cas 1940, currently icon doesn't match - FC.12)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity					# SM.84 (nav 1940)
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity		# G.55 (fighter 1944)
+			}
+		}
+	}
+	small_plane_cas_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_3_entity			# Ba.201 (cas 1944, currently icon doesn't match - SM.93)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_3 = {
+		pool = {
+			weight = 5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_3_entity # SM.89 (nav 1944)
+				ITA_nav_3_entity					 # SM.89 (nav 1944)
+			}
+		}
+	}
+	small_plane_airframe_4 = {						# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity
+			}
+		}
+	}
+	small_plane_cas_airframe_4 = {					# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_CAS_equipment_2_entity
+				ITA_CAS_equipment_3_entity
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_4 = {			# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_3_entity # SM.89 (nav 1944)
+				ITA_nav_3_entity					 # SM.89 (nav 1944)
+			}
+		}
+	}
+
+
+	cv_small_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_0_entity
+				ITA_cv_nav_bomber_equipment_1_entity	# Unknown biplane - definitely not SM.79
+				ITA_cv_fighter_equipment_0_entity		# ICR.32 (interwar fighter)
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_cv_fighter_equipment_1_entity	# IC.200 (cv fighter 1936, currently icon doesn't match)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_cv_CAS_equipment_1_entity		# Looks like shorter reskin of IC.200 or G.50 (currently icon doesn't match)
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 5
+			models = {
+				ITA_nav_1_entity					# SM.79 (nav 1936)
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_cv_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_cv_CAS_equipment_2_entity		# Reskin of the same model
+				ITA_cv_fighter_equipment_2_entity	# IC.202 (cv 1940)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_cv_CAS_equipment_1_entity
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_cv_nav_bomber_equipment_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_2_entity # SM.84 (nav 1940)
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_2_entity
+				ITA_cv_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity
+				ITA_cv_fighter_equipment_3_entity	# No clue, looks somewhat like re.2005 but PDX uses G.55 at this tier (which looks very different)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_2_entity
+				ITA_cv_CAS_equipment_2_entity
+				ITA_CAS_equipment_3_entity
+				ITA_cv_CAS_equipment_3_entity		# No clue, but looks different than Ba.201 which is used by PDX at this tier
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_2_entity
+				ITA_nav_3_entity
+				ITA_cv_nav_bomber_equipment_3_entity	# SM.89 (nav 1944)
+			}
+		}
+	}
+	cv_small_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_3_entity
+				ITA_cv_fighter_equipment_3_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_3_entity
+				ITA_cv_CAS_equipment_3_entity
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_3_entity
+				ITA_cv_nav_bomber_equipment_3_entity
+			}
+		}
+	}
+
+	medium_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_interwar_bomber_entity
+			}
+		}
+	}
+	medium_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_interwar_bomber_entity 				# SM.81 (medium plane 1936)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_equipment_1_entity	# Ro.57 (heavy fighter 1936)
+			}
+		}
+	}
+	medium_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_tac_bomber_1_entity
+				ITA_tac_bomber_2_entity					# Z.1007 (medium plane 1940)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_2_entity				# Ro.58 (heavy fighter 1940)
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_tac_bomber_2_entity
+				ITA_tac_bomber_3_entity					# Z.1018 (medium plane 1944)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_3_entity				# SM.92 (heavy fighter 1944)
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_3_entity
+				ITA_tac_bomber_3_entity	
+			}
+		}
+	}
+
+	large_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_1_entity					# P.50 (strat 1936)
+			}
+		}
+	}
+	large_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity			# P.108 (strat 1940)
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity
+				ITA_strat_bomber_equipment_3_entity			# P.133 (strat 1940)
+			}
+		}
+	}
+	large_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity
+				ITA_strat_bomber_equipment_3_entity
+			}
+		}
+	}
+}
+TUS = {
+	small_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_0_entity		# CR.32 (interwar fighter)
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity		# C.200 (fighter 1936)
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity			# Ba.65 (cas 1936)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity					# SM.79 (nav 1936)
+			}
+		}
+	}
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity		# C.202 (fighter 1940)
+			}
+		}
+	}
+	small_plane_cas_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_CAS_equipment_2_entity			# Ba.88 (cas 1940, currently icon doesn't match - FC.12)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity					# SM.84 (nav 1940)
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity		# G.55 (fighter 1944)
+			}
+		}
+	}
+	small_plane_cas_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_3_entity			# Ba.201 (cas 1944, currently icon doesn't match - SM.93)
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_3 = {
+		pool = {
+			weight = 5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_3_entity # SM.89 (nav 1944)
+				ITA_nav_3_entity					 # SM.89 (nav 1944)
+			}
+		}
+	}
+	small_plane_airframe_4 = {						# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity
+			}
+		}
+	}
+	small_plane_cas_airframe_4 = {					# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_CAS_equipment_2_entity
+				ITA_CAS_equipment_3_entity
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_4 = {			# No applicable model available
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_3_entity # SM.89 (nav 1944)
+				ITA_nav_3_entity					 # SM.89 (nav 1944)
+			}
+		}
+	}
+
+
+	cv_small_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_0_entity
+				ITA_cv_nav_bomber_equipment_1_entity	# Unknown biplane - definitely not SM.79
+				ITA_cv_fighter_equipment_0_entity		# ICR.32 (interwar fighter)
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_cv_fighter_equipment_1_entity	# IC.200 (cv fighter 1936, currently icon doesn't match)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_cv_CAS_equipment_1_entity		# Looks like shorter reskin of IC.200 or G.50 (currently icon doesn't match)
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 5
+			models = {
+				ITA_nav_1_entity					# SM.79 (nav 1936)
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_1_entity
+				ITA_cv_fighter_equipment_1_entity
+				ITA_fighter_equipment_2_entity
+				ITA_cv_CAS_equipment_2_entity		# Reskin of the same model
+				ITA_cv_fighter_equipment_2_entity	# IC.202 (cv 1940)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_1_entity
+				ITA_cv_CAS_equipment_1_entity
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_1_entity
+				ITA_cv_nav_bomber_equipment_1_entity
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_2_entity # SM.84 (nav 1940)
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_2_entity
+				ITA_cv_fighter_equipment_2_entity
+				ITA_fighter_equipment_3_entity
+				ITA_cv_fighter_equipment_3_entity	# No clue, looks somewhat like re.2005 but PDX uses G.55 at this tier (which looks very different)
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_2_entity
+				ITA_cv_CAS_equipment_2_entity
+				ITA_CAS_equipment_3_entity
+				ITA_cv_CAS_equipment_3_entity		# No clue, but looks different than Ba.201 which is used by PDX at this tier
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_2_entity
+				ITA_cv_nav_bomber_equipment_2_entity
+				ITA_nav_3_entity
+				ITA_cv_nav_bomber_equipment_3_entity	# SM.89 (nav 1944)
+			}
+		}
+	}
+	cv_small_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_fighter_equipment_3_entity
+				ITA_cv_fighter_equipment_3_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_CAS_equipment_3_entity
+				ITA_cv_CAS_equipment_3_entity
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_nav_3_entity
+				ITA_cv_nav_bomber_equipment_3_entity
+			}
+		}
+	}
+
+	medium_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_interwar_bomber_entity
+			}
+		}
+	}
+	medium_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_interwar_bomber_entity 				# SM.81 (medium plane 1936)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_equipment_1_entity	# Ro.57 (heavy fighter 1936)
+			}
+		}
+	}
+	medium_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_tac_bomber_1_entity
+				ITA_tac_bomber_2_entity					# Z.1007 (medium plane 1940)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_2_entity				# Ro.58 (heavy fighter 1940)
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_tac_bomber_2_entity
+				ITA_tac_bomber_3_entity					# Z.1018 (medium plane 1944)
+			}
+		}
+	}
+	medium_plane_fighter_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_3_entity				# SM.92 (heavy fighter 1944)
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_fighter_3_entity
+				ITA_tac_bomber_3_entity	
+			}
+		}
+	}
+
+	large_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_1_entity					# P.50 (strat 1936)
+			}
+		}
+	}
+	large_plane_airframe_2 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity			# P.108 (strat 1940)
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity
+				ITA_strat_bomber_equipment_3_entity			# P.133 (strat 1940)
+			}
+		}
+	}
+	large_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_strat_bomber_equipment_2_entity
+				ITA_strat_bomber_equipment_3_entity
+			}
+		}
+	}
+}
+
+CHI = {
+	small_plane_airframe_0 = {
+		pool = {
+			weight = 3
+			models = {
+				ITA_fighter_equipment_0_entity		# CR.32 (interwar fighter)
+			}
+		}
+	}
+	cv_small_plane_airframe_0 = {
+		pool = {
+			weight = 3
+			models = {
+				ITA_fighter_equipment_0_entity
+				ITA_cv_nav_bomber_equipment_1_entity	# Unknown biplane - definitely not SM.79
+				ITA_cv_fighter_equipment_0_entity		# ICR.32 (interwar fighter)
+			}
+		}
+	}
+	medium_plane_airframe_1 = {
+		pool = {
+			weight = 3
+			models = {
+				ITA_interwar_bomber_entity 				# SM.81 (medium plane 1936)
+			}
+		}
+	}
+}

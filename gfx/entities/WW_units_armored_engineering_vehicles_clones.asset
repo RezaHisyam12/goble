@@ -16,6 +16,10 @@ entity = {
 }
 entity = { 
 	clone = "ENG_assault_engineer_entity"
+	name = "CAN_assault_engineer_entity"
+}
+entity = { 
+	clone = "ENG_assault_engineer_entity"
 	name = "AST_assault_engineer_entity"
 }
 
@@ -84,6 +88,14 @@ entity = {
 }
 entity = { 
 	clone = "USA_assault_engineer_entity"
+	name = "COR_assault_engineer_entity"
+}
+entity = { 
+	clone = "USA_assault_engineer_entity"
+	name = "WCC_assault_engineer_entity"
+}
+entity = { 
+	clone = "USA_assault_engineer_entity"
 	name = "NEE_assault_engineer_entity"
 }
 entity = { 
@@ -101,6 +113,10 @@ entity = {
 entity = { 
 	clone = "ENG_armored_engineer_entity"
 	name = "IMP_armored_engineer_entity"
+}
+entity = { 
+	clone = "ENG_armored_engineer_entity"
+	name = "CAN_armored_engineer_entity"
 }
 entity = { 
 	clone = "ENG_armored_engineer_entity"
@@ -254,6 +270,14 @@ entity = {
 entity = { 
 	clone = "USA_armored_maintenance_entity"
 	name = "TEX_armored_maintenance_entity"
+}
+entity = { 
+	clone = "USA_armored_maintenance_entity"
+	name = "COR_armored_maintenance_entity"
+}
+entity = { 
+	clone = "USA_armored_maintenance_entity"
+	name = "WCC_armored_maintenance_entity"
 }
 entity = { 
 	clone = "USA_armored_maintenance_entity"

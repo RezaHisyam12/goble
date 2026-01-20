@@ -95,6 +95,16 @@ division_upgrades_are_very_important = {
 	}
 	ai_strategy = {
 		type = template_prio
+		id = super_heavy_armor
+		value = 100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = land_cruiser
+		value = 100
+	}
+	ai_strategy = {
+		type = template_prio
 		id = mountaineer
 		value = 100
 	}
@@ -665,11 +675,6 @@ default_armour_super_heavy_production = {
 		value = 5
 	}
 	ai_strategy = {
-		type = template_prio
-		id = super_heavy_armor
-		value = 100
-	}
-	ai_strategy = {
 		type = equipment_variant_production_factor
 		id = super_heavy_tank_chassis
 		value = 10
@@ -693,11 +698,6 @@ default_armour_landcruiser_production = {
 		type = role_ratio
 		id = armour_landcruiser
 		value = 5
-	}
-	ai_strategy = {
-		type = template_prio
-		id = land_cruiser
-		value = 100
 	}
 	ai_strategy = {
 		type = equipment_variant_production_factor
@@ -866,12 +866,6 @@ default_flame_tank_and_support_production = {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = armored_support_vehicle
-		value = 10
-	}
-
-	ai_strategy = {
-		type = equipment_production_factor
-		id = helicopter_equipment
 		value = 10
 	}
 }

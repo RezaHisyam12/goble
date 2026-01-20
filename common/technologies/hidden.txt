@@ -783,6 +783,24 @@ technologies = {
 			ap_attack = 1
 		}
 	}
+
+	tech_river_boats = {
+		
+		research_cost = 1
+
+		#only added by effect
+		allow = {
+			always = no
+		}
+
+		category_all_infantry = {
+			river = {
+				movement = 0.1
+				attack = 0.1
+				defence = 0.05
+			}
+		}
+	}
 	
 	tech_martial_arts = {
 
@@ -831,6 +849,16 @@ technologies = {
 
 		enable_subunits = {
 			elephantry
+		}
+	}
+
+	tech_sturmtruppe = {
+		allow = { always = no } #only added by effect
+
+		#If you change these
+		#Change the custom tooltip too: sturmtruppe_tech_effect
+		enable_subunits = {
+			sturmtruppe_battalion
 		}
 	}
 }

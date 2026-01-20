@@ -92,6 +92,10 @@ entity = {
 }
 entity = { 
 	clone = "ENG_heavy_flame_tank_entity"
+	name = "CAN_heavy_flame_tank_entity"
+}
+entity = { 
+	clone = "ENG_heavy_flame_tank_entity"
 	name = "SAF_heavy_flame_tank_entity"
 }
 entity = { 
@@ -172,6 +176,14 @@ entity = {
 }
 entity = { 
 	clone = "USA_light_flame_tank_entity"
+	name = "COR_light_flame_tank_entity"
+}
+entity = { 
+	clone = "USA_light_flame_tank_entity"
+	name = "WCC_light_flame_tank_entity"
+}
+entity = { 
+	clone = "USA_light_flame_tank_entity"
 	name = "NEE_light_flame_tank_entity"
 }
 entity = { 
@@ -191,6 +203,14 @@ entity = {
 entity = { 
 	clone = "USA_medium_flame_tank_entity"
 	name = "TEX_medium_flame_tank_entity"
+}
+entity = { 
+	clone = "USA_medium_flame_tank_entity"
+	name = "COR_medium_flame_tank_entity"
+}
+entity = { 
+	clone = "USA_medium_flame_tank_entity"
+	name = "WCC_medium_flame_tank_entity"
 }
 entity = { 
 	clone = "USA_medium_flame_tank_entity"

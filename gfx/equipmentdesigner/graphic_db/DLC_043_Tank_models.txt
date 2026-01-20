@@ -31,6 +31,38 @@ GER = {
 		}
 	}
 }
+GRU = {
+	light_tank_flame_chassis = {
+		pool = {
+			weight = 2
+			models = {
+				GER_light_flame_tank_entity
+			}
+		}
+	}
+
+	medium_tank_flame_chassis = {
+		pool = {
+			weight = 2
+			models = {
+				GER_medium_flame_tank_entity
+			}
+		}
+	}
+
+	land_cruiser_chassis_1 = {
+		pool = {
+			icons = {
+				GFX_GER_land_cruiser_armor_2_medium
+				GFX_GER_land_cruiser_armor_medium
+			}
+			models = {
+				GER_land_cruiser_alt_0_entity
+				GER_land_cruiser_entity
+			}
+		}
+	}
+}
 MAF = {
 	light_tank_flame_chassis = {
 		pool = {
@@ -159,7 +191,7 @@ LIT = {
 		}
 	}
 }
-BLR = {
+WHR = {
 	light_tank_flame_chassis = {
 		pool = {
 			weight = 2
@@ -373,17 +405,16 @@ RUS = {
 			}
 		}
 	}
-	# Both directly contain Stalin name and/or soviet symbols
-	# land_cruiser_chassis_1 = {
-	# 	pool = {
-	# 		icons = {
-	# 			GFX_SOV_land_cruiser_armor_medium
-	# 		}
-	# 		models = {
-	# 			SOV_land_cruiser_entity
-	# 		}
-	# 	}
-	# }
+	land_cruiser_chassis_1 = {
+	 	pool = {
+	 		icons = {
+	 			GFX_SOV_land_cruiser_armor_medium
+	 		}
+	 		models = {
+	 			SOV_land_cruiser_entity
+	 		}
+	 	}
+	 }
 }
 
 ### ENG
@@ -408,7 +439,7 @@ ENG = {
 		}
 	}
 }
-IMP = {
+CAN = {
 	heavy_tank_flame_chassis = {
 		pool = {
 			weight = 2 #ENG tank weights are not fixed in 00_tank_icons.txt
@@ -568,7 +599,7 @@ USA = {
 		}
 	}
 }
-PSA = {
+CSA = {
 	light_tank_flame_chassis = {
 		pool = {
 			weight = 2 #Otherwise regular Light Armor shows up
@@ -598,7 +629,7 @@ PSA = {
 		}
 	}
 }
-CSA = {
+CAL = {
 	light_tank_flame_chassis = {
 		pool = {
 			weight = 2 #Otherwise regular Light Armor shows up
@@ -658,7 +689,98 @@ TEX = {
 		}
 	}
 }
+COR = {
+	light_tank_flame_chassis = {
+		pool = {
+			weight = 2 #Otherwise regular Light Armor shows up
+			models = {
+				USA_light_flame_tank_entity
+			}
+		}
+	}
+
+	medium_tank_flame_chassis = {
+		pool = {
+			weight = 2 #USA tank weights are not fixed in 00_tank_icons.txt
+			models = {
+				USA_medium_flame_tank_entity
+			}
+		}
+	}
+
+	land_cruiser_chassis_1 = {
+		pool = {
+			icons = {
+				GFX_USA_land_cruiser_armor_medium
+			}
+			models = {
+				USA_land_cruiser_entity
+			}
+		}
+	}
+}
+WCC = {
+	light_tank_flame_chassis = {
+		pool = {
+			weight = 2 #Otherwise regular Light Armor shows up
+			models = {
+				USA_light_flame_tank_entity
+			}
+		}
+	}
+
+	medium_tank_flame_chassis = {
+		pool = {
+			weight = 2 #USA tank weights are not fixed in 00_tank_icons.txt
+			models = {
+				USA_medium_flame_tank_entity
+			}
+		}
+	}
+
+	land_cruiser_chassis_1 = {
+		pool = {
+			icons = {
+				GFX_USA_land_cruiser_armor_medium
+			}
+			models = {
+				USA_land_cruiser_entity
+			}
+		}
+	}
+}
 NEE = {
+	light_tank_flame_chassis = {
+		pool = {
+			weight = 2 #Otherwise regular Light Armor shows up
+			models = {
+				USA_light_flame_tank_entity
+			}
+		}
+	}
+
+	medium_tank_flame_chassis = {
+		pool = {
+			weight = 2 #USA tank weights are not fixed in 00_tank_icons.txt
+			models = {
+				USA_medium_flame_tank_entity
+			}
+		}
+	}
+
+	land_cruiser_chassis_1 = {
+		pool = {
+			icons = {
+				GFX_USA_land_cruiser_armor_medium
+			}
+			models = {
+				USA_land_cruiser_entity
+			}
+		}
+	}
+}
+
+PHI = {
 	light_tank_flame_chassis = {
 		pool = {
 			weight = 2 #Otherwise regular Light Armor shows up

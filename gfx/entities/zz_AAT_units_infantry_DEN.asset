@@ -1,0 +1,233 @@
+### Infantry
+	entity = {
+		clone = "DEN_AAT_infantry_kragjorgensen_entity"
+		name = "DEN_infantry_alt_0_entity"
+		pdxmesh = "KR_DEN_infantry_rifle_mesh"
+	}
+
+	entity = {
+		clone = "DEN_AAT_infantry_kragjorgensen_entity"
+		name = "DEN_infantry_alt_0_entity_snow"
+		pdxmesh = "KR_DEN_infantry_rifle_snow_mesh"
+	}
+
+	entity = {
+		clone = "DEN_AAT_infantry_kragjorgensen_entity"
+		name = "DEN_infantry_0_alt_0_entity"
+		pdxmesh = "KR_DEN_infantry_rifle_mesh"
+	}
+
+	entity = {
+		clone = "DEN_AAT_infantry_kragjorgensen_entity"
+		name = "DEN_infantry_0_alt_0_entity_snow"
+		pdxmesh = "KR_DEN_infantry_rifle_snow_mesh"
+	}
+
+	entity = {
+		clone = "DEN_AAT_infantry_kragjorgensen_entity"
+		name = "DEN_infantry_1_alt_0_entity"
+		pdxmesh = "KR_DEN_infantry_rifle_mesh"
+	}
+
+	entity = {
+		clone = "DEN_AAT_infantry_kragjorgensen_entity"
+		name = "DEN_infantry_1_alt_0_entity_snow"
+		pdxmesh = "KR_DEN_infantry_rifle_snow_mesh"
+	}
+
+	entity = {
+		clone = "DEN_AAT_infantry_madsenM45_entity"
+		name = "DEN_infantry_2_alt_0_entity"
+		pdxmesh = "KR_DEN_infantry_mg_mesh"
+	}
+
+	entity = {
+		clone = "DEN_AAT_infantry_madsenM45_entity"
+		name = "DEN_infantry_2_alt_0_entity_snow"
+		pdxmesh = "KR_DEN_infantry_mg_snow_mesh"
+	}
+
+	entity = {
+		clone = "DEN_AAT_infantry_madsenM45_entity"
+		name = "DEN_infantry_3_alt_0_entity"
+		pdxmesh = "KR_DEN_infantry_mg_mesh"
+	}
+
+	entity = {
+		clone = "DEN_AAT_infantry_madsenM45_entity"
+		name = "DEN_infantry_3_alt_0_entity_snow"
+		pdxmesh = "KR_DEN_infantry_mg_snow_mesh"
+	}
+
+############
+#
+# Motorized
+#
+############
+
+	entity = {
+		clone = "motorized_entity"
+		name = "DEN_motorized_alt_0_entity"
+
+		attach = { 	name = "vehicle"	vehicle = "DEN_motorized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "DEN_infantry_alt_0_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "DEN_motorized_alt_0_entity_snow"
+
+		attach = { 	name = "vehicle"	vehicle = "DEN_motorized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "DEN_infantry_alt_0_entity_snow" }
+	}
+
+#1#
+
+	entity = {
+		clone = "motorized_entity"
+		name = "DEN_motorized_0_alt_0_entity"
+
+		attach = { 	name = "vehicle"	vehicle = "DEN_motorized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "DEN_infantry_0_alt_0_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "DEN_motorized_0_alt_0_entity_snow"
+
+		attach = { 	name = "vehicle"	vehicle = "DEN_motorized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "DEN_infantry_0_alt_0_entity_snow" }
+	}
+
+#1#
+
+	entity = {
+		clone = "motorized_entity"
+		name = "DEN_motorized_1_alt_0_entity"
+
+		attach = { 	name = "vehicle"	vehicle = "DEN_motorized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "DEN_infantry_1_alt_0_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "DEN_motorized_1_alt_0_entity_snow"
+
+		attach = { 	name = "vehicle"	vehicle = "DEN_motorized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "DEN_infantry_1_alt_0_entity_snow" }
+	}
+
+#2#
+
+	entity = {
+		clone = "motorized_entity"
+		name = "DEN_motorized_2_alt_0_entity"
+
+		attach = { 	name = "vehicle"	vehicle = "DEN_motorized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "DEN_infantry_2_alt_0_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "DEN_motorized_2_alt_0_entity_snow"
+
+		attach = { 	name = "vehicle"	vehicle = "DEN_motorized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "DEN_infantry_2_alt_0_entity_snow" }
+	}
+
+
+#3#
+
+	entity = {
+		clone = "motorized_entity"
+		name = "DEN_motorized_3_alt_0_entity"
+
+		attach = { 	name = "vehicle"	vehicle = "DEN_motorized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "DEN_infantry_3_alt_0_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "DEN_motorized_3_alt_0_entity_snow"
+
+		attach = { 	name = "vehicle"	vehicle = "DEN_motorized_vehicle_entity" }
+		attach = { name = "infantry" 	infantry = "DEN_infantry_3_alt_0_entity_snow" }
+	}
+
+############
+#
+# Mechanized
+#
+############
+
+
+	entity = {
+		clone = "motorized_entity"
+		name = "DEN_mechanized_alt_0_entity"
+
+		attach = { name = "vehicle" 	vehicle = "DEN_mechanized_vehicle_0_entity" }
+		attach = { name = "infantry" 	infantry = "DEN_infantry_alt_0_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "DEN_mechanized_alt_0_entity_snow"
+
+		attach = { name = "vehicle" 	vehicle = "DEN_mechanized_vehicle_0_entity" }
+		attach = { name = "infantry" 	infantry = "DEN_infantry_alt_0_entity_snow" }
+	}
+
+#1#
+
+	entity = {
+		clone = "motorized_entity"
+		name = "DEN_mechanized_0_alt_0_entity"
+
+		attach = { name = "vehicle" 	vehicle = "DEN_mechanized_vehicle_0_entity" }
+		attach = { name = "infantry" 	infantry = "DEN_infantry_2_alt_0_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "DEN_mechanized_0_alt_0_entity_snow"
+
+		attach = { name = "vehicle" 	vehicle = "DEN_mechanized_vehicle_0_entity" }
+		attach = { name = "infantry" 	infantry = "DEN_infantry_2_alt_0_entity_snow" }
+	}
+
+#2#
+
+	entity = {
+		clone = "motorized_entity"
+		name = "DEN_mechanized_1_alt_0_entity"
+
+		attach = { name = "vehicle" 	vehicle = "DEN_mechanized_vehicle_1_entity" }
+		attach = { name = "infantry" 	infantry = "DEN_infantry_3_alt_0_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "DEN_mechanized_1_alt_0_entity_snow"
+
+		attach = { name = "vehicle" 	vehicle = "DEN_mechanized_vehicle_1_entity" }
+		attach = { name = "infantry" 	infantry = "DEN_infantry_3_alt_0_entity_snow" }
+	}
+
+
+#3#
+
+	entity = {
+		clone = "motorized_entity"
+		name = "DEN_mechanized_2_alt_0_entity"
+
+		attach = { name = "vehicle" 	vehicle = "DEN_mechanized_vehicle_2_entity" }
+		attach = { name = "infantry" 	infantry = "DEN_infantry_3_alt_0_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "DEN_mechanized_2_alt_0_entity_snow"
+
+		attach = { name = "vehicle" 	vehicle = "DEN_mechanized_vehicle_2_entity" }
+		attach = { name = "infantry" 	infantry = "DEN_infantry_3_alt_0_entity_snow" }
+	}

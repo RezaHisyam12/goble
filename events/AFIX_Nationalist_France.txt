@@ -1,0 +1,1169 @@
+﻿###########################
+# Nationalist France Events
+###########################
+# By Edouard Saladier, The Alpha Dog, Nijato and Rnk AND MUCH MORE IMPORTANTLY JOCN, and also Tonitruant, Pogge, Vozhd, and now I guess AmCath cuz Jocn just kinda left this here
+###########################
+
+add_namespace = nfa
+
+add_namespace = natfra
+
+add_namespace = napfra
+
+add_namespace = darnfra
+
+add_namespace = flavorfra
+
+add_namespace = newsnfa
+
+add_namespace = nfa_debug
+
+add_namespace = revoltfra
+
+add_namespace = popefra
+
+
+country_event = { #krauts took part of france
+	id = natfra.149
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.149"}
+	title = natfra.149.t
+	desc = natfra.149.d
+	picture = GFX_event_NFA_boche
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #begin mobilisation
+		name = natfra.149.a 
+		add_stability = -0.04
+		add_war_support = 0.06
+		add_command_power = 30
+		set_country_flag = NFA_prepared_to_mobilise
+		add_threat = 10
+	}
+
+	option = { #prepare to negotiate
+		name = natfra.149.b
+		ai_chance = {
+			base = 50
+		}
+		add_political_power = 15
+		add_stability = 0.02
+		add_war_support = -0.01
+		add_command_power = -5
+		set_country_flag = NFA_prepared_to_negotiate
+	}
+
+	option = { #there is little we can do
+		name = natfra.149.c
+		add_political_power = -25
+		add_stability = 0.07
+		add_war_support = -0.08
+		add_command_power = -25
+		set_country_flag = NFA_pussied_out
+		add_threat = -5
+	}
+}
+
+country_event = { #krauts say no
+	id = natfra.151
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.151"}
+	title = natfra.151.t
+	desc = natfra.151.d
+	picture = GFX_event_NFA_boche2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #to war
+		name = natfra.151.a 
+		declare_war_on = { target = var:64.owner type = annex_everything }
+		add_war_support = 0.03
+		add_manpower = 2000
+		var:64.owner = {
+			country_event = { id = natfra.152 days = 1 }
+		}
+		set_country_flag = NFA_attacked_germany_after_talks
+	}
+
+	option = { #back down
+		name = natfra.151.b
+		add_war_support = -0.1
+		add_stability = -0.1
+		add_political_power = -75
+		var:64.owner = {
+			country_event = { id = natfra.153 days = 1 }
+		}
+		set_country_flag = NFA_accepted_current_position_after_talks
+	}
+}
+
+country_event = { #frogs declare war
+	id = natfra.152
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.152"}
+	title = natfra.152.t
+	desc = natfra.152.d
+	picture = GFX_event_NFA_boche2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #to war
+		name = natfra.152.a 
+		add_war_support = 0.05
+	}
+}
+
+country_event = { #frogs back down
+	id = natfra.153
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.153"}
+	title = natfra.153.t
+	desc = natfra.153.d
+	picture = GFX_event_NFA_boche2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #ebin
+		name = natfra.153.a 
+		add_political_power = 40
+		add_stability = 0.03
+		if = {
+			limit = { FRP = { exists = no } }
+			var:64.owner = {
+			every_owned_state = {
+				limit = {
+					is_not_claim_or_core_of_ROOT = yes
+					is_european_france = yes
+					NOT = { state = 779 }
+				}
+				FRP = { transfer_state = PREV }
+			}
+			set_temp_variable = { tag_to_release = FRP }
+			puppet_released_tag = yes
+			}
+		}
+	}
+}
+
+country_event = { #krauts want concessions
+	id = natfra.154
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.154"}
+	title = natfra.154.t
+	desc = natfra.154.d
+	picture = GFX_event_NFA_boche2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #fine
+		name = natfra.154.a 
+		var:64.owner = {
+			country_event = { id = natfra.155 days = 2 }
+		}
+		add_ideas = NFA_german_concessions
+		add_war_support = -0.04
+		add_political_power = -35
+		set_country_flag = NFA_accepted_german_demands_for_land
+	}
+
+	option = { #nope
+		name = natfra.154.b
+		country_event = { id = natfra.156 days = 2 }
+		add_war_support = 0.03
+	}
+}
+
+country_event = { #frogs accept
+	id = natfra.155
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.155"}
+	title = natfra.155.t
+	desc = natfra.155.d
+	picture = GFX_event_NFA_boche
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #yay
+		name = natfra.155.a 
+		custom_effect_tooltip = NFA_explain_state_transfer_to_krauts
+		add_political_power = 50
+		GER_transfer_NFA = yes
+	}
+}
+
+country_event = { #what to do now that talks failed
+	id = natfra.156
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.156"}
+	title = natfra.156.t
+	desc = natfra.156.d
+	picture = GFX_event_NFA_boche2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #attack krauts
+		name = natfra.156.a 
+		declare_war_on = { target = var:64.owner type = annex_everything }
+		add_war_support = 0.03
+		add_manpower = 2000
+		var:64.owner = {
+			country_event = { id = natfra.152 days = 1 }
+		}
+		set_country_flag = NFA_attacked_germany_after_talks
+	}
+
+	option = { #do fuck all
+		name = natfra.156.b
+		add_war_support = 0.03
+		add_manpower = 2000
+		var:64.owner = {
+			country_event = { id = natfra.157 days = 7 }
+		}
+		set_country_flag = NFA_accepted_current_position_after_talks
+	}
+}
+
+country_event = { #frogs calmed down
+	id = natfra.157
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.157"}
+	title = natfra.157.t
+	desc = natfra.157.d
+	picture = GFX_event_NFA_boche
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #ebin
+		name = natfra.157.a 
+		add_political_power = 50
+		add_stability = 0.03
+		if = {
+			limit = { FRP = { exists = no } }
+			var:64.owner = {
+			every_owned_state = {
+				limit = {
+					is_not_claim_or_core_of_ROOT = yes
+					is_european_france = yes
+					NOT = { state = 779 }
+				}
+				FRP = { transfer_state = PREV }
+			}
+			set_temp_variable = { tag_to_release = FRP }
+			puppet_released_tag = yes
+			}
+		}
+	}
+}
+
+country_event = { #krauts are pussies
+	id = natfra.158
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.158"}
+	title = natfra.158.t
+	desc = natfra.158.d
+	picture = GFX_event_NFA_boche
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #ebin
+		name = natfra.158.a 
+		add_political_power = 50
+		add_stability = 0.03
+		add_war_support = 0.07
+		set_country_flag = NFA_germany_gave_in
+	}
+}
+
+country_event = { #frogs want to talk 
+	id = natfra.159
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.159"}
+	title = natfra.159.t
+	desc = natfra.159.d
+	picture = GFX_event_NFA_boche
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #fine
+		name = natfra.159.a 
+		add_political_power = 35
+		ai_chance = {
+			base = 50
+		}
+		NFA = {
+			country_event = { id = natfra.160 days = 2 }
+		}
+	}
+
+	option = { #nope
+		name = natfra.159.b
+		add_war_support = 0.03
+		var:64.owner = {
+			every_owned_state = {
+				limit = {
+					is_not_claim_or_core_of_ROOT = yes
+					is_european_france = yes
+				}
+				FRP = { transfer_state = PREV }
+			}
+			set_temp_variable = { tag_to_release = FRP }
+			puppet_released_tag = yes
+		}
+		NFA = {
+			country_event = { id = natfra.167 days = 2 }
+		}
+	}
+}
+
+country_event = { #krauts agree
+	id = natfra.160
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.160"}
+	title = natfra.160.t
+	desc = natfra.160.d
+	picture = GFX_event_NFA_boche
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #fine
+		name = natfra.160.a 
+		var:64.owner = {
+			country_event = { id = natfra.161 days = 2 }
+		}
+	}
+}
+
+country_event = { #how much to demand from french
+	id = natfra.161
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.161"}
+	title = natfra.161.t
+	desc = natfra.161.d
+	picture = GFX_event_NFA_boche
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #not to be attacked
+		name = natfra.161.a 
+		ai_chance = {
+			base = 50
+		}
+		NFA = {
+			country_event = { id = natfra.162 days = 2 }
+		}
+	}
+
+	option = { #not to be attacked and economic concessions
+		name = natfra.161.b 
+		NFA = {
+			country_event = { id = natfra.163 days = 2 }
+		}
+	}
+
+	option = { #not to be attacked and mil access
+		name = natfra.161.c 
+		NFA = {
+			country_event = { id = natfra.164 days = 2 }
+		}
+	}
+}
+
+country_event = { #kind kraut demands arrive
+	id = natfra.162
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.162"}
+	title = natfra.162.t
+	desc = natfra.162.d
+	picture = GFX_event_NFA_boche
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #accept
+		name = natfra.162.a 
+		ai_chance = {
+			base = 50
+		}
+		set_truce = { target = var:64.owner days = 600 }
+		add_political_power = -25
+		add_war_support = -0.02
+		add_stability = 0.04
+		var:64.owner = {
+			country_event = { id = natfra.155 days = 2 }
+		}
+		set_country_flag = NFA_accepted_german_demands_for_land
+	}
+
+	option = { #decline
+		name = natfra.162.b 
+		custom_effect_tooltip = NFA_talks_will_fail
+		add_stability = -0.04
+		add_war_support = 0.02
+		var:64.owner = {
+			country_event = { id = natfra.165 days = 2 }
+		}
+		set_country_flag = NFA_accepted_current_position_after_talks
+	}
+}
+
+country_event = { #moderate kraut demands arrive
+	id = natfra.163
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.163"}
+	title = natfra.163.t
+	desc = natfra.163.d
+	picture = GFX_event_NFA_boche
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #accept
+		name = natfra.163.a 
+		set_truce = { target = var:64.owner days = 600 }
+		add_ideas = NFA_german_concessions
+		add_political_power = -40
+		add_war_support = -0.03
+		add_stability = 0.04
+		var:64.owner = {
+			country_event = { id = natfra.155 days = 2 }
+		}
+		set_country_flag = NFA_accepted_german_demands_for_land
+	}
+
+	option = { #decline
+		name = natfra.163.b 
+		custom_effect_tooltip = NFA_talks_will_fail
+		add_stability = -0.04
+		add_war_support = 0.04
+		var:64.owner = {
+			country_event = { id = natfra.165 days = 2 }
+		}
+		set_country_flag = NFA_accepted_current_position_after_talks
+	}
+}
+
+country_event = { #harsh kraut demands arrive
+	id = natfra.164
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.164"}
+	title = natfra.164.t
+	desc = natfra.164.d
+	picture = GFX_event_NFA_boche2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #accept
+		name = natfra.164.a 
+		add_ideas = NFA_german_garrison
+		add_ideas = NFA_german_concessions
+		set_truce = { target = var:64.owner days = 1200 }
+		add_political_power = -55
+		add_war_support = -0.05
+		add_stability = 0.04
+		var:64.owner = {
+			country_event = { id = natfra.155 days = 2 }
+		}
+		set_country_flag = NFA_accepted_german_demands_for_land
+	}
+
+	option = { #decline
+		name = natfra.164.b 
+		custom_effect_tooltip = NFA_talks_will_fail
+		add_stability = -0.04
+		add_war_support = 0.04
+		var:64.owner = {
+			country_event = { id = natfra.165 days = 2 }
+		}
+		set_country_flag = NFA_accepted_current_position_after_talks
+	}
+}
+
+country_event = { #germany notified that talks failed
+	id = natfra.165
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.165"}
+	title = natfra.165.t
+	desc = natfra.165.d
+	picture = GFX_event_NFA_boche
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #lol
+		name = natfra.165.a 
+		add_political_power = 20
+		var:64.owner = {
+			every_owned_state = {
+				limit = {
+					is_not_claim_or_core_of_ROOT = yes
+					is_european_france = yes
+				}
+				FRP = { transfer_state = PREV }
+			}
+			set_temp_variable = { tag_to_release = FRP }
+			puppet_released_tag = yes
+		}
+	}
+}
+
+country_event = { #germany notified that NFA is a pussy
+	id = natfra.166
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.166"}
+	title = natfra.166.t
+	desc = natfra.166.d
+	picture = GFX_report_event_FRA_weeping
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #lol
+		name = natfra.166.a 
+		add_political_power = 20
+		add_war_support = 0.03
+		var:64.owner = {
+			every_owned_state = {
+				limit = {
+					is_not_claim_or_core_of_ROOT = yes
+					is_european_france = yes
+				}
+				FRP = { transfer_state = PREV }
+			}
+			set_temp_variable = { tag_to_release = FRP }
+			puppet_released_tag = yes
+		}
+	}
+}
+
+country_event = { #frogs notified that krauts won't talk
+	id = natfra.167
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.167"}
+	title = natfra.167.t
+	desc = natfra.167.d
+	picture = GFX_event_NFA_boche2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #kill them
+		name = natfra.167.a 
+		add_war_support = 0.04
+		add_stability = -0.06
+		declare_war_on = { target = var:64.owner type = annex_everything }
+		set_country_flag = NFA_attacked_germany_after_talks
+	}
+
+	option = { #so be it
+		name = natfra.167.b
+		add_war_support = -0.02
+		add_stability = 0.03
+		set_country_flag = NFA_accepted_current_position_after_talks
+		var:64.owner = {
+			country_event = { id = natfra.157 days = 7 }
+		}
+	}
+}
+
+country_event = { #greater resistance activity in FRP
+	id = natfra.168
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.168"}
+	title = natfra.168.t
+	desc = natfra.168.d
+	picture = GFX_event_NFA_resistance
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #handle it ourselves
+		name = natfra.168.a 
+		add_manpower = -35000
+		add_political_power = -60
+		add_stability = 0.03
+		hidden_effect = {
+			country_event = { id = natfra.179 days = 14 }
+		}
+	}
+
+	option = { #ask for german reinforcements
+		name = natfra.168.b
+		trigger = {
+			NFA = {
+				is_ai = yes
+			}
+		}
+		add_stability = -0.05
+		var:64.owner = {
+			country_event = { id = natfra.169 days = 5 }
+		}
+	}
+}
+
+country_event = { #FRP wants reinforcements
+	id = natfra.169
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.169"}
+	title = natfra.169.t
+	desc = natfra.169.d
+	picture = GFX_event_NFA_resistance
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #fine
+		name = natfra.169.a 
+		add_manpower = -35000
+		FRP = {
+			country_event = { id = natfra.170 days = 5 }
+		}
+	}
+
+	option = { #no
+		name = natfra.169.b
+		add_stability = 0.01
+		FRP = {
+			country_event = { id = natfra.172 days = 30 }
+		}
+	}
+}
+
+country_event = { #german reinforcements demand special powers
+	id = natfra.170
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.170"}
+	title = natfra.170.t
+	desc = natfra.170.d
+	picture = GFX_report_event_ger_march
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #fine
+		name = natfra.170.a 
+		add_stability = -0.04
+		add_political_power = -45
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = FRP_paternal_autocrat_party_german_long
+			name = FRP_paternal_autocrat_party_german
+		}
+		create_country_leader = {
+			name = "Walter Model"
+			desc = "POLITICS_WALTER_MODEL_DESC"
+			picture = "gfx/leaders/GER/Portrait_Germany_Walter_Model_kr.png"
+			expire = "1.1.1"
+			ideology = junta_subtype
+			traits = {
+				desperate_defender
+			}
+		} 
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.25
+		}
+		hidden_effect = {
+			country_event = { id = natfra.171 days = 30 }
+		}
+	}
+
+	option = { #no way
+		name = natfra.170.b
+		add_political_power = 30
+		FRP = {
+			country_event = { id = natfra.172 days = 14 }
+		}
+	}
+}
+
+country_event = { #german reinforcements defeat maquisards
+	id = natfra.171
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.171"}
+	title = natfra.171.t
+	desc = natfra.171.d
+	picture = GFX_report_event_ger_march
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #yay
+		name = natfra.171.a 
+		add_stability = 0.05
+		add_manpower = 5000
+		add_political_power = 50
+		increase_ruling_party_popularity_by_10 = yes
+		hidden_effect = {
+			NFA = {
+				country_event = { id = natfra.180 days = 3 }
+			}
+		}
+	}
+}
+
+country_event = { #govt control starts to collapse
+	id = natfra.172
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.172"}
+	title = natfra.172.t
+	desc = natfra.172.d
+	picture = GFX_report_event_NFA_riots
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #yay
+		name = natfra.172.a 
+		add_political_power = -100
+		add_stability = -0.1
+		decrease_ruling_party_popularity_by_10 = yes
+		hidden_effect = {
+			country_event = { id = natfra.173 days = 14 }
+		}
+	}
+}
+
+country_event = { #macquisard coup
+	id = natfra.173
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.173"}
+	title = natfra.173.t
+	desc = natfra.173.d
+	picture = GFX_report_event_NFA_riots
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #yay
+		name = natfra.173.a 
+		add_stability = -0.1
+		add_manpower = -5000
+		set_cosmetic_tag = NFA_MAQUI
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = FRP_paternal_autocrat_macquisards_long
+			name = FRP_paternal_autocrat_macquisards
+		}
+		create_country_leader = {
+			name = "Henri d'Astier de la Vigerie"
+			desc = "POLITICS_DASTIER_DE_LA_VIGERIE_DESC"
+			picture = "gfx/leaders/FRP/Portrait_FRP_de_la_vigerie.png"
+			expire = "1.1.1"
+			ideology = paternal_autocrat_subtype
+			traits = {
+				young_leader_hos
+			}
+		} 
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.25
+		}
+		var:64.owner = { end_puppet = FRP }
+		leave_faction = yes
+		hidden_effect = {
+			NFA = {
+				country_event = natfra.174
+			}
+		}
+	}
+}
+
+country_event = { #macquisard coup: NFA POV
+	id = natfra.174
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.174"}
+	title = natfra.174.t
+	desc = natfra.174.d
+	picture = GFX_event_NFA_resistance
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #move to annex them
+		name = natfra.174.a
+		add_command_power = 30
+		add_war_support = 0.05
+		var:64.owner = {
+			country_event = { id = natfra.175 days = 3 }
+		}
+		annex_country = {
+			target = FRP
+			transfer_troops = yes
+		}
+		create_corps_commander = { # de la Vigerie
+			name = "Henri d'Astier de la Vigerie"
+			portrait_path = "gfx/leaders/NFA/Portrait_NFA_de_la_vigerie.png"
+			traits = {
+				commando
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 4
+		}
+		set_country_flag = NFA_annexed_frp
+	}
+
+	option = { #wait to see what the germans do
+		name = natfra.174.b 
+		add_political_power = 10
+		var:64.owner = {
+			country_event = { id = natfra.176 days = 3 }
+		}
+	}
+}
+
+country_event = { #french are moving to annex macquisards
+	id = natfra.175
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.175"}
+	title = natfra.175.t
+	desc = natfra.175.d
+	picture = GFX_event_NFA_resistance
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #we've lost the initiative, let them have it 
+		name = natfra.175.a 
+		add_war_support = -0.05
+		NFA = {
+			country_event = { id = natfra.177 days = 2 }
+		}
+	}
+
+	option = { #stand and fight
+		name = natfra.175.b 
+		add_command_power = 30
+		add_war_support = 0.05
+		declare_war_on = {
+			target = NFA
+			type = annex_everything
+		}
+	}
+}
+
+country_event = { #what to do with FRP coup
+	id = natfra.176
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.176"}
+	title = natfra.176.t
+	desc = natfra.176.d
+	picture = GFX_event_NFA_resistance
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #fall back and cut our losses
+		name = natfra.176.a 
+		add_war_support = -0.05
+		add_stability = 0.05
+		NFA = {
+			country_event = { id = natfra.177 days = 2 }
+		}
+	}
+
+	option = { #crush em
+		name = natfra.176.b 
+		add_command_power = 30
+		add_war_support = 0.03
+		declare_war_on = {
+			target = FRP
+			type = annex_everything
+		}
+		NFA = {
+			country_event = { id = natfra.178 days = 2 }
+		}
+	}
+}
+
+country_event = { #germans fall back
+	id = natfra.177
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.177"}
+	title = natfra.177.t
+	desc = natfra.177.d
+	picture = GFX_event_NFA_boche2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #epic
+		name = natfra.177.a 
+		add_political_power = 50
+		if = {
+			limit = { country_exists = FRP }
+			annex_country = {
+				target = FRP
+				transfer_troops = yes
+			}
+			create_corps_commander = { # de la Vigerie
+				name = "Henri d'Astier de la Vigerie"
+				portrait_path = "gfx/leaders/NFA/Portrait_NFA_de_la_vigerie.png"
+				traits = {
+					commando
+				}
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 4
+			}
+			set_country_flag = NFA_annexed_frp
+		}
+	}
+}
+
+country_event = { #germans try to crush maquisards
+	id = natfra.178
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.178"}
+	title = natfra.178.t
+	desc = natfra.178.d
+	picture = GFX_event_NFA_boche2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #fight back
+		name = natfra.178.a 
+		declare_war_on = {
+			target = var:64.owner
+			type = annex_everything
+		}
+		add_war_support = 0.05
+		annex_country = {
+			target = FRP
+			transfer_troops = yes
+		}
+		create_corps_commander = { # de la Vigerie
+			name = "Henri d'Astier de la Vigerie"
+			portrait_path = "gfx/leaders/NFA/Portrait_NFA_de_la_vigerie.png"
+			traits = {
+				commando
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 4
+		}
+		set_country_flag = NFA_annexed_frp
+	}
+
+	option = { #leave them to their fate
+		name = natfra.178.b 
+		add_war_support = -0.04
+		add_stability = 0.02
+	}
+}
+
+country_event = { #greater resistance activity in FRP
+	id = natfra.179
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.179"}
+	title = natfra.179.t
+	desc = natfra.179.d
+	picture = GFX_event_NFA_boche2
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #focus on propaganda
+		name = natfra.179.a 
+		add_political_power = 20
+		add_stability = 0.03
+		hidden_effect = {
+			country_event = { id = natfra.172 days = 14 }
+		}
+	}
+
+	option = { #ask for german reinforcements
+		name = natfra.179.b
+		trigger = {
+			NFA = {
+				is_ai = yes
+			}
+		}
+		add_stability = -0.05
+		add_war_support = -0.05
+		hidden_effect = {
+			country_event = { id = natfra.171 days = 45 }
+		}
+	}
+}
+
+country_event = { #macquisards crushed
+	id = natfra.180
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.180"}
+	title = natfra.180.t
+	desc = natfra.180.d
+	picture = GFX_event_NFA_germany_diplomacy
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #SAD!
+		name = natfra.180.a 
+		add_political_power = -20
+	}
+}
+
+country_event = { #GER: natfrance wants to entrench diplomatic relations
+	id = natfra.181
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.181"}
+	title = natfra.181.t
+	desc = natfra.181.d
+	picture = GFX_event_NFA_germany_diplomacy
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #sure
+		name = natfra.181.a 
+		add_political_power = 20
+		NFA = {
+			country_event = { id = natfra.182 days = 1 }
+		}
+	}
+}
+
+country_event = { #diplomatic relations secure
+	id = natfra.182
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.182"}
+	title = natfra.182.t
+	desc = natfra.182.d
+	picture = GFX_event_NFA_germany_diplomacy
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #sure
+		name = natfra.182.a 
+		add_political_power = 20
+	}
+}
+
+country_event = { #franco-german trade deal
+	id = natfra.183
+	immediate = {log = "[GetDateText]: [Root.GetName]: event natfra.183"}
+	title = natfra.183.t
+	desc = natfra.183.d
+	picture = GFX_event_NFA_trade_deal
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #sure
+		name = natfra.183.a 
+		add_political_power = 10
+		random_owned_state = {
+			limit = {
+				is_controlled_by = NFA
+			}
+			add_extra_state_shared_building_slots = 1
+		}
+		var:64.owner = {
+			country_event = { id = natfra.184 days = 1 }
+		}
+	}
+}
+
+country_event = { #join the pact?
+	id = flavorfra.70
+	immediate = {log = "[GetDateText]: [Root.GetName]: event flavorfra.70"}
+	title = flavorfra.70.t
+	desc = flavorfra.70.d
+	picture = GFX_event_NFA_boche
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = flavorfra.70.a #join germany
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				var:64.owner = { is_ai = no }
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					has_game_rule = {
+						rule = NFA_foreign_policy
+						option = DEFAULT
+					}
+					has_game_rule = {
+						rule = NFA_foreign_policy
+						option = NFA_FOREIGN_POLICY_REICHSPAKT
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				28 = {
+					OR = {
+						is_core_of = NFA
+						is_claimed_by = NFA
+					}
+					NOT = { is_owned_by = NFA }
+				}
+			}
+			28 = { remove_claim_by = NFA }
+			remove_state_core = 28
+		}
+		var:64.owner = { add_to_faction = NFA }
+		decrease_ruling_party_popularity_by_10 = yes
+	}
+	
+	option = {
+		name = flavorfra.70.b #no boches?
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = NFA_foreign_policy
+					option = NFA_FOREIGN_POLICY_REICHSPAKT
+				}
+			}
+		}
+		increase_ruling_party_popularity_by_10 = yes
+	}
+	
+}
+
+
+	
+
+

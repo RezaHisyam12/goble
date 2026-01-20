@@ -4,6 +4,10 @@
 ### ENG_land_cruiser_entity
 entity = { 
 	clone = "ENG_land_cruiser_entity"
+	name = "IMP_land_cruiser_entity"
+}
+entity = { 
+	clone = "ENG_land_cruiser_entity"
 	name = "CAN_land_cruiser_entity"
 }
 entity = { 
@@ -151,6 +155,10 @@ entity = {
 entity = { 
 	clone = "USA_land_cruiser_entity"
 	name = "COR_land_cruiser_entity"
+}
+entity = { 
+	clone = "USA_land_cruiser_entity"
+	name = "WCC_land_cruiser_entity"
 }
 entity = { 
 	clone = "USA_land_cruiser_entity"

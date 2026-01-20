@@ -500,16 +500,16 @@ guerilla_war = {
 		modifier = {
 			factor = 0
 			NOT = {
-                OR = {
+                		OR = {
 					has_template_containing_unit = irregular_infantry
 					has_template_containing_unit = militia
 				}
 			}
 		}
-      		modifier = {
-            		factor = 4
-            		is_chinese_tag = yes
-        	}
+		modifier = {
+			factor = 50
+			has_subdoctrine = irregulars
+		}
 	}
 
 	# EFFECTS

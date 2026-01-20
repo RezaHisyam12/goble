@@ -1,0 +1,550 @@
+### Reason to have a separate copy of vanilla file
+## - Conflicts with existing GER mountaineer models
+## - Uses unaccessible GER mg_2 weapon entity (replaced with MP44)
+## - Uses different weapons
+
+
+###########################################################################################################################
+#                                                     SPECIAL FORCES                                                      #
+###########################################################################################################################
+
+#################################################
+###                   ENG                     ###
+#################################################
+	entity = { name = "ENG_paratrooper_entity"                        clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_paratrooper_rifle_mesh" }
+	entity = { name = "ENG_paratrooper_entity_snow"                   clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_paratrooper_snow_rifle_mesh" }
+	entity = { name = "ENG_paratrooper_1_entity"                      clone = "KR_infantry_No4_entity"             pdxmesh = "ENG_paratrooper_rifle_mesh" }
+	entity = { name = "ENG_paratrooper_1_entity_snow"                 clone = "KR_infantry_No4_entity"             pdxmesh = "ENG_paratrooper_snow_rifle_mesh" }
+	entity = { name = "ENG_paratrooper_2_entity"                      clone = "KR_infantry_Sten_entity"            pdxmesh = "ENG_paratrooper_mg_mesh" }
+	entity = { name = "ENG_paratrooper_2_entity_snow"                 clone = "KR_infantry_Sten_entity"            pdxmesh = "ENG_paratrooper_snow_mg_mesh" }
+	entity = { name = "ENG_paratrooper_3_entity"                      clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_paratrooper_rifle_mesh" }
+	entity = { name = "ENG_paratrooper_3_entity_snow"                 clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_paratrooper_snow_rifle_mesh" }
+
+	entity = { name = "ENG_paratrooper_alt_0_entity"                  clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_paratrooper_alt_0_rifle_mesh" }
+	entity = { name = "ENG_paratrooper_1_alt_0_entity"                clone = "KR_infantry_No4_entity"             pdxmesh = "ENG_paratrooper_alt_0_rifle_mesh" }
+	entity = { name = "ENG_paratrooper_2_alt_0_entity"                clone = "KR_infantry_Sten_entity"            pdxmesh = "ENG_paratrooper_alt_0_mg_mesh" }
+	entity = { name = "ENG_paratrooper_3_alt_0_entity"                clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_paratrooper_alt_0_rifle_mesh" }
+
+	entity = { name = "ENG_marine_entity"                             clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_marine_rifle_mesh" }
+	entity = { name = "ENG_marine_1_entity"                           clone = "KR_infantry_No4_entity"             pdxmesh = "ENG_marine_rifle_mesh" }
+	entity = { name = "ENG_marine_2_entity"                           clone = "KR_infantry_Sten_entity"            pdxmesh = "ENG_marine_mg_mesh" }
+	entity = { name = "ENG_marine_3_entity"                           clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_marine_rifle_mesh" }
+
+	entity = { name = "ENG_marine_alt_0_entity"                       clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_marine_alt_0_rifle_mesh" }
+	entity = { name = "ENG_marine_1_alt_0_entity"                     clone = "KR_infantry_No4_entity"             pdxmesh = "ENG_marine_alt_0_rifle_mesh" }
+	entity = { name = "ENG_marine_2_alt_0_entity"                     clone = "KR_infantry_Sten_entity"            pdxmesh = "ENG_marine_alt_0_mg_mesh" }
+	entity = { name = "ENG_marine_3_alt_0_entity"                     clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_marine_alt_0_rifle_mesh" }
+
+	entity = { name = "ENG_marine_alt_1_entity"                       clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_marine_alt_1_rifle_mesh" }
+	entity = { name = "ENG_marine_1_alt_1_entity"                     clone = "KR_infantry_No4_entity"             pdxmesh = "ENG_marine_alt_1_rifle_mesh" }
+	entity = { name = "ENG_marine_2_alt_1_entity"                     clone = "KR_infantry_Sten_entity"            pdxmesh = "ENG_marine_alt_1_mg_mesh" }
+	entity = { name = "ENG_marine_3_alt_1_entity"                     clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_marine_alt_1_rifle_mesh" }
+
+
+#################################################
+###                   IMP                     ###
+#################################################
+	entity = { name = "IMP_paratrooper_entity"                        clone = "KR_infantry_P14_entity"             pdxmesh = "ENG_paratrooper_rifle_mesh" }
+	entity = { name = "IMP_paratrooper_entity_snow"                   clone = "KR_infantry_P14_entity"             pdxmesh = "ENG_paratrooper_snow_rifle_mesh" }
+	entity = { name = "IMP_paratrooper_1_entity"                      clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_paratrooper_rifle_mesh" }
+	entity = { name = "IMP_paratrooper_1_entity_snow"                 clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_paratrooper_snow_rifle_mesh" }
+	entity = { name = "IMP_paratrooper_2_entity"                      clone = "KR_infantry_Stirling_entity"        pdxmesh = "ENG_paratrooper_mg_mesh" }
+	entity = { name = "IMP_paratrooper_2_entity_snow"                 clone = "KR_infantry_Stirling_entity"        pdxmesh = "ENG_paratrooper_snow_mg_mesh" }
+	entity = { name = "IMP_paratrooper_3_entity"                      clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_paratrooper_rifle_mesh" }
+	entity = { name = "IMP_paratrooper_3_entity_snow"                 clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_paratrooper_snow_rifle_mesh" }
+
+	entity = { name = "IMP_paratrooper_alt_0_entity"                  clone = "KR_infantry_P14_entity"             pdxmesh = "ENG_paratrooper_alt_0_rifle_mesh" }
+	entity = { name = "IMP_paratrooper_1_alt_0_entity"                clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_paratrooper_alt_0_rifle_mesh" }
+	entity = { name = "IMP_paratrooper_2_alt_0_entity"                clone = "KR_infantry_Stirling_entity"        pdxmesh = "ENG_paratrooper_alt_0_mg_mesh" }
+	entity = { name = "IMP_paratrooper_3_alt_0_entity"                clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_paratrooper_alt_0_rifle_mesh" }
+
+	entity = { name = "IMP_marine_entity"                             clone = "KR_infantry_P14_entity"             pdxmesh = "ENG_marine_alt_0_rifle_mesh" }
+	entity = { name = "IMP_marine_1_entity"                           clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_marine_alt_0_rifle_mesh" }
+	entity = { name = "IMP_marine_2_entity"                           clone = "KR_infantry_Stirling_entity"        pdxmesh = "ENG_marine_alt_0_mg_mesh" }
+	entity = { name = "IMP_marine_3_entity"                           clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_paratrooper_rifle_mesh" }
+
+	entity = { name = "IMP_marine_alt_0_entity"                       clone = "KR_infantry_P14_entity"             pdxmesh = "ENG_marine_rifle_mesh" }
+	entity = { name = "IMP_marine_1_alt_0_entity"                     clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_marine_rifle_mesh" }
+	entity = { name = "IMP_marine_2_alt_0_entity"                     clone = "KR_infantry_Stirling_entity"        pdxmesh = "ENG_marine_mg_mesh" }
+	entity = { name = "IMP_marine_3_alt_0_entity"                     clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_marine_rifle_mesh" }
+
+	entity = { name = "IMP_marine_alt_1_entity"                       clone = "KR_infantry_P14_entity"             pdxmesh = "ENG_marine_alt_1_rifle_mesh" }
+	entity = { name = "IMP_marine_1_alt_1_entity"                     clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_marine_alt_1_rifle_mesh" }
+	entity = { name = "IMP_marine_2_alt_1_entity"                     clone = "KR_infantry_Stirling_entity"        pdxmesh = "ENG_marine_alt_1_mg_mesh" }
+	entity = { name = "IMP_marine_3_alt_1_entity"                     clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_marine_alt_1_rifle_mesh" }
+
+	### IMP clones - AST
+		entity = { name = "AST_paratrooper_entity"                        clone = "KR_infantry_P14_entity"             pdxmesh = "ENG_paratrooper_rifle_mesh" }
+		entity = { name = "AST_paratrooper_entity_snow"                   clone = "KR_infantry_P14_entity"             pdxmesh = "ENG_paratrooper_snow_rifle_mesh" }
+		entity = { name = "AST_paratrooper_1_entity"                      clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_paratrooper_rifle_mesh" }
+		entity = { name = "AST_paratrooper_1_entity_snow"                 clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_paratrooper_snow_rifle_mesh" }
+		entity = { name = "AST_paratrooper_2_entity"                      clone = "KR_infantry_Stirling_entity"        pdxmesh = "ENG_paratrooper_mg_mesh" }
+		entity = { name = "AST_paratrooper_2_entity_snow"                 clone = "KR_infantry_Stirling_entity"        pdxmesh = "ENG_paratrooper_snow_mg_mesh" }
+		entity = { name = "AST_paratrooper_3_entity"                      clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_paratrooper_rifle_mesh" }
+		entity = { name = "AST_paratrooper_3_entity_snow"                 clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_paratrooper_snow_rifle_mesh" }
+
+		entity = { name = "AST_paratrooper_alt_0_entity"                  clone = "KR_infantry_P14_entity"             pdxmesh = "ENG_paratrooper_alt_0_rifle_mesh" }
+		entity = { name = "AST_paratrooper_1_alt_0_entity"                clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_paratrooper_alt_0_rifle_mesh" }
+		entity = { name = "AST_paratrooper_2_alt_0_entity"                clone = "KR_infantry_Stirling_entity"        pdxmesh = "ENG_paratrooper_alt_0_mg_mesh" }
+		entity = { name = "AST_paratrooper_3_alt_0_entity"                clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_paratrooper_alt_0_rifle_mesh" }
+
+		entity = { name = "AST_marine_entity"                             clone = "KR_infantry_P14_entity"             pdxmesh = "ENG_marine_alt_0_rifle_mesh" }
+		entity = { name = "AST_marine_1_entity"                           clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_marine_alt_0_rifle_mesh" }
+		entity = { name = "AST_marine_2_entity"                           clone = "KR_infantry_Stirling_entity"        pdxmesh = "ENG_marine_alt_0_mg_mesh" }
+		entity = { name = "AST_marine_3_entity"                           clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_paratrooper_rifle_mesh" }
+
+		entity = { name = "AST_marine_alt_0_entity"                       clone = "KR_infantry_P14_entity"             pdxmesh = "ENG_marine_rifle_mesh" }
+		entity = { name = "AST_marine_1_alt_0_entity"                     clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_marine_rifle_mesh" }
+		entity = { name = "AST_marine_2_alt_0_entity"                     clone = "KR_infantry_Stirling_entity"        pdxmesh = "ENG_marine_mg_mesh" }
+		entity = { name = "AST_marine_3_alt_0_entity"                     clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_marine_rifle_mesh" }
+
+		entity = { name = "AST_marine_alt_1_entity"                       clone = "KR_infantry_P14_entity"             pdxmesh = "ENG_marine_alt_1_rifle_mesh" }
+		entity = { name = "AST_marine_1_alt_1_entity"                     clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_marine_alt_1_rifle_mesh" }
+		entity = { name = "AST_marine_2_alt_1_entity"                     clone = "KR_infantry_Stirling_entity"        pdxmesh = "ENG_marine_alt_1_mg_mesh" }
+		entity = { name = "AST_marine_3_alt_1_entity"                     clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_marine_alt_1_rifle_mesh" }
+
+	### IMP clones - CAN
+		entity = { name = "CAN_paratrooper_entity"                        clone = "KR_infantry_P14_entity"             pdxmesh = "ENG_paratrooper_rifle_mesh" }
+		entity = { name = "CAN_paratrooper_entity_snow"                   clone = "KR_infantry_P14_entity"             pdxmesh = "ENG_paratrooper_snow_rifle_mesh" }
+		entity = { name = "CAN_paratrooper_1_entity"                      clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_paratrooper_rifle_mesh" }
+		entity = { name = "CAN_paratrooper_1_entity_snow"                 clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_paratrooper_snow_rifle_mesh" }
+		entity = { name = "CAN_paratrooper_2_entity"                      clone = "KR_infantry_Stirling_entity"        pdxmesh = "ENG_paratrooper_mg_mesh" }
+		entity = { name = "CAN_paratrooper_2_entity_snow"                 clone = "KR_infantry_Stirling_entity"        pdxmesh = "ENG_paratrooper_snow_mg_mesh" }
+		entity = { name = "CAN_paratrooper_3_entity"                      clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_paratrooper_rifle_mesh" }
+		entity = { name = "CAN_paratrooper_3_entity_snow"                 clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_paratrooper_snow_rifle_mesh" }
+
+		entity = { name = "CAN_paratrooper_alt_0_entity"                  clone = "KR_infantry_P14_entity"             pdxmesh = "ENG_paratrooper_alt_0_rifle_mesh" }
+		entity = { name = "CAN_paratrooper_1_alt_0_entity"                clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_paratrooper_alt_0_rifle_mesh" }
+		entity = { name = "CAN_paratrooper_2_alt_0_entity"                clone = "KR_infantry_Stirling_entity"        pdxmesh = "ENG_paratrooper_alt_0_mg_mesh" }
+		entity = { name = "CAN_paratrooper_3_alt_0_entity"                clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_paratrooper_alt_0_rifle_mesh" }
+
+		entity = { name = "CAN_marine_entity"                             clone = "KR_infantry_P14_entity"             pdxmesh = "ENG_marine_alt_0_rifle_mesh" }
+		entity = { name = "CAN_marine_1_entity"                           clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_marine_alt_0_rifle_mesh" }
+		entity = { name = "CAN_marine_2_entity"                           clone = "KR_infantry_Stirling_entity"        pdxmesh = "ENG_marine_alt_0_mg_mesh" }
+		entity = { name = "CAN_marine_3_entity"                           clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_paratrooper_rifle_mesh" }
+
+		entity = { name = "CAN_marine_alt_0_entity"                       clone = "KR_infantry_P14_entity"             pdxmesh = "ENG_marine_rifle_mesh" }
+		entity = { name = "CAN_marine_1_alt_0_entity"                     clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_marine_rifle_mesh" }
+		entity = { name = "CAN_marine_2_alt_0_entity"                     clone = "KR_infantry_Stirling_entity"        pdxmesh = "ENG_marine_mg_mesh" }
+		entity = { name = "CAN_marine_3_alt_0_entity"                     clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_marine_rifle_mesh" }
+
+		entity = { name = "CAN_marine_alt_1_entity"                       clone = "KR_infantry_P14_entity"             pdxmesh = "ENG_marine_alt_1_rifle_mesh" }
+		entity = { name = "CAN_marine_1_alt_1_entity"                     clone = "KR_infantry_SMLE_entity"            pdxmesh = "ENG_marine_alt_1_rifle_mesh" }
+		entity = { name = "CAN_marine_2_alt_1_entity"                     clone = "KR_infantry_Stirling_entity"        pdxmesh = "ENG_marine_alt_1_mg_mesh" }
+		entity = { name = "CAN_marine_3_alt_1_entity"                     clone = "KR_infantry_No5_entity"             pdxmesh = "ENG_marine_alt_1_rifle_mesh" }
+
+
+
+#################################################
+###                   GER                     ###
+#################################################
+	entity = { name = "GER_paratrooper_alt_0_entity"                  clone = "KR_infantry_G98_entity"             pdxmesh = "GER_paratrooper_alt_0_rifle_mesh" }
+	entity = { name = "GER_paratrooper_alt_0_entity_snow"             clone = "KR_infantry_G98_entity"             pdxmesh = "GER_paratrooper_snow_alt_0_rifle_mesh" }
+	entity = { name = "GER_paratrooper_1_alt_0_entity"                clone = "KR_infantry_98k_entity"             pdxmesh = "GER_paratrooper_alt_0_rifle_mesh" }
+	entity = { name = "GER_paratrooper_1_alt_0_entity_snow"           clone = "KR_infantry_98k_entity"             pdxmesh = "GER_paratrooper_snow_alt_0_rifle_mesh" }
+	entity = { name = "GER_paratrooper_2_alt_0_entity"                clone = "KR_infantry_MP38_entity"            pdxmesh = "GER_paratrooper_alt_0_mg_mesh" }
+	entity = { name = "GER_paratrooper_2_alt_0_entity_snow"           clone = "KR_infantry_MP38_entity"            pdxmesh = "GER_paratrooper_snow_alt_0_mg_mesh" }
+	entity = { name = "GER_paratrooper_3_alt_0_entity"                clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_paratrooper_alt_0_mg_mesh" }
+	entity = { name = "GER_paratrooper_3_alt_0_entity_snow"           clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_paratrooper_snow_alt_0_mg_mesh" }
+
+	entity = { name = "GER_mountaineers_alt_0_entity"                 clone = "KR_infantry_G98_entity"             pdxmesh = "GER_mountaineers_rifle_mesh" }
+	entity = { name = "GER_mountaineers_alt_0_entity_snow"            clone = "KR_infantry_G98_entity"             pdxmesh = "GER_mountaineers_snow_rifle_mesh" }
+	entity = { name = "GER_mountaineers_alt_0_entity_desert"          clone = "KR_infantry_G98_entity"             pdxmesh = "GER_mountaineers_desert_rifle_mesh" }
+	entity = { name = "GER_mountaineers_1_alt_0_entity"               clone = "KR_infantry_98k_entity"             pdxmesh = "GER_mountaineers_rifle_mesh" }
+	entity = { name = "GER_mountaineers_1_alt_0_entity_snow"          clone = "KR_infantry_98k_entity"             pdxmesh = "GER_mountaineers_snow_rifle_mesh" }
+	entity = { name = "GER_mountaineers_1_alt_0_entity_desert"        clone = "KR_infantry_98k_entity"             pdxmesh = "GER_mountaineers_desert_rifle_mesh" }
+	entity = { name = "GER_mountaineers_2_alt_0_entity"               clone = "KR_infantry_G43_entity"             pdxmesh = "GER_mountaineers_rifle_mesh" }
+	entity = { name = "GER_mountaineers_2_alt_0_entity_snow"          clone = "KR_infantry_G43_entity"             pdxmesh = "GER_mountaineers_snow_rifle_mesh" }
+	entity = { name = "GER_mountaineers_2_alt_0_entity_desert"        clone = "KR_infantry_G43_entity"             pdxmesh = "GER_mountaineers_desert_rifle_mesh" }
+	entity = { name = "GER_mountaineers_3_alt_0_entity"               clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_mountaineers_mg_mesh" }
+	entity = { name = "GER_mountaineers_3_alt_0_entity_snow"          clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_mountaineers_snow_mg_mesh" }
+	entity = { name = "GER_mountaineers_3_alt_0_entity_desert"        clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_mountaineers_desert_mg_mesh" }
+
+	### GER clones - BAT
+		entity = { name = "BAT_paratrooper_alt_0_entity"                  clone = "KR_infantry_G98_entity"             pdxmesh = "GER_paratrooper_alt_0_rifle_mesh" }
+		entity = { name = "BAT_paratrooper_alt_0_entity_snow"             clone = "KR_infantry_G98_entity"             pdxmesh = "GER_paratrooper_snow_alt_0_rifle_mesh" }
+		entity = { name = "BAT_paratrooper_1_alt_0_entity"                clone = "KR_infantry_98k_entity"             pdxmesh = "GER_paratrooper_alt_0_rifle_mesh" }
+		entity = { name = "BAT_paratrooper_1_alt_0_entity_snow"           clone = "KR_infantry_98k_entity"             pdxmesh = "GER_paratrooper_snow_alt_0_rifle_mesh" }
+		entity = { name = "BAT_paratrooper_2_alt_0_entity"                clone = "KR_infantry_MP38_entity"            pdxmesh = "GER_paratrooper_alt_0_mg_mesh" }
+		entity = { name = "BAT_paratrooper_2_alt_0_entity_snow"           clone = "KR_infantry_MP38_entity"            pdxmesh = "GER_paratrooper_snow_alt_0_mg_mesh" }
+		entity = { name = "BAT_paratrooper_3_alt_0_entity"                clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_paratrooper_alt_0_mg_mesh" }
+		entity = { name = "BAT_paratrooper_3_alt_0_entity_snow"           clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_paratrooper_snow_alt_0_mg_mesh" }
+
+		entity = { name = "BAT_mountaineers_alt_0_entity"                 clone = "KR_infantry_G98_entity"             pdxmesh = "GER_mountaineers_rifle_mesh" }
+		entity = { name = "BAT_mountaineers_alt_0_entity_snow"            clone = "KR_infantry_G98_entity"             pdxmesh = "GER_mountaineers_snow_rifle_mesh" }
+		entity = { name = "BAT_mountaineers_alt_0_entity_desert"          clone = "KR_infantry_G98_entity"             pdxmesh = "GER_mountaineers_desert_rifle_mesh" }
+		entity = { name = "BAT_mountaineers_1_alt_0_entity"               clone = "KR_infantry_98k_entity"             pdxmesh = "GER_mountaineers_rifle_mesh" }
+		entity = { name = "BAT_mountaineers_1_alt_0_entity_snow"          clone = "KR_infantry_98k_entity"             pdxmesh = "GER_mountaineers_snow_rifle_mesh" }
+		entity = { name = "BAT_mountaineers_1_alt_0_entity_desert"        clone = "KR_infantry_98k_entity"             pdxmesh = "GER_mountaineers_desert_rifle_mesh" }
+		entity = { name = "BAT_mountaineers_2_alt_0_entity"               clone = "KR_infantry_G43_entity"             pdxmesh = "GER_mountaineers_rifle_mesh" }
+		entity = { name = "BAT_mountaineers_2_alt_0_entity_snow"          clone = "KR_infantry_G43_entity"             pdxmesh = "GER_mountaineers_snow_rifle_mesh" }
+		entity = { name = "BAT_mountaineers_2_alt_0_entity_desert"        clone = "KR_infantry_G43_entity"             pdxmesh = "GER_mountaineers_desert_rifle_mesh" }
+		entity = { name = "BAT_mountaineers_3_alt_0_entity"               clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_mountaineers_mg_mesh" }
+		entity = { name = "BAT_mountaineers_3_alt_0_entity_snow"          clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_mountaineers_snow_mg_mesh" }
+		entity = { name = "BAT_mountaineers_3_alt_0_entity_desert"        clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_mountaineers_desert_mg_mesh" }
+
+	### GER clones - GRU
+		entity = { name = "GRU_paratrooper_alt_0_entity"                  clone = "KR_infantry_G98_entity"             pdxmesh = "GER_paratrooper_alt_0_rifle_mesh" }
+		entity = { name = "GRU_paratrooper_alt_0_entity_snow"             clone = "KR_infantry_G98_entity"             pdxmesh = "GER_paratrooper_snow_alt_0_rifle_mesh" }
+		entity = { name = "GRU_paratrooper_1_alt_0_entity"                clone = "KR_infantry_98k_entity"             pdxmesh = "GER_paratrooper_alt_0_rifle_mesh" }
+		entity = { name = "GRU_paratrooper_1_alt_0_entity_snow"           clone = "KR_infantry_98k_entity"             pdxmesh = "GER_paratrooper_snow_alt_0_rifle_mesh" }
+		entity = { name = "GRU_paratrooper_2_alt_0_entity"                clone = "KR_infantry_MP38_entity"            pdxmesh = "GER_paratrooper_alt_0_mg_mesh" }
+		entity = { name = "GRU_paratrooper_2_alt_0_entity_snow"           clone = "KR_infantry_MP38_entity"            pdxmesh = "GER_paratrooper_snow_alt_0_mg_mesh" }
+		entity = { name = "GRU_paratrooper_3_alt_0_entity"                clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_paratrooper_alt_0_mg_mesh" }
+		entity = { name = "GRU_paratrooper_3_alt_0_entity_snow"           clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_paratrooper_snow_alt_0_mg_mesh" }
+
+		entity = { name = "GRU_mountaineers_alt_0_entity"                 clone = "KR_infantry_G98_entity"             pdxmesh = "GER_mountaineers_rifle_mesh" }
+		entity = { name = "GRU_mountaineers_alt_0_entity_snow"            clone = "KR_infantry_G98_entity"             pdxmesh = "GER_mountaineers_snow_rifle_mesh" }
+		entity = { name = "GRU_mountaineers_alt_0_entity_desert"          clone = "KR_infantry_G98_entity"             pdxmesh = "GER_mountaineers_desert_rifle_mesh" }
+		entity = { name = "GRU_mountaineers_1_alt_0_entity"               clone = "KR_infantry_98k_entity"             pdxmesh = "GER_mountaineers_rifle_mesh" }
+		entity = { name = "GRU_mountaineers_1_alt_0_entity_snow"          clone = "KR_infantry_98k_entity"             pdxmesh = "GER_mountaineers_snow_rifle_mesh" }
+		entity = { name = "GRU_mountaineers_1_alt_0_entity_desert"        clone = "KR_infantry_98k_entity"             pdxmesh = "GER_mountaineers_desert_rifle_mesh" }
+		entity = { name = "GRU_mountaineers_2_alt_0_entity"               clone = "KR_infantry_G43_entity"             pdxmesh = "GER_mountaineers_rifle_mesh" }
+		entity = { name = "GRU_mountaineers_2_alt_0_entity_snow"          clone = "KR_infantry_G43_entity"             pdxmesh = "GER_mountaineers_snow_rifle_mesh" }
+		entity = { name = "GRU_mountaineers_2_alt_0_entity_desert"        clone = "KR_infantry_G43_entity"             pdxmesh = "GER_mountaineers_desert_rifle_mesh" }
+		entity = { name = "GRU_mountaineers_3_alt_0_entity"               clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_mountaineers_mg_mesh" }
+		entity = { name = "GRU_mountaineers_3_alt_0_entity_snow"          clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_mountaineers_snow_mg_mesh" }
+		entity = { name = "GRU_mountaineers_3_alt_0_entity_desert"        clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_mountaineers_desert_mg_mesh" }
+
+	### GER clones - GEA
+		entity = { name = "GEA_paratrooper_alt_0_entity"                  clone = "KR_infantry_G98_entity"             pdxmesh = "GER_paratrooper_alt_0_rifle_mesh" }
+		entity = { name = "GEA_paratrooper_alt_0_entity_snow"             clone = "KR_infantry_G98_entity"             pdxmesh = "GER_paratrooper_snow_alt_0_rifle_mesh" }
+		entity = { name = "GEA_paratrooper_1_alt_0_entity"                clone = "KR_infantry_98k_entity"             pdxmesh = "GER_paratrooper_alt_0_rifle_mesh" }
+		entity = { name = "GEA_paratrooper_1_alt_0_entity_snow"           clone = "KR_infantry_98k_entity"             pdxmesh = "GER_paratrooper_snow_alt_0_rifle_mesh" }
+		entity = { name = "GEA_paratrooper_2_alt_0_entity"                clone = "KR_infantry_MP38_entity"            pdxmesh = "GER_paratrooper_alt_0_mg_mesh" }
+		entity = { name = "GEA_paratrooper_2_alt_0_entity_snow"           clone = "KR_infantry_MP38_entity"            pdxmesh = "GER_paratrooper_snow_alt_0_mg_mesh" }
+		entity = { name = "GEA_paratrooper_3_alt_0_entity"                clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_paratrooper_alt_0_mg_mesh" }
+		entity = { name = "GEA_paratrooper_3_alt_0_entity_snow"           clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_paratrooper_snow_alt_0_mg_mesh" }
+
+		entity = { name = "GEA_mountaineers_alt_0_entity"                 clone = "KR_infantry_G98_entity"             pdxmesh = "GER_mountaineers_rifle_mesh" }
+		entity = { name = "GEA_mountaineers_alt_0_entity_snow"            clone = "KR_infantry_G98_entity"             pdxmesh = "GER_mountaineers_snow_rifle_mesh" }
+		entity = { name = "GEA_mountaineers_alt_0_entity_desert"          clone = "KR_infantry_G98_entity"             pdxmesh = "GER_mountaineers_desert_rifle_mesh" }
+		entity = { name = "GEA_mountaineers_1_alt_0_entity"               clone = "KR_infantry_98k_entity"             pdxmesh = "GER_mountaineers_rifle_mesh" }
+		entity = { name = "GEA_mountaineers_1_alt_0_entity_snow"          clone = "KR_infantry_98k_entity"             pdxmesh = "GER_mountaineers_snow_rifle_mesh" }
+		entity = { name = "GEA_mountaineers_1_alt_0_entity_desert"        clone = "KR_infantry_98k_entity"             pdxmesh = "GER_mountaineers_desert_rifle_mesh" }
+		entity = { name = "GEA_mountaineers_2_alt_0_entity"               clone = "KR_infantry_G43_entity"             pdxmesh = "GER_mountaineers_rifle_mesh" }
+		entity = { name = "GEA_mountaineers_2_alt_0_entity_snow"          clone = "KR_infantry_G43_entity"             pdxmesh = "GER_mountaineers_snow_rifle_mesh" }
+		entity = { name = "GEA_mountaineers_2_alt_0_entity_desert"        clone = "KR_infantry_G43_entity"             pdxmesh = "GER_mountaineers_desert_rifle_mesh" }
+		entity = { name = "GEA_mountaineers_3_alt_0_entity"               clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_mountaineers_mg_mesh" }
+		entity = { name = "GEA_mountaineers_3_alt_0_entity_snow"          clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_mountaineers_snow_mg_mesh" }
+		entity = { name = "GEA_mountaineers_3_alt_0_entity_desert"        clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_mountaineers_desert_mg_mesh" }
+
+	### GER clones - MAF
+		entity = { name = "MAF_paratrooper_alt_0_entity"                  clone = "KR_infantry_G98_entity"             pdxmesh = "GER_paratrooper_alt_0_rifle_mesh" }
+		entity = { name = "MAF_paratrooper_alt_0_entity_snow"             clone = "KR_infantry_G98_entity"             pdxmesh = "GER_paratrooper_snow_alt_0_rifle_mesh" }
+		entity = { name = "MAF_paratrooper_1_alt_0_entity"                clone = "KR_infantry_98k_entity"             pdxmesh = "GER_paratrooper_alt_0_rifle_mesh" }
+		entity = { name = "MAF_paratrooper_1_alt_0_entity_snow"           clone = "KR_infantry_98k_entity"             pdxmesh = "GER_paratrooper_snow_alt_0_rifle_mesh" }
+		entity = { name = "MAF_paratrooper_2_alt_0_entity"                clone = "KR_infantry_MP38_entity"            pdxmesh = "GER_paratrooper_alt_0_mg_mesh" }
+		entity = { name = "MAF_paratrooper_2_alt_0_entity_snow"           clone = "KR_infantry_MP38_entity"            pdxmesh = "GER_paratrooper_snow_alt_0_mg_mesh" }
+		entity = { name = "MAF_paratrooper_3_alt_0_entity"                clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_paratrooper_alt_0_mg_mesh" }
+		entity = { name = "MAF_paratrooper_3_alt_0_entity_snow"           clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_paratrooper_snow_alt_0_mg_mesh" }
+
+		entity = { name = "MAF_mountaineers_alt_0_entity"                 clone = "KR_infantry_G98_entity"             pdxmesh = "GER_mountaineers_rifle_mesh" }
+		entity = { name = "MAF_mountaineers_alt_0_entity_snow"            clone = "KR_infantry_G98_entity"             pdxmesh = "GER_mountaineers_snow_rifle_mesh" }
+		entity = { name = "MAF_mountaineers_alt_0_entity_desert"          clone = "KR_infantry_G98_entity"             pdxmesh = "GER_mountaineers_desert_rifle_mesh" }
+		entity = { name = "MAF_mountaineers_1_alt_0_entity"               clone = "KR_infantry_98k_entity"             pdxmesh = "GER_mountaineers_rifle_mesh" }
+		entity = { name = "MAF_mountaineers_1_alt_0_entity_snow"          clone = "KR_infantry_98k_entity"             pdxmesh = "GER_mountaineers_snow_rifle_mesh" }
+		entity = { name = "MAF_mountaineers_1_alt_0_entity_desert"        clone = "KR_infantry_98k_entity"             pdxmesh = "GER_mountaineers_desert_rifle_mesh" }
+		entity = { name = "MAF_mountaineers_2_alt_0_entity"               clone = "KR_infantry_G43_entity"             pdxmesh = "GER_mountaineers_rifle_mesh" }
+		entity = { name = "MAF_mountaineers_2_alt_0_entity_snow"          clone = "KR_infantry_G43_entity"             pdxmesh = "GER_mountaineers_snow_rifle_mesh" }
+		entity = { name = "MAF_mountaineers_2_alt_0_entity_desert"        clone = "KR_infantry_G43_entity"             pdxmesh = "GER_mountaineers_desert_rifle_mesh" }
+		entity = { name = "MAF_mountaineers_3_alt_0_entity"               clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_mountaineers_mg_mesh" }
+		entity = { name = "MAF_mountaineers_3_alt_0_entity_snow"          clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_mountaineers_snow_mg_mesh" }
+		entity = { name = "MAF_mountaineers_3_alt_0_entity_desert"        clone = "KR_infantry_MP44_entity"            pdxmesh = "GER_mountaineers_desert_mg_mesh" }
+
+#################################################
+###                   JAP                     ###
+#################################################
+	entity = { name = "JAP_marine_entity"                             clone = "KR_infantry_ArisakaT38_entity"      pdxmesh = "JAP_marine_rifle_mesh" }
+	entity = { name = "JAP_marine_1_entity"                           clone = "KR_infantry_ArisakaT99_entity"      pdxmesh = "JAP_marine_rifle_mesh" }
+	entity = { name = "JAP_marine_2_entity"                           clone = "KR_infantry_Type14_entity"          pdxmesh = "JAP_marine_rifle_mesh" }
+	entity = { name = "JAP_marine_3_entity"                           clone = "KR_infantry_ArisakaT4_entity"       pdxmesh = "JAP_marine_rifle_mesh" }
+
+	entity = { name = "JAP_marine_alt_0_entity"                       clone = "KR_infantry_ArisakaT38_entity"      pdxmesh = "JAP_marine_alt_0_rifle_mesh" }
+	entity = { name = "JAP_marine_1_alt_0_entity"                     clone = "KR_infantry_ArisakaT99_entity"      pdxmesh = "JAP_marine_alt_0_rifle_mesh" }
+	entity = { name = "JAP_marine_2_alt_0_entity"                     clone = "KR_infantry_Type14_entity"          pdxmesh = "JAP_marine_alt_0_rifle_mesh" }
+	entity = { name = "JAP_marine_3_alt_0_entity"                     clone = "KR_infantry_ArisakaT4_entity"       pdxmesh = "JAP_marine_alt_0_rifle_mesh" }
+
+#################################################
+###                   RUS                     ###
+#################################################
+
+	entity = { name = "RUS_paratrooper_entity"                        clone = "KR_infantry_Mosin91_entity"         pdxmesh = "SOV_paratrooper_rifle_mesh" }
+	entity = { name = "RUS_paratrooper_1_entity"                      clone = "KR_infantry_Mosin91-30_entity"      pdxmesh = "SOV_paratrooper_rifle_mesh" }
+	entity = { name = "RUS_paratrooper_2_entity"                      clone = "KR_infantry_SVT40_entity"           pdxmesh = "SOV_paratrooper_rifle_mesh" }
+	entity = { name = "RUS_paratrooper_3_entity"                      clone = "KR_infantry_PPS43_entity"           pdxmesh = "SOV_paratrooper_mg_mesh" }
+
+	entity = { name = "RUS_marine_entity"                             clone = "KR_infantry_Mosin91_entity"         pdxmesh = "SOV_marine_rifle_mesh" }
+	entity = { name = "RUS_marine_1_entity"                           clone = "KR_infantry_Mosin91-30_entity"      pdxmesh = "SOV_marine_rifle_mesh" }
+	entity = { name = "RUS_marine_2_entity"                           clone = "KR_infantry_SVT40_entity"           pdxmesh = "SOV_marine_rifle_mesh" }
+	entity = { name = "RUS_marine_3_entity"                           clone = "KR_infantry_PPS43_entity"           pdxmesh = "SOV_marine_mg_mesh" }
+
+	entity = { name = "RUS_mountaineers_entity"                       clone = "KR_infantry_Mosin91_entity"         pdxmesh = "SOV_mountaineers_rifle_mesh" }
+	entity = { name = "RUS_mountaineers_1_entity"                     clone = "KR_infantry_Mosin91-30_entity"      pdxmesh = "SOV_mountaineers_rifle_mesh" }
+	entity = { name = "RUS_mountaineers_2_entity"                     clone = "KR_infantry_SVT40_entity"           pdxmesh = "SOV_mountaineers_rifle_mesh" }
+	entity = { name = "RUS_mountaineers_3_entity"                     clone = "KR_infantry_PPS43_entity"           pdxmesh = "SOV_mountaineers_mg_mesh" }
+
+	### RUS clones - RSA
+		entity = { name = "RSA_paratrooper_entity"                        clone = "KR_infantry_Mosin91_entity"         pdxmesh = "SOV_paratrooper_rifle_mesh" }
+		entity = { name = "RSA_paratrooper_1_entity"                      clone = "KR_infantry_Mosin91-30_entity"      pdxmesh = "SOV_paratrooper_rifle_mesh" }
+		entity = { name = "RSA_paratrooper_2_entity"                      clone = "KR_infantry_SVT40_entity"           pdxmesh = "SOV_paratrooper_rifle_mesh" }
+		entity = { name = "RSA_paratrooper_3_entity"                      clone = "KR_infantry_PPS43_entity"           pdxmesh = "SOV_paratrooper_mg_mesh" }
+
+		entity = { name = "RSA_marine_entity"                             clone = "KR_infantry_Mosin91_entity"         pdxmesh = "SOV_marine_rifle_mesh" }
+		entity = { name = "RSA_marine_1_entity"                           clone = "KR_infantry_Mosin91-30_entity"      pdxmesh = "SOV_marine_rifle_mesh" }
+		entity = { name = "RSA_marine_2_entity"                           clone = "KR_infantry_SVT40_entity"           pdxmesh = "SOV_marine_rifle_mesh" }
+		entity = { name = "RSA_marine_3_entity"                           clone = "KR_infantry_PPS43_entity"           pdxmesh = "SOV_marine_mg_mesh" }
+
+		entity = { name = "RSA_mountaineers_entity"                       clone = "KR_infantry_Mosin91_entity"         pdxmesh = "SOV_mountaineers_rifle_mesh" }
+		entity = { name = "RSA_mountaineers_1_entity"                     clone = "KR_infantry_Mosin91-30_entity"      pdxmesh = "SOV_mountaineers_rifle_mesh" }
+		entity = { name = "RSA_mountaineers_2_entity"                     clone = "KR_infantry_SVT40_entity"           pdxmesh = "SOV_mountaineers_rifle_mesh" }
+		entity = { name = "RSA_mountaineers_3_entity"                     clone = "KR_infantry_PPS43_entity"           pdxmesh = "SOV_mountaineers_mg_mesh" }
+
+	### RUS clones - FER
+		entity = { name = "FER_paratrooper_entity"                        clone = "KR_infantry_Mosin91_entity"         pdxmesh = "SOV_paratrooper_rifle_mesh" }
+		entity = { name = "FER_paratrooper_1_entity"                      clone = "KR_infantry_Mosin91-30_entity"      pdxmesh = "SOV_paratrooper_rifle_mesh" }
+		entity = { name = "FER_paratrooper_2_entity"                      clone = "KR_infantry_SVT40_entity"           pdxmesh = "SOV_paratrooper_rifle_mesh" }
+		entity = { name = "FER_paratrooper_3_entity"                      clone = "KR_infantry_PPS43_entity"           pdxmesh = "SOV_paratrooper_mg_mesh" }
+
+		entity = { name = "FER_marine_entity"                             clone = "KR_infantry_Mosin91_entity"         pdxmesh = "SOV_marine_rifle_mesh" }
+		entity = { name = "FER_marine_1_entity"                           clone = "KR_infantry_Mosin91-30_entity"      pdxmesh = "SOV_marine_rifle_mesh" }
+		entity = { name = "FER_marine_2_entity"                           clone = "KR_infantry_SVT40_entity"           pdxmesh = "SOV_marine_rifle_mesh" }
+		entity = { name = "FER_marine_3_entity"                           clone = "KR_infantry_PPS43_entity"           pdxmesh = "SOV_marine_mg_mesh" }
+
+		entity = { name = "FER_mountaineers_entity"                       clone = "KR_infantry_Mosin91_entity"         pdxmesh = "SOV_mountaineers_rifle_mesh" }
+		entity = { name = "FER_mountaineers_1_entity"                     clone = "KR_infantry_Mosin91-30_entity"      pdxmesh = "SOV_mountaineers_rifle_mesh" }
+		entity = { name = "FER_mountaineers_2_entity"                     clone = "KR_infantry_SVT40_entity"           pdxmesh = "SOV_mountaineers_rifle_mesh" }
+		entity = { name = "FER_mountaineers_3_entity"                     clone = "KR_infantry_PPS43_entity"           pdxmesh = "SOV_mountaineers_mg_mesh" }
+
+#################################################
+###                   USA                     ###
+#################################################
+
+	entity = { name = "USA_marine_entity"                             clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_marine_rifle_mesh" }
+	entity = { name = "USA_marine_1_entity"                           clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_marine_rifle_mesh" }
+	entity = { name = "USA_marine_2_entity"                           clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_rifle_mesh" }
+	entity = { name = "USA_marine_3_entity"                           clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_rifle_mesh" }
+
+	entity = { name = "USA_marine_alt_0_entity"                       clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_marine_alt_0_rifle_mesh" }
+	entity = { name = "USA_marine_1_alt_0_entity"                     clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_marine_alt_0_rifle_mesh" }
+	entity = { name = "USA_marine_2_alt_0_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_alt_0_rifle_mesh" }
+	entity = { name = "USA_marine_3_alt_0_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_alt_0_rifle_mesh" }
+
+	entity = { name = "USA_marine_alt_1_entity"                       clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_marine_alt_1_rifle_mesh" }
+	entity = { name = "USA_marine_1_alt_1_entity"                     clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_marine_alt_1_rifle_mesh" }
+	entity = { name = "USA_marine_2_alt_1_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_alt_1_rifle_mesh" }
+	entity = { name = "USA_marine_3_alt_1_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_alt_1_rifle_mesh" }
+
+	entity = { name = "USA_mountaineers_entity"                       clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_mountaineers_rifle_mesh" }
+	entity = { name = "USA_mountaineers_1_entity"                     clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_mountaineers_rifle_mesh" }
+	entity = { name = "USA_mountaineers_2_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_mountaineers_rifle_mesh" }
+	entity = { name = "USA_mountaineers_3_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_mountaineers_rifle_mesh" }
+
+	entity = { name = "USA_paratrooper_entity"                        clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_paratrooper_rifle_mesh" }
+	entity = { name = "USA_paratrooper_1_entity"                      clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_paratrooper_rifle_mesh" }
+	entity = { name = "USA_paratrooper_2_entity"                      clone = "KR_infantry_M1Grease_entity"        pdxmesh = "USA_paratrooper_mg_mesh" }
+	entity = { name = "USA_paratrooper_3_entity"                      clone = "KR_infantry_M3Grease_entity"        pdxmesh = "USA_paratrooper_mg_mesh" }
+
+	entity = { name = "USA_paratrooper_alt_0_entity"                  clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_paratrooper_alt_0_rifle_mesh" }
+	entity = { name = "USA_paratrooper_1_alt_0_entity"                clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_paratrooper_alt_0_rifle_mesh" }
+	entity = { name = "USA_paratrooper_2_alt_0_entity"                clone = "KR_infantry_M1Grease_entity"        pdxmesh = "USA_paratrooper_alt_0_mg_mesh" }
+	entity = { name = "USA_paratrooper_3_alt_0_entity"                clone = "KR_infantry_M3Grease_entity"        pdxmesh = "USA_paratrooper_alt_0_mg_mesh" }
+
+	entity = { name = "USA_paratrooper_alt_1_entity"                  clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_paratrooper_alt_1_rifle_mesh" }
+	entity = { name = "USA_paratrooper_1_alt_1_entity"                clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_paratrooper_alt_1_rifle_mesh" }
+	entity = { name = "USA_paratrooper_2_alt_1_entity"                clone = "KR_infantry_M1Grease_entity"        pdxmesh = "USA_paratrooper_alt_1_mg_mesh" }
+	entity = { name = "USA_paratrooper_3_alt_1_entity"                clone = "KR_infantry_M3Grease_entity"        pdxmesh = "USA_paratrooper_alt_1_mg_mesh" }
+
+	### USA clones - WCA
+
+		entity = { name = "WCA_marine_entity"                             clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_marine_rifle_mesh" }
+		entity = { name = "WCA_marine_1_entity"                           clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_marine_rifle_mesh" }
+		entity = { name = "WCA_marine_2_entity"                           clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_rifle_mesh" }
+		entity = { name = "WCA_marine_3_entity"                           clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_rifle_mesh" }
+
+		entity = { name = "WCA_marine_alt_0_entity"                       clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_marine_alt_0_rifle_mesh" }
+		entity = { name = "WCA_marine_1_alt_0_entity"                     clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_marine_alt_0_rifle_mesh" }
+		entity = { name = "WCA_marine_2_alt_0_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_alt_0_rifle_mesh" }
+		entity = { name = "WCA_marine_3_alt_0_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_alt_0_rifle_mesh" }
+
+		entity = { name = "WCA_marine_alt_1_entity"                       clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_marine_alt_1_rifle_mesh" }
+		entity = { name = "WCA_marine_1_alt_1_entity"                     clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_marine_alt_1_rifle_mesh" }
+		entity = { name = "WCA_marine_2_alt_1_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_alt_1_rifle_mesh" }
+		entity = { name = "WCA_marine_3_alt_1_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_alt_1_rifle_mesh" }
+
+		entity = { name = "WCA_mountaineers_entity"                       clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_mountaineers_rifle_mesh" }
+		entity = { name = "WCA_mountaineers_1_entity"                     clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_mountaineers_rifle_mesh" }
+		entity = { name = "WCA_mountaineers_2_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_mountaineers_rifle_mesh" }
+		entity = { name = "WCA_mountaineers_3_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_mountaineers_rifle_mesh" }
+
+		entity = { name = "WCA_paratrooper_entity"                        clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_paratrooper_rifle_mesh" }
+		entity = { name = "WCA_paratrooper_1_entity"                      clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_paratrooper_rifle_mesh" }
+		entity = { name = "WCA_paratrooper_2_entity"                      clone = "KR_infantry_M1Grease_entity"        pdxmesh = "USA_paratrooper_mg_mesh" }
+		entity = { name = "WCA_paratrooper_3_entity"                      clone = "KR_infantry_M3Grease_entity"        pdxmesh = "USA_paratrooper_mg_mesh" }
+
+		entity = { name = "WCA_paratrooper_alt_0_entity"                  clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_paratrooper_alt_0_rifle_mesh" }
+		entity = { name = "WCA_paratrooper_1_alt_0_entity"                clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_paratrooper_alt_0_rifle_mesh" }
+		entity = { name = "WCA_paratrooper_2_alt_0_entity"                clone = "KR_infantry_M1Grease_entity"        pdxmesh = "USA_paratrooper_alt_0_mg_mesh" }
+		entity = { name = "WCA_paratrooper_3_alt_0_entity"                clone = "KR_infantry_M3Grease_entity"        pdxmesh = "USA_paratrooper_alt_0_mg_mesh" }
+
+		entity = { name = "WCA_paratrooper_alt_1_entity"                  clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_paratrooper_alt_1_rifle_mesh" }
+		entity = { name = "WCA_paratrooper_1_alt_1_entity"                clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_paratrooper_alt_1_rifle_mesh" }
+		entity = { name = "WCA_paratrooper_2_alt_1_entity"                clone = "KR_infantry_M1Grease_entity"        pdxmesh = "USA_paratrooper_alt_1_mg_mesh" }
+		entity = { name = "WCA_paratrooper_3_alt_1_entity"                clone = "KR_infantry_M3Grease_entity"        pdxmesh = "USA_paratrooper_alt_1_mg_mesh" }
+
+	### USA clones - APG
+
+		entity = { name = "APG_marine_entity"                             clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_marine_rifle_mesh" }
+		entity = { name = "APG_marine_1_entity"                           clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_marine_rifle_mesh" }
+		entity = { name = "APG_marine_2_entity"                           clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_rifle_mesh" }
+		entity = { name = "APG_marine_3_entity"                           clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_rifle_mesh" }
+
+		entity = { name = "APG_marine_alt_0_entity"                       clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_marine_alt_0_rifle_mesh" }
+		entity = { name = "APG_marine_1_alt_0_entity"                     clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_marine_alt_0_rifle_mesh" }
+		entity = { name = "APG_marine_2_alt_0_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_alt_0_rifle_mesh" }
+		entity = { name = "APG_marine_3_alt_0_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_alt_0_rifle_mesh" }
+
+		entity = { name = "APG_marine_alt_1_entity"                       clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_marine_alt_1_rifle_mesh" }
+		entity = { name = "APG_marine_1_alt_1_entity"                     clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_marine_alt_1_rifle_mesh" }
+		entity = { name = "APG_marine_2_alt_1_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_alt_1_rifle_mesh" }
+		entity = { name = "APG_marine_3_alt_1_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_alt_1_rifle_mesh" }
+
+		entity = { name = "APG_mountaineers_entity"                       clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_mountaineers_rifle_mesh" }
+		entity = { name = "APG_mountaineers_1_entity"                     clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_mountaineers_rifle_mesh" }
+		entity = { name = "APG_mountaineers_2_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_mountaineers_rifle_mesh" }
+		entity = { name = "APG_mountaineers_3_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_mountaineers_rifle_mesh" }
+
+		entity = { name = "APG_paratrooper_entity"                        clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_paratrooper_rifle_mesh" }
+		entity = { name = "APG_paratrooper_1_entity"                      clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_paratrooper_rifle_mesh" }
+		entity = { name = "APG_paratrooper_2_entity"                      clone = "KR_infantry_M1Grease_entity"        pdxmesh = "USA_paratrooper_mg_mesh" }
+		entity = { name = "APG_paratrooper_3_entity"                      clone = "KR_infantry_M3Grease_entity"        pdxmesh = "USA_paratrooper_mg_mesh" }
+
+		entity = { name = "APG_paratrooper_alt_0_entity"                  clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_paratrooper_alt_0_rifle_mesh" }
+		entity = { name = "APG_paratrooper_1_alt_0_entity"                clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_paratrooper_alt_0_rifle_mesh" }
+		entity = { name = "APG_paratrooper_2_alt_0_entity"                clone = "KR_infantry_M1Grease_entity"        pdxmesh = "USA_paratrooper_alt_0_mg_mesh" }
+		entity = { name = "APG_paratrooper_3_alt_0_entity"                clone = "KR_infantry_M3Grease_entity"        pdxmesh = "USA_paratrooper_alt_0_mg_mesh" }
+
+		entity = { name = "APG_paratrooper_alt_1_entity"                  clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_paratrooper_alt_1_rifle_mesh" }
+		entity = { name = "APG_paratrooper_1_alt_1_entity"                clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_paratrooper_alt_1_rifle_mesh" }
+		entity = { name = "APG_paratrooper_2_alt_1_entity"                clone = "KR_infantry_M1Grease_entity"        pdxmesh = "USA_paratrooper_alt_1_mg_mesh" }
+		entity = { name = "APG_paratrooper_3_alt_1_entity"                clone = "KR_infantry_M3Grease_entity"        pdxmesh = "USA_paratrooper_alt_1_mg_mesh" }
+
+	### USA clones - ACC
+
+		entity = { name = "ACC_marine_entity"                             clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_marine_rifle_mesh" }
+		entity = { name = "ACC_marine_1_entity"                           clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_marine_rifle_mesh" }
+		entity = { name = "ACC_marine_2_entity"                           clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_rifle_mesh" }
+		entity = { name = "ACC_marine_3_entity"                           clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_rifle_mesh" }
+
+		entity = { name = "ACC_marine_alt_0_entity"                       clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_marine_alt_0_rifle_mesh" }
+		entity = { name = "ACC_marine_1_alt_0_entity"                     clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_marine_alt_0_rifle_mesh" }
+		entity = { name = "ACC_marine_2_alt_0_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_alt_0_rifle_mesh" }
+		entity = { name = "ACC_marine_3_alt_0_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_alt_0_rifle_mesh" }
+
+		entity = { name = "ACC_marine_alt_1_entity"                       clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_marine_alt_1_rifle_mesh" }
+		entity = { name = "ACC_marine_1_alt_1_entity"                     clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_marine_alt_1_rifle_mesh" }
+		entity = { name = "ACC_marine_2_alt_1_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_alt_1_rifle_mesh" }
+		entity = { name = "ACC_marine_3_alt_1_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_alt_1_rifle_mesh" }
+
+		entity = { name = "ACC_mountaineers_entity"                       clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_mountaineers_rifle_mesh" }
+		entity = { name = "ACC_mountaineers_1_entity"                     clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_mountaineers_rifle_mesh" }
+		entity = { name = "ACC_mountaineers_2_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_mountaineers_rifle_mesh" }
+		entity = { name = "ACC_mountaineers_3_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_mountaineers_rifle_mesh" }
+
+		entity = { name = "ACC_paratrooper_entity"                        clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_paratrooper_rifle_mesh" }
+		entity = { name = "ACC_paratrooper_1_entity"                      clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_paratrooper_rifle_mesh" }
+		entity = { name = "ACC_paratrooper_2_entity"                      clone = "KR_infantry_M1Grease_entity"        pdxmesh = "USA_paratrooper_mg_mesh" }
+		entity = { name = "ACC_paratrooper_3_entity"                      clone = "KR_infantry_M3Grease_entity"        pdxmesh = "USA_paratrooper_mg_mesh" }
+
+		entity = { name = "ACC_paratrooper_alt_0_entity"                  clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_paratrooper_alt_0_rifle_mesh" }
+		entity = { name = "ACC_paratrooper_1_alt_0_entity"                clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_paratrooper_alt_0_rifle_mesh" }
+		entity = { name = "ACC_paratrooper_2_alt_0_entity"                clone = "KR_infantry_M1Grease_entity"        pdxmesh = "USA_paratrooper_alt_0_mg_mesh" }
+		entity = { name = "ACC_paratrooper_3_alt_0_entity"                clone = "KR_infantry_M3Grease_entity"        pdxmesh = "USA_paratrooper_alt_0_mg_mesh" }
+
+		entity = { name = "ACC_paratrooper_alt_1_entity"                  clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_paratrooper_alt_1_rifle_mesh" }
+		entity = { name = "ACC_paratrooper_1_alt_1_entity"                clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_paratrooper_alt_1_rifle_mesh" }
+		entity = { name = "ACC_paratrooper_2_alt_1_entity"                clone = "KR_infantry_M1Grease_entity"        pdxmesh = "USA_paratrooper_alt_1_mg_mesh" }
+		entity = { name = "ACC_paratrooper_3_alt_1_entity"                clone = "KR_infantry_M3Grease_entity"        pdxmesh = "USA_paratrooper_alt_1_mg_mesh" }
+
+	### USA clones - ACC
+
+		entity = { name = "NEE_marine_entity"                             clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_marine_rifle_mesh" }
+		entity = { name = "NEE_marine_1_entity"                           clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_marine_rifle_mesh" }
+		entity = { name = "NEE_marine_2_entity"                           clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_rifle_mesh" }
+		entity = { name = "NEE_marine_3_entity"                           clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_rifle_mesh" }
+
+		entity = { name = "NEE_marine_alt_0_entity"                       clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_marine_alt_0_rifle_mesh" }
+		entity = { name = "NEE_marine_1_alt_0_entity"                     clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_marine_alt_0_rifle_mesh" }
+		entity = { name = "NEE_marine_2_alt_0_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_alt_0_rifle_mesh" }
+		entity = { name = "NEE_marine_3_alt_0_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_alt_0_rifle_mesh" }
+
+		entity = { name = "NEE_marine_alt_1_entity"                       clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_marine_alt_1_rifle_mesh" }
+		entity = { name = "NEE_marine_1_alt_1_entity"                     clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_marine_alt_1_rifle_mesh" }
+		entity = { name = "NEE_marine_2_alt_1_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_alt_1_rifle_mesh" }
+		entity = { name = "NEE_marine_3_alt_1_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_marine_alt_1_rifle_mesh" }
+
+		entity = { name = "NEE_mountaineers_entity"                       clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_mountaineers_rifle_mesh" }
+		entity = { name = "NEE_mountaineers_1_entity"                     clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_mountaineers_rifle_mesh" }
+		entity = { name = "NEE_mountaineers_2_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_mountaineers_rifle_mesh" }
+		entity = { name = "NEE_mountaineers_3_entity"                     clone = "KR_infantry_JohnsonM41_entity"      pdxmesh = "USA_mountaineers_rifle_mesh" }
+
+		entity = { name = "NEE_paratrooper_entity"                        clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_paratrooper_rifle_mesh" }
+		entity = { name = "NEE_paratrooper_1_entity"                      clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_paratrooper_rifle_mesh" }
+		entity = { name = "NEE_paratrooper_2_entity"                      clone = "KR_infantry_M1Grease_entity"        pdxmesh = "USA_paratrooper_mg_mesh" }
+		entity = { name = "NEE_paratrooper_3_entity"                      clone = "KR_infantry_M3Grease_entity"        pdxmesh = "USA_paratrooper_mg_mesh" }
+
+		entity = { name = "NEE_paratrooper_alt_0_entity"                  clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_paratrooper_alt_0_rifle_mesh" }
+		entity = { name = "NEE_paratrooper_1_alt_0_entity"                clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_paratrooper_alt_0_rifle_mesh" }
+		entity = { name = "NEE_paratrooper_2_alt_0_entity"                clone = "KR_infantry_M1Grease_entity"        pdxmesh = "USA_paratrooper_alt_0_mg_mesh" }
+		entity = { name = "NEE_paratrooper_3_alt_0_entity"                clone = "KR_infantry_M3Grease_entity"        pdxmesh = "USA_paratrooper_alt_0_mg_mesh" }
+
+		entity = { name = "NEE_paratrooper_alt_1_entity"                  clone = "KR_infantry_M1903_entity"           pdxmesh = "USA_paratrooper_alt_1_rifle_mesh" }
+		entity = { name = "NEE_paratrooper_1_alt_1_entity"                clone = "KR_infantry_M1903A1_entity"         pdxmesh = "USA_paratrooper_alt_1_rifle_mesh" }
+		entity = { name = "NEE_paratrooper_2_alt_1_entity"                clone = "KR_infantry_M1Grease_entity"        pdxmesh = "USA_paratrooper_alt_1_mg_mesh" }
+		entity = { name = "NEE_paratrooper_3_alt_1_entity"                clone = "KR_infantry_M3Grease_entity"        pdxmesh = "USA_paratrooper_alt_1_mg_mesh" }
+
+########################################################################################################################
+#################################################  WEAPONS LOCKER  #####################################################
+########################################################################################################################
+
+entity = {
+	name = "GER_paratrooper_weapon_mg_left_entity"
+	pdxmesh = "GER_paratrooper_weapon_mg_mesh"
+	scale = 0.9
+}
+
+entity = {
+	name = "GER_paratrooper_weapon_mg_long_idle_entity"
+	pdxmesh = "GER_paratrooper_weapon_mg_mesh"
+	scale = 0.9
+}
+
+entity = {
+	name = "GER_paratrooper_weapon_mg_right_entity"
+	pdxmesh = "GER_paratrooper_weapon_mg_mesh"
+	scale = 0.8
+
+	get_state_from_parent = yes
+	default_state = "idle"
+	state = { name = "idle" }
+	state = { name = "move"	}
+
+	state = { name = "attack"	animation = "attack"
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0.5 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0.5 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+
+	state = { name = "defend"
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes   light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+		event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+
+	state = {
+	name = "support_attack"	animation = "support_attack"
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+	event = { time = 0 node="muzzle" particle = "mg_muzzle_smoke_particle"  keep_particle = yes light = "mg_muzzle_flash" sound = { soundeffect = infantry_mg_attack } }
+	event = { time = 0 node="cartridge" particle = "mg_cartridge_particle"  keep_particle = yes }
+	}
+}

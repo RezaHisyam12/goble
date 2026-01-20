@@ -2542,7 +2542,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_RUINED_ECONOMY"}
 			picture = GRU_SOON_DEAD
 			allowed = { always = no }
-            modifier = {
+            	modifier = {
 				industrial_capacity_factory = -0.4
 				production_factory_max_efficiency_factor = -0.20
 				production_speed_buildings_factor = -0.60
@@ -3098,6 +3098,24 @@ ideas = {
 				production_speed_buildings_factor = 0.05
         			drift_defence_factor = 0.05
         			resistance_target_on_our_occupied_states = -0.05
+			}
+		}
+		RUS_postwar_devastation = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_postwar_devastation"}
+			picture = NFA_devastation
+			allowed = { always = no }
+			name = NFA_postwar_devastation_1
+            		modifier = {
+				industrial_capacity_factory = -0.4
+				production_factory_max_efficiency_factor = -0.20
+				production_speed_buildings_factor = -0.60
+				production_speed_infrastructure_factor = -0.60
+				production_factory_efficiency_gain_factor = -0.20
+				consumer_goods_factor = 0.40
+				industry_repair_factor = -0.20
+				local_resources_factor = -0.50
+				political_power_gain = -0.50
+				stability_weekly = -0.05
 			}
 		}
 		

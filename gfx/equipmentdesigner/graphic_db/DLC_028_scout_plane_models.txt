@@ -1,0 +1,1307 @@
+### ENG scout plane
+ENG = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+CAN = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+CHI = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+HND = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+MEX = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+NOR = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+VEN = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+YUC = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+GBP = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+SCO = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+WLS = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+
+### ENG - IMP scout plane
+IMP = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+D01 = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+AST = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+RAJ = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+GRE = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+NZL = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+POR = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+ZIM = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+SAF = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+WIF = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+QUE = {
+	small_plane_airframe_2 = {
+		pool = {
+			weight = 1.4
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+	cv_small_plane_airframe_2 = {
+		pool = {
+			weight = 1.6
+			models = {
+				ENG_scout_plane_entity
+			}
+		}
+	}
+}
+
+### USA scout plane
+USA = {
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 6
+			models = {
+				USA_scout_plane_entity
+			}
+		}
+	}
+}
+CSA = {
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 6
+			models = {
+				USA_scout_plane_entity
+			}
+		}
+	}
+}
+NEE = {
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 6
+			models = {
+				USA_scout_plane_entity
+			}
+		}
+	}
+}
+CAL = {
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 6
+			models = {
+				USA_scout_plane_entity
+			}
+		}
+	}
+}
+TEX = {
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 6
+			models = {
+				USA_scout_plane_entity
+			}
+		}
+	}
+}
+COR = {
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 6
+			models = {
+				USA_scout_plane_entity
+			}
+		}
+	}
+}
+WCC = {
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 6
+			models = {
+				USA_scout_plane_entity
+			}
+		}
+	}
+}
+HAW = {
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 6
+			models = {
+				USA_scout_plane_entity
+			}
+		}
+	}
+}
+LIB = {
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 6
+			models = {
+				USA_scout_plane_entity
+			}
+		}
+	}
+}
+PHI = {
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 6
+			models = {
+				USA_scout_plane_entity
+			}
+		}
+	}
+}
+### GER scout plane
+GER = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+GRU = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+BAT = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+MAF = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+GEA = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+AZR = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+BUL = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+DEI = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+FIN = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+FLA = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+ICE = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+IRE = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+MOR = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+HOL = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+NMB = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+VIN = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+WAL = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+LEP = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+QIE = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+SWI = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+GRU = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+NGF = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+PRE = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+RHI = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+BAY = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+BEL = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+DEN = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+SCA = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+SWE = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+IRQ = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+PAL = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+TUR = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+SYR = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+BRM = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+EST = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+GEO = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+LAT = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+LIT = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+UKR = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+WHR = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+POL = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+RSA = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				GER_scout_plane_entity
+			}
+		}
+	}
+}
+
+### SOV scout plane
+RUS = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				SOV_scout_plane_entity
+			}
+		}
+	}
+}
+ETS = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				SOV_scout_plane_entity
+			}
+		}
+	}
+}
+KAZ = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				SOV_scout_plane_entity
+			}
+		}
+	}
+}
+ARM = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				SOV_scout_plane_entity
+			}
+		}
+	}
+}
+BUK = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				SOV_scout_plane_entity
+			}
+		}
+	}
+}
+KHI = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				SOV_scout_plane_entity
+			}
+		}
+	}
+}
+MON = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				SOV_scout_plane_entity
+			}
+		}
+	}
+}
+PER = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				SOV_scout_plane_entity
+			}
+		}
+	}
+}
+ROM = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				SOV_scout_plane_entity
+			}
+		}
+	}
+}
+TRK = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				SOV_scout_plane_entity
+			}
+		}
+	}
+}
+
+### FRA scout plane
+FRA = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				FRA_scout_plane_entity
+			}
+		}
+	}
+}
+ALG = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				FRA_scout_plane_entity
+			}
+		}
+	}
+}
+EGY = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				FRA_scout_plane_entity
+			}
+		}
+	}
+}
+CHL = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				FRA_scout_plane_entity
+			}
+		}
+	}
+}
+INC = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				FRA_scout_plane_entity
+			}
+		}
+	}
+}
+FOP = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				FRA_scout_plane_entity
+			}
+		}
+	}
+}
+SER = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				FRA_scout_plane_entity
+			}
+		}
+	}
+}
+FRP = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				FRA_scout_plane_entity
+			}
+		}
+	}
+}
+
+### FRA-NFA scout plane
+
+NFA = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				FRA_scout_plane_entity
+			}
+		}
+	}
+}
+DAH = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				FRA_scout_plane_entity
+			}
+		}
+	}
+}
+GNA = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				FRA_scout_plane_entity
+			}
+		}
+	}
+}
+VOL = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				FRA_scout_plane_entity
+			}
+		}
+	}
+}
+CHA = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				FRA_scout_plane_entity
+			}
+		}
+	}
+}
+IVO = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				FRA_scout_plane_entity
+			}
+		}
+	}
+}
+MLI = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				FRA_scout_plane_entity
+			}
+		}
+	}
+}
+MRT = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				FRA_scout_plane_entity
+			}
+		}
+	}
+}
+NGR = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				FRA_scout_plane_entity
+			}
+		}
+	}
+}
+SEN = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				FRA_scout_plane_entity
+			}
+		}
+	}
+}
+TUN = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				FRA_scout_plane_entity
+			}
+		}
+	}
+}
+
+### ITA scout plane
+
+ITA = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				ITA_scout_plane_entity
+			}
+		}
+	}
+}
+PAP = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				ITA_scout_plane_entity
+			}
+		}
+	}
+}
+SRD = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				ITA_scout_plane_entity
+			}
+		}
+	}
+}
+SRI = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				ITA_scout_plane_entity
+			}
+		}
+	}
+}
+SIC = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				ITA_scout_plane_entity
+			}
+		}
+	}
+}
+VNC = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				ITA_scout_plane_entity
+			}
+		}
+	}
+}
+LOM = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				ITA_scout_plane_entity
+			}
+		}
+	}
+}
+EMI = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				ITA_scout_plane_entity
+			}
+		}
+	}
+}
+TUS = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				ITA_scout_plane_entity
+			}
+		}
+	}
+}
+
+### JAP scout plane
+
+JAP = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				JAP_scout_plane_entity
+			}
+		}
+	}
+}
+CAM = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				JAP_scout_plane_entity
+			}
+		}
+	}
+}
+FNG = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				JAP_scout_plane_entity
+			}
+		}
+	}
+}
+INS = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				JAP_scout_plane_entity
+			}
+		}
+	}
+}
+KOR = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				JAP_scout_plane_entity
+			}
+		}
+	}
+}
+LAO = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				JAP_scout_plane_entity
+			}
+		}
+	}
+}
+MAL = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				JAP_scout_plane_entity
+			}
+		}
+	}
+}
+FER = {
+	medium_plane_scout_plane_airframe = {
+		pool = {
+			models = {
+				JAP_scout_plane_entity
+			}
+		}
+	}
+}

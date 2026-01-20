@@ -350,11 +350,11 @@ shared_focus = {
 		id = GRU_german_endsieg
 		allow_branch = {
 			and = {
-				BAT = { has_cosmetic_tag = VKB }
-				UKR = { has_cosmetic_tag = VKR }
-				DKB = { has_cosmetic_tag = VKK }
-				WRA = { has_cosmetic_tag = VKM }
-				SWE = { has_cosmetic_tag = HYP }
+				has_country_flag = VKB_established
+				has_country_flag = VKR_established
+				has_country_flag = VKM_established
+				has_country_flag = VKK_established
+				has_country_flag = HYP_established
 			}
 		}
 		icon = GRU_german_endsieg
@@ -390,11 +390,11 @@ shared_focus = {
 		id = GRU_state_eye
 		allow_branch = {
 			and = {
-				BAT = { has_cosmetic_tag = VKB }
-				UKR = { has_cosmetic_tag = VKR }
-				DKB = { has_cosmetic_tag = VKK }
-				WRA = { has_cosmetic_tag = VKM }
-				SWE = { has_cosmetic_tag = HYP }
+				has_country_flag = VKB_established
+				has_country_flag = VKR_established
+				has_country_flag = VKM_established
+				has_country_flag = VKK_established
+				has_country_flag = HYP_established
 			}
 		}
 		icon = GRU_state_eye
@@ -413,11 +413,11 @@ shared_focus = {
 		id = GRU_NM_family
 		allow_branch = {
 			and = {
-				BAT = { has_cosmetic_tag = VKB }
-				UKR = { has_cosmetic_tag = VKR }
-				DKB = { has_cosmetic_tag = VKK }
-				WRA = { has_cosmetic_tag = VKM }
-				SWE = { has_cosmetic_tag = HYP }
+				has_country_flag = VKB_established
+				has_country_flag = VKR_established
+				has_country_flag = VKM_established
+				has_country_flag = VKK_established
+				has_country_flag = HYP_established
 			}
 		}
 		icon = GRU_NM_family
@@ -436,11 +436,11 @@ shared_focus = {
 		id = GRU_OLD_GOD
 		allow_branch = {
 			and = {
-				BAT = { has_cosmetic_tag = VKB }
-				UKR = { has_cosmetic_tag = VKR }
-				DKB = { has_cosmetic_tag = VKK }
-				WRA = { has_cosmetic_tag = VKM }
-				SWE = { has_cosmetic_tag = HYP }
+				has_country_flag = VKB_established
+				has_country_flag = VKR_established
+				has_country_flag = VKM_established
+				has_country_flag = VKK_established
+				has_country_flag = HYP_established
 			}
 		}
 		icon = GRU_OLD_GOD
@@ -462,11 +462,11 @@ shared_focus = {
 		id = GRU_SOCIAL_CREDIT
 		allow_branch = {
 			and = {
-				BAT = { has_cosmetic_tag = VKB }
-				UKR = { has_cosmetic_tag = VKR }
-				DKB = { has_cosmetic_tag = VKK }
-				WRA = { has_cosmetic_tag = VKM }
-				SWE = { has_cosmetic_tag = HYP }
+				has_country_flag = VKB_established
+				has_country_flag = VKR_established
+				has_country_flag = VKM_established
+				has_country_flag = VKK_established
+				has_country_flag = HYP_established
 			}
 		}
 		icon = GRU_SOCIAL_CREDIT
@@ -485,11 +485,11 @@ shared_focus = {
 		id = GRU_german_millenia
 		allow_branch = {
 			and = {
-				BAT = { has_cosmetic_tag = VKB }
-				UKR = { has_cosmetic_tag = VKR }
-				DKB = { has_cosmetic_tag = VKK }
-				WRA = { has_cosmetic_tag = VKM }
-				SWE = { has_cosmetic_tag = HYP }
+				has_country_flag = VKB_established
+				has_country_flag = VKR_established
+				has_country_flag = VKM_established
+				has_country_flag = VKK_established
+				has_country_flag = HYP_established
 			}
 		}
 		icon = GRU_german_millenia
@@ -533,7 +533,7 @@ shared_focus = {
 			custom_effect_tooltip = tooltip_white_line
 			add_ideas = GRU_recruitment
 			hidden_effect = {
-			set_technology = { RR_1_motorized_tech  = 1 } 
+			set_technology = { RR_1_motorized_tech = 1 } 
 				division_template = {
 					name = "RR-Division"
 					division_names_group = GRU_RR_01
@@ -698,9 +698,10 @@ shared_focus = {
 			factor = 25
 		}
 		completion_reward = {
-                  country_event = { id =  rotermorgenmisc.401 days = 1 }
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_found_the_fdj" 
 			add_ideas = GRU_FDJ
+			custom_effect_tooltip = tooltip_white_line
+            country_event = { id =  rotermorgenmisc.401 days = 1 }
 		}
 
 		prerequisite = { focus = GRU_volkssturm   focus = GRU_proclaim_victory_over_judeo_capitalism  }
@@ -8843,7 +8844,7 @@ shared_focus = {
 		y = 2
 		cost = 6	
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 			modifier = {
 				factor = 0
 				AUS = { exists = yes }

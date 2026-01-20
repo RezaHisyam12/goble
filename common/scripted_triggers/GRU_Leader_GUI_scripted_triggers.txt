@@ -54,7 +54,6 @@ GRU_has_leader_GUI = {
 		has_country_flag = GRU_GOEBB_ROEM_VISIBLE
 		has_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
 		has_country_flag = GRU_GOEBB_SPEER_VISIBLE
-		has_country_flag = GRU_LIEBK_ROSA_VISIBLE
 	}
 }
 GGB_has_leader_GUI = {
@@ -64,10 +63,7 @@ IBR_has_leader_GUI = {
 	has_country_leader = { character = GRU_Franco_Bahamonde ruling_only = yes }
 }
 ITT_has_leader_GUI = {
-	OR = {
-		has_country_leader = { character = GRU_gian_galeazzo_ciano ruling_only = yes }
-		has_country_leader = { character = GRU_Benito_Mussolini ruling_only = yes }
-	}
+	has_country_leader = { character = GRU_gian_galeazzo_ciano ruling_only = yes }
 }
 MNT_has_leader_GUI = {
 	has_country_flag = GRU_MNT_VISIBLE
@@ -93,9 +89,6 @@ SUG_has_leader_GUI = {
 }
 RRV_has_leader_GUI = {
 	has_country_flag = GRU_RRV_VISIBLE
-}
-AMR_has_leader_GUI = {
-	has_country_flag = GRU_AMR_VISIBLE
 }
 MGD_has_leader_GUI = {
 	has_country_flag = GRU_MGD_VISIBLE

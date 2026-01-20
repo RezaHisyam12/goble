@@ -1,0 +1,2079 @@
+IMP = {
+	small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	cv_small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	medium_plane_airframe = {
+		pool = {
+			weight = 0.9
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter, IMP only
+				ENG_medium_plane_3_entity
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_3_entity	# Looks like Mosquito
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_jet_plane_entity	# Venom
+			}
+		}
+	}
+	large_plane_airframe = {
+		pool = {
+			models = {
+				ENG_heavy_plane_1_entity
+				ENG_heavy_plane_2_entity
+			}
+		}
+	}
+	large_plane_maritime_patrol_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_1_entity
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_2_entity	# Stirling
+			}
+		}
+	}
+}
+
+CAN = {
+	small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	cv_small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	medium_plane_airframe = {
+		pool = {
+			weight = 0.9
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter, IMP only
+				ENG_medium_plane_3_entity
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_3_entity	# Looks like Mosquito
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_jet_plane_entity	# Venom
+			}
+		}
+	}
+	large_plane_airframe = {
+		pool = {
+			models = {
+				ENG_heavy_plane_1_entity
+				ENG_heavy_plane_2_entity
+			}
+		}
+	}
+	large_plane_maritime_patrol_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_1_entity
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_2_entity	# Stirling
+			}
+		}
+	}
+}
+
+D01 = {
+	small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	cv_small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	medium_plane_airframe = {
+		pool = {
+			weight = 0.9
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter, IMP only
+				ENG_medium_plane_3_entity
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_3_entity	# Looks like Mosquito
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_jet_plane_entity	# Venom
+			}
+		}
+	}
+	large_plane_airframe = {
+		pool = {
+			models = {
+				ENG_heavy_plane_1_entity
+				ENG_heavy_plane_2_entity
+			}
+		}
+	}
+	large_plane_maritime_patrol_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_1_entity
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_2_entity	# Stirling
+			}
+		}
+	}
+}
+AST = {
+	small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	cv_small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	medium_plane_airframe = {
+		pool = {
+			weight = 0.9
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter, IMP only
+				ENG_medium_plane_3_entity
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_3_entity	# Looks like Mosquito
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_jet_plane_entity	# Venom
+			}
+		}
+	}
+	large_plane_airframe = {
+		pool = {
+			models = {
+				ENG_heavy_plane_1_entity
+				ENG_heavy_plane_2_entity
+			}
+		}
+	}
+	large_plane_maritime_patrol_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_1_entity
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_2_entity	# Stirling
+			}
+		}
+	}
+}
+RAJ = {
+	small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	cv_small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	medium_plane_airframe = {
+		pool = {
+			weight = 0.9
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter, IMP only
+				ENG_medium_plane_3_entity
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_3_entity	# Looks like Mosquito
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_jet_plane_entity	# Venom
+			}
+		}
+	}
+	large_plane_airframe = {
+		pool = {
+			models = {
+				ENG_heavy_plane_1_entity
+				ENG_heavy_plane_2_entity
+			}
+		}
+	}
+	large_plane_maritime_patrol_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_1_entity
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_2_entity	# Stirling
+			}
+		}
+	}
+}
+GRE = {
+	small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	cv_small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	medium_plane_airframe = {
+		pool = {
+			weight = 0.9
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter, IMP only
+				ENG_medium_plane_3_entity
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_3_entity	# Looks like Mosquito
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_jet_plane_entity	# Venom
+			}
+		}
+	}
+	large_plane_airframe = {
+		pool = {
+			models = {
+				ENG_heavy_plane_1_entity
+				ENG_heavy_plane_2_entity
+			}
+		}
+	}
+	large_plane_maritime_patrol_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_1_entity
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_2_entity	# Stirling
+			}
+		}
+	}
+}
+NZL = {
+	small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	cv_small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	medium_plane_airframe = {
+		pool = {
+			weight = 0.9
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter, IMP only
+				ENG_medium_plane_3_entity
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_3_entity	# Looks like Mosquito
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_jet_plane_entity	# Venom
+			}
+		}
+	}
+	large_plane_airframe = {
+		pool = {
+			models = {
+				ENG_heavy_plane_1_entity
+				ENG_heavy_plane_2_entity
+			}
+		}
+	}
+	large_plane_maritime_patrol_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_1_entity
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_2_entity	# Stirling
+			}
+		}
+	}
+}
+POR = {
+	small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	cv_small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	medium_plane_airframe = {
+		pool = {
+			weight = 0.9
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter, IMP only
+				ENG_medium_plane_3_entity
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_3_entity	# Looks like Mosquito
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_jet_plane_entity	# Venom
+			}
+		}
+	}
+	large_plane_airframe = {
+		pool = {
+			models = {
+				ENG_heavy_plane_1_entity
+				ENG_heavy_plane_2_entity
+			}
+		}
+	}
+	large_plane_maritime_patrol_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_1_entity
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_2_entity	# Stirling
+			}
+		}
+	}
+}
+ZIM = {
+	small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	cv_small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	medium_plane_airframe = {
+		pool = {
+			weight = 0.9
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter, IMP only
+				ENG_medium_plane_3_entity
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_3_entity	# Looks like Mosquito
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_jet_plane_entity	# Venom
+			}
+		}
+	}
+	large_plane_airframe = {
+		pool = {
+			models = {
+				ENG_heavy_plane_1_entity
+				ENG_heavy_plane_2_entity
+			}
+		}
+	}
+	large_plane_maritime_patrol_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_1_entity
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_2_entity	# Stirling
+			}
+		}
+	}
+}
+SAF = {
+	small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	cv_small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	medium_plane_airframe = {
+		pool = {
+			weight = 0.9
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter, IMP only
+				ENG_medium_plane_3_entity
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_3_entity	# Looks like Mosquito
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_jet_plane_entity	# Venom
+			}
+		}
+	}
+	large_plane_airframe = {
+		pool = {
+			models = {
+				ENG_heavy_plane_1_entity
+				ENG_heavy_plane_2_entity
+			}
+		}
+	}
+	large_plane_maritime_patrol_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_1_entity
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_2_entity	# Stirling
+			}
+		}
+	}
+}
+WIF = {
+	small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	cv_small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	medium_plane_airframe = {
+		pool = {
+			weight = 0.9
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter, IMP only
+				ENG_medium_plane_3_entity
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_3_entity	# Looks like Mosquito
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_jet_plane_entity	# Venom
+			}
+		}
+	}
+	large_plane_airframe = {
+		pool = {
+			models = {
+				ENG_heavy_plane_1_entity
+				ENG_heavy_plane_2_entity
+			}
+		}
+	}
+	large_plane_maritime_patrol_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_1_entity
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_2_entity	# Stirling
+			}
+		}
+	}
+}
+
+QUE = {
+	small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	cv_small_plane_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle, IMP only
+				ENG_light_plane_3_entity
+				ENG_light_plane_2_entity
+				ENG_light_plane_1_entity
+			}
+		}
+	}
+	cv_small_plane_cas_airframe = {
+		pool = {
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_airframe_0 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_1_entity	# Hurricane
+			}
+		}
+	}
+	cv_small_plane_cas_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_4_entity 	# Fairey Battle
+			}
+		}
+	}
+	cv_small_plane_naval_bomber_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_2_entity	# Biplane
+			}
+		}
+	}
+	cv_small_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_light_plane_3_entity	# Tempest
+			}
+		}
+	}
+	medium_plane_airframe = {
+		pool = {
+			weight = 0.9
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter, IMP only
+				ENG_medium_plane_3_entity
+			}
+		}
+	}
+	medium_plane_fighter_airframe_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_2_entity	# Bristol Beaufighter
+			}
+		}
+	}
+	medium_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_plane_3_entity	# Looks like Mosquito
+			}
+		}
+	}
+	medium_plane_airframe_4 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_medium_jet_plane_entity	# Venom
+			}
+		}
+	}
+	large_plane_airframe = {
+		pool = {
+			models = {
+				ENG_heavy_plane_1_entity
+				ENG_heavy_plane_2_entity
+			}
+		}
+	}
+	large_plane_maritime_patrol_plane_airframe = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_1_entity
+			}
+		}
+	}
+	large_plane_airframe_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ENG_heavy_plane_2_entity	# Stirling
+			}
+		}
+	}
+}

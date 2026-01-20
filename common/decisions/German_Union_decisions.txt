@@ -4566,12 +4566,18 @@ GRU_germania_plan_decisions = {
 			factor = 100
 			modifier = {
 				factor = 0
-				has_war = yes
+				date < 1943.4.1
 			}
 			modifier = {
 				factor = 0
 				FROM = {
 				is_in_faction_with = FRA
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = CAN
 				}
 			}
 			modifier = {
@@ -4673,12 +4679,18 @@ GRU_germania_plan_decisions = {
 			factor = 100
 			modifier = {
 				factor = 0
-				has_war = yes
+				date < 1943.4.1
 			}
 			modifier = {
 				factor = 0
 				FROM = {
 				is_in_faction_with = FRA
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = CAN
 				}
 			}
 			modifier = {
@@ -6860,10 +6872,10 @@ GRU_Germania_Stadt_decisions = {
 		modifier = { consumer_goods_factor = 0.15 }
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
 			modifier = {
 				factor = 0
-				FRA = { has_capitulated = no }
+				country_exists = FRA
 			}
 		}
 		remove_effect = {
@@ -9433,6 +9445,24 @@ GRU_kill_rivals_decisions = {
 			}
 			modifier = {
 				factor = 0
+				FROM = {
+				is_in_faction_with = FRA
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = RUS
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = ENT
+				}
+			}
+			modifier = {
+				factor = 0
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.8
@@ -9522,15 +9552,28 @@ GRU_kill_colonies_decisions = {
 			}
 			modifier = {
 				factor = 0
-				strength_ratio = {
-					tag = FROM
-					ratio < 0.8
+				FROM = {
+				is_in_faction_with = FRA
 				}
 			}
 			modifier = {
 				factor = 0
-				country_exists = FRA
-				country_exists = RUS
+				FROM = {
+				is_in_faction_with = RUS
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = ENT
+				}
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
 			}
 			modifier = {
 				factor = 0
@@ -9692,6 +9735,24 @@ GRU_kill_libleft_decisions = {
 			}
 			modifier = {
 				factor = 0
+				FROM = {
+				is_in_faction_with = FRA
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = RUS
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = ENT
+				}
+			}
+			modifier = {
+				factor = 0
 				strength_ratio = {
 					tag = FROM
 					ratio < 0.8
@@ -9788,7 +9849,19 @@ GRU_scandi_decisions = {
 			modifier = {
 				factor = 0
 				FROM = {
-					is_in_faction_with = RUS
+				is_in_faction_with = FRA
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = RUS
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = ENT
 				}
 			}
 			modifier = {
@@ -9874,7 +9947,19 @@ GRU_scandi_decisions = {
 			modifier = {
 				factor = 0
 				FROM = {
-					is_in_faction_with = RUS
+				is_in_faction_with = FRA
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = RUS
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = ENT
 				}
 			}
 			modifier = {
@@ -9960,7 +10045,19 @@ GRU_scandi_decisions = {
 			modifier = {
 				factor = 0
 				FROM = {
-					is_in_faction_with = RUS
+				is_in_faction_with = FRA
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = RUS
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = ENT
 				}
 			}
 			modifier = {
@@ -10037,6 +10134,24 @@ GRU_scandi_decisions = {
 			modifier = {
 				factor = 0
 				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = FRA
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = RUS
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = ENT
+				}
 			}
 			modifier = {
 				factor = 0

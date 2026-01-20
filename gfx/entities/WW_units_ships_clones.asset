@@ -11,6 +11,10 @@ entity = {
 }
 entity = { 
 	clone = "ENG_ship_hull_nuclear_powered_submarine_entity"
+	name = "CAN_ship_hull_nuclear_powered_submarine_entity"
+}
+entity = { 
+	clone = "ENG_ship_hull_nuclear_powered_submarine_entity"
 	name = "SAF_ship_hull_nuclear_powered_submarine_entity"
 }
 entity = { 
@@ -142,6 +146,14 @@ entity = {
 }
 entity = { 
 	clone = "USA_ship_hull_cruiser_submarine_entity"
+	name = "COR_ship_hull_cruiser_submarine_entity"
+}
+entity = { 
+	clone = "USA_ship_hull_cruiser_submarine_entity"
+	name = "WCC_ship_hull_cruiser_submarine_entity"
+}
+entity = { 
+	clone = "USA_ship_hull_cruiser_submarine_entity"
 	name = "NEE_ship_hull_cruiser_submarine_entity"
 }
 
@@ -158,6 +170,14 @@ entity = {
 entity = { 
 	clone = "USA_ship_hull_nuclear_powered_submarine_entity"
 	name = "TEX_ship_hull_nuclear_powered_submarine_entity"
+}
+entity = { 
+	clone = "USA_ship_hull_nuclear_powered_submarine_entity"
+	name = "COR_ship_hull_nuclear_powered_submarine_entity"
+}
+entity = { 
+	clone = "USA_ship_hull_nuclear_powered_submarine_entity"
+	name = "WCC_ship_hull_nuclear_powered_submarine_entity"
 }
 entity = { 
 	clone = "USA_ship_hull_nuclear_powered_submarine_entity"
