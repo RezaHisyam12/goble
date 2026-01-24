@@ -268,8 +268,7 @@ ideas = {
 			allowed = { always = no }
 			picture = AUS_mountaineers
 			modifier = {
-				conscription = 0.025
-				surrender_limit = 0.1
+				conscription = 0.02
 			}
 		}
 
@@ -433,7 +432,7 @@ ideas = {
 			}
 		}
 
-		AUS_SLOintegration = {
+		AUS_integration = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea AUS_SLOintegration" }
 			allowed = { always = no }
 			picture = FRA_matignon_agreements
@@ -697,7 +696,7 @@ ideas = {
 			modifier = {
 				war_support_factor = -0.4
 				consumer_goods_factor = 0.55
-				industrial_capacity_factory = -0.15
+				industrial_capacity_factory = -0.45
 				political_power_gain = -0.60
 				conscription_factor = -0.60
 			}

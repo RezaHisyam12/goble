@@ -10742,6 +10742,11 @@ RUS_toz_organisation = {
 		position = { x = 0 y = 0 }
 
 		mutually_exclusive = { toz_upgrade_2 }
+		available = {
+			FROM = {
+				owns_state = 408
+			}
+		}
 
 		equipment_bonus = {
 			soft_attack = 0.05
@@ -10779,6 +10784,11 @@ RUS_toz_organisation = {
 
 		position = { x = 7 y = 0 }
 
+		available = {
+			FROM = {
+				owns_state = 408
+			}
+		}
 		mutually_exclusive = { toz_upgrade_4 }
 
 		equipment_bonus = {
@@ -10821,6 +10831,11 @@ RUS_toz_organisation = {
 
 		mutually_exclusive = { toz_upgrade_1_2 }
 
+		available = {
+			FROM = {
+				owns_state = 408
+			}
+		}
 		equipment_bonus = {
 			reliability = 0.05
 		}
@@ -10878,6 +10893,11 @@ RUS_toz_organisation = {
 
 		mutually_exclusive = { toz_upgrade_1_5 }
 
+		available = {
+			FROM = {
+				owns_state = 408
+			}
+		}
 		equipment_bonus = {
 			breakthrough = 0.05
 		}

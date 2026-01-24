@@ -1413,8 +1413,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_skoda"
-			custom_effect_tooltip = AUS_unlock_skoda
+			if = {
+				limit = { has_dlc_aat = no }
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = skoda
+			}
+			else = {
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = AUS_skoda_organisation
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_ideas = AUS_skoda_works
+			custom_effect_tooltip = tooltip_white_line
 			add_tech_bonus = {
 				name = AUS_skoda
 				bonus = 1
@@ -1448,7 +1458,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_daimler"
-			custom_effect_tooltip = AUS_unlock_daimler
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = austro_daimler
+			custom_effect_tooltip = tooltip_white_line
 			swap_ideas = {
 				remove_idea = AUS_skoda_works
 				add_idea = AUS_skoda_works_2
@@ -2389,7 +2401,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 			modifier = {
 				factor = 0
 				OR = {
@@ -2820,7 +2832,7 @@ focus_tree = {
 			focus = AUS_military_occupation
 		}
 
-		ai_will_do = { factor = 100 }
+		ai_will_do = { factor = 1000 }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_the_new_Empire"
@@ -3140,19 +3152,27 @@ focus_tree = {
 		available = {
 			is_subject = no
 			can_declare_war_on = 66.owner
-			NOT = {
+			second_weltkrieg_has_begun = yes
+		}
+
+		bypass = {
+			OR = {
 				is_in_faction_with = GER
 				is_in_faction_with = GRU
 				is_in_faction_with = DDR
+				AND = {
+					owns_state = 66
+					owns_state = 67
+				}
 			}
 		}
-		bypass_if_unavailable = yes
 
 		ai_will_do = { factor = 0 }
 
 		will_lead_to_war_with = GER
 		will_lead_to_war_with = GRU
 		will_lead_to_war_with = DDR
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_claim_silesia"
 			add_state_claim = 66
@@ -4025,11 +4045,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus AUS_still_their_king"
 			remove_ideas = AUS_financial_ties_broken
-
-			set_autonomy = {
-				target = HUN
-				autonomy_state = kr_occupied_puppet
-			}
+			HUN = { remove_ideas = HUN_financial_ties_broken }
 		}
 		search_filters = { FOCUS_FILTER_TFV_AUTONOMY }
 	}
@@ -5580,8 +5596,8 @@ focus_tree = {
 	focus = {
 		id = AUS_protector_of_the_balkans
 		icon = GFX_goal_NFE_illyrian_provinces
-		x = 3
-		y = 3
+		x = 5
+		y = 4
 		cost = 6
 
 		#relative_position_id = AUS_status_quo
@@ -5590,7 +5606,7 @@ focus_tree = {
 			threat > 0.1
 			is_subject = no
 			AUS_no_black_monday = yes
-						is_faction_leader = yes
+			is_faction_leader = yes
 		}
 
 		ai_will_do = {
@@ -5675,6 +5691,7 @@ focus_tree = {
 			is_faction_leader = yes
 			threat > 0.6
 			ALB = {
+				exists = yes
 				has_socialist_government = no
 				is_in_faction = no
 				is_subject = no
@@ -8416,7 +8433,11 @@ focus_tree = {
 			set_faction_name = AUS_central_power
 			if = {
 				limit = { is_in_faction = no }
-				create_faction = "Central Powers"
+				create_faction_from_template = { 
+					template = faction_template_austria              
+					name = AUS_central_power
+					icon = GFX_faction_austria_hungary
+				}
 			}
 			country_event = aushre.8796
 			hidden_effect = {

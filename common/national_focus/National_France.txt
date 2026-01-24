@@ -17352,12 +17352,6 @@ focus_tree = {
 			factor = 100
 		}
 		
-		bypass = {
-			NOT = {
-				has_dlc = "La Resistance"
-			}
-		}
-		
 		mutually_exclusive = {
 			focus = NFE_coastal_proficiency
 		}
