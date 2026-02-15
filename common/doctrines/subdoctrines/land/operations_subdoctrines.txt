@@ -496,7 +496,11 @@ guerilla_war = {
 		has_dlc_ncns = yes
 	}
 	ai_will_do = {
-		base = 1
+		base = 0
+		modifier = {
+			add = 5
+			has_subdoctrine = irregulars
+		}
 		modifier = {
 			factor = 0
 			NOT = {
@@ -505,10 +509,6 @@ guerilla_war = {
 					has_template_containing_unit = militia
 				}
 			}
-		}
-		modifier = {
-			factor = 50
-			has_subdoctrine = irregulars
 		}
 	}
 

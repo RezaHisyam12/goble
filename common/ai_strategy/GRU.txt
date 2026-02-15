@@ -169,19 +169,134 @@ GRU_Volunteer = {
 		tag = GRU
 	}
 	enable = {
-		has_government = national_populist
+		GRU = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
+		type = alliance
+		id = RUS
+		value = -100
+	}
+	ai_strategy = {
+		type = befriend
+		id = RUS
+		value = -100
+	}
+	ai_strategy = {
+		type = support
+		id = RUS
+		value = -100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = RUS
+		value = -100
+	}
+	ai_strategy = {
+		type = befriend
+		id = ENG
+		value = -500
+	}
+	ai_strategy = {
+		type = support
+		id = ENG
+		value = -500
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = ENG
+		value = -500
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = ENG
+		value = -500
+	}
+	ai_strategy = {
+		type = befriend
+		id = FRA
+		value = -500
+	}
+	ai_strategy = {
+		type = support
+		id = FRA
+		value = -500
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = FRA
+		value = -500
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = FRA
+		value = -500
+	}
+	ai_strategy = {
+		type = alliance
+		id = BHC
+		value = -500
+	}
+	ai_strategy = {
+		type = befriend
+		id = BHC
+		value = -500
+	}
+	ai_strategy = {
+		type = support
+		id = BHC
+		value = -500
+	}
+	ai_strategy = {
 		type = send_volunteers_desire
 		id = BHC
-		value = -10000
+		value = -500
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = BHC
+		value = -500
+	}
+	ai_strategy = {
+		type = alliance
+		id = CSA
+		value = -500
+	}
+	ai_strategy = {
+		type = befriend
+		id = CSA
+		value = -500
+	}
+	ai_strategy = {
+		type = support
+		id = CSA
+		value = -500
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = CSA
-		value = -10000
+		value = -500
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = CSA
+		value = -500
+	}
+	ai_strategy = {
+		type = alliance
+		id = SRI
+		value = -500
+	}
+	ai_strategy = {
+		type = befriend
+		id = SRI
+		value = -500
+	}
+	ai_strategy = {
+		type = support
+		id = SRI
+		value = -500
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
@@ -189,34 +304,247 @@ GRU_Volunteer = {
 		value = -10000
 	}
 	ai_strategy = {
+		type = send_lend_lease_desire
+		id = SRI
+		value = -500
+	}
+	ai_strategy = {
+		type = alliance
+		id = CNT
+		value = -500
+	}
+	ai_strategy = {
+		type = befriend
+		id = CNT
+		value = -500
+	}
+	ai_strategy = {
+		type = support
+		id = CNT
+		value = -500
+	}
+	ai_strategy = {
 		type = send_volunteers_desire
 		id = CNT
-		value = -10000
+		value = -500
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = CNT
+		value = -500
+	}
+	ai_strategy = {
+		type = alliance
+		id = CHL
+		value = -500
+	}
+	ai_strategy = {
+		type = befriend
+		id = CHL
+		value = -500
+	}
+	ai_strategy = {
+		type = support
+		id = CHL
+		value = -500
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = CHL
+		value = -500
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = CHL
+		value = -500
+	}
+	ai_strategy = {
+		type = alliance
+		id = FOP
+		value = -500
+	}
+	ai_strategy = {
+		type = befriend
+		id = FOP
+		value = -500
+	}
+	ai_strategy = {
+		type = support
+		id = FOP
+		value = -500
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = FOP
+		value = -500
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = FOP
+		value = -500
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = PRF
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = PRF
+		value = 200
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = PRF
+		value = 200
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = PRF
 		value = 10000
 	}
+
+	ai_strategy = {
+		type = befriend
+		id = COR
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = COR
+		value = 200
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = COR
+		value = 200
+	}
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = TEX
+		id = COR
 		value = 10000
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = ITA
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = ITA
+		value = 200
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = ITA
+		value = 200
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = ITA
 		value = 10000
 	}
+
+	ai_strategy = {
+		type = befriend
+		id = CAR
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = CAR
+		value = 200
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = CAR
+		value = 200
+	}
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = SPR
+		id = CAR
+		value = 200
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = BUL
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = BUL
+		value = 200
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = BUL
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = BUL
 		value = 10000
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = TUR
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = TUR
+		value = 200
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = TUR
+		value = 200
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
 		id = TUR
 		value = 10000
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = AFG
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = AFG
+		value = 200
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = AFG
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = AFG
+		value = 10000
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = CHI
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = CHI
+		value = 200
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = CHI
+		value = 200
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
@@ -1401,15 +1729,15 @@ GRU_less_focus_on_russia = {
 			OR = {
 				VKB = {
 					is_in_faction_with = ROOT
-					surrender_progress > 0.60
+					surrender_progress > 0.70
 				}
 				VKR = {
 					is_in_faction_with = ROOT
-					surrender_progress > 0.60
+					surrender_progress > 0.70
 				}
 				VKK = {
 					is_in_faction_with = ROOT
-					surrender_progress > 0.60
+					surrender_progress > 0.70
 				}
 				NOT = { has_full_control_of_state = 5 } #Konigsberg
 			}
@@ -1441,15 +1769,15 @@ GRU_secure_eastern_front = {
 		OR = {
 			VKB = {
 				is_in_faction_with = ROOT
-				surrender_progress > 0.60
+				surrender_progress > 0.70
 			}
 			VKR = {
 				is_in_faction_with = ROOT
-				surrender_progress > 0.60
+				surrender_progress > 0.70
 			}
 			VKK = {
 				is_in_faction_with = ROOT
-				surrender_progress > 0.60
+				surrender_progress > 0.70
 			}
 		}
 		has_war_with = RUS

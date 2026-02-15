@@ -9234,7 +9234,7 @@ shared_focus = {
 		ai_will_do = {
 			factor = 2
 			modifier = {
-				factor = 50
+				factor = 150
 				has_completed_focus = GRU_NMDVP_LEBENSRAUM
 			}
 		}

@@ -10703,8 +10703,8 @@ RUS_motovilikha_organisation = {
 	allowed = {
 		is_russian_mio_tag = yes
 	}
-	available = { FROM = { owns_state = 398 } } #Perm
-	ai_will_do = { base = 0 }
+	available = { FROM = { owns_state = 408 } } #Vladivostok
+	ai_will_do = { factor = 0 }
 }
 RUS_toz_organisation = {
 	name = toz
@@ -10742,11 +10742,6 @@ RUS_toz_organisation = {
 		position = { x = 0 y = 0 }
 
 		mutually_exclusive = { toz_upgrade_2 }
-		available = {
-			FROM = {
-				owns_state = 408
-			}
-		}
 
 		equipment_bonus = {
 			soft_attack = 0.05
@@ -10784,11 +10779,6 @@ RUS_toz_organisation = {
 
 		position = { x = 7 y = 0 }
 
-		available = {
-			FROM = {
-				owns_state = 408
-			}
-		}
 		mutually_exclusive = { toz_upgrade_4 }
 
 		equipment_bonus = {
@@ -11017,6 +11007,10 @@ RUS_toz_organisation = {
 		all_parents = { toz_upgrade_1_3 }
 
 		position = { x = 4 y = 2 }
+
+		available = { 
+			mio:RUS_toz_organisation = { has_mio_size > 5 }			
+		}
 
 		equipment_bonus = {
 			reliability = 0.05
@@ -11620,6 +11614,8 @@ RUS_obukhov_organisation = {
 		is_russian_tag_that_can_integrate = yes
 	}
 	available = { FROM = { owns_state = 195 } } #Petrograd
+
+	ai_will_do = { base = 10 }
 
 	equipment_type = {
 		artillery_equipment
@@ -12919,7 +12915,7 @@ RUS_amo_organisation = {
 		mio_cat_tech_all_armor_and_modules
 	}
 
-	ai_will_do = { base = 1000 }
+	ai_will_do = { base = 100 }
 
 	initial_trait = {
 		name = RUS_amo_mio_desc

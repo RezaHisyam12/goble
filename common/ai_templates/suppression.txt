@@ -8,17 +8,17 @@ suppression_generic = {
 	upgrade_prio = {
 		base = 0
 		modifier = {
-			add = 2
+			add = 1
 			num_occupied_states > 0
 		}
 		modifier = {
-			add = 2
+			factor = 50
 			num_occupied_states > 10
 		}
 	}
 
 	suppression_1 = {
-		can_upgrade_in_field = { always = yes }
+		can_upgrade_in_field = { always = no }
 		reinforce_prio = 0
 
 		upgrade_prio = {
@@ -33,11 +33,18 @@ suppression_generic = {
 	}
 
 	suppression_2 = {
-		can_upgrade_in_field = { always = yes }
+		can_upgrade_in_field = { always = no }
 		reinforce_prio = 0
 
 		upgrade_prio = {
 			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = operations }
+				}
+			}
 			modifier = {
 				factor = 0
 				num_occupied_states < 10
@@ -59,10 +66,14 @@ suppression_generic = {
 	}
 
 	suppression_3 = {
-		can_upgrade_in_field = { always = yes }
+		can_upgrade_in_field = { always = no }
 
 		upgrade_prio = {
 			base = 100
+			modifier = {
+				factor = 0
+				NOT = { has_tech = armored_car1 }
+			}
 			modifier = {
 				factor = 0
 				OR = {
@@ -74,15 +85,11 @@ suppression_generic = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { has_tech = armored_car1 }
-			}
-			modifier = {
-				factor = 0
-				num_of_military_factories < 200
+				num_of_military_factories < 250
 			}
 			modifier = {
 				factor = 4
-				num_of_military_factories > 200
+				num_of_military_factories > 250
 			}
 		}
 

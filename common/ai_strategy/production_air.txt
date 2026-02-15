@@ -156,7 +156,7 @@ naval_bomber_air_production = {
 	ai_strategy = {
 		type = equipment_production_min_factories
 		id = naval_bomber
-		value = 1
+		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
@@ -181,32 +181,9 @@ CV_aircraft_production = {
 		id = cv_naval_bomber
 		value = 1
 	}
-	ai_strategy = {
-		type = equipment_production_min_factories
-		id = cv_cas
-		value = 1
-	}
 }
 
-other_aircraft_production_1 = {
-	enable = {
-		is_eligible_for_medium_aircraft_production = yes
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = equipment_production_min_factories
-		id = air_transport
-		value = 1
-	}
-	ai_strategy = {
-		type = equipment_production_min_factories
-		id = scout_plane
-		value = 1
-	}
-}
-
-other_aircraft_production_2 = {
+other_aircraft_production = {
 	enable = {
 		is_eligible_for_heavy_aircraft_production = yes
 	}
@@ -215,12 +192,12 @@ other_aircraft_production_2 = {
 	ai_strategy = {
 		type = equipment_production_min_factories
 		id = air_transport
-		value = 1
+		value = 2
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
 		id = scout_plane
-		value = 2
+		value = 3
 	}
 }
 

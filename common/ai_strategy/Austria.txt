@@ -140,10 +140,12 @@ AUS_eyes_on_france = {
 	}
 	enable = {
 		is_neighbor_of = FRA
-		NOT = {
-			has_war_with = RUS
-			has_war_with = GRU
-			}
+		has_war = no
+		OR = {
+			NOT = { has_war_with = RUS }
+			NOT = { has_war_with = GRU }
+			NOT = { has_war_with = GER }
+		}
 		FRA = { has_capitulated = no }
 	}
 	abort_when_not_enabled = yes
@@ -230,6 +232,7 @@ austria_hates_sri = {
 	enable = {
 		is_in_faction_with = AUS
 		is_in_europe = yes
+		has_war = no
 		SRI = {
 			has_socialist_government = yes
 			NOT = { is_in_faction_with = AUS }
@@ -272,6 +275,7 @@ austria_hates_italy = {
 		}
 	}
 	enable = {
+		has_war = no
 		OR = {
 			is_subject_of = AUS
 			is_in_faction_with = AUS
@@ -580,6 +584,7 @@ AUS_watch_ukraine = {
 		original_tag = AUS
 	}
 	enable = {
+		has_war = no
 		NOT = { is_ally_with = UKR }
 	}
 	abort_when_not_enabled = yes
@@ -604,6 +609,7 @@ AUS_crownlands_watch_ukraine = {
 		}
 	}
 	enable = {
+		has_war = no
 		OR = {
 			is_subject_of = AUS
 			is_in_faction_with = AUS
@@ -696,6 +702,7 @@ AUS_watch_gru = {
 		original_tag = AUS
 	}
 	enable = {
+		has_war = no
 		NOT = { is_ally_with = GRU }
 	}
 	abort_when_not_enabled = yes
@@ -720,6 +727,7 @@ AUS_crownlands_watch_gru = {
 		}
 	}
 	enable = {
+		has_war = no
 		OR = {
 			is_subject_of = AUS
 			is_in_faction_with = AUS
@@ -1529,10 +1537,11 @@ AUS_build_tanks_if_france_is_aggressive = {
 	}
 	enable = {
 		is_neighbor_of = FRA
-		NOT = {
-			has_war_with = RUS
-			has_war_with = GRU
-			}
+		OR = {
+			NOT = { has_war_with = RUS }
+			NOT = { has_war_with = GRU }
+			NOT = { has_war_with = GER }
+		}
 		FRA = { has_capitulated = no }
 		FRA = { has_government = totalist }
 	}
@@ -1560,7 +1569,6 @@ AUS_total_war_against_russia = {
 	}
 	enable = {
 		RUS = { is_faction_leader = yes }
-		NOT = { has_war_with = NFA }
 		FRA = {
 			OR = {
 				has_capitulated = yes

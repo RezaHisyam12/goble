@@ -3,23 +3,16 @@
 ######################
 
 heavy_armour_generic = {
-	role = heavy_armor_role #to distinguish from armor, a hardcoded keyword for all tank equipment types
+	role = heavy_armor_role
 	front_role_override = offence
 
 	available_for = { GRU GER }
 
-	upgrade_prio = {
-		factor = 5
+   	upgrade_prio = {
+		factor = 1000
 		modifier = {
 			factor = 0
-			OR = {
-				NOT = { has_subdoctrine_in_track = infantry }
-				NOT = { has_subdoctrine_in_track = combat_support }
-			}
-		}
-		modifier = {
-			factor = 0
-			is_eligible_for_armor_production = no
+			is_eligible_for_heavy_armor_production = no
 		}
 		modifier = {
 			factor = 0
@@ -31,12 +24,17 @@ heavy_armour_generic = {
 			NOT = { has_tech = basic_heavy_tank_chassis }
 		}
 		modifier = {
-			factor = 3
-			has_doctrine = new_mobile_warfare
+			factor = 0
+			OR = {
+				NOT = { has_subdoctrine_in_track = infantry }
+				NOT = { has_subdoctrine_in_track = combat_support }
+				NOT = { has_subdoctrine_in_track = armor }
+				NOT = { has_subdoctrine_in_track = operations }
+			}
 		}
 	}
 
-	motorised_armour_template = {
+	motorized_heavy = {
         can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
@@ -62,7 +60,7 @@ heavy_armour_generic = {
 		}
 	}
 
-	mechanised_armour_template = {
+	mechanized_heavy = {
         can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
@@ -72,13 +70,13 @@ heavy_armour_generic = {
 				factor = 0
 				NOT = { has_tech = mechanised_infantry }
 			}
-			modifier = {
+           		modifier = {
 				factor = 0
-				num_of_military_factories < 150
+				is_eligible_for_improved_heavy_armor_production = no
 			}
 			modifier = {
 				factor = 2
-				num_of_military_factories > 150
+				is_eligible_for_improved_heavy_armor_production = yes
 			}
 		}
 
@@ -100,7 +98,7 @@ heavy_armour_generic = {
 		}
 	}
 
-	big_modern_armour = {
+	heavy_modern_armour = {
         can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
@@ -117,11 +115,11 @@ heavy_armour_generic = {
 			}
 			modifier = {
 				factor = 0
-				num_of_military_factories < 150
+				is_eligible_for_improved_heavy_armor_production = no
 			}
 			modifier = {
-				factor = 6
-				num_of_military_factories > 150
+				factor = 4
+				is_eligible_for_improved_heavy_armor_production = yes
 			}
 		}
 

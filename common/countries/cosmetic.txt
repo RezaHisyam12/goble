@@ -1252,8 +1252,8 @@ STO = {
 }
 
 AUS_HRE = {
-	color = rgb { 128 128 128 }
-	color_ui = rgb { 128 128 128 }
+	color = rgb { 93 93 61 }
+	color_ui = rgb { 138 155 116 }
 }
 ANT_1 = {
 	color = rgb { 156 126 159 }
@@ -1319,7 +1319,7 @@ CZE_free_czech = {
 	color = rgb { 50 128 200 }
 	color_ui = rgb { 50 128 200 }
 }
-CZE_czechoslavakia = {
+CZE_czechoslovakia = {
 	color = rgb { 45 86 186 }
 	color_ui = rgb { 45 86 186 }
 }

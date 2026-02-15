@@ -9,7 +9,7 @@ armour_landcruiser_generic = {
 	available_for = { GRU GER }
 
 	upgrade_prio = {
-		factor = 15
+		factor = 2000
 		modifier = {
 			factor = 0
 			NOT = { has_tech = super_heavy_tank_chassis }

@@ -5,6 +5,7 @@
 mw_aifc_base = {
 	enable = {
 		has_doctrine = new_mobile_warfare
+		has_subdoctrine_in_track = operations
 	}
 	abort_when_not_enabled = yes
 
@@ -17,7 +18,7 @@ mw_aifc_base = {
 mw_aifc_offset_1 = {
 	enable = {
 		has_doctrine = new_mobile_warfare
-		has_subdoctrine_in_track = operations
+		has_subdoctrine_in_track = armor
 	}
 	abort_when_not_enabled = yes
 
@@ -30,7 +31,7 @@ mw_aifc_offset_1 = {
 mw_aifc_offset_2 = {
 	enable = {
 		has_doctrine = new_mobile_warfare
-		has_subdoctrine_in_track = armor
+		has_completed_track = operations
 	}
 	abort_when_not_enabled = yes
 
@@ -43,10 +44,7 @@ mw_aifc_offset_2 = {
 mw_aifc_offset_3 = {
 	enable = {
 		has_doctrine = new_mobile_warfare
-		OR = {
-			has_completed_track = armor
-			has_completed_track = operations
-		}
+		has_completed_track = armor
 	}
 	abort_when_not_enabled = yes
 
@@ -61,6 +59,7 @@ mw_aifc_offset_3 = {
 sf_aifc_base = {
 	enable = {
 		has_doctrine = superior_firepower
+		has_subdoctrine_in_track = operations
 	}
 	abort_when_not_enabled = yes
 
@@ -73,7 +72,7 @@ sf_aifc_base = {
 sf_aifc_offset_1 = {
 	enable = {
 		has_doctrine = superior_firepower
-		has_subdoctrine_in_track = operations
+		has_subdoctrine_in_track = armor
 	}
 	abort_when_not_enabled = yes
 
@@ -86,7 +85,10 @@ sf_aifc_offset_1 = {
 sf_aifc_offset_2 = {
 	enable = {
 		has_doctrine = superior_firepower
-		has_subdoctrine_in_track = armor
+		OR = {
+			has_completed_track = operations
+			has_completed_track = armor
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -101,6 +103,7 @@ sf_aifc_offset_2 = {
 gbp_aifc_base = {
 	enable = {
 		has_doctrine = grand_battleplan
+		has_subdoctrine_in_track = operations
 	}
 	abort_when_not_enabled = yes
 
@@ -113,7 +116,7 @@ gbp_aifc_base = {
 gbp_aifc_offset_1 = {
 	enable = {
 		has_doctrine = grand_battleplan
-		has_subdoctrine_in_track = operations
+		has_subdoctrine_in_track = armor
 	}
 	abort_when_not_enabled = yes
 
@@ -126,7 +129,7 @@ gbp_aifc_offset_1 = {
 gbp_aifc_offset_2 = {
 	enable = {
 		has_doctrine = grand_battleplan
-		has_subdoctrine_in_track = armor
+		has_completed_track = operations
 	}
 	abort_when_not_enabled = yes
 
@@ -139,10 +142,7 @@ gbp_aifc_offset_2 = {
 gbp_aifc_offset_3 = {
 	enable = {
 		has_doctrine = grand_battleplan
-		OR = {
-			has_completed_track = armor
-			has_completed_track = operations
-		}
+		has_completed_track = armor
 	}
 	abort_when_not_enabled = yes
 
@@ -157,6 +157,7 @@ gbp_aifc_offset_3 = {
 ma_aifc_base = {
 	enable = {
 		has_doctrine = mass_assault
+		has_subdoctrine_in_track = operations
 	}
 	abort_when_not_enabled = yes
 
@@ -169,7 +170,7 @@ ma_aifc_base = {
 ma_aifc_offset_1 = {
 	enable = {
 		has_doctrine = mass_assault
-		has_subdoctrine_in_track = operations
+		has_subdoctrine_in_track = armor
 	}
 	abort_when_not_enabled = yes
 

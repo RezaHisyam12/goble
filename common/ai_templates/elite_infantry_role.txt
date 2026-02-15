@@ -7,7 +7,7 @@ elite_infantry_generic = {
 	front_role_override = offence
 
 	upgrade_prio = {
-		factor = 10
+		factor = 500
 		modifier = {
 			factor = 0
 			NOT = { has_tech = elite_infantry_tech }

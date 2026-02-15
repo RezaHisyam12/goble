@@ -341,6 +341,7 @@ ideologies = {
 			radsoc_macianismo_subtype = {can_be_randomly_selected = no } #Maciànismo
 			malthusianism_subtype = {can_be_randomly_selected = no } #Neo-Malthusianism
 			anarcha_feminism_subtype = {can_be_randomly_selected = no color = { 110 0 255 } } #Anarcha-Feminism
+			radsoc_christian_syndicalism_subtype = {can_be_randomly_selected = no} #Christian Syndicalism
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_RADICAL_SOCIALIST_1"
@@ -478,6 +479,7 @@ ideologies = {
 			socdem_left_social_credit_subtype = {can_be_randomly_selected = no } #Left Social Credit
 			socdem_eco_socialism_subtype = {can_be_randomly_selected = no } #Eco-Socialism
 			socdem_christian_anarchism_subtype = {can_be_randomly_selected = no} #Christian Anarchism
+			milazzismo_subtype = {can_be_randomly_selected = no} #Milazzismo
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_SOCIAL_DEMOCRAT_1"
@@ -689,6 +691,7 @@ ideologies = {
 			nupela_pasin_subtype = {can_be_randomly_selected = no} #Nupela Pasin
 			marlib_popular_patriotism_subtype = {can_be_randomly_selected = no} #Popular Patriotism
 			marlib_organic_liberalism_subtype = {can_be_randomly_selected = no} #Organic Liberalism
+			aulic_liberalism_subtype = {can_be_randomly_selected = no} #Aulic Liberalism
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_MARKET_LIBERAL_1"

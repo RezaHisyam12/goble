@@ -1268,8 +1268,6 @@ generic_heavy_flame_tank = {
 generic_heavy_tank_destroyer = {
 	category = land
 
-	available_for = { GER GRU RUS USA CSA COR WCC TEX NEE CAL }
-
 	roles = {
 		land_heavy_tank_destroyer
 	}
@@ -1278,7 +1276,7 @@ generic_heavy_tank_destroyer = {
 		factor = 1000
 		modifier = {
 			factor = 0
-			is_eligible_for_armor_production = no
+			is_eligible_for_improved_heavy_armor_production = no
 		}
 	}
 	heavy_tank_destroyer_1 = {

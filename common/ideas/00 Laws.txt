@@ -115,7 +115,7 @@ ideas = {
 					add = 250
 					has_idea = tot_economic_mobilisation
 					OR = {
-						max_available_manpower_k < 100
+						manpower_per_military_factory < 5000
 						coal < -10
 					}
 				}
@@ -157,7 +157,7 @@ ideas = {
 					add = 500
 					has_idea = tot_economic_mobilisation
 					OR = {
-						max_available_manpower_k < 100
+						manpower_per_military_factory < 5000
 						coal < -10
 					}
 				}
@@ -204,7 +204,7 @@ ideas = {
 					add = 750
 					has_idea = tot_economic_mobilisation
 					OR = {
-						max_available_manpower_k < 100
+						manpower_per_military_factory < 5000
 						coal < -10
 					}
 				}
@@ -247,7 +247,7 @@ ideas = {
 					add = 1000
 					has_idea = tot_economic_mobilisation
 					OR = {
-						max_available_manpower_k < 100
+						manpower_per_military_factory < 5000
 						coal < -10
 					}
 				}
@@ -286,7 +286,7 @@ ideas = {
 				modifier = {
 					add = 1000
 					has_idea = war_economy
-					manpower_per_military_factory > 12000
+					has_manpower > 5000000
 					coal > 10
 				}
 			}

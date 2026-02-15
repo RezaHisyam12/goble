@@ -1681,6 +1681,22 @@ technologies = {
 				add = 100
 				num_of_factories > 20
 			}
+			modifier = {
+				factor = 20
+				has_war = yes
+			}
+			modifier = {
+				factor = 1.2
+				date > 1936.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1937.1.1
+			}
+			modifier = {
+				factor = 1.2
+				date > 1938.1.1
+			}
 		}
 	}
 

@@ -7,7 +7,7 @@ RR_Werwolf_generic = {
 	front_role_override = offence
 
 	upgrade_prio = {
-		factor = 10
+		factor = 500
 		modifier = {
 			factor = 0
 			NOT = { has_tech = RR_Werwolf_tech }
@@ -56,13 +56,13 @@ RR_Werwolf_generic = {
 				factor = 0
 				NOT = { has_tech = RR_1_motorized_tech }
 			}
-			modifier = {
+            		modifier = {
 				factor = 0
-				num_of_military_factories < 75 #90% of previous threshold
+				num_of_military_factories < 90
 			}
 			modifier = {
-				add = 2
-				num_of_military_factories > 150
+				factor = 3
+				num_of_military_factories > 90
 			}
 		}
 

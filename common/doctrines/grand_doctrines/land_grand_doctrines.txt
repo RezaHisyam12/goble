@@ -405,7 +405,11 @@ mass_assault = {
             add = 100
             is_han_chinese_tag = yes
         }
-    }
+         modifier = {
+            add = 100
+            tag = RUS
+        }
+   }
 
     tracks = {
         infantry

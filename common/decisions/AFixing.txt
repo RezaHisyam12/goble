@@ -3,6 +3,104 @@
 ###########################	
 
 RUS_Economy_decisions = {
+	RUS_izhevsk_mechanical_plant = {
+		icon = GFX_decision_generic_merge_plant_tank
+		allowed = { always = no }
+		available = {
+			FROM = { is_fully_controlled_by = ROOT }
+		}
+		highlight_states = { highlight_state_targets = { state = 399 } } #Izhevsk
+		cost = 75
+		state_target = yes
+		days_remove = 60
+		fire_only_once = yes
+		modifier = { consumer_goods_factor = 0.04 }
+		ai_will_do = {
+			base = 2
+		}
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete RUS_izhevsk_mechanical_plant"
+		}
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove RUS_izhevsk_mechanical_plant"
+			399 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 }
+			}
+			if = { #Tooltip for those that have MIOs
+				limit = { has_dlc_aat = yes }
+				mio:RUS_imz_organisation = {
+					add_mio_size = 2
+					add_mio_funds = 1000
+				}
+			}
+			else = { #Tooltip for those that have vanilla companies
+				custom_effect_tooltip = {
+					localization_key = RUS_unlock_improved_company COMPANY = izjevskij_mekhanitsjeskij
+				}
+				show_ideas_tooltip = izjevskij_mekhanitsjeskij_improved
+				if = {
+					limit = { has_idea = izjevskij_mekhanitsjeskij }
+					swap_ideas = {
+						remove_idea = izjevskij_mekhanitsjeskij
+						add_idea = izjevskij_mekhanitsjeskij_improved
+					}
+				}
+			}
+			set_country_flag = improve_imz
+		}
+		fixed_random_seed = no
+	}
+
+	RUS_tula_arms_factory = {
+		icon = GFX_decision_factories
+		allowed = { always = no }
+		available = {
+			FROM = { is_fully_controlled_by = ROOT }
+		}
+		highlight_states = { highlight_state_targets = { state = 223 } } #Tula
+		cost = 75
+		state_target = yes
+		days_remove = 60
+		fire_only_once = yes
+		modifier = { consumer_goods_factor = 0.04 }
+		ai_will_do = {
+			base = 2
+		}
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete RUS_tula_arms_factory"
+		}
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove RUS_tula_arms_factory"
+			223 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = { type = arms_factory level = 3 }
+			}
+			if = { #Tooltip for those that have MIOs
+				limit = { has_dlc_aat = yes }
+				mio:RUS_toz_organisation = {
+					add_mio_size = 2
+					add_mio_funds = 1000
+				}
+			}
+			else = { #Tooltip for those that have vanilla companies
+				custom_effect_tooltip = {
+					localization_key = RUS_unlock_improved_company COMPANY = tulsky_oruzheiny
+				}
+				show_ideas_tooltip = tulsky_oruzheiny_improved
+				if = {
+					limit = { has_idea = tulsky_oruzheiny }
+					swap_ideas = {
+						remove_idea = tulsky_oruzheiny
+						add_idea = tulsky_oruzheiny_improved
+					}
+				}
+			}
+			set_country_flag = improve_toz
+		}
+		fixed_random_seed = no
+	}	
+
 	RUS_New_Eurasian_Capital = {
 		icon = GFX_decision_generic_focus
 		
@@ -266,6 +364,11 @@ RUS_Foreign_Policy_decisions = {
 			}
 			modifier = {
 				factor = 0
+				country_exists = GRU
+				GRU = { is_subject = no }
+			}
+			modifier = {
+				factor = 0
 				FROM = {
 					is_subject_of = GRU
 				}
@@ -315,7 +418,8 @@ RUS_Foreign_Policy_decisions = {
 				activate_mission = RUS_defeat_caucasus
 			}
 		}
-	}	
+	}
+
 	RUS_Attack_Eastern_Europe = {
 		icon = hol_draw_up_staff_plans
 
@@ -472,19 +576,19 @@ RUS_Foreign_Policy_decisions = {
 		}
 
 		cancel_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision cancel RUS_Attack_Europe target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision cancel RUS_Attack_Eastern_Europe target: [From.GetName]"
 			clear_decision_attack_AI = yes
 			add_political_power = 10
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision complete RUS_Attack_Europe target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision complete RUS_Attack_Eastern_Europe target: [From.GetName]"
 			FROM = { incoming_war_notification_effect = yes }
 			setup_decision_attack_AI = yes
 		}
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove RUS_Attack_Europe target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision remove RUS_Attack_Eastern_Europe target: [From.GetName]"
 			clear_decision_attack_AI = yes
 			declare_war_on = {
 				target = FROM
@@ -567,6 +671,11 @@ RUS_Foreign_Policy_decisions = {
 			}
 			modifier = {
 				factor = 0
+				country_exists = GRU
+				GRU = { is_subject = no }
+			}
+			modifier = {
+				factor = 0
 				FROM = {
 					is_subject_of = GRU
 				}
@@ -612,7 +721,10 @@ RUS_Foreign_Policy_decisions = {
 		available = {
 			has_army_manpower = { size > 2000000 }
 			FROM = {
-				has_war_with = INT
+				OR = {
+					has_war_with = INT
+					has_war_with = ENG
+				}
 			}
 			any_neighbor_country = {
 				OR = {

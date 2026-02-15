@@ -46,7 +46,7 @@ generic_fighter = {
 			modules = {
 				fixed_main_weapon_slot = {
 					any_of = {
-						heavy_mg_4x
+						aircraft_cannon_1_2x
 						light_mg_4x
 					}
 				}
@@ -64,6 +64,57 @@ generic_fighter = {
 			modifier = {
 				has_tech = advanced_small_airframe
 				factor = 0 #let's not waste XP here
+			}
+			modifier = {
+				OR = {
+					any_subject_country = { check_variable = { resource_produced@rubber > 100 } }
+					resource_produced@rubber > 100
+				}
+				factor = 0
+			}
+		}
+
+		target_variant = {
+			match_value = 3000
+			type = small_plane_airframe_2
+			modules = {
+				fixed_main_weapon_slot = {
+					any_of = {
+						heavy_mg_4x
+						light_mg_4x
+					}
+				}
+				fixed_auxiliary_weapon_slot_1 = {
+					any_of = {
+						heavy_mg_4x
+						light_mg_4x
+					}
+				}
+				fixed_auxiliary_weapon_slot_2 = {
+					any_of = {
+						heavy_mg_2x
+						light_mg_2x
+					}
+				}
+				engine_type_slot = engine_3_1x
+				special_type_slot_1 = drop_tanks
+				special_type_slot_2 = armor_plate_small
+				special_type_slot_3 = armor_plate_small
+			}
+		}
+	}
+
+	improved_fighter_1940_more_rubber = {
+		priority = {
+			factor = 100
+			modifier = {
+				has_tech = advanced_small_airframe
+				factor = 0 #let's not waste XP here
+			}
+			modifier = {
+				NOT = { any_subject_country = { check_variable = { resource_produced@rubber > 100 } } }
+				NOT = { resource_produced@rubber > 100 }
+				factor = 0
 			}
 		}
 
@@ -103,6 +154,58 @@ generic_fighter = {
 			modifier = {
 				has_tech = modern_small_airframe
 				factor = 0 #let's not waste XP here
+			}
+			modifier = {
+				OR = {
+					any_subject_country = { check_variable = { resource_produced@rubber > 100 } }
+					resource_produced@rubber > 100
+				}
+				factor = 0
+			}
+		}
+
+		target_variant = {
+			match_value = 4000
+			type = small_plane_airframe_3
+			modules = {
+				fixed_main_weapon_slot = {
+					any_of = {
+						aircraft_cannon_1_2x
+						heavy_mg_4x
+					}
+				}
+				fixed_auxiliary_weapon_slot_1 = {
+					any_of = {
+						aircraft_cannon_1_2x
+						heavy_mg_4x
+					}
+				}
+				fixed_auxiliary_weapon_slot_2 = {
+					any_of = {
+						aircraft_cannon_1_2x
+						heavy_mg_4x
+					}
+				}
+				engine_type_slot = engine_4_1x
+				special_type_slot_1 = drop_tanks
+				special_type_slot_2 = empty
+				special_type_slot_3 = armor_plate_small
+				special_type_slot_4 = armor_plate_small
+			}
+		}
+	}
+
+	advanced_fighter_1944_more_rubber = {
+		priority = {
+			factor = 100
+			modifier = {
+				has_tech = modern_small_airframe
+				factor = 0 #let's not waste XP here
+			}
+			modifier = {
+				NOT = { any_subject_country = { check_variable = { resource_produced@rubber > 100 } } }
+				NOT = { resource_produced@rubber > 100 }
+				factor = 0
 			}
 		}
 

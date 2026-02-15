@@ -6,7 +6,7 @@ line_irregulars = {
 	role = infantry
 
 	upgrade_prio = {
-		factor = 10
+		factor = 2000
 	}
 
 	irregulars_default = {
@@ -23,12 +23,40 @@ line_irregulars = {
 
 			support = {
 				artillery = 1
+			}
+		}
+	}
+
+	irregulars_upgraded_0 = {
+		can_upgrade_in_field = { always = yes }
+		
+		upgrade_prio = {
+			base = 100
+			modifier = {
+				factor = 0
+				num_of_military_factories < 15
+			}
+			modifier = {
+				factor = 2
+				num_of_military_factories > 15
+			}
+		}
+
+		target_template = {
+			regiments = {
+				irregular_infantry = 11
+				artillery_brigade = 1
+			}
+
+			support = {
+				artillery = 1
+				anti_air = 1
 				engineer = 1
 			}
 		}
 	}
 
-	irregulars_upgraded = {
+	irregulars_upgraded_1 = {
         can_upgrade_in_field = { always = yes }
 
 		upgrade_prio = {
@@ -46,7 +74,7 @@ line_irregulars = {
 		target_template = {
 			regiments = {
 				irregular_infantry = 12
-				artillery_brigade = 1
+				artillery_brigade = 2
 			}
 
 			support = {
