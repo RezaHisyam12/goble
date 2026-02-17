@@ -30,6 +30,11 @@ heavy_armour_generic = {
 				NOT = { has_subdoctrine_in_track = armor }
 				NOT = { has_subdoctrine_in_track = operations }
 			}
+			NOT = { has_doctrine = grand_battleplan }
+		}
+		modifier = { 
+			has_doctrine = grand_battleplan
+			factor = 5
 		}
 	}
 

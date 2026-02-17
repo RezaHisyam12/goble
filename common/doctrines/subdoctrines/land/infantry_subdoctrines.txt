@@ -8,14 +8,36 @@ mobile_infantry = {
 	xp_type = army
 
 	ai_will_do = {
-		base = 5
+		base = 0
 		modifier = {
-			factor = 0
-			NOT = {has_doctrine = new_mobile_warfare}
+			add = 25
+			has_doctrine = new_mobile_warfare
 		}
 		modifier = {
-			factor = 2
-			has_doctrine = new_mobile_warfare
+			add = 5
+			OR = {
+				tag = LBA
+				tag = SAU
+				tag = JBS
+				tag = TRU
+				tag = IKH
+				tag = YEM
+				tag = OMA
+				tag = TRP
+				tag = ETS
+				tag = SIK
+				tag = TAN
+				tag = KHI
+				tag = KYR
+				tag = TRK
+				tag = UZB
+				tag = ALO
+				tag = MON
+				tag = XSM
+				tag = DKB
+				tag = KUB
+				tag = MTR
+			}
 		}
 	}
 
@@ -76,10 +98,15 @@ defensive_postures = {
 		modifier = {
 			factor = 0
 			OR = {
-				tag = CAN
-				tag = NFA
 				is_russian_tag = yes
+				is_american_tag = yes
+				tag = GER
+				tag = JAP
 			}
+		}
+		modifier = {
+			factor = 0
+			has_doctrine = new_mobile_warfare
 		}
 	}
 
@@ -129,12 +156,16 @@ large_unit_tactics = {
 	ai_will_do = {
 		base = 5
 		modifier = {
-			factor = 0.75
-			is_major = no
-		}
-		modifier = {
 			factor = 2
 			has_doctrine = mass_assault
+		}
+		modifier = {
+			factor = 0
+			has_doctrine = new_mobile_warfare
+		}
+		modifier = {
+			factor = 0
+			has_doctrine = superior_firepower
 		}
 	}
 
@@ -200,6 +231,18 @@ assault_infantry = {
 
 	ai_will_do = {
 		base = 5
+		modifier = {
+			factor = 2
+			is_major = yes
+			has_doctrine = superior_firepower
+		}
+		modifier = {
+            factor = 2
+            OR = {
+                tag = CAN
+                tag = NFA
+            }
+        }
 	}
 
 	# EFFECTS
@@ -547,9 +590,9 @@ irregulars = {
 	}
 
 	ai_will_do = {
-		base = 2
-      		modifier = {
-            		factor = 4
+		base = 0
+		modifier = {
+			add = 25
             		is_han_chinese_tag = yes
         	}
 	}

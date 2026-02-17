@@ -26,7 +26,7 @@ motorized_infantry = {
 	}
 
 	trucks_1 = {
-		can_upgrade_in_field = { always = yes }
+		can_upgrade_in_field = { always = no }
 		
 		upgrade_prio = {
 			base = 100
@@ -46,7 +46,7 @@ motorized_infantry = {
 	}
 
 	trucks_2 = {
-		can_upgrade_in_field = { always = yes }
+		can_upgrade_in_field = { always = no }
 		
 		upgrade_prio = {
 			base = 100
@@ -54,7 +54,6 @@ motorized_infantry = {
 				factor = 0
 				OR = {
 					NOT = { has_subdoctrine_in_track = infantry }
-					NOT = { has_subdoctrine_in_track = combat_support }
 					NOT = { has_subdoctrine_in_track = operations }
 				}
 			}
@@ -86,7 +85,7 @@ motorized_infantry = {
 	}
 
     trucks_3 = {
-		can_upgrade_in_field = { always = yes }
+		can_upgrade_in_field = { always = no }
 		
 		upgrade_prio = {
 			base = 100
@@ -103,7 +102,7 @@ motorized_infantry = {
 					NOT = { has_subdoctrine_in_track = operations }
 				}
 			}
-            		modifier = {
+            modifier = {
 				factor = 0
 				num_of_military_factories < 90
 			}
@@ -131,7 +130,7 @@ motorized_infantry = {
 	}
 
 	trucks_4 = {
-		can_upgrade_in_field = { always = yes }
+		can_upgrade_in_field = { always = no }
 		
 		upgrade_prio = {
 			base = 100
@@ -148,7 +147,7 @@ motorized_infantry = {
 					NOT = { has_subdoctrine_in_track = operations }
 				}
 			}
-            		modifier = {
+            modifier = {
 				factor = 0
 				num_of_military_factories < 150
 			}

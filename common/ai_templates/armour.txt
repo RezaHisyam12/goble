@@ -28,6 +28,10 @@ armour_generic = {
 			NOT = { has_tech = basic_medium_tank }
 			NOT = { has_tech = basic_medium_tank_chassis }
 		}
+		modifier = { 
+			has_doctrine = grand_battleplan
+			factor = 0.2
+		}
 	}
 
 	dummy_light_div = {

@@ -320,11 +320,7 @@ mobile_recon_and_assault = {
 		base = 2
 		modifier = {
 			factor = 0
-			is_major = no
-		}
-		modifier = {
-			factor = 0
-			has_doctrine = mass_assault
+			NOT = {has_doctrine = new_mobile_warfare}
 		}
 	}
 
@@ -405,11 +401,7 @@ mobile_recon_and_assault_no_lar = {
 		base = 2
 		modifier = {
 			factor = 0
-			is_major = no
-		}
-		modifier = {
-			factor = 0
-			has_doctrine = mass_assault
+			NOT = {has_doctrine = new_mobile_warfare}
 		}
 	}
 

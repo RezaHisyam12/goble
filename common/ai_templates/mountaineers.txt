@@ -43,6 +43,42 @@ mountaineer_generic = {
 		target_template = {
 			regiments = {
 				mountaineers = 11
+			}
+
+			support = {
+				artillery = 1
+				anti_air = 1
+				engineer = 1
+			}
+		}
+	}
+
+	mountaineer_2 = {
+		can_upgrade_in_field = { always = yes }
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = operations }
+				}
+			}
+			modifier = {
+				factor = 0
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 2
+				num_of_military_factories > 30
+			}
+		}
+
+		target_template = {
+			regiments = {
+				mountaineers = 11
 				artillery_brigade = 1
 			}
 

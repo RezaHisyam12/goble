@@ -9,6 +9,13 @@ mission_type_tactics = {
 
 	ai_will_do = {
 		base = 3
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_doctrine = defensive_postures
+				has_doctrine = great_war_infantry
+			}
+		}
 	}
 
 	# EFFECTS
@@ -70,7 +77,22 @@ last_stand = {
 	conscription = 0.05
 
 	ai_will_do = {
-		base = 1
+		base = 3
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_doctrine = defensive_postures
+				has_doctrine = great_war_infantry
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_doctrine = mass_assault
+		}
+		modifier = {
+			factor = 0
+			has_doctrine = new_mobile_warfare
+		}
 	}
 
 	rewards = {
@@ -113,7 +135,17 @@ infiltration_tactics = {
 	xp_cost = 100
 	xp_type = army
 
-	ai_will_do = { base = 3 }
+	ai_will_do = {
+		base = 3
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_doctrine = defensive_postures
+				has_doctrine = assault_infantry
+				has_doctrine = great_war_infantry
+			}
+		}
+	}
 
 	# EFFECTS
 	enable_tactic = tactic_infantry_assault
@@ -196,11 +228,14 @@ grand_assault = {
 	xp_cost = 100
 	xp_type = army
 
-	ai_will_do = { 
-		base = 3 
+	ai_will_do = {
+		base = 3
 		modifier = {
-			factor = 2
-			has_doctrine = mass_assault
+			factor = 1.5
+			OR = {
+				has_doctrine = large_unit_tactics
+				has_doctrine = assault_infantry
+			}
 		}
 	}
 
@@ -280,8 +315,19 @@ deep_battle = {
 	ai_will_do = {
 		base = 3
 		modifier = {
-			factor = 0.5
+			factor = 0
 			is_major = no
+		}
+		modifier = {
+            factor = 0
+            OR = {
+                tag = CAN
+                tag = NFA
+            }
+        }
+		modifier = {
+			factor = 1.5
+			has_doctrine = mass_assault
 		}
 	}
 
@@ -390,8 +436,19 @@ deep_battle_no_lar = {
 	ai_will_do = {
 		base = 3
 		modifier = {
-			factor = 0.5
+			factor = 0
 			is_major = no
+		}
+		modifier = {
+            factor = 0
+            OR = {
+                tag = CAN
+                tag = NFA
+            }
+        }
+		modifier = {
+			factor = 1.5
+			has_doctrine = mass_assault
 		}
 	}
 
@@ -498,16 +555,13 @@ guerilla_war = {
 	ai_will_do = {
 		base = 0
 		modifier = {
-			add = 5
-			has_subdoctrine = irregulars
+			add = 25
+			has_doctrine = irregulars
 		}
 		modifier = {
 			factor = 0
 			NOT = {
-                		OR = {
-					has_template_containing_unit = irregular_infantry
-					has_template_containing_unit = militia
-				}
+				has_template_containing_unit = irregular_infantry
 			}
 		}
 	}
@@ -598,8 +652,19 @@ rapid_domination = {
 	ai_will_do = {
 		base = 3
 		modifier = {
-			factor = 0.5
+			factor = 0
 			is_major = no
+		}
+		modifier = {
+            factor = 0
+            OR = {
+                tag = CAN
+                tag = NFA
+            }
+        }
+		modifier = {
+			factor = 1.5
+			has_doctrine = superior_firepower
 		}
 	}
 
@@ -683,14 +748,7 @@ expeditionary_warfare = {
 		has_dlc_ncns = yes
 	}
 
-	ai_will_do = {
-
-		base = 0
-		modifier = {
-			add = 4
-			tag = CAN
-		}
-	}
+	ai_will_do = { base = 0 }
 
 	# EFFECTS
 

@@ -79,10 +79,9 @@ NDefines.NAI.WANTED_UNITS_MAX_WANTED_CAP = 1000	-- Maximum wanted divisions for 
 --------------------------------------------------------------------------------------------------------------
 -- DIVISION UPGRADES
 --------------------------------------------------------------------------------------------------------------
-NDefines.NAI.UPGRADE_DIVISION_RELUCTANCE = 3
-NDefines.NAI.UPGRADE_PERCENTAGE_OF_FORCES = 0.10
-NDefines.NAI.STOP_TRAINING_FULLY_TRAINED_FACTOR = 0.99
-NDefines.NAI.UPGRADES_DEFICIT_LIMIT_DAYS = 60
+NDefines.NAI.UPGRADE_DIVISION_RELUCTANCE = 30
+NDefines.NAI.UPGRADE_PERCENTAGE_OF_FORCES = 0.02
+NDefines.NAI.UPGRADES_DEFICIT_LIMIT_DAYS = 270
 
 --------------------------------------------------------------------------------------------------------------
 -- AREA DEFENSE

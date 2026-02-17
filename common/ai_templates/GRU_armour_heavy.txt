@@ -31,6 +31,11 @@ heavy_armour_generic = {
 				NOT = { has_subdoctrine_in_track = armor }
 				NOT = { has_subdoctrine_in_track = operations }
 			}
+			NOT = { has_doctrine = new_mobile_warfare }
+		}
+		modifier = { 
+			has_doctrine = new_mobile_warfare
+			factor = 5
 		}
 	}
 
@@ -55,7 +60,7 @@ heavy_armour_generic = {
 				heavy_flame_tank = 1
 				signal_company = 1
 				logistics_company = 1
-				maintenance_company = 1
+				assault_engineer = 1
 			}
 		}
 	}
@@ -93,7 +98,7 @@ heavy_armour_generic = {
 				heavy_flame_tank = 1
 				armored_signal = 1
 				logistics_company = 1
-				armored_maintenance = 1
+				armored_engineer = 1
 			}
 		}
 	}
@@ -132,7 +137,7 @@ heavy_armour_generic = {
 			}
 
 			support = {
-				assault_engineer = 1
+				armored_engineer = 1
 				heavy_flame_tank = 1
 				armored_signal = 1
 				logistics_company = 1

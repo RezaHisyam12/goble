@@ -4,7 +4,7 @@ light_aircraft_production_default = {
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = air_factory_balance value = 30 }
+	ai_strategy = { type = air_factory_balance value = 20 }
 	ai_strategy = { type = unit_ratio id = fighter value = 65 }
 	ai_strategy = { type = unit_ratio id = cas value = 35 }
 }
@@ -53,7 +53,7 @@ tac_bomber_production_default = {
 
 	ai_strategy = {
 		type = air_factory_balance
-		value = 5
+		value = 10
 	}
 	ai_strategy = {
 		type = unit_ratio

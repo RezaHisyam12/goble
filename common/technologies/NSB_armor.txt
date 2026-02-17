@@ -618,6 +618,13 @@ technologies = {
 				is_eligible_for_armor_production = yes
 			}
 			modifier = {
+				factor = 10
+				OR = {
+					has_global_flag = SpaceMarines
+					has_doctrine = grand_battleplan
+				}
+			}
+			modifier = {
 				add = 500
 				tag = GRU
 			}
@@ -666,8 +673,11 @@ technologies = {
 				is_eligible_for_armor_production = yes
 			}
 			modifier = {
-				factor = 2
-				is_eligible_for_heavy_armor_production = yes
+				factor = 10
+				OR = {
+					has_global_flag = SpaceMarines
+					has_doctrine = grand_battleplan
+				}
 			}
 			modifier = {
 				add = 500
@@ -711,6 +721,13 @@ technologies = {
 			modifier = {
 				add = 25
 				is_eligible_for_armor_production = yes
+			}
+			modifier = {
+				factor = 10
+				OR = {
+					has_global_flag = SpaceMarines
+					has_doctrine = grand_battleplan
+				}
 			}
 		}
 

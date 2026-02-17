@@ -4,13 +4,13 @@
 --------------------------------------------------------------------------------------------------------------
 -- AGGRESSIVENESS
 --------------------------------------------------------------------------------------------------------------
-NDefines.NAI.AGGRESSIVENESS_CHECK_BASE = 1.4               -- Encourages more aggressive stance overall
-NDefines.NAI.AGGRESSIVENESS_CHECK_EASY_TARGET = -0.7       -- Makes AI take bigger risks vs weak nations
-NDefines.NAI.AGGRESSIVENESS_CHECK_CAREFUL = 0.8            -- More willing to stop being cautious
-NDefines.NAI.AGGRESSIVENESS_CHECK_PARTLY_FORTIFIED = 1.8  -- Requires less strength to attempt balanced attack
-NDefines.NAI.AGGRESSIVENESS_CHECK_PARTLY_FORTIFIED_WEAK_POINTS = 0.6 -- Encourages exploiting weaknesses more
-NDefines.NAI.AGGRESSIVENESS_CHECK_FULLY_FORTIFIED = 8.0    -- Less conservative vs strongholds
-NDefines.NAI.AGGRESSIVENESS_CHECK_FULLY_FORTIFIED_POCKET = 2.0 -- Pushes AI to kill off encircled enemies sooner
+NDefines.NAI.AGGRESSIVENESS_CHECK_BASE = 1.5               -- restore vanilla (1.4 → 1.5)
+NDefines.NAI.AGGRESSIVENESS_CHECK_EASY_TARGET = -0.4       -- tone down significantly (-0.7 → -0.4)
+NDefines.NAI.AGGRESSIVENESS_CHECK_CAREFUL = 0.7            -- slight increase from vanilla (0.6 → 0.7)
+NDefines.NAI.AGGRESSIVENESS_CHECK_PARTLY_FORTIFIED = 1.8   -- keep (minor effect)
+NDefines.NAI.AGGRESSIVENESS_CHECK_PARTLY_FORTIFIED_WEAK_POINTS = 0.65  -- slight restore (0.6 → 0.65)
+NDefines.NAI.AGGRESSIVENESS_CHECK_FULLY_FORTIFIED = 8.0    -- keep (negligible in practice)
+NDefines.NAI.AGGRESSIVENESS_CHECK_FULLY_FORTIFIED_POCKET = 4.0  -- tone down (-0.7 → 4.0)
 
 --------------------------------------------------------------------------------------------------------------
 -- RESEARCH

@@ -150,6 +150,13 @@ armored_infantry_support = {
 
 	ai_will_do = {
 		base = 1
+		modifier = {
+			factor = 0
+			OR = {
+				is_major = no
+				NOT = { has_doctrine = grand_battleplan }
+			}
+		}
 	}
 
 	# EFFECTS
@@ -294,10 +301,6 @@ mobile_defense = {
 		base = 1
 		modifier = {
 			factor = 0
-			is_major = yes
-		}
-		modifier = {
-			factor = 2
 			is_major = no
 		}
 	}

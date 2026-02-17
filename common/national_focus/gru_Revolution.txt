@@ -5156,19 +5156,20 @@ shared_focus = {
 			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward = {
-			add_research_slot_until_six = yes
 			add_breakthrough_progress = {
 				specialization = specialization_land
-				value = 0.5
+				value = 0.25
 			}
 			add_breakthrough_progress = {
 				specialization = specialization_air
-				value = 0.5
+				value = 0.25
 			}
 			add_breakthrough_progress = {
 				specialization = specialization_naval
-				value = 0.5
+				value = 0.25
 			}
+			custom_effect_tooltip = tooltip_white_line
+			add_research_slot_until_six = yes
 		}
 	}
 	shared_focus = {
