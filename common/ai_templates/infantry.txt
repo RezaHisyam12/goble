@@ -1,6 +1,6 @@
 line_infantry = {
 	blocked_for = {
-		TRP ETS SIK TAN KYR KHI TRK UZB ALO KYR MON XSM DKB KUB MTR #uses line_cavalry
+		TRP ETS SIK TAN KYR KHI TRK UZB ALO MON XSM DKB KUB MTR #uses line_cavalry
 		LBA SAU JBS TRU IKH YEM OMA #uses line_camelry
 		ANQ CHI FNG GXC HNN LEP MAN QIE SHX SIK SHD SZC XSM YUN KUM #uses line_irregulars instead
 		FRA GRU VKB VKK VKR VKM VKN VKP VOB VSJ VST HYP #uses infantry_artillery_focus
@@ -101,6 +101,10 @@ line_infantry = {
 			base = 100
 			modifier = {
 				factor = 0
+				NOT = { has_subdoctrine_in_track = infantry }
+			}
+			modifier = {
+				factor = 0
 				num_of_military_factories < 75
 			}
 			modifier = {
@@ -130,6 +134,13 @@ line_infantry = {
 		
 		upgrade_prio = {
 			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = operations }
+				}
+			}
 			modifier = {
 				factor = 0
 				num_of_military_factories < 150
@@ -177,6 +188,10 @@ line_infantry = {
 			}
 			modifier = {
 				factor = 0
+				NOT = { has_subdoctrine_in_track = infantry }
+			}
+			modifier = {
+				factor = 0
 				num_of_military_factories < 75
 			}
 			modifier = {
@@ -219,6 +234,13 @@ line_infantry = {
 				factor = 0
 				NOT = { has_tech = basic_heavy_tank }
 				NOT = { has_tech = basic_heavy_tank_chassis }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = operations }
+				}
 			}
 			modifier = {
 				factor = 0

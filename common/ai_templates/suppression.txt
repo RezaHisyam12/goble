@@ -55,11 +55,11 @@ suppression_generic = {
 			}
 			modifier = {
 				factor = 0
-				num_of_military_factories < 250
+				num_of_military_factories < 200
 			}
 			modifier = {
 				factor = 2
-				num_of_military_factories > 250
+				num_of_military_factories > 200
 			}
 		}
 

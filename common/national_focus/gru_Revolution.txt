@@ -8718,7 +8718,11 @@ shared_focus = {
 		y = 3
 		cost = 4
 		ai_will_do = {
-			factor = 100
+			factor = 1000
+			modifier = {
+				factor = 0
+				AUS = { exists = yes }
+			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_RED_COLONIALISM"

@@ -5,8 +5,8 @@ light_aircraft_production_default = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = { type = air_factory_balance value = 20 }
-	ai_strategy = { type = unit_ratio id = fighter value = 65 }
-	ai_strategy = { type = unit_ratio id = cas value = 35 }
+	ai_strategy = { type = unit_ratio id = fighter value = 60 }
+	ai_strategy = { type = unit_ratio id = cas value = 40 }
 }
 
 light_aircraft_production_losing_air_war = {
@@ -22,8 +22,8 @@ light_aircraft_production_losing_air_war = {
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = unit_ratio id = fighter value = 15 }
-	ai_strategy = { type = unit_ratio id = cas value = -15 }
+	ai_strategy = { type = unit_ratio id = fighter value = 20 }
+	ai_strategy = { type = unit_ratio id = cas value = -20 }
 }
 
 light_aircraft_production_winning_air_war = {

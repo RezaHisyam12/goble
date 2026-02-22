@@ -71,6 +71,7 @@ GRU_infantry = {
 		target_template = {
 			regiments = {
 				infantry = 10
+				artillery_brigade = 1
 			}
 
 			support = {
@@ -86,6 +87,10 @@ GRU_infantry = {
 		
 		upgrade_prio = {
 			base = 100
+			modifier = {
+				factor = 0
+				NOT = { has_subdoctrine_in_track = infantry }
+			}
 			modifier = {
 				factor = 0
 				num_of_military_factories < 75
@@ -117,6 +122,13 @@ GRU_infantry = {
 		
 		upgrade_prio = {
 			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = operations }
+				}
+			}
 			modifier = {
 				factor = 0
 				num_of_military_factories < 150

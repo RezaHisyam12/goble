@@ -11124,7 +11124,7 @@ GRU_expansion_three_volksland_hypoborea = {
 						type = support_equipment
 						amount = 1000
 						}
-						add_manpower = 40000
+						add_manpower = 70000
 						army_experience = 500
 						remove_ideas = BAT_black_monday
 						remove_ideas = BAT_black_monday_1
@@ -12060,16 +12060,16 @@ GRU_expansion_three_volksland_hypoborea = {
 							target = WHR
 							transfer_troops = yes
 						}
-					transfer_state = 207
-					transfer_state = 96
-					transfer_state = 94
-					transfer_state = 1295
-					transfer_state = 204
-					transfer_state = 206
-					transfer_state = 1294
-					transfer_state = 1087
+						transfer_state = 207
+						transfer_state = 96
+						transfer_state = 94
+						transfer_state = 1295
+						transfer_state = 204
+						transfer_state = 206
+						transfer_state = 1294
+						transfer_state = 1087
 					}
-					hidden_effect = {
+				hidden_effect = {
 				VKB = {	country_event = rotermorgenmisc.400 }
 				}
 			}

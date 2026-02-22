@@ -1,6 +1,6 @@
 line_cavalry = {
 	available_for = {
-		TRP ETS SIK TAN KYR KHI TRK UZB ALO KYR MON XSM
+		TRP ETS SIK TAN KHI KYR TRK UZB ALO MON XSM
 	}
 
 	role = infantry
@@ -61,6 +61,10 @@ line_cavalry = {
 		
 		upgrade_prio = {
 			base = 100
+			modifier = {
+				factor = 0
+				NOT = { has_subdoctrine_in_track = infantry }
+			}
 			modifier = {
 				factor = 0
 				num_of_military_factories < 75

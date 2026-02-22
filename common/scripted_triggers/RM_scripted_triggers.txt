@@ -381,3 +381,60 @@ GRU_VK_EAST = {
 	}
 }
 
+eastern_kommissariat_over_50_surrender = {
+    OR = {
+        VKP = {
+            is_in_faction_with = ROOT
+            surrender_progress > 0.50
+        }
+        VKB = {
+            is_in_faction_with = ROOT
+            surrender_progress > 0.50
+        }
+        VKR = {
+            is_in_faction_with = ROOT
+            surrender_progress > 0.50
+        }
+    }
+}
+
+eastern_kommissariat_collapse_score = {
+
+    value = 0
+
+    add = {
+        if = {
+            limit = {
+                VKP = {
+                    is_in_faction_with = ROOT
+                    surrender_progress > 0.50
+                }
+            }
+            value = 1
+        }
+    }
+
+    add = {
+        if = {
+            limit = {
+                VKB = {
+                    is_in_faction_with = ROOT
+                    surrender_progress > 0.50
+                }
+            }
+            value = 1
+        }
+    }
+
+    add = {
+        if = {
+            limit = {
+                VKR = {
+                    is_in_faction_with = ROOT
+                    surrender_progress > 0.50
+                }
+            }
+            value = 1
+        }
+    }
+}

@@ -5,7 +5,6 @@ unit_limits = {
 	}
 
 	min = 8
-	max = 300
 
 	base = 8
 	faction_leader_bonus = 0.15

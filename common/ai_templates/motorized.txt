@@ -54,16 +54,17 @@ motorized_infantry = {
 				factor = 0
 				OR = {
 					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = combat_support }
 					NOT = { has_subdoctrine_in_track = operations }
 				}
 			}
 			modifier = {
 				factor = 0
-				num_of_military_factories < 90
+				num_of_military_factories < 60
 			}
 			modifier = {
 				factor = 2
-				num_of_military_factories > 90
+				num_of_military_factories > 60
 			}
 		}
 
@@ -104,11 +105,11 @@ motorized_infantry = {
 			}
             modifier = {
 				factor = 0
-				num_of_military_factories < 90
+				num_of_military_factories < 60
 			}
 			modifier = {
 				factor = 4
-				num_of_military_factories > 90
+				num_of_military_factories > 60
 			}
 		}
 
@@ -149,11 +150,11 @@ motorized_infantry = {
 			}
             modifier = {
 				factor = 0
-				num_of_military_factories < 150
+				num_of_military_factories < 120
 			}
 			modifier = {
 				factor = 6
-				num_of_military_factories > 150
+				num_of_military_factories > 120
 			}
 		}
 

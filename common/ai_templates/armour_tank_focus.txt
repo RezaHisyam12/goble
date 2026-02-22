@@ -78,6 +78,13 @@ armour_more_tanks = {
 			}
 			modifier = {
 				factor = 0
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = operations }
+				}
+			}
+			modifier = {
+				factor = 0
 				is_eligible_for_improved_armor_production = no
 			}
 			modifier = {
@@ -117,6 +124,15 @@ armour_more_tanks = {
 			modifier = {
 				factor = 0
 				NOT = { has_tech = mechanised_infantry }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = combat_support }
+					NOT = { has_subdoctrine_in_track = armor }
+					NOT = { has_subdoctrine_in_track = operations }
+				}
 			}
 			modifier = {
 				factor = 0

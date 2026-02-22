@@ -111,30 +111,6 @@ FRA_dont_justify_on_benesam = {
 ################
 ### Military ###
 ################
-FRA_keep_garrison = {
-	allowed = {
-		original_tag = FRA
-	}
-	enable = {
-		always = yes
-	}
-	abort = { always = no }
-	ai_strategy = {
-		type = garrison
-		value = 5
-	}
-	ai_strategy = {
-		type = put_unit_buffers
-		ratio = 0.05
-		states = {
-			15 #Normandy
-			16 #Paris
-			20 #Lyonnais
-			21 #Provence
-		}
-	}
-}
-
 FRA_focus_on_the_home_front = {
 	allowed = {
 		original_tag = FRA
@@ -279,43 +255,6 @@ FRA_focus_on_germany_socialist = {
 	}
 }
 
-FRA_eyes_on_GRU = {
-	allowed = {
-		original_tag = FRA
-	}
-	enable = {
-		is_neighbor_of = GRU
-		GRU = { has_capitulated = no }
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = conquer
-		id = GRU
-		value = 1000
-	}
-	ai_strategy = {
-		type = front_armor_score
-		id = GRU
-		value = 250
-	}
-	ai_strategy = {
-		type = front_unit_request
-		area = globally
-		value = -25
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = GRU
-		value = 50
-	}
-	ai_strategy = {
-		type = theatre_distribution_demand_increase
-		id = 28 #Alsace-Lorraine
-		value = 10
-	}
-}
-
 FRA_destroy_entente_beachheads = {
 	allowed = {
 		tag = FRA
@@ -447,6 +386,7 @@ FRA_less_troops_on_iberia = {
 
 	ai_strategy = {
 		type = front_unit_request
+		strategic_region = 41 #Eastern Iberia
 		strategic_region = 236 #Southern Iberia
 		strategic_region = 237 #Western Iberia
 		value = -30
@@ -478,32 +418,6 @@ FRA_industrial_strategy_early = {
 	ai_strategy = { type = research_weight_factor id = basic_fortification_tech value = 1500 }
 }
 
-FRA_industrial_strategy_war = {
-	allowed = {
-		original_tag = FRA
-	}
-	enable = {
-		OR = {
-			threat > 0.75
-			has_war = yes
-		}
-		num_of_military_factories < 150
-	}
-	abort = {
-		num_of_military_factories > 150
-	}
-
-	ai_strategy = {
-		type = added_military_to_civilian_factory_ratio
-		value = 50
-	}
-	ai_strategy = {
-		type = building_target
-		id = arms_factory
-		value = 150
-	}
-}
-
 FRA_industrial_strategy_war_late = {
 	allowed = {
 		original_tag = FRA
@@ -527,7 +441,7 @@ FRA_build_radars_lorraine = {
 	}
 	enable = {
 		785 = { #Lorraine
-			controller = { is_ally_with = FROM }
+			is_owned_and_controlled_by_ROOT_or_ally = yes
 			free_building_slots = { building = radar_station size > 0 }
 		}
 	}
@@ -549,7 +463,7 @@ FRA_build_radars_picardy = {
 	}
 	enable = {
 		24 = { #Picardy
-			controller = { is_ally_with = FROM }
+			is_owned_and_controlled_by_ROOT_or_ally = yes
 			free_building_slots = { building = radar_station size > 0 }
 		}
 	}
@@ -571,7 +485,7 @@ FRA_build_radars_paris = {
 	}
 	enable = {
 		16 = { #Île de France
-			controller = { is_ally_with = FROM }
+			is_owned_and_controlled_by_ROOT_or_ally = yes
 			free_building_slots = { building = radar_station size > 0 }
 		}
 	}
@@ -588,12 +502,12 @@ FRA_build_radars_paris = {
 FRA_build_radars_provence = {
 	allowed = {
 		original_tag = FRA
-		threat > 0.7
+		threat > 0.6
 		is_special_project_completed = sp:sp_air_radar
 	}
 	enable = {
 		21 = { #Provence
-			controller = { is_ally_with = FROM }
+			is_owned_and_controlled_by_ROOT_or_ally = yes
 			free_building_slots = { building = radar_station size > 0 }
 		}
 	}

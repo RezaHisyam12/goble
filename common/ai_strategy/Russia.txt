@@ -1072,6 +1072,39 @@ RUS_crush_german_socialist = {
 	}
 }
 
+RUS_focus_on_GRU = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		is_neighbor_of = GRU
+		OR = {
+			has_war = no
+			has_war_with = GRU
+		}
+		GRU = {
+			exists = yes
+			has_capitulated = no
+		}
+		FRA = {
+			exists = yes
+			has_capitulated = no
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = GRU
+		value = 300
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = TRM
+		value = -25
+	}
+}
+
 RUS_eyes_on_transamur = {
 	allowed = {
 		original_tag = RUS
@@ -1574,11 +1607,6 @@ RUS_total_war_against_german_socialist = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = conquer
-		id = GRU
-		value = 300
-	}
-	ai_strategy = {
 		type = role_ratio
 		id = armor
 		value = 20
@@ -2024,6 +2052,43 @@ RUS_focus_on_vkr = {
 	}
 }
 
+RUS_crush_vkr = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = VKR
+		VKR = { has_capitulated = no }
+		has_manpower > 250000
+		stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
+		num_planes_stationed_in_regions = {
+			value > 1000
+			regions = { 130 } #Ukraine
+		}
+
+		#activate during the non-winter months
+		set_temp_variable = { frequency = global.num_days }
+		modulo_temp_variable = { frequency = 365 }
+		check_variable = { frequency > 90 } #early April
+		check_variable = { frequency < 300 } #late October
+
+		#activate every 25 days, then pause for another 25
+		set_temp_variable = { frequency = global.num_days }
+		modulo_temp_variable = { frequency = 50 }
+		check_variable = { frequency < 25 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = VKR
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+}
+
 RUS_focus_on_vk_baltic_duchy = {
 	allowed = {
 		original_tag = RUS
@@ -2059,6 +2124,43 @@ RUS_focus_on_vk_baltic_duchy = {
 		type = front_unit_request
 		tag = TRM
 		value = -25
+	}
+}
+
+RUS_mop_up_vk_baltic_duchy = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = VKB
+		VKB = { has_capitulated = no }
+		has_manpower > 250000
+		stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
+		num_planes_stationed_in_regions = {
+			value > 1000
+			regions = { 37 } #Baltic States
+		}
+
+		#activate during the non-winter months
+		set_temp_variable = { frequency = global.num_days }
+		modulo_temp_variable = { frequency = 365 }
+		check_variable = { frequency > 90 } #early April
+		check_variable = { frequency < 300 } #late October
+
+		#activate every 25 days, then pause for another 25
+		set_temp_variable = { frequency = global.num_days }
+		modulo_temp_variable = { frequency = 50 }
+		check_variable = { frequency < 25 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = VKB
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
 	}
 }
 

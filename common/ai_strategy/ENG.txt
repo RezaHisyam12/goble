@@ -105,14 +105,10 @@ ENG_build_up_civs_2 = {
 	}
 	enable = {
 		date > 1938.1.1
-		threat < 0.75
 		has_war = no
 	}
 	abort = {
-		OR = {
-			threat > 0.75
-			has_war = yes
-		}
+		has_war = yes
 	}
 
 	ai_strategy = {
@@ -128,32 +124,6 @@ ENG_build_up_civs_2 = {
 	ai_strategy = {
 		type = air_factory_balance
 		value = 30
-	}
-}
-
-ENG_build_up_mils_1 = {
-	allowed = {
-		original_tag = ENG
-	}
-	enable = {
-		OR = {
-			threat > 0.75
-			has_war = yes
-		}
-		num_of_military_factories < 150
-	}
-	abort = {
-		num_of_military_factories > 150
-	}
-
-	ai_strategy = {
-		type = added_military_to_civilian_factory_ratio
-		value = 50
-	}
-	ai_strategy = {
-		type = building_target
-		id = arms_factory
-		value = 150
 	}
 }
 

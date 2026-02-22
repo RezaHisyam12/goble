@@ -62,6 +62,10 @@ line_irregulars_cavalry = {
 			base = 100
 			modifier = {
 				factor = 0
+				NOT = { has_subdoctrine_in_track = infantry }
+			}
+			modifier = {
+				factor = 0
 				num_of_military_factories < 75
 			}
 			modifier = {

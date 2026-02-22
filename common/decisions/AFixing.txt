@@ -597,6 +597,101 @@ RUS_Foreign_Policy_decisions = {
 		}
 	}
 
+	RUS_Attack_Ottomans = {
+		icon = hol_draw_up_staff_plans
+
+		available = {
+			OR = {
+				is_owner_neighbor_of = FROM
+				any_allied_country = { is_owner_neighbor_of = FROM }
+				FROM = {
+					NOT = { has_idea = OTT_yerevan_treaty }
+				}
+			}
+			NOT = {
+				has_non_aggression_pact_with = FROM
+				custom_trigger_tooltip = {
+					tooltip = RUS_demanding_armenia #cleaner tooltip
+					has_country_flag = RUS_demanding_armenia
+				}
+			}
+		}
+
+		cancel_trigger = {
+			OR = {
+				NOT = { can_declare_war_on = FROM }
+				has_non_aggression_pact_with = FROM
+				FROM = {
+					has_idea = OTT_yerevan_treaty
+				}
+			}
+		}
+
+		targets = { TUR }
+		target_root_trigger = {
+			OR = {
+				has_completed_focus = RUS_Open_The_Straits
+				has_completed_focus = TRM_Finish_The_Turks
+				has_completed_focus = RUS_KER_Claim_The_Straits
+			}
+		}
+		target_trigger = {
+			can_declare_war_on = FROM
+		}
+
+		cost = 10
+		days_remove = 40
+		fire_only_once = yes
+		war_with_target_on_remove = yes
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				OR = {
+					FROM = { RUS_dont_attack_if_target_is_stronger = yes }
+					FROM = { RUS_dont_attack_if_faction_is_stronger = yes }
+					FROM = { RUS_dont_attack_if_overlord_is_stronger = yes }
+					TUR = { is_subject = yes }
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = RUS_OTT_AI_strategies
+			}
+		}
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel RUS_Attack_Ottomans target: [From.GetName]"
+			clear_decision_attack_AI = yes
+			add_political_power = 10
+			clr_country_flag = RUS_attacking_ottomans
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete RUS_Attack_Ottomans target: [From.GetName]"
+			FROM = { incoming_war_notification_effect = yes }
+			setup_decision_attack_AI = yes
+			set_country_flag = RUS_attacking_ottomans
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove RUS_Attack_Ottomans target: [From.GetName]"
+			if = {
+				limit = { OTT = { exists = yes } }
+				log = "KR_Event_Logging;RUS INTERVENE AGAINST OTT;[GetDateText]"
+			}
+			clear_decision_attack_AI = yes
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
+			}
+			clr_country_flag = RUS_attacking_ottomans
+			clr_country_flag = RUS_demanding_armenia
+			clr_country_flag = RUS_OTT_AI_strategies
+		}
+	}
+
 	SOV_Attack_Europe = {
 		name = RUS_Attack_Region
 		icon = hol_draw_up_staff_plans

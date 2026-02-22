@@ -24,13 +24,13 @@ heavy_armour_generic = {
 		}
 		modifier = {
 			factor = 0
+			NOT = { has_doctrine = grand_battleplan }
 			OR = {
 				NOT = { has_subdoctrine_in_track = infantry }
 				NOT = { has_subdoctrine_in_track = combat_support }
 				NOT = { has_subdoctrine_in_track = armor }
 				NOT = { has_subdoctrine_in_track = operations }
 			}
-			NOT = { has_doctrine = grand_battleplan }
 		}
 		modifier = { 
 			has_doctrine = grand_battleplan
@@ -72,7 +72,14 @@ heavy_armour_generic = {
 				factor = 0
 				NOT = { has_tech = mechanised_infantry }
 			}
-            modifier = {
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = operations }
+				}
+			}
+            		modifier = {
 				factor = 0
 				is_eligible_for_improved_heavy_armor_production = no
 			}
@@ -113,6 +120,15 @@ heavy_armour_generic = {
 			modifier = {
 				factor = 0
 				NOT = { has_tech = mechanised_infantry }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = combat_support }
+					NOT = { has_subdoctrine_in_track = armor }
+					NOT = { has_subdoctrine_in_track = operations }
+				}
 			}
 			modifier = {
 				factor = 0
