@@ -7,25 +7,12 @@ country_event = {
 	desc = rotermorgenGCW.99.d
 	#is_triggered_only = yes
 	trigger = {
+		tag = GER
+		date > 1936.2.20
 		OR = {
 			is_ai = no
 			has_global_flag = KX_GER_REV_ALWAYS
 			has_global_flag = KX_GER_REV_MAYBE
-		}
-		tag = GER
-		OR = {	
-			AND = {
-				GER = {
-					has_completed_focus = GER_black_monday_aftermath
-				}
-				date > 1936.4.20
-			}
-			AND = {
-				GER = {
-					NOT = { has_completed_focus = GER_black_monday_aftermath }
-				}
-				date > 1936.6.20
-			}
 		}
 	}
 	hidden = yes

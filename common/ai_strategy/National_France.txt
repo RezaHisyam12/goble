@@ -4,35 +4,27 @@
 NFA_hates_socialists = {
 	reversed = yes
 
-	enable_reverse = {
-		NFA = { is_subject = no }
-	}
 	enable = {
 		has_socialist_government = yes
 	}
-
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = antagonize
 		id = NFA
-		value = 300
+		value = 1000
 	}
 }
 NFA_dislikes_germany = {
 	reversed = yes
 
-	enable_reverse = {
-		NFA = { is_subject = no }
-		GER = { is_faction_leader = yes }
-		NOT = { has_global_flag = GER_stay_out_france_uk }
-	}
 	enable = {
 		is_in_faction_with = GER
+		NOT = { has_global_flag = GER_stay_out_france_uk }
+		GER = { is_faction_leader = yes }
+		NFA = { is_subject = no }
 	}
 	abort_when_not_enabled = yes
-
-	target_array = GER.faction_members
 
 	ai_strategy = {
 		type = ignore
@@ -58,16 +50,12 @@ NFA_dislikes_germany = {
 NFA_dislikes_gru = {
 	reversed = yes
 
-	enable_reverse = {
-		NFA = { is_subject = no }
-		GRU = { is_faction_leader = yes }
-	}
 	enable = {
 		is_in_faction_with = GRU
+		GRU = { is_faction_leader = yes }
+		NFA = { is_subject = no }
 	}
 	abort_when_not_enabled = yes
-
-	target_array = GRU.faction_members
 
 	ai_strategy = {
 		type = ignore
@@ -235,7 +223,7 @@ NFA_defend_metropole_from_uob_counterattack = {
 		type = put_unit_buffers
 		states = { 29 17 15 14 983 23 19 779 16 }
 		ratio = 0.35
-		area = mainland_europe
+		area = western_europe
 		subtract_fronts_from_need = no
 	}
 }

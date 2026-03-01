@@ -59,6 +59,17 @@ NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_NAVY_SPIRIT = 0.01      -- How quickly is d
 NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_AIR_SPIRIT = 0.01       -- How quickly is desire to unlock air spirits accumulated?
 
 --------------------------------------------------------------------------------------------------------------
+-- XP COSTS
+--------------------------------------------------------------------------------------------------------------
+NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 16
+NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 4
+NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 8
+
+NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 999
+NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 999
+NDefines.NMilitary.MAX_AIR_EXPERIENCE = 999
+
+--------------------------------------------------------------------------------------------------------------
 -- WANTED NUMBER OF DIVISIONS
 --------------------------------------------------------------------------------------------------------------
 	-- Calculating wanted nr of divisions

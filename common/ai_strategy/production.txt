@@ -894,20 +894,20 @@ german_mil_buildup = {
 	}
 }
 
-russian_mil_buildup = {
+RUS_military_buildup = {
 	allowed = {
 		original_tag = RUS
 	}
 	enable = {
-		has_completed_focus = RUS_Rearmament_Programme
-		date < 1939.1.1
+		date < 1940.1.1
+		date > 1937.6.1
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = building_target
 		id = arms_factory
-		value = 500
+		value = 1000
 	}
 }
 

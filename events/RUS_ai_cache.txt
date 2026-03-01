@@ -1,0 +1,34 @@
+add_namespace = rus_ai
+
+country_event = {
+    id = rus_ai.1
+    hidden = yes
+    is_triggered_only = yes
+
+    immediate = {
+
+        clr_country_flag = rus_vk_attack_window
+
+        # === GET DAY OF YEAR ===
+        set_temp_variable = { day_cycle = global.num_days }
+        modulo_temp_variable = { day_cycle = 365 }
+
+        # === WINTER CHECK ===
+        # Active only between day 90 (April) and 300 (October)
+        if = {
+            limit = {
+                check_variable = { day_cycle > 90 }
+                check_variable = { day_cycle < 300 }
+            }
+
+            # === 50 DAY CYCLE ===
+            set_temp_variable = { atk_cycle = global.num_days }
+            modulo_temp_variable = { atk_cycle = 50 }
+
+            if = {
+                limit = { check_variable = { atk_cycle < 25 } }
+                set_country_flag = rus_vk_attack_window
+            }
+        }
+    }
+}

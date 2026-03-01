@@ -1460,6 +1460,11 @@ STP_ignore_northern_oststaaten = {
 	enable = {
 		is_ally_with = GRU
 		NOT = { has_war_with = AUS }
+		RUS = {
+			exists = yes
+			is_subject = no
+			has_capitulated = no
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -1476,7 +1481,6 @@ STP_ignore_southern_oststaaten = { #Rest of Reichspakt should focus on BLR/BAT f
 			tag = BAT
 			tag = VKB
 			tag = VKK
-			tag = VKP
 
 			#Banned from Eastern Front in general
 			is_belgian_tag = yes
@@ -1489,6 +1493,7 @@ STP_ignore_southern_oststaaten = { #Rest of Reichspakt should focus on BLR/BAT f
 	enable = {
 		is_ally_with = GRU
 		NOT = { has_war_with = AUS }
+		RUS = { is_faction_leader = yes }
 	}
 	abort_when_not_enabled = yes
 
@@ -1512,6 +1517,7 @@ STP_ignore_western_front = {
 			is_scandinavian_tag = yes
 			is_ukrainian_tag = yes
 			tag = BAT
+			tag = HUN
 			tag = VKB
 			tag = VKR
 			tag = VKK
@@ -1520,11 +1526,9 @@ STP_ignore_western_front = {
 	}
 	enable = {
 		is_ally_with = GRU
-		russian_civil_war = no
 		FRA = { is_faction_leader = yes }			
 		NOT = { has_war_with = AUS }
-		NOT = { GRU = { has_full_control_of_state = 5 } }
-
+		gru_controls_konigsberg = yes
 	}
 	abort_when_not_enabled = yes
 
@@ -1557,7 +1561,6 @@ STP_defend_eastern_front_northern_oststaaten = {
 		}
 		is_ally_with = GRU
 		NOT = { has_war_with = AUS }
-		russian_civil_war = no
 	}
 	abort_when_not_enabled = yes
 
@@ -1571,6 +1574,7 @@ STP_defend_eastern_front_northern_oststaaten = {
 STP_defend_eastern_front_southern_oststaaten = {
 	allowed = {
 		OR = {
+			tag = VKP
 			is_balkan_tag = yes
 			is_ukrainian_tag = yes
 		}
@@ -1583,7 +1587,6 @@ STP_defend_eastern_front_southern_oststaaten = {
 		}
 		is_ally_with = GRU
 		NOT = { has_war_with = AUS }
-		russian_civil_war = no
 	}
 	abort_when_not_enabled = yes
 
@@ -1693,6 +1696,33 @@ GRU_finish_off_italy = {
 	}
 }
 
+GRU_less_focus_on_russia = {
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		has_war_with = RUS
+		FRA = {
+			has_capitulated = no
+			is_faction_leader = yes
+		}
+		gru_controls_konigsberg = yes
+		eastern_kommissariat_below_50_surrender = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = RUS
+		value = -100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = TRM
+		value = -100
+	}
+}
+
 ################
 ### Industry/2WK ###
 ################
@@ -1798,180 +1828,6 @@ German_default_heavy_tank_production = {
 		type = equipment_variant_production_factor
 		id = armored_support_vehicle
 		value = 10
-	}
-}
-
-GRU_less_focus_on_russia = {
-	allowed = {
-		tag = GRU
-	}
-    	enable = {
-        	has_war_with = RUS
-    	}
-
-    # =========================
-    # RUSSIAN FRONT PRIORITY
-    # =========================
-
-    ai_strategy = {
-        type = front_unit_request
-        tag = RUS
-        value = -100    # Base mild priority
-
-        # If 1 ally collapsing → increase focus east
-        modifier = {
-            add = 50
-            check_variable = {
-                eastern_kommissariat_collapse_score > 0
-            }
-        }
-
-        # If 2 collapsing → major shift east
-        modifier = {
-            add = 25
-            check_variable = {
-                eastern_kommissariat_collapse_score > 1
-            }
-        }
-
-        # If 3 collapsing → emergency eastern shift
-        modifier = {
-            add = 25
-            check_variable = {
-                eastern_kommissariat_collapse_score > 2
-            }
-        }
-    }
-
-    # =========================
-    # WESTERN FRONT PRIORITY
-    # =========================
-
-    ai_strategy = {
-        type = front_unit_request
-        tag = FRA
-        value = 100    # Base western focus
-
-        # If east unstable → reduce west commitment
-        modifier = {
-            add = -50
-            check_variable = {
-                eastern_kommissariat_collapse_score > 0
-            }
-        }
-
-        modifier = {
-            add = -25
-            check_variable = {
-                eastern_kommissariat_collapse_score > 1
-            }
-        }
-
-        modifier = {
-            add = -25
-            check_variable = {
-                eastern_kommissariat_collapse_score > 2
-            }
-        }
-    }
-}
-
-GRU_finish_russia_off = {
-	allowed = {
-		OR = {
-			tag = GRU
-			tag = VKP
-			is_ally_with = GRU
-		}
-		is_in_europe = yes
-	}
-	enable = {
-		has_war_with = RUS
-		OR = {
-			NOT = { country_exists = FRA }
-			FRA = { has_capitulated = yes }
-		}
-		OR = {
-			NOT = { country_exists = SRI }
-			SRI = { has_capitulated = yes }
-		}
-		NOT = { is_neighbor_of = CSA } #== being invaded
-		has_equipment = { infantry_equipment > 0 }
-		has_manpower > 0
-
-		#activate during the non-winter months
-		set_temp_variable = { frequency = global.num_days }
-		modulo_temp_variable = { frequency = 365 }
-		check_variable = { frequency > 90 } #early April
-		check_variable = { frequency < 300 } #late October
-
-		#activate every 25 days, then pause for another 25
-		set_temp_variable = { frequency = global.num_days }
-		modulo_temp_variable = { frequency = 50 }
-		check_variable = { frequency > 25 }
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = front_control
-		tag = RUS
-		priority = 100
-		ordertype = front
-		execution_type = rush_weak
-		execute_order = yes
-	}
-}
-
-GRU_finish_russia_off_air = {
-	allowed = {
-		OR = {
-			tag = GRU
-			is_ally_with = GRU
-		}
-		is_in_europe = yes
-	}
-	enable = {
-		has_war_with = RUS
-		OR = {
-			NOT = { country_exists = FRA }
-			FRA = { has_capitulated = yes }
-		}
-		OR = {
-			NOT = { country_exists = SRI }
-			SRI = { has_capitulated = yes }
-		}
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 130 # West Ukraine
-		value = 15000
-	}
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 165 # East Ukraine
-		value = 15000
-	}
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 132 #Northern Russia
-		value = 15000
-	}
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 133 #Central Russia
-		value = 15000
-	}
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 137 #Volga
-		value = 15000
-	}
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 244 #Caspian Lowlands
-		value = 15000
 	}
 }
 
@@ -2127,10 +1983,8 @@ GRU_war_against_france = {
 		tag = GRU
 	}
 	enable = {
-		FRA = {
-			has_war_with = GRU
-			has_capitulated = no
-		}
+		has_war_with = FRA
+		FRA = { has_capitulated = no }
 	}
 	abort_when_not_enabled = yes
 
@@ -2153,7 +2007,7 @@ GRU_war_against_france = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = RUS
-		value = -20
+		value = -70
 	}
 }
 
@@ -2211,6 +2065,105 @@ GRU_total_war_against_russia = {
 	ai_strategy = {
 		type = railway_gun_divisions_ratio
 		value = 1
+	}
+}
+
+GRU_finish_russia_off = {
+	allowed = {
+		OR = {
+			tag = GRU
+			tag = VKP
+			is_ally_with = GRU
+		}
+		is_in_europe = yes
+	}
+	enable = {
+		has_war_with = RUS
+		OR = {
+			NOT = { country_exists = FRA }
+			FRA = { has_capitulated = yes }
+		}
+		OR = {
+			NOT = { country_exists = SRI }
+			SRI = { has_capitulated = yes }
+		}
+		NOT = { is_neighbor_of = CSA } #== being invaded
+		has_equipment = { infantry_equipment > 0 }
+		has_manpower > 0
+
+		#activate during the non-winter months
+		set_temp_variable = { frequency = global.num_days }
+		modulo_temp_variable = { frequency = 365 }
+		check_variable = { frequency > 90 } #early April
+		check_variable = { frequency < 300 } #late October
+
+		#activate every 25 days, then pause for another 25
+		set_temp_variable = { frequency = global.num_days }
+		modulo_temp_variable = { frequency = 50 }
+		check_variable = { frequency > 25 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = RUS
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+}
+
+GRU_finish_russia_off_air = {
+	allowed = {
+		OR = {
+			tag = GRU
+			is_ally_with = GRU
+		}
+		is_in_europe = yes
+	}
+	enable = {
+		has_war_with = RUS
+		OR = {
+			NOT = { country_exists = FRA }
+			FRA = { has_capitulated = yes }
+		}
+		OR = {
+			NOT = { country_exists = SRI }
+			SRI = { has_capitulated = yes }
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 130 # West Ukraine
+		value = 15000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 165 # East Ukraine
+		value = 15000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 132 #Northern Russia
+		value = 15000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 133 #Central Russia
+		value = 15000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 137 #Volga
+		value = 15000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 244 #Caspian Lowlands
+		value = 15000
 	}
 }
 

@@ -7899,6 +7899,7 @@ RUS_duks_organisation = {
 	equipment_type = {
 		small_plane_airframe
 		medium_plane_fighter_airframe
+		mothership_equipment
 	}
 
 	research_categories = {
@@ -8212,6 +8213,8 @@ RUS_tsagi_organisation = {
 	equipment_type = {
 		medium_plane_airframe
 		large_plane_airframe
+		strat_bomber_intercontinental_equipment
+		ballistic_missile_equipment
 		guided_missile_equipment
 	}
 
@@ -8323,6 +8326,9 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
+			ballistic_missile_equipment
+			guided_missile_equipment
 		}
 
 		equipment_bonus = {
@@ -8390,6 +8396,9 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
+			ballistic_missile_equipment
+			guided_missile_equipment
 		}
 
 		equipment_bonus = {
@@ -8435,6 +8444,9 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
+			ballistic_missile_equipment
+			guided_missile_equipment
 		}
 
 		equipment_bonus = {
@@ -8488,6 +8500,9 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
+			ballistic_missile_equipment
+			guided_missile_equipment
 		}
 
 		equipment_bonus = {
@@ -8509,6 +8524,9 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
+			ballistic_missile_equipment
+			guided_missile_equipment
 		}
 
 		equipment_bonus = {
@@ -8530,6 +8548,7 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
 		}
 
 		equipment_bonus = {
@@ -8550,6 +8569,7 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
 		}
 
 		equipment_bonus = {
@@ -8569,6 +8589,9 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
+			ballistic_missile_equipment
+			guided_missile_equipment
 		}
 
 		equipment_bonus = {
@@ -8590,6 +8613,9 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
+			ballistic_missile_equipment
+			guided_missile_equipment
 		}
 
 		equipment_bonus = {
@@ -8612,6 +8638,9 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
+			ballistic_missile_equipment
+			guided_missile_equipment
 		}
 
 		equipment_bonus = {
@@ -8640,6 +8669,9 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
+			ballistic_missile_equipment
+			guided_missile_equipment
 		}
 
 		on_complete = {
@@ -8746,6 +8778,9 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
+			ballistic_missile_equipment
+			guided_missile_equipment
 		}
 
 		equipment_bonus = {
@@ -8774,6 +8809,9 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
+			ballistic_missile_equipment
+			guided_missile_equipment
 		}
 
 		equipment_bonus = {
@@ -8802,6 +8840,9 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
+			ballistic_missile_equipment
+			guided_missile_equipment
 		}
 
 		equipment_bonus = {
@@ -8830,6 +8871,9 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
+			ballistic_missile_equipment
+			guided_missile_equipment
 		}
 
 		equipment_bonus = {
@@ -8858,6 +8902,9 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
+			ballistic_missile_equipment
+			guided_missile_equipment
 		}
 
 		equipment_bonus = {
@@ -8886,6 +8933,9 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
+			ballistic_missile_equipment
+			guided_missile_equipment
 		}
 
 		equipment_bonus = {
@@ -8914,6 +8964,9 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
+			ballistic_missile_equipment
+			guided_missile_equipment
 		}
 
 		equipment_bonus = {
@@ -8942,6 +8995,9 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
+			ballistic_missile_equipment
+			guided_missile_equipment
 		}
 
 		equipment_bonus = {
@@ -8970,6 +9026,9 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
+			ballistic_missile_equipment
+			guided_missile_equipment
 		}
 
 		equipment_bonus = {
@@ -8998,6 +9057,9 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
+			ballistic_missile_equipment
+			guided_missile_equipment
 		}
 
 		equipment_bonus = {
@@ -9026,6 +9088,9 @@ RUS_tsagi_organisation = {
 		limit_to_equipment_type = {
 			medium_plane_airframe
 			large_plane_airframe
+			strat_bomber_intercontinental_equipment
+			ballistic_missile_equipment
+			guided_missile_equipment
 		}
 
 		equipment_bonus = {
@@ -9319,6 +9384,13 @@ RUS_skorost_organisation = {
 		large_plane_airframe
 		cv_small_plane_airframe
 		transport_plane_equipment
+		helicopter_equipment
+		mothership_equipment
+		strat_bomber_intercontinental_equipment
+		nuclear_missile
+		ballistic_missile_equipment
+		sam_missile_equipment
+		guided_missile_equipment
 	}
 
 	research_categories = {
@@ -11621,6 +11693,8 @@ RUS_obukhov_organisation = {
 		artillery_equipment
 		anti_tank_equipment
 		anti_air_equipment
+		super_heavy_artillery_equipment
+		self_propelled_super_heavy_artillery_equipment
 	}
 
 	research_categories = {
@@ -11753,7 +11827,11 @@ RUS_obukhov_organisation = {
 
 		position = { x = 5 y = 0 }
 
-		limit_to_equipment_type = { artillery_equipment }
+		limit_to_equipment_type = {
+			artillery_equipment
+			super_heavy_artillery_equipment
+			self_propelled_super_heavy_artillery_equipment
+		}
 
 		mutually_exclusive = { obukhov_upgrade_6 }
 
@@ -11800,7 +11878,11 @@ RUS_obukhov_organisation = {
 
 		position = { x = 7 y = 0 }
 
-		limit_to_equipment_type = { artillery_equipment }
+		limit_to_equipment_type = {
+			artillery_equipment
+			super_heavy_artillery_equipment
+			self_propelled_super_heavy_artillery_equipment
+		}
 
 		mutually_exclusive = { obukhov_upgrade_5 }
 
@@ -11940,7 +12022,11 @@ RUS_obukhov_organisation = {
 
 		position = { x = 5 y = 1 }
 
-		limit_to_equipment_type = { artillery_equipment }
+		limit_to_equipment_type = {
+			artillery_equipment
+			super_heavy_artillery_equipment
+			self_propelled_super_heavy_artillery_equipment
+		}
 
 		mutually_exclusive = { obukhov_upgrade_1_5 }
 
@@ -11958,7 +12044,11 @@ RUS_obukhov_organisation = {
 
 		position = { x = 7 y = 1 }
 
-		limit_to_equipment_type = { artillery_equipment }
+		limit_to_equipment_type = {
+			artillery_equipment
+			super_heavy_artillery_equipment
+			self_propelled_super_heavy_artillery_equipment
+		}
 
 		mutually_exclusive = { obukhov_upgrade_1_4 }
 
@@ -12065,7 +12155,11 @@ RUS_obukhov_organisation = {
 
 		position = { x = 5 y = 2 }
 
-		limit_to_equipment_type = { artillery_equipment }
+		limit_to_equipment_type = {
+			artillery_equipment
+			super_heavy_artillery_equipment
+			self_propelled_super_heavy_artillery_equipment
+		}
 
 		mutually_exclusive = { obukhov_upgrade_2_5 }
 
@@ -12535,7 +12629,10 @@ RUS_bmz_organisation = {
 	equipment_type = {
 		artillery_equipment
 		rocket_artillery_equipment
+		super_heavy_artillery_equipment
+		self_propelled_super_heavy_artillery_equipment
 		railway_gun_equipment
+		super_heavy_railway_gun_equipment
 		train_equipment
 	}
 
@@ -12560,6 +12657,8 @@ RUS_bmz_organisation = {
 		limit_to_equipment_type = {
 			artillery_equipment
 			rocket_artillery_equipment
+			super_heavy_artillery_equipment
+			self_propelled_super_heavy_artillery_equipment
 		}
 
 		equipment_bonus = {
@@ -12714,6 +12813,8 @@ RUS_bmz_organisation = {
 		limit_to_equipment_type = {
 			artillery_equipment
 			rocket_artillery_equipment
+			super_heavy_artillery_equipment
+			self_propelled_super_heavy_artillery_equipment
 		}
 
 		equipment_bonus = {
@@ -12738,6 +12839,8 @@ RUS_bmz_organisation = {
 		limit_to_equipment_type = {
 			artillery_equipment
 			rocket_artillery_equipment
+			super_heavy_artillery_equipment
+			self_propelled_super_heavy_artillery_equipment
 		}
 
 		equipment_bonus = {
@@ -12756,6 +12859,7 @@ RUS_bmz_organisation = {
 
 		limit_to_equipment_type = {
 			railway_gun_equipment
+			super_heavy_railway_gun_equipment
 		}
 
 		equipment_bonus = {
@@ -12808,6 +12912,8 @@ RUS_bmz_organisation = {
 		limit_to_equipment_type = {
 			artillery_equipment
 			rocket_artillery_equipment
+			super_heavy_artillery_equipment
+			self_propelled_super_heavy_artillery_equipment
 		}
 
 		equipment_bonus = {
@@ -12827,6 +12933,8 @@ RUS_bmz_organisation = {
 		limit_to_equipment_type = {
 			artillery_equipment
 			rocket_artillery_equipment
+			super_heavy_artillery_equipment
+			self_propelled_super_heavy_artillery_equipment
 		}
 
 		equipment_bonus = {
@@ -12860,6 +12968,8 @@ RUS_bmz_organisation = {
 		limit_to_equipment_type = {
 			artillery_equipment
 			rocket_artillery_equipment
+			super_heavy_artillery_equipment
+			self_propelled_super_heavy_artillery_equipment
 		}
 
 		equipment_bonus = {

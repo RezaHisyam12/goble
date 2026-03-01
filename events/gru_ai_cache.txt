@@ -1,0 +1,21 @@
+add_namespace = gru_ai
+
+country_event = {
+    id = gru_ai.1
+    is_triggered_only = yes
+    hidden = yes
+
+	immediate = {
+
+		clr_country_flag = ger_east_stable
+		clr_country_flag = ger_east_critical
+
+		if = {
+			limit = { eastern_subject_below_50 = yes }
+			set_country_flag = ger_east_critical
+		}
+		else = {
+			set_country_flag = ger_east_stable
+		}
+	}
+}

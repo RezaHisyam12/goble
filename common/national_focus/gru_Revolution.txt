@@ -2484,7 +2484,7 @@ shared_focus = {
 		y = 9
 		cost = 5
 		ai_will_do = {
-			factor = 50
+			factor = 500
 		}
 		available = {
 			is_faction_leader = yes
@@ -8142,7 +8142,7 @@ shared_focus = {
 		y = 1
 		cost = 4
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_allignment"
@@ -8719,10 +8719,6 @@ shared_focus = {
 		cost = 4
 		ai_will_do = {
 			factor = 1000
-			modifier = {
-				factor = 0
-				AUS = { exists = yes }
-			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_RED_COLONIALISM"

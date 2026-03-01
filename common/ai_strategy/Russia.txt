@@ -1,6 +1,45 @@
 #################
 ### Diplomacy ###
 #################
+RUS_integration_of_transamur = {
+	allowed = {
+		tag = RUS
+	}
+	enable = {
+		has_non_aggression_pact_with = TRM
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = befriend
+		id = TRM
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = TRM
+		value = -200
+	}
+}
+RUS_integration_of_transamur_TRM = {
+	allowed = {
+		tag = TRM
+	}
+	enable = {
+		has_non_aggression_pact_with = RUS
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = befriend
+		id = TRM
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = TRM
+		value = -200
+	}
+}
+
 RUS_hates_reichspakt = {
 	reversed = yes
 
@@ -70,6 +109,45 @@ RUS_dont_support_japan = {
 		type = send_volunteers_desire
 		id = JAP
 		value = -400
+	}
+}
+
+RUS_postwar_contain_INT = {
+	allowed = {
+		is_russian_tag = yes
+	}
+	enable = {
+		is_faction_leader = yes
+		has_socialist_government = no
+		country_exists = INT
+		NOT = { country_exists = GER }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = contain
+		id = INT
+		value = 300
+	}
+	ai_strategy = {
+		type = befriend
+		id = CAN
+		value = 300
+	}
+	ai_strategy = {
+		type = support
+		id = CAN
+		value = 200
+	}
+	ai_strategy = {
+		type = befriend
+		id = NFA
+		value = 300
+	}
+	ai_strategy = {
+		type = support
+		id = NFA
+		value = 200
 	}
 }
 
@@ -1002,109 +1080,6 @@ RUS_crush_germany = {
 	}
 }
 
-RUS_focus_on_german_socialist = {
-	allowed = {
-		original_tag = RUS
-	}
-	enable = {
-		has_war_with = GRU
-		surrender_progress < 0.1
-		OR = {
-			NOT = { has_war_with = VKR }
-			VKR = { has_capitulated = yes }
-		}
-		OR = {
-			NOT = { has_war_with = VKB }
-			VKB = { has_capitulated = yes }
-		}
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = conquer
-		id = GRU
-		value = 200
-	}
-	ai_strategy = {
-		type = front_armor_score
-		id = GRU
-		value = 100
-	}
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 8 #Lower Germany
-		value = 30000
-	}
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 38 #Poland
-		value = 30000
-	}
-	ai_strategy = {
-		type = strategic_air_importance
-		id = 155 #Galicia
-		value = 30000
-	}
-}
-
-RUS_crush_german_socialist = {
-	allowed = {
-		original_tag = RUS
-	}
-	enable = {
-		has_war_with = GRU
-		surrender_progress < 0.1
-
-		#activate every 25 days, then pause for another 25
-		set_temp_variable = { frequency = global.num_days }
-		modulo_temp_variable = { frequency = 50 }
-		check_variable = { frequency < 25 }
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = front_control
-		tag = GRU
-		priority = 100
-		ordertype = front
-		execution_type = rush_weak
-		execute_order = yes
-	}
-}
-
-RUS_focus_on_GRU = {
-	allowed = {
-		original_tag = RUS
-	}
-	enable = {
-		is_neighbor_of = GRU
-		OR = {
-			has_war = no
-			has_war_with = GRU
-		}
-		GRU = {
-			exists = yes
-			has_capitulated = no
-		}
-		FRA = {
-			exists = yes
-			has_capitulated = no
-		}
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = conquer
-		id = GRU
-		value = 300
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = TRM
-		value = -25
-	}
-}
-
 RUS_eyes_on_transamur = {
 	allowed = {
 		original_tag = RUS
@@ -1446,22 +1421,6 @@ RUS_crush_turkestan = {
 	}
 }
 
-RUS_civilian_buildup = {
-	allowed = {
-		original_tag = RUS
-	}
-	enable = {
-		date < 1939.1.1
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = building_target
-		id = industrial_complex
-		value = 85
-	}
-}
-
 RUS_dont_bother_naval_invading_before_germany_dies = {
 	allowed = {
 		original_tag = RUS
@@ -1503,7 +1462,7 @@ RUS_less_focus_on_navy = {
 	enable = {
 		OR = {
 			GER = { is_faction_leader = yes }
-			GRU = { exists = yes }
+			GRU = { is_faction_leader = yes }
 		}
 	}
 	abort_when_not_enabled = yes
@@ -1598,8 +1557,8 @@ RUS_total_war_against_german_socialist = {
 			has_war_with = ROOT
 		}
 		OR = {
-			FRA = { exists = no }
-			date > 1942.1.1
+			NOT = { country_exists = FRA }
+			FRA = { has_capitulated = yes }
 		}
 		TRM = { exists = no }
 		surrender_progress < 0.1
@@ -1969,22 +1928,22 @@ RUS_dont_send_troops_over_black_sea = {
 	ai_strategy = {
 		type = dont_defend_ally_borders
 		id = ROM
-		value = 10
+		value = 100
 	}
 	ai_strategy = {
 		type = dont_defend_ally_borders
 		id = SER
-		value = 10
+		value = 100
 	}
 	ai_strategy = {
 		type = dont_defend_ally_borders
 		id = BUL
-		value = 10
+		value = 100
 	}
 	ai_strategy = {
 		type = dont_defend_ally_borders
 		id = ALB
-		value = 10
+		value = 100
 	}
 	ai_strategy = {
 		type = dont_defend_ally_borders
@@ -2011,6 +1970,108 @@ RUS_ignore_faraway_allies = {
 		type = dont_defend_ally_borders
 		id = NOR
 		value = 10
+	}
+}
+
+RUS_focus_on_german_socialist = {
+	allowed = {
+		tag = RUS
+	}
+	enable = {
+		has_war_with = GRU
+		surrender_progress < 0.1
+		OR = {
+			NOT = { has_war_with = VKR }
+			VKR = { has_capitulated = yes }
+		}
+		OR = {
+			NOT = { has_war_with = VKB }
+			VKB = { has_capitulated = yes }
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = GRU
+		value = 200
+	}
+	ai_strategy = {
+		type = front_armor_score
+		id = GRU
+		value = 100
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 8 #Lower Germany
+		value = 30000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 38 #Poland
+		value = 30000
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 155 #Galicia
+		value = 30000
+	}
+}
+
+RUS_focus_on_GRU = {
+	allowed = {
+		tag = RUS
+	}
+	enable = {
+		OR = {
+			has_war = no
+			has_war_with = GRU
+		}
+		GRU = {
+			exists = yes
+			has_capitulated = no
+		}
+		FRA = {
+			exists = yes
+			has_capitulated = no
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = GRU
+		value = 300
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = TRM
+		value = -25
+	}
+}
+
+RUS_crush_german_socialist = {
+	allowed = {
+		tag = RUS
+	}
+	enable = {
+		has_war_with = GRU
+		surrender_progress < 0.1
+
+		#activate every 25 days, then pause for another 25
+		set_temp_variable = { frequency = global.num_days }
+		modulo_temp_variable = { frequency = 50 }
+		check_variable = { frequency < 25 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = GRU
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
 	}
 }
 
@@ -2053,39 +2114,54 @@ RUS_focus_on_vkr = {
 }
 
 RUS_crush_vkr = {
-	allowed = {
-		original_tag = RUS
-	}
+
+	allowed = { original_tag = RUS }
+
 	enable = {
 		has_war_with = VKR
 		VKR = { has_capitulated = no }
-		has_manpower > 250000
-		stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
-		num_planes_stationed_in_regions = {
-			value > 1000
-			regions = { 130 } #Ukraine
-		}
-
-		#activate during the non-winter months
-		set_temp_variable = { frequency = global.num_days }
-		modulo_temp_variable = { frequency = 365 }
-		check_variable = { frequency > 90 } #early April
-		check_variable = { frequency < 300 } #late October
-
-		#activate every 25 days, then pause for another 25
-		set_temp_variable = { frequency = global.num_days }
-		modulo_temp_variable = { frequency = 50 }
-		check_variable = { frequency < 25 }
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = {
-		type = front_control
-		tag = VKR
-		priority = 100
-		ordertype = front
-		execution_type = rush_weak
-		execute_order = yes
+    ai_strategy = {
+        type = front_control
+        tag = VKR
+        priority = 60
+        ordertype = front
+        execution_type = rush_weak
+
+        # ATTACK WINDOW (spring–autumn only)
+        modifier = {
+            add = 50
+            has_country_flag = rus_vk_attack_window
+        }
+
+        # PAUSE OR WINTER
+        modifier = {
+            add = -80
+            NOT = { has_country_flag = rus_vk_attack_window }
+        }
+
+        # Equipment brake
+        modifier = {
+            add = -120
+            equipment_ratio < 0.25
+        }
+
+        # Manpower brake
+        modifier = {
+            add = -80
+            has_manpower < 150000
+        }
+
+        # Supply brake
+        modifier = {
+            add = -60
+    	    stockpile_ratio = {
+        	archetype = infantry_equipment
+        	ratio < 0.25
+			}
+		}
 	}
 }
 
@@ -2128,39 +2204,53 @@ RUS_focus_on_vk_baltic_duchy = {
 }
 
 RUS_mop_up_vk_baltic_duchy = {
-	allowed = {
-		original_tag = RUS
-	}
+	allowed = { original_tag = RUS }
+
 	enable = {
 		has_war_with = VKB
 		VKB = { has_capitulated = no }
-		has_manpower > 250000
-		stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
-		num_planes_stationed_in_regions = {
-			value > 1000
-			regions = { 37 } #Baltic States
-		}
-
-		#activate during the non-winter months
-		set_temp_variable = { frequency = global.num_days }
-		modulo_temp_variable = { frequency = 365 }
-		check_variable = { frequency > 90 } #early April
-		check_variable = { frequency < 300 } #late October
-
-		#activate every 25 days, then pause for another 25
-		set_temp_variable = { frequency = global.num_days }
-		modulo_temp_variable = { frequency = 50 }
-		check_variable = { frequency < 25 }
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = {
-		type = front_control
-		tag = VKB
-		priority = 100
-		ordertype = front
-		execution_type = rush_weak
-		execute_order = yes
+    ai_strategy = {
+        type = front_control
+        tag = VKB
+        priority = 60
+        ordertype = front
+        execution_type = rush_weak
+
+        # ATTACK WINDOW (spring–autumn only)
+        modifier = {
+            add = 50
+            has_country_flag = rus_vk_attack_window
+        }
+
+        # PAUSE OR WINTER
+        modifier = {
+            add = -80
+            NOT = { has_country_flag = rus_vk_attack_window }
+        }
+
+        # Equipment brake
+        modifier = {
+            add = -120
+            equipment_ratio < 0.25
+        }
+
+        # Manpower brake
+        modifier = {
+            add = -80
+            has_manpower < 150000
+        }
+
+        # Supply brake
+        modifier = {
+            add = -60
+    	    stockpile_ratio = {
+        	archetype = infantry_equipment
+        	ratio < 0.25
+			}
+		}
 	}
 }
 

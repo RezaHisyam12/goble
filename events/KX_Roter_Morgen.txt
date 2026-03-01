@@ -157,7 +157,7 @@ country_event = { # Occupation Intro
 		hidden_effect = {
 			country_event = {
 				id = rotermorgen.20
-				days = 14
+				days = 7
 			}
 		}
 	}
@@ -176,7 +176,7 @@ country_event = { # SPD radikalize Forms
 		hidden_effect = {
 			country_event = {
 				id = rotermorgen.30
-				days = 16
+				days = 7
 			}
 		}
 	}
@@ -194,7 +194,7 @@ country_event = { # FAUD-Reaorganises
 		hidden_effect = {
 			country_event = {
 				id = rotermorgen.40
-				days = 17
+				days = 7
 			}
 		}
 	}
@@ -212,7 +212,7 @@ country_event = { # SMEPD forms
 		hidden_effect = {
 			country_event = {
 				id = rotermorgen.50
-				days = 13
+				days = 7
 			}
 		}
 	}
@@ -231,7 +231,7 @@ country_event = { # NMDVP Forms
 		hidden_effect = {
 			country_event = {
 				id = rotermorgen.51
-				days = 12
+				days = 7
 			}
 		}
 	}
@@ -250,7 +250,7 @@ country_event = { # NMDVP Forms
 		hidden_effect = {
 			country_event = {
 				id = rotermorgen.52
-				days = 5
+				days = 7
 			}
 		}
 	}
@@ -269,7 +269,7 @@ country_event = { # NMDVP Forms
 		hidden_effect = {
 			country_event = {
 				id = rotermorgen.60
-				days = 20
+				days = 14
 			}
 			country_event = {
 				id = rotermorgen.61
@@ -282,7 +282,7 @@ country_event = { # NMDVP Forms
 		hidden_effect = {
 				country_event = {
 				id = rotermorgen.60
-				days = 20
+				days = 14
 				}
 		}
 	}

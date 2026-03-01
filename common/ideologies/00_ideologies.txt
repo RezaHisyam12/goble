@@ -99,7 +99,7 @@ ideologies = {
 			tot_matswanism_subtype = {can_be_randomly_selected = no} #Matswanisme
 			maximist_ruralism_subtype = {can_be_randomly_selected = no} #Maximist Ruralism
 			militant_feminism_subtype = {can_be_randomly_selected = no} #Militant Feminism
-
+			tot_kritarchy_subtype = {can_be_randomly_selected = no} #Kritarchy
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_TOTALIST_1"
@@ -351,9 +351,7 @@ ideologies = {
 			"FACTION_NAME_RADICAL_SOCIALIST_5"
 			"FACTION_NAME_RADICAL_SOCIALIST_6"
 		}
-		color = { 234 81 83 }
-
-		## Rules (identical for each ideology)
+		color = { 233 58 58 }
 		rules = {
 			can_force_government = yes
 			can_puppet = no
@@ -801,6 +799,7 @@ ideologies = {
 			soccon_kritarchy_subtype = {can_be_randomly_selected = no} #Kritarchy
 			soccon_imaginism_subtype = {can_be_randomly_selected = no} #Imaginism
 			soccon_hilozoismo_subtype = {can_be_randomly_selected = no } #Hilozoismo
+			soccon_theocracy_subtype = {can_be_randomly_selected = no } #Theocracy
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_SOCIAL_CONSERVATIVE_1"

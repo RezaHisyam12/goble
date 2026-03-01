@@ -85,10 +85,7 @@ armour_generic = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					NOT = { has_subdoctrine_in_track = infantry }
-					NOT = { has_subdoctrine_in_track = operations }
-				}
+				NOT = { has_subdoctrine_in_track = infantry }
 			}
 			modifier = {
 				factor = 0

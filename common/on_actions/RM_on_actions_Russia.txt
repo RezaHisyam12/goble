@@ -72,4 +72,13 @@ on_actions = {
 			}
 		}
 	}
+
+	on_weekly_pulse = {
+    	effect = {
+        	if = {
+            		limit = { tag = RUS }
+            		country_event = { id = rus_ai.1 }
+        		}
+    		}
+	}
 }

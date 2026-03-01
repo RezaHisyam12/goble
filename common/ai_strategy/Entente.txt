@@ -987,17 +987,12 @@ ENT_support_invasion_of_france = {
 	ai_strategy = {
 		type = conquer
 		id = FRA
-		value = 300
+		value = 200
 	}
 	ai_strategy = {
 		type = front_unit_request
 		tag = FRA
 		value = 50
-	}
-	ai_strategy = {
-		type = front_armor_score
-		id = RUS
-		value = 10
 	}
 }
 
