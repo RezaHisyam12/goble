@@ -1707,22 +1707,30 @@ GRU_less_focus_on_russia = {
 			is_faction_leader = yes
 		}
 		gru_controls_konigsberg = yes
-		eastern_kommissariat_below_50_surrender = yes
 	}
-	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = front_unit_request
 		tag = RUS
-		value = -100
+		value = -40
+
+		modifier = {
+			add = -40
+			eastern_kommissariat_below_50_surrender = yes
+		}
 	}
+
 	ai_strategy = {
 		type = front_unit_request
 		tag = TRM
-		value = -100
+		value = -40
+
+		modifier = {
+			add = -40
+			eastern_kommissariat_below_50_surrender = yes
+		}
 	}
 }
-
 ################
 ### Industry/2WK ###
 ################
@@ -1828,6 +1836,60 @@ German_default_heavy_tank_production = {
 		type = equipment_variant_production_factor
 		id = armored_support_vehicle
 		value = 10
+	}
+}
+
+GRU_finish_austria_off = {
+	allowed = {
+		OR = {
+			is_polish_tag = yes
+			original_tag = BAT
+			original_tag = WHR
+			original_tag = UKR
+			is_baltic_tag = yes
+			is_balkan_tag = yes
+			is_scandinavian_tag = yes
+		}
+	}
+	enable = {
+		has_war_with = AUS
+
+		#activate during the non-winter months
+		set_temp_variable = { frequency = global.num_days }
+		modulo_temp_variable = { frequency = 365 }
+		check_variable = { frequency > 90 } #early April
+		check_variable = { frequency < 300 } #late October
+
+		#activate every 25 days, then pause for another 25
+		set_temp_variable = { frequency = global.num_days }
+		modulo_temp_variable = { frequency = 50 }
+		check_variable = { frequency > 25 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = AUS
+		priority = 150
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		tag = CZE
+		priority = 150
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		tag = HUN
+		priority = 150
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
 	}
 }
 
@@ -2004,6 +2066,16 @@ GRU_war_against_france = {
 	}
 
 	#less focus on other fronts
+	ai_strategy = {
+		type = front_unit_request
+		tag = SER
+		value = -25
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = ROM
+		value = -25
+	}
 	ai_strategy = {
 		type = front_unit_request
 		tag = RUS
