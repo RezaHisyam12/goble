@@ -17,7 +17,7 @@ focus_tree = {
 		allow_branch = {
 			has_country_flag = IS_VKK 
 		}
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_KAUKASIA_START_COLONIZING"
 			218 = {
@@ -292,7 +292,7 @@ focus_tree = {
 		y = 3
 		available = {
 		}
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_KAUKASIA_COLONIZED"
 			swap_ideas = {

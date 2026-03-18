@@ -393,6 +393,68 @@ FRA_less_troops_on_iberia = {
 	}
 }
 
+FRA_fortify_alsace = {
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		28 = { is_owned_and_controlled_by_ROOT_or_ally = yes }
+		GRU = { is_faction_leader = yes }			
+		NOT = { has_war_with = GRU }
+		date > 1939.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = bunker # Type of building
+		target = 9559 #Alsace-L
+		value = 9999
+	}
+	ai_strategy = {
+		type = build_building
+		id = bunker # Type of building
+		target = 11502 #Alsace-L
+		value = 9999
+	}
+	ai_strategy = {
+		type = build_building
+		id = bunker # Type of building
+		target = 3629 #Alsace-L
+		value = 9999
+	}
+	ai_strategy = {
+		type = build_building
+		id = bunker # Type of building
+		target = 549 #Alsace-L
+		value = 9999
+	}
+	ai_strategy = {
+		type = build_building
+		id = bunker # Type of building
+		target = 1346 #Alsace-L
+		value = 9999
+	}
+	ai_strategy = {
+		type = build_building
+		id = bunker # Type of building
+		target = 9503 #Alsace-L
+		value = 9999
+	}
+	ai_strategy = {
+		type = build_building
+		id = bunker # Type of building
+		target = 6529 #Alsace-L
+		value = 9999
+	}
+	ai_strategy = {
+		type = build_building
+		id = bunker # Type of building
+		target = 678 #Alsace-L
+		value = 9999
+	}
+}
+
 ################
 ### Industry ###
 ################

@@ -143,8 +143,8 @@ FRA_infantry = {
 
 		target_template = {
 			regiments = {
-				infantry = 11
-				artillery_brigade = 3
+				infantry = 12
+				artillery_brigade = 2
 				anti_air_brigade = 1
                			anti_tank_brigade = 1
 			}

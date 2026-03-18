@@ -13,7 +13,7 @@ leader_traits = {
 			base = 0
 			modifier = {
 				add = 100
-				has_tech = mobile_warfare
+				has_doctrine = new_mobile_warfare
 			}
 		}
 	}
@@ -30,7 +30,7 @@ leader_traits = {
 			base = 0
 			modifier = {
 				add = 100
-				has_tech = superior_firepower
+				has_doctrine = superior_firepower
 			}
 		}
 	}
@@ -48,7 +48,7 @@ leader_traits = {
 			base = 0
 			modifier = {
 				add = 100
-				has_tech = trench_warfare
+				has_doctrine = grand_battleplan
 			}
 		}
 	}

@@ -314,7 +314,7 @@
 				}
 			}
 		}
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_MOSKOWIA_COLONIZE_ONE"
 			every_state = {
@@ -535,7 +535,7 @@
 				}
 			}
 		}
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_MOSKOWIA_COLONIZE_TWO"
 			every_state = {
@@ -578,7 +578,7 @@
 		x = 2
 		y = 1
 
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_MOSKOWIA_COLONIZE_THREE"
 			add_manpower = 35000
@@ -594,7 +594,7 @@
 		y = 2
 		available = {
 		}
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_MOSKOWIA_COLONIZED"
 			set_province_name = { id = 6174 name = "Petersburg"}

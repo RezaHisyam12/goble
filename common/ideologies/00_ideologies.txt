@@ -207,6 +207,8 @@ ideologies = {
 			reformed_sorelianism_subtype = {can_be_randomly_selected = no} #Reformed Sorelianism
 			laskian_syndicalism_subtype  = {can_be_randomly_selected = no} #Laskian Syndicalism
 			syn_spiritualism_subtype = {can_be_randomly_selected = no} #Syndie spiritualism
+			syn_platformism_subtype = {can_be_randomly_selected = no} #Platformism
+			synthesis_anarchism_subtype = {can_be_randomly_selected = no} #Anarchist Synthesis
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_SYNDICALIST_1"
@@ -342,6 +344,8 @@ ideologies = {
 			malthusianism_subtype = {can_be_randomly_selected = no } #Neo-Malthusianism
 			anarcha_feminism_subtype = {can_be_randomly_selected = no color = { 110 0 255 } } #Anarcha-Feminism
 			radsoc_christian_syndicalism_subtype = {can_be_randomly_selected = no} #Christian Syndicalism
+			platformism_subtype = {can_be_randomly_selected = no} #Platformism
+			radsoc_synthesis_anarchism_subtype = {can_be_randomly_selected = no} #Anarchist Synthesis
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_RADICAL_SOCIALIST_1"
@@ -1257,7 +1261,8 @@ ideologies = {
 			manhem_nordicism_subtype = {can_be_randomly_selected = no} #Manhem Nordicism
 			natpop_pelleyism_subtype = {can_be_randomly_selected = no} #Pelleyism
 			pan_turkism_subtype = {can_be_randomly_selected = no} #Pan-Turkism
-			
+			balli_kombetar_subtype = {can_be_randomly_selected = no} #Balli Kombetar
+						
 			#Goeb 			
 			natpop_goebbels_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }
 			natpop_goebbels2_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }

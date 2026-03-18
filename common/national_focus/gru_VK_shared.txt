@@ -5,7 +5,7 @@ shared_focus = {
 		y = 2
 		available = {
 		}
-		cost = 6
+		cost = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_SHARED_ESTABLISH_VK"
 			hidden_effect = {
@@ -24,7 +24,7 @@ shared_focus = {
 		y = 1
 		available = {
 		}
-		cost = 5
+		cost = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_SHARED_SETTLERS"
 			add_ideas = VK_COLONY_SETTLERS_ONE

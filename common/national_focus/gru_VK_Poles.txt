@@ -37,7 +37,7 @@
 		relative_position_id = VK_FOCUS_GOUVERMENT_START_COLONIZING
 		x = -2
 		y = 1
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_GOUVERMENT_COLONIZE_ONE"
 			add_ideas = GRU_NW_FAMILY_idea
@@ -51,7 +51,7 @@
 		relative_position_id = VK_FOCUS_GOUVERMENT_START_COLONIZING
 		x = 0
 		y = 1
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_GOUVERMENT_COLONIZE_TWO"
 			add_ideas = GRU_volkssturm_idea
@@ -65,7 +65,7 @@
 		relative_position_id = VK_FOCUS_GOUVERMENT_START_COLONIZING
 		x = 2
 		y = 1
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_GOUVERMENT_COLONIZE_THREE"
 			add_ideas = GRU_FDJ
@@ -81,7 +81,7 @@
 		y = 2
 		available = {
 		}
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_GOUVERMENT_COLONIZED"
 			swap_ideas = {

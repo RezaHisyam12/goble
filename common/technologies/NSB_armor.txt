@@ -365,6 +365,10 @@ technologies = {
 				add = 15
 				is_eligible_for_armor_production = yes
 			}
+			modifier = {
+				add = 500
+				tag = GRU
+			}	
 		}
 
 		categories = {
@@ -729,6 +733,10 @@ technologies = {
 					has_doctrine = grand_battleplan
 				}
 			}
+			modifier = {
+				add = 500
+				tag = GRU
+			}	
 		}
 
 		categories = {

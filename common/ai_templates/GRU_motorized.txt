@@ -6,7 +6,7 @@ motorized_infantry = {
     role = motorized
 	front_role_override = offence
 
-	blocked_for = { GRU GER	}
+	available_for = { GRU GER }
 
 	upgrade_prio = {
 		factor = 100
@@ -36,7 +36,8 @@ motorized_infantry = {
 
 		target_template = {
 			regiments = {
-				motorized = 8
+				motorized = 4
+				light_armor = 4
 			}
 
 			support = {
@@ -72,14 +73,15 @@ motorized_infantry = {
 
 		target_template = {
 			regiments = {
-				motorized = 8
+				motorized = 6
+				light_armor = 6
 				mot_artillery_brigade = 1
 				mot_anti_air_brigade = 1
 			}
 
 			support = {
 				anti_tank = 1
-				mot_recon = 1
+				light_tank_recon = 1
 				engineer = 1
 				field_hospital = 1
 				logistics_company = 1
@@ -87,7 +89,7 @@ motorized_infantry = {
 		}
 	}
 
-    trucks_3 = {
+    	trucks_3 = {
 		can_upgrade_in_field = { always = no }
 		
 		upgrade_prio = {
@@ -96,7 +98,7 @@ motorized_infantry = {
 				factor = 0
 				NOT = { has_tech = motorized_rocket_unit }
 			}
-            modifier = {
+            		modifier = {
 				factor = 0
 				OR = {
 					NOT = { has_subdoctrine_in_track = infantry }
@@ -105,7 +107,7 @@ motorized_infantry = {
 					NOT = { has_subdoctrine_in_track = operations }
 				}
 			}
-            modifier = {
+            		modifier = {
 				factor = 0
 				num_of_military_factories < 60
 			}
@@ -117,14 +119,15 @@ motorized_infantry = {
 
 		target_template = {
 			regiments = {
-				motorized = 8
+				motorized = 6
+				light_armor = 6
 				motorized_rocket_brigade = 1
 				mot_anti_air_brigade = 1
 			}
 
 			support = {
 				anti_tank = 1
-				mot_recon = 1
+				light_tank_recon = 1
 				engineer = 1
 				field_hospital = 1
 				logistics_company = 1
@@ -162,14 +165,15 @@ motorized_infantry = {
 
 		target_template = {
 			regiments = {
-				motorized = 8
-				motorized_rocket_brigade = 4
+				motorized = 6
+				light_armor = 6
+				motorized_rocket_brigade = 2
 				mot_anti_air_brigade = 2
 			}
 
 			support = {
 				anti_tank = 1
-				mot_recon = 1
+				light_tank_recon = 1
 				engineer = 1
 				field_hospital = 1
 				logistics_company = 1

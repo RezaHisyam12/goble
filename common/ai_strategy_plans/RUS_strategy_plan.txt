@@ -1,0 +1,148 @@
+RUS_absolute_monarch_plan = {
+	name = "RUS_absolute_monarch_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_country_flag = make_absolute_monarchy_tree_visible
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		RUS_Imperial_Glory
+		RUS_traditional_values_rnsma
+		RUS_Devoted_Subjects
+		RUS_Orthodoxy
+		RUS_Autocracy
+		RUS_Nationality
+		RUS_Neo_Slavism
+		RUS_Eurasinism_Monarchy
+		RUS_The_Voice_Of_The_Tsar
+		RUS_one_and_indivisible
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
+RUS_absolute_rnsma_plan = {
+	name = "RUS_absolute_rnsma_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		OR = {
+			has_idea = RUS_Vladimir_M_Purishkevich_hog_npo
+			has_idea = RUS_Nikolay_E_Markov_hog_npo
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		RUS_rnsma
+		RUS_for_faith
+		RUS_for_tsar
+		RUS_for_fatherland
+		RUS_Russian_Nationalism
+		RUS_Galvanize_Yellowshirt_Chauvinism
+		RUS_Deal_With_Republicans
+		RUS_black_hundred
+		RUS_third_rome
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
+RUS_zemstva_plan = {
+	name = "RUS_zemstva_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		OR = {
+			kdp_in_power = yes
+			psr_in_power = yes
+			vns_in_power = yes
+			RUS_is_eurasia = yes
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		RUS_Reinstitute_The_Zemstva
+		RUS_Funding_Frenzy
+		RUS_Local_Development
+		RUS_Zemstvo_Research_Initiatives
+		RUS_War_Preparations_Programme
+		RUS_National_Investment_Bank
+		RUS_Industry_In_The_Urals
+		RUS_ec_mutual8
+		RUS_The_Wealth_Of_Siberia
+		RUS_ec_mutual3
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
+RUS_bureaucratic_overhaul_plan = {
+	name = "RUS_bureaucratic_overhaul_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		OR = {
+			kdp_in_power = no
+			psr_in_power = no
+			vns_in_power = no
+			RUS_is_eurasia = no
+			has_socialist_government = no
+			has_left_democratic_government = no
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		RUS_Bureaucratic_Overhaul
+		RUS_MinProm
+		RUS_Military_Production_Act
+		RUS_Economic_Efficiency_Act
+		RUS_Agricultural_Modernisation
+		RUS_Industry_In_The_Urals
+		RUS_ec_mutual8
+		RUS_The_Wealth_Of_Siberia
+		RUS_ec_mutual3
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}

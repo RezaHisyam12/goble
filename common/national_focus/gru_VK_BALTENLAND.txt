@@ -80,7 +80,7 @@
 								controls_state = 1087
 							}
 		}
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -133,7 +133,7 @@
 								controls_state = 1290				
 									}
 		}
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 100
 		}
@@ -179,7 +179,7 @@
 		x = -2
 		y = 2
 
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_FOUR"
 			add_manpower = 35000
@@ -197,7 +197,7 @@
 		x = 0
 		y = 2
 
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_FIVE"
 			add_manpower = 35000
@@ -215,7 +215,7 @@
 		x = 2
 		y = 2
 
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_SIX"
 			add_manpower = 35000
@@ -234,7 +234,7 @@
 		y = 3
 		available = {
 		}
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTENLAND_COLONIZED"
 			swap_ideas = {

@@ -91,7 +91,7 @@ focus_tree = {
 				controls_state = 1221
 			}
 		}
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_ONE"
 			1320 = {
@@ -246,7 +246,7 @@ focus_tree = {
 				controls_state = 194
 					}
 		}
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_TWO"
 			80 = {
@@ -273,7 +273,7 @@ focus_tree = {
 				controls_state = 202
 			}
 		}
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_THREE"
 			add_manpower = 15000
@@ -297,7 +297,7 @@ focus_tree = {
 				controls_state = 821
 							}
 		}
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_FOUR"
 			220 = {
@@ -326,7 +326,7 @@ focus_tree = {
 				controls_state = 1231
 							}
 		}
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_FIVE"
 			240 = {
@@ -354,7 +354,7 @@ focus_tree = {
 				controls_state = 1229
 							}
 		}
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_SIX"
 			1229 = {
@@ -376,7 +376,7 @@ focus_tree = {
 		y = 3
 		available = {
 		}
-		cost = 6
+		cost = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZED"
 			swap_ideas = {

@@ -1323,6 +1323,9 @@ GRU_COMMUNAL_HOUSING:0 "Communal Housing"
 GRU_SUCCDUM:0 "Socialist Democracy"
 
 stahlpakt_defense_spirit:0 "Legacy of Weltkrieg"
+stahlpakt_defense_spirit_desc:0 "Forged in the trenches of the last great war, our armies carry the hard-earned lessons of the Weltkrieg. Discipline, entrenchment, and unbreakable defensive lines remain the foundation of our military doctrine."
+moscow_accord_attrition_doctrine:0 "Legacy of the Stavka"
+moscow_accord_attrition_doctrine_desc:0 "Even the harshest conditions cannot halt the advance of our armies."
 
 VK_COLONY_ONE:0 "Early Colonization"
 VK_COLONY_TWO:0 "Ongoing Colonization"

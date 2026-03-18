@@ -758,7 +758,9 @@ ideas = {
 			}
 			modifier = {
 				naval_invasion_penalty = -0.25
+				invasion_preparation = -0.10
 				naval_invasion_capacity = 5
+				special_forces_cap = 0.05
 			}
 			ai_will_do = {
 				factor = 2
@@ -778,6 +780,8 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.1
 				army_morale_factor = 0.05
+				planning_speed = 0.05
+				coordination_bonus = 0.03
 			}
 			ai_will_do = {
 				factor = 2
@@ -795,6 +799,7 @@ ideas = {
 				coordination_bonus = 0.05
 				experience_loss_factor = -0.15
 				org_loss_at_low_org_factor = -0.10
+				land_reinforce_rate = 0.05
 			}
 			ai_will_do = {
 				factor = 2
@@ -844,15 +849,17 @@ ideas = {
 				planning_speed = 0.15
 			}
 			ai_will_do = {
-				factor = 50
+				factor = 100
 			}
 		}
 		istanbul_pact_spirit = {
 			ledger = army
 			picture = TUR_ottoman_hegemony
 			visible = {
-				is_in_faction_with = TUR
-				TUR = { is_faction_leader = yes }
+				OR = {
+					tag = TUR
+					is_in_faction_with = TUR
+				}
 			}
 			modifier = {
 				army_org_factor = 0.05

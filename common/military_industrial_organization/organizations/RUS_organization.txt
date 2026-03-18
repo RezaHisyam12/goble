@@ -13293,7 +13293,7 @@ RUS_amo_organisation = {
 		available = {
 			if = {
 				limit = { FROM = { original_tag = RUS } }
-				FROM = { has_country_flag = improve_amo }
+				FROM = { has_country_flag = soviet_russia_restored }
 			}
 		}
 

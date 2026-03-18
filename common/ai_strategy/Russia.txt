@@ -2142,12 +2142,6 @@ RUS_crush_vkr = {
             NOT = { has_country_flag = rus_vk_attack_window }
         }
 
-        # Equipment brake
-        modifier = {
-            add = -120
-            equipment_ratio < 0.25
-        }
-
         # Manpower brake
         modifier = {
             add = -80
@@ -2229,12 +2223,6 @@ RUS_mop_up_vk_baltic_duchy = {
         modifier = {
             add = -80
             NOT = { has_country_flag = rus_vk_attack_window }
-        }
-
-        # Equipment brake
-        modifier = {
-            add = -120
-            equipment_ratio < 0.25
         }
 
         # Manpower brake

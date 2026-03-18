@@ -31,7 +31,6 @@ ideas = {
 			picture = guns_shield
 			modifier = {
 				ai_focus_defense_factor = 0.5
-				defence = 0.1
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.1
 			}
@@ -1182,9 +1181,9 @@ ideas = {
 			allowed = { always = no }
             	modifier = {
 				army_org_factor = 0.1
-				coordination_bonus = 0.1
-				max_planning = 0.1
+				coordination_bonus = 0.05
 				land_reinforce_rate = 0.05
+				max_planning = 0.1
 			}
 		}
 		GRU_skill_off = {

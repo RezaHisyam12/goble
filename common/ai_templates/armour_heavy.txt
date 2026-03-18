@@ -24,13 +24,13 @@ heavy_armour_generic = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { has_doctrine = grand_battleplan }
 			OR = {
 				NOT = { has_subdoctrine_in_track = infantry }
 				NOT = { has_subdoctrine_in_track = combat_support }
 				NOT = { has_subdoctrine_in_track = armor }
 				NOT = { has_subdoctrine_in_track = operations }
 			}
+			NOT = { has_doctrine = grand_battleplan }
 		}
 		modifier = { 
 			has_doctrine = grand_battleplan

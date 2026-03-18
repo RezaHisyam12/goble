@@ -395,11 +395,6 @@ GRU_Volunteer = {
 		value = 200
 	}
 	ai_strategy = {
-		type = send_lend_lease_desire
-		id = PRF
-		value = 200
-	}
-	ai_strategy = {
 		type = send_volunteers_desire
 		id = PRF
 		value = 10000
@@ -416,11 +411,6 @@ GRU_Volunteer = {
 		value = 200
 	}
 	ai_strategy = {
-		type = send_lend_lease_desire
-		id = COR
-		value = 200
-	}
-	ai_strategy = {
 		type = send_volunteers_desire
 		id = COR
 		value = 10000
@@ -437,11 +427,6 @@ GRU_Volunteer = {
 		value = 200
 	}
 	ai_strategy = {
-		type = send_lend_lease_desire
-		id = ITA
-		value = 200
-	}
-	ai_strategy = {
 		type = send_volunteers_desire
 		id = ITA
 		value = 10000
@@ -458,11 +443,6 @@ GRU_Volunteer = {
 		value = 200
 	}
 	ai_strategy = {
-		type = send_lend_lease_desire
-		id = CAR
-		value = 200
-	}
-	ai_strategy = {
 		type = send_volunteers_desire
 		id = CAR
 		value = 200
@@ -479,11 +459,6 @@ GRU_Volunteer = {
 		value = 200
 	}
 	ai_strategy = {
-		type = send_lend_lease_desire
-		id = BUL
-		value = 200
-	}
-	ai_strategy = {
 		type = send_volunteers_desire
 		id = BUL
 		value = 10000
@@ -502,7 +477,7 @@ GRU_Volunteer = {
 	ai_strategy = {
 		type = send_lend_lease_desire
 		id = TUR
-		value = 200
+		value = 100
 	}
 	ai_strategy = {
 		type = send_volunteers_desire
@@ -521,11 +496,6 @@ GRU_Volunteer = {
 		value = 200
 	}
 	ai_strategy = {
-		type = send_lend_lease_desire
-		id = AFG
-		value = 200
-	}
-	ai_strategy = {
 		type = send_volunteers_desire
 		id = AFG
 		value = 10000
@@ -538,11 +508,6 @@ GRU_Volunteer = {
 	}
 	ai_strategy = {
 		type = support
-		id = CHI
-		value = 200
-	}
-	ai_strategy = {
-		type = send_lend_lease_desire
 		id = CHI
 		value = 200
 	}
@@ -1551,6 +1516,7 @@ STP_defend_eastern_front_northern_oststaaten = {
 			tag = VKP
 			tag = HUN
 			is_polish_tag = yes
+			is_balkan_tag = yes
 		}
 	}
 	enable = {
@@ -1698,7 +1664,7 @@ GRU_finish_off_italy = {
 
 GRU_less_focus_on_russia = {
 	allowed = {
-		original_tag = GRU
+		tag = GRU
 	}
 	enable = {
 		has_war_with = RUS
@@ -1706,16 +1672,15 @@ GRU_less_focus_on_russia = {
 			has_capitulated = no
 			is_faction_leader = yes
 		}
-		gru_controls_konigsberg = yes
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = front_unit_request
 		tag = RUS
-		value = -40
-
+		value = -70
 		modifier = {
-			add = -40
+			add = -20
 			eastern_kommissariat_below_50_surrender = yes
 		}
 	}
@@ -1723,8 +1688,7 @@ GRU_less_focus_on_russia = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = TRM
-		value = -40
-
+		value = -50
 		modifier = {
 			add = -40
 			eastern_kommissariat_below_50_surrender = yes
@@ -1805,6 +1769,35 @@ GRU_build_tanks_focus = {
 	}
 }
 
+default_flame_tank_and_support_production = {
+	allowed = {
+		OR = {
+			tag = GER
+			tag = GRU
+		}
+	}
+	enable = {
+		is_eligible_for_armor_production = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = light_tank_chassis
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = heavy_tank_flame_chassis
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = heavy_tank_flame_chassis
+		value = 1
+	}
+}
+
 German_default_heavy_tank_production = {
 	allowed = {
 		OR = {
@@ -1833,11 +1826,40 @@ German_default_heavy_tank_production = {
 		value = 15
 	}
 	ai_strategy = {
+		type = equipment_production_factor
+		id = armored_support_vehicle
+		value = 10
+	}
+	ai_strategy = {
 		type = equipment_variant_production_factor
 		id = armored_support_vehicle
 		value = 10
 	}
 }
+
+default_super_heavy_artillery_production = {
+	allowed = {
+		OR = {
+			tag = GER
+			tag = GRU
+		}
+	}
+	enable = {
+		is_special_project_completed = sp:sp_land_super_heavy_howitzer
+		num_divisions > 100
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = super_heavy_artillery_equipment
+		value = 5
+	}
+}
+
+####################
+### 2WK Strategy ###
+####################
 
 GRU_finish_austria_off = {
 	allowed = {
@@ -2022,17 +2044,7 @@ GRU_build_tanks_if_france_is_aggressive = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor
-		value = 10
-	}
-	ai_strategy = {
-		type = front_armor_score
-		id = FRA
-		value = 250 # GRU already gets a 100 score on FRA, but maybe this will make them focus even more.
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = FRA
-		value = 100
+		value = 20
 	}
 	ai_strategy = {
 		type = railway_gun_divisions_ratio
@@ -2075,11 +2087,6 @@ GRU_war_against_france = {
 		type = front_unit_request
 		tag = ROM
 		value = -25
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = RUS
-		value = -70
 	}
 }
 

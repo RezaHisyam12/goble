@@ -24,6 +24,8 @@ new_mobile_warfare = {
                 tag = CAN
                 tag = NFA
                 tag = JAP
+                tag = FRA
+                tag = ENG
                 is_russian_tag = yes
                 is_han_chinese_tag = yes
                 is_indian_tag = yes
@@ -33,6 +35,11 @@ new_mobile_warfare = {
             add = 100
             tag = GRU
         }
+	modifier = {
+		add = 1
+		tag = RUS 
+		has_authoritarian_government = yes
+	}
    }
 
     tracks = {
@@ -210,7 +217,7 @@ superior_firepower = {
             #Armor
             enable_tactic = tactic_delay
             category_army = {
-                default_morale = 0.2
+                default_morale = 0.1
             }
 
             effect = {
@@ -231,7 +238,7 @@ superior_firepower = {
             #Operations
             enable_tactic = tactic_tactical_withdrawal
             category_army = {
-                default_morale = 0.4
+                default_morale = 0.2
             }
             planning_decay_rate_factor = -0.1
 
@@ -400,6 +407,14 @@ mass_assault = {
             add = 100
             is_han_chinese_tag = yes
         }
+	modifier = {
+		factor = 0
+		tag = RUS 
+		OR = {
+			has_democratic_government = yes
+			has_authoritarian_government = yes
+		}
+	}
    }
 
     tracks = {
