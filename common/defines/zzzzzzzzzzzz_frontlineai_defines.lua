@@ -98,7 +98,7 @@ NDefines.NAI.ASSIGN_MOUNTAINEERS_TO_MOUNTAINS = 50.0
 NDefines.NAI.FRONT_EVAL_UNIT_ACCURACY = 2.0	-- Vanilla 1.0	-- scale how stupid ai will act on fronts. 0 is potato
 NDefines.NAI.FRONT_EVAL_UNIT_AIR_SUP_IMPACT = 2.0 -- Vanilla 1.0	-- scale how good the AI thinks air superiority is for units
 NDefines.NAI.FRONT_EVAL_PERCENT_TO_ASSIST_ALLY_FRONT = 0.75  -- Vanilla 0.5  percentage of how many units the AI thinks it should have compared to an ally before considering sending units
-NDefines.NAITheatre.FRONT_EVAL_UNIT_SUPPLY_AND_ORG_LACK_IMPACT = 1.5	-- Vanilla 1.0; scale how painful the AI thinks a combined lack of supply and organization is for units	
+NDefines.NAI.FRONT_EVAL_UNIT_SUPPLY_AND_ORG_LACK_IMPACT = 2.0	-- Vanilla 1.0; scale how painful the AI thinks a combined lack of supply and organization is for units	
 
 ---NDefines.NAI.PLAN_STEP_COST_LIMIT = 15          --- vanilla 9; When stepping to draw a plan this cost makes it break if it hits hard terrain (multiplied by number of desired steps)	
 ---NDefines.NAI.PLAN_STEP_COST_LIMIT_REDUCTION = 0.012   -- vanilla 3	Cost limit is reduced per iteration, making hard terrain less likely to be crossed the further into enemy territory it is	
@@ -480,10 +480,13 @@ NDefines.NAI.RESOURCE_WANT_PER_CONSUMED = 0.15
 --------------------------------------
 ------ Supply & Front Deployment (NSupply) -----------
 --------------------------------------
-NDefines.NSupply.AI_FRONT_MAX_UNITS_ENEMY_COUNT_FACTOR = 1.05     -- vanilla 1.2
+NDefines.NSupply.AI_FRONT_MAX_UNITS_ENEMY_COUNT_FACTOR = 1.1     -- vanilla 1.2
 NDefines.NSupply.AI_FRONT_MINIMUM_UNITS_PER_PROVINCE_FOR_SUPPLY_CALCULATIONS = 0.8 -- vanilla 1.0
 NDefines.NAITheatre.AI_THEATRE_DISTRIBUTION_MAX_PERCENT_UNMET_DEMAND_PER_FRONT = 0.1   -- Percentage of how much fronts should request from other lower priority fronts, 0 means once a front gets hold of a unit it stays there forever until its demand is reduced, controlls shuffling of units.
 NDefines.NAITheatre.AI_THEATRE_SUPPLY_CRISIS_LIMIT = 0.25
+
+NDefines.NAI.UPDATE_SUPPLY_BOTTLENECKS_FREQUENCY_HOURS = 144 		-- Vanilla 168     -- Check for and try to fix supply bottlenecks this often. (168 hours = 1 week)
+NDefines.NAI.FIX_SUPPLY_BOTTLENECK_SATURATION_THRESHOLD = 0.6		-- Vanilla 0.85  -- Try to fix supply bottlenecks if supply node saturation exceeds this value.
 
 --------------------------------------
 ------ Construction AI -----------

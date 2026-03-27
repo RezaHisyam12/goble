@@ -938,6 +938,125 @@ entity = {
 
 
 #######
+# GRU #
+#######
+
+
+entity = {
+	name = "GRU_heavy_sp_artillery_brigade_1_entity"
+	pdxmesh = "GER_heavy_tank_artillery_1_mesh"
+	clone = "GER_heavy_sp_artillery_brigade_1_entity"
+}
+
+entity = {
+	name = "GRU_heavy_tank_destroyer_brigade_0_entity"
+	pdxmesh = "GER_heavy_tank_destroyer_0_mesh"
+	clone = "GER_heavy_tank_destroyer_brigade_0_entity"
+}
+
+entity = {
+	name = "GRU_heavy_tank_destroyer_brigade_1_entity"
+	pdxmesh = "GER_heavy_tank_destroyer_1_mesh"
+	clone = "GER_heavy_tank_destroyer_brigade_1_entity"
+}
+
+entity = {
+	name = "GRU_heavy_tank_destroyer_brigade_2_entity"
+	pdxmesh = "GER_heavy_tank_destroyer_2_mesh"
+	clone = "GER_heavy_tank_destroyer_brigade_2_entity"
+}
+
+entity = {
+	name = "GRU_light_sp_anti_air_brigade_0_entity"
+	pdxmesh = "GER_light_tank_aa_0_mesh"
+	clone = "GER_light_sp_anti_air_brigade_0_entity"
+}
+
+entity = {
+	name = "GRU_light_sp_artillery_brigade_0_entity"
+	pdxmesh = "GER_light_tank_artillery_0_mesh"
+	clone = "GER_light_sp_artillery_brigade_0_entity"
+}
+
+entity = {
+	name = "GRU_light_sp_artillery_brigade_1_entity"
+	pdxmesh = "GER_light_tank_artillery_1_mesh"
+	clone = "GER_light_sp_artillery_brigade_1_entity"
+}
+
+entity = {
+	name = "GRU_light_tank_destroyer_brigade_0_entity"
+	pdxmesh = "GER_light_tank_destroyer_0_mesh"
+	clone = "GER_light_tank_destroyer_brigade_0_entity"
+}
+
+entity = {
+	name = "GRU_light_tank_destroyer_brigade_1_entity"
+	pdxmesh = "GER_light_tank_destroyer_1_mesh"
+	clone = "GER_light_tank_destroyer_brigade_1_entity"
+}
+
+entity = {
+	name = "GRU_medium_sp_anti_air_brigade_0_entity"
+	pdxmesh = "GER_medium_tank_aa_0_mesh"
+	clone = "GER_medium_sp_anti_air_brigade_0_entity"
+}
+
+entity = {
+	name = "GRU_medium_sp_anti_air_brigade_1_entity"
+	pdxmesh = "GER_medium_tank_aa_1_mesh"
+	clone = "GER_medium_sp_anti_air_brigade_1_entity"
+}
+
+entity = {
+	name = "GRU_medium_sp_anti_air_brigade_2_entity"
+	pdxmesh = "GER_medium_tank_aa_2_mesh"
+	clone = "GER_medium_sp_anti_air_brigade_2_entity"
+}
+
+entity = {
+	name = "GRU_medium_sp_artillery_brigade_0_entity"
+	pdxmesh = "GER_medium_tank_artillery_0_mesh"
+	clone = "GER_medium_sp_artillery_brigade_0_entity"
+}
+
+entity = {
+	name = "GRU_medium_sp_artillery_brigade_1_entity"
+	pdxmesh = "GER_medium_tank_artillery_1_mesh"
+	clone = "GER_medium_sp_artillery_brigade_1_entity"
+}
+
+entity = {
+	name = "GRU_medium_sp_artillery_brigade_2_entity"
+	pdxmesh = "GER_medium_tank_artillery_2_mesh"
+	clone = "GER_medium_sp_artillery_brigade_2_entity"
+}
+
+entity = {
+	name = "GRU_medium_tank_destroyer_brigade_0_entity"
+	pdxmesh = "GER_medium_tank_destroyer_0_mesh"
+	clone = "GER_medium_tank_destroyer_brigade_0_entity"
+}
+
+entity = {
+	name = "GRU_medium_tank_destroyer_brigade_1_entity"
+	pdxmesh = "GER_medium_tank_destroyer_1_mesh"
+	clone = "GER_medium_tank_destroyer_brigade_1_entity"
+}
+
+entity = {
+	name = "GRU_medium_tank_destroyer_brigade_2_entity"
+	pdxmesh = "GER_medium_tank_destroyer_2_mesh"
+	clone = "GER_medium_tank_destroyer_brigade_2_entity"
+}
+
+entity = {
+	name = "GRU_modern_sp_anti_air_brigade_0_entity"
+	pdxmesh = "GER_modern_tank_aa_0_mesh"
+	clone = "GER_modern_sp_anti_air_brigade_0_entity"
+}
+
+#######
 # UBD #
 #######
 

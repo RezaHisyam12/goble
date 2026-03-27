@@ -1,0 +1,75 @@
+CAN_starting_plan = {
+	name = "CAN_starting_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = CAN
+	}
+	enable = {
+		date < 1938.12.2
+	}
+	abort = {
+		date > 1938.12.1
+	}
+
+	ai_national_focuses = {
+		CAN_crown_corporations
+		CAN_create_iedc
+		CAN_public_works
+		CAN_create_isac
+		CAN_national_research_council
+		CAN_economic_recovery
+		CAN_defense_one
+		CAN_new_home_of_the_free
+		CAN_expand_air_force
+		CAN_transcanada_airlines
+		CAN_airspace_defense
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
+CAN_quebec_plan = {
+	name = "CAN_quebec_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = CAN
+	}
+	enable = {
+		has_idea = CAN_quebec_in_flames_idea
+	}
+	abort = {
+		OR = {
+			has_completed_focus = CAN_new_quebec_status
+			has_completed_focus = CAN_surete_du_quebec
+			has_completed_focus = CAN_assert_royal_prerogatives
+		}
+	}
+
+	ai_national_focuses = {
+		CAN_quebec_in_flames
+
+		CAN_montreal_conference
+		CAN_official_bilingualism
+		CAN_new_quebec_status
+
+		CAN_suppress_quebecois
+		CAN_promote_anglophones
+		CAN_surete_du_quebec
+
+		CAN_war_measures_act
+		CAN_purge_the_opposition
+		CAN_assert_royal_prerogatives
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}

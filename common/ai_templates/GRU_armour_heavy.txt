@@ -9,7 +9,7 @@ heavy_armour_generic = {
 	available_for = { GRU GER }
 
    	upgrade_prio = {
-		factor = 1000
+		factor = 2000
 		modifier = {
 			factor = 0
 			is_eligible_for_heavy_armor_production = no

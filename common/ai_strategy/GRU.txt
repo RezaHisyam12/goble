@@ -1477,16 +1477,16 @@ STP_ignore_southern_oststaaten = { #Rest of Reichspakt should focus on BLR/BAT f
 STP_ignore_western_front = {
 	allowed = {
 		OR = {
-			is_polish_tag = yes
-			is_balkan_tag = yes
-			is_scandinavian_tag = yes
-			is_ukrainian_tag = yes
 			tag = BAT
 			tag = HUN
 			tag = VKB
 			tag = VKR
 			tag = VKK
 			tag = VKP
+			is_polish_tag = yes
+			is_balkan_tag = yes
+			is_scandinavian_tag = yes
+			is_ukrainian_tag = yes
 		}
 	}
 	enable = {
@@ -1500,12 +1500,12 @@ STP_ignore_western_front = {
 	ai_strategy = {
 		type = dont_defend_ally_borders
 		id = GRU
-		value = 100
+		value = 200
 	}
 	ai_strategy = {
 		type = dont_defend_ally_borders
 		id = VKN
-		value = 100
+		value = 200
 	}
 }
 
@@ -1570,28 +1570,22 @@ STP_defend_eastern_front_southern_oststaaten = {
 
 STP_finish_off_russia = {
 	allowed = {
+		NOT = {
+			tag = GRU
+		}
 		OR = {
 			tag = VKB
 			tag = VKR
 			tag = VKK
 			tag = VKP
-			is_polish_tag = yes
-			is_baltic_tag = yes
 			original_tag = HUN
+			is_polish_tag = yes
 			is_balkan_tag = yes
 			is_scandinavian_tag = yes
 		}
 	}
 	enable = {
 		has_war_with = RUS
-		OR = {
-			NOT = { country_exists = FRA }
-			FRA = { has_capitulated = yes }
-		}
-		OR = {
-			NOT = { country_exists = SRI }
-			SRI = { has_capitulated = yes }
-		}
 		NOT = { is_neighbor_of = CSA } #== being invaded
 
 		#activate during the non-winter months
@@ -1610,7 +1604,7 @@ STP_finish_off_russia = {
 	ai_strategy = {
 		type = front_control
 		tag = RUS
-		priority = 150
+		priority = 100
 		ordertype = front
 		execution_type = rush_weak
 		execute_order = yes
@@ -1678,9 +1672,9 @@ GRU_less_focus_on_russia = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = RUS
-		value = -70
+		value = -75
 		modifier = {
-			add = -20
+			add = -15
 			eastern_kommissariat_below_50_surrender = yes
 		}
 	}
@@ -1782,11 +1776,6 @@ default_flame_tank_and_support_production = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = light_tank_chassis
-		value = 15
-	}
-	ai_strategy = {
 		type = equipment_production_factor
 		id = heavy_tank_flame_chassis
 		value = 15
@@ -1798,7 +1787,7 @@ default_flame_tank_and_support_production = {
 	}
 }
 
-German_default_heavy_tank_production = {
+german_default_more_tank_production = {
 	allowed = {
 		OR = {
 			tag = GER
@@ -1812,6 +1801,16 @@ German_default_heavy_tank_production = {
 
 	ai_strategy = {
 		type = role_ratio
+		id = infantry
+		value = -10
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = light_armor_role
+		value = 20
+	}
+	ai_strategy = {
+		type = role_ratio
 		id = heavy_armor_role
 		value = 10
 	}
@@ -1819,6 +1818,11 @@ German_default_heavy_tank_production = {
 		type = role_ratio
 		id = tank_destroyer_role
 		value = 10
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = light_tank_chassis
+		value = 15
 	}
 	ai_strategy = {
 		type = equipment_variant_production_factor
@@ -1868,7 +1872,6 @@ GRU_finish_austria_off = {
 			original_tag = BAT
 			original_tag = WHR
 			original_tag = UKR
-			is_baltic_tag = yes
 			is_balkan_tag = yes
 			is_scandinavian_tag = yes
 		}

@@ -26,6 +26,9 @@ armour_landcruiser_generic = {
 	landcruiser_template = {
 		can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
+		models = {
+			GER_land_cruiser_alt_0_entity
+		}
 
 		upgrade_prio = {
 			base = 100
@@ -61,6 +64,9 @@ armour_landcruiser_generic = {
 	landcruiser_template_late = {
 		can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
+		models = {
+			GER_land_cruiser_alt_0_entity
+		}
 
 		upgrade_prio = {
 			base = 100

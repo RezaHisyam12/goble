@@ -115,14 +115,12 @@ RUS_bureaucratic_overhaul_plan = {
 		original_tag = RUS
 	}
 	enable = {
-		OR = {
-			kdp_in_power = no
-			psr_in_power = no
-			vns_in_power = no
-			RUS_is_eurasia = no
-			has_socialist_government = no
-			has_left_democratic_government = no
-		}
+		kdp_in_power = no
+		psr_in_power = no
+		vns_in_power = no
+		RUS_is_eurasia = no
+		has_socialist_government = no
+		has_left_democratic_government = no
 	}
 	abort = {
 

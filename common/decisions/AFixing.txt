@@ -1653,10 +1653,10 @@ CAN_new_england_decisions = {
 		}
 
 		highlight_states = {
-highlight_state_targets = {
+		highlight_state_targets = {
 			state = 357
+			}
 		}
-}
 
 		available = {
 			controls_state = 357 #Maine

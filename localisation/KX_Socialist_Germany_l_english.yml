@@ -1044,6 +1044,10 @@ bohemia_cored:0 "Bohemia cored"
 swiss_cored:0 "Switzerland cored"
 slovenia_cored:0 "Slovenia cored"
 austria_cored:0 "Austria cored"
+polar_cored:0 "Polar Island cored"
+
+LEC_restore_germania_vote:0 "Restore Voting Rights to [GRU.GetNameDef]"
+LEC_restore_germania_vote_desc:0 "Now that Germany is united once again, we should restore to them their voting rights, as a crucial counterbalance against Russia and Japan."
 
 ####ideas####
 GRU_Stasi:0 "Stasi"
@@ -2143,6 +2147,41 @@ rotermorgenIV.3.b:0 "Long live Ruprecht of Bavaria!"
 rotermorgenIV.3.c:0 "Democracy at the Rhine!"
 rotermorgenIV.3.e:0 "The revolutions torch still burns in the north!"
 
+##############
+#### LEC #####
+##############
+
+lec.210.t:0 "Restoring the German Vote?"
+lec.210.d:0 "When the Legation Cities were founded, German, as a nation with Chinese concessions, was naturally given voting rights on the Council. Unfortunately, there were German revolution happening. Now that [GRU.GetNameDef] is indisputably the only German remaining, however, the ambassador from Berlin has urged us to restore voting rights to his government.\n\nSince this is quite a substantive matter, it is technically supposed to go through the Legation Council. However, since it is unlikely that Japan or Russian, both rivals of the German, would ever let it pass, we can instead simply let the Chair of the Legation Council push it through on a Point of Order. While this would provide a powerful new voter with no ties to the Japanese or Russian, it would probably upset some powers on the Council."
+lec.210.a:0 "The Legation Council must vote."
+lec.210.b:0 "This is solely a procedural matter."
+
+lec.211.t:0 "The Legation Council Votes on Restoring the German Voting Rights"
+lec.211.d.notjapan:0 "Now that the former has been eliminated from the world stage, however, it would seem only proper for the German voting rights to be restored. However, German is undoubtedly a geopolitical threat to the nations of Eurasia, and some question if it would be wise to so easily grant them more influence."
+lec.211.d.japan:0 "While German is undoubtedly a threat to our nation, perhaps they could be harnessed as a weapon against Russian influence."
+lec.211.a:0 "We will vote with care."
+
+lec.212.t:0 "The Legation Council Votes on Restoring Our Vote"
+lec.212.d:0 "Now that there are no longer disputes our claims to be the one true German, however, the Chair has decided to call for a vote on whether or not to restore our rights. If there is any justice in this world, we will naturally regain them, but we cannot discount the malice and jealousy of Tokyo and Moscow."
+lec.212.a:0 "Let the Council see sense."
+
+lec.213.t:0 "The Results of the Vote on German Voting Rights"
+lec.213.d:0 "The vote on whether or not to restore voting rights to the German government has ended. Though smaller states supported the motion as an invaluable counterbalance against Russian and Japan, many followed their lead as well. In the end, it seems the motion has been..."
+lec.213.a:0 "Accepted!"
+lec.213.b:0 "Denied."
+
+lec.214.t:0 "German Is Granted Voting Rights on the Legation Council"
+lec.214.d:0 "It seems that the Legation Council has granted German the right to vote on the Legation Council, as the German Empire no longer is in a position to dispute the issue. While this is undoubtedly correct procedure, not consulting the Council for a vote sets a worrying precedent, and threatens Japanese and Russian precedence. Unfortunately, however, we have no choice but to accept this for now."
+lec.214.a:0 "It cannot happen again."
+
+lec.215.t:0 "Our Voting Rights Are Restored!"
+lec.215.d:0 "The Legation Council, after a contentious debate, has elected to restore our voting rights on the Legation Council, since the German Empire no longer exist. This is a great day for German and Europe as a whole!"
+lec.215.a:0 "Great news!"
+
+lec.216.t:0 "The Legation Council Votes Against Restoring Our Voting Rights"
+lec.216.d:0 "The Legation Council has voted not to restore our voting rights, citing both the irrelevance of our concessions and our aggressive actions in the East as reasons. It would seem that fear of Japan and Russian has triumphed against common sense and hope for the future."
+lec.216.a:0 "So much for international cooperation."
+
 ###tooltips###
 GRU_tt_hydroelectricity_decisions:0 "Decisions on §YHydroelectricity§! will become available."
 GRU_tt_breitspurbahn_decisions:0 "\n\n\n£goebb_breitspur_tt£\n\n\n\nDecisions on building the §RBreitspurbahn§! network will become available."
@@ -2195,8 +2234,8 @@ GRU_hydroelectricity_decisions:0 "Hydroelectricity"
 GRU_Damn_the_danube_decision:0 "Damm the Danube"
 GRU_Damn_the_chezchs_decision:0 "Damm the Elbe in Bohemia"
 GRU_FRANCONIA_Hydroelectricity_decision:0 "Damm the Main in Franconia"
-GRU_WUPPERSPERRE_Hydroelectricity_decision:0 "Damm the Wupper"
-GRU_Lemburg_Hydroelectricity_decision:0 "Damm the Dnister"
+GRU_WUPPERSPERRE_Hydroelectricity_decision:0 "Damm the Leine"
+GRU_Lemburg_Hydroelectricity_decision:0 "Damm the Odra"
 GRU_tyrol_Hydroelectricity_decision:0 "Damm the Etsch"
 
 GRU_breitspurbahn_decisions:0 "The Breitspurbahn Network"

@@ -709,10 +709,10 @@ indonesian_revolution_volunteers = {
 }
 
 liangguang_civil_war_volunteers = {
-	FROM = {
+	GXC = { has_civil_war = yes }
+	PREV = {
 		original_tag = GXC
-		has_civil_war = yes
-		china_compatible_alignment_to_FROM = yes
+		china_compatible_alignment_to_PREV = yes
 		if = {
 			limit = { is_ruled_by_right_kmt = yes }
 			NOT = {
@@ -724,11 +724,6 @@ liangguang_civil_war_volunteers = {
 			}
 		}
 	}
-	OR = {
-		is_subject = no
-		overlord = { china_same_alignment_as_FROMFROM = yes }
-	}
-	log = "willing_to_send_volunteers_to_FROM -- liangguang_civil_war_volunteers --- THIS = [THIS.GetName] FROM = [FROM.GetName]"
 }
 
 siamese_civil_war_volunteers = {

@@ -135,7 +135,7 @@
 		}
 		cost = 5
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_THREE"

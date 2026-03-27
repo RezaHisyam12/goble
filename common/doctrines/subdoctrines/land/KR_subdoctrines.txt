@@ -620,14 +620,16 @@ fronde_subdoctrine = {
         }
         fronde_subdoctrine4 = {
             category_light_infantry = {
-                casualty_trickleback = 0.15
+                casualty_trickleback = 0.05
                 soft_attack = 0.1
             }
-
+			army_org_factor = 0.08
         }
         fronde_subdoctrine5 = {
-            army_attack_against_major_factor = 0.05
+            army_attack_against_major_factor = 0.075
+			land_reinforce_rate = 0.02
             training_time_army_factor = -0.1
+			planning_speed = 0.15
         }
 
     }
@@ -870,7 +872,7 @@ southern_school = {
 		}
 		southern_school5 = {
 		#5
-			army_attack_against_major_factor = 0.15
+			army_attack_against_major_factor = 0.1
 			category_all_infantry = {
 				default_morale = 0.2
 			}
@@ -892,6 +894,99 @@ southern_school = {
 			land_night_attack = 0.2
 			recon_factor_while_entrenched = 0.5
 			planning_speed = 0.2
+		}
+	}
+}
+
+continental_militia_warfare = {
+    track = operations
+    name = continental_militia_warfare_name
+    description = continental_militia_warfare_desc
+    icon = GFX_idea_USA_revolt
+
+    xp_cost = 75
+    xp_type = army
+
+    ai_will_do = {
+		base = 15
+	}
+	visible = { 
+		OR = {
+		tag = NEE
+		tag = USA
+		tag = APG 
+		tag = WCA 
+		tag = ACC 
+		}
+	}
+
+    # EFFECTS
+	effect = {
+		add_manpower = 50000
+	}
+    training_time_army_factor = -0.05
+    army_org_factor = -0.05
+	conversion_cost_civ_to_mil_factor = -0.1
+
+    rewards = {
+		continental_militia_warfare1 = {
+		#1
+			category_militia = {
+				max_organisation = 5
+				default_morale = 0.1
+			}
+			land_reinforce_rate = 0.01
+		}
+		continental_militia_warfare2 = {
+		#2
+			category_light_infantry = {
+				supply_consumption = -0.05
+				combat_width = -0.5
+			}
+			org_loss_when_moving = 0.05
+		}
+		continental_militia_warfare3 = {
+		#3
+			equipment_bonus ={
+				support_equipment = {
+					defense = 0.05
+					breakthrough = 0.05
+				}
+				infantry_equipment = {
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		continental_militia_warfare4 = {
+		#4
+			equipment_conversion_speed = 0.10
+			category_militia = {
+				max_organisation = 5
+				default_morale = 0.1
+			}
+		}
+		continental_militia_warfare5 = {
+		#5
+			planning_speed = 0.15
+			category_light_infantry = {
+				default_morale = 0.2
+			}
+		}
+		continental_militia_warfare6 = {
+		#5
+			land_reinforce_rate = 0.01
+			dig_in_speed_factor = 0.15
+			army_core_attack_factor = 0.1
+			equipment_bonus ={
+				support_equipment = {
+					supply_consumption = -0.05
+					soft_attack = 0.05
+				}
+				infantry_equipment = {
+					reliability = 0.05
+				}
+			}
+			
 		}
 	}
 }

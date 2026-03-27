@@ -1075,7 +1075,7 @@ RUS_uztm_organisation = {
 		mio_cat_tech_all_armor_and_modules
 	}
 
-	ai_will_do = { base = 1 }
+	ai_will_do = { base = 1000 }
 
 	initial_trait = {
 		name = RUS_uztm_mio_desc
@@ -1843,7 +1843,7 @@ RUS_tstz_organisation = {
 		mio_cat_tech_all_armor_and_modules
 	}
 
-	ai_will_do = { base = 10 }
+	ai_will_do = { base = 1000 }
 
 	initial_trait = {
 		name = RUS_tstz_mio_desc
@@ -10776,7 +10776,7 @@ RUS_motovilikha_organisation = {
 		is_russian_mio_tag = yes
 	}
 	available = { FROM = { owns_state = 408 } } #Vladivostok
-	ai_will_do = { factor = 0 }
+	ai_will_do = { base = 0 }
 }
 RUS_toz_organisation = {
 	name = toz
@@ -11482,7 +11482,7 @@ RUS_imz_organisation = {
 		cat_special_forces_generic
 	}
 
-	ai_will_do = { base = 100 }
+	ai_will_do = { base = 1000 }
 
 	initial_trait = {
 		name = RUS_imz_mio_desc
@@ -11687,7 +11687,7 @@ RUS_obukhov_organisation = {
 	}
 	available = { FROM = { owns_state = 195 } } #Petrograd
 
-	ai_will_do = { base = 10 }
+	ai_will_do = { base = 1000 }
 
 	equipment_type = {
 		artillery_equipment
@@ -12641,7 +12641,7 @@ RUS_bmz_organisation = {
 		train_tech
 	}
 
-	ai_will_do = { base = 1000 }
+	ai_will_do = { base = 10 }
 
 	initial_trait = {
 		name = RUS_bmz_mio_desc
@@ -13025,7 +13025,7 @@ RUS_amo_organisation = {
 		mio_cat_tech_all_armor_and_modules
 	}
 
-	ai_will_do = { base = 100 }
+	ai_will_do = { base = 10 }
 
 	initial_trait = {
 		name = RUS_amo_mio_desc

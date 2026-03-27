@@ -160,11 +160,11 @@ GRU_hydroelectricity_decisions = {
 
 		visible = {
 			has_completed_focus = GRU_hydroelectric_power
-			57 = { is_owned_and_controlled_by = ROOT }
+			59 = { is_owned_and_controlled_by = ROOT }
 		}
 		available = {
 			has_completed_focus = GRU_hydroelectric_power
-			57 = { is_owned_and_controlled_by = ROOT }
+			59 = { is_owned_and_controlled_by = ROOT }
 			NOT = { has_country_flag = GRU_HYDRO_BUILDING }
 		}
 		fire_only_once = yes
@@ -180,7 +180,7 @@ GRU_hydroelectricity_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_WUPPERSPERRE_Hydroelectricity_decision"
 			clr_country_flag = GRU_HYDRO_BUILDING
-			57 = {
+			59 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -197,7 +197,7 @@ GRU_hydroelectricity_decisions = {
 					level = 1
 					instant_build = yes
 					province = {
-						id = 3355
+						id = 11493
 					}
 				}
 				custom_effect_tooltip = {
@@ -212,11 +212,11 @@ GRU_hydroelectricity_decisions = {
 
 		visible = {
 			has_completed_focus = GRU_hydroelectric_power
-			91 = { is_owned_and_controlled_by = ROOT }
+			66 = { is_owned_and_controlled_by = ROOT }
 		}
 		available = {
 			has_completed_focus = GRU_hydroelectric_power
-			91 = { is_owned_and_controlled_by = ROOT }
+			66 = { is_owned_and_controlled_by = ROOT }
 			NOT = { has_country_flag = GRU_HYDRO_BUILDING }
 		}
 		fire_only_once = yes
@@ -232,7 +232,7 @@ GRU_hydroelectricity_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_Lemburg_Hydroelectricity_decision"
 			clr_country_flag = GRU_HYDRO_BUILDING
-			91 = {
+			66 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -249,7 +249,7 @@ GRU_hydroelectricity_decisions = {
 					level = 1
 					instant_build = yes
 					province = {
-						id = 11479
+						id = 552
 					}
 				}
 				custom_effect_tooltip = {
@@ -11856,7 +11856,7 @@ GRU_expansion_three_volksland_hypoborea = {
 			}
 		highlight_states = {
 		    highlight_state_targets = {
-		    	state = 12
+		    		state = 12
 				state = 191
 				state = 13
 				state = 190
@@ -12055,7 +12055,7 @@ GRU_expansion_three_volksland_hypoborea = {
 			}
 		
 			complete_effect = {
-					VKB = {
+					BAT = {
 						annex_country = {
 							target = WHR
 							transfer_troops = yes
@@ -16149,11 +16149,11 @@ GRU_stahlpakt_alliance_decisions = {
 		fire_only_once = no
 		cost = 100
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision GRU_stahlpakt_invite_countries_decision target: [From.GetName]"
-			FROM = {	country_event = rotermorgenmisc.801 }
+			FROM = { country_event = rotermorgenmisc.801 }
 		}
 	}
 
@@ -16205,7 +16205,7 @@ GRU_stahlpakt_alliance_decisions = {
 		war_with_target_on_remove = yes
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 			modifier = {
 				factor = 0
 				FROM = {

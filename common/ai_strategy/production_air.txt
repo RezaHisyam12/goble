@@ -197,7 +197,7 @@ other_aircraft_production = {
 	ai_strategy = {
 		type = equipment_production_min_factories
 		id = scout_plane
-		value = 3
+		value = 2
 	}
 }
 

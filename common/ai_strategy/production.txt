@@ -16,6 +16,7 @@ division_limiter = {
 	ai_strategy = { type = build_army 	id = motorized			value = -1000 }
 	ai_strategy = { type = build_army 	id = mechanized			value = -1000 }
 	ai_strategy = { type = build_army	id = armor_role			value = -1000 }
+	ai_strategy = { type = build_army 	id = light_armor_role		value = -1000 }
 	ai_strategy = { type = build_army 	id = heavy_armor_role		value = -1000 }
 	ai_strategy = { type = build_army 	id = tank_destroyer_role	value = -1000 }
 	ai_strategy = { type = build_army 	id = marine			value = -1000 }
@@ -52,16 +53,15 @@ shock_infantry_effort = {
 	ai_strategy = { type = role_ratio                          id = shock_infantry               value = 25 }
 }
 
-sm_mode_more_shock_inf = {
+space_marine_effort = {
 	enable = {
 		is_eligible_for_armor_production = yes
-		ai_has_role_template = shock_infantry
-		has_global_flag = SpaceMarines
+		ai_has_role_template = space_marine
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = role_ratio                          id = infantry                     value = -10 }
-	ai_strategy = { type = role_ratio                          id = shock_infantry               value = 10 }
+	ai_strategy = { type = role_ratio                          id = infantry                   value = -30 }
+	ai_strategy = { type = role_ratio                          id = space_marine               value = 30 }
 }
 
 motorized_infantry_effort = {
@@ -360,6 +360,75 @@ build_shock_inf_army_5 = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = { type = build_army                          id = shock_infantry                    value = 25 }
+}
+
+############################################################################################################
+#	BUILD ARMY: SPACE MARINE
+############################################################################################################
+
+build_sm_army_1 = {
+	enable = {
+		is_eligible_for_armor_production = yes
+		ai_has_role_template = space_marine
+		manpower_per_military_factory > 6000
+		has_manpower > 375000
+		has_army_size = { size > 50 type = infantry }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = build_army                          id = space_marine                    value = 30 }
+}
+
+build_sm_army_2 = {
+	enable = {
+		is_eligible_for_armor_production = yes
+		ai_has_role_template = space_marine
+		manpower_per_military_factory > 6000
+		has_manpower > 750000
+		has_army_size = { size > 100 type = infantry }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = build_army                          id = space_marine                    value = 30 }
+}
+
+build_sm_army_3 = {
+	enable = {
+		is_eligible_for_armor_production = yes
+		ai_has_role_template = space_marine
+		manpower_per_military_factory > 6000
+		has_manpower > 1125000
+		has_army_size = { size > 150 type = infantry }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = build_army                          id = space_marine                    value = 30 }
+}
+
+build_sm_army_4 = {
+	enable = {
+		is_eligible_for_armor_production = yes
+		ai_has_role_template = space_marine
+		manpower_per_military_factory > 6000
+		has_manpower > 1500000
+		has_army_size = { size > 200 type = infantry }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = build_army                          id = space_marine                    value = 30 }
+}
+
+build_sm_army_5 = {
+	enable = {
+		is_eligible_for_armor_production = yes
+		ai_has_role_template = space_marine
+		manpower_per_military_factory > 6000
+		has_manpower > 1875000
+		has_army_size = { size > 250 type = infantry }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = build_army                          id = space_marine                    value = 30 }
 }
 
 ############################################################################################################
@@ -668,8 +737,7 @@ default_mountaineer_production = {
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = role_ratio                          id = infantry                     value = -5 }
-	ai_strategy = { type = role_ratio                          id = mountaineer                  value = 5 }
+	ai_strategy = { type = role_ratio                          id = mountaineer                  value = 10 }
 }
 
 land_powers_make_more_mountaineers = {
@@ -694,7 +762,6 @@ land_powers_make_more_mountaineers = {
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = role_ratio                          id = infantry                     value = -10 }
 	ai_strategy = { type = role_ratio                          id = mountaineer                  value = 10 }
 }
 
@@ -706,8 +773,7 @@ default_marine_production = {
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = role_ratio                          id = infantry                     value = -5 }
-	ai_strategy = { type = role_ratio                          id = marine                     	 value = 5 }
+	ai_strategy = { type = role_ratio                          id = marine                     	 value = 10 }
 }
 
 naval_powers_make_more_marines = {
@@ -733,7 +799,6 @@ naval_powers_make_more_marines = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = { type = role_ratio                          id = infantry                   value = -10 }
-	ai_strategy = { type = role_ratio                          id = marine                     value = 10 }
 }
 
 default_bicycle_production = {

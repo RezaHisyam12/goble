@@ -12,7 +12,7 @@ ai_front_management_stop = {
 		has_manpower < 5000
 		OR = {
 			surrender_progress > 0.3
-			enemies_strength_ratio > 2.0
+			enemies_strength_ratio > 1.49
 		}
 	}
 	
@@ -98,7 +98,7 @@ ai_front_management_careful_failing = {
 		surrender_progress < 0.4
 		has_manpower > 499
 		enemies_strength_ratio > 0.99
-		enemies_strength_ratio < 2.0
+		enemies_strength_ratio < 1.5
 	}
 	
 	abort_when_not_enabled = yes
@@ -155,7 +155,7 @@ ai_front_management_careful = {
 		surrender_progress < 0.2
 		has_manpower > 499
 		enemies_strength_ratio > 1.09
-		enemies_strength_ratio < 2.0
+		enemies_strength_ratio < 1.5
 	}
 	
 	abort_when_not_enabled = yes
@@ -183,7 +183,7 @@ ai_front_management_rush_vs_minors = {
 		is_major = yes
 		surrender_progress < 0.2
 		has_manpower > 499
-		enemies_strength_ratio < 1.5
+		enemies_strength_ratio < 1.1
 		NOT = { any_enemy_country = { is_major = yes } }
 	}
 	
@@ -212,8 +212,8 @@ ai_front_management_careful_vs_minors = {
 		is_major = yes
 		surrender_progress < 0.2
 		has_manpower > 499
-		enemies_strength_ratio > 1.49
-		enemies_strength_ratio < 2.0
+		enemies_strength_ratio > 1.09
+		enemies_strength_ratio < 1.5
 		NOT = { any_enemy_country = { is_major = yes } }
 	}
 	
@@ -241,7 +241,7 @@ ai_front_management_default_rush = {
 		has_war = yes
 		surrender_progress < 0.2
 		has_manpower > 499
-		enemies_strength_ratio < 1.2  # Slight advantage or even
+		enemies_strength_ratio < 1.1  # Slight advantage or even
 	}
 	
 	abort_when_not_enabled = yes
@@ -268,8 +268,8 @@ ai_front_management_default_balanced = {
 		has_war = yes
 		surrender_progress < 0.2
 		has_manpower > 499
-		enemies_strength_ratio > 1.19
-		enemies_strength_ratio < 2.0
+		enemies_strength_ratio > 1.09
+		enemies_strength_ratio < 1.5
 	}
 	
 	abort_when_not_enabled = yes

@@ -1,0 +1,41 @@
+NEE_starting_plan = {
+	name = "NEE_starting_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = NEE
+	}
+	enable = {
+		date < 1939.12.2
+	}
+	abort = {
+		date > 1939.12.1
+	}
+
+	ai_national_focuses = {
+		NEE_Legitimate_America
+		NEE_Infrastructure_Act
+		NEE_Settlement_Movement
+		NEE_Ivy_League_Expansion
+		NEE_Reestablish_Minutemen
+		NEE_Smith_and_Wessons
+		NEE_Lowel_Munition_Factory
+		NEE_Electrification_Effort
+		NEE_American_Capitalism
+		NEE_bureau_of_industry
+		NEE_Maine_Steel
+		NEE_Synthetic_Oil
+
+		NEE_US_Navy
+		NEE_US_Airforce
+		NEE_Self_Reliance
+		NEE_Liberty_Ships
+		NEE_Battleline_of_Freedom
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
