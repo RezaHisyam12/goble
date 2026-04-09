@@ -165,6 +165,7 @@ set_popularities = {
 	paternal_autocrat = 7
 	national_populist = 4
 }
+set_country_flag = legation_council_member
 
 if = {
 	limit = { has_dlc_nsb = yes }

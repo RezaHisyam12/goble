@@ -28,6 +28,7 @@ LEC_votes_category = {
 				original_tag = TXS
 				original_tag = NYC
 				original_tag = BBR
+				original_tag = HAW
 				original_tag = AST
 				original_tag = RUS
 				original_tag = TRM
@@ -72,7 +73,7 @@ LEC_votes_category = {
 			}
 			modifier = {
 				factor = 15
-				tag = USA
+				is_american_tag = yes
 				has_global_flag = LEC_DAB_bailout_question
 			}
 			modifier = {
@@ -102,7 +103,7 @@ LEC_votes_category = {
 			}
 			modifier = {
 				factor = 15
-				tag = USA
+				is_american_tag = yes
 				has_global_flag = LEC_sichuan_famine_vote
 			}
 			modifier = {
@@ -117,7 +118,7 @@ LEC_votes_category = {
 			}
 			modifier = {
 				factor = 15
-				tag = USA
+				is_american_tag = yes
 				has_global_flag = LEC_russia_vote
 			}
 			modifier = {
@@ -157,7 +158,7 @@ LEC_votes_category = {
 			}
 			modifier = {
 				factor = 15
-				tag = USA
+				is_american_tag = yes
 				has_global_flag = LEC_britain_vote
 			}
 			modifier = {
@@ -240,7 +241,7 @@ LEC_votes_category = {
 			}
 			modifier = {
 				factor = 15
-				tag = USA
+				is_american_tag = yes
 				has_global_flag = LEC_america_vote
 			}
 			modifier = {
@@ -305,6 +306,7 @@ LEC_votes_category = {
 				original_tag = TXS
 				original_tag = NYC
 				original_tag = BBR
+				original_tag = HAW
 				original_tag = AST
 				original_tag = RUS
 				original_tag = TRM
@@ -404,7 +406,7 @@ LEC_votes_category = {
 			}
 			modifier = {
 				factor = 11
-				tag = USA
+				is_american_tag = yes
 				has_global_flag = LEC_belgium_vote
 			}
 			modifier = {
@@ -449,7 +451,7 @@ LEC_votes_category = {
 			}
 			modifier = {
 				factor = 5
-				tag = USA
+				is_american_tag = yes
 				has_global_flag = LEC_germany_vote
 			}
 			modifier = {
@@ -513,6 +515,7 @@ LEC_votes_category = {
 				original_tag = TXS
 				original_tag = NYC
 				original_tag = BBR
+				original_tag = HAW
 				original_tag = RUS
 				original_tag = TRM
 			}
@@ -590,6 +593,7 @@ LEC_votes_category = {
 				original_tag = TXS
 				original_tag = NYC
 				original_tag = BBR
+				original_tag = HAW
 				original_tag = RUS
 				original_tag = TRM
 			}
@@ -655,7 +659,14 @@ LEC_votes_category = {
 					is_subject = no
 				}
 			}
-			GRU = { has_country_flag = GRU_CONGRESS_DONE }
+			GRU = { 
+				OR = {
+					has_country_flag = GRU_NMDVP_rule
+					has_country_flag = GRU_SMEPD_rule
+					has_country_flag = GRU_FAUD_rule
+					has_country_flag = GRU_SPD_rule
+				}
+			}
 			NOT = {
 				has_global_flag = legation_vote_ongoing
 				has_country_flag = LEC_Triad_Power
@@ -669,7 +680,7 @@ LEC_votes_category = {
 			}
 		}
 		fire_only_once = yes
-		ai_will_do = { factor = 15}
+		ai_will_do = { factor = 100}
 		cost = 25
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision LEC_restore_germania_vote"

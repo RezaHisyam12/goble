@@ -11182,6 +11182,7 @@ country_event = { #Fate of America
 			set_cosmetic_tag = HAW_america_kingdom
 			set_global_flag = USA_HAS_RETURNED
 		}
+		set_country_flag = HAW_claimed_america
 		hidden_effect = {
 			country_event = {
 				id = NYC_flavor.57
@@ -25971,6 +25972,7 @@ country_event = { #Fate of Flanders
 					29 = {
 						is_owned_by = ROOT
 						is_claimed_by = FLN
+						is_claim_or_core_of_ROOT = no
 					}
 				}
 				set_temp_variable = { tag_to_release = HOL }
@@ -41864,6 +41866,7 @@ country_event = { #The Fate of Central Italy
 					state = 1236 #San Marino
 				}
 			}
+			add_claim_by = PAP
 			PAP = { transfer_state = PREV }
 		}
 		recheck_annexations = yes

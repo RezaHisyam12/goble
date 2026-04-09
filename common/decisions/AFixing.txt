@@ -157,36 +157,48 @@ RUS_Siberian_War = {
 				OR = {
 					GER = { has_war_with = RUS }
 					GRU = { has_war_with = RUS }
-					custom_trigger_tooltip = {
-						tooltip = RUS_Start_The_Offensive_tooltip
-						check_variable = { global.siberian_war_chance > 0.84 }
-					}
-				}
-				OR = {
-					has_completed_focus = TRM_Form_A_New_Cabinet
-					has_completed_focus = TRM_Our_Proud_Varyag_2
-					has_completed_focus = TRM_RSDRP_PSR
-					has_completed_focus = TRM_KDV
-					has_completed_focus = TRM_NDS
-					has_completed_focus = TRM_New_Far_Eastern_Republic
-					has_completed_focus = TRM_Transbaikal_Union
-					has_completed_focus = TRM_Russian_Empire_In_Exile
-					has_completed_focus = TRM_spirit_revolution
-					has_completed_focus = TRM_Hail_Tsar
-					has_completed_focus = TRM_ROVS_Secures_The_Power
-					has_country_flag = SOV_restored_in_transamur
+					INT = { has_war_with = RUS }
+					JAP = { has_war_with = RUS }
+					ENT = { has_war_with = RUS }
+					has_country_flag = TRM_decision_to_attack_russia
 				}
 			}
 			OR = {
 				is_owner_neighbor_of = FROM
 				any_allied_country = { is_owner_neighbor_of = FROM }
 			}
-			NOT = { has_non_aggression_pact_with = FROM }
+			NOT = { 
+				has_non_aggression_pact_with = FROM 
+				has_country_flag = RUS_negotiating_siberia
+			}
+		}
+		visible = {
+			OR = {
+				AND = {
+					country_exists = RUS
+					NOT = { is_ally_with = RUS }
+				}
+				AND = {
+					country_exists = RVA
+					NOT = { is_ally_with = RVA }
+				}
+				AND = {
+					country_exists = WRA
+					NOT = { is_ally_with = WRA }
+				}
+				AND = {
+					country_exists = RRF
+					NOT = { is_ally_with = RRF }
+				}
+			}			
 		}
 
 		targets = { RUS RVA WRA RRF }
 		target_root_trigger = {
-			has_idea = TRM_dream
+			OR = {
+				has_idea = TRM_dream
+				has_idea = TRM_Sib_Fed					
+			}
 			NOT = { has_active_mission = TRM_will_declare_war_on_RUS }
 		}
 		target_trigger = {
@@ -195,7 +207,13 @@ RUS_Siberian_War = {
 				limit = { russian_civil_war = no }
 				FROM = { owns_state = 219 }
 			}
+			FROM = {
+				any_owned_state = {
+					is_claim_or_core_of_ROOT = yes
+				}
+			}
 		}
+		cancel_if_not_visible = yes
 
 		cost = 10
 		days_remove = 14
@@ -227,6 +245,10 @@ RUS_Siberian_War = {
 				factor = 2
 				russian_civil_war = yes
 			}
+			modifier = {
+				factor = 0
+				TRM = { has_country_flag = TRM_integration_with_russia }
+			}
 		}
 		cancel_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision cancelled RUS_Start_The_Offensive_TRM target: [From.GetName]"
@@ -235,6 +257,7 @@ RUS_Siberian_War = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision RUS_Start_The_Offensive_TRM target: [From.GetName]"
 			setup_decision_attack_AI = yes
+			set_country_flag = TRM_decision_to_attack_russia
 		}
 
 		remove_effect = {
@@ -244,6 +267,11 @@ RUS_Siberian_War = {
 				target = FROM
 				type = annex_everything
 			}
+			add_timed_idea = {
+				idea = TRM_for_russia
+				days = 365
+			}
+			set_country_flag = TRM_has_attacked_@FROM
 			hidden_effect = {
 				random_other_country = {
 					limit = {

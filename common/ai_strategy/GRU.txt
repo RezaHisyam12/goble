@@ -1725,6 +1725,23 @@ default_RR_Werwolf_production = {
 	}
 }
 
+GRU_for_deutschland = {
+	allowed = {
+		tag = GRU
+	}
+	enable = {
+		num_divisions < 250
+		has_manpower > 300000
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+       		type = force_build_armies
+        	value = 250
+    	}
+}
+
 GRU_build_tanks_focus = {
 	allowed = {
 		OR = {
@@ -1753,13 +1770,34 @@ GRU_build_tanks_focus = {
 	}
 	ai_strategy = {
 		type = role_ratio
-		id = armor_role
+		id = armor
 		value = 10
 	}
 	ai_strategy = {
 		type = equipment_variant_production_factor
 		id = medium_tank_chassis
 		value = 15
+	}
+}
+
+GERGRU_production_early_game = {
+	allowed = {
+		OR = {
+			tag = GER
+			tag = GRU
+		}
+	}
+	enable = {
+		num_of_military_factories < 100
+	}
+	abort = {
+		num_of_military_factories > 99
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = motorized_equipment
+		value = 10
 	}
 }
 
@@ -1777,13 +1815,18 @@ default_flame_tank_and_support_production = {
 
 	ai_strategy = {
 		type = equipment_production_factor
-		id = heavy_tank_flame_chassis
-		value = 15
+		id = flame
+		value = 25
 	}
 	ai_strategy = {
-		type = equipment_production_min_factories_archetype
+		type = equipment_variant_production_factor
+		id = medium_tank_flame_chassis
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
 		id = heavy_tank_flame_chassis
-		value = 1
+		value = 5
 	}
 }
 
@@ -1800,9 +1843,19 @@ german_default_more_tank_production = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = -10
+		type = role_ratio #even more tanks
+		id = armor
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = support
+		value = 45
 	}
 	ai_strategy = {
 		type = role_ratio
@@ -1830,14 +1883,29 @@ german_default_more_tank_production = {
 		value = 15
 	}
 	ai_strategy = {
-		type = equipment_production_factor
-		id = armored_support_vehicle
-		value = 10
+		type = equipment_variant_production_factor
+		id = heavy_tank_destroyer_chassis
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = support_equipment
+		value = 12
 	}
 	ai_strategy = {
 		type = equipment_variant_production_factor
 		id = armored_support_vehicle
 		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = motorized
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = mechanized
+		value = 20
 	}
 }
 
@@ -2426,3 +2494,28 @@ GRU_build_rocket_site_masuria = {
 		value = 2000
 	}
 }
+
+GRU_2WK_air_space = {
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		has_war = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = air_base
+		target = 51 
+		value = 10
+	}
+
+	ai_strategy = {
+		type = build_building
+		id = air_base
+		target = 55 
+		value = 10
+	}
+}
+

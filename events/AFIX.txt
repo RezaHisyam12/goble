@@ -8,6 +8,7 @@
 
 add_namespace = tram
 add_namespace = lec
+add_namespace = ottars
 
 country_event = {
 	id = tram.400
@@ -207,10 +208,10 @@ country_event = { #Vote on German Vote Restoration?
 	option = {	#Of course!
 		name = lec.210.a
 		ai_chance = {
-			factor = 99
+			factor = 1
 		}
 		activate_mission = LEC_vote_timer
-		set_global_flag = LEC_german_vote
+		set_global_flag = LEC_germany_vote
 		set_global_flag = legation_vote_ongoing
 		for_each_scope_loop = {
 			array = global.LEC_voters
@@ -231,7 +232,7 @@ country_event = { #Vote on German Vote Restoration?
 	option = {	#We don't need a vote...
 		name = lec.210.b
 		ai_chance = {
-			factor = 1
+			factor = 99
 		}
 		add_political_power = -50
 		for_each_scope_loop = {
@@ -298,7 +299,7 @@ country_event = { #Germany Vote - Result
 		clear_variable = global.legations_yes_votes
 		clear_variable = global.legations_no_votes
 		clear_variable = global.legations_abstain_votes
-		clr_global_flag = LEC_german_vote
+		clr_global_flag = LEC_germany_vote
 		clr_global_flag = legation_vote_ongoing
 		GRU = {
 			country_event = {
@@ -334,7 +335,7 @@ country_event = { #Germany Vote - Result
 		clear_variable = global.legations_yes_votes
 		clear_variable = global.legations_no_votes
 		clear_variable = global.legations_abstain_votes
-		clr_global_flag = LEC_german_vote
+		clr_global_flag = LEC_germany_vote
 		clr_global_flag = legation_vote_ongoing
 		GRU = {
 			country_event = {
@@ -409,5 +410,392 @@ country_event = { #Germany voting rights - voted down
 	option = {	#how dare they not consult us?
 		name = lec.216.a
 		add_political_power = -5
+	}
+}
+
+country_event = {	#Coup d'État in Konstantiniyye
+	id = ottars.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ottars.11" }
+	title = ottars.11.t
+	desc = ottars.11.d
+
+	picture = GFX_OTT_Troops_Istanbul
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = ottars.11.a
+		ai_chance = {
+			factor = 0
+		}
+		set_party_name = {
+			ideology = paternal_autocrat
+			long_name = TUR_military_government_long
+			name = TUR_military_government
+		}
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		end_coalition = yes
+		remove_all_ministers = yes
+		add_ideas = {
+			OTT_Mustafa_Fevzi_Pasa_hog_pau
+			OTT_Fahrettin_Pasa_for_pau
+			OTT_Sirri_Bey_eco_ade
+			OTT_Mehmed_Recep_Pasa_sec_pau
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.15
+		}
+		hidden_effect = {
+			country_event = {
+				id = ottfev.1
+				days = 3
+			}
+			country_event = {
+				id = ottfev.6
+				days = 14
+			}
+			random_country = {
+				limit = {
+					NOT = {
+						tag = TUR
+					}
+				}
+				news_event = worldnews.435
+			}
+			set_country_leader_ideology = junta_subtype 
+		}
+		remove_ideas = ott_military_purge
+		remove_ideas = ott_bloated_administration
+		load_focus_tree = ottoman_fevzi_coup_focus
+		complete_national_focus = OTT_State_of_Emergency
+		set_stability = 0.6
+		OTT_remove_kemalist_ideas = yes
+	}
+	
+	option = {
+		name = ottars.11.b
+		ai_chance = {
+			factor = 50
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.15
+		}
+		add_manpower = -500
+		army_experience = -15
+		add_stability = -0.02
+		add_political_power = 75
+		remove_ideas = ott_military_purge
+		set_country_flag = OTT_absolute_monarchy_flag
+	}
+	
+	option = {
+		name = ottars.11.c
+		ai_chance = {
+			factor = 50
+		}
+		set_politics = {
+			ruling_party = social_conservative
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = -0.50
+		}
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.20
+		}
+		add_stability = 0.04
+		add_political_power = -50
+		remove_ideas = ott_military_purge
+		set_country_flag = OTT_islamic_democracy_flag
+		add_pataut_to_coalition = yes
+	}
+}
+
+country_event = {	#To Unite the Faithfuls?
+	id = ottars.13
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ottars.13" }
+	title = ottars.13.t
+	desc = ottars.13.d
+
+	picture = GFX_OTT_Sheikh_Islam
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = ottars.13.a
+		ai_chance = {
+			factor = 0
+		}
+		
+		add_stability = 0.02
+		add_political_power = 25
+	}
+	
+	option = {
+		name = ottars.13.b
+		ai_chance = {
+			factor = 100
+		}
+		
+		add_war_support = 0.05
+		add_political_power = -50
+		add_command_power = 50
+		set_cosmetic_tag = OTT_caliphate
+		
+		every_state = {
+				limit = { is_core_of = OMA }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = OMA }
+		every_state = {
+				limit = { is_core_of = JBS }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = JBS }
+		every_state = {
+				limit = { is_core_of = SAU }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = SAU }
+		every_state = {
+				limit = { is_core_of = YEM }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = YEM }
+		every_state = {
+				limit = { is_core_of = PER }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = PER }
+		every_state = {
+				limit = { is_core_of = AFG }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = AFG }
+		every_state = {
+				limit = { is_core_of = SUD }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = SUD }
+		every_state = {
+				limit = { is_core_of = AZE }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = AZE }
+		every_state = {
+				limit = { is_core_of = EGY }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = EGY }
+		every_state = {
+				limit = { is_core_of = LBA }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = LBA }
+		every_state = {
+				limit = { is_core_of = TRP }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = TRP }
+		every_state = {
+				limit = { is_core_of = TUN }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = TUN }
+		every_state = {
+				limit = { is_core_of = ALG }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = ALG }
+		every_state = {
+				limit = { is_core_of = MOR }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = MOR }
+		every_state = {
+				limit = { is_core_of = MRT }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = MRT }
+		create_wargoal = { type = annex_everything target = NFA }
+		every_state = {
+				limit = { is_core_of = ERI }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = ERI }
+		every_state = {
+				limit = { is_core_of = DJI }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = DJI }
+		every_state = {
+				limit = { is_core_of = UZB }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = UZB }
+		every_state = {
+				limit = { is_core_of = KHI }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = KHI }
+		every_state = {
+				limit = { is_core_of = TRK }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = TRK }
+		every_state = {
+				limit = { is_core_of = KYR }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = KYR }
+		every_state = {
+				limit = { is_core_of = ALO }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = ALO }
+		every_state = {
+				limit = { is_core_of = NER }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = NER }
+		every_state = {
+				limit = { is_core_of = MAL }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = MAL }
+		every_state = {
+				limit = { is_core_of = WAD }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = WAD }
+		every_state = {
+				limit = { is_core_of = BFA }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = BFA }
+		every_state = {
+				limit = { is_core_of = SEN }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = SEN }
+		every_state = {
+				limit = { is_core_of = GNA }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = GNA }
+		every_state = {
+				limit = { is_core_of = CVG }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = CVG }
+		every_state = {
+				limit = { is_core_of = SIE }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = SIE }
+		every_state = {
+				limit = { is_core_of = ALB }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = ALB }
+		every_state = {
+				limit = { is_core_of = BOS }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = BOS }
+		every_state = {
+				limit = { is_core_of = SIK }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = SIK }
+		every_state = {
+				limit = { is_core_of = MTR }
+				add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = MTR }
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = SOM
+					is_claimed_by = SOM
+				}
+			}
+			add_core_of = TUR
+		}
+		create_wargoal = { type = annex_everything target = SOM }
+		
+		hidden_effect = {
+			819 = {	add_core_of = TUR }
+			352 = {	add_core_of = TUR }
+			350 = {	add_core_of = TUR }
+			450 = {	add_core_of = TUR }
+			905 = { add_core_of = TUR }
+			989 = { add_core_of = TUR }
+			965 = { add_core_of = TUR }
+			834 = { add_core_of = TUR }
+			1219 = { add_core_of = TUR }
+			444 = {	add_core_of = TUR }
+			443 = {	add_core_of = TUR }
+			445 = { add_core_of = TUR }
+			442 = { add_core_of = TUR }
+			891 = { add_core_of = TUR }
+			441 = { add_core_of = TUR }
+			1208 = { add_core_of = TUR }
+			583 = { add_core_of = TUR }
+			588 = { add_core_of = TUR }
+			708 = {	add_core_of = TUR }
+			1275 = { add_core_of = TUR }
+			country_event = {
+				id = ottars.14
+				days = 2
+			}
+		}
+		
+	}
+}
+
+country_event = {	#Name of the Caliphate
+	id = ottars.14
+	immediate = { log = "[GetDateText]: [Root.GetName]: event ottars.14" }
+	title = ottars.14.t
+	desc = ottars.14.d
+
+	picture = GFX_OTT_Sublime_Porte1
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = ottars.14.a
+		
+	}
+	
+	option = {
+		name = ottars.14.b
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			set_cosmetic_tag = OTT_caliphate_larp
+		}
+	}
+	
+	option = {
+		name = ottars.14.c
+		hidden_effect = {
+			set_cosmetic_tag = OTT_caliphate_sublime
+		}
 	}
 }

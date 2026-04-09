@@ -1,0 +1,27 @@
+TUR_Arslan_plan = {
+	name = "TUR_Arslan_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		has_active_mission = OTT_prorogue_parliament_mission
+	}
+	abort = {
+		NOT = {	has_active_mission = OTT_prorogue_parliament_mission }
+	}
+
+	ai_national_focuses = {
+		OTT_Enforce_Mecelle
+		OTT_Desecularise_Army
+		OTT_Revert_Social_Reforms
+		OTT_Caliphate_Of_Old
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}

@@ -10842,6 +10842,9 @@ RUS_toz_organisation = {
 			}
 			custom_effect_tooltip = toz_upgrade_2_tt
 		}
+		equipment_bonus = {
+			soft_attack = 0.025
+		}
 	}
 
 	trait = {
@@ -10879,6 +10882,9 @@ RUS_toz_organisation = {
 				set_mio_flag = TOZ_Medal_Decision_Taken
 			}
 			custom_effect_tooltip = toz_upgrade_4_tt
+		}
+		equipment_bonus = {
+			defense = 0.025
 		}
 	}
 
@@ -10926,6 +10932,9 @@ RUS_toz_organisation = {
 				set_mio_flag = TOZ_Medal_Decision_Taken
 			}
 			custom_effect_tooltip = toz_upgrade_1_2_tt
+		}
+		equipment_bonus = {
+			reliability = 0.025
 		}
 	}
 
@@ -10988,6 +10997,9 @@ RUS_toz_organisation = {
 				set_mio_flag = TOZ_Medal_Decision_Taken
 			}
 			custom_effect_tooltip = toz_upgrade_1_5_tt
+		}
+		equipment_bonus = {
+			breakthrough = 0.025
 		}
 	}
 

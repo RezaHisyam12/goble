@@ -1,0 +1,227 @@
+SOV_research_slot_plan_kamenev = {
+	name = "SOV_research_slot_plan_kamenev"
+	desc = ""
+
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_country_flag = soviet_russia_restored
+		NOT = {	has_game_rule = { rule = SOV_politburo_struggle option = SOV_PATH_NSP_SOKOLNIKOV } }
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		SOV_Milestone_Highway_To_Socialism
+		SOV_Old_Moscow_Familiars
+		SOV_Support_Proletkult_Intelligentsia
+		SOV_Soyuzmultfilm
+		SOV_The_New_Leninism
+		SOV_Introduce_NEP
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
+SOV_research_slot_plan_sokolnikov = {
+	name = "SOV_research_slot_plan_sokolnikov"
+	desc = ""
+
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_country_flag = soviet_russia_restored
+		NOT = {	has_game_rule = { rule = SOV_politburo_struggle option = SOV_PATH_NSP_KAMENEV } }
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		SOV_Milestone_Highway_To_Socialism
+		SOV_Confide_In_Kamenev
+		SOV_Support_Proletkult_Intelligentsia
+		SOV_Soyuzmultfilm
+		SOV_The_New_Leninism
+		SOV_Introduce_NEP
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
+SOV_NEP_plan = {
+	name = "SOV_NEP_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_country_flag = soviet_russia_restored
+		has_dynamic_modifier = { modifier = RUS_New_Economic_Policy_modifier }
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		SOV_Socialism_In_The_City
+		SOV_Capitalism_In_The_Village
+		SOV_Khozraschyot
+		SOV_Cautious_Industrialization_nsp
+		SOV_Foreign_Concessions
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
+SOV_NEP_down_plan = {
+	name = "SOV_NEP_down_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_country_flag = soviet_russia_restored
+		has_dynamic_modifier = { modifier = RUS_New_Economic_Policy_modifier }
+		has_country_flag = SOV_decided_to_go_down_with_nep 
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		SOV_Down_With_Nep
+		SOV_Install_Bread_Monopoly
+		SOV_Tax_The_Peasants
+		SOV_Supplant_Private_Sector
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
+SOV_rearm_plan = {
+	name = "SOV_rearm_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		date > 1939.1.1
+		has_country_flag = soviet_russia_restored
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		RUS_Rearmament_Programme
+		RUS_Expansionism
+		RUS_Enemy_In_The_South
+		RUS_Secure_Central_Asia
+		RUS_Bring_Back_Cossacks
+		RUS_Into_The_Caucasus
+		RUS_Enemy_In_The_East
+		RUS_Reclaim_Far_East
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
+SOV_rykov_plan = {
+	name = "SOV_rykov_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_country_flag = soviet_congress_end
+		SOV_rykov_in_power = yes
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		SOV_Complete_Nationalization
+		SOV_Involve_Peasants_Into_Socialism
+		SOV_Rykovs_Selkhoznalog
+		SOV_Tax_the_Vodka
+		SOV_Achieve_Level_Of_Ford
+		SOV_Cultivation_Of_A_Communist_Man
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
+SOV_zdanov_plan = {
+	name = "SOV_zdanov_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_country_flag = soviet_congress_end
+		SOV_zhdanov_in_power = yes
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		SOV_Premier_Zhdanov
+		SOV_Redefine_Russian_Identity
+		SOV_Enshrine_Rykov_Legacy
+		SOV_Condemn_Bukharinist_Revision
+		SOV_Court_Zapadnaya_Faction
+		SOV_Soviets_Beyond_Nations
+		SOV_Bureaucrat_Every_House
+		SOV_Central_Commission_State_Planning
+		SOV_Final_Nail_NEP
+		SOV_Logical_Endpoint_Centralist_Doctrine
+		SOV_Zhdanovshchina
+		SOV_Judges_Honour
+		SOV_New_Socialist_Reality
+		SOV_Silence_Bourgeois_Pragmatist_Lean
+		SOV_No_Progress_Without_Ideology
+		SOV_All_Reaching_Party_Apparatus
+		SOV_Their_Dream_Forged_Reality
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}

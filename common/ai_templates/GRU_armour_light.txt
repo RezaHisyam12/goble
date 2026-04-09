@@ -2,14 +2,14 @@
 #	LIGHT ARMOR ROLE
 ######################
 
-motorized_infantry = {
+light_armour_generic = {
     role = light_armor_role
 	front_role_override = offence
 
 	available_for = { GRU GER }
 
 	upgrade_prio = {
-		factor = 1000
+		factor = 2000
 		modifier = {
 			factor = 0
 			is_eligible_for_armor_production = no
@@ -19,7 +19,7 @@ motorized_infantry = {
 			NOT = { has_tech = motorised_infantry }
 		}
 		modifier = {
-			factor = 2
+			factor = 5
 			OR = {
 				has_doctrine = new_mobile_warfare
 				has_doctrine = mass_assault
@@ -27,7 +27,7 @@ motorized_infantry = {
 		}
 	}
 
-	trucks_1 = {
+	motorized_light_1 = {
 		can_upgrade_in_field = { always = no }
 		
 		upgrade_prio = {
@@ -36,8 +36,8 @@ motorized_infantry = {
 
 		target_template = {
 			regiments = {
-				motorized = 4
-				light_armor = 4
+				motorized = 6
+				light_armor = 6
 			}
 
 			support = {
@@ -48,7 +48,7 @@ motorized_infantry = {
 		}
 	}
 
-	trucks_2 = {
+	motorized_light_2 = {
 		can_upgrade_in_field = { always = no }
 		
 		upgrade_prio = {
@@ -66,7 +66,7 @@ motorized_infantry = {
 				num_of_military_factories < 60
 			}
 			modifier = {
-				factor = 2
+				factor = 5
 				num_of_military_factories > 60
 			}
 		}
@@ -83,13 +83,13 @@ motorized_infantry = {
 				anti_tank = 1
 				light_tank_recon = 1
 				engineer = 1
-				field_hospital = 1
+				signal_company = 1
 				logistics_company = 1
 			}
 		}
 	}
 
-    	trucks_3 = {
+    	motorized_light_3 = {
 		can_upgrade_in_field = { always = no }
 		
 		upgrade_prio = {
@@ -129,13 +129,13 @@ motorized_infantry = {
 				anti_tank = 1
 				light_tank_recon = 1
 				engineer = 1
-				field_hospital = 1
+				signal_company = 1
 				logistics_company = 1
 			}
 		}
 	}
 
-	trucks_4 = {
+	motorized_light_4 = {
 		can_upgrade_in_field = { always = no }
 		
 		upgrade_prio = {
@@ -165,8 +165,8 @@ motorized_infantry = {
 
 		target_template = {
 			regiments = {
-				motorized = 6
-				light_armor = 6
+				motorized = 8
+				light_armor = 8
 				motorized_rocket_brigade = 2
 				mot_anti_air_brigade = 2
 			}
@@ -175,7 +175,7 @@ motorized_infantry = {
 				anti_tank = 1
 				light_tank_recon = 1
 				engineer = 1
-				field_hospital = 1
+				signal_company = 1
 				logistics_company = 1
 			}
 		}
