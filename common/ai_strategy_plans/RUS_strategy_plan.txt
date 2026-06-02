@@ -76,6 +76,7 @@ RUS_zemstva_plan = {
 		original_tag = RUS
 	}
 	enable = {
+		has_completed_focus = RUS_russian_army
 		OR = {
 			kdp_in_power = yes
 			psr_in_power = yes
@@ -94,10 +95,6 @@ RUS_zemstva_plan = {
 		RUS_Zemstvo_Research_Initiatives
 		RUS_War_Preparations_Programme
 		RUS_National_Investment_Bank
-		RUS_Industry_In_The_Urals
-		RUS_ec_mutual8
-		RUS_The_Wealth_Of_Siberia
-		RUS_ec_mutual3
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
@@ -115,6 +112,7 @@ RUS_bureaucratic_overhaul_plan = {
 		original_tag = RUS
 	}
 	enable = {
+		has_completed_focus = RUS_russian_army
 		kdp_in_power = no
 		psr_in_power = no
 		vns_in_power = no
@@ -132,10 +130,6 @@ RUS_bureaucratic_overhaul_plan = {
 		RUS_Military_Production_Act
 		RUS_Economic_Efficiency_Act
 		RUS_Agricultural_Modernisation
-		RUS_Industry_In_The_Urals
-		RUS_ec_mutual8
-		RUS_The_Wealth_Of_Siberia
-		RUS_ec_mutual3
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

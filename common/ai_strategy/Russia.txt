@@ -178,6 +178,25 @@ JAP_dont_support_russia = {
 }
 
 #################
+### ARMY ###
+#################
+RUS_for_motherhland = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		num_divisions < 250
+		has_manpower > 300000
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+       		type = force_build_armies
+        	value = 250
+    	}
+}
+
 SOV_build_army = {
 	allowed = {
 		tag = RUS

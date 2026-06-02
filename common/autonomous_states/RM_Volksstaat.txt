@@ -1,10 +1,10 @@
 autonomy_state = {
 	id = RM_Volksstaat
 
-	default = yes
 	is_puppet = yes
+	default = yes
+	min_freedom_level = 0.5
 
-	min_freedom_level = 0.9
 	manpower_influence = 0
 
 	rule = {
@@ -22,9 +22,10 @@ autonomy_state = {
 		can_master_build_for_us = 1
 		extra_trade_to_overlord_factor = 0.5
 		overlord_trade_cost_factor = -0.5
+		license_subject_master_purchase_cost = -1
 		cic_to_overlord_factor = 0.10
-		autonomy_gain_global_factor = -0.5
 		peace_score_ratio_transferred_to_overlord = 0.1
+		faction_influence_contribution_factor = -0.10
 	}
 
 	ai_subject_wants_higher = {

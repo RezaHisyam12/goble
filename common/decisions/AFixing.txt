@@ -915,9 +915,9 @@ RUS_Foreign_Policy_decisions = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision RUS_Intervene_Germany target: [From.GetName]"
-			set_country_flag = { flag = imminent_war days = 42 value = 1 }
-			setup_decision_attack_AI = yes
 			FROM = { incoming_war_notification_effect = yes }
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			setup_decision_attack_AI = yes
 			for_each_scope_loop = {
 				array = FROM.faction_members
 				if = {
@@ -941,6 +941,7 @@ RUS_Foreign_Policy_decisions = {
 							NOT = { has_global_flag = UKR_secret_collusion_with_russia }
 						}
 					}
+					incoming_war_notification_effect = yes
 					add_ai_strategy = {
 						type = prepare_for_war
 						id = ROOT
@@ -2350,6 +2351,171 @@ highlight_state_targets = {
 					remove_dynamic_modifier = { modifier = CAN_nee_recruitment2 }
 				}
 				add_dynamic_modifier = { modifier = CAN_nee_recruitment3 }
+			}
+		}
+	}
+}
+
+OTT_congress = {
+	OTT_prorogue_parliament_mission = {
+		icon = eng_ally_imperialist_coup
+
+		allowed = {
+			always = no
+		}
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		selectable_mission = no
+		days_mission_timeout = 150
+
+		is_good = no
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		cancel_trigger = {
+			NOT = {
+				has_government = social_conservative
+				has_government = paternal_autocrat
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision OTT_prorogue_parliament_mission"
+		}
+
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout OTT_prorogue_parliament_mission"
+			decrease_ruling_party_popularity_by_20 = yes
+		}
+	}
+}
+
+Ottoman_Pan_Islam_ambition_decisions = {
+	OTT_Pan_Islam_ambition = {
+		icon = hol_draw_up_staff_plans
+
+		available = {
+			OR = {
+				is_owner_neighbor_of = FROM
+				any_allied_country = { is_owner_neighbor_of = FROM }
+			}
+			NOT = { 
+				has_non_aggression_pact_with = FROM 
+				has_guaranteed = FROM
+			}
+		}
+
+		visible = {
+			OR = {
+				has_country_flag = OTT_islamic_democracy_flag
+				has_country_flag = OTT_absolute_monarchy_flag
+			}
+			can_declare_war_on = FROM
+			NOT = { 
+				has_non_aggression_pact_with = FROM 
+				has_guaranteed = FROM
+				FROM = { is_subject_of = GRU }
+			}
+			if = {
+				limit = { FROM = { tag = NFA } }
+				NFA = {
+					NOT = { 
+						is_guaranteed_by = CAN 
+						is_ally_with = CAN
+					}
+				}		
+			}			
+		}
+
+		targets = { OMA JBS SAU YEM PER AFG SUD AZE EGY LBA TRP TUN ALG MOR MRT NFA ERI DJI UZB KHI TRK KYR ALO NER MAL WAD BFA SEN GNA CVG SIE ALB BOS SIK MTR SOM ETH }
+		target_root_trigger = {
+			has_completed_focus = OTT_Pan_Islamic_Legitimacy
+		}
+		target_trigger = {
+			can_declare_war_on = FROM
+		}
+		cancel_if_not_visible = yes
+
+		cost = 10
+		days_remove = 30
+		fire_only_once = yes
+		war_with_target_on_remove = yes
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject_of = GRU
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { is_in_faction_with = ENT }
+			}
+			modifier = {
+				factor = 0
+				FROM = { is_in_faction_with = RUS }
+				NOT = { has_global_flag = second_weltkrieg_has_started }
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					any_allied_country = {
+						is_faction_leader = yes
+						overlord = {
+							strength_ratio = {
+								tag = ROOT
+								ratio > 0.7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+		}
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel OTT_Pan_Islam_ambition target: [From.GetName]"
+			clear_decision_attack_AI = yes
+			add_political_power = 10
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete OTT_Pan_Islam_ambition target: [From.GetName]"
+			FROM = { incoming_war_notification_effect = yes }
+			setup_decision_attack_AI = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove OTT_Pan_Islam_ambition target: [From.GetName]"
+			clear_decision_attack_AI = yes
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
 			}
 		}
 	}

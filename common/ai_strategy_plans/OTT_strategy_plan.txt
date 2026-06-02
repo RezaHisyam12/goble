@@ -16,7 +16,43 @@ TUR_Arslan_plan = {
 		OTT_Enforce_Mecelle
 		OTT_Desecularise_Army
 		OTT_Revert_Social_Reforms
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
+TUR_Arslan_plan_2 = {
+	name = "TUR_Arslan_plan_2"
+	desc = ""
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OR = {
+			has_government = social_conservative
+			has_government = paternal_autocrat
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
 		OTT_Caliphate_Of_Old
+
+		OTT_Beyond_Nationalities
+		OTT_Pan_Islamic_Legitimacy
+
+		OTT_Suleiman_Legacy
+		OTT_Golden_Age
+
+		OTT_Islamic_Democracy
+		OTT_Prince_of_Eloquence
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

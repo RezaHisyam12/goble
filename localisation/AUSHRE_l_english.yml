@@ -132,6 +132,13 @@ AUS_hreantium:0 "§RIt is time to retake our historical lands!§!"
 AUS_hreantium_reborn:0 "§GThe enemy have been defeated. Holy Roman Empire is restored!§!"
 AUS_if_demands_refused:0 "§GIf France refuse our demand!§!"
 
+OTT_Pan_Islam_ambition:0 "Attack [From.GetNameDef]."
+OTT_Pan_Islam_ambition_tooltip:0 "§GThe Ottoman will look to its past and attempt to restore its former glory!§!"
+
+Ottoman_Pan_Islam_ambition_decisions:0 "Pan-Islamic Campaign"
+Ottoman_Pan_Islam_ambition_decisions_desc:0 "Beset from all sides and betrayed by those who we believed to be our staunchest allies, we must now fight for everything that we hold dear. Let us remember those who repelled the British forces at Maraş and let us honour the heroes of Antep as we now face yet another threat to our great nation! For the Sultan and the house of Osman!"
+
+
 annex.1020.c: "Reunite the Danubian lands."
 AUS_tt_entente_decisions:0 "Unlocks §RWar§! decisions towards §COur Rival§!."
 AUS_kill_rivals_decisions:0 "Rival Governments"

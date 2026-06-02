@@ -7,6 +7,10 @@ SOV_research_slot_plan_kamenev = {
 	}
 	enable = {
 		has_country_flag = soviet_russia_restored
+		OR = {
+			has_completed_focus = RUS_Rebuild_The_Red_Army
+			has_completed_focus = RUS_Empower_The_Krasnaya_Gvardiya
+		}
 		NOT = {	has_game_rule = { rule = SOV_politburo_struggle option = SOV_PATH_NSP_SOKOLNIKOV } }
 	}
 	abort = {
@@ -19,6 +23,12 @@ SOV_research_slot_plan_kamenev = {
 		SOV_Support_Proletkult_Intelligentsia
 		SOV_Soyuzmultfilm
 		SOV_The_New_Leninism
+		RUS_Rearmament_Programme
+		RUS_Expansionism
+		RUS_Enemy_In_The_South
+		RUS_Secure_Central_Asia
+		RUS_Enemy_In_The_East
+		RUS_Reclaim_Far_East
 		SOV_Introduce_NEP
 	}
 
@@ -38,6 +48,10 @@ SOV_research_slot_plan_sokolnikov = {
 	}
 	enable = {
 		has_country_flag = soviet_russia_restored
+		OR = {
+			has_completed_focus = RUS_Rebuild_The_Red_Army
+			has_completed_focus = RUS_Empower_The_Krasnaya_Gvardiya
+		}
 		NOT = {	has_game_rule = { rule = SOV_politburo_struggle option = SOV_PATH_NSP_KAMENEV } }
 	}
 	abort = {
@@ -50,6 +64,12 @@ SOV_research_slot_plan_sokolnikov = {
 		SOV_Support_Proletkult_Intelligentsia
 		SOV_Soyuzmultfilm
 		SOV_The_New_Leninism
+		RUS_Rearmament_Programme
+		RUS_Expansionism
+		RUS_Enemy_In_The_South
+		RUS_Secure_Central_Asia
+		RUS_Enemy_In_The_East
+		RUS_Reclaim_Far_East
 		SOV_Introduce_NEP
 	}
 
@@ -69,6 +89,10 @@ SOV_NEP_plan = {
 	}
 	enable = {
 		has_country_flag = soviet_russia_restored
+		OR = {
+			has_completed_focus = RUS_Rebuild_The_Red_Army
+			has_completed_focus = RUS_Empower_The_Krasnaya_Gvardiya
+		}
 		has_dynamic_modifier = { modifier = RUS_New_Economic_Policy_modifier }
 	}
 	abort = {
@@ -111,39 +135,6 @@ SOV_NEP_down_plan = {
 		SOV_Install_Bread_Monopoly
 		SOV_Tax_The_Peasants
 		SOV_Supplant_Private_Sector
-	}
-
-	# Keep small, as it is used as a factor for some things (such as research needs)
-	# Recommended around 1.0. Useful for relation between plans
-	weight = {
-		factor = 1.0
-	}
-}
-
-SOV_rearm_plan = {
-	name = "SOV_rearm_plan"
-	desc = ""
-
-	allowed = {
-		original_tag = RUS
-	}
-	enable = {
-		date > 1939.1.1
-		has_country_flag = soviet_russia_restored
-	}
-	abort = {
-
-	}
-
-	ai_national_focuses = {
-		RUS_Rearmament_Programme
-		RUS_Expansionism
-		RUS_Enemy_In_The_South
-		RUS_Secure_Central_Asia
-		RUS_Bring_Back_Cossacks
-		RUS_Into_The_Caucasus
-		RUS_Enemy_In_The_East
-		RUS_Reclaim_Far_East
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

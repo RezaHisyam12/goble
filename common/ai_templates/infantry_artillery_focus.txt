@@ -182,8 +182,8 @@ firepower_infantry = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { has_tech = improved_medium_tank }
-				NOT = { has_tech = improved_medium_tank_chassis }
+				NOT = { has_tech = basic_medium_tank }
+				NOT = { has_tech = basic_medium_tank_chassis }
 			}
 			modifier = {
 				factor = 0
@@ -231,8 +231,8 @@ firepower_infantry = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { has_tech = improved_medium_tank }
-				NOT = { has_tech = improved_medium_tank_chassis }
+				NOT = { has_tech = basic_medium_tank }
+				NOT = { has_tech = basic_medium_tank_chassis }
 			}
 			modifier = {
 				factor = 0

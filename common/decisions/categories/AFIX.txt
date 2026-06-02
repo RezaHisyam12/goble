@@ -88,3 +88,15 @@ LEC_influence_category = {
 		} 
 	}
 }
+
+Ottoman_Pan_Islam_ambition_decisions = {
+	icon = GFX_decision_category_border_conflicts
+
+	picture = GFX_decision_cat_picture_generic_border_conflicts
+
+	allowed = {
+		tag = TUR
+	}
+	
+}
+

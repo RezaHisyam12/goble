@@ -2994,9 +2994,12 @@ focus_tree = {
 			remove_idea = NFA_legion_idealism_idea_3
 			add_idea = NFA_legion_idealism_idea_4
 			}
-			create_wargoal = {
-				target = FRA
-				type = annex_everything
+			if = {
+				limit = { is_ai = no }
+				create_wargoal = {
+					target = FRA
+					type = annex_everything
+				}
 			}
 		}
 	}
@@ -8682,11 +8685,11 @@ focus_tree = {
 			}
 			add_soccon_to_coalition = yes
 			hidden_effect = {
-				set_party_name = {
-					ideology = social_conservative
-					long_name = NFA_authoritarian_democrat_party_petain_long
-					name = NFA_authoritarian_democrat_party_petain
-				}
+			set_party_name = {
+				ideology = social_conservative
+				long_name = NFA_isorni_party_long
+				name = NFA_isorni_party
+			}
 			}
 		}
 	}
@@ -8807,11 +8810,11 @@ focus_tree = {
 			}
 			add_natpop_to_coalition = yes
 			hidden_effect = {
-				set_party_name = {
-					ideology = national_populist
-					long_name = NFA_pataut_junta_long
-					name = NFA_pataut_junta
-				}
+			set_party_name = {
+				ideology = national_populist
+				long_name = NFA_labarthete_party_long
+				name = NFA_labarthete_party
+			}
 			}
 		}
 	}

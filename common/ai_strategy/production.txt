@@ -147,14 +147,14 @@ ma_less_mech = {
 #	ROLE RATIOS: ARMOR
 ############################################################################################################
 
-medium_armor_effort = {
+medium_armor_effort_1 = {
 	enable = {
 		is_eligible_for_armor_production = yes
 		ai_has_role_template = armor_role
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 35 }
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 20 }
 }
 
 ma_less_tanks = {
@@ -166,6 +166,20 @@ ma_less_tanks = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = { type = role_ratio                          id = armor_role             		 value = -10 }
+}
+
+medium_armor_effort_2 = {
+	enable = {
+		is_eligible_for_armor_production = yes
+		ai_has_role_template = armor_role
+		OR = {
+			has_tech = improved_medium_tank
+			has_tech = improved_medium_tank_chassis
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = armor_role             		 value = 15 }
 }
 
 heavy_armor_effort = {
@@ -1164,7 +1178,7 @@ majors_build_some_refineries_1 = {
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 2
+		value = 1
 	}
 }
 
@@ -1183,7 +1197,7 @@ majors_build_some_refineries_2 = {
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 2
+		value = 1
 	}
 }
 
@@ -1202,7 +1216,7 @@ majors_build_some_refineries_3 = {
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 2
+		value = 1
 	}
 }
 
@@ -1221,7 +1235,7 @@ majors_build_some_refineries_4 = {
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 2
+		value = 1
 	}
 }
 
@@ -1240,7 +1254,7 @@ majors_build_some_refineries_5 = {
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 2
+		value = 1
 	}
 }
 
@@ -1259,7 +1273,7 @@ majors_build_some_refineries_6 = {
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 2
+		value = 1
 	}
 }
 
@@ -1278,7 +1292,7 @@ majors_build_some_refineries_7 = {
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 2
+		value = 1
 	}
 }
 
@@ -1297,7 +1311,7 @@ majors_build_some_refineries_8 = {
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 2
+		value = 1
 	}
 }
 
@@ -1316,7 +1330,7 @@ majors_build_some_refineries_9 = {
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 2
+		value = 1
 	}
 }
 
@@ -1335,7 +1349,7 @@ majors_build_some_refineries_10 = {
 	ai_strategy = {
 		type = building_target
 		id = synthetic_refinery
-		value = 2
+		value = 1
 	}
 }
 
@@ -1538,7 +1552,7 @@ make_trucks = {
 		NOT = {has_tech = mechanised_infantry}
 	} 
 	abort_when_not_enabled = yes
-	ai_strategy = { type = equipment_production_min_factories_archetype id = motorized_equipment value = 3 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = motorized_equipment value = 2 }
 }
 
 always_upgrade_tanks = {

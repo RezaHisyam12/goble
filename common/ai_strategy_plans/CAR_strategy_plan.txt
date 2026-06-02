@@ -1,0 +1,38 @@
+CAR_starting_plan = {
+	name = "CAR_starting_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = CAR
+	}
+	enable = {
+		has_country_flag = CAR_carlist_restoration
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		CAR_rebuilding_the_economy
+		CAR_ley_general_educacion
+		CAR_provincial_rebuilding
+		CAR_military_investements
+		CAR_comercial_investment
+		CAR_expand_railroads
+		CAR_create_ini
+		CAR_military_factories
+		CAR_modern_agriculture
+		CAR_labour_charter
+		CAR_catholic_trade_unions
+		CAR_expand_real_academia
+		CAR_market_protections
+		CAR_electrification_program
+		CAR_expand_air_ports
+		CAR_spanish_miracle
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}

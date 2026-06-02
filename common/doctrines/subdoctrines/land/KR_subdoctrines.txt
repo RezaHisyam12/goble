@@ -347,8 +347,8 @@ golovin_reform_subdoctrine = {
     available = {
 		has_socialist_government = no
 		OR = {
-		has_completed_focus = RUS_science_of_victory
 		has_doctrine = new_mobile_warfare
+		has_doctrine = grand_battleplan
 		}
 	}
 
@@ -435,8 +435,8 @@ messner_subdoctrine = {
     available = {
 		has_socialist_government = no
 		OR = {
-		has_completed_focus = RUS_spirit_of_victory
 		has_doctrine = superior_firepower
+		has_doctrine = mass_assault
 		}
 	}
 

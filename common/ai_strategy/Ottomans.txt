@@ -1,3 +1,17 @@
+TUR_build_intelligence_agency = {
+	allowed = { tag = TUR }
+	enable = {
+		has_intelligence_agency = no
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = intelligence_agency_usable_factories
+		value = 5
+	}
+}
+
 TUR_put_units_on_the_kurdish_states = {
 	allowed = {
 		original_tag = TUR

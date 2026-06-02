@@ -52,6 +52,7 @@ GRU = {
 
 	land_cruiser_chassis_1 = {
 		pool = {
+			weight = 2
 			icons = {
 				GFX_GER_land_cruiser_armor_2_medium
 				GFX_GER_land_cruiser_armor_medium

@@ -54,6 +54,7 @@ anglo_afghan_war_volunteers = {
 			OR = {
 				tag = TUR
 				tag = GER
+				tag = GRU
 			}
 		}
 }
@@ -189,6 +190,7 @@ spanish_civil_war_volunteers = {
 			OR = {
 				original_tag = SIC
 				original_tag = POR
+				original_tag = IRE
 				is_ally_with = ENT
 				AND = {
 					original_tag = IRE
@@ -200,6 +202,21 @@ spanish_civil_war_volunteers = {
 				AND = {
 					original_tag = ARG
 					has_government = national_populist
+				}
+				AND = { #Kingdom supporters switch to carlists if SPR died
+					SPR = { exists = no }
+					OR = {
+						tag = RUS
+						tag = GER
+						AND = {
+							tag = AUS
+							NOT = {
+								has_government = paternal_autocrat
+								#has_idea = AUS_Engelbert_Dollfuss_hog_ade #for later
+								#has_idea = AUS_Engelbert_Dollfuss_hog_pau
+							}
+						}
+					}
 				}
 			}
 			has_socialist_government = no
@@ -267,6 +284,7 @@ fourth_balkan_war_volunteers = {
 			AND = {
 				OR = {
 					tag = GER
+					tag = GRU
 					tag = AUS
 					tag = HUN
 					tag = ALB
@@ -417,6 +435,7 @@ indian_civil_war_volunteers = {
 			has_socialist_government = no
 			OR = {
 				tag = GER
+				tag = GRU
 				tag = JAP
 				tag = TUR
 			}
@@ -782,6 +801,7 @@ levantine_war_volunteers = {
 	OR = {
 		OR = {
 			original_tag = GER
+			original_tag = GRU
 			original_tag = AUS
 			original_tag = FRA
 			original_tag = ENG
@@ -797,6 +817,7 @@ levantine_war_volunteers = {
 			has_socialist_government = no
 			OR = {
 				original_tag = GER
+				original_tag = GRU
 				original_tag = AUS
 			}
 		}
@@ -833,6 +854,7 @@ winter_war_volunteers = {
 	}
 	OR = {
 		original_tag = GER
+		original_tag = GRU
 		original_tag = SWE
 	}
 	has_socialist_government = no
@@ -1374,4 +1396,17 @@ default_attack_AI_trigger_FROM_consider_naval_strength = {
 AI_trigger_can_upgrade_in_field = {
 	surrender_progress < 0.15
 	has_reached_maximum_divisions = no
+}
+AI_trigger_dont_hire_high_command_too_early = {
+	has_war = no
+	has_political_power < 200
+}
+AI_trigger_dont_hire_navy_chief_too_early = {
+	has_war = no
+	count_triggers = {
+		amount = 2
+		NOT = { has_idea_with_trait = chief_of_army }
+		NOT = { has_idea_with_trait = chief_of_staff }
+		NOT = { has_idea_with_trait = chief_of_air }
+	}
 }

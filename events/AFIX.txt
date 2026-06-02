@@ -552,178 +552,144 @@ country_event = {	#To Unite the Faithfuls?
 		add_political_power = -50
 		add_command_power = 50
 		set_cosmetic_tag = OTT_caliphate
-		
+		custom_effect_tooltip = OTT_Pan_Islam_ambition_tooltip	
+	
 		every_state = {
 				limit = { is_core_of = OMA }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = OMA }
 		every_state = {
 				limit = { is_core_of = JBS }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = JBS }
 		every_state = {
 				limit = { is_core_of = SAU }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = SAU }
 		every_state = {
 				limit = { is_core_of = YEM }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = YEM }
 		every_state = {
 				limit = { is_core_of = PER }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = PER }
 		every_state = {
 				limit = { is_core_of = AFG }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = AFG }
 		every_state = {
 				limit = { is_core_of = SUD }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = SUD }
 		every_state = {
 				limit = { is_core_of = AZE }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = AZE }
 		every_state = {
 				limit = { is_core_of = EGY }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = EGY }
 		every_state = {
 				limit = { is_core_of = LBA }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = LBA }
 		every_state = {
 				limit = { is_core_of = TRP }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = TRP }
 		every_state = {
 				limit = { is_core_of = TUN }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = TUN }
 		every_state = {
 				limit = { is_core_of = ALG }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = ALG }
 		every_state = {
 				limit = { is_core_of = MOR }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = MOR }
 		every_state = {
 				limit = { is_core_of = MRT }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = MRT }
-		create_wargoal = { type = annex_everything target = NFA }
 		every_state = {
 				limit = { is_core_of = ERI }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = ERI }
 		every_state = {
 				limit = { is_core_of = DJI }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = DJI }
 		every_state = {
 				limit = { is_core_of = UZB }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = UZB }
 		every_state = {
 				limit = { is_core_of = KHI }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = KHI }
 		every_state = {
 				limit = { is_core_of = TRK }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = TRK }
 		every_state = {
 				limit = { is_core_of = KYR }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = KYR }
 		every_state = {
 				limit = { is_core_of = ALO }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = ALO }
 		every_state = {
 				limit = { is_core_of = NER }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = NER }
 		every_state = {
 				limit = { is_core_of = MAL }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = MAL }
 		every_state = {
 				limit = { is_core_of = WAD }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = WAD }
 		every_state = {
 				limit = { is_core_of = BFA }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = BFA }
 		every_state = {
 				limit = { is_core_of = SEN }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = SEN }
 		every_state = {
 				limit = { is_core_of = GNA }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = GNA }
 		every_state = {
 				limit = { is_core_of = CVG }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = CVG }
 		every_state = {
 				limit = { is_core_of = SIE }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = SIE }
 		every_state = {
 				limit = { is_core_of = ALB }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = ALB }
 		every_state = {
 				limit = { is_core_of = BOS }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = BOS }
 		every_state = {
 				limit = { is_core_of = SIK }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = SIK }
 		every_state = {
 				limit = { is_core_of = MTR }
 				add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = MTR }
 		every_state = {
 			limit = {
 				OR = {
@@ -733,7 +699,6 @@ country_event = {	#To Unite the Faithfuls?
 			}
 			add_core_of = TUR
 		}
-		create_wargoal = { type = annex_everything target = SOM }
 		
 		hidden_effect = {
 			819 = {	add_core_of = TUR }
@@ -785,7 +750,7 @@ country_event = {	#Name of the Caliphate
 	option = {
 		name = ottars.14.b
 		ai_chance = {
-			factor = 100
+			factor = 20
 		}
 		hidden_effect = {
 			set_cosmetic_tag = OTT_caliphate_larp
@@ -794,6 +759,9 @@ country_event = {	#Name of the Caliphate
 	
 	option = {
 		name = ottars.14.c
+		ai_chance = {
+			factor = 80
+		}
 		hidden_effect = {
 			set_cosmetic_tag = OTT_caliphate_sublime
 		}

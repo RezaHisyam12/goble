@@ -1,0 +1,30 @@
+CNT_starting_plan = {
+	name = "CNT_starting_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = CNT
+	}
+	enable = {
+		has_socialist_government = yes
+	}
+	abort = {
+	}
+
+	ai_national_focuses = {
+		CNT_industrial_focus
+		CNT_industry_focus_1
+		CNT_industry_focus_2
+		CNT_industry_focus_3
+		CNT_mining_focus_1
+		CNT_mining_focus_2
+		CNT_mining_focus_3
+		CNT_helping_hand_focus
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}

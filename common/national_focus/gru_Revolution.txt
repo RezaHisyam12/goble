@@ -304,7 +304,7 @@ shared_focus = {
 		y = 1
 		cost = 5
 		ai_will_do = {
-			factor = 20
+			factor = 25
 		}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_DAF"
@@ -2064,7 +2064,11 @@ shared_focus = {
 		y = 8
 		cost = 5
 		ai_will_do = {
-			factor = 15
+			factor = 4
+			modifier = {
+				factor = 5
+				date > 1940.1.1
+			}
 		}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_rev_oil"
@@ -8726,7 +8730,7 @@ shared_focus = {
 		y = 3
 		cost = 4
 		ai_will_do = {
-			factor = 1000
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_RED_COLONIALISM"
