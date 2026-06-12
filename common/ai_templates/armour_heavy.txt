@@ -1,6 +1,6 @@
-######################
+####################################################################################################
 #	HEAVY ARMOUR ROLE
-######################
+####################################################################################################
 
 heavy_armour_generic = {
     role = heavy_armor_role
@@ -39,7 +39,10 @@ heavy_armour_generic = {
 	}
 
 	motorized_heavy = {
-        can_upgrade_in_field = { always = no }
+        can_upgrade_in_field = {
+			has_equipment = { mechanized_equipment > 100 }
+			has_equipment = { heavy_tank_chassis > 100 }
+		}
 		reinforce_prio = 2
 
 		upgrade_prio = {
@@ -56,8 +59,7 @@ heavy_armour_generic = {
 				anti_air = 1
 				light_tank_recon = 1
 				medium_flame_tank = 1
-				assault_engineer = 1
-				logistics_company = 1
+				armored_engineer = 1
 			}
 		}
     }
@@ -69,12 +71,20 @@ heavy_armour_generic = {
 		upgrade_prio = {
 			base = 100
 			modifier = {
+				date < 1941.1.1
+				factor = 0
+			}
+			modifier = {
 				factor = 0
 				NOT = { has_tech = mechanised_infantry }
 			}
 			modifier = {
 				factor = 0
-				NOT = { has_subdoctrine_in_track = infantry }
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = combat_support }
+					NOT = { has_subdoctrine_in_track = operations }
+				}
 			}
             modifier = {
 				factor = 0
@@ -88,9 +98,8 @@ heavy_armour_generic = {
 
         target_template = {
 			regiments = {
-				heavy_armor = 8
+				heavy_armor = 10
 				mechanized = 8
-				heavy_tank_destroyer_brigade = 2
 			}
 
 			support = {

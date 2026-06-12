@@ -1,6 +1,6 @@
-######################
+####################################################################################################
 #	MA ARMOUR ROLE
-######################
+####################################################################################################
 
 armour_more_trucks = {
 	role = armor_role #to distinguish from armor, a hardcoded keyword for all tank equipment types
@@ -27,23 +27,10 @@ armour_more_trucks = {
 		}
 	}
 
-	ma_dummy_light_div = {
-		can_upgrade_in_field = { always = no }
-		
-		upgrade_prio = {
-			base = 0
-		}
-
-		target_template = {
-			regiments = {
-				light_armor = 6
-				motorized = 4
-			}
-		}
-	}
-
 	ma_motorised_medium = {
-		can_upgrade_in_field = { always = no }
+        can_upgrade_in_field = {
+			has_equipment = { mechanized_equipment > 100 }
+		}
 		reinforce_prio = 2
 
 		upgrade_prio = {
@@ -64,6 +51,144 @@ armour_more_trucks = {
 		}
 	}
 
+	ma_lil_mechanized_medium = {
+        can_upgrade_in_field = {
+			has_equipment = { mechanized_equipment > 100 }
+		}
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			base = 100
+			modifier = {
+				date < 1940.1.1
+				factor = 0
+			}
+			modifier = {
+				date > 1940.4.1
+				factor = 0
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_tech = mechanised_infantry }
+			}
+			modifier = {
+				factor = 0
+				is_eligible_for_improved_armor_production = no
+			}
+			modifier = {
+				factor = 2
+				is_eligible_for_improved_armor_production = yes
+			}
+		}
+
+		target_template = {
+			regiments = {
+				medium_armor = 6
+				motorized = 7
+				mechanized = 2
+			}
+
+			support = {
+				artillery = 1
+				anti_air = 1
+				anti_tank = 1
+				engineer = 1
+			}
+		}
+	}
+
+	ma_kinda_mechanized_medium = {
+        can_upgrade_in_field = {
+			has_equipment = { mechanized_equipment > 100 }
+		}
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			base = 100
+			modifier = {
+				date < 1940.4.1
+				factor = 0
+			}
+			modifier = {
+				date > 1940.8.1
+				factor = 0
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_tech = mechanised_infantry }
+			}
+			modifier = {
+				factor = 0
+				is_eligible_for_improved_armor_production = no
+			}
+			modifier = {
+				factor = 2
+				is_eligible_for_improved_armor_production = yes
+			}
+		}
+
+		target_template = {
+			regiments = {
+				medium_armor = 6
+				motorized = 4
+				mechanized = 5
+			}
+
+			support = {
+				artillery = 1
+				anti_air = 1
+				anti_tank = 1
+				engineer = 1
+			}
+		}
+	}
+
+	ma_pretty_mechanized_medium = {
+        can_upgrade_in_field = {
+			has_equipment = { mechanized_equipment > 100 }
+		}
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			base = 100
+			modifier = {
+				date < 1940.8.1
+				factor = 0
+			}
+			modifier = {
+				date > 1941.1.1
+				factor = 0
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_tech = mechanised_infantry }
+			}
+			modifier = {
+				factor = 0
+				is_eligible_for_improved_armor_production = no
+			}
+			modifier = {
+				factor = 2
+				is_eligible_for_improved_armor_production = yes
+			}
+		}
+
+		target_template = {
+			regiments = {
+				medium_armor = 6
+				motorized = 2
+				mechanized = 7
+			}
+
+			support = {
+				artillery = 1
+				anti_air = 1
+				anti_tank = 1
+				engineer = 1
+			}
+		}
+	}
+
 	ma_mechanized_medium = {
 		can_upgrade_in_field = { always = no }
 		reinforce_prio = 2
@@ -71,12 +196,12 @@ armour_more_trucks = {
 		upgrade_prio = {
 			base = 100
 			modifier = {
+				date < 1941.1.1
 				factor = 0
-				NOT = { has_tech = mechanised_infantry }
 			}
 			modifier = {
 				factor = 0
-				NOT = { has_subdoctrine_in_track = infantry }
+				NOT = { has_tech = mechanised_infantry }
 			}
 			modifier = {
 				factor = 0

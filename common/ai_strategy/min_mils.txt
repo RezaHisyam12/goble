@@ -1,0 +1,1183 @@
+# Enhanced AI - Minimum Mils
+
+####################################################################################################
+#	MINIMUM MILS: INFANTRY
+####################################################################################################
+
+infantry_min_production_1 = {
+	enable = { num_of_military_factories > 10 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype id = infantry_equipment 	value = 8 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = artillery_equipment 	value = 1 }
+}
+
+infantry_min_production_2 = {
+	enable = { num_of_military_factories > 20 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype id = infantry_equipment 	value = 5 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = support_equipment 		value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = artillery_equipment 	value = 2 }
+}
+
+infantry_min_production_3 = {
+	enable = { num_of_military_factories > 30 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype id = infantry_equipment 	value = 3 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = support_equipment 		value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = artillery_equipment 	value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = anti_air_equipment 	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = motorized_equipment 	value = 1 }
+}
+
+infantry_min_production_4 = {
+	enable = { num_of_military_factories > 40 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype id = infantry_equipment 	value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = support_equipment 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = artillery_equipment 	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = anti_air_equipment 	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = anti_tank_equipment 	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = motorized_equipment 	value = 1 }
+}
+
+infantry_min_production_5 = {
+	enable = { num_of_military_factories > 50 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype id = infantry_equipment 	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = support_equipment 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = artillery_equipment 	value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = anti_air_equipment 	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = anti_tank_equipment 	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = motorized_equipment 	value = 1 }
+}
+
+infantry_min_production_6 = {
+	enable = { num_of_military_factories > 60 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype id = infantry_equipment 	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = support_equipment 		value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = artillery_equipment 	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = anti_air_equipment 	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = anti_tank_equipment 	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = motorized_equipment 	value = 1 }
+}
+
+infantry_min_production_7 = {
+	enable = { num_of_military_factories > 70 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype id = support_equipment 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = artillery_equipment 	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = anti_air_equipment 	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = anti_tank_equipment 	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = motorized_equipment 	value = 1 }
+}
+
+infantry_min_production_8 = {
+	enable = { num_of_military_factories > 80 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype id = support_equipment 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = artillery_equipment 	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = anti_air_equipment 	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = anti_tank_equipment 	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = motorized_equipment 	value = 1 }
+}
+
+infantry_min_production_9 = {
+	enable = { num_of_military_factories > 90 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype id = support_equipment 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = artillery_equipment 	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = anti_air_equipment 	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = anti_tank_equipment 	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = motorized_equipment 	value = 1 }
+}
+
+infantry_min_production_10 = {
+	enable = { num_of_military_factories > 100 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype id = infantry_equipment 	value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = motorized_equipment 	value = 1 }
+}
+
+infantry_min_production_11 = {
+	enable = { num_of_military_factories > 110 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype id = infantry_equipment 	value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = artillery_equipment	value = 1 }
+}
+
+infantry_min_production_12 = {
+	enable = { num_of_military_factories > 120 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype id = infantry_equipment 	value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype id = support_equipment	 	value = 1 }
+}
+
+####################################################################################################
+#	MINIMUM MILS: PLANES
+####################################################################################################
+
+planes_min_production_1 = {
+	enable = { num_of_military_factories > 25 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories			id = fighter 				value = 3 }
+}
+
+planes_min_production_2 = {
+	enable = { num_of_military_factories > 40 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories			id = fighter 				value = 3 }
+}
+
+planes_min_production_3 = {
+	enable = { num_of_military_factories > 55 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories			id = fighter 				value = 3 }
+}
+
+planes_min_production_4 = {
+	enable = { num_of_military_factories > 70 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories			id = fighter 				value = 3 }
+}
+
+planes_min_production_5 = {
+	enable = { num_of_military_factories > 85 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories			id = fighter 				value = 3 }
+}
+
+planes_min_production_6 = {
+	enable = { num_of_military_factories > 100 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories			id = fighter 				value = 2 }
+	ai_strategy = { type = equipment_production_min_factories			id = cas 					value = 1 }
+}
+
+planes_min_production_7 = {
+	enable = { num_of_military_factories > 115 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories			id = fighter 				value = 2 }
+	ai_strategy = { type = equipment_production_min_factories			id = cas 					value = 1 }
+}
+
+planes_min_production_8 = {
+	enable = { num_of_military_factories > 130 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories			id = fighter 				value = 2 }
+	ai_strategy = { type = equipment_production_min_factories			id = cas 					value = 1 }
+}
+
+planes_min_production_9 = {
+	enable = { num_of_military_factories > 145 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories			id = fighter 				value = 2 }
+	ai_strategy = { type = equipment_production_min_factories			id = cas 					value = 1 }
+}
+
+planes_min_production_10 = {
+	enable = { num_of_military_factories > 160 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories			id = fighter 				value = 2 }
+	ai_strategy = { type = equipment_production_min_factories			id = cas 					value = 1 }
+}
+
+planes_min_production_11 = {
+	enable = { num_of_military_factories > 175 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories			id = fighter 				value = 1 }
+	ai_strategy = { type = equipment_production_min_factories			id = cas 					value = 1 }
+}
+
+planes_min_production_12 = {
+	enable = { num_of_military_factories > 190 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories			id = fighter 				value = 1 }
+	ai_strategy = { type = equipment_production_min_factories			id = cas 					value = 1 }
+}
+
+planes_min_production_13 = {
+	enable = { num_of_military_factories > 205 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories			id = fighter 				value = 1 }
+	ai_strategy = { type = equipment_production_min_factories			id = cas 					value = 1 }
+}
+
+planes_min_production_14 = {
+	enable = { num_of_military_factories > 220 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories			id = fighter 				value = 1 }
+	ai_strategy = { type = equipment_production_min_factories			id = cas 					value = 1 }
+}
+
+planes_min_production_15 = {
+	enable = { num_of_military_factories > 235 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories			id = fighter 				value = 1 }
+	ai_strategy = { type = equipment_production_min_factories			id = cas 					value = 1 }
+}
+
+####################################################################################################
+#	MINIMUM MILS: EARLY ARMOR
+####################################################################################################
+
+early_armor_min_production_1 = {
+	enable = {
+		num_of_military_factories > 30
+		NOT = { has_global_flag = SpaceMarines }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = motorized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 1 }
+}
+
+early_armor_min_production_2 = {
+	enable = {
+		num_of_military_factories > 40
+		NOT = { has_global_flag = SpaceMarines }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = motorized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 1 }
+}
+
+early_armor_min_production_3 = {
+	enable = {
+		num_of_military_factories > 50
+		NOT = { has_global_flag = SpaceMarines }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = motorized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 1 }
+}
+
+####################################################################################################
+#	MINIMUM MILS: SM EARLY ARMOR
+####################################################################################################
+
+sm_early_armor_min_production_1 = {
+	enable = {
+		num_of_military_factories > 30
+		has_global_flag = SpaceMarines
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = light_tank_artillery_chassis	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_destroyer_chassis	value = 1 }
+}
+
+sm_early_armor_min_production_2 = {
+	enable = {
+		num_of_military_factories > 40
+		has_global_flag = SpaceMarines
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = light_tank_artillery_chassis	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_destroyer_chassis	value = 1 }
+}
+
+sm_early_armor_min_production_3 = {
+	enable = {
+		num_of_military_factories > 50
+		has_global_flag = SpaceMarines
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = light_tank_artillery_chassis	value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_destroyer_chassis	value = 1 }
+}
+
+####################################################################################################
+#	MINIMUM MILS: ARMOR
+####################################################################################################
+
+armor_min_production_1 = {
+	enable = {
+		num_of_military_factories > 60
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 1 }
+}
+
+armor_min_production_2 = {
+	enable = {
+		num_of_military_factories > 70
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 1 }
+}
+
+armor_min_production_3 = {
+	enable = {
+		num_of_military_factories > 80
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 1 }
+}
+
+armor_min_production_4 = {
+	enable = {
+		num_of_military_factories > 90
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 1 }
+}
+
+armor_min_production_5 = {
+	enable = {
+		num_of_military_factories > 100
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 1 }
+}
+
+armor_min_production_6 = {
+	enable = {
+		num_of_military_factories > 110
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 2 }
+}
+
+armor_min_production_7 = {
+	enable = {
+		num_of_military_factories > 120
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 2 }
+}
+
+armor_min_production_8 = {
+	enable = {
+		num_of_military_factories > 130
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 2 }
+}
+
+armor_min_production_9 = {
+	enable = {
+		num_of_military_factories > 140
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 2 }
+}
+
+armor_min_production_10 = {
+	enable = {
+		num_of_military_factories > 150
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 2 }
+}
+
+armor_min_production_11 = {
+	enable = {
+		num_of_military_factories > 160
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 3 }
+}
+
+armor_min_production_12 = {
+	enable = {
+		num_of_military_factories > 170
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 3 }
+}
+
+armor_min_production_13 = {
+	enable = {
+		num_of_military_factories > 180
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 3 }
+}
+
+armor_min_production_14 = {
+	enable = {
+		num_of_military_factories > 190
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 3 }
+}
+
+armor_min_production_15 = {
+	enable = {
+		num_of_military_factories > 200
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 3 }
+}
+
+armor_min_production_16 = {
+	enable = {
+		num_of_military_factories > 210
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 1 }
+}
+
+armor_min_production_17 = {
+	enable = {
+		num_of_military_factories > 220
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 1 }
+}
+
+armor_min_production_18 = {
+	enable = {
+		num_of_military_factories > 230
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 1 }
+}
+
+armor_min_production_19 = {
+	enable = {
+		num_of_military_factories > 240
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 1 }
+}
+
+armor_min_production_20 = {
+	enable = {
+		num_of_military_factories > 250
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 1 }
+}
+
+armor_min_production_21 = {
+	enable = {
+		num_of_military_factories > 260
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_destroyer_chassis	value = 1 }
+}
+
+armor_min_production_22 = {
+	enable = {
+		num_of_military_factories > 270
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_destroyer_chassis	value = 1 }
+}
+
+armor_min_production_23 = {
+	enable = {
+		num_of_military_factories > 280
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_destroyer_chassis	value = 1 }
+}
+
+armor_min_production_24 = {
+	enable = {
+		num_of_military_factories > 290
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_destroyer_chassis	value = 1 }
+}
+
+armor_min_production_25 = {
+	enable = {
+		num_of_military_factories > 300
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_destroyer_chassis	value = 1 }
+}
+
+####################################################################################################
+#	MINIMUM MILS: GBP HEAVY ARMOR OFFSET
+####################################################################################################
+
+gbp_heavy_armor_min_production_offset_1 = {
+	enable = {
+		num_of_military_factories > 75
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+		has_doctrine = grand_battleplan
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = -2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 2 }
+}
+
+gbp_heavy_armor_min_production_offset_2 = {
+	enable = {
+		num_of_military_factories > 100
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+		has_doctrine = grand_battleplan
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = -2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 2 }
+}
+
+gbp_heavy_armor_min_production_offset_3 = {
+	enable = {
+		num_of_military_factories > 125
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+		has_doctrine = grand_battleplan
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = -2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 2 }
+}
+
+gbp_heavy_armor_min_production_offset_4 = {
+	enable = {
+		num_of_military_factories > 150
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+		has_doctrine = grand_battleplan
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = -2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 2 }
+}
+
+gbp_heavy_armor_min_production_offset_5 = {
+	enable = {
+		num_of_military_factories > 175
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+		has_doctrine = grand_battleplan
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = -2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 2 }
+}
+
+gbp_heavy_armor_min_production_offset_6 = {
+	enable = {
+		num_of_military_factories > 200
+		NOT = { has_tech = main_battle_tank }
+		NOT = { has_tech = main_battle_tank_chassis }
+		has_doctrine = grand_battleplan
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = -2 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 2 }
+}
+
+####################################################################################################
+#	MINIMUM MILS: MODERN ARMOR
+####################################################################################################
+
+modern_armor_min_production_1 = {
+	enable = {
+		num_of_military_factories > 60
+		OR = {
+			has_tech = main_battle_tank
+			has_tech = main_battle_tank_chassis
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = modern_tank_chassis	 		value = 1 }
+}
+
+modern_armor_min_production_2 = {
+	enable = {
+		num_of_military_factories > 90
+		OR = {
+			has_tech = main_battle_tank
+			has_tech = main_battle_tank_chassis
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 3 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = modern_tank_chassis	 		value = 6 }
+}
+
+modern_armor_min_production_3 = {
+	enable = {
+		num_of_military_factories > 120
+		OR = {
+			has_tech = main_battle_tank
+			has_tech = main_battle_tank_chassis
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 3 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = modern_tank_chassis	 		value = 6 }
+}
+
+modern_armor_min_production_4 = {
+	enable = {
+		num_of_military_factories > 150
+		OR = {
+			has_tech = main_battle_tank
+			has_tech = main_battle_tank_chassis
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 3 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = modern_tank_chassis	 		value = 6 }
+}
+
+modern_armor_min_production_5 = {
+	enable = {
+		num_of_military_factories > 180
+		OR = {
+			has_tech = main_battle_tank
+			has_tech = main_battle_tank_chassis
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 3 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = modern_tank_chassis	 		value = 6 }
+}
+
+modern_armor_min_production_6 = {
+	enable = {
+		num_of_military_factories > 210
+		OR = {
+			has_tech = main_battle_tank
+			has_tech = main_battle_tank_chassis
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 4 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = modern_tank_chassis	 		value = 8 }
+}
+
+modern_armor_min_production_7 = {
+	enable = {
+		num_of_military_factories > 240
+		OR = {
+			has_tech = main_battle_tank
+			has_tech = main_battle_tank_chassis
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 4 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = modern_tank_chassis	 		value = 8 }
+}
+
+modern_armor_min_production_8 = {
+	enable = {
+		num_of_military_factories > 270
+		OR = {
+			has_tech = main_battle_tank
+			has_tech = main_battle_tank_chassis
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 4 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = modern_tank_chassis	 		value = 8 }
+}
+
+modern_armor_min_production_9 = {
+	enable = {
+		num_of_military_factories > 300
+		OR = {
+			has_tech = main_battle_tank
+			has_tech = main_battle_tank_chassis
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 4 }
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = modern_tank_chassis	 		value = 8 }
+}
+
+####################################################################################################
+#	MINIMUM MILS: SUPPORT ARMOR
+####################################################################################################
+
+armored_support_min_production_1 = {
+	enable = {
+		num_of_military_factories > 40
+		is_special_project_completed = sp:sp_land_military_engineering_vehicles
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = armored_support_vehicle 		value = 1 }
+}
+
+armored_support_min_production_2 = {
+	enable = {
+		num_of_military_factories > 80
+		is_special_project_completed = sp:sp_land_military_engineering_vehicles
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = armored_support_vehicle 		value = 1 }
+}
+
+armored_support_min_production_3 = {
+	enable = {
+		num_of_military_factories > 120
+		is_special_project_completed = sp:sp_land_military_engineering_vehicles
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = armored_support_vehicle 		value = 1 }
+}
+
+flame_tank_min_production_1 = {
+	enable = {
+		num_of_military_factories > 40
+		is_special_project_completed = sp:sp_land_flamethrower_tank
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_flame_chassis 		value = 1 }
+}
+
+flame_tank_min_production_2 = {
+	enable = {
+		num_of_military_factories > 80
+		is_special_project_completed = sp:sp_land_flamethrower_tank
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_flame_chassis 		value = 1 }
+}
+
+flame_tank_min_production_3 = {
+	enable = {
+		num_of_military_factories > 120
+		is_special_project_completed = sp:sp_land_flamethrower_tank
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_flame_chassis 		value = 1 }
+}
+
+####################################################################################################
+#	MINIMUM MILS: MOBILE ARTILLERY
+####################################################################################################
+
+spg_min_production_1 = {
+	enable = {
+		num_of_military_factories > 60
+		OR = {
+			has_tech = basic_medium_tank
+			has_tech = basic_medium_tank_chassis
+		}
+		OR = {
+			has_doctrine = superior_firepower
+			has_doctrine = grand_battleplan
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_artillery_chassis 		value = 1 }
+}
+
+spg_min_production_2 = {
+	enable = {
+		num_of_military_factories > 120
+		OR = {
+			has_tech = basic_medium_tank
+			has_tech = basic_medium_tank_chassis
+		}
+		OR = {
+			has_doctrine = superior_firepower
+			has_doctrine = grand_battleplan
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_artillery_chassis 		value = 1 }
+}
+
+spg_min_production_3 = {
+	enable = {
+		num_of_military_factories > 180
+		OR = {
+			has_tech = basic_medium_tank
+			has_tech = basic_medium_tank_chassis
+		}
+		OR = {
+			has_doctrine = superior_firepower
+			has_doctrine = grand_battleplan
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_artillery_chassis 		value = 1 }
+}
+
+spg_min_production_4 = {
+	enable = {
+		num_of_military_factories > 240
+		OR = {
+			has_tech = basic_medium_tank
+			has_tech = basic_medium_tank_chassis
+		}
+		OR = {
+			has_doctrine = superior_firepower
+			has_doctrine = grand_battleplan
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_artillery_chassis 		value = 1 }
+}
+
+spg_min_production_5 = {
+	enable = {
+		num_of_military_factories > 300
+		OR = {
+			has_tech = basic_medium_tank
+			has_tech = basic_medium_tank_chassis
+		}
+		OR = {
+			has_doctrine = superior_firepower
+			has_doctrine = grand_battleplan
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_artillery_chassis 		value = 1 }
+}
+
+katyusha_min_production_1 = {
+	enable = {
+		num_of_military_factories > 60
+		has_tech = motorized_rocket_unit
+		OR = {
+			has_doctrine = new_mobile_warfare
+			has_doctrine = mass_assault
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = motorized_rocket_equipment 		value = 1 }
+}
+
+katyusha_min_production_2 = {
+	enable = {
+		num_of_military_factories > 120
+		has_tech = motorized_rocket_unit
+		OR = {
+			has_doctrine = new_mobile_warfare
+			has_doctrine = mass_assault
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = motorized_rocket_equipment 		value = 1 }
+}
+
+katyusha_min_production_3 = {
+	enable = {
+		num_of_military_factories > 180
+		has_tech = motorized_rocket_unit
+		OR = {
+			has_doctrine = new_mobile_warfare
+			has_doctrine = mass_assault
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = motorized_rocket_equipment 		value = 1 }
+}
+
+katyusha_min_production_4 = {
+	enable = {
+		num_of_military_factories > 240
+		has_tech = motorized_rocket_unit
+		OR = {
+			has_doctrine = new_mobile_warfare
+			has_doctrine = mass_assault
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = motorized_rocket_equipment 		value = 1 }
+}
+
+katyusha_min_production_5 = {
+	enable = {
+		num_of_military_factories > 300
+		has_tech = motorized_rocket_unit
+		OR = {
+			has_doctrine = new_mobile_warfare
+			has_doctrine = mass_assault
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = motorized_rocket_equipment 		value = 1 }
+}
+
+####################################################################################################
+#	MINIMUM MILS: RAILWAY GUNS
+####################################################################################################
+
+railway_gun_min_production_1 = {
+	enable = {
+		num_of_military_factories > 100
+		has_tech = railway_gun
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = railway_gun_equipment		 		value = 1 }
+}
+
+railway_gun_min_production_2 = {
+	enable = {
+		num_of_military_factories > 125
+		has_tech = railway_gun
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = railway_gun_equipment		 		value = 1 }
+}
+
+railway_gun_min_production_3 = {
+	enable = {
+		num_of_military_factories > 150
+		has_tech = railway_gun
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = railway_gun_equipment		 		value = 1 }
+}
+
+railway_gun_min_production_4 = {
+	enable = {
+		num_of_military_factories > 175
+		has_tech = railway_gun
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = railway_gun_equipment		 		value = 1 }
+}
+
+railway_gun_min_production_5 = {
+	enable = {
+		num_of_military_factories > 200
+		has_tech = railway_gun
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = railway_gun_equipment		 		value = 1 }
+}
+
+####################################################################################################
+#	MINIMUM MILS: SUPPLY
+####################################################################################################
+
+supply_min_production_1 = {
+	enable = {
+		num_of_military_factories > 50
+		OR = {
+			has_tech = wartime_train
+			has_tech = armored_train
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype id = train_equipment 		value = 1 }
+}
+
+supply_min_production_2 = {
+	enable = {
+		num_of_military_factories > 100
+		OR = {
+			has_tech = wartime_train
+			has_tech = armored_train
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype id = train_equipment 		value = 1 }
+}
+
+supply_min_production_3 = {
+	enable = {
+		num_of_military_factories > 150
+		OR = {
+			has_tech = wartime_train
+			has_tech = armored_train
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype id = train_equipment 		value = 1 }
+}
+
+supply_min_production_4 = {
+	enable = {
+		num_of_military_factories > 200
+		OR = {
+			has_tech = wartime_train
+			has_tech = armored_train
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype id = train_equipment 		value = 1 }
+}

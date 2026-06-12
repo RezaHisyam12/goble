@@ -1,0 +1,41 @@
+# Enhanced AI - KX-specific Micro
+
+####################################################################################################
+#	RUSSIA MICRO
+####################################################################################################
+
+RUS_kill_transamur_softly = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = TRM
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = TRM
+		priority = 2000
+		ordertype = front
+		execution_type = careful
+	}
+}
+
+RUS_kill_mongolia = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = MON
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = MON
+		priority = 2000
+		ordertype = front
+		execution_type = balanced
+	}
+}

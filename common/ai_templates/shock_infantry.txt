@@ -1,6 +1,6 @@
-########################
+####################################################################################################
 #	SHOCK INFANTRY ROLE
-########################
+####################################################################################################
 
 heavy_infantry = {
 	role = shock_infantry
@@ -15,6 +15,10 @@ heavy_infantry = {
 		modifier = {
 			factor = 2
 			has_global_flag = SpaceMarines
+			OR = {
+				has_doctrine = new_mobile_warfare
+				has_doctrine = grand_battleplan
+			}
 		}
 	}
 
@@ -37,7 +41,7 @@ heavy_infantry = {
 				anti_air = 1
 				anti_tank = 1
 				assault_engineer = 1
-				field_hospital = 1
+				signal_company = 1
 			}
 		}
 	}
@@ -50,7 +54,10 @@ heavy_infantry = {
 			base = 100
 			modifier = {
 				factor = 0
-				NOT = { has_subdoctrine_in_track = infantry }
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = operations }
+				}
 			}
 			modifier = {
 				factor = 0
@@ -74,7 +81,7 @@ heavy_infantry = {
 				anti_air = 1
 				medium_flame_tank = 1
 				assault_engineer = 1
-				field_hospital = 1
+				signal_company = 1
 			}
 		}
 	}
@@ -89,7 +96,9 @@ heavy_infantry = {
 				factor = 0
 				OR = {
 					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = combat_support }
 					NOT = { has_subdoctrine_in_track = operations }
+					NOT = { has_subdoctrine_in_track = armor }
 				}
 			}
 			modifier = {
@@ -121,7 +130,7 @@ heavy_infantry = {
 	}
 
 	sm_shock_infantry_0 = {
-		can_upgrade_in_field = { always = yes }
+		can_upgrade_in_field = { always = no }
 		
 		upgrade_prio = {
 			base = 100
@@ -150,64 +159,15 @@ heavy_infantry = {
 			support = {
 				artillery = 1
 				anti_air = 1
+				recon = 1
 				medium_flame_tank = 1
 				assault_engineer = 1
-				field_hospital = 1
 			}
 		}
 	}
 
 	sm_shock_infantry_1 = {
-		can_upgrade_in_field = { always = yes }
-		
-		upgrade_prio = {
-			base = 100
-			modifier = {
-				factor = 0
-				NOT = { has_global_flag = SpaceMarines }
-			}
-			modifier = {
-				factor = 10
-				has_global_flag = SpaceMarines
-			}
-			modifier = {
-				factor = 0
-				NOT = { has_tech = basic_heavy_tank }
-				NOT = { has_tech = basic_heavy_tank_chassis }
-			}
-			modifier = {
-				factor = 0
-				NOT = { has_subdoctrine_in_track = infantry }
-			}
-			modifier = {
-				factor = 0
-				num_of_military_factories < 60
-			}
-			modifier = {
-				factor = 2
-				num_of_military_factories > 60
-			}
-		}
-
-		target_template = {
-			regiments = {
-				infantry = 11
-				artillery_brigade = 2
-				heavy_tank_destroyer_brigade = 1
-			}
-
-			support = {
-				artillery = 1
-				anti_air = 1
-				medium_flame_tank = 1
-				assault_engineer = 1
-				field_hospital = 1
-			}
-		}
-	}
-
-	sm_shock_infantry_2 = {
-		can_upgrade_in_field = { always = yes }
+		can_upgrade_in_field = { always = no }
 		
 		upgrade_prio = {
 			base = 100
@@ -233,6 +193,65 @@ heavy_infantry = {
 			}
 			modifier = {
 				factor = 0
+				num_of_military_factories < 60
+			}
+			modifier = {
+				factor = 2
+				num_of_military_factories > 60
+			}
+		}
+
+		target_template = {
+			regiments = {
+				infantry = 11
+				artillery_brigade = 2
+				heavy_tank_destroyer_brigade = 1
+			}
+
+			support = {
+				artillery = 1
+				anti_air = 1
+				recon = 1
+				medium_flame_tank = 1
+				assault_engineer = 1
+			}
+		}
+	}
+
+	sm_shock_infantry_2 = {
+		can_upgrade_in_field = { always = no }
+		
+		upgrade_prio = {
+			base = 100
+			modifier = {
+				factor = 0
+				NOT = { has_global_flag = SpaceMarines }
+			}
+			modifier = {
+				factor = 10
+				has_global_flag = SpaceMarines
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_tech = basic_heavy_tank }
+				NOT = { has_tech = basic_heavy_tank_chassis }
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_tech = basic_light_tank }
+				NOT = { has_tech = basic_light_tank_chassis }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = combat_support }
+					NOT = { has_subdoctrine_in_track = operations }
+					NOT = { has_subdoctrine_in_track = armor }
+				}
+			}
+			modifier = {
+				factor = 0
 				num_of_military_factories < 120
 			}
 			modifier = {
@@ -245,16 +264,16 @@ heavy_infantry = {
 			regiments = {
 				infantry = 14
 				artillery_brigade = 3
+				anti_air_brigade = 1
 				heavy_tank_destroyer_brigade = 1
-				light_sp_anti_air_brigade = 1
 			}
 
 			support = {
 				artillery = 1
+				recon = 1
 				medium_flame_tank = 1
 				assault_engineer = 1
 				field_hospital = 1
-                signal_company = 1
 			}
 		}
 	}

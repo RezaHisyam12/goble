@@ -1388,7 +1388,7 @@ focus_tree = {
 			create_faction_from_template = { 
 				template = faction_template_generic_dominance              
 				name = maliphinsul_faction
-				icon = "GFX_faction_maliphinsul"
+				icon = GFX_faction_maliphinsul
 			}			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2251,7 +2251,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus INS_guerilla_force"
 			add_ideas = INS_idea_guerilla_force
 			set_country_flag = dutch_lovers
-
+			set_country_flag = enable_peoples_war_doctrine
+			custom_effect_tooltip = enable_peoples_war_doctrine_tt
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}

@@ -1,9 +1,9 @@
--------------------------------------------------------------------------------------------------------------------------------------------------
--- ENHANCED AI DEFINES
--------------------------------------------------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+-- ENHANCED AI
+----------------------------------------------------------------------------------------------------
+--------------------------------------------------
 -- DESIGNS
----------------------------------------------------------------------------------------------
+--------------------------------------------------
 NDefines.NAI.DEFAULT_MODULE_VARIANT_CREATION_XP_CUTOFF_LAND = 20 --50	-- Army XP needed before attempting to create a variant of a type that uses the tank designer (the tank designer DLC feature must be active).
 NDefines.NAI.DEFAULT_MODULE_VARIANT_CREATION_XP_CUTOFF_NAVY = 20 --50	-- Same as above but for the ship designer.
 NDefines.NAI.DEFAULT_MODULE_VARIANT_CREATION_XP_CUTOFF_AIR = 20 --25	-- Same as above but for the air designer.
@@ -38,9 +38,9 @@ NDefines.NAI.LAND_DESIGN_DEMAND_ABSENT = 1
 
 NDefines.NAI.LAND_DESIGN_CUTOFF_AS_PERCENTAGE_OF_MAX = 0.25 --0.25
 
---------------------------------------------------------------------------------------------------------------
+--------------------------------------------------
 -- XP SPENDING DESIRES
---------------------------------------------------------------------------------------------------------------
+--------------------------------------------------
 -- The AI "desires" to spend XP on doctrines, templates, and equipment.
 -- The desire is built up over time and when XP is available it spends it on the action that has the highest accumulated desire. After spending XP the desire is reset, in effect balancing the desires.
 -- Below is the daily desire gain for each action.
@@ -58,9 +58,9 @@ NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_ARMY_SPIRIT = 0.01      -- How quickly is d
 NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_NAVY_SPIRIT = 0.01      -- How quickly is desire to unlock naval spirits accumulated?
 NDefines.NAI.DESIRE_USE_XP_TO_UNLOCK_AIR_SPIRIT = 0.01       -- How quickly is desire to unlock air spirits accumulated?
 
---------------------------------------------------------------------------------------------------------------
+--------------------------------------------------
 -- WANTED NUMBER OF DIVISIONS
---------------------------------------------------------------------------------------------------------------
+--------------------------------------------------
 	-- Calculating wanted nr of divisions
 NDefines.NAI.WANTED_UNITS_INDUSTRY_FACTOR = 1.60                        -- How many units a country wants is partially based on how much military industry that is available
 NDefines.NAI.WANTED_UNITS_THREAT_BASE = 0.7                             -- If no threat, multiply min wanted units by this
@@ -76,33 +76,51 @@ NDefines.NAI.WANTED_UNITS_MIN_DEFENCE_FACTOR = 0.4						-- Factor on units requi
 
 NDefines.NAI.WANTED_UNITS_MAX_WANTED_CAP = 1000	-- Maximum wanted divisions for a country. This can be exceeded by certain hardcoded multipliers, but not by base calculation logic.
 
---------------------------------------------------------------------------------------------------------------
--- DIVISION UPGRADES
---------------------------------------------------------------------------------------------------------------
-NDefines.NAI.UPGRADE_DIVISION_RELUCTANCE = 30
-NDefines.NAI.UPGRADE_PERCENTAGE_OF_FORCES = 0.02
-NDefines.NAI.UPGRADES_DEFICIT_LIMIT_DAYS = 240
+--------------------------------------------------
+-- DIVISION UPGRADES, DEPLOYMENT & TRAINING
+--------------------------------------------------
+NDefines.NAI.STOP_TRAINING_FULLY_TRAINED_FACTOR = 0.99  -- vanilla 0.95 | ai will not train if at least this ratio of divisions in the army are fully trained
+NDefines.NAI.UPGRADE_DIVISION_RELUCTANCE = 3  -- vanilla 7 | How often to consider upgrading to new templates for units in the field
+NDefines.NAI.UPGRADE_PERCENTAGE_OF_FORCES = 0.08  -- vanilla 0.20 | How big part of the army that should be considered for upgrading
+NDefines.NAI.UPGRADES_DEFICIT_LIMIT_DAYS = 120  -- vanilla 60 | Ai will avoid upgrading units in the field to new templates if it takes longer than this to fullfill their equipment need
 
---------------------------------------------------------------------------------------------------------------
--- AREA DEFENSE
---------------------------------------------------------------------------------------------------------------
-NDefines.NAI.AREA_DEFENSE_SETTING_VP = false								-- Vanilla is false
-NDefines.NAI.AREA_DEFENSE_SETTING_PORTS = true								-- Vanilla is true
-NDefines.NAI.AREA_DEFENSE_SETTING_AIRBASES = false							-- Vanilla is false
-NDefines.NAI.AREA_DEFENSE_SETTING_BORDERS = false							-- Vanilla is false
-NDefines.NAI.AREA_DEFENSE_SETTING_FORTS = false								-- Vanilla is false
-NDefines.NAI.AREA_DEFENSE_SETTING_COASTLINES = false						-- Vanilla is true
-NDefines.NAI.AREA_DEFENSE_SETTING_RAILWAYS = false							-- Vanilla is false
-NDefines.NAI.AREA_DEFENSE_SETTING_FACILITY = false							-- Vanilla is false
+NDefines.NAI.LOW_PRIO_TEMPLATE_BONUS_FOR_GARRISONS = 300000  -- vanilla 1000 | bonus to make ai more likely to assign low prio units to garrisons
+NDefines.NAI.LOW_PRIO_TEMPLATE_PENALTY_FOR_FRONTS = -2000  -- vanilla 500 | penalty to make ai less likely to assign low prio units to fronts
 
--------------------------
--- NAVAL INVASIONS
--------------------------
-NDefines.NAI.MAX_INVASION_SIZE = 64	
-NDefines.NAI.MIN_INVASION_AREA_SIZE_FOR_FLOATING_HARBORS = 1   -- AI will consider using floating harbors for naval invasion if invasion area is larger than this many provinces
-NDefines.NAI.MAX_DISTANCE_NAVAL_INVASION = 100.0				-- AI is extremely unwilling to plan naval invasions above this naval distance limit.
+NDefines.NAI.START_TRAINING_EQUIPMENT_LEVEL = 0.25  -- vanilla 0.40 | ai will not start to train if equipment drops below this level
+NDefines.NAI.STOP_TRAINING_EQUIPMENT_LEVEL = 0.10  -- vanilla 0.25 | ai will not train if equipment drops below this level
+NDefines.NAI.START_TRAINING_SUPPLY_LEVEL = 0.25  -- vanilla 0.40 | ai will not start to train if supply ratio drops below this level
+NDefines.NAI.STOP_TRAINING_SUPPLY_LEVEL = 0.15  -- vanilla 0.30 | ai will not train if supply ratio drops below this level
 
-NDefines.NAI.INVASION_TARGET_DISTANCE_DENOMINATOR = 1000	-- Vanilla 1000            -- When selecting invasion target, divide this with (pixel) distance to get distance score factor. (Doesn't really affect the relative scoring, but it affects the linearity of the score function.)
-NDefines.NAI.INVASION_TARGET_NO_PORT_FACTOR = 0.1	-- Vanilla 0.3                   -- When selecting invasion target, multiply score with this if the target has no port
-NDefines.NAI.INVASION_TARGET_TRUNCATION_SELECT_THRESHOLD = 0.9	-- Vanilla 0.6      -- When selecting invasion target, use this threshold for truncation selection. (1.0 means select highest scored target, 0.0 means select randomly from all possible target, 0.5 means select randomly from all targets with more than 50 % of highest score)
-NDefines.NAI.INVASION_TARGET_PRIO_NOT_ENEMY_FACTOR = 0.15	-- Vanilla 0.17           -- When calculating priority for an invasion, factor the score with this if the target is not an actual enemy.
+--------------------------------------------------
+-- EQUIPMENT PRODUCTION
+--------------------------------------------------
+NDefines.NAI.PRODUCTION_EQUIPMENT_SURPLUS_FACTOR = 0.6 -- Base value for how much of currently used equipment the AI will at least strive to have in stock
+NDefines.NAI.PRODUCTION_EQUIPMENT_SURPLUS_FACTOR_GARRISON = 0.2 -- Base value for how much of currently used equipment the AI will at least strive to have in stock for garrison forces
+
+--------------------------------------------------
+-- NAVY & AIR FORCE TRAINING
+--------------------------------------------------
+NDefines.NAI.MAX_FULLY_TRAINED_SHIP_RATIO_FOR_TRAINING = 0.95  -- vanilla 0.7 | ai will not train a taskforce if fully trained ships are above this ratio | [VNR]
+NDefines.NNavy.AI_MAX_TASKFORCES_PER_TRAINING_OBJECTIVE = 20  -- vanilla 5 | Max number of taskforces we desire for AI to put in each fleet that is training. | [VNR]
+NDefines.NAI.MAX_FUEL_CONSUMPTION_RATIO_FOR_AIR_TRAINING = 0.90  -- vanilla 0.20 | ai will use at most this ratio of affordable fuel for air training
+NDefines.NAI.MAX_FUEL_CONSUMPTION_RATIO_FOR_NAVY_TRAINING = 0.60  -- vanilla 0.20 | ai will use at most this ratio of affordable fuel for naval training
+
+--------------------------------------------------
+-- RAILWAY GUNS
+--------------------------------------------------
+NDefines.NAI.RAILWAY_GUN_PRODUCTION_BASE_DIVISIONS_RATIO_PERCENT = 5  -- vanilla 0 | Base ratio of desired railway guns to divisions for AI (5 means 5%). Can be modified by railway_guns_divisions_ratio AI strategy value
+NDefines.NAI.RAILWAY_GUN_PRODUCTION_MIN_DIVISONS = 50  -- vanilla 20 | Minimum required number of divisions for the AI to consider producing railway guns
+NDefines.NAI.RAILWAY_GUN_PRODUCTION_MIN_FACTORIES = 25  -- vanilla 10 | Minimum required number of military factories for the AI to consider producing railway guns
+
+--------------------------------------------------
+-- INTELLIGENCE AGENCY
+--------------------------------------------------
+NDefines.NOperatives.AGENCY_AI_BASE_NUM_FACTORIES = 10.0  -- vanilla 25.0 | Used by AI to pace the upgrades. Formula : if( AGENCY_AI_BASE_NUM_FACTORIES <= num_civ_factories - num_upgrades * AGENCY_AI_PER_UPGRADE_FACTORIES ) | [FAI]
+NDefines.NOperatives.AGENCY_AI_PER_UPGRADE_FACTORIES = 2.0  -- vanilla 6.0 | Used by AI to pace the upgrades. Formula : if( AGENCY_AI_BASE_NUM_FACTORIES <= num_civ_factories - num_upgrades * AGENCY_AI_PER_UPGRADE_FACTORIES ) | [FAI]
+
+--------------------------------------------------
+-- ARMS MARKET
+--------------------------------------------------
+NDefines.NAI.EQUIPMENT_MARKET_MAX_CIVS_FOR_PURCHASES_RATIO = 0.2  -- vanilla 0.1 | Ratio of available civilian factories to max use for equipment purchases (0.2 = 20 %, so 50 available civs would mean max ca 10 civs to spend on purchases at any one time). Gets modified by equipment_market_spend_factories AI strategy.
+NDefines.NAI.EQUIPMENT_MARKET_NR_DELIVERIES_SOFT_MAX = 7  -- vanilla 10 | AI tries to adjust assigned factories and amount of equipment to keep nr deliveries at max this

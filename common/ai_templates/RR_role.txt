@@ -57,13 +57,13 @@ RR_Werwolf_generic = {
 					NOT = { has_subdoctrine_in_track = operations }
 				}
 			}
-           		modifier = {
+			modifier = {
 				factor = 0
-				num_of_military_factories < 90
+				num_of_military_factories < 30
 			}
 			modifier = {
-				factor = 3
-				num_of_military_factories > 90
+				factor = 4
+				num_of_military_factories > 30
 			}
 		}
 

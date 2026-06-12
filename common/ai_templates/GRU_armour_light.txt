@@ -3,13 +3,13 @@
 ######################
 
 light_armour_generic = {
-    role = light_armor_role
+    	role = light_armor_role
 	front_role_override = offence
 
 	available_for = { GRU GER }
 
 	upgrade_prio = {
-		factor = 2000
+		factor = 5000
 		modifier = {
 			factor = 0
 			is_eligible_for_armor_production = no
@@ -19,16 +19,15 @@ light_armour_generic = {
 			NOT = { has_tech = motorised_infantry }
 		}
 		modifier = {
-			factor = 5
-			OR = {
-				has_doctrine = new_mobile_warfare
-				has_doctrine = mass_assault
-			}
+			factor = 0
+			NOT = { has_tech = basic_light_tank }
+			NOT = { has_tech = basic_light_tank_chassis }
 		}
 	}
 
 	motorized_light_1 = {
 		can_upgrade_in_field = { always = no }
+		reinforce_prio = 2
 		
 		upgrade_prio = {
 			base = 100
@@ -50,6 +49,7 @@ light_armour_generic = {
 
 	motorized_light_2 = {
 		can_upgrade_in_field = { always = no }
+		reinforce_prio = 2
 		
 		upgrade_prio = {
 			base = 100
@@ -58,16 +58,17 @@ light_armour_generic = {
 				OR = {
 					NOT = { has_subdoctrine_in_track = infantry }
 					NOT = { has_subdoctrine_in_track = combat_support }
+					NOT = { has_subdoctrine_in_track = armor }
 					NOT = { has_subdoctrine_in_track = operations }
 				}
 			}
 			modifier = {
 				factor = 0
-				num_of_military_factories < 60
+				num_of_military_factories < 30
 			}
 			modifier = {
 				factor = 5
-				num_of_military_factories > 60
+				num_of_military_factories > 30
 			}
 		}
 
@@ -91,6 +92,7 @@ light_armour_generic = {
 
     	motorized_light_3 = {
 		can_upgrade_in_field = { always = no }
+		reinforce_prio = 2
 		
 		upgrade_prio = {
 			base = 100
@@ -137,6 +139,7 @@ light_armour_generic = {
 
 	motorized_light_4 = {
 		can_upgrade_in_field = { always = no }
+		reinforce_prio = 2
 		
 		upgrade_prio = {
 			base = 100
@@ -144,7 +147,7 @@ light_armour_generic = {
 				factor = 0
 				NOT = { has_tech = motorized_rocket_unit }
 			}
-            modifier = {
+            		modifier = {
 				factor = 0
 				OR = {
 					NOT = { has_subdoctrine_in_track = infantry }
@@ -153,7 +156,7 @@ light_armour_generic = {
 					NOT = { has_subdoctrine_in_track = operations }
 				}
 			}
-            modifier = {
+            		modifier = {
 				factor = 0
 				num_of_military_factories < 120
 			}

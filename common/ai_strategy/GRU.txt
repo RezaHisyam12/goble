@@ -87,7 +87,7 @@ stahlpakt_hates_russia = {
 	ai_strategy = {
 		type = antagonize
 		id = RUS
-		value = 300
+		value = 1000
 	}
 	ai_strategy = {
 		type = diplo_action_acceptance
@@ -614,33 +614,81 @@ GRU_ignore_swiss = {
 
 GRU_eyes_on_france = {
 	allowed = {
-		tag = GRU
+		original_tag = GRU
 	}
 	enable = {
-		NOT = { country_exists = AUS }
-		GRU = {
-			is_subject = no
-			has_socialist_government = no
-		}
 		is_neighbor_of = FRA
 		FRA = { has_capitulated = no }
+		surrender_progress < 0.1
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = conquer
-		id = FRA
-		value = 300
+		type = theatre_distribution_demand_increase
+		id = 28 #Alsace-Lorraine
+		id = 42 #Palatinate
+		id = 780 #Baden
+
+		value = 10
 	}
 	ai_strategy = {
-		type = front_armor_score
-		id = FRA
-		value = 100
+		type = force_concentration_target_weight
+		state = 17 #Pas-de-Calais
+		state = 980 #Lille
+		state = 24 #Picardy
+		state = 15 #Normandy
+		state = 16 #Paris
+
+		value = 500
+	}
+	ai_strategy = {
+		type = force_concentration_target_weight
+		state = 18 #Champagne
+		state = 27 #Burgundy
+		state = 760 #Romandy
+		state = 785 #Lorraine
+		state = 3 #Switzerland
+		state = 33 #Orleans
+
+		value = -500
+	}
+	ai_strategy = {
+		type = force_concentration_front_factor
+		state = 17 #Pas-de-Calais
+		state = 980 #Lille
+		state = 24 #Picardy
+		state = 15 #Normandy
+		state = 16 #Paris
+
+		value = 500
+	}
+	ai_strategy = {
+		type = force_concentration_front_factor
+		state = 18 #Champagne
+		state = 27 #Burgundy
+		state = 760 #Romandy
+		state = 785 #Lorraine
+		state = 3 #Switzerland
+		state = 33 #Orleans
+
+		value = -500
+	}
+
+	#less focus on other fronts
+	ai_strategy = {
+		type = front_unit_request
+		tag = SER
+		value = -100
 	}
 	ai_strategy = {
 		type = front_unit_request
-		tag = FRA
-		value = 50
+		tag = ROM
+		value = -100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = RUS
+		value = -25
 	}
 }
 
@@ -1472,19 +1520,23 @@ STP_ignore_western_front = {
 		is_ally_with = GRU
 		FRA = { is_faction_leader = yes }			
 		NOT = { has_war_with = AUS }
-		gru_controls_konigsberg = yes
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = dont_defend_ally_borders
 		id = GRU
-		value = 200
+		value = 100
 	}
 	ai_strategy = {
 		type = dont_defend_ally_borders
 		id = VKN
-		value = 200
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = SWI
+		value = 100
 	}
 }
 
@@ -1565,6 +1617,14 @@ STP_finish_off_russia = {
 	}
 	enable = {
 		has_war_with = RUS
+		OR = {
+			NOT = { country_exists = FRA }
+			FRA = { has_capitulated = yes }
+		}
+		OR = {
+			NOT = { country_exists = SRI }
+			SRI = { has_capitulated = yes }
+		}
 		NOT = { is_neighbor_of = CSA } #== being invaded
 
 		#activate during the non-winter months
@@ -1583,10 +1643,50 @@ STP_finish_off_russia = {
 	ai_strategy = {
 		type = front_control
 		tag = RUS
+		priority = 150
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+}
+
+GRU_finish_off_romania = {
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		ROM = {
+			has_war_with = ROOT
+			has_capitulated = no
+		}
+		FRA = {
+			OR = {
+				exists = no
+				has_capitulated = yes
+			}
+		}
+		NOT = { 202 = { is_controlled_by = RUS } } #Ukraine hasn't lost Kyiv yet
+		surrender_progress < 0.05
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = ROM
+		value = 100
+	}
+	ai_strategy = {
+		type = front_control
+		tag = ROM
 		priority = 100
 		ordertype = front
 		execution_type = rush_weak
 		execute_order = yes
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 15 #Romania
+		value = 15000
 	}
 }
 
@@ -1637,13 +1737,30 @@ GRU_finish_off_italy = {
 
 GRU_less_focus_on_russia = {
 	allowed = {
-		tag = GRU
+		original_tag = GRU
 	}
 	enable = {
-		has_war_with = RUS
 		FRA = {
 			has_capitulated = no
 			is_faction_leader = yes
+		}
+		NOT = {
+			VKR = {
+				is_in_faction_with = ROOT
+				surrender_progress > 0.40
+			}
+			VKB = {
+				is_in_faction_with = ROOT
+				surrender_progress > 0.40
+			}
+			VKP = {
+				is_in_faction_with = ROOT
+				surrender_progress > 0.40
+			}
+			HUN = {
+				is_in_faction_with = ROOT
+				surrender_progress > 0.40
+			}
 		}
 	}
 	abort_when_not_enabled = yes
@@ -1651,23 +1768,10 @@ GRU_less_focus_on_russia = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = RUS
-		value = -70
-		modifier = {
-			add = -15
-			eastern_kommissariat_below_50_surrender = yes
-		}
-	}
-
-	ai_strategy = {
-		type = front_unit_request
-		tag = TRM
-		value = -50
-		modifier = {
-			add = -40
-			eastern_kommissariat_below_50_surrender = yes
-		}
+		value = -100
 	}
 }
+
 ################
 ### Industry/2WK ###
 ################
@@ -1756,27 +1860,6 @@ GRU_build_tanks_focus = {
 		type = equipment_variant_production_factor
 		id = medium_tank_chassis
 		value = 15
-	}
-}
-
-GERGRU_production_early_game = {
-	allowed = {
-		OR = {
-			tag = GER
-			tag = GRU
-		}
-	}
-	enable = {
-		num_of_military_factories < 100
-	}
-	abort = {
-		num_of_military_factories > 99
-	}
-
-	ai_strategy = {
-		type = equipment_production_min_factories_archetype
-		id = motorized_equipment
-		value = 10
 	}
 }
 
@@ -2084,8 +2167,8 @@ GRU_build_tanks_if_france_is_aggressive = {
 		}
 		AUS = {
 			OR = {
-				has_capitulated = yes
 				exists = no
+				has_capitulated = yes
 			}
 		}
 	}
@@ -2094,28 +2177,12 @@ GRU_build_tanks_if_france_is_aggressive = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor
-		value = 20
+		value = 10
 	}
-	ai_strategy = {
-		type = railway_gun_divisions_ratio
-		value = 4
-	}
-}
-
-GRU_war_against_france = {
-	allowed = {
-		tag = GRU
-	}
-	enable = {
-		has_war_with = FRA
-		FRA = { has_capitulated = no }
-	}
-	abort_when_not_enabled = yes
-
 	ai_strategy = {
 		type = front_armor_score
 		id = FRA
-		value = 100
+		value = 250 # GER already gets a 100 score on FRA, but maybe this will make them focus even more.
 	}
 	ai_strategy = {
 		type = front_unit_request
@@ -2123,20 +2190,9 @@ GRU_war_against_france = {
 		value = 100
 	}
 	ai_strategy = {
-		type = railway_gun_divisions_ratio
-		value = 1
-	}
-
-	#less focus on other fronts
-	ai_strategy = {
-		type = front_unit_request
-		tag = SER
-		value = -25
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = ROM
-		value = -25
+		type = strategic_air_importance
+		id = 19 # Northern France
+		value = 1000
 	}
 }
 

@@ -1,13 +1,13 @@
-########################
+####################################################################################################
 #	SPACE MARINE ROLE
-########################
+####################################################################################################
 
 light_sp_infantry = {
 	role = space_marine
 	front_role_override = offence
 
 	upgrade_prio = {
-		factor = 1500
+		factor = 750
 		modifier = {
 			factor = 0
 			is_eligible_for_armor_production = no
@@ -21,10 +21,17 @@ light_sp_infantry = {
 			factor = 0
 			NOT = { has_global_flag = SpaceMarines }
 		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_doctrine = superior_firepower
+				has_doctrine = mass_assault
+			}
+		}
 	}
 
 	spg_space_marine_1 = {
-		can_upgrade_in_field = { always = yes }
+		can_upgrade_in_field = { always = no }
 		
 		upgrade_prio = {
 			base = 100
@@ -41,20 +48,23 @@ light_sp_infantry = {
 				artillery = 1
 				anti_air = 1
 				anti_tank = 1
+				medium_flame_tank = 1
 				engineer = 1
-				field_hospital = 1
 			}
 		}
 	}
 
 	spg_space_marine_2 = {
-		can_upgrade_in_field = { always = yes }
+		can_upgrade_in_field = { always = no }
 		
 		upgrade_prio = {
 			base = 100
 			modifier = {
 				factor = 0
-				NOT = { has_subdoctrine_in_track = infantry }
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = operations }
+				}
 			}
 			modifier = {
 				factor = 0
@@ -77,14 +87,14 @@ light_sp_infantry = {
 				artillery = 1
 				anti_air = 1
 				anti_tank = 1
+				medium_flame_tank = 1
 				engineer = 1
-				field_hospital = 1
 			}
 		}
 	}
 
-	late_space_marine = {
-		can_upgrade_in_field = { always = yes }
+	spg_space_marine_3 = {
+		can_upgrade_in_field = { always = no }
 		
 		upgrade_prio = {
 			base = 1000
@@ -92,7 +102,9 @@ light_sp_infantry = {
 				factor = 0
 				OR = {
 					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = combat_support }
 					NOT = { has_subdoctrine_in_track = operations }
+					NOT = { has_subdoctrine_in_track = armor }
 				}
 			}
 			modifier = {
@@ -108,15 +120,14 @@ light_sp_infantry = {
 		target_template = {
 			regiments = {
 				infantry = 14
-				artillery_brigade = 2
-				anti_tank_brigade = 1
+				artillery_brigade = 3
+				anti_air_brigade = 1
 				light_sp_artillery_brigade = 1
-				light_sp_anti_air_brigade = 1
 			}
 
 			support = {
 				artillery = 1
-				helicopter_brigade = 1
+				anti_tank = 1
 				medium_flame_tank = 1
 				engineer = 1
 				field_hospital = 1

@@ -811,12 +811,12 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = small_plane_airframe
 				amount = 200
-				producer = GER
+				producer = GEA
 			}
 			add_equipment_to_stockpile = {
 				type = cv_small_plane_airframe
 				amount = 100
-				producer = GER
+				producer = GEA
 			}
 		}
 	}
@@ -922,6 +922,10 @@ focus_tree = {
 		relative_position_id = GEA_mission1
 		ai_will_do = {
 			factor = 3
+			modifier = {
+				factor = 0
+				already_has_other_doctrine_FIB = yes
+			}
 			modifier = {
 				factor = 3
 				any_enemy_country = { is_actual_major = yes }
@@ -1052,6 +1056,10 @@ focus_tree = {
 		relative_position_id = GEA_mission1
 		ai_will_do = {
 			factor = 3
+			modifier = {
+				factor = 0
+				already_has_other_doctrine_TI = yes
+			}
 			modifier = {
 				factor = 3
 				any_enemy_country = { is_actual_major = yes }
@@ -1318,7 +1326,7 @@ focus_tree = {
 				name = GEA_battlecruiser2
 				bonus = 1.5
 				uses = 1
-				category = bc_tech
+				category = ca_tech
 			}
 			custom_effect_tooltip = tooltip_white_line
 			if = {
@@ -1403,6 +1411,10 @@ focus_tree = {
 		relative_position_id = GEA_mission1
 		ai_will_do = {
 			factor = 3
+			modifier = {
+				factor = 0
+				already_has_other_doctrine_BS = yes
+			}
 			modifier = {
 				factor = 3
 				any_enemy_country = { is_actual_major = yes }

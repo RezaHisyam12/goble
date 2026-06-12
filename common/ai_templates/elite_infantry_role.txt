@@ -3,7 +3,7 @@
 ######################
 
 elite_infantry_generic = {
-	role = elite_infantry 
+	role = elite_infantry
 	front_role_override = offence
 
 	upgrade_prio = {
@@ -19,7 +19,7 @@ elite_infantry_generic = {
 		reinforce_prio = 2
 
 		upgrade_prio = {
-			factor = 100
+			base = 100
 		}
 
 		target_template = {

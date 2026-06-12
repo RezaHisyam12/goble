@@ -1,16 +1,20 @@
-########################
+####################################################################################################
 #	TANK DESTROYER ROLE
-########################
+####################################################################################################
 
 tank_destroyer = {
     role = tank_destroyer_role
 	front_role_override = offence
 
     upgrade_prio = {
-		factor = 100
+		factor = 10
 		modifier = {
 			factor = 0
 			is_eligible_for_improved_heavy_armor_production = no
+		}
+		modifier = {
+			date < 1942.1.1
+			factor = 0
 		}
 		modifier = {
 			factor = 0
@@ -33,14 +37,50 @@ tank_destroyer = {
 	}
 
 	mechanized_heavy_td_1 = {
-        can_upgrade_in_field = { always = no }
+        can_upgrade_in_field = {
+			has_equipment = { heavy_tank_destroyer_chassis > 500 }
+		}
 		reinforce_prio = 2
 
 		upgrade_prio = {
 			base = 100
 		}
 
-        	target_template = {
+        target_template = {
+			regiments = {
+				mechanized = 9
+				heavy_tank_destroyer_brigade = 1
+			}
+
+			support = {
+				anti_air = 1
+				light_tank_recon = 1
+				armored_engineer = 1
+				field_hospital = 1
+				logistics_company = 1
+			}
+		}
+    }
+
+	mechanized_heavy_td_2 = {
+        can_upgrade_in_field = {
+			has_equipment = { heavy_tank_destroyer_chassis > 500 }
+		}
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			base = 100
+			modifier = {
+				factor = 0
+				num_of_military_factories < 150
+			}
+			modifier = {
+				factor = 2
+				num_of_military_factories > 150
+			}
+		}
+
+        target_template = {
 			regiments = {
 				mechanized = 9
 				heavy_tank_destroyer_brigade = 3
@@ -56,7 +96,7 @@ tank_destroyer = {
 		}
     }
 
-	mechanized_heavy_td_2 = {
+	mechanized_heavy_td_3 = {
         can_upgrade_in_field = { always = no }
 		reinforce_prio = 2
 
@@ -64,15 +104,15 @@ tank_destroyer = {
 			base = 100
 			modifier = {
 				factor = 0
-				num_of_military_factories < 150
+				num_of_military_factories < 300
 			}
 			modifier = {
-				factor = 2
-				num_of_military_factories > 150
+				factor = 4
+				num_of_military_factories > 300
 			}
 		}
 
-        	target_template = {
+        target_template = {
 			regiments = {
 				mechanized = 9
 				heavy_tank_destroyer_brigade = 6

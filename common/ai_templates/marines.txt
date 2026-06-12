@@ -1,6 +1,6 @@
-######################
+####################################################################################################
 #	MARINE ROLE
-######################
+####################################################################################################
 
 marine_generic = {
 	role = marine
@@ -26,7 +26,9 @@ marine_generic = {
 	}
 
 	marine_1 = {
-		can_upgrade_in_field = { always = no }
+		can_upgrade_in_field = {
+			NOT = { has_tech = amphibious_mechanized_infantry }
+		}
 		reinforce_prio = 2
 
 		upgrade_prio = {
@@ -40,8 +42,7 @@ marine_generic = {
 
 			support = {
 				artillery = 1
-				anti_air = 1
-				anti_tank = 1
+				engineer = 1
 			}
 		}
 	}
@@ -66,6 +67,50 @@ marine_generic = {
 			}
 			modifier = {
 				factor = 2
+				num_of_military_factories > 30
+			}
+		}
+
+		target_template = {
+			regiments = {
+				marine = 12
+				artillery_brigade = 2
+			}
+
+			support = {
+				artillery = 1
+				anti_air = 1
+				anti_tank = 1
+				medium_flame_tank = 1
+				engineer = 1
+			}
+		}
+	}
+
+	marine_3 = {
+		can_upgrade_in_field = { always = no }
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			base = 100
+			modifier = {
+				factor = 0
+				NOT = { has_tech = special_forces_marines }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = combat_support }
+					NOT = { has_subdoctrine_in_track = operations }
+				}
+			}
+			modifier = {
+				factor = 0
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 4
 				num_of_military_factories > 30
 			}
 		}
@@ -115,7 +160,7 @@ marine_generic = {
 				is_eligible_for_improved_armor_production = no
 			}
 			modifier = {
-				factor = 4
+				factor = 6
 				is_eligible_for_improved_armor_production = yes
 			}
 		}

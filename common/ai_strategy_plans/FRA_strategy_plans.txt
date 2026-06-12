@@ -1,0 +1,112 @@
+FRA_early_game = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = FRA
+	}
+
+	enable = {
+		date > 1936.1.1
+	}
+
+	abort = {
+		has_completed_focus = FRA_military_buildup_three
+	}
+	
+	ai_national_focuses = {
+		FRA_socialist_education
+		FRA_Blanqui_Research_Institute
+		FRA_eco_direction
+		FRA_orth_syndicalism
+		FRA_Industrialisation
+		FRA_war_eco_agri
+		FRA_cooperatives
+		FRA_amenagement
+		FRA_plan_prost
+		FRA_improve_manage
+		FRA_fac_towns
+		FRA_dedication
+		FRA_modern_farms
+		FRA_mass_production
+		FRA_war_industry
+		FRA_decentralized_industry
+		FRA_market_socialism
+		FRA_road_to_war
+		FRA_military_buildup
+		FRA_military_buildup_two
+		FRA_military_buildup_three
+	}
+	weight = {
+		factor = 1.0
+	}
+}
+
+FRA_fix_the_army = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = FRA
+	}
+
+	enable = {
+		date > 1938.1.1
+		has_completed_focus = FRA_Demand_Romandy
+	}
+
+	abort = {
+		has_completed_focus = FRA_grand_army_reform
+	}
+	
+	ai_national_focuses = {
+		FRA_renseignements_generaux
+		FRA_communal_army
+		FRA_principe_concentration
+		FRA_centralized_hc
+		FRA_officers_initiative
+		FRA_mass_conscription
+		FRA_tank_research
+		FRA_tank_assembly_line
+		FRA_analysing_wki
+		FRA_war_experience
+		FRA_military_academy
+		FRA_empower_rifleman
+		FRA_mission_type
+		FRA_global_organization
+		FRA_mass_fire_support
+		FRA_grand_army_reform
+	}
+	weight = {
+		factor = 1.0
+	}
+}
+
+FRA_prepare_for_war = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = FRA
+	}
+
+	enable = {
+		date > 1939.1.1
+		has_completed_focus = FRA_Demand_Romandy
+	}
+
+	abort = {
+		has_completed_focus = FRA_military_science
+	}
+	
+	ai_national_focuses = {
+		FRA_German_borders
+		FRA_extend_line
+		FRA_fast_army
+		FRA_Our_time_has_come
+		FRA_military_science
+	}
+	weight = {
+		factor = 1.0
+	}
+}

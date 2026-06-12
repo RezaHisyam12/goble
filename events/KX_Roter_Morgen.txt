@@ -4886,6 +4886,7 @@ country_event = { #
 		89 = { add_core_of = VKP }
 		1124 = { add_core_of = VKP }
 		91 = { add_core_of = VKP }
+		1366 = { add_core_of = VKP }
 
 		10 = { remove_claim_by = GRU }
 		90 = { remove_claim_by = GRU }
@@ -4901,6 +4902,7 @@ country_event = { #
 		1124 = { remove_claim_by = GRU }
 		91 = { remove_claim_by = GRU }
 		89 = { remove_claim_by = GRU }
+		1366 = { remove_claim_by = GRU }
 
 		10 = { remove_core_of = GRU }
 		90 = { remove_core_of = GRU }
@@ -4916,6 +4918,7 @@ country_event = { #
 		1124 = { remove_core_of = GRU }
 		91 = { remove_core_of = GRU }
 		89 = { remove_core_of = GRU }
+		1366 = { remove_core_of = GRU }
 	}
 }
 

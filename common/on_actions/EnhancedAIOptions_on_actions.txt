@@ -1,0 +1,10 @@
+on_actions = {
+	on_weekly = {
+		effect = {
+			if = {
+				limit = { is_ai = yes }
+				FAI_weekly_update = yes
+			}
+		}
+	}
+}

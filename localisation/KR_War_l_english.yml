@@ -26,12 +26,42 @@ WAR_NAME_CAL_TEX:0 "Second American Civil War"
 WAR_NAME_TEX_CAL:0 "Second American Civil War"
 
 ### Spanish Civil War ###
-WAR_NAME_SPR_CAR:0 "SCW: $ORDER$$FIRST$-$SECOND$ War"
-WAR_NAME_CAR_SPR:0 "SCW: $ORDER$$FIRST$-$SECOND$ War"
-WAR_NAME_SPR_CNT:0 "SCW: $ORDER$$FIRST$-$SECOND$ War"
-WAR_NAME_CNT_SPR:0 "SCW: $ORDER$$FIRST$-$SECOND$ War"
-WAR_NAME_CAR_CNT:0 "SCW: $ORDER$$FIRST$-$SECOND$ War"
-WAR_NAME_CNT_CAR:0 "SCW: $ORDER$$FIRST$-$SECOND$ War"
+WAR_NAME_SPR_CAR:0 "Spanish Civil War"
+WAR_NAME_CAR_SPR:0 "Spanish Civil War"
+WAR_NAME_SPR_CNT:0 "Spanish Civil War"
+WAR_NAME_CNT_SPR:0 "Spanish Civil War"
+WAR_NAME_CAR_CNT:0 "Spanish Civil War"
+WAR_NAME_CNT_CAR:0 "Spanish Civil War"
+
+### Second Rif War ###
+WAR_NAME_SPR_RIF:0 "Second Rif War"
+WAR_NAME_RIF_SPR:0 "Second Rif War"
+
+### Moroccan War ###
+WAR_NAME_SPR_MOR:0 "Moroccan War"
+WAR_NAME_MOR_SPR:0 "Moroccan War"
+
+### Crisis on the Danube ###
+ WAR_NAME_AUS_HUN: "Crisis on the Danube"
+ WAR_NAME_AUS_CRO: "Crisis on the Danube"
+ WAR_NAME_AUS_CZE: "Crisis on the Danube"
+ WAR_NAME_AUS_GAL: "Crisis on the Danube"
+ WAR_NAME_HUN_AUS: "Crisis on the Danube"
+ WAR_NAME_HUN_CRO: "Crisis on the Danube"
+ WAR_NAME_HUN_CZE: "Crisis on the Danube"
+ WAR_NAME_HUN_GAL: "Crisis on the Danube"
+ WAR_NAME_CRO_AUS: "Crisis on the Danube"
+ WAR_NAME_CRO_HUN: "Crisis on the Danube"
+ WAR_NAME_CRO_CZE: "Crisis on the Danube"
+ WAR_NAME_CRO_GAL: "Crisis on the Danube"
+ WAR_NAME_CZE_AUS: "Crisis on the Danube"
+ WAR_NAME_CZE_HUN: "Crisis on the Danube"
+ WAR_NAME_CZE_CRO: "Crisis on the Danube"
+ WAR_NAME_CZE_GAL: "Crisis on the Danube"
+ WAR_NAME_GAL_AUS: "Crisis on the Danube"
+ WAR_NAME_GAL_HUN: "Crisis on the Danube"
+ WAR_NAME_GAL_CRO: "Crisis on the Danube"
+ WAR_NAME_GAL_CZE: "Crisis on the Danube"
 
 ### Italian War of Unification ###
  WAR_NAME_SRI_SIC: "Italian War of Unification"
@@ -114,10 +144,6 @@ WAR_NAME_FRA_GRU: "The Second Weltkrieg"
 WAR_NAME_GRU_ENG: "The Second Weltkrieg"
 WAR_NAME_ENG_GRU: "The Second Weltkrieg"
 
-### The Great Patriotic War ###
- WAR_NAME_GRU_RUS: "The Great Patriotic War"
- WAR_NAME_RUS_GRU: "The Great Patriotic War"
-
 ### 2nd Russo-Japanese War ###
 WAR_NAME_RUS_JAP:0 "2nd Russo-$ORDER$$SECOND$ War"
 WAR_NAME_JAP_RUS:0 "2nd Russo-$ORDER$$FIRST$ War"
@@ -149,10 +175,10 @@ WAR_NAME_LIT_GER:0 "$ORDER$$FIRST$ War of Independence"
 ### Indian Wars ###
 WAR_NAME_DEH_PRF:0 "Entente Reclamation of Hyderabad"
 WAR_NAME_DEH_BHC:0 "Entente Reclamation of Bengal"
-WAR_NAME_BHC_PRF:0 "Bharatiya Liberation of Dehli"
+WAR_NAME_BHC_PRF:0 "Bharatiya Liberation of Delhi"
 WAR_NAME_BHC_DEH:0 "Bharatiya Liberation of Hyderabad"
 WAR_NAME_PRF_BHC:0 "Princely Order Restoration of Bengal"
-WAR_NAME_PRF_DEH:0 "Princely Order Restoration of Dehli"
+WAR_NAME_PRF_DEH:0 "Princely Order Restoration of Delhi"
 
 ### Fifth Anglo-Afghani War ###
  WAR_NAME_AFG_DEH: "Fifth Anglo-Afghani War"
@@ -213,8 +239,8 @@ WAR_NAME_COL_VEN:0 "Bolivarian War"
 WAR_NAME_VEN_COL:0 "Bolivarian War"
 
 ### Peru-Ecuador War ###
-WAR_NAME_PRU_ECU:0 "Pastanza War"
-WAR_NAME_ECU_PRU:0 "Pastanza War"
+WAR_NAME_PRU_ECU:0 "Pastaza War"
+WAR_NAME_ECU_PRU:0 "Pastaza War"
 
 ### Bolivia-Chile War ###
 WAR_NAME_BOL_CHL:0 "Second War of the Pacific"
@@ -239,8 +265,9 @@ WAR_NAME_POR_MAF:0 "Bush War"
  WAR_NAME_SUD_EGY: "Second Mahdist Revolt"
 
 ### Ottoman Wars ###
-WAR_NAME_LBA_OTT:0 "Tripolitanian War of Independence"
-WAR_NAME_OTT_LBA:0 "Tripolitanian Revolt"
+# Egypt
+ WAR_NAME_EGY_OTT: "Levant Crisis"
+ WAR_NAME_OTT_EGY: "Levant Crisis"
 
 # Tripolitania
  WAR_NAME_LBA_OTT: "Tripolitanian War of Independence"
@@ -414,6 +441,10 @@ WAR_NAME_OTT_LBA:0 "Tripolitanian Revolt"
  WAR_NAME_YUN_JAP: "2nd Sino-Japanese War"
  WAR_NAME_HNN_JAP: "2nd Sino-Japanese War"
 
+### 3rd Boer War ###
+ WAR_NAME_SAF_NAT: "3rd Boer War"
+ WAR_NAME_SAF_ENT: "3rd Boer War"
+ 
 ### Congo Crisis ###
 WAR_NAME_COG_KIV:0 "Congo Crisis"
 WAR_NAME_KIV_COG:0 "Congo Crisis"

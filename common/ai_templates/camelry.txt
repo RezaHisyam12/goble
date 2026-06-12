@@ -1,3 +1,7 @@
+####################################################################################################
+#	INFANTRY ROLE - for camelry-centric tags
+####################################################################################################
+
 line_camelry = {
 	available_for = {
 		LBA SAU JBS TRU IKH YEM OMA #Middle East
@@ -61,10 +65,6 @@ line_camelry = {
 		
 		upgrade_prio = {
 			base = 100
-			modifier = {
-				factor = 0
-				NOT = { has_subdoctrine_in_track = infantry }
-			}
 			modifier = {
 				factor = 0
 				num_of_military_factories < 75

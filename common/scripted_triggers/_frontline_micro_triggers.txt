@@ -1,0 +1,62 @@
+has_green_air = {
+	has_country_flag = FAI_green_air
+}
+
+has_red_air = {
+	NOT = { has_country_flag = FAI_green_air }
+}
+
+has_manpower_and_equipment_surplus = {
+	manpower_per_military_factory > 5000
+	stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
+	stockpile_ratio = { archetype = support_equipment ratio > 0.05 }
+	stockpile_ratio = { archetype = artillery_equipment ratio > 0.05 }
+	stockpile_ratio = { archetype = anti_air_equipment ratio > 0.05 }
+	stockpile_ratio = { archetype = anti_tank_equipment ratio > 0.05 }
+	stockpile_ratio = { archetype = motorized_equipment ratio > 0.05 }
+}
+
+has_manpower_or_equipment_shortage = {
+	OR = {
+		manpower_per_military_factory < 1000
+		stockpile_ratio = { archetype = infantry_equipment ratio < 0.01 }
+		stockpile_ratio = { archetype = support_equipment ratio < 0.01 }
+		stockpile_ratio = { archetype = artillery_equipment ratio < 0.01 }
+		stockpile_ratio = { archetype = anti_air_equipment ratio < 0.01 }
+		stockpile_ratio = { archetype = anti_tank_equipment ratio < 0.01 }
+		stockpile_ratio = { archetype = motorized_equipment ratio < 0.01 }
+	}
+}
+
+has_manpower_or_equipment_crisis = {
+	OR = {
+		has_country_flag = FAI_manpower_crisis
+		has_country_flag = FAI_equipment_crisis
+	}
+}
+
+has_an_actual_civil_war = {
+	has_civil_war = yes
+	NOT = {
+		any_enemy_country = {
+			has_civil_war = no
+		}
+	}
+}
+
+####################################################################################################
+# KX TRIGGERS
+####################################################################################################
+
+has_2acw = {
+	is_american_tag = yes
+	has_global_flag = USA_civil_war_begun_flag
+	NOT = { has_global_flag = USA_civil_war_over_flag }
+}
+
+has_an_actual_kx_civil_war = {
+	OR = {
+		has_an_actual_civil_war = yes
+		has_2acw = yes
+	}
+}

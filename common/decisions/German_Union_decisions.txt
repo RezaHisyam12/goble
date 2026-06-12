@@ -16901,6 +16901,7 @@ GRU_new_order_decisions = {
 						transfer_state = 89
 						transfer_state = 91
 						transfer_state = 1124
+						transfer_state = 1366
 						
 						add_manpower = 500000
 						army_experience = 500

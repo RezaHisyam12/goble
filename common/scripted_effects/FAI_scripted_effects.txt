@@ -1,0 +1,100 @@
+FAI_green_air_update = {
+	if = {
+		limit = { has_war = yes }
+
+		set_temp_variable = { FAI_friendly_air = num_deployed_planes_with_type@small_plane_airframe }
+		every_enemy_country = {
+			subtract_from_temp_variable = { FAI_friendly_air = num_deployed_planes_with_type@small_plane_airframe }
+		}
+
+		if = {
+			limit = {
+				NOT = { has_country_flag = FAI_green_air }
+				if = {
+					OR = {
+						check_variable = { FAI_friendly_air > 0 }
+						check_variable = { FAI_friendly_air = 0 }
+					}
+				}
+			}
+			set_country_flag = FAI_green_air
+		}
+		else_if = {
+			limit = {
+				has_country_flag = FAI_green_air
+				if = {
+					check_variable = { FAI_friendly_air < 0 }
+				}
+			}
+			clr_country_flag = FAI_green_air
+		}
+	}
+	else = { set_country_flag = FAI_green_air }
+}
+
+FAI_equipment_crisis_update = {
+	if = {
+		limit = { has_war = yes }
+
+		# Guard against division by zero (no armies deployed = no crisis)
+		if = {
+			limit = { check_variable = { num_target_equipment_in_armies_k@infantry_equipment > 0 } }
+			set_temp_variable = { FAI_eq_ratio = num_equipment_in_armies_k@infantry_equipment }
+			divide_temp_variable = { FAI_eq_ratio = num_target_equipment_in_armies_k@infantry_equipment }
+			set_variable = { FAI_fielded_eq_ratio = FAI_eq_ratio }
+		}
+		else = { set_variable = { FAI_fielded_eq_ratio = 1 } }
+
+		if = {
+			limit = {
+				NOT = { has_country_flag = FAI_equipment_crisis }
+				if = {
+					check_variable = { FAI_fielded_eq_ratio < 0.75 }
+				}
+			}
+			set_country_flag = FAI_equipment_crisis
+		}
+		else_if = {
+			limit = {
+				has_country_flag = FAI_equipment_crisis
+				if = {
+					check_variable = { FAI_fielded_eq_ratio > 0.90 }
+				}
+			}
+			clr_country_flag = FAI_equipment_crisis
+		}
+	}
+	else = { clr_country_flag = FAI_equipment_crisis }
+}
+
+FAI_manpower_crisis_update = {
+	if = {
+		limit = { has_war = yes }
+
+		if = {
+			limit = {
+				NOT = { has_country_flag = FAI_manpower_crisis }
+				if = {
+					manpower_per_military_factory < 500
+				}
+			}
+			set_country_flag = FAI_manpower_crisis
+		}
+		else_if = {
+			limit = {
+				has_country_flag = FAI_manpower_crisis
+				if = {
+					manpower_per_military_factory > 1000
+				}
+			}
+			clr_country_flag = FAI_manpower_crisis
+		}
+	}
+	else = { clr_country_flag = FAI_manpower_crisis }
+}
+
+FAI_weekly_update = {
+	FAI_green_air_update = yes
+	FAI_equipment_crisis_update = yes
+	FAI_manpower_crisis_update = yes
+}

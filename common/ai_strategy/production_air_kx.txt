@@ -1,0 +1,98 @@
+# Enhanced AI - KX-specific Air Production
+
+####################################################################################################
+#	KX AIR PROD
+####################################################################################################
+
+GER_chill_with_fighter_prod = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		FRA = { is_faction_leader = yes }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = -50
+	}
+}
+
+GER_cas_rampup = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		FRA = { is_faction_leader = yes }
+		has_war = yes
+		any_enemy_country = { is_major = yes }
+		has_green_air = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = -25
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 25
+	}
+}
+
+RUS_cas_is_cool_but_you_need_fighters = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		GER = { is_faction_leader = yes }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 25
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = -25
+	}
+}
+
+FRA_cas_is_cool_but_you_need_fighters = {
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		GER = { is_faction_leader = yes }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 25
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = -25
+	}
+}
+
+please_no_more_helis = {
+	enable = { always = yes }
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = kx_helicopter_equipment
+		value = -1000
+	}
+}

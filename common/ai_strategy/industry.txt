@@ -1,0 +1,526 @@
+# Enhanced AI - Industry
+
+####################################################################################################
+#	CIVS, MILS AND DOCKS
+####################################################################################################
+
+make_civs = {
+	allowed = {
+		NOT = {
+			is_american_tag = yes
+			tag = GER
+			tag = GRU
+		}
+	}
+	enable = {
+		date < 1937.1.1
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 1000
+	}
+}
+
+make_mils = {
+	enable = {
+		num_of_civilian_factories > 15
+		OR = {
+			date > 1937.1.1
+			has_war = yes
+		}
+	}
+	abort_when_not_enabled = yes
+		
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 1000
+	}
+}
+
+french_mil_buildup = {
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		has_completed_focus = FRA_military_buildup_two
+		date < 1939.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 500
+	}
+}
+
+german_mil_buildup = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		OR = {
+			has_completed_focus = GER_groener2
+			has_completed_focus = GER_schacht2
+		}
+		date < 1939.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 500
+	}
+}
+
+russian_mil_buildup = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		date > 1937.1.1
+		date < 1939.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 500
+	}
+}
+
+island_nations_need_dockyards = {
+	allowed = {
+		OR = {
+			tag = CAN
+			tag = ENG
+			tag = GBR
+			tag = JAP
+		}
+	}
+	enable = {
+		num_of_military_factories > 9
+		surrender_progress < 0.05
+		set_temp_variable = { mil_fact = num_of_naval_factories }
+		divide_temp_variable = { mil_fact = num_of_military_factories }
+		check_variable = {
+			var = mil_fact
+			value = 0.60
+			compare = less_than
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dockyard_to_military_factory_ratio
+		value = 1000
+	}
+}
+
+americas_need_dockyards = {
+	allowed = {
+		is_american_tag = yes
+	}
+	enable = {
+		OR = {
+			has_global_flag = USA_civil_war_over_flag
+			has_global_flag = USA_civil_war_avoided_flag
+		}
+		num_of_military_factories > 9
+		surrender_progress < 0.05
+		set_temp_variable = { mil_fact = num_of_naval_factories }
+		divide_temp_variable = { mil_fact = num_of_military_factories }
+		check_variable = {
+			var = mil_fact
+			value = 0.40
+			compare = less_than
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dockyard_to_military_factory_ratio
+		value = 1000
+	}
+}
+
+germany_needs_dockyards = {
+	allowed = {
+		OR = {
+			tag = GER
+			tag = GRU
+		}
+	}
+	enable = {
+		num_of_military_factories > 9
+		surrender_progress < 0.05
+		set_temp_variable = { mil_fact = num_of_naval_factories }
+		divide_temp_variable = { mil_fact = num_of_military_factories }
+		check_variable = {
+			var = mil_fact
+			value = 0.30
+			compare = less_than
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dockyard_to_military_factory_ratio
+		value = 1000
+	}
+}
+
+other_majors_need_dockyards = {
+	allowed = {
+		NOT = {
+			is_american_tag = yes
+			tag = GER
+			tag = GRU
+			tag = CAN
+			tag = ENG
+			tag = GBR
+			tag = JAP
+		}
+	}
+	enable = {
+		is_actual_major = yes
+		num_of_military_factories > 9
+		surrender_progress < 0.05
+		set_temp_variable = { mil_fact = num_of_naval_factories }
+		divide_temp_variable = { mil_fact = num_of_military_factories }
+		check_variable = {
+			var = mil_fact
+			value = 0.10
+			compare = less_than
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dockyard_to_military_factory_ratio
+		value = 1000
+	}
+}
+
+minors_need_dockyards = {
+	enable = {
+		is_actual_major = no
+		num_of_military_factories > 9
+		surrender_progress < 0.05
+		set_temp_variable = { mil_fact = num_of_naval_factories }
+		divide_temp_variable = { mil_fact = num_of_military_factories }
+		check_variable = {
+			var = mil_fact
+			value = 0.05
+			compare = less_than
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dockyard_to_military_factory_ratio
+		value = 1000
+	}
+}
+
+####################################################################################################
+#	REFS AND SILOS
+####################################################################################################
+
+majors_build_some_refineries_1 = {
+	enable = {
+		date > 1938.1.1
+		is_actual_major = yes
+		has_tech = synth_oil_experiments
+		num_of_military_factories > 30
+		NOT = { any_subject_country = { check_variable = { resource@rubber > 10 } } }
+		NOT = { resource@rubber > 10 }
+		NOT = { synthetic_refinery > 5 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 1
+	}
+}
+
+majors_build_some_refineries_2 = {
+	enable = {
+		date > 1938.1.1
+		is_actual_major = yes
+		has_tech = synth_oil_experiments
+		num_of_military_factories > 60
+		NOT = { any_subject_country = { check_variable = { resource@rubber > 20 } } }
+		NOT = { resource@rubber > 20 }
+		NOT = { synthetic_refinery > 10 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 1
+	}
+}
+
+majors_build_some_refineries_3 = {
+	enable = {
+		date > 1938.1.1
+		is_actual_major = yes
+		has_tech = synth_oil_experiments
+		num_of_military_factories > 90
+		NOT = { any_subject_country = { check_variable = { resource@rubber > 30 } } }
+		NOT = { resource@rubber > 30 }
+		NOT = { synthetic_refinery > 15 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 1
+	}
+}
+
+majors_build_some_refineries_4 = {
+	enable = {
+		date > 1938.1.1
+		is_actual_major = yes
+		has_tech = synth_oil_experiments
+		num_of_military_factories > 120
+		NOT = { any_subject_country = { check_variable = { resource@rubber > 40 } } }
+		NOT = { resource@rubber > 40 }
+		NOT = { synthetic_refinery > 20 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 1
+	}
+}
+
+majors_build_some_refineries_5 = {
+	enable = {
+		date > 1938.1.1
+		is_actual_major = yes
+		has_tech = synth_oil_experiments
+		num_of_military_factories > 150
+		NOT = { any_subject_country = { check_variable = { resource@rubber > 50 } } }
+		NOT = { resource@rubber > 50 }
+		NOT = { synthetic_refinery > 25 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 1
+	}
+}
+
+majors_build_some_refineries_6 = {
+	enable = {
+		date > 1938.1.1
+		is_actual_major = yes
+		has_tech = synth_oil_experiments
+		num_of_military_factories > 180
+		NOT = { any_subject_country = { check_variable = { resource@rubber > 60 } } }
+		NOT = { resource@rubber > 60 }
+		NOT = { synthetic_refinery > 30 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 1
+	}
+}
+
+majors_build_some_refineries_7 = {
+	enable = {
+		date > 1938.1.1
+		is_actual_major = yes
+		has_tech = synth_oil_experiments
+		num_of_military_factories > 210
+		NOT = { any_subject_country = { check_variable = { resource@rubber > 70 } } }
+		NOT = { resource@rubber > 70 }
+		NOT = { synthetic_refinery > 35 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 1
+	}
+}
+
+majors_build_some_refineries_8 = {
+	enable = {
+		date > 1938.1.1
+		is_actual_major = yes
+		has_tech = synth_oil_experiments
+		num_of_military_factories > 240
+		NOT = { any_subject_country = { check_variable = { resource@rubber > 80 } } }
+		NOT = { resource@rubber > 80 }
+		NOT = { synthetic_refinery > 40 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 1
+	}
+}
+
+majors_build_some_refineries_9 = {
+	enable = {
+		date > 1938.1.1
+		is_actual_major = yes
+		has_tech = synth_oil_experiments
+		num_of_military_factories > 270
+		NOT = { any_subject_country = { check_variable = { resource@rubber > 90 } } }
+		NOT = { resource@rubber > 90 }
+		NOT = { synthetic_refinery > 45 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 1
+	}
+}
+
+majors_build_some_refineries_10 = {
+	enable = {
+		date > 1938.1.1
+		is_actual_major = yes
+		has_tech = synth_oil_experiments
+		num_of_military_factories > 300
+		NOT = { any_subject_country = { check_variable = { resource@rubber > 100 } } }
+		NOT = { resource@rubber > 100 }
+		NOT = { synthetic_refinery > 50 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 1
+	}
+}
+
+we_urgently_need_oil_or_rubber = {
+	enable = {
+		has_war = yes
+		has_tech = synth_oil_experiments
+		OR = {
+			has_fuel < 100
+			rubber < 0
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = synthetic_refinery
+		value = 10
+	}
+}
+
+majors_build_some_silos_1 = {
+	enable = {
+		date > 1938.1.1
+		is_actual_major = yes
+		has_tech = fuel_silos
+		fuel_silo < 5
+		OR = {
+			has_navy_size = {size > 75}
+			has_deployed_air_force_size = {type = fighter	size > 1500}
+			num_of_military_factories > 100
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = fuel_silo
+		value = 1
+	}
+}
+
+majors_build_some_silos_2 = {
+	enable = {
+		date > 1938.1.1
+		is_actual_major = yes
+		has_tech = fuel_silos
+		fuel_silo < 10
+		OR = {
+			has_navy_size = {size > 150}
+			has_deployed_air_force_size = {type = fighter	size > 3000}
+			num_of_military_factories > 200
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = fuel_silo
+		value = 1
+	}
+}
+
+majors_build_some_silos_3 = {
+	enable = {
+		date > 1938.1.1
+		is_actual_major = yes
+		has_tech = fuel_silos
+		fuel_silo < 15
+		OR = {
+			has_navy_size = {size > 225}
+			has_deployed_air_force_size = {type = fighter	size > 4500}
+			num_of_military_factories > 300
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = fuel_silo
+		value = 1
+	}
+}
+
+majors_build_some_silos_4 = {
+	enable = {
+		date > 1938.1.1
+		is_actual_major = yes
+		has_tech = fuel_silos
+		fuel_silo < 20
+		OR = {
+			has_navy_size = {size > 300}
+			has_deployed_air_force_size = {type = fighter	size > 6000}
+			num_of_military_factories > 400
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = fuel_silo
+		value = 1
+	}
+}

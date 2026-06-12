@@ -1,3 +1,32 @@
+RUS_block_focus = {
+	name = "RUS_block_focus"
+	desc = ""
+
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		country_exists = GRU
+	}
+	abort = {
+		NOT = { country_exists = GRU }
+	}
+
+	focus_factors = {
+		RUS_Anti_Internationale = 0
+		RUS_Feast_In_Time_Of_Plague = 0
+		RUS_The_Iron_Curtain = 0
+		RUS_European_Ambitions = 0
+		RUS_Gendarme_of_Europe = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1
+	}
+}
+
 RUS_absolute_monarch_plan = {
 	name = "RUS_absolute_monarch_plan"
 	desc = ""
@@ -90,7 +119,6 @@ RUS_zemstva_plan = {
 
 	ai_national_focuses = {
 		RUS_Reinstitute_The_Zemstva
-		RUS_Funding_Frenzy
 		RUS_Local_Development
 		RUS_Zemstvo_Research_Initiatives
 		RUS_War_Preparations_Programme

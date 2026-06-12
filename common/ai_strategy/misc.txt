@@ -1,0 +1,314 @@
+# Enhanced AI - Miscellaneous
+
+####################################################################################################
+#	MISC
+####################################################################################################
+
+division_limiter = {
+	allowed = {
+		NOT = { has_game_rule = { rule = unit_limit_options option = NONE } }
+	}
+	enable = {
+		has_reached_maximum_divisions = yes
+	}
+
+	abort_when_not_enabled = yes
+
+	#AI roles
+	ai_strategy = { type = build_army 	id = infantry			value = -1000 }
+	ai_strategy = { type = build_army 	id = shock_infantry		value = -1000 }
+	ai_strategy = { type = build_army 	id = motorized			value = -1000 }
+	ai_strategy = { type = build_army 	id = mechanized			value = -1000 }
+	ai_strategy = { type = build_army	id = armor_role			value = -1000 }
+	ai_strategy = { type = build_army 	id = light_armor_role		value = -1000 }
+	ai_strategy = { type = build_army 	id = heavy_armor_role		value = -1000 }
+	ai_strategy = { type = build_army 	id = tank_destroyer_role	value = -1000 }
+	ai_strategy = { type = build_army 	id = marine			value = -1000 }
+	ai_strategy = { type = build_army 	id = mountaineer		value = -1000 }
+	ai_strategy = { type = build_army 	id = suppression		value = -1000 }
+	ai_strategy = { type = build_army 	id = bicycle			value = -1000 }
+	ai_strategy = { type = build_army 	id = elite_infantry		value = -1000 }
+	ai_strategy = { type = build_army 	id = RR_Werwolf			value = -1000 }
+	ai_strategy = { type = build_army 	id = armour_super_heavy		value = -1000 }
+	ai_strategy = { type = build_army 	id = armour_landcruiser		value = -1000 }
+}
+
+division_upgrades_are_very_important = {
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = land_xp_spend_priority
+		id = division_template
+		value = 100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = 100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = 100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = artillery
+		value = 100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = 100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = mechanized
+		value = 100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
+		value = 100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = modern_armor
+		value = 100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = mountaineer
+		value = 100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = marine
+		value = 100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = super_heavy_armor
+		value = 100
+	}
+	ai_strategy = {
+		type = template_prio
+		id = land_cruiser
+		value = 100
+	}
+}
+
+make_nukes = {
+	enable = {
+		has_tech = nuclear_reactor
+		num_of_civilian_factories > 50
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = nuclear_reactor 
+		value = 5
+	}
+}
+
+make_trains = {
+	enable = { 
+		is_eligible_for_armor_production = yes
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = { type = equipment_production_min_factories_archetype id = train_equipment value = 1 }
+}
+
+make_trucks = { 
+	enable = { 
+		is_eligible_for_armor_production = yes
+		has_tech = motorised_infantry
+		NOT = {has_tech = mechanised_infantry}
+	} 
+	abort_when_not_enabled = yes
+	ai_strategy = { type = equipment_production_min_factories_archetype id = motorized_equipment value = 2 }
+}
+
+always_upgrade_tanks = {
+	enable = { always = yes }
+	abort_when_not_enabled = yes
+	
+	ai_strategy = { type = production_upgrade_desire_offset id = light_tank_chassis_1 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = light_tank_chassis_2 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = light_tank_chassis_3 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = medium_tank_chassis_1 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = medium_tank_chassis_2 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = medium_tank_chassis_3 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = heavy_tank_chassis_1 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = heavy_tank_chassis_2 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = heavy_tank_chassis_3 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = modern_tank_chassis value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = super_heavy_tank_chassis_1 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = land_cruiser_chassis_1 value = 100 }
+}
+
+always_upgrade_fighters = {
+	enable = { always = yes }
+	abort_when_not_enabled = yes
+	
+	ai_strategy = { type = production_upgrade_desire_offset id = small_plane_airframe_1 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = small_plane_airframe_2 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = small_plane_airframe_3 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = small_plane_airframe_4 value = 100 }
+}
+
+majors_go_crazy = {
+	enable = {
+		is_major = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = force_build_armies
+		value = 100
+	}
+}
+
+we_need_nuclear_reactor = {
+	enable = {
+		is_special_project_completed = sp:sp_nuclear_reactor
+		nuclear_reactor < 10
+		num_of_military_factories > 249
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = nuclear_reactor
+		value = 10
+	}
+}
+
+we_need_nuclear_reactor_commercial = {
+	enable = {
+		is_special_project_completed = sp:sp_commercial_nuclear_reactor
+		commercial_nuclear_reactor < 10
+		num_of_military_factories > 249
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = commercial_nuclear_reactor
+		value = 10
+	}
+}
+
+default_railway_gun_production = {
+	allowed = { has_dlc = "No Step Back" }
+	enable = {
+		has_tech = railway_gun
+		num_divisions > 100
+		is_major = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = railway_gun
+		value = 1
+	}
+}
+
+default_build_a_lw_facility_minor = {
+	enable = {
+		is_major = no
+		NOT = { has_facility_specialization = specialization_land }
+		num_of_civilian_factories > 40
+		num_of_military_factories > 40
+		OR = {
+			has_tech = improved_light_tank_chassis
+			has_tech = basic_medium_tank_chassis
+			has_tech = improved_heavy_tank_chassis
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = land_facility
+		value = 1
+	}
+}
+
+default_build_an_air_facility_minor = {
+	enable = {
+		is_major = no
+		NOT = { has_facility_specialization = specialization_air }
+		num_of_military_factories > 40
+		if = {
+			limit = { has_dlc_bba = yes }
+			OR = {
+				has_tech = basic_small_airframe
+				has_tech = basic_medium_airframe
+				has_tech = basic_large_airframe
+			}
+		}
+		else = {
+			OR = {
+				has_tech = fighter1
+				has_tech = heavy_fighter1
+				has_tech = tactical_bomber1
+				has_tech = strategic_bomber1
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = air_facility
+		value = 1
+	}
+}
+
+default_build_facility_land_powers = {
+	enable = {
+		is_major = yes
+		num_of_civilian_factories > 80
+		num_of_military_factories > 80
+		land_facility < 3
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = land_facility
+		value = 1
+	}
+}
+
+default_build_another_air_facility = {
+	enable = {
+		is_major = yes
+		num_of_civilian_factories > 60
+		num_of_military_factories > 60
+		air_facility < 2
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = air_facility
+		value = 1
+	}
+}
+
+

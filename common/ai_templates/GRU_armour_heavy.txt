@@ -8,8 +8,8 @@ heavy_armour_generic = {
 
 	available_for = { GRU GER }
 
-   	upgrade_prio = {
-		factor = 2000
+    upgrade_prio = {
+		factor = 1000
 		modifier = {
 			factor = 0
 			is_eligible_for_heavy_armor_production = no
@@ -25,13 +25,13 @@ heavy_armour_generic = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { has_doctrine = new_mobile_warfare }
 			OR = {
 				NOT = { has_subdoctrine_in_track = infantry }
 				NOT = { has_subdoctrine_in_track = combat_support }
 				NOT = { has_subdoctrine_in_track = armor }
 				NOT = { has_subdoctrine_in_track = operations }
 			}
+			NOT = { has_doctrine = new_mobile_warfare }
 		}
 		modifier = { 
 			has_doctrine = new_mobile_warfare
@@ -40,7 +40,10 @@ heavy_armour_generic = {
 	}
 
 	motorized_heavy = {
-        can_upgrade_in_field = { always = yes }
+        can_upgrade_in_field = {
+			has_equipment = { mechanized_equipment > 100 }
+			has_equipment = { heavy_tank_chassis > 100 }
+		}
 		reinforce_prio = 2
 
 		upgrade_prio = {
@@ -66,20 +69,28 @@ heavy_armour_generic = {
 	}
 
 	mechanized_heavy = {
-        can_upgrade_in_field = { always = yes }
+        can_upgrade_in_field = { always = no }
 		reinforce_prio = 2
 
 		upgrade_prio = {
 			base = 100
+			modifier = {
+				date < 1941.1.1
+				factor = 0
+			}
 			modifier = {
 				factor = 0
 				NOT = { has_tech = mechanised_infantry }
 			}
 			modifier = {
 				factor = 0
-				NOT = { has_subdoctrine_in_track = infantry }
+				OR = {
+					NOT = { has_subdoctrine_in_track = infantry }
+					NOT = { has_subdoctrine_in_track = combat_support }
+					NOT = { has_subdoctrine_in_track = operations }
+				}
 			}
-          		modifier = {
+           	 	modifier = {
 				factor = 0
 				is_eligible_for_improved_heavy_armor_production = no
 			}

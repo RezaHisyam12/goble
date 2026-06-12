@@ -1576,8 +1576,8 @@ RUS_total_war_against_german_socialist = {
 			has_war_with = ROOT
 		}
 		OR = {
-			NOT = { country_exists = FRA }
-			FRA = { has_capitulated = yes }
+			FRA = { exists = no }
+			date > 1943.1.1
 		}
 		TRM = { exists = no }
 		surrender_progress < 0.1

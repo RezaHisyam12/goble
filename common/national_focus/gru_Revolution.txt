@@ -5093,16 +5093,13 @@ shared_focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_panzertruppe"
 			add_ideas = GRU_panzer
 			custom_effect_tooltip = tooltip_white_line	
-			custom_effect_tooltip = masterful_blitz_effect
+			unlock_tactic = tactic_masterful_blitz
 			custom_effect_tooltip = tooltip_white_line
 			add_mastery_bonus = {
 				name = GRU_panzertruppe
 				bonus = 0.1
 				days = 365
 				track = armor
-			}
-			hidden_effect = {
-				set_technology = { masterful_blitz = 1 popup = no }
 			}
 		}
 	}
@@ -5129,16 +5126,13 @@ shared_focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_mass_conscription"
 			add_ideas = GRU_masses
 			custom_effect_tooltip = tooltip_white_line	
-			custom_effect_tooltip = tech_human_wave_tactics_effect
+			unlock_tactic = tactic_human_wave_tactics
 			custom_effect_tooltip = tooltip_white_line
 			add_mastery_bonus = {
 				name = GRU_mass_conscription
 				bonus = 0.1
 				days = 365
 				track = combat_support
-			}
-			hidden_effect = {
-				set_technology = { tech_human_wave_tactics = 1 popup = no }
 			}
 		}
 	}

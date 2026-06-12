@@ -2543,6 +2543,14 @@ generic_heavy_tanks = {
 				NOT = { has_subdoctrine_in_track = operations }
 			}
 		}
+		modifier = { 
+			has_doctrine = grand_battleplan
+			factor = 4
+		}
+		modifier = { 
+			has_doctrine = new_mobile_warfare
+			factor = 4
+		}
 	}
 
 	basic_heavy_tank_default = {
@@ -2598,8 +2606,10 @@ generic_heavy_tanks = {
 			type = heavy_tank_chassis_2
 			modules = {
 				main_armament_slot = { 
-					any_of = { 
-						tank_heavy_cannon_2 
+					any_of = {
+						tank_heavy_cannon 
+						tank_heavy_cannon_2
+						tank_high_velocity_cannon
 						tank_high_velocity_cannon_2 
 					} 
 				}
