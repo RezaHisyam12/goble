@@ -39,6 +39,11 @@ light_armour_generic = {
 				light_armor = 6
 			}
 
+			regimental_support = {
+				anti_air_battery = 1
+				mot_fire_support = 1
+			}
+
 			support = {
 				artillery = 1
 				anti_air = 1
@@ -78,6 +83,11 @@ light_armour_generic = {
 				light_armor = 6
 				mot_artillery_brigade = 1
 				mot_anti_air_brigade = 1
+			}
+
+			regimental_support = {
+				anti_air_battery = 1
+				mot_fire_support = 1
 			}
 
 			support = {
@@ -127,6 +137,11 @@ light_armour_generic = {
 				mot_anti_air_brigade = 1
 			}
 
+			regimental_support = {
+				anti_air_battery = 1
+				mot_fire_support = 1
+			}
+
 			support = {
 				anti_tank = 1
 				light_tank_recon = 1
@@ -172,6 +187,11 @@ light_armour_generic = {
 				light_armor = 8
 				motorized_rocket_brigade = 2
 				mot_anti_air_brigade = 2
+			}
+
+			regimental_support = {
+				anti_air_battery = 1
+				mot_fire_support = 1
 			}
 
 			support = {

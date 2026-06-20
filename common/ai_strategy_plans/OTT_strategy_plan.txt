@@ -33,10 +33,9 @@ TUR_Arslan_plan_2 = {
 		original_tag = TUR
 	}
 	enable = {
-		OR = {
-			has_government = social_conservative
-			has_government = paternal_autocrat
-		}
+		has_completed_focus = OTT_Enforce_Mecelle
+		has_completed_focus = OTT_Desecularise_Army
+		has_completed_focus = OTT_Revert_Social_Reforms
 	}
 	abort = {
 

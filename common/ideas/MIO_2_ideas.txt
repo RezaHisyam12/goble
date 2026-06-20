@@ -1,4 +1,105 @@
 ideas = {
+	country = {
+		### MIO ideas ### (moved from visible ones to here)
+		RUS_tsagi_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_tsagi_1" }
+			name = RUS_tsagi_rockets
+			picture = tsagi
+			equipment_bonus = {
+				guided_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.25
+				}
+			}
+		}
+		RUS_tsagi_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_tsagi_2" }
+			name = RUS_tsagi_rockets
+			picture = tsagi
+			equipment_bonus = {
+				guided_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.25
+					air_range = 4.0
+				}
+			}
+		}
+		RUS_tsagi_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_tsagi_3" }
+			name = RUS_tsagi_rockets
+			picture = tsagi
+			equipment_bonus = {
+				guided_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.25
+					air_range = 4.0
+					air_bombing = 0.1
+				}
+			}
+		}
+		RUS_tsagi_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_tsagi_4" }
+			name = RUS_tsagi_rockets
+			picture = tsagi
+			equipment_bonus = {
+				guided_missile_equipment = {
+					instant = yes
+					air_range = 4.0
+				}
+			}
+		}
+		RUS_tsagi_5 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_tsagi_5" }
+			name = RUS_tsagi_rockets
+			picture = tsagi
+			equipment_bonus = {
+				guided_missile_equipment = {
+					instant = yes
+					air_range = 4.0
+					air_bombing = 0.1
+				}
+			}
+		}
+		dalzavod_mio_upgrade_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea dalzavod_mio_upgrade_1" }
+			name = dalzavod
+			picture = generic_naval_manufacturer_2
+			modifier = {
+				refit_ic_cost = -0.1
+			}
+		}
+		dalzavod_mio_upgrade_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea dalzavod_mio_upgrade_2" }
+			name = dalzavod
+			picture = generic_naval_manufacturer_2
+			modifier = {
+				refit_ic_cost = -0.1
+				refit_speed = 0.1
+			}
+		}
+		dalzavod_mio_upgrade_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea dalzavod_mio_upgrade_3" }
+			name = dalzavod
+			picture = generic_naval_manufacturer_2
+			modifier = {
+				refit_ic_cost = -0.1
+				refit_speed = 0.1
+				repair_speed_factor = 0.1
+			}
+		}
+		dalzavod_mio_upgrade_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea dalzavod_mio_upgrade_4" }
+			name = dalzavod
+			picture = generic_naval_manufacturer_2
+			modifier = {
+				refit_ic_cost = -0.1
+				refit_speed = 0.1
+				repair_speed_factor = 0.1
+				naval_accidents_chance = -0.15
+			}
+		}
+	}
+
 	hidden_ideas = {
 		### Russian Faction Ideas ###
 		RUS_surrender_limit_idea = { #this is so RUS doesn't cap before Scripted Peace, removed by `on_peace`
@@ -213,104 +314,6 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_junkers_navy_xp_2" }
 			modifier = {
 				experience_gain_navy = 0.3
-			}
-		}
-		### MIO ideas ### (moved from visible ones to here)
-		RUS_tsagi_1 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_tsagi_1" }
-			name = RUS_tsagi_rockets
-			picture = tsagi
-			equipment_bonus = {
-				guided_missile_equipment = {
-					instant = yes
-					build_cost_ic = -0.25
-				}
-			}
-		}
-		RUS_tsagi_2 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_tsagi_2" }
-			name = RUS_tsagi_rockets
-			picture = tsagi
-			equipment_bonus = {
-				guided_missile_equipment = {
-					instant = yes
-					build_cost_ic = -0.25
-					air_range = 4.0
-				}
-			}
-		}
-		RUS_tsagi_3 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_tsagi_3" }
-			name = RUS_tsagi_rockets
-			picture = tsagi
-			equipment_bonus = {
-				guided_missile_equipment = {
-					instant = yes
-					build_cost_ic = -0.25
-					air_range = 4.0
-					air_bombing = 0.1
-				}
-			}
-		}
-		RUS_tsagi_4 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_tsagi_4" }
-			name = RUS_tsagi_rockets
-			picture = tsagi
-			equipment_bonus = {
-				guided_missile_equipment = {
-					instant = yes
-					air_range = 4.0
-				}
-			}
-		}
-		RUS_tsagi_5 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_tsagi_5" }
-			name = RUS_tsagi_rockets
-			picture = tsagi
-			equipment_bonus = {
-				guided_missile_equipment = {
-					instant = yes
-					air_range = 4.0
-					air_bombing = 0.1
-				}
-			}
-		}
-		dalzavod_mio_upgrade_1 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea dalzavod_mio_upgrade_1" }
-			name = dalzavod
-			picture = generic_naval_manufacturer_2
-			modifier = {
-				refit_ic_cost = -0.1
-			}
-		}
-		dalzavod_mio_upgrade_2 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea dalzavod_mio_upgrade_2" }
-			name = dalzavod
-			picture = generic_naval_manufacturer_2
-			modifier = {
-				refit_ic_cost = -0.1
-				refit_speed = 0.1
-			}
-		}
-		dalzavod_mio_upgrade_3 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea dalzavod_mio_upgrade_3" }
-			name = dalzavod
-			picture = generic_naval_manufacturer_2
-			modifier = {
-				refit_ic_cost = -0.1
-				refit_speed = 0.1
-				repair_speed_factor = 0.1
-			}
-		}
-		dalzavod_mio_upgrade_4 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea dalzavod_mio_upgrade_4" }
-			name = dalzavod
-			picture = generic_naval_manufacturer_2
-			modifier = {
-				refit_ic_cost = -0.1
-				refit_speed = 0.1
-				repair_speed_factor = 0.1
-				naval_accidents_chance = -0.15
 			}
 		}
 	}

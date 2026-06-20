@@ -8852,10 +8852,6 @@ shared_focus = {
 		cost = 6	
 		ai_will_do = {
 			factor = 1000
-			modifier = {
-				factor = 0
-				AUS = { exists = yes }
-			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_LEBENSRAUM"
@@ -8863,7 +8859,7 @@ shared_focus = {
 			custom_effect_tooltip = GRU_tt_lebensraum_2_decisions			
 			}
 		prerequisite = { focus = GRU_NMDVP_RED_COLONIALISM  }
-		}	
+	}	
 	shared_focus = {
 		id = GRU_NMDVP_REMOVE_KAISER
 		icon = GRU_NMDVP_REMOVE_KAISER
@@ -9556,7 +9552,7 @@ shared_focus = {
 				}
 				add_timed_idea = {
 					idea = GRU_wide_front_operations_idea
-					days = 365
+					days = 550
 				}
 			}
 			custom_effect_tooltip = tooltip_white_line
@@ -9595,7 +9591,7 @@ shared_focus = {
 				}
 				add_timed_idea = {
 					idea = GRU_break_fortifications_idea
-					days = 365
+					days = 550
 				}
 			}
 			custom_effect_tooltip = tooltip_white_line

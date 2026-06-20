@@ -74,6 +74,11 @@ GRU_infantry = {
 				artillery_brigade = 1
 			}
 
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
+			}
+
 			support = {
 				artillery = 1
 				anti_air = 1
@@ -101,6 +106,11 @@ GRU_infantry = {
 			regiments = {
 				infantry = 12
 				artillery_brigade = 2
+			}
+
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
 			}
 
 			support = {
@@ -143,6 +153,11 @@ GRU_infantry = {
 				artillery_brigade = 2
 				anti_air_brigade = 1
                			anti_tank_brigade = 1
+			}
+
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
 			}
 
 			support = {

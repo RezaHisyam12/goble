@@ -29,6 +29,11 @@ RR_Werwolf_generic = {
 				anti_air_brigade = 1
 			}
 
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
+			}
+
 			support = {
 				engineer = 1
 				signal_company = 1
@@ -72,6 +77,11 @@ RR_Werwolf_generic = {
 				RR_1_motorized = 12
 				mot_artillery_brigade = 3
 				mot_anti_air_brigade = 1
+			}
+
+			regimental_support = {
+				field_guns = 1
+				mot_fire_support = 1
 			}
 
 			support = {

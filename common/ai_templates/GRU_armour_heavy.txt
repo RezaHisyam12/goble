@@ -58,6 +58,11 @@ heavy_armour_generic = {
 				motorized = 6
 			}
 
+			regimental_support = {
+				anti_air_battery = 1
+				mot_fire_support = 1
+			}
+
 			support = {
 				light_tank_recon = 1
 				heavy_flame_tank = 1
@@ -106,6 +111,11 @@ heavy_armour_generic = {
 				heavy_tank_destroyer_brigade = 2
 				heavy_sp_anti_air_brigade = 2
 				mechanized = 8
+			}
+
+			regimental_support = {
+				anti_air_battery = 1
+				mot_fire_support = 1
 			}
 
 			support = {
@@ -158,6 +168,11 @@ heavy_armour_generic = {
 				modern_tank_destroyer_brigade = 2
 				modern_sp_anti_air_brigade = 2
 				mechanized = 8
+			}
+
+			regimental_support = {
+				anti_air_battery = 1
+				mot_fire_support = 1
 			}
 
 			support = {

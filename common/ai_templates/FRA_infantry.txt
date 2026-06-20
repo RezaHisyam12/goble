@@ -74,6 +74,11 @@ FRA_infantry = {
 				artillery_brigade = 1
 			}
 
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
+			}
+
 			support = {
 				assault_battalion = 1
 				artillery = 1
@@ -103,6 +108,11 @@ FRA_infantry = {
 				infantry = 10
 				artillery_brigade = 3
                			anti_air_brigade = 1
+			}
+
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
 			}
 
 			support = {
@@ -145,6 +155,11 @@ FRA_infantry = {
 				artillery_brigade = 2
 				anti_air_brigade = 1
                			anti_tank_brigade = 1
+			}
+
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
 			}
 
 			support = {

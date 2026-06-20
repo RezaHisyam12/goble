@@ -4,14 +4,12 @@
 GRU_hates_socialists = {
 	reversed = yes
 
-	enable_reverse = {
+	enable = {
+		has_socialist_government = yes
 		GRU = {
 			is_subject = no
 			has_socialist_government = no
 		}
-	}
-	enable = {
-		has_socialist_government = yes
 	}
 
 	abort_when_not_enabled = yes
@@ -19,16 +17,11 @@ GRU_hates_socialists = {
 	ai_strategy = {
 		type = antagonize
 		id = GRU
-		value = 200
+		value = 1000
 	}
 	ai_strategy = {
 		type = diplo_action_acceptance
 		target = market_access_rights
-		id = GRU
-		value = -1000
-	}
-	ai_strategy = {
-		type = send_volunteers_desire
 		id = GRU
 		value = -1000
 	}
@@ -36,29 +29,25 @@ GRU_hates_socialists = {
 GRU_hates_japan = {
 	reversed = yes
 
-	enable_reverse = {
+	enable = {
+		is_in_faction_with = JAP
+		JAP = { is_faction_leader = yes }
 		GRU = {
 			is_subject = no
 			has_socialist_government = no
 		}
-		JAP = { is_faction_leader = yes }
-	}
-	enable = {
-		is_in_faction_with = JAP
 	}
 	abort_when_not_enabled = yes
-
-	target_array = JAP.faction_members
 
 	ai_strategy = {
 		type = antagonize
 		id = JAP
-		value = 300
+		value = 1000
 	}
 	ai_strategy = {
 		type = diplo_action_acceptance
 		target = market_access_rights
-		id = GRU
+		id = JAP
 		value = -1000
 	}
 }
@@ -92,7 +81,7 @@ stahlpakt_hates_russia = {
 	ai_strategy = {
 		type = diplo_action_acceptance
 		target = market_access_rights
-		id = GRU
+		id = RUS
 		value = -1000
 	}
 }
@@ -1553,10 +1542,9 @@ STP_defend_eastern_front_northern_oststaaten = {
 	enable = {
 		OR = {
 			country_exists = RUS
-			RUS = { has_capitulated = no }
-			has_war_with = RUS
+			RUS = { is_faction_leader = yes }
 		}
-		is_ally_with = GRU
+		is_in_faction_with = GRU
 		NOT = { has_war_with = AUS }
 	}
 	abort_when_not_enabled = yes
@@ -1571,7 +1559,6 @@ STP_defend_eastern_front_northern_oststaaten = {
 STP_defend_eastern_front_southern_oststaaten = {
 	allowed = {
 		OR = {
-			tag = VKP
 			is_balkan_tag = yes
 			is_ukrainian_tag = yes
 		}
@@ -1579,10 +1566,9 @@ STP_defend_eastern_front_southern_oststaaten = {
 	enable = {
 		OR = {
 			country_exists = RUS
-			RUS = { has_capitulated = no }
-			has_war_with = RUS
+			RUS = { is_faction_leader = yes }
 		}
-		is_ally_with = GRU
+		is_in_faction_with = GRU
 		NOT = { has_war_with = AUS }
 	}
 	abort_when_not_enabled = yes
@@ -1907,12 +1893,12 @@ german_default_more_tank_production = {
 	ai_strategy = {
 		type = role_ratio #even more tanks
 		id = armor
-		value = 15
+		value = 20
 	}
 	ai_strategy = {
 		type = equipment_production_factor
 		id = armor
-		value = 15
+		value = 20
 	}
 	ai_strategy = {
 		type = equipment_production_factor
@@ -1922,17 +1908,17 @@ german_default_more_tank_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = light_armor_role
-		value = 20
+		value = 40
 	}
 	ai_strategy = {
 		type = role_ratio
 		id = heavy_armor_role
-		value = 10
+		value = 20
 	}
 	ai_strategy = {
 		type = role_ratio
 		id = tank_destroyer_role
-		value = 10
+		value = 20
 	}
 	ai_strategy = {
 		type = equipment_variant_production_factor

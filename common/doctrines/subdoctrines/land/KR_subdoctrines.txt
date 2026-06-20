@@ -16,7 +16,7 @@ maneuver_integration_combat_support = {
     }
 
     ai_will_do = { 
-        base = 2
+        base = 0
     
     }
 
@@ -220,11 +220,18 @@ reformisten_subdoctrine = {
 			category_all_infantry = {
 				max_strength = 0.1
 			}
+			fire_support = {
+				soft_attack = 0.1
+			}
 			max_planning_factor = 0.1
 			org_loss_when_moving = -0.15
 		}
 		reformisten_subdoctrine3 = {
 		#3
+			mot_fire_support = {
+				max_organisation = 5
+				soft_attack = 0.1
+			}
 			experience_loss_factor = -0.1
 			category_all_armor = {
 				hardness = 0.1
@@ -315,8 +322,12 @@ democratic_organization_subdoctrine = {
         
         democratic_organization5 = {
 		#4
+			category_regimental_support_artillery = {
+				max_organisation = 5
+				soft_attack = 0.1
+			}
 			planning_speed = 0.05
-            experience_gain_army_unit_factor = 0.05
+            		experience_gain_army_unit_factor = 0.05
 		}
 	}
 }
@@ -385,6 +396,10 @@ golovin_reform_subdoctrine = {
 			category_line_artillery = {
 				max_organisation = 3
 			}
+			category_regimental_support_artillery = {
+				max_organisation = 5
+				soft_attack = 0.1
+			}
 			category_all_armor = {
 				initiative = 0.15
 			}
@@ -450,11 +465,14 @@ messner_subdoctrine = {
 		messner_subdoctrine1 = {
 		#1
 			army_attack_speed_factor = 0.1
-            category_line_artillery = {
+            		category_line_artillery = {
 				recon = 0.5
 				initiative = 0.1
 			}
-            category_tanks = {
+ 			category_regimental_support_artillery = {
+				breakthrough = 0.1
+			}
+           		category_tanks = {
 				recon = 0.2
 				initiative = 0.2
 			}
@@ -615,6 +633,10 @@ fronde_subdoctrine = {
             }
         }
         fronde_subdoctrine3 = {
+			category_regimental_support_artillery = {
+				max_organisation = 5
+				soft_attack = 0.1
+			}
             dig_in_speed_factor = 0.2
             max_dig_in = 5
         }
@@ -680,7 +702,10 @@ altgardisten_subdoctrine = {
                 max_organisation = 10
                 maximum_speed = 0.2
             }
-            land_reinforce_rate = 0.02
+ 		fire_support = {
+			soft_attack = 0.1
+		}
+           land_reinforce_rate = 0.02
         }
         altgardisten_subdoctrine3 = {
             army_speed_factor = 0.05
@@ -924,14 +949,14 @@ continental_militia_warfare = {
 	effect = {
 		add_manpower = 50000
 	}
-    training_time_army_factor = -0.05
-    army_org_factor = -0.05
+    	training_time_army_factor = -0.05
+    	army_org_factor = -0.05
 	conversion_cost_civ_to_mil_factor = -0.1
 
     rewards = {
 		continental_militia_warfare1 = {
 		#1
-			category_militia = {
+			militia = {
 				max_organisation = 5
 				default_morale = 0.1
 			}
@@ -955,12 +980,18 @@ continental_militia_warfare = {
 				infantry_equipment = {
 					build_cost_ic = -0.1
 				}
+				category_regimental_support_artillery = {
+					soft_attack = 0.05
+				}
+				fire_support = {
+					soft_attack = 0.05
+				}
 			}
 		}
 		continental_militia_warfare4 = {
 		#4
 			equipment_conversion_speed = 0.10
-			category_militia = {
+			militia = {
 				max_organisation = 5
 				default_morale = 0.1
 			}

@@ -7,21 +7,11 @@ is_eligible_for_improved_armor_production = {
 }
 
 is_eligible_for_heavy_armor_production = {
-	OR = {
-		num_of_military_factories > 50
-		AND = {
-			is_eligible_for_armor_production = yes
-			has_doctrine = grand_battleplan
-		}
-	}
+	num_of_military_factories > 50
 }
 
 is_eligible_for_improved_heavy_armor_production = {
 	num_of_military_factories > 75
-}
-
-is_eligible_for_light_spaa_space_marine_production = {
-	num_of_military_factories > 120
 }
 
 is_eligible_for_light_aircraft_production = {

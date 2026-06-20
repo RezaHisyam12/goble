@@ -2042,7 +2042,8 @@ ideas = {
 			picture = GRU_guard_2
 			allowed = { always = no }
 			modifier = {
-				national_populist_drift = 0.05
+				unit_limit_bonus = 20
+				national_populist_drift = 0.06
 				mobilization_speed = 0.15
 				training_time_factor = -0.50
 				training_time_army_factor = -0.25

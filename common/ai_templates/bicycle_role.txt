@@ -40,6 +40,11 @@ bicycle_generic = {
 				artillery_brigade = 1
 			}
 
+			regimental_support = {
+				field_guns = 1
+				mot_fire_support = 1
+			}
+
 			support = {
 				artillery = 1
 				anti_air = 1

@@ -48,6 +48,11 @@ line_irregulars = {
 				artillery_brigade = 1
 			}
 
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
+			}
+
 			support = {
 				artillery = 1
 				anti_air = 1
@@ -79,6 +84,11 @@ line_irregulars = {
 			regiments = {
 				irregular_infantry = 12
 				artillery_brigade = 2
+			}
+
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
 			}
 
 			support = {
@@ -117,6 +127,11 @@ line_irregulars = {
 			regiments = {
 				irregular_infantry = 17
 				artillery_brigade = 3
+			}
+
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
 			}
 
 			support = {

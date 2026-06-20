@@ -53,6 +53,11 @@ armour_landcruiser_generic = {
 				motorized = 3
 			}
 
+			regimental_support = {
+				anti_air_battery = 1
+				mot_fire_support = 1
+			}
+
 			support = {
 				land_cruiser = 1
 				armored_engineer = 1
@@ -99,6 +104,11 @@ armour_landcruiser_generic = {
 				modern_sp_anti_air_brigade = 4
 				mechanized = 3
 				motorized = 3
+			}
+
+			regimental_support = {
+				anti_air_battery = 1
+				mot_fire_support = 1
 			}
 
 			support = {

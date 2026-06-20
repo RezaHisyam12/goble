@@ -13,7 +13,7 @@
 		icon = VKB_COLONIZE
 		relative_position_id = VK_FOCUS_SHARED_ESTABLISH_VK
 		x = 0
-		y = 3
+		y = 2
 		available = {
 						VKB = {
 								controls_state = 12

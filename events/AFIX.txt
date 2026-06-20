@@ -744,13 +744,15 @@ country_event = {	#Name of the Caliphate
 
 	option = {
 		name = ottars.14.a
-		
+		ai_chance = {
+			factor = 80
+		}		
 	}
 	
 	option = {
 		name = ottars.14.b
 		ai_chance = {
-			factor = 20
+			factor = 10
 		}
 		hidden_effect = {
 			set_cosmetic_tag = OTT_caliphate_larp
@@ -760,7 +762,7 @@ country_event = {	#Name of the Caliphate
 	option = {
 		name = ottars.14.c
 		ai_chance = {
-			factor = 80
+			factor = 10
 		}
 		hidden_effect = {
 			set_cosmetic_tag = OTT_caliphate_sublime

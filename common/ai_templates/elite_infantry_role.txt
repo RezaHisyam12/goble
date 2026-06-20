@@ -29,6 +29,11 @@ elite_infantry_generic = {
 				anti_air_brigade = 1
 			}
 
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
+			}
+
 			support = {
 				recon = 1
 				engineer = 1

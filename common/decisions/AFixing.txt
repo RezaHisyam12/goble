@@ -2400,6 +2400,7 @@ Ottoman_Pan_Islam_ambition_decisions = {
 		icon = hol_draw_up_staff_plans
 
 		available = {
+			OTT_cairo_pact_defeated = yes
 			OR = {
 				is_owner_neighbor_of = FROM
 				any_allied_country = { is_owner_neighbor_of = FROM }
