@@ -1,3 +1,36 @@
+SOV_block_focus = {
+	name = "SOV_block_focus"
+	desc = ""
+
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		OR = {
+			country_exists = GRU
+			GRU = { is_faction_leader = yes }
+		}
+	}
+	abort = {
+		date > 1942.1.1
+		GRU = { is_faction_leader = no }
+	}
+
+	focus_factors = {
+		RUS_Join_The_Internationale = 0
+		RUS_The_New_Internationale = 0
+		RUS_Eastern_Bloc = 0
+		SOV_Headquarters_Of_The_World_Revolution = 0
+		SOV_Communism_Marches = 0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1
+	}
+}
+
 SOV_research_slot_plan_kamenev = {
 	name = "SOV_research_slot_plan_kamenev"
 	desc = ""

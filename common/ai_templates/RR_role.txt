@@ -16,6 +16,7 @@ RR_Werwolf_generic = {
 
 	RR_Werwolf_template_early = {
         can_upgrade_in_field = { always = yes }
+		division_names_group = GRU_RR_Werwolf
 		reinforce_prio = 2
 
 		upgrade_prio = {
@@ -46,6 +47,7 @@ RR_Werwolf_generic = {
 
 	RR_Werwolf_template_late = {
         can_upgrade_in_field = { always = yes }
+		division_names_group = GRU_RR_01
 		reinforce_prio = 2
 
 		upgrade_prio = {

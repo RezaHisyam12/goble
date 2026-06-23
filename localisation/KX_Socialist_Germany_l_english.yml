@@ -511,7 +511,7 @@ GRU_panzer_divisions:0 "Send the Panzer Divisions"
  GER_imperial_shipyards_desc: "The shipyards of Kiel, Danzig and Wilhelmshaven are known as the Three Imperial Shipyards, as the produced the majority of the ships for the Prussian and Imperial navies. We must expand their facilities and sign new contracts with the shipyard authorities to bolster our naval production there."
  GER_graf_zeppelin: "Flugzeugträger A"
  GER_graf_zeppelin_desc: "Experiments after the Weltkrieg have shown that air power is likely to play a crucial role in the naval battles of the future - planes launched off specially designed carriers can strike farther and deadlier than even the heaviest battleships. We must award a contract to a company to begin construction of Flugzeugträger A - Germany's own aircraft carrier."
- GER_mass_tank_production_idea: "Mass Tank Production"
+ GER_mass_tank_production_idea: "Perfection of Armour Design"
  GER_mass_tank_production_idea_desc: "Our factories are chirping out more tanks than usual. We shall mass a large stockpile to meet our equipment quotas and ensure the army never faces a lack of tanks."
 
 
@@ -4956,6 +4956,14 @@ sturmtruppe:0 "Sturmtruppe"
 sturmtruppe_long:0 "Sturmtruppe"
 tech_sturmtruppe:0 "Sturmtruppe"
 sturmtruppe_tech_effect:0 "Enables §Y$tech_sturmtruppe$§! battalions"
+super_heavy_armor_battalion:0 "Super-Heavy Armor"
+super_heavy_armor_battalion_long:0 "Super-Heavy Armor Battalion"
+land_cruiser_battalion:0 "Land Cruiser"
+land_cruiser_battalion_long:0 "Land Cruiser Battalion"
+tech_land_cruiser_battalion:0 "Land Cruiser Battalion"
+tech_land_cruiser_battalion_effect:0 "Enables §R$tech_land_cruiser_battalion$§!"
+tech_land_cruiser_battalion_effect_tt: "If the special project §H$sp_land_land_cruiser$§! has been completed:\n"
+
 
 ### Leaders
 

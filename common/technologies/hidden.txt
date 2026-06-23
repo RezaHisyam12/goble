@@ -1004,5 +1004,20 @@ technologies = {
 			sturmtruppe_battalion
 		}
 	}
+
+	tech_land_cruiser_battalion = {
+		research_cost = 1
+
+		#only added by effect
+		allow = {
+			always = no
+		}
+
+		#If you change these
+		#Change the custom tooltip too: tech_land_cruiser_battalion_effect
+		enable_subunits = {
+			land_cruiser_battalion
+		}
+	}
 }
 

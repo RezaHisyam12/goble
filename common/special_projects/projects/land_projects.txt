@@ -200,7 +200,7 @@ sp_land_land_cruiser = {
 	ai_will_do = {
 		base = 2
 		modifier = {
-			factor = 50
+			factor = 500
 			tag = GRU
 		}
 	}

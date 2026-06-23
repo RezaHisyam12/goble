@@ -20,6 +20,7 @@ GER = {
 
 	land_cruiser_chassis_1 = {
 		pool = {
+			weight = 20.0
 			icons = {
 				GFX_GER_land_cruiser_armor_2_medium
 				GFX_GER_land_cruiser_armor_medium
@@ -52,14 +53,12 @@ GRU = {
 
 	land_cruiser_chassis_1 = {
 		pool = {
-			weight = 2
+			weight = 20.0
 			icons = {
 				GFX_GER_land_cruiser_armor_2_medium
-				GFX_GER_land_cruiser_armor_medium
 			}
 			models = {
 				GER_land_cruiser_alt_0_entity
-				GER_land_cruiser_entity
 			}
 		}
 	}

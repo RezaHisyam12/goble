@@ -6,10 +6,14 @@ RUS_block_focus = {
 		original_tag = RUS
 	}
 	enable = {
-		country_exists = GRU
+		OR = {
+			country_exists = GRU
+			GRU = { is_faction_leader = yes }
+		}
 	}
 	abort = {
-		NOT = { country_exists = GRU }
+		date > 1942.1.1
+		GRU = { is_faction_leader = no }
 	}
 
 	focus_factors = {

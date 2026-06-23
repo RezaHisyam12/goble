@@ -14,13 +14,6 @@ armour_super_heavy_generic = {
 			factor = 0
 			NOT = { has_tech = super_heavy_tank_chassis }
 		}
-		modifier = {
-			factor = 0
-			OR = {
-				NOT = { has_subdoctrine_in_track = infantry }
-				NOT = { has_subdoctrine_in_track = combat_support }
-			}
-		}
 	}
 
 	armour_super_heavy_template = {
@@ -37,16 +30,20 @@ armour_super_heavy_generic = {
 
 		target_template = {
 			regiments = {
-				heavy_armor = 1
-				heavy_tank_destroyer_brigade = 1
+				super_heavy_armor_battalion = 4
 				heavy_sp_anti_air_brigade = 4
 				mechanized = 3
 				motorized = 3
 			}
 
+			regimental_support = {
+				anti_air_battery = 1
+				mot_fire_support = 1
+			}
+
 			support = {
-				super_heavy_armor = 1
 				armored_engineer = 1
+				armored_maintenance = 1
 				medium_flame_tank = 1
 				light_tank_recon = 1
 				logistics_company = 1
@@ -73,16 +70,20 @@ armour_super_heavy_generic = {
 
 		target_template = {
 			regiments = {
-				modern_armor = 1
-				modern_tank_destroyer_brigade = 1
+				super_heavy_armor_battalion = 4
 				modern_sp_anti_air_brigade = 4
 				mechanized = 3
 				motorized = 3
 			}
 
+			regimental_support = {
+				anti_air_battery = 1
+				mot_fire_support = 1
+			}
+
 			support = {
-				super_heavy_armor = 1
 				armored_engineer = 1
+				armored_maintenance = 1
 				medium_flame_tank = 1
 				light_tank_recon = 1
 				logistics_company = 1

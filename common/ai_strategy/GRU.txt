@@ -1466,7 +1466,6 @@ STP_ignore_southern_oststaaten = { #Rest of Reichspakt should focus on BLR/BAT f
 			#Banned from Eastern Front in general
 			is_belgian_tag = yes
 			is_scandinavian_tag = yes
-			is_danubian_tag = yes
 			tag = VKN
 
 		}
@@ -1638,20 +1637,20 @@ STP_finish_off_russia = {
 
 GRU_finish_off_romania = {
 	allowed = {
-		original_tag = GRU
+		OR = {
+			original_tag = GRU
+			original_tag = HUN
+		}
 	}
 	enable = {
 		ROM = {
 			has_war_with = ROOT
 			has_capitulated = no
 		}
-		FRA = {
-			OR = {
-				exists = no
-				has_capitulated = yes
-			}
+		NOT = { 
+			202 = { is_controlled_by = RUS } #Ukraine hasn't lost Kyiv yet
+			has_war_with = FRA
 		}
-		NOT = { 202 = { is_controlled_by = RUS } } #Ukraine hasn't lost Kyiv yet
 		surrender_progress < 0.05
 	}
 	abort_when_not_enabled = yes
@@ -1672,6 +1671,46 @@ GRU_finish_off_romania = {
 	ai_strategy = {
 		type = strategic_air_importance
 		id = 15 #Romania
+		value = 15000
+	}
+}
+
+GRU_finish_off_serbia = {
+	allowed = {
+		OR = {
+			original_tag = GRU
+			original_tag = HUN
+		}
+	}
+	enable = {
+		SER = {
+			has_war_with = ROOT
+			has_capitulated = no
+		}
+		NOT = { 
+			202 = { is_controlled_by = RUS } #Ukraine hasn't lost Kyiv yet
+			has_war_with = FRA
+		}
+		surrender_progress < 0.05
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = SER
+		value = 100
+	}
+	ai_strategy = {
+		type = front_control
+		tag = SER
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = strategic_air_importance
+		id = 24 #Central Balkans
 		value = 15000
 	}
 }
@@ -1913,7 +1952,7 @@ german_default_more_tank_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = heavy_armor_role
-		value = 20
+		value = 40
 	}
 	ai_strategy = {
 		type = role_ratio

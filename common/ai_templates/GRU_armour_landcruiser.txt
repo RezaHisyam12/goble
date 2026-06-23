@@ -28,9 +28,6 @@ armour_landcruiser_generic = {
 	landcruiser_template = {
 		can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
-		models = {
-			GER_land_cruiser_alt_0_entity
-		}
 
 		upgrade_prio = {
 			base = 100
@@ -46,6 +43,7 @@ armour_landcruiser_generic = {
 
 		target_template = {
 			regiments = {
+				land_cruiser_battalion = 2
 				heavy_armor = 1
 				heavy_tank_destroyer_brigade = 1
 				heavy_sp_anti_air_brigade = 4
@@ -59,8 +57,8 @@ armour_landcruiser_generic = {
 			}
 
 			support = {
-				land_cruiser = 1
 				armored_engineer = 1
+				armored_maintenance = 1
 				heavy_flame_tank = 1
 				light_tank_recon = 1
 				logistics_company = 1
@@ -71,9 +69,6 @@ armour_landcruiser_generic = {
 	landcruiser_template_late = {
 		can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
-		models = {
-			GER_land_cruiser_alt_0_entity
-		}
 
 		upgrade_prio = {
 			base = 100
@@ -99,6 +94,7 @@ armour_landcruiser_generic = {
 
 		target_template = {
 			regiments = {
+				land_cruiser_battalion = 2
 				modern_armor = 1
 				modern_tank_destroyer_brigade = 1
 				modern_sp_anti_air_brigade = 4
@@ -112,8 +108,8 @@ armour_landcruiser_generic = {
 			}
 
 			support = {
-				land_cruiser = 1
 				armored_engineer = 1
+				armored_maintenance = 1
 				heavy_flame_tank = 1
 				light_tank_recon = 1
 				logistics_company = 1

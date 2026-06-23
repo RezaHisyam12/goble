@@ -16,6 +16,7 @@ TUR_Arslan_plan = {
 		OTT_Enforce_Mecelle
 		OTT_Desecularise_Army
 		OTT_Revert_Social_Reforms
+		OTT_Caliphate_Of_Old
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

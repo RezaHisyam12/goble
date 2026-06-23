@@ -44,6 +44,7 @@ heavy_armour_generic = {
 			has_equipment = { mechanized_equipment > 100 }
 			has_equipment = { heavy_tank_chassis > 100 }
 		}
+		division_names_group = GRU_Arm_01
 		reinforce_prio = 2
 
 		upgrade_prio = {
@@ -75,6 +76,7 @@ heavy_armour_generic = {
 
 	mechanized_heavy = {
         can_upgrade_in_field = { always = no }
+		division_names_group = GRU_Arm_01
 		reinforce_prio = 2
 
 		upgrade_prio = {
@@ -130,6 +132,7 @@ heavy_armour_generic = {
 
 	heavy_modern_armour = {
         can_upgrade_in_field = { always = yes }
+		division_names_group = GRU_Arm_01
 		reinforce_prio = 2
 
 		upgrade_prio = {

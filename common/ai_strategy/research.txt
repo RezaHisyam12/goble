@@ -1,0 +1,540 @@
+# Enhanced AI - Research
+
+
+####################################################################################################
+#	SYNTHETIC RESOURCES
+####################################################################################################
+
+research_refs_and_silos = {
+	enable = {
+		date > 1937.1.1
+		is_major = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = fuel_silos
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = synth_oil_experiments
+		value = 100
+	}
+}
+
+research_processing_techs_1 = {
+	enable = {
+		date > 1937.1.1
+		is_major = yes
+		num_of_military_factories > 50
+		synthetic_refinery > 5
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = oil_processing
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = rubber_processing
+		value = 100
+	}
+}
+
+research_processing_techs_2 = {
+	enable = {
+		date > 1939.1.1
+		is_major = yes
+		num_of_military_factories > 100
+		synthetic_refinery > 10
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = improved_oil_processing
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = improved_rubber_processing
+		value = 100
+	}
+}
+
+research_processing_techs_3 = {
+	enable = {
+		date > 1941.1.1
+		is_major = yes
+		num_of_military_factories > 150
+		synthetic_refinery > 20
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = advanced_oil_processing
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = advanced_rubber_processing
+		value = 100
+	}
+}
+
+research_processing_techs_4 = {
+	enable = {
+		date > 1943.1.1
+		is_major = yes
+		num_of_military_factories > 200
+		synthetic_refinery > 40
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = modern_oil_processing
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = modern_rubber_processing
+		value = 100
+	}
+}
+
+####################################################################################################
+#	ARMOR
+####################################################################################################
+
+research_mech = {
+	enable = {
+		date > 1939.1.1
+		is_major = yes
+		is_eligible_for_armor_production = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = mechanised_infantry
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = improved_radio
+		value = 100
+	}
+}
+
+####################################################################################################
+#	SMALL AIRCRAFT
+####################################################################################################
+
+research_fighter_and_cas_1 = {
+	enable = {
+		date > 1937.1.1
+		is_major = yes
+		is_eligible_for_light_aircraft_production = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = aa_lmg
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = early_bombs
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = iw_small_airframe
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = engines_1
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = early_fighter
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = basic_small_airframe
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = engines_2
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = fighter1
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = CAS1
+		value = 100
+	}
+}
+
+research_plane_modules = {
+	enable = {
+		date > 1938.1.1
+		is_major = yes
+		is_eligible_for_light_aircraft_production = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = aircraft_construction
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = range_improvements
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = aa_hmg
+		value = 100
+	}
+}
+
+research_fighter_and_cas_2 = {
+	enable = {
+		date > 1939.1.1
+		is_major = yes
+		is_eligible_for_improved_light_aircraft_production = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = survivability_studies
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = improved_small_airframe
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = engines_3
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = fighter2
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = CAS2
+		value = 100
+	}
+}
+
+research_fighter_and_cas_3 = {
+	enable = {
+		date > 1944.1.1
+		is_major = yes
+		is_eligible_for_improved_light_aircraft_production = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = aa_cannon_1
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = heavy_bombs
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = advanced_small_airframe
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = engines_4
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = fighter3
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = CAS3
+		value = 100
+	}
+}
+
+####################################################################################################
+#	BIG AIRCRAFT
+####################################################################################################
+
+research_tac_1 = {
+	enable = {
+		date > 1937.1.1
+		is_major = yes
+		is_eligible_for_medium_aircraft_production = yes
+		has_doctrine = new_operational_integrity
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = iw_medium_airframe
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = early_bomber
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = basic_medium_airframe
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = tactical_bomber1
+		value = 100
+	}
+}
+
+research_tac_2 = {
+	enable = {
+		date > 1940.1.1
+		is_major = yes
+		is_eligible_for_medium_aircraft_production = yes
+		has_doctrine = new_operational_integrity
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = improved_medium_airframe
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = tactical_bomber2
+		value = 100
+	}
+}
+
+research_tac_3 = {
+	enable = {
+		date > 1944.1.1
+		is_major = yes
+		is_eligible_for_medium_aircraft_production = yes
+		has_doctrine = new_operational_integrity
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = advanced_medium_airframe
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = tactical_bomber3
+		value = 100
+	}
+}
+
+research_strat_1 = {
+	enable = {
+		date > 1937.1.1
+		is_major = yes
+		is_eligible_for_heavy_aircraft_production = yes
+		has_doctrine = new_strategic_destruction
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = iw_large_airframe
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = basic_large_airframe
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = strategic_bomber1
+		value = 100
+	}
+}
+
+research_strat_2 = {
+	enable = {
+		date > 1940.1.1
+		is_major = yes
+		is_eligible_for_heavy_aircraft_production = yes
+		has_doctrine = new_strategic_destruction
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = improved_large_airframe
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = strategic_bomber2
+		value = 100
+	}
+}
+
+research_strat_3 = {
+	enable = {
+		date > 1944.1.1
+		is_major = yes
+		is_eligible_for_heavy_aircraft_production = yes
+		has_doctrine = new_strategic_destruction
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = advanced_large_airframe
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = strategic_bomber3
+		value = 100
+	}
+}
+
+research_transport_1 = {
+	enable = {
+		date > 1938.1.1
+		is_major = yes
+		is_eligible_for_heavy_aircraft_production = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = bba_early_transport_plane
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = early_transport_plane
+		value = 100
+	}
+}
+
+research_transport_2 = {
+	enable = {
+		date > 1942.1.1
+		is_major = yes
+		is_eligible_for_heavy_aircraft_production = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = bba_improved_transport_plane
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = improved_transport_plane
+		value = 100
+	}
+}
+
+research_transport_3 = {
+	enable = {
+		date > 1945.1.1
+		is_major = yes
+		is_eligible_for_heavy_aircraft_production = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = bba_strategic_airlifter
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = strategic_airlifter
+		value = 100
+	}
+}
+
+####################################################################################################
+#	OTHER
+####################################################################################################
+
+research_silly_armored_cars = {
+	enable = {
+		date > 1942.1.1
+		is_major = yes
+		num_of_military_factories > 200
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = armored_car1
+		value = 100
+	}
+}
+
+research_le_funny_katyusha = {
+	enable = {
+		date > 1942.1.1
+		is_major = yes
+		is_eligible_for_armor_production = yes
+		OR = {
+			has_doctrine = new_mobile_warfare
+			has_doctrine = mass_assault
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = rocket_artillery
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = motorized_rocket_unit
+		value = 100
+	}
+}
