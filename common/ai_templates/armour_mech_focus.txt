@@ -48,6 +48,11 @@ armour_more_trucks = {
 				anti_air = 1
 				engineer = 1
 			}
+
+			regimental_support = {
+				mot_fire_support = 1
+				anti_air_battery = 1
+			}
 		}
 	}
 
@@ -93,6 +98,11 @@ armour_more_trucks = {
 				anti_air = 1
 				anti_tank = 1
 				engineer = 1
+			}
+
+			regimental_support = {
+				mot_fire_support = 2
+				anti_air_battery = 1
 			}
 		}
 	}
@@ -140,6 +150,11 @@ armour_more_trucks = {
 				anti_tank = 1
 				engineer = 1
 			}
+
+			regimental_support = {
+				mot_fire_support = 2
+				anti_air_battery = 1
+			}
 		}
 	}
 
@@ -186,6 +201,11 @@ armour_more_trucks = {
 				anti_tank = 1
 				engineer = 1
 			}
+
+			regimental_support = {
+				mot_fire_support = 2
+				anti_air_battery = 1
+			}
 		}
 	}
 
@@ -225,6 +245,12 @@ armour_more_trucks = {
 				engineer = 1
 				logistics_company = 1
 				signal_company = 1
+			}
+
+			regimental_support = {
+				mot_fire_support = 2
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 		}
 	}
@@ -275,6 +301,12 @@ armour_more_trucks = {
 				assault_engineer = 1
 				logistics_company = 1
 				armored_signal = 1
+			}
+
+			regimental_support = {
+				mot_fire_support = 2
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 		}
 	}

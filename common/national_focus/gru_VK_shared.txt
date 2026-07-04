@@ -76,9 +76,11 @@ shared_focus = {
 		cost = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_SHARED_OUR_OWN_RR"
+			custom_effect_tooltip = sturmtruppe_tech_effect
 			custom_effect_tooltip = RR_1_motorized_tech_effect			add_ideas = GRU_guard
 			hidden_effect = {
-			set_technology = { RR_1_motorized_tech  = 1 } 
+				set_technology = { tech_sturmtruppe = 1 popup = no }
+				set_technology = { RR_1_motorized_tech = 1 popup = no } 
 			}
 		}
 		prerequisite = { focus = VK_FOCUS_SHARED_SETTLERS  }

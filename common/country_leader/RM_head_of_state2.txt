@@ -183,9 +183,7 @@ leader_traits = {
 		equipment_bonus = {
 			motorized_equipment = { soft_attack = 0.1 instant = yes }
 		}
-		experience_gain_army = 0.04
-		experience_gain_navy = 0.04
-		experience_gain_air = 0.04
+		experience_gain_army = 0.15
 		random = no
 	}
 

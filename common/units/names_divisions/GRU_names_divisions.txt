@@ -934,6 +934,40 @@ GRU_RR_01 = {
 	}
 }
 
+GRU_volks_1 = {
+	name = "Volkssturm Divisions"
+
+	for_countries = { GRU }
+
+	can_use = { has_completed_focus = GRU_volkssturm }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d. Infantry Volkssturm Division"
+}
+GRU_volks_2 = {
+	name = "Volksgrenadier divisions"
+
+	for_countries = { GRU }
+
+	can_use = { has_completed_focus = GRU_volkssturm }
+
+	division_types = { "motorized" }
+
+	fallback_name = "%d. Motorised Volkssturm Division"
+}
+GRU_volks_3 = {
+	name = "Volkspanzer Divisions"
+
+	for_countries = { GRU }
+
+	can_use = { has_completed_focus = GRU_volkssturm }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	fallback_name = "%d-я Volkspanzer Division"
+}
+
 GRU_RR_Werwolf = {
 	name = "Volksdeutsche «Werwolf»"
 

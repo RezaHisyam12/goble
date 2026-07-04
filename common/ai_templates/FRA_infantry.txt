@@ -113,6 +113,8 @@ FRA_infantry = {
 			regimental_support = {
 				field_guns = 1
 				fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 
 			support = {
@@ -158,8 +160,10 @@ FRA_infantry = {
 			}
 
 			regimental_support = {
-				field_guns = 1
+				field_guns = 2
 				fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 
 			support = {

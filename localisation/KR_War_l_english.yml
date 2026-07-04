@@ -143,6 +143,8 @@ WAR_NAME_GRU_FRA: "The Second Weltkrieg"
 WAR_NAME_FRA_GRU: "The Second Weltkrieg"
 WAR_NAME_GRU_ENG: "The Second Weltkrieg"
 WAR_NAME_ENG_GRU: "The Second Weltkrieg"
+WAR_NAME_RUS_GRU: "The Second Weltkrieg"
+WAR_NAME_GRU_RUS: "The Second Weltkrieg"
 
 ### 2nd Russo-Japanese War ###
 WAR_NAME_RUS_JAP:0 "2nd Russo-$ORDER$$SECOND$ War"

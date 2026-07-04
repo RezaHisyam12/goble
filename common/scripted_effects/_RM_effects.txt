@@ -1994,3 +1994,117 @@ GRU_add_or_modify_wunderwaffen = {
 		custom_effect_tooltip = GRU_modify_wunderwaffen_modifier_tt
 	}
 }
+
+### GRU templates ###
+
+create_GRU_volkssturm_template = {
+	if = {
+		limit = {
+			NOT = { has_template = "Volkssturm Divisions" }
+		}
+		division_template = {
+			name = "Volkssturm Divisions"
+			division_names_group = GRU_volks_1
+			is_locked = no
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 0 y = 3 }
+				
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 1 y = 3 }
+
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+				
+				artillery_brigade = { x = 3 y = 0 }
+			}
+			support = {
+				mot_recon = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				anti_air = { x = 0 y = 2 }
+				field_hospital = { x = 0 y = 3 }
+			}
+			priority = 1
+		}
+	}
+}
+
+create_GRU_volkspanzer_template = {
+	if = {
+		limit = {
+			NOT = { has_template = "Volkspanzer Divisions" }
+		}
+		division_template = {
+			name = "Volkspanzer Divisions"
+			division_names_group = GRU_volks_3
+			is_locked = no
+			regiments = {
+				medium_armor = { x = 0 y = 0 }
+				medium_armor = { x = 0 y = 1 }
+				medium_armor = { x = 0 y = 2 }
+
+				medium_sp_anti_air_brigade = { x = 1 y = 0 }
+				medium_sp_artillery_brigade = { x = 1 y = 1 }
+
+				motorized = { x = 2 y = 0 }
+				motorized = { x = 2 y = 1 }
+				motorized = { x = 2 y = 2 }
+
+				motorized = { x = 3 y = 0 }
+				motorized = { x = 3 y = 1 }
+				motorized = { x = 3 y = 2 }
+			}
+			support = {
+				armored_car_recon = { x = 0 y = 0 }
+				signal_company = { x = 0 y = 1 }
+				artillery = { x = 0 y = 2 }
+				maintenance_company = { x = 0 y = 3 }
+				logistics_company = { x = 0 y = 4 }
+			}
+			priority = 2
+		}
+	}
+}
+
+create_GRU_volksgrenadier_template = {
+	if = {
+		limit = {
+			NOT = { has_template = "Volksgrenadier Divisions" }
+		}
+		division_template = {
+			name = "Volksgrenadier Divisions"
+			division_names_group = GRU_volks_2
+			is_locked = no
+			regiments = {
+				motorized = { x = 0 y = 0 }
+				motorized = { x = 0 y = 1 }
+				motorized = { x = 0 y = 2 }
+				
+				motorized = { x = 1 y = 0 }
+				motorized = { x = 1 y = 1 }
+				motorized = { x = 1 y = 2 }
+
+				mot_artillery_brigade = { x = 2 y = 0 }
+				anti_tank_brigade = { x = 2 y = 1 }
+
+				motorized = { x = 3 y = 0 }
+				motorized = { x = 3 y = 1 }
+				
+				motorized = { x = 4 y = 0 }
+				motorized = { x = 4 y = 1 }
+			}
+			support = {
+				mot_recon = { x = 0 y = 0 }
+				engineer = { x = 0 y = 1 }
+				anti_air = { x = 0 y = 2 }
+				field_hospital = { x = 0 y = 3 }
+			}
+			priority = 1
+		}
+	}
+}

@@ -11,7 +11,7 @@ generic_fighter = {
 
 	early_fighter_1933 = {
 		priority = {
-			factor = 1
+			factor = 9999
 			modifier = {
 				has_tech = basic_small_airframe
 				factor = 0 #let's not waste XP here
@@ -19,7 +19,7 @@ generic_fighter = {
 		}
 
 		target_variant = {
-			match_value = 1000
+			match_value = 9999
 			type = small_plane_airframe_0
 			modules = {
 				fixed_main_weapon_slot = light_mg_4x
@@ -33,7 +33,7 @@ generic_fighter = {
 
 	basic_fighter_1936 = {
 		priority = {
-			factor = 100
+			factor = 9999
 			modifier = {
 				has_tech = improved_small_airframe
 				factor = 0 #let's not waste XP here
@@ -45,7 +45,7 @@ generic_fighter = {
 		}
 
 		target_variant = {
-			match_value = 2000
+			match_value = 9999
 			type = small_plane_airframe_1
 			modules = {
 				fixed_main_weapon_slot = {
@@ -64,7 +64,7 @@ generic_fighter = {
 
 	basic_fighter_1936_hmg = {
 		priority = {
-			factor = 100
+			factor = 9999
 			modifier = {
 				has_tech = improved_small_airframe
 				factor = 0 #let's not waste XP here
@@ -76,7 +76,7 @@ generic_fighter = {
 		}
 
 		target_variant = {
-			match_value = 2000
+			match_value = 9999
 			type = small_plane_airframe_1
 			modules = {
 				fixed_main_weapon_slot = heavy_mg_4x
@@ -90,7 +90,7 @@ generic_fighter = {
 
 	improved_fighter_1940 = {
 		priority = {
-			factor = 100
+			factor = 9999
 			modifier = {
 				has_tech = advanced_small_airframe
 				factor = 0 #let's not waste XP here
@@ -105,7 +105,7 @@ generic_fighter = {
 		}
 
 		target_variant = {
-			match_value = 3000
+			match_value = 9999
 			type = small_plane_airframe_2
 			modules = {
 				fixed_main_weapon_slot = heavy_mg_4x
@@ -121,7 +121,7 @@ generic_fighter = {
 
 	improved_fighter_1940_more_rubber = {
 		priority = {
-			factor = 100
+			factor = 9999
 			modifier = {
 				has_tech = advanced_small_airframe
 				factor = 0 #let's not waste XP here
@@ -134,7 +134,7 @@ generic_fighter = {
 		}
 
 		target_variant = {
-			match_value = 3000
+			match_value = 9999
 			type = small_plane_airframe_2
 			modules = {
 				fixed_main_weapon_slot = heavy_mg_4x
@@ -150,7 +150,7 @@ generic_fighter = {
 
 	advanced_fighter_1944 = {
 		priority = {
-			factor = 100
+			factor = 9999
 			modifier = {
 				has_tech = modern_small_airframe
 				factor = 0 #let's not waste XP here
@@ -165,7 +165,7 @@ generic_fighter = {
 		}
 
 		target_variant = {
-			match_value = 4000
+			match_value = 9999
 			type = small_plane_airframe_3
 			modules = {
 				fixed_main_weapon_slot = {
@@ -197,7 +197,7 @@ generic_fighter = {
 
 	advanced_fighter_1944_more_rubber = {
 		priority = {
-			factor = 100
+			factor = 9999
 			modifier = {
 				has_tech = modern_small_airframe
 				factor = 0 #let's not waste XP here
@@ -210,7 +210,7 @@ generic_fighter = {
 		}
 
 		target_variant = {
-			match_value = 4000
+			match_value = 9999
 			type = small_plane_airframe_3
 			modules = {
 				fixed_main_weapon_slot = {
@@ -242,11 +242,11 @@ generic_fighter = {
 
 	modern_fighter_1945 = {
 		priority = {
-			factor = 100
+			factor = 9999
 		}
 
 		target_variant = {
-			match_value = 4000
+			match_value = 9999
 			type = small_plane_airframe_4
 			modules = {
 				fixed_main_weapon_slot = {

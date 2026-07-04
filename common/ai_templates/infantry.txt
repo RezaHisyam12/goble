@@ -95,6 +95,11 @@ line_infantry = {
 				anti_air = 1
 				engineer = 1
 			}
+
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
+			}
 		}
 	}
 
@@ -126,6 +131,13 @@ line_infantry = {
 				engineer = 1
 				field_hospital = 1
 			}
+
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
+			}
 		}
 	}
 
@@ -156,7 +168,7 @@ line_infantry = {
 		target_template = {
 			regiments = {
 				infantry = 13
-				artillery_brigade = 2
+				artillery_brigade = 3
 				anti_tank_brigade = 1
 			}
 
@@ -166,6 +178,13 @@ line_infantry = {
 				engineer = 1
 				field_hospital = 1
 				signal_company = 1
+			}
+
+			regimental_support = {
+				field_guns = 2
+				fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 		}
 	}

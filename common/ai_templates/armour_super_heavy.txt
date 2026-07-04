@@ -37,8 +37,8 @@ armour_super_heavy_generic = {
 			}
 
 			regimental_support = {
-				anti_air_battery = 1
-				mot_fire_support = 1
+				mot_fire_support = 3
+				anti_tank_battery = 1
 			}
 
 			support = {
@@ -77,8 +77,8 @@ armour_super_heavy_generic = {
 			}
 
 			regimental_support = {
-				anti_air_battery = 1
-				mot_fire_support = 1
+				mot_fire_support = 3
+				anti_tank_battery = 1
 			}
 
 			support = {

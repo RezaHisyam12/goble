@@ -11,7 +11,7 @@ generic_cas = {
 
 	early_cas_1933 = {
 		priority = {
-			factor = 1
+			factor = 9999
 			modifier = {
 				has_tech = basic_small_airframe
 				factor = 0 #let's not waste XP here
@@ -19,7 +19,7 @@ generic_cas = {
 		}
 
 		target_variant = {
-			match_value = 500
+			match_value = 9999
 			type = small_plane_cas_airframe_0
 			modules = {
 				fixed_main_weapon_slot = bomb_locks
@@ -33,14 +33,14 @@ generic_cas = {
 
 	basic_cas_1936 = {
 		priority = {
-			factor = 100
+			factor = 9999
 			modifier = {
 				has_tech = improved_small_airframe
 				factor = 0 #let's not waste XP here
 			}
 		}
 		target_variant = {
-			match_value = 1000
+			match_value = 9999
 			type = small_plane_cas_airframe_1
 			modules = {
 				fixed_main_weapon_slot = bomb_locks
@@ -54,7 +54,7 @@ generic_cas = {
 
 	improved_cas_1940 = {
 		priority = {
-			factor = 100
+			factor = 9999
 			modifier = {
 				has_tech = advanced_small_airframe
 				factor = 0 #let's not waste XP here
@@ -66,7 +66,7 @@ generic_cas = {
 			}
 		}
 		target_variant = {
-			match_value = 1500
+			match_value = 9999
 			type = small_plane_cas_airframe_2
 			modules = {
 				fixed_main_weapon_slot = bomb_locks
@@ -82,7 +82,7 @@ generic_cas = {
 
 	improved_cas_1940_rockets = {
 		priority = {
-			factor = 100
+			factor = 9999
 			modifier = {
 				has_tech = advanced_small_airframe
 				factor = 0 #let's not waste XP here
@@ -96,7 +96,7 @@ generic_cas = {
 			}
 		}
 		target_variant = {
-			match_value = 1500
+			match_value = 9999
 			type = small_plane_cas_airframe_2
 			modules = {
 				fixed_main_weapon_slot = {
@@ -117,14 +117,14 @@ generic_cas = {
 
 	advanced_cas_1944 = {
 		priority = {
-			factor = 100
+			factor = 9999
 			modifier = {
 				has_tech = modern_small_airframe
 				factor = 0 #let's not waste XP here
 			}
 		}
 		target_variant = {
-			match_value = 2500
+			match_value = 9999
 			type = small_plane_cas_airframe_3
 			modules = {
 				fixed_main_weapon_slot = {
@@ -157,11 +157,11 @@ generic_cas = {
 
 	modern_cas_1945 = {
 		priority = {
-			factor = 100
+			factor = 9999
 		}
 
 		target_variant = {
-			match_value = 4000
+			match_value = 9999
 			type = small_plane_cas_airframe_4
 			modules = {
 				fixed_main_weapon_slot = {

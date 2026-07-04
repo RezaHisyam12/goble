@@ -42,7 +42,13 @@ marine_generic = {
 
 			support = {
 				artillery = 1
+				medium_flame_tank = 1
 				engineer = 1
+			}
+
+			regimental_support = {
+				fire_support = 1
+				anti_air_battery = 1
 			}
 		}
 	}
@@ -84,6 +90,11 @@ marine_generic = {
 				medium_flame_tank = 1
 				engineer = 1
 			}
+
+			regimental_support = {
+				fire_support = 3
+				anti_air_battery = 1
+			}
 		}
 	}
 
@@ -95,7 +106,8 @@ marine_generic = {
 			base = 100
 			modifier = {
 				factor = 0
-				NOT = { has_tech = special_forces_marines }
+				NOT = { has_doctrine = marines_1 }
+				NOT = { has_doctrine = marines_2 }
 			}
 			modifier = {
 				factor = 0
@@ -127,6 +139,11 @@ marine_generic = {
 				anti_tank = 1
 				medium_flame_tank = 1
 				pioneer_support = 1
+			}
+
+			regimental_support = {
+				fire_support = 3
+				anti_air_battery = 1
 			}
 		}
 	}
@@ -177,6 +194,12 @@ marine_generic = {
 				medium_flame_tank = 1
 				assault_engineer = 1
 				logistics_company = 1
+			}
+
+			regimental_support = {
+				mot_fire_support = 2
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 		}
 	}

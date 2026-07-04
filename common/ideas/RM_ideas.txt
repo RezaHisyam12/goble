@@ -143,15 +143,13 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_guard"}
 			picture = GRU_guard
 			allowed = { always = no }
-            modifier = {
+            		modifier = {
 				army_morale_factor = 0.1
 				army_org_factor = 0.10
 				army_speed_factor = 0.05
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.05
 				experience_gain_army_factor = 0.25
-				stability_factor = 0.10
-				war_support_factor = 0.2
 				land_reinforce_rate = 0.05
 				local_intel_to_enemies = -0.15
 				out_of_supply_factor = -0.15
@@ -1046,12 +1044,12 @@ ideas = {
 			equipment_bonus = {
 				motorized_equipment = {
 					reliability = 0.1
-					build_cost_ic = 0.05
+					build_cost_ic = -0.05
 					instant = yes
 				}
 				mechanized_equipment = {
 					reliability = 0.1
-					build_cost_ic = 0.05
+					build_cost_ic = -0.05
 					instant = yes
 				}
 			}				
@@ -1082,13 +1080,13 @@ ideas = {
 				infantry_equipment = {
 					soft_attack = 0.1
 					breakthrough = 0.05
-					build_cost_ic = 0.1
+					build_cost_ic = -0.05
 					instant = yes
 				}
 				artillery_equipment = {
 					soft_attack = 0.1
 					breakthrough = 0.05
-					build_cost_ic = 0.1
+					build_cost_ic = -0.05
 					instant = yes
 				}
 			}		
@@ -1113,18 +1111,18 @@ ideas = {
 			}
 			equipment_bonus = {
 				motorized_equipment = {
+					build_cost_ic = -0.1
 					reliability = 0.1
-					build_cost_ic = 0.05
 					instant = yes
 				}				
 				mechanized_equipment = {
+					build_cost_ic = -0.1
 					reliability = 0.1
-					build_cost_ic = 0.05
 					instant = yes
 				}	
 				armor = {
+					build_cost_ic = -0.1
 					reliability = 0.1
-					build_cost_ic = 0.05
 					instant = yes
 				}
 			}
@@ -1151,25 +1149,25 @@ ideas = {
 				infantry_equipment = {
 					soft_attack = 0.1
 					breakthrough = 0.05
-					build_cost_ic = 0.05
+					build_cost_ic = -0.1
 					instant = yes
 				}
 				artillery_equipment = {
 					soft_attack = 0.1
 					breakthrough = 0.05
-					build_cost_ic = 0.05
+					build_cost_ic = -0.1
 					instant = yes
 				}
 				anti_tank_equipment = {
 					hard_attack = 0.1
 					breakthrough = 0.05
-					build_cost_ic = 0.05
+					build_cost_ic = -0.1
 					instant = yes
 				}
 				anti_air_equipment = {
 					air_attack = 0.05
 					hard_attack = 0.05
-					build_cost_ic = 0.05
+					build_cost_ic = -0.1
 					instant = yes
 				}
 			}		
@@ -2109,12 +2107,12 @@ ideas = {
 		   	     ZZZ_blank_idea_trait
 		    	}
 			allowed = { always = no }
-			research_bonus = {
-				armor = 0.15
-			}
 			modifier = {
 				land_equipment_upgrade_xp_cost = -0.15
 			}			
+			research_bonus = {
+				armor = 0.15
+			}
 			equipment_bonus = {
 				armor = {
 					build_cost_ic = -0.1
@@ -3058,10 +3056,7 @@ ideas = {
 			picture = generic_spy_political
 			allowed = { always = no }
 			modifier = {
-				army_intel_factor = 0.05
-				civilian_intel_factor = 0.05
-				navy_intel_factor = 0.05
-				airforce_intel_factor = 0.05
+				operative_slot = 1
 			}
 		}
 		VKP_militarism = {

@@ -871,13 +871,9 @@ levantine_war_volunteers = {
 	}
 	TUR = { is_subject = no }
 	OR = {
-		OR = {
-			original_tag = GER
-			original_tag = GRU
-			original_tag = AUS
-			original_tag = FRA
-			original_tag = ENG
-			original_tag = RUS
+		AND = {
+			is_major = yes
+			is_in_europe = yes
 		}
 		is_neighbor_of = EGY
 		is_neighbor_of = PER
@@ -885,7 +881,7 @@ levantine_war_volunteers = {
 	}
 	OR = {
 		AND = {
-			FROM = { tag = TUR }
+			PREV = { tag = TUR }
 			has_socialist_government = no
 			OR = {
 				original_tag = GER
@@ -894,9 +890,9 @@ levantine_war_volunteers = {
 			}
 		}
 		AND = {
-			FROM = { tag = TUR }
+			PREV = { tag = TUR }
 			original_tag = BUL
-			has_relation_modifier = { target = FROM modifier = volunteer_limit_plus_three }
+			has_relation_modifier = { target = PREV modifier = volunteer_limit_plus_three }
 			is_subject = no
 			has_socialist_government = no
 		}
@@ -913,8 +909,16 @@ levantine_war_volunteers = {
 				both_socialist_or_both_not_socialist = yes
 			}
 		}
+		AND = {
+			PREV = {
+				original_tag = ARM
+				has_war_with = OTT
+			}
+			original_tag = RUS
+			both_socialist_or_both_not_socialist = yes
+		}
 	}
-	log = "willing_to_send_volunteers_to_FROM -- levantine_war_volunteers --- THIS = [THIS.GetName] FROM = [FROM.GetName]"
+	log = "willing_to_send_volunteers_to_FROM -- levantine_war_volunteers --- THIS = [THIS.GetName] PREV = [PREV.GetName]"
 }
 
 winter_war_volunteers = {

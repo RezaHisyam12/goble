@@ -30,8 +30,8 @@ elite_infantry_generic = {
 			}
 
 			regimental_support = {
-				field_guns = 1
-				fire_support = 1
+				fire_support = 3
+				anti_tank_battery = 1
 			}
 
 			support = {

@@ -220,6 +220,7 @@ ideologies = {
 			macedonian_federalism_subtype = {can_be_randomly_selected = no} #Macedonian Federalism
 			syn_occultism_subtype = {can_be_randomly_selected = no} #Esotericism
 			syn_pan_celticism_subtype = {can_be_randomly_selected = no} #Pan-Celticism
+			syn_municipalism_subtype = {can_be_randomly_selected = no} #Municipalism			
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_SYNDICALIST_1"
@@ -362,6 +363,7 @@ ideologies = {
 			freiwirtschaft_subtype = {can_be_randomly_selected = no} #Freiwirtschaft
 			rangga_theory_subtype = {can_be_randomly_selected = no} #Rangga Theory
 			radsoc_occultism_subtype = {can_be_randomly_selected = no} #Esotericism
+			radsoc_municipalism_subtype = {can_be_randomly_selected = no} #Municipalism				
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_RADICAL_SOCIALIST_1"
@@ -503,6 +505,7 @@ ideologies = {
 			socdem_macedonian_federalism_subtype = {can_be_randomly_selected = no} #Macedonian Federalism
 			socdem_centrist_subtype = {can_be_randomly_selected = no} #Centrism
 			socdem_occultism_subtype = {can_be_randomly_selected = no} #Esotericism
+			socdem_municipalism_subtype = {can_be_randomly_selected = no} #Municipalism			
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_SOCIAL_DEMOCRAT_1"
@@ -618,6 +621,7 @@ ideologies = {
 			organic_liberalism_subtype = {can_be_randomly_selected = no} #Organic Liberalism
 			soclib_occultism_subtype = {can_be_randomly_selected = no} #Esotericism
 			soclib_gandhism_subtype = {can_be_randomly_selected = no} #Gandhism
+			municipalism_subtype = {can_be_randomly_selected = no} #Municipalism
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_SOCIAL_LIBERAL_1"
@@ -718,6 +722,7 @@ ideologies = {
 			marlib_organic_liberalism_subtype = {can_be_randomly_selected = no} #Organic Liberalism
 			aulic_liberalism_subtype = {can_be_randomly_selected = no} #Aulic Liberalism
 			marlib_austropopulism_subtype = {can_be_randomly_selected = no} #Austropopulism
+			costismo_subtype = {can_be_randomly_selected = no} #Costismo
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_MARKET_LIBERAL_1"
@@ -830,6 +835,7 @@ ideologies = {
 			soccon_theocracy_subtype = {can_be_randomly_selected = no } #Theocracy
 			soccon_yugoslavism_subtype = {can_be_randomly_selected = no} #Yugoslavism
 			soccon_hearstian_democracy_subtype = {can_be_randomly_selected = no} #Hearstian Democracy
+			soccon_costismo_subtype = {can_be_randomly_selected = no} #Costismo
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_SOCIAL_CONSERVATIVE_1"
@@ -966,6 +972,7 @@ ideologies = {
 			authdem_hispanism_subtype = {can_be_randomly_selected = no} #Hispanism
 			authdem_pan_celticism_subtype = {can_be_randomly_selected = no} #Pan-Celticism
 			authdem_teetotalism_subtype = {can_be_randomly_selected = no} #Teetotalism
+			authdem_costismo_subtype = {can_be_randomly_selected = no} #Costismo
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_AUTHORITARIAN_DEMOCRAT_1"
@@ -1110,7 +1117,8 @@ ideologies = {
 			pataut_paneuropeanism_subtype = {can_be_randomly_selected = no} #Paneuropeanism
 			pataut_popularism_subtype = {can_be_randomly_selected = no} #Popularism
 			pataut_macedonian_federalism_subtype = {can_be_randomly_selected = no} #Macedonian Federalism
-			aranaism_subtype = {can_be_randomly_selected = no} #Aranaism			
+			aranaism_subtype = {can_be_randomly_selected = no} #Aranaism	
+			pataut_costismo_subtype = {can_be_randomly_selected = no} #Costismo			
 	    }
 		dynamic_faction_names = {
 			"FACTION_NAME_PATERNAL_AUTOCRAT_1"
@@ -1300,7 +1308,8 @@ ideologies = {
 			possedism_subtype = {can_be_randomly_selected = no} #Possedism
 			kristlichen_lehre_subtype = {can_be_randomly_selected = no} #Kristlichen Lehre
 			ustahsa_subtype = {can_be_randomly_selected = no} #Ustaše 	
-			german_faith_movement_subtype = {can_be_randomly_selected = no} #Deutscher Glaube															
+			german_faith_movement_subtype = {can_be_randomly_selected = no} #Deutscher Glaube													
+					
 			#Goeb 			
 			natpop_goebbels_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }
 			natpop_goebbels2_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }

@@ -6,7 +6,7 @@ light_armour_generic = {
     	role = light_armor_role
 	front_role_override = offence
 
-	available_for = { GRU GER }
+	available_for = { GRU GER VKB VKK VKR VKM VKN VKP VOB VSJ VST HYP }
 
 	upgrade_prio = {
 		factor = 5000

@@ -6,6 +6,7 @@ focus_tree = {
 	}
 	shared_focus = GRU_GCW_VICTORY
 	shared_focus = GRU_formation_of_the_nva
+	shared_focus = GRU_formation_of_the_nva_soc
 	
 	shared_focus = GRU_THE_DEMOCRACY_PROMISE
 	shared_focus = GRU_FAUD_FUTURE

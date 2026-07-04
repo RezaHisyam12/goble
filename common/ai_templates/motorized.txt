@@ -37,6 +37,10 @@ motorized_infantry = {
 				anti_air = 1
 				engineer = 1
 			}
+
+			regimental_support = {
+				field_guns = 1
+			}
 		}
 	}
 
@@ -85,6 +89,11 @@ motorized_infantry = {
 				engineer = 1
 				field_hospital = 1
 				logistics_company = 1
+			}
+
+			regimental_support = {
+				field_guns = 2
+				anti_tank_battery = 1
 			}
 		}
 	}
@@ -136,6 +145,11 @@ motorized_infantry = {
 				logistics_company = 1
 				signal_company = 1
 			}
+
+			regimental_support = {
+				field_guns = 3
+				anti_tank_battery = 1
+			}
 		}
 	}
 
@@ -179,10 +193,15 @@ motorized_infantry = {
 
 			support = {
 				anti_air = 1
-				assault_engineer = 1
+				armored_engineer = 1
 				field_hospital = 1
 				logistics_company = 1
 				signal_company = 1
+			}
+
+			regimental_support = {
+				field_guns = 3
+				anti_tank_battery = 2
 			}
 		}
 	}

@@ -59,6 +59,11 @@ tank_destroyer = {
 				field_hospital = 1
 				logistics_company = 1
 			}
+
+			regimental_support = {
+				mot_fire_support = 2
+				anti_air_battery = 1
+			}
 		}
     }
 
@@ -93,6 +98,12 @@ tank_destroyer = {
 				field_hospital = 1
 				logistics_company = 1
 			}
+
+			regimental_support = {
+				mot_fire_support = 2
+				anti_air_battery = 1
+				anti_tank_battery = 1
+			}
 		}
     }
 
@@ -124,6 +135,12 @@ tank_destroyer = {
 				armored_engineer = 1
 				field_hospital = 1
 				logistics_company = 1
+			}
+
+			regimental_support = {
+				mot_fire_support = 3
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 		}
     }

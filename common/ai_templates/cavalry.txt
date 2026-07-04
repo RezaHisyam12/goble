@@ -57,6 +57,10 @@ line_cavalry = {
 				anti_air = 1
 				engineer = 1
 			}
+
+			regimental_support = {
+				mot_fire_support = 1
+			}
 		}
 	}
 
@@ -87,6 +91,10 @@ line_cavalry = {
 				anti_tank = 1
 				engineer = 1
 				field_hospital = 1
+			}
+
+			regimental_support = {
+				mot_fire_support = 3
 			}
 		}
 	}

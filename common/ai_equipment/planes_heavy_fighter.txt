@@ -15,7 +15,7 @@ generic_heavy_fighter = {
 
 	early_heavy_fighter_1933 = {
 		priority = {
-			factor = 1
+			factor = 9999
 			modifier = {
 				has_tech = basic_medium_airframe
 				factor = 0 #let's not waste XP here
@@ -23,7 +23,7 @@ generic_heavy_fighter = {
 		}
 
 		target_variant = {
-			match_value = 1000
+			match_value = 9999
 			type = medium_plane_fighter_airframe_0
 			modules = {
 				fixed_main_weapon_slot = light_mg_4x
@@ -41,7 +41,7 @@ generic_heavy_fighter = {
 
 	basic_heavy_fighter_1936 = {
 		priority = {
-			factor = 100
+			factor = 9999
 			modifier = {
 				has_tech = improved_medium_airframe
 				factor = 0 #let's not waste XP here
@@ -49,7 +49,7 @@ generic_heavy_fighter = {
 		}
 
 		target_variant = {
-			match_value = 1000
+			match_value = 9999
 			type = medium_plane_fighter_airframe_1
 			modules = {
 				fixed_main_weapon_slot = {
@@ -75,7 +75,7 @@ generic_heavy_fighter = {
 
 	improved_heavy_fighter_1940 = {
 		priority = {
-			factor = 100
+			factor = 9999
 			modifier = {
 				has_tech = advanced_medium_airframe
 				factor = 0 #let's not waste XP here
@@ -83,7 +83,7 @@ generic_heavy_fighter = {
 		}
 
 		target_variant = {
-			match_value = 1500
+			match_value = 9999
 			type = medium_plane_fighter_airframe_2
 			modules = {
 				fixed_main_weapon_slot = {
@@ -125,7 +125,7 @@ generic_heavy_fighter = {
 
 	advanced_heavy_fighter_1944 = {
 		priority = {
-			factor = 100
+			factor = 9999
 			modifier = {
 				has_tech = modern_medium_airframe
 				factor = 0 #let's not waste XP here
@@ -133,7 +133,7 @@ generic_heavy_fighter = {
 		}
 
 		target_variant = {
-			match_value = 2000
+			match_value = 9999
 			type = medium_plane_fighter_airframe_3
 			modules = {
 				fixed_main_weapon_slot = aircraft_cannon_1_2x
@@ -153,11 +153,11 @@ generic_heavy_fighter = {
 
 	modern_heavy_fighter_1945 = {
 		priority = {
-			factor = 100
+			factor = 9999
 		}
 
 		target_variant = {
-			match_value = 2000
+			match_value = 9999
 			type = medium_plane_fighter_airframe_4
 			modules = {
 				fixed_main_weapon_slot = {

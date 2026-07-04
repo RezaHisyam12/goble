@@ -52,8 +52,8 @@ armour_landcruiser_generic = {
 			}
 
 			regimental_support = {
+				mot_fire_support = 2
 				anti_air_battery = 1
-				mot_fire_support = 1
 			}
 
 			support = {
@@ -103,8 +103,8 @@ armour_landcruiser_generic = {
 			}
 
 			regimental_support = {
+				mot_fire_support = 2
 				anti_air_battery = 1
-				mot_fire_support = 1
 			}
 
 			support = {

@@ -67,6 +67,11 @@ mechanized_infantry = {
 				field_hospital = 1
 				logistics_company = 1
 			}
+
+			regimental_support = {
+				mot_fire_support = 2
+				anti_tank_battery = 1
+			}
 		}
 	}
 
@@ -110,6 +115,11 @@ mechanized_infantry = {
 				assault_engineer = 1
 				field_hospital = 1
 				logistics_company = 1
+			}
+
+			regimental_support = {
+				mot_fire_support = 2
+				anti_tank_battery = 1
 			}
 		}
 	}
@@ -155,6 +165,11 @@ mechanized_infantry = {
 				field_hospital = 1
 				logistics_company = 1
 			}
+
+			regimental_support = {
+				mot_fire_support = 3
+				anti_tank_battery = 1
+			}
 		}
 	}
 
@@ -196,6 +211,11 @@ mechanized_infantry = {
 				assault_engineer = 1
 				field_hospital = 1
 				logistics_company = 1
+			}
+
+			regimental_support = {
+				mot_fire_support = 3
+				anti_tank_battery = 2
 			}
 		}
 	}
@@ -240,6 +260,11 @@ mechanized_infantry = {
 				field_hospital = 1
 				logistics_company = 1
 			}
+
+			regimental_support = {
+				mot_fire_support = 2
+				anti_tank_battery = 1
+			}
 		}
 	}
 
@@ -283,6 +308,11 @@ mechanized_infantry = {
 				field_hospital = 1
 				logistics_company = 1
 			}
+
+			regimental_support = {
+				mot_fire_support = 3
+				anti_tank_battery = 1
+			}
 		}
 	}
 
@@ -323,6 +353,11 @@ mechanized_infantry = {
 				engineer = 1
 				field_hospital = 1
 				logistics_company = 1
+			}
+
+			regimental_support = {
+				mot_fire_support = 3
+				anti_tank_battery = 2
 			}
 		}
 	}

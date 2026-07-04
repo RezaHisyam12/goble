@@ -77,11 +77,11 @@ spriteTypes = {
 
 	spriteType = { 
 		name = "GFX_unit_land_cruiser_battalion_icon_medium"								
-		textureFile = "gfx/interface/counters/divisions_large/unit_landkruiser_icon.dds"
+		textureFile = "gfx/interface/counters/divisions_large/unit_landkreuzer_icon.dds"
 	}
 	spriteType = {
 		name = "GFX_unit_land_cruiser_battalion_icon_medium_white"
-		texturefile = "gfx/interface/counters/divisions_small/onmap_unit_landkruiser_icon.dds"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_unit_landkreuzer_icon.dds"
 		noOfFrames = 2
 	}
 

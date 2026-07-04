@@ -21,6 +21,8 @@ SRI_starting_plan = {
 		SRI_maintain_regional_unions
 		SRI_stabilimento_di_mirafiori
 		SRI_terni_city_of_steel
+		SRI_la_guardia_rossa
+		SRI_la_legione_proletaria
 		SRI_finish_the_electrical_conversion
 		SRI_expand_ilva
 		SRI_modern_production_lines

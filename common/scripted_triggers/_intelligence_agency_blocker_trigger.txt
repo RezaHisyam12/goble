@@ -41,12 +41,14 @@ can_create_intelligence_agency = {
 		}			
 	}
 	else_if = {
-		limit = { tag = GRU }
+		limit = { 
+			tag = GRU
+		}
 		OR = {
-		has_completed_focus = GRU_form_the_stasi
-		has_completed_focus = GRU_pieck_red_guard
-		has_completed_focus = GRU_thalmann_gestapo
-		has_completed_focus = GRU_I_found_dad
+			has_completed_focus = GRU_form_the_stasi
+			has_completed_focus = GRU_pieck_red_guard
+			has_completed_focus = GRU_thalmann_gestapo
+			has_completed_focus = GRU_I_found_dad
 		}
 	}
 	else = {

@@ -687,7 +687,7 @@ GRU_eyes_on_italy = {
 	}
 	enable = {
 		NOT = { country_exists = AUS }
-		is_neighbor_of = SRI
+		is_owner_neighbor_of = SRI
 	}
 	abort_when_not_enabled = yes
 
@@ -1628,7 +1628,7 @@ STP_finish_off_russia = {
 	ai_strategy = {
 		type = front_control
 		tag = RUS
-		priority = 150
+		priority = 100
 		ordertype = front
 		execution_type = rush_weak
 		execute_order = yes
@@ -1638,8 +1638,12 @@ STP_finish_off_russia = {
 GRU_finish_off_romania = {
 	allowed = {
 		OR = {
-			original_tag = GRU
+			tag = VKB
+			tag = VKR
+			tag = VKK
 			original_tag = HUN
+			is_balkan_tag = yes
+			is_scandinavian_tag = yes
 		}
 	}
 	enable = {
@@ -1649,7 +1653,6 @@ GRU_finish_off_romania = {
 		}
 		NOT = { 
 			202 = { is_controlled_by = RUS } #Ukraine hasn't lost Kyiv yet
-			has_war_with = FRA
 		}
 		surrender_progress < 0.05
 	}
@@ -1678,8 +1681,12 @@ GRU_finish_off_romania = {
 GRU_finish_off_serbia = {
 	allowed = {
 		OR = {
-			original_tag = GRU
+			tag = GRU
+			tag = VKP
 			original_tag = HUN
+			is_polish_tag = yes
+			is_balkan_tag = yes
+			is_scandinavian_tag = yes
 		}
 	}
 	enable = {
@@ -1689,7 +1696,6 @@ GRU_finish_off_serbia = {
 		}
 		NOT = { 
 			202 = { is_controlled_by = RUS } #Ukraine hasn't lost Kyiv yet
-			has_war_with = FRA
 		}
 		surrender_progress < 0.05
 	}
@@ -1717,7 +1723,7 @@ GRU_finish_off_serbia = {
 
 GRU_finish_off_italy = {
 	allowed = {
-		tag = GRU
+		original_tag = GRU
 	}
 	enable = {
 		SRI = {
@@ -1935,16 +1941,6 @@ german_default_more_tank_production = {
 		value = 20
 	}
 	ai_strategy = {
-		type = equipment_production_factor
-		id = armor
-		value = 20
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = support
-		value = 45
-	}
-	ai_strategy = {
 		type = role_ratio
 		id = light_armor_role
 		value = 40
@@ -1957,41 +1953,6 @@ german_default_more_tank_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = tank_destroyer_role
-		value = 20
-	}
-	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = light_tank_chassis
-		value = 15
-	}
-	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = heavy_tank_chassis
-		value = 15
-	}
-	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = heavy_tank_destroyer_chassis
-		value = 15
-	}
-	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = support_equipment
-		value = 12
-	}
-	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = armored_support_vehicle
-		value = 10
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = motorized
-		value = 5
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = mechanized
 		value = 20
 	}
 }
@@ -2012,7 +1973,35 @@ default_super_heavy_artillery_production = {
 	ai_strategy = {
 		type = equipment_production_min_factories_archetype
 		id = super_heavy_artillery_equipment
-		value = 5
+		value = 3
+	}
+}
+
+stp_default_light_tank_production = {
+	allowed = {
+		OR = {
+			tag = GRU
+			tag = VKB
+			tag = VKR
+			tag = VKK
+			tag = VKM
+			tag = VSJ
+			tag = VST
+			tag = HYP
+			tag = VKN
+			tag = VKP
+			tag = VOB
+		}
+	}
+	enable = {
+		is_eligible_for_armor_production = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = light_armor_role
+		value = 40
 	}
 }
 

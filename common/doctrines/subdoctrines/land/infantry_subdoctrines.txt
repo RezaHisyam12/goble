@@ -647,10 +647,6 @@ irregulars = {
 
 	ai_will_do = {
 		base = 0
-		modifier = {
-			add = 25
-            		is_han_chinese_tag = yes
-        	}
 	}
 
 	irregular_infantry = {

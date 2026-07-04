@@ -849,10 +849,20 @@ RUS_Foreign_Policy_decisions = {
 					has_war_with = ENG
 				}
 			}
-			any_neighbor_country = {
-				OR = {
-					is_ally_with = FROM
-					tag = FROM
+			OR = {
+				any_neighbor_country = {
+					OR = {
+						is_ally_with = FROM
+						tag = FROM
+					}
+				}
+				any_subject_country = {
+					any_neighbor_country = {
+						OR = {
+							is_ally_with = FROM
+							tag = FROM
+						}
+					}
 				}
 			}
 			NOT = { has_war_with = TRM }
@@ -862,10 +872,6 @@ RUS_Foreign_Policy_decisions = {
 		}
 
 		visible = {
-			OR = {
-				has_completed_focus = RUS_The_Final_Battle
-				has_completed_focus = RUS_Destroy_German_Imperialists
-			}
 			can_declare_war_on = FROM
 			NOT = { has_global_flag = danzig_treaty_active }
 			NOT = { has_country_flag = GRU_RUS_NO_WESTERN_RUSSIA }
@@ -879,7 +885,10 @@ RUS_Foreign_Policy_decisions = {
 				}
 				OR = {
 					has_completed_focus = RUS_The_Final_Battle
-					has_completed_focus = RUS_Destroy_German_Imperialists
+					has_completed_focus = DKB_End_Germany
+					has_completed_focus = ORE_Minsk_Mistakes
+					has_completed_focus = DKB_Minsk_Mistakes
+					has_completed_focus = TRM_Reclaim_Lands
 				}
 			}
 		}
@@ -915,9 +924,14 @@ RUS_Foreign_Policy_decisions = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision RUS_Intervene_Germany target: [From.GetName]"
-			FROM = { incoming_war_notification_effect = yes }
-			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			clr_country_flag = RUS_GER_blocks_caucasus
+			set_country_flag = { flag = imminent_war days = 35 value = 1 }
 			setup_decision_attack_AI = yes
+			FROM = { incoming_war_notification_effect = yes }
+			every_neighbor_country = {
+				limit = { is_ally_with = GRU }
+				incoming_war_notification_effect = yes
+			}
 			for_each_scope_loop = {
 				array = FROM.faction_members
 				if = {
@@ -925,10 +939,11 @@ RUS_Foreign_Policy_decisions = {
 						OR = {
 							is_in_europe = yes
 							tag = DKB
-							tag = KUB
 							tag = KLY
+							tag = KUB
 							tag = MTR
 							tag = GEO
+							tag = ABK
 							tag = AZE
 						}
 						is_in_faction_with = GRU
@@ -936,12 +951,7 @@ RUS_Foreign_Policy_decisions = {
 							can_declare_war_on = PREV
 							is_neighbor_of = PREV
 						}
-						if = {
-							limit = { tag = VKR }
-							NOT = { has_global_flag = UKR_secret_collusion_with_russia }
-						}
 					}
-					incoming_war_notification_effect = yes
 					add_ai_strategy = {
 						type = prepare_for_war
 						id = ROOT
@@ -963,33 +973,91 @@ RUS_Foreign_Policy_decisions = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove RUS_Intervene_Germany target: [From.GetName]"
 			clear_decision_attack_AI = yes
 			news_event = worldnews.472
-			effect_tooltip = {
-				every_other_country = {
-					limit = {
-						OR = {
-							is_in_europe = yes
-							tag = DKB
-							tag = GEO
-							tag = AZE
-						}
-						is_in_faction_with = GRU
-						ROOT = {
-							can_declare_war_on = PREV
-							is_neighbor_of = PREV
-						}
-						if = {
-							limit = { tag = VKR }
-							NOT = { has_global_flag = UKR_secret_collusion_with_russia }
-						}
-					}
-					ROOT = {
-						declare_war_on = {
-							target = PREV
-							type = annex_everything
-						}
-					}
+			clr_country_flag = RUS_GER_blocks_caucasus
+			declare_war_on = {
+				target = GRU
+				type = annex_everything
+			}
+			if = {
+				limit = {
+					can_declare_war_on = VKB
+					VKR = { is_ally_with = GRU }
 				}
-			} 
+				declare_war_on = {
+					target = VKB
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					can_declare_war_on = VKR
+					VKR = { is_ally_with = GRU }
+				}
+				declare_war_on = {
+					target = VKR
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					can_declare_war_on = VKP
+					VKP = { is_ally_with = GRU }
+				}
+				declare_war_on = {
+					target = VKP
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					can_declare_war_on = VKK
+					VKK = { is_ally_with = GRU }
+				}
+				declare_war_on = {
+					target = VKK
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					can_declare_war_on = UKR
+					UKR = { is_ally_with = GRU }
+				}
+				declare_war_on = {
+					target = UKR
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					can_declare_war_on = BAT
+					BAT = { is_ally_with = GRU }
+				}
+				declare_war_on = {
+					target = BAT
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					can_declare_war_on = WHR
+					WHR = { is_ally_with = GRU }
+				}
+				declare_war_on = {
+					target = WHR
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					can_declare_war_on = LIT
+					LIT = { is_ally_with = GRU }
+				}
+				declare_war_on = {
+					target = LIT
+					type = annex_everything
+				}
+			}
 			every_other_country = {
 				limit = {
 					ROOT = { has_country_flag = RUS_prepare_for_war_@PREV }
@@ -1013,6 +1081,7 @@ RUS_Foreign_Policy_decisions = {
 				}
 			}
 		}
+		fixed_random_seed = no
 	}
 }
 

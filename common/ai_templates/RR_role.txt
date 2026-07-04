@@ -31,8 +31,8 @@ RR_Werwolf_generic = {
 			}
 
 			regimental_support = {
-				field_guns = 1
-				fire_support = 1
+				fire_support = 2
+				anti_tank_battery = 1
 			}
 
 			support = {
@@ -55,6 +55,10 @@ RR_Werwolf_generic = {
 			modifier = {
 				factor = 0
 				NOT = { has_tech = RR_1_motorized_tech }
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_tech = tech_sturmtruppe }
 			}
  			modifier = {
 				factor = 0
@@ -82,14 +86,14 @@ RR_Werwolf_generic = {
 			}
 
 			regimental_support = {
-				field_guns = 1
-				mot_fire_support = 1
+				mot_fire_support = 2
+				anti_tank_battery = 1
 			}
 
 			support = {
 				engineer = 1
 				signal_company = 1
-				anti_air = 1
+				sturmtruppe_battalion = 1
 				field_hospital = 1
 				logistics_company = 1
 			}

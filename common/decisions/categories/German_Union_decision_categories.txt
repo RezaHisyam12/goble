@@ -131,6 +131,14 @@ GRU_zollverein_category = {
 	priority = 65
 	picture = GFX_decision_cat_generic_crate_of_guns
 }
+GRU_vs_units_decisions = {
+	icon = GRU_volkssturm
+	allowed = { tag = GRU }
+	visible = {
+		GRU = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
+		has_completed_focus = GRU_volkssturm
+	}
+}
 #GRU_alternate_leaders_decisions = {
 #	icon = babey
 #	allowed = {}
