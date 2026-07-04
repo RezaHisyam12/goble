@@ -39,24 +39,24 @@ armour_more_trucks = {
 
 		target_template = {
 			regiments = {
-				medium_armor = 5
-				motorized = 7
+				medium_armor = 6
+				motorized = 6
 			}
 
 			support = {
 				artillery = 1
 				anti_air = 1
+				anti_tank = 1
 				engineer = 1
 			}
 
 			regimental_support = {
-				mot_fire_support = 1
-				anti_air_battery = 1
+				mot_fire_support = 4
 			}
 		}
 	}
 
-	ma_lil_mechanized_medium = {
+	ma_semi_mechanized_medium_1 = {
         can_upgrade_in_field = {
 			has_equipment = { mechanized_equipment > 100 }
 		}
@@ -89,7 +89,7 @@ armour_more_trucks = {
 		target_template = {
 			regiments = {
 				medium_armor = 6
-				motorized = 7
+				motorized = 4
 				mechanized = 2
 			}
 
@@ -101,13 +101,12 @@ armour_more_trucks = {
 			}
 
 			regimental_support = {
-				mot_fire_support = 2
-				anti_air_battery = 1
+				mot_fire_support = 4
 			}
 		}
 	}
 
-	ma_kinda_mechanized_medium = {
+	ma_semi_mechanized_medium_2 = {
         can_upgrade_in_field = {
 			has_equipment = { mechanized_equipment > 100 }
 		}
@@ -140,8 +139,8 @@ armour_more_trucks = {
 		target_template = {
 			regiments = {
 				medium_armor = 6
-				motorized = 4
-				mechanized = 5
+				motorized = 2
+				mechanized = 4
 			}
 
 			support = {
@@ -152,13 +151,12 @@ armour_more_trucks = {
 			}
 
 			regimental_support = {
-				mot_fire_support = 2
-				anti_air_battery = 1
+				mot_fire_support = 4
 			}
 		}
 	}
 
-	ma_pretty_mechanized_medium = {
+	ma_semi_mechanized_medium_3 = {
         can_upgrade_in_field = {
 			has_equipment = { mechanized_equipment > 100 }
 		}
@@ -191,8 +189,7 @@ armour_more_trucks = {
 		target_template = {
 			regiments = {
 				medium_armor = 6
-				motorized = 2
-				mechanized = 7
+				mechanized = 6
 			}
 
 			support = {
@@ -203,8 +200,7 @@ armour_more_trucks = {
 			}
 
 			regimental_support = {
-				mot_fire_support = 2
-				anti_air_battery = 1
+				mot_fire_support = 4
 			}
 		}
 	}
@@ -225,6 +221,10 @@ armour_more_trucks = {
 			}
 			modifier = {
 				factor = 0
+				has_two_subdoctrine_tracks = no
+			}
+			modifier = {
+				factor = 0
 				is_eligible_for_improved_armor_production = no
 			}
 			modifier = {
@@ -242,15 +242,15 @@ armour_more_trucks = {
 			support = {
 				artillery = 1
 				anti_air = 1
-				engineer = 1
+				assault_engineer = 1
 				logistics_company = 1
 				signal_company = 1
 			}
 
 			regimental_support = {
-				mot_fire_support = 2
-				anti_air_battery = 1
-				anti_tank_battery = 1
+				medium_tank_destroyer_support = 1
+				medium_sp_anti_air_support = 1
+				mot_fire_support = 3
 			}
 		}
 	}
@@ -272,12 +272,7 @@ armour_more_trucks = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					NOT = { has_subdoctrine_in_track = infantry }
-					NOT = { has_subdoctrine_in_track = combat_support }
-					NOT = { has_subdoctrine_in_track = armor }
-					NOT = { has_subdoctrine_in_track = operations }
-				}
+				has_four_subdoctrine_tracks = no
 			}
 			modifier = {
 				factor = 0
@@ -304,9 +299,9 @@ armour_more_trucks = {
 			}
 
 			regimental_support = {
-				mot_fire_support = 2
-				anti_air_battery = 1
-				anti_tank_battery = 1
+				medium_tank_destroyer_support = 1
+				medium_sp_anti_air_support = 1
+				mot_fire_support = 3
 			}
 		}
 	}

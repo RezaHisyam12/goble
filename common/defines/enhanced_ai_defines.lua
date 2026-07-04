@@ -95,8 +95,8 @@ NDefines.NAI.STOP_TRAINING_SUPPLY_LEVEL = 0.15  -- vanilla 0.30 | ai will not tr
 --------------------------------------------------
 -- EQUIPMENT PRODUCTION
 --------------------------------------------------
-NDefines.NAI.PRODUCTION_EQUIPMENT_SURPLUS_FACTOR = 0.6 -- Base value for how much of currently used equipment the AI will at least strive to have in stock
-NDefines.NAI.PRODUCTION_EQUIPMENT_SURPLUS_FACTOR_GARRISON = 0.2 -- Base value for how much of currently used equipment the AI will at least strive to have in stock for garrison forces
+NDefines.NAI.PRODUCTION_EQUIPMENT_SURPLUS_FACTOR = 0.3 -- Base value for how much of currently used equipment the AI will at least strive to have in stock
+NDefines.NAI.PRODUCTION_EQUIPMENT_SURPLUS_FACTOR_GARRISON = 0.1 -- Base value for how much of currently used equipment the AI will at least strive to have in stock for garrison forces
 
 --------------------------------------------------
 -- NAVY & AIR FORCE TRAINING

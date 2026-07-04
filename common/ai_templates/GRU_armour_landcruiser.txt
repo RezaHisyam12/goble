@@ -16,12 +16,7 @@ armour_landcruiser_generic = {
 		}
 		modifier = {
 			factor = 0
-			OR = {
-				NOT = { has_subdoctrine_in_track = infantry }
-				NOT = { has_subdoctrine_in_track = combat_support }
-				NOT = { has_subdoctrine_in_track = armor }
-				NOT = { has_subdoctrine_in_track = operations }
-			}
+			has_four_subdoctrine_tracks = no
 		}
 	}
 
@@ -79,12 +74,7 @@ armour_landcruiser_generic = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					NOT = { has_subdoctrine_in_track = infantry }
-					NOT = { has_subdoctrine_in_track = combat_support }
-					NOT = { has_subdoctrine_in_track = armor }
-					NOT = { has_subdoctrine_in_track = operations }
-				}
+				has_four_subdoctrine_tracks = no
 			}
 			modifier = {
 				factor = 6

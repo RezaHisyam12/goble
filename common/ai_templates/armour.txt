@@ -51,19 +51,20 @@ armour_generic = {
 			}
 
 			support = {
+				artillery = 1
 				anti_air = 1
+				anti_tank = 1
 				medium_flame_tank = 1
 				engineer = 1
 			}
 
 			regimental_support = {
-				mot_fire_support = 1
-				anti_air_battery = 1
+				mot_fire_support = 4
 			}
 		}
 	}
 
-	lil_mechanized_medium = {
+	semi_mechanized_medium_1 = {
         can_upgrade_in_field = {
 			has_equipment = { mechanized_equipment > 100 }
 		}
@@ -96,11 +97,12 @@ armour_generic = {
 		target_template = {
 			regiments = {
 				medium_armor = 6
-				motorized = 6
+				motorized = 4
 				mechanized = 2
 			}
 
 			support = {
+				artillery = 1
 				anti_air = 1
 				anti_tank = 1
 				medium_flame_tank = 1
@@ -108,13 +110,12 @@ armour_generic = {
 			}
 
 			regimental_support = {
-				mot_fire_support = 2
-				anti_air_battery = 1
+				mot_fire_support = 4
 			}
 		}
 	}
 
-	kinda_mechanized_medium = {
+	semi_mechanized_medium_2 = {
         can_upgrade_in_field = {
 			has_equipment = { mechanized_equipment > 100 }
 		}
@@ -147,11 +148,12 @@ armour_generic = {
 		target_template = {
 			regiments = {
 				medium_armor = 6
-				motorized = 4
+				motorized = 2
 				mechanized = 4
 			}
 
 			support = {
+				artillery = 1
 				anti_air = 1
 				anti_tank = 1
 				medium_flame_tank = 1
@@ -159,13 +161,12 @@ armour_generic = {
 			}
 
 			regimental_support = {
-				mot_fire_support = 2
-				anti_air_battery = 1
+				mot_fire_support = 4
 			}
 		}
 	}
 
-	pretty_mechanized_medium = {
+	semi_mechanized_medium_3 = {
         can_upgrade_in_field = {
 			has_equipment = { mechanized_equipment > 100 }
 		}
@@ -198,11 +199,11 @@ armour_generic = {
 		target_template = {
 			regiments = {
 				medium_armor = 6
-				motorized = 2
 				mechanized = 6
 			}
 
 			support = {
+				artillery = 1
 				anti_air = 1
 				anti_tank = 1
 				medium_flame_tank = 1
@@ -210,8 +211,7 @@ armour_generic = {
 			}
 
 			regimental_support = {
-				mot_fire_support = 2
-				anti_air_battery = 1
+				mot_fire_support = 4
 			}
 		}
 	}
@@ -232,6 +232,10 @@ armour_generic = {
 			}
 			modifier = {
 				factor = 0
+				has_two_subdoctrine_tracks = no
+			}
+			modifier = {
+				factor = 0
 				is_eligible_for_improved_armor_production = no
 			}
 			modifier = {
@@ -243,7 +247,7 @@ armour_generic = {
 		target_template = {
 			regiments = {
 				medium_armor = 6
-				mechanized = 8
+				mechanized = 9
 			}
 
 			support = {
@@ -255,9 +259,9 @@ armour_generic = {
 			}
 
 			regimental_support = {
-				mot_fire_support = 2
-				anti_air_battery = 1
-				anti_tank_battery = 1
+				medium_tank_destroyer_support = 1
+				medium_sp_anti_air_support = 1
+				mot_fire_support = 3
 			}
 		}
 	}
@@ -278,12 +282,7 @@ armour_generic = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					NOT = { has_subdoctrine_in_track = infantry }
-					NOT = { has_subdoctrine_in_track = combat_support }
-					NOT = { has_subdoctrine_in_track = armor }
-					NOT = { has_subdoctrine_in_track = operations }
-				}
+				has_four_subdoctrine_tracks = no
 			}
 			modifier = {
 				factor = 0
@@ -297,9 +296,8 @@ armour_generic = {
 
 		target_template = {
 			regiments = {
-				medium_armor = 6
-				mechanized = 8
-				medium_sp_artillery_brigade = 1
+				medium_armor = 9
+				mechanized = 9
 			}
 
 			support = {
@@ -311,9 +309,9 @@ armour_generic = {
 			}
 
 			regimental_support = {
+				medium_tank_destroyer_support = 2
+				medium_sp_anti_air_support = 1
 				mot_fire_support = 2
-				anti_air_battery = 1
-				anti_tank_battery = 1
 			}
 		}
 	}
@@ -335,12 +333,7 @@ armour_generic = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					NOT = { has_subdoctrine_in_track = infantry }
-					NOT = { has_subdoctrine_in_track = combat_support }
-					NOT = { has_subdoctrine_in_track = armor }
-					NOT = { has_subdoctrine_in_track = operations }
-				}
+				has_four_subdoctrine_tracks = no
 			}
 			modifier = {
 				factor = 0
@@ -354,8 +347,8 @@ armour_generic = {
 
 		target_template = {
 			regiments = {
-				modern_armor = 7
-				mechanized = 8
+				modern_armor = 9
+				mechanized = 9
 			}
 
 			support = {
@@ -367,9 +360,9 @@ armour_generic = {
 			}
 
 			regimental_support = {
+				medium_tank_destroyer_support = 2
+				medium_sp_anti_air_support = 1
 				mot_fire_support = 2
-				anti_air_battery = 1
-				anti_tank_battery = 1
 			}
 		}
 	}

@@ -27,12 +27,7 @@ tank_destroyer = {
 		}
 		modifier = {
 			factor = 0
-			OR = {
-				NOT = { has_subdoctrine_in_track = infantry }
-				NOT = { has_subdoctrine_in_track = combat_support }
-				NOT = { has_subdoctrine_in_track = armor }
-				NOT = { has_subdoctrine_in_track = operations }
-			}
+			has_four_subdoctrine_tracks = no
 		}
 	}
 
@@ -61,8 +56,7 @@ tank_destroyer = {
 			}
 
 			regimental_support = {
-				mot_fire_support = 2
-				anti_air_battery = 1
+				mot_fire_support = 3
 			}
 		}
     }
@@ -100,9 +94,8 @@ tank_destroyer = {
 			}
 
 			regimental_support = {
-				mot_fire_support = 2
-				anti_air_battery = 1
-				anti_tank_battery = 1
+				mot_fire_support = 3
+				heavy_tank_destroyer_support = 1
 			}
 		}
     }
@@ -139,8 +132,7 @@ tank_destroyer = {
 
 			regimental_support = {
 				mot_fire_support = 3
-				anti_air_battery = 1
-				anti_tank_battery = 1
+				heavy_tank_destroyer_support = 2
 			}
 		}
     }

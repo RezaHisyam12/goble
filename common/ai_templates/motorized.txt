@@ -36,10 +36,13 @@ motorized_infantry = {
 				artillery = 1
 				anti_air = 1
 				engineer = 1
+				field_hospital = 1
+				logistics_company = 1
 			}
 
 			regimental_support = {
-				field_guns = 1
+				field_guns = 2
+				anti_tank_battery = 1
 			}
 		}
 	}
@@ -61,12 +64,7 @@ motorized_infantry = {
 			}
             modifier = {
 				factor = 0
-				OR = {
-					NOT = { has_subdoctrine_in_track = infantry }
-					NOT = { has_subdoctrine_in_track = combat_support }
-					NOT = { has_subdoctrine_in_track = armor }
-					NOT = { has_subdoctrine_in_track = operations }
-				}
+				has_four_subdoctrine_tracks = no
 			}
             modifier = {
 				factor = 0
@@ -116,12 +114,7 @@ motorized_infantry = {
 			}
             modifier = {
 				factor = 0
-				OR = {
-					NOT = { has_subdoctrine_in_track = infantry }
-					NOT = { has_subdoctrine_in_track = combat_support }
-					NOT = { has_subdoctrine_in_track = armor }
-					NOT = { has_subdoctrine_in_track = operations }
-				}
+				has_four_subdoctrine_tracks = no
 			}
 			modifier = {
 				factor = 0
@@ -140,7 +133,7 @@ motorized_infantry = {
 
 			support = {
 				anti_air = 1
-				engineer = 1
+				armored_engineer = 1
 				field_hospital = 1
 				logistics_company = 1
 				signal_company = 1
@@ -169,12 +162,7 @@ motorized_infantry = {
 			}
             modifier = {
 				factor = 0
-				OR = {
-					NOT = { has_subdoctrine_in_track = infantry }
-					NOT = { has_subdoctrine_in_track = combat_support }
-					NOT = { has_subdoctrine_in_track = armor }
-					NOT = { has_subdoctrine_in_track = operations }
-				}
+				has_four_subdoctrine_tracks = no
 			}
 			modifier = {
 				factor = 0

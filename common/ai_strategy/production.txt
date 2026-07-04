@@ -257,14 +257,7 @@ more_td_losing_tank_war = {
 		is_eligible_for_improved_heavy_armor_production = yes
 		ai_has_role_template = armor_role
 		ai_has_role_template = tank_destroyer_role
-		any_enemy_country = {
-			ROOT = {
-				estimated_intel_max_armor = {
-					tag = PREV
-					value > 25
-				}
-			}
-		}
+		is_losing_tank_war = yes
 	}
 	abort_when_not_enabled = yes
 
@@ -334,7 +327,7 @@ mountaineer_effort = {
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = role_ratio                          id = mountaineer                  value = 25 }
+	ai_strategy = { type = role_ratio                          id = mountaineer                  value = 10 }
 }
 
 land_powers_more_mountaineers = {
@@ -359,7 +352,7 @@ land_powers_more_mountaineers = {
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = role_ratio                          id = mountaineer                  value = 25 }
+	ai_strategy = { type = role_ratio                          id = mountaineer                  value = 10 }
 }
 
 marine_effort = {
@@ -370,7 +363,7 @@ marine_effort = {
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = role_ratio                          id = marine                     	 value = 25 }
+	ai_strategy = { type = role_ratio                          id = marine                     	 value = 10 }
 }
 
 naval_powers_more_marines = {
@@ -395,7 +388,7 @@ naval_powers_more_marines = {
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = role_ratio                          id = marine                     	 value = 25 }
+	ai_strategy = { type = role_ratio                          id = marine                     	 value = 10 }
 }
 
 default_bicycle_production = {
@@ -414,11 +407,6 @@ default_bicycle_production = {
 	}
 	abort_when_not_enabled = yes 
 	
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = -10
-	}
 	ai_strategy = {
 		type = role_ratio
 		id = bicycle
@@ -440,7 +428,7 @@ default_elite_infantry_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = elite_infantry
-		value = 20
+		value = 10
 	}
 	ai_strategy = {
 		type = template_prio

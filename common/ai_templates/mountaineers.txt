@@ -18,6 +18,20 @@ mountaineer_generic = {
 		}
 	}
 
+	rangers_are_actually_mountaineers = {
+		can_upgrade_in_field = { always = yes }
+		
+		upgrade_prio = {
+			base = 0
+		}
+
+		target_template = {
+			regiments = {
+				ranger_battalion = 5
+			}
+		}
+	}
+
 	paratroopers_are_actually_mountaineers = {
 		can_upgrade_in_field = { always = yes }
 		
@@ -32,27 +46,7 @@ mountaineer_generic = {
 		}
 	}
 
-	mountaineer_1 = {
-		can_upgrade_in_field = { always = yes }
-		reinforce_prio = 2
-
-		upgrade_prio = {
-			base = 100
-		}
-
-		target_template = {
-			regiments = {
-				mountaineers = 12
-			}
-
-			support = {
-				artillery = 1
-				engineer = 1
-			}
-		}
-	}
-
-	mountaineer_2 = {
+	mountaineer_1_RUS = {
 		can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
@@ -60,55 +54,7 @@ mountaineer_generic = {
 			base = 100
 			modifier = {
 				factor = 0
-				NOT = { has_subdoctrine_in_track = infantry }
-			}
-			modifier = {
-				factor = 0
-				num_of_military_factories < 15
-			}
-			modifier = {
-				factor = 2
-				num_of_military_factories > 15
-			}
-		}
-
-		target_template = {
-			regiments = {
-				mountaineers = 12
-			}
-
-			support = {
-				artillery = 1
-				recon = 1
-				engineer = 1
-			}
-
-			regimental_support = {
-				fire_support = 2
-			}
-		}
-	}
-
-	mountaineer_3 = {
-		can_upgrade_in_field = { always = yes }
-		reinforce_prio = 2
-
-		upgrade_prio = {
-			base = 100
-			modifier = {
-				factor = 0
-				OR = {
-					NOT = { has_subdoctrine_in_track = infantry }
-					NOT = { has_subdoctrine_in_track = operations }
-				}
-			}
-			modifier = {
-				factor = 0
-				num_of_military_factories < 30
-			}
-			modifier = {
-				factor = 4
-				num_of_military_factories > 30
+				NOT = { tag = RUS }
 			}
 		}
 
@@ -132,7 +78,84 @@ mountaineer_generic = {
 		}
 	}
 
-	mountaineer_4 = {
+	mountaineer_1 = {
+		can_upgrade_in_field = { always = yes }
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			base = 100
+			modifier = {
+				factor = 0
+				tag = RUS
+			}
+		}
+
+		target_template = {
+			regiments = {
+				mountaineers = 9
+			}
+
+			support = {
+				artillery = 1
+				anti_air = 1
+				recon = 1
+				engineer = 1
+				field_hospital = 1
+			}
+
+			regimental_support = {
+				fire_support = 2
+				anti_tank_battery = 1
+			}
+		}
+	}
+
+	mountaineer_2 = {
+		can_upgrade_in_field = { always = yes }
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			base = 100
+			modifier = {
+				factor = 0
+				tag = RUS
+			}
+			modifier = {
+				factor = 0
+				has_two_subdoctrine_tracks = no
+			}
+			modifier = {
+				factor = 0
+				num_of_military_factories < 30
+			}
+			modifier = {
+				factor = 2
+				num_of_military_factories > 30
+			}
+		}
+
+		target_template = {
+			regiments = {
+				mountaineers = 9
+				artillery_brigade = 2
+			}
+
+			support = {
+				artillery = 1
+				anti_air = 1
+				recon = 1
+				engineer = 1
+				field_hospital = 1
+			}
+
+			regimental_support = {
+				fire_support = 2
+				anti_tank_battery = 1
+			}
+		}
+	}
+
+	super_mountaineer = {
 		can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
@@ -145,24 +168,22 @@ mountaineer_generic = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					NOT = { has_subdoctrine_in_track = infantry }
-					NOT = { has_subdoctrine_in_track = operations }
-				}
+				has_four_subdoctrine_tracks = no
 			}
 			modifier = {
 				factor = 0
-				num_of_military_factories < 30
+				num_of_military_factories < 60
 			}
 			modifier = {
-				factor = 6
-				num_of_military_factories > 30
+				factor = 4
+				num_of_military_factories > 60
 			}
 		}
 
 		target_template = {
 			regiments = {
 				mountaineers = 12
+				artillery_brigade = 4
 			}
 
 			support = {
@@ -174,7 +195,7 @@ mountaineer_generic = {
 			}
 
 			regimental_support = {
-				fire_support = 3
+				fire_support = 4
 				anti_tank_battery = 1
 			}
 		}

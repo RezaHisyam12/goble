@@ -103,12 +103,7 @@ light_armour_generic = {
 			}
             		modifier = {
 				factor = 0
-				OR = {
-					NOT = { has_subdoctrine_in_track = infantry }
-					NOT = { has_subdoctrine_in_track = combat_support }
-					NOT = { has_subdoctrine_in_track = armor }
-					NOT = { has_subdoctrine_in_track = operations }
-				}
+				has_four_subdoctrine_tracks = no
 			}
             		modifier = {
 				factor = 0
@@ -155,12 +150,7 @@ light_armour_generic = {
 			}
             		modifier = {
 				factor = 0
-				OR = {
-					NOT = { has_subdoctrine_in_track = infantry }
-					NOT = { has_subdoctrine_in_track = combat_support }
-					NOT = { has_subdoctrine_in_track = armor }
-					NOT = { has_subdoctrine_in_track = operations }
-				}
+				has_four_subdoctrine_tracks = no
 			}
             		modifier = {
 				factor = 0
@@ -181,8 +171,8 @@ light_armour_generic = {
 			}
 
 			regimental_support = {
-				rocket_battery = 1
-				mot_fire_support = 1
+				rocket_battery = 2
+				mot_fire_support = 2
 			}
 
 			support = {

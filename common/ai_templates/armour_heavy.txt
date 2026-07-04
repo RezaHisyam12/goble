@@ -24,13 +24,8 @@ heavy_armour_generic = {
 		}
 		modifier = {
 			factor = 0
-			OR = {
-				NOT = { has_subdoctrine_in_track = infantry }
-				NOT = { has_subdoctrine_in_track = combat_support }
-				NOT = { has_subdoctrine_in_track = armor }
-				NOT = { has_subdoctrine_in_track = operations }
-			}
 			NOT = { has_doctrine = grand_battleplan }
+			has_four_subdoctrine_tracks = no
 		}
 		modifier = { 
 			has_doctrine = grand_battleplan
@@ -41,7 +36,6 @@ heavy_armour_generic = {
 	motorized_heavy = {
         can_upgrade_in_field = {
 			has_equipment = { mechanized_equipment > 100 }
-			has_equipment = { heavy_tank_chassis > 100 }
 		}
 		reinforce_prio = 2
 
@@ -56,16 +50,15 @@ heavy_armour_generic = {
 			}
 
 			support = {
+				artillery = 1
 				anti_air = 1
-				light_tank_recon = 1
+				anti_tank = 1
 				medium_flame_tank = 1
-				armored_engineer = 1
+				engineer = 1
 			}
 
 			regimental_support = {
-				mot_fire_support = 2
-				anti_air_battery = 1
-				anti_tank_battery = 1
+				mot_fire_support = 4
 			}
 		}
     }
@@ -86,11 +79,7 @@ heavy_armour_generic = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					NOT = { has_subdoctrine_in_track = infantry }
-					NOT = { has_subdoctrine_in_track = combat_support }
-					NOT = { has_subdoctrine_in_track = operations }
-				}
+				has_two_subdoctrine_tracks = no
 			}
             modifier = {
 				factor = 0
@@ -104,8 +93,8 @@ heavy_armour_generic = {
 
         target_template = {
 			regiments = {
-				heavy_armor = 10
-				mechanized = 8
+				heavy_armor = 6
+				mechanized = 6
 			}
 
 			support = {
@@ -117,9 +106,59 @@ heavy_armour_generic = {
 			}
 
 			regimental_support = {
-				mot_fire_support = 3
-				anti_air_battery = 1
-				anti_tank_battery = 1
+				heavy_tank_destroyer_support = 1
+				medium_sp_anti_air_support = 1
+				mot_fire_support = 2
+			}
+		}
+    }
+
+	super_mechanized_heavy = {
+        can_upgrade_in_field = { always = no }
+		reinforce_prio = 2
+
+		upgrade_prio = {
+			base = 100
+			modifier = {
+				date < 1942.1.1
+				factor = 0
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_tech = mechanised_infantry }
+			}
+			modifier = {
+				factor = 0
+				has_four_subdoctrine_tracks = no
+			}
+            modifier = {
+				factor = 0
+				is_eligible_for_improved_heavy_armor_production = no
+			}
+			modifier = {
+				factor = 4
+				is_eligible_for_improved_heavy_armor_production = yes
+			}
+		}
+
+        target_template = {
+			regiments = {
+				heavy_armor = 9
+				mechanized = 9
+			}
+
+			support = {
+				anti_air = 1
+				light_tank_recon = 1
+				medium_flame_tank = 1
+				armored_engineer = 1
+				logistics_company = 1
+			}
+
+			regimental_support = {
+				heavy_tank_destroyer_support = 2
+				medium_sp_anti_air_support = 1
+				mot_fire_support = 2
 			}
 		}
     }
@@ -141,27 +180,22 @@ heavy_armour_generic = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					NOT = { has_subdoctrine_in_track = infantry }
-					NOT = { has_subdoctrine_in_track = combat_support }
-					NOT = { has_subdoctrine_in_track = armor }
-					NOT = { has_subdoctrine_in_track = operations }
-				}
+				has_four_subdoctrine_tracks = no
 			}
 			modifier = {
 				factor = 0
 				is_eligible_for_improved_heavy_armor_production = no
 			}
 			modifier = {
-				factor = 4
+				factor = 6
 				is_eligible_for_improved_heavy_armor_production = yes
 			}
 		}
 
 		target_template = {
 			regiments = {
-				modern_armor = 10
-				mechanized = 8
+				modern_armor = 9
+				mechanized = 9
 			}
 
 			support = {
@@ -173,9 +207,9 @@ heavy_armour_generic = {
 			}
 
 			regimental_support = {
-				mot_fire_support = 3
-				anti_air_battery = 1
-				anti_tank_battery = 1
+				heavy_tank_destroyer_support = 2
+				medium_sp_anti_air_support = 1
+				mot_fire_support = 2
 			}
 		}
 	}

@@ -25,12 +25,7 @@ heavy_armour_generic = {
 		}
 		modifier = {
 			factor = 0
-			OR = {
-				NOT = { has_subdoctrine_in_track = infantry }
-				NOT = { has_subdoctrine_in_track = combat_support }
-				NOT = { has_subdoctrine_in_track = armor }
-				NOT = { has_subdoctrine_in_track = operations }
-			}
+			has_four_subdoctrine_tracks = no
 			NOT = { has_doctrine = new_mobile_warfare }
 		}
 		modifier = { 
@@ -91,11 +86,7 @@ heavy_armour_generic = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					NOT = { has_subdoctrine_in_track = infantry }
-					NOT = { has_subdoctrine_in_track = combat_support }
-					NOT = { has_subdoctrine_in_track = operations }
-				}
+				has_two_subdoctrine_tracks = no
 			}
            	 	modifier = {
 				factor = 0
@@ -149,12 +140,7 @@ heavy_armour_generic = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					NOT = { has_subdoctrine_in_track = infantry }
-					NOT = { has_subdoctrine_in_track = combat_support }
-					NOT = { has_subdoctrine_in_track = armor }
-					NOT = { has_subdoctrine_in_track = operations }
-				}
+				has_four_subdoctrine_tracks = no
 			}
 			modifier = {
 				factor = 0

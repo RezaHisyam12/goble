@@ -49,20 +49,15 @@ suppression_generic = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					NOT = { has_subdoctrine_in_track = infantry }
-					NOT = { has_subdoctrine_in_track = combat_support }
-					NOT = { has_subdoctrine_in_track = armor }
-					NOT = { has_subdoctrine_in_track = operations }
-				}
+				has_four_subdoctrine_tracks = no
 			}
 			modifier = {
 				factor = 0
-				num_of_military_factories < 200
+				num_of_military_factories < 100
 			}
 			modifier = {
 				factor = 2
-				num_of_military_factories > 200
+				num_of_military_factories > 100
 			}
 		}
 

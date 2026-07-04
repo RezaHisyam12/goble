@@ -22,12 +22,7 @@ mechanized_infantry = {
 		}
 		modifier = {
 			factor = 0
-			OR = {
-				NOT = { has_subdoctrine_in_track = infantry }
-				NOT = { has_subdoctrine_in_track = combat_support }
-				NOT = { has_subdoctrine_in_track = armor }
-				NOT = { has_subdoctrine_in_track = operations }
-			}
+			has_four_subdoctrine_tracks = no
 		}
 	}
 
@@ -61,8 +56,8 @@ mechanized_infantry = {
 			}
 
 			support = {
-				artillery = 1
 				anti_air = 1
+				mot_recon = 1
 				engineer = 1
 				field_hospital = 1
 				logistics_company = 1
@@ -106,74 +101,25 @@ mechanized_infantry = {
 		target_template = {
 			regiments = {
 				mechanized = 9
-				medium_sp_artillery_brigade = 2
+				medium_sp_artillery_brigade = 3
 			}
 
 			support = {
 				anti_air = 1
 				mot_recon = 1
-				assault_engineer = 1
-				field_hospital = 1
-				logistics_company = 1
-			}
-
-			regimental_support = {
-				mot_fire_support = 2
-				anti_tank_battery = 1
-			}
-		}
-	}
-
-	super_spg_mech = {
-		can_upgrade_in_field = {
-			has_equipment = { medium_tank_artillery_chassis > 500 }
-		}
-		reinforce_prio = 2
-		
-		upgrade_prio = {
-			base = 100
-			modifier = {
-				factor = 0
-				NOT = { has_tech = basic_medium_tank }
-				NOT = { has_tech = basic_medium_tank_chassis }
-			}
-			modifier = {
-				factor = 0
-				NOT = {has_doctrine = superior_firepower}
-				NOT = {has_doctrine = grand_battleplan}
-			}
-            modifier = {
-				factor = 0
-				num_of_military_factories < 180
-			}
-			modifier = {
-				factor = 4
-				num_of_military_factories > 180
-			}
-		}
-
-		target_template = {
-			regiments = {
-				mechanized = 9
-				medium_sp_artillery_brigade = 4
-			}
-
-			support = {
-				anti_air = 1
-				mot_recon = 1
-				assault_engineer = 1
+				armored_engineer = 1
 				field_hospital = 1
 				logistics_company = 1
 			}
 
 			regimental_support = {
 				mot_fire_support = 3
-				anti_tank_battery = 1
+				medium_tank_destroyer_support = 1
 			}
 		}
 	}
 
-	ultimate_spg_mech = {
+	super_spg_mech = {
 		can_upgrade_in_field = { always = no }
 		reinforce_prio = 2
 		
@@ -194,7 +140,7 @@ mechanized_infantry = {
 				num_of_military_factories < 240
 			}
 			modifier = {
-				factor = 6
+				factor = 4
 				num_of_military_factories > 240
 			}
 		}
@@ -208,14 +154,14 @@ mechanized_infantry = {
 			support = {
 				anti_air = 1
 				mot_recon = 1
-				assault_engineer = 1
+				armored_engineer = 1
 				field_hospital = 1
 				logistics_company = 1
 			}
 
 			regimental_support = {
-				mot_fire_support = 3
-				anti_tank_battery = 2
+				mot_fire_support = 4
+				medium_tank_destroyer_support = 1
 			}
 		}
 	}
@@ -250,61 +196,13 @@ mechanized_infantry = {
 		target_template = {
 			regiments = {
 				mechanized = 9
-				motorized_rocket_brigade = 2
+				motorized_rocket_brigade = 3
 			}
 
 			support = {
 				anti_air = 1
 				mot_recon = 1
-				engineer = 1
-				field_hospital = 1
-				logistics_company = 1
-			}
-
-			regimental_support = {
-				mot_fire_support = 2
-				anti_tank_battery = 1
-			}
-		}
-	}
-
-	super_katyusha_mech = {
-		can_upgrade_in_field = {
-			has_equipment = { motorized_rocket_equipment > 500 }
-		}
-		reinforce_prio = 2
-		
-		upgrade_prio = {
-			base = 100
-			modifier = {
-				factor = 0
-				NOT = { has_tech = motorized_rocket_unit }
-			}
-			modifier = {
-				factor = 0
-				NOT = {has_doctrine = new_mobile_warfare}
-				NOT = {has_doctrine = mass_assault}
-			}
-            modifier = {
-				factor = 0
-				num_of_military_factories < 180
-			}
-			modifier = {
-				factor = 4
-				num_of_military_factories > 180
-			}
-		}
-
-		target_template = {
-			regiments = {
-				mechanized = 9
-				motorized_rocket_brigade = 4
-			}
-
-			support = {
-				anti_air = 1
-				mot_recon = 1
-				engineer = 1
+				assault_engineer = 1
 				field_hospital = 1
 				logistics_company = 1
 			}
@@ -316,7 +214,7 @@ mechanized_infantry = {
 		}
 	}
 
-	ultimate_katyusha_mech = {
+	super_katyusha_mech = {
 		can_upgrade_in_field = { always = no }
 		reinforce_prio = 2
 		
@@ -336,7 +234,7 @@ mechanized_infantry = {
 				num_of_military_factories < 240
 			}
 			modifier = {
-				factor = 6
+				factor = 4
 				num_of_military_factories > 240
 			}
 		}
@@ -350,14 +248,14 @@ mechanized_infantry = {
 			support = {
 				anti_air = 1
 				mot_recon = 1
-				engineer = 1
+				assault_engineer = 1
 				field_hospital = 1
 				logistics_company = 1
 			}
 
 			regimental_support = {
-				mot_fire_support = 3
-				anti_tank_battery = 2
+				mot_fire_support = 4
+				anti_tank_battery = 1
 			}
 		}
 	}

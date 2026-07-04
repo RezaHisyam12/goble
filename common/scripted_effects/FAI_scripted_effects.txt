@@ -2,34 +2,62 @@ FAI_green_air_update = {
 	if = {
 		limit = { has_war = yes }
 
-		set_temp_variable = { FAI_friendly_air = num_deployed_planes_with_type@small_plane_airframe }
+		set_temp_variable = { FAI_solo_fighter_total = num_deployed_planes_with_type@small_plane_airframe }
+
 		every_enemy_country = {
-			subtract_from_temp_variable = { FAI_friendly_air = num_deployed_planes_with_type@small_plane_airframe }
+			subtract_from_temp_variable = { FAI_solo_fighter_total = num_deployed_planes_with_type@small_plane_airframe }
 		}
 
 		if = {
 			limit = {
-				NOT = { has_country_flag = FAI_green_air }
-				if = {
-					OR = {
-						check_variable = { FAI_friendly_air > 0 }
-						check_variable = { FAI_friendly_air = 0 }
-					}
+				NOT = { has_country_flag = FAI_strong_green_air }
+				OR = {
+					check_variable = { FAI_solo_fighter_total > 0 }
+					check_variable = { FAI_solo_fighter_total = 0 }
 				}
 			}
-			set_country_flag = FAI_green_air
+			set_country_flag = FAI_strong_green_air
 		}
 		else_if = {
 			limit = {
-				has_country_flag = FAI_green_air
-				if = {
-					check_variable = { FAI_friendly_air < 0 }
-				}
+				has_country_flag = FAI_strong_green_air
+				check_variable = { FAI_solo_fighter_total < 0 }
 			}
-			clr_country_flag = FAI_green_air
+			clr_country_flag = FAI_strong_green_air
 		}
+
+		if = {
+			limit = { NOT = { has_country_flag = FAI_strong_green_air } }
+
+			set_temp_variable = { FAI_combined_fighter_total = FAI_solo_fighter_total }
+			every_allied_country = {
+				add_to_temp_variable = { FAI_combined_fighter_total = num_deployed_planes_with_type@small_plane_airframe }
+			}
+
+			if = {
+				limit = {
+					NOT = { has_country_flag = FAI_weak_green_air }
+					OR = {
+						check_variable = { FAI_combined_fighter_total > 0 }
+						check_variable = { FAI_combined_fighter_total = 0 }
+					}
+				}
+				set_country_flag = FAI_weak_green_air
+			}
+			else_if = {
+				limit = {
+					has_country_flag = FAI_weak_green_air
+					check_variable = { FAI_combined_fighter_total < 0 }
+				}
+				clr_country_flag = FAI_weak_green_air
+			}
+		}
+		else = { set_country_flag = FAI_weak_green_air }
 	}
-	else = { set_country_flag = FAI_green_air }
+	else = {
+		set_country_flag = FAI_strong_green_air
+		set_country_flag = FAI_weak_green_air
+	}
 }
 
 FAI_equipment_crisis_update = {

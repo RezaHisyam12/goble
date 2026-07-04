@@ -10,17 +10,21 @@ light_aircraft_production_default = {
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = { type = air_factory_balance value = 150 }
+	ai_strategy = { type = air_factory_balance value = 100 }
 	ai_strategy = { type = unit_ratio id = fighter value = 70 }
 	ai_strategy = { type = unit_ratio id = cas value = 30 }
 }
 
-light_aircraft_production_losing_air_war = {
+light_aircraft_production_air_war_ongoing = {
 	enable = {
 		is_eligible_for_light_aircraft_production = yes
+		date > 1939.1.1
 		has_war = yes
 		any_enemy_country = { is_major = yes }
-		has_red_air = yes
+		OR = {
+			has_yellow_air = yes
+			has_red_air = yes
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -49,9 +53,10 @@ light_aircraft_production_losing_air_war = {
 	}
 }
 
-light_aircraft_production_winning_air_war = {
+light_aircraft_production_air_war_won = {
 	enable = {
 		is_eligible_for_light_aircraft_production = yes
+		date > 1939.1.1
 		has_war = yes
 		any_enemy_country = { is_major = yes }
 		has_green_air = yes
@@ -73,17 +78,20 @@ light_aircraft_production_winning_air_war = {
 	}
 }
 
-the_air_force_is_dead_jim = {
+light_aircraft_production_air_war_lost = {
 	enable = {
 		is_eligible_for_light_aircraft_production = yes
+		date > 1939.1.1
 		has_war = yes
-		has_deployed_air_force_size = {
-			type = fighter
-			size < 100
-		}
+		any_enemy_country = { is_major = yes }
+		has_red_air = yes
+		the_air_force_is_dead_jim = yes
 	}
 	abort = {
-		has_green_air = yes
+		OR = {
+			has_green_air = yes
+			has_yellow_air = yes
+		}
 	}
 
 	ai_strategy = {
@@ -99,11 +107,6 @@ the_air_force_is_dead_jim = {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = strategic_bomber
-		value = -100
-	}
-	ai_strategy = {
-		type = equipment_production_factor
-		id = heavy_fighter
 		value = -100
 	}
 	ai_strategy = {
