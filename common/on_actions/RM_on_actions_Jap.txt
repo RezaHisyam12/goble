@@ -1,0 +1,73 @@
+on_actions = {
+	on_state_control_changed = {
+		effect = {
+			if = { #SSJW flag for Japan to help Japan identify stalemate
+				limit = {
+					ROOT = {
+						is_ally_with = JAP
+						has_war_with = CUF
+					}
+					FROM = { is_ally_with = CUF }
+					FROM.FROM = { is_coastal = no }
+				}
+				JAP = { set_country_flag = JAP_SSJW_last_major_frontline_change_flag }
+			}
+		}
+	}
+
+	on_naval_invasion = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = JAP
+					}
+					NOT = { has_state_flag = landing_priority }
+					is_island_state = no
+				}
+				if = {
+					limit = {
+						ROOT = {
+							NOT = { has_country_flag = JAP_landing_priority_boost }
+						}
+					}
+					ROOT = { set_country_flag = JAP_landing_priority_boost }
+					set_state_flag = {
+						flag = landing_priority
+						days = 30
+						value = 1
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_country_flag = JAP_landing_priority_boost
+						}
+					}
+					ROOT = { set_country_flag = JAP_landing_priority_boost }
+					set_state_flag = {
+						flag = landing_priority
+						days = 25
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						tag = JAP
+						NOT = { has_country_flag = JAP_recent_naval_invasion }
+					}
+					is_island_state = no
+				}
+				ROOT = {
+					set_country_flag = {
+						flag = JAP_recent_naval_invasion
+						days = 30
+						value = 1
+					}
+				}
+			}
+		}
+	}
+}

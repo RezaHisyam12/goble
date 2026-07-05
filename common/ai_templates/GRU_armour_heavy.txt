@@ -161,9 +161,9 @@ heavy_armour_generic = {
 			}
 
 			regimental_support = {
-				mot_fire_support = 3
-				anti_air_battery = 1
-				anti_tank_battery = 1
+				heavy_tank_destroyer_support = 2
+				medium_sp_anti_air_support = 1
+				mot_fire_support = 2
 			}
 
 			support = {

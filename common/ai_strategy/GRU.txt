@@ -1383,6 +1383,35 @@ GRU_dont_trust_national_france = {
 ## Stahlpakt  Coordination ##
 #############################
 
+STP_dont_send_expeditionary_forces_to_GRU = {
+	allowed = {
+		OR = {
+			tag = BAT
+			tag = HUN
+			tag = VKB
+			tag = VKR
+			tag = VKK
+			tag = VKP
+			tag = VKN
+			is_polish_tag = yes
+			is_balkan_tag = yes
+			is_scandinavian_tag = yes
+			is_ukrainian_tag = yes
+		}
+	}
+	enable = {
+		is_ally_with = GRU
+		FRA = { is_faction_leader = yes }			
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = diplo_action_desire
+		id = GRU
+		target = send_expeditionary_force
+		value = -1000
+	}
+}
 STP_ignore_scandinavia = {
 	allowed = {
 		is_scandinavian_tag = no

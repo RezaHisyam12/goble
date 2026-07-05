@@ -109,6 +109,97 @@ research_processing_techs_4 = {
 }
 
 ####################################################################################################
+#	SUPPORT
+####################################################################################################
+
+research_support_techs_1 = {
+	enable = {
+		date > 1936.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = tech_support
+		value = 100
+	}
+}
+
+research_support_techs_2 = {
+	enable = {
+		date > 1937.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = tech_engineers
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = tech_recon
+		value = 100
+	}
+}
+
+research_support_techs_3 = {
+	enable = {
+		date > 1938.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = tech_field_hospital
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = tech_logistics_company
+		value = 100
+	}
+}
+
+research_support_techs_3_majors = {
+	enable = {
+		date > 1938.1.1
+		is_major = yes
+		is_eligible_for_armor_production = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = tech_maintenance_company
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = tech_signal_company
+		value = 100
+	}
+}
+
+research_support_techs_4 = {
+	enable = {
+		date > 1939.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = tech_engineers2
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = tech_recon2
+		value = 100
+	}
+}
+
+####################################################################################################
 #	ARMOR
 ####################################################################################################
 
@@ -128,6 +219,48 @@ research_mech = {
 	ai_strategy = {
 		type = research_tech
 		id = improved_radio
+		value = 100
+	}
+}
+
+research_amphibious_techs_1 = {
+	enable = {
+		date > 1941.1.1
+		is_major = yes
+		is_eligible_for_armor_production = yes
+		is_naval_power = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = amphibious_tank_chassis
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = amphibious_drive
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = amphibious_mechanized_infantry
+		value = 100
+	}
+}
+
+research_amphibious_techs_2 = {
+	enable = {
+		date > 1943.1.1
+		is_major = yes
+		is_eligible_for_armor_production = yes
+		is_naval_power = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = amphibious_mechanized_infantry_2
 		value = 100
 	}
 }
@@ -287,6 +420,60 @@ research_fighter_and_cas_3 = {
 	ai_strategy = {
 		type = research_tech
 		id = CAS3
+		value = 100
+	}
+}
+
+research_torpedoes_1 = {
+	enable = {
+		date > 1937.1.1
+		is_major = yes
+		OR = {
+			is_eligible_for_naval_aircraft_production = yes
+			is_eligible_for_cv_aircraft_production = yes
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = air_torpedoe_1
+		value = 100
+	}
+}
+
+research_torpedoes_2 = {
+	enable = {
+		date > 1940.1.1
+		is_major = yes
+		OR = {
+			is_eligible_for_naval_aircraft_production = yes
+			is_eligible_for_cv_aircraft_production = yes
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = air_torpedoe_2
+		value = 100
+	}
+}
+
+research_torpedoes_3 = {
+	enable = {
+		date > 1944.1.1
+		is_major = yes
+		OR = {
+			is_eligible_for_naval_aircraft_production = yes
+			is_eligible_for_cv_aircraft_production = yes
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = air_torpedoe_3
 		value = 100
 	}
 }
@@ -496,6 +683,21 @@ research_transport_3 = {
 	}
 }
 
+research_scout_planes = {
+	enable = {
+		date > 1940.1.1
+		is_major = yes
+		is_eligible_for_medium_aircraft_production = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = photo_reconnaisance
+		value = 100
+	}
+}
+
 ####################################################################################################
 #	OTHER
 ####################################################################################################
@@ -535,6 +737,43 @@ research_le_funny_katyusha = {
 	ai_strategy = {
 		type = research_tech
 		id = motorized_rocket_unit
+		value = 100
+	}
+}
+
+research_armored_support_1 = {
+	enable = {
+		date > 1940.1.1
+		is_major = yes
+		is_eligible_for_heavy_armor_production = yes
+		is_special_project_completed = sp:sp_land_military_engineering_vehicles
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = sp_armored_engineer_tech
+		value = 100
+	}
+}
+
+research_armored_support_2 = {
+	enable = {
+		date > 1944.1.1
+		is_major = yes
+		is_eligible_for_improved_armor_production = yes
+		is_special_project_completed = sp:sp_land_military_engineering_vehicles
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = sp_armored_maintenance_tech
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = sp_armored_signal_tech
 		value = 100
 	}
 }

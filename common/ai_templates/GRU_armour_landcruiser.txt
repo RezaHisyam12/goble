@@ -31,6 +31,10 @@ armour_landcruiser_generic = {
 				NOT = { is_special_project_completed = sp:sp_land_land_cruiser }
 			}
 			modifier = {
+				factor = 0
+				has_four_subdoctrine_tracks = no
+			}
+			modifier = {
 				factor = 6
 				num_of_military_factories > 200
 			}
