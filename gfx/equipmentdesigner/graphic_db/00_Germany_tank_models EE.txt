@@ -4,16 +4,12 @@
 LIT = {
 	light_tank_chassis = {
 		pool = {
-			models = { 
-				LIT_light_armor_entity
-				EE_light_armor_entity
-			}
+			models = { EE_light_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
 		pool = {
 			models = {
-				LIT_medium_armor_entity
 				FIN_medium_armor_entity
 				GER_medium_armor_alt_entity
 				EE_medium_armor_entity
@@ -29,18 +25,12 @@ LIT = {
 	}
 	heavy_tank_chassis = {
 		pool = {
-			models = { 
-				LIT_heavy_armor_entity
-				EE_heavy_armor_entity
-			}
+			models = { EE_heavy_armor_entity }
 		}
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			models = { 
-				LIT_heavy_armor_entity
-				EE_heavy_armor_entity
-			}
+			models = { EE_heavy_armor_entity }
 		}
 	}
 	modern_tank_chassis = {
@@ -68,16 +58,12 @@ LIT = {
 WHR = {
 	light_tank_chassis = {
 		pool = {
-			models = { 
-				WHR_light_armor_entity
-				EE_light_armor_entity
-			}
+			models = { EE_light_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
 		pool = {
 			models = {
-				WHR_medium_armor_entity
 				FIN_medium_armor_entity
 				GER_medium_armor_alt_entity
 				EE_medium_armor_entity
@@ -93,18 +79,12 @@ WHR = {
 	}
 	heavy_tank_chassis = {
 		pool = {
-			models = { 
-				WHR_heavy_armor_entity
-				EE_heavy_armor_entity
-			}
+			models = { EE_heavy_armor_entity }
 		}
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			models = { 
-				WHR_heavy_armor_entity
-				EE_heavy_armor_entity
-			}
+			models = { EE_heavy_armor_entity }
 		}
 	}
 	modern_tank_chassis = {
@@ -456,16 +436,12 @@ UKR = {
 IRE = {
 	light_tank_chassis = {
 		pool = {
-			models = { 
-				IRE_light_armor_entity
-				EE_light_armor_entity
-			}
+			models = { EE_light_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
 		pool = {
 			models = {
-				IRE_medium_armor_entity
 				FIN_medium_armor_entity
 				GER_medium_armor_alt_entity
 				EE_medium_armor_entity
@@ -481,18 +457,12 @@ IRE = {
 	}
 	heavy_tank_chassis = {
 		pool = {
-			models = { 
-				IRE_heavy_armor_entity
-				EE_heavy_armor_entity
-			}
+			models = { EE_heavy_armor_entity }
 		}
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			models = { 
-				IRE_heavy_armor_entity
-				EE_heavy_armor_entity
-			}
+			models = { EE_heavy_armor_entity }
 		}
 	}
 	modern_tank_chassis = {
@@ -624,4 +594,5 @@ CRM = {
 		}
 	}
 }
+
 

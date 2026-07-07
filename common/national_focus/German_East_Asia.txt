@@ -478,7 +478,12 @@ focus_tree = {
 			hidden_effect = {
 				load_oob = GEA_Native_Garrisons
 			}
+			swap_ideas = {
+				add_idea = GEA_local_troops_2
+				remove_idea = GEA_local_troops
+			}
 			add_manpower = 5000
+			army_experience = 15
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
 	}
@@ -514,7 +519,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GEA_localtroops3"
 			swap_ideas = {
-				remove_idea = GEA_local_troops
+				remove_idea = GEA_local_troops_2
 				add_idea = GEA_language
 			}
 			add_manpower = 10000
@@ -563,6 +568,7 @@ focus_tree = {
 				category = land_doctrine
 			}
 			add_manpower = 10000
+			army_experience = 25
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_RESEARCH }
 	}
@@ -901,6 +907,10 @@ focus_tree = {
 				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
+			}
+			add_timed_idea = {
+				idea = GEA_naval_plan
+				days = 365
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }

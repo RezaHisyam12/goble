@@ -1,0 +1,132 @@
+JAP_showa_ai = {
+	name = "JAP_showa_ai"
+	desc = ""
+
+	allowed = {
+		original_tag = JAP
+	}
+
+	enable = {
+		OR = {
+			NOT = { has_country_flag = JAP_path_decided }
+			has_country_flag = JAP_showa_tree
+		}
+	}
+	abort = {
+		NOT = { has_completed_focus = JAP_continental_warfare }
+		has_war_with = CHN
+	}
+	
+	ai_national_focuses = {
+		JAP_revise_imperial_defence_policy
+		JAP_long_war_doctrine
+		JAP_plan_edit_1
+		JAP_start_the_third_circle_plan
+		JAP_reexamine_naval_doctrine
+		JAP_revise_kantai_kessen
+
+		JAP_showa_restoration
+		JAP_Enlightenment_from_the_Kenkyukai
+		JAP_Unite_the_Chrysanthemums_Servants
+		JAP_Cleansing_the_Gardens_of_Sinners
+		JAP_Kokutai_no_Hongi
+		JAP_The_White_Fox_in_the_Village
+		JAP_In_Corradinis_Proletarian_Vision
+		JAP_For_Their_Freedom_and_Ours
+		JAP_Tuning_70_Million_Gears
+		JAP_Grant_Patronage_to_Asanuma
+		JAP_land_reform_focus
+		JAP_national_rd_institutes
+
+		JAP_rising_sun
+		JAP_tokyo_conference
+		JAP_osaka_conference
+		JAP_integrate_asian_economies
+		JAP_strengthen_the_ijaas
+		JAP_phase_out_arisakas
+		JAP_new_order_in_east_asia
+		JAP_five_races_under_the_sun
+		JAP_nanshin_ron
+		JAP_extend_pacific_security_zone
+		JAP_claim_colonies
+
+		JAP_bureaucratic_economy
+		JAP_regulating_the_automotive_industry
+		JAP_prioritise_military_oil
+		JAP_reorganise_resource_extraction
+		JAP_the_shinkansen_proposal
+		JAP_colonial_incentives
+
+		JAP_plan_edit_2
+		JAP_agile_and_indomitable
+		JAP_plan_edit_3
+		JAP_coordinate_intelligence_services
+		JAP_new_field_manuals
+		JAP_supremacy_of_logistics
+		JAP_logistics_corps
+		JAP_expand_the_engineer_corps
+		JAP_update_the_imperial_war_college
+		JAP_expand_shipping_capacity
+		JAP_start_the_fourth_circle_plan
+		JAP_expand_personnel_reserves
+		JAP_invest_in_heavy_industry
+		JAP_build_new_aircraft_facilities
+		JAP_riken_north
+	}
+
+	ideas = {
+		low_economic_mobilisation = 10
+		partial_economic_mobilisation = 10
+		Furukawa_Siemens = 30
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
+JAP_war_with_china_plan = {
+	name = "JAP_war_with_china_plan"
+	desc = ""
+
+	allowed = { original_tag = JAP }
+	enable = {
+		NOT = { has_completed_focus = JAP_continental_warfare }
+		has_war_with = CHN
+	}
+	abort = {
+		has_completed_focus = JAP_continental_warfare
+	}
+
+	ai_national_focuses = {
+		JAP_continental_warfare
+	}
+
+	weight = {
+		factor = 1.0
+	}
+}
+
+JAP_war_with_GEA_plan = {
+	name = "JAP_war_with_GEA_plan"
+	desc = ""
+
+	allowed = { original_tag = JAP }
+	enable = {
+		NOT = { has_completed_focus = JAP_ultimatum }
+		GER = { has_war_with = FRA }
+	}
+	abort = {
+		has_completed_focus = JAP_ultimatum
+	}
+
+	ai_national_focuses = {
+		JAP_ultimatum
+	}
+
+	weight = {
+		factor = 1.0
+	}
+}

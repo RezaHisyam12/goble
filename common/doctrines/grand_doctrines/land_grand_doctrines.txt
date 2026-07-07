@@ -377,18 +377,11 @@ mass_assault = {
                 NOT = {tag = COR}
                 NOT = {tag = TEX}
                 NOT = {tag = FRA}
+                NOT = {tag = JAP}
                 NOT = {tag = SRI}
                 NOT = {tag = CNT}
                 NOT = {tag = GRU}
             }
-        }
-        modifier = {
-            add = 100
-            is_han_chinese_tag = yes
-        }
-        modifier = {
-            factor = 100
-		tag = JAP 
         }
 	modifier = {
 		factor = 0

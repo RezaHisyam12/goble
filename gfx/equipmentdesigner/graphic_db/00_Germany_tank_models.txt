@@ -1,6 +1,6 @@
 ### GER armor
 ### GER, AZE, GEA, ICE, MAF, NMB, BAT, VIN, FLN, WLL, MOR, LEP, QIE, SWI, GRU, NGF, DDR, WGR, BAY
-### BEL, BUL
+### BEL, BUL, FIN
 ### HOL, DEI
 ### TUR, PAL, SYR, IRQ
 ### SWE, SCA, DEN
@@ -8,7 +8,15 @@
 GER = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -30,6 +38,14 @@ GER = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -59,10 +75,18 @@ GER = {
 	}
 }
 
-AZE = {
+AZR = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -84,6 +108,14 @@ AZE = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -116,7 +148,15 @@ AZE = {
 GEA = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -138,6 +178,14 @@ GEA = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -170,7 +218,15 @@ GEA = {
 ICE = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -192,6 +248,14 @@ ICE = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -224,7 +288,15 @@ ICE = {
 MAF = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -246,6 +318,14 @@ MAF = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -278,7 +358,15 @@ MAF = {
 NMB = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -300,6 +388,14 @@ NMB = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -332,7 +428,15 @@ NMB = {
 BAT = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -354,6 +458,14 @@ BAT = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -386,7 +498,15 @@ BAT = {
 VIN = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -408,6 +528,14 @@ VIN = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -437,10 +565,18 @@ VIN = {
 	}
 }
 
-FLN = {
+FLA = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -462,6 +598,14 @@ FLN = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -491,10 +635,18 @@ FLN = {
 	}
 }
 
-WLL = {
+WAL = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -516,6 +668,14 @@ WLL = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -548,7 +708,15 @@ WLL = {
 MOR = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -570,6 +738,14 @@ MOR = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -602,7 +778,15 @@ MOR = {
 LEP = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -624,6 +808,14 @@ LEP = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -656,7 +848,15 @@ LEP = {
 QIE = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -678,6 +878,14 @@ QIE = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -710,7 +918,15 @@ QIE = {
 SWI = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -732,6 +948,14 @@ SWI = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -764,7 +988,15 @@ SWI = {
 GRU = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -786,6 +1018,14 @@ GRU = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -818,7 +1058,15 @@ GRU = {
 NGF = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -840,6 +1088,14 @@ NGF = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -872,7 +1128,15 @@ NGF = {
 DDR = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -894,6 +1158,14 @@ DDR = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -926,7 +1198,15 @@ DDR = {
 WGR = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -948,6 +1228,14 @@ WGR = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -980,7 +1268,15 @@ WGR = {
 BAY = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -1002,6 +1298,14 @@ BAY = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -1034,7 +1338,15 @@ BAY = {
 BEL = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -1063,6 +1375,14 @@ BEL = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -1095,7 +1415,15 @@ BEL = {
 BUL = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -1117,6 +1445,14 @@ BUL = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -1149,7 +1485,15 @@ BUL = {
 HOL = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -1171,6 +1515,14 @@ HOL = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -1203,7 +1555,15 @@ HOL = {
 DEI = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -1225,6 +1585,14 @@ DEI = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -1257,7 +1625,15 @@ DEI = {
 TUR = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -1279,6 +1655,14 @@ TUR = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_entity
+				GER_heavy_armor_1_alt_0_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -1311,7 +1695,15 @@ TUR = {
 PAL = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -1333,6 +1725,14 @@ PAL = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_entity
+				GER_heavy_armor_1_alt_0_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -1365,7 +1765,15 @@ PAL = {
 SYR = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -1387,6 +1795,14 @@ SYR = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_entity
+				GER_heavy_armor_1_alt_0_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -1419,7 +1835,15 @@ SYR = {
 IRQ = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -1441,6 +1865,14 @@ IRQ = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_entity
+				GER_heavy_armor_1_alt_0_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -1473,7 +1905,15 @@ IRQ = {
 SWE = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -1495,6 +1935,14 @@ SWE = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -1527,7 +1975,15 @@ SWE = {
 SCA = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -1549,6 +2005,14 @@ SCA = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {
@@ -1581,7 +2045,15 @@ SCA = {
 DEN = {
 	light_tank_chassis = {
 		pool = {
-			models = { GER_light_armor_entity }
+			models = {
+				GER_iw_armor_entity
+				GER_light_armor_entity
+			}
+		}
+	}
+	light_tank_chassis_0 = {
+		pool = {
+			models = { GER_iw_armor_entity }
 		}
 	}
 	medium_tank_chassis = {
@@ -1603,6 +2075,14 @@ DEN = {
 	heavy_tank_chassis = {
 		pool = {
 			models = { GER_heavy_armor_entity }
+		}
+	}
+	heavy_tank_chassis_2 = {
+		pool = {
+			models = {
+				GER_heavy_armor_1_alt_0_entity
+				GER_heavy_armor_1_entity
+			}
 		}
 	}
 	super_heavy_tank_chassis = {

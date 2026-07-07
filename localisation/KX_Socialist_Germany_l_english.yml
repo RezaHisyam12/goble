@@ -518,7 +518,10 @@ GRU_oknlw_soc:0 "OK-NLW"
 GRU_oknlw_soc_desc:0 "Oberkommando Nationale Luftwaffe will be founded to organize the Air Force and concentrate its efforts. Led by the Generalsstab-Luftwaffe which will itself be led by the Grand Marshal of the Air Force. With this we will turn our disorganized smattering of squadrons into a true professional Air Force to match and even beat anything they may face."
 
 #############################################
+ JAP_no_ichigo_tooltip: "Attack bonus against §H$all_chinese_countries_tt$§!: [?0.10|+=%1]"
+ JAP_ichigo_tooltip: "Attack bonus against §H$all_chinese_countries_tt$§!: [?0.15|+=%1]"
 
+############################################
 
 GRU_new_order:0 "The New Order"
 GRU_reinforce_bunker:0 "Reinforce Capital Fortifications"
