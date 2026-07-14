@@ -89,7 +89,7 @@ faction_goal_GRU_defeat_internationale = {
 			add_political_power = 100
 		}
 	}
-	ai_will_do = { base = 100 }
+	ai_will_do = { base = 1000 }
 }
 faction_goal_GRU_defeat_russia = {
 	name = goal_GRU_defeat_russia_name
@@ -118,5 +118,5 @@ faction_goal_GRU_defeat_russia = {
 			add_political_power = 100
 		}
 	}
-	ai_will_do = { base = 100 }
+	ai_will_do = { base = 1000 }
 }

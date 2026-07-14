@@ -9383,6 +9383,7 @@ shared_focus = {
 						tag = VKR
 						tag = VKK
 						tag = VKP
+						tag = VKN
 					}
 					is_in_faction_with = GRU
 				}

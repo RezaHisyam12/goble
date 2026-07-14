@@ -440,3 +440,15 @@ eastern_kommissariat_collapse_score = {
 gru_controls_konigsberg = {
     has_full_control_of_state = 5
 }
+
+GRU_in_naval_war = {
+	OR = {
+		has_war_with = ENG
+		has_war_with = JAP
+		has_war_with = var:361.owner #Washington DC
+	}
+	OR = {
+		FRA = { has_capitulated = yes }
+		NOT = { country_exists = FRA }
+	}
+}

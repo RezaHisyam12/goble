@@ -5370,3 +5370,11 @@ MAF_SWA = {
 	color = rgb { 136 104 60 }
 	color_ui = rgb { 136 104 60 }
 }
+RIF_CNT = {
+	color = rgb { 235 39 55 }
+	color_ui = rgb { 235 39 55 }
+}
+EQG_CNT = {
+	color = rgb { 245 49 66 }
+	color_ui = rgb { 245 49 66 }
+}

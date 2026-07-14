@@ -88,7 +88,33 @@ CAN_invite_german_halifax_decision: "Invite Berlin into the Halifax Conference"
 	GRU_Kurt_Student_cair_ade:0 "Kurt Student"
 	GRU_Rudolf_Hess_cair_npo:0 "Rudolf Heß"
 
+### Germany Unique Special Project Names
 
+ GRU_sp_land_multi_charge_large_caliber_gun: "Projekt Wotan"
+ GRU_sp_land_super_heavy_railway_gun: "Projekt Eisenfaust"
+ GRU_sp_land_super_heavy_howitzer: "Projekt Donnerschlag"
+ GRU_sp_land_self_propelled_super_heavy_howitzer: "Projekt Grendel"
+ GRU_sp_land_land_cruiser: "Festungskreuzer 'Siegfried'"
+ GRU_sp_air_radar: "Projekt Walküre"
+
+ GRU_sp_nuclear_reactor: "Uranverein II"
+ GRU_sp_nuclear_bomb: "Projekt Götterdämmerung"
+ GRU_sp_thermo_nuclear_bomb: "Projekt Ragnarök"
+
+ GRU_sp_rockets_flying_bomb: "Projekt Blitzvogel"
+ GRU_sp_rockets_ballistic_missile: "Projekt Wurfgerät"
+ GRU_sp_rockets_medium_range_ballistic_missile: "Projekt Weltenbrand"
+ GRU_sp_rockets_ground_to_air_missile: "Projekt Schildwache"
+ GRU_sp_rocket_interceptor: "Projekt Falkenjäger"
+
+ GRU_sp_naval_nuclear_submarine: "Projekt Leviathan"
+ GRU_sp_naval_ice_carrier: "Projekt Nordstern"
+
+ GRU_sp_air_intercontinental_bomber: "Projekt Adler"
+ GRU_sp_air_mothership_aircraft: "Projekt Zeppelin II"
+ GRU_sp_air_helicopter: "Projekt Kolibri II"
+ GRU_sp_air_jet_engine: "Projekt Sturmvogel"
+ 
 ###################
 ####Zollverein#####
 ###################

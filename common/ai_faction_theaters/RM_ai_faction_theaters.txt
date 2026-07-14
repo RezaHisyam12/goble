@@ -1,0 +1,187 @@
+### Stahlpakt AI Faction Theatres ###
+
+stahlpakt_western_europe = {
+	name = stahlpakt_theatre_western_europe
+	regions = {
+		5 #Low Countries
+		6 #Rhineland
+		7 #Upper Germany
+		19 #Northern France
+		20 #Lyonnais
+		164 #Western France
+		18 #English Channel
+		173 #Eastern North Sea
+		131 #Switzerland
+		1 #Southern England
+		41 #Eastern Iberia
+		236 #Southern Iberia
+		237 #Western Iberia
+		8 #Lower Germany
+	}
+	can_skip_first_region = yes
+	preferred_countries = { #Behaviour a bit bugged - experiment with later
+		GRU VKN SWI ITA
+	}
+	cancel = {
+		OR = {
+			NOT = { INT = { capital_scope = { is_on_continent = europe } } }
+			NOT = { has_war_with = INT }
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 100
+			original_tag = GRU
+		}
+	}
+}
+
+stahlpakt_eastern_europe = {
+	name = stahlpakt_theatre_eastern_europe
+	regions = {
+		130 #Ukraine
+		39 #Belarus
+		37 #Baltic States
+		132 #Western Russia
+		133 #Central Russia
+		135 #North Caucasus
+		137 #Caspian Lowlands
+		13 #Finland
+		134 #Transcaucasia
+		38 #Poland
+	}
+	can_skip_first_region = yes
+	preferred_countries = {
+		UKR WHR BAT LIT POL VKB VKR VKP VKK HUN BUL SER ROM
+	}
+	cancel = {
+		NOT = { has_war_with = RUS }
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 100
+			original_tag = GRU
+		}
+	}
+}
+
+stahlpakt_central_europe = {
+	name = stahlpakt_theatre_central_europe
+	regions = {
+		143 #Illyria
+		144 #Transylvania
+		27 #Hungary
+		24 #Central Balkans
+		15 #Romania
+		26 #Bulgaria
+		181 #Po Valley
+		23 #Italy
+		25 #Greece
+		21 #Austria
+		22 #Bohemia
+	}
+	can_skip_first_region = yes
+	preferred_countries = {
+		GRU HUN BUL ITA UKR POL ALB VKP VKR
+	}
+	cancel = {
+		NOT = {
+			any_enemy_country = {
+				any_owned_state = {
+					OR = {
+						region = 143 #Illyria
+						region = 144 #Transylvania
+						region = 21 #Austria
+						region = 27 #Hungary
+						region = 24 #Central Balkans
+						region = 15 #Romania
+						region = 26 #Bulgaria
+						region = 181 #Po Valley
+						region = 23 #Italy
+						region = 25 #Greece
+						region = 22 #Bohemia
+					}
+				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 90
+			original_tag = GRU
+		}
+	}
+}
+
+### 3rd Internationale AI Faction Theatres ###
+
+internationale_western_europe_2 = {
+	name = internationale_theatre_western_europe_2
+	regions = {
+		5 #Low Countries
+		6 #Rhineland
+		7 #Upper Germany
+		18 #English Channel
+		19 #Northern France
+		164 #Western France
+		173 #Eastern North Sea
+		8 #Lower Germany
+		131 #Switzerland
+		1 #Southern England
+	}
+	can_skip_first_region = yes
+	preferred_countries = {
+		FRA ENG BEL WLL FLN HOL SWI SRI SPR IRE DEN
+	}
+	cancel = {
+		NOT = { has_war_with = GRU }
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 100
+			tag = INT
+		}
+	}
+}
+
+### Moscow Accord AI Faction Theatres ###
+
+moscow_accord_eastern_europe_2 = {
+	name = moscow_accord_theatre_eastern_europe_2
+	regions = {
+		130 #Ukraine
+		165 #E. Ukraine
+		39 #Belarus
+		37 #Baltic States
+		132 #Western Russia
+		133 #Central Russia
+		135 #North Caucasus
+		137 #Caspian Lowlands
+		13 #Finland
+		134 #Transcaucasia
+		38 #Poland
+	}
+	can_skip_first_region = yes
+	preferred_countries = {
+		RUS UKR WHR LIT LAT EST ROM POL FIN GEO ARM AZE NOR BUK MON ETS
+	}
+	cancel = {
+		NOT = { has_war_with = GRU }
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 100
+			original_tag = RUS
+		}
+	}
+}

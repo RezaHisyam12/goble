@@ -1,7 +1,7 @@
 ANQ = {
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_0_entity
 			}
@@ -9,7 +9,7 @@ ANQ = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_2_entity
 			}
@@ -73,7 +73,7 @@ ANQ = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_super_heavy_armor_entity
 			}
@@ -83,7 +83,7 @@ ANQ = {
 HNN = {
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_0_entity
 			}
@@ -91,7 +91,7 @@ HNN = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_2_entity
 			}
@@ -155,7 +155,7 @@ HNN = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_super_heavy_armor_entity
 			}
@@ -165,7 +165,7 @@ HNN = {
 GXC = {
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_0_entity
 			}
@@ -173,7 +173,7 @@ GXC = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_2_entity
 			}
@@ -237,7 +237,7 @@ GXC = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_super_heavy_armor_entity
 			}
@@ -247,7 +247,7 @@ GXC = {
 XSM = {
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_0_entity
 			}
@@ -255,7 +255,7 @@ XSM = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_2_entity
 			}
@@ -319,7 +319,7 @@ XSM = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_super_heavy_armor_entity
 			}
@@ -329,7 +329,7 @@ XSM = {
 SHD = {
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_0_entity
 			}
@@ -337,7 +337,7 @@ SHD = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_2_entity
 			}
@@ -401,7 +401,7 @@ SHD = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_super_heavy_armor_entity
 			}
@@ -411,7 +411,7 @@ SHD = {
 SHX = {
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_0_entity
 			}
@@ -419,7 +419,7 @@ SHX = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_2_entity
 			}
@@ -483,7 +483,7 @@ SHX = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_super_heavy_armor_entity
 			}
@@ -493,7 +493,7 @@ SHX = {
 SZC = {
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_0_entity
 			}
@@ -501,7 +501,7 @@ SZC = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_2_entity
 			}
@@ -565,7 +565,7 @@ SZC = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_super_heavy_armor_entity
 			}
@@ -575,7 +575,7 @@ SZC = {
 TIB = {
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_0_entity
 			}
@@ -583,7 +583,7 @@ TIB = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_2_entity
 			}
@@ -647,7 +647,7 @@ TIB = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_super_heavy_armor_entity
 			}
@@ -657,7 +657,7 @@ TIB = {
 SIK = {
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_0_entity
 			}
@@ -665,7 +665,7 @@ SIK = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_2_entity
 			}
@@ -729,7 +729,7 @@ SIK = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_super_heavy_armor_entity
 			}
@@ -739,7 +739,7 @@ SIK = {
 YUN = {
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_0_entity
 			}
@@ -747,7 +747,7 @@ YUN = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_2_entity
 			}
@@ -811,7 +811,7 @@ YUN = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_super_heavy_armor_entity
 			}
@@ -821,7 +821,7 @@ YUN = {
 KUM = {
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_0_entity
 			}
@@ -829,7 +829,7 @@ KUM = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_heavy_armor_2_entity
 			}
@@ -893,7 +893,7 @@ KUM = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				RUS_super_heavy_armor_entity
 			}

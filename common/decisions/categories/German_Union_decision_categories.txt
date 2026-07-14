@@ -137,6 +137,7 @@ GRU_vs_units_decisions = {
 	visible = {
 		GRU = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
 		has_completed_focus = GRU_volkssturm
+		has_reached_maximum_divisions = no
 	}
 }
 #GRU_alternate_leaders_decisions = {

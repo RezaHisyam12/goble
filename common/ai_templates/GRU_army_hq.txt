@@ -1,0 +1,41 @@
+######################
+#	HQ ROLE
+######################
+
+hq_generic = {
+	role = hq_role
+	available_for = { GRU VKB VKK VKR VKM VKN VKP VOB VSJ VST HYP }
+
+	upgrade_prio = {
+		base = 1000
+	}
+
+	hq_default = {
+		upgrade_prio = {
+			base = 100 #Intentionally low to not waste time on them
+			modifier = {
+				factor = 0
+				num_of_military_factories < 50
+			}
+			modifier = {
+				factor = 5
+				num_of_military_factories > 75
+			}
+		}
+
+        	can_upgrade_in_field = { always = yes }
+
+		target_template = {
+			support = {
+				hq_signal = 1
+				hq_logistics = 1
+				hq_engineer = 1
+				hq_field_hospital = 1
+			}
+
+			regiments = {
+				hq_light_armor = 4
+			}
+		}
+	}
+}

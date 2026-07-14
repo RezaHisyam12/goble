@@ -1,4 +1,28 @@
 ITA = {
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
 	light_tank_chassis_2 = {
 		pool = {
 			weight = 1.5
@@ -11,33 +35,16 @@ ITA = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_light_armor_1_entity
+				ITA_medium_armor_1_entity
 			}
 		}
 	}
-	light_tank_destroyer_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_light_tank_destroyer_brigade_0_entity
-				ITA_light_tank_destroyer_brigade_1_entity
-			}
-		}
-	}
-	light_tank_artillery_chassis = {
+
+	medium_tank_artillery_chassis = {
 		pool = {
 			weight = 1.5
 			models = {
 				ITA_medium_sp_artillery_brigade_1_entity
-			}
-		}
-	}
-	medium_tank_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_armor_1_entity
-				ITA_heavy_armor_2_entity
 			}
 		}
 	}
@@ -49,27 +56,20 @@ ITA = {
 			}
 		}
 	}
-	medium_tank_destroyer_chassis_2 = {
+	medium_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+
+	medium_tank_artillery_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
 				ITA_medium_tank_destroyer_brigade_2_entity
-			}
-		}
-	}
-	medium_tank_destroyer_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_tank_destroyer_brigade_2_entity
-			}
-		}
-	}
-	medium_tank_artillery_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_sp_artillery_brigade_1_entity
 			}
 		}
 	}
@@ -77,7 +77,23 @@ ITA = {
 		pool = {
 			weight = 1.5
 			models = {
+				ITA_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
 				ITA_medium_sp_artillery_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_armor_2_entity
 			}
 		}
 	}
@@ -89,30 +105,15 @@ ITA = {
 			}
 		}
 	}
-	medium_tank_aa_chassis = {
+	medium_tank_destroyer_chassis_3 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_sp_anti_air_brigade_2_entity
+				ITA_medium_tank_destroyer_brigade_2_entity
 			}
 		}
 	}
-	heavy_tank_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_heavy_armor_2_entity
-			}
-		}
-	}
-	heavy_tank_destroyer_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_tank_destroyer_brigade_1_entity
-			}
-		}
-	}
+
 	heavy_tank_artillery_chassis = {
 		pool = {
 			weight = 1.5
@@ -129,19 +130,43 @@ ITA = {
 			}
 		}
 	}
-	super_heavy_tank_chassis = {
+	heavy_tank_artillery_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_heavy_armor_2_entity
+				ITA_medium_sp_artillery_brigade_1_entity
 			}
 		}
 	}
-	modern_tank_chassis = {
+	heavy_tank_destroyer_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_armor_1_entity
+				ITA_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_artillery_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+
+	modern_tank_chassis = {
+		pool = {
+			weight = 5
+			models = {
 				ITA_heavy_armor_2_entity
 			}
 		}
@@ -150,7 +175,6 @@ ITA = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_tank_destroyer_brigade_1_entity
 				ITA_medium_tank_destroyer_brigade_2_entity
 			}
 		}
@@ -173,6 +197,30 @@ ITA = {
 	}
 }
 PAP = {
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
 	light_tank_chassis_2 = {
 		pool = {
 			weight = 1.5
@@ -185,33 +233,16 @@ PAP = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_light_armor_1_entity
+				ITA_medium_armor_1_entity
 			}
 		}
 	}
-	light_tank_destroyer_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_light_tank_destroyer_brigade_0_entity
-				ITA_light_tank_destroyer_brigade_1_entity
-			}
-		}
-	}
-	light_tank_artillery_chassis = {
+
+	medium_tank_artillery_chassis = {
 		pool = {
 			weight = 1.5
 			models = {
 				ITA_medium_sp_artillery_brigade_1_entity
-			}
-		}
-	}
-	medium_tank_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_armor_1_entity
-				ITA_heavy_armor_2_entity
 			}
 		}
 	}
@@ -223,27 +254,20 @@ PAP = {
 			}
 		}
 	}
-	medium_tank_destroyer_chassis_2 = {
+	medium_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+
+	medium_tank_artillery_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
 				ITA_medium_tank_destroyer_brigade_2_entity
-			}
-		}
-	}
-	medium_tank_destroyer_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_tank_destroyer_brigade_2_entity
-			}
-		}
-	}
-	medium_tank_artillery_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_sp_artillery_brigade_1_entity
 			}
 		}
 	}
@@ -251,7 +275,23 @@ PAP = {
 		pool = {
 			weight = 1.5
 			models = {
+				ITA_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
 				ITA_medium_sp_artillery_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_armor_2_entity
 			}
 		}
 	}
@@ -263,30 +303,15 @@ PAP = {
 			}
 		}
 	}
-	medium_tank_aa_chassis = {
+	medium_tank_destroyer_chassis_3 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_sp_anti_air_brigade_2_entity
+				ITA_medium_tank_destroyer_brigade_2_entity
 			}
 		}
 	}
-	heavy_tank_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_heavy_armor_2_entity
-			}
-		}
-	}
-	heavy_tank_destroyer_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_tank_destroyer_brigade_1_entity
-			}
-		}
-	}
+
 	heavy_tank_artillery_chassis = {
 		pool = {
 			weight = 1.5
@@ -303,19 +328,43 @@ PAP = {
 			}
 		}
 	}
-	super_heavy_tank_chassis = {
+	heavy_tank_artillery_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_heavy_armor_2_entity
+				ITA_medium_sp_artillery_brigade_1_entity
 			}
 		}
 	}
-	modern_tank_chassis = {
+	heavy_tank_destroyer_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_armor_1_entity
+				ITA_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_artillery_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+
+	modern_tank_chassis = {
+		pool = {
+			weight = 5
+			models = {
 				ITA_heavy_armor_2_entity
 			}
 		}
@@ -324,7 +373,6 @@ PAP = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_tank_destroyer_brigade_1_entity
 				ITA_medium_tank_destroyer_brigade_2_entity
 			}
 		}
@@ -347,6 +395,30 @@ PAP = {
 	}
 }
 SRD = {
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
 	light_tank_chassis_2 = {
 		pool = {
 			weight = 1.5
@@ -359,33 +431,16 @@ SRD = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_light_armor_1_entity
+				ITA_medium_armor_1_entity
 			}
 		}
 	}
-	light_tank_destroyer_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_light_tank_destroyer_brigade_0_entity
-				ITA_light_tank_destroyer_brigade_1_entity
-			}
-		}
-	}
-	light_tank_artillery_chassis = {
+
+	medium_tank_artillery_chassis = {
 		pool = {
 			weight = 1.5
 			models = {
 				ITA_medium_sp_artillery_brigade_1_entity
-			}
-		}
-	}
-	medium_tank_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_armor_1_entity
-				ITA_heavy_armor_2_entity
 			}
 		}
 	}
@@ -397,27 +452,20 @@ SRD = {
 			}
 		}
 	}
-	medium_tank_destroyer_chassis_2 = {
+	medium_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+
+	medium_tank_artillery_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
 				ITA_medium_tank_destroyer_brigade_2_entity
-			}
-		}
-	}
-	medium_tank_destroyer_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_tank_destroyer_brigade_2_entity
-			}
-		}
-	}
-	medium_tank_artillery_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_sp_artillery_brigade_1_entity
 			}
 		}
 	}
@@ -425,7 +473,23 @@ SRD = {
 		pool = {
 			weight = 1.5
 			models = {
+				ITA_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
 				ITA_medium_sp_artillery_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_armor_2_entity
 			}
 		}
 	}
@@ -437,30 +501,15 @@ SRD = {
 			}
 		}
 	}
-	medium_tank_aa_chassis = {
+	medium_tank_destroyer_chassis_3 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_sp_anti_air_brigade_2_entity
+				ITA_medium_tank_destroyer_brigade_2_entity
 			}
 		}
 	}
-	heavy_tank_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_heavy_armor_2_entity
-			}
-		}
-	}
-	heavy_tank_destroyer_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_tank_destroyer_brigade_1_entity
-			}
-		}
-	}
+
 	heavy_tank_artillery_chassis = {
 		pool = {
 			weight = 1.5
@@ -477,19 +526,43 @@ SRD = {
 			}
 		}
 	}
-	super_heavy_tank_chassis = {
+	heavy_tank_artillery_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_heavy_armor_2_entity
+				ITA_medium_sp_artillery_brigade_1_entity
 			}
 		}
 	}
-	modern_tank_chassis = {
+	heavy_tank_destroyer_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_armor_1_entity
+				ITA_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_artillery_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+
+	modern_tank_chassis = {
+		pool = {
+			weight = 5
+			models = {
 				ITA_heavy_armor_2_entity
 			}
 		}
@@ -498,7 +571,6 @@ SRD = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_tank_destroyer_brigade_1_entity
 				ITA_medium_tank_destroyer_brigade_2_entity
 			}
 		}
@@ -521,6 +593,30 @@ SRD = {
 	}
 }
 SRI = {
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
 	light_tank_chassis_2 = {
 		pool = {
 			weight = 1.5
@@ -533,33 +629,16 @@ SRI = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_light_armor_1_entity
+				ITA_medium_armor_1_entity
 			}
 		}
 	}
-	light_tank_destroyer_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_light_tank_destroyer_brigade_0_entity
-				ITA_light_tank_destroyer_brigade_1_entity
-			}
-		}
-	}
-	light_tank_artillery_chassis = {
+
+	medium_tank_artillery_chassis = {
 		pool = {
 			weight = 1.5
 			models = {
 				ITA_medium_sp_artillery_brigade_1_entity
-			}
-		}
-	}
-	medium_tank_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_armor_1_entity
-				ITA_heavy_armor_2_entity
 			}
 		}
 	}
@@ -571,27 +650,20 @@ SRI = {
 			}
 		}
 	}
-	medium_tank_destroyer_chassis_2 = {
+	medium_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+
+	medium_tank_artillery_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
 				ITA_medium_tank_destroyer_brigade_2_entity
-			}
-		}
-	}
-	medium_tank_destroyer_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_tank_destroyer_brigade_2_entity
-			}
-		}
-	}
-	medium_tank_artillery_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_sp_artillery_brigade_1_entity
 			}
 		}
 	}
@@ -599,7 +671,23 @@ SRI = {
 		pool = {
 			weight = 1.5
 			models = {
+				ITA_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
 				ITA_medium_sp_artillery_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_armor_2_entity
 			}
 		}
 	}
@@ -611,30 +699,15 @@ SRI = {
 			}
 		}
 	}
-	medium_tank_aa_chassis = {
+	medium_tank_destroyer_chassis_3 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_sp_anti_air_brigade_2_entity
+				ITA_medium_tank_destroyer_brigade_2_entity
 			}
 		}
 	}
-	heavy_tank_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_heavy_armor_2_entity
-			}
-		}
-	}
-	heavy_tank_destroyer_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_tank_destroyer_brigade_1_entity
-			}
-		}
-	}
+
 	heavy_tank_artillery_chassis = {
 		pool = {
 			weight = 1.5
@@ -651,19 +724,43 @@ SRI = {
 			}
 		}
 	}
-	super_heavy_tank_chassis = {
+	heavy_tank_artillery_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_heavy_armor_2_entity
+				ITA_medium_sp_artillery_brigade_1_entity
 			}
 		}
 	}
-	modern_tank_chassis = {
+	heavy_tank_destroyer_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_armor_1_entity
+				ITA_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_artillery_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+
+	modern_tank_chassis = {
+		pool = {
+			weight = 5
+			models = {
 				ITA_heavy_armor_2_entity
 			}
 		}
@@ -672,7 +769,6 @@ SRI = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_tank_destroyer_brigade_1_entity
 				ITA_medium_tank_destroyer_brigade_2_entity
 			}
 		}
@@ -695,6 +791,30 @@ SRI = {
 	}
 }
 SIC = {
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
 	light_tank_chassis_2 = {
 		pool = {
 			weight = 1.5
@@ -707,33 +827,16 @@ SIC = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_light_armor_1_entity
+				ITA_medium_armor_1_entity
 			}
 		}
 	}
-	light_tank_destroyer_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_light_tank_destroyer_brigade_0_entity
-				ITA_light_tank_destroyer_brigade_1_entity
-			}
-		}
-	}
-	light_tank_artillery_chassis = {
+
+	medium_tank_artillery_chassis = {
 		pool = {
 			weight = 1.5
 			models = {
 				ITA_medium_sp_artillery_brigade_1_entity
-			}
-		}
-	}
-	medium_tank_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_armor_1_entity
-				ITA_heavy_armor_2_entity
 			}
 		}
 	}
@@ -745,27 +848,20 @@ SIC = {
 			}
 		}
 	}
-	medium_tank_destroyer_chassis_2 = {
+	medium_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+
+	medium_tank_artillery_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
 				ITA_medium_tank_destroyer_brigade_2_entity
-			}
-		}
-	}
-	medium_tank_destroyer_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_tank_destroyer_brigade_2_entity
-			}
-		}
-	}
-	medium_tank_artillery_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_sp_artillery_brigade_1_entity
 			}
 		}
 	}
@@ -773,7 +869,23 @@ SIC = {
 		pool = {
 			weight = 1.5
 			models = {
+				ITA_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
 				ITA_medium_sp_artillery_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_armor_2_entity
 			}
 		}
 	}
@@ -785,30 +897,15 @@ SIC = {
 			}
 		}
 	}
-	medium_tank_aa_chassis = {
+	medium_tank_destroyer_chassis_3 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_sp_anti_air_brigade_2_entity
+				ITA_medium_tank_destroyer_brigade_2_entity
 			}
 		}
 	}
-	heavy_tank_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_heavy_armor_2_entity
-			}
-		}
-	}
-	heavy_tank_destroyer_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_tank_destroyer_brigade_1_entity
-			}
-		}
-	}
+
 	heavy_tank_artillery_chassis = {
 		pool = {
 			weight = 1.5
@@ -825,19 +922,43 @@ SIC = {
 			}
 		}
 	}
-	super_heavy_tank_chassis = {
+	heavy_tank_artillery_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_heavy_armor_2_entity
+				ITA_medium_sp_artillery_brigade_1_entity
 			}
 		}
 	}
-	modern_tank_chassis = {
+	heavy_tank_destroyer_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_armor_1_entity
+				ITA_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_artillery_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+
+	modern_tank_chassis = {
+		pool = {
+			weight = 5
+			models = {
 				ITA_heavy_armor_2_entity
 			}
 		}
@@ -846,7 +967,6 @@ SIC = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_tank_destroyer_brigade_1_entity
 				ITA_medium_tank_destroyer_brigade_2_entity
 			}
 		}
@@ -869,6 +989,30 @@ SIC = {
 	}
 }
 VNC = {
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
 	light_tank_chassis_2 = {
 		pool = {
 			weight = 1.5
@@ -881,33 +1025,16 @@ VNC = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_light_armor_1_entity
+				ITA_medium_armor_1_entity
 			}
 		}
 	}
-	light_tank_destroyer_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_light_tank_destroyer_brigade_0_entity
-				ITA_light_tank_destroyer_brigade_1_entity
-			}
-		}
-	}
-	light_tank_artillery_chassis = {
+
+	medium_tank_artillery_chassis = {
 		pool = {
 			weight = 1.5
 			models = {
 				ITA_medium_sp_artillery_brigade_1_entity
-			}
-		}
-	}
-	medium_tank_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_armor_1_entity
-				ITA_heavy_armor_2_entity
 			}
 		}
 	}
@@ -919,27 +1046,20 @@ VNC = {
 			}
 		}
 	}
-	medium_tank_destroyer_chassis_2 = {
+	medium_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+
+	medium_tank_artillery_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
 				ITA_medium_tank_destroyer_brigade_2_entity
-			}
-		}
-	}
-	medium_tank_destroyer_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_tank_destroyer_brigade_2_entity
-			}
-		}
-	}
-	medium_tank_artillery_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_sp_artillery_brigade_1_entity
 			}
 		}
 	}
@@ -947,7 +1067,23 @@ VNC = {
 		pool = {
 			weight = 1.5
 			models = {
+				ITA_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
 				ITA_medium_sp_artillery_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_armor_2_entity
 			}
 		}
 	}
@@ -959,30 +1095,15 @@ VNC = {
 			}
 		}
 	}
-	medium_tank_aa_chassis = {
+	medium_tank_destroyer_chassis_3 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_sp_anti_air_brigade_2_entity
+				ITA_medium_tank_destroyer_brigade_2_entity
 			}
 		}
 	}
-	heavy_tank_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_heavy_armor_2_entity
-			}
-		}
-	}
-	heavy_tank_destroyer_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_tank_destroyer_brigade_1_entity
-			}
-		}
-	}
+
 	heavy_tank_artillery_chassis = {
 		pool = {
 			weight = 1.5
@@ -999,19 +1120,43 @@ VNC = {
 			}
 		}
 	}
-	super_heavy_tank_chassis = {
+	heavy_tank_artillery_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_heavy_armor_2_entity
+				ITA_medium_sp_artillery_brigade_1_entity
 			}
 		}
 	}
-	modern_tank_chassis = {
+	heavy_tank_destroyer_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_armor_1_entity
+				ITA_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_artillery_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+
+	modern_tank_chassis = {
+		pool = {
+			weight = 5
+			models = {
 				ITA_heavy_armor_2_entity
 			}
 		}
@@ -1020,7 +1165,6 @@ VNC = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_tank_destroyer_brigade_1_entity
 				ITA_medium_tank_destroyer_brigade_2_entity
 			}
 		}
@@ -1043,6 +1187,30 @@ VNC = {
 	}
 }
 LOM = {
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
 	light_tank_chassis_2 = {
 		pool = {
 			weight = 1.5
@@ -1055,33 +1223,16 @@ LOM = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_light_armor_1_entity
+				ITA_medium_armor_1_entity
 			}
 		}
 	}
-	light_tank_destroyer_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_light_tank_destroyer_brigade_0_entity
-				ITA_light_tank_destroyer_brigade_1_entity
-			}
-		}
-	}
-	light_tank_artillery_chassis = {
+
+	medium_tank_artillery_chassis = {
 		pool = {
 			weight = 1.5
 			models = {
 				ITA_medium_sp_artillery_brigade_1_entity
-			}
-		}
-	}
-	medium_tank_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_armor_1_entity
-				ITA_heavy_armor_2_entity
 			}
 		}
 	}
@@ -1093,27 +1244,20 @@ LOM = {
 			}
 		}
 	}
-	medium_tank_destroyer_chassis_2 = {
+	medium_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+
+	medium_tank_artillery_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
 				ITA_medium_tank_destroyer_brigade_2_entity
-			}
-		}
-	}
-	medium_tank_destroyer_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_tank_destroyer_brigade_2_entity
-			}
-		}
-	}
-	medium_tank_artillery_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_sp_artillery_brigade_1_entity
 			}
 		}
 	}
@@ -1121,7 +1265,23 @@ LOM = {
 		pool = {
 			weight = 1.5
 			models = {
+				ITA_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
 				ITA_medium_sp_artillery_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_armor_2_entity
 			}
 		}
 	}
@@ -1133,30 +1293,15 @@ LOM = {
 			}
 		}
 	}
-	medium_tank_aa_chassis = {
+	medium_tank_destroyer_chassis_3 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_sp_anti_air_brigade_2_entity
+				ITA_medium_tank_destroyer_brigade_2_entity
 			}
 		}
 	}
-	heavy_tank_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_heavy_armor_2_entity
-			}
-		}
-	}
-	heavy_tank_destroyer_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_tank_destroyer_brigade_1_entity
-			}
-		}
-	}
+
 	heavy_tank_artillery_chassis = {
 		pool = {
 			weight = 1.5
@@ -1173,19 +1318,43 @@ LOM = {
 			}
 		}
 	}
-	super_heavy_tank_chassis = {
+	heavy_tank_artillery_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_heavy_armor_2_entity
+				ITA_medium_sp_artillery_brigade_1_entity
 			}
 		}
 	}
-	modern_tank_chassis = {
+	heavy_tank_destroyer_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_armor_1_entity
+				ITA_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_artillery_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+
+	modern_tank_chassis = {
+		pool = {
+			weight = 5
+			models = {
 				ITA_heavy_armor_2_entity
 			}
 		}
@@ -1194,7 +1363,6 @@ LOM = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_tank_destroyer_brigade_1_entity
 				ITA_medium_tank_destroyer_brigade_2_entity
 			}
 		}
@@ -1217,6 +1385,30 @@ LOM = {
 	}
 }
 EMI = {
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
 	light_tank_chassis_2 = {
 		pool = {
 			weight = 1.5
@@ -1229,33 +1421,16 @@ EMI = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_light_armor_1_entity
+				ITA_medium_armor_1_entity
 			}
 		}
 	}
-	light_tank_destroyer_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_light_tank_destroyer_brigade_0_entity
-				ITA_light_tank_destroyer_brigade_1_entity
-			}
-		}
-	}
-	light_tank_artillery_chassis = {
+
+	medium_tank_artillery_chassis = {
 		pool = {
 			weight = 1.5
 			models = {
 				ITA_medium_sp_artillery_brigade_1_entity
-			}
-		}
-	}
-	medium_tank_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_armor_1_entity
-				ITA_heavy_armor_2_entity
 			}
 		}
 	}
@@ -1267,27 +1442,20 @@ EMI = {
 			}
 		}
 	}
-	medium_tank_destroyer_chassis_2 = {
+	medium_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+
+	medium_tank_artillery_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
 				ITA_medium_tank_destroyer_brigade_2_entity
-			}
-		}
-	}
-	medium_tank_destroyer_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_tank_destroyer_brigade_2_entity
-			}
-		}
-	}
-	medium_tank_artillery_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_sp_artillery_brigade_1_entity
 			}
 		}
 	}
@@ -1295,7 +1463,23 @@ EMI = {
 		pool = {
 			weight = 1.5
 			models = {
+				ITA_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
 				ITA_medium_sp_artillery_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_armor_2_entity
 			}
 		}
 	}
@@ -1307,30 +1491,15 @@ EMI = {
 			}
 		}
 	}
-	medium_tank_aa_chassis = {
+	medium_tank_destroyer_chassis_3 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_sp_anti_air_brigade_2_entity
+				ITA_medium_tank_destroyer_brigade_2_entity
 			}
 		}
 	}
-	heavy_tank_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_heavy_armor_2_entity
-			}
-		}
-	}
-	heavy_tank_destroyer_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_tank_destroyer_brigade_1_entity
-			}
-		}
-	}
+
 	heavy_tank_artillery_chassis = {
 		pool = {
 			weight = 1.5
@@ -1347,19 +1516,43 @@ EMI = {
 			}
 		}
 	}
-	super_heavy_tank_chassis = {
+	heavy_tank_artillery_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_heavy_armor_2_entity
+				ITA_medium_sp_artillery_brigade_1_entity
 			}
 		}
 	}
-	modern_tank_chassis = {
+	heavy_tank_destroyer_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_armor_1_entity
+				ITA_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_artillery_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+
+	modern_tank_chassis = {
+		pool = {
+			weight = 5
+			models = {
 				ITA_heavy_armor_2_entity
 			}
 		}
@@ -1368,7 +1561,6 @@ EMI = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_tank_destroyer_brigade_1_entity
 				ITA_medium_tank_destroyer_brigade_2_entity
 			}
 		}
@@ -1391,6 +1583,30 @@ EMI = {
 	}
 }
 TUS = {
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_artillery_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_light_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	light_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_light_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
 	light_tank_chassis_2 = {
 		pool = {
 			weight = 1.5
@@ -1403,33 +1619,16 @@ TUS = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_light_armor_1_entity
+				ITA_medium_armor_1_entity
 			}
 		}
 	}
-	light_tank_destroyer_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_light_tank_destroyer_brigade_0_entity
-				ITA_light_tank_destroyer_brigade_1_entity
-			}
-		}
-	}
-	light_tank_artillery_chassis = {
+
+	medium_tank_artillery_chassis = {
 		pool = {
 			weight = 1.5
 			models = {
 				ITA_medium_sp_artillery_brigade_1_entity
-			}
-		}
-	}
-	medium_tank_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_armor_1_entity
-				ITA_heavy_armor_2_entity
 			}
 		}
 	}
@@ -1441,27 +1640,20 @@ TUS = {
 			}
 		}
 	}
-	medium_tank_destroyer_chassis_2 = {
+	medium_tank_aa_chassis = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_anti_air_brigade_2_entity
+			}
+		}
+	}
+
+	medium_tank_artillery_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
 				ITA_medium_tank_destroyer_brigade_2_entity
-			}
-		}
-	}
-	medium_tank_destroyer_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_tank_destroyer_brigade_2_entity
-			}
-		}
-	}
-	medium_tank_artillery_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_sp_artillery_brigade_1_entity
 			}
 		}
 	}
@@ -1469,7 +1661,23 @@ TUS = {
 		pool = {
 			weight = 1.5
 			models = {
+				ITA_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_destroyer_chassis_2 = {
+		pool = {
+			weight = 1.5
+			models = {
 				ITA_medium_sp_artillery_brigade_2_entity
+			}
+		}
+	}
+	medium_tank_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_heavy_armor_2_entity
 			}
 		}
 	}
@@ -1481,30 +1689,15 @@ TUS = {
 			}
 		}
 	}
-	medium_tank_aa_chassis = {
+	medium_tank_destroyer_chassis_3 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_sp_anti_air_brigade_2_entity
+				ITA_medium_tank_destroyer_brigade_2_entity
 			}
 		}
 	}
-	heavy_tank_chassis_3 = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_heavy_armor_2_entity
-			}
-		}
-	}
-	heavy_tank_destroyer_chassis = {
-		pool = {
-			weight = 1.5
-			models = {
-				ITA_medium_tank_destroyer_brigade_1_entity
-			}
-		}
-	}
+
 	heavy_tank_artillery_chassis = {
 		pool = {
 			weight = 1.5
@@ -1521,19 +1714,43 @@ TUS = {
 			}
 		}
 	}
-	super_heavy_tank_chassis = {
+	heavy_tank_artillery_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_heavy_armor_2_entity
+				ITA_medium_sp_artillery_brigade_1_entity
 			}
 		}
 	}
-	modern_tank_chassis = {
+	heavy_tank_destroyer_chassis_1 = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_armor_1_entity
+				ITA_medium_tank_destroyer_brigade_1_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_sp_artillery_brigade_2_entity
+			}
+		}
+	}
+	heavy_tank_destroyer_chassis_3 = {
+		pool = {
+			weight = 1.5
+			models = {
+				ITA_medium_tank_destroyer_brigade_2_entity
+			}
+		}
+	}
+
+	modern_tank_chassis = {
+		pool = {
+			weight = 5
+			models = {
 				ITA_heavy_armor_2_entity
 			}
 		}
@@ -1542,7 +1759,6 @@ TUS = {
 		pool = {
 			weight = 1.5
 			models = {
-				ITA_medium_tank_destroyer_brigade_1_entity
 				ITA_medium_tank_destroyer_brigade_2_entity
 			}
 		}

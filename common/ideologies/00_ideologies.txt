@@ -788,7 +788,7 @@ ideologies = {
 			whiggism_subtype = {can_be_randomly_selected = no} #Whiggism
 			soccon_mercenary_democracy_subtype = {can_be_randomly_selected = no} 
             soccon_neo_feudalism_subtype = {can_be_randomly_selected = no}
-            neo_confucianism_subtype = {can_be_randomly_selected = no}
+            neo_confucianism_subtype = {can_be_randomly_selected = no} #Neo-Confucianism
 			soccon_coconut_subtype = {can_be_randomly_selected = no}
 			soccon_generic_national_democracy_subtype = {can_be_randomly_selected = no}
             soccon_regionalism_subtype = {can_be_randomly_selected = no} #Post-Colonial Regionalism
@@ -973,6 +973,7 @@ ideologies = {
 			authdem_pan_celticism_subtype = {can_be_randomly_selected = no} #Pan-Celticism
 			authdem_teetotalism_subtype = {can_be_randomly_selected = no} #Teetotalism
 			authdem_costismo_subtype = {can_be_randomly_selected = no} #Costismo
+			authdem_neo_confucianism_subtype = {can_be_randomly_selected = no} #Neo-Confucianism
 		}
 		dynamic_faction_names = {
 			"FACTION_NAME_AUTHORITARIAN_DEMOCRAT_1"
@@ -1118,7 +1119,8 @@ ideologies = {
 			pataut_popularism_subtype = {can_be_randomly_selected = no} #Popularism
 			pataut_macedonian_federalism_subtype = {can_be_randomly_selected = no} #Macedonian Federalism
 			aranaism_subtype = {can_be_randomly_selected = no} #Aranaism	
-			pataut_costismo_subtype = {can_be_randomly_selected = no} #Costismo			
+			pataut_costismo_subtype = {can_be_randomly_selected = no} #Costismo	
+			pataut_neo_confucianism_subtype = {can_be_randomly_selected = no} #Neo-Confucianism		
 	    }
 		dynamic_faction_names = {
 			"FACTION_NAME_PATERNAL_AUTOCRAT_1"
@@ -1309,7 +1311,9 @@ ideologies = {
 			kristlichen_lehre_subtype = {can_be_randomly_selected = no} #Kristlichen Lehre
 			ustahsa_subtype = {can_be_randomly_selected = no} #Ustaše 	
 			german_faith_movement_subtype = {can_be_randomly_selected = no} #Deutscher Glaube													
-					
+			natpop_neo_confucianism_subtype = {can_be_randomly_selected = no} #Neo-Confucianism	
+			
+								
 			#Goeb 			
 			natpop_goebbels_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }
 			natpop_goebbels2_subtype = { can_be_randomly_selected = no color = { 5 5 5 } }

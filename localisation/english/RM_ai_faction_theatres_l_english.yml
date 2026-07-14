@@ -1,0 +1,28 @@
+﻿l_english:
+
+#Stahlpakt AI Faction Theatres
+stahlpakt_theatre_western_europe: "Stahlpakt Western Europe"
+stahlpakt_theatre_eastern_europe: "Stahlpakt Eastern Europe"
+stahlpakt_theatre_central_europe: "Stahlpakt Central Europe"
+
+#Internationale AI Faction Theatres
+internationale_theatre_western_europe_2: "Internationale Western Europe"
+
+#Moscow Accord AI Faction Theatres
+moscow_accord_theatre_eastern_europe_2: "Moscow Accord Eastern Europe"
+
+# TODO: Fix for count_in_collection crashes. Revert if count_in_collection is fixed
+ count_in_collection_battalions_workaround_tooltip: "At least $RIGHT|H*0$ §Y[?unit_type_temp.GetTokenLocalizedKey] Battalions§! in Faction. Currently: $LEFT|H*0$"
+ count_in_collection_marine_workaround_tooltip: "At least $RIGHT|H*0$ §YMarine Battalions, Marine Commandos Battalions, Amtrac Battalion Battalions and Amphibious Armor§! in Faction. Currently: $LEFT|H*0$"
+ count_in_collection_units_workaround_tooltip: "At least $RIGHT|H*0$ §Y[?unit_type_temp.GetTokenLocalizedKey]§! in Faction. Currently: $LEFT|H*0$"
+
+# TODO: Fix for collection_size crashes. Revert if collection_size is fixed.
+ faction_get_core_states_not_fully_controlled_workaround_tooltip: "Number of §H$FACTION_CORE_STATES_NOT_FULLY_CONTROLLED$§! ($LEFT|H0$) is less than $RIGHT|H0$"
+ faction_get_enemy_core_states_controlled_by_us_workaround_tooltip: "Number of §H$ENEMY_FACTION_CORE_STATES_CONTROLLED_BY_US$§! ($LEFT|H0$) is greater than $RIGHT|H0$"
+ faction_get_enemy_faction_states_bombed_workaround_tooltip: "Number of §H$ENEMY_FACTION_STATES_BOMBED$§! ($LEFT|H0$) is greater than $RIGHT|H0$"
+ faction_casualities_inflicted_by_faction_members_workaround_tooltip: "Number of §H$COLLECTION_CASUALTIES_INFLICTED_BY_FACTION_MEMBERS$§! ($LEFT|H0$) is greater than $RIGHT|H0$"
+ faction_border_states_full_infrastructure_workaround_tooltip: "Number of §H$COLLECTION_FACTION_BORDER_STATES_FULL_INFRASTRUCTURE$§! ($LEFT|H0$) is less than $RIGHT|H0$"
+
+ any_faction_member_tooltip: "Any Faction Member"
+
+ faction_core_states_fully_controlled_by_faction_members: "All §HFaction Owned Core States§! are fully controlled by §HFaction Members§!"

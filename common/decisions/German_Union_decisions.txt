@@ -15,12 +15,17 @@ GRU_hydroelectricity_decisions = {
 			4 = { is_owned_and_controlled_by = ROOT }
 			NOT = { has_country_flag = GRU_HYDRO_BUILDING }
 		}
+		highlight_states = {
+		    highlight_state_targets = {
+				state = 4
+			}
+		}
 		fire_only_once = yes
 		cost = 20
 		days_remove = 100
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 		
 		complete_effect = {
@@ -66,12 +71,17 @@ GRU_hydroelectricity_decisions = {
 			1134 = { is_owned_and_controlled_by = ROOT }
 			NOT = { has_country_flag = GRU_HYDRO_BUILDING }
 		}
+		highlight_states = {
+		    highlight_state_targets = {
+				state = 1134
+			}
+		}
 		fire_only_once = yes
 		cost = 20
 		days_remove = 100
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 		complete_effect = {
 			set_country_flag = GRU_HYDRO_BUILDING
@@ -114,12 +124,17 @@ GRU_hydroelectricity_decisions = {
 			54 = { is_owned_and_controlled_by = ROOT }
 			NOT = { has_country_flag = GRU_HYDRO_BUILDING }
 		}
+		highlight_states = {
+		    highlight_state_targets = {
+				state = 54
+			}
+		}
 		fire_only_once = yes
 		cost = 20
 		days_remove = 100
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 		complete_effect = {
 			set_country_flag = GRU_HYDRO_BUILDING
@@ -167,12 +182,17 @@ GRU_hydroelectricity_decisions = {
 			59 = { is_owned_and_controlled_by = ROOT }
 			NOT = { has_country_flag = GRU_HYDRO_BUILDING }
 		}
+		highlight_states = {
+		    highlight_state_targets = {
+				state = 59
+			}
+		}
 		fire_only_once = yes
 		cost = 20
 		days_remove = 100
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 		complete_effect = {
 			set_country_flag = GRU_HYDRO_BUILDING
@@ -219,12 +239,17 @@ GRU_hydroelectricity_decisions = {
 			66 = { is_owned_and_controlled_by = ROOT }
 			NOT = { has_country_flag = GRU_HYDRO_BUILDING }
 		}
+		highlight_states = {
+		    highlight_state_targets = {
+				state = 66
+			}
+		}
 		fire_only_once = yes
 		cost = 20
 		days_remove = 100
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 		complete_effect = {
 			set_country_flag = GRU_HYDRO_BUILDING
@@ -271,12 +296,17 @@ GRU_hydroelectricity_decisions = {
 			39 = { is_owned_and_controlled_by = ROOT }
 			NOT = { has_country_flag = GRU_HYDRO_BUILDING }
 		}
+		highlight_states = {
+		    highlight_state_targets = {
+				state = 39
+			}
+		}
 		fire_only_once = yes
 		cost = 20
 		days_remove = 100
 
 		ai_will_do = {
-			factor = 6
+			factor = 100
 		}
 		complete_effect = {
 			set_country_flag = GRU_HYDRO_BUILDING

@@ -1,0 +1,32 @@
+GRU_starting_plan = {
+	name = "GRU_starting_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		has_completed_focus = GRU_nmdvp_victory
+	}
+	abort = {
+		has_completed_focus = GRU_mfsp
+	}
+
+	ai_national_focuses = {
+		GRU_proclaim_victory_over_judeo_capitalism
+		GRU_National_Corporatism
+		GRU_national_labour_service
+		GRU_agrarian_subsides
+		GRU_national_socialist_market_economics
+		GRU_technocrat_influence
+		GRU_organic_growth
+		GRU_neue_schwerindustrie
+		GRU_mfsp
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}

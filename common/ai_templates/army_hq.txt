@@ -4,6 +4,7 @@
 
 hq_generic = {
 	role = hq_role
+	blocked_for = { GRU VKB VKK VKR VKM VKN VKP VOB VSJ VST HYP }
 
 	upgrade_prio = {
 		base = 1 #Intentionally low to not waste time on them

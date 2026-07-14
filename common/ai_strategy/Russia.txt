@@ -1474,6 +1474,41 @@ RUS_dont_bother_naval_invading_before_germansocialist_dies = {
 	}
 }
 
+RUS_take_the_fight_to_england = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		has_war_with = ENG
+		has_navy_size = { size > 0 }
+		ENG = { naval_strength_comparison = { other = ROOT ratio < 0.6 } }
+		surrender_progress < 0.05
+		FRA = {
+			OR = {
+				has_capitulated = yes
+				exists = no
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invade
+		id = "ENG"
+		value = 200
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = ENG
+		value = 100
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		tag = ENG
+		value = 10
+	}
+}
+
 RUS_less_focus_on_navy = {
 	allowed = {
 		original_tag = RUS
@@ -2491,6 +2526,45 @@ RUS_crush_FNG = {
 	ai_strategy = {
 		type = conquer
 		id = FNG
+		value = 100
+	}
+}
+
+RUS_endsieg = { #If losing, focus everything on defence and don't do stupid attacks
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		surrender_progress > 0.25
+		stockpile_ratio = { archetype = infantry_equipment ratio < 0.1 }
+		GRU = {
+			has_war_with = ROOT
+			has_capitulated = no
+			surrender_progress < 0.1
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = GRU
+		priority = 150
+		ordertype = front
+		execute_order = no
+	}
+	ai_strategy = {
+		type = invasion_unit_request
+		area = globally
+		value = -500
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = ROM
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = SER
 		value = 100
 	}
 }

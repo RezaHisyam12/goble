@@ -42,6 +42,7 @@ JAP_showa_ai = {
 		JAP_tokyo_conference
 		JAP_osaka_conference
 		JAP_integrate_asian_economies
+
 		JAP_strengthen_the_ijaas
 		JAP_phase_out_arisakas
 		JAP_new_order_in_east_asia
@@ -49,6 +50,26 @@ JAP_showa_ai = {
 		JAP_nanshin_ron
 		JAP_extend_pacific_security_zone
 		JAP_claim_colonies
+
+		JAP_Towards_Reverence_and_Retribution
+		JAP_Emperors_Familial_Benevolence
+		JAP_To_Slay_Orochi
+		JAP_Movement_Sweeps_the_Ministries
+		JAP_Lineage_of_Amaterasu_Omikami
+		JAP_Children_of_the_Sun
+		JAP_Hashimotos_Sincere_Youth
+		JAP_Capturing_Beauty_and_Harmony
+		JAP_Arakis_Righteous_Samurai
+		JAP_Yamashitas_Honorable_Bushi
+		JAP_Forge_the_Gunkoku_Shoujo
+		JAP_Idolize_the_Yamato_Nadeshiko
+		JAP_Mobilize_for_the_Daitoa_Seisen
+		JAP_Rising_Tides_and_Blooming_Petals
+		JAP_Way_of_Death
+		JAP_Exalt_the_Virtuous_Soldier
+		JAP_Venerate_Yoritomos_Resolution
+		JAP_Uphold_Masashiges_Loyalty
+		JAP_To_Sunder_the_Sunset
 
 		JAP_bureaucratic_economy
 		JAP_regulating_the_automotive_industry

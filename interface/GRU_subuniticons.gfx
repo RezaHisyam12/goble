@@ -91,7 +91,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_unit_super_heavy_armor_battalion_icon_medium_white"
-		texturefile = "gfx/interface/counters/divisions_small/onmap_unit_super_heavy_armor_icon.dds"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_unit_superheavy_armor_icon.dds"
 		noOfFrames = 2
 	}
 }

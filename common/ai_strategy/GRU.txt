@@ -1377,6 +1377,11 @@ GRU_dont_trust_national_france = {
 		id = NFA
 		value = 100
 	}
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 28 #Alsace-Lorraine
+		value = 5
+	}
 }
 
 #############################
@@ -1916,11 +1921,6 @@ GRU_build_tanks_focus = {
 		id = armor
 		value = 10
 	}
-	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = medium_tank_chassis
-		value = 15
-	}
 }
 
 default_flame_tank_and_support_production = {
@@ -2031,6 +2031,22 @@ stp_default_light_tank_production = {
 		type = role_ratio
 		id = light_armor_role
 		value = 40
+	}
+}
+
+GRU_in_naval_war = {
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		GRU_in_naval_war = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = dockyard # Type of building
+		value = 100
 	}
 }
 
@@ -2148,7 +2164,7 @@ GRU_dont_naval_invade_if_fighting_in_two_fronts = {
 		original_tag = GRU
 	}
 	enable = {
-		has_war_with = RUS
+		has_war_with = var:219.owner
 		has_war_with = FRA
 		FRA = { has_capitulated = no }
 	}

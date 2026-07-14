@@ -2,7 +2,7 @@ leader_traits = {
 	### German ###
 	KR_shock_theorist = { #Messner
 		random = no
-		land_doctrine_cost_factor = -0.1
+		experience_gain_army = 0.15
 		tactic_breakthrough_preferred_weight_factor = 0.5
 		tactic_backhand_blow_preferred_weight_factor = 0.5
 		unit_cavalry_design_cost_factor = -0.75
@@ -20,7 +20,7 @@ leader_traits = {
 
 	KR_firepower_theorist = {
 		random = no
-		land_doctrine_cost_factor = -0.15
+		experience_gain_army = 0.15
 		tactic_barrage_preferred_weight_factor = 0.5
 		tactic_elastic_defense_preferred_weight_factor = 0.5
 		unit_artillery_brigade_design_cost_factor = -1
@@ -37,7 +37,7 @@ leader_traits = {
 
 	KR_small_army_theorist = { #Verkhovsky
 		random = no
-		land_doctrine_cost_factor = -0.1
+		experience_gain_army = 0.15
 		tactic_unexpected_thrust_preferred_weight_factor = 0.5
 		tactic_elastic_defense_preferred_weight_factor = 0.5
 		unit_artillery_design_cost_factor = -1
@@ -56,7 +56,7 @@ leader_traits = {
 	KR_deep_operation_theorist = { #Triandafillov
 		random = no
 		sprite = 8
-		land_doctrine_cost_factor = -0.1
+		experience_gain_army = 0.15
 		tactic_relentless_assault_preferred_weight_factor = 0.5
 		tactic_tactical_withdrawal_preferred_weight_factor = 0.5
 		unit_motorized_design_cost_factor = -0.5

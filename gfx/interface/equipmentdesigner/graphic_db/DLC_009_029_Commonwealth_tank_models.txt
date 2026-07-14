@@ -1,9 +1,9 @@
 ### This file includes NSB pools from both 009 and 029 for Commonwealth and affiliated tags.
 
-IMP = {
+CAN = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -11,7 +11,7 @@ IMP = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -19,7 +19,7 @@ IMP = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -28,7 +28,7 @@ IMP = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -36,7 +36,7 @@ IMP = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -44,7 +44,7 @@ IMP = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -52,7 +52,7 @@ IMP = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -60,7 +60,7 @@ IMP = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -69,7 +69,7 @@ IMP = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -77,7 +77,7 @@ IMP = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -85,7 +85,7 @@ IMP = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -93,7 +93,7 @@ IMP = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -101,7 +101,7 @@ IMP = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -109,7 +109,7 @@ IMP = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -120,7 +120,7 @@ IMP = {
 D01 = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -128,7 +128,7 @@ D01 = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -136,7 +136,7 @@ D01 = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -145,7 +145,7 @@ D01 = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -153,7 +153,7 @@ D01 = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -161,7 +161,7 @@ D01 = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -169,7 +169,7 @@ D01 = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -177,7 +177,7 @@ D01 = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -186,7 +186,7 @@ D01 = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -194,7 +194,7 @@ D01 = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -202,7 +202,7 @@ D01 = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -210,7 +210,7 @@ D01 = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -218,7 +218,7 @@ D01 = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -226,7 +226,7 @@ D01 = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -237,7 +237,7 @@ D01 = {
 AFG = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -245,7 +245,7 @@ AFG = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -253,7 +253,7 @@ AFG = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -262,7 +262,7 @@ AFG = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -270,7 +270,7 @@ AFG = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -278,7 +278,7 @@ AFG = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -286,7 +286,7 @@ AFG = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -294,7 +294,7 @@ AFG = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -303,7 +303,7 @@ AFG = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -311,7 +311,7 @@ AFG = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -319,7 +319,7 @@ AFG = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -327,7 +327,7 @@ AFG = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -335,7 +335,7 @@ AFG = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -343,7 +343,7 @@ AFG = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -353,7 +353,7 @@ AFG = {
 ANG = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -361,7 +361,7 @@ ANG = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -369,7 +369,7 @@ ANG = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -378,7 +378,7 @@ ANG = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -386,7 +386,7 @@ ANG = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -394,7 +394,7 @@ ANG = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -402,7 +402,7 @@ ANG = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -410,7 +410,7 @@ ANG = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -419,7 +419,7 @@ ANG = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -427,7 +427,7 @@ ANG = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -435,7 +435,7 @@ ANG = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -443,7 +443,7 @@ ANG = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -451,7 +451,7 @@ ANG = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -459,7 +459,7 @@ ANG = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -469,7 +469,7 @@ ANG = {
 ASY = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -477,7 +477,7 @@ ASY = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -485,7 +485,7 @@ ASY = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -494,7 +494,7 @@ ASY = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -502,7 +502,7 @@ ASY = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -510,7 +510,7 @@ ASY = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -518,7 +518,7 @@ ASY = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -526,7 +526,7 @@ ASY = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -535,7 +535,7 @@ ASY = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -543,7 +543,7 @@ ASY = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -551,7 +551,7 @@ ASY = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -559,7 +559,7 @@ ASY = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -567,7 +567,7 @@ ASY = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -575,7 +575,7 @@ ASY = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -585,7 +585,7 @@ ASY = {
 AST = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -593,7 +593,7 @@ AST = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -601,7 +601,7 @@ AST = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -610,7 +610,7 @@ AST = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -618,7 +618,7 @@ AST = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -626,7 +626,7 @@ AST = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -634,7 +634,7 @@ AST = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -642,7 +642,7 @@ AST = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -651,7 +651,7 @@ AST = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -659,7 +659,7 @@ AST = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -667,7 +667,7 @@ AST = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -675,7 +675,7 @@ AST = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -683,7 +683,7 @@ AST = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -691,7 +691,7 @@ AST = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -701,7 +701,7 @@ AST = {
 BHU = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -709,7 +709,7 @@ BHU = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -717,7 +717,7 @@ BHU = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -726,7 +726,7 @@ BHU = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -734,7 +734,7 @@ BHU = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -742,7 +742,7 @@ BHU = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -750,7 +750,7 @@ BHU = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -758,7 +758,7 @@ BHU = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -767,7 +767,7 @@ BHU = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -775,7 +775,7 @@ BHU = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -783,7 +783,7 @@ BHU = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -791,7 +791,7 @@ BHU = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -799,7 +799,7 @@ BHU = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -807,7 +807,7 @@ BHU = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -817,7 +817,7 @@ BHU = {
 RAJ = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -825,7 +825,7 @@ RAJ = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -833,7 +833,7 @@ RAJ = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -842,7 +842,7 @@ RAJ = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -850,7 +850,7 @@ RAJ = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -858,7 +858,7 @@ RAJ = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -866,7 +866,7 @@ RAJ = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -874,7 +874,7 @@ RAJ = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -883,7 +883,7 @@ RAJ = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -891,7 +891,7 @@ RAJ = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -899,7 +899,7 @@ RAJ = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -907,7 +907,7 @@ RAJ = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -915,7 +915,7 @@ RAJ = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -923,7 +923,7 @@ RAJ = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -933,7 +933,7 @@ RAJ = {
 GRE = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -941,7 +941,7 @@ GRE = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -949,7 +949,7 @@ GRE = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -958,7 +958,7 @@ GRE = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -966,7 +966,7 @@ GRE = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -974,7 +974,7 @@ GRE = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -982,7 +982,7 @@ GRE = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -990,7 +990,7 @@ GRE = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -999,7 +999,7 @@ GRE = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -1007,7 +1007,7 @@ GRE = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -1015,7 +1015,7 @@ GRE = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -1023,7 +1023,7 @@ GRE = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -1031,7 +1031,7 @@ GRE = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -1039,7 +1039,7 @@ GRE = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -1049,7 +1049,7 @@ GRE = {
 PJB = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -1057,7 +1057,7 @@ PJB = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -1065,7 +1065,7 @@ PJB = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -1074,7 +1074,7 @@ PJB = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -1082,7 +1082,7 @@ PJB = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -1090,7 +1090,7 @@ PJB = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -1098,7 +1098,7 @@ PJB = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -1106,7 +1106,7 @@ PJB = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -1115,7 +1115,7 @@ PJB = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -1123,7 +1123,7 @@ PJB = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -1131,7 +1131,7 @@ PJB = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -1139,7 +1139,7 @@ PJB = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -1147,7 +1147,7 @@ PJB = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -1155,7 +1155,7 @@ PJB = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -1165,7 +1165,7 @@ PJB = {
 MZB = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -1173,7 +1173,7 @@ MZB = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -1181,7 +1181,7 @@ MZB = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -1190,7 +1190,7 @@ MZB = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -1198,7 +1198,7 @@ MZB = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -1206,7 +1206,7 @@ MZB = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -1214,7 +1214,7 @@ MZB = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -1222,7 +1222,7 @@ MZB = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -1231,7 +1231,7 @@ MZB = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -1239,7 +1239,7 @@ MZB = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -1247,7 +1247,7 @@ MZB = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -1255,7 +1255,7 @@ MZB = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -1263,7 +1263,7 @@ MZB = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -1271,7 +1271,7 @@ MZB = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -1281,7 +1281,7 @@ MZB = {
 NEP = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -1289,7 +1289,7 @@ NEP = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -1297,7 +1297,7 @@ NEP = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -1306,7 +1306,7 @@ NEP = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -1314,7 +1314,7 @@ NEP = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -1322,7 +1322,7 @@ NEP = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -1330,7 +1330,7 @@ NEP = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -1338,7 +1338,7 @@ NEP = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -1347,7 +1347,7 @@ NEP = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -1355,7 +1355,7 @@ NEP = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -1363,7 +1363,7 @@ NEP = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -1371,7 +1371,7 @@ NEP = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -1379,7 +1379,7 @@ NEP = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -1387,7 +1387,7 @@ NEP = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -1397,7 +1397,7 @@ NEP = {
 NZL = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -1405,7 +1405,7 @@ NZL = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -1413,7 +1413,7 @@ NZL = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -1422,7 +1422,7 @@ NZL = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -1430,7 +1430,7 @@ NZL = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -1438,7 +1438,7 @@ NZL = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -1446,7 +1446,7 @@ NZL = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -1454,7 +1454,7 @@ NZL = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -1463,7 +1463,7 @@ NZL = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -1471,7 +1471,7 @@ NZL = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -1479,7 +1479,7 @@ NZL = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -1487,7 +1487,7 @@ NZL = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -1495,7 +1495,7 @@ NZL = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -1503,7 +1503,7 @@ NZL = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -1513,7 +1513,7 @@ NZL = {
 POR = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -1521,7 +1521,7 @@ POR = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -1529,7 +1529,7 @@ POR = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -1538,7 +1538,7 @@ POR = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -1546,7 +1546,7 @@ POR = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -1554,7 +1554,7 @@ POR = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -1562,7 +1562,7 @@ POR = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -1570,7 +1570,7 @@ POR = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -1579,7 +1579,7 @@ POR = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -1587,7 +1587,7 @@ POR = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -1595,7 +1595,7 @@ POR = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -1603,7 +1603,7 @@ POR = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -1611,7 +1611,7 @@ POR = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -1619,7 +1619,7 @@ POR = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -1629,7 +1629,7 @@ POR = {
 PRF = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -1637,7 +1637,7 @@ PRF = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -1645,7 +1645,7 @@ PRF = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -1654,7 +1654,7 @@ PRF = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -1662,7 +1662,7 @@ PRF = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -1670,7 +1670,7 @@ PRF = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -1678,7 +1678,7 @@ PRF = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -1686,7 +1686,7 @@ PRF = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -1695,7 +1695,7 @@ PRF = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -1703,7 +1703,7 @@ PRF = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -1711,7 +1711,7 @@ PRF = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -1719,7 +1719,7 @@ PRF = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -1727,7 +1727,7 @@ PRF = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -1735,7 +1735,7 @@ PRF = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -1745,7 +1745,7 @@ PRF = {
 ZIM = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -1753,7 +1753,7 @@ ZIM = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -1761,7 +1761,7 @@ ZIM = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -1770,7 +1770,7 @@ ZIM = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -1778,7 +1778,7 @@ ZIM = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -1786,7 +1786,7 @@ ZIM = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -1794,7 +1794,7 @@ ZIM = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -1802,7 +1802,7 @@ ZIM = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -1811,7 +1811,7 @@ ZIM = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -1819,7 +1819,7 @@ ZIM = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -1827,7 +1827,7 @@ ZIM = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -1835,7 +1835,7 @@ ZIM = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -1843,7 +1843,7 @@ ZIM = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -1851,7 +1851,7 @@ ZIM = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -1861,7 +1861,7 @@ ZIM = {
 SIE = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -1869,7 +1869,7 @@ SIE = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -1877,7 +1877,7 @@ SIE = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -1886,7 +1886,7 @@ SIE = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -1894,7 +1894,7 @@ SIE = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -1902,7 +1902,7 @@ SIE = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -1910,7 +1910,7 @@ SIE = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -1918,7 +1918,7 @@ SIE = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -1927,7 +1927,7 @@ SIE = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -1935,7 +1935,7 @@ SIE = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -1943,7 +1943,7 @@ SIE = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -1951,7 +1951,7 @@ SIE = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -1959,7 +1959,7 @@ SIE = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -1967,7 +1967,7 @@ SIE = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -1977,7 +1977,7 @@ SIE = {
 SAF = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -1985,7 +1985,7 @@ SAF = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -1993,7 +1993,7 @@ SAF = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -2002,7 +2002,7 @@ SAF = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -2010,7 +2010,7 @@ SAF = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -2018,7 +2018,7 @@ SAF = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -2026,7 +2026,7 @@ SAF = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -2034,7 +2034,7 @@ SAF = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -2043,7 +2043,7 @@ SAF = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -2051,7 +2051,7 @@ SAF = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -2059,7 +2059,7 @@ SAF = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -2067,7 +2067,7 @@ SAF = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -2075,7 +2075,7 @@ SAF = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -2083,7 +2083,7 @@ SAF = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -2093,7 +2093,7 @@ SAF = {
 WIF = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -2101,7 +2101,7 @@ WIF = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -2109,7 +2109,7 @@ WIF = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -2118,7 +2118,7 @@ WIF = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -2126,7 +2126,7 @@ WIF = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -2134,7 +2134,7 @@ WIF = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -2142,7 +2142,7 @@ WIF = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -2150,7 +2150,7 @@ WIF = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -2159,7 +2159,7 @@ WIF = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -2167,7 +2167,7 @@ WIF = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -2175,7 +2175,7 @@ WIF = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -2183,7 +2183,7 @@ WIF = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -2191,7 +2191,7 @@ WIF = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -2199,7 +2199,7 @@ WIF = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -2209,7 +2209,7 @@ WIF = {
 GYA = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -2217,7 +2217,7 @@ GYA = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -2225,7 +2225,7 @@ GYA = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -2234,7 +2234,7 @@ GYA = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -2242,7 +2242,7 @@ GYA = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -2250,7 +2250,7 @@ GYA = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -2258,7 +2258,7 @@ GYA = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -2266,7 +2266,7 @@ GYA = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -2275,7 +2275,7 @@ GYA = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -2283,7 +2283,7 @@ GYA = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -2291,7 +2291,7 @@ GYA = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -2299,7 +2299,7 @@ GYA = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -2307,7 +2307,7 @@ GYA = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -2315,7 +2315,7 @@ GYA = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -2325,7 +2325,7 @@ GYA = {
 JAM = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -2333,7 +2333,7 @@ JAM = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -2341,7 +2341,7 @@ JAM = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -2350,7 +2350,7 @@ JAM = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -2358,7 +2358,7 @@ JAM = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -2366,7 +2366,7 @@ JAM = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -2374,7 +2374,7 @@ JAM = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -2382,7 +2382,7 @@ JAM = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -2391,7 +2391,7 @@ JAM = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -2399,7 +2399,7 @@ JAM = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -2407,7 +2407,7 @@ JAM = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -2415,7 +2415,7 @@ JAM = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -2423,7 +2423,7 @@ JAM = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -2431,7 +2431,7 @@ JAM = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -2441,7 +2441,7 @@ JAM = {
 TRI = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -2449,7 +2449,7 @@ TRI = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -2457,7 +2457,7 @@ TRI = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -2466,7 +2466,7 @@ TRI = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -2474,7 +2474,7 @@ TRI = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -2482,7 +2482,7 @@ TRI = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -2490,7 +2490,7 @@ TRI = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -2498,7 +2498,7 @@ TRI = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -2507,7 +2507,7 @@ TRI = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -2515,7 +2515,7 @@ TRI = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -2523,7 +2523,7 @@ TRI = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -2531,7 +2531,7 @@ TRI = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -2539,7 +2539,7 @@ TRI = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -2547,7 +2547,7 @@ TRI = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -2557,7 +2557,7 @@ TRI = {
 QUE = {
 	light_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_1_entity
 			}
@@ -2565,7 +2565,7 @@ QUE = {
 	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}
@@ -2573,7 +2573,7 @@ QUE = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_0_entity
 				ENG_light_tank_destroyer_brigade_2_entity
@@ -2582,7 +2582,7 @@ QUE = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_sp_artillery_brigade_2_entity
 			}
@@ -2590,7 +2590,7 @@ QUE = {
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_armor_2_entity
 			}
@@ -2598,7 +2598,7 @@ QUE = {
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_tank_destroyer_brigade_2_entity
 			}
@@ -2606,7 +2606,7 @@ QUE = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_artillery_brigade_2_entity
 			}
@@ -2614,7 +2614,7 @@ QUE = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_medium_sp_anti_air_brigade_1_entity
 				ENG_medium_sp_anti_air_brigade_0_entity
@@ -2623,7 +2623,7 @@ QUE = {
 	}
 	heavy_tank_chassis_1 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_0_entity
 			}
@@ -2631,7 +2631,7 @@ QUE = {
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_armor_2_entity
 			}
@@ -2639,7 +2639,7 @@ QUE = {
 	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_heavy_sp_artillery_brigade_1_entity
 			}
@@ -2647,7 +2647,7 @@ QUE = {
 	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_super_heavy_armor_entity
 			}
@@ -2655,7 +2655,7 @@ QUE = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_modern_armor_entity
 			}
@@ -2663,7 +2663,7 @@ QUE = {
 	}
 	amphibious_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				ENG_light_armor_2_entity
 			}

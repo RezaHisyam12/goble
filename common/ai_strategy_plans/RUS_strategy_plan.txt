@@ -114,6 +114,7 @@ RUS_zemstva_plan = {
 			kdp_in_power = yes
 			psr_in_power = yes
 			vns_in_power = yes
+			RUS_kornilov_in_power = yes
 			RUS_is_eurasia = yes
 		}
 	}
@@ -149,6 +150,7 @@ RUS_bureaucratic_overhaul_plan = {
 		psr_in_power = no
 		vns_in_power = no
 		RUS_is_eurasia = no
+		RUS_kornilov_in_power = no
 		has_socialist_government = no
 		has_left_democratic_government = no
 	}

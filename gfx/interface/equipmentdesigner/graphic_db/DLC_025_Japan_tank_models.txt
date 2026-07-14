@@ -1,15 +1,23 @@
 JAP = {
-	light_tank_chassis_1 = {
+	light_tank_chassis_0 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_armor_0_entity
 			}
 		}
 	}
+	light_tank_chassis_2 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_light_armor_2_entity
+			}
+		}
+	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_armor_2_entity
 			}
@@ -17,7 +25,7 @@ JAP = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_tank_destroyer_brigade_2_entity
 			}
@@ -25,7 +33,7 @@ JAP = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_artillery_brigade_2_entity
 			}
@@ -33,7 +41,7 @@ JAP = {
 	}
 	light_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_anti_air_brigade_1_entity
 				JAP_light_sp_anti_air_brigade_2_entity
@@ -42,25 +50,24 @@ JAP = {
 	}
 	medium_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				# JAP_medium_armor_1_entity - diffuse is broken
 				JAP_medium_armor_2_entity
 			}
 		}
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				# JAP_medium_armor_1_entity - diffuse is broken
 				JAP_medium_armor_2_entity
+				JAP_medium_armor_1_entity
 			}
 		}
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_0_entity
 			}
@@ -68,7 +75,7 @@ JAP = {
 	}
 	medium_tank_destroyer_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_1_entity
 			}
@@ -76,7 +83,7 @@ JAP = {
 	}
 	medium_tank_destroyer_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_1_entity
 			}
@@ -84,7 +91,7 @@ JAP = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_sp_artillery_brigade_0_entity
 				JAP_medium_sp_artillery_brigade_2_entity
@@ -94,50 +101,87 @@ JAP = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_anti_air_brigade_2_entity
 			}
 		}
 	}
-	heavy_tank_chassis = {
+	heavy_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				JAP_heavy_armor_2_entity
 				JAP_heavy_armor_1_entity
+				JAP_super_heavy_armor_entity
+				JAP_heavy_armor_2_entity
 			}
 		}
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
+				JAP_heavy_armor_2_entity
+				JAP_heavy_armor_1_entity
 				JAP_super_heavy_armor_entity
 			}
 		}
 	}
 	heavy_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_tank_destroyer_brigade_0_entity
 				JAP_heavy_tank_destroyer_brigade_1_entity
 			}
 		}
 	}
+	heavy_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_sp_artillery_brigade_0_entity
 				JAP_heavy_sp_artillery_brigade_1_entity
 			}
 		}
 	}
+	heavy_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_2 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_3 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_armor_1_entity
 				JAP_heavy_armor_2_entity
@@ -147,7 +191,7 @@ JAP = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_modern_armor_entity
 			}
@@ -155,7 +199,7 @@ JAP = {
 	}
 	modern_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_tank_destroyer_brigade_0_entity
 				JAP_heavy_tank_destroyer_brigade_1_entity
@@ -164,26 +208,34 @@ JAP = {
 	}
 	modern_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
 				JAP_heavy_sp_artillery_brigade_0_entity
-				JAP_heavy_sp_artillery_brigade_1_entity
 			}
 		}
 	}
 }
 FNG = {
-	light_tank_chassis_1 = {
+	light_tank_chassis_0 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_armor_0_entity
 			}
 		}
 	}
+	light_tank_chassis_2 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_light_armor_2_entity
+			}
+		}
+	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_armor_2_entity
 			}
@@ -191,7 +243,7 @@ FNG = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_tank_destroyer_brigade_2_entity
 			}
@@ -199,7 +251,7 @@ FNG = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_artillery_brigade_2_entity
 			}
@@ -207,7 +259,7 @@ FNG = {
 	}
 	light_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_anti_air_brigade_1_entity
 				JAP_light_sp_anti_air_brigade_2_entity
@@ -216,25 +268,24 @@ FNG = {
 	}
 	medium_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				# JAP_medium_armor_1_entity - diffuse is broken
 				JAP_medium_armor_2_entity
 			}
 		}
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				# JAP_medium_armor_1_entity - diffuse is broken
 				JAP_medium_armor_2_entity
+				JAP_medium_armor_1_entity
 			}
 		}
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_0_entity
 			}
@@ -242,7 +293,7 @@ FNG = {
 	}
 	medium_tank_destroyer_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_1_entity
 			}
@@ -250,7 +301,7 @@ FNG = {
 	}
 	medium_tank_destroyer_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_1_entity
 			}
@@ -258,7 +309,7 @@ FNG = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_sp_artillery_brigade_0_entity
 				JAP_medium_sp_artillery_brigade_2_entity
@@ -268,50 +319,87 @@ FNG = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_anti_air_brigade_2_entity
 			}
 		}
 	}
-	heavy_tank_chassis = {
+	heavy_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				JAP_heavy_armor_2_entity
 				JAP_heavy_armor_1_entity
+				JAP_super_heavy_armor_entity
+				JAP_heavy_armor_2_entity
 			}
 		}
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
+				JAP_heavy_armor_2_entity
+				JAP_heavy_armor_1_entity
 				JAP_super_heavy_armor_entity
 			}
 		}
 	}
 	heavy_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_tank_destroyer_brigade_0_entity
 				JAP_heavy_tank_destroyer_brigade_1_entity
 			}
 		}
 	}
+	heavy_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_sp_artillery_brigade_0_entity
 				JAP_heavy_sp_artillery_brigade_1_entity
 			}
 		}
 	}
+	heavy_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_2 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_3 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_armor_1_entity
 				JAP_heavy_armor_2_entity
@@ -321,7 +409,7 @@ FNG = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_modern_armor_entity
 			}
@@ -329,7 +417,7 @@ FNG = {
 	}
 	modern_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_tank_destroyer_brigade_0_entity
 				JAP_heavy_tank_destroyer_brigade_1_entity
@@ -338,26 +426,34 @@ FNG = {
 	}
 	modern_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
 				JAP_heavy_sp_artillery_brigade_0_entity
-				JAP_heavy_sp_artillery_brigade_1_entity
 			}
 		}
 	}
 }
 FER = {
-	light_tank_chassis_1 = {
+	light_tank_chassis_0 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_armor_0_entity
 			}
 		}
 	}
+	light_tank_chassis_2 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_light_armor_2_entity
+			}
+		}
+	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_armor_2_entity
 			}
@@ -365,7 +461,7 @@ FER = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_tank_destroyer_brigade_2_entity
 			}
@@ -373,7 +469,7 @@ FER = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_artillery_brigade_2_entity
 			}
@@ -381,7 +477,7 @@ FER = {
 	}
 	light_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_anti_air_brigade_1_entity
 				JAP_light_sp_anti_air_brigade_2_entity
@@ -390,25 +486,24 @@ FER = {
 	}
 	medium_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				# JAP_medium_armor_1_entity - diffuse is broken
 				JAP_medium_armor_2_entity
 			}
 		}
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				# JAP_medium_armor_1_entity - diffuse is broken
 				JAP_medium_armor_2_entity
+				JAP_medium_armor_1_entity
 			}
 		}
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_0_entity
 			}
@@ -416,7 +511,7 @@ FER = {
 	}
 	medium_tank_destroyer_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_1_entity
 			}
@@ -424,7 +519,7 @@ FER = {
 	}
 	medium_tank_destroyer_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_1_entity
 			}
@@ -432,7 +527,7 @@ FER = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_sp_artillery_brigade_0_entity
 				JAP_medium_sp_artillery_brigade_2_entity
@@ -442,50 +537,87 @@ FER = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_anti_air_brigade_2_entity
 			}
 		}
 	}
-	heavy_tank_chassis = {
+	heavy_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				JAP_heavy_armor_2_entity
 				JAP_heavy_armor_1_entity
+				JAP_super_heavy_armor_entity
+				JAP_heavy_armor_2_entity
 			}
 		}
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
+				JAP_heavy_armor_2_entity
+				JAP_heavy_armor_1_entity
 				JAP_super_heavy_armor_entity
 			}
 		}
 	}
 	heavy_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_tank_destroyer_brigade_0_entity
 				JAP_heavy_tank_destroyer_brigade_1_entity
 			}
 		}
 	}
+	heavy_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_sp_artillery_brigade_0_entity
 				JAP_heavy_sp_artillery_brigade_1_entity
 			}
 		}
 	}
+	heavy_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_2 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_3 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_armor_1_entity
 				JAP_heavy_armor_2_entity
@@ -495,7 +627,7 @@ FER = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_modern_armor_entity
 			}
@@ -503,7 +635,7 @@ FER = {
 	}
 	modern_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_tank_destroyer_brigade_0_entity
 				JAP_heavy_tank_destroyer_brigade_1_entity
@@ -512,26 +644,34 @@ FER = {
 	}
 	modern_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
 				JAP_heavy_sp_artillery_brigade_0_entity
-				JAP_heavy_sp_artillery_brigade_1_entity
 			}
 		}
 	}
 }
 CAM = {
-	light_tank_chassis_1 = {
+	light_tank_chassis_0 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_armor_0_entity
 			}
 		}
 	}
+	light_tank_chassis_2 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_light_armor_2_entity
+			}
+		}
+	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_armor_2_entity
 			}
@@ -539,7 +679,7 @@ CAM = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_tank_destroyer_brigade_2_entity
 			}
@@ -547,7 +687,7 @@ CAM = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_artillery_brigade_2_entity
 			}
@@ -555,7 +695,7 @@ CAM = {
 	}
 	light_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_anti_air_brigade_1_entity
 				JAP_light_sp_anti_air_brigade_2_entity
@@ -564,25 +704,24 @@ CAM = {
 	}
 	medium_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				# JAP_medium_armor_1_entity - diffuse is broken
 				JAP_medium_armor_2_entity
 			}
 		}
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				# JAP_medium_armor_1_entity - diffuse is broken
 				JAP_medium_armor_2_entity
+				JAP_medium_armor_1_entity
 			}
 		}
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_0_entity
 			}
@@ -590,7 +729,7 @@ CAM = {
 	}
 	medium_tank_destroyer_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_1_entity
 			}
@@ -598,7 +737,7 @@ CAM = {
 	}
 	medium_tank_destroyer_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_1_entity
 			}
@@ -606,7 +745,7 @@ CAM = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_sp_artillery_brigade_0_entity
 				JAP_medium_sp_artillery_brigade_2_entity
@@ -616,50 +755,87 @@ CAM = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_anti_air_brigade_2_entity
 			}
 		}
 	}
-	heavy_tank_chassis = {
+	heavy_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				JAP_heavy_armor_2_entity
 				JAP_heavy_armor_1_entity
+				JAP_super_heavy_armor_entity
+				JAP_heavy_armor_2_entity
 			}
 		}
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
+				JAP_heavy_armor_2_entity
+				JAP_heavy_armor_1_entity
 				JAP_super_heavy_armor_entity
 			}
 		}
 	}
 	heavy_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_tank_destroyer_brigade_0_entity
 				JAP_heavy_tank_destroyer_brigade_1_entity
 			}
 		}
 	}
+	heavy_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_sp_artillery_brigade_0_entity
 				JAP_heavy_sp_artillery_brigade_1_entity
 			}
 		}
 	}
+	heavy_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_2 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_3 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_armor_1_entity
 				JAP_heavy_armor_2_entity
@@ -669,7 +845,7 @@ CAM = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_modern_armor_entity
 			}
@@ -677,7 +853,7 @@ CAM = {
 	}
 	modern_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_tank_destroyer_brigade_0_entity
 				JAP_heavy_tank_destroyer_brigade_1_entity
@@ -686,26 +862,34 @@ CAM = {
 	}
 	modern_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
 				JAP_heavy_sp_artillery_brigade_0_entity
-				JAP_heavy_sp_artillery_brigade_1_entity
 			}
 		}
 	}
 }
 INS = {
-	light_tank_chassis_1 = {
+	light_tank_chassis_0 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_armor_0_entity
 			}
 		}
 	}
+	light_tank_chassis_2 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_light_armor_2_entity
+			}
+		}
+	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_armor_2_entity
 			}
@@ -713,7 +897,7 @@ INS = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_tank_destroyer_brigade_2_entity
 			}
@@ -721,7 +905,7 @@ INS = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_artillery_brigade_2_entity
 			}
@@ -729,7 +913,7 @@ INS = {
 	}
 	light_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_anti_air_brigade_1_entity
 				JAP_light_sp_anti_air_brigade_2_entity
@@ -738,25 +922,24 @@ INS = {
 	}
 	medium_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				# JAP_medium_armor_1_entity - diffuse is broken
 				JAP_medium_armor_2_entity
 			}
 		}
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				# JAP_medium_armor_1_entity - diffuse is broken
 				JAP_medium_armor_2_entity
+				JAP_medium_armor_1_entity
 			}
 		}
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_0_entity
 			}
@@ -764,7 +947,7 @@ INS = {
 	}
 	medium_tank_destroyer_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_1_entity
 			}
@@ -772,7 +955,7 @@ INS = {
 	}
 	medium_tank_destroyer_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_1_entity
 			}
@@ -780,7 +963,7 @@ INS = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_sp_artillery_brigade_0_entity
 				JAP_medium_sp_artillery_brigade_2_entity
@@ -790,50 +973,87 @@ INS = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_anti_air_brigade_2_entity
 			}
 		}
 	}
-	heavy_tank_chassis = {
+	heavy_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				JAP_heavy_armor_2_entity
 				JAP_heavy_armor_1_entity
+				JAP_super_heavy_armor_entity
+				JAP_heavy_armor_2_entity
 			}
 		}
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
+				JAP_heavy_armor_2_entity
+				JAP_heavy_armor_1_entity
 				JAP_super_heavy_armor_entity
 			}
 		}
 	}
 	heavy_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_tank_destroyer_brigade_0_entity
 				JAP_heavy_tank_destroyer_brigade_1_entity
 			}
 		}
 	}
+	heavy_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_sp_artillery_brigade_0_entity
 				JAP_heavy_sp_artillery_brigade_1_entity
 			}
 		}
 	}
+	heavy_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_2 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_3 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_armor_1_entity
 				JAP_heavy_armor_2_entity
@@ -843,7 +1063,7 @@ INS = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_modern_armor_entity
 			}
@@ -851,7 +1071,7 @@ INS = {
 	}
 	modern_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_tank_destroyer_brigade_0_entity
 				JAP_heavy_tank_destroyer_brigade_1_entity
@@ -860,26 +1080,34 @@ INS = {
 	}
 	modern_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
 				JAP_heavy_sp_artillery_brigade_0_entity
-				JAP_heavy_sp_artillery_brigade_1_entity
 			}
 		}
 	}
 }
 KOR = {
-	light_tank_chassis_1 = {
+	light_tank_chassis_0 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_armor_0_entity
 			}
 		}
 	}
+	light_tank_chassis_2 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_light_armor_2_entity
+			}
+		}
+	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_armor_2_entity
 			}
@@ -887,7 +1115,7 @@ KOR = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_tank_destroyer_brigade_2_entity
 			}
@@ -895,7 +1123,7 @@ KOR = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_artillery_brigade_2_entity
 			}
@@ -903,7 +1131,7 @@ KOR = {
 	}
 	light_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_anti_air_brigade_1_entity
 				JAP_light_sp_anti_air_brigade_2_entity
@@ -912,25 +1140,24 @@ KOR = {
 	}
 	medium_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				# JAP_medium_armor_1_entity - diffuse is broken
 				JAP_medium_armor_2_entity
 			}
 		}
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				# JAP_medium_armor_1_entity - diffuse is broken
 				JAP_medium_armor_2_entity
+				JAP_medium_armor_1_entity
 			}
 		}
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_0_entity
 			}
@@ -938,7 +1165,7 @@ KOR = {
 	}
 	medium_tank_destroyer_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_1_entity
 			}
@@ -946,7 +1173,7 @@ KOR = {
 	}
 	medium_tank_destroyer_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_1_entity
 			}
@@ -954,7 +1181,7 @@ KOR = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_sp_artillery_brigade_0_entity
 				JAP_medium_sp_artillery_brigade_2_entity
@@ -964,50 +1191,87 @@ KOR = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_anti_air_brigade_2_entity
 			}
 		}
 	}
-	heavy_tank_chassis = {
+	heavy_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				JAP_heavy_armor_2_entity
 				JAP_heavy_armor_1_entity
+				JAP_super_heavy_armor_entity
+				JAP_heavy_armor_2_entity
 			}
 		}
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
+				JAP_heavy_armor_2_entity
+				JAP_heavy_armor_1_entity
 				JAP_super_heavy_armor_entity
 			}
 		}
 	}
 	heavy_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_tank_destroyer_brigade_0_entity
 				JAP_heavy_tank_destroyer_brigade_1_entity
 			}
 		}
 	}
+	heavy_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_sp_artillery_brigade_0_entity
 				JAP_heavy_sp_artillery_brigade_1_entity
 			}
 		}
 	}
+	heavy_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_2 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_3 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_armor_1_entity
 				JAP_heavy_armor_2_entity
@@ -1017,7 +1281,7 @@ KOR = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_modern_armor_entity
 			}
@@ -1025,7 +1289,7 @@ KOR = {
 	}
 	modern_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_tank_destroyer_brigade_0_entity
 				JAP_heavy_tank_destroyer_brigade_1_entity
@@ -1034,26 +1298,34 @@ KOR = {
 	}
 	modern_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
 				JAP_heavy_sp_artillery_brigade_0_entity
-				JAP_heavy_sp_artillery_brigade_1_entity
 			}
 		}
 	}
 }
 LAO = {
-	light_tank_chassis_1 = {
+	light_tank_chassis_0 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_armor_0_entity
 			}
 		}
 	}
+	light_tank_chassis_2 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_light_armor_2_entity
+			}
+		}
+	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_armor_2_entity
 			}
@@ -1061,7 +1333,7 @@ LAO = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_tank_destroyer_brigade_2_entity
 			}
@@ -1069,7 +1341,7 @@ LAO = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_artillery_brigade_2_entity
 			}
@@ -1077,7 +1349,7 @@ LAO = {
 	}
 	light_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_anti_air_brigade_1_entity
 				JAP_light_sp_anti_air_brigade_2_entity
@@ -1086,25 +1358,24 @@ LAO = {
 	}
 	medium_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				# JAP_medium_armor_1_entity - diffuse is broken
 				JAP_medium_armor_2_entity
 			}
 		}
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				# JAP_medium_armor_1_entity - diffuse is broken
 				JAP_medium_armor_2_entity
+				JAP_medium_armor_1_entity
 			}
 		}
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_0_entity
 			}
@@ -1112,7 +1383,7 @@ LAO = {
 	}
 	medium_tank_destroyer_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_1_entity
 			}
@@ -1120,7 +1391,7 @@ LAO = {
 	}
 	medium_tank_destroyer_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_1_entity
 			}
@@ -1128,7 +1399,7 @@ LAO = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_sp_artillery_brigade_0_entity
 				JAP_medium_sp_artillery_brigade_2_entity
@@ -1138,50 +1409,87 @@ LAO = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_anti_air_brigade_2_entity
 			}
 		}
 	}
-	heavy_tank_chassis = {
+	heavy_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				JAP_heavy_armor_2_entity
 				JAP_heavy_armor_1_entity
+				JAP_super_heavy_armor_entity
+				JAP_heavy_armor_2_entity
 			}
 		}
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
+				JAP_heavy_armor_2_entity
+				JAP_heavy_armor_1_entity
 				JAP_super_heavy_armor_entity
 			}
 		}
 	}
 	heavy_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_tank_destroyer_brigade_0_entity
 				JAP_heavy_tank_destroyer_brigade_1_entity
 			}
 		}
 	}
+	heavy_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_sp_artillery_brigade_0_entity
 				JAP_heavy_sp_artillery_brigade_1_entity
 			}
 		}
 	}
+	heavy_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_2 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_3 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_armor_1_entity
 				JAP_heavy_armor_2_entity
@@ -1191,7 +1499,7 @@ LAO = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_modern_armor_entity
 			}
@@ -1199,7 +1507,7 @@ LAO = {
 	}
 	modern_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_tank_destroyer_brigade_0_entity
 				JAP_heavy_tank_destroyer_brigade_1_entity
@@ -1208,26 +1516,34 @@ LAO = {
 	}
 	modern_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
 				JAP_heavy_sp_artillery_brigade_0_entity
-				JAP_heavy_sp_artillery_brigade_1_entity
 			}
 		}
 	}
 }
 MAL = {
-	light_tank_chassis_1 = {
+	light_tank_chassis_0 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_armor_0_entity
 			}
 		}
 	}
+	light_tank_chassis_2 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_light_armor_2_entity
+			}
+		}
+	}
 	light_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_armor_2_entity
 			}
@@ -1235,7 +1551,7 @@ MAL = {
 	}
 	light_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_tank_destroyer_brigade_2_entity
 			}
@@ -1243,7 +1559,7 @@ MAL = {
 	}
 	light_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_artillery_brigade_2_entity
 			}
@@ -1251,7 +1567,7 @@ MAL = {
 	}
 	light_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_anti_air_brigade_1_entity
 				JAP_light_sp_anti_air_brigade_2_entity
@@ -1260,25 +1576,24 @@ MAL = {
 	}
 	medium_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				# JAP_medium_armor_1_entity - diffuse is broken
 				JAP_medium_armor_2_entity
 			}
 		}
 	}
 	medium_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				# JAP_medium_armor_1_entity - diffuse is broken
 				JAP_medium_armor_2_entity
+				JAP_medium_armor_1_entity
 			}
 		}
 	}
 	medium_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_0_entity
 			}
@@ -1286,7 +1601,7 @@ MAL = {
 	}
 	medium_tank_destroyer_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_1_entity
 			}
@@ -1294,7 +1609,7 @@ MAL = {
 	}
 	medium_tank_destroyer_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_tank_destroyer_brigade_1_entity
 			}
@@ -1302,7 +1617,7 @@ MAL = {
 	}
 	medium_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_medium_sp_artillery_brigade_0_entity
 				JAP_medium_sp_artillery_brigade_2_entity
@@ -1312,50 +1627,87 @@ MAL = {
 	}
 	medium_tank_aa_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_light_sp_anti_air_brigade_2_entity
 			}
 		}
 	}
-	heavy_tank_chassis = {
+	heavy_tank_chassis_2 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
-				JAP_heavy_armor_2_entity
 				JAP_heavy_armor_1_entity
+				JAP_super_heavy_armor_entity
+				JAP_heavy_armor_2_entity
 			}
 		}
 	}
 	heavy_tank_chassis_3 = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
+				JAP_heavy_armor_2_entity
+				JAP_heavy_armor_1_entity
 				JAP_super_heavy_armor_entity
 			}
 		}
 	}
 	heavy_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_tank_destroyer_brigade_0_entity
 				JAP_heavy_tank_destroyer_brigade_1_entity
 			}
 		}
 	}
+	heavy_tank_destroyer_chassis_1 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_0_entity
+			}
+		}
+	}
 	heavy_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_sp_artillery_brigade_0_entity
 				JAP_heavy_sp_artillery_brigade_1_entity
 			}
 		}
 	}
+	heavy_tank_artillery_chassis_1 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_2 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
+	heavy_tank_artillery_chassis_3 = {
+		pool = {
+			weight = 999
+			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
+				JAP_heavy_sp_artillery_brigade_0_entity
+			}
+		}
+	}
 	super_heavy_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_armor_1_entity
 				JAP_heavy_armor_2_entity
@@ -1365,7 +1717,7 @@ MAL = {
 	}
 	modern_tank_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_modern_armor_entity
 			}
@@ -1373,7 +1725,7 @@ MAL = {
 	}
 	modern_tank_destroyer_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
 				JAP_heavy_tank_destroyer_brigade_0_entity
 				JAP_heavy_tank_destroyer_brigade_1_entity
@@ -1382,10 +1734,10 @@ MAL = {
 	}
 	modern_tank_artillery_chassis = {
 		pool = {
-			weight = 1.5
+			weight = 999
 			models = {
+				JAP_heavy_tank_destroyer_brigade_1_entity
 				JAP_heavy_sp_artillery_brigade_0_entity
-				JAP_heavy_sp_artillery_brigade_1_entity
 			}
 		}
 	}
