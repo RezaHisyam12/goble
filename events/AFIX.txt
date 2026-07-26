@@ -9,6 +9,7 @@
 add_namespace = tram
 add_namespace = lec
 add_namespace = ottars
+add_namespace = lefteurasia
 
 country_event = {
 	id = tram.400
@@ -769,3 +770,47 @@ country_event = {	#Name of the Caliphate
 		}
 	}
 }
+
+###########################
+# Eurasia Events
+###########################
+country_event = {
+	id = lefteurasia.33
+	immediate = { log = "[GetDateText]: [Root.GetName]: event lefteurasia.33" }
+	title = lefteurasia.33.t
+	desc = lefteurasia.33.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = lefteurasia.33.a
+		ai_chance = {
+			factor = 100
+		}
+
+		add_political_power = -50
+		add_stability = -0.05
+		if = {
+			limit = {
+				has_idea = RUS_state_religion
+			}
+			remove_ideas = RUS_state_religion
+		}
+		add_ideas = RUS_church_of_all_religions
+		add_timed_idea = {
+			idea = RUS_religious_opposition
+			days = 500
+		}
+	}
+	option = {
+		name = lefteurasia.33.b
+		add_political_power = -50
+		add_stability = -0.05
+		if = {
+			limit = {
+				has_idea = RUS_state_religion
+			}
+			remove_ideas = RUS_state_religion
+		}
+	}
+}			

@@ -1335,7 +1335,7 @@ RUS_crush_afghans = {
 	ai_strategy = {
 		type = conquer
 		id = AFG
-		value = 100
+		value = 400
 	}
 }
 
@@ -1357,7 +1357,7 @@ RUS_crush_persians = {
 	ai_strategy = {
 		type = conquer
 		id = PER
-		value = 100
+		value = 400
 	}
 }
 
@@ -2526,7 +2526,7 @@ RUS_crush_FNG = {
 	ai_strategy = {
 		type = conquer
 		id = FNG
-		value = 100
+		value = 400
 	}
 }
 

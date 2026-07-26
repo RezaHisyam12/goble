@@ -1,5 +1,128 @@
 # Enhanced AI - Research
 
+####################################################################################################
+#	INDUSTRY
+####################################################################################################
+
+research_industry_techs_1 = {
+	enable = {
+		date > 1936.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = basic_machine_tools
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = concentrated_industry
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = construction1
+		value = 100
+	}
+	ai_strategy = {
+		type = research_weight_factor
+		id = dispersed_industry 
+		value = -1000
+	}
+}
+
+research_industry_techs_2 = {
+	enable = {
+		date > 1937.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = improved_machine_tools
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = concentrated_industry2
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = construction2
+		value = 100
+	}
+}
+
+research_industry_techs_3 = {
+	enable = {
+		date > 1939.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = advanced_machine_tools
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = concentrated_industry3
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = construction3
+		value = 100
+	}
+}
+
+research_industry_techs_4 = {
+	enable = {
+		date > 1941.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = assembly_line_production
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = concentrated_industry4
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = construction4
+		value = 100
+	}
+}
+
+research_industry_techs_5 = {
+	enable = {
+		date > 1943.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = streamlined_line
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = concentrated_industry5
+		value = 100
+	}
+	ai_strategy = {
+		type = research_tech
+		id = construction5
+		value = 100
+	}
+}
 
 ####################################################################################################
 #	SYNTHETIC RESOURCES

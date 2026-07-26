@@ -71,15 +71,21 @@ JAP_showa_ai = {
 		JAP_Uphold_Masashiges_Loyalty
 		JAP_To_Sunder_the_Sunset
 
-		JAP_bureaucratic_economy
-		JAP_regulating_the_automotive_industry
-		JAP_prioritise_military_oil
-		JAP_reorganise_resource_extraction
-		JAP_the_shinkansen_proposal
-		JAP_colonial_incentives
+		JAP_philippines
+		JAP_target_east_indies
+		JAP_target_indochina
+		JAP_ultimatum
+		JAP_hawaii
+		JAP_target_india
 
 		JAP_plan_edit_2
 		JAP_agile_and_indomitable
+		JAP_victory_with_vision
+		JAP_plant_cherry_blossoms
+		JAP_bureaucratic_economy
+		JAP_invest_in_heavy_industry
+		JAP_build_new_aircraft_facilities
+		JAP_rapid_industrialisation
 		JAP_plan_edit_3
 		JAP_coordinate_intelligence_services
 		JAP_new_field_manuals

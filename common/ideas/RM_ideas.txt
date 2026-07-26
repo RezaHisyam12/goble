@@ -178,7 +178,7 @@ ideas = {
 			picture = GRU_new_germany
 			allowed = { always = no }
           		modifier = {
-				surrender_limit = 0.50
+				surrender_limit = 0.10
 				stability_weekly_factor = 0.001
 				monthly_population = 0.15
 				political_power_gain = 0.15

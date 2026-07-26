@@ -480,6 +480,32 @@ FRA_industrial_strategy_early = {
 	ai_strategy = { type = research_weight_factor id = basic_fortification_tech value = 1500 }
 }
 
+FRA_industrial_strategy_war = {
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		OR = {
+			threat > 0.75
+			has_war = yes
+		}
+		num_of_military_factories < 150
+	}
+	abort = {
+		num_of_military_factories > 150
+	}
+
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 50
+	}
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 150
+	}
+}
+
 FRA_industrial_strategy_war_late = {
 	allowed = {
 		original_tag = FRA

@@ -248,7 +248,7 @@ ideas = {
 				conscription = 0.02
 				training_time_army_factor = -0.15
 				army_attack_factor = 0.1
-				land_night_attack = 0.25
+				land_night_attack = 0.1
 				org_loss_when_moving = -0.15
 				supply_consumption_factor = -0.1
 			}
@@ -680,9 +680,9 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SCA_educational_discrepancy_idea" }
 			allowed = { always = no }
 			modifier = {
-				political_power_gain = -0.2
-				stability_factor = -0.10
-				research_speed_factor = -0.08
+				political_power_gain = -0.10
+				stability_factor = -0.05
+				research_speed_factor = -0.05
 			}
 			picture = generic_central_management
 		}
@@ -691,8 +691,8 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SCA_language_barrier_idea" }
 			allowed = { always = no }
 			modifier = {
-				political_power_gain = -0.1
-				research_speed_factor = -0.08
+				political_power_gain = -0.05
+				research_speed_factor = -0.02
 			}
 			picture = generic_central_management
 		}
@@ -708,7 +708,7 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea SCA_great_minds_2_idea" }
 			allowed = { always = no }
             modifier = {
-				research_speed_factor = 0.10
+				research_speed_factor = 0.05
 			}
 			picture = jap_supremacy_of_will
 		}
@@ -871,7 +871,7 @@ ideas = {
 			allowed = { original_tag = SCA }
 			traits = { infantry_equipment_producer_offense_2 }
 			research_bonus = {
-				infantry_weapons = 0.1
+				infantry_weapons = 0.15
 			}
 		}
 
@@ -891,7 +891,7 @@ ideas = {
 			allowed = { original_tag = SCA }
 			traits = { artillery_producer_offense_2 }
 			research_bonus = {
-				artillery = 0.1
+				artillery = 0.15
 			}
 		}
 
@@ -951,7 +951,7 @@ ideas = {
 			allowed = { original_tag = SCA }
 			traits = { capital_ship_producer_offense_1 }
 			research_bonus = {
-				naval_equipment = 0.1
+				naval_equipment = 0.15
 			}
 		}
 
@@ -960,7 +960,7 @@ ideas = {
 			allowed = { original_tag = SCA }
 			traits = { cruiser_producer_defense_1 }
 			research_bonus = {
-				naval_equipment = 0.1
+				naval_equipment = 0.15
 			}
 		}
 
@@ -970,7 +970,7 @@ ideas = {
 			allowed = { original_tag = SCA }
 			traits = { small_ship_producer_mass_1 }
 			research_bonus = {
-				naval_equipment = 0.1
+				naval_equipment = 0.15
 			}
 		}
 
@@ -987,7 +987,7 @@ ideas = {
 			}
 			traits = { fighter_producer_offense_2 }
 			research_bonus = {
-				air_equipment = 0.1
+				air_equipment = 0.15
 			}
 		}
 
@@ -997,7 +997,7 @@ ideas = {
 			allowed = { original_tag = SCA }
 			traits = { fighter_producer_mass_1 }
 			research_bonus = {
-				air_equipment = 0.1
+				air_equipment = 0.15
 			}
 		}
 
@@ -1006,7 +1006,7 @@ ideas = {
 			allowed = { original_tag = SCA }
 			traits = { us_plane_companies_boeing }
 			research_bonus = {
-				air_equipment = 0.1
+				air_equipment = 0.15
 			}
 		}
 

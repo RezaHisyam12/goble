@@ -1,0 +1,139 @@
+GER_early_game = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = GER
+	}
+
+	enable = {
+		date > 1936.1.1
+	}
+
+	abort = {
+		has_completed_focus = GER_easter_promises
+	}
+	
+	ai_national_focuses = {
+		GER_economy
+		GER_experimental_research
+		GER_research_expansion
+		GER_mil_expansion_naval_1
+		GER_political_1
+		GER_organize_the_youth
+		GER_easter_promises
+	}
+	weight = {
+		factor = 1.0
+	}
+}
+
+GER_deal_with_black_monday = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = GER
+		NOT = { has_game_rule = { rule = GER_election option = GER_ELECTION_PATAUT } }
+	}
+
+	enable = {
+		OR = {
+			has_completed_focus = GER_schleicher
+			has_completed_focus = GER_finalise_centralisation
+			has_completed_focus = GER_restore_country_rights
+		}
+	}
+
+	abort = {
+		has_completed_focus = GER_black_monday_finish
+	}
+	
+	ai_national_focuses = {
+		GER_black_monday_aftermath
+		GER_schacht1
+		GER_groener1
+		GER_black_monday_radio
+		GER_schacht2
+		GER_groener2
+		GER_Mauser_werke
+		GER_Infantry_divs
+		GER_mil_industry_2
+		GER_arms_industry
+		GER_schacht3
+		GER_groener3
+		GER_black_monday_finish
+	}
+	weight = {
+		factor = 1.0
+	}
+}
+
+GER_fix_the_army = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = GER
+	}
+
+	enable = {
+		has_completed_focus = GER_black_monday_finish
+	}
+
+	abort = {
+		has_completed_focus = GER_mil_expansion_land_1
+	}
+	
+	ai_national_focuses = {
+		GER_mil_expansion
+		GER_doctrine_great_war_2
+		GER_doctrine_mobile_2
+		GER_doctrine_great_war
+		GER_doctrine_armor
+		GER_doctrine_mobile
+		GER_doctrine_last
+		GER_mil_expansion_land_1
+	}
+	weight = {
+		factor = 1.0
+	}
+}
+
+GER_prepare_for_war = {
+	name = ""
+	desc = ""
+
+	allowed = {
+		original_tag = GER
+	}
+
+	enable = {
+		has_completed_focus = GER_mil_expansion_land_1
+	}
+
+	abort = {
+		OR = {
+			has_completed_focus = GER_linie2_full
+			has_completed_focus = GER_linie2_small
+		}
+		has_completed_focus = GER_jet
+	}
+	
+	ai_national_focuses = {
+		GER_linie1
+		GER_linie2_full
+		GER_linie2_small
+		GER_poli_temp
+		GER_mil_industry_3
+		GER_doctrine_mobile_3
+		GER_luftwaffe
+		GER_Henschel_Albatros
+		GER_Junkers_Fogger
+		GER_schule
+		GER_jet
+	}
+	weight = {
+		factor = 1.0
+	}
+}

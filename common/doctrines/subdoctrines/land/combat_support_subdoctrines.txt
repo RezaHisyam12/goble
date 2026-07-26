@@ -744,7 +744,13 @@ field_engineering = {
 	xp_cost = 100
 	xp_type = army
 
-	ai_will_do = { base = 2 }
+	ai_will_do = {
+		base = 2
+		modifier = {
+			factor = 1.5
+			has_doctrine = defensive_postures
+		}
+	}
 
 	engineer = {
 		river = {
@@ -770,7 +776,7 @@ field_engineering = {
 			movement = 0.2
 		}
 	}
-	#TODO_JBE: replace with category of engineers
+
 	rewards = {
 		rapid_fire_lane_clearance = {
 			engineer = {

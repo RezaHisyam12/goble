@@ -31,14 +31,16 @@ armour_super_heavy_generic = {
 		target_template = {
 			regiments = {
 				super_heavy_armor_battalion = 4
-				heavy_sp_anti_air_brigade = 4
-				mechanized = 3
+				heavy_sp_anti_air_brigade = 2
+				heavy_tank_destroyer_brigade = 2
 				motorized = 3
+				mechanized = 3
 			}
 
 			regimental_support = {
-				mot_fire_support = 3
-				anti_tank_battery = 1
+				mot_fire_support = 2
+				heavy_tank_destroyer_support = 1
+				medium_sp_anti_air_support = 1
 			}
 
 			support = {
@@ -75,14 +77,16 @@ armour_super_heavy_generic = {
 		target_template = {
 			regiments = {
 				super_heavy_armor_battalion = 4
-				modern_sp_anti_air_brigade = 4
-				mechanized = 3
+				modern_sp_anti_air_brigade = 2
+				modern_tank_destroyer_brigade = 2
 				motorized = 3
+				mechanized = 3
 			}
 
 			regimental_support = {
-				mot_fire_support = 3
-				anti_tank_battery = 1
+				mot_fire_support = 2
+				heavy_tank_destroyer_support = 1
+				medium_sp_anti_air_support = 1
 			}
 
 			support = {

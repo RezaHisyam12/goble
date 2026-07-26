@@ -65,6 +65,123 @@ RUS_absolute_monarch_plan = {
 	}
 }
 
+RUS_eusrasia_plan = {
+	name = "RUS_eusrasia_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		RUS_is_eurasia = yes
+	}
+	abort = {
+		has_completed_focus = RUS_Council_Of_Five
+	}
+
+	ai_national_focuses = {
+		RUS_Birth_Of_The_Eurasian_Union
+		RUS_A_Split_In_The_Party
+		RUS_Turn_The_Other_Cheek
+		RUS_Evil_Comes_From_Everywhereness
+		RUS_Council_Of_Five
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
+RUS_orthodox_eusrasia_plan = {
+	name = "RUS_orthodox_eusrasia_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		RUS_is_eurasia = yes
+		has_completed_focus = RUS_Orthodox_Eurasianists
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		RUS_Rule_Of_Intelligentsia
+		RUS_Cultural_Revolution
+		RUS_A_New_Eurasian_Nation
+		RUS_A_New_Social_Class
+		RUS_A_New_Identity
+		RUS_Respect_Classic_Eurasianism
+		RUS_Power_Of_The_Orthodoxy
+		RUS_Promote_Eurasianist_Ideology
+		RUS_The_Only_True_Eurasianists
+		RUS_Social_Hierarchy
+
+		RUS_Question_Of_The_Monarchy
+		RUS_Tsar_Of_All_Eurasia
+		RUS_Royal_Constitution
+
+		RUS_Question_Of_The_Duma
+		RUS_Dominant_Party_Democracy
+		RUS_Sovereign_Democracy
+	}
+
+	ideas = {
+		RUS_Sergey_L_Markov_cos_ade = 10
+		RUS_Aleksey_von_Lampe_carm_pau = 10
+		opz = 30
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
+RUS_natpop_eusrasia_plan = {
+	name = "RUS_natpop_eusrasia_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		RUS_is_eurasia = yes
+		has_country_flag = RUS_opposition_persecuted
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		RUS_Spirit_Of_The_Revolution
+		RUS_The_New_Eurasian_Generation
+		RUS_Sobornost
+		RUS_National_Maximalist_Church
+		RUS_Embrace_The_Krestostrel
+		RUS_The_New_Oprichnina
+		RUS_Legacy_Of_Slavophilia
+		RUS_The_Dark_Sky_Of_Eurasia
+		RUS_Coalition_With_Nationalists
+		RUS_Adopt_Savinkovs_Ideology
+		RUS_The_Apocalyptic_Equestrian
+		RUS_Russian_Supremacy
+		RUS_Neoeurasianism
+		RUS_The_Dictates_Of_Reason
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
 RUS_absolute_rnsma_plan = {
 	name = "RUS_absolute_rnsma_plan"
 	desc = ""

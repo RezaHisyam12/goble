@@ -1520,14 +1520,6 @@ FOP_core_Argentina_decisions = {
 
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				factor = 0
-				NOT = {
-					FROM = {
-						any_neighbor_state = { is_core_of = ROOT }
-					}
-				}
-			}
 		}
 
 		remove_effect = {
@@ -1565,14 +1557,6 @@ FOP_core_Argentina_decisions = {
 
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				factor = 0
-				NOT = {
-					FROM = {
-						any_neighbor_state = { is_core_of = ROOT }
-					}
-				}
-			}
 		}
 
 		remove_effect = {
@@ -1611,14 +1595,6 @@ FOP_core_Argentina_decisions = {
 
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				factor = 0
-				NOT = {
-					FROM = {
-						any_neighbor_state = { is_core_of = ROOT }
-					}
-				}
-			}
 		}
 
 		remove_effect = {

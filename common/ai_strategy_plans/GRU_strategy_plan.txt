@@ -30,3 +30,39 @@ GRU_starting_plan = {
 		factor = 1.0
 	}
 }
+
+GRU_offensive_plan = {
+	name = "GRU_offensive_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		has_country_flag = GRU_REBUILD
+		has_country_flag = GRU_NMDVP_rule
+		has_country_flag = gru_military_build_up
+		is_subject = no
+		is_major = yes
+		has_army_manpower = { size > 300000 }
+	}
+	abort = {
+		has_completed_focus = GRU_NMDVP_PAN_GERMANISM_RELOADED
+	}
+
+	ai_national_focuses = {
+		GRU_NMDVP_PATH
+		GRU_NMDVP_imperialism
+		GRU_NMDVP_PAN_GERMANISM
+		GRU_NMDVP_BORDER_FORTIFICATIONS
+		GRU_NMDVP_allignment
+		GRU_NMDVP_SLAV_LAND_EXPANSION
+		GRU_NMDVP_PAN_GERMANISM_RELOADED
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}

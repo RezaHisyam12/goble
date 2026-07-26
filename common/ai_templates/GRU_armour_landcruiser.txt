@@ -2,7 +2,7 @@
 ## Landcruiser ROLE ##
 ######################
 
-armour_landcruiser_generic = {
+landcruiser_generic = {
 	role = armour_landcruiser
 	front_role_override = offence
 
@@ -34,17 +34,17 @@ armour_landcruiser_generic = {
 
 		target_template = {
 			regiments = {
-				land_cruiser_battalion = 2
-				heavy_armor = 1
-				heavy_tank_destroyer_brigade = 1
-				heavy_sp_anti_air_brigade = 4
-				mechanized = 3
+				land_cruiser_battalion = 4
+				heavy_tank_destroyer_brigade = 2
+				heavy_sp_anti_air_brigade = 2
 				motorized = 3
+				mechanized = 3
 			}
 
 			regimental_support = {
 				mot_fire_support = 2
-				anti_air_battery = 1
+				heavy_sp_anti_air_support = 1
+				heavy_tank_destroyer_support = 1
 			}
 
 			support = {
@@ -80,17 +80,17 @@ armour_landcruiser_generic = {
 
 		target_template = {
 			regiments = {
-				land_cruiser_battalion = 2
-				modern_armor = 1
-				modern_tank_destroyer_brigade = 1
-				modern_sp_anti_air_brigade = 4
-				mechanized = 3
+				land_cruiser_battalion = 4
+				modern_tank_destroyer_brigade = 2
+				modern_sp_anti_air_brigade = 2
 				motorized = 3
+				mechanized = 3
 			}
 
 			regimental_support = {
 				mot_fire_support = 2
-				anti_air_battery = 1
+				heavy_sp_anti_air_support = 1
+				heavy_tank_destroyer_support = 1
 			}
 
 			support = {

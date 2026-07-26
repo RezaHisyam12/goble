@@ -732,6 +732,7 @@ sub_units = {
 		priority = 3520
 		ai_priority = 3520
 		active = no
+		division_3d_model_priority = 99999
 
 		type = {
 			armor
@@ -816,6 +817,7 @@ sub_units = {
 		priority = 3520
 		ai_priority = 3520
 		active = yes
+		division_3d_model_priority = 99999
 
 		type = {
 			armor

@@ -1,4 +1,4 @@
-# AI tank design for testing
+# Enhanced AI - Tank Designs
 
 generic_light_tanks = {
 	category = land
@@ -103,15 +103,7 @@ generic_light_tanks = {
 
 	improved_light_tank_default = {
 		priority = {
-			factor = 10
-			modifier = { 
-				has_tech = advanced_light_tank_chassis 
-				factor = 0 #let's not waste XP here
-			}
-			modifier = { 
-				factor = 100
-				tag = GRU
-			}
+			factor = 200
 		}
 
 		target_variant = {
@@ -172,7 +164,12 @@ generic_light_tanks = {
 
 	advanced_light_tank_default = {
 		priority = {
-			factor = 10
+			factor = 300
+			modifier = {
+				has_design_based_on = light_tank_chassis
+				has_four_subdoctrine_tracks = no
+				factor = 0
+			}
 			modifier = { 
 				factor = 100
 				tag = GRU
@@ -262,10 +259,6 @@ generic_light_tank_artillery = {
 	light_tank_artillery_1 = {
 		priority = {
 			factor = 10
-			modifier = { 
-				has_tech = improved_light_tank_chassis 
-				factor = 0 #let's not waste XP here
-			}
 		}
 
 		target_variant = {
@@ -291,11 +284,7 @@ generic_light_tank_artillery = {
 
 	light_tank_artillery_2 = {
 		priority = {
-			factor = 10
-			modifier = { 
-				has_tech = advanced_light_tank_chassis 
-				factor = 0 #let's not waste XP here
-			}
+			factor = 20
 		}
 
 		target_variant = {
@@ -344,7 +333,12 @@ generic_light_tank_artillery = {
 
 	light_tank_artillery_3 = {
 		priority = {
-			factor = 10
+			factor = 30
+			modifier = {
+				has_design_based_on = light_tank_artillery_chassis
+				has_four_subdoctrine_tracks = no
+				factor = 0
+			}
 		}
 
 		target_variant = {
@@ -410,10 +404,6 @@ generic_light_tank_anti_air = {
 	light_tank_anti_air_1 = {
 		priority = {
 			factor = 10
-			modifier = { 
-				has_tech = improved_light_tank_chassis 
-				factor = 0 #let's not waste XP here
-			}
 		}
 
 		target_variant = {
@@ -439,7 +429,12 @@ generic_light_tank_anti_air = {
 
 	light_tank_anti_air_2 = {
 		priority = {
-			factor = 10
+			factor = 20
+			modifier = {
+				has_design_based_on = light_tank_aa_chassis
+				has_four_subdoctrine_tracks = no
+				factor = 0
+			}
 		}
 
 		target_variant = {
@@ -486,10 +481,6 @@ generic_medium_tanks = {
 	basic_medium_tank_default = {
 		priority = {
 			factor = 100
-			modifier = { 
-				has_tech = improved_medium_tank_chassis
-				factor = 0 #let's not waste XP here
-			}
 			modifier = {
 				OR = {
 					has_doctrine = new_mobile_warfare
@@ -545,10 +536,6 @@ generic_medium_tanks = {
 	basic_medium_tank_mobile_warfare = {
 		priority = {
 			factor = 100
-			modifier = { 
-				has_tech = improved_medium_tank_chassis
-				factor = 0 #let's not waste XP here
-			}
 			modifier = {
 				NOT = {has_doctrine = new_mobile_warfare}
 				factor = 0
@@ -601,10 +588,6 @@ generic_medium_tanks = {
 	basic_medium_tank_mass_assault = {
 		priority = {
 			factor = 100
-			modifier = { 
-				has_tech = improved_medium_tank_chassis
-				factor = 0 #let's not waste XP here
-			}
 			modifier = {
 				NOT = {has_doctrine = mass_assault}
 				factor = 0
@@ -659,10 +642,11 @@ generic_medium_tanks = {
 
 	improved_medium_tank_default_1 = {
 		priority = {
-			factor = 100
-			modifier = { 
-				has_tech = advanced_medium_tank_chassis 
-				factor = 0 #let's not waste XP here
+			factor = 200
+			modifier = {
+				has_design_based_on = medium_tank_chassis
+				has_one_subdoctrine_track = no
+				factor = 0
 			}
 			modifier = {
 				OR = {
@@ -750,10 +734,11 @@ generic_medium_tanks = {
 
 	improved_medium_tank_default_2 = {
 		priority = {
-			factor = 100
-			modifier = { 
-				has_tech = advanced_medium_tank_chassis 
-				factor = 0 #let's not waste XP here
+			factor = 200
+			modifier = {
+				has_design_based_on = medium_tank_chassis
+				has_one_subdoctrine_track = no
+				factor = 0
 			}
 			modifier = {
 				OR = {
@@ -836,10 +821,11 @@ generic_medium_tanks = {
 
 	improved_medium_tank_default_3 = {
 		priority = {
-			factor = 100
-			modifier = { 
-				has_tech = advanced_medium_tank_chassis 
-				factor = 0 #let's not waste XP here
+			factor = 200
+			modifier = {
+				has_design_based_on = medium_tank_chassis
+				has_one_subdoctrine_track = no
+				factor = 0
 			}
 			modifier = {
 				OR = {
@@ -916,10 +902,11 @@ generic_medium_tanks = {
 
 	improved_medium_tank_mobile_warfare_1 = {
 		priority = {
-			factor = 100
-			modifier = { 
-				has_tech = advanced_medium_tank_chassis 
-				factor = 0 #let's not waste XP here
+			factor = 200
+			modifier = {
+				has_design_based_on = medium_tank_chassis
+				has_one_subdoctrine_track = no
+				factor = 0
 			}
 			modifier = {
 				NOT = {has_doctrine = new_mobile_warfare}
@@ -999,10 +986,11 @@ generic_medium_tanks = {
 
 	improved_medium_tank_mobile_warfare_2 = {
 		priority = {
-			factor = 100
-			modifier = { 
-				has_tech = advanced_medium_tank_chassis 
-				factor = 0 #let's not waste XP here
+			factor = 200
+			modifier = {
+				has_design_based_on = medium_tank_chassis
+				has_one_subdoctrine_track = no
+				factor = 0
 			}
 			modifier = {
 				NOT = {has_doctrine = new_mobile_warfare}
@@ -1082,10 +1070,11 @@ generic_medium_tanks = {
 
 	improved_medium_tank_mobile_warfare_3 = {
 		priority = {
-			factor = 100
-			modifier = { 
-				has_tech = advanced_medium_tank_chassis 
-				factor = 0 #let's not waste XP here
+			factor = 200
+			modifier = {
+				has_design_based_on = medium_tank_chassis
+				has_one_subdoctrine_track = no
+				factor = 0
 			}
 			modifier = {
 				NOT = {has_doctrine = new_mobile_warfare}
@@ -1159,10 +1148,11 @@ generic_medium_tanks = {
 
 	improved_medium_tank_mass_assault_1 = {		
 		priority = {
-			factor = 100
-			modifier = { 
-				has_tech = advanced_medium_tank_chassis 
-				factor = 0 #let's not waste XP here
+			factor = 200
+			modifier = {
+				has_design_based_on = medium_tank_chassis
+				has_one_subdoctrine_track = no
+				factor = 0
 			}
 			modifier = {
 				NOT = {has_doctrine = mass_assault}
@@ -1241,10 +1231,11 @@ generic_medium_tanks = {
 
 	improved_medium_tank_mass_assault_2 = {		
 		priority = {
-			factor = 100
-			modifier = { 
-				has_tech = advanced_medium_tank_chassis 
-				factor = 0 #let's not waste XP here
+			factor = 200
+			modifier = {
+				has_design_based_on = medium_tank_chassis
+				has_one_subdoctrine_track = no
+				factor = 0
 			}
 			modifier = {
 				NOT = {has_doctrine = mass_assault}
@@ -1318,10 +1309,11 @@ generic_medium_tanks = {
 
 	improved_medium_tank_mass_assault_3 = {		
 		priority = {
-			factor = 100
-			modifier = { 
-				has_tech = advanced_medium_tank_chassis 
-				factor = 0 #let's not waste XP here
+			factor = 200
+			modifier = {
+				has_design_based_on = medium_tank_chassis
+				has_one_subdoctrine_track = no
+				factor = 0
 			}
 			modifier = {
 				NOT = {has_doctrine = mass_assault}
@@ -1389,7 +1381,12 @@ generic_medium_tanks = {
 
 	advanced_medium_tank_default = {		
 		priority = {
-			factor = 100
+			factor = 300
+			modifier = {
+				has_design_based_on = medium_tank_chassis
+				has_four_subdoctrine_tracks = no
+				factor = 0
+			}
 			modifier = {
 				OR = {
 					has_doctrine = new_mobile_warfare
@@ -1463,7 +1460,12 @@ generic_medium_tanks = {
 
 	advanced_medium_tank_mobile_warfare = {
 		priority = {
-			factor = 100
+			factor = 300
+			modifier = {
+				has_design_based_on = medium_tank_chassis
+				has_four_subdoctrine_tracks = no
+				factor = 0
+			}
 			modifier = {
 				NOT = {has_doctrine = new_mobile_warfare}
 				factor = 0
@@ -1534,7 +1536,12 @@ generic_medium_tanks = {
 
 	advanced_medium_tank_mass_assault = {
 		priority = {
-			factor = 100
+			factor = 300
+			modifier = {
+				has_design_based_on = medium_tank_chassis
+				has_four_subdoctrine_tracks = no
+				factor = 0
+			}
 			modifier = {
 				NOT = {has_doctrine = mass_assault}
 				factor = 0
@@ -1873,7 +1880,7 @@ generic_medium_tank_anti_air = {
 			factor = 0
 		}
 		modifier = {
-			has_two_subdoctrine_tracks = no
+			has_four_subdoctrine_tracks = no
 			factor = 0
 		}
 	}
@@ -2050,7 +2057,7 @@ generic_medium_tank_destroyer = {
 			factor = 0
 		}
 		modifier = {
-			has_two_subdoctrine_tracks = no
+			has_four_subdoctrine_tracks = no
 			factor = 0
 		}
 	}
@@ -2447,15 +2454,15 @@ generic_medium_flame_tanks = {
 			is_eligible_for_armor_production = no
 			factor = 0
 		}
+		modifier = {
+			has_selected_a_grand_doctrine = no
+			factor = 0
+		}
 	}
 
 	basic_medium_flame_tank_default = {
 		priority = {
-			factor = 100
-			modifier = { 
-				has_tech = improved_medium_tank_chassis
-				factor = 0 #let's not waste XP here
-			}
+			factor = 10
 		}
 
 		target_variant = {
@@ -2490,10 +2497,11 @@ generic_medium_flame_tanks = {
 
 	improved_medium_flame_tank_default = {
 		priority = {
-			factor = 100
-			modifier = { 
-				has_tech = advanced_medium_tank_chassis
-				factor = 0 #let's not waste XP here
+			factor = 20
+			modifier = {
+				has_design_based_on = medium_tank_flame_chassis
+				has_one_subdoctrine_track = no
+				factor = 0
 			}
 		}
 
@@ -2552,7 +2560,12 @@ generic_medium_flame_tanks = {
 
 	advanced_medium_flame_tank_default = {
 		priority = {
-			factor = 100
+			factor = 30
+			modifier = {
+				has_design_based_on = medium_tank_flame_chassis
+				has_four_subdoctrine_tracks = no
+				factor = 0
+			}
 		}
 
 		target_variant = {
@@ -2616,11 +2629,14 @@ generic_amphibious_tanks = {
 	}
 
 	priority = {
-		base = 0
+		factor = 500
+		modifier = { 
+			is_eligible_for_improved_armor_production = no
+			factor = 0
+		}
 		modifier = {
-			add = 500
-			is_eligible_for_improved_armor_production = yes
-			has_four_subdoctrine_tracks = yes
+			has_four_subdoctrine_tracks = no
+			factor = 0
 		}
 	}
 
@@ -2925,10 +2941,14 @@ generic_heavy_flame_tank = {
 	}
 
 	priority = {
-		factor = 1000
+		base = 0
 		modifier = {
-			factor = 0
-			is_eligible_for_armor_production = no
+			add = 1000
+			is_eligible_for_armor_production = yes
+			OR = {
+				has_design_based_on = heavy_tank_chassis
+				has_design_based_on = super_heavy_tank_chassis
+			}
 		}
 	}
 
@@ -3085,22 +3105,13 @@ generic_heavy_tank_destroyer = {
 	}
 
 	priority = {
-		factor = 1000
+		base = 0
 		modifier = {
-			factor = 0
-			is_eligible_for_improved_heavy_armor_production = no
-		}
-		modifier = { 
+			add = 1000
 			is_eligible_for_armor_production = yes
-			factor = 5
-		}
-		modifier = {
-			factor = 0
 			OR = {
-				NOT = { has_subdoctrine_in_track = infantry }
-				NOT = { has_subdoctrine_in_track = combat_support }
-				NOT = { has_subdoctrine_in_track = armor }
-				NOT = { has_subdoctrine_in_track = operations }
+				has_design_based_on = heavy_tank_chassis
+				has_design_based_on = super_heavy_tank_chassis
 			}
 		}
 	}
@@ -3341,25 +3352,18 @@ generic_heavy_tank_destroyer = {
 generic_heavy_tank_anti_air = {
 	category = land
 
-	available_for = { GER GRU RUS USA CSA COR WCC TEX NEE CAL }
-
 	roles = {
 		land_heavy_tank_anti_air
 	}
 
 	priority = {
-		factor = 1000
+		base = 0
 		modifier = {
-			factor = 0
-			is_eligible_for_armor_production = no
-		}
-		modifier = {
-			factor = 0
+			add = 1000
+			is_eligible_for_armor_production = yes
 			OR = {
-				NOT = { has_subdoctrine_in_track = infantry }
-				NOT = { has_subdoctrine_in_track = combat_support }
-				NOT = { has_subdoctrine_in_track = armor }
-				NOT = { has_subdoctrine_in_track = operations }
+				has_design_based_on = heavy_tank_chassis
+				has_design_based_on = super_heavy_tank_chassis
 			}
 		}
 	}
@@ -3570,71 +3574,217 @@ generic_modern_tanks = {
 	}
 
 	priority = {
-		factor = 2000
+		factor = 8000
 		modifier = { 
-			is_eligible_for_medium_armor_production = no
+			is_eligible_for_improved_armor_production = no
+			factor = 0
+		}
+		modifier = {
+			has_four_subdoctrine_tracks = no
 			factor = 0
 		}
 	}
 
-	modern_armour_default = { #1945 chassis
+	modern_tank_default = {
 		priority = {
-			factor = 100
+			factor = 10
+			modifier = {
+				OR = {
+					has_doctrine = new_mobile_warfare
+					has_doctrine = mass_assault
+				}
+				factor = 0
+			}
 		}
 
 		target_variant = {
-			match_value = 5000
-			type = modern_tank_chassis_1
+			match_value = 1000
+			type = modern_tank_chassis
 			modules = {
-				main_armament_slot = { 
-					any_of = { 
-						tank_heavy_cannon_3 
-						tank_high_velocity_cannon_3 
-						tank_heavy_cannon_2 
-						tank_high_velocity_cannon_2 
-						tank_heavy_cannon 
-					} 
-				}
+				main_armament_slot = tank_heavy_cannon_3
 				turret_type_slot = tank_modern_tank_turret
 				suspension_type_slot = tank_torsion_bar_suspension
-				armor_type_slot = tank_welded_armor
+				armor_type_slot = tank_cast_armor
 				engine_type_slot = tank_diesel_engine
-				special_type_slot_1 > tank_radio_1
-				special_type_slot_2 = easy_maintenance
-				special_type_slot_3 = sloped_armor
-				special_type_slot_4 = auto_loader
+				special_type_slot_1 = tank_radio_module
+				special_type_slot_2 = sloped_armor
+				special_type_slot_3 = auto_loader
+				special_type_slot_4 = easy_maintenance
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 20
-				tank_nsb_armor_upgrade = 10
+				tank_nsb_engine_upgrade = {
+					base = 0
+					modifier = {
+						add = 4
+						num_of_military_factories > 60
+					}
+					modifier = {
+						add = 5
+						num_of_military_factories > 120
+					}
+					modifier = {
+						add = 5
+						num_of_military_factories > 180
+					}
+				}
+				tank_nsb_armor_upgrade = {
+					base = 4
+					modifier = {
+						add = 5
+						num_of_military_factories > 60
+					}
+					modifier = {
+						add = 5
+						num_of_military_factories > 120
+					}
+					modifier = {
+						add = 3
+						num_of_military_factories > 180
+					}
+					modifier = {
+						add = 3
+						num_of_military_factories > 240
+					}
+				}
 			}
 		}
 
-		allowed_modules = {
-			
-			tank_high_velocity_cannon_2 
-			tank_high_velocity_cannon_3 
-			tank_heavy_cannon 
-			tank_heavy_cannon_2 
-			tank_heavy_cannon_3 
-			tank_modern_tank_turret
-			tank_christie_suspension
-			tank_torsion_bar_suspension
-			tank_cast_armor
-			tank_riveted_armor
-			tank_welded_armor
-			tank_diesel_engine
-			tank_gasoline_engine
-			sloped_armor
-			smoke_launchers
-			easy_maintenance
-			tank_radio_1
-			tank_radio_2
-			tank_radio_3
-			wet_ammo_storage
-			armor_skirts
-			auto_loader
+		requirements = {}
+		allowed_modules = {}
+	}
+
+	modern_tank_mobile_warfare = {
+		priority = {
+			factor = 10
+			modifier = {
+				NOT = {has_doctrine = new_mobile_warfare}
+				factor = 0
+			}
 		}
+
+		target_variant = {
+			match_value = 1000
+			type = modern_tank_chassis
+			modules = {
+				main_armament_slot = tank_high_velocity_cannon_3
+				turret_type_slot = tank_modern_tank_turret
+				suspension_type_slot = tank_christie_suspension
+				armor_type_slot = tank_cast_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = tank_radio_module
+				special_type_slot_2 = squeezebore_adaptor
+				special_type_slot_3 = auto_loader
+				special_type_slot_4 = easy_maintenance
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = {
+					base = 4
+					modifier = {
+						add = 5
+						num_of_military_factories > 60
+					}
+					modifier = {
+						add = 5
+						num_of_military_factories > 120
+					}
+					modifier = {
+						add = 3
+						num_of_military_factories > 180
+					}
+				}
+				tank_nsb_armor_upgrade = {
+					base = 4
+					modifier = {
+						add = 5
+						num_of_military_factories > 60
+					}
+					modifier = {
+						add = 5
+						num_of_military_factories > 120
+					}
+					modifier = {
+						add = 3
+						num_of_military_factories > 180
+					}
+					modifier = {
+						add = 3
+						num_of_military_factories > 240
+					}
+				}
+			}
+		}
+
+		requirements = {}
+		allowed_modules = {}
+	}
+
+	modern_tank_mass_assault = {
+		priority = {
+			factor = 10
+			modifier = {
+				NOT = {has_doctrine = mass_assault}
+				factor = 0
+			}
+		}
+
+		target_variant = {
+			match_value = 1000
+			type = modern_tank_chassis
+			modules = {
+				main_armament_slot = tank_heavy_cannon_3
+				turret_type_slot = tank_modern_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_welded_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = tank_radio_module
+				special_type_slot_2 = stabilizer
+				special_type_slot_3 = auto_loader
+				special_type_slot_4 = easy_maintenance
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = {
+					base = 0
+					modifier = {
+						add = 4
+						num_of_military_factories > 60
+					}
+					modifier = {
+						add = 5
+						num_of_military_factories > 120
+					}
+					modifier = {
+						add = 5
+						num_of_military_factories > 180
+					}
+				}
+				tank_nsb_armor_upgrade = {
+					base = 0
+					modifier = {
+						add = 4
+						num_of_military_factories > 60
+					}
+					modifier = {
+						add = 5
+						num_of_military_factories > 120
+					}
+					modifier = {
+						add = 5
+						num_of_military_factories > 180
+					}
+					modifier = {
+						add = 3
+						num_of_military_factories > 240
+					}
+					modifier = {
+						add = 3
+						num_of_military_factories > 300
+					}
+				}
+			}
+		}
+
+		requirements = {}
+		allowed_modules = {}
 	}
 }
 

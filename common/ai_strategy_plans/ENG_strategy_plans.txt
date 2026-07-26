@@ -1,0 +1,30 @@
+ENG_mosley_plan = {
+	name = "ENG_mosley_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = ENG
+	}
+
+	enable = {
+		has_country_flag = mosley_chairman
+	}
+
+	abort = {
+		NOT = { has_country_flag = mosley_chairman }
+	}
+	
+	ai_national_focuses = {
+		ENG_political_commissars
+		ENG_united_britain
+		ENG_merge
+		ENG_revolution
+		ENG_truth
+		ENG_fanaticism
+		ENG_always_watching
+		ENG_lives
+	}
+	weight = {
+		factor = 1.0
+	}
+}

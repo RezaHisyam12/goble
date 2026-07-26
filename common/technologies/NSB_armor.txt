@@ -681,6 +681,7 @@ technologies = {
 				OR = {
 					has_global_flag = SpaceMarines
 					has_doctrine = grand_battleplan
+					num_of_military_factories > 100
 				}
 			}
 			modifier = {
@@ -807,6 +808,7 @@ technologies = {
 			modifier = {
 				add = 50
 				is_eligible_for_armor_production = yes
+				is_major = yes
 			}
 			modifier = {
 				add = 500

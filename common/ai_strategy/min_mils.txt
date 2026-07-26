@@ -210,8 +210,8 @@ planes_min_production_15 = {
 
 sm_early_armor_min_production = {
 	enable = {
-		num_of_military_factories > 30
 		has_global_flag = SpaceMarines
+		num_of_military_factories > 30
 	}
 	abort_when_not_enabled = yes
 
@@ -221,8 +221,8 @@ sm_early_armor_min_production = {
 
 early_armor_min_production_1 = {
 	enable = {
-		num_of_military_factories > 30
 		NOT = { has_global_flag = SpaceMarines }
+		num_of_military_factories > 30
 	}
 	abort_when_not_enabled = yes
 
@@ -581,6 +581,7 @@ gbp_heavy_armor_min_production_offset_1 = {
 	}
 	abort_when_not_enabled = yes
 
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
 	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = -2 }
 	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 2 }
 }
@@ -594,6 +595,7 @@ gbp_heavy_armor_min_production_offset_2 = {
 	}
 	abort_when_not_enabled = yes
 
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
 	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = -2 }
 	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 2 }
 }
@@ -607,6 +609,7 @@ gbp_heavy_armor_min_production_offset_3 = {
 	}
 	abort_when_not_enabled = yes
 
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
 	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = -2 }
 	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 2 }
 }
@@ -620,6 +623,7 @@ gbp_heavy_armor_min_production_offset_4 = {
 	}
 	abort_when_not_enabled = yes
 
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
 	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = -2 }
 	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 2 }
 }
@@ -633,6 +637,7 @@ gbp_heavy_armor_min_production_offset_5 = {
 	}
 	abort_when_not_enabled = yes
 
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
 	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = -2 }
 	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 2 }
 }
@@ -646,6 +651,7 @@ gbp_heavy_armor_min_production_offset_6 = {
 	}
 	abort_when_not_enabled = yes
 
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = mechanized_equipment	 		value = 1 }
 	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_chassis	 		value = -2 }
 	ai_strategy = { type = equipment_production_min_factories_archetype 	id = heavy_tank_chassis	 			value = 2 }
 }
@@ -794,9 +800,19 @@ armored_support_min_production = {
 	ai_strategy = { type = equipment_production_min_factories_archetype 	id = armored_support_vehicle 		value = 1 }
 }
 
-flame_tank_min_production = {
+flame_tank_min_production_1 = {
 	enable = {
 		num_of_military_factories > 30
+		is_special_project_completed = sp:sp_land_flamethrower_tank
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_production_min_factories_archetype 	id = medium_tank_flame_chassis 		value = 1 }
+}
+
+flame_tank_min_production_2 = {
+	enable = {
+		num_of_military_factories > 60
 		is_special_project_completed = sp:sp_land_flamethrower_tank
 	}
 	abort_when_not_enabled = yes

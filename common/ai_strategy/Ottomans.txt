@@ -375,7 +375,6 @@ TUR_attack_carefully_into_arabia = {
 		EGY = {
 			has_war_with = ROOT
 			controls_state = 753 #Suez Canal
-			NOT = { has_idea = EGY_levant_crisis_initiative_lost }
 		}
 	}
 	abort_when_not_enabled = yes
@@ -453,7 +452,6 @@ TUR_crush_egypt = {
 	}
 	enable = {
 		has_war_with = EGY
-		EGY = { has_idea = EGY_levant_crisis_initiative_lost }
 		## focus on Iran first if a threat
 		any_state_of = {
 			count = 4

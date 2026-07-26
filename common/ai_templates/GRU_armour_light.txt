@@ -40,8 +40,7 @@ light_armour_generic = {
 			}
 
 			regimental_support = {
-				field_guns = 1
-				mot_fire_support = 1
+				mot_fire_support = 2
 			}
 
 			support = {
@@ -77,8 +76,7 @@ light_armour_generic = {
 			}
 
 			regimental_support = {
-				field_guns = 1
-				mot_fire_support = 1
+				mot_fire_support = 2
 			}
 
 			support = {
