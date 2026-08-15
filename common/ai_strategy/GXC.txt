@@ -81,6 +81,35 @@ GXC_buffer_against_japanese_invasion = {
 		value = 25
 	}
 }
+GXC_army_composition = {
+	allowed = { original_tag = GXC }
+	enable = {
+		OR = {
+			has_war_with = JAP
+			date < 1941.1.1
+		}
+		check_variable = { num_divisions < 50 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = light_infantry
+		value = 150
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -50
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineer
+		value = 25
+	}
+}
 GXC_prepare_for_SCW_YUN = {
 	allowed = { original_tag = GXC }
 	enable = {

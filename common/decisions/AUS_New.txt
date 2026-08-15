@@ -60,6 +60,383 @@ political_actions = {
 			add_to_tech_sharing_group = austrian_research
 		}
 	}
+
+	AUS_syndie_threat = {
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			always = no
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = AUS_status_quo
+				has_completed_focus = AUS_embrace_pluralism
+				has_completed_focus = AUS_military_occupation
+			}
+		}
+		visible = {
+			FROM = { has_war_with = GER }
+			is_major = yes
+			is_valid_peace_target = yes
+			has_capitulated = no
+			has_socialist_government = no
+			NOT = { has_war_with = GER }
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 0
+				has_war = yes
+				OR = {
+					any_country_of = {
+						target = { HUN SER ROM }
+						has_war_with = ROOT
+					}
+					surrender_progress > 0.01
+					HUN = {
+						is_subject_of = AUS
+						surrender_progress > 0.05
+					}
+					any_country_of = {
+						target = { CZE CRO }
+						is_subject_of = ROOT
+						surrender_progress > 0.15
+					}
+				}
+				NOT = { has_war_with = INT }
+				NOT = { has_war_with = RUS }
+			}
+			modifier = {
+				factor = 0
+				OTT_ottomans_defeated = no
+				has_game_rule = { rule = OTT_forpol option = OTT_FORPOL_AUS }
+			}
+			modifier = {
+				factor = 0
+				has_completed_focus = AUS_military_occupation
+				NOT = { has_war_with = INT }
+			}
+			modifier = {
+				add = 100 # Germany is losing heavily
+				GER = { surrender_progress > 0.25 }
+			}
+			modifier = {
+				add = 100 # INT has crossed the Rhine
+				any_state_of = {
+					target = { 50 51 55 57 780 } #Wurttemberg, Eastern Rhineland, Hesse, Westphalia, Baden
+					controller = { is_ally_with = INT }
+				}
+			}
+			modifier = {
+				add = 100 # BEL and HOL are both occupied by INT
+				any_state_of = {
+					count = 3
+					target = { 6 34 925 948 } #Flanders, Hainaut, Brabant, Liège
+					controller = { is_ally_with = INT }
+				}
+				any_state_of = {
+					count = 3
+					target = { 7 35 36 866 } #Holland, North Brabant, Frisia, Guelders
+					controller = { is_ally_with = INT }
+				}
+			}
+			modifier = {
+				add = 100 # Switzerland has gone socialist
+				SWI = {
+					is_in_faction = yes
+					faction_leader = { has_socialist_government = yes }
+				}
+			}
+			modifier = {
+				add = 100 # SRI has defeated ITA
+				SRI = {
+					is_owner_neighbor_of = ROOT
+					has_socialist_government = yes
+				}
+			}
+			modifier = {
+				add = 100 # Poland is in a socialist faction
+				POL = {
+					is_in_faction = yes
+					faction_leader = { has_socialist_government = yes }
+				}
+			}
+			modifier = {
+				add = 100 # Poland is in the DAB and borders socialist RUS
+				POL = {
+					is_in_faction_with = ROOT
+					any_home_area_neighbor_country = {
+						has_socialist_government = yes
+						is_major = yes
+					}
+				}
+			}
+			modifier = {
+				add = 100 # Syndie Ukraine
+				UKR = { has_socialist_government = yes }
+			}
+			modifier = {
+				add = 100 # to make Austria join in the war if it is still a stalemate by 1942
+				is_actual_major = yes
+				date > 1942.1.1
+				RUS = {
+					has_war_with = GER
+					NOT = { surrender_progress > 0.10 }
+				}
+				FRA = {
+					has_war_with = GER
+					NOT = { surrender_progress > 0.10 }
+				}
+			}
+			modifier = {
+				add = 100 # Austria is already at war with INT / RUS
+				OR = {
+					has_war_with = INT
+					has_war_with = RUS
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete AUS_syndie_threat"
+			FROM = { save_event_target_as = threat_country }
+			GER = { country_event = aus.tree.4011 }
+		}
+		fixed_random_seed = no
+	}
+
+	AUS_russian_threat = {
+		icon = generic_prepare_civil_war
+
+		allowed = { always = no }
+
+		available = {
+			OR = {
+				has_completed_focus = AUS_status_quo
+				has_completed_focus = AUS_embrace_pluralism
+				has_completed_focus = AUS_military_occupation
+			}
+		}
+
+		visible = {
+			FROM = {
+				has_war_with = GER
+				is_valid_peace_target = yes
+			}
+			is_major = yes
+			is_valid_peace_target = yes
+			has_capitulated = no
+			has_socialist_government = no
+			NOT = { has_war_with = GER }
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				factor = 0
+				GER = {
+					surrender_progress < 0.10
+					NOT = { has_war_with = INT }
+				}
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+				OR = {
+					any_country_of = {
+						target = { HUN SER ROM }
+						has_war_with = ROOT
+					}
+					surrender_progress > 0.01
+					HUN = {
+						is_subject_of = AUS
+						surrender_progress > 0.05
+					}
+					any_country_of = {
+						target = { CZE CRO }
+						is_subject_of = ROOT
+						surrender_progress > 0.15
+					}
+				}
+				NOT = { has_war_with = INT }
+				NOT = { has_war_with = RUS }
+			}
+			modifier = {
+				factor = 0
+				has_war_with = INT
+				GER = { surrender_progress < 0.3 }
+				any_country_of = {
+					count = 2
+					target = { POL SER ROM }
+					surrender_progress < 0.20
+					is_in_faction_with = RUS
+				}
+			}
+			modifier = {
+				factor = 0
+				OTT_ottomans_defeated = no
+				has_game_rule = { rule = OTT_forpol option = OTT_FORPOL_AUS }
+			}
+			modifier = {
+				factor = 0
+				has_completed_focus = AUS_military_occupation
+				NOT = { has_war_with = RUS }
+			}
+			modifier = {
+				add = 100	# Austria or its allies border RUS
+				OR = {
+					is_neighbor_of = RUS
+					RUS = { any_home_area_neighbor_country = { is_ally_with = ROOT } }
+				}
+			}
+			modifier = {
+				add = 100
+				188 = {	# RUS has occupied Memel
+					is_owned_by = GER
+					controller = { is_ally_with = RUS }
+				}
+			}
+			modifier = {
+				add = 100
+				POL = {	# POL is in RP and has fallen
+					is_in_faction_with = GER
+					has_capitulated = yes
+					any_core_state = { controller = { is_ally_with = RUS } }
+				}
+			}
+			modifier = {
+				add = 100	# POL or UKR is in MA
+				any_country_of = {
+					target = { POL UKR }
+					is_ally_with = RUS
+				}
+			}
+			modifier = {
+				add = 100	# POL/UKR is at war w/ GER
+				any_country_of = {
+					target = { POL UKR }
+					has_war_with = GER
+				}
+			}
+			modifier = {
+				add = 100	# BUL is in MA and borders DAB
+				BUL = {
+					is_in_faction_with = RUS
+					any_home_area_neighbor_country = { is_ally_with = ROOT }
+				}
+			}
+			modifier = {
+				add = 100
+				OR = {
+					has_war_with = INT
+					has_war_with = RUS
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete AUS_russian_threat"
+			FROM = { save_event_target_as = threat_country }
+			GER = { country_event = aus.tree.4011 }
+		}
+		fixed_random_seed = no
+	}
+
+	AUS_reform_faction = {
+		icon = generic_political_discourse
+
+		allowed = { always = no }
+
+		available = {
+			GER = {
+				has_country_flag = { flag = GER_2WK_Victory days > 45 }
+			}
+			surrender_progress < 0.01
+			OR = {
+				has_war = no
+				AND = {
+					NOT = { any_home_area_neighbor_country = { has_war_with = ROOT } }
+					if = {
+						limit = { is_in_faction = no }
+						NOT = { any_subject_country = { any_home_area_neighbor_country = { has_war_with = PREV } } }
+					}
+					else = {
+						NOT = {
+							any_allied_country = {
+								hidden_trigger = { has_country_flag = AUS_former_faction_member }
+								any_home_area_neighbor_country = { has_war_with = PREV }
+							}
+						}
+					}
+					NOT = {
+						any_enemy_country = {
+							OR = {
+								is_in_europe = yes
+								is_in_north_africa = yes
+								is_in_middle_east = yes
+							}
+							is_subject = no
+						}
+					}
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = AUS_intervened_in_weltkrieg
+			NOT = { has_global_flag = AUS_treaty_of_budapest }
+			is_subject = no
+			has_socialist_government = no
+			OR = {
+				is_in_faction = no
+				is_in_faction_with = GER
+			}
+		}
+
+		cost = 0
+		fire_only_once = no
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete AUS_reform_faction"
+			clr_country_flag = AUS_intervened_in_weltkrieg
+			every_subject_country = { clr_country_flag = AUS_former_faction_member }
+			if = {
+				limit = { is_in_faction_with = GER }
+				leave_faction = yes
+				peace_out_non_neighbours_after_leaving_faction = yes
+				GER = { country_event = aus.tree.4015 }
+			}
+			create_faction_from_template = { template = faction_template_donau_adriabund name = faction_donau_adriabund }
+			scope:faction = { set_variable = { faction_template_donau_adriabund_var = 1 } }
+			if = {
+				limit = { has_dlc_ncns = yes }
+				apply_former_faction_attributes = yes
+			}
+			every_country = {
+				limit = {
+					has_country_flag = AUS_former_faction_member
+					has_socialist_government = no
+					OR = {
+						is_in_faction_with = GER
+						is_in_faction = no
+					}
+					is_subject = no
+				}
+				country_event = aus.tree.4014
+			}
+		}
+		fixed_random_seed = no
+	}
 }
 
 AUS_reichkrieg_decision_category = {

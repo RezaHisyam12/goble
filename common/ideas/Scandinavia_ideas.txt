@@ -13,7 +13,7 @@ ideas = {
             modifier = {
 				political_power_factor = 0.1
 			}
-			picture = NOR_nordic_council
+			picture = NOR_nordic_council_idea
 		}
 
 		SCA_common_mil_purchases = {
@@ -23,7 +23,7 @@ ideas = {
 					build_cost_ic = -0.1 instant = yes
 				}
 			}
-			picture = guns_shield
+			picture = SWE_hodgepodge_of_equipment
 		}
 
 		SCA_passport_union_idea = {

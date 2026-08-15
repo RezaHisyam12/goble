@@ -13,6 +13,18 @@ HNN_infantry_organisation = {
 
 	ai_strategy = {
 		type = role_ratio
+		id = light_infantry
+		value = 100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -100
+	}
+
+	ai_strategy = {
+		type = role_ratio
 		id = mountaineer
 		value = 20
 	}

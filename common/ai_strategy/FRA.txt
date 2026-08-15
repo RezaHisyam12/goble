@@ -108,6 +108,32 @@ FRA_dont_justify_on_benesam = {
 	ai_strategy = { type = ignore_claim id = HOL value = 1 }
 }
 
+FRA_Volunteer = {
+	allowed = {
+		tag = FRA
+	}
+	enable = {
+		FRA = { has_socialist_government = yes }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = befriend
+		id = CHI
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = CHI
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = CHI
+		value = 10000
+	}
+}
+
 ################
 ### Military ###
 ################

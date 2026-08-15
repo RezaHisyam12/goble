@@ -1528,6 +1528,43 @@ spriteTypes = {
 	
 	
 	SpriteType = { 
+		name = "GRU_National_Corporatism"
+		texturefile = "gfx/interface/goals/GRU_National_Corporatism.png"
+	}
+
+	##Icon Shine For: 
+	SpriteType = { 
+		name = "GRU_National_Corporatism_shine"
+		texturefile = "gfx/interface/goals/GRU_National_Corporatism.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GRU_National_Corporatism.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GRU_National_Corporatism.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = { 
 		name = "GRU_SPZ_PFEIL"
 		texturefile = "gfx/interface/goals/GRU_SPZ_PFEIL.png"
 	}

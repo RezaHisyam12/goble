@@ -2263,7 +2263,15 @@ shared_focus = {
 				GRU_wunderwaffen_sp_nuclear_bomb_speed_factor = 0.1
 				tooltip = sp_nuclear_bomb_speed_factor_tt
 			}
+			custom_effect_tooltip = tooltip_white_line
+			activate_targeted_decision = { target = 64.owner decision = GRU_operation_uranium }
+			activate_targeted_decision = { target = INT decision = GRU_damocles_spy_ring }
+			activate_targeted_decision = { target = 62 decision = GRU_joachimsthal_uranium }
+			activate_targeted_decision = { target = 65 decision = GRU_erzgebirge_uranium }
+			activate_targeted_decision = { target = 60 decision = GRU_uranium_city }
+			activate_targeted_decision = { target = 60 decision = RUS_nuclear_test }
 		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 	}
 
 	#Spz.Proj.PFEIL

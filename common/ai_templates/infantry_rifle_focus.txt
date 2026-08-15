@@ -8,6 +8,7 @@ mass_infantry = {
 		LBA SAU JBS TRU IKH YEM OMA #uses line_camelry
 		FRA GRU VKB VKK VKR VKM VKN VKP VOB VSJ VST HYP #uses GRU_infantry
 		RUS #uses russian_infantry
+		QIE ANQ CHI FNG GXC HNN LEP MAN SHX SIK SQI SZC XSM YUN KUM #uses line_irregulars instead
 	}
 
 	role = infantry

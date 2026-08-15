@@ -2878,22 +2878,12 @@ focus_tree = {
 				add_state_core = 102
 				add_state_core = 1101
 				add_state_core = 1103
-				add_state_core = 1103
+				add_state_core = 1104
 				
 				transfer_state = 102
 				transfer_state = 1101
 				transfer_state = 1103
-				transfer_state = 1103
-				#736
-				if = {
-					limit = {
-						AUS = {
-							owns_state = 736
-						}
-					}
-					transfer_state = 736
-					add_state_core = 736
-				}
+				transfer_state = 1104
 				
 				set_province_controller = 11595
 				set_province_controller = 599
@@ -3107,8 +3097,8 @@ focus_tree = {
 		relative_position_id = CRO_loyalty_remains
 		
 		completion_reward = {
-			custom_effect_tooltip = CRO_increase_autonomy_tt
-			add_autonomy_ratio = { value = 0.5 localization = CRO_autonomy }
+			add_political_power = 50
+			add_stability = 0.1
 		}
 	}
 	focus = {
@@ -3129,7 +3119,8 @@ focus_tree = {
 		relative_position_id = CRO_loyalty_remains
 		
 		completion_reward = {
-			custom_effect_tooltip = CRO_independent_tt
+			add_political_power = 50
+			increase_ruling_party_popularity_by_10 = yes
 		}
 	}
 	focus = {
@@ -3304,6 +3295,7 @@ focus_tree = {
 		icon = GFX_goal_attack_illyria
 		x = 0
 		y = 2
+		available = { is_subject_of = AUS }
 		prerequisite = {
 			focus = CRO_austrian_garrison_force
 		}
@@ -3453,12 +3445,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			BOS = {
-				remove_state_core = 104
-			}
-			MNT = {
-				remove_state_core = 105
-			}
 			remove_ideas = CRO_ethnic_clashes
 		}
 	}
@@ -3516,19 +3502,21 @@ focus_tree = {
 		icon = GFX_goal_CRO_illyrian_democracy
 		x = 24
 		y = 9
-		cost = 5
+		cost = 0
 		available = {
 			OR = {
 				has_country_flag = CRO_won_independence
 				has_country_flag = CRO_won_civilwar
 			}
-		NOT = { AUS = { has_country_flag = HRE_rise } }
+			is_subject = no
+			NOT = { AUS = { has_country_flag = HRE_rise } }
 		}
 		bypass = {
 			OR = {
 				has_country_flag = CRO_won_independence
 				has_country_flag = CRO_won_civilwar
 			}
+			is_subject = no
 		}
 		
 		completion_reward = {
@@ -3548,6 +3536,7 @@ focus_tree = {
 		}
 		available = {
 			has_country_flag = CRO_federation_dead
+			is_subject = no
 		}
 		relative_position_id = CRO_democracy
 		cost = 5
@@ -3575,6 +3564,7 @@ focus_tree = {
 		}
 		available = {
 			has_country_flag = CRO_federation_survives
+			is_subject = no
 		}
 		relative_position_id = CRO_democracy
 		cost = 5
@@ -3631,14 +3621,15 @@ focus_tree = {
 		available = {
 			has_country_flag = CRO_election
 			has_government = social_liberal
+			is_subject = no
 		}
 		bypass = {
 			has_government = social_liberal
 			has_country_flag = CRO_election
+			is_subject = no
 		}
 		relative_position_id = CRO_democracy
 		cost = 5
-		
 		
 		completion_reward = {
 			custom_effect_tooltip = unlock_focuses
@@ -3861,10 +3852,12 @@ focus_tree = {
 		available = {
 			has_country_flag = CRO_election
 			has_government = social_democrat
+			is_subject = no
 		}
 		bypass = {
 			has_government = social_democrat
 			has_country_flag = CRO_election
+			is_subject = no
 		}
 		relative_position_id = CRO_democracy
 		cost = 5
@@ -3888,6 +3881,7 @@ focus_tree = {
 		}
 		available = {
 			has_country_flag = CRO_tito_loyal
+			is_subject = no
 		}
 		relative_position_id = CRO_socdem_elected
 		cost = 5
@@ -3938,6 +3932,7 @@ focus_tree = {
 				has_government = syndicalist
 				has_government = totalist
 			}
+			is_subject = no
 		}
 		relative_position_id = CRO_socdem_elected
 		cost = 5
@@ -3998,6 +3993,7 @@ focus_tree = {
 			NOT = {
 				has_country_flag = CRO_federation_dead
 			}
+			is_subject = no
 		}
 		relative_position_id = CRO_socdem_elected
 		cost = 5
@@ -4078,6 +4074,7 @@ focus_tree = {
 				has_completed_focus = CRO_slavic_brothers
 				has_completed_focus = CRO_best_friends
 			}
+			is_subject = no
 		}
 		relative_position_id = CRO_socdem_elected
 		cost = 5
@@ -4448,6 +4445,7 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_completed_focus = CRO_austrian_rapprochement
+				is_ally_with = AUS
 			}
 			is_subject = no
 		}
@@ -4485,6 +4483,7 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_war_with = SER
+				is_ally_with = AUS
 			}
 			is_subject = no
 			SER = { exists = yes }
@@ -4512,6 +4511,7 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_war_with = SER
+				is_ally_with = AUS
 			}
 			is_subject = no
 			SER = { exists = yes }
@@ -4545,6 +4545,7 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_war_with = SER
+				is_ally_with = AUS
 			}
 			is_subject = no
 			SER = { exists = yes }
@@ -4579,6 +4580,7 @@ focus_tree = {
 			is_subject = no
 			has_socialist_government = no
 			NOT = {
+				has_war_with = AUS
 				has_completed_focus = CRO_anti_austria
 			}
 		}
@@ -4624,6 +4626,7 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_war_with = BUL
+				has_war_with = AUS
 			}
 			is_subject = no
 			BUL = { exists = yes }
@@ -4653,6 +4656,7 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_war_with = BUL
+				has_war_with = AUS
 			}
 			is_subject = no
 			BUL = { exists = yes }
@@ -4679,6 +4683,7 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_war_with = BUL
+				has_war_with = AUS
 			}
 			is_subject = no
 			BUL = { exists = yes }

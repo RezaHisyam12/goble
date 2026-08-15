@@ -13,7 +13,6 @@ new_mobile_warfare = {
 
     ai_will_do = {
         base = 1
-
         modifier = {
             factor = 0
             is_major = no
@@ -135,22 +134,11 @@ superior_firepower = {
 		always = yes
 	}
 
-    xp_cost = 100
-    xp_type = army
-
-    ai_will_do = {
-        base = 1
-    }
-
 	xp_cost = 100
 	xp_type = army
 
 	ai_will_do = {
 		base = 1
-		modifier = {
-			factor = 0.5
-			is_major = no
-		}
 	}
 
 	tracks = {
@@ -263,16 +251,16 @@ grand_battleplan = {
 	xp_cost = 100
 	xp_type = army
 
-    ai_will_do = {
-        base = 1
-    }
+	ai_will_do = {
+		base = 1
+	}
 
-    tracks = {
-        infantry
-        combat_support
-        armor
-        operations
-    }
+	tracks = {
+		infantry
+		combat_support
+		armor
+		operations
+	}
 
 	# EFFECTS
 	enable_tactic = tactic_planned_attack
@@ -364,41 +352,51 @@ mass_assault = {
 	xp_cost = 100
 	xp_type = army
 
-    ai_will_do = {
+    	ai_will_do = {
         base = 1
         modifier = {
             factor = 0
-            AND = {
-                is_russian_tag = no
-                is_han_chinese_tag = no
-                is_indian_tag = no
-                NOT = {tag = BRA}
-                NOT = {tag = CSA}
-                NOT = {tag = COR}
-                NOT = {tag = TEX}
-                NOT = {tag = FRA}
-                NOT = {tag = JAP}
-                NOT = {tag = SRI}
-                NOT = {tag = CNT}
-                NOT = {tag = GRU}
-            }
-        }
-	modifier = {
+            	AND = {
+                	is_russian_tag = no
+                	is_han_chinese_tag = no
+                	is_indian_tag = no
+                	NOT = {tag = BRA}
+                	NOT = {tag = CSA}
+                	NOT = {tag = COR}
+                	NOT = {tag = TEX}
+                	NOT = {tag = JAP}
+                	NOT = {tag = FRA}
+                	NOT = {tag = SRI}
+                	NOT = {tag = CNT}
+                	NOT = {tag = GRU}
+            		}
+        	}
+		modifier = {
+			factor = 100
+			OR = {
+				tag = QIE
+				tag = CHI
+				tag = LEP
+				tag = ANQ
+				tag = SQI
+			}
+		}
+		modifier = {
 		factor = 0
 		tag = RUS 
-		OR = {
-			has_democratic_government = yes
-			has_authoritarian_government = yes
-		}
-	}
-   }
+			OR = {
+				has_democratic_government = yes
+				has_authoritarian_government = yes
+				}
+			}
+   		}
 
-    tracks = {
-        infantry
-        combat_support
-        armor
-        operations
-    }
+	tracks = {
+		infantry
+		combat_support
+		armor
+		operations
+	}
 
 	# EFFECTS
 	no_supply_grace = 48

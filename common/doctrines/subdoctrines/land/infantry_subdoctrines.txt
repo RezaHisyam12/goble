@@ -13,32 +13,6 @@ mobile_infantry = {
 			add = 25
 			has_doctrine = new_mobile_warfare
 		}
-		modifier = {
-			add = 5
-			OR = {
-				tag = LBA
-				tag = SAU
-				tag = JBS
-				tag = TRU
-				tag = IKH
-				tag = YEM
-				tag = OMA
-				tag = TRP
-				tag = ETS
-				tag = SIK
-				tag = TAN
-				tag = KHI
-				tag = KYR
-				tag = TRK
-				tag = UZB
-				tag = ALO
-				tag = MON
-				tag = XSM
-				tag = DKB
-				tag = KUB
-				tag = MTR
-			}
-		}
 	}
 
 	# EFFECTS
@@ -400,7 +374,7 @@ mounted_infantry = {
 	ai_will_do = {
 		base = 0
 		modifier = {
-			add = 10
+			add = 200
 			OR = {
 				tag = LBA
 				tag = SAU
@@ -647,6 +621,17 @@ irregulars = {
 
 	ai_will_do = {
 		base = 0
+		modifier = {
+			add = 200
+			OR = {
+				tag = CHI
+				tag = GXC
+				tag = ANQ
+				tag = QIE
+				tag = SQI
+				tag = SZC
+			}
+		}
 	}
 
 	irregular_infantry = {

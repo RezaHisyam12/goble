@@ -99,6 +99,29 @@ LEP_build_military_factories = {
 		value = 30
 	}
 }
+LEP_army_composition = {
+	allowed = { original_tag = LEP }
+	enable = {
+		OR = {
+			has_war_with = JAP
+			date < 1941.1.1
+		}
+		check_variable = { num_divisions < 100 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = light_infantry
+		value = 150
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -50
+	}
+}
 LEP_basic_production = {
 	allowed = {
 		original_tag = LEP
@@ -252,7 +275,7 @@ LEP_attack_mingan = {
 			QIE = { has_country_flag = wu_intervenes_proLEP }
 			CHI = { has_idea = china_desertions_common }
 			CHI = { has_idea = china_anti_stalemate_idea_2 }
-			NOT = { has_war_with = SHD }
+			NOT = { has_war_with = SQI }
 		}
 		has_war_with = CHI
 		ANQ = { exists = no }
@@ -280,11 +303,11 @@ LEP_attack_shandong = {
 	enable = {
 		OR = {
 			QIE = { has_country_flag = wu_intervenes_proLEP }
-			SHD = { has_idea = china_desertions_common }
-			SHD = { has_idea = china_anti_stalemate_idea_2 }
+			SQI = { has_idea = china_desertions_common }
+			SQI = { has_idea = china_anti_stalemate_idea_2 }
 			NOT = { has_war_with = CHI }
 		}
-		has_war_with = SHD
+		has_war_with = SQI
 		ANQ = { exists = no }
 		NOT = { has_global_flag = LEP_league_war_over }
 	}
@@ -292,7 +315,7 @@ LEP_attack_shandong = {
 
 	ai_strategy = {
 		type = front_control
-		tag = SHD
+		tag = SQI
 
 		ratio = 0.0
 

@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_decision_cat_GRU_nuclear_program"
+		texturefile = "gfx/interface/decisions/decisions_categories_pictures/GRU_nuclear_program.png"
+	}
+}

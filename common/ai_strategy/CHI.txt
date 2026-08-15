@@ -42,6 +42,21 @@ CHI_army_composition_1 = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
+		type = role_ratio
+		id = mass_infantry
+		value = 125
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = light_infantry
+		value = 125
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -100
+	}
+	ai_strategy = {
 		type = building_target
 		id = arms_factory
 		value = 30
@@ -75,6 +90,29 @@ CHI_army_composition_1 = {
 		type = equipment_variant_production_factor
 		id = support_equipment
 		value = -50
+	}
+}
+CHI_army_composition_2 = {
+	allowed = { original_tag = CHI }
+	enable = {
+		OR = {
+			has_war_with = JAP
+			date < 1941.1.1
+		}
+		check_variable = { num_divisions > 59 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = light_infantry
+		value = 100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 100
 	}
 }
 CHI_build_military_factories = {
@@ -168,14 +206,14 @@ CHI_attack_shandong = {
 		original_tag = CHI
 	}
 	enable = {
-		has_war_with = SHD
+		has_war_with = SQI
 		NOT = { has_global_flag = LEP_league_war_over }
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = front_control
-		tag = SHD
+		tag = SQI
 
 		ratio = 0.0
 
@@ -283,3 +321,40 @@ SOCRUS_support_LKMT_if_TRM_is_in_COPRO = {			#Far Eastern Army only joins CoPro 
 		value = 500
 	}
 }
+
+CHI_governorate_crush_JAP = {
+	allowed = {
+		is_chinese_tag = yes
+	}
+	enable = {
+		OR = {
+			is_subject_of = CHI
+			is_in_faction_with = CHI
+		}
+		has_war_with = JAP
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = JAP
+		value = 1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = MON
+		value = -20
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = TIB
+		value = -20
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = JAP
+		value = 100
+	}
+}
+

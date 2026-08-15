@@ -1,0 +1,12 @@
+GRU = {
+	infantry_equipment = {
+		pool = {
+			limit = { has_dlc = "Thunder at Our Gates" }
+			sub_units = { hq_support_company }
+			weight = 3000
+			models = {
+				GER_army_headquarters_entity
+			}
+		}
+	}
+}

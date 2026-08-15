@@ -1384,6 +1384,32 @@ GRU_dont_trust_national_france = {
 	}
 }
 
+GRU_dont_send_troops_over_iberia = {
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		has_war_with_major = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = CAR
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = SPR
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = POR
+		value = 100
+	}
+}
+
 #############################
 ## Stahlpakt  Coordination ##
 #############################
@@ -1808,6 +1834,10 @@ GRU_less_focus_on_russia = {
 		FRA = {
 			has_capitulated = no
 			is_faction_leader = yes
+		}
+		OR = {
+			gru_controls_konigsberg = yes
+			surrender_progress < 0.01
 		}
 		NOT = {
 			VKR = {

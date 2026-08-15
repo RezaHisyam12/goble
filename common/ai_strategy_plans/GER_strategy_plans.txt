@@ -1,5 +1,5 @@
 GER_early_game = {
-	name = ""
+	name = "GER_early_game"
 	desc = ""
 
 	allowed = {
@@ -11,17 +11,24 @@ GER_early_game = {
 	}
 
 	abort = {
-		has_completed_focus = GER_easter_promises
+		has_completed_focus = GER_prop_up_AOG
 	}
 	
 	ai_national_focuses = {
-		GER_economy
-		GER_experimental_research
-		GER_research_expansion
-		GER_mil_expansion_naval_1
-		GER_political_1
-		GER_organize_the_youth
-		GER_easter_promises
+		GER_ForPol_Start
+		GER_Flexibility_in_the_Far_East
+		GER_Tending_to_the_Backyard
+		GER_Watching_Over_the_Black_Heart
+		GER_Preparing_for_the_Worst
+		GER_Ostpolitik
+		GER_Obligations_of_Empire
+		GER_Drinks_With_Our_Dutch_Brothers
+		GER_Austria_Alliance
+		GER_Ottoman_Rapproachement
+		GER_Standing_Against_the_Sultanate
+		GER_Away_in_Afghanistan
+		GER_Colonial_Spring_Cleaning
+		GER_prop_up_AOG
 	}
 	weight = {
 		factor = 1.0
@@ -29,48 +36,42 @@ GER_early_game = {
 }
 
 GER_deal_with_black_monday = {
-	name = ""
+	name = "GER_deal_with_black_monday"
 	desc = ""
 
 	allowed = {
 		original_tag = GER
-		NOT = { has_game_rule = { rule = GER_election option = GER_ELECTION_PATAUT } }
 	}
 
 	enable = {
-		OR = {
-			has_completed_focus = GER_schleicher
-			has_completed_focus = GER_finalise_centralisation
-			has_completed_focus = GER_restore_country_rights
-		}
+		has_country_flag = GER_has_black_monday
 	}
 
 	abort = {
-		has_completed_focus = GER_black_monday_finish
+		has_country_flag = GER_Black_Monday_Finished
 	}
 	
 	ai_national_focuses = {
-		GER_black_monday_aftermath
-		GER_schacht1
-		GER_groener1
-		GER_black_monday_radio
-		GER_schacht2
-		GER_groener2
-		GER_Mauser_werke
-		GER_Infantry_divs
-		GER_mil_industry_2
-		GER_arms_industry
-		GER_schacht3
-		GER_groener3
-		GER_black_monday_finish
+		GER_Force_the_Reichsbanks_Hand
+		GER_Katzenkopf_for_Every_Home
+		GER_Kaiserliche_Domane
+		GER_Tighten_Up_Our_Belts
+		GER_Bright_Opportunities_in_Dark_Times
+		GER_Martial_Starvation_Diet
+		GER_Atlas_No_More
+		GER_Choosing_the_Concretes_Place
+		GER_Clipping_a_Few_Wings
+		GER_Extend_the_Controls
+		GER_Seal_of_Product_Quality
+		GER_Successful_Stabilization
 	}
 	weight = {
 		factor = 1.0
 	}
 }
 
-GER_fix_the_army = {
-	name = ""
+GER_research = {
+	name = "GER_research"
 	desc = ""
 
 	allowed = {
@@ -78,22 +79,25 @@ GER_fix_the_army = {
 	}
 
 	enable = {
-		has_completed_focus = GER_black_monday_finish
+		date > 1937.1.1
+		has_country_flag = GER_Black_Monday_Finished
 	}
 
 	abort = {
-		has_completed_focus = GER_mil_expansion_land_1
+		date > 1938.1.1
 	}
 	
 	ai_national_focuses = {
-		GER_mil_expansion
-		GER_doctrine_great_war_2
-		GER_doctrine_mobile_2
-		GER_doctrine_great_war
-		GER_doctrine_armor
-		GER_doctrine_mobile
-		GER_doctrine_last
-		GER_mil_expansion_land_1
+		GER_Economy_Start
+		GER_The_Brightest_Minds
+		GER_Physics_Mania
+		GER_Science_and_Saving_Lives
+		GER_Heading_Into_the_Electromechanical_Future
+		GER_Unrestrained_Innovation
+		GER_The_Noblest_Universities
+		GER_Der_Uranverein
+		GER_Kaiserwaffe1
+		GER_The_Amazing_Atom
 	}
 	weight = {
 		factor = 1.0
@@ -101,7 +105,7 @@ GER_fix_the_army = {
 }
 
 GER_prepare_for_war = {
-	name = ""
+	name = "GER_prepare_for_war"
 	desc = ""
 
 	allowed = {
@@ -109,29 +113,31 @@ GER_prepare_for_war = {
 	}
 
 	enable = {
-		has_completed_focus = GER_mil_expansion_land_1
+		date > 1939.1.1
 	}
 
 	abort = {
-		OR = {
-			has_completed_focus = GER_linie2_full
-			has_completed_focus = GER_linie2_small
-		}
-		has_completed_focus = GER_jet
+		has_completed_focus = GER_for_the_fatherland
 	}
 	
 	ai_national_focuses = {
-		GER_linie1
-		GER_linie2_full
-		GER_linie2_small
-		GER_poli_temp
-		GER_mil_industry_3
-		GER_doctrine_mobile_3
-		GER_luftwaffe
-		GER_Henschel_Albatros
-		GER_Junkers_Fogger
-		GER_schule
-		GER_jet
+		GER_Ludendorff_Line_Modernization
+		GER_Exporting_Prussianism_East
+		GER_Georgia_Support
+		GER_Ostwacht_hielt_im_Osten
+		GER_Caucasus_Conference
+		GER_Defending_from_the_Bear
+		GER_Halifax_Conference
+		GER_Hochseeflotte_and_Royal_Navy
+		GER_Tuareg_Contacts
+		GER_Renault_Mercedes_Projects
+		GER_Coopting_British_Counterrevs
+		GER_prop_up_GEA
+		GER_Order_in_the_Land_of_Orders
+		GER_prop_up_MAF
+		GER_An_Eastern_Hansa
+		GER_Towards_Afrikan_Autarky
+		GER_for_the_fatherland
 	}
 	weight = {
 		factor = 1.0

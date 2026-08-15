@@ -358,38 +358,6 @@ TUR_less_troops_in_hejaz = {
 	}
 }
 
-TUR_attack_carefully_into_arabia = {
-	###Do not overextend into enemy Arabian tag's territory early on; mind the supply
-	allowed = {
-		original_tag = TUR
-	}
-	enable = {
-		OTT_ottomans_have_post_defeat_content = no
-
-		#Arabian tag is not ally or neutral
-		var:915.owner = { #Ha'il
-			has_war_with = ROOT
-		}
-
-		#EGY is on the initiative
-		EGY = {
-			has_war_with = ROOT
-			controls_state = 753 #Suez Canal
-		}
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = front_control
-		strategic_region = 187 # North Arabia
-		strategic_region = 240 # South Arabia
-		ordertype = front
-		execution_type = balanced
-		execute_order = no
-		manual_attack = yes
-	}
-}
-
 ### Libyan Front Strategies ###
 TUR_leave_benghazi = {
 	###Exploit-proofing a player ability to get repeat encirclements into Benghazi tile

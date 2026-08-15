@@ -110,11 +110,27 @@ RUS_orthodox_eusrasia_plan = {
 	}
 
 	ai_national_focuses = {
+		RUS_russian_army
+		RUS_Study_German_Method
+		RUS_National_High_Command_Formation_School
+		RUS_Reorganize_the_General_Staff
+		RUS_Realpolitik
+
 		RUS_Rule_Of_Intelligentsia
 		RUS_Cultural_Revolution
 		RUS_A_New_Eurasian_Nation
 		RUS_A_New_Social_Class
 		RUS_A_New_Identity
+
+		RUS_Expansionism
+		RUS_Enemy_In_The_West
+		RUS_Russo-Serbian_Friendship
+		RUS_Bring_Back_Cossacks
+		RUS_Secure_Central_Asia
+		RUS_Into_The_Caucasus
+		RUS_Enemy_In_The_East
+		RUS_Reclaim_Far_East
+
 		RUS_Respect_Classic_Eurasianism
 		RUS_Power_Of_The_Orthodoxy
 		RUS_Promote_Eurasianist_Ideology
@@ -182,6 +198,66 @@ RUS_natpop_eusrasia_plan = {
 	}
 }
 
+RUS_natpop_savinkov_plan = {
+	name = "RUS_natpop_savinkov_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		RUS_savinkov_in_power = yes
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		RUS_russian_army
+		RUS_Study_German_Method
+		RUS_National_High_Command_Formation_School
+		RUS_Reorganize_the_General_Staff
+		RUS_Realpolitik
+
+		RUS_A_New_Russia
+		RUS_fight_corruption
+		RUS_Establish_The_VES
+		RUS_Machine_And_Tractor_Stations
+		RUS_Ural_Tractor_Plants
+		RUS_Railway_Nationalisation
+
+		RUS_Expansionism
+		RUS_Enemy_In_The_West
+		RUS_Russo-Serbian_Friendship
+		RUS_Bring_Back_Cossacks
+		RUS_Secure_Central_Asia
+		RUS_Into_The_Caucasus
+		RUS_Enemy_In_The_East
+		RUS_Reclaim_Far_East
+		RUS_Franco_Russian_Treaty
+
+		RUS_purge_leftists_savinkov
+		RUS_ec_corporat3
+		RUS_Korporatsiya_Yusupova
+		RUS_Natsguardiya
+		RUS_Yunarmiya
+		RUS_Combat_Squads
+		RUS_Economic_Draft_Scheme
+		RUS_propaganda_savinkov
+		RUS_Support_Cossacks
+		RUS_Cossack_Forces
+		RUS_labour_army
+		RUS_Advisory_Parliament
+		RUS_Ally_Evraziytsy
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
 RUS_absolute_rnsma_plan = {
 	name = "RUS_absolute_rnsma_plan"
 	desc = ""
@@ -236,7 +312,7 @@ RUS_zemstva_plan = {
 		}
 	}
 	abort = {
-
+		has_completed_focus = RUS_National_Investment_Bank
 	}
 
 	ai_national_focuses = {
@@ -272,7 +348,7 @@ RUS_bureaucratic_overhaul_plan = {
 		has_left_democratic_government = no
 	}
 	abort = {
-
+		has_completed_focus = RUS_Agricultural_Modernisation
 	}
 
 	ai_national_focuses = {

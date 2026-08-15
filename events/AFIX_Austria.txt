@@ -1,0 +1,169 @@
+﻿###########################
+# Austrian Events
+###########################
+# By ~mw~
+###########################
+
+add_namespace = aus.tree
+
+
+###########################################################################################################################
+### DIPLOMATIC PART OF THE TREE EVENTS, THIS IS MW CONTENT
+###########################################################################################################################
+
+## Joining forces with the Reichspakt
+
+country_event = {
+	id = aus.tree.4011
+	title = aus.tree.4011.t
+	desc = aus.tree.4011.d
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { is_in_faction_with = AUS }
+	}
+
+	option = {
+		log = "[GetLogInfo]: event aus.tree.4011 option aus.tree.4011.a"
+		name = aus.tree.4011.a #Brothers in Arms once more!
+		effect_tooltip = { add_to_faction = AUS }
+		AUS = { country_event = aus.tree.4013 }
+		log = "KR_Event_Logging;AUSTRIA IN 2WK"
+	}
+	option = {
+		log = "[GetLogInfo]: event aus.tree.4011 option aus.tree.4011.b"
+		name = aus.tree.4011.b #We are doing good on our own
+		ai_chance = { base = 0 }
+		AUS = { country_event = aus.tree.4012 }
+	}
+}
+
+country_event = {
+	id = aus.tree.4012
+	title = aus.tree.4012.t
+	desc = aus.tree.4012.d
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { is_in_faction_with = GER }
+	}
+
+	option = {
+		log = "[GetLogInfo]: event aus.tree.4012 option aus.tree.4012.a"
+		name = aus.tree.4012.a #How rude
+		add_political_power = -25
+	}
+}
+
+country_event = {
+	id = aus.tree.4013
+	title = aus.tree.4013.t
+	desc = aus.tree.4013.d
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { is_in_faction_with = GER }
+	}
+
+	option = {
+		log = "[GetLogInfo]: event aus.tree.4013 option aus.tree.4013.a"
+		name = aus.tree.4013.a
+		AUS_faction_merges_with_reichspakt = yes
+		meta_effect = {
+			text = {
+				add_to_war = {
+					targeted_alliance = GER
+					enemy = [ENEMY]
+				}
+			}
+			ENEMY = "[threat_country.GetTag]"
+		}
+		hidden_effect = {
+			news_event = world_news_events.177
+			remove_targeted_decision = { target = INT decision = AUS_syndie_threat }
+			remove_targeted_decision = { target = RUS decision = AUS_russian_threat }
+		}
+	}
+}
+
+# Austria reforms its faction after the war
+country_event = {
+	id = aus.tree.4014
+	title = aus.tree.4014.t
+
+	desc = {
+		text = aus.tree.4014.d
+		trigger = {
+			NOT = { is_in_faction_with = GER }
+		}
+	}
+	desc = {
+		text = aus.tree.4014.d.rp
+		trigger = {
+			is_in_faction_with = GER
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event aus.tree.4014 option aus.tree.4014.a"
+		name = aus.tree.4014.a #Of course!
+		clr_country_flag = AUS_former_faction_member
+		if = {
+			limit = { is_in_faction_with = GER }
+			leave_faction = yes
+			peace_out_non_neighbours_after_leaving_faction = yes
+		}
+		AUS = { add_to_faction = ROOT }
+	}
+	option = {
+		log = "[GetLogInfo]: event aus.tree.4014 option aus.tree.4014.b"
+		name = aus.tree.4014.b #No way!
+		trigger = {
+			is_ai = no
+			NOT = { is_subject_of = AUS }
+		}
+		clr_country_flag = AUS_former_faction_member
+		if = {
+			limit = { is_in_faction_with = GER }
+			leave_faction = yes
+			peace_out_non_neighbours_after_leaving_faction = yes
+		}
+	}
+	after = {
+		every_subject_country = { clr_country_flag = AUS_former_faction_member }
+	}
+}
+
+# Informing Germany
+country_event = {
+	id = aus.tree.4015
+	title = aus.tree.4015.t
+	desc = aus.tree.4015.d
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event aus.tree.4015 option aus.tree.4015.a"
+		name = aus.tree.4015.a
+	}
+}
+
+# Austria informed of Germany's fall
+country_event = {
+	id = aus.tree.4016
+	title = aus.tree.4016.t
+	desc = aus.tree.4016.d
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event aus.tree.4016 option aus.tree.4016.a"
+		name = aus.tree.4016.a
+	}
+}
+

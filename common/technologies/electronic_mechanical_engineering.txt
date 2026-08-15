@@ -1499,7 +1499,7 @@ technologies = {
 				is_major = yes
 			}
 			modifier = {
-				factor = 20
+				factor = 25
 				num_of_military_factories > 150
 			}
 		}

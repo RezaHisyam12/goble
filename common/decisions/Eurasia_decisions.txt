@@ -2305,10 +2305,7 @@ RUS_orth_eur_cultural_revolution_decisions = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					has_country_flag = RUS_eurasia_orthodox_ai
-					has_country_flag = RUS_eurasia_monarchy_ai
-				}
+				NOT = { has_government = social_democrat }
 			}
 		}
 		
@@ -2353,10 +2350,7 @@ RUS_orth_eur_cultural_revolution_decisions = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					has_country_flag = RUS_eurasia_orthodox_ai
-					has_country_flag = RUS_eurasia_monarchy_ai
-				}
+				NOT = { has_government = market_liberal }
 			}
 		}
 		

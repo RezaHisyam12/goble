@@ -13,6 +13,18 @@ YUN_infantry_organisation = {
 
 	ai_strategy = {
 		type = role_ratio
+		id = light_infantry
+		value = 150
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -50
+	}
+
+	ai_strategy = {
+		type = role_ratio
 		id = mountaineer
 		value = 25
 	}

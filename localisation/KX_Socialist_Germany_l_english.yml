@@ -97,7 +97,7 @@ CAN_invite_german_halifax_decision: "Invite Berlin into the Halifax Conference"
  GRU_sp_land_land_cruiser: "Festungskreuzer 'Siegfried'"
  GRU_sp_air_radar: "Projekt Walküre"
 
- GRU_sp_nuclear_reactor: "Uranverein II"
+ GRU_sp_nuclear_reactor: "Uranverein"
  GRU_sp_nuclear_bomb: "Projekt Götterdämmerung"
  GRU_sp_thermo_nuclear_bomb: "Projekt Ragnarök"
 
@@ -1829,6 +1829,10 @@ rotermorgenmisc.668.a:0 "...death by public hanging."
 rotermorgenmisc.668.b:0 "...death by public stoning."
 rotermorgenmisc.668.c:0 "...death by firing squad."
 rotermorgenmisc.668.e:0 "...death by getting dragged by a steam locomotive."
+
+rotermorgenmisc.669.t: "Götterdämmerung"
+rotermorgenmisc.669.d: "At dawn, the silence of the Jonastal is broken by a light brighter than the sun. The earth shakes beneath the feet of the men watching from the observation bunkers, while an enormous column of fire rises over the Thuringian forests. For several moments, nobody speaks. The scientists of the Uranverein can only stare at the impossible spectacle they have created.\n\nIn Berlin, the Volksführer is informed that the test has succeeded. Years of German research, conducted under the shadow of war and surrounded by the ruins of a continent, have produced what was once considered impossible. The atom has been split—and Germany has learned how to turn that discovery into a weapon.\n\nGoebbels understands immediately that this is more than a military achievement. The enemies of Germany believed that they could defeat the Reich through numbers, blockade, and endless offensives. They believed that Germany could be exhausted. They believed that this Weltkrieg would end in their favor.\n\nThey were wrong.\n\nThe existence of the weapon will remain a closely guarded secret. But beneath the triumph lies a darker realization. The men of the Uranverein have not merely created a weapon capable of winning battles. They have created a weapon capable of changing the meaning of war itself.\n\nThe first atomic fire has risen over Germany. The age of the atom has begun."
+rotermorgenmisc.669.a: "A new age begins"
 
 rotermorgenrussiandoom.3.t:0 "Collapse of the Eastern Giant"
 rotermorgenrussiandoom.3.d:0 "It seems as if the Russians could no longer withstand the German forces that hammered through Eastern Europe like thunder, and in the chaos that erupted after the Russian military surrendered, civil order broke down all over the remains of Russia giving birth to many new and old nations again."
@@ -5637,7 +5641,34 @@ GRU_Demand_Submission_desc: ""
 GRU_Flip_Ideology: "Force our New Ideology to [From.GetNameDefCap]"
 GRU_Flip_Ideology_desc: ""
 german_civil_war_debug:0 "Start the German Civil War"
-german_civil_war_debug_desc:0 "integrate router morgan!!!!" ####################
+german_civil_war_debug_desc:0 "integrate router morgan!!!!" 
+
+ ### Nuclear programme
+ GRU_nuclear_program: "Project Uranverein"
+ GRU_nuclear_program_desc: "The atom has long been regarded as one of the great mysteries of modern science. Now, with the Weltkrieg once again engulfing Europe, Germany can no longer afford to leave such knowledge in the hands of others. The Uranverein will bring together the Reich's foremost physicists, engineers, and industrial laboratories in a single effort to unlock the power contained within the atom. Whether this power will become the ultimate weapon of the Reich remains uncertain. What is certain is that Germany cannot allow its enemies to reach it first."
+ GRU_operation_uranium: "Operation Uranverein"
+ GRU_operation_uranium_desc: "The Uranverein requires more than brilliant scientists. Uranium ore, heavy water, specialized machinery, and secure laboratories must be gathered on an unprecedented scale. Across the Reich and its territories, geological surveys have identified several promising sources. These resources must be placed under strict state control before enemy intelligence can discover their importance."
+ GRU_damocles_spy_ring: "Infiltrate Damocles"
+ GRU_damocles_spy_ring_desc: "We have intel that suggests that the Internationale powers have an atomic programme of their own. It is imperative for us to infiltrate their programme and steal whatever secrets we can."
+ GRU_joachimsthal_uranium: "Joachimsthal Uranium Works"
+ GRU_joachimsthal_uranium_desc: "The mines of Joachimsthal have produced uranium-bearing ores for decades, although their importance was once little understood. The discovery of nuclear fission has changed that calculation completely. The Uranverein now regards Joachimsthal as a strategic resource. The mines must be expanded, modernized, and placed under strict military supervision to provide the Reich with a dependable domestic source of uranium."
+ GRU_joachimsthal_uranium_completed: "Joachimsthal Uranium Works Completed"
+ GRU_erzgebirge_uranium: "Erzgebirge Uranium Mines"
+ GRU_erzgebirge_uranium_desc: "The mountains of Saxony contain extensive uranium-bearing deposits whose importance has only recently become apparent. Their proximity to Germany's industrial heartland makes them particularly valuable to the Uranverein. Expanded mining and refining operations will provide the Reich with a secure source of uranium without relying upon foreign suppliers."
+ GRU_erzgebirge_uranium_completed: "Erzgebirge Uranium Mines Completed"
+ GRU_uranium_city: "Forschungsstadt 'Wewelsburg'"
+ GRU_uranium_city_desc: "The most sensitive work of the Uranverein cannot be conducted in ordinary universities or industrial laboratories. A sealed research city will be established where physicists, engineers, and technicians can work beyond the reach of foreign spies. The facility will not appear on public maps, and those who enter will be expected to leave the outside world behind."
+ GRU_nuclear_test: "Operation Götterdämmerung"
+ GRU_nuclear_test_default_desc: "For years, the Uranverein has existed behind locked doors and guarded secrets. Today, its work will finally be put to the ultimate test. Deep within a secured testing ground, Germany will attempt to unleash the energy of the atom. If successful, the world will enter a new age—and Germany will possess a weapon unlike anything humanity has ever witnessed."
+ GRU_first_atomic_test: "Has conducted the first atomic test."
+ GRU_first_atomic_test_desc: "The impossible has become reality. Germany has successfully demonstrated the destructive power of nuclear fission. The Uranverein has transformed a scientific curiosity into a weapon capable of changing the course of the Weltkrieg. From this day forward, no enemy can assume that the Reich's survival is merely a matter of conventional arms."
+
+ GRU_Rural_Development: "Sponsor Rural Development in [FROM.GetName]"
+ GRU_Rural_Development_name: "Sponsor Rural Development"
+ GRU_Rural_Development_tt: "Unlocks Decision: £GFX_decision_icon_small §YSponsor Rural Development§!\nWhen decision is removed:\nAdd §Y$GRU_sponsored_rural_region$§! in state, which grants:\n$MODIFIER_LOCAL_BUILDING_SLOTS$: §G+2§!\n$modifier_state_production_speed_infrastructure_factor$: [?0.1|%+=]\nThe effects of this decision §Gchange§! every time it is used."
+ GRU_rural_development_stage_tt: "The next time this decision is used, it will grant:"
+ 
+####################
 #### New Event ####
 ####################
 

@@ -1,15 +1,15 @@
-SHD_strike_south = {
+SQI_strike_south = {
 	allowed = {
-		original_tag = SHD
+		original_tag = SQI
 	}
 	enable = {
 		country_exists = LEP
 		NOT = { has_war_with = LEP }
 		NOT = { has_global_flag = LEP_league_war_over }
 		OR = {
-			SHD_is_led_by_zongchang = yes
+			SQI_is_led_by_zongchang = yes
 			AND = {
-				SHD_is_led_by_tianran = yes
+				SQI_is_led_by_tianran = yes
 				NOT = { QIE = { focus_progress = { focus = QIE_handling_the_disintegration progress > 0 } } }
 				NOT = { QIE = { has_completed_focus = QIE_handling_the_disintegration } }
 			}
@@ -34,9 +34,9 @@ SHD_strike_south = {
 	}
 }
 
-SHD_attack_nanjing = {
+SQI_attack_nanjing = {
 	allowed = {
-		original_tag = SHD
+		original_tag = SQI
 	}
 	enable = {
 		has_war_with = LEP
@@ -53,9 +53,9 @@ SHD_attack_nanjing = {
 	}
 }
 
-SHD_attack_mingan = {
+SQI_attack_mingan = {
 	allowed = {
-		original_tag = SHD
+		original_tag = SQI
 	}
 	enable = {
 		has_war_with = CHI
@@ -73,9 +73,9 @@ SHD_attack_mingan = {
 	}
 
 }
-SHD_attack_anqing = {
+SQI_attack_anqing = {
 	allowed = {
-		original_tag = SHD
+		original_tag = SQI
 	}
 	enable = {
 		has_war_with = ANQ
@@ -93,8 +93,8 @@ SHD_attack_anqing = {
 	}
 
 }
-SHD_army_composition = {
-	allowed = { original_tag = SHD }
+SQI_army_composition = {
+	allowed = { original_tag = SQI }
 	enable = {
 		OR = {
 			check_variable = { num_divisions < 50 }
@@ -104,6 +104,16 @@ SHD_army_composition = {
 	}
 	abort_when_not_enabled = yes
 
+	ai_strategy = {
+		type = role_ratio
+		id = mass_infantry
+		value = 200
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -100
+	}
 	ai_strategy = {
 		type = building_target
 		id = arms_factory

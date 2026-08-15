@@ -566,7 +566,7 @@ rangers_1 = {
 		has_dlc_ncns = yes
 	}
 
-	ai_will_do = { base = 1 }
+	ai_will_do = { base = 0 }
 
     # EFFECTS
 	effect = {
@@ -668,7 +668,7 @@ rangers_2 = {
 		has_dlc_ncns = yes
 	}
 
-	ai_will_do = { base = 1 }
+	ai_will_do = { base = 0 }
 
     # EFFECTS
 

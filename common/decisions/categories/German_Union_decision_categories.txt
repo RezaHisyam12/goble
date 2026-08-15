@@ -140,6 +140,14 @@ GRU_vs_units_decisions = {
 		has_reached_maximum_divisions = no
 	}
 }
+GRU_nuclear_program = {
+	icon = GFX_decision_category_nuclear
+	picture = GFX_decision_cat_GRU_nuclear_program
+	priority = 1000
+	allowed = { always = no }
+	visible = { is_faction_leader = yes }
+}
+
 #GRU_alternate_leaders_decisions = {
 #	icon = babey
 #	allowed = {}

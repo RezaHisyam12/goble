@@ -2590,3 +2590,93 @@ Ottoman_Pan_Islam_ambition_decisions = {
 		}
 	}
 }
+
+china_united_front_decisions = {
+	form_chinese_united_front = {
+		icon = generic_civil_support
+		priority = 1000
+		allowed = {
+			NOT = { original_tag = FNG }
+			NOT = { original_tag = MON }
+			NOT = { original_tag = KUM } #manually activated by KUM_set_as_chinese_tag
+		}
+		available = {
+			OR = {
+				JAP = {
+					has_war_with = ROOT
+					is_major = yes
+					is_subject = no
+				}
+				FNG = {
+					is_in_faction_with = JAP #Fengtian joining Japan will result in United Front forming
+					is_faction_leader = no
+				}
+				AND = {
+					has_defensive_war = yes
+					any_enemy_country = {
+						is_major = yes
+						num_of_controlled_factories > 50
+						has_offensive_war_with = ROOT
+						is_subject = no
+						hidden_trigger = { is_chinese_tag = no }
+					}
+				}
+			}
+			#Only the "Main China" can form CUF unless they aren't already at war with the foreign threat.
+			if = {
+				limit = { NOT = { tag = CHN } }
+				any_enemy_country = {
+					OR = {
+						is_major = yes
+						tag = JAP
+					}
+					NOT = { has_war_with = CHN }
+				}
+			}
+		}
+		visible = {
+			OR = {
+				has_war_with_major = yes
+				FNG = { is_in_faction_with = JAP }
+			}
+			has_civil_war = no
+			NOT = { has_event_target = china_united_front_leader }
+			NOT = { has_global_flag = china_united }
+			NOT = { has_global_flag = china_united_front_defeated }
+			is_subject = no
+			is_in_faction = no
+			is_working_with_JAP = no
+			if = {
+				limit = {
+					original_tag = KUM
+				}
+				has_country_flag = KUM_is_chinese_tag
+			}
+		}
+
+		cost = 0
+		days_remove = 40
+		fire_only_once = no
+		ai_will_do = { factor = 1000 }
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision form_chinese_united_front"
+			country_event = {
+				id = china_shared.2
+				days = 18
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove form_chinese_united_front"
+			hidden_effect = {
+				country_event = china_shared.9
+				country_event = china_shared.10
+				news_event = {
+					id = china_shared.13
+					days = 2
+				}
+			}
+		}
+	}
+}

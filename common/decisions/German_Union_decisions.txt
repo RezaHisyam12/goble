@@ -2,6 +2,214 @@
 # German Union Decisions
 ###########################	
 
+GRU_nuclear_program = {
+	GRU_operation_uranium = {
+		icon = GFX_decision_generic_research
+		allowed = { always = no }
+		available = {
+			64 = { is_controlled_by_ROOT_or_ally = yes } #Berlin
+		}
+		cost = 50
+		days_remove = 60
+		fire_only_once = yes
+		ai_will_do = { base = 100 }
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove GRU_operation_uranium"
+			if = {
+				limit = {
+					has_tech = atomic_research
+					NOT = { is_special_project_completed = sp:sp_nuclear_reactor }
+				}
+				if = {
+					limit = { RUS = { has_completed_focus = RUS_ec_mutual9 } }
+					sp:sp_nuclear_reactor = { add_project_progress_ratio = 0.2 }
+				}
+				else = {
+					sp:sp_nuclear_reactor = { add_project_progress_ratio = 0.1 }
+				}
+			}
+			else_if = {
+				limit = { RUS = { has_completed_focus = RUS_ec_mutual9 } }
+				add_tech_bonus = {
+					name = GRU_operation_masuria
+					bonus = 0.5
+					ahead_reduction = 1
+					uses = 1
+					category = nuclear
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					name = GRU_operation_uranium
+					bonus = 0.25
+					ahead_reduction = 1
+					uses = 1
+					category = nuclear
+				}
+			}
+			add_tech_bonus = {
+				name = GRU_operation_uranium
+				bonus = 0.5
+				uses = 1
+				category = rocketry
+				category = jet_technology
+			}
+		}
+		fixed_random_seed = no
+	}
+	GRU_damocles_spy_ring = {
+		icon = GFX_decision_onmap_recruit_operative
+		allowed = { always = no }
+		available = {
+			OR = {
+				FRA = { has_completed_focus = FRA_damocles }
+				ENG = { has_completed_focus = ENG_westminster_project }
+			}
+			if = {
+				limit = { has_dlc_lar = yes }
+				network_strength = {
+					target = INT
+					value > 70
+				}
+			}
+			else = {
+				has_completed_focus = GRU_form_the_stasi
+			}
+		}
+		cost = 50
+		days_remove = 120
+		fire_only_once = yes
+		ai_will_do = { base = 100 }
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove GRU_damocles_spy_ring"
+			add_named_threat = {
+				threat = 2
+				name = GRU_damocles_spy_ring
+			}
+			if = {
+				limit = { NOT = { is_special_project_completed = sp:sp_nuclear_reactor } }
+				sp:sp_nuclear_reactor = { add_project_progress_ratio = 0.1 }
+			}
+		}
+		fixed_random_seed = no
+	}
+	GRU_joachimsthal_uranium = {
+		icon = GFX_decision_chromium
+		allowed = { always = no }
+		available = {
+			controls_state = 62
+		}
+		cost = 40
+		fire_only_once = yes
+		state_target = yes
+		days_remove = 90
+		ai_will_do = { base = 100 }
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove GRU_joachimsthal_uranium"
+			62 = { #Okhotsk
+				add_building_construction = { type = infrastructure level = 1 }
+			}
+			if = {
+				limit = { NOT = { is_special_project_completed = sp:sp_nuclear_reactor } }
+				sp:sp_nuclear_reactor = { add_project_progress_ratio = 0.1 }
+			}
+			set_country_flag = GRU_joachimsthal_uranium_completed
+		}
+		fixed_random_seed = no
+	}
+	GRU_erzgebirge_uranium = {
+		icon = GFX_decision_chromium
+		allowed = { always = no }
+		available = {
+			65 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+		cost = 40
+		days_remove = 120
+		state_target = yes
+		fire_only_once = yes
+		ai_will_do = { base = 100 }
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove GRU_erzgebirge_uranium"
+			65 = {  #Tashkent
+				add_building_construction = { type = infrastructure level = 1 }
+			}
+			if = {
+				limit = { NOT = { is_special_project_completed = sp:sp_nuclear_reactor } }
+				sp:sp_nuclear_reactor = { add_project_progress_ratio = 0.1 }
+			}
+			set_country_flag = GRU_erzgebirge_uranium_completed
+		}
+		fixed_random_seed = no
+	}
+	GRU_uranium_city = {
+		icon = GFX_decision_SOV_academy_of_sciences
+		allowed = { always = no }
+		visible = {
+			has_government = national_populist
+		}
+		available = {
+			if = {
+				limit = { is_ai = no }
+				is_special_project_completed = sp:sp_nuclear_reactor
+			}
+			controls_state = 60
+			has_country_flag = GRU_joachimsthal_uranium_completed
+			has_country_flag = GRU_erzgebirge_uranium_completed
+		}
+		cost = 40
+		days_remove = 120
+		state_target = yes
+		fire_only_once = yes
+		ai_will_do = { base = 100 }
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove GRU_uranium_city"
+			60 = {
+				add_building_construction = { type = nuclear_reactor level = 1 }
+			}
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				complete_special_project = sp:sp_nuclear_reactor
+				complete_special_project = sp:sp_nuclear_bomb
+			}
+			else_if = {
+				limit = { NOT = { is_special_project_completed = sp:sp_nuclear_bomb } }
+				sp:sp_nuclear_bomb = { add_project_progress_ratio = 0.1 }
+			}
+		}
+		fixed_random_seed = no
+	}
+	GRU_nuclear_test = {
+		icon = GFX_decision_generic_ignite_civil_war
+		allowed = { always = no }
+		available = {
+			num_of_nukes > 0
+			60 = { is_controlled_by_ROOT_or_ally = yes }
+			has_country_flag = GRU_joachimsthal_uranium_completed
+			has_country_flag = GRU_erzgebirge_uranium_completed
+		}
+		fire_only_once = yes
+		days_remove = 7
+		state_target = yes
+		ai_will_do = { base = 100 }
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove GRU_nuclear_test"
+			set_country_flag = GRU_first_atomic_test
+			60 = {
+				add_building_construction = { type = air_base level = 2 }
+				add_building_construction = { type = rocket_site level = 1 }
+			}
+			launch_nuke = {
+				province = 482
+				use_nuke = yes
+			}
+			hidden_effect = { country_event = rotermorgenmisc.669 } #Götterdämmerung
+		}
+		fixed_random_seed = no
+	}
+}
+
 GRU_hydroelectricity_decisions = {
 	GRU_Damn_the_danube_decision = {
 		icon = generic_construction
@@ -10478,6 +10686,21 @@ GRU_volksreichskommissariat_decisions = {
 						amount = 100
 						}
 						add_manpower = 40000
+						remove_ideas = {
+							SWE_political_chaos_idea
+							SWE_political_chaos_idea2
+							SWE_conservative_army_idea_1
+							SWE_statare_idea
+							SWE_german_reach_1
+							SWE_black_monday
+							SWE_black_monday_0
+							SWE_black_monday_1
+							SWE_black_monday_2
+							SWE_black_monday_3
+							
+						}
+						SWE_remove_socialism_effect = yes
+						SWE_remove_nationalism_effect = yes
 					}
 					if = {
 						limit = {
@@ -16785,7 +17008,7 @@ GRU_new_order_decisions = {
 						add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 5000 }
 						add_manpower = 120000
 						army_experience = 500
-						set_capital = { state = 7 }
+						set_capital = { state = 7 remember_old_capital = no }
 						remove_all_ministers = yes
 						add_ideas = limited_conscription
 						add_ideas = limited_exports

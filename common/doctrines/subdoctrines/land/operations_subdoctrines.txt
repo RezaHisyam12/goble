@@ -586,6 +586,17 @@ guerilla_war = {
 				has_template_containing_unit = irregular_infantry
 			}
 		}
+		modifier = {
+			add = 500
+			OR = {
+				tag = CHI
+				tag = GXC
+				tag = ANQ
+				tag = SHX
+				tag = SZC
+				tag = SHD
+			}
+		}
 	}
 
 	# EFFECTS

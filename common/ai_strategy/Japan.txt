@@ -663,7 +663,7 @@ JAP_no_naval_invasion = {
 	}
 	ai_strategy = {
 		type = invade
-		id = SHD
+		id = SQI
 		value = -1000
 	}
 	ai_strategy = {
@@ -1007,7 +1007,7 @@ JAP_only_naval_invade_china_once = {
 	}
 	ai_strategy = {
 		type = invade
-		id = SHD
+		id = SQI
 		value = -1000
 	}
 	ai_strategy = {

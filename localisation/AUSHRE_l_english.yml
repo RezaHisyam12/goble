@@ -382,7 +382,38 @@ AUS_Invade_ITA_desc:0 "Italy wielded significant influence within the empire's d
 AUS_Rus_Right_desc:0 "We cannot continue to let the menace of the East continue to build up its strength gradually; it is time to curb Russia's ambition and bring peace and order to the East once and for all."
 AUS_Rus_Left_desc:0 "While we dealt the Russian Bear a crippling blow in the Weltkrieg, years of covert and open rearmament have made the Russian nation eager for war and revenge against Our Empire. As long as the Russian threat exists on the eastern border, we are not safe."
 
+#########################################################################################################################
+### TREE EVENTS
+#########################################################################################################################
 
+ aus.tree.4011.t: "Austrian Intervention"
+ aus.tree.4011.d: "Today, the ambassador from Vienna stated that our southern neighbours are keen on 'helping out' with the ongoing war against [threat_country.GetNameDef], joining our alliance at least for the duration of this conflict. While the Austrian army is no longer the trainwreck it was during the Weltkrieg, and thus might prove of more help, it's possible their participation could open a southern front should they prove unable to stand firm."
+ aus.tree.4011.a: "Brothers-in-arms once more!"
+ aus.tree.4011.b: "We are doing well enough on our own"
+
+ aus.tree.4012.t: "Germany Declines Our Offer"
+ aus.tree.4012.d: "Berlin has responded to our offer, stating our help was neither needed nor wanted, and that we should look to managing our internal affairs."
+ aus.tree.4012.a: "How rude!"
+
+ aus.tree.4013.t: "Germany Accepts Our Support"
+ aus.tree.4013.d: "Berlin welcomes the help we have offered in combating the [threat_country.GetAdjective] menace. The [Root.GetFactionName] will merge with the [From.GetFactionName], at least for the duration of this conflict."
+ aus.tree.4013.a: "Brothers-in-arms once more!"
+ joining_reichspakt_tt: "§YYou will have the option to reform the [Root.GetFactionName] with all existing members once you are at peace again.§!\n"
+
+ aus.tree.4014.t: "The Donau-Adriabund Reforms"
+ aus.tree.4014.d: "[AUS.GetNameDefCap] has decided to reform the Donau-Adriabund alliance, now that the war is done, and has called on [Root.GetNameDef] to take their place at their side once again."
+ aus.tree.4014.d.rp: "[AUS.GetNameDefCap] has decided to reform the Donau-Adriabund alliance, now that the war is done, and has called on [Root.GetNameDef] to take their place at their side once again. If we refuse, staying in the Reichspakt will not be an option - at least not for now. We will be on our own."
+ aus.tree.4014.a: "Of course!"
+ aus.tree.4014.b: "We'd rather not..."
+
+ aus.tree.4015.t: "The Donau-Adriabund Reforms"
+ aus.tree.4015.d: "With the war now over, [AUS.GetNameDef] has elected to return to its former position as the head of the Donau-Adriabund alliance."
+ aus.tree.4015.a: "We thank them for their assistance!"
+
+ aus.tree.4016.t: "We Are On Our Own"
+ aus.tree.4016.d: "The fall of Germany means [Root.GetNameDef] and the members of the Donau-Adriabund are now on our own!"
+ aus.tree.4016.a: "This can't be good..."
+ 
 ####puppets##  
 crownland:0 "Crownland"
 
