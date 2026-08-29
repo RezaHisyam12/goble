@@ -8,15 +8,15 @@ add_namespace = rmfallgoebb
 add_namespace = rmorgenentente
 
 
+###
 country_event = { # GRU setup
 	id = rotermorgen.1
 	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgen.1" }
 	title = rotermorgen.1.t
 	desc = rotermorgen.1.d
-	
-	fire_only_once = yes
+	picture = GFX_report_event_gru_switch
 	is_triggered_only = yes
-	
+	fire_only_once = yes
 	immediate = {
 		hidden_effect = {
 			GRU = {
@@ -81,7 +81,7 @@ country_event = { # GRU setup
 		        }
 				set_politics = {
 					ruling_party = syndicalist
-					last_election = "1936.11.16"
+					last_election = "1.1.1"
 					elections_allowed = no
 				}
 				set_popularities = {
@@ -94,7 +94,6 @@ country_event = { # GRU setup
 					social_conservative = 6
 					authoritarian_democrat = 5
 				}
-				load_focus_tree = { tree = gru-totalist }
 				set_party_name = {
 					ideology = totalist
 					long_name = GRU_occu_long
@@ -125,6 +124,1338 @@ country_event = { # GRU setup
 					long_name = GRU_CONS_PARTY_long
 					name = GRU_CONS_PARTY
 				}
+				load_focus_tree = { tree = gru-totalist }
+				remove_ideas = {
+					GRU_Soldatenkonig_Legacy_idea
+                    GRU_VKC
+                    GRU_Inlandsabteilung
+                    GRU_Bismarckian_Social_Policy
+                    GRU_Rote_Ritters
+                    GRU_guard_jude
+                    GRU_PV_ONE
+                    GRU_new_germany_l
+                    GRU_National_Corporatism_one
+                    GRU_National_Corporatism_two
+                    GRU_National_Corporatism_three
+                    GRU_Stasi
+                    GRU_FDJ
+                    GRU_totaler_kieg_idea
+                    GRU_rheinland_idea
+                    FRA_GRU_rheinland_idea
+                    GRU_volkssturm_idea
+                    GRU_volkssturm_idea_2
+                    gru_red_imperialism
+                    gru_red_imperialism2
+                    GRU_red_ufa
+                    GRU_SYNTHWAVE
+                    GRU_blackbook
+                    GRU_breitspur
+                    GRU_guard
+                    GRU_lager
+                    GRU_new_germany
+                    GRU_deutsche_architecture
+                    GRU_heavy_industry_a
+                    GRU_heavy_industry
+					GRU_DAF_KDF_ONE
+                    GRU_DAF_KDF_A
+                    GRU_DAF_KDF_B
+                    GRU_DAF_KDF_AB
+                    GRU_Der_Volksgenosse
+                    GRU_Volksempfaenger
+                    GRU_Volkswohlfahrt
+                    GRU_Ostarbeiters
+					GRU_Volksempfaenger_two
+                    GRU_Volkswagen
+                    GRU_carrier
+                    GRU_carrier_submarine
+                    GRU_carrier_cruiser
+                    GRU_carrier_submarine_OK_NVM
+                    GRU_carrier_cruiser_OK_NVM
+                    GRU_battleship
+                    GRU_battleship_submarine
+                    GRU_battleship_cruiser
+                    GRU_battleship_submarine_OK_NVM
+                    GRU_battleship_cruiser_OK_NVM
+                    GRU_fighter
+                    GRU_fighter_ground
+                    GRU_fighter_sea
+                    GRU_fighter_ground_OK_NLW
+                    GRU_fighter_sea_OK_NLW
+                    GRU_bomber
+                    GRU_bomber_ground
+                    GRU_bomber_sea
+                    GRU_bomber_ground_OK_NLW
+                    GRU_bomber_sea_OK_NLW
+                    GRU_panzer
+                    GRU_panzer_two
+                    GRU_masses
+                    GRU_masses_two
+                    GRU_mobile_generals
+                    GRU_masses_generals
+                    GRU_pol_off
+                    GRU_skill_off
+                    GRU_eleced_off
+					GRU_MFSP
+                    GRU_DSR
+                    GRU_DSR_Welfare
+                    GRU_DSR_education1
+                    GRU_DSR_education2
+                    GRU_DSR_integration
+                    GRU_DSR_oneunion
+                    GRU_DSR_fortschritt
+                    GRU_DSR_industrialunions
+                    GRU_DSR_industrialunions_TWO
+                    GRU_DSR_COMITTEE
+                    GRU_DSR_ressources1
+                    GRU_DSR_ressources2
+                    GRU_FAUD_congress
+                    GRU_SPD_Education1
+                    GRU_SPD_Education2
+                    GRU_SPD_FAUD_WOMAN_RIGHTS
+                    GRU_SPD_FAUD_FREIHEIT
+                    GRU_SPD_SOCIAL_MARKET
+                    GRU_SUCCDUM
+                    GRU_SPD_SOCIAL_MARKET_MIRACLE
+                    GRU_SPD_WORKER_RIGHTS
+                    GRU_paganism_idea
+                    gru_red_imperialism3
+                    GRU_the_eye_idea
+                    GRU_NW_FAMILY_idea
+                    GRU_soccredit_idea
+                    GRU_WORLD_REVOLUTION
+                    GRU_arsenal_of_syndicalism_idea
+                    GRU_RED_TRADE
+                    GRU_RED_WORLD
+                    GRU_VOLKSGESUNDHEITSAMT
+                    GRU_HEROISM
+                    GRU_RED_GUARD
+                    GRU_RED_NEWS
+                    GRU_WOMAN_WORKER
+                    GRU_BRUTALISM
+                    GRU_5_YEAR_PLAN
+                    GRU_KOMMANDOWIRTSCHAFT_a
+                    GRU_KOMMANDOWIRTSCHAFT_aa
+                    GRU_KOMMANDOWIRTSCHAFT
+                    GRU_National_socialism_one
+                    GRU_National_socialism_two
+                    GRU_National_socialism_three
+                    GRU_GPR
+                    GRU_GDU
+                    GRU_FEMALE_SOLDIER
+                    GRU_RED_PATRIOT
+                    GRU_PARLIAMENT
+                    GRU_DIRECT_CONTROL
+                    GRU_GESTAPO
+                    GRU_COUNCIL_ECONOMICS
+                    FAUD_Roar_of_a_black_cat
+                    FAUD_Schwarze_Scharen
+                    FAUD_Schwarze_Scharen_2
+                    FAUD_Free_Education
+                    FAUD_Universal_Tolerance
+                    FAUD_Universal_Tolerance_2
+                    FAUD_Universal_Tolerance_3
+                    FAUD_Universal_Tolerance_4
+                    FAUD_UGVR
+                    FAUD_UGVR_2
+                    FAUD_Labor_Democracy
+                    FAUD_Labor_Democracy_2
+                    FAUD_Communal_Housing
+                    FAUD_Soviet_Freedom
+                    FAUD_CoLiving
+                    FAUD_Anarchist_Diplomacy
+                    FAUD_Anarchist_Diplomacy_2
+                    FAUD_Anarchist_Diplomacy_3
+                    FAUD_Anarchist_Diplomacy_2_3
+                    FAUD_Anarchist_Diplomacy_4
+                    FAUD_Anarchist_Help
+                    FAUD_Cult_of_Reason
+                    FAUD_New_Family_1
+                    FAUD_New_Family_2
+                    FAUD_New_Family_1_2
+                    FAUD_Absolute_Legalization
+                    FAUD_Road_to_True_Freedom
+                    FAUD_Road_to_True_Freedom_2
+                    FAUD_Road_to_True_Freedom_3
+                    FAUD_Rehabilitation_Instead_of_Shackles
+                    FAUD_Kindness_will_Save_the_World
+                    FAUD_We_are_Free
+                    GRU_COMMUNAL_HOUSING
+                    VK_COLONY_ONE
+                    VK_COLONY_TWO
+                    VK_COLONY_THREE
+                    VK_COLONY_SETTLERS_ONE
+                    VK_COLONY_SETTLERS_TWO
+                    VK_COLONY_INDUSTRY_ONE
+                    VK_COLONY_INDUSTRY_TWO
+                    GRU_FUTHARK
+                    HYP_HYPOBOREA1
+                    HYP_HYPOBOREA2
+                    HYP_NORDMANNEN
+                    HYP_NATURE
+                    GRU_FREE_TRADE
+                    GRU_CDU_SOCIAL_MARKET_MIRACLE
+                    GRU_CONSERVATIVE_SOCIETY
+					GRU_CONDEM
+                    GRU_banned_tobacco
+                    GRU_Basic_animal_rights
+                    GRU_mandatory_sport
+                    GRU_DLP_EMPLOYER_RIGHTS
+                    GRU_DLP_TURBO_CAPITALISM
+                    GRU_DLP_STATE_CHAUVINISM
+                    GRU_DLP_BOUGHT_MEDIA
+                    GRU_OLIGARCHY
+                    GRU_MARLIB_STATE
+                    GRU_CORPORATE_DICTATORSHIP_IDEA
+                    GRU_CORPORATE_DICTATORSHIP_IDEA_TWO
+                    GRU_KRUPP_POLICE
+                    GRU_KRUPP_POLICE_TWO
+                    GRU_Biological_Weapons
+                    gru_corporate_meth
+                    GER_bleeding_germany
+                    GRU_FDP_THE_GAY_IS_A_OK
+                    GRU_FDP_secular_state
+                    GRU_FDP_SOCIAL_MARKET_MIRACLE
+                    GRU_SOCLIB_DEM
+                    GRU_SPD_SOCIAL_MARKET_MIRACLE_TWO
+                    GRU_SPD_WORKER_RIGHTS_AA
+                    GRU_SPD_WORKER_RIGHTS_AB
+                    GRU_SPD_WORKER_RIGHTS_B
+                    GRU_SUCCDUM_TWO
+                    GRU_PDS_SOCIALIST_MARKET_ECONOMICS
+                    GRU_RED_NEWS_RDS
+                    GRU_foreign_aid
+                    GERMAN_CIVIL_WAR_participant
+                    GRU_ger_dying_faterland
+                    GRU_ger_last_hope
+                    GRU_fra_blockade
+                    GRU_RUINED_ECONOMY_TOALLY_RUINED
+                    VST_GOKTURK
+                    VST_TENGRI
+                    VST_TURANIA_ONE
+                    VST_TURANIA_TWO
+                    VST_TURANIA_THREE
+                    VST_TURANIA_NEW
+                    VST_TURANIA_OLD
+                    VST_TURANIA_OLD_TWO
+                    VSJ_JUDEA
+                    VSJ_ASHKENAZI_IMMIGRATION
+                    VSJ_ASHKENAZI_SUPREMACISM
+                    BUILDING_GERMANIA
+                    GERMANIA_STADT
+                    GGB_german_dictate
+                    GGB_economic_collapse
+                    GGB_Illegitimate_king
+                    GGB_waning_military
+                    GGB_old_lion
+					ENG_synthetic_oil_lover
+					GRU_Albert_Speer_sec_npo
+				}
+				delete_unit_template_and_units = { division_template = "Volksdeutsche «Werwolf»" }
+				delete_unit_template_and_units = { division_template = "1. RR-Panzer-Division «Leibstandarte Joseph Goebbels»" }
+				delete_unit_template_and_units = { division_template = "2. RR-Panzerdivision «Das Reich»" }
+				delete_unit_template_and_units = { division_template = "3. RR-Panzer-Division «Totenkopf»" }
+				delete_unit_template_and_units = { division_template = "4. RR-Polizei-Panzergrenadier-Division «Polizei»" }
+				clr_country_flag = GRU_GOEBB_ROEM_VISIBLE
+				clr_country_flag = GRU_GOEBB_HIMMLER_VISIBLE
+				clr_country_flag = GRU_GOEBB_SPEER_VISIBLE
+				clr_country_flag = GRU_LEADER_GUI_VISIBLE
+				clr_country_flag = HOG_veiw
+				uncomplete_national_focus = {
+                    focus = GRU_spd_victory
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_faud_victory
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_sepd_victory
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_nmdvp_victory
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_formation_of_the_nva
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_social_true_democracy
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_1
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_industrial_unionisation
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_ressource_redistribution
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_thalmann_total_gender_equality
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_thalmann_red_patriotism
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_deutsche_syndikalisiische_republik
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_pieck_heroism
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_pieck_red_guard
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_iva
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_rva
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_National_Corporatism
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_nationalize_ufa
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_form_the_stasi
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_found_the_fdj
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_elected_officers
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_skilled_officers
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_political_officers
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_nationale_volksmarine
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_nationale_luftwaffe
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_nationales_volksheer
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_socialmarket_economics
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_woman_suffrage
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_2
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_3
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_new_industries
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_industrial_democracy
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_new_railroads
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_thalmann_power_to_party
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_welfare
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_syndicalist_education
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_pieck_chairman
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_agrarian_collectivisation
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_factory_network_unions
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_national_labour_service
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_agrarian_subsides
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_gleichschaltung
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_volksgesundheitsamt
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_carrier_focus
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_battleship_focus
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_bomber_focus
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_fighter_focus
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_panzertruppe
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_mass_conscription
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_support_startups
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_worker_rights
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_liberal_education
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_4
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_5
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_6
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_artisan_communes
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_agrarian_collectives
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_thalmann_gestapo
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_thalmann_direct_union_control
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_thalmann_rural_housing_programm
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_one_union
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_pieck_propaganda
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_pieck_working_women
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_pieck_brutalist_architecture
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_kommandowirtschaft
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_technocrat_influence
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_national_socialist_market_economics
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_volksfuhrer
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_submarine_focus
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_cruiser_focus
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_naval_support_focus
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_ground_support_focus
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_panzergrenadiere
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_overwhelming_firepower
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_humane_pensions
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_higher_education_grants
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_7
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_8
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_thalman_culture_revolution
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_thalmann_trail_pieck
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_integration
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_free_universities
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_pieck_kill_syndies
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_pieck_five_year_plans
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_planned_growth
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_organic_growth
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_breitspurbahnen
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_kulturkampf
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_form_the_guard
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_anhaltelager
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_DAF
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_oknvm
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_oknlw
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_oknvh
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_german_industrial_miracle
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_9
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_union_trade_committee
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_thalmann_germany
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_universial_healthcare
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_pieck_germany
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_neue_schwerindustrie
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_night_of_the
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_staatsfeind_nr1
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_THE_DEMOCRACY_PROMISE
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_I_found_dad
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_und_freiheit
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_10
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_fortschritt
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_mfsp
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_germany_reborn
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_NMDVP_PATH
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_CONSERVATIVES_ELECTED
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SOCIAL_LIBERALS_ELECTED
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SOCIAL_DEMS_ELECTED
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_11
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_12
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_13
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_14
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_rev_oil
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_spzprojpfeil
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_spzproj_uran
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_deutschsozialistische_architektur
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_german_endsieg
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_NMDVP_PRESSURE_SORELIAN_FRANCE
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_NMDVP_EMBARGO_FRANCE
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_NMDVP_BORDER_FORTIFICATIONS
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_NMDVP_imperialism
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_CONSERVATIVES_WITH_THE_CHURCH
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_CONSERVATIVES_SIDELINE_RADICALS
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_CONSERVATIVES_UNDO_NATIONALIZATION
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SOCLIB_GURANTEE_RELIGIOUS_FREEDOM
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SOCLIB_DECRIMINALIZE_HOMOSEXUALITY
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SOCLIB_BAN_CONSCRIPTION
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SOCDEM_MANDATORY_INSURRANCE
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SOCDEM_PRIVATIZE_KEY_INDUSTRY
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SOCDEM_FREE_DAYCARE
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_15
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_16
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_17
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_18
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_19
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_20
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SMEPD_DIPLO
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_autobahnen
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_death_trains
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_NM_family
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SOCIAL_CREDIT
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_NMDVP_END_FRANCE
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_NMDVP_RED_COLONIALISM
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_NMDVP_PAN_GERMANISM
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_CONSERVATIVES_WITH_THE_CHURCH
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_CONSERVATIVES_TAX_CUT
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SOCLIB_CUT_BUISNESS_TAX
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SOCLIB_DIRECT_REFERENDUMS
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SOCDEM_40_HOURS_WEEK
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SOCDEM_PAYED_VACCATION
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_21
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_22
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_23
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_24
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_25
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SMEPD_STRENGTHEN_INTERNATIONALE_TIES
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SMEPD_fourth_internationale
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SMEPD_greater_germ
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SMEPD_EXPORT_REVOLUTION
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_OLD_GOD
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_state_eye
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_NMDVP_totalerkieg
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_NMDVP_KILL_COLONIES
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_NMDVP_SLAV_LAND_EXPANSION
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_NMDVP_PAN_GERMANISM_RELOADED
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_CONSERVATIVE_REPUBLIC
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SOCLIB_FREE_REPUBLIC
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SOCDEM_SOCIAL_REPUBLIC
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_26
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_27
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_28
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_29
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SMEPD_EXPAND_INTERNATIONALE
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SMEPD_RED_TRADE
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SMEPD_anti_revision_diplomacy
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SMEPD_LIBERATE_NEIGHBOURS
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SMEPD_ATTACK_AUSTRIA
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_german_millenia
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_NMDVP_BURN_ENTENTE_MONARCHISTS
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_NMDVP_CRUSADE_AGAINST_LIBERAL_LEFTIES
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_NMDVP_REMOVE_KAISER
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_NMDVP_PROCLAIM_GERMANIC_STATE
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_JOIN_ENTENTE
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_OUR_OWN
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_REJOIN_INTERNATIONALE
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_FAUD_30
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SMEPD_FURTHER
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_NMDVP_LEBENSRAUM
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_NMDVP_SCANDINAVIA
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_MARKET_LIBERALS_ELECTED
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_RADSOCS_ELECTED
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SMEPD_LIBERATE_AFRICA
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SMEPD_LIBERATE_EAST
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SMEPD_LIBERATE_MIDDLE_EAST
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_MARLIB_TWENTY_PERCENTE_ELECTROAL_THRESHOLD
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_MARLIB_CONTROL_MEDIA_WITH_MONEY
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_RADSOCS_UNIVERSIAL_BASIC_INCOME
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_RADSOCS_STATE_MEDIA
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_SMEPD_RED_WORLD
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_MARLIB_OLIGARCHIC_REPUBLIC
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_RADSOCS_SOCIALIST_REPUBLIC
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_CORPORATE_DICTATORSHIP
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_EXPAND_POLICE
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_ALLIANCE_OF_INDUSTRIALS
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_AUTOBAHN_FINANCING
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_RIOT_CONTROL
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_MILITARY_INDUSTRIAL_COMPLEX
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_CHEMICAL_INDUSTRY
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_RED_SCARE
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_RAPID_GROWTH
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_METH_FOR_ALL
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_BUY_UP_SMALL_BUISNESS
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				uncomplete_national_focus = {
+                    focus = GRU_WORLDS_FIRST_MEGACORP
+                    uncomplete_children = yes
+                    refund_political_power = no
+                }
+				mark_focus_tree_layout_dirty = yes
 			}
 		}	
 	}
@@ -186,6 +1517,7 @@ country_event = { # FAUD-Reaorganises
 	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgen.30" }
 	title = rotermorgen.30.t
 	desc = rotermorgen.30.d
+	picture = GFX_report_event_faud_reaorganises
 
 	is_triggered_only = yes
 	
@@ -204,6 +1536,7 @@ country_event = { # SMEPD forms
 	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgen.40" }
 	title = rotermorgen.40.t
 	desc = rotermorgen.40.d
+	picture = GFX_report_event_smepd_forms
 
 	is_triggered_only = yes
 	
@@ -240,7 +1573,7 @@ country_event = { # NMDVP Forms
 	id = rotermorgen.51
 	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgen.51" }
 	title = rotermorgen.51.t
-      picture = GFX_report_event_goebbels
+    picture = GFX_report_event_smepd_forms
 	desc = rotermorgen.51.d
 
 	is_triggered_only = yes
@@ -259,7 +1592,7 @@ country_event = { # NMDVP Forms
 	id = rotermorgen.52
 	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgen.52" }
 	title = rotermorgen.52.t
-      picture = GFX_report_event_goebbels
+    picture = GFX_report_event_Goebb_patay
 	desc = rotermorgen.52.d
 
 	is_triggered_only = yes
@@ -291,6 +1624,7 @@ country_event = { # NMDVP Forms
 country_event = { # congress_allowed
 	id = rotermorgen.60
 	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgen.60" }
+	picture = GFX_report_event_rm_congress
 	title = rotermorgen.60.t
 	desc = rotermorgen.60.d
 
@@ -304,6 +1638,7 @@ country_event = { # congress_allowed
 country_event = { 
 	id = rotermorgen.61
 	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgen.61" }
+	picture = GFX_report_event_goebb_NMDVP_police
 	title = rotermorgen.61.t
 	desc = rotermorgen.61.d
 
@@ -404,7 +1739,7 @@ country_event = { # CONGRESS
 			}
 			set_politics = {
 				ruling_party = totalist
-				last_election = "1936.11.16"
+				last_election = "1.1.1"
 				elections_allowed = no
 			}
 			add_popularity = {
@@ -504,7 +1839,7 @@ country_event = { # CONGRESS
 			}
 			set_politics = {
 				ruling_party = syndicalist
-				last_election = "1936.11.16"
+				last_election = "1.1.1"
 				elections_allowed = no
 			}
 			add_popularity = {
@@ -544,7 +1879,7 @@ country_event = { # CONGRESS
 			}
 			set_politics = {
 				ruling_party = syndicalist
-				last_election = "1936.11.16"
+				last_election = "1.1.1"
 				elections_allowed = no
 			}
 			add_popularity = {
@@ -637,7 +1972,7 @@ country_event = { # CONGRESS
 			}
 			set_politics = {
 				ruling_party = radical_socialist
-				last_election = "1936.11.16"
+				last_election = "1.1.1"
 				elections_allowed = no
 			}
 			add_popularity = {
@@ -792,7 +2127,7 @@ country_event = { # SMEPD SPLIT
 			}
 			set_politics = {
 				ruling_party = totalist
-				last_election = "1936.11.16"
+				last_election = "1.1.1"
 				elections_allowed = no
 			}
 			add_popularity = {
@@ -849,7 +2184,7 @@ country_event = {
 			}
 			set_politics = {
 				ruling_party = social_conservative
-				last_election = "1936.11.16"
+				last_election = "1.1.1"
 				elections_allowed = no
 			}
 		}
@@ -897,7 +2232,7 @@ country_event = {
 				}
 				set_politics = {
 					ruling_party = market_liberal
-					last_election = "1936.11.16"
+					last_election = "1.1.1"
 					elections_allowed = no
 				}
 		}
@@ -937,7 +2272,7 @@ country_event = {
 			}
 			set_politics = {
 				ruling_party = social_liberal
-				last_election = "1936.11.16"
+				last_election = "1.1.1"
 				elections_allowed = no
 			}
 		}
@@ -981,7 +2316,7 @@ country_event = {
 			}
 			set_politics = {
 				ruling_party = social_democrat
-				last_election = "1936.11.16"
+				last_election = "1.1.1"
 				elections_allowed = no
 			}
 		}
@@ -1025,7 +2360,7 @@ country_event = {
 			}
 			set_politics = {
 				ruling_party = radical_socialist
-				last_election = "1936.11.16"
+				last_election = "1.1.1"
 				elections_allowed = no
 			}
 		}
@@ -4185,7 +5520,7 @@ country_event = { # Future of Germany MarLibs
 		}
 		set_politics = {
 			ruling_party = authoritarian_democrat
-			last_election = "1936.11.16"
+			last_election = "1.1.1"
 			elections_allowed = no
 		}
 		remove_all_ministers = yes
@@ -4259,7 +5594,7 @@ country_event = { # Future of Germany MarLibs
 			}
 			set_politics = {
 				ruling_party = paternal_autocrat
-				last_election = "1936.11.16"
+				last_election = "1.1.1"
 				elections_allowed = no
 			}
 			complete_national_focus = GRU_CORPORATE_DICTATORSHIP
@@ -4734,7 +6069,7 @@ country_event = { # Ideology Switch
 		}
 		set_politics = {
 			ruling_party = national_populist
-			last_election = "1936.11.16"
+			last_election = "1.1.1"
 			elections_allowed = no
 		}
 		set_party_name = {
@@ -9071,7 +10406,7 @@ country_event = { # accept
 				}
 				set_politics = {
 					ruling_party = national_populist
-					last_election = "1936.11.16"
+					last_election = "1.1.1"
 					elections_allowed = no
 				}
 				remove_all_ministers = yes
@@ -9314,7 +10649,7 @@ country_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.300" }
 	title = entente.300.t
 	desc = entente.300.d
-	picture = GFX_report_event_CAN_parliament1
+	picture = GFX_report_event_GER_England_Germany
 
 	is_triggered_only = yes
 
@@ -9340,7 +10675,7 @@ country_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.301" }
 	title = entente.301.t
 	desc = entente.301.d
-	picture = GFX_report_event_GER_reichstag2
+	picture = GFX_report_event_GER_England_Germany_Holding
 
 	is_triggered_only = yes
 
@@ -9356,7 +10691,7 @@ country_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.302" }
 	title = entente.302.t
 	desc = entente.302.d
-	picture = GFX_report_event_GER_reichstag2
+	picture = GFX_report_event_GER_England_Germany_Meeting
 
 	is_triggered_only = yes
 
@@ -9408,7 +10743,7 @@ country_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.303" }
 	title = entente.303.t
 	desc = entente.303.d
-	picture = GFX_report_event_CAN_parliament1
+	picture = GFX_report_event_GER_Halifax_Postcard
 
 	is_triggered_only = yes
 	major = yes
@@ -9453,7 +10788,7 @@ country_event = {
 	immediate = { log = "[GetDateText]: [Root.GetName]: event rmorgenentente.304" }
 	title = entente.304.t
 	desc = entente.304.d
-	picture = GFX_report_event_generic_conference2
+	picture = GFX_report_event_GER_Halifax_Postcard
 
 	is_triggered_only = yes
 	major = yes

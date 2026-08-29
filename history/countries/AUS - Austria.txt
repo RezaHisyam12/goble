@@ -162,6 +162,10 @@ set_popularities = {
 set_convoys = 50
 
 set_autonomy = {
+	target = CRO
+	autonomy_state = crownland
+}
+set_autonomy = {
 	target = CZE
 	autonomy_state = crownland
 }
@@ -325,6 +329,16 @@ create_country_leader = {
 	ideology = ariosophy_subtype
 }
 
+create_country_leader = {
+	name = "Karl I"
+	desc = "POLITICS_KARL_DESC"
+	picture = "gfx/leaders/AUS/Portrait_AUS_Karl_I.png"
+	expire = "1.1.1"
+	ideology = ariosophy_subtype
+	traits = { AUS_kaiser_of_the_people }
+}
+
+
 ###########################
 ### Generals & Admirals ###
 ###########################
@@ -428,6 +442,7 @@ create_corps_commander = {
 	defense_skill = 3
 	planning_skill = 3
 	logistics_skill = 2
+	id = 400010
 }
 
 create_corps_commander = {
@@ -444,6 +459,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 2
+	id = 400015
 }
 
 create_corps_commander = {
@@ -459,6 +475,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 2
+	id = 400014
 }
 
 create_corps_commander = {
@@ -475,6 +492,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 1
+	id = 400013
 }
 
 create_corps_commander = {
@@ -491,6 +509,7 @@ create_corps_commander = {
 	defense_skill = 1
 	planning_skill = 2
 	logistics_skill = 2
+	id = 400011
 }
 
 create_corps_commander = {
@@ -538,6 +557,7 @@ create_corps_commander = {
 	defense_skill = 1
 	planning_skill = 3
 	logistics_skill = 2
+	id = 400012
 }
 
 create_corps_commander = {
@@ -572,6 +592,7 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 4
 	logistics_skill = 4
+	id = 400016
 }
 
 create_corps_commander = {
@@ -615,6 +636,7 @@ create_corps_commander = {
 	defense_skill = 3
 	planning_skill = 4
 	logistics_skill = 3
+	id = 40008
 }
 
 create_corps_commander = {
@@ -630,6 +652,21 @@ create_corps_commander = {
 	defense_skill = 3
 	planning_skill = 3
 	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Otto Skorzeny"
+	portrait_path = "gfx/leaders/AUS/Portrait_AUS_Otto_Skorzeny.png"
+	traits = {
+		air_commander
+		commando
+	}
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+	id = 400017
 }
 
 ### Admirals ###
@@ -790,6 +827,8 @@ recruit_character = AUS_Eugen_Sanger
 recruit_character = AUS_Herbert_Wagner
 recruit_character = AUS_Igo_Etrich
 recruit_character = AUS_Max_Valier
+recruit_character = AUS_Friedrich_Schmiedl
+recruit_character = AUS_Richard_von_Mises_Scientist
 
 ## NAVY
 

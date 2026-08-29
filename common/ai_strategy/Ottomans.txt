@@ -101,14 +101,14 @@ TUR_research_transports_to_invade_cyprus = {
 
 ### Caucasus Frontline strategies ###
 TUR_manage_armenian_azeri_fronts = {
-	###Always be hostile towards ARM, never towards AZR
+	###Always be hostile towards ARM, never towards AZE
 	allowed = {
 		original_tag = TUR
 	}
 	enable = {
 		OTT_ottomans_have_post_defeat_content = no
-		#Disable if AZR situation changes
-		AZR = {
+		#Disable if AZE situation changes
+		AZE = {
 			exists = yes
 			OR = {
 				is_subject_of = GER
@@ -137,18 +137,18 @@ TUR_manage_armenian_azeri_fronts = {
 	#Azerbaijan is never hostile
 	ai_strategy = {
 		type = conquer
-		id = AZR
+		id = AZE
 		value = -200
 	}
 	ai_strategy = {
 		type = antagonize
-		id = AZR
+		id = AZE
 		value = -1000
 	}
-	#Don't put troops on AZR border
+	#Don't put troops on AZE border
 	ai_strategy = {
 		type = front_unit_request
-		tag = AZR
+		tag = AZE
 		value = -200
 	}
 }
@@ -196,14 +196,14 @@ TUR_manage_georgian_front = {
 
 ### Caucasus Frontline strategies ###
 TUR_manage_armenian_azeri_fronts = {
-	###Always be hostile towards ARM, never towards AZR
+	###Always be hostile towards ARM, never towards AZE
 	allowed = {
 		original_tag = TUR
 	}
 	enable = {
 		OTT_ottomans_have_post_defeat_content = no
-		#Disable if AZR situation changes
-		AZR = {
+		#Disable if AZE situation changes
+		AZE = {
 			exists = yes
 			OR = {
 				is_subject_of = GER
@@ -232,18 +232,18 @@ TUR_manage_armenian_azeri_fronts = {
 	#Azerbaijan is never hostile
 	ai_strategy = {
 		type = conquer
-		id = AZR
+		id = AZE
 		value = -200
 	}
 	ai_strategy = {
 		type = antagonize
-		id = AZR
+		id = AZE
 		value = -1000
 	}
-	#Don't put troops on AZR border
+	#Don't put troops on AZE border
 	ai_strategy = {
 		type = front_unit_request
-		tag = AZR
+		tag = AZE
 		value = -200
 	}
 }
@@ -396,7 +396,7 @@ TUR_prepare_for_egypt = {
 	enable = {
 		OTT_ottomans_have_post_defeat_content = no
 		EGY = { is_faction_leader = yes }
-		NOT = { has_war_with = SYR }
+		has_war = no
 	}
 	abort_when_not_enabled = yes
 
@@ -474,7 +474,6 @@ TUR_prepare_for_iran = {
 		PER = {
 			exists = yes
 			is_subject = no
-			NOT = { has_idea = generic_neutral_foreign_policy }
 		}
 	}
 	abort_when_not_enabled = yes

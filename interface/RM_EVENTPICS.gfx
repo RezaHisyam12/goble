@@ -313,6 +313,289 @@ spriteTypes = {
 			texturefile = "gfx/event_pictures/himmler.png"
 
 	}
-	
-	
+	spriteType = {
+		name = "GFX_report_event_Goebbelf_event"  
+		texturefile = "gfx/event_pictures/goebbles.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_spd_rd_frm"  
+		texturefile = "gfx/event_pictures/spd_rd_frm.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_faud_reaorganises"  
+		texturefile = "gfx/event_pictures/faud_reaorganises.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_smepd_forms"  
+		texturefile = "gfx/event_pictures/smepd_forms.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_Goebb_patay"  
+		texturefile = "gfx/event_pictures/goebb_patay.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_goebb_NMDVP_police"  
+		texturefile = "gfx/event_pictures/goebb_NMDVP_police.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_rm_GSVP_congress"  
+		texturefile = "gfx/event_pictures/rm_GSVP_congress.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_rm_congress"  
+		texturefile = "gfx/event_pictures/rm_congress.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_goebb_ufa"  
+		texturefile = "gfx/event_pictures/goebb_ufa.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_goebb_fdj"  
+		texturefile = "gfx/event_pictures/goebb_fdj.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_unitedfront_gru"  
+		texturefile = "gfx/event_pictures/unitedfront_gru.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_unitedfront_2_gru"  
+		texturefile = "gfx/event_pictures/unitedfront_2_gru.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_goebb_select_port"  
+		texturefile = "gfx/event_pictures/goebb_select_port.png"
+	}
+	spriteType = {
+		name = "GFX_The_Night_of_the_Long_Knives"  
+		texturefile = "gfx/event_pictures/The_Night_of_the_Long_Knives.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_GRU_flag"
+		texturefile = "gfx/event_pictures/GRU/NEW/GRU_flag.png"
+	}
+	spriteType = {  
+		name = "GFX_report_event_PV"  
+		texturefile = "gfx/event_pictures/GRU/NEW/PV_event.png"
+	}
+	spriteType = {  
+		name = "GFX_report_event_hmlr_pidr"  
+		texturefile = "gfx/event_pictures/hmlr_pidr.png"
+	}
+	spriteType = {  
+		name = "GFX_report_event_goebb_strass"  
+		texturefile = "gfx/event_pictures/goebb_strass.png"
+	}
+	spriteType = {  
+		name = "GFX_report_event_goebb_ostarbeiters"  
+		texturefile = "gfx/event_pictures/goebb_ostarbeiters.png"
+	}
+	spriteType = {  
+		name = "GFX_report_event_goebb_flag_change"  
+		texturefile = "gfx/event_pictures/GRU_goebb_flag_change.png"
+	}
+	spriteType = {  
+		name = "GFX_report_event_goebb_their_imminent_end"  
+		texturefile = "gfx/event_pictures/goebb_their_imminent_end.png"
+	}
+	spriteType = {  
+		name = "GFX_report_event_goebb_annex_pss"  
+		texturefile = "gfx/event_pictures/goebb_annex_pss.png"
+	}
+	spriteType = {  
+		name = "GFX_report_event_gru_switch"  
+		texturefile = "gfx/event_pictures/gru_switch.png"
+	}
+	### GGB
+	spriteType = {  
+		name = "GFX_report_event_goebb_eng_suck"  
+		texturefile = "gfx/event_pictures/goebb_eng_suck.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_goebb_eng_and_fra_sucks"  
+		texturefile = "gfx/event_pictures/goebb_eng_and_fra_sucks.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_goebb_occupation_islands"  
+		texturefile = "gfx/event_pictures/goebb_occupation_islands.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_goebb_occupation_cwl"  
+		texturefile = "gfx/event_pictures/goebb_occupation_cwl.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_goebb_eng_suck_2"  
+		texturefile = "gfx/event_pictures/goebb_eng_suck_2.png"
+	}
+	### ???????
+	spriteType = {
+		name = "GFX_report_event_goebb_orden_hml_2"  
+		texturefile = "gfx/event_pictures/goebb_orden_hml_2.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_goebb_orden_hml_3"  
+		texturefile = "gfx/event_pictures/goebb_orden_hml_3.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_goebb_orden_hml_4"  
+		texturefile = "gfx/event_pictures/goebb_orden_hml_4.png"
+	}
+	### ????????? ????????
+	spriteType = {  
+		name = "GFX_report_event_goebb_rmfallgoebb_1"  
+		texturefile = "gfx/event_pictures/goebb_rmfallgoebb_1.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_goebb_russ"  
+		texturefile = "gfx/event_pictures/goebb_russ.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_goebb_russ_2"  
+		texturefile = "gfx/event_pictures/goebb_russ_2.png"
+	}
+	spriteType = {  
+		name = "GFX_GRU_news_event_6"  
+		texturefile = "gfx/event_pictures/GRU_NEWS/GRU_news_6.png"
+	}
+	spriteType = {  
+		name = "GFX_GRU_news_event_7"  
+		texturefile = "gfx/event_pictures/GRU_NEWS/GRU_news_7.png"
+	}
+	#
+	spriteType = {
+        name = "GFX_report_event_rm_FAUD_event_2"
+        texturefile = "gfx/event_pictures/rm_FAUD_event_2.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_event_3"
+        texturefile = "gfx/event_pictures/rm_FAUD_event_3.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_event_4"
+        texturefile = "gfx/event_pictures/rm_FAUD_event_4.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_event_5"
+        texturefile = "gfx/event_pictures/rm_FAUD_event_5.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_event_6"
+        texturefile = "gfx/event_pictures/rm_FAUD_event_6.png"
+    }
+	spriteType = {
+        name = "GFX_report_event_rm_FAUD_event_10"
+        texturefile = "gfx/event_pictures/rm_FAUD_event_10.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_event_11"
+        texturefile = "gfx/event_pictures/rm_FAUD_event_11.png"
+    }
+	#
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_1"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_1.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_2"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_2.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_3"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_3.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_4"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_4.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_5"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_5.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_6"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_6.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_7"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_7.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_8"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_8.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_9"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_9.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_10"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_10.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_11"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_11.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_12"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_12.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_13"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_13.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_14"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_14.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_15"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_15.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_16"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_16.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_17"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_17.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_18"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_18.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_19"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_19.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_20"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_20.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_21"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_21.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_22"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_22.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_23"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_23.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_24"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_24.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_25"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_25.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_26"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_26.png"
+    }
+    spriteType = {
+        name = "GFX_report_event_rm_FAUD_future_event_27"
+        texturefile = "gfx/event_pictures/rm_FAUD_future_event_27.png"
+    }
 }

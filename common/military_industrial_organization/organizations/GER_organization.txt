@@ -512,6 +512,85 @@ GER_daimler_organisation = {
 	}
 }
 
+GER_man_company_organisation = {
+	include = generic_heavy_tank_organization
+	name = man_company
+	icon = GFX_idea_man_company
+	allowed = {
+		is_germany_or_german_colonial_tag = yes
+	}
+}
+GER_mercedes_benz_organisation = {
+	include = generic_medium_tank_organization
+	name = mercedes_benz
+	icon = GFX_idea_mercedes_benz
+	allowed = {
+		is_germany_or_german_colonial_tag = yes
+		NOT = { original_tag = MAF }
+	}
+
+	#Daimler-Benz traits from vanilla
+	tree_header_text = {
+		text = mio_header_tank_construction
+		x = 3
+	}
+
+	tree_header_text = {
+		text = mio_header_equipment_and_specialization
+		x = 7
+	}
+
+	tree_header_text = {
+		text = mio_header_armor
+		x = 9
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+	}
+
+	add_trait = {
+		token = GER_mio_trait_hotrolled_armor
+		name = GER_mio_trait_hotrolled_armor
+		icon = GFX_generic_mio_department_icon_tank_general_technology
+		special_trait_background = yes
+
+		limit_to_equipment_type = { light_tank_chassis medium_tank_chassis }
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+			production_efficiency_gain_factor = 0.05
+		}
+
+		position = { x=8 y=2 }
+	}
+
+	add_trait = {
+		token = GER_mio_trait_multilayer_armour
+		name = GER_mio_trait_multilayer_armour
+		icon = GFX_generic_mio_trait_icon_armor_value
+		special_trait_background = yes
+
+		any_parent = { GER_mio_trait_hotrolled_armor }
+		limit_to_equipment_type = { light_tank_chassis medium_tank_chassis }
+		equipment_bonus = {
+			armor_value = 0.1
+		}
+
+		position = { x=8 y=4 }
+	}
+}
+GER_vomag_organisation = {
+	include = generic_tank_organization
+	name = vomag
+	icon = GFX_idea_vomag
+	allowed = {
+		is_germany_or_german_colonial_tag = yes
+		has_dlc_lar = yes
+	}
+}
+
 ##################
 ### Naval MIOs ###
 ##################
@@ -1078,6 +1157,21 @@ GER_kaiserliche_werft_kiel_organisation = {
 		}
 
 		ai_will_do = { base = 2 }
+	}
+}
+
+GER_vulcan_stettin_organisation = {
+	include = generic_refurbishment_repair_organization
+	name = vulcan_stettin
+	icon = GFX_idea_vulcan_stettin
+	allowed = {
+		OR = {
+			is_germany_or_german_colonial_tag = yes
+			AND = {
+				original_tag = CRE
+				NOT = { has_country_flag = CRE_GERMS_LEAVE }
+			}
+		}
 	}
 }
 

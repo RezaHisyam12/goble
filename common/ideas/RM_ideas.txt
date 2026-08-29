@@ -2889,7 +2889,7 @@ ideas = {
 			picture = LIB_ger_bailout
 			allowed = { always = no }
 			available = {
-				country_exists = GRU
+				GRU = { exists = yes }
 				is_subject_of = GRU
 				NOT = {
 					has_war_with = GRU

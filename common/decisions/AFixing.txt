@@ -1572,7 +1572,7 @@ NFA_reclaim_metropole_cat = {
 CAN_returning_home_decisions = {
 
 	CAN_invite_german_halifax_decision = {
-		icon = generic_political_actions
+		icon = GFX_decision_dec_GER_halifax
 
 		allowed = {
 			tag = CAN

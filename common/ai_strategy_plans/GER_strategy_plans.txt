@@ -70,8 +70,8 @@ GER_deal_with_black_monday = {
 	}
 }
 
-GER_research = {
-	name = "GER_research"
+GER_economy = {
+	name = "GER_economy"
 	desc = ""
 
 	allowed = {
@@ -84,7 +84,40 @@ GER_research = {
 	}
 
 	abort = {
-		date > 1938.1.1
+		has_completed_focus = GER_Ascension_of_the_Steel_Eagle
+	}
+	
+	ai_national_focuses = {
+		GER_Economy_Start
+		GER_The_Cartels_Court
+		GER_Smoke_Plumes_from_Krupp
+		GER_Workers_Colonies
+		GER_Decoy_Sites
+		GER_Profit_from_Envy
+		GER_Eternal_Urge
+		GER_Ascension_of_the_Steel_Eagle
+	}
+	weight = {
+		factor = 1.0
+	}
+}
+
+GER_research = {
+	name = "GER_research"
+	desc = ""
+
+	allowed = {
+		original_tag = GER
+	}
+
+	enable = {
+		date > 1937.1.1
+		has_country_flag = GER_Black_Monday_Finished
+		has_completed_focus = GER_Ascension_of_the_Steel_Eagle
+	}
+
+	abort = {
+		has_completed_focus = GER_The_Amazing_Atom
 	}
 	
 	ai_national_focuses = {
@@ -98,6 +131,43 @@ GER_research = {
 		GER_Der_Uranverein
 		GER_Kaiserwaffe1
 		GER_The_Amazing_Atom
+	}
+	weight = {
+		factor = 1.0
+	}
+}
+
+GER_economy_2 = {
+	name = "GER_economy_2"
+	desc = ""
+
+	allowed = {
+		original_tag = GER
+	}
+
+	enable = {
+		date > 1938.1.1
+		has_country_flag = GER_Black_Monday_Finished
+		has_completed_focus = GER_The_Amazing_Atom
+	}
+
+	abort = {
+		has_completed_focus = GER_Tending_to_Germanys_Finest
+	}
+	
+	ai_national_focuses = {
+		GER_Centralize_Banking
+		GER_Regulating_Credit
+		GER_Commercial_Urbanization
+		GER_In_Sleepless_Lampenstadt
+		GER_The_Power_of_the_Future
+		GER_Telefunken_Calling
+		GER_Worldwide_Illumination
+		GER_Propel_Zuse_Forward
+		GER_United_Grid_United_Europe
+		GER_Industrial_Architecture
+		GER_Closer_to_Heaven
+		GER_Tending_to_Germanys_Finest
 	}
 	weight = {
 		factor = 1.0
