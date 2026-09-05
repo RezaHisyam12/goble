@@ -144,6 +144,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HYPOBOREA_germanize_LAND"
 			set_province_name = { id = 6050 name = "Thule"}
+			141 = { set_state_name = "Thule" }
 				141 = {
 					add_core_of  = HYP
 				}

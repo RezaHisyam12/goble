@@ -135,7 +135,7 @@
 
 	shared_focus = {
 		id = GEX_air
-		icon = GFX_goal_GER_Pilots
+		icon = GFX_goal_GER_German_Pilots
 		prerequisite = { focus = GEX_darkest_hour }
 		x = 2
 		y = 1
@@ -393,7 +393,7 @@
 
 	shared_focus = {
 		id = GEX_army_of_exile
-		icon = GFX_goal_Deutsches_Heer
+		icon = GFX_goal_GER_Deutsches_Heer
 		prerequisite = { focus = GEX_darkest_hour }
 		x = 0
 		y = 1
@@ -518,7 +518,6 @@
 				has_global_flag = JAP_Fading_Sun
 				NOT = { country_exists = JAP }
 				has_global_flag = GEX_treaty_done
-				date > 1940.1.1
 			}
 		}
 
@@ -564,7 +563,7 @@
 		cost = 5
 
 		ai_will_do = {
-			factor = 10
+			factor = 100
 			modifier = {
 				factor = 0
 				OR = {
@@ -823,8 +822,8 @@
 			}
 			else = { 			create_faction_from_template = { 
 				template = faction_template_generic_dominance              
-				name = "Mittelmacht"
-				icon = "GFX_faction_icon_reichspakt"
+				name = faction_mittelmacht
+				icon = GFX_faction_icon_reichspakt
 			} }
 			add_political_power = 100
 			custom_effect_tooltip = GEX_Invite_Country_tt
@@ -837,7 +836,7 @@
 	
 	shared_focus = {
 		id = GEX_our_continent
-		icon = GFX_goal_our_continent
+		icon = GFX_goal_GER_our_continent
 		prerequisite = { focus = GEX_reichspakt_revival }
 		x = 0
 		y = 1
@@ -1638,7 +1637,7 @@
 	
 	shared_focus = {
 		id = GEX_copium
-		icon = GFX_goal_kill_syndies
+		icon = GFX_goal_GER_crush_western_syndies
 		prerequisite = { focus = GEX_old_enemies_new_allies focus = GEX_reichspakt_revival }
 		x = -2
 		y = 1

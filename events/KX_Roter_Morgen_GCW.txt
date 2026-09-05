@@ -2581,88 +2581,204 @@ country_event = { # victory Intro
 				limit {
 					NOT = { has_country_flag = GRU_OCCUPIED_START }
 				}
-					every_state = {
-					limit = {
-						OR = {
-							is_core_of = COG
-							state = 956
-							state = 955
-							state = 970
-							state = 547
-							state = 969
-							state = 548
-							state = 925
-							state = 558
-							state = 662
-							state = 878
-							state = 913
-							state = 973
-							state = 876
-							state = 877
-							state = 1322
-							state = 1321
-							state = 274
-							state = 871
-							state = 957
-							state = 958
-						}
-					}
-					MAF = {
-						add_state_core = PREV
-						transfer_state = PREV
+				every_state = {
+				limit = {
+					OR = {
+						is_core_of = COG
+						state = 956
+						state = 955
+						state = 970
+						state = 547
+						state = 969
+						state = 548
+						state = 925
+						state = 558
+						state = 662
+						state = 878
+						state = 913
+						state = 973
+						state = 876
+						state = 877
+						state = 1322
+						state = 1321
+						state = 274
+						state = 871
+						state = 957
+						state = 958
 					}
 				}
-				every_state = {
-					limit = {
-						OR = {
-							state = 963
-							state = 807
-							state = 1323
-						}
-					}
-					NFA = {
-						transfer_state = PREV
+				MAF = {
+					add_state_core = PREV
+					transfer_state = PREV
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 963
+						state = 807
+						state = 1323
 					}
 				}
-				every_state = {
-					limit = {
-						OR = {
-							state = 892
-							state = 268
-						}
-					}
-					SOM = {
-						transfer_state = PREV
+				NFA = {
+					transfer_state = PREV
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 892
+						state = 268
 					}
 				}
-				every_state = {
-					limit = {
-						OR = {
-							state = 813
-						}
-					}
-					ZIM = {
-						add_state_core = PREV
-						transfer_state = PREV
+				SOM = {
+					transfer_state = PREV
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 813
 					}
 				}
-				every_state = {
-					limit = {
-						OR = {
-							state = 964
-							state = 541
-						}
+				ZIM = {
+					add_state_core = PREV
+					transfer_state = PREV
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 964
+						state = 541
 					}
-					SAF = {
-						transfer_state = PREV
-					}
-					MAF = {
-						remove_core_of = PREV
-					}
+				}
+				SAF = {
+					transfer_state = PREV
+				}
+				MAF = {
+					remove_core_of = PREV
 				}
 			}
 			MAF = {
 				add_opinion_modifier = { target = GRU modifier = KR_hostile }
+				if = {
+					limit = {
+						NSW = {
+				        	has_country_leader = {
+	                        	name = "Alfred Ritscher"
+	                        	ruling_only = yes
+	                        }
+				        }
+					}
+					set_country_flag = MAF_kasier_willyII_gang
+					create_country_leader = {
+						name = "Wilhelm II"
+						picture = "gfx/leaders/MAF_Wilhelm_II.png"
+						expire = "1.1.1"
+						ideology = soccon_colonial_govt_subtype
+						traits = { GER_Imperial_Patriarch }
+					}
+					create_country_leader = {
+						name = "Wilhelm II"
+						picture = "gfx/leaders/MAF_Wilhelm_II.png"
+						expire = "1.1.1"
+						ideology = marlib_colonial_govt_subtype
+						traits = { GER_Imperial_Patriarch }
+					}
+					create_country_leader = {
+						name = "Wilhelm II"
+						picture = "gfx/leaders/MAF_Wilhelm_II.png"
+						expire = "1.1.1"
+						ideology = soclib_colonial_govt_subtype
+						traits = { GER_Imperial_Patriarch }
+					}
+					create_country_leader = {
+						name = "Wilhelm II"
+						picture = "gfx/leaders/MAF_Wilhelm_II.png"
+						expire = "1.1.1"
+						ideology = socdem_colonial_govt_subtype
+						traits = { GER_Imperial_Patriarch }
+					}
+					create_country_leader = {
+						name = "Wilhelm II"
+						picture = "gfx/leaders/MAF_Wilhelm_II.png"
+						expire = "1.1.1"
+						ideology = colonial_govt_subtype
+						traits = { GER_Imperial_Patriarch }
+					}
+					create_country_leader = {
+						name = "Wilhelm II"
+						picture = "gfx/leaders/MAF_Wilhelm_II.png"
+						expire = "1.1.1"
+						ideology = autocratic_colonial_govt_subtype
+						traits = { GER_Imperial_Patriarch }
+					}
+				}
+				if = {
+					limit = {
+						NSW = {
+				        	has_country_leader = {
+	                        	name = "Альфред Ричер"
+	                        	ruling_only = yes
+	                        }
+				        }
+					}
+					set_country_flag = MAF_kasier_willyII_gang
+					create_country_leader = {
+						name = "Вильгельм II"
+						picture = "gfx/leaders/MAF_Wilhelm_II.png"
+						expire = "1.1.1"
+						ideology = soccon_colonial_govt_subtype
+						traits = { GER_Imperial_Patriarch }
+					}
+					create_country_leader = {
+						name = "Вильгельм II"
+						picture = "gfx/leaders/MAF_Wilhelm_II.png"
+						expire = "1.1.1"
+						ideology = marlib_colonial_govt_subtype
+						traits = { GER_Imperial_Patriarch }
+					}
+					create_country_leader = {
+						name = "Вильгельм II"
+						picture = "gfx/leaders/MAF_Wilhelm_II.png"
+						expire = "1.1.1"
+						ideology = soclib_colonial_govt_subtype
+						traits = { GER_Imperial_Patriarch }
+					}
+					create_country_leader = {
+						name = "Вильгельм II"
+						picture = "gfx/leaders/MAF_Wilhelm_II.png"
+						expire = "1.1.1"
+						ideology = socdem_colonial_govt_subtype
+						traits = { GER_Imperial_Patriarch }
+					}
+					create_country_leader = {
+						name = "Вильгельм II"
+						picture = "gfx/leaders/MAF_Wilhelm_II.png"
+						expire = "1.1.1"
+						ideology = colonial_govt_subtype
+						traits = { GER_Imperial_Patriarch }
+					}
+					create_country_leader = {
+						name = "Вильгельм II"
+						picture = "gfx/leaders/MAF_Wilhelm_II.png"
+						expire = "1.1.1"
+						ideology = autocratic_colonial_govt_subtype
+						traits = { GER_Imperial_Patriarch }
+					}
+				}
+				remove_all_ministers = yes
+				add_ideas = {
+	                GER_Franz_von_Papen_hog_ade
+	                GER_Friedrich_Werner_von_der_Schulenberg_for_ade
+	                GER_Hjalmar_Schacht_eco_ade
+	                GER_Johann_von_Bernstorff_sec_ade
+                
+	                GER_August_Von_Mackensen_carm_pau
+	                GER_Manfred_Freiherr_von_Richthofen_cair_ade
+	                GER_Hans_von_Seeckt_cos_pau
+				}
 				remove_ideas = {
 					MAF_Colonial_Nation
 					MAF_French_Settlers
@@ -2674,27 +2790,19 @@ country_event = { # victory Intro
 					MAF_border_shit_show
 				}
 				set_politics = {
-					ruling_party = authoritarian_democrat
+					ruling_party = paternal_autocrat
+					last_election = "1.1.1"
 					elections_allowed = no
-				}
-				set_rule = {
-					can_decline_call_to_war = yes
-					can_not_declare_war = no
-				}
-				random_unit_leader = {
-					limit = { has_id = 198 }			
-					set_nationality = GRU
 				}
 				event_target:Mittelafrika_Target = { transfer_technology = yes }
 				event_target:Mittelafrika_Target = {
 					set_global_flag = GER_became_GEX
-				}
+				
 		        event_target:current_german_exile_government = {
 		        	clr_country_flag = current_german_exile_government
 		        }
 		        clear_global_event_target = current_german_exile_government
-	           	save_global_event_target_as = current_german_exile_government
-
+	            save_global_event_target_as = current_german_exile_government
 	            GER = {
 	            	take_occupied_states_in_africa = yes
 	            	every_owned_state = {
@@ -2716,7 +2824,9 @@ country_event = { # victory Intro
 	            	idea = GEX_trauma
 	            	days = 120
 	            }
-				set_cosmetic_tag = MAF_SWA
+
+				set_global_flag = MAF_no_die
+				set_cosmetic_tag = AFRICAN_HRE_GOEBB
 
 				create_field_marshal = {
                 	name = GRU_general_August_Mackensen
@@ -2758,7 +2868,7 @@ country_event = { # victory Intro
                 	planning_skill = 2
                 	logistics_skill = 5
                 }
-
+	
 	            GER = {
 		            # transfer a sizeable amount of equipment
 		            set_temp_variable = { temp = num_equipment@infantry_equipment }
@@ -2820,7 +2930,7 @@ country_event = { # victory Intro
 		            	set_temp_variable = { temp = num_equipment@modern_tank_chassis }
 		            	multiply_temp_variable = { temp = 0.3 }
 		            	send_equipment = { target = PREV type = modern_tank_chassis amount = temp }
-					}
+		            }
 	            	set_temp_variable = { temp = num_equipment@small_plane_naval_bomber_airframe }
 	            	multiply_temp_variable = { temp = 0.35 }
 	            	send_equipment = { target = PREV type = small_plane_naval_bomber_airframe amount = temp }
@@ -2849,49 +2959,50 @@ country_event = { # victory Intro
 	            	multiply_temp_variable = { temp = 0.5 }
 	            	send_equipment = { target = PREV type = convoy amount = temp }
 	            }
-
-				if = {
-					limit = {
-						NOT = { tag = GEA }
-						country_exists = GEA
-						GEA = { is_subject_of = GER }
-					}
-					"GEA" = { get_current_government_type = yes }
-					puppet = "GEA"
-					"GEA" = { restore_previous_government_type = yes }
-				}
-				else = {
-					GER = {
-						set_autonomy = {
-							target = GEA
-							autonomy_state = autonomy_free
-						}
-					}
-				}
-				if = {
-					limit = {
-						NOT = { tag = LEP }
-						country_exists = LEP
-						LEP = { is_subject_of = GER }
-					}
-					"LEP" = { get_current_government_type = yes }
-					puppet = "LEP"
-					"LEP" = { restore_previous_government_type = yes }
-				}
-				else = {
-					GER = {
-						set_autonomy = {
-							target = LEP
-							autonomy_state = autonomy_free
-						}
-					}
+	                if = {
+	                	limit = {
+	                		NOT = { tag = GEA }
+	                		country_exists = GEA
+	                		GEA = { is_subject_of = GER }
+	                	}
+	                	"GEA" = { get_current_government_type = yes }
+	                	puppet = "GEA"
+	                	"GEA" = { restore_previous_government_type = yes }
+	                }
+	                else = {
+	                	GER = {
+	                		set_autonomy = {
+	                			target = GEA
+	                			autonomy_state = autonomy_free
+	                		}
+	                	}
+	                }
+	                if = {
+	                	limit = {
+	                		NOT = { tag = LEP }
+	                		country_exists = LEP
+	                		LEP = { is_subject_of = GER }
+	                	}
+	                	"LEP" = { get_current_government_type = yes }
+	                	puppet = "LEP"
+	                	"LEP" = { restore_previous_government_type = yes }
+	                }
+	                else = {
+	                	GER = {
+	                		set_autonomy = {
+	                			target = LEP
+	                			autonomy_state = autonomy_free
+	                		}
+	                	}
+	                }
+	                change_tag_from = GER
 				}
 				germany_capitulates = yes
 				create_faction_from_template = { 
-					template = faction_template_reichspakt         
-					name = "gru_alldeutschpakt_faction"
-					icon = GFX_faction_icon_reichspakt
-				}
+		        	template = faction_template_reichspakt              
+		        	name = gru_alldeutschpakt_faction
+		        	icon = "GFX_faction_icon_reichspakt"
+		        }
 				MAF = {
 					add_to_faction = GEA
 					add_to_faction = MAG
@@ -2902,8 +3013,9 @@ country_event = { # victory Intro
 			    			has_country_flag = MLT_germ_cuck_knights
 			    		}
 			    		MAF = { add_to_faction = MLT }
-					}
-				}
+		            }
+			    }
+			}
 			}
 		}
 	}
@@ -3437,5 +3549,118 @@ country_event = { # CONGRESS
 				name = GRU_SPD
 			}
 		}
+	}
+}
+
+country_event = {
+	id = rotermorgenGCW.4008
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenGCW.4008" }
+	trigger = {
+		date > 1941.6.3
+	}
+	fire_only_once = yes
+	hidden = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NSW = {
+						has_country_leader = {
+	                    	name = "Alfred Ritscher"
+	                    	ruling_only = yes
+	                    }
+					}
+				}
+				MAF = {
+					create_country_leader = {
+				    	name = "Wilhelm III"
+				    	picture = "gfx/leaders/MAF_Wilhelm_III.png"
+				    	expire = "1.1.1"
+				    	ideology = soccon_colonial_govt_subtype
+				    }
+				    create_country_leader = {
+				    	name = "Wilhelm III"
+				    	picture = "gfx/leaders/MAF_Wilhelm_III.png"
+				    	expire = "1.1.1"
+				    	ideology = marlib_colonial_govt_subtype
+				    }
+				    create_country_leader = {
+				    	name = "Wilhelm III"
+				    	picture = "gfx/leaders/MAF_Wilhelm_III.png"
+				    	expire = "1.1.1"
+				    	ideology = soclib_colonial_govt_subtype
+				    }
+				    create_country_leader = {
+				    	name = "Wilhelm III"
+				    	picture = "gfx/leaders/MAF_Wilhelm_III.png"
+				    	expire = "1.1.1"
+				    	ideology = socdem_colonial_govt_subtype
+				    }
+				    create_country_leader = {
+				    	name = "Wilhelm III"
+				    	picture = "gfx/leaders/MAF_Wilhelm_III.png"
+				    	expire = "1.1.1"
+				    	ideology = colonial_govt_subtype
+				    }
+				    create_country_leader = {
+				    	name = "Wilhelm III"
+				    	picture = "gfx/leaders/MAF_Wilhelm_III.png"
+				    	expire = "1.1.1"
+				    	ideology = autocratic_colonial_govt_subtype
+				    }
+				}
+			}
+			if = {
+				limit = {
+					NSW = {
+						has_country_leader = {
+	                    	name = "Альфред Ричер"
+	                    	ruling_only = yes
+	                    }
+					}
+				}
+				MAF = {
+					create_country_leader = {
+				    	name = "Вильгельм III"
+				    	picture = "gfx/leaders/MAF_Wilhelm_III.png"
+				    	expire = "1.1.1"
+				    	ideology = soccon_colonial_govt_subtype
+				    }
+				    create_country_leader = {
+				    	name = "Вильгельм III"
+				    	picture = "gfx/leaders/MAF_Wilhelm_III.png"
+				    	expire = "1.1.1"
+				    	ideology = marlib_colonial_govt_subtype
+				    }
+				    create_country_leader = {
+				    	name = "Вильгельм III"
+				    	picture = "gfx/leaders/MAF_Wilhelm_III.png"
+				    	expire = "1.1.1"
+				    	ideology = soclib_colonial_govt_subtype
+				    }
+				    create_country_leader = {
+				    	name = "Вильгельм III"
+				    	picture = "gfx/leaders/MAF_Wilhelm_III.png"
+				    	expire = "1.1.1"
+				    	ideology = socdem_colonial_govt_subtype
+				    }
+				    create_country_leader = {
+				    	name = "Вильгельм III"
+				    	picture = "gfx/leaders/MAF_Wilhelm_III.png"
+				    	expire = "1.1.1"
+				    	ideology = colonial_govt_subtype
+				    }
+				    create_country_leader = {
+				    	name = "Вильгельм III"
+				    	picture = "gfx/leaders/MAF_Wilhelm_III.png"
+				    	expire = "1.1.1"
+				    	ideology = autocratic_colonial_govt_subtype
+				    }
+				}
+			}
+		}
+	}
+	option = { 
+		name = rotermorgenGCW.4008.a
 	}
 }

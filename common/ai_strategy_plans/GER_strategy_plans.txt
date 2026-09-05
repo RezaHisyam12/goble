@@ -11,7 +11,7 @@ GER_early_game = {
 	}
 
 	abort = {
-		has_completed_focus = GER_prop_up_AOG
+		has_completed_focus = GER_mil_expansion
 	}
 	
 	ai_national_focuses = {
@@ -29,6 +29,7 @@ GER_early_game = {
 		GER_Away_in_Afghanistan
 		GER_Colonial_Spring_Cleaning
 		GER_prop_up_AOG
+		GER_mil_expansion
 	}
 	weight = {
 		factor = 1.0
@@ -112,12 +113,11 @@ GER_research = {
 
 	enable = {
 		date > 1937.1.1
-		has_country_flag = GER_Black_Monday_Finished
 		has_completed_focus = GER_Ascension_of_the_Steel_Eagle
 	}
 
 	abort = {
-		has_completed_focus = GER_The_Amazing_Atom
+		has_completed_focus = GER_Kaiserwaffe1
 	}
 	
 	ai_national_focuses = {
@@ -128,9 +128,7 @@ GER_research = {
 		GER_Heading_Into_the_Electromechanical_Future
 		GER_Unrestrained_Innovation
 		GER_The_Noblest_Universities
-		GER_Der_Uranverein
 		GER_Kaiserwaffe1
-		GER_The_Amazing_Atom
 	}
 	weight = {
 		factor = 1.0
@@ -147,12 +145,11 @@ GER_economy_2 = {
 
 	enable = {
 		date > 1938.1.1
-		has_country_flag = GER_Black_Monday_Finished
-		has_completed_focus = GER_The_Amazing_Atom
+		has_completed_focus = GER_Die_Signature
 	}
 
 	abort = {
-		has_completed_focus = GER_Tending_to_Germanys_Finest
+		has_completed_focus = GER_Expand_the_Stakes
 	}
 	
 	ai_national_focuses = {
@@ -168,6 +165,7 @@ GER_economy_2 = {
 		GER_Industrial_Architecture
 		GER_Closer_to_Heaven
 		GER_Tending_to_Germanys_Finest
+		GER_Expand_the_Stakes
 	}
 	weight = {
 		factor = 1.0
@@ -184,6 +182,7 @@ GER_prepare_for_war = {
 
 	enable = {
 		date > 1939.1.1
+		has_completed_focus = GER_Die_Signature
 	}
 
 	abort = {

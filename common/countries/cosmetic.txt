@@ -1481,6 +1481,16 @@ CZE_slov_rusmon_puppet = {
 	color_ui = rgb { 45 86 186 }
 }
 
+CZE_PGU = {
+	color = rgb { 135 80 130 }
+	color_ui = rgb { 135 80 130 }
+}
+
+CZE_PGU_Slovakia = {
+	color = rgb { 135 80 130 }
+	color_ui = rgb { 135 80 130 }
+}
+
 PBC = {
 	color = rgb { 155 13 20 }
 	color_ui = rgb { 155 13 20 }
@@ -4488,6 +4498,10 @@ AOG_CHINA = {
 AOG_CHINA_REICH = {
 	color = rgb { 92 92 92 }
 	color_ui = rgb { 92 92 92 }
+}
+AOG_CHINA_PUPPET = {
+	color = rgb { 189 151 0 }
+	color_ui = rgb { 189 151 0 }
 }
 GBP_FREESTATE = {
 	color = rgb { 193 44 44 }

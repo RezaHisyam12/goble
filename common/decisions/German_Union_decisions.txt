@@ -167,6 +167,13 @@ GRU_nuclear_program = {
 				add_building_construction = { type = nuclear_reactor level = 1 }
 			}
 			if = {
+				limit = {
+					is_ai = yes
+				}
+				complete_special_project = sp:sp_nuclear_reactor
+				complete_special_project = sp:sp_nuclear_bomb
+			}
+			else_if = {
 				limit = { NOT = { is_special_project_completed = sp:sp_nuclear_bomb } }
 				sp:sp_nuclear_bomb = { add_project_progress_ratio = 0.1 }
 			}
@@ -4134,6 +4141,107 @@ GRU_germania_plan_decisions = {
 		}
 	}
 	#
+	GRU_pan_germanism_hungary_decision = {
+		icon = GFX_pangermanicone
+		allowed = { original_tag = GRU }
+		available = {
+			is_subject = no
+			country_exists = HUN
+			HUN = {
+				NOT = { is_in_faction_with = FRA }
+			}
+		}
+		visible = {
+			has_completed_focus = GRU_NMDVP_SLAV_LAND_EXPANSION
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = HUN
+				}
+			}
+		}
+		targets = { HUN }
+		target_root_trigger = {
+			has_completed_focus = GRU_NMDVP_SLAV_LAND_EXPANSION
+		}
+
+		target_trigger = {
+			can_declare_war_on = FROM
+			FROM = {
+				OR = {
+				tag = HUN
+				}	
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 30
+
+		ai_will_do = {
+			factor = 135
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+				is_in_faction_with = FRA
+				}
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = FROM
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					any_allied_country = {
+						is_faction_leader = yes
+						overlord = {
+							strength_ratio = {
+								tag = ROOT
+								ratio > 0.7
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					is_subject = yes
+					overlord = {
+						strength_ratio = {
+							tag = ROOT
+							ratio > 0.7
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = imminent_war
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_pan_germanism_hungary_decision target: [From.GetName]"
+			set_country_flag = { flag = imminent_war days = 30 value = 1 }
+			setup_decision_attack_AI = yes
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_hungary_decision target: [From.GetName]"
+			clear_decision_attack_AI = yes
+			declare_war_on = { type = annex_everything	target = HUN }
+		}
+	}
+	#
 	GRU_pan_germanism_galicia_decision = {
 		icon = GFX_pangermanicone
 		allowed = { original_tag = GRU }
@@ -5651,25 +5759,10 @@ GRU_germania_plan_decisions = {
 					}
 				}
 			}
-			#784 = { 
-			#	owner = {
-			#		OR = {
-			#			tag = GRU
-			#			is_subject_of = GRU
-			#		}
-			#	}
-			#	controller = {
-			#		OR = {
-			#			tag = GRU
-			#			is_subject_of = GRU
-			#		}
-			#	}
-			#}
 		}
 
 		fire_only_once = yes
 		cost = 20
-		days_remove = 100
 
 		ai_will_do = {
 			factor = 100
@@ -5677,86 +5770,25 @@ GRU_germania_plan_decisions = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_core_austria_decision"
-			4 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
+			every_state = {
+				limit = {
+					OR = {
+						state = 4
+						state = 152
+						state = 836
+						state = 153
+						state = 942
+						state = 1137
+						state = 775
+						state = 835
+						state = 39
+						state = 783
+						state = 1235
+						state = 1272
+						state = 784
+					}
 				}
-			}
-			152 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			836 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			153 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			942 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			1137 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			775 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			835 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			39 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			783 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			1235 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			1272 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			784 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			1123 = { 
-				add_core_of = GRU
+				enable_state_integration_50_compliance = yes
 				GRU = {
 					transfer_state = PREV
 				}
@@ -5915,7 +5947,6 @@ GRU_germania_plan_decisions = {
 
 		fire_only_once = yes
 		cost = 20
-		days_remove = 100
 
 		ai_will_do = {
 			factor = 100
@@ -5923,44 +5954,19 @@ GRU_germania_plan_decisions = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_core_slovenia_decision"
-			1104 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
+			every_state = {
+				limit = {
+					OR = {
+						state = 1104
+						state = 102
+						state = 1101
+						state = 1103
+						state = 736
+						state = 1144
+						state = 1100
+					}
 				}
-			}
-			102 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			1101 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			1103 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			736 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			1144 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			1100 = { 
-				add_core_of = GRU
+				enable_state_integration_50_compliance = yes
 				GRU = {
 					transfer_state = PREV
 				}
@@ -6273,7 +6279,6 @@ GRU_germania_plan_decisions = {
 
 		fire_only_once = yes
 		cost = 20
-		days_remove = 100
 
 		ai_will_do = {
 			factor = 100
@@ -6281,86 +6286,26 @@ GRU_germania_plan_decisions = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_core_bohemia_decision"
-			1133 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
+			every_state = {
+				limit = {
+					OR = {
+						state = 1133
+						state = 69
+						state = 1139
+						state = 1138
+						state = 786
+						state = 1130
+						state = 9
+						state = 1129
+						state = 1134
+						state = 1132
+						state = 71
+						state = 75
+						state = 74
+						state = 1131
+					}
 				}
-			}
-			69 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			1139 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			1138 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			786 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			1130 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			9 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			1129 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			1134 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			1132 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			71 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			75 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			74 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			1131 = { 
-				add_core_of = GRU
+				enable_state_integration_50_compliance = yes
 				GRU = {
 					transfer_state = PREV
 				}
@@ -6436,7 +6381,6 @@ GRU_germania_plan_decisions = {
 
 		fire_only_once = yes
 		cost = 20
-		days_remove = 100
 
 		ai_will_do = {
 			factor = 100
@@ -6444,26 +6388,16 @@ GRU_germania_plan_decisions = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_core_poland_decision"
-			87 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
+			every_state = {
+				limit = {
+					OR = {
+						state = 87
+						state = 98
+						state = 1148
+						state = 97
+					}
 				}
-			}
-			98 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			1148 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			97 = { 
-				add_core_of = GRU
+				enable_state_integration_50_compliance = yes
 				GRU = {
 					transfer_state = PREV
 				}
@@ -6479,6 +6413,15 @@ GRU_germania_plan_decisions = {
 			set_province_name = { id = 9452 name = "Schelm"}
 			set_province_name = { id = 11301 name = "Bjelostock"}
 			set_province_name = { id = 3230 name = "Schröttersburg"}
+			
+			hidden_effect = {
+				87 = { set_state_name = "Litzmannstadt" }
+				90 = { set_state_name = "Kjelzy" }
+				1148 = { set_state_name = "Lumbsee" }
+				10 = { set_state_name = "Herrmann Stadt" }
+				1088 = { set_state_name = "Schelm" }
+				97 = { set_state_name = "Bjelostock" }
+			}
 		}
 	}
 	
@@ -6521,7 +6464,6 @@ GRU_germania_plan_decisions = {
 
 		fire_only_once = yes
 		cost = 20
-		days_remove = 100
 
 		ai_will_do = {
 			factor = 100
@@ -6529,14 +6471,14 @@ GRU_germania_plan_decisions = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_core_suwalki_decision"
-			655 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
+			every_state = {
+				limit = {
+					OR = {
+						state = 655
+						state = 1329
+					}
 				}
-			}
-			1329 = { 
-				add_core_of = GRU
+				enable_state_integration_50_compliance = yes
 				GRU = {
 					transfer_state = PREV
 				}
@@ -6642,46 +6584,25 @@ GRU_germania_plan_decisions = {
 
 		fire_only_once = yes
 		cost = 20
-		days_remove = 100
 
 		ai_will_do = {
-			factor = 6
+			factor = 0
 		}
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_core_dutch_decision"
-			866 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
+			every_state = {
+				limit = {
+					OR = {
+						state = 866
+						state = 36
+						state = 7
+						state = 35
+						state = 978
+						state = 979
+					}
 				}
-			}
-			36 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			7 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			35 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			978 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			979 = { 
-				add_core_of = GRU
+				enable_state_integration_50_compliance = yes
 				GRU = {
 					transfer_state = PREV
 				}
@@ -6744,28 +6665,22 @@ GRU_germania_plan_decisions = {
 
 		fire_only_once = yes
 		cost = 20
-		days_remove = 100
 
 		ai_will_do = {
-			factor = 6
+			factor = 0
 		}
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_core_belgian_decision"
-			6 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
+			every_state = {
+				limit = {
+					OR = {
+						state = 6
+						state = 34
+						state = 741
+					}
 				}
-			}
-			34 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			741 = { 
-				add_core_of = GRU
+				enable_state_integration_50_compliance = yes
 				GRU = {
 					transfer_state = PREV
 				}
@@ -6794,7 +6709,6 @@ GRU_germania_plan_decisions = {
 
 		fire_only_once = yes
 		cost = 20
-		days_remove = 100
 
 		ai_will_do = {
 			factor = 100
@@ -6803,7 +6717,7 @@ GRU_germania_plan_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_core_luxembourg_decision"
 			8 = { 
-				add_core_of = GRU
+				enable_state_integration_50_compliance = yes
 				GRU = {
 					transfer_state = PREV
 				}
@@ -6851,7 +6765,6 @@ GRU_germania_plan_decisions = {
 
 		fire_only_once = yes
 		cost = 20
-		days_remove = 100
 
 		ai_will_do = {
 			factor = 100
@@ -6859,20 +6772,15 @@ GRU_germania_plan_decisions = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_core_denmark_decision"
-			99 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
+			every_state = {
+				limit = {
+					OR = {
+						state = 99
+						state = 37
+						state = 337
+					}
 				}
-			}
-			37 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
-				}
-			}
-			337 = { 
-				add_core_of = GRU
+				enable_state_integration_50_compliance = yes
 				GRU = {
 					transfer_state = PREV
 				}
@@ -6906,7 +6814,6 @@ GRU_germania_plan_decisions = {
 
 		fire_only_once = yes
 		cost = 20
-		days_remove = 0
 
 		ai_will_do = {
 			factor = 100
@@ -6915,7 +6822,7 @@ GRU_germania_plan_decisions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_core_iceland_decision"
 			100 = { 
-				add_core_of = GRU
+				enable_state_integration_50_compliance = yes
 				GRU = {
 					transfer_state = PREV
 				}
@@ -6963,7 +6870,6 @@ GRU_germania_plan_decisions = {
 
 		fire_only_once = yes
 		cost = 20
-		days_remove = 0
 
 		ai_will_do = {
 			factor = 100
@@ -6971,14 +6877,14 @@ GRU_germania_plan_decisions = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_core_polarisland_decision"
-			1146 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
+			every_state = {
+				limit = {
+					OR = {
+						state = 1146
+						state = 1147
+					}
 				}
-			}
-			1147 = { 
-				add_core_of = GRU
+				enable_state_integration_50_compliance = yes
 				GRU = {
 					transfer_state = PREV
 				}
@@ -7008,25 +6914,10 @@ GRU_germania_plan_decisions = {
 					}
 				}
 			}
-			8 = { 
-				owner = {
-					OR = {
-						tag = GRU
-						is_subject_of = GRU
-					}
-				}
-				controller = {
-					OR = {
-						tag = GRU
-						is_subject_of = GRU
-					}
-				}
-			}
 		}
 
 		fire_only_once = yes
 		cost = 20
-		days_remove = 100
 
 		ai_will_do = {
 			factor = 100
@@ -7034,14 +6925,13 @@ GRU_germania_plan_decisions = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove GRU_pan_germanism_core_elsas_decision"
-			28 = { 
-				add_core_of = GRU
-				GRU = {
-					transfer_state = PREV
+			every_state = {
+				limit = {
+					OR = {
+						state = 28
+					}
 				}
-			}
-			8 = { 
-				add_core_of = GRU
+				enable_state_integration_50_compliance = yes
 				GRU = {
 					transfer_state = PREV
 				}
@@ -8062,7 +7952,7 @@ GRU_subvert_france_decisions = {
 		}
 
 		fire_only_once = no
-		cost = 50
+		cost = 25
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision GRU_subvert_thrid_internationale target: [From.GetName]"
 			FROM = {	country_event = rotermorgenmisc.50 }
@@ -8128,7 +8018,7 @@ GRU_subvert_france_decisions = {
 		}
 
 		fire_only_once = no
-		cost = 50
+		cost = 25
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision GRU_subvert_thrid_internationale target: [From.GetName]"
 			FROM = {	country_event = rotermorgenmisc.60 }
@@ -16496,11 +16386,61 @@ GRU_stahlpakt_alliance_decisions = {
 		}
 	}
 
+	GRU_stahlpakt_invite_ottoman_decision = {
+		icon = GFX_decision_dec_GER_central_power_knights
+
+		available = {
+			GRU = {
+				has_war_with = INT
+				has_war_with = RUS
+			}
+			TUR = { 
+				is_subject = no
+				has_socialist_government = no
+				NOT = {
+					has_war_with = GRU
+				}
+			}
+			VKB = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+				}
+			}
+			VKR = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = GRU_NMDVP_allignment
+			NOT = { has_country_leader = { name = "Reinhard Heydrich" ruling_only = yes } }
+		}
+
+		target_root_trigger = {
+			has_completed_focus = GRU_NMDVP_allignment
+		}
+
+		targets = { TUR }
+
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_stahlpakt_invite_ottoman_decision target: [From.GetName]"
+			FROM = { country_event = rotermorgenmisc.801 }
+		}
+	}
+
 	GRU_Demand_Submission = {
 		icon = hol_draw_up_staff_plans
 
 		visible = {
-			can_declare_war_on = FROM
+			has_completed_focus = GRU_nmdvp_victory
 		}
 		available = {
 			NOT = { is_ally_with = FROM }

@@ -1995,9 +1995,6 @@ focus_tree = {
 				GRU = { exists = yes }
 			}
 		}
-		mutually_exclusive = {
-			focus = FRA_peace_with_germany
-		}
 		will_lead_to_war_with = GER
 		will_lead_to_war_with = GRU
 		bypass = {
@@ -2034,55 +2031,6 @@ focus_tree = {
 					target = GRU
 				}
 			}
-		}
-	}
-	focus = {
-		id = FRA_peace_with_germany
-		icon = GFX_goal_AUS_German_Nation_Of_Practical_Traditions
-		cost = 6.00
-		prerequisite = {
-			focus = FRA_Demand_Alsace_Lorraine
-		}
-		mutually_exclusive = {
-			focus = FRA_War_with_germany
-		}
-		x = 2
-		y = 1
-		relative_position_id = FRA_Demand_Alsace_Lorraine
-		available = {
-			has_country_flag = GER_FOLD
-			if = {
-				limit = {
-					is_ai = yes
-				}
-				NOT = {
-					has_government = totalist
-					is_in_faction_with = RUS
-				}
-				GER = {
-					has_government = social_democrat
-					has_completed_focus = GER_embrace_faud
-				}
-
-			}
-		}
-		
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus FRA_War_with_germany"
-			add_war_support = -0.25
-			remove_ideas = THINT_exact_vengeance
-			diplomatic_relation = { 
-			country = GER 
-			relation = non_aggression_pact 
-				}
-				GER = {
-					diplomatic_relation = { 
-			country = FRA 
-			relation = non_aggression_pact 
-				}
-				}
-				
-
 		}
 	}
 	focus = {
@@ -4293,44 +4241,13 @@ focus_tree = {
 			focus = FRA_true_marxism
 			focus = FRA_communism_reborn
 		}
-
+		ai_will_do = {
+			factor = 0
+		}
 		x = 55
 		y = 6
 		available = {
 			has_government = totalist
-			date > 1939.10.5
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				date > 1938.1.1
-				NOT = {
-					controls_state = 779
-					controls_state = 28
-				}
-			}
-			modifier = {
-				factor = 100
-				date > 1939.11.23
-				NOT = {
-					controls_state = 779
-					controls_state = 28
-				}
-			}
-			modifier = {
-				factor = 1000
-				date > 1940.11.6
-				AND = {
-					controls_state = 779
-					controls_state = 28
-				}
-			}
-			modifier = {
-				factor = 0
-				date < 1941.10.1
-				GRU = { exists = yes }
-			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_no_nationalism"
@@ -4399,36 +4316,7 @@ focus_tree = {
 			date > 1939.10.5
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				date > 1938.1.1
-				NOT = {
-					controls_state = 779
-					controls_state = 28
-				}
-			}
-			modifier = {
-				factor = 100
-				date > 1939.11.23
-				NOT = {
-					controls_state = 779
-					controls_state = 28
-				}
-			}
-			modifier = {
-				factor = 1000
-				date > 1940.11.6
-				AND = {
-					controls_state = 779
-					controls_state = 28
-				}
-			}
-			modifier = {
-				factor = 0
-				date < 1941.10.1
-				GRU = { exists = yes }
-			}
+			factor = 0
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FRA_war_with_capitalists"

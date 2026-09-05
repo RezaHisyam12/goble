@@ -22,6 +22,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_START_COLONIZING"
 			202 = {
 				add_core_of = VKR
+				set_state_name = "Kønugarðr"
 			}
 			set_province_name = { id = 525 name = "Kønugarðr"}
 			swap_ideas = {

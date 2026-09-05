@@ -599,10 +599,12 @@
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_MOSKOWIA_COLONIZED"
 			set_province_name = { id = 6174 name = "Petersburg"}
 			set_province_name = { id = 117 name = "Hólmgarðr"}
+			195 = { set_state_name = "Petersburg" }
+			263 = { set_state_name = "Hólmgarðr" }
 			swap_ideas = {
-							remove_idea = VK_COLONY_TWO
-							add_idea = VK_COLONY_THREE
-						}
+				remove_idea = VK_COLONY_TWO
+				add_idea = VK_COLONY_THREE
+			}
 			set_country_flag = Germanized_VKM
 		}
 		prerequisite = { focus =  VK_FOCUS_MOSKOWIA_COLONIZE_ONE }

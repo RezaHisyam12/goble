@@ -1,3 +1,56 @@
+OTT_soccon_strategy_plan = {
+	name = ""
+	desc = ""
+	
+	enable = {
+		original_tag = TUR
+		has_game_rule = { rule = OTT_PATHS option = OTT_PATHS_SOCCON }
+	}
+	
+	focus_factors = {
+		OTT_Repeal_Unification_Law = 0
+	}
+	
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+OTT_early_game = {
+	name = "OTT_early_game"
+	desc = ""
+
+	allowed = {
+		original_tag = TUR
+	}
+
+	enable = {
+		date > 1936.1.1
+	}
+
+	abort = {
+		date > 1938.1.1
+	}
+	
+	ai_national_focuses = {
+		OTT_Raise_Import_Tariffs_lib
+		OTT_Restrict_Foreign_Exchange_Regime_lib
+		OTT_Quantity_Restrictions_Import_lib
+		OTT_Ziraat_Bankasi_Credit_lib
+		OTT_Toprak_Mahsulleri_Ofisi_lib
+		OTT_Balance_the_Budget_lib
+		OTT_Imperial_Institute_Technology
+		OTT_Repeal_National_Protection_Law
+		OTT_Enable_Foreign_Investment
+	}
+	weight = {
+		factor = 1.0
+	}
+}
+
 TUR_Arslan_plan = {
 	name = "TUR_Arslan_plan"
 	desc = ""
@@ -6,13 +59,71 @@ TUR_Arslan_plan = {
 		original_tag = TUR
 	}
 	enable = {
-		has_active_mission = OTT_prorogue_parliament_mission
+		OR = {
+			has_government = market_liberal
+			has_government = social_liberal
+		}
+		has_completed_focus = OTT_Enable_Foreign_Investment
 	}
 	abort = {
-		NOT = {	has_active_mission = OTT_prorogue_parliament_mission }
+		has_completed_focus = OTT_The_Sublime_Federation
 	}
 
 	ai_national_focuses = {
+		OTT_Reform_the_Gendarmerie
+		OTT_Break_Up_State_Monopolies
+		OTT_Encourage_Private_Initiative
+		OTT_Distribute_Miri_Land
+		OTT_Multi_Level_Democracy
+		OTT_Shift_Power_to_the_Provincial_Assembly
+		OTT_Revise_the_Mecelle
+		OTT_Equality_before_the_Law
+		OTT_Imperial_Literacy_Campaign
+		OTT_Abolish_Senate
+		OTT_Revise_Millet
+		OTT_The_Sublime_Federation
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
+TUR_Arslan_plan = {
+	name = "TUR_Arslan_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		has_idea = OTT_Shakib_Arslan_hog_sco
+		has_completed_focus = OTT_Enable_Foreign_Investment
+	}
+	abort = {
+		has_government = paternal_autocrat
+	}
+
+	ai_national_focuses = {
+		OTT_Reform_the_Gendarmerie
+		OTT_Break_Up_State_Monopolies
+		OTT_Encourage_Private_Initiative
+		OTT_Distribute_Miri_Land
+		OTT_Multi_Level_Democracy
+		OTT_Shift_Power_to_the_Provincial_Assembly
+		OTT_Revise_the_Mecelle
+		OTT_Equality_before_the_Law
+
+		OTT_Grand_Vizier_Arslan
+		OTT_Promote_Panislamism
+		OTT_Mosque_Renovation_Program
+		OTT_Religious_Education
+		OTT_Empower_Sheikh
+		OTT_Jizya
+		OTT_Revise_Constitution
+
 		OTT_Enforce_Mecelle
 		OTT_Desecularise_Army
 		OTT_Revert_Social_Reforms
@@ -39,20 +150,18 @@ TUR_Arslan_plan_2 = {
 		has_completed_focus = OTT_Revert_Social_Reforms
 	}
 	abort = {
-
+		has_completed_focus = OTT_Pan_Islamic_Legitimacy
 	}
 
 	ai_national_focuses = {
-		OTT_Caliphate_Of_Old
-
-		OTT_Beyond_Nationalities
-		OTT_Pan_Islamic_Legitimacy
-
 		OTT_Suleiman_Legacy
 		OTT_Golden_Age
 
 		OTT_Islamic_Democracy
 		OTT_Prince_of_Eloquence
+
+		OTT_Beyond_Nationalities
+		OTT_Pan_Islamic_Legitimacy
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

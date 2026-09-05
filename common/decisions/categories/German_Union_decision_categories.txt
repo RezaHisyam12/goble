@@ -118,7 +118,7 @@ GRU_Germania_Stadt_decisions = {
 }
 GRU_stahlpakt_alliance_decisions = {
 	icon = generic_foreign_policy
-	priority = 65
+	priority = 90
 	allowed = { tag = GRU }
 }
 GRU_new_order_decisions = {

@@ -1,6 +1,6 @@
 	shared_focus = {
 		id = GRU_GCW_VICTORY
-	   	icon = GFX_GRU_REBELLS_VICTORY
+	   	icon = GRU_REBELLS_VICTORY
 		x = 35
 		y = 2
 		cost = 1
@@ -10,9 +10,7 @@
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_GCW_VICTORY"
-			hidden_effect = {
-				country_event = { id =  rotermorgenGCW.10 days = 1 }
-			}
+			country_event = { id =  rotermorgenGCW.10 }		
 		}
 	}
 	#Occupational Government
@@ -28,9 +26,7 @@
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_occupational_government"
-			hidden_effect = {
-				country_event = { id =  rotermorgen.10 days = 1 }
-			}
+			country_event = { id =  rotermorgen.10 }
 		}
 	}
 	
@@ -302,7 +298,11 @@ shared_focus = {
 		y = 1
 		cost = 5
 		ai_will_do = {
-			factor = 100
+			factor = 5
+			modifier = {
+				factor = 100
+				has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+			}
 		}
 		completion_reward = {
 					log = "[GetDateText]: [Root.GetName]: Focus GRU_DAF"
@@ -8544,13 +8544,13 @@ shared_focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_PAN_GERMANISM"
 			custom_effect_tooltip = GRU_tt_pan_germanism_one_decisions
 			hidden_effect = {
-			every_state = {
-				limit = {
-					OR = { is_core_of = AUS is_core_of = SLO is_core_of = FIU }
-					is_not_claim_or_core_of_ROOT = yes
+				every_state = {
+					limit = {
+						region = 21 #Austria
+					}
+					add_claim_by = GRU
 				}
-				add_claim_by = GRU
-			}
+				784 = { add_claim_by = GRU }
 			}
 		}
 		prerequisite = { focus = GRU_NMDVP_imperialism  }
@@ -8569,57 +8569,57 @@ shared_focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_PAN_GERMANISM_RELOADED"
 			custom_effect_tooltip = GRU_tt_pan_germanism_two_decisions
 			hidden_effect = {
-			866 = {
-				add_claim_by = GRU
-			}
-			36 = {
-				add_claim_by = GRU
-			}
-			7 = {
-				add_claim_by = GRU
-			}
-			35 = {
-				add_claim_by = GRU
-			}
-			978 = {
-				add_claim_by = GRU
-			}
-			979 = {
-				add_claim_by = GRU
-			}
-			6 = {
-				add_claim_by = GRU
-			}
-			34 = {
-				add_claim_by = GRU
-			}
-			741 = {
-				add_claim_by = GRU
-			}
-			8 = {
-				add_claim_by = GRU
-			}
-			99 = {
-				add_claim_by = GRU
-			}
-			37 = {
-				add_claim_by = GRU
-			}
-			100 = {
-				add_claim_by = GRU
-			}
-			1146 = {
-				add_claim_by = GRU
-			}
-			1147 = {
-				add_claim_by = GRU
-			}
-			28 = {
-				add_claim_by = GRU
-			}
-			337 = {
-				add_claim_by = GRU
-			}
+				866 = {
+					add_claim_by = GRU
+				}
+				36 = {
+					add_claim_by = GRU
+				}
+				7 = {
+					add_claim_by = GRU
+				}
+				35 = {
+					add_claim_by = GRU
+				}
+				978 = {
+					add_claim_by = GRU
+				}
+				979 = {
+					add_claim_by = GRU
+				}
+				6 = {
+					add_claim_by = GRU
+				}
+				34 = {
+					add_claim_by = GRU
+				}
+				741 = {
+					add_claim_by = GRU
+				}
+				8 = {
+					add_claim_by = GRU
+				}
+				99 = {
+					add_claim_by = GRU
+				}
+				37 = {
+					add_claim_by = GRU
+				}
+				100 = {
+					add_claim_by = GRU
+				}
+				1146 = {
+					add_claim_by = GRU
+				}
+				1147 = {
+					add_claim_by = GRU
+				}
+				28 = {
+					add_claim_by = GRU
+				}
+				337 = {
+					add_claim_by = GRU
+				}
 			}
 		}
 		prerequisite = { focus = GRU_NMDVP_PAN_GERMANISM  }
@@ -8757,96 +8757,18 @@ shared_focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_SLAV_LAND_EXPANSION"
 			custom_effect_tooltip = GRU_tt_pan_germanism_three_decisions
 			hidden_effect = {
-			every_state = {
-				limit = {
-					is_core_of = "CZE"
-					is_not_claim_or_core_of_ROOT = yes
+				every_state = {
+					limit = {
+						OR= {
+							region = 22 #Bohemia
+							region = 38 #Poland
+							region = 155 #Galicia
+						}
+					}
+					add_claim_by = GRU
 				}
-				add_claim_by = GRU
-			}
-			1138 = {
-				add_claim_by = GRU
-			}
-			1124 = {
-				add_claim_by = GRU
-			}
-			88 = {
-				add_claim_by = GRU
-			}
-			1125 = {
-				add_claim_by = GRU
-			}
-			1127 = {
-				add_claim_by = GRU
-			}
-			1126 = {
-				add_claim_by = GRU
-			}
-			91 = {
-				add_claim_by = GRU
-			}
-			1140 = {
-				add_claim_by = GRU
-			}
-			89 = {
-				add_claim_by = GRU
-			}
-			1314 = {
-				add_claim_by = GRU
-			}
-			1319 = {
-				add_claim_by = GRU
-			}
-			#
-			every_state = {
-				limit = {
-					is_core_of = "POL"
-					is_not_claim_or_core_of_ROOT = yes
-				}
-				add_claim_by = GRU
-			}
-			655 = {
-				add_claim_by = GRU
-			}
-			1329 = {
-				add_claim_by = GRU
-			}
-			713 = {
-				remove_claim_by = GRU
-			}
-			80 = {
-				remove_claim_by = GRU
-			}
-			199 = {
-				remove_claim_by = GRU
-			}
-			1228 = {
-				remove_claim_by = GRU
-			}
-			792 = {
-				remove_claim_by = GRU
-			}
-			95 = {
-				remove_claim_by = GRU
-			}
-			997 = {
-				remove_claim_by = GRU
-			}
-			93 = {
-				remove_claim_by = GRU
-			}
-			1295 = {
-				remove_claim_by = GRU
-			}
-			94 = {
-				remove_claim_by = GRU
-			}
-			207 = {
-				remove_claim_by = GRU
-			}
-			96 = {
-				remove_claim_by = GRU
-			}
+				655 = { add_claim_by = GRU }
+				1329 = { add_claim_by = GRU }
 			}
 		}		
 		prerequisite = { focus = GRU_NMDVP_PAN_GERMANISM  }
