@@ -5765,7 +5765,7 @@ GRU_germania_plan_decisions = {
 		cost = 20
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		remove_effect = {
@@ -5786,6 +5786,7 @@ GRU_germania_plan_decisions = {
 						state = 1235
 						state = 1272
 						state = 784
+						state = 1123
 					}
 				}
 				enable_state_integration_50_compliance = yes
@@ -5949,7 +5950,7 @@ GRU_germania_plan_decisions = {
 		cost = 20
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		remove_effect = {
@@ -6281,7 +6282,7 @@ GRU_germania_plan_decisions = {
 		cost = 20
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		remove_effect = {
@@ -6383,7 +6384,7 @@ GRU_germania_plan_decisions = {
 		cost = 20
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		remove_effect = {
@@ -6466,7 +6467,7 @@ GRU_germania_plan_decisions = {
 		cost = 20
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		remove_effect = {
@@ -6711,7 +6712,7 @@ GRU_germania_plan_decisions = {
 		cost = 20
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		remove_effect = {
@@ -6767,7 +6768,7 @@ GRU_germania_plan_decisions = {
 		cost = 20
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		remove_effect = {
@@ -6816,7 +6817,7 @@ GRU_germania_plan_decisions = {
 		cost = 20
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		remove_effect = {
@@ -6872,7 +6873,7 @@ GRU_germania_plan_decisions = {
 		cost = 20
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		remove_effect = {
@@ -6920,7 +6921,7 @@ GRU_germania_plan_decisions = {
 		cost = 20
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		remove_effect = {
@@ -16624,6 +16625,774 @@ GRU_stahlpakt_alliance_decisions = {
 }
 
 GRU_new_order_decisions = {
+	GRU_pakt_France_goeb = {
+		icon = GFX_goebb_decision_fra
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1000
+				GRU = {
+					has_country_flag = goebb_captured_FRA
+				}
+			}
+		}
+		highlight_states = {
+		    highlight_state_targets = {
+				state = 15
+				state = 30
+				state = 33
+				state = 16
+				state = 23
+				state = 25
+				state = 26
+				state = 19
+				state = 984
+				state = 1334
+				state = 817
+				state = 22
+				state = 31
+				state = 21
+				state = 763
+				state = 32
+				state = 20
+				state = 735
+				state = 762
+				state = 983
+				state = 14
+		    }
+		}
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+			NOT = {
+				country_exists = FRP
+				has_global_flag = GRU_stay_out_france_uk
+			}
+		}
+		available = {
+			tag = GRU 
+			16 = { 
+				owner = {
+					OR = {
+						tag = GRU
+						is_subject_of = GRU
+					}
+				}
+			}
+			NOT = {
+				country_exists = FRA 
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							region = 19 #Northern France
+							region = 20 #Southern France
+							region = 164 #Western France
+							is_core_of = FRP
+						}
+						NOT = {
+							AND = {
+								ROOT = {
+									OR = {
+										has_country_flag = SIC_empire
+										tag = SRD
+										tag = SRI
+										tag = ITA
+									}
+								}
+								OR = {
+									state = 762 #Nice
+									state = 735 #Savoy
+									state = 943 #Upper Savoy
+								}
+							}
+						}
+					}
+					add_core_of = FRP
+					if = {
+						limit = {
+							is_owned_by = ROOT
+							is_claim_or_core_of_ROOT = no
+							NOT = { has_variable = ambition_area_@ROOT }
+						}
+						FRP = { transfer_state = PREV }
+					}
+				}
+				set_temp_variable = { tag_to_release = FRP }
+				release_targeted_tag = yes
+				FRP = {
+					hidden_effect = {		
+					create_country_leader = {
+						name = "Marcel Déat"
+						desc = "POLITICS_MARCEL_DEAT_DESC"
+						picture = "gfx/leaders/FRA/Portrait_France_Marcel_Deat_Emergency.png"
+						expire = "1.1.1"
+						ideology = totalist_subtype
+						traits = {
+							dictator
+						}
+					}
+					add_stability = -0.1
+					remove_ideas_with_trait = head_of_government
+					add_ideas = FRA_Rene_Belin_hog_tot
+					remove_ideas_with_trait = foreign_minister
+					add_ideas = FRA_Pierre_Drieu_La_Rochelle_for_tot
+					remove_ideas_with_trait = economy_minister
+					add_ideas = FRA_Jacques_Doriot_eco_tot
+					remove_ideas_with_trait = security_minister
+					add_ideas = FRA_Henri_Barbe_sec_tot
+					add_popularity = {
+					ideology = totalist
+					popularity = 0.20
+					}
+					set_cosmetic_tag = FRP_Vanguard
+					set_party_name = {
+					ideology = totalist
+					long_name = FRA_vanguard
+					name = FRA_vanguard
+					}
+
+					create_country_leader = {
+						name = "Edgar Puaud"
+						picture = "gfx/leaders/GRU/Portrait_Edgar_Puaud.png"
+						expire = "1.1.1"
+						ideology = natpop_goebbels_subtype
+						traits = {
+						}
+					}
+					set_party_name = {
+					ideology = national_populist
+					long_name = goebb_party_RFA_long
+					name = goebb_party_RFA
+					}
+					add_manpower = 60000
+					add_ideas = limited_conscription
+					add_ideas = limited_exports
+					add_ideas = war_economy	
+					}
+					if = {
+						limit = {
+							760 = { is_owned_and_controlled_by = GRU }
+						}
+						transfer_state = 760
+					}
+					add_state_claim = 760
+				}
+				set_autonomy = { target = FRP autonomy_state = RM_Stahlpakt_member }
+				FRP = {
+					hidden_effect = {
+						IF = {
+							limit = {
+								GRU = {
+									has_government = totalist
+								}
+							}
+							set_politics = {
+								ruling_party = totalist
+								last_election = "1936.1.1"
+								election_frequency = 48
+								elections_allowed = no
+							}
+							add_popularity = {
+								ideology = totalist
+								popularity = 0.70
+							}
+							add_ideas = FRA_union_loyalty2
+							add_ideas = FRA_planisme
+							add_ideas = FRA_empower_rifleman_idea	
+						}
+						IF = {
+							limit = {
+								GRU = {
+									has_government = national_populist
+								}
+							}
+							set_cosmetic_tag = goebb_fra
+							remove_all_ministers = yes
+							set_politics = {
+								ruling_party = national_populist
+								last_election = "1936.1.1"
+								election_frequency = 48
+								elections_allowed = no
+							}
+							add_popularity = {
+								ideology = national_populist
+								popularity = 0.70
+							}
+							set_capital = { state = 16 }
+							add_ideas = GRU_guard
+							add_ideas = GRU_lager
+							add_ideas = GRU_pol_off
+						}
+					}
+					delete_unit_template_and_units = { division_template = "Volkspolitzai Division" }
+					delete_unit_template_and_units = { division_template = "Gebirgsjäger" }
+					delete_unit_template_and_units = { division_template = "Marine-Sturmdivision" }
+					delete_unit_template_and_units = { division_template = "Volkssturm Divisions" }
+					delete_unit_template_and_units = { division_template = "Volkspanzer Divisions" }
+					delete_unit_template_and_units = { division_template = "Volksgrenadier Divisions" }
+					delete_unit_template_and_units = { division_template = "Volksdeutsche «Werwolf»" }
+					delete_unit_template_and_units = { division_template = "1. RR-Panzer-Division «Leibstandarte Joseph Goebbels»" }
+					delete_unit_template_and_units = { division_template = "2. RR-Panzerdivision «Das Reich»" }
+					delete_unit_template_and_units = { division_template = "3. RR-Panzer-Division «Totenkopf»" }
+					delete_unit_template_and_units = { division_template = "4. RR-Polizei-Panzergrenadier-Division «Polizei»" }
+
+					division_template = {
+						name = "Division d'Infanterie Régulière"
+						division_names_group = NFA_INF_01
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 2 y = 2 }
+						}
+						template_counter = 202
+					}
+					
+					division_template = {
+						name = "Division d'Infanterie Légère Blindée"
+						division_names_group = NFA_INF_01
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 2 y = 2 }
+							light_armor = { x = 3 y = 0 }
+						}
+						template_counter = 202
+					}
+					
+					division_template = {
+						name = "Garnison Coloniale"			# Represents: 2xRgt colonial forces and , usually with old equipment
+						division_names_group = NFA_GAR_01
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+						}
+						support = {
+							military_police = { x = 0 y = 0 }
+						}
+						priority = 0
+						template_counter = 202
+					}
+					
+					division_template = {
+						name = "Division d'Infanterie Motorisée"
+						division_names_group = NFA_MOT_01
+						regiments = {
+							motorized = { x = 0 y = 0 }
+							motorized = { x = 0 y = 1 }
+							motorized = { x = 0 y = 2 }
+							motorized = { x = 1 y = 0 }
+							motorized = { x = 1 y = 1 }
+							motorized = { x = 1 y = 2 }
+							light_armor = { x = 2 y = 0 }
+						}
+					}
+					
+					division_template = {
+						name = "Troupes de Marine"
+						division_names_group = NFA_MAR_01
+						regiments = {
+							marine = { x = 0 y = 0 }
+							marine = { x = 0 y = 1 }
+							marine = { x = 1 y = 0 }
+							marine = { x = 1 y = 1 }
+						}
+						priority = 2
+					}
+					
+					division_template = {
+						name = "Division d'Elite de Montagne"
+						division_names_group = NFA_MTN_01
+						regiments = {
+							mountaineers = { x = 0 y = 0 }
+							mountaineers = { x = 0 y = 1 }
+							mountaineers = { x = 0 y = 2 }
+							mountaineers = { x = 1 y = 0 }
+							mountaineers = { x = 1 y = 1 }
+							mountaineers = { x = 1 y = 2 }
+						}
+						priority = 2
+					}
+					
+					division_template = {
+						name = "Division de Cavalerie Coloniale"
+						division_names_group = NFA_CAV_01
+						regiments = {
+							cavalry = { x = 0 y = 0 }
+							cavalry = { x = 0 y = 1 }
+							cavalry = { x = 0 y = 2 }
+							cavalry = { x = 1 y = 0 }
+							cavalry = { x = 1 y = 1 }
+							cavalry = { x = 1 y = 2 }
+						}
+					}
+					
+					division_template = {
+						name = "Compagnie Méhariste"
+						division_names_group = NFA_CAV_01
+						regiments = {
+							camelry = { x = 0 y = 0 }
+							camelry = { x = 0 y = 1 }
+							camelry = { x = 0 y = 2 }
+							camelry = { x = 1 y = 0 }
+							camelry = { x = 1 y = 1 }
+							camelry = { x = 1 y = 2 }
+						}
+						support = {
+							military_police = { x = 0 y = 0 }
+						}
+					}
+					
+					division_template = {
+						name = "Division Blindée"
+						division_names_group = NFA_ARM_01
+						regiments = {
+							light_armor = { x = 0 y = 0 }
+							light_armor = { x = 0 y = 1 }
+							light_armor = { x = 0 y = 2 }
+							motorized = { x = 1 y = 0 }
+							motorized = { x = 1 y = 1 }
+							motorized = { x = 1 y = 2 }
+						}
+					}
+				}
+			}
+		}
+	}
+	GRU_pakt_Hung_goeb = {
+		icon = GFX_goebb_decision_hun
+		ai_will_do = { factor = 1000 }
+		highlight_states = {
+		    highlight_state_targets = {
+				state = 43
+				state = 155
+				state = 1136
+				state = 1122
+				state = 1109
+				state = 154
+				state = 1110
+				state = 1118
+				state = 1117
+				state = 76
+				state = 789
+				state = 1112
+				state = 1115
+				state = 83
+				state = 45
+				state = 1206
+				state = 1106
+				state = 1107
+				state = 1108
+				state = 1111
+				state = 875
+				state = 1114
+				state = 82
+				state = 1113
+				state = 84
+				state = 1116
+				state = 109
+				state = 1102
+				state = 794
+				state = 103
+				state = 1099
+				state = 1105
+				state = 1128
+				state = 163
+				state = 1098
+
+				state = 73
+				state = 1119
+				state = 1121
+				state = 1120
+				state = 70
+				state = 664
+				state = 1135
+		    }
+		}
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+		}
+		available = {
+			43 = { 
+				owner = {
+					OR = {
+						tag = GRU
+						is_subject_of = GRU
+					}
+				}
+			}
+		}
+		complete_effect = {
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						region = 27 #Hungary
+						region = 144 #Transylvania
+						region = 145 #Slovakia
+					}
+					NOT = {
+						state = 80 #Cernauti
+						state = 713 #Suceava
+						AND = {
+							state = 784 #Burgenland
+							ROOT = {
+								NOT = {
+									owns_state = 1137 #Vienna
+									has_country_flag = AUS_CONQ
+									is_ally_with = AUS
+								}
+							}
+						}
+					}
+				}
+				add_core_of = HUN
+			}
+			107 = { add_claim_by = HUN }
+			108 = { add_claim_by = HUN }
+			767 = { add_claim_by = HUN }
+			765 = { add_claim_by = HUN }
+			1097 = { add_claim_by = HUN }
+			105 = { add_claim_by = HUN }
+			1269 = { add_claim_by = HUN }
+			1270 = { add_claim_by = HUN }
+			784 = { remove_core_of = HUN }
+			1123 = { remove_core_of = HUN }
+		set_temp_variable = { tag_to_release = HUN }
+		release_targeted_tag = yes
+		HUN = {
+			hidden_effect = {
+				set_cosmetic_tag = HUN_Nazbol
+				add_manpower = 400000
+				#load_focus_tree = {
+				#	tree = generic_focus		
+				#}
+				#create_country_leader = {
+				#	name = "Matyas Rakosi"
+				#	desc = "POLITICS_MATYAS_RAKOSI_DESC"
+				#	picture = "gfx/leaders/BAN/BAN_matyas_rakosi.png"
+				#	expire = "1.1.1"
+				#	ideology = totalist_subtype
+				#	traits = {
+				#		dictator
+				#		national_integralist
+				#		BAN_totalist_revolutionary
+				#	}
+				#}
+				create_country_leader = {
+					name = "Pál Prónay"
+					desc = "POLITICS_PAL_PRONAY_DESC"
+					picture = "gfx/leaders/HUN/Portrait_HUN_Pal_Pronay2.png"
+					expire = "1950.1.1"
+					ideology = totalist_subtype
+					traits = {}
+				}
+				create_country_leader = {
+					name = "Pál Prónay"
+					desc = "POLITICS_PAL_PRONAY_DESC"
+					picture = "gfx/leaders/HUN/Portrait_HUN_Pal_Pronay2.png"
+					expire = "1950.1.1"
+					ideology = national_populist_subtype
+					traits = {}
+				}
+				set_party_name = {
+					ideology = totalist
+					long_name = HUN_NAZBOL_PARTY_LONG
+					name = HUN_NAZBOL_PARTY
+				}
+				set_party_name = {
+					ideology = national_populist
+					long_name = HUN_NAZBOL_PARTY_LONG
+					name = HUN_NAZBOL_PARTY
+				}
+				if = {
+					limit = { has_idea = AUS_imperial_development_scheme }
+					remove_ideas = AUS_imperial_development_scheme
+				}
+				if = {
+					limit = { has_idea = AUS_imperial_development_scheme_2 }
+					remove_ideas = AUS_imperial_development_scheme_2
+				}
+				if = {
+					limit = { has_idea = AUS_imperial_together }
+					remove_ideas = AUS_imperial_together
+				}
+				if = {
+					limit = { has_idea = AUS_drastic_together }
+					remove_ideas = AUS_drastic_together
+				}
+				if = {
+					limit = { has_idea = AUS_budapest_treaty }
+					remove_ideas = AUS_budapest_treaty
+				}
+				if = {
+					limit = {
+						109 = { is_owned_and_controlled_by = GRU }
+					}
+					transfer_state = 109
+				}
+				if = {
+					limit = {
+						1102 = { is_owned_and_controlled_by = GRU }
+					}
+					transfer_state = 1102
+				}
+				if = {
+					limit = {
+						794 = { is_owned_and_controlled_by = GRU }
+					}
+					transfer_state = 794
+				}
+				if = {
+					limit = {
+						1128 = { is_owned_and_controlled_by = GRU }
+					}
+					transfer_state = 1128
+				}
+				if = {
+					limit = {
+						1099 = { is_owned_and_controlled_by = GRU }
+					}
+					transfer_state = 1099
+				}
+				if = {
+					limit = {
+						103 = { is_owned_and_controlled_by = GRU }
+					}
+					transfer_state = 103
+				}
+				if = {
+					limit = {
+						1105 = { is_owned_and_controlled_by = GRU }
+					}
+					transfer_state = 1105
+				}
+				if = {
+					limit = {
+						163 = { is_owned_and_controlled_by = GRU }
+					}
+					transfer_state = 163
+				}
+				if = {
+					limit = {
+						1098 = { is_owned_and_controlled_by = GRU }
+					}
+					transfer_state = 1098
+				}
+				add_state_claim = 109
+				add_state_claim = 1102
+				add_state_claim = 794
+				add_state_claim = 1128			
+				add_state_claim = 1099	
+				add_state_claim = 103	
+				add_state_claim = 1105		
+				add_state_claim = 163
+				add_state_claim = 1098
+				}
+			}
+			set_autonomy = { target = HUN autonomy_state = RM_Stahlpakt_member }
+			HUN = {
+				hidden_effect = {
+					IF = {
+						limit = {
+							GRU = {
+								has_government = totalist
+							}
+						}
+						set_politics = {
+							ruling_party = totalist
+							last_election = "1936.1.1"
+							election_frequency = 48
+							elections_allowed = no
+						}
+						add_popularity = {
+							ideology = totalist
+							popularity = 0.70
+						}
+					}
+					IF = {
+						limit = {
+							GRU = {
+								has_government = national_populist
+							}
+						}
+						set_politics = {
+							ruling_party = national_populist
+							last_election = "1936.1.1"
+							election_frequency = 48
+							elections_allowed = no
+						}
+						add_popularity = {
+							ideology = national_populist
+							popularity = 0.70
+						}
+					}
+				}
+				delete_unit_template_and_units = { division_template = "Volkspolitzai Division" }
+				delete_unit_template_and_units = { division_template = "Gebirgsjäger" }
+				delete_unit_template_and_units = { division_template = "Marine-Sturmdivision" }
+				delete_unit_template_and_units = { division_template = "Volkssturm Divisions" }
+				delete_unit_template_and_units = { division_template = "Volkspanzer Divisions" }
+				delete_unit_template_and_units = { division_template = "Volksgrenadier Divisions" }
+				delete_unit_template_and_units = { division_template = "Volksdeutsche «Werwolf»" }
+				delete_unit_template_and_units = { division_template = "1. RR-Panzer-Division «Leibstandarte Joseph Goebbels»" }
+				delete_unit_template_and_units = { division_template = "2. RR-Panzerdivision «Das Reich»" }
+				delete_unit_template_and_units = { division_template = "3. RR-Panzer-Division «Totenkopf»" }
+				delete_unit_template_and_units = { division_template = "4. RR-Polizei-Panzergrenadier-Division «Polizei»" }
+
+				division_template = {
+					name = "Gyaloghadosztály"
+					division_names_group = HUN_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+					}
+				}
+				division_template = {
+					name = "Gyalogság tüzérséggel"
+					division_names_group = HUN_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+					}
+				}
+				
+				division_template = {
+					name = "Gyalogság mérnökökkel"
+					division_names_group = HUN_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+					}
+				}
+				
+				division_template = {
+					name = "Hegyi csapatok"
+					division_names_group = HUN_INF_01
+					regiments = {
+						mountaineers = { x = 0 y = 0 }
+						mountaineers = { x = 0 y = 1 }
+						mountaineers = { x = 0 y = 2 }
+						mountaineers = { x = 1 y = 0 }
+						mountaineers = { x = 1 y = 1 }
+						mountaineers = { x = 1 y = 2 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+					}
+				}
+				
+				division_template = {
+					name = "Területi dandár"
+					division_names_group = HUN_MIL_01
+					regiments = {
+						militia = { x = 0 y = 0 }
+						militia = { x = 0 y = 1 }
+						militia = { x = 0 y = 2 }
+						militia = { x = 1 y = 0 }
+						militia = { x = 1 y = 1 }
+						militia = { x = 1 y = 2 }
+					}
+				}
+				### Territorial Army Cavalry
+				
+				division_template = {
+					name = "Vörös huszár"
+					division_names_group = HUN_CAV_01
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+						cavalry = { x = 0 y = 2 }
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+						cavalry = { x = 1 y = 2 }
+					}
+				}
+				
+				division_template = {
+					name = "Mobil csapathadosztály"
+					division_names_group = HUN_MOT_01
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+						cavalry = { x = 0 y = 2 }
+						motorized = { x = 1 y = 0 }
+						motorized = { x = 1 y = 1 }
+						motorized = { x = 1 y = 2 }
+						mot_artillery_brigade = { x = 2 y = 0 }
+						mot_artillery_brigade = { x = 2 y = 1 }
+					}
+					support = {
+						mot_recon = { x = 0 y = 0 }
+					}
+				}
+				
+				division_template = {
+					name = "Könnyű mobil páncél"
+					division_names_group = HUN_ARM_01
+					regiments = {
+						light_armor = { x = 0 y = 0 }
+						light_armor = { x = 0 y = 1 }
+						light_armor = { x = 0 y = 2 }
+						light_armor = { x = 0 y = 3 }
+						motorized = { x = 1 y = 0 }
+						motorized = { x = 1 y = 1 }
+						motorized = { x = 1 y = 2 }
+						motorized = { x = 1 y = 3 }
+						}
+					}
+				}
+				GRU = { add_to_faction = HUN }
+			}
+		}
+	}
 	GRU_Ordenstaat_Burgundy = {
 
 		icon = GFX_goebb_decision_burg

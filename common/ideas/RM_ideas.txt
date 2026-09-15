@@ -187,7 +187,7 @@ ideas = {
 				special_forces_cap = 0.15
 				offensive_war_stability_factor = 0.05
 				send_volunteer_divisions_required = -0.5
-				send_volunteer_size = 5	
+				send_volunteer_size = 2	
 			}
 		}
 		GRU_deutsche_architecture = {
@@ -1424,6 +1424,26 @@ ideas = {
 				research_speed_factor = 0.12
 				party_popularity_stability_factor = 0.3
 				consumer_goods_factor = -0.2
+			}
+		}
+		GRU_totaler_kieg_idea = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_totaler_kieg_idea" }
+			picture = GRU_totalerkieg
+			modifier = {
+				political_power_gain = -3
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.20
+				conscription_factor = 0.1
+				stability_factor = -0.50
+				stability_weekly = -0.010
+				justify_war_goal_time = -1
+				offensive_war_stability_factor = 0.5
+				org_loss_when_moving = -0.25
+				local_manpower = 0.20
+				surrender_limit = 1
+				mobilization_speed = 0.35
+				min_export = -0.75
+				industrial_capacity_factory = -0.15
 			}
 		}
 		GRU_the_eye_idea = {

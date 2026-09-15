@@ -346,6 +346,25 @@ RUS_Foreign_Policy_decisions = {
 			OR = {
 				is_owner_neighbor_of = FROM
 				any_allied_country = { is_owner_neighbor_of = FROM }
+				any_subject_country = { is_owner_neighbor_of = FROM }
+				if = {
+					limit = { FROM = { tag = AUS } }
+					FROM = { any_allied_country = { is_owner_neighbor_of = ROOT } }
+				}
+			}
+			NOT = { has_non_aggression_pact_with = FROM }
+			if = {
+				limit = { FROM = { tag = AFG } }
+				FROM = { 
+					NOT = { has_country_flag = AFG_aral_success }
+				}
+			} 
+			if = {
+				limit = { 
+					is_in_faction_with = GER 
+					FROM = { tag = FIN }
+				}
+				FIN = { FIN_is_monarchy = no }
 			}
 		}
 		visible = {
@@ -389,6 +408,78 @@ RUS_Foreign_Policy_decisions = {
 			modifier = {
 				factor = 0
 				FROM = { RUS_dont_attack_if_overlord_is_stronger = yes }
+			}
+			modifier = {
+				factor = 0
+				FROM = { tag = PER }
+				country_exists = GER
+				NOT = { FROM = { has_war_with = TUR } }
+			}
+			modifier = {
+				factor = 0
+				FROM = { tag = AFG }
+				country_exists = GER
+			}
+			modifier = {
+				factor = 0
+				FROM = { tag = KUB }
+				OR = {
+					KUB = { is_in_faction_with = AUS }
+					KUB = { is_in_faction_with = GER }
+					KUB = { is_in_faction_with = INT }
+					KUB = { is_guaranteed_by = AUS }
+					KUB = { is_guaranteed_by = GER }
+					KUB = { is_guaranteed_by = INT }
+					AND = {
+						KUB = {
+							OR = { 
+								is_guaranteed_by = UKR
+								is_subject_of = UKR
+							}
+						}
+						UKR = {
+							OR = {
+								is_in_faction_with = AUS
+								is_in_faction_with = GER
+								is_in_faction_with = INT
+								is_guaranteed_by = AUS
+								is_guaranteed_by = GER
+								is_guaranteed_by = INT
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { tag = GEO }
+				OR = {
+					GEO = { is_in_faction_with = GER }
+					GEO = { is_in_faction_with = INT }
+					GEO = { is_guaranteed_by = GER }
+					GEO = { is_guaranteed_by = INT }
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { tag = AZE }
+				OR = {
+					AZE = { is_in_faction_with = GER }
+					AZE = { is_guaranteed_by = GER }
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { tag = MTR }
+				OR = {
+					MTR = { is_in_faction_with = GER }
+					MTR = { is_guaranteed_by = GER }
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = { tag = POL }
+				has_game_rule = { rule = POL_foreign_policy option = POL_FOREIGN_POLICY_RUSSIA }
 			}
 			modifier = {
 				factor = 0
@@ -455,6 +546,7 @@ RUS_Foreign_Policy_decisions = {
 			OR = {
 				is_owner_neighbor_of = FROM
 				any_allied_country = { is_owner_neighbor_of = FROM }
+				any_subject_country = { is_owner_neighbor_of = FROM }
 			}
 			NOT = { 
 				has_non_aggression_pact_with = FROM 
@@ -482,7 +574,10 @@ RUS_Foreign_Policy_decisions = {
 			}
 			if = {
 				limit = { FROM = { tag = UKR } }
-				NOT = { has_global_flag = UKR_secret_collusion_with_russia }		
+				NOT = { 
+					has_global_flag = UKR_secret_collusion_with_russia
+					has_civil_war = yes
+				}
 			}		
 			if = {
 				limit = { FROM = { tag = KAR } }
@@ -495,17 +590,55 @@ RUS_Foreign_Policy_decisions = {
 			}			
 			NOT = { has_global_flag = danzig_treaty_active }
 			if = {
-				limit = { has_completed_focus = RUS_Enemy_In_The_West }
-				if = {
-					limit = {
-						FROM = { 
-							OR = {
-								is_ally_with = GER
-								is_guaranteed_by = GER
-							}
+				limit = {
+					FROM = { 
+						NOT = { original_tag = WHR }
+					}
+				}
+				FROM = {
+					NOT = {
+						is_ally_with = GER
+						is_guaranteed_by = GER
+					}
+				}
+			}
+			if = {
+				limit = { 
+					tag = DKB
+					has_completed_focus = DKB_Attack_Europe
+					FROM = { tag = KAR }
+				}
+				has_completed_focus = DKB_Invade_Finland
+			}
+			if = {
+				limit = { 
+					tag = DKB
+					has_completed_focus = DKB_Attack_Europe
+					FROM = { tag = WHR }
+				}
+				has_completed_focus = DKB_Invade_WHR
+			}
+			if = {
+				limit = { 
+					tag = DKB
+					has_completed_focus = DKB_Attack_Europe
+					FROM = {
+						OR = {
+							tag = UKR
+							tag = CRM
 						}
 					}
-					has_completed_focus = RUS_The_Final_Battle
+				}
+				has_completed_focus = DKB_Invade_Ukraine
+			}
+			else = {
+				OR = {
+					has_completed_focus = RUS_Enemy_In_The_West
+					has_completed_focus = RUS_Solving_Territorial_Disputes
+					has_completed_focus = ORE_Minsk_Mistakes
+					has_completed_focus = DKB_Minsk_Mistakes
+					has_completed_focus = DKB_Attack_Europe
+					has_completed_focus = TRM_Reclaim_Lands
 				}
 			}
 		}
@@ -517,6 +650,7 @@ RUS_Foreign_Policy_decisions = {
 				has_completed_focus = RUS_Solving_Territorial_Disputes
 				has_completed_focus = ORE_Minsk_Mistakes
 				has_completed_focus = DKB_Minsk_Mistakes
+				has_completed_focus = DKB_Attack_Europe
 				has_completed_focus = TRM_Reclaim_Lands
 			}
 		}
@@ -563,7 +697,7 @@ RUS_Foreign_Policy_decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_completed_focus = RUS_Realpolitik
+				RUS_is_open_to_diplomacy = yes
 				FROM = {
 					OR = {
 						original_tag = LIT
@@ -591,6 +725,7 @@ RUS_Foreign_Policy_decisions = {
 			modifier = {
 				factor = 0
 				OR = {
+					RUS_dont_attack_if_vulnerable_or_preparing = yes
 					FROM = { RUS_dont_attack_if_target_is_stronger = yes }
 					FROM = { RUS_dont_attack_if_faction_is_stronger = yes }
 					FROM = { RUS_dont_attack_if_overlord_is_stronger = yes }
@@ -598,8 +733,22 @@ RUS_Foreign_Policy_decisions = {
 			}
 			modifier = {
 				factor = 0
-				FROM = { is_in_faction_with = AUS }
+				FROM = { 
+					OR = {
+						is_in_faction_with = AUS 
+						is_guaranteed_by = AUS 
+					}
+				}
 				NOT = { has_global_flag = second_weltkrieg_has_started }
+			}
+			modifier = {
+				factor = 0
+				FROM = { is_in_faction_with = GER }
+				NOT = { has_global_flag = second_weltkrieg_has_started }
+			}
+			modifier = {
+				add = 100
+				FROM = { original_tag = WHR }
 			}
 		}
 
@@ -611,16 +760,69 @@ RUS_Foreign_Policy_decisions = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete RUS_Attack_Eastern_Europe target: [From.GetName]"
-			FROM = { incoming_war_notification_effect = yes }
-			setup_decision_attack_AI = yes
+			if = {
+				limit = {
+					can_declare_war_on = FROM
+				}
+				FROM = {
+					incoming_war_notification_effect = yes
+				}
+				setup_decision_attack_AI = yes
+			}
+			if = {
+				limit = {
+					FROM = { tag = WHR }
+				}
+				if = {
+					limit = { 
+						has_socialist_government = no
+						has_left_democratic_government = no
+						NOT = { 
+							is_in_faction_with = GER 
+							has_war_with = WHR
+						}
+						WHR = {
+							has_country_leader = {
+								ruling_only = yes
+								name = "Stanisłaŭ Bułak-Bałachowič"
+							}
+						}
+					}
+					WHR = { get_current_government_type = yes }
+					ROOT = {
+						set_autonomy = {
+							target = WHR
+							autonomy_state = kr_autonomous_puppet
+						}
+					}
+					WHR = { restore_previous_government_type = yes }
+					country_event = {
+						id = rusfor.1242
+						days = 1
+					}
+				}
+				else = {
+					country_event = {
+						id = rusfor.1240
+						days = 1
+					}
+				}
+			}
 		}
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove RUS_Attack_Eastern_Europe target: [From.GetName]"
 			clear_decision_attack_AI = yes
-			declare_war_on = {
-				target = FROM
-				type = annex_everything
+			if = {
+				limit = {
+					FROM = {
+						NOT = { tag = WHR }
+					}
+				}
+				declare_war_on = {
+					target = FROM
+					type = annex_everything
+				}
 			}
 		}
 	}
@@ -632,9 +834,7 @@ RUS_Foreign_Policy_decisions = {
 			OR = {
 				is_owner_neighbor_of = FROM
 				any_allied_country = { is_owner_neighbor_of = FROM }
-				FROM = {
-					NOT = { has_idea = OTT_yerevan_treaty }
-				}
+				any_subject_country = { is_owner_neighbor_of = FROM }
 			}
 			NOT = {
 				has_non_aggression_pact_with = FROM
@@ -642,6 +842,9 @@ RUS_Foreign_Policy_decisions = {
 					tooltip = RUS_demanding_armenia #cleaner tooltip
 					has_country_flag = RUS_demanding_armenia
 				}
+			}
+			FROM = {
+				NOT = { has_idea = OTT_yerevan_treaty }
 			}
 		}
 
@@ -660,7 +863,8 @@ RUS_Foreign_Policy_decisions = {
 			OR = {
 				has_completed_focus = RUS_Open_The_Straits
 				has_completed_focus = TRM_Finish_The_Turks
-				has_completed_focus = RUS_KER_Claim_The_Straits
+				has_completed_focus = DKB_Finish_The_Turks
+				has_completed_focus = DKB_Secure_Straits
 			}
 		}
 		target_trigger = {
@@ -730,8 +934,8 @@ RUS_Foreign_Policy_decisions = {
 				has_guaranteed = FROM
 			}
 			OR = {
-				is_owner_neighbor_of = FROM
-				any_allied_country = { is_owner_neighbor_of = FROM }
+				is_neighbor_of = FROM
+				FROM = { any_home_area_neighbor_country = { is_ally_with = ROOT } }
 			}
 		}
 		target_array = global.european_tags_array
@@ -743,29 +947,19 @@ RUS_Foreign_Policy_decisions = {
 			FROM = { 
 				is_ally_of_ROOT = no
 				has_socialist_government = no
+				NOT = { has_war_with = ROOT }
 				NOT = { has_government = social_democrat }
 				NOT = { tag = GRU }
+				NOT = {
+					original_tag = POL
+				}
 			}
 		}
 		cancel_trigger = {
-			if = {
-				limit = { has_completed_focus = RUS_The_Final_Battle }
-				OR = {
-					NOT = { can_declare_war_on = FROM }
-					has_non_aggression_pact_with = FROM
-					FROM = { is_subject_of = GRU }
-					FROM = { tag = GRU }
-				}
-			}
-			else = {
-				OR = {
-					NOT = { can_declare_war_on = FROM }
-					has_non_aggression_pact_with = FROM
-					FROM = { is_in_faction = yes }
-					FROM = { is_guaranteed_by = GER }
-					FROM = { is_subject_of = GRU }
-				}
-			}
+			NOT = { can_declare_war_on = FROM }
+			has_non_aggression_pact_with = FROM
+			FROM = { is_subject_of = GRU }
+			FROM = { tag = GRU }
 		}
 
 		cost = 10

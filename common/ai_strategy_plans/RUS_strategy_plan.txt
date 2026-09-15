@@ -113,7 +113,6 @@ RUS_orthodox_eusrasia_plan = {
 		RUS_russian_army
 		RUS_Study_German_Method
 		RUS_National_High_Command_Formation_School
-		RUS_Reorganize_the_General_Staff
 		RUS_Realpolitik
 
 		RUS_Rule_Of_Intelligentsia
@@ -130,6 +129,8 @@ RUS_orthodox_eusrasia_plan = {
 		RUS_Into_The_Caucasus
 		RUS_Enemy_In_The_East
 		RUS_Reclaim_Far_East
+		RUS_ec_mutual3
+		RUS_Build_Up_New_Capital
 
 		RUS_Respect_Classic_Eurasianism
 		RUS_Power_Of_The_Orthodoxy
@@ -189,6 +190,8 @@ RUS_natpop_eusrasia_plan = {
 		RUS_Russian_Supremacy
 		RUS_Neoeurasianism
 		RUS_The_Dictates_Of_Reason
+		RUS_ec_mutual3
+		RUS_Build_Up_New_Capital
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
@@ -216,7 +219,6 @@ RUS_natpop_savinkov_plan = {
 		RUS_russian_army
 		RUS_Study_German_Method
 		RUS_National_High_Command_Formation_School
-		RUS_Reorganize_the_General_Staff
 		RUS_Realpolitik
 
 		RUS_A_New_Russia

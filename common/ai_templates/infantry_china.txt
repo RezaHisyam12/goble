@@ -97,7 +97,7 @@ mass_infantry_china = {				#these units serve purely the role of filling lines
 }
 light_infantry_china = {
 	available_for = {
-		QIE LEP ANQ GXC YUN CHI HNN SHX SZC SQI
+		QIE LEP ANQ GXC YUN CHI HNN SHX SZC SQI FNG
 	}
 
 	role = light_infantry
@@ -209,7 +209,7 @@ light_infantry_china = {
 }
 regular_infantry_china = {
 	available_for = {
-		QIE LEP ANQ GXC YUN CHI HNN SHX SZC SQI
+		QIE LEP ANQ GXC YUN CHI HNN SHX SZC SQI FNG
 	}
 
 	role = infantry

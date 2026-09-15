@@ -1,24 +1,3 @@
-OTT_soccon_strategy_plan = {
-	name = ""
-	desc = ""
-	
-	enable = {
-		original_tag = TUR
-		has_game_rule = { rule = OTT_PATHS option = OTT_PATHS_SOCCON }
-	}
-	
-	focus_factors = {
-		OTT_Repeal_Unification_Law = 0
-	}
-	
-	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
-	}
-}
-
 OTT_early_game = {
 	name = "OTT_early_game"
 	desc = ""
@@ -51,8 +30,8 @@ OTT_early_game = {
 	}
 }
 
-TUR_Arslan_plan = {
-	name = "TUR_Arslan_plan"
+TUR_sublime_plan = {
+	name = "TUR_sublime_plan"
 	desc = ""
 
 	allowed = {
@@ -66,7 +45,10 @@ TUR_Arslan_plan = {
 		has_completed_focus = OTT_Enable_Foreign_Investment
 	}
 	abort = {
-		has_completed_focus = OTT_The_Sublime_Federation
+		OR = {
+			has_idea = OTT_Shakib_Arslan_hog_sco
+			has_completed_focus = OTT_The_Sublime_Federation
+		}
 	}
 
 	ai_national_focuses = {
@@ -100,22 +82,12 @@ TUR_Arslan_plan = {
 	}
 	enable = {
 		has_idea = OTT_Shakib_Arslan_hog_sco
-		has_completed_focus = OTT_Enable_Foreign_Investment
 	}
 	abort = {
 		has_government = paternal_autocrat
 	}
 
 	ai_national_focuses = {
-		OTT_Reform_the_Gendarmerie
-		OTT_Break_Up_State_Monopolies
-		OTT_Encourage_Private_Initiative
-		OTT_Distribute_Miri_Land
-		OTT_Multi_Level_Democracy
-		OTT_Shift_Power_to_the_Provincial_Assembly
-		OTT_Revise_the_Mecelle
-		OTT_Equality_before_the_Law
-
 		OTT_Grand_Vizier_Arslan
 		OTT_Promote_Panislamism
 		OTT_Mosque_Renovation_Program

@@ -1163,6 +1163,96 @@ country_event = { #join the pact?
 	
 }
 
+country_event = { #French invasion of Morocco - independent Morocco
+	id = nfa.116
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nfa.116" }
+	title = nfa.116.t
+	desc = nfa.116.d
+	picture = GFX_report_event_NFA_event_NFAGenericArmy
+
+	is_triggered_only = yes
+
+	option = {
+		name = nfa.116.a #There's nothing that we can do, we must surrender
+		ai_chance = {
+			base = 35
+		}
+		NFA = {
+			annex_country = { target = MOR }
+			annex_country = { target = RIF }
+			country_event = {
+				id = nfa.113
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = nfa.116.b #We may be weak, but we'll bow to no French - Resist any incursion
+		ai_chance = {
+			base = 65
+		}
+		add_stability = 0.1
+		NFA = {
+			country_event = {
+				id = nfa.117
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #Moroccan response - independent
+	id = nfa.117
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nfa.117" }
+	title = nfa.117.t
+	desc = nfa.117.d
+	picture = GFX_LBA_Senussi_Warrior
+
+	is_triggered_only = yes
+
+	option = { #We are not ready for war yet
+		name = nfa.117.a
+		ai_chance = {
+			base = 20
+		}
+		add_stability = -0.025
+		add_state_claim = 461
+		add_state_claim = 462
+		add_state_claim = 290
+		add_state_claim = 699
+		add_state_claim = 1318
+		create_wargoal = {
+			type = annex_everything
+			target = MOR
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = RIF
+		}
+	}
+
+	option = { #We must fight them
+		name = nfa.117.b
+		ai_chance = {
+			base = 80
+		}
+		add_stability = 0.025
+		add_state_claim = 461
+		add_state_claim = 462
+		add_state_claim = 290
+		add_state_claim = 699
+		add_state_claim = 1318
+		declare_war_on = {
+			target = MOR
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = RIF
+			type = annex_everything
+		}
+	}
+}
 
 	
 

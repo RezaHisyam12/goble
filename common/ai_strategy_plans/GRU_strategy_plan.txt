@@ -31,6 +31,46 @@ GRU_starting_plan = {
 	}
 }
 
+GRU_political_plan = {
+	name = "GRU_political_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = GRU
+	}
+	enable = {
+		has_completed_focus = GRU_mfsp
+	}
+	abort = {
+		has_completed_focus = GRU_germany_reborn
+	}
+
+	ai_national_focuses = {
+		GRU_volkssturm
+		GRU_form_the_stasi
+		GRU_found_the_fdj
+		GRU_nationalize_ufa
+		GRU_volksgesundheitsamt
+		GRU_gleichschaltung
+		GRU_volksfuhrer
+		GRU_form_the_guard
+		GRU_kulturkampf
+		GRU_staatsfeind_nr1
+		GRU_anhaltelager
+		GRU_night_of_the
+		GRU_formation_of_the_nva
+		GRU_breitspurbahnen
+		GRU_deutschsozialistische_architektur
+		GRU_germany_reborn
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
 GRU_offensive_plan = {
 	name = "GRU_offensive_plan"
 	desc = ""

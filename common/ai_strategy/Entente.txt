@@ -664,6 +664,32 @@ entente_assist_sicily = {
 	}
 }
 
+entente_hold_france = {
+	enable = {
+		is_in_faction_with = NFA
+		num_divisions > 4
+		has_war_with = FRA
+		FRA = { has_capitulated = no }
+		NOT = { surrender_progress > 0 }
+		NFA = {
+			any_controlled_state = {
+				OR = {
+					region = 20 #Southern France
+					region = 164 #Western France
+				}
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = area_priority
+		id = france
+		value = 1000
+	}
+}
+
 DEH_keep_garrison = {
 	allowed = { tag = DEH }
 	enable = {
@@ -855,46 +881,30 @@ ENT_dont_invade_if_too_minor = { #support fronts instead
 	}
 }
 
-ENT_dont_invade_britain_before_france = {
-	allowed = {
-		is_in_faction_with = ENT
-	}
+CAN_homeland_above_all = {
+	allowed = { tag = CAN }
 	enable = {
+		is_faction_leader = yes
 		has_war_with = ENG
-		has_war_with = FRA
-		FRA = { has_capitulated = no }
+		surrender_progress < 0.05
 	}
+
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = invade
 		id = ENG
-		value = -500
+		value = 100
 	}
 	ai_strategy = {
-		type = invade
-		id = IRE
-		value = -500
+		type = invasion_unit_request
+		tag = ENG
+		value = 100
 	}
 	ai_strategy = {
-		type = invade
-		id = NOR
-		value = -500
-	}
-	ai_strategy = {
-		type = invade
-		id = ICE
-		value = -500
-	}
-	ai_strategy = {
-		type = invade
-		id = HOL
-		value = -500
-	}
-	ai_strategy = {
-		type = invade
-		id = BEL
-		value = -500
+		type = force_concentration_front_factor
+		tag = ENG
+		value = 50
 	}
 }
 
@@ -942,6 +952,7 @@ ENT_buffer_troops_for_invasion_of_france = {
 		states = {
 			1 #Corsica
 			114 #Sardinia
+			1002 #Sardinia
 		}
 		ratio = 0.3
 		area = mainland_europe
@@ -1071,6 +1082,7 @@ ENT_buffer_troops_for_invasion_of_britain = {
 		states = {
 			14 #Upper Brittany
 			15 #Normandy
+			17 #Pas-de-Calais
 			983 #Brittany
 		}
 		ratio = 0.5
@@ -1224,7 +1236,39 @@ ENT_ignore_malta = {
 ################
 ### Military ###
 ################
-ENT_prepare_for_intervention_against_CSA = {
+ENT_contain_CSA = {
+	allowed = {
+		OR = {
+			tag = CAN
+			tag = AST
+			tag = NFA
+		}
+	}
+	enable = {
+		is_in_faction_with = ENT
+		country_exists = CSA
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = contain
+		id = CSA
+		value = 100
+	}
+	ai_strategy = {
+		type = conquer
+		id = CSA
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = CSA
+		value = 100
+	}
+}
+
+ENT_intervention_against_CSA = {
 	allowed = {
 		is_in_faction_with = ENT
 		NOT = { tag = CAN }
@@ -1232,18 +1276,8 @@ ENT_prepare_for_intervention_against_CSA = {
 	}
 
 	enable = {
-		NOT = { has_global_flag = USA_civil_war_over_flag }
-		OR = {
-			has_war_with = CSA
-			AND = {
-				is_in_faction_with = CAN
-				check_variable = { CAN.ai_strategy_prepare_for_war@CSA > 0 }
-			}
-			AND = {
-				is_in_faction_with = NEE
-				check_variable = { NEE.ai_strategy_prepare_for_war@CSA > 0 }
-			}
-		}
+		has_global_flag = USA_civil_war_over_flag
+		has_war_with = CSA
 	}
 	abort_when_not_enabled = yes
 
@@ -1285,7 +1319,7 @@ ENT_prepare_for_intervention_against_CSA = {
 	}
 }
 
-ENT_prepare_for_intervention_against_USA = {
+ENT_intervention_against_USA = {
 	allowed = {
 		is_in_faction_with = ENT
 		NOT = { tag = CAN }
@@ -1293,18 +1327,8 @@ ENT_prepare_for_intervention_against_USA = {
 	}
 
 	enable = {
-		NOT = { has_global_flag = USA_civil_war_over_flag }
-		OR = {
-			has_war_with = USA
-			AND = {
-				is_in_faction_with = CAN
-				check_variable = { CAN.ai_strategy_prepare_for_war@USA > 0 }
-			}
-			AND = {
-				is_in_faction_with = NEE
-				check_variable = { NEE.ai_strategy_prepare_for_war@USA > 0 }
-			}
-		}
+		has_global_flag = USA_civil_war_over_flag
+		has_war_with = USA
 	}
 	abort_when_not_enabled = yes
 
@@ -1346,7 +1370,7 @@ ENT_prepare_for_intervention_against_USA = {
 	}
 }
 
-ENT_prepare_for_intervention_against_CAL = {
+ENT_intervention_against_CAL = {
 	allowed = {
 		is_in_faction_with = ENT
 		NOT = { tag = CAN }
@@ -1354,18 +1378,8 @@ ENT_prepare_for_intervention_against_CAL = {
 	}
 
 	enable = {
-		NOT = { has_global_flag = USA_civil_war_over_flag }
-		OR = {
-			has_war_with = CAL
-			AND = {
-				is_in_faction_with = CAN
-				check_variable = { CAN.ai_strategy_prepare_for_war@CAL > 0 }
-			}
-			AND = {
-				is_in_faction_with = NEE
-				check_variable = { NEE.ai_strategy_prepare_for_war@CAL > 0 }
-			}
-		}
+		has_global_flag = USA_civil_war_over_flag
+		has_war_with = CAL
 	}
 	abort_when_not_enabled = yes
 
@@ -1407,7 +1421,42 @@ ENT_prepare_for_intervention_against_CAL = {
 	}
 }
 
-ENT_prepare_for_intervention_against_TEX = {
+ENT_contain_TEX = {
+	allowed = {
+		OR = {
+			tag = CAN
+			tag = AST
+			tag = NFA
+		}
+	}
+	enable = {
+		is_in_faction_with = ENT
+		country_exists = TEX
+		NOT = { 
+			TEX = { is_in_faction_with = ENT }
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = contain
+		id = TEX
+		value = 100
+	}
+	ai_strategy = {
+		type = conquer
+		id = TEX
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = TEX
+		value = 100
+	}
+}
+
+ENT_intervention_against_TEX = {
 	allowed = {
 		is_in_faction_with = ENT
 		NOT = { tag = CAN }
@@ -1415,18 +1464,8 @@ ENT_prepare_for_intervention_against_TEX = {
 	}
 
 	enable = {
-		NOT = { has_global_flag = USA_civil_war_over_flag }
-		OR = {
-			has_war_with = TEX
-			AND = {
-				is_in_faction_with = CAN
-				check_variable = { CAN.ai_strategy_prepare_for_war@TEX > 0 }
-			}
-			AND = {
-				is_in_faction_with = NEE
-				check_variable = { NEE.ai_strategy_prepare_for_war@TEX > 0 }
-			}
-		}
+		has_global_flag = USA_civil_war_over_flag
+		has_war_with = TEX
 	}
 	abort_when_not_enabled = yes
 
@@ -1468,7 +1507,42 @@ ENT_prepare_for_intervention_against_TEX = {
 	}
 }
 
-ENT_prepare_for_intervention_against_COR = {
+ENT_contain_COR = {
+	allowed = {
+		OR = {
+			tag = CAN
+			tag = AST
+			tag = NFA
+		}
+	}
+	enable = {
+		is_in_faction_with = ENT
+		country_exists = COR
+		NOT = { 
+			COR = { is_in_faction_with = ENT }
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = contain
+		id = COR
+		value = 100
+	}
+	ai_strategy = {
+		type = conquer
+		id = COR
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = COR
+		value = 100
+	}
+}
+
+ENT_intervention_against_COR = {
 	allowed = {
 		is_in_faction_with = ENT
 		NOT = { tag = CAN }
@@ -1476,18 +1550,8 @@ ENT_prepare_for_intervention_against_COR = {
 	}
 
 	enable = {
-		NOT = { has_global_flag = USA_civil_war_over_flag }
-		OR = {
-			has_war_with = COR
-			AND = {
-				is_in_faction_with = CAN
-				check_variable = { CAN.ai_strategy_prepare_for_war@COR > 0 }
-			}
-			AND = {
-				is_in_faction_with = NEE
-				check_variable = { NEE.ai_strategy_prepare_for_war@COR > 0 }
-			}
-		}
+		has_global_flag = USA_civil_war_over_flag
+		has_war_with = COR
 	}
 	abort_when_not_enabled = yes
 

@@ -3680,7 +3680,7 @@ shared_focus = {
 		y = 1
 		cost = 5
 		ai_will_do = {
-			factor = 6
+			factor = 8
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -3813,7 +3813,7 @@ shared_focus = {
 		y = 1
 		cost = 5
 		ai_will_do = {
-			factor = 6
+			factor = 2
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -4016,7 +4016,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 6
+			factor = 10
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -4066,12 +4066,12 @@ shared_focus = {
 	}
 	shared_focus = {
 		id = GRU_oknlw
-		icon = GFX_GRU_oknlw-4007
+		icon = GFX_GRU_oknlw-4007_2
 		x = 0
 		y = 2
 		cost = 5
 		ai_will_do = {
-			base = 100
+			base = 1000
 		}
 		relative_position_id = GER_aircraft_industry
 		prerequisite = {
@@ -4770,7 +4770,7 @@ shared_focus = {
 		y = 1
 		cost = 5
 		ai_will_do = {
-			factor = 12
+			factor = 6
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -5100,12 +5100,12 @@ shared_focus = {
 	}
 	shared_focus = {
 		id = GRU_oknvm
-		icon = GFX_GRU_oknvm-4008
+		icon = GFX_GRU_oknvm-4008_2
 		x = 0
 		y = 2
 		cost = 5
 		ai_will_do = {
-			base = 100
+			base = 1000
 		}
 		relative_position_id = GER_graf_zeppelin
 		prerequisite = {
@@ -5180,7 +5180,7 @@ shared_focus = {
 			focus = GRU_centralized_off
 		}
 		ai_will_do = {
-			factor = 15
+			factor = 24
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -5277,7 +5277,7 @@ shared_focus = {
 		y = 2
 		cost = 5
 		ai_will_do = {
-			factor = 20
+			factor = 50
 			modifier = {
 				factor = 10
 				has_war = yes
@@ -5308,12 +5308,12 @@ shared_focus = {
 	}
 	shared_focus = {
 		id = GRU_oknvh
-		icon = GFX_GRU_oknvh-4009
+		icon = GFX_GRU_oknvh-4009_2
 		x = 0
 		y = 2
 		cost = 5
 		ai_will_do = {
-			base = 100
+			base = 1000
 		}
 		relative_position_id = GER_invest_in_rnd
 		prerequisite = {
@@ -8551,6 +8551,7 @@ shared_focus = {
 					add_claim_by = GRU
 				}
 				784 = { add_claim_by = GRU }
+				1123 = { add_claim_by = GRU }
 			}
 		}
 		prerequisite = { focus = GRU_NMDVP_imperialism  }
@@ -8930,7 +8931,42 @@ shared_focus = {
 		}	
 		prerequisite = { focus = GRU_NMDVP_RED_COLONIALISM  }
 	} 
-
+	shared_focus = {
+		id = GRU_NMDVP_totalerkieg
+		icon = GFX_totalerkieg
+		relative_position_id = GRU_NMDVP_PATH
+		x = 6
+		y = 1
+		cost = 4
+		available = {
+			OR = {
+				casualties_k > 2000 
+				enemies_strength_ratio > 0.25
+				enemies_naval_strength_ratio > 0.25
+			}
+			OR = {
+				VKB = {
+					exists = no
+					has_capitulated = yes
+				}
+				VKR = { 
+					exists = no
+					has_capitulated = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_totalerkieg"
+			add_timed_idea = {
+		    	idea = GRU_totaler_kieg_idea
+		    	days = 365
+		   }
+		}
+		prerequisite = { focus = GRU_NMDVP_PATH }
+	}
 	# Puppet Policy
 
 	shared_focus = {
