@@ -23,6 +23,7 @@ JAP_hates_reichspakt = {
 		value = -1000
 	}
 }
+
 JAP_hates_chinese_claimants = {
 	reversed = yes
 
@@ -50,6 +51,7 @@ JAP_hates_chinese_claimants = {
 		value = -1000
 	}
 }
+
 JAP_dont_send_expeditionary_forces_to_FNG = {
 	allowed = { original_tag = JAP }
 	enable = { always = yes }
@@ -122,6 +124,7 @@ JAP_heavily_support_PRF = {
 ################
 ### Military ###
 ################
+
 JAP_convoy_voy_voy = {
 	allowed = { original_tag = JAP }
 	enable = {
@@ -303,7 +306,6 @@ JAP_raid_the_ocean_79 = {
 			1099 = { NOT = { is_fully_controlled_by = JAP } }
 			1106 = { NOT = { is_fully_controlled_by = JAP } }
 		}
-
 	}
 	abort_when_not_enabled = yes
 
@@ -328,7 +330,6 @@ JAP_raid_the_ocean_90 = {
 			533 = { NOT = { is_fully_controlled_by = JAP } }
 			1106 = { NOT = { is_fully_controlled_by = JAP } }
 		}
-
 	}
 	abort_when_not_enabled = yes
 
@@ -520,6 +521,7 @@ JAP_no_naval_invasion_overseas = {
 		value = -2000
 	}
 }
+
 JAP_no_naval_invasion = {
 	allowed = { original_tag = JAP }
 	enable = {
@@ -533,7 +535,7 @@ JAP_no_naval_invasion = {
 				AND = {
 					any_allied_country = {
 						is_chinese_tag = yes
-						check_variable = { num_divisions < 50 }
+						num_divisions < 50
 					}
 					has_country_flag = {
 						flag = JAP_SSJW_last_major_frontline_change_flag
@@ -542,7 +544,7 @@ JAP_no_naval_invasion = {
 				}
 				any_enemy_country = {
 					is_chinese_tag = yes
-					check_variable = { num_divisions > JAP.num_divisions }
+					num_divisions > JAP.num_divisions
 				}
 				any_allied_country = {
 					is_chinese_tag = yes
@@ -746,6 +748,7 @@ JAP_do_not_naval_invade_these_state = {
 		value = -100
 	}
 }
+
 JAP_only_naval_invade_these_states = {
 	allowed = { original_tag = JAP }
 	enable = {
@@ -768,7 +771,7 @@ JAP_only_naval_invade_these_states = {
 					AND = {
 						any_allied_country = {
 							is_chinese_tag = yes
-							check_variable = { num_divisions < 50 }
+							num_divisions < 50
 						}
 						has_country_flag = {
 							flag = JAP_SSJW_last_major_frontline_change_flag
@@ -777,7 +780,7 @@ JAP_only_naval_invade_these_states = {
 					}
 					any_enemy_country = {
 						is_chinese_tag = yes
-						check_variable = { num_divisions > JAP.num_divisions }
+						num_divisions > JAP.num_divisions
 					}
 					any_allied_country = {
 						is_chinese_tag = yes
@@ -1048,9 +1051,11 @@ JAP_follow_up_on_invasion_priority = {
 			flag = JAP_landing_priority_boost
 			days < 60
 		}
-		set_temp_variable = { aggro_days_small = global.num_days }
-		modulo_temp_variable = { aggro_days_small = 14 }
-		check_variable = { aggro_days_small < 8 }
+		check_expr = { #aggro_days_small
+			value = global.num_days
+			mod = 14
+			less_than = 8
+		}
 	}
 
 	abort_when_not_enabled = yes
@@ -1098,6 +1103,7 @@ JAP_follow_up_on_invasion_priority = {
 		value = -200
 	}
 }
+
 JAP_sync_invasions_on_china = {
 	allowed = {
 		original_tag = JAP
@@ -1106,9 +1112,11 @@ JAP_sync_invasions_on_china = {
 	enable = {
 		has_war_with = CUF
 		NOT = { has_global_flag = JAP_defeated_by_china }
-		set_temp_variable = { invasion_days = global.num_days }
-		modulo_temp_variable = { invasion_days = 90 }
-		check_variable = { invasion_days < 45 }
+		check_expr = { #invasion_days
+			value = global.num_days
+			mod = 90
+			less_than = 45
+		}
 	}
 
 	abort_when_not_enabled = yes
@@ -1120,6 +1128,7 @@ JAP_sync_invasions_on_china = {
 		execute_order = no
 	}
 }
+
 JAP_bypass_the_islands = {
 	allowed = { original_tag = JAP }
 	enable = {
@@ -1188,6 +1197,7 @@ JAP_bypass_the_islands = {
 		value = -100
 	}
 }
+
 JAP_avoid_Tianjin_if_no_nearby_controlled_states = {
 	allowed = { original_tag = JAP }
 	enable = {
@@ -1686,6 +1696,27 @@ JAP_1938_research = {
 	}
 }
 
+#Disabled for now to see if JAP will be more aggressive in the SSJW if FNG is their ally
+#JAP_dont_spread_out_troops_if_fighting_china = {
+#	reversed = yes
+#
+#	enable = {
+#		is_in_faction_with = JAP
+#		JAP = {
+#			has_war = yes
+#			any_enemy_country = { is_chinese_tag = yes }
+#		}
+#		is_chinese_tag = no
+#	}
+#	abort_when_not_enabled = yes
+#
+#	ai_strategy = {
+#		type = dont_defend_ally_borders
+#		id = JAP
+#		value = 100
+#	}
+#}
+
 ### Airbase Construction
 
 JAP_expand_527_airbase = {
@@ -1696,17 +1727,13 @@ JAP_expand_527_airbase = {
 		FNG = {
 			has_war = yes
 			OR = {
-				check_variable = { FNG.FNG_JAP_influence_variable < 0.25 }
+				check_variable = { FNG.party_popularity@market_liberal < 0.25 }
 				has_war_with = JAP
 			}
 		}
 		527 = {
 			controller = { is_ally_with = JAP }
 			air_base < 2
-			OR = {
-				free_building_slots = { building = air_base size > 8 }
-				check_variable = { building_level@air_base < 2 }
-			}
 		}
 	}
 	abort_when_not_enabled = yes
@@ -1718,6 +1745,7 @@ JAP_expand_527_airbase = {
 		value = 2
 	}
 }
+
 JAP_expand_1100_airbase = {
 	allowed = {
 		tag = JAP
@@ -1726,17 +1754,13 @@ JAP_expand_1100_airbase = {
 		FNG = {
 			has_war = yes
 			OR = {
-				check_variable = { FNG.FNG_JAP_influence_variable < 0.25 }
+				check_variable = { FNG.party_popularity@market_liberal < 0.25 }
 				has_war_with = JAP
 			}
 		}
-		1100 = {
+		1347 = {
 			controller = { is_ally_with = JAP }
 			air_base < 2
-			OR = {
-				free_building_slots = { building = air_base size > 8 }
-				check_variable = { building_level@air_base < 2 }
-			}
 		}
 	}
 	abort_when_not_enabled = yes
@@ -1744,10 +1768,11 @@ JAP_expand_1100_airbase = {
 	ai_strategy = {
 		type = build_building
 		id = air_base
-		target = 1100
+		target = 1347
 		value = 2
 	}
 }
+
 JAP_expand_610_airbase = {
 	allowed = {
 		tag = JAP
@@ -1761,10 +1786,6 @@ JAP_expand_610_airbase = {
 		610 = {
 			controller = { is_ally_with = JAP }
 			air_base < 2
-			OR = {
-				free_building_slots = { building = air_base size > 8 }
-				check_variable = { building_level@air_base < 2 }
-			}
 		}
 	}
 	abort_when_not_enabled = yes
@@ -1776,23 +1797,19 @@ JAP_expand_610_airbase = {
 		value = 2
 	}
 }
+
 JAP_expand_1048_airbase = {
 	allowed = {
 		tag = JAP
 	}
 	enable = {
-		OR = {
-			661 = { controller = { has_war_with = JAP } }
-			1013 = { controller = { has_war_with = JAP } }
-			602 = { controller = { has_war_with = JAP } }
+		any_state_of = {
+			target = { 661 1013 602 }
+			controller = { has_war_with = JAP }
 		}
 		1048 = {
 			controller = { is_ally_with = JAP }
 			air_base < 3
-			OR = {
-				free_building_slots = { building = air_base size > 7 }
-				check_variable = { building_level@air_base < 3 }
-			}
 		}
 	}
 	abort_when_not_enabled = yes
@@ -1804,6 +1821,7 @@ JAP_expand_1048_airbase = {
 		value = 3
 	}
 }
+
 JAP_expand_799_airbase = {
 	allowed = {
 		tag = JAP
@@ -1817,10 +1835,6 @@ JAP_expand_799_airbase = {
 		799 = {
 			controller = { is_ally_with = JAP }
 			air_base < 3
-			OR = {
-				free_building_slots = { building = air_base size > 7 }
-				check_variable = { building_level@air_base < 3 }
-			}
 		}
 	}
 	abort_when_not_enabled = yes
@@ -1832,6 +1846,7 @@ JAP_expand_799_airbase = {
 		value = 3
 	}
 }
+
 JAP_expand_602_airbase = {
 	allowed = {
 		tag = JAP
@@ -1845,10 +1860,6 @@ JAP_expand_602_airbase = {
 		602 = {
 			controller = { is_ally_with = JAP }
 			air_base < 3
-			OR = {
-				free_building_slots = { building = air_base size > 8 }
-				check_variable = { building_level@air_base < 2 }
-			}
 		}
 	}
 	abort_when_not_enabled = yes
@@ -1860,6 +1871,7 @@ JAP_expand_602_airbase = {
 		value = 2
 	}
 }
+
 JAP_expand_600_airbase = {
 	allowed = {
 		tag = JAP
@@ -1873,10 +1885,6 @@ JAP_expand_600_airbase = {
 		600 = {
 			controller = { is_ally_with = JAP }
 			air_base < 3
-			OR = {
-				free_building_slots = { building = air_base size > 8 }
-				check_variable = { building_level@air_base < 2 }
-			}
 		}
 	}
 	abort_when_not_enabled = yes
@@ -1888,6 +1896,7 @@ JAP_expand_600_airbase = {
 		value = 2
 	}
 }
+
 JAP_expand_743_airbase = {
 	allowed = {
 		tag = JAP
@@ -1897,10 +1906,6 @@ JAP_expand_743_airbase = {
 		743 = {
 			controller = { is_ally_with = JAP }
 			air_base < 10
-			OR = {
-				free_building_slots = { building = air_base size > 0 }
-				check_variable = { building_level@air_base < 10 }
-			}
 		}
 	}
 	abort_when_not_enabled = yes
@@ -1924,7 +1929,7 @@ JAP_buffer_to_support_fengtian_for_FNG = {
 			has_war = yes
 			controls_state = 716
 		}
-		check_variable = { FNG.FNG_JAP_influence_variable > 0.15 }
+		check_variable = { FNG.party_popularity@market_liberal > 0.15 }
 	}
 	abort_when_not_enabled = yes
 
@@ -1945,6 +1950,7 @@ JAP_buffer_to_support_fengtian_for_FNG = {
 		value = 500
 	}
 }
+
 JAP_buffer_to_support_fengtian_enemy_FNG = {
 	allowed = {
 		original_tag = JAP
@@ -1958,7 +1964,7 @@ JAP_buffer_to_support_fengtian_enemy_FNG = {
 			tag = FNG
 		}
 		OR = {
-			check_variable = { FNG.FNG_JAP_influence_variable > 0.15 }
+			check_variable = { FNG.party_popularity@market_liberal > 0.15 }
 			FNG = { controls_state = 716 }
 		}
 	}
@@ -1981,6 +1987,7 @@ JAP_buffer_to_support_fengtian_enemy_FNG = {
 		value = 500
 	}
 }
+
 JAP_buffer_to_anti_fengtian = {
 	allowed = {
 		original_tag = JAP
@@ -1989,7 +1996,7 @@ JAP_buffer_to_anti_fengtian = {
 		has_war = no
 		FNG = { exists = yes }
 		FNG_JAP_mission_complete_trigger = yes
-		check_variable = { FNG.FNG_JAP_influence_variable < 0.15 }
+		check_variable = { FNG.party_popularity@market_liberal < 0.15 }
 	}
 	abort_when_not_enabled = yes
 
@@ -2008,67 +2015,5 @@ JAP_buffer_to_anti_fengtian = {
 		type = conquer
 		id = "FNG"
 		value = 500
-	}
-}
-
-#################
-### KX ###
-#################
-japan_ignore_hawaii = {
-	allowed = {
-		tag = JAP
-	}
-	enable = {
-		has_completed_focus = JAP_extend_pacific_security_zone
-		country_exists = HAW
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = ignore_claim
-		id = "HAW"
-		value = 1
-	}
-}
-
-japan_korea_is_paramount = {
-	allowed = {
-		tag = JAP
-	}
-	enable = {
-		OR = {
-			owns_state = 527
-			owns_state = 525
-			owns_state = 1345
-			owns_state = 1346
-			owns_state = 1347
-		}
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = area_priority
-		id = korea
-		value = 50
-	}
-}
-
-japan_protect_manchuria = {
-	allowed = {
-		tag = JAP
-	}
-	enable = {
-		has_war = yes
-		716 = { is_owned_by_ROOT_or_war_ally = yes }
-	}
-
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = area_priority
-		id = manchuria
-		value = 50
 	}
 }

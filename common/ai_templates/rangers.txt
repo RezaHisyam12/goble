@@ -1,38 +1,24 @@
 ####################################################################################################
-#	MOUNTAINEER ROLE
+#	RANGERS ROLE
 ####################################################################################################
 
-mountaineer_generic = {
-	role = mountaineer
+ranger_generic = {
+	role = rangers_role
 	front_role_override = offence
 
 	upgrade_prio = {
 		base = 0
 		modifier = {
 			add = 1
-			has_tech = tech_mountaineers
+			has_tech = rangers_tech
 		}
 		modifier = {
 			factor = 500
-			has_terrain = mountain
+			has_terrain = jungle
 		}
 	}
 
-	paratroopers_are_actually_mountaineers = {
-		can_upgrade_in_field = { always = yes }
-		
-		upgrade_prio = {
-			base = 0
-		}
-
-		target_template = {
-			regiments = {
-				paratrooper = 5
-			}
-		}
-	}
-
-	mountaineer_1_RUS = {
+	ranger_1_RUS = {
 		can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
@@ -46,7 +32,7 @@ mountaineer_generic = {
 
 		target_template = {
 			regiments = {
-				mountaineers = 12
+				ranger_battalion = 12
 			}
 
 			support = {
@@ -64,7 +50,7 @@ mountaineer_generic = {
 		}
 	}
 
-	mountaineer_1 = {
+	ranger_1 = {
 		can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
@@ -78,7 +64,7 @@ mountaineer_generic = {
 
 		target_template = {
 			regiments = {
-				mountaineers = 9
+				ranger_battalion = 9
 			}
 
 			support = {
@@ -96,7 +82,7 @@ mountaineer_generic = {
 		}
 	}
 
-	mountaineer_2 = {
+	ranger_2 = {
 		can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
@@ -122,7 +108,7 @@ mountaineer_generic = {
 
 		target_template = {
 			regiments = {
-				mountaineers = 9
+				ranger_battalion = 9
 				artillery_brigade = 2
 			}
 
@@ -141,7 +127,7 @@ mountaineer_generic = {
 		}
 	}
 
-	super_mountaineer = {
+	super_ranger = {
 		can_upgrade_in_field = { always = yes }
 		reinforce_prio = 2
 
@@ -149,8 +135,8 @@ mountaineer_generic = {
 			base = 100
 			modifier = {
 				factor = 0
-				NOT = { has_doctrine = mountaineers_1 }
-				NOT = { has_doctrine = mountaineers_2 }
+				NOT = { has_doctrine = rangers_1 }
+				NOT = { has_doctrine = rangers_2 }
 			}
 			modifier = {
 				factor = 0
@@ -168,7 +154,7 @@ mountaineer_generic = {
 
 		target_template = {
 			regiments = {
-				mountaineers = 12
+				ranger_battalion = 12
 				artillery_brigade = 4
 			}
 

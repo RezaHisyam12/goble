@@ -759,7 +759,7 @@ sub_units = {
 		default_morale = 0.3 #SH: 0.3 / Infantry: 0.3
 		max_strength = 15 #SH: 2 / Infantry: 25
 
-		training_time = 250 #SH: 180 / Infantry: 90
+		training_time = 180 #SH: 180 / Infantry: 90
 		weight = 2 #SH: 1 / Infantry: 0.5
 		
 		supply_consumption = 0.6 #SH: 0.4 / Infantry: 0.06

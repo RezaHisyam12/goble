@@ -37,8 +37,8 @@ landcruiser_generic = {
 				land_cruiser_battalion = 4
 				heavy_tank_destroyer_brigade = 2
 				heavy_sp_anti_air_brigade = 2
-				motorized = 3
-				mechanized = 3
+				motorized = 4
+				mechanized = 4
 			}
 
 			regimental_support = {
@@ -83,8 +83,8 @@ landcruiser_generic = {
 				land_cruiser_battalion = 4
 				modern_tank_destroyer_brigade = 2
 				modern_sp_anti_air_brigade = 2
-				motorized = 3
-				mechanized = 3
+				motorized = 4
+				mechanized = 4
 			}
 
 			regimental_support = {

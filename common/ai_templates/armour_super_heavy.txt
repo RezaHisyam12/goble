@@ -33,8 +33,8 @@ armour_super_heavy_generic = {
 				super_heavy_armor_battalion = 4
 				heavy_sp_anti_air_brigade = 2
 				heavy_tank_destroyer_brigade = 2
-				motorized = 3
-				mechanized = 3
+				motorized = 4
+				mechanized = 4
 			}
 
 			regimental_support = {
@@ -79,8 +79,8 @@ armour_super_heavy_generic = {
 				super_heavy_armor_battalion = 4
 				modern_sp_anti_air_brigade = 2
 				modern_tank_destroyer_brigade = 2
-				motorized = 3
-				mechanized = 3
+				motorized = 4
+				mechanized = 4
 			}
 
 			regimental_support = {

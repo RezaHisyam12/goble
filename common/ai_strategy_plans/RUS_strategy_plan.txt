@@ -201,6 +201,105 @@ RUS_natpop_eusrasia_plan = {
 	}
 }
 
+RUS_vns_empire_plan = {
+	name = "RUS_vns_empire_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		vns_in_power = yes
+		OR = {
+			has_game_rule = { rule = RUS_1936_elections option = RUS_1936_ELECTIONS_VNS_ARISTOCRATIC_MONARCHY }
+			has_game_rule = { rule = RUS_1936_elections option = RUS_1936_ELECTIONS_VNS_OLIGARCHIC_MONARCHY }
+			has_country_flag = RUS_vns_olmon_ai
+			has_country_flag = RUS_vns_armon_ai
+		}
+	}
+	abort = {
+		has_completed_focus = RUS_United_Russia
+	}
+
+	ai_national_focuses = {
+		RUS_russian_army
+		RUS_The_Russian_Tradition
+		RUS_National_High_Command_Formation_School
+		RUS_Expand_The_Shock_Divisions
+		RUS_Realpolitik
+
+		RUS_Towards_Etatism
+		RUS_Monarchist_Coalition
+		RUS_fight_radicalism
+		RUS_Towards_Greatest_Aim
+		RUS_Monarchist_Propaganda
+		RUS_Monarchy_Referendum
+		RUS_Glorious_Restoration
+
+		RUS_Expansionism
+		RUS_Enemy_In_The_West
+		RUS_Russo-Serbian_Friendship
+		RUS_Bring_Back_Cossacks
+		RUS_Secure_Central_Asia
+		RUS_Into_The_Caucasus
+		RUS_Enemy_In_The_East
+		RUS_Reclaim_Far_East
+		RUS_Reorganize_the_General_Staff
+
+		RUS_A_Symbol_Of_Russian_Might
+		RUS_Third_Rome
+		RUS_Adjust_Constitution_For_Tsar
+		RUS_Tsar_Imperial_Benevolence
+		RUS_Long_Live_Tsar
+
+		RUS_ec_conserv
+		RUS_Private_Property
+		RUS_Stolypin
+		RUS_Minority_Question
+		RUS_Fight_Republican_Sentiments
+
+		RUS_ec_conserv2
+		RUS_Bet_On_Large_Industrialists
+		RUS_Support_Small_Business_vns
+
+		RUS_Orthodox_Church_Influence
+		RUS_Trade_Unions_Without_Socialists
+		RUS_Ban_Trade_Unions
+
+		RUS_New_Russian_Conservatism
+		RUS_Ban_Socialists_vns
+		RUS_Lessons_Of_Democracy
+		RUS_Revive_Blackhundredists
+		RUS_ec_conserv4
+
+		RUS_Second_Term_Of_VNS
+		RUS_Reaffirm_Protectionist_Policy
+		RUS_Putilovs_War_Machine
+		RUS_Only_Russian_Workers
+		RUS_The_Industry_Needs_Men
+		RUS_Continute_The_Agrarian_Reform
+		RUS_Subsidize_Agricultural_Modernization
+		RUS_Support_Peasant_Cooperatives
+		RUS_Go_On_With_Import_Embargo
+		RUS_Strong_Currency
+		RUS_Sovereign_Power
+		RUS_Enact_Traditional_Values
+		RUS_United_Russia
+	}
+
+	ideas = {
+		RUS_Mikhail_Diterikhs_cos_pau = 10
+		RUS_Vladimir_Kappel_carm_pau = 10
+		opz = 10
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
 RUS_natpop_savinkov_plan = {
 	name = "RUS_natpop_savinkov_plan"
 	desc = ""

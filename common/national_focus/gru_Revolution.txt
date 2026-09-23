@@ -8935,7 +8935,7 @@ shared_focus = {
 		id = GRU_NMDVP_totalerkieg
 		icon = GFX_totalerkieg
 		relative_position_id = GRU_NMDVP_PATH
-		x = 6
+		x = 5
 		y = 1
 		cost = 4
 		available = {
@@ -8946,12 +8946,16 @@ shared_focus = {
 			}
 			OR = {
 				VKB = {
+				OR = {
 					exists = no
 					has_capitulated = yes
+					}
 				}
 				VKR = { 
+				OR = {
 					exists = no
 					has_capitulated = yes
+					}
 				}
 			}
 		}
@@ -9098,13 +9102,13 @@ shared_focus = {
 	shared_focus = {
 		id = GRU_ostwall
 		icon = GFX_goal_GER_Ostwall
-		cost = 3
+		cost = 6
 
 		relative_position_id = GRU_new_order
 		x = -2
 		y = 1
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { factor = 100 }
 		prerequisite = {
 			focus = GRU_new_order
 		}
@@ -9121,6 +9125,335 @@ shared_focus = {
 					is_in_faction_with = GRU
 				}
 				add_ideas = GRU_ostwall_idea
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = {
+					VKB = {
+						is_in_faction_with = GRU
+						exists = yes
+					}
+				}
+				13 = {
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = bunker
+							province = {
+								all_provinces = yes
+								limit_to_border_country = RUS
+							}
+							level = 1
+							instant_build = yes
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_border_provinces_with_tag
+							BUILDING = bunker
+							NUMBER = 1
+							TAG = "[RUS.GetTag]"
+						}
+					}
+				}
+				191 = {
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = bunker
+							province = {
+								all_provinces = yes
+								limit_to_border_country = RUS
+							}
+							level = 1
+							instant_build = yes
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_border_provinces_with_tag
+							BUILDING = bunker
+							NUMBER = 1
+							TAG = "[RUS.GetTag]"
+						}
+					}
+				}
+				12 = {
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = bunker
+							province = {
+								all_provinces = yes
+								limit_to_border_country = RUS
+							}
+							level = 1
+							instant_build = yes
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_border_provinces_with_tag
+							BUILDING = bunker
+							NUMBER = 1
+							TAG = "[RUS.GetTag]"
+						}
+					}
+				}
+				190 = {
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = bunker
+							province = {
+								all_provinces = yes
+								limit_to_border_country = RUS
+							}
+							level = 1
+							instant_build = yes
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_border_provinces_with_tag
+							BUILDING = bunker
+							NUMBER = 1
+							TAG = "[RUS.GetTag]"
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					VKB = {
+						exists = yes
+						is_in_faction_with = GRU
+						controls_state = 207
+					}
+				}
+				207 = {
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = bunker
+							province = {
+								all_provinces = yes
+								limit_to_border_country = RUS
+							}
+							level = 1
+							instant_build = yes
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_border_provinces_with_tag
+							BUILDING = bunker
+							NUMBER = 1
+							TAG = "[RUS.GetTag]"
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					VKB = {
+						exists = yes
+						is_in_faction_with = GRU
+						controls_state = 1294
+					}
+				}
+				1294 = {
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = bunker
+							province = {
+								all_provinces = yes
+								limit_to_border_country = RUS
+							}
+							level = 1
+							instant_build = yes
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_border_provinces_with_tag
+							BUILDING = bunker
+							NUMBER = 1
+							TAG = "[RUS.GetTag]"
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					VKB = {
+						exists = yes
+						is_in_faction_with = GRU
+						controls_state = 1087
+					}
+				}
+				1087 = {
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = bunker
+							province = {
+								all_provinces = yes
+								limit_to_border_country = RUS
+							}
+							level = 1
+							instant_build = yes
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_border_provinces_with_tag
+							BUILDING = bunker
+							NUMBER = 1
+							TAG = "[RUS.GetTag]"
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					VKR = {
+						exists = yes
+						is_in_faction_with = GRU
+					}
+				}
+				194 = {
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = bunker
+							province = {
+								all_provinces = yes
+								limit_to_border_country = RUS
+							}
+							level = 1
+							instant_build = yes
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_border_provinces_with_tag
+							BUILDING = bunker
+							NUMBER = 1
+							TAG = "[RUS.GetTag]"
+						}
+					}
+				}
+				241 = {
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = bunker
+							province = {
+								all_provinces = yes
+								limit_to_border_country = RUS
+							}
+							level = 1
+							instant_build = yes
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_border_provinces_with_tag
+							BUILDING = bunker
+							NUMBER = 1
+							TAG = "[RUS.GetTag]"
+						}
+					}
+				}
+				1230 = {
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = bunker
+							province = {
+								all_provinces = yes
+								limit_to_border_country = RUS
+							}
+							level = 1
+							instant_build = yes
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_border_provinces_with_tag
+							BUILDING = bunker
+							NUMBER = 1
+							TAG = "[RUS.GetTag]"
+						}
+					}
+				}
+				1242 = {
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = bunker
+							province = {
+								all_provinces = yes
+								limit_to_border_country = RUS
+							}
+							level = 1
+							instant_build = yes
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_border_provinces_with_tag
+							BUILDING = bunker
+							NUMBER = 1
+							TAG = "[RUS.GetTag]"
+						}
+					}
+				}
+				225 = {
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = bunker
+							province = {
+								all_provinces = yes
+								limit_to_border_country = RUS
+							}
+							level = 1
+							instant_build = yes
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_border_provinces_with_tag
+							BUILDING = bunker
+							NUMBER = 1
+							TAG = "[RUS.GetTag]"
+						}
+					}
+				}
+				221 = {
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = bunker
+							province = {
+								all_provinces = yes
+								limit_to_border_country = RUS
+							}
+							level = 1
+							instant_build = yes
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_border_provinces_with_tag
+							BUILDING = bunker
+							NUMBER = 1
+							TAG = "[RUS.GetTag]"
+						}
+					}
+				}
+				1285 = {
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = bunker
+							province = {
+								all_provinces = yes
+								limit_to_border_country = RUS
+							}
+							level = 1
+							instant_build = yes
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_border_provinces_with_tag
+							BUILDING = bunker
+							NUMBER = 1
+							TAG = "[RUS.GetTag]"
+						}
+					}
+				}
+				1282 = {
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = bunker
+							province = {
+								all_provinces = yes
+								limit_to_border_country = RUS
+							}
+							level = 1
+							instant_build = yes
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_border_provinces_with_tag
+							BUILDING = bunker
+							NUMBER = 1
+							TAG = "[RUS.GetTag]"
+						}
+					}
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_TFV_AUTONOMY }

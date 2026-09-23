@@ -38,23 +38,6 @@ TUR_build_intelligence_agency = {
 	}
 }
 
-TUR_dont_naval_invade_if_fighting_egypt = {
-	allowed = {
-		original_tag = TUR
-	}
-	enable = {
-		has_war_with = EGY
-		EGY = { has_capitulated = no }
-	}
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = invasion_unit_request
-		area = globally
-		value = -500
-	}
-}
-
 TUR_put_units_on_the_kurdish_states = {
 	allowed = {
 		original_tag = TUR
@@ -316,7 +299,7 @@ TUR_ignore_ally_arabia = {
 		347 = { NOT = { is_owned_and_controlled_by = PER } } #Khasab
 		var:915.controller = {  #Ha'il
 			is_ally_with = ROOT
-			NOT = { has_war_together_with = OTT }
+			NOT = { has_war_together_with = TUR }
 		}
 
 		#Neutral/Friendly Muscat is not currently being pushed into from the West
@@ -357,7 +340,7 @@ TUR_less_troops_in_hejaz = {
 		#Disable after Arabia joins on either side
 		var:915.owner = { #Ha'il
 			NOT = {
-				tag = OTT
+				tag = TUR
 				has_war_with = ROOT
 				is_subject_of = ROOT
 			}

@@ -490,7 +490,7 @@ defined_text = {
 	name = unit_limit_reached_floor
 	text = {
 		trigger = {
-			check_variable = { uncapped_max_divisions < constant:unit_limits.min }
+			check_variable = { uncapped_max_divisions < constant:unit_limits.base }
 		}
 		localization_key = unit_limit_reached_floor_desc
 	}
@@ -537,9 +537,12 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			NOT = { check_variable = { base_factories = 0 } }
+			check_variable = { base_factories > 0 }
 		}
 		localization_key = unit_limit_factories_high_desc
+	}
+	text = {
+		localization_key = unit_limit_factories_equalised_desc
 	}
 }
 
@@ -561,7 +564,7 @@ defined_text = {
 			NOT = { check_variable = { index < subjects^num } } #end loop if past final index
 			set_temp_variable = { index = 0 } #for other loops down the line
 		}
-		localization_key = ""
+		localization_key = loc_empty
 	}
 	text = {
 		trigger = { #modifier present, list scope

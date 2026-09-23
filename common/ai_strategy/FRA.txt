@@ -134,6 +134,27 @@ FRA_Volunteer = {
 	}
 }
 
+FRA_dont_send_troops_everywhere = {
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		has_war_with_major = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = MEX
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = CSA
+		value = 100
+	}
+}
+
 ################
 ### Military ###
 ################

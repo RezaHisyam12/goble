@@ -13,6 +13,12 @@ CAN_starting_plan = {
 	}
 
 	ai_national_focuses = {
+		CAN_kings_speech
+		CAN_privy_council
+		CAN_imperial_conference
+		CAN_fate_of_the_senate
+		CAN_draft_bill_c7
+
 		CAN_crown_corporations
 		CAN_create_iedc
 		CAN_public_works

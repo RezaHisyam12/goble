@@ -494,6 +494,23 @@ naval_powers_more_marines = {
 	ai_strategy = { type = role_ratio                          id = marine                     	 value = 10 }
 }
 
+ranger_effort = {	
+	enable = {
+		has_tech = rangers_tech
+		has_terrain = jungle
+		ai_has_role_template = rangers_role
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = role_ratio                          id = rangers_role                value = 10 }
+
+	ai_strategy = {
+		type = template_prio
+		id = rangers_role
+		value = 50
+	}
+}
+
 default_bicycle_production = {
 	allowed = {
 		OR = {

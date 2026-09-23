@@ -358,3 +358,39 @@ CHI_governorate_crush_JAP = {
 	}
 }
 
+CHI_build_supply_andong = {
+	allowed = {
+		is_chinese_tag = yes
+		threat > 0.6
+	}
+	enable = {
+		controls_province = 11781
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = supply_node
+		province = 11781
+		value = 2000
+	}
+}
+
+CHI_build_supply_kwanbuk = {
+	allowed = {
+		is_chinese_tag = yes
+		threat > 0.6
+	}
+	enable = {
+		controls_province = 898
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = naval_base
+		province = 898
+		value = 2000
+	}
+}
+

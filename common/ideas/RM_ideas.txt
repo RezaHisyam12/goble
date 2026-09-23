@@ -1430,9 +1430,9 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_totaler_kieg_idea" }
 			picture = GRU_totalerkieg
 			modifier = {
-				political_power_gain = -3
-				army_core_attack_factor = 0.10
-				army_core_defence_factor = 0.20
+				political_power_gain = -2
+				army_core_attack_factor = 0.20
+				army_core_defence_factor = 0.40
 				conscription_factor = 0.1
 				stability_factor = -0.50
 				stability_weekly = -0.010
@@ -1442,8 +1442,12 @@ ideas = {
 				local_manpower = 0.20
 				surrender_limit = 1
 				mobilization_speed = 0.35
-				min_export = -0.75
-				industrial_capacity_factory = -0.15
+				weekly_casualties_war_support = 0.05
+				weekly_convoys_war_support = 0.05
+				weekly_bombing_war_support = 0.05
+				conversion_cost_civ_to_mil_factor = 0.50
+				resistance_damage_to_garrison_on_our_occupied_states = 0.15
+				resistance_growth_on_our_occupied_states = 0.20
 			}
 		}
 		GRU_the_eye_idea = {
@@ -2935,7 +2939,7 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = RUS
-				defense_bonus_against = 0.15
+				defense_bonus_against = 0.2
 			}
 		}
 		GRU_break_fortifications_idea = {
@@ -3388,6 +3392,61 @@ ideas = {
 		}
 
 
+	}
+
+	economy = {
+		FRA_autonomous_communes_default = {
+			on_add = { log = "[GetLogRoot]: add idea FRA_autonomous_communes_default" }
+			picture = new_economic_policy
+
+			allowed = { always = no }
+
+			allowed_to_remove = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = TRIGGER_HAS_NOT_COMPLETED_FOCUS
+						FOCUS = FRA_support_workers_initiatives
+					}
+					always = no
+				}
+			}
+
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			modifier = {
+				consumer_goods_expected_value = 0.15
+				production_speed_buildings_factor = -0.15
+				unit_limit_law_bonus = 20
+			}
+		}
+		FRA_autonomous_communes_upgraded = {
+			on_add = { log = "[GetLogRoot]: add idea FRA_autonomous_communes_upgraded" }
+			name = FRA_autonomous_communes_default
+			picture = new_economic_policy
+
+			allowed = { always = no }
+
+			allowed_to_remove = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = TRIGGER_HAS_NOT_COMPLETED_FOCUS
+						FOCUS = FRA_consumer_cooperatives
+					}
+					always = no
+				}
+			}
+
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			modifier = {
+				consumer_goods_expected_value = 0.10
+				production_speed_buildings_factor = -0.2
+				global_building_slots_factor = 0.1
+				unit_limit_law_bonus = 20
+			}
+		}
 	}
 
 }

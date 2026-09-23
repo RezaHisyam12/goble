@@ -4618,13 +4618,6 @@ GRU_germania_plan_decisions = {
 		available = {
 			is_subject = no
 			country_exists = HOL
-			HOL = {
-				NOT = { 
-					is_in_faction_with = FRA 
-					is_in_faction_with = CAN 
-					is_guaranteed_by = CAN
-				}
-			}
 		}
 		visible = {
 			has_completed_focus = GRU_NMDVP_PAN_GERMANISM_RELOADED
@@ -4632,6 +4625,13 @@ GRU_germania_plan_decisions = {
 			FROM = {
 				OR = {
 				tag = HOL
+				}
+			}
+			HOL = {
+				NOT = { 
+					is_in_faction_with = FRA 
+					is_in_faction_with = CAN 
+					is_guaranteed_by = CAN
 				}
 			}
 		}
@@ -4648,6 +4648,7 @@ GRU_germania_plan_decisions = {
 				}	
 			}
 		}
+		cancel_if_not_visible = yes
 
 		fire_only_once = yes
 		cost = 50
@@ -4708,6 +4709,12 @@ GRU_germania_plan_decisions = {
 				factor = 0
 				has_country_flag = imminent_war
 			}
+		}
+
+		cancel_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision cancel GRU_pan_germanism_dutch_decision target: [From.GetName]"
+			clear_decision_attack_AI = yes
+			add_political_power = 50
 		}
 
 		complete_effect = {
@@ -11145,6 +11152,10 @@ GRU_expansion_three_volksland_hypoborea = {
 						}
 						add_manpower = 40000
 						army_experience = 500
+						KR_mizhmoria_remove_from_economic = yes
+						KCN_remove_from_kcn_council = yes
+						UKR_remove_impending_failure = yes
+
 						remove_dynamic_modifier = { modifier = UKR_breadbasket_of_europe_modifier }
 						remove_dynamic_modifier = { modifier = UKR_ukrainian_army }
 						remove_dynamic_modifier = { modifier = UKR_borotbyst_uprising_state }
@@ -11165,10 +11176,6 @@ GRU_expansion_three_volksland_hypoborea = {
 						remove_ideas = UKR_social_nationalist_resistance
 						remove_ideas = UKR_social_nationalist_resistance_1
 						remove_ideas = UKR_social_nationalist_resistance_2
-						remove_ideas = UKR_impending_failure
-						remove_ideas = UKR_impending_failure_1
-						remove_ideas = UKR_impending_failure_2
-						remove_ideas = UKR_impending_failure_3
 						remove_ideas = UKR_ivan_po_influence_idea_1
 						remove_ideas = UKR_ivan_po_influence_idea_2
 						remove_ideas = UKR_ivan_po_influence_idea_3
@@ -16350,9 +16357,9 @@ GRU_stahlpakt_alliance_decisions = {
 
 		available = {
 			is_major = yes
-			is_subject = no
 			is_faction_leader = yes
 			has_war = no
+			FROM = { has_war = no }
 			AUS = { exists = no }
 			NOT = { has_country_leader = { name = "Reinhard Heydrich" ruling_only = yes } }
 		}
@@ -17144,6 +17151,22 @@ GRU_new_order_decisions = {
 				if = {
 					limit = { has_idea = AUS_budapest_treaty }
 					remove_ideas = AUS_budapest_treaty
+				}
+				if = {
+					limit = { has_idea = HUN_black_monday_1 }
+					remove_ideas = HUN_black_monday_1
+				}
+				if = {
+					limit = { has_idea = HUN_black_monday_2 }
+					remove_ideas = HUN_black_monday_2
+				}
+				if = {
+					limit = { has_idea = HUN_black_monday_3 }
+					remove_ideas = HUN_black_monday_3
+				}
+				if = {
+					limit = { has_idea = HUN_black_monday_4 }
+					remove_ideas = HUN_black_monday_4
 				}
 				if = {
 					limit = {
