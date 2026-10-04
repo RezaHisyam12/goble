@@ -852,6 +852,18 @@ JAP_only_naval_invade_these_states = {
 
 	ai_strategy = {
 		type = naval_invasion_support_priority
+		id = 78 # Philippine Sea
+		value = 300
+	}
+
+	ai_strategy = {
+		type = naval_dominance
+		id = 78
+		value = 555
+	}
+
+	ai_strategy = {
+		type = naval_invasion_support_priority
 		id = 77 # Yellow Sea
 		value = 300
 	}

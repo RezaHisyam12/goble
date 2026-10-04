@@ -8013,44 +8013,17 @@ country_event = { # HYP claims
 	is_triggered_only = yes
 	hidden = yes
 	immediate = {
-		38 = { add_claim_by = HYP }
-		110 = { add_claim_by = HYP }
-		111 = { add_claim_by = HYP }
-		124 = { add_claim_by = HYP }
-		138 = { add_claim_by = HYP }
-		139 = { add_claim_by = HYP }
-		140 = { add_claim_by = HYP }
-		141 = { add_claim_by = HYP }
-		142 = { add_claim_by = HYP }
-		143 = { add_claim_by = HYP }
-		144 = { add_claim_by = HYP }
-		145 = { add_claim_by = HYP }
-		146 = { add_claim_by = HYP }
-		147 = { add_claim_by = HYP }
-		148 = { add_claim_by = HYP }
-		149 = { add_claim_by = HYP }
-		150 = { add_claim_by = HYP }
-		213 = { add_claim_by = HYP }
-		215 = { add_claim_by = HYP }
-		216 = { add_claim_by = HYP }
-		666 = { add_claim_by = HYP }
-		722 = { add_claim_by = HYP }
-		778 = { add_claim_by = HYP }
-		840 = { add_claim_by = HYP }
-		844 = { add_claim_by = HYP }
-		863 = { add_claim_by = HYP }
-		864 = { add_claim_by = HYP }
-		865 = { add_claim_by = HYP }
-		908 = { add_claim_by = HYP }
-		909 = { add_claim_by = HYP }
-		936 = { add_claim_by = HYP }
-		937 = { add_claim_by = HYP }
-		960 = { add_claim_by = HYP }
-		1274 = { add_claim_by = HYP }
-		1326 = { add_claim_by = HYP }
-		1327 = { add_claim_by = HYP }
-		1324 = { add_claim_by = HYP }
-		1325 = { add_claim_by = HYP }
+		every_state = {
+			limit = {
+				OR= {
+					region = 10 #Bohemia
+					region = 11 #Poland
+					region = 12 #Galicia
+					region = 13 #Galicia
+				}
+			}
+			add_claim_by = HYP
+		}
 	}
 }
 
@@ -8603,14 +8576,15 @@ country_event = { # allignment to internationale SMEPD
 	}
 }
 
-country_event = { # allignment to internationale SMEPD
+country_event = { # allignment to germany
 	id = rotermorgenmisc.801
 	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.801" }
 	title = rotermorgenmisc.801.t
 	desc = rotermorgenmisc.801.d
+	picture = GFX_report_event_goebb_annex_pss
 	is_triggered_only = yes
 	
-	option = { # join internationale
+	option = { # join stahlpakt
 		name = rotermorgenmisc.801.a
 		ai_chance = {
 			factor = 50

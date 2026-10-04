@@ -5,6 +5,7 @@ VKK = "countries/Goebbels.txt"
 VKN = "countries/Goebbels.txt"
 VKP = "countries/Goebbels.txt"
 VOB = "countries/Goebbels.txt"
+HYP = "countries/Goebbels.txt"
 
 MVA = "countries/Goebbels.txt"
 MTA = "countries/Goebbels.txt"

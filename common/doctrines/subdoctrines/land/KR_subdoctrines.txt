@@ -193,7 +193,7 @@ reformisten_subdoctrine = {
     	}
 	available = {
 		OR = {
-		has_completed_focus = GER_path_of_seeckt
+		has_completed_focus = GRU_formation_of_the_nva
 		has_doctrine = new_mobile_warfare
 		}
 	}

@@ -8285,6 +8285,40 @@ shared_focus = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_allignment"
 			custom_effect_tooltip = GRU_tt_allies_decisions
+			FRA = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_decrease
+				}
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_decrease
+				}
+			}
+			ENT = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
+				}
+			}
+			NFA = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_increase
+				}
+			}
+			TUR = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = ger_tur_diplomacy_focus
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT
+					modifier = ger_tur_diplomacy_focus
+				}
+			}
 		}
 		prerequisite = { focus = GRU_NMDVP_PATH  }
 	}
@@ -8310,12 +8344,12 @@ shared_focus = {
 		relative_position_id = GRU_NMDVP_PATH
 		x = -1
 		y = 2
-		cost = 6
+		cost = 5
 		allowed = {
 			tag = GRU
 		}
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 			modifier = {
 				factor = 0
 				date < 1942.6.1
@@ -8383,7 +8417,7 @@ shared_focus = {
 					}
 			}
 		select_effect = {
-			set_country_flag = { flag = imminent_war days = 42 value = 1 }
+			set_country_flag = { flag = imminent_war days = 35 value = 1 }
 			setup_decision_attack_AI = yes
 		}
 		completion_reward = {
@@ -8447,7 +8481,7 @@ shared_focus = {
 		relative_position_id = GRU_NMDVP_PATH
 		x = 1
 		y = 2
-		cost = 6	
+		cost = 2	
 		
 		available = {
 					is_subject = no
@@ -8477,6 +8511,10 @@ shared_focus = {
 			FRA = {
 				reverse_add_opinion_modifier = { target = GRU modifier = KR_trade_sanctions }
 				embargo_ROOT = yes
+				add_timed_idea = {
+					idea = GRU_embargo_france
+					days = 365
+				}
 			}
 			GRU = {
 				reverse_add_opinion_modifier = { target = FRA modifier = KR_trade_sanctions }
@@ -8671,7 +8709,7 @@ shared_focus = {
 		y = 5
 		cost = 6
 		ai_will_do = {
-			factor = 10
+			factor = 75
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRU_NMDVP_SCANDINAVIA"

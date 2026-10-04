@@ -7,6 +7,7 @@ OTT_early_game = {
 	}
 
 	enable = {
+		OTT_ottomans_have_post_defeat_content = no
 		date > 1936.1.1
 	}
 
@@ -38,6 +39,7 @@ TUR_sublime_plan = {
 		original_tag = TUR
 	}
 	enable = {
+		OTT_ottomans_have_post_defeat_content = no
 		OR = {
 			has_government = market_liberal
 			has_government = social_liberal
@@ -81,6 +83,7 @@ TUR_Arslan_plan = {
 		original_tag = TUR
 	}
 	enable = {
+		OTT_ottomans_have_post_defeat_content = no
 		has_idea = OTT_Shakib_Arslan_hog_sco
 	}
 	abort = {
@@ -117,6 +120,7 @@ TUR_Arslan_plan_2 = {
 		original_tag = TUR
 	}
 	enable = {
+		OTT_ottomans_have_post_defeat_content = no
 		has_completed_focus = OTT_Enforce_Mecelle
 		has_completed_focus = OTT_Desecularise_Army
 		has_completed_focus = OTT_Revert_Social_Reforms
@@ -134,6 +138,108 @@ TUR_Arslan_plan_2 = {
 
 		OTT_Beyond_Nationalities
 		OTT_Pan_Islamic_Legitimacy
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
+TUR_endeavour_plan = {
+	name = "TUR_endeavour_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OTT_ottomans_have_post_defeat_content = no
+		OR = {
+			has_game_rule = {
+				rule = OTT_PATHS
+				option = OTT_PATHS_ENDEAVOUR_MARLIB
+			}
+			has_game_rule = {
+				rule = OTT_PATHS
+				option = OTT_PATHS_ENDEAVOUR_AUTDEM
+			}
+			has_game_rule = {
+				rule = OTT_PATHS
+				option = OTT_PATHS_ENDEAVOUR_NATPOP
+			}
+		}
+	}
+	abort = {
+		has_completed_focus = OTT_Lift_State_of_Emergency
+	}
+
+	ai_national_focuses = {
+		OTT_State_of_Emergency
+		OTT_Replace_Walis
+		OTT_Abolish_Mecelle_Fevzi
+		OTT_Marechal_Nous_Voila
+		OTT_Confiscate_Privy_Purse_Holdings
+		OTT_Reform_the_Millet_System
+		OTT_Expand_the_Military_Rusdiye
+		OTT_Lift_State_of_Emergency
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
+
+TUR_kadroist_plan = {
+	name = "TUR_kadroist_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OTT_ottomans_have_post_defeat_content = no
+		has_game_rule = {
+			rule = OTT_PATHS
+			option = OTT_PATHS_ENDEAVOUR_NATPOP
+		}
+	}
+	abort = {
+		has_completed_focus = OTT_Solidarism_Between_People
+	}
+
+	ai_national_focuses = {
+		OTT_Enshrine_Endeavour_Front
+		OTT_Centralise_State_Authority
+		OTT_Incorporate_Kadroist_Movement
+		OTT_Millet_Mektepleri_FEV
+		OTT_Committee_Inquest
+
+		OTT_Reeling_in_the_Arab_Vilayets
+		OTT_Reeling_in_the_Anatolian_Vilayets
+		OTT_Order_by_the_Locomotive
+		OTT_Crack_down_on_the_SSNP
+		OTT_Status_of_the_Autonomous_Regions
+		OTT_OHP_Membership_Reward_Program
+		OTT_Expand_Halkevleri
+		OTT_Eradicate_Military_Disloyalty
+		OTT_Extend_Authority_Kurdish_Territories
+		OTT_Reform_the_Conscription_System
+		OTT_Tribunals_of_Progress
+
+		OTT_Enact_Separation_Church_State
+		OTT_Social_Nationalism
+		OTT_Nationalise_Basic_Industries
+		OTT_Emancipation_Vanguard_FEV
+		OTT_Union_Party_State
+		OTT_Turn_Towards_Etatism
+		OTT_A_New_State
+		OTT_Achieve_the_Classless_society
+		OTT_Socialist_Biased_Neutrality
+		OTT_Solidarism_Between_People
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

@@ -1,0 +1,34 @@
+SIC_black_monday_plan = {
+	name = "SIC_black_monday_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = SIC
+	}
+	enable = {
+		date > 1936.1.1
+	}
+	abort = {
+		has_completed_focus = SIC_through_land_reform
+	}
+
+	ai_national_focuses = {
+		SIC_investment
+		SIC_BM_deal
+		SIC_infro
+		SIC_asuterity_measures
+		SIC_industry1
+		SIC_industrial_modernization
+		SIC_dig_deeply_and_greedily
+		SIC_BM_gonepoof
+		SIC_agrarian_issue
+		SIC_invest_modern_farming
+		SIC_through_land_reform
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}

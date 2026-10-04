@@ -10545,14 +10545,15 @@ GRU_volksreichskommissariat_decisions = {
 			available = {
 				has_completed_focus = GRU_NMDVP_LEBENSRAUM
 				has_completed_focus = GRU_NMDVP_SCANDINAVIA
+				SWE = { NOT = { has_country_leader = { name = "Sven Olov Lindholm" ruling_only = yes } } }
 				tag = GRU 
 						OR = {
 							GRU = {
-								owns_state = 141
+								controls_state = 141
 							}
 							any_other_country = {
 								is_subject_of = GRU
-								owns_state = 141
+								controls_state = 141
 						}
 					}
 				}
@@ -10577,21 +10578,13 @@ GRU_volksreichskommissariat_decisions = {
 						amount = 100
 						}
 						add_manpower = 40000
-						remove_ideas = {
-							SWE_political_chaos_idea
-							SWE_political_chaos_idea2
-							SWE_conservative_army_idea_1
-							SWE_statare_idea
-							SWE_german_reach_1
-							SWE_black_monday
-							SWE_black_monday_0
-							SWE_black_monday_1
-							SWE_black_monday_2
-							SWE_black_monday_3
-							
-						}
-						SWE_remove_socialism_effect = yes
-						SWE_remove_nationalism_effect = yes
+						add_ideas = limited_conscription
+						add_ideas = command_economy
+						add_ideas = war_economy
+						add_ideas = {
+							GRU_pol_off
+                    					GRU_lager
+                  				}
 					}
 					if = {
 						limit = {
@@ -11152,6 +11145,10 @@ GRU_expansion_three_volksland_hypoborea = {
 						}
 						add_manpower = 40000
 						army_experience = 500
+						add_ideas = command_economy
+						add_ideas = {
+							GRU_pol_off
+              					}
 						KR_mizhmoria_remove_from_economic = yes
 						KCN_remove_from_kcn_council = yes
 						UKR_remove_impending_failure = yes
@@ -11181,6 +11178,10 @@ GRU_expansion_three_volksland_hypoborea = {
 						remove_ideas = UKR_ivan_po_influence_idea_3
 						remove_ideas = UKR_ivan_po_influence_idea_4
 						remove_ideas = UKR_ivan_po_influence_idea_5
+						remove_ideas = UKR_partisan_warfare
+						remove_ideas = UKR_peoples_army_1
+						remove_ideas = UKR_peoples_army_2
+						remove_ideas = UKR_peoples_army_3
 					}
 				VKR = {	country_event = { id = rotermorgenmisc.200 days = 2 } }
 				VKR = {	country_event = { id = rotermorgenmisc.201 days = 2 } }
@@ -11271,6 +11272,9 @@ GRU_expansion_three_volksland_hypoborea = {
 						}
 						add_manpower = 40000
 						army_experience = 500
+						add_ideas = limited_conscription
+						add_ideas = command_economy
+						add_ideas = war_economy
 					}
 					VKK = {	country_event = { id = rotermorgenmisc.301 days = 2 } }
 				if = {
@@ -11350,6 +11354,10 @@ GRU_expansion_three_volksland_hypoborea = {
 						}
 						add_manpower = 70000
 						army_experience = 500
+						add_ideas = command_economy
+						add_ideas = {
+							GRU_pol_off
+              					}
 						remove_ideas = BAT_black_monday
 						remove_ideas = BAT_black_monday_1
 						remove_ideas = BAT_black_monday_2
@@ -11444,6 +11452,9 @@ GRU_expansion_three_volksland_hypoborea = {
 						}
 						add_manpower = 40000
 						army_experience = 500
+						add_ideas = limited_conscription
+						add_ideas = command_economy
+						add_ideas = war_economy
 					}
 				if = {
 						limit = {
@@ -16409,18 +16420,7 @@ GRU_stahlpakt_alliance_decisions = {
 					has_war_with = GRU
 				}
 			}
-			VKB = {
-				OR = {
-					exists = no
-					has_capitulated = yes
-				}
-			}
-			VKR = {
-				OR = {
-					exists = no
-					has_capitulated = yes
-				}
-			}
+			surrender_progress > 0.05
 		}
 		visible = {
 			has_completed_focus = GRU_NMDVP_allignment
@@ -17584,7 +17584,7 @@ GRU_new_order_decisions = {
 						add_manpower = 400000
 						remove_all_ministers = yes
 						add_ideas = limited_conscription
-						add_ideas = limited_exports
+						add_ideas = command_economy
 						add_ideas = war_economy
 						
 						add_ideas = {
@@ -17735,8 +17735,8 @@ GRU_new_order_decisions = {
 						army_experience = 500
 						set_capital = { state = 7 remember_old_capital = no }
 						remove_all_ministers = yes
-						add_ideas = limited_conscription
-						add_ideas = limited_exports
+						add_ideas = extensive_conscription
+						add_ideas = command_economy
 						add_ideas = war_economy
 
 						add_ideas = {
@@ -17994,7 +17994,7 @@ GRU_new_order_decisions = {
 
 						remove_all_ministers = yes
 						add_ideas = extensive_conscription
-						add_ideas = limited_exports
+						add_ideas = command_economy
 						add_ideas = war_economy
 
 						add_ideas = {
@@ -18002,7 +18002,7 @@ GRU_new_order_decisions = {
 							POL_warsaw_garrison3
 							GRU_okw
 							VKP_militarism
-                  		}
+                  				}
 						create_field_marshal = {
 							name = "Paul Hausser"
 							portrait_path = "gfx/leaders/GRU/Portrait_Germany_Paul_Hausser.png"

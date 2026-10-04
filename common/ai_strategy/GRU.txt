@@ -2009,11 +2009,6 @@ german_default_more_tank_production = {
 		id = heavy_armor_role
 		value = 40
 	}
-	ai_strategy = {
-		type = role_ratio
-		id = tank_destroyer_role
-		value = 20
-	}
 }
 
 default_super_heavy_artillery_production = {
@@ -2039,7 +2034,6 @@ default_super_heavy_artillery_production = {
 stp_default_light_tank_production = {
 	allowed = {
 		OR = {
-			tag = GRU
 			tag = VKB
 			tag = VKR
 			tag = VKK

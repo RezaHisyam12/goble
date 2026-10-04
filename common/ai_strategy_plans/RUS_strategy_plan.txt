@@ -288,7 +288,7 @@ RUS_vns_empire_plan = {
 	}
 
 	ideas = {
-		RUS_Mikhail_Diterikhs_cos_pau = 10
+		RUS_Anatoliy_Pepelyaev_cos_pau = 10
 		RUS_Vladimir_Kappel_carm_pau = 10
 		opz = 10
 	}

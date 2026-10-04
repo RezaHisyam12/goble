@@ -176,6 +176,7 @@ ideas = {
 					is_in_faction_with = GER
 					is_in_faction_with = ENT
 					is_in_faction_with = JAP
+					is_in_faction_with = GRU
 				}
 			}
 			modifier = {
@@ -564,11 +565,11 @@ ideas = {
 			picture = received_attache
 			allowed = { always = no }
             modifier = {
-				production_speed_buildings_factor = 0.05
+				production_speed_buildings_factor = 0.1
 				global_building_slots_factor = 0.10
 				research_speed_factor = 0.02
-				production_factory_efficiency_gain_factor = 0.05
-				production_factory_start_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
 			}
 		}
 		
@@ -578,11 +579,11 @@ ideas = {
 			picture = generic_foreign_capital
 			allowed = { always = no }
             modifier = {
-				production_speed_buildings_factor = 0.1
-				global_building_slots_factor = 0.10
-				research_speed_factor = 0.02
-				production_factory_efficiency_gain_factor = 0.05
-				production_factory_start_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.15
+				global_building_slots_factor = 0.12
+				research_speed_factor = 0.08
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_start_efficiency_factor = 0.15
 				production_speed_rail_way_factor = 0.25
 			}
 		}
@@ -620,9 +621,10 @@ ideas = {
 			picture = YUG_federal_defense_council
 			allowed = { always = no }
             modifier = {
-				conscription = 0.01
+				conscription = 0.02
 				global_building_slots_factor = 0.20
 				local_resources_factor = 0.20
+				consumer_goods_factor = -0.1
 			}
 		}
 
@@ -745,10 +747,10 @@ ideas = {
 			picture = islam
 			allowed = { always = no }
             modifier = {
-				stability_factor = 0.05
+				stability_weekly = 0.003
 				global_building_slots_factor = 0.15
 				surrender_limit = 0.05
-				conscription = 0.01
+				conscription = 0.015
 				army_defence_factor = 0.05
 				army_org_Factor = 0.05
 			}
@@ -760,10 +762,10 @@ ideas = {
 			allowed = { always = no }
             modifier = {
 				social_conservative_drift = 0.02
-				research_speed_factor = 0.03
-				production_speed_buildings_factor = 0.08
+				research_speed_factor = 0.1
+				production_speed_buildings_factor = 0.1
 				local_resources_factor = 0.10
-				political_power_factor = 0.04
+				political_power_factor = 0.1
 				non_core_manpower = 0.15
 				resistance_growth = -0.1
 			}
@@ -775,12 +777,13 @@ ideas = {
 			allowed = { always = no }
             modifier = {
 				paternal_autocrat_drift = 0.02
-				conscription_factor = 0.15
+				conscription_factor = 0.25
 				industrial_capacity_factory = 0.10
 				global_building_slots_factor = 0.10
 				training_time_factor = -0.10
-				army_attack_factor = 0.05
-				army_defence_factor = 0.05
+				army_attack_factor = 0.075
+				army_defence_factor = 0.075
+				war_support_weekly = 0.003
 			}
 		}
 
@@ -902,6 +905,7 @@ ideas = {
             modifier = {
 				stability_factor = 0.05
 				monthly_population = 0.2
+				consumer_goods_factor = -0.1
 			}
 		}
 
@@ -911,7 +915,7 @@ ideas = {
 			allowed = { always = no }
             modifier = {
 				production_speed_buildings_factor = 0.1
-				production_factory_start_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.1
 			}
 		}
 
@@ -921,8 +925,8 @@ ideas = {
 			allowed = { always = no }
             modifier = {
 				production_speed_buildings_factor = 0.1
-				production_factory_start_efficiency_factor = 0.05
-				industrial_capacity_factory = 0.05
+				production_factory_start_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
 			}
 		}
 
@@ -990,7 +994,10 @@ ideas = {
 			allowed = { always = no }
             modifier = {
 				political_power_gain = 0.20
-				min_export = -0.25
+				min_export = -0.1
+				industrial_capacity_factory = 0.05
+				local_resources_factor = 0.05
+				production_lack_of_resource_penalty_factor = 0.25
 			}
 		}
 
@@ -1000,8 +1007,12 @@ ideas = {
 			allowed = { always = no }
             modifier = {
 				political_power_gain = 0.20
-				min_export = -0.25
+				min_export = -0.1
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.1
+				war_support_weekly = 0.003
 				local_resources_factor = 0.10
+				production_lack_of_resource_penalty_factor = 0.25
 			}
 		}
 
@@ -1012,7 +1023,7 @@ ideas = {
             modifier = {
 				production_speed_infrastructure_factor = 0.15
 				production_speed_industrial_complex_factor = 0.15
-				industrial_capacity_factory = 0.10
+				production_lack_of_resource_penalty_factor = -0.25
 				consumer_goods_factor = 0.2
 			}
 		}
@@ -1025,6 +1036,7 @@ ideas = {
 				stability_factor = 0.05
 				monthly_population = 0.3
 				global_building_slots_factor = 0.05
+				consumer_goods_factor = -0.1
 			}
 		}
 
@@ -1036,6 +1048,7 @@ ideas = {
 				stability_factor = 0.10
 				monthly_population = 0.6
 				global_building_slots_factor = 0.1
+				consumer_goods_factor = -0.15
 			}
 		}
 
@@ -1176,9 +1189,9 @@ ideas = {
 			}
 			allowed = { always = no }
             modifier = {
+				conscription = 0.01
 				stability_factor = 0.10
-				war_support_factor = -0.10
-				army_core_defence_factor = 0.10
+				army_core_defence_factor = 0.05
 				production_speed_bunker_factor = 0.1
 				production_speed_coastal_bunker_factor = 0.1
 			}

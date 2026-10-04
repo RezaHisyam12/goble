@@ -143,7 +143,10 @@ JAP_war_with_GEA_plan = {
 	allowed = { original_tag = JAP }
 	enable = {
 		NOT = { has_completed_focus = JAP_ultimatum }
-		GER = { has_war_with = FRA }
+		OR = {
+			GER = { has_war_with = FRA }
+			GRU = { has_war_with = FRA }
+		}
 	}
 	abort = {
 		has_completed_focus = JAP_ultimatum

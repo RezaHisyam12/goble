@@ -2584,6 +2584,21 @@ ideas = {
 			}
 		}
 		
+		GRU_embargo_france = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_embargo_france"}
+			allowed = { always = no }
+			name = rus_ceased_contacts_germany
+			available = {
+				country_exists = GRU
+				NOT = { has_war_with = GRU }
+			}
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = -0.1
+				min_export = -0.2
+			}
+			picture = RUS_mitteleuropa_embargo
+		}
 		
 		
 		####Maintanance Traits####

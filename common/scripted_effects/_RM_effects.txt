@@ -1510,7 +1510,7 @@ create_VKK = {
 }
 
 create_HYP = {
-	SWE = {
+	HYP = {
 		set_politics = {
 			ruling_party = totalist
 			last_election = "1936.1.1"
@@ -1525,22 +1525,94 @@ create_HYP = {
 
 		create_country_leader = {
 			name = "Sven Olov Lindholm"
-			desc = "POLITICS_Lindholm_DESC"
+			desc = "Politics_Sven_Olov_Lindholm"
 			picture = "gfx/leaders/GRU/Portrait_HYP_sevn.png"
 			expire = "1.1.1"
 			ideology = tot_left_nationalism_subtype
-			traits = { }
+			traits = { SWE_lindholm_trait }
 		}
 		create_country_leader = {
 			name = "Sven Olov Lindholm"
-			desc = "POLITICS_Lindholm_DESC"
+			desc = "Politics_Sven_Olov_Lindholm"
 			picture = "gfx/leaders/GRU/Portrait_HYP_sevn.png"
 			expire = "1.1.1"
 			ideology = natpop_goebbels_subtype
-			traits = { }
+			traits = { SWE_lindholm_trait }
 		}
+		add_ideas = SWE_Sven_Olov_Lindholm_hog_tot
 		set_cosmetic_tag = HYP
 		load_focus_tree = gru_HYP
+
+create_field_marshal = {
+	name = GRU_general_Vidkun_Quisling
+	portrait_path = "gfx/leaders/NOR/Portrait_Norway_Vidkun_Quisling_Uniform.png"
+	traits = { harsh_leader media_personality organizer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_field_marshal = {
+	name = GRU_general_Jonas_Lie
+	portrait_path = "gfx/leaders/NOR/Portrait_Norway_Jonas_Lie.png"
+	traits = { offensive_doctrine }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = GRU_general_Oliver_Moystad
+	portrait_path = "gfx/leaders/NOR/Portrait_Norway_Oliver_Moystad.png"
+	traits = { winter_specialist }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = GRU_general_Henrik_Rogstad
+	portrait_path = "gfx/leaders/NOR/Portrait_Norway_Henrik_Rogstad.png"
+	traits = { hill_fighter }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = GRU_general_Karl_Marthinsen
+	portrait_path = "gfx/leaders/NOR/Portrait_Norway_Karl_Marthinsen.png"
+	traits = { trickster }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = GRU_general_Axel_Stang
+	portrait_path = "gfx/leaders/NOR/Portrait_Norway_Axel_Stang.png"
+	traits = { }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = GRU_general_Konrad_Sundlo
+	portrait_path = "gfx/leaders/NOR/Portrait_Norway_Konrad_Sundlo.png"
+	traits = { old_guard }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+}
 	}
 }
 

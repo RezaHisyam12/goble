@@ -1,0 +1,24 @@
+AFG_amanullah_plan = {
+	name = "AFG_amanullah_plan"
+	desc = ""
+
+	allowed = {
+		original_tag = AFG
+	}
+	enable = {
+		has_war = no
+	}
+	abort = {
+		has_completed_focus = AFG_AMN_draft_constitution
+	}
+
+	ai_national_focuses = {
+		AFG_AMN_draft_constitution
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}
