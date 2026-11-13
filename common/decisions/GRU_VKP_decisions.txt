@@ -1,0 +1,67 @@
+GRU_VKP_reconstruction_decisions = {
+
+	GRU_VKP_rebuild_warsaw_hub = {
+		icon = generic_construction
+		fire_only_once = yes
+		cost = 50
+
+		visible = { has_completed_focus = GRU_VKP_eco_cir }
+		available = { owns_state = 10 }
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_VKP_rebuild_warsaw_hub"
+			10 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = { factor = 20 }
+	}
+
+	GRU_VKP_radom_arms_works = {
+		icon = generic_construction
+		fire_only_once = yes
+		cost = 75
+
+		visible = { has_country_flag = GRU_VKP_munitions_bureau }
+		available = { owns_state = 90 }
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_VKP_radom_arms_works"
+			90 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = { factor = 20 }
+	}
+
+	GRU_VKP_expand_the_district = {
+		icon = generic_construction
+		fire_only_once = yes
+		cost = 75
+
+		visible = { has_country_flag = GRU_VKP_munitions_bureau }
+		available = { owns_state = 92 }
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision GRU_VKP_expand_the_district"
+			92 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = { factor = 20 }
+	}
+}

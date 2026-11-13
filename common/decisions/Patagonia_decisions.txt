@@ -1369,7 +1369,7 @@ FOP_administrative_chaos_decisions = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		remove_effect = {
@@ -1393,7 +1393,7 @@ FOP_administrative_chaos_decisions = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		remove_effect = {
@@ -1417,7 +1417,7 @@ FOP_administrative_chaos_decisions = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		remove_effect = {
@@ -1441,7 +1441,7 @@ FOP_administrative_chaos_decisions = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 
 		remove_effect = {

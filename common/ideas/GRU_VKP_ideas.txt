@@ -1,0 +1,181 @@
+### VKP ideas (tiered ideas share a name, as in the Kaiserreich Poland tree)
+ideas = {
+	country = {
+
+		GRU_VKP_central_industrial_region_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKP_central_industrial_region_1" }
+			name = GRU_VKP_central_industrial_region
+			picture = man_five_year_plan_industry
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+
+		GRU_VKP_central_industrial_region_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKP_central_industrial_region_2" }
+			name = GRU_VKP_central_industrial_region
+			picture = man_five_year_plan_industry
+			modifier = {
+				production_speed_buildings_factor = 0.10
+			}
+			research_bonus = {
+				industry = 0.1
+				synth_resources = 0.1
+			}
+		}
+
+		GRU_VKP_central_industrial_region_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKP_central_industrial_region_3" }
+			name = GRU_VKP_central_industrial_region
+			picture = man_five_year_plan_industry
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				industry_repair_factor = 0.10
+			}
+			research_bonus = {
+				industry = 0.1
+				synth_resources = 0.1
+			}
+		}
+
+		GRU_VKP_central_industrial_region_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKP_central_industrial_region_4" }
+			name = GRU_VKP_central_industrial_region
+			picture = man_five_year_plan_industry
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+				global_building_slots_factor = 0.10
+			}
+			research_bonus = {
+				industry = 0.1
+				synth_resources = 0.1
+			}
+		}
+
+		GRU_VKP_rural_schools = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKP_rural_schools" }
+			picture = generic_research_increase
+			modifier = {
+				research_speed_factor = 0.10
+				political_power_factor = -0.05
+			}
+		}
+
+		GRU_VKP_german_integration = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKP_german_integration" }
+			picture = GRE_german_ownership
+			modifier = {
+				stability_factor = -0.05
+				production_speed_arms_factory_factor = 0.10
+				production_factory_max_efficiency_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = GRU
+				cic_to_target_factor = 0.10
+			}
+		}
+
+		GRU_VKP_eigenwirtschaft = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKP_eigenwirtschaft" }
+			picture = generic_trade
+			modifier = {
+				stability_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.10
+			}
+		}
+
+		GRU_VKP_hilfsverbaende_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKP_hilfsverbaende_1" }
+			name = GRU_VKP_hilfsverbaende
+			picture = POL_royal_army
+			modifier = {
+				army_org_factor = 0.05
+				conscription_factor = 0.03
+			}
+		}
+
+		GRU_VKP_hilfsverbaende_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKP_hilfsverbaende_2" }
+			name = GRU_VKP_hilfsverbaende
+			picture = POL_royal_army
+			modifier = {
+				army_org_factor = 0.05
+				conscription_factor = 0.03
+				coordination_bonus = 0.04
+				land_doctrine_cost_factor = -0.10
+			}
+		}
+
+		GRU_VKP_hilfsverbaende_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKP_hilfsverbaende_3" }
+			name = GRU_VKP_hilfsverbaende
+			picture = POL_royal_army
+			modifier = {
+				army_org_factor = 0.10
+				army_attack_factor = 0.05
+				conscription_factor = 0.03
+				coordination_bonus = 0.04
+				land_doctrine_cost_factor = -0.10
+			}
+		}
+
+		GRU_VKP_ordnungsdienst = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKP_ordnungsdienst" }
+			picture = generic_secret_police
+			modifier = {
+				stability_factor = 0.05
+				intelligence_agency_defense = 0.15
+			}
+		}
+
+		GRU_VKP_modern_cavalry = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKP_modern_cavalry" }
+			picture = ETH_national_studs
+			modifier = {
+				recon_factor = 0.05
+				cavalry_attack_factor = 0.10
+				cavalry_defence_factor = 0.05
+				supply_node_range = 0.10
+			}
+		}
+
+		GRU_VKP_modern_cavalry_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKP_modern_cavalry_2" }
+			name = GRU_VKP_modern_cavalry
+			picture = ETH_national_studs
+			modifier = {
+				recon_factor = 0.05
+				cavalry_attack_factor = 0.10
+				cavalry_defence_factor = 0.05
+				motorized_attack_factor = 0.05
+				mechanized_attack_factor = 0.05
+				supply_node_range = 0.10
+			}
+		}
+
+		GRU_VKP_polnische_wehrmacht = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKP_polnische_wehrmacht" }
+			picture = POL_royal_army
+			modifier = {
+				coordination_bonus = 0.04
+				army_speed_factor = 0.05
+				supply_consumption_factor = -0.05
+				land_doctrine_cost_factor = -0.05
+			}
+		}
+
+		GRU_VKP_landwacht = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKP_landwacht" }
+			picture = POL_royal_army
+			modifier = {
+				war_support_factor = 0.05
+				conscription_factor = 0.05
+				army_morale_factor = 0.05
+				stability_factor = -0.02
+			}
+		}
+	}
+}

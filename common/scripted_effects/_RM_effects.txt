@@ -1617,7 +1617,7 @@ create_corps_commander = {
 }
 
 create_VKM = {
-	WRA = {
+	VKM = {
 		set_politics = {
 			ruling_party = totalist
 			last_election = "1936.1.1"

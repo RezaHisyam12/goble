@@ -1932,24 +1932,21 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus OTT_army_modernization"
+		log = "[GetLogRoot]: Focus Completed OTT_army_modernization"
 		add_tech_bonus = {
 			name = OTT_army_modernization
 			bonus = 1
 			uses = 1
 			category = infantry_weapons
 		}
-		random_owned_state = {
+		random_owned_controlled_state = {
+			prioritize = { 49 339 340 342 343 344 345 346 354 355 356 }
 			limit = {
-				state_population > 500000
-				is_core_of = TUR
-				free_building_slots = {
-					building = arms_factory
-					size > 1
-					include_locked = yes
-				}
+				is_core_of = ROOT
+				is_in_home_area = yes
+				is_valid_state_for_development = yes
+				free_building_slots = { building = arms_factory size > 0 include_locked = yes }
 			}
-
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = arms_factory
@@ -1957,17 +1954,14 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
-		random_owned_state = {
+		random_owned_controlled_state = {
+			prioritize = { 49 339 340 342 343 344 345 346 354 355 356 }
 			limit = {
-				state_population > 500000
-				is_core_of = TUR
-				free_building_slots = {
-					building = arms_factory
-					size > 1
-					include_locked = yes
-				}
+				is_core_of = ROOT
+				is_in_home_area = yes
+				is_valid_state_for_development = yes
+				free_building_slots = { building = arms_factory size > 0 include_locked = yes }
 			}
-
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = arms_factory
@@ -2047,6 +2041,7 @@ shared_focus = {
 			uses = 2
 			category = land_doctrine
 		}
+		army_experience = 100
 	}
 }
 
@@ -2103,11 +2098,69 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_RESEARCH }
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus OTT_armor_effort_unq"
-		hidden_effect = {
-			load_oob = OTT_tanks
+		log = "[GetLogRoot]: Focus Completed OTT_armor_effort_unq"
+		custom_override_tooltip = {
+			tooltip = {
+				localization_key = tooltip_create_division_template
+				NAME = "Zirhli Alayi"
+				LINE_1 = { localization_key = line_battalion_tt NAME = light_armor ICON = GFX_unit_light_armor_icon_small COUNT = 4 }
+				LINE_2 = { localization_key = line_battalion_tt NAME = motorized ICON = GFX_unit_motorized_icon_small COUNT = 2 }
+				SUPPORT_1 = { localization_key = support_battalion_tt NAME = mot_recon ICON = GFX_unit_mot_recon_icon_small }
+				SUPPORT_2 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+				SUPPORT_3 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+			}
+			if = {
+				limit = { has_template = "Zirhli Alayi" }
+				delete_unit_template_and_units = { division_template = "Zirhli Alayi" disband = yes } #no cheating
+			}
+			division_template = {
+				name = "Zirhli Alayi"
+				division_names_group = OTT_ARM_01
+				regiments = {
+					light_armor = { x = 0 y = 0 }
+					light_armor = { x = 0 y = 1 }
+					light_armor = { x = 1 y = 0 }
+					light_armor = { x = 1 y = 1 }
+					motorized = { x = 2 y = 0 }
+					motorized = { x = 2 y = 1 }
+				}
+				support = {
+					mot_recon = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+					artillery = { x = 0 y = 2 }
+				}
+			}
 		}
-		custom_effect_tooltip = OTT_armor_division_template_gained
+		random_owned_controlled_state = {
+			prioritize = { 676 49 }
+			limit = { valid_state_for_spawning_friendly_unit = yes }
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_spawn_unit
+					TYPE = "Zirhli Alayi"
+				}
+				create_unit = {
+					division = "name = \"1. Zirhli Alayi\" division_template = \"Zirhli Alayi\" start_experience_factor = 0.3"
+					prioritize_location = 12046
+					owner = ROOT
+				}
+			}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 773 49 }
+			limit = { valid_state_for_spawning_friendly_unit = yes }
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_spawn_unit
+					TYPE = "Zirhli Alayi"
+				}
+				create_unit = {
+					division = "name = \"2. Zirhli Alayi\" division_template = \"Zirhli Alayi\" start_experience_factor = 0.3"
+					prioritize_location = 9833
+					owner = ROOT
+				}
+			}
+		}
 		add_tech_bonus = {
 			name = OTT_armor_effort_unq
 			bonus = 1
@@ -2288,7 +2341,7 @@ shared_focus = {
 			}
 		}
 		custom_effect_tooltip = tooltip_white_line
-		enable_tech_river_boats = yes
+		set_technology = { tech_river_boats = 1 popup = no }
 	}
 }
 
@@ -2311,14 +2364,14 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_AIRFORCE_BONUS FOCUS_FILTER_RESEARCH }
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus OTT_army_aviation_unq"
-		air_experience = 25
+		log = "[GetLogRoot]: Focus Completed OTT_army_aviation_unq"
 		add_doctrine_cost_reduction = {
-				name = air_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
+			name = OTT_army_aviation_unq
+			cost_reduction = 0.5
+			uses = 2
+			category = air_doctrine
 		}
+		air_experience  = 100
 	}
 }
 
@@ -2340,14 +2393,8 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus OTT_air_warfare_academy"
-		air_experience = 25
+		air_experience = 50
 		add_ideas = ott_air_warfare_academy_idea
-		add_doctrine_cost_reduction = {
-				name = air_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-		}
 	}
 }
 
@@ -2375,7 +2422,7 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus OTT_aircraft_industry"
+		log = "[GetLogRoot]: Focus Completed OTT_aircraft_industry"
 		773 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
@@ -2384,40 +2431,37 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
-		custom_effect_tooltip = tooltip_white_line
 		if = {
-			limit = { has_dlc_aat = no }
-			custom_effect_tooltip = OTT_hurkus_unlocked_tt
+			limit = { has_dlc_aat = yes }
+			custom_effect_tooltip = tooltip_white_line
 		}
-		else = {
-			if = {
-				limit = {
-					has_military_industrial_organization = TUR_hurkus_organisation
-					mio:TUR_hurkus_organisation = { is_mio_available = yes }
-				}
-				mio:TUR_hurkus_organisation = { add_mio_funds = 500 }
+		if = {
+			limit = {
+				has_military_industrial_organization = TUR_hurkus_organisation
+				mio:TUR_hurkus_organisation = { is_mio_available = yes }
 			}
-			if = {
-				limit = {
-					has_military_industrial_organization = TUR_tomtas_organisation
-					mio:TUR_tomtas_organisation = { is_mio_available = yes }
-				}
-				mio:TUR_tomtas_organisation = { add_mio_funds = 500 }
+			mio:TUR_hurkus_organisation = { add_mio_funds = 500 }
+		}
+		if = {
+			limit = {
+				has_military_industrial_organization = TUR_tomtas_organisation
+				mio:TUR_tomtas_organisation = { is_mio_available = yes }
 			}
-			if = {
-				limit = {
-					has_military_industrial_organization = TUR_nuri_demirag_company_organisation
-					mio:TUR_nuri_demirag_company_organisation = { is_mio_available = yes }
-				}
-				mio:TUR_nuri_demirag_company_organisation = { add_mio_funds = 500 }
+			mio:TUR_tomtas_organisation = { add_mio_funds = 500 }
+		}
+		if = {
+			limit = {
+				has_military_industrial_organization = TUR_nuri_demirag_company_organisation
+				mio:TUR_nuri_demirag_company_organisation = { is_mio_available = yes }
 			}
-			if = {
-				limit = {
-					has_military_industrial_organization = TUR_thk_company_organisation
-					mio:TUR_thk_company_organisation = { is_mio_available = yes }
-				}
-				mio:TUR_thk_company_organisation = { add_mio_funds = 500 }
+			mio:TUR_nuri_demirag_company_organisation = { add_mio_funds = 500 }
+		}
+		if = {
+			limit = {
+				has_military_industrial_organization = TUR_thk_company_organisation
+				mio:TUR_thk_company_organisation = { is_mio_available = yes }
 			}
+			mio:TUR_thk_company_organisation = { add_mio_funds = 500 }
 		}
 	}
 }
@@ -2451,7 +2495,7 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus OTT_Naval_Program"
+		log = "[GetLogRoot]: Focus Completed OTT_Naval_Program"
 		773 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
@@ -2469,6 +2513,7 @@ shared_focus = {
 			}
 			unlock_decision_tooltip = OTT_TRI_Misrata_Program
 		}
+		navy_experience = 100
 	}
 }
 
@@ -2498,12 +2543,18 @@ shared_focus = {
 	
 	search_filters = { FOCUS_FILTER_RESEARCH }
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus OTT_Upgrade_Dreadnoughts"
+		log = "[GetLogRoot]: Focus Completed OTT_Upgrade_Dreadnoughts"
+		add_tech_bonus = {
+			name = OTT_Upgrade_Dreadnoughts
+			bonus = 0.75
+			uses = 2
+			category = ship_modules_tech
+		}
 		add_tech_bonus = {
 			name = OTT_Upgrade_Dreadnoughts
 			bonus = 1
-			uses = 3
-			category = cat_gunnery
+			uses = 1
+			category = bb_tech
 		}
 	}
 }
@@ -2545,27 +2596,51 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus OTT_Dominance_Black_Sea"
+		log = "[GetLogRoot]: Focus Completed OTT_Dominance_Black_Sea"
 		773 = {
-			add_building_construction = {
-				type = coastal_bunker
-				province = 9833
-				level = 3
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = coastal_bunker
-				province = 11829
-				level = 3
-				instant_build = yes
+			custom_override_tooltip = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 9833
+					level = 3
+					instant_build = yes
+				}
+				tooltip = {
+					localization_key = tooltip_add_building_on_victory_point
+					BUILDING = coastal_bunker
+					NUMBER = 3
+					VP = 9833
+				}
 			}
 		}
 		340 = {
-			add_building_construction = {
-				type = coastal_bunker
-				province = 6864
-				level = 1
-				instant_build = yes
+			custom_override_tooltip = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 11829
+					level = 3
+					instant_build = yes
+				}
+				tooltip = {
+					localization_key = tooltip_add_building_on_victory_point
+					BUILDING = coastal_bunker
+					NUMBER = 3
+					VP = 11829
+				}
+			}
+			custom_override_tooltip = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 6864
+					level = 1
+					instant_build = yes
+				}
+				tooltip = {
+					localization_key = tooltip_add_building_on_victory_point
+					BUILDING = coastal_bunker
+					NUMBER = 1
+					VP = 6864
+				}
 			}
 			add_building_construction = {
 				type = coastal_bunker
@@ -2575,31 +2650,63 @@ shared_focus = {
 			}
 		}
 		356 = {
-			add_building_construction = {
-				type = coastal_bunker
-				province = 11866
-				level = 3
-				instant_build = yes
+			custom_override_tooltip = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 11866
+					level = 3
+					instant_build = yes
+				}
+				tooltip = {
+					localization_key = tooltip_add_building_on_victory_point
+					BUILDING = coastal_bunker
+					NUMBER = 3
+					VP = 11866
+				}
 			}
-			add_building_construction = {
-				type = coastal_bunker
-				province = 6995
-				level = 3
-				instant_build = yes
+			custom_override_tooltip = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 6995
+					level = 3
+					instant_build = yes
+				}
+				tooltip = {
+					localization_key = tooltip_add_building_on_victory_point
+					BUILDING = coastal_bunker
+					NUMBER = 3
+					VP = 6995
+				}
 			}
 		}
 		355 = {
-			add_building_construction = {
-				type = coastal_bunker
-				province = 11881
-				level = 3
-				instant_build = yes
+			custom_override_tooltip = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 11881
+					level = 3
+					instant_build = yes
+				}
+				tooltip = {
+					localization_key = tooltip_add_building_on_victory_point
+					BUILDING = coastal_bunker
+					NUMBER = 3
+					VP = 11881
+				}
 			}
-			add_building_construction = {
-				type = coastal_bunker
-				province = 9932
-				level = 3
-				instant_build = yes
+			custom_override_tooltip = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 9932
+					level = 3
+					instant_build = yes
+				}
+				tooltip = {
+					localization_key = tooltip_add_building_on_victory_point
+					BUILDING = coastal_bunker
+					NUMBER = 3
+					VP = 9932
+				}
 			}
 		}
 	}
@@ -2632,21 +2739,21 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_INDUSTRY }
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus OTT_Shipbuilding_Effort"
+		log = "[GetLogRoot]: Focus Completed OTT_Shipbuilding_Effort"
 		if = {
 			limit = { has_dlc_aat = no }
-			add_ideas = golcuk_tersanesi
+			if = {
+				limit = { amount_taken_ideas = { amount < 1 slots = { naval_manufacturer } } }
+				add_ideas = golcuk_tersanesi
+			}
+			else = {
+				navy_experience = 25
+			}
 		}
 		else = {
-			if = {
-				limit = {
-					has_military_industrial_organization = TUR_golcuk_tersanesi_organisation
-					mio:TUR_golcuk_tersanesi_organisation = { is_mio_available = yes }
-				}
-				mio:TUR_golcuk_tersanesi_organisation = {
-					add_mio_size = 1
-					add_mio_funds = 500
-				}
+			mio:TUR_golcuk_tersanesi_organisation = {
+				add_mio_size = 1
+				add_mio_funds = 500
 			}
 		}
 		custom_effect_tooltip = tooltip_white_line
@@ -2688,11 +2795,11 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_RESEARCH }
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus OTT_Naval_Academy"
+		log = "[GetLogRoot]: Focus Completed OTT_Naval_Academy"
 		add_doctrine_cost_reduction = {
 			name = OTT_Naval_Academy
 			category = naval_doctrine
-			cost_reduction = 1
+			cost_reduction = 0.5
 			uses = 2
 		}
 	}
@@ -2725,7 +2832,7 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus OTT_Basra_Kuwait"
+		log = "[GetLogRoot]: Focus Completed OTT_Basra_Kuwait"
 		812 = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
@@ -11006,7 +11113,6 @@ shared_focus = {
 			ideology = paternal_autocrat
 		}
 		custom_effect_tooltip = tooltip_white_line
-		army_experience = -100
 		add_timed_idea = {
 			idea = ott_military_purge
 			days = 400
@@ -11019,7 +11125,7 @@ shared_focus = {
 	icon = GFX_goal_SOM_Caliph_Horn
 
 	available = {
-		paternal_autocrat > 0.4
+		paternal_autocrat > 0.35
 	}
 
 	prerequisite = {
@@ -11057,14 +11163,14 @@ shared_focus = {
 				id = ottars.11
 				days = 50
 			}
-			set_country_leader_ideology = absolute_monarchy_subtype
+			set_country_leader_ideology = pataut_islamism_subtype
 			set_party_name = {
 				ideology = paternal_autocrat
 				long_name = TUR_absolutist_party_long
 				name = TUR_absolutist_party
 			}
 		}
-		custom_effect_tooltip = pataut_absolute_monarchy_subtype_swap_tt
+		custom_effect_tooltip = pataut_pataut_islamism_subtype_swap_tt
 		remove_ideas = ott_bloated_administration
 		add_soccon_to_coalition = yes
 	}
@@ -11156,6 +11262,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus OTT_Pan_Islamic_Legitimacy"
 		add_ideas = ott_Pan_Islamic_Idea
+		remove_ideas = ott_widespread_illiteracy
+		hidden_effect = { add_dynamic_modifier = { modifier = millet_mektepleri_dynamic_modifier } }
 		country_event = {
 			id = ottars.13
 		}

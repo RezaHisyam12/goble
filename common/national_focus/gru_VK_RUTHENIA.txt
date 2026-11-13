@@ -18,6 +18,9 @@ focus_tree = {
 		allow_branch = {
 			has_country_flag = IS_VKR 
 		}
+		ai_will_do = {
+			factor = 400
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_START_COLONIZING"
 			202 = {
@@ -93,6 +96,9 @@ focus_tree = {
 			}
 		}
 		cost = 5
+		ai_will_do = {
+			factor = 400
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_ONE"
 			1320 = {
@@ -248,6 +254,9 @@ focus_tree = {
 					}
 		}
 		cost = 5
+		ai_will_do = {
+			factor = 400
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_TWO"
 			80 = {
@@ -275,6 +284,9 @@ focus_tree = {
 			}
 		}
 		cost = 5
+		ai_will_do = {
+			factor = 400
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_THREE"
 			add_manpower = 15000
@@ -299,6 +311,9 @@ focus_tree = {
 							}
 		}
 		cost = 5
+		ai_will_do = {
+			factor = 400
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_FOUR"
 			220 = {
@@ -326,6 +341,9 @@ focus_tree = {
 				controls_state = 240
 				controls_state = 1231
 							}
+		}
+		ai_will_do = {
+			factor = 400
 		}
 		cost = 5
 		completion_reward = {
@@ -356,6 +374,9 @@ focus_tree = {
 							}
 		}
 		cost = 5
+		ai_will_do = {
+			factor = 400
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZE_SIX"
 			1229 = {
@@ -378,6 +399,9 @@ focus_tree = {
 		available = {
 		}
 		cost = 5
+		ai_will_do = {
+			factor = 400
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_RUTHENIA_COLONIZED"
 			swap_ideas = {
@@ -392,5 +416,6 @@ focus_tree = {
 		prerequisite = { focus = VK_FOCUS_RUTHENIA_COLONIZE_SIX  }
 	}
 	shared_focus = VK_FOCUS_SHARED_ESTABLISH_VK
-	#shared_focus = GRU_formation_of_the_nva
+	shared_focus = GRU_VK_eco_root
+	shared_focus = GRU_VK_mil_root
 }

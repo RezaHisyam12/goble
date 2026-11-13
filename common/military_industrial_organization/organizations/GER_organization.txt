@@ -2238,7 +2238,7 @@ GER_hanomag_organisation = {
 	}
 
 	equipment_type = {
-		mechanized_equipment
+		mio_cat_eq_all_mechanised
 		armored_car_equipment
 	}
 

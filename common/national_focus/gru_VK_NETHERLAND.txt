@@ -1,4 +1,4 @@
-	focus_tree = {
+focus_tree = {
 	id = gru_VKN
 	continuous_focus_position = { x = 2700 y = 300 }
 	country = {
@@ -94,6 +94,648 @@
 		prerequisite = { focus =  VK_FOCUS_NETHERLAND_COLONIZE_TWO }
 		prerequisite = { focus =  VK_FOCUS_NETHERLAND_COLONIZE_THREE }
 	}
+	### VKN: Festung Holland (land) and Küsten- und Seeverteidigung (sea and air) - repelling the British invasion ###
+	focus = {
+		id = GRU_VKN_land_root
+		icon = GFX_goal_generic_defence
+		relative_position_id = VK_FOCUS_SHARED_ESTABLISH_VK
+		x = -3
+		y = 6
+		cost = 5
+		dynamic = yes
+		allow_branch = {
+			has_country_flag = IS_VKN
+		}
+		ai_will_do = {
+			base = 50
+		}
+		prerequisite = { focus = VK_FOCUS_NETHERLAND_COLONIZED }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKN_land_root"
+			add_ideas = GRU_VKN_homeland_defence_1
+			add_manpower = 20000
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = GRU_VKN_alert_add_tt
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = GRU_VKN_invasion_alert_dm }
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER }
+	}
+
+	focus = {
+		id = GRU_VKN_land_dyke_guard
+		icon = GFX_goal_generic_army_cooperation
+		relative_position_id = GRU_VKN_land_root
+		x = -2
+		y = 1
+		cost = 5
+		dynamic = yes
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				GRU_VKN_at_war_with_british = yes
+			}
+		}
+		prerequisite = { focus = GRU_VKN_land_root }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKN_land_dyke_guard"
+			add_ideas = GRU_VKN_dyke_guard
+			add_manpower = 25000
+			custom_effect_tooltip = tooltip_white_line
+			add_to_variable = { GRU_vkn_alert_reinforce = 0.02 tooltip = land_reinforce_rate_tooltip }
+			force_update_dynamic_modifier = yes
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER }
+	}
+
+	focus = {
+		id = GRU_VKN_land_bunker_belt
+		icon = GFX_goal_generic_construct_military
+		relative_position_id = GRU_VKN_land_root
+		x = 0
+		y = 1
+		cost = 6
+		dynamic = yes
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				GRU_VKN_at_war_with_british = yes
+			}
+		}
+		prerequisite = { focus = GRU_VKN_land_root }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKN_land_bunker_belt"
+			every_core_state = {
+				display_individual_scopes = yes
+				limit = { is_owned_and_controlled_by = ROOT }
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_victory_point = yes
+						}
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_victory_points
+						BUILDING = bunker
+						NUMBER = 1
+					}
+				}
+			}
+			swap_ideas = {
+				remove_idea = GRU_VKN_homeland_defence_1
+				add_idea = GRU_VKN_homeland_defence_2
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_to_variable = { GRU_vkn_alert_dig_in = 0.05 tooltip = dig_in_speed_factor_tooltip }
+			force_update_dynamic_modifier = yes
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = GRU_VKN_land_rhine_line
+		icon = GFX_goal_generic_construct_military
+		relative_position_id = GRU_VKN_land_root
+		x = 2
+		y = 1
+		cost = 6
+		dynamic = yes
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				GRU_VKN_at_war_with_british = yes
+			}
+		}
+		prerequisite = { focus = GRU_VKN_land_root }
+		available = {
+			OR = {
+				owns_state = 7
+				owns_state = 866
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKN_land_rhine_line"
+			if = {
+				limit = { owns_state = 7 }
+				7 = {
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = bunker
+							level = 3
+							instant_build = yes
+							province = 9498
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_victory_point
+							BUILDING = bunker
+							NUMBER = 3
+							VP = 9498
+						}
+					}
+				}
+			}
+			if = {
+				limit = { owns_state = 866 }
+				866 = {
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = bunker
+							level = 3
+							instant_build = yes
+							province = 11456
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_victory_point
+							BUILDING = bunker
+							NUMBER = 3
+							VP = 11456
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_to_variable = { GRU_vkn_alert_planning = 0.05 tooltip = max_planning_factor_tooltip }
+			force_update_dynamic_modifier = yes
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = GRU_VKN_land_reich_garrison
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = GRU_VKN_land_root
+		x = 4
+		y = 1
+		cost = 5
+		ai_will_do = {
+			base = 30
+		}
+		prerequisite = { focus = GRU_VKN_land_root }
+		available = {
+			is_subject_of = GRU
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKN_land_reich_garrison"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 3000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 150
+			}
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment_1
+				amount = 150
+			}
+			custom_effect_tooltip = GRU_VKN_tt_closer
+			hidden_effect = {
+				if = {
+					limit = { is_subject = yes }
+					add_autonomy_ratio = { value = -0.05 localization = GRU_VKN_autonomy_closer }
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	focus = {
+		id = GRU_VKN_land_anti_tank
+		icon = GFX_goal_generic_defence
+		relative_position_id = GRU_VKN_land_dyke_guard
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			base = 30
+			modifier = {
+				factor = 2
+				GRU_VKN_at_war_with_british = yes
+			}
+		}
+		prerequisite = { focus = GRU_VKN_land_dyke_guard }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKN_land_anti_tank"
+			if = {
+				limit = { NOT = { has_tech = interwar_antitank } }
+				set_technology = { interwar_antitank = 1 }
+			}
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment_1
+				amount = 200
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = GRU_VKN_land_counterlanding
+		icon = GFX_goal_generic_army_cooperation
+		relative_position_id = GRU_VKN_land_anti_tank
+		x = 0
+		y = 1
+		cost = 6
+		dynamic = yes
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				GRU_VKN_at_war_with_british = yes
+			}
+		}
+		prerequisite = { focus = GRU_VKN_land_anti_tank }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKN_land_counterlanding"
+			add_ideas = GRU_VKN_counterlanding
+			custom_effect_tooltip = tooltip_white_line
+			add_to_variable = { GRU_vkn_alert_org = 0.05 tooltip = army_org_factor_tooltip }
+			force_update_dynamic_modifier = yes
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	focus = {
+		id = GRU_VKN_land_waterlines
+		icon = GFX_focus_hol_prepare_the_inundation_lines
+		relative_position_id = GRU_VKN_land_root
+		x = 1
+		y = 2
+		cost = 6
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 2
+				GRU_VKN_at_war_with_british = yes
+			}
+		}
+		prerequisite = { focus = GRU_VKN_land_bunker_belt }
+		prerequisite = { focus = GRU_VKN_land_rhine_line }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKN_land_waterlines"
+			swap_ideas = {
+				remove_idea = GRU_VKN_homeland_defence_2
+				add_idea = GRU_VKN_homeland_defence_3
+			}
+			unlock_decision_category_tooltip = GRU_VKN_waterlines
+			custom_effect_tooltip = GRU_VKN_waterlines_tt
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = GRU_VKN_land_fortress
+		icon = GFX_goal_generic_defence
+		relative_position_id = GRU_VKN_land_root
+		x = 0
+		y = 4
+		cost = 10
+		dynamic = yes
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 2
+				GRU_VKN_at_war_with_british = yes
+			}
+		}
+		prerequisite = { focus = GRU_VKN_land_waterlines }
+		prerequisite = { focus = GRU_VKN_land_counterlanding }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKN_land_fortress"
+			swap_ideas = {
+				remove_idea = GRU_VKN_homeland_defence_3
+				add_idea = GRU_VKN_homeland_defence_4
+			}
+			add_political_power = 75
+			if = {
+				limit = { GRU_VKN_at_war_with_british = yes }
+				add_war_support = 0.10
+			}
+			set_country_flag = GRU_VKN_land_complete
+			custom_effect_tooltip = tooltip_white_line
+			add_to_variable = { GRU_vkn_alert_org = 0.05 tooltip = army_org_factor_tooltip }
+			add_to_variable = { GRU_vkn_alert_planning = 0.05 tooltip = max_planning_factor_tooltip }
+			force_update_dynamic_modifier = yes
+			hidden_effect = {
+				country_event = { id = GRU_VKN_events.1 days = 3 }
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = GRU_VKN_sea_root
+		icon = GFX_goal_generic_construct_naval_base
+		relative_position_id = VK_FOCUS_SHARED_ESTABLISH_VK
+		x = 3
+		y = 7
+		cost = 5
+		dynamic = yes
+		allow_branch = {
+			has_country_flag = IS_VKN
+		}
+		ai_will_do = {
+			base = 50
+		}
+		prerequisite = { focus = VK_FOCUS_NETHERLAND_COLONIZED }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKN_sea_root"
+			add_ideas = GRU_VKN_coastal_defence_1
+			navy_experience = 20
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = GRU_VKN_alert_add_tt
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = GRU_VKN_invasion_alert_dm }
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_NAVY_XP }
+	}
+
+	focus = {
+		id = GRU_VKN_sea_coastal_batteries
+		icon = GFX_goal_generic_construct_military
+		relative_position_id = GRU_VKN_sea_root
+		x = -2
+		y = 1
+		cost = 6
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				GRU_VKN_at_war_with_british = yes
+			}
+		}
+		prerequisite = { focus = GRU_VKN_sea_root }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKN_sea_coastal_batteries"
+			every_core_state = {
+				display_individual_scopes = yes
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					naval_base > 0
+				}
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_naval_base = yes
+						}
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_naval_base
+						BUILDING = coastal_bunker
+						NUMBER = 2
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = GRU_VKN_sea_minefields
+		icon = GFX_goal_generic_navy_anti_submarine
+		relative_position_id = GRU_VKN_sea_root
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				GRU_VKN_at_war_with_british = yes
+			}
+		}
+		prerequisite = { focus = GRU_VKN_sea_root }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKN_sea_minefields"
+			swap_ideas = {
+				remove_idea = GRU_VKN_coastal_defence_1
+				add_idea = GRU_VKN_coastal_defence_2
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+
+	focus = {
+		id = GRU_VKN_sea_flak
+		icon = GFX_goal_generic_air_defense
+		relative_position_id = GRU_VKN_sea_root
+		x = 2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				GRU_VKN_at_war_with_british = yes
+			}
+		}
+		prerequisite = { focus = GRU_VKN_sea_root }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKN_sea_flak"
+			add_ideas = GRU_VKN_air_watch
+			add_tech_bonus = {
+				name = GRU_VKN_flak
+				bonus = 1.0
+				uses = 1
+				category = electronics
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE_BONUS }
+	}
+
+	focus = {
+		id = GRU_VKN_sea_port_security
+		icon = GFX_goal_generic_construct_naval_base
+		relative_position_id = GRU_VKN_sea_coastal_batteries
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			base = 30
+			modifier = {
+				factor = 2
+				GRU_VKN_at_war_with_british = yes
+			}
+		}
+		prerequisite = { focus = GRU_VKN_sea_coastal_batteries }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKN_sea_port_security"
+			add_ideas = GRU_VKN_port_security
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = GRU_VKN_sea_flotilla
+		icon = GFX_goal_generic_navy_anti_submarine
+		relative_position_id = GRU_VKN_sea_minefields
+		x = 0
+		y = 1
+		cost = 6
+		ai_will_do = {
+			base = 30
+			modifier = {
+				factor = 2
+				GRU_VKN_at_war_with_british = yes
+			}
+		}
+		prerequisite = { focus = GRU_VKN_sea_minefields }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKN_sea_flotilla"
+			navy_experience = 30
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.25
+			}
+			add_doctrine_cost_reduction = {
+				name = GRU_VKN_flotilla
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_NAVY_BONUS }
+	}
+
+	focus = {
+		id = GRU_VKN_sea_air_cover
+		icon = GFX_goal_generic_air_fighter
+		relative_position_id = GRU_VKN_sea_flak
+		x = 0
+		y = 1
+		cost = 6
+		ai_will_do = {
+			base = 30
+			modifier = {
+				factor = 2
+				GRU_VKN_at_war_with_british = yes
+			}
+		}
+		prerequisite = { focus = GRU_VKN_sea_flak }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKN_sea_air_cover"
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_1
+				amount = 100
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.25
+			}
+		}
+		search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
+	}
+
+	focus = {
+		id = GRU_VKN_sea_reich_liaison
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		relative_position_id = GRU_VKN_sea_root
+		x = -1
+		y = 3
+		cost = 7
+		ai_will_do = {
+			base = 40
+		}
+		prerequisite = { focus = GRU_VKN_sea_flotilla }
+		prerequisite = { focus = GRU_VKN_sea_air_cover }
+		mutually_exclusive = { focus = GRU_VKN_sea_dutch_command }
+		available = {
+			is_subject_of = GRU
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKN_sea_reich_liaison"
+			add_ideas = GRU_VKN_reich_liaison
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_1
+				amount = 150
+			}
+			custom_effect_tooltip = GRU_VKN_tt_closer
+			hidden_effect = {
+				if = {
+					limit = { is_subject = yes }
+					add_autonomy_ratio = { value = -0.05 localization = GRU_VKN_autonomy_closer }
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_AIRFORCE_BONUS FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = GRU_VKN_sea_dutch_command
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		relative_position_id = GRU_VKN_sea_root
+		x = 1
+		y = 3
+		cost = 7
+		ai_will_do = {
+			base = 15
+			modifier = {
+				factor = 3
+				NOT = { is_subject_of = GRU }
+			}
+		}
+		prerequisite = { focus = GRU_VKN_sea_flotilla }
+		prerequisite = { focus = GRU_VKN_sea_air_cover }
+		mutually_exclusive = { focus = GRU_VKN_sea_reich_liaison }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKN_sea_dutch_command"
+			add_ideas = GRU_VKN_coastal_command
+			navy_experience = 30
+			custom_effect_tooltip = GRU_VKN_tt_looser
+			hidden_effect = {
+				if = {
+					limit = { is_subject = yes }
+					add_autonomy_ratio = { value = 0.05 localization = GRU_VKN_autonomy_looser }
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = GRU_VKN_sea_shield
+		icon = GFX_goal_generic_construct_naval_base
+		relative_position_id = GRU_VKN_sea_root
+		x = 0
+		y = 4
+		cost = 10
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 2
+				GRU_VKN_at_war_with_british = yes
+			}
+		}
+		prerequisite = { focus = GRU_VKN_sea_reich_liaison focus = GRU_VKN_sea_dutch_command }
+		prerequisite = { focus = GRU_VKN_sea_port_security }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKN_sea_shield"
+			add_ideas = GRU_VKN_atlantic_shield
+			add_political_power = 75
+			if = {
+				limit = { GRU_VKN_at_war_with_british = yes }
+				add_war_support = 0.10
+			}
+			set_country_flag = GRU_VKN_sea_complete
+			hidden_effect = {
+				country_event = { id = GRU_VKN_events.2 days = 3 }
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_POLITICAL }
+	}
+
 	shared_focus = VK_FOCUS_SHARED_ESTABLISH_VK
 	#shared_focus = GRU_formation_of_the_nva
 }

@@ -2620,7 +2620,7 @@ country_event = { #
 		tag = GRU
 		has_war_with = var:219.owner
 		GRU = { has_country_leader = { name = "Josef Goebbels" ruling_only = yes } }
-		RUS = { surrender_progress > 0.85 }
+		RUS = { surrender_progress > 0.80 }
 		OR = {
 			GRU = {
 				controls_state = 195
@@ -2647,15 +2647,35 @@ country_event = { #
 	option = {
 		name = rmruss.1.a
 		ai_chance = {
-			factor = 75
+			factor = 100
 		}
 		add_stability = 0.25
+		every_country = {
+			limit = { is_in_tech_sharing_group = russian_research }
+			remove_from_tech_sharing_group = russian_research
+		}
+		every_country = {
+			limit = {
+				is_subject_of = RUS
+			}
+			RUS = {
+				set_autonomy = { target = PREV autonomy_state = autonomy_free }
+			}
+		}	
 		RUS = {
-			leave_faction = yes
+			dismantle_faction = yes
 		    	separate_peace_all_wars = yes
+			add_timed_idea = {
+				idea = RUS_vilnius_treaty
+				days = 8
+			}
 			add_timed_idea = {
 				idea = RUS_postwar_devastation
 				days = 400
+			}
+			country_event = {
+				id = rusd.3327
+				days = 7
 			}
 		}
 		hidden_effect = {
@@ -3101,7 +3121,7 @@ country_event = { #
 	option = {
 		name = rmruss.1.b
 		ai_chance = {
-			factor = 25
+			factor = 1
 		}
 		add_stability = -0.35
 		add_war_support = -0.50
@@ -3121,7 +3141,7 @@ country_event = { #
 	option = {
 		name = rmruss.2.a
 		ai_chance = {
-			factor = 1
+			factor = 0
 		}
 		every_state = {
 			limit = {
@@ -8016,10 +8036,10 @@ country_event = { # HYP claims
 		every_state = {
 			limit = {
 				OR= {
-					region = 10 #Bohemia
-					region = 11 #Poland
-					region = 12 #Galicia
-					region = 13 #Galicia
+					region = 10
+					region = 11 
+					region = 12 
+					region = 13 
 				}
 			}
 			add_claim_by = HYP
@@ -8027,6 +8047,58 @@ country_event = { # HYP claims
 	}
 }
 
+country_event = { # HYP claims SWE
+	id = rotermorgenmisc.901
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.901" }
+	title = rotermorgenmisc.901.t
+	desc = rotermorgenmisc.901.d
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+   	 	every_owned_state = {
+        	limit = {
+            		is_core_of = SWE
+           	 	NOT = { is_core_of = ROOT }
+        	}
+        	add_compliance = 50
+    	}
+	}
+}
+
+country_event = { # HYP claims NOR
+	id = rotermorgenmisc.902
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.902" }
+	title = rotermorgenmisc.902.t
+	desc = rotermorgenmisc.902.d
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+   	 	every_owned_state = {
+        	limit = {
+            		is_core_of = NOR
+           	 	NOT = { is_core_of = ROOT }
+        	}
+        	add_compliance = 50
+    	}
+	}
+}
+country_event = { # HYP claims FIN
+	id = rotermorgenmisc.903
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.903" }
+	title = rotermorgenmisc.903.t
+	desc = rotermorgenmisc.903.d
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+   	 	every_owned_state = {
+        	limit = {
+            		is_core_of = FIN
+           	 	NOT = { is_core_of = ROOT }
+        	}
+        	add_compliance = 50
+    	}
+	}
+}
 
 country_event = { # VSJ claims
 	id = rotermorgenmisc.950
@@ -9673,7 +9745,7 @@ country_event = { #
 
 country_event = { #
 	id = rotermorgenmisc.958
-	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.957" }
+	immediate = { log = "[GetDateText]: [Root.GetName]: event rotermorgenmisc.958" }
 	title = rotermorgenmisc.958.t
 	desc = rotermorgenmisc.958.d
 	is_triggered_only = yes

@@ -1,0 +1,7 @@
+# True while the country is at war with the British. Change the tags if the invader has another one in your mod.
+GRU_VKN_at_war_with_british = {
+	OR = {
+		has_war_with = GBR
+		has_war_with = ENT
+	}
+}

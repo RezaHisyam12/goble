@@ -38,6 +38,14 @@ NDefines.NAI.LAND_DESIGN_DEMAND_ABSENT = 1
 
 NDefines.NAI.LAND_DESIGN_CUTOFF_AS_PERCENTAGE_OF_MAX = 0.25 --0.25
 
+NDefines.NMilitary.AI_BATTALION_BUILD_ORDER = {
+	1, 4, 7, 10, 13,
+	2, 5, 8, 11, 14,
+	3, 6, 9, 12, 15,
+	16, 18, 20, 22, 24,
+	17, 19, 21, 23, 25
+}
+
 --------------------------------------------------
 -- XP SPENDING DESIRES
 --------------------------------------------------

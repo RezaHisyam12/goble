@@ -1,0 +1,144 @@
+### GRU Volkskommissariat ideas
+ideas = {
+	country = {
+
+		GRU_VK_militia_command = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VK_militia_command" }
+			allowed = { always = no }
+			picture = GRU_masses
+			modifier = {
+				conscription_factor = 0.03
+				training_time_factor = -0.05
+			}
+		}
+
+		GRU_VK_military_districts = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VK_military_districts" }
+			allowed = { always = no }
+			picture = GRU_masses
+			modifier = {
+				conscription_factor = 0.05
+				training_time_factor = -0.10
+			}
+		}
+
+		GRU_VK_border_guard = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VK_border_guard" }
+			allowed = { always = no }
+			picture = generic_secret_police
+			modifier = {
+				army_core_defence_factor = 0.05
+				land_reinforce_rate = 0.02
+			}
+		}
+
+		GRU_VK_loyal_corps = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VK_loyal_corps" }
+			allowed = { always = no }
+			picture = GRU_guard_2
+			modifier = {
+				army_morale_factor = 0.05
+				supply_consumption_factor = -0.10
+				experience_gain_army_factor = 0.10
+			}
+		}
+
+		GRU_VK_volksarmee = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VK_volksarmee" }
+			allowed = { always = no }
+			picture = GRU_guard_2
+			modifier = {
+				army_attack_factor = 0.10
+				army_morale_factor = 0.05
+			}
+		}
+
+		GRU_VK_fortified_belt = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VK_fortified_belt" }
+			allowed = { always = no }
+			picture = GRU_HEROISM
+			modifier = {
+				army_core_defence_factor = 0.10
+				dig_in_speed_factor = 0.15
+			}
+		}
+
+		GRU_VK_shield_of_the_east = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VK_shield_of_the_east" }
+			allowed = { always = no }
+			picture = GRU_totalerkieg
+			modifier = {
+				army_org_factor = 0.05
+				land_reinforce_rate = 0.03
+				war_support_factor = 0.05
+				stability_factor = 0.05
+				conscription_factor = 0.03
+			}
+		}
+
+		GRU_VK_planned_economy = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VK_planned_economy" }
+			allowed = { always = no }
+			picture = GRU_KOMMANDOWIRTSCHAFT
+			modifier = {
+				global_building_slots_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		GRU_VK_resource_survey = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VK_resource_survey" }
+			allowed = { always = no }
+			picture = GRU_heavy_industry
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.15
+			}
+		}
+
+		GRU_VK_agrarplan = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VK_agrarplan" }
+			allowed = { always = no }
+			picture = GRU_COMMUNAL_HOUSE
+			modifier = {
+				stability_factor = 0.05
+				monthly_population = 0.05
+			}
+		}
+
+		GRU_VK_reichsplan = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VK_reichsplan" }
+			allowed = { always = no }
+			picture = GRU_KOMMANDOWIRTSCHAFT
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				production_factory_max_efficiency_factor = 0.05
+				political_power_factor = -0.05
+			}
+		}
+
+		GRU_VK_autarky = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VK_autarky" }
+			allowed = { always = no }
+			picture = GRU_heavy_industry
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.15
+				consumer_goods_factor = -0.05
+				stability_factor = 0.05
+			}
+		}
+
+		GRU_VK_economic_union = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VK_economic_union" }
+			allowed = { always = no }
+			picture = GRU_DAF_KDF
+			modifier = {
+				global_building_slots_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.10
+				stability_factor = 0.05
+			}
+		}
+	}
+}

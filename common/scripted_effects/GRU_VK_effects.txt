@@ -1,0 +1,53 @@
+### GRU Volkskommissariat helpers
+
+GRU_VK_build_arms_factory = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+
+GRU_VK_build_civ_factory = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+		}
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+
+GRU_VK_build_infrastructure = {
+	random_owned_controlled_state = {
+		add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+
+# Called from the puppet's scope. Raises GRU's tribute bonus by 1.5% per call, capped at 10% in total.
+GRU_VK_add_tribute = {
+	if = {
+		limit = { is_subject_of = GRU }
+		GRU = {
+			add_to_variable = { GRU_vk_tribute_level = 0.015 }
+			clamp_variable = {
+				var = GRU_vk_tribute_level
+				min = 0
+				max = 0.10
+			}
+			add_dynamic_modifier = { modifier = GRU_VK_tribute_dm }
+		}
+	}
+}

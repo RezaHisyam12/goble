@@ -447,6 +447,21 @@ research_fighter_and_cas_1 = {
 	}
 }
 
+majors_get_hmg_asap = {
+	enable = {
+		date > 1937.6.1
+		is_major = yes
+		is_eligible_for_light_aircraft_production = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = aa_hmg
+		value = 100
+	}
+}
+
 research_plane_modules = {
 	enable = {
 		date > 1938.1.1
@@ -463,11 +478,6 @@ research_plane_modules = {
 	ai_strategy = {
 		type = research_tech
 		id = range_improvements
-		value = 100
-	}
-	ai_strategy = {
-		type = research_tech
-		id = aa_hmg
 		value = 100
 	}
 }
@@ -840,6 +850,21 @@ research_silly_armored_cars = {
 	}
 }
 
+research_rockets = {
+	enable = {
+		date > 1941.1.1
+		is_major = yes
+		is_eligible_for_armor_production = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = research_tech
+		id = rocket_artillery
+		value = 100
+	}
+}
+
 research_le_funny_katyusha = {
 	enable = {
 		date > 1942.1.1
@@ -854,12 +879,23 @@ research_le_funny_katyusha = {
 
 	ai_strategy = {
 		type = research_tech
-		id = rocket_artillery
+		id = motorized_rocket_unit
 		value = 100
 	}
+}
+
+research_advanced_flames = {
+	enable = {
+		date > 1941.1.1
+		is_major = yes
+		is_eligible_for_armor_production = yes
+		is_special_project_completed = sp:sp_land_flamethrower_tank
+	}
+	abort_when_not_enabled = yes
+
 	ai_strategy = {
 		type = research_tech
-		id = motorized_rocket_unit
+		id = sp_armored_advanced_flamethrower_tech
 		value = 100
 	}
 }

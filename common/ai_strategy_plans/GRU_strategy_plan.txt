@@ -87,7 +87,7 @@ GRU_offensive_plan = {
 		has_army_manpower = { size > 300000 }
 	}
 	abort = {
-		has_completed_focus = GRU_NMDVP_PAN_GERMANISM_RELOADED
+		has_completed_focus = GRU_NMDVP_LEBENSRAUM
 	}
 
 	ai_national_focuses = {
@@ -99,6 +99,8 @@ GRU_offensive_plan = {
 		GRU_NMDVP_EMBARGO_FRANCE
 		GRU_NMDVP_SLAV_LAND_EXPANSION
 		GRU_NMDVP_PAN_GERMANISM_RELOADED
+		GRU_NMDVP_RED_COLONIALISM
+		GRU_NMDVP_LEBENSRAUM
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

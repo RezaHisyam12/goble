@@ -1226,10 +1226,7 @@ country_event = { #Moroccan response - independent
 			type = annex_everything
 			target = MOR
 		}
-		create_wargoal = {
-			type = annex_everything
-			target = RIF
-		}
+		annex_country = { target = RIF }
 	}
 
 	option = { #We must fight them
@@ -1247,10 +1244,7 @@ country_event = { #Moroccan response - independent
 			target = MOR
 			type = annex_everything
 		}
-		declare_war_on = {
-			target = RIF
-			type = annex_everything
-		}
+		annex_country = { target = RIF }
 	}
 }
 

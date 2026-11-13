@@ -4838,7 +4838,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 2000
 		}
 
 		available_if_capitulated = yes
@@ -4883,7 +4883,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 2000
 		}
 
 		available_if_capitulated = yes

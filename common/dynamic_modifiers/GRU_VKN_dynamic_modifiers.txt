@@ -1,0 +1,9 @@
+# Invasion alert: each defensive focus raises a variable, but the bonus only applies while at war with the British.
+GRU_VKN_invasion_alert_dm = {
+	icon = "GFX_idea_GRU_HEROISM"
+	enable = { GRU_VKN_at_war_with_british = yes }
+	army_org_factor = GRU_vkn_alert_org
+	land_reinforce_rate = GRU_vkn_alert_reinforce
+	dig_in_speed_factor = GRU_vkn_alert_dig_in
+	max_planning_factor = GRU_vkn_alert_planning
+}

@@ -15,6 +15,18 @@ light_aircraft_production_default = {
 	ai_strategy = { type = unit_ratio id = cas value = 30 }
 }
 
+hold_off_on_air_prod_until_hmg = {
+	enable = {
+		is_eligible_for_light_aircraft_production = yes
+		NOT = { has_tech = aa_hmg }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = air_factory_balance value = -75 }
+	ai_strategy = { type = unit_ratio id = fighter value = -30 }
+	ai_strategy = { type = unit_ratio id = cas value = -10 }
+}
+
 light_aircraft_production_air_war_ongoing = {
 	enable = {
 		is_eligible_for_light_aircraft_production = yes

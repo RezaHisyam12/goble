@@ -2818,7 +2818,7 @@ country_event = { #Bohemian faction building
 			}
 		}
 		CZE = {
-			add_to_faction = ROOT
+			add_to_faction = CRO
 			add_political_power = 100
 			country_event = {
 				id = ausgleich.new.352

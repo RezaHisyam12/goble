@@ -738,3 +738,49 @@ TUR_base_navy_in_beirut_before_levantine_war = {
 		value = 250
 	}
 }
+
+TUR_total_war_against_russia = {
+	allowed = {
+		tag = TUR
+	}
+	enable = {
+		is_in_faction_with = GRU
+		has_war_with = RUS
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 20
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = RUS
+		value = 50
+	}
+	ai_strategy = {
+		type = front_armor_score
+		id = RUS
+		value = 250
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 10
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 120 #aim for 4:2 ratio of fighters to CAS
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 100
+	}
+	ai_strategy = {
+		type = railway_gun_divisions_ratio
+		value = 1
+	}
+}

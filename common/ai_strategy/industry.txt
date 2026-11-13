@@ -58,11 +58,29 @@ french_mil_buildup = {
 	}
 }
 
+german_infra_buildup = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		NOT = { has_completed_focus = GER_Successful_Stabilization }
+		date < 1937.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = infrastructure
+		value = 1000
+	}
+}
+
 german_mil_buildup = {
 	allowed = {
 		original_tag = GER
 	}
 	enable = {
+		has_completed_focus = GER_Successful_Stabilization
 		date < 1940.1.1
 	}
 	abort_when_not_enabled = yes

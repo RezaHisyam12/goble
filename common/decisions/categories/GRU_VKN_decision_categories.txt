@@ -1,0 +1,6 @@
+GRU_VKN_waterlines = {
+	icon = generic_political_actions
+
+	allowed = { original_tag = VKN }
+	visible = { has_completed_focus = GRU_VKN_land_waterlines }
+}

@@ -308,5 +308,6 @@ focus_tree = {
 		prerequisite = { focus =  VK_FOCUS_KAUKASIA_COLONIZE_FIVE }
 	}
 	shared_focus = VK_FOCUS_SHARED_ESTABLISH_VK
-	#shared_focus = GRU_formation_of_the_nva
+	shared_focus = GRU_VK_eco_root
+	shared_focus = GRU_VK_mil_root
 }

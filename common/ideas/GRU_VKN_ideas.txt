@@ -1,0 +1,150 @@
+### VKN ideas (tiered ideas share a name, as in the Kaiserreich Netherlands tree)
+ideas = {
+	country = {
+
+		GRU_VKN_homeland_defence_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKN_homeland_defence_1" }
+			name = GRU_VKN_homeland_defence
+			allowed = { always = no }
+			picture = tfv_can_conscription_crisis
+			modifier = {
+				conscription_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+
+		GRU_VKN_homeland_defence_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKN_homeland_defence_2" }
+			name = GRU_VKN_homeland_defence
+			allowed = { always = no }
+			picture = tfv_can_conscription_crisis
+			modifier = {
+				conscription_factor = 0.05
+				army_core_defence_factor = 0.05
+				production_speed_bunker_factor = 0.15
+			}
+		}
+
+		GRU_VKN_homeland_defence_3 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKN_homeland_defence_3" }
+			name = GRU_VKN_homeland_defence
+			allowed = { always = no }
+			picture = tfv_can_conscription_crisis
+			modifier = {
+				conscription_factor = 0.05
+				army_core_defence_factor = 0.05
+				production_speed_bunker_factor = 0.15
+				production_speed_coastal_bunker_factor = 0.15
+			}
+		}
+
+		GRU_VKN_homeland_defence_4 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKN_homeland_defence_4" }
+			name = GRU_VKN_homeland_defence
+			allowed = { always = no }
+			picture = tfv_can_conscription_crisis
+			modifier = {
+				conscription_factor = 0.05
+				army_core_defence_factor = 0.10
+				production_speed_bunker_factor = 0.15
+				production_speed_coastal_bunker_factor = 0.15
+			}
+		}
+
+		GRU_VKN_dyke_guard = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKN_dyke_guard" }
+			allowed = { always = no }
+			picture = GRU_guard
+			modifier = {
+				land_reinforce_rate = 0.02
+				conscription_factor = 0.03
+			}
+		}
+
+		GRU_VKN_counterlanding = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKN_counterlanding" }
+			allowed = { always = no }
+			picture = GRU_HEROISM
+			modifier = {
+				army_attack_factor = 0.05
+				army_speed_factor = 0.05
+				land_reinforce_rate = 0.02
+			}
+		}
+
+		GRU_VKN_coastal_defence_1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKN_coastal_defence_1" }
+			name = GRU_VKN_coastal_defence
+			allowed = { always = no }
+			picture = GRU_heavy_industry
+			modifier = {
+				production_speed_coastal_bunker_factor = 0.10
+				production_speed_naval_base_factor = 0.10
+			}
+		}
+
+		GRU_VKN_coastal_defence_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKN_coastal_defence_2" }
+			name = GRU_VKN_coastal_defence
+			allowed = { always = no }
+			picture = GRU_heavy_industry
+			modifier = {
+				production_speed_coastal_bunker_factor = 0.10
+				production_speed_naval_base_factor = 0.10
+				naval_mines_effectiveness_factor = 0.25
+			}
+		}
+
+		GRU_VKN_air_watch = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKN_air_watch" }
+			allowed = { always = no }
+			picture = GRU_air
+			modifier = {
+				air_defence_factor = 0.10
+			}
+		}
+
+		GRU_VKN_port_security = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKN_port_security" }
+			allowed = { always = no }
+			picture = GRU_heavy_industry
+			modifier = {
+				production_speed_naval_base_factor = 0.20
+				industry_repair_factor = 0.15
+			}
+		}
+
+		GRU_VKN_reich_liaison = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKN_reich_liaison" }
+			allowed = { always = no }
+			picture = GRU_guard_2
+			modifier = {
+				air_defence_factor = 0.05
+				supply_consumption_factor = -0.05
+			}
+		}
+
+		GRU_VKN_coastal_command = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKN_coastal_command" }
+			allowed = { always = no }
+			picture = GRU_masses
+			modifier = {
+				war_support_factor = 0.05
+				production_speed_coastal_bunker_factor = 0.10
+				naval_mines_effectiveness_factor = 0.10
+			}
+		}
+
+		GRU_VKN_atlantic_shield = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GRU_VKN_atlantic_shield" }
+			allowed = { always = no }
+			picture = GRU_totalerkieg
+			modifier = {
+				naval_mines_effectiveness_factor = 0.15
+				air_defence_factor = 0.05
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+	}
+}

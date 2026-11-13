@@ -13,7 +13,7 @@
 		icon = VKB_COLONIZE
 		relative_position_id = VK_FOCUS_SHARED_ESTABLISH_VK
 		x = 0
-		y = 2
+		y = 3
 		available = {
 						VKB = {
 								controls_state = 12
@@ -29,6 +29,9 @@
 			has_country_flag = IS_VKB 
 		}
 		cost = 2
+		ai_will_do = {
+			factor = 400
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTENLAND_START_COLONIZING"
 			swap_ideas = {
@@ -135,7 +138,7 @@
 		}
 		cost = 5
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_THREE"
@@ -180,6 +183,9 @@
 		y = 2
 
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_FOUR"
 			add_manpower = 35000
@@ -198,6 +204,9 @@
 		y = 2
 
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_FIVE"
 			add_manpower = 35000
@@ -216,6 +225,9 @@
 		y = 2
 
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTEN_COLONIZE_SIX"
 			add_manpower = 35000
@@ -235,6 +247,9 @@
 		available = {
 		}
 		cost = 5
+		ai_will_do = {
+			factor = 400
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus VK_FOCUS_BALTENLAND_COLONIZED"
 			swap_ideas = {
@@ -248,5 +263,6 @@
 		prerequisite = { focus = VK_FOCUS_BALTEN_COLONIZE_SIX  }
 	}
 	shared_focus = VK_FOCUS_SHARED_ESTABLISH_VK
-	#shared_focus = GRU_formation_of_the_nva
+	shared_focus = GRU_VK_eco_root
+	shared_focus = GRU_VK_mil_root
 }

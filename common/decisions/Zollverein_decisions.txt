@@ -30,7 +30,6 @@ GRU_zollverein_category = {
 				tag = NEE
 				tag = DEH
 				tag = PRF
-				tag = TUR
 				tag = DEI
 				tag = ICE #handled by tag content
 				tag = ABK #handled by tag content
@@ -49,6 +48,10 @@ GRU_zollverein_category = {
 				has_same_government_as_ROOT = yes
 			}
 			NOT = { has_country_flag = GRU_zollverein_member }
+		}
+
+		available = {
+			is_member_of_economic_sphere = no
 		}
 
 		cost = 0

@@ -1,0 +1,7 @@
+is_monarchy = {
+	custom_override_tooltip = {
+		tooltip = is_monarchy
+		country_leader_is_monarchical = yes
+		has_socialist_government = no #nope, don't even bother
+	}
+}

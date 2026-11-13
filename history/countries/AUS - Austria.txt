@@ -43,7 +43,7 @@ set_technology = {
 
 if = {
 	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "AUS_1936_air_bba"
+		set_air_oob = "AUS_air_bba"
 		set_technology = {
 			aa_lmg = 1
 			aa_cannon_1 = 1
@@ -829,6 +829,7 @@ recruit_character = AUS_Igo_Etrich
 recruit_character = AUS_Max_Valier
 recruit_character = AUS_Friedrich_Schmiedl
 recruit_character = AUS_Richard_von_Mises_Scientist
+recruit_character = AUS_Georg_Meindl
 
 ## NAVY
 

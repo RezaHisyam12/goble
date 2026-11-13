@@ -1,0 +1,9 @@
+GRU_VKP_reconstruction_dm = {
+	enable = { always = yes }
+	remove_trigger = { always = no }
+	icon = "GFX_idea_KDF2"
+
+	industrial_capacity_factory = GRU_vkp_rec_factory_output
+	stability_factor = GRU_vkp_rec_stability
+	production_speed_buildings_factor = GRU_vkp_rec_construction
+}

@@ -87,7 +87,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_idea_GRU_guard_2"
-		texturefile = "gfx/interface/ideas/GRU/GRU_guard_2.png"
+		texturefile = "gfx/interface/ideas/GRU/GRU_guard2.png"
 	}
 	spriteType = {
 		name = "GFX_idea_GRU_Rote_Ritters_Ic"
@@ -1043,6 +1043,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_GRU_germania"
 		texturefile = "gfx/interface/ideas/GRU/GRU_germania.png"
+	}
+	spriteType = {
+		name = "GFX_idea_KDF2"
+		texturefile = "gfx/interface/ideas/GRU/KDF2.png"
 	}
 	spriteType = {
 		name = "GFX_dynamic_GRU_germania"

@@ -13028,7 +13028,7 @@ RUS_amo_organisation = {
 
 	equipment_type = {
 		motorized_equipment
-		mechanized_equipment
+		mio_cat_eq_all_mechanised
 		armor
 	}
 
@@ -13080,7 +13080,7 @@ RUS_amo_organisation = {
 
 		position = { x = 7 y = 0 }
 
-		limit_to_equipment_type = { mechanized_equipment }
+		limit_to_equipment_type = { mio_cat_eq_all_mechanised }
 
 		equipment_bonus = {
 			reliability = 0.05
@@ -13195,7 +13195,7 @@ RUS_amo_organisation = {
 
 		mutually_exclusive = { amo_upgrade_1_5 }
 
-		limit_to_equipment_type = { mechanized_equipment }
+		limit_to_equipment_type = { mio_cat_eq_all_mechanised }
 
 		equipment_bonus = {
 			maximum_speed = 0.05
@@ -13215,7 +13215,7 @@ RUS_amo_organisation = {
 		position = { x = 1 y = 2 }
 		relative_position_id = amo_upgrade_3
 
-		limit_to_equipment_type = { mechanized_equipment }
+		limit_to_equipment_type = { mio_cat_eq_all_mechanised }
 
 		any_parent = { amo_upgrade_2 amo_upgrade_3 }
 
@@ -13331,7 +13331,7 @@ RUS_naz_organisation = {
 
 	equipment_type = {
 		motorized_equipment
-		mechanized_equipment
+		mio_cat_eq_all_mechanised
 		motorized_rocket_equipment
 		light_tank_artillery_chassis
 		medium_tank_artillery_chassis
@@ -13387,7 +13387,7 @@ RUS_naz_organisation = {
 
 		limit_to_equipment_type = {
 			motorized_equipment
-			mechanized_equipment
+			mio_cat_eq_all_mechanised
 			motorized_rocket_equipment
 			armored_car_equipment
 		}
@@ -13408,7 +13408,7 @@ RUS_naz_organisation = {
 
 		limit_to_equipment_type = {
 			motorized_equipment
-			mechanized_equipment
+			mio_cat_eq_all_mechanised
 			motorized_rocket_equipment
 			armored_car_equipment
 		}
@@ -13482,7 +13482,7 @@ RUS_naz_organisation = {
 
 		limit_to_equipment_type = {
 			motorized_equipment
-			mechanized_equipment
+			mio_cat_eq_all_mechanised
 			motorized_rocket_equipment
 			armored_car_equipment
 		}
@@ -13568,7 +13568,7 @@ RUS_naz_organisation = {
 
 		limit_to_equipment_type = {
 			motorized_equipment
-			mechanized_equipment
+			mio_cat_eq_all_mechanised
 			motorized_rocket_equipment
 			armored_car_equipment
 		}
@@ -13591,7 +13591,7 @@ RUS_naz_organisation = {
 
 		limit_to_equipment_type = {
 			motorized_equipment
-			mechanized_equipment
+			mio_cat_eq_all_mechanised
 			motorized_rocket_equipment
 			armored_car_equipment
 		}
@@ -13669,7 +13669,7 @@ RUS_naz_organisation = {
 
 		limit_to_equipment_type = {
 			motorized_equipment
-			mechanized_equipment
+			mio_cat_eq_all_mechanised
 			motorized_rocket_equipment
 			armored_car_equipment
 		}
@@ -13735,7 +13735,7 @@ RUS_naz_organisation = {
 
 		limit_to_equipment_type = {
 			motorized_equipment
-			mechanized_equipment
+			mio_cat_eq_all_mechanised
 			motorized_rocket_equipment
 			armored_car_equipment
 		}
@@ -13830,7 +13830,7 @@ RUS_laz_organisation = {
 
 	equipment_type = {
 		motorized_equipment
-		mechanized_equipment
+		mio_cat_eq_all_mechanised
 		motorized_rocket_equipment
 	}
 
@@ -13879,7 +13879,7 @@ RUS_laz_organisation = {
 
 		limit_to_equipment_type = {
 			motorized_equipment
-			mechanized_equipment
+			mio_cat_eq_all_mechanised
 			motorized_rocket_equipment
 		}
 
@@ -13907,7 +13907,7 @@ RUS_laz_organisation = {
 
 		limit_to_equipment_type = {
 			motorized_equipment
-			mechanized_equipment
+			mio_cat_eq_all_mechanised
 			motorized_rocket_equipment
 		}
 
@@ -14038,7 +14038,7 @@ RUS_laz_organisation = {
 
 		limit_to_equipment_type = {
 			motorized_equipment
-			mechanized_equipment
+			mio_cat_eq_all_mechanised
 		}
 
 		equipment_bonus = {
@@ -14067,7 +14067,7 @@ RUS_laz_organisation = {
 
 		limit_to_equipment_type = {
 			motorized_equipment
-			mechanized_equipment
+			mio_cat_eq_all_mechanised
 		}
 
 		equipment_bonus = {
@@ -14100,7 +14100,7 @@ RUS_laz_organisation = {
 
 		limit_to_equipment_type = {
 			motorized_equipment
-			mechanized_equipment
+			mio_cat_eq_all_mechanised
 		}
 
 		equipment_bonus = {
@@ -14268,7 +14268,7 @@ RUS_laz_organisation = {
 
 		limit_to_equipment_type = {
 			motorized_equipment
-			mechanized_equipment
+			mio_cat_eq_all_mechanised
 		}
 
 		equipment_bonus = {
@@ -14291,7 +14291,7 @@ RUS_laz_organisation = {
 
 		limit_to_equipment_type = {
 			motorized_equipment
-			mechanized_equipment
+			mio_cat_eq_all_mechanised
 		}
 
 		equipment_bonus = {

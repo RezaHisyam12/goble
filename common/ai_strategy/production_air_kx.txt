@@ -77,12 +77,12 @@ FRA_cas_is_cool_but_you_need_fighters = {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = fighter
-		value = 25
+		value = 50
 	}
 	ai_strategy = {
 		type = equipment_production_factor
 		id = cas
-		value = -25
+		value = -50
 	}
 }
 

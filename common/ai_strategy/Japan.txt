@@ -1739,7 +1739,7 @@ JAP_expand_527_airbase = {
 		FNG = {
 			has_war = yes
 			OR = {
-				check_variable = { FNG.party_popularity@market_liberal < 0.25 }
+				has_idea = FNG_Expel_the_Japanese_Bandits
 				has_war_with = JAP
 			}
 		}
@@ -1766,7 +1766,7 @@ JAP_expand_1100_airbase = {
 		FNG = {
 			has_war = yes
 			OR = {
-				check_variable = { FNG.party_popularity@market_liberal < 0.25 }
+				has_idea = FNG_Expel_the_Japanese_Bandits
 				has_war_with = JAP
 			}
 		}

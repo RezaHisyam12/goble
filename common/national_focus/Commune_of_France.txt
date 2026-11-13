@@ -1953,8 +1953,6 @@ focus_tree = {
 						is_subject_of = FRA
 						country_exists = AUS
 					}
-					has_country_flag = VKB_established
-					has_country_flag = VKR_established
 				}
 			}
 			date > 1939.10.5

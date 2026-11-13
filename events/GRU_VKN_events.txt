@@ -1,0 +1,36 @@
+### GRU Volkskommissariat Netherlands events
+add_namespace = GRU_VKN_events
+
+country_event = {
+	id = GRU_VKN_events.1
+	title = GRU_VKN_events.1.t
+	desc = GRU_VKN_events.1.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event GRU_VKN_events.1"
+	}
+
+	option = {
+		name = GRU_VKN_events.1.a
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = GRU_VKN_events.2
+	title = GRU_VKN_events.2.t
+	desc = GRU_VKN_events.2.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event GRU_VKN_events.2"
+	}
+
+	option = {
+		name = GRU_VKN_events.2.a
+		add_stability = 0.02
+	}
+}

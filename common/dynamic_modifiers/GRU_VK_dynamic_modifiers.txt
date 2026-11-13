@@ -1,0 +1,5 @@
+GRU_VK_tribute_dm = {
+	icon = "GFX_idea_KDF2"
+	industrial_capacity_factory = GRU_vk_tribute_level
+	production_factory_max_efficiency_factor = GRU_vk_tribute_level
+}

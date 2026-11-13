@@ -161,8 +161,8 @@ make_nukes = {
 
 	ai_strategy = {
 		type = building_target
-		id = nuclear_reactor 
-		value = 5
+		id = nuclear_reactor
+		value = 1
 	}
 }
 
@@ -224,31 +224,16 @@ majors_go_crazy = {
 	}
 }
 
-we_need_nuclear_reactor = {
-	enable = {
-		is_special_project_completed = sp:sp_nuclear_reactor
-		nuclear_reactor < 10
-		num_of_military_factories > 249
-	}
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = building_target
-		id = nuclear_reactor
-		value = 10
-	}
-}
-
 we_need_nuclear_reactor_commercial = {
 	enable = {
 		is_special_project_completed = sp:sp_commercial_nuclear_reactor
-		commercial_nuclear_reactor < 10
 		num_of_military_factories > 249
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
-		type = building_target
+		type = build_building
 		id = commercial_nuclear_reactor
-		value = 10
+		value = 1
 	}
 }
 

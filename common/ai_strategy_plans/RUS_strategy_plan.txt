@@ -114,13 +114,6 @@ RUS_orthodox_eusrasia_plan = {
 		RUS_Study_German_Method
 		RUS_National_High_Command_Formation_School
 		RUS_Realpolitik
-
-		RUS_Rule_Of_Intelligentsia
-		RUS_Cultural_Revolution
-		RUS_A_New_Eurasian_Nation
-		RUS_A_New_Social_Class
-		RUS_A_New_Identity
-
 		RUS_Expansionism
 		RUS_Enemy_In_The_West
 		RUS_Russo-Serbian_Friendship
@@ -129,6 +122,14 @@ RUS_orthodox_eusrasia_plan = {
 		RUS_Into_The_Caucasus
 		RUS_Enemy_In_The_East
 		RUS_Reclaim_Far_East
+		RUS_Reorganize_the_General_Staff
+
+		RUS_Rule_Of_Intelligentsia
+		RUS_Cultural_Revolution
+		RUS_A_New_Eurasian_Nation
+		RUS_A_New_Social_Class
+		RUS_A_New_Identity
+
 		RUS_ec_mutual3
 		RUS_Build_Up_New_Capital
 
@@ -336,6 +337,7 @@ RUS_natpop_savinkov_plan = {
 		RUS_Enemy_In_The_East
 		RUS_Reclaim_Far_East
 		RUS_Franco_Russian_Treaty
+		RUS_Reorganize_the_General_Staff
 
 		RUS_purge_leftists_savinkov
 		RUS_ec_corporat3
@@ -403,6 +405,7 @@ RUS_zemstva_plan = {
 		original_tag = RUS
 	}
 	enable = {
+		date > 1939.1.1
 		has_completed_focus = RUS_russian_army
 		OR = {
 			kdp_in_power = yes
@@ -439,6 +442,7 @@ RUS_bureaucratic_overhaul_plan = {
 		original_tag = RUS
 	}
 	enable = {
+		date > 1939.1.1
 		has_completed_focus = RUS_russian_army
 		kdp_in_power = no
 		psr_in_power = no

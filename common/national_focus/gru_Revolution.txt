@@ -8982,20 +8982,7 @@ shared_focus = {
 				enemies_strength_ratio > 0.25
 				enemies_naval_strength_ratio > 0.25
 			}
-			OR = {
-				VKB = {
-				OR = {
-					exists = no
-					has_capitulated = yes
-					}
-				}
-				VKR = { 
-				OR = {
-					exists = no
-					has_capitulated = yes
-					}
-				}
-			}
+			surrender_progress > 0.05
 		}
 		ai_will_do = {
 			factor = 1000

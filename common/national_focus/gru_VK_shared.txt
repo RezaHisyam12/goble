@@ -105,3 +105,452 @@ shared_focus = {
 		prerequisite = { focus = VK_FOCUS_SHARED_SETTLERS  }
 		prerequisite = { focus = VK_FOCUS_SHARED_NATIONALISATION  }
 	}
+
+### GRU Volkskommissariat shared focuses
+### Include in each puppet tree with: shared_focus = GRU_VK_mil_root  / GRU_VK_eco_root  etc.
+### Roots use absolute x/y (mil root x=4, eco root x=14, both y=0). Move them to fit the puppet tree.
+
+	shared_focus = {
+		id = GRU_VK_mil_root
+		icon = GRU_Wehrmacht
+		relative_position_id = VK_FOCUS_SHARED_ESTABLISH_VK
+		x = 7
+		y = 4
+		cost = 5
+		available = {
+			has_completed_focus = VK_FOCUS_SHARED_MORE_SETTLERS
+			has_completed_focus = VK_FOCUS_SHARED_OUR_OWN_RR
+			has_completed_focus = VK_FOCUS_SHARED_ENSLAVE_NATIVES
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VK_mil_root"
+			add_ideas = GRU_VK_militia_command
+			add_manpower = 20000
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	shared_focus = {
+		id = GRU_VK_mil_wehrbezirke
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = GRU_VK_mil_root
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { focus = GRU_VK_mil_root }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VK_mil_wehrbezirke"
+			add_ideas = GRU_VK_military_districts
+			add_manpower = 25000
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	shared_focus = {
+		id = GRU_VK_mil_grenzwacht
+		icon = GFX_GRU_volkssturm
+		relative_position_id = GRU_VK_mil_root
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { focus = GRU_VK_mil_root }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VK_mil_grenzwacht"
+			add_ideas = GRU_VK_border_guard
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	shared_focus = {
+		id = GRU_VK_mil_reich_arms
+		icon = GFX_goal_generic_production
+		relative_position_id = GRU_VK_mil_root
+		x = 2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { focus = GRU_VK_mil_root }
+		available = {
+			is_subject_of = GRU
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VK_mil_reich_arms"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 3000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 150
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	shared_focus = {
+		id = GRU_VK_mil_loyal_corps
+		icon = GFX_GRU_mass_conscription-4021
+		relative_position_id = GRU_VK_mil_wehrbezirke
+		x = 1
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		prerequisite = { focus = GRU_VK_mil_wehrbezirke }
+		prerequisite = { focus = GRU_VK_mil_grenzwacht }
+		mutually_exclusive = { focus = GRU_VK_mil_volksarmee }
+		available = {
+			is_subject_of = GRU
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VK_mil_loyal_corps"
+			add_ideas = GRU_VK_loyal_corps
+			custom_effect_tooltip = GRU_VK_tt_loyal
+			hidden_effect = {
+				if = {
+					limit = { is_subject = yes }
+					add_autonomy_ratio = { value = -0.05 localization = GRU_VK_autonomy_closer }
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	shared_focus = {
+		id = GRU_VK_mil_volksarmee
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = GRU_VK_mil_grenzwacht
+		x = 1
+		y = 1
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GRU_VK_mil_wehrbezirke }
+		prerequisite = { focus = GRU_VK_mil_grenzwacht }
+		mutually_exclusive = { focus = GRU_VK_mil_loyal_corps }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VK_mil_volksarmee"
+			add_ideas = GRU_VK_volksarmee
+			custom_effect_tooltip = GRU_VK_tt_independent
+			hidden_effect = {
+				if = {
+					limit = { is_subject = yes }
+					add_autonomy_ratio = { value = 0.05 localization = GRU_VK_autonomy_looser }
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	shared_focus = {
+		id = GRU_VK_mil_fortified_belt
+		icon = GFX_goal_nested_fortifications
+		relative_position_id = GRU_VK_mil_root
+		x = 0
+		y = 3
+		cost = 7
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { focus = GRU_VK_mil_loyal_corps focus = GRU_VK_mil_volksarmee }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VK_mil_fortified_belt"
+			add_ideas = GRU_VK_fortified_belt
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	shared_focus = {
+		id = GRU_VK_mil_war_school
+		icon = GRU_Technocratic
+		relative_position_id = GRU_VK_mil_root
+		x = -2
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GRU_VK_mil_loyal_corps focus = GRU_VK_mil_volksarmee }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VK_mil_war_school"
+			army_experience = 40
+			add_tech_bonus = {
+				name = GRU_VK_war_school
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	shared_focus = {
+		id = GRU_VK_mil_shield
+		icon = GFX_totalerkieg
+		relative_position_id = GRU_VK_mil_root
+		x = 0
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 3
+		}
+		prerequisite = { focus = GRU_VK_mil_fortified_belt }
+		prerequisite = { focus = GRU_VK_mil_war_school }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VK_mil_shield"
+			swap_ideas = {
+				remove_idea = GRU_VK_militia_command
+				add_idea = GRU_VK_shield_of_the_east
+			}
+			add_political_power = 75
+			if = {
+				limit = { has_war_with = RUS }
+				add_war_support = 0.10
+			}
+			set_country_flag = GRU_VK_mil_complete
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	shared_focus = {
+		id = GRU_VK_eco_root
+		icon = GFX_GRU_neue_schwerindustrie-3965
+		relative_position_id = VK_FOCUS_SHARED_ESTABLISH_VK
+		x = -8
+		y = 4
+		cost = 5
+		available = {
+			has_completed_focus = VK_FOCUS_SHARED_MORE_SETTLERS
+			has_completed_focus = VK_FOCUS_SHARED_OUR_OWN_RR
+			has_completed_focus = VK_FOCUS_SHARED_ENSLAVE_NATIVES
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VK_eco_root"
+			add_ideas = GRU_VK_planned_economy
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	shared_focus = {
+		id = GRU_VK_eco_survey
+		icon = GFX_GRU_rva-3956
+		relative_position_id = GRU_VK_eco_root
+		x = -3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { focus = GRU_VK_eco_root }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VK_eco_survey"
+			add_ideas = GRU_VK_resource_survey
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	shared_focus = {
+		id = GRU_VK_eco_infrastructure
+		icon = GFX_goal_generic_railroad
+		relative_position_id = GRU_VK_eco_root
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { focus = GRU_VK_eco_root }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VK_eco_infrastructure"
+			GRU_VK_build_infrastructure = yes
+			GRU_VK_build_infrastructure = yes
+			GRU_VK_build_infrastructure = yes
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	shared_focus = {
+		id = GRU_VK_eco_agrar
+		icon = GRU_agrarian_subsides
+		relative_position_id = GRU_VK_eco_root
+		x = 3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { focus = GRU_VK_eco_root }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VK_eco_agrar"
+			add_ideas = GRU_VK_agrarplan
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	shared_focus = {
+		id = GRU_VK_eco_civ_works
+		icon = GFX_goal_syndicalist_workers
+		relative_position_id = GRU_VK_eco_survey
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { focus = GRU_VK_eco_survey }
+		prerequisite = { focus = GRU_VK_eco_infrastructure }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VK_eco_civ_works"
+			GRU_VK_build_civ_factory = yes
+			GRU_VK_build_civ_factory = yes
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	shared_focus = {
+		id = GRU_VK_eco_arms_works
+		icon = GRU_National_Corporatism
+		relative_position_id = GRU_VK_eco_agrar
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { focus = GRU_VK_eco_infrastructure }
+		prerequisite = { focus = GRU_VK_eco_agrar }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VK_eco_arms_works"
+			GRU_VK_build_arms_factory = yes
+			GRU_VK_build_arms_factory = yes
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	shared_focus = {
+		id = GRU_VK_eco_reichsplan
+		icon = GRU_National_Socialism
+		relative_position_id = GRU_VK_eco_infrastructure
+		x = -1
+		y = 2
+		cost = 7
+		ai_will_do = {
+			factor = 3
+		}
+		prerequisite = { focus = GRU_VK_eco_civ_works }
+		prerequisite = { focus = GRU_VK_eco_arms_works }
+		mutually_exclusive = { focus = GRU_VK_eco_autarky }
+		available = {
+			is_subject_of = GRU
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VK_eco_reichsplan"
+			add_ideas = GRU_VK_reichsplan
+			custom_effect_tooltip = GRU_VK_tt_tribute
+			hidden_effect = { GRU_VK_add_tribute = yes }
+			custom_effect_tooltip = GRU_VK_tt_loyal
+			hidden_effect = {
+				if = {
+					limit = { is_subject = yes }
+					add_autonomy_ratio = { value = -0.05 localization = GRU_VK_autonomy_closer }
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	shared_focus = {
+		id = GRU_VK_eco_autarky
+		icon = GRU_NAD
+		relative_position_id = GRU_VK_eco_infrastructure
+		x = 1
+		y = 2
+		cost = 7
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = GRU_VK_eco_civ_works }
+		prerequisite = { focus = GRU_VK_eco_arms_works }
+		mutually_exclusive = { focus = GRU_VK_eco_reichsplan }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VK_eco_autarky"
+			add_ideas = GRU_VK_autarky
+			custom_effect_tooltip = GRU_VK_tt_independent
+			hidden_effect = {
+				if = {
+					limit = { is_subject = yes }
+					add_autonomy_ratio = { value = 0.05 localization = GRU_VK_autonomy_looser }
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	shared_focus = {
+		id = GRU_VK_eco_hochschule
+		icon = GRU_Technocratic
+		relative_position_id = GRU_VK_eco_root
+		x = 0
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { focus = GRU_VK_eco_reichsplan focus = GRU_VK_eco_autarky }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VK_eco_hochschule"
+			add_research_slot_until_five = yes
+			add_tech_bonus = {
+				name = GRU_VK_hochschule
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	shared_focus = {
+		id = GRU_VK_eco_union
+		icon = GRU_DAF_ICON
+		relative_position_id = GRU_VK_eco_root
+		x = 0
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 3
+		}
+		prerequisite = { focus = GRU_VK_eco_reichsplan focus = GRU_VK_eco_autarky }
+		prerequisite = { focus = GRU_VK_eco_hochschule }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VK_eco_union"
+			swap_ideas = {
+				remove_idea = GRU_VK_planned_economy
+				add_idea = GRU_VK_economic_union
+			}
+			add_political_power = 75
+			if = {
+				limit = { is_subject_of = GRU }
+				custom_effect_tooltip = GRU_VK_tt_tribute
+				hidden_effect = { GRU_VK_add_tribute = yes }
+			}
+			set_country_flag = GRU_VK_eco_complete
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}

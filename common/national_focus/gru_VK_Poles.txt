@@ -1,4 +1,4 @@
-	focus_tree = {
+focus_tree = {
 	id = gru_VKP
 	continuous_focus_position = { x = 2700 y = 300 }
 	country = {
@@ -94,6 +94,530 @@
 		prerequisite = { focus =  VK_FOCUS_GOUVERMENT_COLONIZE_TWO }
 		prerequisite = { focus =  VK_FOCUS_GOUVERMENT_COLONIZE_THREE }
 	}
+	### VKP: Economy branch (Zentraler Industriebezirk) and Military branch (Polnische Hilfsverbände) ###
+	focus = {
+		id = GRU_VKP_eco_cir
+		icon = GFX_goal_GAL_COP
+		relative_position_id = VK_FOCUS_SHARED_ESTABLISH_VK
+		x = -3
+		y = 6
+		cost = 5
+		allow_branch = {
+			has_country_flag = IS_VKP
+		}
+		prerequisite = { focus = VK_FOCUS_GOUVERMENT_COLONIZED  }
+		ai_will_do = {
+			factor = 400
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_eco_cir"
+			GRU_VKP_cir_tier_up = yes
+			add_tech_bonus = {
+				name = GRU_VKP_eco_cir
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+			add_dynamic_modifier = { modifier = GRU_VKP_reconstruction_dm }
+			force_update_dynamic_modifier = yes
+			custom_effect_tooltip = GRU_VKP_tt_decisions
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = GRU_VKP_eco_roads
+		icon = GFX_goal_generic_road_construction
+		relative_position_id = GRU_VKP_eco_cir
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 300
+		}
+		prerequisite = { focus = GRU_VKP_eco_cir }
+		mutually_exclusive = { focus = GRU_VKP_eco_coops }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_eco_roads"
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = GRU_VKP_reconstruction_dm
+			}
+			add_to_variable = {
+				GRU_vkp_rec_factory_output = 0.04
+				tooltip = industrial_capacity_factory_tooltip
+			}
+			force_update_dynamic_modifier = yes
+			set_country_flag = GRU_VKP_roads
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = GRU_VKP_eco_coops
+		icon = GFX_goal_agriculture2
+		relative_position_id = GRU_VKP_eco_cir
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 300
+		}
+		prerequisite = { focus = GRU_VKP_eco_cir }
+		mutually_exclusive = { focus = GRU_VKP_eco_roads }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_eco_coops"
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = GRU_VKP_reconstruction_dm
+			}
+			add_to_variable = {
+				GRU_vkp_rec_stability = 0.05
+				tooltip = stability_factor_tooltip
+			}
+			add_to_variable = {
+				GRU_vkp_rec_construction = 0.04
+				tooltip = production_speed_buildings_factor_tooltip
+			}
+			force_update_dynamic_modifier = yes
+			set_country_flag = GRU_VKP_coops
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = GRU_VKP_eco_chemical
+		icon = GFX_focus_generic_mass_production
+		relative_position_id = GRU_VKP_eco_cir
+		x = 0
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 250
+		}
+		prerequisite = { focus = GRU_VKP_eco_cir }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_eco_chemical"
+			GRU_VKP_cir_tier_up = yes
+			add_tech_bonus = {
+				name = GRU_VKP_eco_chemical
+				bonus = 1
+				uses = 1
+				category = synth_resources
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = GRU_VKP_eco_stalowa
+		icon = GFX_goal_social_reforms
+		relative_position_id = GRU_VKP_eco_cir
+		x = -2
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 250
+		}
+		prerequisite = { focus = GRU_VKP_eco_roads focus = GRU_VKP_eco_coops }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_eco_stalowa"
+			if = {
+				limit = { owns_state = 92 }
+				92 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_resource = {
+						type = steel
+						amount = 8
+					}
+				}
+			}
+			else = {
+				GRU_VKP_build_civ_factory = yes
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = GRU_VKP_eco_rural_schools
+		icon = GFX_goal_KTG_Bookstack
+		relative_position_id = GRU_VKP_eco_cir
+		x = 2
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 150
+		}
+		prerequisite = { focus = GRU_VKP_eco_roads focus = GRU_VKP_eco_coops }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_eco_rural_schools"
+			add_timed_idea = {
+				idea = GRU_VKP_rural_schools
+				days = 360
+			}
+			custom_effect_tooltip = { localization_key = tooltip_after_days DAYS = 360 }
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = GRU_VKP_eco_munitions
+		icon = GFX_focus_generic_tank_production
+		relative_position_id = GRU_VKP_eco_cir
+		x = 0
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 250
+		}
+		prerequisite = { focus = GRU_VKP_eco_chemical }
+		prerequisite = { focus = GRU_VKP_eco_stalowa }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_eco_munitions"
+			GRU_VKP_cir_tier_up = yes
+			GRU_VKP_build_arms_factory = yes
+			set_country_flag = GRU_VKP_munitions_bureau
+			custom_effect_tooltip = GRU_VKP_tt_decisions
+		}
+		search_filters = { FOCUS_FILTER_PRODUCTION }
+	}
+
+	focus = {
+		id = GRU_VKP_eco_german_integration
+		icon = GFX_goal_generic_positive_trade_relations_gold
+		relative_position_id = GRU_VKP_eco_cir
+		x = -1
+		y = 4
+		cost = 7
+		ai_will_do = {
+			factor = 300
+		}
+		prerequisite = { focus = GRU_VKP_eco_munitions }
+		mutually_exclusive = { focus = GRU_VKP_eco_eigen }
+		available = {
+			is_subject_of = GRU
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_eco_german_integration"
+			add_ideas = GRU_VKP_german_integration
+			custom_effect_tooltip = GRU_VKP_tt_closer
+			hidden_effect = {
+				if = {
+					limit = { is_subject = yes }
+					add_autonomy_ratio = { value = -0.05 localization = GRU_VKP_autonomy_closer }
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = GRU_VKP_eco_eigen
+		icon = GFX_goal_generic_construction2
+		relative_position_id = GRU_VKP_eco_cir
+		x = 1
+		y = 4
+		cost = 7
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = GRU_VKP_eco_munitions }
+		mutually_exclusive = { focus = GRU_VKP_eco_german_integration }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_eco_eigen"
+			add_ideas = GRU_VKP_eigenwirtschaft
+			custom_effect_tooltip = GRU_VKP_tt_looser
+			hidden_effect = {
+				if = {
+					limit = { is_subject = yes }
+					add_autonomy_ratio = { value = 0.05 localization = GRU_VKP_autonomy_looser }
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = GRU_VKP_eco_werkstatt
+		icon = GFX_goal_POL_industry_warsaw
+		relative_position_id = GRU_VKP_eco_cir
+		x = 0
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 250
+		}
+		prerequisite = { focus = GRU_VKP_eco_german_integration focus = GRU_VKP_eco_eigen }
+		prerequisite = { focus = GRU_VKP_eco_rural_schools }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_eco_werkstatt"
+			GRU_VKP_cir_tier_up = yes
+			add_political_power = 75
+			set_country_flag = GRU_VKP_eco_complete
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = GRU_VKP_mil_root
+		icon = GFX_goal_generic_drafted_army
+		relative_position_id = VK_FOCUS_SHARED_ESTABLISH_VK
+		x = 3
+		y = 6
+		cost = 5
+		allow_branch = {
+			has_country_flag = IS_VKP
+		}
+		prerequisite = { focus = VK_FOCUS_GOUVERMENT_COLONIZED  }
+		ai_will_do = {
+			factor = 400
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_mil_root"
+			GRU_VKP_hilfs_tier_up = yes
+			set_country_flag = GRU_VKP_mil_started
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	focus = {
+		id = GRU_VKP_mil_ordnungsdienst
+		icon = GFX_goal_army_guy_2
+		relative_position_id = GRU_VKP_mil_root
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 250
+		}
+		prerequisite = { focus = GRU_VKP_mil_root }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_mil_ordnungsdienst"
+			add_ideas = GRU_VKP_ordnungsdienst
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = GRU_VKP_mil_reserve
+		icon = GFX_goal_army_guy
+		relative_position_id = GRU_VKP_mil_root
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 250
+		}
+		prerequisite = { focus = GRU_VKP_mil_root }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_mil_reserve"
+			GRU_VKP_hilfs_tier_up = yes
+			add_manpower = 20000
+			enable_tech_irregulars = yes
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER }
+	}
+
+	focus = {
+		id = GRU_VKP_mil_engineers
+		icon = GFX_goal_generic_construction2
+		relative_position_id = GRU_VKP_mil_root
+		x = 2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = { focus = GRU_VKP_mil_root }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_mil_engineers"
+			enable_tech_expanded_engineer_corps = yes
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	focus = {
+		id = GRU_VKP_mil_cavalry
+		icon = GFX_goal_generic_cavalry
+		relative_position_id = GRU_VKP_mil_ordnungsdienst
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 150
+		}
+		prerequisite = { focus = GRU_VKP_mil_ordnungsdienst }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_mil_cavalry"
+			add_ideas = GRU_VKP_modern_cavalry
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	focus = {
+		id = GRU_VKP_mil_motorised
+		icon = GFX_goal_generic_mechanisation
+		relative_position_id = GRU_VKP_mil_cavalry
+		x = 1
+		y = 1
+		cost = 6
+		ai_will_do = {
+			factor = 150
+		}
+		prerequisite = { focus = GRU_VKP_mil_cavalry }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_mil_motorised"
+			swap_ideas = {
+				remove_idea = GRU_VKP_modern_cavalry
+				add_idea = GRU_VKP_modern_cavalry_2
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	focus = {
+		id = GRU_VKP_mil_academy
+		icon = GFX_goal_NEE_join_ISAC
+		relative_position_id = GRU_VKP_mil_root
+		x = 1
+		y = 2
+		cost = 6
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = { focus = GRU_VKP_mil_engineers }
+		prerequisite = { focus = GRU_VKP_mil_reserve }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_mil_academy"
+			army_experience = 30
+			add_doctrine_cost_reduction = {
+				name = GRU_VKP_mil_academy
+				cost_reduction = 0.25
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	focus = {
+		id = GRU_VKP_mil_wehrmacht
+		icon = GFX_goal_generic_army_doctrines
+		relative_position_id = GRU_VKP_mil_root
+		x = -1
+		y = 4
+		cost = 7
+		ai_will_do = {
+			factor = 300
+		}
+		prerequisite = { focus = GRU_VKP_mil_motorised }
+		prerequisite = { focus = GRU_VKP_mil_academy }
+		mutually_exclusive = { focus = GRU_VKP_mil_landwacht }
+		available = {
+			is_subject_of = GRU
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_mil_wehrmacht"
+			add_ideas = GRU_VKP_polnische_wehrmacht
+			custom_effect_tooltip = GRU_VKP_tt_closer
+			hidden_effect = {
+				if = {
+					limit = { is_subject = yes }
+					add_autonomy_ratio = { value = -0.05 localization = GRU_VKP_autonomy_closer }
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+
+	focus = {
+		id = GRU_VKP_mil_contracts
+		icon = GFX_focus_generic_mass_production
+		relative_position_id = GRU_VKP_mil_wehrmacht
+		x = 1
+		y = 1
+		cost = 6
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = { focus = GRU_VKP_mil_wehrmacht }
+		available = {
+			is_subject_of = GRU
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_mil_contracts"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 2500
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 150
+			}
+		}
+		search_filters = { FOCUS_FILTER_PRODUCTION }
+	}
+
+	focus = {
+		id = GRU_VKP_mil_landwacht
+		icon = GFX_goal_generic_drafted_army
+		relative_position_id = GRU_VKP_mil_root
+		x = 1
+		y = 4
+		cost = 7
+		ai_will_do = {
+			factor = 100
+		}
+		prerequisite = { focus = GRU_VKP_mil_motorised }
+		prerequisite = { focus = GRU_VKP_mil_academy }
+		mutually_exclusive = { focus = GRU_VKP_mil_wehrmacht }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_mil_landwacht"
+			add_ideas = GRU_VKP_landwacht
+			add_war_support = 0.05
+			add_manpower = 40000
+			custom_effect_tooltip = GRU_VKP_tt_looser
+			hidden_effect = {
+				if = {
+					limit = { is_subject = yes }
+					add_autonomy_ratio = { value = 0.05 localization = GRU_VKP_autonomy_looser }
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER }
+	}
+
+	focus = {
+		id = GRU_VKP_mil_freiwilligenkorps
+		icon = GFX_goal_army_guy_2
+		relative_position_id = GRU_VKP_mil_root
+		x = 1
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 250
+		}
+		prerequisite = { focus = GRU_VKP_mil_contracts focus = GRU_VKP_mil_landwacht }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRU_VKP_mil_freiwilligenkorps"
+			GRU_VKP_hilfs_tier_up = yes
+			add_war_support = 0.05
+			army_experience = 25
+			if = {
+				limit = { has_war_with = RUS }
+				add_manpower = 30000
+			}
+			set_country_flag = GRU_VKP_mil_complete
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER }
+	}
+
 	shared_focus = VK_FOCUS_SHARED_ESTABLISH_VK
 	#shared_focus = GRU_formation_of_the_nva
 }

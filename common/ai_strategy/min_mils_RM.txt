@@ -33,6 +33,7 @@ land_cruiser_min_production_ = {
 armor_car_min_production_1 = {
 	allowed = {
 		OR = {
+			tag = FRA
 			tag = GER
 			tag = GRU
 		}

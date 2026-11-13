@@ -1,0 +1,77 @@
+### VKP helpers
+
+GRU_VKP_build_arms_factory = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = { building = arms_factory size > 0 include_locked = yes }
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+
+GRU_VKP_build_civ_factory = {
+	random_owned_controlled_state = {
+		limit = {
+			free_building_slots = { building = industrial_complex size > 0 include_locked = yes }
+		}
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+
+# Central Industrial Region: each call moves up one tier (1 -> 2 -> 3 -> 4)
+GRU_VKP_cir_tier_up = {
+	if = {
+		limit = { has_idea = GRU_VKP_central_industrial_region_3 }
+		swap_ideas = {
+			remove_idea = GRU_VKP_central_industrial_region_3
+			add_idea = GRU_VKP_central_industrial_region_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = GRU_VKP_central_industrial_region_2 }
+		swap_ideas = {
+			remove_idea = GRU_VKP_central_industrial_region_2
+			add_idea = GRU_VKP_central_industrial_region_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = GRU_VKP_central_industrial_region_1 }
+		swap_ideas = {
+			remove_idea = GRU_VKP_central_industrial_region_1
+			add_idea = GRU_VKP_central_industrial_region_2
+		}
+	}
+	else = {
+		add_ideas = GRU_VKP_central_industrial_region_1
+	}
+}
+
+# Polnische Hilfsverbaende: each call moves up one tier (1 -> 2 -> 3)
+GRU_VKP_hilfs_tier_up = {
+	if = {
+		limit = { has_idea = GRU_VKP_hilfsverbaende_2 }
+		swap_ideas = {
+			remove_idea = GRU_VKP_hilfsverbaende_2
+			add_idea = GRU_VKP_hilfsverbaende_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = GRU_VKP_hilfsverbaende_1 }
+		swap_ideas = {
+			remove_idea = GRU_VKP_hilfsverbaende_1
+			add_idea = GRU_VKP_hilfsverbaende_2
+		}
+	}
+	else_if = {
+		limit = { NOT = { has_idea = GRU_VKP_hilfsverbaende_3 } }
+		add_ideas = GRU_VKP_hilfsverbaende_1
+	}
+}

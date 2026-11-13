@@ -1,0 +1,6 @@
+GRU_VKP_reconstruction_decisions = {
+	icon = generic_construction
+
+	allowed = { original_tag = VKP }
+	visible = { has_completed_focus = GRU_VKP_eco_cir }
+}

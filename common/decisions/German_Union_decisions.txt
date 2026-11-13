@@ -10727,6 +10727,19 @@ GRU_volksreichskommissariat_decisions = {
 			}
 		
 			complete_effect = {
+				if = {
+					limit = {
+						country_exists = SWE
+						SWE = { is_subject_of = GRU }
+					}
+					HYP = {
+						annex_country = {
+							target = SWE
+							transfer_troops = yes
+						}
+						country_event = { id = rotermorgenmisc.901 days = 1 }
+					}
+				}
 					HYP = {
 								transfer_state = 139
 								transfer_state = 138
@@ -10841,6 +10854,19 @@ GRU_expansion_two_volksland_hypoborea = {
 			}
 		
 			complete_effect = {
+				if = {
+					limit = {
+						country_exists = NOR
+						NOR = { is_subject_of = GRU }
+					}
+					HYP = {
+						annex_country = {
+							target = NOR
+							transfer_troops = yes
+						}
+						country_event = { id = rotermorgenmisc.902 days = 1 }
+					}
+				}
 					HYP = {
 								transfer_state = 110
 								transfer_state = 142
@@ -11070,6 +11096,19 @@ GRU_expansion_three_volksland_hypoborea = {
 			}
 		
 			complete_effect = {
+				if = {
+					limit = {
+						country_exists = FIN
+						FIN = { is_subject_of = GRU }
+					}
+					HYP = {
+						annex_country = {
+							target = FIN
+							transfer_troops = yes
+						}
+						country_event = { id = rotermorgenmisc.903 days = 1 }
+					}
+				}
 					HYP = {
 								transfer_state = 148
 								transfer_state = 145
@@ -11431,9 +11470,6 @@ GRU_expansion_three_volksland_hypoborea = {
 		
 			visible = {
 				has_completed_focus = GRU_NMDVP_LEBENSRAUM
-				has_country_flag = VKB_established
-				has_country_flag = VKK_established
-				has_country_flag = VKR_established
 			}
 		
 			complete_effect = {
@@ -13193,15 +13229,6 @@ GRU_expansion_four_volksreichskommissariat_ruthenia = {
 				AND = {	
 						OR = {
 							GRU = {
-								owns_state = 1265
-							}
-							any_other_country = {
-								is_subject_of = GRU
-								owns_state = 1265
-							}
-						}
-						OR = {
-							GRU = {
 								owns_state = 245
 							}
 							any_other_country = {
@@ -13265,7 +13292,6 @@ GRU_expansion_four_volksreichskommissariat_ruthenia = {
 		
 			complete_effect = {
 					VKK = {
-								transfer_state = 1265
 								transfer_state = 245
 								transfer_state = 1264
 								transfer_state = 1263
@@ -16420,7 +16446,15 @@ GRU_stahlpakt_alliance_decisions = {
 					has_war_with = GRU
 				}
 			}
-			surrender_progress > 0.05
+			OR = {
+				surrender_progress > 0.05
+				TUR = {
+					AND = {
+						date > 1941.6.1
+						has_war_with = RUS
+					}
+				}
+			}
 		}
 		visible = {
 			has_completed_focus = GRU_NMDVP_allignment
@@ -17439,6 +17473,7 @@ GRU_new_order_decisions = {
 				
 			available = {
 				has_completed_focus = GRU_NMDVP_PAN_GERMANISM
+				FRA = {	has_capitulated = yes }
 				tag = GRU 
 				AND = {
 					OR = {

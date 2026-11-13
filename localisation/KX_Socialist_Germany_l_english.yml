@@ -1,6 +1,169 @@
 ﻿l_english:
 
+###########################################################
+### MODIFIERS (for use as tooltips in variable effects) ###
+###########################################################
 
+### Exclusively Supported Country Scoped Modifiers ###
+ consumer_goods_factor_tooltip: "$MODIFIER_CONSUMER_GOODS_FACTOR$: $RIGHT|Y=%1$"
+ consumer_goods_expected_value_tooltip: "$MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: $RIGHT|Y=%1$"
+ industrial_capacity_factory_tooltip: "$MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$: $RIGHT|+=%$"
+ industrial_capacity_dockyard_tooltip: "$MODIFIER_INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR$: $RIGHT|+=%$"
+ industry_repair_tooltip: "$MODIFIER_INDUSTRY_REPAIR_FACTOR$: $RIGHT|+=%$"
+ local_resources_factor_tooltip: "$MODIFIER_LOCAL_RESOURCES_FACTOR$: $RIGHT|+=%$"
+ global_building_slots_factor_tooltip: "$MODIFIER_GLOBAL_BUILDING_SLOTS_FACTOR$: $RIGHT|+=%0$"
+ research_speed_factor_tooltip: "$MODIFIER_RESEARCH_SPEED_FACTOR$: $RIGHT|%=+$"
+
+ power_balance_daily_tooltip: "$MODIFIER_POWER_BALANCE_DAILY$: $RIGHT|Y=%2$"
+ power_balance_weekly_tooltip: "$MODIFIER_POWER_BALANCE_WEEKLY$: $RIGHT|Y=%2$"
+
+ production_speed_buildings_factor_tooltip: "$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: $RIGHT|+=%$"
+ production_speed_infrastructure_factor_tooltip: "$modifier_production_speed_infrastructure_factor$: $RIGHT|+=%$"
+ production_speed_arms_factory_factor_tooltip: "$modifier_production_speed_arms_factory_factor$: $RIGHT|+=%$"
+ production_speed_industrial_complex_factor_tooltip: "$modifier_production_speed_industrial_complex_factor$: $RIGHT|+=%$"
+ production_speed_dockyard_factor_tooltip: "$modifier_production_speed_dockyard_factor$: $RIGHT|+=%$"
+ production_speed_synthetic_refinery_factor_tooltip: "$modifier_production_speed_synthetic_refinery_factor$: $RIGHT|+=%$"
+ production_speed_air_base_factor_tooltip: "$modifier_production_speed_air_base_factor$: $RIGHT|+=%$"
+ production_speed_naval_base_factor_tooltip: "$modifier_production_speed_naval_base_factor$: $RIGHT|+=%$"
+ production_speed_bunker_factor_tooltip: "$modifier_production_speed_bunker_factor$: $RIGHT|+=%$"
+ production_speed_coastal_bunker_factor_tooltip: "$modifier_production_speed_coastal_bunker_factor$: $RIGHT|+=%$"
+ production_speed_anti_air_building_factor_tooltip: "$modifier_production_speed_anti_air_building_factor$: $RIGHT|+=%$"
+ production_speed_radar_station_factor_tooltip: "$modifier_production_speed_radar_station_factor$: $RIGHT|+=%$"
+ production_speed_rocket_site_factor_tooltip: "$modifier_production_speed_rocket_site_factor$: $RIGHT|+=%$"
+ production_speed_nuclear_reactor_factor_tooltip: "$modifier_production_speed_nuclear_reactor_factor$: $RIGHT|+=%$"
+ production_speed_fuel_silo_factor_tooltip: "$modifier_production_speed_fuel_silo_factor$: $RIGHT|+=%$"
+ production_speed_railway_factor_tooltip: "$modifier_production_speed_rail_way_factor$: $RIGHT|+=%$"
+ production_speed_supply_node_factor_tooltip: "$modifier_production_speed_supply_node_factor$: $RIGHT|+=%$"
+ production_speed_commercial_nuclear_reactor_factor_tooltip: "$modifier_production_speed_commercial_nuclear_reactor_factor$: $RIGHT|+=%$"
+
+ conversion_cost_civ_to_mil_factor_tooltip: "$MODIFIER_CONVERSION_COST_CIV_TO_MIL_FACTOR$: $RIGHT|-=%$"
+ conversion_cost_mil_to_civ_factor_tooltip: "$MODIFIER_CONVERSION_COST_MIL_TO_CIV_FACTOR$: $RIGHT|-=%$"
+
+ trade_opinion_factor_tooltip: "$MODIFIER_TRADE_OPINION_FACTOR$: $RIGHT|Y=%$"
+ min_export_tooltip: "$MODIFIER_MIN_EXPORT_FACTOR$: $RIGHT|=Y%0$"
+
+ opinion_gain_monthly_factor_tooltip: "$MODIFIER_OPINION_GAIN_MONTHLY_FACTOR$: $RIGHT|+=%$"
+ improve_relations_maintain_cost_factor_tooltip: "$MODIFIER_IMPROVE_RELATIONS_MAINTAIN_COST_FACTOR$: $RIGHT|-=%$"
+
+ production_factory_max_efficiency_factor_tooltip: "$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_FACTOR$: $RIGHT|=%+$"
+ production_factory_start_efficiency_factor_tooltip: "$MODIFIER_PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR$: $RIGHT|=%+$"
+ production_factory_efficiency_gain_factor_tooltip: "$MODIFIER_PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR$: $RIGHT|=%+$"
+ line_change_production_efficiency_factor_tooltip: "$MODIFIER_LINE_CHANGE_PRODUCTION_EFFICIENCY_FACTOR$: $RIGHT|=%+$"
+ production_lack_of_resource_penalty_factor_tooltip: "$MODIFIER_PRODUCTION_LACK_OF_RESOURCE_PENALTY_FACTOR$: $RIGHT|-=%$"
+
+ industrial_factory_donations_tooltip: "$MODIFIER_INDUSTRIAL_FACTORY_DONATIONS$: $RIGHT|+=0$"
+ military_factory_donations_tooltip: "$MODIFIER_MILITARY_FACTORY_DONATIONS$: $RIGHT|+=0$"
+ dockyard_donations_tooltip: "$MODIFIER_DOCKYARD_DONATIONS$: $RIGHT|+=0$"
+
+ country_resource_aluminium_tooltip: "$country_resource_aluminium$: $RIGHT|+=0$"
+ country_resource_chromium_tooltip: "$country_resource_chromium$: $RIGHT|+=0$"
+ country_resource_oil_tooltip: "$country_resource_oil$: $RIGHT|+=0$"
+ country_resource_rubber_tooltip: "$country_resource_rubber$: $RIGHT|+=0$"
+ country_resource_steel_tooltip: "$country_resource_steel$: $RIGHT|+=0$"
+ country_resource_tungsten_tooltip: "$country_resource_tungsten$: $RIGHT|+=0$"
+ country_resource_coal_tooltip: "$country_resource_coal$: $RIGHT|+=0$"
+
+ country_resource_cost_aluminium_tooltip: "$country_resource_cost_aluminium$: $RIGHT|-=0$"
+ country_resource_cost_chromium_tooltip: "$country_resource_cost_chromium$: $RIGHT|-=0$"
+ country_resource_cost_oil_tooltip: "$country_resource_cost_oil$: $RIGHT|-=0$"
+ country_resource_cost_rubber_tooltip: "$country_resource_cost_rubber$: $RIGHT|-=0$"
+ country_resource_cost_steel_tooltip: "$country_resource_cost_steel$: $RIGHT|-=0$"
+ country_resource_cost_tungsten_tooltip: "$country_resource_cost_tungsten$: $RIGHT|-=0$"
+ country_resource_cost_coal_tooltip: "$country_resource_cost_coal$: $RIGHT|-=0$"
+
+ max_fuel_factor_tooltip: "$MODIFIER_MAX_FUEL_FACTOR$: $RIGHT|+=%2$"
+ base_fuel_gain_factor_tooltip: "$MODIFIER_BASE_FUEL_GAIN_FACTOR$: $RIGHT|+=%2$"
+ fuel_gain_factor_tooltip: "$MODIFIER_FUEL_GAIN_FACTOR$: $RIGHT|+=%2$"
+ fuel_gain_factor_from_states_tooltip: "$MODIFIER_FUEL_GAIN_FACTOR_FROM_STATES$: $RIGHT|+=%2$"
+ production_oil_factor_tooltip: "$MODIFIER_PRODUCTION_OIL_FACTOR$: $RIGHT|+=%2$"
+
+ equipment_conversion_speed_tooltip: "$MODIFIER_EQUIPMENT_CONVERSION_SPEED$: $RIGHT|+=%0$"
+ equipment_capture_factor_tooltip: "$MODIFIER_EQUIPMENT_CAPTURE_FACTOR$: $RIGHT|+=%1$"
+
+ political_power_gain_tooltip: "$MODIFIER_POLITICAL_POWER_GAIN$: $RIGHT|+=2$"
+ political_power_cost_tooltip: "$MODIFIER_POLITICAL_POWER_COST$: $RIGHT|-=2$"
+ political_power_factor_tooltip: "$MODIFIER_POLITICAL_POWER_FACTOR$: $RIGHT|+=%0$"
+ stability_factor_tooltip: "$MODIFIER_STABILITY_FACTOR$: $RIGHT|=%+$"
+ stability_weekly_tooltip: "$MODIFIER_STABILITY_WEEKLY$: $RIGHT|=%+$"
+ party_popularity_stability_factor_tooltip: "$MODIFIER_STABILITY_POPULARITY_FACTOR$: $RIGHT|=%+$"
+ war_stability_factor_tooltip: "$MODIFIER_STABILITY_WAR_FACTOR$: $RIGHT|+=%2$"
+ offensive_war_stability_factor_tooltip: "$MODIFIER_STABILITY_OFFENSIVE_WAR_FACTOR$: $RIGHT|+=%2$"
+ defensive_war_stability_factor_tooltip: "$MODIFIER_STABILITY_DEFENSIVE_WAR_FACTOR$: $RIGHT|+=%2$"
+
+ war_support_factor_tooltip: "$MODIFIER_WAR_SUPPORT_FACTOR$: $RIGHT|=%+$"
+ war_support_weekly_tooltip: "$MODIFIER_WAR_SUPPORT_WEEKLY$: $RIGHT|+=%2$"
+ weekly_casualties_war_support_tooltip: "$MODIFIER_WEEKLY_CASUALTIES_WAR_SUPPORT$: $RIGHT|+=%2$"
+ weekly_convoys_war_support_tooltip: "$MODIFIER_WEEKLY_CONVOYS_WAR_SUPPORT$: $RIGHT|+=%2$"
+ weekly_bombing_war_support_tooltip: "$MODIFIER_WEEKLY_BOMBING_WAR_SUPPORT$: $RIGHT|+=%2$"
+
+ surrender_limit_tooltip: "$MODIFIER_SURRENDER_LIMIT$ $RIGHT|+=%1$"
+ enemy_justify_war_goal_time_tooltip: "$MODIFIER_ENEMY_JUSTIFY_WAR_GOAL_TIME$: $RIGHT|+=%1$"
+
+ supply_node_range_tooltip: "$MODIFIER_SUPPLY_NODE_RANGE$: $RIGHT|+=%0$"
+
+ mobilization_laws_cost_factor_tooltip: "$mobilization_laws_cost_factor$: $RIGHT|-=%1$"
+ trade_laws_cost_factor_tooltip: "$trade_laws_cost_factor$: $RIGHT|-=%1$"
+ economy_cost_factor_tooltip: "$economy_cost_factor$: $RIGHT|-=%1$"
+ political_advisor_cost_factor_tooltip: "$political_advisor_cost_factor$: $RIGHT|-=%0$"
+ air_advisor_cost_factor_tooltip: "$MODIFIER_AIR_ADVISOR_COST_FACTOR$: $RIGHT|-=%0$"
+ army_advisor_cost_factor_tooltip: "$MODIFIER_ARMY_ADVISOR_COST_FACTOR$: $RIGHT|-=%0$"
+ navy_advisor_cost_factor_tooltip: "$MODIFIER_NAVY_ADVISOR_COST_FACTOR$: $RIGHT|-=%0$"
+ army_chief_cost_factor_tooltip: "$army_chief_cost_factor$: $RIGHT|-=%0$"
+ navy_chief_cost_factor_tooltip: "$navy_chief_cost_factor$: $RIGHT|-=%0$"
+ air_chief_cost_factor_tooltip: "$air_chief_cost_factor$: $RIGHT|-=%0$"
+ high_command_cost_factor_tooltip: "$high_command_cost_factor$: $RIGHT|-=%0$"
+ theorist_cost_factor_tooltip: "$theorist_cost_factor$: $RIGHT|-=%0$"
+ tank_manufacturer_cost_factor_tooltip: "$tank_manufacturer_cost_factor$: $RIGHT|-=%0$"
+ naval_manufacturer_cost_factor_tooltip: "$naval_manufacturer_cost_factor$: $RIGHT|-=%0$"
+ aircraft_manufacturer_cost_factor_tooltip: "$aircraft_manufacturer_cost_factor$: $RIGHT|-=%0$"
+ materiel_manufacturer_cost_factor_tooltip: "$materiel_manufacturer_cost_factor$: $RIGHT|-=%0$"
+ industrial_concern_cost_factor_tooltip: "$industrial_concern_cost_factor$: $RIGHT|-=%0$"
+
+ monthly_population_tooltip: "$MODIFIER_GLOBAL_MONTHLY_POPULATION$: $RIGHT|=%+1$"
+
+ conscription_tooltip: "$MODIFIER_CONSCRIPTION_FACTOR$: $RIGHT|H%$"
+ conscription_factor_tooltip: "$MODIFIER_CONSCRIPTION_TOTAL_FACTOR$: $RIGHT|%+=0$"
+ weekly_manpower_tooltip: "$MODIFIER_WEEKLY_MANPOWER$: $RIGHT|+=0$"
+ non_core_manpower_tooltip: "$MODIFIER_GLOBAL_NON_CORE_MANPOWER$: $RIGHT|+=%2$"
+
+ land_equipment_upgrade_xp_cost_tooltip: "$MODIFIER_LAND_EQUIPMENT_UPGRADE_XP_COST$: $RIGHT|-=%0$"
+ naval_equipment_upgrade_xp_cost_tooltip: "$MODIFIER_NAVAL_EQUIPMENT_UPGRADE_XP_COST$: $RIGHT|-=%0$"
+ air_equipment_upgrade_xp_cost_tooltip: "$MODIFIER_AIR_EQUIPMENT_UPGRADE_XP_COST$: $RIGHT|-=%0$"
+
+ land_doctrine_cost_factor_tooltip: "$MODIFIER_LAND_DOCTRINE_COST_FACTOR$: $RIGHT|-=%2$"
+ air_doctrine_cost_factor_tooltip: "$MODIFIER_AIR_DOCTRINE_COST_FACTOR$: $RIGHT|-=%2$"
+ naval_doctrine_cost_factor_tooltip: "$MODIFIER_NAVAL_DOCTRINE_COST_FACTOR$: $RIGHT|-=%2$"
+
+ army_spirit_category_type_cost_factor_tooltip: "$army_spirit_category_type_cost_factor$: $RIGHT|-=%0$"
+ air_spirit_category_type_cost_factor_tooltip: "$air_spirit_category_type_cost_factor$: $RIGHT|-=%0$"
+ navy_spirit_category_type_cost_factor_tooltip: "$navy_spirit_category_type_cost_factor$: $RIGHT|-=%0$"
+
+ decryption_factor_tooltip: "$MODIFIER_DECRYPTION_FACTOR$: $RIGHT|+=%2$"
+ encryption_factor_tooltip: "$MODIFIER_ENCRYPTION_FACTOR$: $RIGHT|+=%2$"
+
+ civilian_intel_to_others_tooltip: "$MODIFIER_CIVILIAN_INTEL_TO_OTHERS$: $RIGHT|-=%%1$"
+ army_intel_to_others_tooltip: "$MODIFIER_ARMY_INTEL_TO_OTHERS$: $RIGHT|-=%%1$"
+ navy_intel_to_others_tooltip: "$MODIFIER_NAVY_INTEL_TO_OTHERS$: $RIGHT|-=%%1$"
+ airforce_intel_to_others_tooltip: "$MODIFIER_AIRFORCE_INTEL_TO_OTHERS$: $RIGHT|-=%%1$"
+
+ drift_defence_factor_tooltip: "$MODIFIER_DRIFT_DEFENCE_FACTOR$: $RIGHT|+=%1$"
+
+ totalist_drift_tooltip: "$totalist_drift$: $RIGHT|+=$"
+ syndicalist_drift_tooltip: "$syndicalist_drift$: $RIGHT|+=$"
+ radical_socialist_drift_tooltip: "$radical_socialist_drift$: $RIGHT|+=$"
+ social_democrat_drift_tooltip: "$social_democrat_drift$: $RIGHT|+=$"
+ social_liberal_drift_tooltip: "$social_liberal_drift$: $RIGHT|+=$"
+ market_liberal_drift_tooltip: "$market_liberal_drift$: $RIGHT|+=$"
+ social_conservative_drift_tooltip: "$social_conservative_drift$: $RIGHT|+=$"
+ authoritarian_democrat_drift_tooltip: "$authoritarian_democrat_drift$: $RIGHT|+=$"
+ paternal_autocrat_drift_tooltip: "$paternal_autocrat_drift$: $RIGHT|+=$"
+ national_populist_drift_tooltip: "$national_populist_drift$: $RIGHT|+=$"
+
+ refit_ic_cost_tooltip: "$MODIFIER_INDUSTRIAL_REFIT_IC_COST_FACTOR$: $RIGHT|-=%0$"
+ refit_speed_tooltip: "$MODIFIER_INDUSTRIAL_REFIT_SPEED_FACTOR$: $RIGHT|+=%0$"
+ repair_speed_factor_tooltip: "$MODIFIER_REPAIR_SPEED_FACTOR$: $RIGHT|+=%0$"
+ 
+ ###############
 has_same_government_as_ROOT_tt_NOT: "Does not have the same government as §Y[ROOT.GetNameWithFlag]§!."
 tech_human_wave_tactics_effect: "Enables Tactic: §Y$tactic_human_wave_tactics$§!"
 CAN_invite_german_halifax_decision: "Invite Berlin into the Halifax Conference"
